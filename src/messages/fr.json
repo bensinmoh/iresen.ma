@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "title": "IRESEN",
+    "description": "Site institutionnel IRESEN."
+  },
+  "Navigation": {
+    "label": "Navigation principale",
+    "menu": "Menu",
+    "skip": "Aller au contenu principal",
+    "language": "Choisir la langue",
+    "footer": "Navigation de pied de page",
+    "quickLinks": "Accès directs",
+    "usefulLinks": "Informations utiles",
+    "institute": "L’Institut",
+    "research": "Recherche & Innovation",
+    "expertise": "Expertise & Expérimentation",
+    "resources": "Ressources & Actualités",
+    "sections": "Sur cette page"
+  },
+  "Pages": {
+    "home": "Accueil",
+    "institute": "L’Institut",
+    "governance": "Gouvernance & organisation",
+    "priorities": "Priorités & feuilles de route",
+    "programmes": "Programmes R&D&I",
+    "projects": "Projets collaboratifs",
+    "platforms": "Plateformes de recherche",
+    "network": "Réseau de laboratoires & d’experts",
+    "transfer": "Valorisation & Transfert",
+    "workWithUs": "Travailler avec nous",
+    "news": "Actualités",
+    "events": "Événements",
+    "publications": "Publications & rapports",
+    "media": "Médiathèque",
+    "opportunities": "Opportunités & Carrières",
+    "search": "Recherche",
+    "contact": "Nous contacter",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "cookies": "Préférences de cookies",
+    "accessibility": "Accessibilité",
+    "sitemap": "Plan du site"
+  },
+  "Institute": {
+    "about": "Qui sommes-nous ?",
+    "mission": "Mission & positionnement",
+    "keyFigures": "Chiffres clés"
+  },
+  "States": {
+    "empty": "Aucun contenu publié pour le moment.",
+    "searchUnavailable": "La recherche est actuellement indisponible.",
+    "contactUnavailable": "Le formulaire de contact n’est pas encore disponible.",
+    "noTracking": "Aucun cookie de suivi optionnel n’est activé.",
+    "loading": "Chargement de la page…",
+    "notFoundTitle": "Page introuvable",
+    "notFoundDescription": "Cette page n’existe pas ou n’est plus disponible.",
+    "errorTitle": "La page n’a pas pu être chargée",
+    "errorDescription": "Veuillez réessayer dans un instant.",
+    "retry": "Réessayer",
+    "backHome": "Retour à l’accueil"
+  }
+}

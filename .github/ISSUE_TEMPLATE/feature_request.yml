@@ -1,0 +1,20 @@
+name: Feature request
+description: Propose a focused improvement within the approved architecture.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User need and intended behavior
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and acceptance criteria
+      description: Include locale, accessibility, content/rights and permission effects where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Required decisions, approved content or service dependencies

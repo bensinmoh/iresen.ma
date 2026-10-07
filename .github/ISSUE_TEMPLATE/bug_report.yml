@@ -1,0 +1,23 @@
+name: Bug report
+description: Report reproducible application behavior.
+body:
+  - type: markdown
+    attributes:
+      value: 'For security problems use SECURITY.md. Do not include secrets or personal data.'
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and expected behavior
+      description: Include locale, route, browser and viewport when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence and relevant checks

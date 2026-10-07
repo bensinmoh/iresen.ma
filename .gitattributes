@@ -1,0 +1,6 @@
+# Preserve the attached brief's intentional Markdown line breaks.
+instruction.md whitespace=-blank-at-eol
+# Payload emits SQL template literals with tabs and blank-line indentation.
+src/cms/migrations/*.ts whitespace=-blank-at-eol,-space-before-tab
+# Supplied brand originals must remain byte-identical across platforms.
+public/brand/*.svg -text
