@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "title": "IRESEN",
+    "description": "IRESEN institutional website."
+  },
+  "Navigation": {
+    "label": "Main navigation",
+    "menu": "Menu",
+    "skip": "Skip to main content",
+    "language": "Choose a language",
+    "footer": "Footer navigation",
+    "quickLinks": "Quick links",
+    "usefulLinks": "Useful information",
+    "institute": "The Institute",
+    "research": "Research & Innovation",
+    "expertise": "Expertise & Experimentation",
+    "resources": "Resources & News",
+    "sections": "On this page"
+  },
+  "Pages": {
+    "home": "Home",
+    "institute": "The Institute",
+    "governance": "Governance & organisation",
+    "priorities": "Priorities & roadmaps",
+    "programmes": "R&D&I programmes",
+    "projects": "Collaborative projects",
+    "platforms": "Research platforms",
+    "network": "Laboratory & expert network",
+    "transfer": "Valorisation & Transfer",
+    "workWithUs": "Work with us",
+    "news": "News",
+    "events": "Events",
+    "publications": "Publications & reports",
+    "media": "Media library",
+    "opportunities": "Opportunities & Careers",
+    "search": "Search",
+    "contact": "Contact us",
+    "legal": "Legal information",
+    "privacy": "Privacy",
+    "cookies": "Cookie preferences",
+    "accessibility": "Accessibility",
+    "sitemap": "Sitemap"
+  },
+  "Institute": {
+    "about": "Who are we?",
+    "mission": "Mission & positioning",
+    "keyFigures": "Key figures"
+  },
+  "States": {
+    "empty": "No published content yet.",
+    "searchUnavailable": "Search is currently unavailable.",
+    "contactUnavailable": "The contact form is not available yet.",
+    "noTracking": "No optional tracking cookies are enabled.",
+    "loading": "Loading the page…",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "This page does not exist or is no longer available.",
+    "errorTitle": "The page could not be loaded",
+    "errorDescription": "Please try again in a moment.",
+    "retry": "Try again",
+    "backHome": "Return to home"
+  }
+}

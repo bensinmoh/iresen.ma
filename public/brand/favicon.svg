@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 508.5 508.5">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #296bb4;
+      }
+    </style>
+  </defs>
+  <g id="Icon">
+    <g>
+      <g id="Guides">
+        <g id="Containers">
+          <rect id="Container" class="st0" y="0" width="508.5" height="508.5"/>
+        </g>
+      </g>
+      <path id="Apex_Leaf" class="st1" d="M342.9,110.8l-128.3,64.2c-30,15-49,45.7-49,79.3v143.5l128.3-64.2c30-15,49-45.7,49-79.3V110.8h0Z"/>
+    </g>
+  </g>
+</svg>

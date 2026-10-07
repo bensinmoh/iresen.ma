@@ -1,0 +1,70 @@
+[
+  {
+    "source": "Favicon.svg",
+    "file": "/brand/favicon.svg",
+    "sha256": "b897f8993b00234b756d9f63d2adad287ae7a22dbd4112671e462d60635dab07",
+    "viewBox": "0 0 508.5 508.5",
+    "colors": ["#296bb4"],
+    "version": "Latest owner-supplied SVG, 2026-10-07",
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "IRESEN Colored Logo.svg",
+    "file": "/brand/logo-color.svg",
+    "sha256": "8c47a51d6e424324a91d0e5ecf2ef4d7b102ac137b02efea2b2a0971ac360396",
+    "viewBox": "0 0 696 194.9",
+    "colors": ["#12345a", "#296bb4"],
+    "version": "Latest owner-supplied SVG, 2026-10-07",
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "Apex Leaf.svg",
+    "file": "/brand/apex-leaf.svg",
+    "sha256": "7c51a47ea0775bd26602ce2a61c8b7dbaf8cfa5597c59189b1b85932a56c0f86",
+    "viewBox": "0 0 177.3 287",
+    "colors": ["#296bb4"],
+    "version": "Latest owner-supplied SVG, 2026-10-07",
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "IRESEN Logo White.svg",
+    "file": "/brand/logo-white.svg",
+    "sha256": "9dda62237ecc79104c4a2dc2f524928e30a9e323f2a0740bcbf6d87e36de47d3",
+    "viewBox": "0 0 695.98 194.94",
+    "colors": ["#fff"],
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "IRESEN Logo Monochrome.svg",
+    "file": "/brand/logo-monochrome.svg",
+    "sha256": "f3a865f2016f196c0720a874669e26f27e6753de7d7d1bfbd09162ae8d59fca8",
+    "viewBox": "0 0 695.98 194.94",
+    "colors": ["#fff"],
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "IRESEN Logo Dark Mode.svg",
+    "file": "/brand/logo-dark.svg",
+    "sha256": "63d9db4d934b1556edff1720fec82874530ed05cc1015d3283f0a71c5ab18458",
+    "viewBox": "0 0 696 194.9",
+    "colors": ["#296bb4", "#fff"],
+    "version": "Latest owner-supplied SVG, 2026-10-07",
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "IRESEN Primary Logo.svg",
+    "file": "/brand/logo-primary.svg",
+    "sha256": "693e81d2de8bdb534a40120f97d5dbee5444d899c2ec036ed6ad953ee48e7bca",
+    "viewBox": "0 0 1262.5 508.54",
+    "colors": ["#12345a", "#296bb4"],
+    "version": "Latest owner-supplied SVG, 2026-10-07",
+    "transformation": "None; byte-identical copy",
+    "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  }
+]
