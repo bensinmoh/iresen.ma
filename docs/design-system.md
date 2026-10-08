@@ -31,9 +31,9 @@ Use `logo-color.svg` on light surfaces and the reversed variants on navy. The ne
 
 ## Layout and typography
 
-Use semantic CSS custom properties with Tailwind utilities. Start with fluid gutters, about 1280px content width and a 4/8px spacing rhythm. Keep full-width section boundaries flat. Apply the physical top-left/bottom-right rounded signature selectively to cards and media.
+Use semantic CSS custom properties with Tailwind utilities. `--container-width` is `120rem` and `--gutter` is `clamp(1.25rem, 3.125vw, 4rem)`. Header, hero-body, narrative band, following sections and footer share `min(100% - var(--gutter) * 2, var(--container-width))` with centered inline margins. Constrain reading measure within this broad grid and keep the 4/8px spacing rhythm. Keep full-width section boundaries flat. Apply the physical top-left/bottom-right rounded signature selectively to cards and media.
 
-Use licensed, self-hosted Plus Jakarta Sans for Latin when available and a reviewed Arabic family. Current fallback fonts are deliberate; no font license/files were verified. Use the received vector wordmark rather than recreating it as live text.
+French and English use self-hosted Plus Jakarta Sans through `next/font/local` in the public frontend layout. The normal Latin variable file supports weights 200–800 under SIL OFL 1.1; native controls and links inherit the body family. See [fonts and provenance](fonts.md). Arabic retains Tahoma/Arial until its companion family is reviewed, with natural tracking. Latin hero H1 tracking is `-0.03em` (−3%) in all layouts. Use the received vector wordmark rather than recreating it as live text.
 
 ## Interaction and acceptance
 
@@ -43,7 +43,7 @@ Check actual rendered contrast; brand colors do not automatically make accessibl
 
 Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). Their page sections and composition details remain suggestions, not a validated structure or new design rules. Final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
-Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing exports/fonts do not block the foundation.
+Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports and the reviewed Arabic companion do not block independent work.
 
 ## Design workflow integration
 
@@ -67,10 +67,11 @@ links, label size for footer section headings/utility links and mobile footer
 links, and metadata size for copyright. The earlier refinement used regular footer
 navigation weight; the reference rework below uses 600 weight for desktop links.
 
-`--color-action-surface` (`#EAF1F8`) is the quiet background for hover/current
-language states in the header; use primary blue text and preserve the current
-language underline. This is a control surface, not a new brand primary or status
-color. The earlier refinement's mobile header actions spanned the available width
+`--color-action-surface` (`#EAF1F8`) is the quiet background for language hover
+states in the header. Current languages now use 700 weight alone; the former
+selected fill and underline are superseded by the hero refinement below.
+This is a control surface, not a new brand primary or status color.
+The earlier refinement's mobile header actions spanned the available width
 beneath a divider, keeping language access and the outlined menu control distinct.
 
 The earlier footer refinement grouped the primary contact action above secondary
@@ -85,9 +86,11 @@ verified against the local production build in FR/EN/AR at
 
 ## Footer reference composition — 2026-10-08
 
-The footer-specific width is `min(100% - clamp(1.25rem, 3.125vw, 4rem) * 2, 120rem)`;
-the shared reading-content maximum remains 80rem. At the source's
-1920px viewport, 3.125vw yields its 60px side offset. Native frame `1584:6681`
+The reference rework first introduced
+`min(100% - clamp(1.25rem, 3.125vw, 4rem) * 2, 120rem)` for the footer.
+The hero refinement below now applies this geometry across the page; there is no
+footer width exception. At the source's 1920px viewport, 3.125vw yields its 60px
+side offset. Native frame `1584:6681`
 measures 1920 × 798px and stores a 50px grid gutter; these guide proportions,
 without imposing a fixed height or universal gap on translated responsive content.
 
@@ -107,14 +110,16 @@ current verification](footer.md#reference-rework--2026-10-08).
 ## Navigation reference composition — 2026-10-08
 
 The owner-attached closed-header and open-institute screenshots guide this shared
-navigation. The header uses `min(100% - clamp(1.25rem, 3.125vw, 3.75rem) * 2, 120rem)`;
-the reading-content maximum remains 80rem. It has one row from `110rem`, separate
+navigation. The original header used a separate 120rem maximum and side gutters
+capped at 3.75rem; it now consumes the shared container and gutters above.
+It has one row from `110rem`, separate
 identity/control and navigation rows from `70rem`, and a compact native Menu
 disclosure below `70rem`. Approved page groups and centralized locale routes
 retain precedence over historical source labels.
 
-Navy with a delivered reversed logo is the homepage fallback until its hero is
-implemented. Interior pages use white and the colored logo. The open desktop tab
+Before heroes were implemented, navy with a delivered reversed logo was the
+homepage fallback and interior pages used white and the colored logo. The later
+hero overlay is documented below. The open desktop tab
 joins a white, full-width panel with introduction, destination list and related
 route. Fine dividers, 600-weight link titles, readable secondary descriptions,
 navy hover/focus links and a quiet selected-corner related block give each role
@@ -211,7 +216,7 @@ standalone alliances section, and rearranges sections into a narrow reading flow
 
 | Geometry                | Exact examples                                                                    | Implementation use                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Desktop grid            | All 14 pages: 12-column STRETCH-X, 60px offset, 20px gutter                       | Alignment evidence; retain fluid layout and current 80rem maximum                                  |
+| Desktop grid            | All 14 pages: 12-column STRETCH-X, 60px offset, 20px gutter                       | Alignment evidence; current shared 120rem grid uses fluid side gutters                             |
 | Grid exceptions         | Design board `2211:6303`: 100px offset/50px gutter; footer `1584:6681`: 60px/50px | Source has several grids, not one universal recipe                                                 |
 | Desktop sections        | `804:6069`, `804:6093`: 60px horizontal/80px vertical padding                     | Spacious sections; translate into responsive semantic spacing                                      |
 | Desktop news/statistics | `804:6120`: 100px vertical; `804:6025`: 195px horizontal/40px vertical            | Local composition decisions, not global token defaults                                             |
@@ -282,8 +287,9 @@ derives a 101px line box. See the pinned
 Source
 pixels are reference sizes; use fluid scales, real long content and legible mobile
 body sizes. Do not apply Latin negative tracking or uppercase letter spacing to
-Arabic. Font names in the document do not include licensed usable webfont files;
-the current project fallbacks remain deliberate.
+Arabic. Font names in the native document did not supply licensed usable webfont
+files. The subsequent Latin integration is sourced separately and recorded in
+[the font guide](fonts.md); the Arabic companion remains pending.
 
 No shared text-style references were recovered. The sole serialized local style
 definition is a hidden fill style, `Faticon color` (`33:555`, `#333333`). The
@@ -403,10 +409,12 @@ hierarchy, selected-corner geometry and component anatomy from relevant frames;
 apply current approved identity, content and routes. Keep source observations,
 proposed improvements and implemented decisions distinct.
 
-Prioritize licensed Jakarta/Arabic typography, reusable hero and section-heading
-families, shared image/card/row anatomy, and explicit interactive states when
-those implementations are requested. The current homepage remains an empty
-shell; this analysis has not implemented those families or changed runtime CSS.
+The analysis originally prioritized licensed Jakarta/Arabic typography, reusable
+hero and section-heading families, shared image/card/row anatomy, and explicit
+interactive states. At that stage the homepage remained an empty shell; source
+analysis itself did not implement those families or change runtime CSS. Later
+hero and Latin-font implementations are documented separately below and in
+[the font guide](fonts.md); detailed homepage content remains unfinished.
 Tablet/RTL, focus/keyboard behavior, long CMS content, native instance rendering,
 real image crops, licenses and final approved copy remain verification inputs.
 
@@ -443,3 +451,25 @@ The narrow blue band presents Développer · Éprouver · Valoriser as navigatio
 with the verified 2011 founding year only on home/institute. No sample statistics,
 certification badge or long explanatory cards are included. Display type remains
 fluid; Arabic uses natural tracking, logical alignment and directional arrows.
+
+## Hero layout and typography refinements — 2026-10-08
+
+The owner's refinements replace separate header/footer widths and the narrower
+80rem hero/content container with the shared 120rem grid specified above.
+At 1920px, side gutters are 60px; narrow screens retain at least 1.25rem.
+The hero's copy measure, natural height growth, layout variations and RTL alignment
+remain distinct from its outer container. Latin hero H1 tracking is `-0.03em`;
+the Arabic selector overrides it to `normal`.
+
+Current language links use `font-weight: 700` only, in both the header and footer
+dropdown. No permanent selected background or underline is applied; hover and
+focus styles remain. Desktop `.navigation-trigger` spans its container and centers
+the label/arrow group, including wrapped text. `.menu-toggle` centers its contents.
+
+`--font-latin` resolves the local Plus Jakarta Sans variable before the system
+fallback stack; links and native buttons inherit the body font.
+Découvrir and other public Latin actions therefore use the intended family.
+See [the font guide](fonts.md) for loading, subset and license details, and
+[the validation log](validation.md) for this revision's executed checks and
+rendered coverage. Earlier verification and source measurements above describe
+their respective revisions, not this change.

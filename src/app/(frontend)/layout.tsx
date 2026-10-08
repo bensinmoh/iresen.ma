@@ -1,10 +1,19 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 import { defaultLocale, isLocale, localeDirection } from '@/i18n/locales'
 import { getSiteUrl, isIndexingEnabled } from '@/lib/site'
 import '@/styles/globals.css'
+
+const plusJakartaSans = localFont({
+  src: '../../fonts/plus-jakarta-sans/plus-jakarta-sans-latin-variable.woff2',
+  variable: '--font-plus-jakarta-sans',
+  weight: '200 800',
+  style: 'normal',
+  display: 'swap',
+})
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Metadata')
@@ -23,7 +32,7 @@ export default async function FrontendLayout({ children }: { children: ReactNode
   const messages = await getMessages({ locale })
 
   return (
-    <html lang={locale} dir={localeDirection(locale)}>
+    <html lang={locale} dir={localeDirection(locale)} className={plusJakartaSans.variable}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages} timeZone="Africa/Casablanca">
           {children}

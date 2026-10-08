@@ -23,7 +23,7 @@ This file separates commissioned repository/boilerplate work from later homepage
 - [x] Search/contact contracts with truthful unavailable states.
 - [x] Reproducible install, lint, typecheck, focused tests, production build and browser validation.
 - [x] Import seven current approved SVGs/favicons unchanged; inspect source metadata and private PDF guidelines.
-- [x] Verify supplied-logo browser rendering during final validation; font files remain a later input.
+- [x] Verify supplied-logo browser rendering during foundation validation; Latin font installation is recorded separately below.
 
 Local validation passed on 2026-10-07. See [validation evidence and limits](validation.md). The structure is ready for homepage implementation; the remaining items below are subsequent work.
 
@@ -41,7 +41,9 @@ The 2026-10-08 structure reference supplies recommendations. Its page sections, 
 
 - [x] Integrate repository-local design skills, product/visual context, flexible task routing and pinned optional upstream references; see [design workflow](design-workflow.md).
 - [x] Obtain the supplied logos, apex and favicon; record owner-authorized website use and preserve originals.
-- [ ] Obtain optional website/Illustrator exports, licensed fonts and approved imagery for visual implementation; the unreadable ZIP no longer blocks the foundation.
+- [ ] Obtain optional website/Illustrator exports and approved imagery for visual implementation; the unreadable ZIP no longer blocks the foundation.
+- [x] Install licensed, self-hosted Plus Jakarta Sans Latin for public French/English typography and controls; record provenance and OFL in [the font guide](fonts.md).
+- [ ] Select and verify a compatible Arabic companion; current Tahoma/Arial typography retains natural tracking.
 - [x] Resolve website primary blue as `#296BB4` following the owner's latest correction.
 - [ ] Inspect accessible website/Illustrator exports before finalizing visual composition.
 - [ ] Approve homepage copy and module selections around Développer · Éprouver · Valoriser.

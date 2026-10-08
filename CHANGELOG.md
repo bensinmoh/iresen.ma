@@ -4,6 +4,22 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Hero layout and typography refinements
+
+- Aligned the header, hero-body, narrative band, following sections and footer on
+  one 120rem container with fluid side gutters, reducing the former hero/body
+  inset and removing the footer width exception.
+- Set Latin hero H1 tracking to −3%, retaining natural Arabic letter spacing.
+- Reduced selected-language styling to 700 weight alone in the header and footer
+  dropdown; centered header menu text/arrow groups and the compact Menu contents.
+- Installed self-hosted Plus Jakarta Sans Latin for French/English public text
+  and controls through `next/font/local`, with its OFL notice and verified source
+  record. Arabic's reviewed companion remains a follow-up input.
+
+See [shared design rules](docs/design-system.md#hero-layout-and-typography-refinements--2026-10-08),
+[fonts](docs/fonts.md) and [current validation](docs/validation.md) for executed
+checks and rendered coverage. Earlier entries retain their own revision's results.
+
 ## 2026-10-08 — Institutional references and canonical structure
 
 - Preserved all three supplied DOCX originals as repository references with source
