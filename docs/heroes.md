@@ -16,9 +16,11 @@ Other pages link the approved **Développer · Éprouver · Valoriser** reading
 framework; institute additionally shows the established 2011 founding year,
 already supported by the existing institutional footer source.
 
-Historical mockup statistics and certification are not imported as facts. The
-homepage figures below come from the owner's explicit request; no counts,
-results, commitments or testimonials are invented. `Hero` FR/EN/AR catalog copy
+The initial implementation omitted historical mockup statistics and certification.
+The owner's later direct requests authorize the five homepage figures and the
+certification badge below for the local working site. This records owner-supplied
+claims, without independent certification verification. Other source claims
+remain unadopted. `Hero` FR/EN/AR catalog copy
 is a wayfinding draft, subject to editorial and translation review before
 production publication. Existing empty sections, institute anchors, sitemap
 content and truthful unavailable states remain below the hero.
@@ -146,6 +148,36 @@ Other pages keep the existing pathway band, with 2011 retained on institute.
 
 Current checks and rendered coverage belong in [the validation log](validation.md).
 Earlier evidence below and retained screenshots predate these figure changes.
+
+## Homepage certification badge — 2026-10-08
+
+The owner explicitly requested **Certifié · ISO · 9001:2015 · Première agence de
+moyens certifiée en Afrique** from the attached screenshots. This direct request
+is the content source for the local homepage badge. It does not import other
+historical hero copy, figures or routes. `Hero.certification` retains the French
+wording and the English/Arabic draft translations:
+
+| Locale | Label     | Description                                       |
+| ------ | --------- | ------------------------------------------------- |
+| FR     | Certifié  | Première agence de moyens certifiée en Afrique.   |
+| EN     | Certified | Africa’s first certified research funding agency. |
+| AR     | معتمد     | أول وكالة لتمويل الأبحاث معتمدة في أفريقيا.       |
+
+The home-only badge is a native, noninteractive `aside`, named with its localized
+certified label and ISO 9001:2015. The stable standard identifier uses an LTR `bdi`
+and Plus Jakarta Sans; Arabic copy uses Alexandria with natural tracking.
+The surface uses actual 16px backdrop blur at the default root size, including
+the prefixed property, over `rgb(80 80 80 / 72%)`. Unsupported filters retain the
+darker neutral `rgb(52 52 52 / 94%)` fallback. Its physical 20px top-left/bottom-right
+corners stay rounded and the opposite corners sharp in RTL too.
+
+From `70rem`, the homepage copy uses a two-column grid with an 11rem badge at
+inline-end, bottom-aligned with the actions. Smaller screens place the badge
+between description and actions in natural flow, with wrapping flex content and
+a 24rem maximum width. The CTA stays near the band, all five existing figures
+remain, and the hero can grow for content. Current checks belong in
+[the validation log](validation.md); earlier hero checks and screenshots predate
+this badge.
 
 ## Original implementation verification
 

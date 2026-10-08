@@ -203,6 +203,11 @@ finite wheel animation is disabled for reduced motion. The bottom reserve is
 72px at default text size, bringing the CTA closer to the band without clipping
 growing content. Current checks belong in [the validation log](docs/validation.md).
 
+The homepage now also includes the owner's explicitly requested certification
+badge, documented below. This later request supplies its claim for the local
+working site; the initial hero implementation omitted historical certification
+copy.
+
 The initial narrow blue band presented Développer · Éprouver · Valoriser as
 navigation, with the verified 2011 founding year on home/institute. The later
 homepage figure request below replaces that homepage band; other pages retain
@@ -258,6 +263,22 @@ the requested wording with spelling corrected; English/Arabic labels are drafted
 translations. Auto-fit tracks adapt the figure count per row to available space
 and enlarged text; the hero grows on narrow screens to display all five facts.
 See [the hero content record](docs/heroes.md#homepage-key-figures--2026-10-08).
+
+## Homepage certification badge — 2026-10-08
+
+The owner directly requested Certifié · ISO · 9001:2015 · Première agence de moyens
+certifiée en Afrique. The homepage-only badge records that supplied claim, with
+English/Arabic draft translations; no independent certification verification is
+asserted. It is a labelled, noninteractive native aside. ISO 9001:2015 stays
+LTR-isolated in Plus Jakarta Sans; Arabic copy uses Alexandria.
+
+A translucent neutral gray surface uses actual backdrop blur and the physical
+top-left/bottom-right signature corners, preserved in RTL. At `70rem` and above,
+the 11rem badge sits at the inline end of a two-column copy grid, aligned with
+the CTA's bottom edge. Below that it wraps compactly between description and
+actions, so the button remains near the five-figure band. Natural hero growth is
+retained. See [badge rules and content](docs/heroes.md#homepage-certification-badge--2026-10-08)
+and [current validation](docs/validation.md); earlier hero evidence predates it.
 
 ## Hovered-menu reference adaptation — 2026-10-08
 

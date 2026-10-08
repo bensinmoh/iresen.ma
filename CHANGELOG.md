@@ -4,6 +4,21 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Homepage certification badge
+
+- Added the owner's explicitly requested Certifié · ISO · 9001:2015 badge and
+  French claim, with English/Arabic drafts, to the local homepage.
+- Used a labelled, noninteractive aside with neutral translucent backdrop blur,
+  a darker unsupported-filter fallback and the physical signature corners.
+- Placed the badge beside the copy and CTA on wide screens and between copy
+  and actions on smaller screens, retaining natural height and all five figures.
+- Kept the stable standard LTR in Jakarta and Arabic copy in Alexandria;
+  distinguished the supplied claim from independent certification verification.
+
+See [badge content and behavior](docs/heroes.md#homepage-certification-badge--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage. Earlier hero
+verification and screenshots predate this addition.
+
 ## 2026-10-08 — Shared public fonts and Alexandria
 
 - Added the owner's selected, licensed, self-hosted Alexandria for Arabic,

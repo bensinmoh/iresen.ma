@@ -126,6 +126,10 @@
     "homeTitle": "La recherche au service de la transition énergétique.",
     "discover": "Découvrir",
     "continue": "Explorer la suite",
+    "certification": {
+      "label": "Certifié",
+      "description": "Première agence de moyens certifiée en Afrique."
+    },
     "founded": "Création d’IRESEN",
     "pathways": "Développer, éprouver et valoriser",
     "stages": {

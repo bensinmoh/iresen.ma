@@ -126,6 +126,10 @@
     "homeTitle": "البحث في خدمة الانتقال الطاقي.",
     "discover": "اكتشف",
     "continue": "استكشف المزيد",
+    "certification": {
+      "label": "معتمد",
+      "description": "أول وكالة لتمويل الأبحاث معتمدة في أفريقيا."
+    },
     "founded": "تأسيس IRESEN",
     "pathways": "التطوير والتجريب والتثمين",
     "stages": {

@@ -126,6 +126,10 @@
     "homeTitle": "Research for the energy transition.",
     "discover": "Discover",
     "continue": "Explore further",
+    "certification": {
+      "label": "Certified",
+      "description": "Africa’s first certified research funding agency."
+    },
     "founded": "IRESEN established",
     "pathways": "Develop, test and transfer",
     "stages": {

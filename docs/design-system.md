@@ -494,6 +494,32 @@ See [the font guide](fonts.md) for loading, subset and license details, and
 rendered coverage. Earlier verification and source measurements above describe
 their respective revisions, not this change.
 
+## Homepage certification badge — 2026-10-08
+
+The initial hero omitted historical certification copy. The owner's later direct
+request authorizes Certifié · ISO · 9001:2015 · Première agence de moyens certifiée
+en Afrique for the local homepage. This is an owner-supplied claim, with English
+and Arabic draft translations; it does not establish independent certification
+verification or adopt other screenshot content.
+
+`.hero-certification` is a home-only native, noninteractive aside named with the
+translated certified label and standard. ISO 9001:2015 uses LTR `bdi` isolation
+and `var(--font-latin)`; Arabic copy inherits Alexandria and natural tracking.
+The neutral surface uses `rgb(80 80 80 / 72%)` with `backdrop-filter: blur(1rem)`
+and its WebKit-prefixed equivalent. An `@supports` rule enables this treatment;
+the default `rgb(52 52 52 / 94%)` provides a darker fallback. The physical
+`var(--radius-signature)` corners remain 20px top-left/bottom-right at the default
+root size, with sharp opposite corners in RTL as well.
+
+Below `70rem`, the badge follows the introduction and precedes the actions in
+natural DOM flow. Its flex content wraps within `min(100%, 24rem)`, using 1rem
+padding. From `70rem`, `.hero-body--certified .hero-copy` uses
+`minmax(0, 1fr) 11rem` tracks and a `clamp(2rem, 4vw, 4rem)` column gap. The badge
+occupies the second track across both copy/action rows and aligns at the bottom;
+no fixed hero height is added. The five homepage figures are retained.
+See [content and behavior](heroes.md#homepage-certification-badge--2026-10-08)
+and [revision-specific validation](validation.md); earlier checks remain historical.
+
 ## Shared key-figure typography — 2026-10-08
 
 The owner-attached Figma screenshot references from 2026-10-08 at 20.37.38,

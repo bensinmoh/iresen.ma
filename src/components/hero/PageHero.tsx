@@ -32,14 +32,31 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
           />
         </div>
         <div className="hero-shade" />
-        <div className="container hero-body">
+        <div className={`container hero-body${pageId === 'home' ? ' hero-body--certified' : ''}`}>
           <div className="hero-copy">
-            <p className="hero-eyebrow">
-              <span aria-hidden="true" />
-              {t(`stages.${definition.stage}`)}
-            </p>
-            <h1 id="hero-title">{pageId === 'home' ? t('homeTitle') : titles(pageId)}</h1>
-            <p className="hero-description">{t(`descriptions.${pageId}`)}</p>
+            <div className="hero-introduction">
+              <p className="hero-eyebrow">
+                <span aria-hidden="true" />
+                {t(`stages.${definition.stage}`)}
+              </p>
+              <h1 id="hero-title">{pageId === 'home' ? t('homeTitle') : titles(pageId)}</h1>
+              <p className="hero-description">{t(`descriptions.${pageId}`)}</p>
+            </div>
+            {pageId === 'home' && (
+              <aside
+                className="hero-certification"
+                aria-label={`${t('certification.label')} ISO 9001:2015`}
+              >
+                <div className="hero-certification-heading">
+                  <span className="hero-certification-label">{t('certification.label')}</span>
+                  <bdi className="hero-certification-standard" dir="ltr">
+                    <span>ISO</span>
+                    <span>9001:2015</span>
+                  </bdi>
+                </div>
+                <p className="hero-certification-description">{t('certification.description')}</p>
+              </aside>
+            )}
             <div className="hero-actions">
               <a className="button button-primary hero-primary" href="#page-sections">
                 {t('discover')}

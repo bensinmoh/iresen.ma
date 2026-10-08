@@ -443,6 +443,55 @@ formatting, local links and diff whitespace were checked. This records local
 Chromium coverage; broader browser/screen-reader verification remains separate.
 Changes remain local and have not been pushed.
 
+## Homepage certification badge — 2026-10-08
+
+Added the owner's explicitly requested ISO 9001:2015 certification badge to the
+homepage hero. Its French claim comes from the supplied screenshots; English and
+Arabic are draft equivalents. This records supplied content, without independent
+verification of certification status or the first-in-Africa claim. Other
+historical screenshot copy, routes and statistics were not imported.
+
+The badge uses a translucent neutral tint with actual 16px backdrop blur and a
+darker fallback tint for browsers without that filter. The existing physical
+20px top-left/bottom-right rounding remains unchanged in RTL; top-right and
+bottom-left corners are sharp. The desktop grid bottom-aligns the badge beside
+the copy; smaller screens place it between the description and actions, preserving
+the action area's 72px clearance above the figures. Text stays native and the
+standard is LTR isolated. No new client dependency or image asset was added.
+
+Lint, strict types, all 8 unit tests, the production build and all 39 Chromium
+browser tests passed. Existing all-page hero checks now verify the certification
+is visible on home and absent on other pages, while retaining the five requested
+figures and section navigation. CMS integration checks were not repeated for this
+presentation change.
+
+An additional 27 homepage cases passed: FR/EN/AR at
+320/390/768/1024/1120/1440/1920px plus 200% root text at 320/1440px. Checks covered
+badge/text containment, desktop alignment, compact wrapping, physical corners,
+LTR standard isolation, real blur/translucency, title/header clearance, cue
+separation and unchanged action-to-band spacing. The Arabic badge also remained
+visible without JavaScript.
+
+Independent source analysis calculated a minimum 4.70:1 white-text contrast over
+the brightest possible homepage photo after its existing shade, and 10.34:1 for
+the fallback tint even over unshaded white. Text-free production backdrop samples
+at 1440px measured minimum contrast of 8.94:1 in FR/EN and 8.81:1 in AR across the
+interior text area. These sampled values cover the current image and layout;
+the supported filter rendered in local Chromium. Unsupported-browser rendering
+was not independently exercised. Impeccable's scoped type/layout detector
+returned zero findings.
+
+Final captures:
+
+- [French desktop](screenshots/hero-certification-fr-1440.png)
+- [Arabic mobile](screenshots/hero-certification-ar-390.png)
+- [English narrow layout](screenshots/hero-certification-en-320.png)
+
+All three captures were inspected, with independent review confirming wrapping,
+alignment, corners, mixed-script text and action/cue clearance. Documentation
+formatting, local links and diff whitespace were checked. Changes remain local
+and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

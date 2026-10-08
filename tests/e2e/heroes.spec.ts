@@ -15,6 +15,8 @@ for (const locale of locales) {
       await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
       await expect(hero.locator('.hero-description')).toBeVisible()
       if (id === 'home') {
+        await expect(hero.locator('.hero-certification')).toBeVisible()
+        await expect(hero.locator('.hero-certification')).toContainText('9001:2015')
         await expect(hero.locator('.hero-figures dt')).toHaveCount(5)
         await expect(hero.locator('.hero-figures dd')).toHaveText([
           '69',
@@ -25,6 +27,8 @@ for (const locale of locales) {
         ])
         await expect(hero.locator('.hero-pathways')).toHaveCount(0)
         await expect(hero.locator('.hero-founding')).toHaveCount(0)
+      } else {
+        await expect(hero.locator('.hero-certification')).toHaveCount(0)
       }
       await expect(hero.locator('.hero-photo')).toHaveJSProperty('complete', true)
       expect(
