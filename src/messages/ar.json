@@ -41,6 +41,17 @@
     "accessibility": "إمكانية الوصول",
     "sitemap": "خريطة الموقع"
   },
+  "Footer": {
+    "description": "تأسس <brand>IRESEN</brand> سنة 2011، ويواكب التحول الطاقي في المغرب من خلال البحث التطبيقي والابتكار في الطاقات المتجددة وكفاءة الطاقة.",
+    "addressLabel": "العنوان",
+    "address": "16، شارع الأمير سيدي محمد، السويسي، الرباط 10090، المغرب",
+    "phoneLabel": "اتصل بنا",
+    "emailLabel": "راسلنا",
+    "socialLabel": "الشبكات الاجتماعية والعلمية",
+    "socialLink": "اطّلع على IRESEN عبر {network}",
+    "collaborationDescription": "اكتشف فرص التعاون مع <brand>IRESEN</brand>.",
+    "copyright": "© {year} <brand>IRESEN</brand>. جميع الحقوق محفوظة."
+  },
   "Institute": {
     "about": "من نحن؟",
     "mission": "المهمة والتموقع",
