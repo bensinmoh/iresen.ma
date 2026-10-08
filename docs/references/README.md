@@ -6,15 +6,16 @@ The earlier `OneDrive_2026-10-07.zip` exceeded the tool's 32 MiB transfer limit 
 
 Use concise lowercase kebab-case filenames and preserve the exact source filename/version in the inventory. Do not include sharing links with access queries, credentials or personal data in committed files.
 
-| Location                   | Contents                                                                                |
-| -------------------------- | --------------------------------------------------------------------------------------- |
-| `docs/references/website/` | Non-confidential screenshot references with repository rights                           |
-| `docs/references/brand/`   | Non-confidential Illustrator/brand reference boards with repository rights              |
-| `docs/references/figma/`   | Owner-uploaded native Git LFS reference and sanitized measured design evidence          |
-| `public/brand/`            | Only necessary inspected/approved logo, apex and favicon SVGs                           |
-| `private-references/`      | Ignored original copies, internal narrative and confidential/unapproved reference files |
+| Location                    | Contents                                                                                |
+| --------------------------- | --------------------------------------------------------------------------------------- |
+| `docs/references/website/`  | Non-confidential screenshot references with repository rights                           |
+| `docs/references/brand/`    | Non-confidential Illustrator/brand reference boards with repository rights              |
+| `docs/references/figma/`    | Owner-uploaded native Git LFS reference and sanitized measured design evidence          |
+| `docs/references/strategy/` | Three owner-authorized DOCX originals and their narrative/support/structure analysis    |
+| `public/brand/`             | Only necessary inspected/approved logo, apex and favicon SVGs                           |
+| `private-references/`       | Ignored original copies, internal narrative and confidential/unapproved reference files |
 
-The reference directories are not public website assets. Screenshots and boards guide HTML/CSS implementation; never publish them as page backgrounds, substitute logo crops or facility photographs. The institutional narrative stays private unless explicitly approved for release.
+The reference directories are not public website assets. Screenshots and boards guide HTML/CSS implementation; never publish them as page backgrounds, substitute logo crops or facility photographs. The earlier institutional narrative PDF stays private. On 2026-10-08, the owner explicitly authorized repository inclusion of the three newly supplied DOCX copies; see [their source index and analysis](strategy/README.md). That authorization does not make them approved website downloads or final copy. The detailed structure remains recommendations and suggestions, not a final validated structure.
 
 Received vectors have byte-identical public copies with source checksums and XML geometry/color inspection. The color book was text-inspected and the internal narrative read for direction; their contents stay private. Additional files need the same source/rights record and any approved transformation. Do not make fake placeholder files to fill reference locations. Licensed fonts and production imagery need their own records before public use.
 

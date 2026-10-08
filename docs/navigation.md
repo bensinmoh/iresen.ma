@@ -32,6 +32,8 @@ historical palette and example promotional content.
 
 ## Composition and approved hierarchy
 
+The strategy/structure DOCX files received on 2026-10-08 are separate editorial references. Their suggested labels and paths have not replaced this implemented hierarchy; the owner explicitly states that the structure is unvalidated. See [the proposal comparison](route-map.md#structure-recommendations-received-on-2026-10-08) and [source analysis](references/strategy/README.md) before future navigation work.
+
 The original homepage header used the approved navy and delivered reversed SVG
 before heroes were implemented. Interior pages used a white header and the
 supplied colored SVG. The subsequent hero overlay is recorded below.

@@ -6,6 +6,7 @@ This file separates commissioned repository/boilerplate work from later homepage
 
 - [x] Inspect the existing repository and preserve its files.
 - [x] Record modular trilingual architecture and stable route boundaries.
+- [x] Import and analyse the three supplied strategy/structure DOCX references, preserving their originals and documenting provenance, evidence limits and the structure's unvalidated status; see the [source index and analysis](references/strategy/README.md).
 - [x] Inventory seven current SVGs/private guidelines and hashes; use final website blue `#296BB4`, matching all latest blue-bearing assets including the corrected favicon.
 - [x] Add contribution/security guidance and issue/PR templates.
 - [x] Record exact compatible tool/framework versions and repeatable commands in README.
@@ -25,6 +26,16 @@ This file separates commissioned repository/boilerplate work from later homepage
 - [x] Verify supplied-logo browser rendering during foundation validation; Latin font installation is recorded separately below.
 
 Local validation passed on 2026-10-07. See [validation evidence and limits](validation.md). The structure is ready for homepage implementation; the remaining items below are subsequent work.
+
+## Structure proposal: decisions before page/CMS changes
+
+The 2026-10-08 structure reference supplies recommendations. Its page sections, 23 fixed-page count and nine detail-template count are proposed scope, not delivered work or final approval. The existing 22-page structure is the chosen working baseline; see [ADR 0004](adr/0004-canonical-working-site-structure.md) and [the canonical route map](route-map.md). The decisions below apply before adopting a proposed change, rather than blocking continued work on that baseline.
+
+- [ ] Validate the Agence de Moyens page role, the proposed navigation labels and four main French path changes, plus footer utility scope and paths, before changing routes; document approved correspondences and any required redirects.
+- [ ] Confirm official identity, mission, 2035 ambition/convention status, current governance/organisation and scientific taxonomy before preparing public institutional sections.
+- [ ] Reconcile figures by definition, period, portfolio scope and funding category; validate project contributions/results/maturity, platform sites/operators/available capabilities and publishable transfer/IP evidence.
+- [ ] Select proposed sections and detail templates according to available public material; define shared records, per-object ownership/review dates and versioned call rules with one reference URL across agency and opportunities pages. Programme detail remains conditional.
+- [ ] Approve each FR/EN/AR version, media rights and actual contact/application/registration channels; validate processing, retention and cookie arrangements before activating the corresponding sections or services.
 
 ## Next task: homepage/design-system implementation
 

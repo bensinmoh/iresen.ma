@@ -202,3 +202,34 @@ Inspected final full-page captures:
 These checks cover local Chromium rendering and the documented interactions.
 Cross-browser/screen-reader review and the reviewed Arabic companion remain
 separate work. Current PR CI and merge status are recorded by GitHub.
+
+## Institutional reference documents — 2026-10-08
+
+The three owner-supplied DOCX files were read as source data and preserved under
+`docs/references/strategy/`. Original upload/copy byte comparisons, recorded
+sizes and SHA-256 values, and DOCX ZIP integrity were verified. See [the source
+index and analysis](references/strategy/README.md).
+
+The analysis distinguishes narrative direction, communications-support guidance,
+unvalidated page/section recommendations and future editorial/CMS requirements.
+An independent read-only review checked source fidelity, dates/version uncertainty,
+approval boundaries and the chosen structure. No document instruction or claim
+of a “validated menu” supersedes the owner's explicit clarification.
+
+[ADR 0004](adr/0004-canonical-working-site-structure.md) chooses the existing
+22 stable page IDs as the working baseline. Directly loading the central route
+definition verified 22 distinct paths in each locale (66 localized URLs), valid
+header/footer page references and the derived routing map. The canonical Markdown
+table was compared with all 22 French code paths. Routing, header, footer and
+language controls consume the shared definition; no application routes changed.
+
+Modified/new Markdown local links and heading anchors, Prettier 3.9.9 formatting
+(respecting the repository's `instruction.md` exclusion) and `git diff --check`
+were checked. Formatting used a temporary isolated tool; application dependencies
+and lockfiles were not changed. The application/database/browser suite was not
+rerun locally for this documentation/reference-only increment. Any PR for this
+increment must pass its current CI workflow before merge.
+
+This review covers DOCX text, tables and visible headers/footers, not Word visual
+pagination, independent institutional fact verification, formal content approval,
+approved translations or production publication.
