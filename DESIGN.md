@@ -37,8 +37,9 @@ information architecture. CMS/admin surfaces prioritize clear editing tasks.
 
 ## Typography, rhythm and media
 
-The current token system uses an 80rem content maximum, fluid gutters and a 4/8px
-spacing rhythm. Treat 12/8/4-column desktop/tablet/mobile grids as composition
+The current token system uses an 80rem reading-content maximum, fluid gutters
+and a 4/8px spacing rhythm. The footer has the documented wider exception below.
+Treat 12/8/4-column desktop/tablet/mobile grids as composition
 starting points. Adapt to content; a headline should not become tiny to preserve
 a desktop arrangement on mobile.
 
@@ -81,7 +82,8 @@ display type, marked section labels, flat section bands and editorial rows form
 the source's visual direction. Current approved colors and product/content truth
 retain precedence over its historical palette and mockup content.
 
-The brief's standalone export boards and licensed font files remain unavailable.
+The brief's standalone export boards and licensed font files remain unavailable
+in the checkout; the owner reattached Footer.png in chat for the current rework.
 Native Figma rendering, dedicated RTL/tablet references and effective prototype
 behavior remain unverified. Verify availability/freshness before claiming a direct
 comparison. Existing footer screenshots are prior review artifacts, not supplied
@@ -98,11 +100,12 @@ with a clear border between identity and controls. Active language links use a
 quiet blue surface as well as an underline; the menu has an identifiable control
 boundary. Search retains a 44px-high interaction target.
 
-The footer uses distinct type roles: 16px body/desktop links, 14px group headings
-and utility/mobile links, and 13px copyright metadata at the default root size.
-Section headings carry hierarchy while navigation links use regular weight.
-Contact is the primary engagement action; news and transfer are grouped beneath
-it. A fine divider separates utility navigation. These roles consume shared tokens
+The earlier footer refinement used distinct type roles: 16px body/desktop links,
+14px group headings and utility/mobile links, and 13px copyright metadata at the
+default root size. Section headings carried hierarchy while navigation links used
+regular weight.
+Contact was the primary engagement action; news and transfer were grouped beneath
+it. A fine divider separated utility navigation. These roles consume shared tokens
 and remain fluid with user text settings, logical layout and RTL.
 
 Verified in the local production build across FR/EN/AR at 320, 390, 768, 1024 and
@@ -110,3 +113,20 @@ Verified in the local production build across FR/EN/AR at 320, 390, 768, 1024 an
 retains viewport containment in all three languages. Reduced motion, equivalent
 locale navigation, keyboard focus and no-JavaScript access were checked. Existing
 browser/axe checks passed; cross-browser and screen-reader coverage remain separate.
+
+## Footer reference rework — 2026-10-08
+
+The footer now follows the broad composition of native frame `1584:6681` and the
+owner-reattached Footer.png: identity plus four navigation groups, a contact/social
+row, a divider, prominent newsletter copy and signup controls, then compact utility
+and language access. A footer-specific 120rem maximum and fluid 3.125vw side
+gutters preserve the source's broad proportions instead of compressing it to
+the reading-content width. Group labels remain 14px; desktop links use 16px and
+600 weight, while the newsletter heading has its own fluid display role.
+
+The requested newsletter form remains visible with disabled controls and a
+localized unavailable notice until signup is configured. Approved colors, SVGs,
+routes, contact information and networks supersede historical mockup content.
+Mobile and Arabic reflow are adaptations; decoded source evidence does not
+establish native rendered fidelity. Current verification is recorded in
+[the footer log](docs/footer.md#reference-rework-verification--2026-10-08).

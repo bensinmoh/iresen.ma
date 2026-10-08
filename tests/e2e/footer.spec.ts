@@ -1,27 +1,23 @@
 import { expect, test } from '@playwright/test'
 import { locales, type Locale } from '../../src/i18n/locales'
 import { footerContact, footerSocialLinks } from '../../src/lib/footer'
-import { footerPageIds, navigationGroups, pageHref } from '../../src/lib/site'
+import { footerNavigationGroups, footerPageIds, pageHref } from '../../src/lib/site'
 import ar from '../../src/messages/ar.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
 import fr from '../../src/messages/fr.json' with { type: 'json' }
 
 const catalogs = { ar, en, fr }
 const languageNames = { fr: 'Français', en: 'English', ar: 'العربية' }
-const navigationPageIds = [
-  ...navigationGroups.flatMap((group) => [...group.pages]),
-  'home',
-] as const
+const navigationPageIds = footerNavigationGroups.flatMap((group) => [...group.pages])
 
 for (const locale of locales) {
-  test(`${locale}: footer exposes localized institutional, engagement and utility destinations`, async ({
+  test(`${locale}: footer exposes localized institutional, collaboration and utility destinations`, async ({
     page,
   }) => {
     await page.goto(pageHref('home', locale))
     const footer = page.getByRole('contentinfo')
     const navigation = footer.locator('.footer-navigation')
     const utilities = footer.locator('.footer-utilities')
-    const engagement = footer.locator('.footer-engagement')
     const messages = catalogs[locale]
 
     await expect(navigation).toHaveAccessibleName(messages.Navigation.footer)
@@ -31,9 +27,12 @@ for (const locale of locales) {
       pageHref('home', locale),
     )
 
-    for (const group of navigationGroups) {
+    for (const group of footerNavigationGroups) {
       await expect(
-        navigation.getByRole('heading', { name: messages.Navigation[group.id], exact: true }),
+        navigation.getByRole('heading', {
+          name: messages.Footer.navigation[group.id],
+          exact: true,
+        }),
       ).toBeVisible()
     }
     expect(
@@ -50,11 +49,6 @@ for (const locale of locales) {
     for (const id of footerPageIds) {
       await expect(
         utilities.getByRole('link', { name: messages.Pages[id], exact: true }),
-      ).toHaveAttribute('href', pageHref(id, locale))
-    }
-    for (const id of ['workWithUs', 'contact', 'news', 'transfer'] as const) {
-      await expect(
-        engagement.getByRole('link', { name: messages.Pages[id], exact: true }),
       ).toHaveAttribute('href', pageHref(id, locale))
     }
 
@@ -87,6 +81,43 @@ for (const locale of locales) {
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(messages.Pages.privacy)
   })
 }
+
+test('newsletter CTA explains its unavailable state without accepting subscriptions in every locale', async ({
+  page,
+}) => {
+  for (const locale of locales) {
+    await page.goto(pageHref('home', locale))
+    const messages = catalogs[locale]
+    const newsletter = page
+      .getByRole('contentinfo')
+      .getByRole('region', { name: messages.Footer.newsletterTitle, exact: true })
+    const email = newsletter.getByRole('textbox', {
+      name: messages.Footer.newsletterEmail,
+      exact: true,
+    })
+    const consent = newsletter.getByRole('checkbox')
+    const subscribe = newsletter.getByRole('button', {
+      name: messages.Footer.newsletterSubscribe,
+      exact: true,
+    })
+
+    await expect(
+      newsletter.getByText(messages.Footer.newsletterUnavailable, { exact: true }),
+    ).toBeVisible()
+    await expect(email).toHaveAttribute('type', 'email')
+    await expect(email).toBeDisabled()
+    await expect(email).toHaveValue('')
+    await expect(consent).toHaveAccessibleName(
+      messages.Footer.newsletterConsent.replace(/<\/?brand>/g, ''),
+    )
+    await expect(consent).toBeDisabled()
+    await expect(consent).not.toBeChecked()
+    await expect(subscribe).toBeDisabled()
+    await expect(
+      newsletter.getByRole('link', { name: messages.Pages.privacy, exact: true }),
+    ).toHaveAttribute('href', pageHref('privacy', locale))
+  }
+})
 
 test('all footer content and open language options fit mobile, tablet and desktop in every locale', async ({
   page,

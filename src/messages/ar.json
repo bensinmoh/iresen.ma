@@ -49,8 +49,19 @@
     "emailLabel": "راسلنا",
     "socialLabel": "الشبكات الاجتماعية والعلمية",
     "socialLink": "اطّلع على IRESEN عبر {network}",
-    "collaborationDescription": "اكتشف فرص التعاون مع <brand>IRESEN</brand>.",
-    "copyright": "© {year} <brand>IRESEN</brand>. جميع الحقوق محفوظة."
+    "copyright": "© {year} <brand>IRESEN</brand>. جميع الحقوق محفوظة.",
+    "navigation": {
+      "institute": "المعهد",
+      "science": "العلوم والابتكار",
+      "resources": "الموارد",
+      "collaboration": "الشبكات والشراكات"
+    },
+    "newsletterTitle": "اشترك في نشرتنا الإخبارية",
+    "newsletterDescription": "ابقَ على تواصل معنا لتصلك آخر أخبارنا.",
+    "newsletterEmail": "البريد الإلكتروني",
+    "newsletterSubscribe": "اشترك",
+    "newsletterConsent": "أوافق على تلقي رسائل عبر البريد الإلكتروني من <brand>IRESEN</brand>.",
+    "newsletterUnavailable": "الاشتراك في النشرة الإخبارية غير متاح بعد."
   },
   "Institute": {
     "about": "من نحن؟",

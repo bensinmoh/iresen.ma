@@ -86,3 +86,22 @@ rendered fidelity, effective nested inheritance, prototype execution, dedicated
 RTL/tablet layouts, font/media licensing, approved institutional copy or production
 accessibility. The application/database suite was not rerun locally for this
 reference-only increment; its pull request is subject to the current CI workflow.
+
+## Footer reference rework — 2026-10-08
+
+The current footer uses the analyzed native frame `1584:6681` and the
+owner-reattached Footer.png, preserving the requested newsletter form in its
+unavailable state. Lint, strict types, formatting, 8 unit tests, 4 local CMS
+integration tests, the production build and all 19 browser tests passed.
+The browser suite covers newsletter availability, FR/EN/AR navigation/axe,
+keyboard controls, no-JavaScript destination rendering and localized 404 status,
+including dotted paths. The locale-wide streamed loading boundary was removed
+to prevent deferred destination content remaining hidden without JavaScript.
+
+All 21 rendered responsive/text-enlargement cases fit, with open language options.
+French 1920/1440px, Arabic 390px and English 768px captures were visually inspected;
+logo geometry, reduced motion and keyboard dismissal were verified. The final
+incremental build compiled without warnings. Broader browser and screen-reader
+coverage remains outside this pass. See [review captures and reference
+limits](footer.md#reference-rework-verification--2026-10-08). Current PR CI and merge
+are recorded by GitHub rather than inferred from these local results.

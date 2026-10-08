@@ -1,6 +1,6 @@
 # Design system and Figma reference
 
-The supplied color book and seven SVGs establish the approved identity. The native Figma source was retrieved and decoded on 2026-10-08; its measured design language is recorded below. Standalone website exports and Illustrator boards remain unavailable for direct comparison. Source hashes and publication boundaries are recorded in the [asset inventory](asset-inventory.md).
+The supplied color book and seven SVGs establish the approved identity. The native Figma source was retrieved and decoded on 2026-10-08; its measured design language is recorded below. The owner reattached Footer.png in chat for the current footer rework; other standalone website exports and Illustrator boards remain unavailable in the checkout. Source hashes and publication boundaries are recorded in the [asset inventory](asset-inventory.md).
 
 ## Native Figma reference and evidence
 
@@ -64,8 +64,8 @@ until the requested implementation supplies a reason to change them.
 `--font-size-body` is `1rem`, `--font-size-label` is `0.875rem`, and
 `--font-size-meta` is `0.8125rem`. Use body size for reading text and desktop footer
 links, label size for footer section headings/utility links and mobile footer
-links, and metadata size for copyright. Footer navigation links use regular weight
-so the larger section labels and engagement heading establish hierarchy.
+links, and metadata size for copyright. The earlier refinement used regular footer
+navigation weight; the reference rework below uses 600 weight for desktop links.
 
 `--color-action-surface` (`#EAF1F8`) is the quiet background for hover/current
 language states in the header; use primary blue text and preserve the current
@@ -73,14 +73,36 @@ language underline. This is a control surface, not a new brand primary or status
 color. Mobile header actions span the available width beneath a divider, keeping
 language access and the outlined menu control distinct.
 
-Footer engagement groups the primary contact action above the secondary news and
-transfer links. Utility navigation has its own divider. Both patterns use logical
-alignment and shared spacing, preserving Arabic order and physical signature corners.
+The earlier footer refinement grouped the primary contact action above secondary
+news/transfer links and separated utilities with a divider. Its reference rework
+below replaces that engagement layout with the requested newsletter CTA.
 
 Long text can wrap without widening the viewport; inline language options and
-mobile header actions can wrap when text is enlarged. Verified against the local
-production build in FR/EN/AR at 320/390/768/1024/1440px, including open menus and
+mobile header actions can wrap when text is enlarged. The earlier revision was
+verified against the local production build in FR/EN/AR at
+320/390/768/1024/1440px, including open menus and
 200% text enlargement at 320/1440px. See [refinement evidence](footer.md#design-workflow-refinement).
+
+## Footer reference composition — 2026-10-08
+
+The footer-specific width is `min(100% - clamp(1.25rem, 3.125vw, 4rem) * 2, 120rem)`;
+the shared reading-content maximum remains 80rem. At the source's
+1920px viewport, 3.125vw yields its 60px side offset. Native frame `1584:6681`
+measures 1920 × 798px and stores a 50px grid gutter; these guide proportions,
+without imposing a fixed height or universal gap on translated responsive content.
+
+Desktop uses identity beside four navigation groups, followed by contact/social
+details and a divided newsletter area. Newsletter copy and controls share a row,
+then stack on smaller screens; navigation retains two columns on mobile. Group
+labels use the shared label role and desktop links use body size at 600 weight.
+The newsletter heading is fluid from 1.875rem to 3.375rem. Utilities remain compact.
+
+`--color-footer-field` is a 5% white surface on the approved navy for the visible
+signup block. Disabled email, consent and subscribe controls retain legible type;
+a localized unavailable notice and privacy link explain the current availability.
+Logical layout, isolated Latin identifiers and meaningful arrow mirroring support
+Arabic while preserving physical signature corners. See [implementation and
+current verification](footer.md#reference-rework--2026-10-08).
 
 ## Native design-language analysis — 2026-10-08
 

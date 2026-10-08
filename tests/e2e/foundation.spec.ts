@@ -88,6 +88,10 @@ test('unknown locale/page paths return 404 and development robots disallow crawl
     const unknown = await request.get(`/${locale}/not-a-real-page`)
     expect(unknown.status()).toBe(404)
     expect(await unknown.text()).toContain(`lang="${locale}"`)
+    // Locale paths containing dots must also pass through the proxy's 404 guard.
+    const dotted = await request.get(`/${locale}/not-a-real-page.txt`)
+    expect(dotted.status()).toBe(404)
+    expect(await dotted.text()).toContain(`lang="${locale}"`)
   }
   expect((await request.get('/es')).status()).toBe(404)
   const robots = await request.get('/robots.txt')

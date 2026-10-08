@@ -54,7 +54,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           <nav aria-label={navigation('footer')} className="footer-navigation">
             {footerNavigationGroups.map((group) => (
               <div className="footer-links" key={group.id}>
-                <h2>{navigation(group.id)}</h2>
+                <h2>{footer(`navigation.${group.id}`)}</h2>
                 <ul>
                   {group.pages.map((id) => (
                     <li key={id}>
@@ -114,32 +114,42 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           </nav>
         </div>
 
-        <section className="footer-engagement" aria-labelledby="footer-engagement-title">
-          <div>
-            <h2 id="footer-engagement-title">
-              <a href={pageHref('workWithUs', locale)}>{pageTitle('workWithUs')}</a>
-            </h2>
-            <p>
-              {footer.rich('collaborationDescription', {
-                brand: (chunks) => <bdi dir="ltr">{chunks}</bdi>,
-              })}
-            </p>
+        <section className="footer-newsletter" aria-labelledby="footer-newsletter-title">
+          <div className="footer-newsletter-copy">
+            <h2 id="footer-newsletter-title">{footer('newsletterTitle')}</h2>
+            <p>{footer('newsletterDescription')}</p>
           </div>
-          <div className="footer-engagement-actions">
-            <a className="button footer-contact-button" href={pageHref('contact', locale)}>
-              {pageTitle('contact')}
-              <FooterArrow />
-            </a>
-            <div className="footer-discovery-links">
-              <a className="footer-news-link" href={pageHref('news', locale)}>
-                {pageTitle('news')}
+          <div className="footer-newsletter-signup" aria-describedby="footer-newsletter-status">
+            <div className="footer-newsletter-field">
+              <FooterIcon name="email" />
+              <label className="sr-only" htmlFor="footer-newsletter-email">
+                {footer('newsletterEmail')}
+              </label>
+              <input
+                id="footer-newsletter-email"
+                type="email"
+                autoComplete="email"
+                placeholder={footer('newsletterEmail')}
+                aria-describedby="footer-newsletter-status"
+                disabled
+              />
+              <button type="button" className="footer-newsletter-button" disabled>
+                {footer('newsletterSubscribe')}
                 <FooterArrow />
-              </a>
-              <a className="footer-news-link" href={pageHref('transfer', locale)}>
-                {pageTitle('transfer')}
-                <FooterArrow />
-              </a>
+              </button>
             </div>
+            <label className="footer-newsletter-consent">
+              <input type="checkbox" disabled aria-describedby="footer-newsletter-status" />
+              <span>
+                {footer.rich('newsletterConsent', {
+                  brand: (chunks) => <bdi dir="ltr">{chunks}</bdi>,
+                })}
+              </span>
+            </label>
+            <p id="footer-newsletter-status" className="footer-newsletter-status">
+              <span>{footer('newsletterUnavailable')}</span>{' '}
+              <a href={pageHref('privacy', locale)}>{pageTitle('privacy')}</a>
+            </p>
           </div>
         </section>
 
