@@ -20,7 +20,7 @@
     "test:integration": "CMS_INTEGRATION=1 node scripts/run.mjs vitest run src/tests/cms.integration.test.ts",
     "test:e2e": "node scripts/run.mjs playwright test",
     "setup:local": "node scripts/setup-local.mjs",
-    "db:up": "docker compose up -d db",
+    "db:up": "docker compose --env-file .env.local up -d db",
     "db:wait": "node scripts/run.mjs node scripts/wait-for-db.mjs",
     "cms:types": "node scripts/run.mjs payload generate:types",
     "cms:importmap": "node scripts/run.mjs payload generate:importmap",
