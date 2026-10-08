@@ -4,6 +4,16 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Apex Leaf browser icon
+
+- Selected the existing tightly bounded Apex Leaf for the public browser icon,
+  replacing the padded favicon URL with SVG type and `sizes="any"` metadata.
+- Preserved all seven original SVGs, their hashes, blue fill, proportions and
+  transparency; no derived or additional icon assets were added.
+
+See [active icon selection](docs/asset-inventory.md#active-browser-icon--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage.
+
 ## 2026-10-08 — Footer identity copy
 
 - Replaced the text beneath the footer logo with the owner's selected French

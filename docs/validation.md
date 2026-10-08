@@ -590,6 +590,27 @@ the offscreen skip link without changing application behavior. Documentation
 formatting, local links and diff whitespace were checked. Changes remain local
 and have not been pushed.
 
+## Apex Leaf browser icon — 2026-10-08
+
+Lint, strict types and the production build passed. Chromium verified one active
+SVG icon link with `sizes="any"` on the French, English and Arabic home pages.
+The selected URL returned HTTP 200 with the SVG content type and the original
+Apex Leaf's SHA-256. All seven supplied brand SVG hashes remain unchanged.
+
+At proportional square viewports of 16/32/64px, the tightly framed leaf occupies
+the full icon height. Its nontransparent raster bounds are respectively
+10 × 16, 20 × 32 and 40 × 64px, compared with 6 × 10, 12 × 18 and 24 × 36px
+for the retained padded favicon. The vector geometry is about 77% larger in
+each dimension; antialiasing rounds the occupied pixel bounds at small sizes.
+Proportions remain intact, with transparent space beside the tall leaf when
+fitted into a square browser slot.
+
+The [16/32/64px comparison](screenshots/favicon-apex-comparison.png) was inspected.
+This is a targeted metadata/asset check; unit, broader browser and CMS integration
+suites were not repeated, and other browsers or an operating-system tab strip
+were not manually reviewed. Documentation formatting, local links and diff
+whitespace were checked. Changes remain local and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

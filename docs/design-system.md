@@ -35,7 +35,7 @@ Detailed source data, asset contact sheets, section maps and audited reader tool
 
 The owner's final correction on 2026-10-07 sets website primary blue to `#296BB4`, matching the inspected color-book v0.9 and every current blue-bearing SVG, including the latest corrected favicon. Use `#296BB4` for website primary-blue and focus tokens; copy received vectors byte-identically. The Illustrator board remains uninspected. See [ADR 0003](adr/0003-owner-selected-primary-blue.md).
 
-Use `logo-color.svg` on light surfaces and the reversed variants on navy. The newly received `logo-primary.svg` has a different aspect ratio; preserve its own geometry when used. Both `logo-white.svg` and `logo-monochrome.svg` have white fills; filenames do not make either a navy-on-white mark. Keep SVG proportions and reserve intrinsic geometry to avoid layout shift. Use the actual `favicon.svg`, not a screenshot-derived substitute.
+Use `logo-color.svg` on light surfaces and the reversed variants on navy. The newly received `logo-primary.svg` has a different aspect ratio; preserve its own geometry when used. Both `logo-white.svg` and `logo-monochrome.svg` have white fills; filenames do not make either a navy-on-white mark. Keep SVG proportions and reserve intrinsic geometry to avoid layout shift. Public metadata now selects the supplied `/brand/apex-leaf.svg` as an SVG browser icon with `sizes="any"`, using its tight viewBox and original proportions; the padded `favicon.svg` is retained as an original asset. See [active icon selection](asset-inventory.md#active-browser-icon--2026-10-08).
 
 ## Layout and typography
 

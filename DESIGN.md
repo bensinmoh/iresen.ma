@@ -37,6 +37,9 @@ Reference sample claims remain distinct from requested factual content.
 - Preserve all supplied SVGs byte-for-byte, geometry and aspect ratios included.
   Use the inspected light/reversed variants; white and monochrome filenames both
   refer to white-filled marks. Never reconstruct the wordmark with live text.
+- The active browser icon uses the supplied Apex Leaf's tight viewBox instead of
+  the padded favicon canvas, preserving its blue fill, transparency and proportions;
+  both originals remain in the [asset inventory](docs/asset-inventory.md#active-browser-icon--2026-10-08).
 - Keep full-width section boundaries flat. Apply the physical top-left and
   bottom-right rounded signature selectively to cards, media and focused controls;
   Arabic does not automatically reverse these brand corners.

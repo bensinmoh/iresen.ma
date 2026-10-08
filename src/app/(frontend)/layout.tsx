@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: getSiteUrl(),
     title: { default: t('title'), template: '%s | IRESEN' },
     description: t('description'),
-    icons: { icon: { url: '/brand/favicon.svg', type: 'image/svg+xml' } },
+    icons: { icon: { url: '/brand/apex-leaf.svg', type: 'image/svg+xml', sizes: 'any' } },
     robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
   }
 }
