@@ -59,13 +59,31 @@ for previous checks; neither proves a later change was tested.
 
 ## Content and structure
 
-Preserve the approved page boundaries and central route map. Navigation covers
+Preserve the existing owner-approved page boundaries and central route map. Navigation covers
 the institute, research and innovation, expertise and experimentation, transfer,
 collaboration, resources/news, search and contact. Do not derive additional pages
 or services from a screenshot.
 
-The approved reading framework is **Développer · Éprouver · Valoriser**. Final
-homepage modules, factual claims and institutional translations remain editorial
+The chosen working structure is the existing 22 stable page IDs in `src/lib/site.ts`;
+use this single route definition for internal links. [ADR 0004](docs/adr/0004-canonical-working-site-structure.md)
+records the decision and the coordinated update procedure for later changes.
+
+The three newly supplied strategy DOCX files are authorized for repository
+reference and analysis; see the [strategy reference index](docs/references/strategy/README.md).
+Their detailed website structure and section suggestions remain recommendations,
+not a validated replacement for the implemented navigation. Final institutional
+copy, translations and the proposed slogan still require editorial approval.
+
+The reading framework is **Développer · Éprouver · Valoriser**. It connects needs,
+research, experimentation and use, with feedback between stages; outcomes can
+include knowledge, methods, skills and informed decisions as well as transferred
+solutions. Six cross-cutting capacities support this reading: scientific and
+technological expertise; collaborative R&D&I and programming; platforms and
+experimentation; valorisation and transfer; human capabilities and expert
+networks; partnerships, cooperation and resources. They guide editorial coverage
+rather than define six additional menu entries or an organigram.
+
+Final homepage modules, factual claims and institutional translations remain editorial
 inputs. Internal narratives and sample export content are not publishable facts.
 Do not invent figures, facilities, commitments, people, testimonials or results
 to complete a composition. Draft translations must not be labelled approved.

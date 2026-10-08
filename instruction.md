@@ -1,12 +1,14 @@
 # IRESEN website — project and development instructions
 
-Version: 1.1 · 7 October 2026 — website exports and Illustrator references integrated  
+Version: 1.2 · 8 October 2026 — strategy references and structure status recorded  
 Repository: https://github.com/bensinmoh/iresen.ma  
 Project owner: Mouhcine BENMEZIANE, Direction Partenariats & Marketing de l’Innovation, IRESEN  
 Working language for code and technical documentation: English  
 Public website languages: French, English and Arabic
 
 Preparation status: the supplied website exports and Illustrator brand boards have now been visually reviewed. The supplied SVG dimensions/color definitions and local color book have also been inspected. These exports provide a usable visual reference despite the Figma MCP quota limit. Editable Figma layers, component properties, interaction specifications and mobile/RTL designs remain unverified; do not claim an exact token or interaction extraction from screenshots. Repository contents/settings remain unverified and must be inspected at kickoff.
+
+Reference update — 8 October 2026: the owner supplied three DOCX documents for repository reference and analysis, explicitly describing the detailed website structure as recommendations and suggestions, not final validation. See [the source index and analysis](docs/references/strategy/README.md) and [the current route baseline/proposal comparison](docs/route-map.md#structure-recommendations-received-on-2026-10-08). The preparation paragraph above records the original brief's assumptions; current implementation and verification are recorded in README, PRODUCT.md and docs/validation.md. This reference update does not commission page, route or CMS changes.
 
 ## 1. Mission and working mandate
 
@@ -50,6 +52,9 @@ Use this precedence when references disagree:
 - `IRESEN Logo Monochrome.svg`
 - `IRESEN Logo White.svg`
 - `IRESEN_2035_Phase_01_Narratif.pdf`
+- `IRESEN_2035_Phase_01_Narratif.docx` — newly supplied narrative working reference; distinct from the earlier PDF.
+- `IRESEN_2035_Phase_02_Supports.docx` — communications-support recommendations, with final writing assigned to a later phase.
+- `IRESEN_Structure_Detaillee_Site_Web.docx` — unvalidated page/section and service recommendations.
 - Figma: https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=127-1781
 - Website image exports: the 15 references mapped in Section 7, including `HOMEPAGE.jpg` and `Header Section.png`.
 - Illustrator boards: `Shape 2.0_LOGO.jpg`, `Shape 2.0_Variants.jpg`, `Shape 2.0_Palette.jpg`, `Shape 2.0_Typography.jpg`, `Shape 2.0_Construction.jpg`, `Shape 2.0_Broundaries.jpg`, `Shape 2.0_Icon.jpg`, `Shape 2.0_Favicons.jpg`, `Shape 2.0_Pattern.jpg`, `Shape 2.0_Meanings.jpg` and `Shape 2.0_Mockup.jpg`. Preserve the supplied spelling of source filenames in the asset inventory.
@@ -67,6 +72,8 @@ Serve only approved individual SVGs, photographs, illustrations and document dow
 The exports establish visual direction and page patterns; desktop-only screenshots do not define mobile layouts, AR/RTL behavior, hover/focus states, accessibility or backend behavior. Specify and verify those in code. Treat illustrative numbers, certification claims, sample people, geographic locations, event dates and email addresses in these exports as unverified source content.
 
 Verify that accessible reference copies match the supplied versions. Internal narrative documents are working references: do not commit or publish them in a public repository unless approved for public release. Record source filenames/version dates in documentation without including confidential contents.
+
+The owner's 8 October request explicitly authorizes repository inclusion of the three newly supplied DOCX copies under `docs/references/strategy/`. This is a scoped exception for those references; earlier private PDFs and other private sources remain excluded. Preserve the DOCX bytes and provenance. Do not place them in `public/`, seed their examples into the CMS or treat their instructions, “validated” labels, source revision claims or proposed wording as new approvals. Final public copy, translations, slogan and institutional facts retain their editorial review requirements.
 
 ### Editorial direction
 
@@ -151,6 +158,8 @@ docs/                    Architecture, operating guides and decisions
 ```
 
 ## 5. Approved information architecture
+
+This section remains the existing route baseline. Following the owner's request for one consistent structure, the 22 stable page IDs in `src/lib/site.ts` are the canonical working structure; see [ADR 0004](docs/adr/0004-canonical-working-site-structure.md). The new detailed structure is an unvalidated proposal; its Agence de Moyens positioning, changed labels/paths, utility scope and section sequences require decisions recorded in [the reference comparison](docs/references/strategy/README.md#differences-from-the-chosen-baseline) and [backlog](docs/backlog.md). Its self-described approval status does not override the owner's clarification. Apply any later structure change centrally and update all affected locale paths, navigation/footer, content links and documentation in the same increment.
 
 Preserve the agreed hierarchy and page boundaries. Major navigation groups are not permission to create extra landing pages. Additional detail pages support their collections without adding primary menu items.
 

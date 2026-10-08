@@ -4,6 +4,23 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Institutional references and canonical structure
+
+- Preserved all three supplied DOCX originals as repository references with source
+  filenames, visible dates, byte sizes and SHA-256 hashes.
+- Analyzed narrative, support architecture, proposed page sections and evidence
+  requirements; recorded source-version uncertainty and pending editorial decisions.
+- Marked the detailed structure as recommendations, not final validation. Chose
+  the existing 22-page structure as the single working baseline and documented
+  coordinated future route/navigation/footer/content/locale updates in ADR 0004.
+- Updated product, brief, content-model, route, reference and backlog documentation.
+  Verified source integrity, local links/anchors, formatting, route-map consistency
+  and whitespace; application routes and CMS schemas are unchanged.
+
+See [the reference analysis](docs/references/strategy/README.md),
+[the structure decision](docs/adr/0004-canonical-working-site-structure.md) and
+[validation](docs/validation.md#institutional-reference-documents--2026-10-08).
+
 ## 2026-10-08 — Introductory page heroes
 
 - Added lightweight heroes to all 22 approved pages with five layouts, varied
