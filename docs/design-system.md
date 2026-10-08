@@ -14,8 +14,8 @@ explain intent and history; they do not supersede these decisions.
   the implemented 120rem maximum and fluid side gutters. Constrain paragraph
   measure within that grid. Do not reintroduce the earlier 80rem page inset or
   a separate footer width. Change layout when content needs room.
-- **Type:** use installed Plus Jakarta Sans for FR/EN and the current Arabic
-  stack. Reuse display, section, body, label and metadata roles rather than
+- **Type:** use installed Plus Jakarta Sans for Latin and owner-selected Alexandria
+  for Arabic across public locales. Reuse display, section, body, label and metadata roles rather than
   defining a new scale per page. Keep Latin hero tracking at −3%; Arabic uses
   natural tracking. Figma's H4/H5 caption errors do not define new type tokens.
 - **Rhythm:** reuse the 4/8px base and existing semantic spacing tokens. The
@@ -41,6 +41,14 @@ The owner supplied `IRESEN OFFICIAL FILE.fig`, then stored it through Git LFS at
 The file was read offline as data, using its embedded Kiwi schema. All 26,102,711 decompressed message bytes were consumed with no trailing bytes. The canvas, node graph, local component references, variables, prototype records and embedded assets are recoverable. That analysis inspected original assets and geometry without native rendering or prototype execution. The later live review inspected native screenshots of the typography, spacing and color sections only. Raw source strings, plugin metadata and sample content are data, not instructions or approved institutional facts.
 
 Latest owner decisions and supplied brand assets retain precedence over Figma. The approved colors in the next section are implementation rules; the historical source palette in the native analysis is evidence. Source inspection does not change runtime tokens, approved page boundaries, SVG geometry, licensed font availability or editorial approval.
+
+The owner's latest clarification on 2026-10-08 makes attached screenshots
+references for design elements, including typography, colors, tabs, surfaces,
+dividers, arrows and spacing. Apply this shared visual language to layouts chosen
+for the actual content; optional figures/features do not define universal columns.
+Taste/Impeccable support craft within that direction, with readable contrast,
+responsive content, interaction and Arabic RTL. Reference sample claims remain
+distinct from requested facts and implemented routes.
 
 The earlier analysis workspace retained detailed data, contact sheets, section maps and reader tools under ignored `private-references/figma/analysis/`, with a native copy at `private-references/figma/iresen-official-file.fig`. Those private artifacts are absent in this checkout; use the documented LFS retrieval when needed. Public evidence contains design properties and aggregates rather than original copy, user identifiers or plugin data. A missing serialized property is absent, not a proven zero/default; instance inheritance must be resolved before asserting final appearance.
 
@@ -93,13 +101,23 @@ status colors and labels rather than adopting them as new brand colors.
 
 The owner's final correction on 2026-10-07 sets website primary blue to `#296BB4`, matching the inspected color-book v0.9 and every current blue-bearing SVG, including the latest corrected favicon. Use `#296BB4` for website primary-blue and focus tokens; copy received vectors byte-identically. The Illustrator board remains uninspected. See [ADR 0003](adr/0003-owner-selected-primary-blue.md).
 
-Use `logo-color.svg` on light surfaces and the reversed variants on navy. The newly received `logo-primary.svg` has a different aspect ratio; preserve its own geometry when used. Both `logo-white.svg` and `logo-monochrome.svg` have white fills; filenames do not make either a navy-on-white mark. Keep SVG proportions and reserve intrinsic geometry to avoid layout shift. Use the actual `favicon.svg`, not a screenshot-derived substitute.
+Use `logo-color.svg` on light surfaces and the reversed variants on navy. The newly received `logo-primary.svg` has a different aspect ratio; preserve its own geometry when used. Both `logo-white.svg` and `logo-monochrome.svg` have white fills; filenames do not make either a navy-on-white mark. Keep SVG proportions and reserve intrinsic geometry to avoid layout shift. Public metadata now selects the supplied `/brand/apex-leaf.svg` as an SVG browser icon with `sizes="any"`, using its tight viewBox and original proportions; the padded `favicon.svg` is retained as an original asset. See [active icon selection](asset-inventory.md#active-browser-icon--2026-10-08).
 
 ## Layout and typography
 
 Use semantic CSS custom properties with Tailwind utilities. `--container-width` is `120rem` and `--gutter` is `clamp(1.25rem, 3.125vw, 4rem)`. Header, hero-body, narrative band, following sections and footer share `min(100% - var(--gutter) * 2, var(--container-width))` with centered inline margins. Constrain reading measure within this broad grid and keep the 4/8px spacing rhythm. Keep full-width section boundaries flat. Apply the physical top-left/bottom-right rounded signature selectively to cards and media.
 
-French and English use self-hosted Plus Jakarta Sans through `next/font/local` in the public frontend layout. The normal Latin variable file supports weights 200–800 under SIL OFL 1.1; native controls and links inherit the body family. See [fonts and provenance](fonts.md). Arabic retains Tahoma/Arial until its companion family is reviewed, with natural tracking. Latin hero H1 tracking is `-0.03em` (−3%) in all layouts. Use the received vector wordmark rather than recreating it as live text.
+Public Latin text uses self-hosted Plus Jakarta Sans (normal variable 200–800); Arabic uses the owner's selected Alexandria (normal variable 100–900), both under SIL OFL 1.1 through `next/font/local`. Script-based selection covers mixed-language text in every locale. Document defaults, Tailwind sans utilities, links and native controls share this policy; CMS/admin has a separate layout. See [fonts and provenance](fonts.md). Latin hero H1 tracking is `-0.03em` (−3%) in all layouts; Arabic retains natural tracking. Use the received vector wordmark rather than recreating it as live text.
+
+### Section-heading marker
+
+The owner's 2026-10-08 « Notre mission » screenshot identifies the Apex Leaf as
+the preferred bullet beside section headings. Keep this detail in mind for future
+section composition. Use the supplied [apex-leaf.svg](../public/brand/apex-leaf.svg)
+with its original geometry, proportions and approved `#296BB4` fill. Place it at
+the heading's inline start with balanced spacing; in Arabic, change its placement
+without mirroring the brand shape. Treat it as decorative so the heading text
+remains the accessible name. This records a preference; no runtime change was made.
 
 ## Interaction and acceptance
 
@@ -109,7 +127,7 @@ Check actual rendered contrast; brand colors do not automatically make accessibl
 
 Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). Their page sections and composition details remain suggestions, not a validated structure or new design rules. Final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
-Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports and the reviewed Arabic companion do not block independent work.
+Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports do not block independent work.
 
 ## Design workflow integration
 
@@ -128,10 +146,11 @@ until the requested implementation supplies a reason to change them.
 ## Adopted type and control roles — 2026-10-08
 
 `--font-size-body` is `1rem`, `--font-size-label` is `0.875rem`, and
-`--font-size-meta` is `0.8125rem`. Use body size for reading text and desktop footer
-links, label size for footer section headings/utility links and mobile footer
-links, and metadata size for copyright. The earlier refinement used regular footer
-navigation weight; the reference rework below uses 600 weight for desktop links.
+`--font-size-meta` is `0.8125rem`. Use body size for reading text, label size for
+utility links and metadata size for copyright. Earlier footer roles used body size
+for desktop links and label size for group headings/mobile links, first at regular
+navigation weight and then 600 for desktop links. The current footer refinement
+below supersedes those footer roles.
 
 `--color-action-surface` (`#EAF1F8`) is the quiet background for language hover
 states in the header. Current languages now use 700 weight alone; the former
@@ -162,16 +181,50 @@ without imposing a fixed height or universal gap on translated responsive conten
 
 Desktop uses identity beside four navigation groups, followed by contact/social
 details and a divided newsletter area. Newsletter copy and controls share a row,
-then stack on smaller screens; navigation retains two columns on mobile. Group
-labels use the shared label role and desktop links use body size at 600 weight.
-The newsletter heading is fluid from 1.875rem to 3.375rem. Utilities remain compact.
+then stack on smaller screens; navigation retains two columns on mobile. Initially,
+group labels used the shared label role, desktop links body size at 600 weight
+and the newsletter heading a 1.875–3.375rem scale. The later footer refinement
+below supersedes those roles. Utilities remain compact.
 
 `--color-footer-field` is a 5% white surface on the approved navy for the visible
-signup block. Disabled email, consent and subscribe controls retain legible type;
-a localized unavailable notice and privacy link explain the current availability.
+signup block. The initial email, consent and subscribe controls were disabled,
+with a visible unavailable notice and privacy link.
 Logical layout, isolated Latin identifiers and meaningful arrow mirroring support
 Arabic while preserving physical signature corners. See [implementation and
-current verification](footer.md#reference-rework--2026-10-08).
+earlier verification](footer.md#reference-rework--2026-10-08).
+
+## Footer type and newsletter refinement — 2026-10-08
+
+Our adaptation toward the owner's reference uses these roles at the default root
+size: identity description and navigation use 18px/500; navigation
+reduces to 16px at `35rem` and below. Group labels use 16px/500. Contact labels and
+values use 20px at weights 500 and 600 respectively. The newsletter heading uses
+`clamp(1.875rem, 2.605vw, 3.125rem)` (30–50px), weight 500, line height 1.2 and
+`-0.03em` Latin tracking; Arabic keeps natural tracking.
+The owner-selected footer tagline uses white native `strong` at 18px/700 and
+an 8px gap before the description; [copy approval](footer.md#footer-identity-copy--2026-10-08)
+applies to this footer block, with English/Arabic drafts.
+
+Wide-layout spacing caps are 64px top padding, 48px from grid to contact, 32px
+before the newsletter divider, 48px after it, 32px before utilities and 40px bottom
+padding. The signup track is `min(44%, 37.5rem)` (600px), with existing tablet/mobile
+stacking. Shared alignment, colors, physical corners, SVGs, routes and contact/social
+destinations remain. The source frame's 1920 × 798px dimensions inform composition;
+height follows content, and exact native footer text styles were unavailable.
+
+Newsletter email/consent controls hold local UI state. Subscribe is a native
+`details`/`summary` disclosure: the localized `role="status"` unavailable message
+starts hidden and appears when activated, including without JavaScript. The
+privacy link is always outside the disclosure. No form action, subscription API,
+persistence or success response is introduced.
+The field uses an 80px minimum and an 18px/600, 60px Subscribe control at the
+default root size. Modern `details::details-content` support places icon, email
+and Subscribe in one row; the progressive fallback stacks Subscribe. At `35rem`
+and below, Subscribe spans the field with a 44px minimum. The consent label also
+retains a 44px target and visible checked state.
+See [footer guidance](footer.md#footer-type-and-newsletter-refinement--2026-10-08)
+and [current validation](validation.md); earlier type and disabled-state checks
+retain their original scope.
 
 ## Navigation reference composition — 2026-10-08
 
@@ -187,9 +240,10 @@ Before heroes were implemented, navy with a delivered reversed logo was the
 homepage fallback and interior pages used white and the colored logo. The later
 hero overlay is documented below. The open desktop tab
 joins a white, full-width panel with introduction, destination list and related
-route. Fine dividers, 600-weight link titles, readable secondary descriptions,
-navy hover/focus links and a quiet selected-corner related block give each role
-a clear purpose. Current links use `aria-current` and groups have an underline.
+route. The initial panel used fine dividers, 600-weight link titles, readable
+secondary descriptions, navy hover/focus links and a quiet selected-corner related
+block. The hovered-menu adaptation below supersedes that panel layout and feature
+treatment. Current links use `aria-current` and groups have an underline.
 
 The additional `Header` UI catalog text is localized wayfinding draft copy,
 not approved institutional claims or a live campaign. Related cards use existing
@@ -199,7 +253,7 @@ access. JavaScript adds focus-aware dismissal, Escape focus return, Arrow Down
 entry and optional mouse-hover discovery. Logical layout and meaningful arrow
 mirroring support Arabic without Latin tracking or reversed brand corners.
 
-Local production verification passed across FR/EN/AR at 320–1440px, including
+Initial navigation production verification passed across FR/EN/AR at 320–1440px, including
 open navigation and 200% text at 320/1440px. The 1920px single row, touch navigation,
 reduced motion and final screenshots were checked; all 28 browser tests passed.
 See [navigation sources, decisions
@@ -354,8 +408,8 @@ Source
 pixels are reference sizes; use fluid scales, real long content and legible mobile
 body sizes. Do not apply Latin negative tracking or uppercase letter spacing to
 Arabic. Font names in the native document did not supply licensed usable webfont
-files. The subsequent Latin integration is sourced separately and recorded in
-[the font guide](fonts.md); the Arabic companion remains pending.
+files. The subsequent Jakarta and owner-selected Alexandria integrations are
+sourced separately and recorded in [the font guide](fonts.md).
 
 No shared text-style references were recovered in the offline snapshot. The sole serialized local style
 definition is a hidden fill style, `Faticon color` (`33:555`, `#333333`). The
@@ -487,7 +541,7 @@ The analysis originally prioritized licensed Jakarta/Arabic typography, reusable
 hero and section-heading families, shared image/card/row anatomy, and explicit
 interactive states. At that stage the homepage remained an empty shell; source
 analysis itself did not implement those families or change runtime CSS. Later
-hero and Latin-font implementations are documented separately below and in
+hero and Jakarta/Alexandria font implementations are documented separately below and in
 [the font guide](fonts.md); detailed homepage content remains unfinished.
 Tablet/RTL, focus/keyboard behavior, long CMS content, native instance rendering,
 real image crops, licenses and final approved copy remain verification inputs.
@@ -522,9 +576,19 @@ the hero instead of clipping content. CSS dynamic viewport units and responsive
 header estimates remain functional without JavaScript. No fixed heights or
 body overflow locks are used.
 
-The narrow blue band presents Développer · Éprouver · Valoriser as navigation,
-with the verified 2011 founding year only on home/institute. No sample statistics,
-certification badge or long explanatory cards are included. Display type remains
+The hero scroll cue is a centered native anchor to `#page-sections`, positioned
+above the bottom band. Its accessible name uses the existing localized
+`Hero.continue`; the mouse outline is decorative, replacing visible text/arrow.
+At default text size, the target is 44 × 44px and the white outline is 24 × 36px.
+Wheel motion uses CSS transform/opacity for three 1.6-second cycles, with no
+animation under `prefers-reduced-motion`. The scene's bottom reserve is 72px
+instead of the former fluid 80–128px, while natural hero growth is retained.
+Executed checks and renderings remain in [the validation log](validation.md).
+
+The initial narrow blue band presented Développer · Éprouver · Valoriser as
+navigation, with the verified 2011 founding year on home/institute. The later
+homepage figure request below replaces that homepage band; other pages retain
+their pathways and institute retains its founding year. Display type remains
 fluid; Arabic uses natural tracking, logical alignment and directional arrows.
 
 ## Hero layout and typography refinements — 2026-10-08
@@ -541,10 +605,139 @@ dropdown. No permanent selected background or underline is applied; hover and
 focus styles remain. Desktop `.navigation-trigger` spans its container and centers
 the label/arrow group, including wrapped text. `.menu-toggle` centers its contents.
 
-`--font-latin` resolves the local Plus Jakarta Sans variable before the system
-fallback stack; links and native buttons inherit the body font.
+`--font-latin` resolves the local Plus Jakarta Sans variable before the sans-serif
+fallback. The shared body stack selects the restricted Alexandria face for Arabic
+and Jakarta for Latin; document defaults and all native controls inherit it.
 Découvrir and other public Latin actions therefore use the intended family.
 See [the font guide](fonts.md) for loading, subset and license details, and
 [the validation log](validation.md) for this revision's executed checks and
 rendered coverage. Earlier verification and source measurements above describe
 their respective revisions, not this change.
+
+## Header search and contact controls — 2026-10-08
+
+The owner's screenshot refinement applies the physical signature corners to both
+header controls: `var(--radius-signature)` rounds top-left/bottom-right by 20px
+at the default root size, with sharp opposite corners unchanged in RTL.
+Search uses a white surface, 1px `--color-control-outline` (`#858585`) border and
+a 24px navy (`#12345A`) magnifier. `--header-control-size` is `3rem` (48px),
+reduced to `2.75rem` (44px) at `35rem` and below; both dimensions use this size.
+Contact keeps primary `#296BB4`/white, a 48px minimum height and 24px inline
+padding. Its text inherits the shared Jakarta/Alexandria font policy.
+
+Localized text and routes remain; the contact CTA stays hidden below `70rem`,
+with contact available in the compact menu. Current checks belong in
+[the validation log](validation.md); earlier navigation evidence predates this
+control refinement.
+
+## Homepage certification badge — 2026-10-08
+
+The initial hero omitted historical certification copy. The owner's later direct
+request authorizes Certifié · ISO · 9001:2015 · Première agence de moyens certifiée
+en Afrique for the local homepage. This is an owner-supplied claim, with English
+and Arabic draft translations; it does not establish independent certification
+verification or adopt other screenshot content.
+
+`.hero-certification` is a home-only native, noninteractive aside named with the
+translated certified label and standard. ISO 9001:2015 uses LTR `bdi` isolation
+and `var(--font-latin)`; Arabic copy inherits Alexandria and natural tracking.
+The neutral surface uses `rgb(80 80 80 / 72%)` with `backdrop-filter: blur(1rem)`
+and its WebKit-prefixed equivalent. An `@supports` rule enables this treatment;
+the default `rgb(52 52 52 / 94%)` provides a darker fallback. The physical
+`var(--radius-signature)` corners remain 20px top-left/bottom-right at the default
+root size, with sharp opposite corners in RTL as well.
+
+Below `70rem`, the badge follows the introduction and precedes the actions in
+natural DOM flow. Its flex content wraps within `min(100%, 24rem)`, using 1rem
+padding. From `70rem`, `.hero-body--certified .hero-copy` uses
+`minmax(0, 1fr) 11rem` tracks and a `clamp(2rem, 4vw, 4rem)` column gap. The badge
+occupies the second track across both copy/action rows and aligns at the bottom;
+no fixed hero height is added. The five homepage figures are retained.
+See [content and behavior](heroes.md#homepage-certification-badge--2026-10-08)
+and [revision-specific validation](validation.md); earlier checks remain historical.
+
+## Shared key-figure typography — 2026-10-08
+
+The owner-attached Figma screenshot references from 2026-10-08 at 20.37.38,
+20.41.03 and 20.41.08 show Plus Jakarta Sans values at 60px, weight 600, and labels
+at 18px, weight 500. Both use 100% line height and 0% tracking, with white values
+and 70% white labels. These are styling hints, distinct from the five numeric
+claims explicitly supplied in the owner's later homepage request. The implemented
+style applies to those homepage values, the existing 2011 founding figure
+on institute and the white-panel menu adaptations below.
+
+`.key-figure` stacks `.key-figure-value` over `.key-figure-label` with the shared
+spacing token. Mobile preserves this structure rather than changing to a smaller
+value and horizontal label. The shared roles are:
+
+| Role  | Family                | Size token                 | Weight | Line height | Tracking | Color                       |
+| ----- | --------------------- | -------------------------- | ------ | ----------- | -------- | --------------------------- |
+| Value | `var(--font-latin)`   | `--font-size-figure`       | 600    | 1           | 0        | White                       |
+| Label | Inherited body family | `--font-size-figure-label` | 500    | 1 (Latin)   | 0        | `var(--color-figure-label)` |
+
+`--font-size-figure` is `clamp(2.25rem, 4.167vw, 3.75rem)`, corresponding to
+36–60px at the default root size. `--font-size-figure-label` is `1.125rem` (18px).
+Values deliberately use the Latin family for isolated Latin numerals in Arabic,
+including plus-prefixed homepage values. Arabic labels use Alexandria through
+the shared body stack, with line height
+1.45 and natural tracking; they do not inherit Latin numeral typography.
+
+`--color-figure-label` defaults to `rgb(255 255 255 / 70%)` for suitable dark
+surfaces. `.hero-highlights` overrides it to `rgb(255 255 255 / 87%)` on the
+approved `#296BB4` band, giving approximately 4.55:1 contrast instead of the
+source opacity's 3.54:1. Recheck this small-text contrast when reusing the role
+on another surface. Current application/rendered verification is recorded in
+[the validation log](validation.md); earlier hero checks are revision-specific.
+
+The homepage band uses a semantic definition list of five owner-supplied figures:
+69 supported collaborative projects, +60 patents filed, +1000 young researchers
+supported, +1100 scientific publications and +18 university laboratories
+established. Labels are definition terms and values are their descriptions;
+CSS places the values above their labels. Plus-prefixed values are isolated LTR
+in Arabic. The homepage overrides Latin label line height to 1.35 for long
+wrapping labels; Arabic retains 1.45. The grid uses auto-fit tracks with a
+minimum of `min(100%, 12rem)`,
+reduced to `min(100%, 10rem)` below `35rem`. Gaps are 24px on mobile/tablet and
+32px on wide screens at the default root size; below `35rem`, the last figure
+spans a complete row. The normal-size layout gives five columns at 1440/1920px,
+three at 768px, two at 390px and one at 320px, adapting as text is enlarged.
+The hero can grow on narrow screens to keep all five facts visible.
+This band replaces the homepage's founding-year/pathway items; the
+other pages retain their pathway behavior and institute retains its 2011 figure.
+Corrected French wording, current EN/AR drafts and the content source are recorded
+in [the hero guide](heroes.md#homepage-key-figures--2026-10-08). The user's explicit
+message supplies these claims; screenshot styling hints do not supply content
+approval.
+
+## Hovered-menu reference adaptation — 2026-10-08
+
+The latest owner clarification supersedes the earlier assumption of a universal
+three-column format and shared minimum height. The four menu screenshots define
+a coherent language of Plus Jakarta Sans type, white connected tabs/panels, thin logical dividers,
+inline diagonal arrows, navy/blue text and consistent spacing. Content determines
+the format: institute/research use featured panels; expertise/resources use compact
+panels with their destination lists occupying the remaining space.
+
+`navigationPanels` selects `featured` or `links` by group. The desktop grid retains
+three equal tracks: featured lists occupy one track beside intro/feature content;
+`.mega-menu-grid--links .mega-menu-links` spans `2 / -1` and uses two inner tracks.
+The compact list uses a 2rem column gap, keeps its intro-side 1px divider and
+removes the outer divider. Intro copy and its optional figure have a 1.5rem gap.
+Intro/feature columns use 3rem block and 2rem adjoining inline padding; lists use
+2rem padding. Height follows content without `min-block-size` or auto-pushed figures;
+scrolling remains bounded by `calc(100dvh - 100%)` beneath the actual header.
+
+Figures and related destinations are optional. Only research currently includes
+a menu figure: 69 collaborative projects, resolved from `homeFigures` and
+`Hero.figures` drafts, with navy value and muted label on white. Featured panels
+retain the existing institute/workWithUs and research/opportunities destinations;
+compact expertise/resources panels avoid additional feature/figure content.
+There is no universal minimum height or automatic bottom-pushed figure.
+
+White active tabs, current-route indicators, quiet hover surfaces, visible focus,
+logical RTL dividers and arrow mirroring remain shared elements. Native disclosures
+retain established pointer, keyboard, touch and no-JavaScript behavior. Panel
+height follows content with bounded viewport scrolling. The existing routes and
+localized drafts remain authoritative; new screenshot sample figures, campaigns
+and routes are design reference data. See [navigation formats](navigation.md#hovered-menu-reference-adaptation--2026-10-08)
+and [current validation](validation.md); earlier checks retain their original scope.

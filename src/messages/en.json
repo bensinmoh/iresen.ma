@@ -42,7 +42,8 @@
     "sitemap": "Sitemap"
   },
   "Footer": {
-    "description": "Founded in 2011, <brand>IRESEN</brand> supports Morocco’s energy transition through applied research and innovation in renewable energy and energy efficiency.",
+    "tagline": "Research that moves energy forward.",
+    "description": "Linking research to energy needs to develop, test and create value from innovative solutions with our partners.",
     "addressLabel": "Address",
     "address": "16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Morocco",
     "phoneLabel": "Call us",
@@ -126,6 +127,10 @@
     "homeTitle": "Research for the energy transition.",
     "discover": "Discover",
     "continue": "Explore further",
+    "certification": {
+      "label": "Certified",
+      "description": "Africa’s first certified research funding agency."
+    },
     "founded": "IRESEN established",
     "pathways": "Develop, test and transfer",
     "stages": {
@@ -160,6 +165,14 @@
       "cookies": "Understand cookies and browsing preferences.",
       "accessibility": "Information about the accessibility of this website.",
       "sitemap": "Direct access to the Institute’s pages and resources."
+    },
+    "figuresLabel": "Key figures",
+    "figures": {
+      "collaborativeProjects": "Collaborative projects supported",
+      "patents": "Patents filed",
+      "youngResearchers": "Young researchers supported",
+      "publications": "Scientific publications",
+      "universityLaboratories": "University laboratories established"
     }
   }
 }

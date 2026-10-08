@@ -32,13 +32,21 @@ marketing page.
   [Navigation documentation](docs/navigation.md) records sources and verification.
   The substantial trilingual navy footer follows the analyzed native Figma reference
   and owner-reattached Footer.png, retaining the requested newsletter CTA.
+  Text beneath its logo uses owner-selected French copy for this footer block
+  only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
 - All 22 approved pages have lightweight introductory heroes with five composition
   styles, 17 illustrative backgrounds from the supplied Figma source, short FR/EN/AR
   wayfinding drafts and the Développer · Éprouver · Valoriser reading framework.
-  Only the established founding year (2011) appears as a numeric fact; screenshot
-  statistics and certification claims are omitted. The header-to-band landing
+  The homepage hero band now presents five owner-supplied figures: 69 collaborative
+  projects supported, +60 patents filed, +1000 young researchers supported, +1100
+  scientific publications and +18 university laboratories established. These
+  replace its founding-year/pathway items; other pages retain their pathways,
+  and institute retains the established 2011 founding year. French labels come
+  from the owner's request with spelling corrected; EN/AR labels remain drafted
+  translations. Figma screenshots supply typography hints, rather than approval
+  of numeric claims. The header-to-band landing
   measures the current viewport and grows for content when necessary. See
   [hero documentation](docs/heroes.md).
 - Content sections below the heroes remain honest empty states; the full
@@ -49,10 +57,10 @@ marketing page.
   render it. See [the asset inventory](docs/asset-inventory.md#hero-video) for source
   metadata, rights limits and the future derivative/poster requirements.
 - Search and contact currently have truthful unavailable states. The newsletter
-  form remains visible as requested, with disabled email/consent/subscribe
-  controls, a localized unavailable notice and privacy link. Signup has no
-  provider, subscription endpoint or data storage. No delivery or production
-  service should be implied by a visual control alone.
+  keeps local editable email/consent controls; Subscribe opens a native disclosure
+  with the localized unavailable message, hidden initially. The privacy link stays
+  accessible. No subscription is submitted or stored, and no success is reported;
+  signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).
 
 See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
 for previous checks; neither proves a later change was tested.
@@ -83,8 +91,11 @@ experimentation; valorisation and transfer; human capabilities and expert
 networks; partnerships, cooperation and resources. They guide editorial coverage
 rather than define six additional menu entries or an organigram.
 
-Final homepage modules, factual claims and institutional translations remain editorial
-inputs. Internal narratives and sample export content are not publishable facts.
+Remaining homepage modules, further factual claims and institutional translations
+remain editorial inputs. The five requested homepage figures are recorded in
+[the hero content guide](docs/heroes.md#homepage-key-figures--2026-10-08), sourced
+from the owner's explicit message. Internal narratives and sample export content
+are not publishable facts.
 Do not invent figures, facilities, commitments, people, testimonials or results
 to complete a composition. Draft translations must not be labelled approved.
 

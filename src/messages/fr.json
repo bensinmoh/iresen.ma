@@ -42,7 +42,8 @@
     "sitemap": "Plan du site"
   },
   "Footer": {
-    "description": "Créé en 2011, <brand>IRESEN</brand> accompagne la transition énergétique du Maroc par la recherche appliquée et l’innovation dans les énergies renouvelables et l’efficacité énergétique.",
+    "tagline": "La recherche qui fait avancer l’énergie.",
+    "description": "Relier la recherche aux besoins énergétiques pour développer, éprouver et valoriser, avec nos partenaires, des solutions innovantes.",
     "addressLabel": "Adresse",
     "address": "16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Maroc",
     "phoneLabel": "Nous appeler",
@@ -126,6 +127,10 @@
     "homeTitle": "La recherche au service de la transition énergétique.",
     "discover": "Découvrir",
     "continue": "Explorer la suite",
+    "certification": {
+      "label": "Certifié",
+      "description": "Première agence de moyens certifiée en Afrique."
+    },
     "founded": "Création d’IRESEN",
     "pathways": "Développer, éprouver et valoriser",
     "stages": {
@@ -160,6 +165,14 @@
       "cookies": "Comprendre les cookies et les préférences de navigation.",
       "accessibility": "Les informations relatives à l’accessibilité du site.",
       "sitemap": "Un accès direct aux pages et aux ressources de l’Institut."
+    },
+    "figuresLabel": "Chiffres clés",
+    "figures": {
+      "collaborativeProjects": "Projets collaboratifs soutenus",
+      "patents": "Brevets déposés",
+      "youngResearchers": "Jeunes chercheurs soutenus",
+      "publications": "Publications scientifiques",
+      "universityLaboratories": "Laboratoires universitaires mis en place"
     }
   }
 }

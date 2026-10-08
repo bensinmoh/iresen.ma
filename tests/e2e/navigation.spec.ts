@@ -58,6 +58,11 @@ test('desktop panels dismiss on Escape, outside pointer and focus without moving
   await trigger.hover()
   await expect(group).toHaveAttribute('open', '')
   await expect(page.locator('body')).toBeFocused()
+  // The connected tab must let the pointer reach both destination columns.
+  await group.locator('.mega-menu-links a').first().hover()
+  await expect(group).toHaveAttribute('open', '')
+  await group.locator('.mega-menu-feature').hover()
+  await expect(group).toHaveAttribute('open', '')
   await page.keyboard.press('Escape')
   await expect(group).not.toHaveAttribute('open', '')
   await expect(page.locator('body')).toBeFocused()
@@ -152,7 +157,11 @@ for (const locale of locales) {
         await expect(link).toContainText(messages.Pages[id])
         if (id === 'governance') await expect(link).toHaveAttribute('aria-current', 'page')
       }
-      await expect(group.locator('.mega-menu-feature')).toBeVisible()
+      if (definition.id === 'institute' || definition.id === 'research') {
+        await expect(group.locator('.mega-menu-feature')).toBeVisible()
+      } else {
+        await expect(group.locator('.mega-menu-feature')).toHaveCount(0)
+      }
       await page.keyboard.press('Escape')
     }
 

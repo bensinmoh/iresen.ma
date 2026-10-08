@@ -55,9 +55,10 @@ navy caption does not override the website's approved navy text role.
 The board names Plus Jakarta Sans with Regular, Medium, SemiBold and Bold roles.
 Source Medium/SemiBold family strings need normalization to actual licensed
 webfont metadata. Connector font rendering does not supply redistributable font
-files or an approved Arabic companion. The website already has a separately
-verified, self-hosted Latin variable font; follow [its provenance](fonts.md) and
-retain the Arabic fallback until its companion is reviewed.
+files. The current public website uses separately verified, self-hosted Plus
+Jakarta Sans for Latin and the owner's selected Alexandria for Arabic across
+locales; see [their provenance](fonts.md). These integrations are separate from
+the Latin typography evidence in this review.
 
 | Board role    | Node        | Measured size / weight | Line height / tracking |
 | ------------- | ----------- | ---------------------- | ---------------------- |

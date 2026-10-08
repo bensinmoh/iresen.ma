@@ -203,6 +203,431 @@ These checks cover local Chromium rendering and the documented interactions.
 Cross-browser/screen-reader review and the reviewed Arabic companion remain
 separate work. Current PR CI and merge status are recorded by GitHub.
 
+## Homepage figures and shared figure typography — 2026-10-08
+
+The homepage band now shows the owner's five supplied values: 69, +60, +1000,
++1100 and +18, paired with corrected French labels and drafted English/Arabic
+translations. The user message supplies the content; the attached Figma
+screenshots supply the typography reference. Other pages retain their pathways,
+and institute retains its 2011 founding figure.
+
+Final local checks passed `pnpm lint`, `pnpm typecheck`, `pnpm format:check`, 8 unit tests,
+`pnpm build` and all 35 production Chromium browser tests. The build compiled
+without warnings. Existing homepage axe checks pass in all three locales; hero
+checks now verify the five values and the replacement of homepage pathway items.
+CMS integration checks were not repeated for this UI/content change.
+
+An additional 24 production-rendered cases passed: FR/EN/AR at
+320/390/768/1120/1440/1920px, plus 200% root text at 320/1440px. Checks confirmed
+no horizontal overflow or header/title overlap, all five values, unbroken signed
+numbers, labels below their values, weight 600 values, weight 500 labels and
+18px labels at default text size. Values reach 60px at 1440/1920px and use zero
+tracking; Chromium serializes this as `normal`. Enlarged text adapts the column
+count and grows the hero without clipping content. Narrow homepages may therefore
+extend beyond one viewport.
+
+Chromium's rendered-font inspection confirms the self-hosted Plus Jakarta Sans
+for figure numerals in French, English and Arabic.
+
+Inspected final full-page captures:
+
+- [French, 1440px](screenshots/home-figures-fr-1440.png)
+- [Arabic, 390px](screenshots/home-figures-ar-390.png)
+
+The French view presents five aligned figures in one row; Arabic mobile presents
+two columns followed by a full-width final item, in natural RTL reading order.
+An independent source and screenshot review found no material issues with
+semantic pairing, numeral isolation, typography or wrapping. These results cover
+local Chromium rendering; broader browser and screen-reader review remain
+separate work. The figure changes remain local and have not been pushed.
+
+## Hovered-menu reference adaptation — 2026-10-08
+
+These results describe the earlier uniform-panel revision. The later design-element
+clarification and content-based formats below supersede its layout assumptions.
+
+The desktop menu adapts the owner's attached screenshot into three equal white
+columns with full-height dividers and a connected white active tab. Introduction
+copy sits above a supporting figure; destinations form a single vertical list;
+the plain related-destination column centers its content vertically. Existing
+routes, localized draft copy and supplied figures remain the content sources.
+See [the navigation decisions](navigation.md#hovered-menu-reference-adaptation--2026-10-08).
+
+Local lint, strict types, 8 unit tests, the production build and all 35 Chromium
+browser tests passed. The existing hover-dismissal test also verifies that the
+pointer can move from the tab into both destination columns while the panel stays
+open. Keyboard focus/dismissal, touch-compatible disclosures, no-JavaScript
+access, compact navigation, localized destinations and existing axe checks pass.
+CMS integration tests were not repeated for this presentation change.
+
+An additional 48 production-rendered cases passed: all four groups in FR/EN/AR
+at 1120/1440/1920px, plus 200% root text at 1440px. These check equal columns,
+full-height separators, connected white tabs, the viewport scroll bound,
+visible navy figures, intact signed numerals and no horizontal overflow. Each
+destination title and description remains reachable through panel scrolling;
+Escape restores trigger focus. At enlarged text size a complete link target can
+be taller than the visible panel, while its individual text blocks remain
+readable through scrolling.
+
+Final mouse-hover captures, after the color transition settles:
+
+- [French, 1920px](screenshots/hover-menu-fr-1920.png)
+- [French, 1440px](screenshots/hover-menu-fr-1440.png)
+- [Arabic, 1440px](screenshots/hover-menu-ar-1440.png)
+- [English resources, 1120px](screenshots/hover-menu-resources-en-1120.png)
+
+Rendered review confirms the reference composition, shared gutters, white-panel
+contrast, natural RTL order and mirrored diagonal title arrows. Earlier menu
+captures document their original revision. Independent source/screenshot review
+found no material menu regressions. The existing English header label
+“Experimentation” still wraps within the word at 1120px; this panel change does
+not alter that header behavior. This verification covers local
+Chromium rendering, not broad browser/screen-reader conformance or exact Figma
+measurement. Changes are saved locally and have not been pushed.
+
+## Reference fidelity review — 2026-10-08
+
+This review used the earlier interpretation of the screenshots as composition
+targets. The owner's later clarification below makes them design-element references.
+
+Recorded the owner's direction in AGENTS.md, DESIGN.md, the design workflow and
+shared specification: attached Figma screenshots define the visual target;
+Taste/Impeccable support refinements within that direction. Read the repository
+overrides and relevant preservation guidance; Impeccable's context loader ran
+successfully for SiteHeader using the ignored local cache.
+
+A bounded independent review of the retained menu/figure captures found no
+unnecessary compositional or surface departure requiring a new UI edit. Existing
+adaptations retain the approved palette, owner-supplied figures, current routes,
+readable contrast, responsive content and Arabic behavior. No application source
+changed and application/database/browser checks were not repeated. This review
+does not establish pixel-exact Figma measurement. Documentation changes remain
+local and have not been pushed.
+
+Targeted Markdown formatting, added local links/heading anchors and
+`git diff --check` passed.
+
+## Content-based menu formats — 2026-10-08
+
+The latest owner clarification treats screenshots as references for typography,
+colors, white tabs/panels, dividers, arrows and spacing. Actual content determines
+the layout. Institute and research use featured panels; expertise and resources
+use compact introduction/link panels. Only research includes the existing
+69-project figure. The universal minimum height and bottom-pushed statistics
+were removed; optional content is omitted structurally. Existing routes, catalog
+drafts and all homepage figures remain in place.
+
+Local lint, strict types, 8 unit tests, the production build and all 35 Chromium
+browser tests passed. The browser checks cover both featured and compact menus,
+all destinations, hover continuity, keyboard dismissal/focus, no-JavaScript
+navigation, compact headers, locale behavior and existing axe checks. CMS
+integration checks were not repeated for this presentation change.
+
+An additional 48 production-rendered cases passed: all four groups in FR/EN/AR
+at 1120/1440/1920px, plus 200% root text at 1440px. Checks cover natural height,
+the configured formats/optional content, connected white tabs, viewport containment,
+row-major visual order matching destination DOM order, RTL mirroring, individually
+reachable link text through scrolling and Escape focus restoration. Normal French
+panels at 1440px measure approximately 279px (institute), 429px (research), 225px
+(expertise) and 404px (resources); their height follows the actual content.
+
+Independent layout/source assessment identified the uniform minimum height and
+forced supporting content as the relevant structural problems. Impeccable's
+scoped layout detector returned zero findings before and after the changes;
+manual inspection confirmed the new formats resolve those problems while
+retaining shared spacing tokens, logical properties and the native focus targets.
+
+Final mouse-hover captures:
+
+- [French institute](screenshots/menu-format-institute-fr-1440.png)
+- [French research](screenshots/menu-format-research-fr-1440.png)
+- [French expertise](screenshots/menu-format-expertise-fr-1440.png)
+- [French resources](screenshots/menu-format-resources-fr-1440.png)
+- [Arabic expertise](screenshots/menu-format-expertise-ar-1440.png)
+- [English resources, 1120px](screenshots/menu-format-resources-en-1120.png)
+
+Inspected all six captures; independent review found no material issues with
+content grouping, alignment, typography, optional roles or Arabic presentation.
+Repository formatting, added screenshot links and `git diff --check` also passed.
+
+These checks cover local Chromium rendering and the documented behaviors;
+broader browser/screen-reader conformance remains separate work. Earlier captures
+and test records retain their original scope. Changes remain local and have not
+been pushed.
+
+## Centered hero scroll cue — 2026-10-08
+
+Replaced the visible continuation text/arrow with a centered native scroll-wheel
+link above the hero band. The existing translated accessible name remains; the
+graphic is decorative. Reducing the lower reserve from 80–128px to 72px brings
+the homepage CTA 18px closer to the figures at the checked 1440 × 900px desktop
+size, with 16px between the actions and the 44px link target.
+
+Lint, strict types, all 8 unit tests, the production build, formatting and all
+36 Chromium browser tests passed. The added browser check covers FR/EN/AR,
+desktop/mobile centering, target size, action/band separation, keyboard focus
+and activation, and reduced motion. The no-JavaScript Arabic check now activates
+the scroll cue. CMS integration checks were not repeated for this presentation
+change.
+
+An additional 144 production-rendered cases passed: all five hero compositions
+plus the institute hero in FR/EN/AR at 320/390/768/1120/1440/1920px, and 200%
+root text at 320/1440px after the existing resize observer settles. Checks cover
+centering, target size, copy/header clearance, band separation, the shared bottom
+reserve and absence of horizontal overflow.
+
+Animation-frame inspection confirmed downward wheel motion and fading with
+stable outline geometry. Three 1.6-second cycles finish within 4.8 seconds, then
+restore the visible static wheel. Reduced-motion mode produces no animations.
+Impeccable's scoped layout detector returned zero findings; independent source
+review found no material motion, semantics or layout issues.
+
+Final captures:
+
+- [French desktop](screenshots/hero-scroll-fr-1440.png)
+- [Arabic mobile, reduced motion](screenshots/hero-scroll-ar-390.png)
+
+Both captures were inspected for placement, contrast, spacing and RTL. Checks
+cover local Chromium; broader browser and screen-reader conformance remains
+separate work. Changes remain local and have not been pushed.
+
+## Public fonts and Alexandria — 2026-10-08
+
+The owner requested Plus Jakarta Sans throughout the public site and identified
+Alexandria as the Arabic family. The initial production audit confirmed that
+French/English text already rendered Jakarta, while the document root retained
+a system stack and the Arabic body override also forced system fonts for Latin
+words. The new shared stack uses the Unicode-restricted Alexandria face for
+Arabic and Jakarta for Latin in every locale. Document defaults, Tailwind sans
+utilities, native controls and the decorative ResearchGate text mark now share
+that policy. CMS/admin retains its separate layout.
+
+Alexandria's pinned archive SHA-512, binary/license SHA-256 values, byte identity,
+source metadata, normal variable weight axis and original OFL notice were
+verified independently. The 31,348-byte Arabic subset covers every Arabic-script
+character in the current catalog; together with Jakarta it covers all 74 unique
+Arabic catalog characters. The loader preserves the upstream Unicode range.
+See [font provenance and loading](fonts.md).
+
+Lint, strict types, all 8 unit tests, the production build, formatting and all
+39 Chromium browser tests passed. Three new regression tests inspect actual
+rendered font names through Chrome's font API, covering hero copy/actions,
+figures, header and compact controls, every desktop menu, footer text and
+newsletter controls in FR/EN/AR. They also check Arabic language labels on Latin
+pages and Latin names/numerals on Arabic pages. CMS integration checks were not
+repeated for this typography change.
+
+An independent production audit passed 104 actual-font samples, including Arabic
+without JavaScript and the used 400/500/600/700 weights. Arabic glyphs rendered in
+custom Alexandria; Latin glyphs and figures rendered in custom Plus Jakarta Sans.
+Both local WOFF2 requests returned HTTP 200 with no failed or third-party font
+requests. No system-font fallback appeared in the sampled rendered text.
+
+Additional rendering checks passed 144 hero cases across all five compositions
+plus institute in FR/EN/AR at 320/390/768/1120/1440/1920px and 200% root text at
+320/1440px. After font loading and resize-observer updates, text/cue/header
+clearance, band separation, centering and horizontal containment remained sound.
+All 66 localized routes were checked for visible headings and containment, plus
+36 desktop menu cases across all groups/locales at 1120/1440/1920px.
+Impeccable's scoped type/layout detector returned zero findings.
+
+Final captures:
+
+- [Arabic desktop hero](screenshots/fonts-alexandria-ar-1440.png)
+- [Arabic mobile hero](screenshots/fonts-alexandria-ar-390.png)
+- [Arabic hovered research menu](screenshots/fonts-alexandria-menu-ar-1440.png)
+
+All three were inspected; independent review confirmed shaping, diacritics,
+hierarchy, CTA/figure spacing, mixed-script numerals and RTL arrows. Documentation
+formatting, local links and diff whitespace were checked. This records local
+Chromium coverage; broader browser/screen-reader verification remains separate.
+Changes remain local and have not been pushed.
+
+## Homepage certification badge — 2026-10-08
+
+Added the owner's explicitly requested ISO 9001:2015 certification badge to the
+homepage hero. Its French claim comes from the supplied screenshots; English and
+Arabic are draft equivalents. This records supplied content, without independent
+verification of certification status or the first-in-Africa claim. Other
+historical screenshot copy, routes and statistics were not imported.
+
+The badge uses a translucent neutral tint with actual 16px backdrop blur and a
+darker fallback tint for browsers without that filter. The existing physical
+20px top-left/bottom-right rounding remains unchanged in RTL; top-right and
+bottom-left corners are sharp. The desktop grid bottom-aligns the badge beside
+the copy; smaller screens place it between the description and actions, preserving
+the action area's 72px clearance above the figures. Text stays native and the
+standard is LTR isolated. No new client dependency or image asset was added.
+
+Lint, strict types, all 8 unit tests, the production build and all 39 Chromium
+browser tests passed. Existing all-page hero checks now verify the certification
+is visible on home and absent on other pages, while retaining the five requested
+figures and section navigation. CMS integration checks were not repeated for this
+presentation change.
+
+An additional 27 homepage cases passed: FR/EN/AR at
+320/390/768/1024/1120/1440/1920px plus 200% root text at 320/1440px. Checks covered
+badge/text containment, desktop alignment, compact wrapping, physical corners,
+LTR standard isolation, real blur/translucency, title/header clearance, cue
+separation and unchanged action-to-band spacing. The Arabic badge also remained
+visible without JavaScript.
+
+Independent source analysis calculated a minimum 4.70:1 white-text contrast over
+the brightest possible homepage photo after its existing shade, and 10.34:1 for
+the fallback tint even over unshaded white. Text-free production backdrop samples
+at 1440px measured minimum contrast of 8.94:1 in FR/EN and 8.81:1 in AR across the
+interior text area. These sampled values cover the current image and layout;
+the supported filter rendered in local Chromium. Unsupported-browser rendering
+was not independently exercised. Impeccable's scoped type/layout detector
+returned zero findings.
+
+Final captures:
+
+- [French desktop](screenshots/hero-certification-fr-1440.png)
+- [Arabic mobile](screenshots/hero-certification-ar-390.png)
+- [English narrow layout](screenshots/hero-certification-en-320.png)
+
+All three captures were inspected, with independent review confirming wrapping,
+alignment, corners, mixed-script text and action/cue clearance. Documentation
+formatting, local links and diff whitespace were checked. Changes remain local
+and have not been pushed.
+
+## Header search and contact controls — 2026-10-08
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+39 Chromium browser tests passed. This styling change did not repeat CMS
+integration checks. The existing browser suite verifies rendered Jakarta and
+Alexandria fonts, navigation, keyboard use, RTL and automated accessibility.
+
+An additional 54 rendered cases passed: FR/EN/AR on photo and white headers at
+320/390/768/1024/1120/1440/1920px, plus 200% root text at 320/1440px. Checks covered
+square search dimensions, centered icon, physical signature corners, contact
+height/padding, colors, containment and compact visibility. Native Enter
+navigation and visible focus for both controls, and the search hover tint,
+were checked in each locale. The white header was exercised on a localized 404.
+
+Calculated contrast is 3.69:1 for the gray outline against white, 12.62:1 for
+the navy search icon and 5.45:1 for white contact text on primary blue. Scoped
+Impeccable type/layout analysis returned zero findings. These checks do not
+establish broader browser coverage or manual screen-reader conformance.
+
+Final captures were inspected by two reviewers:
+
+- [French photo header](screenshots/header-controls-fr-hero-1440.png)
+- [French white header](screenshots/header-controls-fr-light-1440.png)
+- [Arabic desktop](screenshots/header-controls-ar-hero-1440.png)
+- [Arabic mobile](screenshots/header-controls-ar-hero-390.png)
+
+An early white-header capture was replaced after rendering settled; the final
+contact label is visible and CDP confirms its actual custom Plus Jakarta Sans
+glyphs. Documentation formatting, local links and diff whitespace were checked.
+Changes remain local and have not been pushed.
+
+## Footer type and newsletter refinement — 2026-10-08
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+39 Chromium browser tests passed. Existing newsletter coverage now verifies
+initially hidden feedback, editable email/consent, visible checked state,
+keyboard opening/closing, focus, malformed-email attempts, privacy access and
+no navigation or data submission. The no-JavaScript footer test exercises an
+actual subscription attempt in FR/EN/AR. CMS integration checks were not repeated
+for this presentation and native interaction change.
+
+An additional 27 footer cases (54 collapsed/expanded views) passed: FR/EN/AR
+at 320/390/768/1024/1120/1440/1920px and 200% root text at 320/1440px. Checks covered
+containment, feedback visibility, control sizes, checked state, type weights,
+Latin/Arabic tracking and physical corners. The wide field measures 600 × 80px
+with a 60px Subscribe control. The French footer has a natural height of about
+884px at 1920px; the source's 798px height is not imposed on current content.
+
+Existing font tests confirm actual custom Jakarta/Alexandria glyph rendering in
+all three locales, including footer links, copy, email and Subscribe. Calculated
+contrast is 7.47:1 for muted footer text, 6.45:1 for contact values, 6.47:1 for the
+email placeholder, 10.93:1 for entered email and 5.45:1 for Subscribe text.
+Scoped Impeccable type/layout analysis returned zero findings. These checks do not
+establish full accessibility conformance, manual screen-reader results or other
+browser coverage; the older-browser stacked layout was source-reviewed.
+
+Final captures:
+
+- [French desktop](screenshots/footer-refined-fr-1920.png)
+- [French at 1440px](screenshots/footer-refined-fr-1440.png)
+- [Feedback after an attempt](screenshots/footer-refined-fr-1920-feedback.png)
+- [Arabic desktop](screenshots/footer-refined-ar-1440.png)
+- [Arabic mobile](screenshots/footer-refined-ar-390.png)
+- [English tablet](screenshots/footer-refined-en-768.png)
+
+Two reviewers inspected the typography, spacing, controls and RTL layouts.
+Default captures use neutral focus. Chromium's tall element capture also painted
+the unfocused skip link from above the viewport; its negative viewport bounds
+were verified, and it was excluded from the two affected captures with temporary
+screenshot styling. The application's skip-link behavior was unchanged.
+Documentation formatting, local links and diff
+whitespace were checked. Changes remain local and have not been pushed.
+
+## Footer identity copy — 2026-10-08
+
+The French tagline and paragraph were compared literally with the owner's
+request. Only the below-logo text, its local emphasis/gap and the complete
+FR/EN/AR catalogs changed at runtime. English and Arabic equivalents remain drafts.
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+11 existing footer/font browser tests passed. The latter confirm actual custom
+font rendering, footer destinations, newsletter attempts, RTL and no-JavaScript
+use. No new tests were added for this copy change; the wider browser and CMS
+integration suites were not repeated.
+
+An additional 12 identity-block cases passed: FR/EN/AR at 320/390/1440px, plus
+200% root text at 320px. Checks covered exact catalog text, two paragraphs,
+white 700-weight emphasis and text/viewport containment. The local type/layout
+detector returned zero findings. These checks do not establish other-browser or
+manual screen-reader coverage.
+
+The [French desktop identity](screenshots/footer-identity-fr-1440.png) and
+[Arabic mobile identity](screenshots/footer-identity-ar-390.png) captures were
+inspected. As in the preceding capture pass, temporary screenshot styling excluded
+the offscreen skip link without changing application behavior. Documentation
+formatting, local links and diff whitespace were checked. Changes remain local
+and have not been pushed.
+
+## Apex Leaf browser icon — 2026-10-08
+
+Lint, strict types and the production build passed. Chromium verified one active
+SVG icon link with `sizes="any"` on the French, English and Arabic home pages.
+The selected URL returned HTTP 200 with the SVG content type and the original
+Apex Leaf's SHA-256. All seven supplied brand SVG hashes remain unchanged.
+
+At proportional square viewports of 16/32/64px, the tightly framed leaf occupies
+the full icon height. Its nontransparent raster bounds are respectively
+10 × 16, 20 × 32 and 40 × 64px, compared with 6 × 10, 12 × 18 and 24 × 36px
+for the retained padded favicon. The vector geometry is about 77% larger in
+each dimension; antialiasing rounds the occupied pixel bounds at small sizes.
+Proportions remain intact, with transparent space beside the tall leaf when
+fitted into a square browser slot.
+
+The [16/32/64px comparison](screenshots/favicon-apex-comparison.png) was inspected.
+This is a targeted metadata/asset check; unit, broader browser and CMS integration
+suites were not repeated, and other browsers or an operating-system tab strip
+were not manually reviewed. Documentation formatting, local links and diff
+whitespace were checked. Changes remain local and have not been pushed.
+
+## Completed design batch before push — 2026-10-08
+
+The final built application passed all 8 unit tests and all 39 Chromium browser
+tests after the footer copy and favicon changes. These include actual custom-font
+rendering, all localized route heroes, responsive/enlarged-text layouts, keyboard
+and no-JavaScript menus, newsletter attempts, automated homepage accessibility,
+locale switching and anonymous CMS restrictions. Earlier lint, strict types,
+production build and focused visual/asset checks apply to the same runtime source.
+
+The branch incorporates the newer live-Figma guidance from `main`, retaining
+both its source evidence and the owner's latest implemented choices. Current
+font guidance names installed Alexandria and Jakarta; source-era observations
+remain historical. Documentation formatting, local links, pinned skill/brand
+hashes and diff whitespace were checked after reconciliation. GitHub CI and merge
+results are recorded by the batch's pull request; production deployment remains
+a separate action.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

@@ -10,18 +10,23 @@
   --color-text: var(--color-navy);
   --color-text-muted: #52667a;
   --color-border: #dce4e9;
+  --color-control-outline: #858585;
   --color-focus: #296bb4;
   --color-action-surface: #eaf1f8;
   --color-footer-muted: #b9c9da;
   --color-footer-divider: rgb(255 255 255 / 16%);
   --color-footer-control: #1b426b;
   --color-footer-field: rgb(255 255 255 / 5%);
-  --font-latin: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
-  --font-arabic: Tahoma, Arial, sans-serif;
-  --font-body: var(--font-latin);
+  /* The Arabic-only face must precede Jakarta's metric-adjusted loading fallback. */
+  --font-latin: var(--font-plus-jakarta-sans), sans-serif;
+  --font-arabic: var(--font-alexandria), var(--font-latin);
+  --font-body: var(--font-arabic);
   --font-size-body: 1rem;
   --font-size-label: 0.875rem;
   --font-size-meta: 0.8125rem;
+  --font-size-figure: clamp(2.25rem, 4.167vw, 3.75rem);
+  --font-size-figure-label: 1.125rem;
+  --color-figure-label: rgb(255 255 255 / 70%);
   --container-width: 120rem;
   --gutter: clamp(1.25rem, 3.125vw, 4rem);
   --space-1: 0.25rem;
@@ -40,8 +45,4 @@
   --color-hero-shade: rgb(5 17 29 / 78%);
   --z-header: 10;
   --z-skip: 30;
-}
-
-html[lang='ar'] {
-  --font-body: var(--font-arabic);
 }

@@ -8,19 +8,33 @@ The owner authorized website use and repository copying of the supplied assets. 
 
 SVG XML was inspected for geometry/color metadata and contains no scripts or external references. This is source inspection, not a claim that the absent website screenshots or Illustrator boards were visually reviewed. Browser rendering is a separate application check.
 
-| Exact source filename        | Role                      | Repository file                    | Verified fills           |
-| ---------------------------- | ------------------------- | ---------------------------------- | ------------------------ |
-| `IRESEN Primary Logo.svg`    | Primary brand mark        | `public/brand/logo-primary.svg`    | `#12345A`, `#296BB4`     |
-| `IRESEN Colored Logo.svg`    | Master for light surfaces | `public/brand/logo-color.svg`      | `#12345A`, `#296BB4`     |
-| `IRESEN Logo Dark Mode.svg`  | Two-color reversed mark   | `public/brand/logo-dark.svg`       | White, `#296BB4`         |
-| `IRESEN Logo White.svg`      | Reversed mark             | `public/brand/logo-white.svg`      | White                    |
-| `IRESEN Logo Monochrome.svg` | Supplied monochrome mark  | `public/brand/logo-monochrome.svg` | White; not navy-on-white |
-| `Apex Leaf.svg`              | Standalone motif          | `public/brand/apex-leaf.svg`       | `#296BB4`                |
-| `Favicon.svg`                | Browser icon              | `public/brand/favicon.svg`         | `#296BB4`                |
+| Exact source filename        | Role                         | Repository file                    | Verified fills           |
+| ---------------------------- | ---------------------------- | ---------------------------------- | ------------------------ |
+| `IRESEN Primary Logo.svg`    | Primary brand mark           | `public/brand/logo-primary.svg`    | `#12345A`, `#296BB4`     |
+| `IRESEN Colored Logo.svg`    | Master for light surfaces    | `public/brand/logo-color.svg`      | `#12345A`, `#296BB4`     |
+| `IRESEN Logo Dark Mode.svg`  | Two-color reversed mark      | `public/brand/logo-dark.svg`       | White, `#296BB4`         |
+| `IRESEN Logo White.svg`      | Reversed mark                | `public/brand/logo-white.svg`      | White                    |
+| `IRESEN Logo Monochrome.svg` | Supplied monochrome mark     | `public/brand/logo-monochrome.svg` | White; not navy-on-white |
+| `Apex Leaf.svg`              | Selected browser icon; motif | `public/brand/apex-leaf.svg`       | `#296BB4`                |
+| `Favicon.svg`                | Original favicon retained    | `public/brand/favicon.svg`         | `#296BB4`                |
 
 Latest colored/dark wordmark viewBoxes are `0 0 696 194.9`; white/monochrome remain `0 0 695.98 194.94` (all approximately 3.57:1). The primary mark is `0 0 1262.5 508.54` (approximately 2.48:1), the apex is `0 0 177.3 287`, and the favicon is square (`0 0 508.5 508.5`). Reserve dimensions proportionally; do not redraw the wordmark as text. The prior private archive retained source filenames under `private-references/brand/` and superseded versions under its ignored `previous/` directory with hash suffixes. Verify access to that archive before inspecting originals.
 
-The latest owner-supplied favicon now uses `#296BB4`, matching the other blue identity assets and UI tokens. Its source SHA-256 is `b897f8993b00234b756d9f63d2adad287ae7a22dbd4112671e462d60635dab07`. All corrected uploads were copied byte-identically; no automatic recoloring was applied.
+The retained owner-supplied `Favicon.svg` uses `#296BB4`, matching the other blue identity assets and UI tokens. Its original source SHA-256 is `b897f8993b00234b756d9f63d2adad287ae7a22dbd4112671e462d60635dab07`. All corrected uploads were copied byte-identically; no automatic recoloring was applied.
+
+### Active browser icon — 2026-10-08
+
+To address the owner's request without the original favicon's canvas padding,
+public Next.js metadata selects the existing `/brand/apex-leaf.svg`, with SVG type and
+`sizes="any"`. Its tight `177.3 × 287` viewBox replaces the active `508.5 × 508.5`
+favicon canvas while preserving the vector's proportions, `#296BB4`, transparency
+and orientation. The changed URL selects the Apex Leaf separately from the old
+cached favicon path.
+
+All seven original SVGs and their [source hashes](brand-assets.json) are unchanged;
+`public/brand/favicon.svg` remains available as the supplied original. This is an
+active-icon selection, with no derived SVG, ICO, PWA or touch-icon asset added.
+Current browser checks belong in [the validation log](validation.md).
 
 ## Hero video
 
@@ -152,7 +166,7 @@ Preserve source spellings in this inventory, including `Broundaries`. Proposed a
 
 Native Figma editable structure, mobile frames and serialized interaction records have been inspected. Native rendering is now reviewed for the typography, spacing and palette sections only. Full-page comparisons, effective inherited-instance/prototype behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
 
-Licensed Plus Jakarta Sans Latin webfont files are now installed independently of the unreadable ZIP; see the font record below. An approved Arabic companion and reviewed original public imagery remain follow-up inputs. Their presence in the unreadable ZIP is unknown. Once accessible, record their licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
+Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
 ## Introductory hero backgrounds — 2026-10-08
 
@@ -186,10 +200,29 @@ copied without modifying its bytes to
 `src/fonts/plus-jakarta-sans/plus-jakarta-sans-latin-variable.woff2`.
 `next/font/local` emits a same-origin public font asset with a generated filename,
 preload and swap loading through the public frontend layout. No remote font
-service or runtime font package is used. Arabic keeps its current Tahoma/Arial
-stack until its companion family is reviewed.
+service or runtime font package is used. The shared public stack now selects
+Jakarta for Latin and Alexandria for Arabic characters in every locale.
 
 The archive's npm SHA-512 integrity, repository SHA-256 values, upstream source,
 subset coverage and [OFL notice](../src/fonts/plus-jakarta-sans/OFL.txt) are recorded
 in [the font guide](fonts.md). Application verification belongs in
 [the validation log](validation.md).
+
+## Alexandria Arabic font — 2026-10-08
+
+The owner selected Alexandria for Arabic typography. The normal Arabic variable
+WOFF2 from `@fontsource-variable/alexandria` 5.3.0 is 31,348 bytes and supports
+weights 100–900. Distributor metadata records Google Fonts family v6, last
+modified 2025-09-05; font metadata records Alexandria-Regular, version 5.100.
+
+`package/files/alexandria-arabic-wght-normal.woff2` was copied byte-identically
+to `src/fonts/alexandria/alexandria-arabic-variable.woff2`; its original 2022
+copyright and SIL OFL 1.1 license are retained in
+[OFL.txt](../src/fonts/alexandria/OFL.txt). The public frontend serves it through
+`next/font/local`, using the upstream Arabic Unicode range, preload and swap
+loading. No font package or remote font request is added at runtime. The font
+license does not license IRESEN code, identity or content.
+
+Archive integrity, SHA-256 values and script-selection details are recorded in
+[the font guide](fonts.md). Earlier application checks predate this addition;
+current rendered coverage belongs in [the validation log](validation.md).

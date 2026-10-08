@@ -5,7 +5,8 @@ import { useCallback, useEffect, useRef, type KeyboardEvent } from 'react'
 import { isLocale, defaultLocale } from '@/i18n/locales'
 import { usePathname } from '@/i18n/navigation'
 import { navigationGroups, pageHref, pageIdFromPathname, type PageId } from '@/lib/site'
-import { navigationFeatures, type NavigationGroup } from '@/lib/navigation'
+import { navigationPanels, type NavigationGroup } from '@/lib/navigation'
+import { homeFigures } from '@/lib/figures'
 import { LocaleSelector } from './LocaleSelector'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 import { NavigationIcon } from './NavigationIcon'
@@ -16,6 +17,7 @@ export function SiteHeader() {
   const t = useTranslations('Navigation')
   const pageTitle = useTranslations('Pages')
   const copy = useTranslations('Header')
+  const figureCopy = useTranslations('Hero')
   const pathname = usePathname()
   const currentPageId = pageIdFromPathname(pathname)
   const headerRef = useRef<HTMLElement>(null)
@@ -134,7 +136,10 @@ export function SiteHeader() {
   }
 
   function desktopGroup(group: NavigationGroup) {
-    const featureId = navigationFeatures[group.id]
+    const panel = navigationPanels[group.id]
+    const featureId = 'feature' in panel ? panel.feature : undefined
+    const figureId = 'figureId' in panel ? panel.figureId : undefined
+    const figure = figureId ? homeFigures.find(({ id }) => id === figureId) : undefined
     const isCurrent = group.pages.some((id) => id === currentPageId)
 
     return (
@@ -189,15 +194,22 @@ export function SiteHeader() {
             <NavigationIcon name="chevron" />
           </summary>
           <div className="mega-menu">
-            <div className="header-container mega-menu-grid">
+            <div className={`header-container mega-menu-grid mega-menu-grid--${panel.layout}`}>
               <div className="mega-menu-intro">
-                <span className="navigation-eyebrow">{t(group.id)}</span>
-                <h2>{copy(`groups.${group.id}.title`)}</h2>
-                <p>{copy(`groups.${group.id}.description`)}</p>
+                <div className="mega-menu-intro-copy">
+                  <h2>{copy(`groups.${group.id}.title`)}</h2>
+                  <p>{copy(`groups.${group.id}.description`)}</p>
+                </div>
+                {figure && (
+                  <p className="key-figure mega-menu-figure">
+                    <strong className="key-figure-value">
+                      <bdi dir="ltr">{figure.value}</bdi>
+                    </strong>
+                    <span className="key-figure-label">{figureCopy(`figures.${figure.id}`)}</span>
+                  </p>
+                )}
               </div>
-              <ul
-                className={`mega-menu-links${group.id === 'resources' ? ' mega-menu-links-dense' : ''}`}
-              >
+              <ul className="mega-menu-links">
                 {group.pages.map((id) => (
                   <li key={id}>
                     <a
@@ -213,17 +225,19 @@ export function SiteHeader() {
                   </li>
                 ))}
               </ul>
-              <a className="mega-menu-feature" href={pageHref(featureId, locale)}>
-                <span className="navigation-eyebrow">{copy('discover')}</span>
-                <span className="mega-menu-feature-title">{pageTitle(featureId)}</span>
-                <span className="mega-menu-feature-description">
-                  {copy(`features.${featureId}`)}
-                </span>
-                <span className="mega-menu-feature-action">
-                  {copy('explore')}
-                  <NavigationIcon name="arrow" />
-                </span>
-              </a>
+              {featureId && (
+                <a className="mega-menu-feature" href={pageHref(featureId, locale)}>
+                  <span className="navigation-eyebrow">{copy('discover')}</span>
+                  <span className="mega-menu-feature-title">{pageTitle(featureId)}</span>
+                  <span className="mega-menu-feature-description">
+                    {copy(`features.${featureId}`)}
+                  </span>
+                  <span className="mega-menu-feature-action">
+                    {copy('explore')}
+                    <NavigationIcon name="arrow" />
+                  </span>
+                </a>
+              )}
             </div>
           </div>
         </details>

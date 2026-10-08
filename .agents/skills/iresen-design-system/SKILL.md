@@ -25,7 +25,8 @@ existing tokens; introduce a token when it expresses a shared purpose. Full-widt
 section edges remain flat; the selected physical top-left/bottom-right signature
 applies sparingly and is preserved in RTL. Circular radios, pill switches and
 appropriate control shapes remain exceptions. FR/EN use the installed licensed
-Plus Jakarta Sans; Arabic retains its current stack pending companion review.
+Plus Jakarta Sans; Arabic uses the owner-selected, installed Alexandria companion,
+with Jakarta for Latin characters. See the font guide for subset and provenance.
 
 Inspect affected components and responsive/locale states after a shared change.
 Update DESIGN.md and the specification together with the adopted rule, reason and

@@ -8,7 +8,21 @@ control width, the compact Menu centers its contents, selected languages use
 Sans. See [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe the original navigation revision; the subsequent
-hero overlay is documented at the end.
+hero overlay and content-based menu formats are documented below. The latest
+owner clarification treats screenshots as design-element references, with layout
+chosen for each group's actual content.
+
+## Header control refinement — 2026-10-08
+
+The owner's latest screenshot gives search a white square with a `#858585`
+outline and 24px navy magnifier: 48px square, or 44px at `35rem` and below at
+the default root size. Contact keeps primary blue/white, a 48px minimum height
+and 24px horizontal padding. Both preserve physical 20px top-left/bottom-right
+corners and sharp opposite corners in RTL. Current fonts, localized labels and
+routes remain; contact stays in the compact menu below the desktop CTA's `70rem`
+threshold. See [shared control rules](design-system.md#header-search-and-contact-controls--2026-10-08)
+and [current validation](validation.md); earlier checks and screenshots retain
+their original scope.
 
 ## Sources and scope — 2026-10-08
 
@@ -62,14 +76,15 @@ remain distinct controls. Group destinations continue to come from
 `src/lib/site.ts`; this increment adds no page, financing branch or duplicate
 news/careers branch.
 
-Desktop group panels contain an introductory text column, destination links
+The original desktop group panels contained an introductory text column, destination links
 with short descriptions, and a related destination. Fine dividers organize the
-white panel. Links use a navy surface on hover/focus; the related destination
-uses a quiet surface and the existing physical corner signature. Current-page
+white panel. Links used a navy surface on hover/focus; the original related destination
+used a quiet surface and the physical corner signature. The latest adaptation
+below replaces that card treatment. Current-page
 links expose `aria-current="page"`, while the containing navigation group has a
 visible current-state underline.
 
-Related destinations live in `src/lib/navigation.ts`:
+The original featured destinations in `src/lib/navigation.ts` were:
 
 | Open group                  | Related destination      |
 | --------------------------- | ------------------------ |
@@ -109,7 +124,7 @@ navigation. Logical spacing, equivalent locale routes and meaningful arrow
 mirroring support Arabic; logos and physical brand corners retain their geometry.
 Arabic typography receives no Latin tracking or uppercase treatment.
 
-## Verification — 2026-10-08
+## Original navigation verification — 2026-10-08
 
 Lint, strict types, formatting, 8 unit tests, 4 local CMS integration tests, the
 production build and all 28 Chromium browser tests passed. The 9 dedicated
@@ -135,7 +150,7 @@ not supplied references or public application assets.
 - [Arabic mobile navigation](screenshots/navigation-ar-mobile.png)
 
 See [the validation log](validation.md#navigation-reference-adaptation--2026-10-08)
-for the current check record. Remote CI and merge status belong to the current
+for the original check record. Remote CI and merge status belong to the current
 pull request and commit history, rather than being inferred from local checks.
 
 ## Hero overlay — 2026-10-08
@@ -146,3 +161,39 @@ header height, including compact or two-row layouts. White mega-menu and compact
 disclosure panels, current-route state and equivalent-language navigation retain
 their established behavior. Routes without a rendered hero retain an in-flow
 header so unknown/error content is not covered. See [page heroes](heroes.md).
+
+## Hovered-menu reference adaptation — 2026-10-08
+
+The owner's latest clarification and four menu examples define design elements,
+not one required layout: coherent type, connected white tabs/panels, thin dividers,
+navy/blue colors, inline diagonal arrows and spacing. This supersedes the earlier
+assumption that every group needed three columns, a bottom figure and a feature.
+The chat attachments are `Screenshot 2026-10-08 at 21.26.37.png`,
+`Screenshot 2026-10-08 at 21.26.42.png`,
+`Screenshot 2026-10-08 at 21.26.45.png` and
+`Screenshot 2026-10-08 at 21.26.50.png`. They illustrate optional compact/featured
+formats and shared design elements; their sample claims and routes are not adopted.
+The current formats follow each group's content:
+
+| Group     | Format   | Destination arrangement                          | Optional content                |
+| --------- | -------- | ------------------------------------------------ | ------------------------------- |
+| Institute | Featured | Intro, two-item list and related destination     | Travailler avec nous; no figure |
+| Research  | Featured | Intro, three-item list and related destination   | 69 projects; opportunities link |
+| Expertise | Compact  | Intro beside two destinations in two tracks      | No extra feature or figure      |
+| Resources | Compact  | Intro beside five destinations across two tracks | No extra feature or figure      |
+
+Only research displays a menu figure, reusing 69 and the collaborative-project
+label from the owner's existing homepage data and localized `Hero.figures`
+drafts. Institute retains its existing collaboration feature; research retains
+opportunities. Screenshot training totals, event/funding claims and proposed
+routes are styling references, not new authorized content.
+
+Panels use consistent padding and natural content height, with no universal
+minimum height or figure pushed to the bottom. White active tabs connect to the
+panel; current-route markers, quiet hover/focus surfaces and meaningful RTL arrow
+mirroring remain. The 22-page route definition, `Header` drafts, keyboard/focus
+dismissal, mouse-hover discovery, touch and no-JavaScript navigation continue.
+
+Executed checks and renderings belong in [the validation log](validation.md).
+Earlier verification and screenshots retain their original revision's scope;
+the previous universal-layout assumption is superseded by this clarification.

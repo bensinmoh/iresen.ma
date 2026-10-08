@@ -4,6 +4,156 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Apex Leaf browser icon
+
+- Selected the existing tightly bounded Apex Leaf for the public browser icon,
+  replacing the padded favicon URL with SVG type and `sizes="any"` metadata.
+- Preserved all seven original SVGs, their hashes, blue fill, proportions and
+  transparency; no derived or additional icon assets were added.
+
+See [active icon selection](docs/asset-inventory.md#active-browser-icon--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage.
+
+## 2026-10-08 — Footer identity copy
+
+- Replaced the text beneath the footer logo with the owner's selected French
+  tagline and description, with English/Arabic draft equivalents.
+- Emphasized the tagline in native white bold at 18px/700, with an 8px gap and
+  the existing 18px/500 description. Copy selection is limited to this footer block.
+
+See [footer wording](docs/footer.md#footer-identity-copy--2026-10-08) and
+[validation](docs/validation.md) for this revision's coverage; earlier identity
+copy and verification remain historical.
+
+## 2026-10-08 — Footer type and newsletter refinement
+
+- Adapted footer typography toward the owner's reference with larger medium-weight
+  navigation/contact text, a 30–50px newsletter heading and tighter Latin tracking.
+- Reduced capped vertical gaps and broadened the signup track while retaining
+  natural height, shared alignment, current content and physical brand corners.
+- Replaced disabled newsletter controls and the initially visible notice with
+  local editable email/consent and a native Subscribe disclosure for unavailable
+  feedback. Privacy stays visible; no subscription API, persistence or success
+  is introduced, and no client component or dependency is added.
+
+See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage. Earlier
+disabled-state checks and screenshots retain their original scope.
+
+## 2026-10-08 — Apex Leaf heading reference
+
+- Recorded the owner's preferred Apex Leaf bullet beside section headings for
+  future composition in the shared design guidance. Runtime and assets are unchanged.
+- Checked documentation formatting, the asset link and diff whitespace locally.
+
+## 2026-10-08 — Header search and contact controls
+
+- Matched the owner's control styling: white/gray-outlined search with a navy
+  magnifier, blue/white contact and physical signature corners on both.
+- Made search square at 48px, or 44px on narrow screens, and restored contact's
+  48px minimum height and 24px horizontal padding at the default root size.
+- Retained localized labels, routes, shared fonts and mobile contact access.
+
+See [control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage.
+
+## 2026-10-08 — Homepage certification badge
+
+- Added the owner's explicitly requested Certifié · ISO · 9001:2015 badge and
+  French claim, with English/Arabic drafts, to the local homepage.
+- Used a labelled, noninteractive aside with neutral translucent backdrop blur,
+  a darker unsupported-filter fallback and the physical signature corners.
+- Placed the badge beside the copy and CTA on wide screens and between copy
+  and actions on smaller screens, retaining natural height and all five figures.
+- Kept the stable standard LTR in Jakarta and Arabic copy in Alexandria;
+  distinguished the supplied claim from independent certification verification.
+
+See [badge content and behavior](docs/heroes.md#homepage-certification-badge--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage. Earlier hero
+verification and screenshots predate this addition.
+
+## 2026-10-08 — Shared public fonts and Alexandria
+
+- Added the owner's selected, licensed, self-hosted Alexandria for Arabic,
+  alongside the unchanged Plus Jakarta Sans Latin asset.
+- Unified public document defaults, Tailwind sans utilities, native controls and
+  the decorative ResearchGate text mark under shared script-based font selection.
+  Arabic labels use Alexandria across locales; Latin text and figures use Jakarta.
+- Preserved Arabic shaping/tracking, local font loading and the separate CMS layout;
+  recorded the new asset's provenance, hashes, Unicode range and OFL notice.
+
+See [fonts](docs/fonts.md) and [validation](docs/validation.md) for this revision's
+coverage. Earlier font checks describe their original assets and implementation.
+
+## 2026-10-08 — Hero scroll cue and spacing
+
+- Replaced the visible continuation text/arrow with a centered native mouse/
+  scroll-wheel link, retaining the translated accessible name and 44px target.
+- Added a short finite wheel animation with a reduced-motion static state.
+- Reduced the lower image reserve to 72px at default text size, bringing the
+  CTA closer to the band while retaining natural hero growth.
+
+See [hero behavior](docs/heroes.md#viewport-and-navigation) and
+[validation](docs/validation.md) for revision-specific checks and renderings.
+
+## 2026-10-08 — Content-based menu formats and design guidance
+
+- Corrected design guidance so screenshot references define typography, colors,
+  tabs, surfaces, dividers, arrows and spacing; composition follows actual content.
+- Used featured institute/research menus and compact expertise/resources menus,
+  with optional features/figures. Research alone reuses the existing 69-project
+  figure; natural height replaces the universal minimum and bottom-pushed figures.
+- Retained the shared visual language, existing routes, localized drafts and
+  native disclosure behavior; screenshot sample claims remain reference content.
+
+See [current navigation formats](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08),
+[the workflow](docs/design-workflow.md) and [validation](docs/validation.md) for
+revision-specific checks and renderings.
+
+## 2026-10-08 — Earlier reference interpretation (superseded)
+
+The earlier reference review treated screenshots as a composition target, with
+Taste/Impeccable guiding refinements. Its menu/figure review required no further
+UI changes at that revision. The later design-element clarification above
+supersedes that layout interpretation. See [the workflow](docs/design-workflow.md) and
+[the validation record](docs/validation.md#reference-fidelity-review--2026-10-08).
+
+## 2026-10-08 — Earlier uniform menu adaptation (superseded)
+
+- Adapted desktop mega-menus to the owner's screenshot with a connected white
+  active tab, three equal columns, full-height dividers, top introduction/bottom
+  figure, stacked destination links and a vertically centered white feature block.
+- Removed the extra intro eyebrow, colored rounded feature card and dense
+  resources sub-grid; retained natural height and bounded scrolling.
+- Reused the established 2011 year and owner-supplied 69 projects, +18 university
+  laboratories and +1100 publications with existing localized labels and routes.
+
+See [that revision's validation](docs/validation.md#hovered-menu-reference-adaptation--2026-10-08)
+for executed checks and renderings.
+Earlier navigation screenshots and verification describe their original revision;
+its universal-layout assumption is superseded by the content-based formats above.
+
+## 2026-10-08 — Homepage key figures and typography
+
+- Replaced the homepage's founding-year/pathway band with the owner's explicitly
+  requested figures: 69 supported collaborative projects, +60 patents filed,
+  +1000 young researchers supported, +1100 scientific publications and +18
+  university laboratories established. Kept other pages' pathway behavior.
+- Corrected the supplied French label spelling and added drafted English/Arabic
+  labels; used a semantic definition list with LTR-isolated numeric values.
+- Applied shared value/label roles to the homepage and institute founding figure using
+  the owner's Figma typography hints: Plus Jakarta Sans 600 values, 500 labels,
+  zero tracking and a fluid 36–60px value with an 18px label at default text size.
+- Kept values and labels stacked on mobile; isolated Arabic-page numerals use
+  the Latin family while Arabic labels retain natural shaping and line height.
+- Retained the source's 70% white label token for suitable dark surfaces and
+  used 87% white on the current blue band to meet normal-text contrast.
+
+See [shared figure rules](docs/design-system.md#shared-key-figure-typography--2026-10-08)
+and [the validation log](docs/validation.md) for executed checks and renderings.
+The user's message supplies the homepage claims; the Figma screenshots provide
+the styling hints. See [the content record](docs/heroes.md#homepage-key-figures--2026-10-08).
+
 ## 2026-10-08 — Live design-system guidance
 
 - Analyzed the owner's live DESIGN SYSTEM devlink: native typography/spacing/

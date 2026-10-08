@@ -47,9 +47,10 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             <a href={pageHref('home', locale)} className="site-identity" aria-label="IRESEN">
               <SiteLogo variant="dark" />
             </a>
-            <p>
-              {footer.rich('description', { brand: (chunks) => <bdi dir="ltr">{chunks}</bdi> })}
+            <p className="footer-tagline">
+              <strong>{footer('tagline')}</strong>
             </p>
+            <p>{footer('description')}</p>
           </div>
           <nav aria-label={navigation('footer')} className="footer-navigation">
             {footerNavigationGroups.map((group) => (
@@ -119,7 +120,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             <h2 id="footer-newsletter-title">{footer('newsletterTitle')}</h2>
             <p>{footer('newsletterDescription')}</p>
           </div>
-          <div className="footer-newsletter-signup" aria-describedby="footer-newsletter-status">
+          <div className="footer-newsletter-signup">
             <div className="footer-newsletter-field">
               <FooterIcon name="email" />
               <label className="sr-only" htmlFor="footer-newsletter-email">
@@ -130,24 +131,30 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 type="email"
                 autoComplete="email"
                 placeholder={footer('newsletterEmail')}
-                aria-describedby="footer-newsletter-status"
-                disabled
               />
-              <button type="button" className="footer-newsletter-button" disabled>
-                {footer('newsletterSubscribe')}
-                <FooterArrow />
-              </button>
+              <details className="footer-newsletter-attempt">
+                <summary
+                  className="footer-newsletter-button"
+                  role="button"
+                  aria-controls="footer-newsletter-status"
+                >
+                  {footer('newsletterSubscribe')}
+                  <FooterArrow />
+                </summary>
+                <p id="footer-newsletter-status" className="footer-newsletter-status" role="status">
+                  {footer('newsletterUnavailable')}
+                </p>
+              </details>
             </div>
             <label className="footer-newsletter-consent">
-              <input type="checkbox" disabled aria-describedby="footer-newsletter-status" />
+              <input type="checkbox" />
               <span>
                 {footer.rich('newsletterConsent', {
                   brand: (chunks) => <bdi dir="ltr">{chunks}</bdi>,
                 })}
               </span>
             </label>
-            <p id="footer-newsletter-status" className="footer-newsletter-status">
-              <span>{footer('newsletterUnavailable')}</span>{' '}
+            <p className="footer-newsletter-privacy">
               <a href={pageHref('privacy', locale)}>{pageTitle('privacy')}</a>
             </p>
           </div>
