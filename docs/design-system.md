@@ -43,6 +43,16 @@ Use semantic CSS custom properties with Tailwind utilities. `--container-width` 
 
 Public Latin text uses self-hosted Plus Jakarta Sans (normal variable 200–800); Arabic uses the owner's selected Alexandria (normal variable 100–900), both under SIL OFL 1.1 through `next/font/local`. Script-based selection covers mixed-language text in every locale. Document defaults, Tailwind sans utilities, links and native controls share this policy; CMS/admin has a separate layout. See [fonts and provenance](fonts.md). Latin hero H1 tracking is `-0.03em` (−3%) in all layouts; Arabic retains natural tracking. Use the received vector wordmark rather than recreating it as live text.
 
+### Section-heading marker
+
+The owner's 2026-10-08 « Notre mission » screenshot identifies the Apex Leaf as
+the preferred bullet beside section headings. Keep this detail in mind for future
+section composition. Use the supplied [apex-leaf.svg](../public/brand/apex-leaf.svg)
+with its original geometry, proportions and approved `#296BB4` fill. Place it at
+the heading's inline start with balanced spacing; in Arabic, change its placement
+without mirroring the brand shape. Treat it as decorative so the heading text
+remains the accessible name. This records a preference; no runtime change was made.
+
 ## Interaction and acceptance
 
 Keep navigation operable by keyboard, touch and pointer. Use visible focus, correct landmarks, a skip link and reduced-motion support. Avoid autoplay carousels and decorative animation libraries in the foundation.

@@ -42,6 +42,9 @@ Reference sample claims remain distinct from requested factual content.
   Arabic does not automatically reverse these brand corners.
 - The apex motif supports a few purposeful brand areas. Avoid dense decoration
   behind text, universal pills, generic gradients and effects without a visitor benefit.
+- The owner's section-heading reference (for example, « Notre mission ») uses the
+  standalone Apex Leaf as its bullet. Retain this preferred heading detail in
+  future section work, using the supplied vector and proportional spacing.
 
 ## Typography, rhythm and media
 

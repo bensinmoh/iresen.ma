@@ -4,6 +4,12 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Apex Leaf heading reference
+
+- Recorded the owner's preferred Apex Leaf bullet beside section headings for
+  future composition in the shared design guidance. Runtime and assets are unchanged.
+- Checked documentation formatting, the asset link and diff whitespace locally.
+
 ## 2026-10-08 — Header search and contact controls
 
 - Matched the owner's control styling: white/gray-outlined search with a navy
