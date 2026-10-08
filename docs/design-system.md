@@ -41,7 +41,7 @@ Keep navigation operable by keyboard, touch and pointer. Use visible focus, corr
 
 Check actual rendered contrast; brand colors do not automatically make accessible status colors. Normal text needs 4.5:1 contrast. Cyan/lime and certain green/blue combinations are unsuitable for normal white/body text.
 
-Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The internal narrative is a private working reference, not publishable copy; final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
+Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). Their page sections and composition details remain suggestions, not a validated structure or new design rules. Final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
 Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing exports/fonts do not block the foundation.
 

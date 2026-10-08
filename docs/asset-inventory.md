@@ -46,7 +46,7 @@ Container and stream metadata were inspected with `ffprobe`. The supplied file r
 
 | Source                              | Role/version                                        | Status and publication boundary                                                                                         |
 | ----------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `instruction.md`                    | Development brief v1.1, 7 October 2026              | Available; project instructions, not a public web asset                                                                 |
+| `instruction.md`                    | Development brief v1.2, 8 October 2026              | Available; project instructions with the latest source-status clarification, not a public web asset                     |
 | `IRESEN_Color_Book_2026_V0_9.pdf`   | Color book v0.9, October 2026                       | Text inspected; ignored `private-references/brand/color-book.pdf`; not served/committed                                 |
 | `IRESEN_2035_Phase_01_Narratif.pdf` | Internal institutional narrative, 30 September 2026 | Read as a working reference; ignored `private-references/institutional-narrative.pdf`; contents not committed/published |
 
@@ -56,6 +56,12 @@ PDF SHA-256 values:
 - Narrative: `d346aa7f0944dc3a7ed9242eeeb101e62f22b7ebc60de00263a50ba569312ab4`.
 
 The color-book v0.9 text confirms navy `#12345A` and signature blue `#296BB4`. The owner's final correction selects **`#296BB4` as the website primary blue**, and all current blue-bearing SVGs match it. Earlier `#256BA2` vectors are preserved privately as superseded versions. Every received PDF/SVG source remains unchanged. The brief's Illustrator-palette observation remains unverified because that board is unavailable.
+
+### Institutional DOCX references — 2026-10-08
+
+The owner authorized repository reference copies of `IRESEN_2035_Phase_01_Narratif.docx`, `IRESEN_2035_Phase_02_Supports.docx` and `IRESEN_Structure_Detaillee_Site_Web.docx`. Their byte-identical copies, sizes, SHA-256 hashes, visible dates and analysis are recorded in [the strategy reference index](references/strategy/README.md). Only filenames were normalized; these files are outside `public/` and the CMS Media collection. The earlier narrative PDF remains a separate private version.
+
+The detailed structure is recommendations and suggestions, not final validation. Source examples, proposed copy, revision claims and implied approval are not independently verified institutional facts. Repository inclusion of these specific files neither supplies an independent redistribution license nor approves website publication, translations or service activation.
 
 ## Native Figma source
 
