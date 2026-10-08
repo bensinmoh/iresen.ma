@@ -1,6 +1,6 @@
 # IRESEN website
 
-Development foundation for IRESEN's French, English and Arabic institutional website. It provides a public locale shell, Payload CMS and PostgreSQL without invented content or a completed homepage. Read [instruction.md](instruction.md) for the development brief and [backlog](docs/backlog.md) for current scope and follow-up work.
+Development foundation for IRESEN's French, English and Arabic institutional website. It provides a public locale shell, Payload CMS and PostgreSQL with introductory page heroes and honest empty content sections. Read [instruction.md](instruction.md) for the development brief and [backlog](docs/backlog.md) for current scope and follow-up work.
 
 ## Selected stack
 
@@ -94,7 +94,7 @@ Project scripts load `.env.local` and keep caches within ignored paths. For a ne
 
 `src/app` contains public locale/CMS routes; `src/components` the UI shell; `src/i18n` and `src/messages` locale routing/catalogs; `src/cms` collections/access/migrations; `src/lib` content and integration boundaries. Technical guides are in [docs](docs/architecture.md). Read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before contributing/reporting.
 
-The next development task is homepage composition from approved copy and supplied visual assets. Full CMS workflows, functional search/contact, production media/email/identity and release assessment remain tracked work. No production deployment, repository visibility change or open-source licensing decision is implied by this foundation. See [deployment](docs/deployment.md) and [security/privacy](docs/security-and-privacy.md).
+All approved routes now have lightweight introductory heroes; the next content task is composing the sections below from approved copy and reviewed visual assets. See [page heroes](docs/heroes.md) for composition, viewport behavior and media/editorial limits. Full CMS workflows, functional search/contact, production media/email/identity and release assessment remain tracked work. No production deployment, repository visibility change or open-source licensing decision is implied by this foundation. See [deployment](docs/deployment.md) and [security/privacy](docs/security-and-privacy.md).
 
 Design work now uses [PRODUCT.md](PRODUCT.md) for product context, [DESIGN.md](DESIGN.md) for visual direction and [the repository design workflow](docs/design-workflow.md) for task-specific skills. The workflow is flexible guidance with constructive critique, shared tokens, FR/EN/AR responsiveness and rendered verification. Eight IRESEN skills and optional pinned Taste/Impeccable references live in `.agents/skills/`; they do not install personal/global skills or activate an engine or hook. See [source and license records](docs/design-skills-sources.json).
 

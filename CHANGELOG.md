@@ -4,6 +4,22 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Introductory page heroes
+
+- Added lightweight heroes to all 22 approved pages with five layouts, varied
+  photographic backgrounds, short FR/EN/AR introductions and links to the sections
+  below. Detailed content remains in those sections.
+- Overlaid the existing header with a dark transparent gradient and the reversed
+  logo, retaining white disclosure panels and accessible navigation.
+- Added measured viewport/header sizing through the bottom narrative band;
+  resize/orientation updates and natural content growth preserve enlarged text.
+- Retained Développer · Éprouver · Valoriser and the verified founding year;
+  omitted screenshot statistics and certification. Documented draft copy and
+  individual Figma image provenance and publication-review limits.
+- Passed lint, strict types, formatting, 8 unit tests, 4 integration tests,
+  production build and all 35 browser tests; inspected desktop, mobile and Arabic
+  renderings. See [page heroes](docs/heroes.md).
+
 ## 2026-10-08 — Navigation reference adaptation
 
 - Reworked the header from the owner's closed-header and open-menu screenshots,

@@ -135,3 +135,29 @@ Broader browser and manual screen-reader review remain outside this local
 Chromium/axe pass; automated scans do not establish full WCAG conformance.
 See [source limits and implementation choices](navigation.md). Current PR CI and
 merge status are recorded by GitHub, separately from these local results.
+
+## Introductory page heroes — 2026-10-08
+
+Passed `pnpm lint`, `pnpm typecheck`, `pnpm test` (8 tests),
+`pnpm test:integration` (4 tests), `pnpm build` and
+`PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e --workers=4`
+(all 35 tests). The build reports the existing next-intl webpack cache warnings.
+The seven additional browser checks cover every approved hero route in each
+locale, background loading, initial 900px landing geometry, section anchors,
+viewport resize, 200% text and no-JavaScript Arabic access. Existing navigation,
+footer and automated accessibility checks remain passing.
+
+Additional geometry checks passed for all 66 localized routes at 390 × 844,
+with the complete landing visible and no header/title overlap or horizontal
+overflow. Transfer, publications and opportunities also passed focused axe checks.
+
+Rendered review inspected all five layouts at 1440 × 900, Arabic home/network at
+390 × 844 and English home at 768 × 1024. These fit their measured viewport
+without horizontal overflow. The existing browser suite also checks open menus,
+RTL and enlarged text over the documented responsive widths. See
+[hero screenshots and detailed limits](heroes.md#review-screenshots).
+
+Checks do not establish cross-browser/screen-reader conformance or native Figma
+pixel fidelity. Hero copy/translations are editorial drafts; extracted imagery
+needs final individual rights/credit review before production publication. No
+deployment was performed.

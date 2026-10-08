@@ -26,16 +26,23 @@ marketing page.
   [src/lib/site.ts](src/lib/site.ts) and [src/i18n/routing.ts](src/i18n/routing.ts).
 - The responsive header follows the owner's reattached navigation screenshots
   with desktop mega-menus, a compact grouped menu, search/contact controls and
-  equivalent-page language access. It preserves the approved hierarchy, using a
-  navy homepage fallback and white interior header. New localized descriptions
-  are wayfinding drafts; no sample event/funding promotion or hero was added.
+  equivalent-page language access. It preserves the approved hierarchy. New localized descriptions are wayfinding
+  drafts. Page introductions now place this header over their imagery with a dark
+  transparent gradient; white panels retain the existing open-menu behavior.
   [Navigation documentation](docs/navigation.md) records sources and verification.
   The substantial trilingual navy footer follows the analyzed native Figma reference
   and owner-reattached Footer.png, retaining the requested newsletter CTA.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- The homepage is an honest empty shell, not a completed institutional homepage.
-  Page/news/media collections start empty. Empty and error states exist. Public
+- All 22 approved pages have lightweight introductory heroes with five composition
+  styles, 17 illustrative backgrounds from the supplied Figma source, short FR/EN/AR
+  wayfinding drafts and the Développer · Éprouver · Valoriser reading framework.
+  Only the established founding year (2011) appears as a numeric fact; screenshot
+  statistics and certification claims are omitted. The header-to-band landing
+  measures the current viewport and grows for content when necessary. See
+  [hero documentation](docs/heroes.md).
+- Content sections below the heroes remain honest empty states; the full
+  institutional homepage is still unfinished. Page/news/media collections start empty. Empty and error states exist. Public
   pages render their content without a locale-wide streamed loading boundary,
   so footer destinations remain readable when JavaScript is disabled.
 - An owner-supplied video is stored for future hero use; the current pages do not

@@ -121,5 +121,45 @@
       "opportunities": "Retrouver les opportunités et les appels à projets.",
       "publications": "Approfondir les sujets avec les publications et les rapports."
     }
+  },
+  "Hero": {
+    "homeTitle": "La recherche au service de la transition énergétique.",
+    "discover": "Découvrir",
+    "continue": "Explorer la suite",
+    "founded": "Création d’IRESEN",
+    "pathways": "Développer, éprouver et valoriser",
+    "stages": {
+      "develop": "Développer",
+      "test": "Éprouver",
+      "transfer": "Valoriser",
+      "institute": "IRESEN · Recherche & innovation",
+      "resources": "Partager les connaissances",
+      "collaboration": "Construire ensemble",
+      "information": "Informations utiles"
+    },
+    "descriptions": {
+      "home": "Développer les connaissances, éprouver les technologies et valoriser la recherche pour la transition énergétique du Maroc.",
+      "institute": "Comprendre notre mission et le lien entre recherche, expérimentation et valorisation.",
+      "governance": "Découvrir la gouvernance et l’organisation qui accompagnent la mission de l’Institut.",
+      "priorities": "Explorer les orientations de recherche au service de la transition énergétique.",
+      "programmes": "Des programmes pour structurer la recherche et faire émerger l’innovation.",
+      "projects": "La recherche collaborative, des questions scientifiques aux applications.",
+      "platforms": "Relier la recherche à l’expérimentation et aux conditions réelles d’usage.",
+      "network": "Les compétences scientifiques au cœur de la recherche et de l’expérimentation.",
+      "transfer": "Faire le lien entre les résultats de la recherche et leurs usages.",
+      "workWithUs": "Explorer les possibilités de collaboration autour de la recherche et de l’innovation.",
+      "news": "Suivre la vie de l’Institut, la recherche et l’innovation.",
+      "events": "Des rencontres pour partager les connaissances et ouvrir le dialogue.",
+      "publications": "Approfondir les sujets à travers les publications et les rapports.",
+      "media": "Découvrir la recherche et l’innovation en images.",
+      "opportunities": "Explorer les opportunités, les carrières et les appels à projets.",
+      "search": "Trouver votre chemin dans les pages et les ressources de l’Institut.",
+      "contact": "Entrer en relation avec IRESEN et identifier le bon interlocuteur.",
+      "legal": "Les informations légales relatives au site IRESEN.",
+      "privacy": "Les informations relatives à la confidentialité et aux données personnelles.",
+      "cookies": "Comprendre les cookies et les préférences de navigation.",
+      "accessibility": "Les informations relatives à l’accessibilité du site.",
+      "sitemap": "Un accès direct aux pages et aux ressources de l’Institut."
+    }
   }
 }

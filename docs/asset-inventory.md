@@ -130,3 +130,21 @@ Preserve source spellings in this inventory, including `Broundaries`. Proposed a
 Native Figma editable structure, mobile frames and serialized interaction records are now inspected. Native rendered comparison, inherited-instance behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
 
 Licensed Plus Jakarta Sans webfont files, an approved Arabic companion and original public imagery remain optional missing inputs for the boilerplate and dependencies for later visual work. Their presence in the unreadable ZIP is unknown. Once accessible, record their licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
+
+## Introductory hero backgrounds — 2026-10-08
+
+The owner's request to create varied page heroes is implemented locally using
+17 individual photographic rasters from the supplied native Figma file. These
+are optimized WebP derivatives under `public/images/heroes/`, not crops of
+complete design screenshots. [hero-assets.json](hero-assets.json) records each
+archive entry, source/output SHA-256, dimensions, transformation and byte count.
+The total derivative payload is about 1.79 MiB; each page requests one responsive
+background through Next Image, not the full set or the MP4. Originals remain in
+the supplied native source.
+
+This is draft design use within the requested local implementation. No
+independent redistribution license, image credit, model release or identification
+of facilities is inferred from Figma. Photographs are decorative and illustrate
+their topic; they do not claim to depict IRESEN researchers or assets. Verify
+individual usage rights and credits before production publication, or replace
+with approved originals. The MP4 remains unchanged and is not played.

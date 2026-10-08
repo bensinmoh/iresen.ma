@@ -19,7 +19,7 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
   if (pageId === 'cookies') emptyMessage = states('noTracking')
 
   return (
-    <PageShell title={pageTitle(pageId)} locale={locale}>
+    <PageShell title={pageTitle(pageId)} locale={locale} pageId={pageId}>
       {pageId === 'institute' ? (
         <>
           <nav aria-label={navigation('sections')} className="section-navigation">

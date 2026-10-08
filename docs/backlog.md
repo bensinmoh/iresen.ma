@@ -34,7 +34,8 @@ Local validation passed on 2026-10-07. See [validation evidence and limits](vali
 - [x] Resolve website primary blue as `#296BB4` following the owner's latest correction.
 - [ ] Inspect accessible website/Illustrator exports before finalizing visual composition.
 - [ ] Approve homepage copy and module selections around Développer · Éprouver · Valoriser.
-- [ ] Build hero and narrative modules; add key figures only from reviewed evidence.
+- [x] Build lightweight introducing heroes for every approved page, with responsive viewport sizing and an overlaid header; see [page heroes](heroes.md).
+- [ ] Build the narrative/content modules below the heroes; add key figures only from reviewed evidence.
 - [ ] Compare desktop/tablet/mobile composition and Arabic adaptations; test long content and keyboard/screen-reader use.
 - [ ] Measure a representative production page's transfer, bundle size and LCP; the empty shell is not a performance baseline.
 

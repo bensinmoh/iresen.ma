@@ -123,3 +123,12 @@ not supplied references or public application assets.
 See [the validation log](validation.md#navigation-reference-adaptation--2026-10-08)
 for the current check record. Remote CI and merge status belong to the current
 pull request and commit history, rather than being inferred from local checks.
+
+## Hero overlay — 2026-10-08
+
+On all approved routes the header now overlays the introductory hero with the
+reversed logo and a dark transparent gradient. The hero measures the actual
+header height, including compact or two-row layouts. White mega-menu and compact
+disclosure panels, current-route state and equivalent-language navigation retain
+their established behavior. Routes without a rendered hero retain an in-flow
+header so unknown/error content is not covered. See [page heroes](heroes.md).
