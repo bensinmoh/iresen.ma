@@ -17,12 +17,16 @@ chosen for each group's actual content.
 The owner's latest screenshot gives search a white square with a `#858585`
 outline and 24px navy magnifier: 48px square, or 44px at `35rem` and below at
 the default root size. Contact keeps primary blue/white, a 48px minimum height
-and 24px horizontal padding. Both preserve physical 20px top-left/bottom-right
-corners and sharp opposite corners in RTL. Current fonts, localized labels and
-routes remain; contact stays in the compact menu below the desktop CTA's `70rem`
+and 24px horizontal padding, with inherited 16px/600 text. Both now use physical
+10px top-left/bottom-right corners and sharp opposite corners in RTL, an adaptation
+toward the reference supported by live CTA evidence. The screenshot does not
+establish an exact radius measurement. The French desktop CTA reads « Contactez-nous »
+through `Header.contact`; “Contact us” and “اتصل بنا” retain their wording.
+Page titles, footer/compact labels and routes remain; contact stays in the compact
+menu below the desktop CTA's `70rem`
 threshold. See [shared control rules](design-system.md#header-search-and-contact-controls--2026-10-08)
-and [current validation](validation.md); earlier checks and screenshots retain
-their original scope.
+and [current validation](validation.md); earlier 20px control checks and screenshots
+retain their original scope.
 
 ## Sources and scope — 2026-10-08
 

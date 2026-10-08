@@ -110,14 +110,14 @@ export function SiteHeader() {
     }
   }
 
-  function pageLink(pageId: PageId, className?: string) {
+  function pageLink(pageId: PageId, className?: string, label = pageTitle(pageId)) {
     return (
       <a
         href={pageHref(pageId, locale)}
         aria-current={currentPageId === pageId ? 'page' : undefined}
         className={className}
       >
-        {pageTitle(pageId)}
+        {label}
       </a>
     )
   }
@@ -281,7 +281,7 @@ export function SiteHeader() {
               >
                 <NavigationIcon name="search" />
               </a>
-              {pageLink('contact', 'button button-primary header-contact')}
+              {pageLink('contact', 'button button-primary header-contact', copy('contact'))}
             </div>
             <details className="site-menu" ref={menuRef}>
               <summary className="menu-toggle">

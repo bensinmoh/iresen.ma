@@ -523,6 +523,37 @@ contact label is visible and CDP confirms its actual custom Plus Jakarta Sans
 glyphs. Documentation formatting, local links and diff whitespace were checked.
 Changes remain local and have not been pushed.
 
+## Header control proportions and contact label — 2026-10-08
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+12 existing navigation/font Chromium tests passed. No new tests were added for
+this small visual/copy change; the wider local browser and CMS integration suites
+were not repeated. GitHub CI runs the full existing workflow before merge.
+
+An additional 54 rendered cases passed: FR/EN/AR on photo and white headers at
+320/390/768/1024/1120/1440/1920px, plus 200% root text at 320/1440px. Checks covered
+the new physical 10px top-left/bottom-right header corners (20px when text is
+enlarged), square search dimensions, icon centering, colors, containment,
+contact size/padding/weight and complete localized labels. Other components keep
+their existing signature radius. White-header checks use a localized 404.
+
+Enter navigation and visible focus passed for both controls in each locale.
+The contact page's current-page state, page title and compact-menu label remain
+correct. The French header reads « Contactez-nous »; English and Arabic retain
+their wording. Existing font tests verify actual Jakarta/Alexandria glyph rendering.
+
+Reviewed captures:
+
+- [French button detail at device scale 2](screenshots/header-buttons-refined-fr-detail.png)
+- [French white header](screenshots/header-buttons-refined-fr-white-1440.png)
+- [Arabic photo header](screenshots/header-buttons-refined-ar-hero-1440.png)
+- [Arabic mobile header](screenshots/header-buttons-refined-ar-hero-390.png)
+
+Documentation formatting, local links and diff whitespace were checked. Earlier
+20px header captures retain their historical scope. These checks do not establish
+other-browser or manual screen-reader coverage; the tighter radius is a proportional
+adaptation toward the supplied reference, not an exact screenshot measurement.
+
 ## Footer type and newsletter refinement — 2026-10-08
 
 Lint, strict types, formatting, all 8 unit tests, the production build and all
