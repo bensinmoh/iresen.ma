@@ -12,6 +12,18 @@ hero overlay and content-based menu formats are documented below. The latest
 owner clarification treats screenshots as design-element references, with layout
 chosen for each group's actual content.
 
+## Header control refinement — 2026-10-08
+
+The owner's latest screenshot gives search a white square with a `#858585`
+outline and 24px navy magnifier: 48px square, or 44px at `35rem` and below at
+the default root size. Contact keeps primary blue/white, a 48px minimum height
+and 24px horizontal padding. Both preserve physical 20px top-left/bottom-right
+corners and sharp opposite corners in RTL. Current fonts, localized labels and
+routes remain; contact stays in the compact menu below the desktop CTA's `70rem`
+threshold. See [shared control rules](design-system.md#header-search-and-contact-controls--2026-10-08)
+and [current validation](validation.md); earlier checks and screenshots retain
+their original scope.
+
 ## Sources and scope — 2026-10-08
 
 The owner requested a modern, efficient navigation bar that stays close to the

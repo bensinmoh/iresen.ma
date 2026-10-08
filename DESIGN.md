@@ -229,6 +229,17 @@ Header menu labels and their arrows center together within the full control widt
 the compact Menu control also centers its contents. Current executed checks and
 rendered coverage are recorded separately in [the validation log](docs/validation.md).
 
+## Header search and contact controls — 2026-10-08
+
+The owner's screenshot refinement gives search a white square, neutral gray
+outline and navy magnifier; contact retains primary blue with white text.
+Both use physical 20px top-left/bottom-right corners with sharp opposite corners,
+including in RTL. Search is 48px square, reducing to 44px at `35rem` and below;
+contact retains a 48px minimum height and 24px horizontal padding at the default
+root size. Localized labels, routes, shared fonts and mobile contact access remain.
+See [control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
+and [current validation](docs/validation.md).
+
 ## Shared key-figure typography — 2026-10-08
 
 The owner's Figma screenshots dated 2026-10-08 at 20.37.38, 20.41.03 and

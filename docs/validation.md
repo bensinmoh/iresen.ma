@@ -492,6 +492,37 @@ alignment, corners, mixed-script text and action/cue clearance. Documentation
 formatting, local links and diff whitespace were checked. Changes remain local
 and have not been pushed.
 
+## Header search and contact controls — 2026-10-08
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+39 Chromium browser tests passed. This styling change did not repeat CMS
+integration checks. The existing browser suite verifies rendered Jakarta and
+Alexandria fonts, navigation, keyboard use, RTL and automated accessibility.
+
+An additional 54 rendered cases passed: FR/EN/AR on photo and white headers at
+320/390/768/1024/1120/1440/1920px, plus 200% root text at 320/1440px. Checks covered
+square search dimensions, centered icon, physical signature corners, contact
+height/padding, colors, containment and compact visibility. Native Enter
+navigation and visible focus for both controls, and the search hover tint,
+were checked in each locale. The white header was exercised on a localized 404.
+
+Calculated contrast is 3.69:1 for the gray outline against white, 12.62:1 for
+the navy search icon and 5.45:1 for white contact text on primary blue. Scoped
+Impeccable type/layout analysis returned zero findings. These checks do not
+establish broader browser coverage or manual screen-reader conformance.
+
+Final captures were inspected by two reviewers:
+
+- [French photo header](screenshots/header-controls-fr-hero-1440.png)
+- [French white header](screenshots/header-controls-fr-light-1440.png)
+- [Arabic desktop](screenshots/header-controls-ar-hero-1440.png)
+- [Arabic mobile](screenshots/header-controls-ar-hero-390.png)
+
+An early white-header capture was replaced after rendering settled; the final
+contact label is visible and CDP confirms its actual custom Plus Jakarta Sans
+glyphs. Documentation formatting, local links and diff whitespace were checked.
+Changes remain local and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

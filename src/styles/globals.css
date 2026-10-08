@@ -129,6 +129,7 @@ ul {
 }
 
 .site-header {
+  --header-control-size: 3rem;
   position: relative;
   z-index: var(--z-header);
   background: var(--color-white);
@@ -196,12 +197,21 @@ body:has(.page-hero) .site-header-overlay {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-inline-size: 3rem;
-  min-block-size: 3rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-small);
-  color: inherit;
+  flex-shrink: 0;
+  inline-size: var(--header-control-size);
+  block-size: var(--header-control-size);
+  min-inline-size: var(--header-control-size);
+  min-block-size: var(--header-control-size);
+  border: 1px solid var(--color-control-outline);
+  border-radius: var(--radius-signature);
+  color: var(--color-navy);
+  background: var(--color-white);
   transition: background-color var(--duration-fast);
+}
+
+.header-search .navigation-icon {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
 }
 
 .header-search:hover {
@@ -213,8 +223,8 @@ body:has(.page-hero) .site-header-overlay {
   flex-shrink: 0;
 }
 
-.header-contact {
-  min-block-size: 3rem;
+.button.header-contact {
+  min-block-size: var(--header-control-size);
   padding-inline: var(--space-6);
   border-radius: var(--radius-signature);
 }
@@ -223,13 +233,11 @@ body:has(.page-hero) .site-header-overlay {
   text-decoration: none;
 }
 
-.site-header-inverse .header-search,
 .site-header-inverse .menu-toggle {
   border-color: var(--color-footer-divider);
   color: var(--color-white);
 }
 
-.site-header-inverse .header-search:hover,
 .site-header-inverse .locale-selector a:hover,
 .site-header-inverse .site-menu[open] > summary,
 .site-header-inverse .menu-toggle:hover {
@@ -1789,8 +1797,8 @@ html[dir='rtl'] .footer-arrow {
     border-color: var(--color-footer-divider);
   }
 
-  .header-search {
-    min-inline-size: 2.75rem;
+  .site-header {
+    --header-control-size: 2.75rem;
   }
 
   .site-logo {

@@ -494,6 +494,22 @@ See [the font guide](fonts.md) for loading, subset and license details, and
 rendered coverage. Earlier verification and source measurements above describe
 their respective revisions, not this change.
 
+## Header search and contact controls — 2026-10-08
+
+The owner's screenshot refinement applies the physical signature corners to both
+header controls: `var(--radius-signature)` rounds top-left/bottom-right by 20px
+at the default root size, with sharp opposite corners unchanged in RTL.
+Search uses a white surface, 1px `--color-control-outline` (`#858585`) border and
+a 24px navy (`#12345A`) magnifier. `--header-control-size` is `3rem` (48px),
+reduced to `2.75rem` (44px) at `35rem` and below; both dimensions use this size.
+Contact keeps primary `#296BB4`/white, a 48px minimum height and 24px inline
+padding. Its text inherits the shared Jakarta/Alexandria font policy.
+
+Localized text and routes remain; the contact CTA stays hidden below `70rem`,
+with contact available in the compact menu. Current checks belong in
+[the validation log](validation.md); earlier navigation evidence predates this
+control refinement.
+
 ## Homepage certification badge — 2026-10-08
 
 The initial hero omitted historical certification copy. The owner's later direct

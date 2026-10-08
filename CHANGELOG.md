@@ -4,6 +4,17 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Header search and contact controls
+
+- Matched the owner's control styling: white/gray-outlined search with a navy
+  magnifier, blue/white contact and physical signature corners on both.
+- Made search square at 48px, or 44px on narrow screens, and restored contact's
+  48px minimum height and 24px horizontal padding at the default root size.
+- Retained localized labels, routes, shared fonts and mobile contact access.
+
+See [control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage.
+
 ## 2026-10-08 — Homepage certification badge
 
 - Added the owner's explicitly requested Certifié · ISO · 9001:2015 badge and
