@@ -25,16 +25,22 @@ marketing page.
   uses RTL. Stable page IDs and equivalent localized paths are centralized in
   [src/lib/site.ts](src/lib/site.ts) and [src/i18n/routing.ts](src/i18n/routing.ts).
 - The responsive header, language selectors and substantial trilingual navy
-  footer are implemented. [Footer documentation](docs/footer.md) records content
-  sources, owner corrections, verification and outstanding editorial limits.
+  footer are implemented. The footer follows the analyzed native Figma reference
+  and owner-reattached Footer.png, retaining the requested newsletter CTA.
+  [Footer documentation](docs/footer.md) records content sources, owner corrections,
+  verification and outstanding editorial limits.
 - The homepage is an honest empty shell, not a completed institutional homepage.
-  Page/news/media collections start empty. Loading, empty and error states exist.
+  Page/news/media collections start empty. Empty and error states exist. Public
+  pages render their content without a locale-wide streamed loading boundary,
+  so footer destinations remain readable when JavaScript is disabled.
 - An owner-supplied video is stored for future hero use; the current pages do not
   render it. See [the asset inventory](docs/asset-inventory.md#hero-video) for source
   metadata, rights limits and the future derivative/poster requirements.
-- Search and contact currently have truthful unavailable states. No newsletter,
-  contact delivery, live search, external embed or production service should be
-  implied by a visual control alone.
+- Search and contact currently have truthful unavailable states. The newsletter
+  form remains visible as requested, with disabled email/consent/subscribe
+  controls, a localized unavailable notice and privacy link. Signup has no
+  provider, subscription endpoint or data storage. No delivery or production
+  service should be implied by a visual control alone.
 
 See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
 for previous checks; neither proves a later change was tested.

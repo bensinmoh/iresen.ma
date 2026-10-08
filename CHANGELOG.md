@@ -4,6 +4,27 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Footer reference rework
+
+- Reworked the footer using the previously analyzed native Figma frame and the
+  owner-reattached Footer.png: broad identity/navigation layout, contact/social
+  row and divided newsletter CTA, with responsive and Arabic adaptations.
+- Kept the requested email, subscribe and consent controls visible until signup
+  is configured; disabled controls, localized unavailable copy and a privacy link
+  avoid implying a working subscription service.
+- Retained approved brand assets, colors, contact/network destinations and page
+  IDs; documented the footer width exception and distinguished prior screenshots
+  and verification from this revision.
+- Removed the locale-wide streamed loading boundary so destination content remains
+  visible during footer navigation with JavaScript disabled.
+- Preserved localized HTTP 404 responses, including dotted unknown paths.
+- Passed lint, strict types, formatting, 8 unit tests, 4 CMS integration tests,
+  the production build, all 19 browser tests and 21 rendered responsive/text
+  enlargement cases. Reviewed French desktop, Arabic mobile and English tablet.
+
+See [footer implementation](docs/footer.md#reference-rework--2026-10-08) and
+[current validation](docs/validation.md#footer-reference-rework--2026-10-08).
+
 ## 2026-10-08 — Native Figma design reference
 
 - Retrieved and hash-verified the owner-uploaded 164,268,977-byte Git LFS source;

@@ -49,8 +49,19 @@
     "emailLabel": "Email us",
     "socialLabel": "Social and scientific networks",
     "socialLink": "Visit IRESEN on {network}",
-    "collaborationDescription": "Explore opportunities to collaborate with <brand>IRESEN</brand>.",
-    "copyright": "© {year} <brand>IRESEN</brand>. All rights reserved."
+    "copyright": "© {year} <brand>IRESEN</brand>. All rights reserved.",
+    "navigation": {
+      "institute": "Institute",
+      "science": "Science & innovation",
+      "resources": "Resources",
+      "collaboration": "Networks & partnerships"
+    },
+    "newsletterTitle": "Subscribe to our Newsletter",
+    "newsletterDescription": "Stay in touch with us to receive our latest news.",
+    "newsletterEmail": "Email address",
+    "newsletterSubscribe": "Subscribe",
+    "newsletterConsent": "I agree to receive emails from <brand>IRESEN</brand>.",
+    "newsletterUnavailable": "Newsletter signup is not available yet."
   },
   "Institute": {
     "about": "Who are we?",

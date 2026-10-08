@@ -147,10 +147,12 @@ export const navigationGroups = [
 
 export const footerPageIds = ['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'] as const
 
-export const footerNavigationGroups = navigationGroups.map((group) => ({
-  ...group,
-  pages: group.id === 'institute' ? (['home', ...group.pages] as const) : group.pages,
-}))
+export const footerNavigationGroups = [
+  { id: 'institute', pages: ['home', 'institute', 'governance', 'opportunities'] },
+  { id: 'science', pages: ['priorities', 'programmes', 'projects', 'platforms', 'network'] },
+  { id: 'resources', pages: ['publications', 'media', 'news', 'events'] },
+  { id: 'collaboration', pages: ['workWithUs', 'contact', 'transfer'] },
+] as const satisfies ReadonlyArray<{ id: string; pages: readonly PageId[] }>
 
 export function pageHref(pageId: PageId, locale: Locale, anchor?: string): string {
   const path = pages[pageId].pathnames[locale]

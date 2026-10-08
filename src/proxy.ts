@@ -25,7 +25,7 @@ export default function proxy(request: NextRequest) {
 
   if (isKnownPage) return handleLocaleRouting(request)
 
-  // Set the HTTP status before a loading boundary can stream the localized 404.
+  // Set the HTTP status before rendering the localized unknown-page response.
   // Register future detail routes here alongside their shared page resolver.
   const localizedUrl = request.nextUrl.clone()
   if (!hasLocale) localizedUrl.pathname = `/${defaultLocale}${pathname}`
@@ -41,5 +41,10 @@ export default function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api(?:/|$)|admin(?:/|$)|_next(?:/|$)|_vercel(?:/|$)|.*\\..*).*)'],
+  matcher: [
+    '/((?!api(?:/|$)|admin(?:/|$)|_next(?:/|$)|_vercel(?:/|$)|.*\\..*).*)',
+    '/fr/:path*',
+    '/en/:path*',
+    '/ar/:path*',
+  ],
 }
