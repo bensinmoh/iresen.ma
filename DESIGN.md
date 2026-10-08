@@ -5,6 +5,12 @@ Use this document for art direction and constructive critique. Use
 rules and [PRODUCT.md](PRODUCT.md) for product/content truth. These are working
 guidelines: explain useful departures and follow the owner's current instructions.
 
+For a shared website decision, start with [current coherence rules](docs/design-system.md#current-coherence-rules)
+and the [live Figma design-system review](docs/figma-design-system-review.md).
+Use this file for art direction and that specification for component/type/spacing
+roles. Source measurements explain intent; contradictory captions do not create
+new tokens or override current implemented decisions.
+
 ## Design read
 
 IRESEN should feel scientifically credible and welcoming: confident typography,
@@ -88,14 +94,25 @@ retain precedence over its historical palette and mockup content.
 The brief's standalone export boards remain unavailable in the checkout; the
 owner reattached Footer.png in chat for the footer rework. Latin font files are
 now installed separately with their verified license and provenance.
-Native Figma rendering, dedicated RTL/tablet references and effective prototype
-behavior remain unverified. Verify availability/freshness before claiming a direct
+Native Figma screenshots were reviewed for typography, spacing and colors on
+2026-10-08. Full-page native rendering, dedicated RTL/tablet references and effective
+prototype behavior remain unverified. Verify availability/freshness before claiming a direct
 comparison. Existing footer screenshots are prior review artifacts, not supplied
 references or proof of a new rendering.
 
 Record adopted shared improvements here and in the design-system specification,
 with the reason and verification. Keep proposals, experimental directions and
 unfinished measurements clearly separate from implemented decisions.
+
+The live board reinforces the display/body/label hierarchy, intentional space,
+flat bands and selected diagonal corners. Keep the implemented shared grid,
+Plus Jakarta Sans, natural Arabic tracking and existing type roles coherent
+across pages. H4's size, H5's rem conversion, the final spacing label, mobile
+grid caption and shadow caption contain source inconsistencies; the measured
+review records them. Illustrative state frames do not supply a production
+component API. Reuse card/row families, one primary action per context and
+accessible native controls; circular radios and pill switches remain appropriate
+exceptions to the diagonal-corner language.
 
 ## Adopted UI refinements — 2026-10-08
 

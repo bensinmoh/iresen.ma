@@ -1,14 +1,14 @@
 # IRESEN website — project and development instructions
 
-Version: 1.2 · 8 October 2026 — strategy references and structure status recorded  
+Version: 1.3 · 8 October 2026 — strategy references and current Figma design-system reference reconciled  
 Repository: https://github.com/bensinmoh/iresen.ma  
 Project owner: Mouhcine BENMEZIANE, Direction Partenariats & Marketing de l’Innovation, IRESEN  
 Working language for code and technical documentation: English  
 Public website languages: French, English and Arabic
 
-Preparation status: the supplied website exports and Illustrator brand boards have now been visually reviewed. The supplied SVG dimensions/color definitions and local color book have also been inspected. These exports provide a usable visual reference despite the Figma MCP quota limit. Editable Figma layers, component properties, interaction specifications and mobile/RTL designs remain unverified; do not claim an exact token or interaction extraction from screenshots. Repository contents/settings remain unverified and must be inspected at kickoff.
+Preparation status: earlier preparation recorded observations from website exports and Illustrator boards; those standalone files are unavailable in the current checkout and have not been reverified here. Supplied SVG dimensions/colors and the color book were subsequently inspected. The native Figma file was structurally analyzed on 2026-10-08, including desktop/mobile frames and serialized component/prototype records. Live access now confirms the design-system page and the reviewed typography, spacing and palette sections; native screenshots verify those sections only. Prototype execution, full-page fidelity and dedicated RTL/tablet references remain unverified. Use [the current design-system rules](docs/design-system.md), [the live review](docs/figma-design-system-review.md) and [the asset inventory](docs/asset-inventory.md) for current evidence; inspect repository state afresh for each task.
 
-Reference update — 8 October 2026: the owner supplied three DOCX documents for repository reference and analysis, explicitly describing the detailed website structure as recommendations and suggestions, not final validation. See [the source index and analysis](docs/references/strategy/README.md) and [the current route baseline/proposal comparison](docs/route-map.md#structure-recommendations-received-on-2026-10-08). The preparation paragraph above records the original brief's assumptions; current implementation and verification are recorded in README, PRODUCT.md and docs/validation.md. This reference update does not commission page, route or CMS changes.
+Reference update — 8 October 2026: the owner supplied three DOCX documents for repository reference and analysis, explicitly describing the detailed website structure as recommendations and suggestions, not final validation. See [the source index and analysis](docs/references/strategy/README.md) and [the current route baseline/proposal comparison](docs/route-map.md#structure-recommendations-received-on-2026-10-08). Current source status is summarized above; implementation and verification are recorded in README, PRODUCT.md and docs/validation.md. This reference update does not commission page, route or CMS changes.
 
 ## 1. Mission and working mandate
 
@@ -56,10 +56,11 @@ Use this precedence when references disagree:
 - `IRESEN_2035_Phase_02_Supports.docx` — communications-support recommendations, with final writing assigned to a later phase.
 - `IRESEN_Structure_Detaillee_Site_Web.docx` — unvalidated page/section and service recommendations.
 - Figma: https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=127-1781
+- Current design-system devlink: https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=2211-6298 — see [the live review](docs/figma-design-system-review.md).
 - Website image exports: the 15 references mapped in Section 7, including `HOMEPAGE.jpg` and `Header Section.png`.
 - Illustrator boards: `Shape 2.0_LOGO.jpg`, `Shape 2.0_Variants.jpg`, `Shape 2.0_Palette.jpg`, `Shape 2.0_Typography.jpg`, `Shape 2.0_Construction.jpg`, `Shape 2.0_Broundaries.jpg`, `Shape 2.0_Icon.jpg`, `Shape 2.0_Favicons.jpg`, `Shape 2.0_Pattern.jpg`, `Shape 2.0_Meanings.jpg` and `Shape 2.0_Mockup.jpg`. Preserve the supplied spelling of source filenames in the asset inventory.
 
-The Figma content will be replaced. Do not carry over stale wording, statistics, names, dates or commitments. Inspect the exports and reusable project components before implementation; convert prototype positioning into responsive layouts. The supplied JPG/PNG exports are an authorized alternative visual reference when editable Figma access is unavailable: development does not need to wait for renewed MCP access. Follow applicable Figma tool guidance if its connector is subsequently used. Request editable details or original assets only where a specific implementation depends on information the exports cannot supply.
+The Figma content will be replaced. Do not carry over stale wording, statistics, names, dates or commitments. Inspect the available reference and reusable project components before implementation; convert prototype positioning into responsive layouts. The supplied JPG/PNG exports remain an authorized alternative visual reference when editable Figma access is unavailable. Follow applicable Figma tool guidance when using the connector. Request editable details or original assets only where a specific implementation depends on information the available evidence cannot supply.
 
 Use the actual supplied SVGs. Preserve their geometry, proportions and approved color treatment. Choose the appropriate supplied logo variant for each background; do not redraw, distort or independently recolor the wordmark. Optimize copies only when rendering is preserved, and keep originals available privately.
 
@@ -237,17 +238,19 @@ Use HEX/RGB values as the digital master; do not convert web colors from CMYK or
 
 These ratios guide relative colored usage across the identity, not exact pixel quotas on every page. White/light neutral surfaces generally occupy 50–70% of page area. Most compositions use the two core colors and one accent maximum. Green supports the blue identity; it does not replace it.
 
-**Observed source discrepancy:** `Shape 2.0_Palette.jpg` labels Heritage Blue as `#256BA2`; the supplied Apex Leaf, favicon and two-color/dark-mode SVG definitions also use `#256BA2`. The color book specifies `#296BB4`. Keep `#296BB4` as the website token under the established source precedence until the owner explicitly changes that reference. Preserve the delivered SVG originals, record their actual color and do not silently recolor them or sample a third blue from JPG pixels. Reconcile the final web asset set and token choice before freezing the visual system; this does not block repository setup or layout work.
+**Resolved source discrepancy:** earlier board notes and superseded SVGs recorded Heritage Blue as `#256BA2`. The owner's latest correction selects the color-book value `#296BB4`, and every current blue-bearing supplied SVG matches it. Preserve all delivered originals and use the current asset set unchanged; see [ADR 0003](docs/adr/0003-owner-selected-primary-blue.md). The Figma design-system palette also contains historical colors, including navy `#0C2340` and action blue `#1A4E8A`; these are source evidence. Website navy stays `#12345A` and primary blue stays `#296BB4` under the established precedence.
 
 Use the master logo with navy wordmark and heritage-blue apex on light backgrounds. Use appropriate supplied reversed/monochrome variants for dark or constrained contexts. Keep the wider color spectrum in carefully selected patterns, graphics and data visualizations.
 
 ### Illustrator brand implementation
 
-- **Typography:** the Illustrator board explicitly identifies **Plus Jakarta Sans**, Regular/Bold, for Latin typography. Use it as the default French/English family, subject to obtaining licensed webfont files. Establish a restrained 400/600/700 hierarchy where the supplied licensed font supports those weights. Select and verify a compatible Arabic companion separately; the Latin board does not define Arabic typography.
+The following board observations were recorded during earlier preparation. The standalone Illustrator files are unavailable in this checkout; reverify their drawings before adopting new measured construction rules. Current geometry and asset colors are recorded in [the asset inventory](docs/asset-inventory.md).
+
+- **Typography:** earlier Illustrator notes identify **Plus Jakarta Sans**, Regular/Bold, for Latin typography; the reviewed native Figma typography also confirms this family. French/English text and controls now use a verified, self-hosted Plus Jakarta Sans Latin variable webfont under OFL 1.1; see [the font guide](docs/fonts.md). Use its restrained 400/600/700 hierarchy. Arabic retains Tahoma/Arial while a compatible companion family awaits review; the Latin references do not define Arabic typography.
 - **Logo geometry:** the lower-case wordmark and apex are custom supplied vectors. Plus Jakarta Sans is for website text, not permission to recreate the logo with live text. Preserve the apex tilt, sharp points, curves and wordmark letterforms.
-- **Clear space:** follow the unit-based guides in `Shape 2.0_Broundaries.jpg` (2U around the wordmark) and `Shape 2.0_Icon.jpg` (3U in the standalone icon diagram). Define U from those drawings rather than guessing a fixed pixel margin. Header/footer layouts must respect the resulting clear space.
+- **Clear space:** earlier notes report 2U around the wordmark in `Shape 2.0_Broundaries.jpg` and 3U in the standalone icon diagram `Shape 2.0_Icon.jpg`. Reverify the drawings and define U before adopting those measurements. Keep the current documented layout breathing room and preserve SVG geometry meanwhile; do not guess a construction unit.
 - **Variant selection:** inspect actual asset colors instead of relying on filenames. In the supplied set, both `IRESEN Logo Monochrome.svg` and `IRESEN Logo White.svg` contain white fills; neither is automatically a navy-on-white variant. Use the inspected two-color vector on light surfaces, a suitable reversed/dark-mode vector on navy, and record any missing required variant for authorized export.
-- **Sizing:** the supplied SVGs use viewBox dimensions rather than explicit root width/height. Reserve component dimensions proportionally, preserve their aspect ratios and prevent clipping or layout shift. The wordmark viewBox is approximately 3.57:1; the apex shape must retain its own tall proportions.
+- **Sizing:** the supplied SVGs use viewBox dimensions rather than explicit root width/height. Reserve component dimensions proportionally, preserve their aspect ratios and prevent clipping or layout shift. The standard wordmark viewBoxes are approximately 3.57:1; the current primary mark has its own approximately 2.48:1 ratio. The apex shape must retain its own tall proportions.
 - **Favicon:** use `Favicon.svg` as the source for the browser icon, inspect contrast at small sizes and generate approved raster/ICO/touch-icon derivatives when needed. Do not use a screenshot of the favicon board, including its construction guides, as the site icon. A manifest or install prompt is not required simply because icon files exist.
 - **Pattern:** use the supplied Apex Leaf silhouette for repeatable, dense symmetrical patterns following `Shape 2.0_Pattern.jpg`. Keep spacing, orientation and rhythm consistent; use restrained tonal versions for backgrounds. Do not stretch the tile, use an unrelated generic leaf, or place dense patterns behind body copy.
 - **Meanings:** the fire, water, leaf, rocket, light-bulb and sharp-point drawings explain the brand symbolism. They are not automatically a mandatory navigation icon set or six additional content pillars.
@@ -256,7 +259,7 @@ Use the master logo with navy wordmark and heritage-blue apex on light backgroun
 ### Layout, hierarchy and graphic signature
 
 - Establish shared tokens for colors, typography, spacing, containers, radii, borders, shadows, motion and z-index. Components consume semantic tokens rather than arbitrary values.
-- Use a consistent grid: 12 columns on desktop, 8 on tablet and 4 on mobile as the baseline. Start with an approximately 1280px content maximum, fluid gutters and a 4/8px spacing rhythm; refine against the actual design.
+- Use 12/8/4-column desktop/tablet/mobile grids as composition starting points. The implemented header, hero, following sections and footer share a 120rem container with `clamp(1.25rem, 3.125vw, 4rem)` aligned gutters and a 4/8px spacing rhythm; this supersedes the brief's original 1280px content-width starting point. Refine composition against the current design rules and real content.
 - Use clear H1/H2/H3 hierarchy, comfortable reading measure (about 60–75 characters for Latin body copy) and equivalent readable Arabic composition.
 - Contrast adjacent full-width sections with white, light neutral and selective navy surfaces. **Do not round full-width horizontal section containers.**
 - Apply the IRESEN rounded **top-left and bottom-right** signature selectively to cards, media frames and focused blocks. Keep other corners restrained; avoid universal pill shapes and excessive rounded containers.
@@ -341,7 +344,7 @@ The screenshot’s exact section order is not binding after the narrative update
 
 Implement desktop, tablet, mobile and Arabic adaptations from the same content system. Compare rendered screenshots to the exports for composition, hierarchy and recognizable design language while evaluating against the newer logo/colors and approved structure. Record intentional differences. Verify typography and image cropping, header fit, clear space, selected-corner treatment, flat section edges, small-screen controls, reduced motion and long Arabic text.
 
-The exports do not provide separate production photographs/3D source assets, mobile frames or tested interactive behavior. Acquire approved individual assets or implement an explicitly documented replacement; do not pretend a cropped screen export is an original image. The dimensional hero motifs are primarily a visual direction, not authorization to ship a heavy 3D engine or add effects to every page.
+The standalone exports do not provide separate production photographs/3D source assets, mobile frames or tested interactive behavior. The native Figma analysis subsequently recovered mobile frames and individual media; the introductory heroes use documented derivatives from that source. Source presence does not establish image rights, facility identity or prototype accessibility. Acquire approved individual assets or implement an explicitly documented replacement where needed; do not pretend a cropped screen export is an original image. The dimensional hero motifs are primarily a visual direction, not authorization to ship a heavy 3D engine or add effects to every page.
 
 ## 8. Responsiveness and accessibility
 
@@ -596,7 +599,7 @@ Complete this foundation before expanding into the full feature build. Report it
 
 ### Milestone 2 — Design system and core institutional pages
 
-Use the reviewed website exports and Illustrator references as the visual baseline in Section 7. Inspect editable Figma details when available for requirements that depend on them, without blocking implementation on connector access. Reuse project components and implement a coherent token system and responsive templates. Resolve the recorded brand-color/asset discrepancy before finalizing visual variants. Apply updated approved copy, with all three locale versions of the core pages. Build the homepage, Institut, governance, priorities, expertise, transfer, collaboration and contact layouts with the agreed boundaries.
+Use [the current design-system rules](docs/design-system.md), [the live Figma review](docs/figma-design-system-review.md) and available references as the visual baseline; Section 7 retains earlier export/Illustrator observations for context. Inspect editable details for requirements that depend on them, without blocking independent work on connector access. Reuse project components and implement coherent tokens and responsive templates. Preserve the resolved owner-approved brand colors and current SVGs. Apply updated approved copy, with all three locale versions of the core pages. Build the homepage, Institut, governance, priorities, expertise, transfer, collaboration and contact layouts with the agreed boundaries. Consult [PRODUCT.md](PRODUCT.md) for the current implementation rather than treating this milestone list as a fresh task.
 
 Acceptance: design/brand comparison at desktop/tablet/mobile sizes; Arabic layout review; no rounded full-width section containers; no stale placeholder claims; meaningful keyboard/screen-reader review and measured bundle/LCP baseline.
 
@@ -642,9 +645,9 @@ Do not block the local foundation on these, but resolve them before dependent pr
 - Confirmed official domain/host variant and migration inventory.
 - Production provider/region, institutional data classification and applicable cloud requirements.
 - Final public copy, verified key figures, translated terminology and media rights.
-- Licensed webfont files for the identified Plus Jakarta Sans family, an approved Arabic companion and original public imagery/illustrations separate from screenshots.
-- Reconciliation of Illustrator/SVG Heritage Blue `#256BA2` with color-book `#296BB4`, and correct light/dark/monochrome asset selection.
-- Editable Figma details only where the available exports cannot resolve a specific component/interaction question.
+- An approved Arabic font companion and reviewed original public imagery/illustrations separate from screenshots; the licensed Plus Jakarta Sans Latin font is already installed and documented in the font guide.
+- Verified Illustrator construction/clear-space drawings and correct light/dark/monochrome asset selection; the website blue decision and current SVG colors are resolved in ADR 0003.
+- Additional editable Figma details only where the recorded native/live evidence cannot resolve a specific component/interaction question.
 - Institutional contact recipients and approved email credentials/provider.
 - Administrator accounts and production MFA/SSO implementation.
 - LinkedIn organization identity, approved developer access and content-retention terms.
@@ -675,4 +678,4 @@ Checked while preparing this brief on 7 October 2026. Recheck package compatibil
 
 ## 22. First implementation task
 
-Read this document and the repository instructions. Inspect the repository, inventory the supplied website exports/Illustrator assets, record the known color discrepancy and confirm the stack compatibility decision. Complete Milestones 0 and 1 on a reviewable branch. Deliver a running blank trilingual foundation, initial CMS, documentation and passing checks. Report blockers precisely and continue independent work. The next task is design-system and page implementation using the reviewed exports, approved identity and updated content; live Figma access is optional unless a specific missing detail requires it.
+This kickoff instruction records the original foundation mandate; that increment is now delivered. For current tasks, read this brief, [AGENTS.md](AGENTS.md), [PRODUCT.md](PRODUCT.md) and the current design reference, inspect the checkout and complete the owner's requested increment on a reviewable branch. Preserve the approved identity, existing implementation and updated content. Report blockers precisely and continue independent work; live Figma access is needed only where a specific missing detail requires it.
