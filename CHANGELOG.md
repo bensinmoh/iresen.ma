@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Header control proportions and contact label
+
+- Reduced only the header search/contact diagonal corners to 10px, preserving
+  their physical orientation and existing control sizes, padding, colors and type.
+- Added the header-specific French CTA « Contactez-nous »; English/Arabic labels,
+  page titles, footer/compact-menu labels and localized routes are preserved.
+- Recorded this as an adaptation toward the re-shared reference, supported by
+  live CTA geometry; earlier 20px verification remains historical.
+
+See [current control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
+and [validation](docs/validation.md) for revision-specific coverage.
+
 ## 2026-10-08 — Apex Leaf browser icon
 
 - Selected the existing tightly bounded Apex Leaf for the public browser icon,

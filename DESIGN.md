@@ -277,12 +277,16 @@ rendered coverage are recorded separately in [the validation log](docs/validatio
 
 The owner's screenshot refinement gives search a white square, neutral gray
 outline and navy magnifier; contact retains primary blue with white text.
-Both use physical 20px top-left/bottom-right corners with sharp opposite corners,
+Both now use physical 10px top-left/bottom-right corners with sharp opposite corners,
 including in RTL. Search is 48px square, reducing to 44px at `35rem` and below;
 contact retains a 48px minimum height and 24px horizontal padding at the default
-root size. Localized labels, routes, shared fonts and mobile contact access remain.
+root size. The tighter radius is an adaptation toward the re-shared reference,
+supported by live CTA corner evidence rather than an exact screenshot measurement.
+The French desktop CTA now reads « Contactez-nous » through its header-specific
+label; shared fonts, page titles, routes and compact-menu contact access remain.
 See [control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
-and [current validation](docs/validation.md).
+and [current validation](docs/validation.md); earlier 20px checks describe the
+previous treatment.
 
 ## Shared key-figure typography — 2026-10-08
 

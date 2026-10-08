@@ -130,6 +130,7 @@ ul {
 
 .site-header {
   --header-control-size: 3rem;
+  --header-control-radius: 0.625rem 0 0.625rem 0;
   position: relative;
   z-index: var(--z-header);
   background: var(--color-white);
@@ -203,7 +204,7 @@ body:has(.page-hero) .site-header-overlay {
   min-inline-size: var(--header-control-size);
   min-block-size: var(--header-control-size);
   border: 1px solid var(--color-control-outline);
-  border-radius: var(--radius-signature);
+  border-radius: var(--header-control-radius);
   color: var(--color-navy);
   background: var(--color-white);
   transition: background-color var(--duration-fast);
@@ -226,7 +227,7 @@ body:has(.page-hero) .site-header-overlay {
 .button.header-contact {
   min-block-size: var(--header-control-size);
   padding-inline: var(--space-6);
-  border-radius: var(--radius-signature);
+  border-radius: var(--header-control-radius);
 }
 
 .header-contact:hover {
