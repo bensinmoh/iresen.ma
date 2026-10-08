@@ -55,3 +55,14 @@ tests plus the 11 existing foundation tests). Local visual previews cover French
 and Arabic desktop/mobile and English tablet. The build reports the existing
 next-intl webpack cache-dependency warning on the initial cold build; the final
 incremental build compiled without warnings.
+
+## Review screenshots
+
+These screenshots were generated from the verified local production application
+on 2026-10-08. They contain only the public footer UI and institutional contact
+information. They are review artifacts, not application assets or supplied design
+references.
+
+![French desktop footer](screenshots/footer-fr-desktop.png)
+
+![Arabic mobile footer](screenshots/footer-ar-mobile.png)
