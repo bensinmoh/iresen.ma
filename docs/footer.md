@@ -19,6 +19,32 @@ alone; public French/English controls use self-hosted Plus Jakarta Sans. See
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe their earlier revisions.
 
+## Footer type and newsletter refinement — 2026-10-08
+
+Our adaptation toward the owner's footer reference uses 18px/500 identity and
+navigation text,
+16px/500 group labels and 20px contact text (500 labels, 600 values) at the default
+root size. Navigation reduces to 16px at `35rem` and below. The newsletter heading
+scales from 30–50px at weight 500, line height 1.2 and −3% Latin tracking;
+Arabic retains natural tracking and the shared Alexandria font.
+
+Wide-layout spacing caps are 64px top, 48px grid-to-contact, 32px before the divider,
+48px after it, 32px before utilities and 40px bottom. The signup track grows to
+`min(44%, 37.5rem)` (600px), retaining responsive stacking, the shared container,
+current colors, physical corners, original SVGs and established destinations.
+These implemented roles adapt the reference; exact native footer text styles were
+unavailable. Its 1920 × 798px frame does not impose a fixed runtime height.
+
+The newsletter's email and consent are editable local controls. Subscribe opens
+a native `details`/`summary` disclosure containing the localized unavailable
+`role="status"` message, initially hidden. It supports native keyboard, pointer,
+touch and no-JavaScript activation; activating it again closes the notice.
+The privacy link stays visible below consent. No form action, named submission
+fields, API, application persistence or subscription success is introduced.
+This remains server-rendered without a new client component or dependency.
+Current checks belong in [the validation log](validation.md); earlier screenshots
+and type/disabled-state checks retain their original scope.
+
 ## Reference rework — 2026-10-08
 
 The native `.fig` analysis was already completed in the preceding reference
@@ -75,10 +101,11 @@ copy, address, contact labels and accessible names live in the complete
 `Footer` UI catalogs. Institutional and utility links use centrally localized
 page identifiers. The footer introduces no CMS schema or external embeds.
 
-The owner explicitly requested the newsletter CTA and chose to keep the form
-visible until signup is configured. Email, consent and subscribe controls are
-visible but disabled, with a localized unavailable notice and privacy link.
-There is no subscription provider, endpoint, data storage or success message.
+The owner explicitly requested the newsletter CTA. The reference rework initially
+kept its email, consent and subscribe controls disabled with a visible unavailable
+notice. The later refinement above replaces that state with local editable controls
+and attempt-only feedback. There is still no subscription provider, endpoint,
+application data storage or success message.
 Current contact-page availability remains governed by the existing contact adapter.
 
 ## Earlier verification
@@ -144,6 +171,9 @@ These captures show the earlier local production footer after that refinement:
 ![Refined Arabic mobile footer](screenshots/design-refinement-ar-mobile.png)
 
 ## Reference rework verification — 2026-10-08
+
+These checks describe the earlier rework, before the current type and newsletter
+interaction refinement.
 
 Lint, strict types, formatting, 8 unit tests, 4 local CMS integration tests,
 the production build and all 19 browser tests passed. Browser coverage includes

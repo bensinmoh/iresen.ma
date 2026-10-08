@@ -82,7 +82,7 @@ for (const locale of locales) {
   })
 }
 
-test('newsletter CTA explains its unavailable state without accepting subscriptions in every locale', async ({
+test('newsletter explains its availability only after an attempt without sending data in every locale', async ({
   page,
 }) => {
   for (const locale of locales) {
@@ -101,21 +101,64 @@ test('newsletter CTA explains its unavailable state without accepting subscripti
       exact: true,
     })
 
-    await expect(
-      newsletter.getByText(messages.Footer.newsletterUnavailable, { exact: true }),
-    ).toBeVisible()
+    const unavailable = newsletter.getByText(messages.Footer.newsletterUnavailable, { exact: true })
+    const attempt = newsletter.locator('.footer-newsletter-attempt')
+
+    await expect(unavailable).toBeHidden()
     await expect(email).toHaveAttribute('type', 'email')
-    await expect(email).toBeDisabled()
+    await expect(email).toBeEnabled()
     await expect(email).toHaveValue('')
     await expect(consent).toHaveAccessibleName(
       messages.Footer.newsletterConsent.replace(/<\/?brand>/g, ''),
     )
-    await expect(consent).toBeDisabled()
+    await expect(consent).toBeEnabled()
     await expect(consent).not.toBeChecked()
-    await expect(subscribe).toBeDisabled()
+    await expect(subscribe).toBeEnabled()
     await expect(
       newsletter.getByRole('link', { name: messages.Pages.privacy, exact: true }),
     ).toHaveAttribute('href', pageHref('privacy', locale))
+
+    await email.fill('newsletter-check@example.test')
+    await consent.check()
+    await expect(consent).toBeChecked()
+    const submitted: string[] = []
+    const recordSubmission = (request: import('@playwright/test').Request) => {
+      if (
+        request.isNavigationRequest() ||
+        request.method() !== 'GET' ||
+        ['fetch', 'xhr'].includes(request.resourceType())
+      ) {
+        submitted.push(`${request.method()} ${request.url()}`)
+      }
+    }
+    page.on('request', recordSubmission)
+    const previousUrl = page.url()
+
+    await subscribe.focus()
+    await page.keyboard.press('Enter')
+    await expect(attempt).toHaveAttribute('open', '')
+    await expect(subscribe).toBeFocused()
+    await expect(subscribe).toHaveCSS('outline-style', 'solid')
+    await expect(newsletter.getByRole('status')).toHaveText(messages.Footer.newsletterUnavailable)
+    await expect(unavailable).toBeVisible()
+    await expect(email).toHaveValue('newsletter-check@example.test')
+    expect(page.url()).toBe(previousUrl)
+    expect(submitted).toEqual([])
+    page.off('request', recordSubmission)
+
+    await page.keyboard.press('Space')
+    await expect(attempt).not.toHaveAttribute('open', '')
+    await expect(unavailable).toBeHidden()
+
+    // Availability feedback does not depend on accepting or validating an email.
+    await email.fill('not-an-email')
+    page.on('request', recordSubmission)
+    await subscribe.click()
+    await expect(unavailable).toBeVisible()
+    await expect(email).toHaveValue('not-an-email')
+    expect(page.url()).toBe(previousUrl)
+    expect(submitted).toEqual([])
+    page.off('request', recordSubmission)
   }
 })
 
@@ -245,7 +288,7 @@ test('footer language dropdown works by keyboard and preserves the current page 
   )
 })
 
-test('footer language switching and mobile navigation remain usable without JavaScript', async ({
+test('newsletter attempts, footer language switching and mobile navigation work without JavaScript', async ({
   browser,
   baseURL,
 }) => {
@@ -261,6 +304,40 @@ test('footer language switching and mobile navigation remain usable without Java
       const targetLocale: Locale = locale === 'fr' ? 'en' : locale === 'en' ? 'ar' : 'fr'
       await page.goto(pageHref('workWithUs', locale))
       const footer = page.getByRole('contentinfo')
+      const newsletter = footer.getByRole('region', {
+        name: catalogs[locale].Footer.newsletterTitle,
+        exact: true,
+      })
+      await expect(newsletter.getByRole('status')).toHaveCount(0)
+      await newsletter
+        .getByRole('textbox', { name: catalogs[locale].Footer.newsletterEmail, exact: true })
+        .fill('newsletter-check@example.test')
+      await newsletter.getByRole('checkbox').check()
+      const subscribe = newsletter.getByRole('button', {
+        name: catalogs[locale].Footer.newsletterSubscribe,
+        exact: true,
+      })
+      const submitted: string[] = []
+      const recordSubmission = (request: import('@playwright/test').Request) => {
+        if (
+          request.isNavigationRequest() ||
+          request.method() !== 'GET' ||
+          ['fetch', 'xhr'].includes(request.resourceType())
+        ) {
+          submitted.push(`${request.method()} ${request.url()}`)
+        }
+      }
+      page.on('request', recordSubmission)
+      const previousUrl = page.url()
+      await subscribe.focus()
+      await page.keyboard.press('Enter')
+      await expect(newsletter.getByRole('status')).toHaveText(
+        catalogs[locale].Footer.newsletterUnavailable,
+      )
+      await expect(subscribe).toBeFocused()
+      expect(page.url()).toBe(previousUrl)
+      expect(submitted).toEqual([])
+      page.off('request', recordSubmission)
       const dropdown = footer.locator('.locale-dropdown')
       await dropdown.locator('summary').focus()
       await page.keyboard.press('Enter')

@@ -4,6 +4,21 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Footer type and newsletter refinement
+
+- Adapted footer typography toward the owner's reference with larger medium-weight
+  navigation/contact text, a 30–50px newsletter heading and tighter Latin tracking.
+- Reduced capped vertical gaps and broadened the signup track while retaining
+  natural height, shared alignment, current content and physical brand corners.
+- Replaced disabled newsletter controls and the initially visible notice with
+  local editable email/consent and a native Subscribe disclosure for unavailable
+  feedback. Privacy stays visible; no subscription API, persistence or success
+  is introduced, and no client component or dependency is added.
+
+See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08)
+and [validation](docs/validation.md) for this revision's coverage. Earlier
+disabled-state checks and screenshots retain their original scope.
+
 ## 2026-10-08 — Apex Leaf heading reference
 
 - Recorded the owner's preferred Apex Leaf bullet beside section headings for

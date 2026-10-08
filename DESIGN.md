@@ -141,15 +141,33 @@ owner-reattached Footer.png: identity plus four navigation groups, a contact/soc
 row, a divider, prominent newsletter copy and signup controls, then compact utility
 and language access. The rework initially introduced a footer-specific 120rem
 maximum and fluid 3.125vw side gutters; the later hero refinement promotes that
-geometry to the shared page grid. Group labels remain 14px; desktop links use 16px and
-600 weight, while the newsletter heading has its own fluid display role.
+geometry to the shared page grid. Initially, group labels were 14px and desktop
+links 16px/600; the later footer type refinement below supersedes these roles.
 
-The requested newsletter form remains visible with disabled controls and a
-localized unavailable notice until signup is configured. Approved colors, SVGs,
-routes, contact information and networks supersede historical mockup content.
+The initial newsletter used disabled controls and a visible unavailable notice.
+Approved colors, SVGs, routes, contact information and networks supersede
+historical mockup content.
 Mobile and Arabic reflow are adaptations; decoded source evidence does not
-establish native rendered fidelity. Current verification is recorded in
+establish native rendered fidelity. Earlier verification is recorded in
 [the footer log](docs/footer.md#reference-rework-verification--2026-10-08).
+
+## Footer type and newsletter refinement — 2026-10-08
+
+Our adaptation toward the owner's footer reference uses 18px/500 identity and
+navigation text,
+16px/500 group labels and 20px contact text (500 labels, 600 values) at the default
+root size. Narrow-screen navigation becomes 16px. The newsletter heading scales
+from 30–50px at weight 500, with −3% Latin tracking and natural Arabic tracking.
+Smaller capped vertical gaps and a broader signup column make these roles fit
+the shared footer composition. Existing colors, assets, routes, contact and social
+destinations remain; footer height follows content rather than the source frame's
+height. Exact native footer text styles were unavailable.
+
+The newsletter keeps editable email/consent controls, with the unavailable message
+hidden until Subscribe opens a native disclosure. The privacy link remains visible;
+no subscription is submitted, stored or reported successful. See
+[footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08)
+and [current validation](docs/validation.md).
 
 ## Navigation reference adaptation — 2026-10-08
 

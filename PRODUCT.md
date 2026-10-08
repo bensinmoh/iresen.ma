@@ -55,10 +55,10 @@ marketing page.
   render it. See [the asset inventory](docs/asset-inventory.md#hero-video) for source
   metadata, rights limits and the future derivative/poster requirements.
 - Search and contact currently have truthful unavailable states. The newsletter
-  form remains visible as requested, with disabled email/consent/subscribe
-  controls, a localized unavailable notice and privacy link. Signup has no
-  provider, subscription endpoint or data storage. No delivery or production
-  service should be implied by a visual control alone.
+  keeps local editable email/consent controls; Subscribe opens a native disclosure
+  with the localized unavailable message, hidden initially. The privacy link stays
+  accessible. No subscription is submitted or stored, and no success is reported;
+  signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).
 
 See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
 for previous checks; neither proves a later change was tested.

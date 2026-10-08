@@ -523,6 +523,48 @@ contact label is visible and CDP confirms its actual custom Plus Jakarta Sans
 glyphs. Documentation formatting, local links and diff whitespace were checked.
 Changes remain local and have not been pushed.
 
+## Footer type and newsletter refinement — 2026-10-08
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+39 Chromium browser tests passed. Existing newsletter coverage now verifies
+initially hidden feedback, editable email/consent, visible checked state,
+keyboard opening/closing, focus, malformed-email attempts, privacy access and
+no navigation or data submission. The no-JavaScript footer test exercises an
+actual subscription attempt in FR/EN/AR. CMS integration checks were not repeated
+for this presentation and native interaction change.
+
+An additional 27 footer cases (54 collapsed/expanded views) passed: FR/EN/AR
+at 320/390/768/1024/1120/1440/1920px and 200% root text at 320/1440px. Checks covered
+containment, feedback visibility, control sizes, checked state, type weights,
+Latin/Arabic tracking and physical corners. The wide field measures 600 × 80px
+with a 60px Subscribe control. The French footer has a natural height of about
+884px at 1920px; the source's 798px height is not imposed on current content.
+
+Existing font tests confirm actual custom Jakarta/Alexandria glyph rendering in
+all three locales, including footer links, copy, email and Subscribe. Calculated
+contrast is 7.47:1 for muted footer text, 6.45:1 for contact values, 6.47:1 for the
+email placeholder, 10.93:1 for entered email and 5.45:1 for Subscribe text.
+Scoped Impeccable type/layout analysis returned zero findings. These checks do not
+establish full accessibility conformance, manual screen-reader results or other
+browser coverage; the older-browser stacked layout was source-reviewed.
+
+Final captures:
+
+- [French desktop](screenshots/footer-refined-fr-1920.png)
+- [French at 1440px](screenshots/footer-refined-fr-1440.png)
+- [Feedback after an attempt](screenshots/footer-refined-fr-1920-feedback.png)
+- [Arabic desktop](screenshots/footer-refined-ar-1440.png)
+- [Arabic mobile](screenshots/footer-refined-ar-390.png)
+- [English tablet](screenshots/footer-refined-en-768.png)
+
+Two reviewers inspected the typography, spacing, controls and RTL layouts.
+Default captures use neutral focus. Chromium's tall element capture also painted
+the unfocused skip link from above the viewport; its negative viewport bounds
+were verified, and it was excluded from the two affected captures with temporary
+screenshot styling. The application's skip-link behavior was unchanged.
+Documentation formatting, local links and diff
+whitespace were checked. Changes remain local and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

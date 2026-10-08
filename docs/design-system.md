@@ -80,10 +80,11 @@ until the requested implementation supplies a reason to change them.
 ## Adopted type and control roles — 2026-10-08
 
 `--font-size-body` is `1rem`, `--font-size-label` is `0.875rem`, and
-`--font-size-meta` is `0.8125rem`. Use body size for reading text and desktop footer
-links, label size for footer section headings/utility links and mobile footer
-links, and metadata size for copyright. The earlier refinement used regular footer
-navigation weight; the reference rework below uses 600 weight for desktop links.
+`--font-size-meta` is `0.8125rem`. Use body size for reading text, label size for
+utility links and metadata size for copyright. Earlier footer roles used body size
+for desktop links and label size for group headings/mobile links, first at regular
+navigation weight and then 600 for desktop links. The current footer refinement
+below supersedes those footer roles.
 
 `--color-action-surface` (`#EAF1F8`) is the quiet background for language hover
 states in the header. Current languages now use 700 weight alone; the former
@@ -114,16 +115,47 @@ without imposing a fixed height or universal gap on translated responsive conten
 
 Desktop uses identity beside four navigation groups, followed by contact/social
 details and a divided newsletter area. Newsletter copy and controls share a row,
-then stack on smaller screens; navigation retains two columns on mobile. Group
-labels use the shared label role and desktop links use body size at 600 weight.
-The newsletter heading is fluid from 1.875rem to 3.375rem. Utilities remain compact.
+then stack on smaller screens; navigation retains two columns on mobile. Initially,
+group labels used the shared label role, desktop links body size at 600 weight
+and the newsletter heading a 1.875–3.375rem scale. The later footer refinement
+below supersedes those roles. Utilities remain compact.
 
 `--color-footer-field` is a 5% white surface on the approved navy for the visible
-signup block. Disabled email, consent and subscribe controls retain legible type;
-a localized unavailable notice and privacy link explain the current availability.
+signup block. The initial email, consent and subscribe controls were disabled,
+with a visible unavailable notice and privacy link.
 Logical layout, isolated Latin identifiers and meaningful arrow mirroring support
 Arabic while preserving physical signature corners. See [implementation and
-current verification](footer.md#reference-rework--2026-10-08).
+earlier verification](footer.md#reference-rework--2026-10-08).
+
+## Footer type and newsletter refinement — 2026-10-08
+
+Our adaptation toward the owner's reference uses these roles at the default root
+size: identity copy and navigation use 18px/500; navigation
+reduces to 16px at `35rem` and below. Group labels use 16px/500. Contact labels and
+values use 20px at weights 500 and 600 respectively. The newsletter heading uses
+`clamp(1.875rem, 2.605vw, 3.125rem)` (30–50px), weight 500, line height 1.2 and
+`-0.03em` Latin tracking; Arabic keeps natural tracking.
+
+Wide-layout spacing caps are 64px top padding, 48px from grid to contact, 32px
+before the newsletter divider, 48px after it, 32px before utilities and 40px bottom
+padding. The signup track is `min(44%, 37.5rem)` (600px), with existing tablet/mobile
+stacking. Shared alignment, colors, physical corners, SVGs, routes and contact/social
+destinations remain. The source frame's 1920 × 798px dimensions inform composition;
+height follows content, and exact native footer text styles were unavailable.
+
+Newsletter email/consent controls hold local UI state. Subscribe is a native
+`details`/`summary` disclosure: the localized `role="status"` unavailable message
+starts hidden and appears when activated, including without JavaScript. The
+privacy link is always outside the disclosure. No form action, subscription API,
+persistence or success response is introduced.
+The field uses an 80px minimum and an 18px/600, 60px Subscribe control at the
+default root size. Modern `details::details-content` support places icon, email
+and Subscribe in one row; the progressive fallback stacks Subscribe. At `35rem`
+and below, Subscribe spans the field with a 44px minimum. The consent label also
+retains a 44px target and visible checked state.
+See [footer guidance](footer.md#footer-type-and-newsletter-refinement--2026-10-08)
+and [current validation](validation.md); earlier type and disabled-state checks
+retain their original scope.
 
 ## Navigation reference composition — 2026-10-08
 
