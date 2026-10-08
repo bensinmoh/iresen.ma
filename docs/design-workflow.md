@@ -5,13 +5,14 @@ guidelines for better design decisions, not a fixed checklist or new product sco
 The user's current request takes precedence over this document and skill defaults.
 Routine coherent refinements can proceed without repeated permission questions.
 
-The owner clarified on 2026-10-08 that the attached Figma screenshots are the
-visual target. Use them to converge toward the supplied layout, typography,
-spacing, alignment, hierarchy and surface treatments. Taste and Impeccable guide
-quality refinements within that design. Latest explicit owner corrections take
-precedence; contrast, responsive content, interaction and Arabic adaptations
-should preserve the reference's visual intent. Explain material departures and
-keep screenshot sample claims separate from requested facts and approved routes.
+The owner's latest clarification on 2026-10-08 makes attached Figma screenshots
+references for design elements: typography, colors, tabs, surfaces, dividers,
+arrows and spacing. Keep this language coherent while choosing layouts for
+the actual content. Figures and featured links are optional when useful;
+no screenshot creates a universal panel format or height. Taste and Impeccable
+guide craft within the approved identity, including contrast, responsive content,
+interaction and Arabic RTL. Keep sample claims separate from requested facts
+and implemented routes.
 
 ## Start with the task
 
@@ -45,9 +46,10 @@ authoritative.
    and actual available evidence. Separate approved content from drafts and sample
    screenshots. Missing optional exports should not stop independent work.
 2. **Read the design.** Briefly explain the composition problem and improvement.
-   Choose fidelity for the owner's supplied visual references; use refinement
-   or redesign when the request calls for it. Critique weak layout
-   and type choices; preserve brand/content/page boundaries. Seek a decision only
+   Identify the shared design elements in supplied references, then choose the
+   composition for the content and request. Use refinement or redesign when
+   requested. Critique weak layout and type choices; preserve brand/content/page
+   boundaries. Seek a decision only
    when it materially blocks the outcome.
 3. **Implement.** Reuse tokens and components, applying responsive, Arabic and
    accessibility rules throughout. A narrow component fix need not replace the

@@ -526,14 +526,13 @@ body:has(.page-hero) .site-header-overlay {
   .mega-menu-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    min-block-size: clamp(26rem, 25vw, 30rem);
     align-items: stretch;
   }
 
   .mega-menu-intro {
     display: flex;
     flex-direction: column;
-    gap: var(--space-12);
+    gap: var(--space-6);
     min-inline-size: 0;
     padding-block: var(--space-12);
     padding-inline-end: var(--space-8);
@@ -563,10 +562,6 @@ body:has(.page-hero) .site-header-overlay {
     line-height: 1.6;
   }
 
-  .mega-menu-intro .mega-menu-figure {
-    margin-block-start: auto;
-  }
-
   .mega-menu-figure .key-figure-value {
     color: var(--color-navy);
   }
@@ -582,6 +577,13 @@ body:has(.page-hero) .site-header-overlay {
     gap: var(--space-2);
     padding: var(--space-8);
     border-inline: 1px solid var(--color-border);
+  }
+
+  .mega-menu-grid--links .mega-menu-links {
+    grid-column: 2 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
+    border-inline-end: 0;
   }
 
   .mega-menu-links a {

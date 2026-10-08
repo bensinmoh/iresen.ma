@@ -10,12 +10,13 @@ The file was read offline as data, using its embedded Kiwi schema. All 26,102,71
 
 Latest owner decisions and supplied brand assets retain precedence over Figma. The approved colors in the next section are implementation rules; the historical source palette in the native analysis is evidence. Source inspection does not change runtime tokens, approved page boundaries, SVG geometry, licensed font availability or editorial approval.
 
-The owner clarified on 2026-10-08 that attached screenshots define the visual
-target. Preserve their composition, typography, spacing, alignment, hierarchy and
-surfaces while applying Taste/Impeccable quality guidance. Latest explicit owner
-corrections, readable contrast, responsive content, interaction and Arabic RTL
-guide necessary adaptations; explain material departures. Reference sample claims
-remain distinct from requested facts and approved routes.
+The owner's latest clarification on 2026-10-08 makes attached screenshots
+references for design elements, including typography, colors, tabs, surfaces,
+dividers, arrows and spacing. Apply this shared visual language to layouts chosen
+for the actual content; optional figures/features do not define universal columns.
+Taste/Impeccable support craft within that direction, with readable contrast,
+responsive content, interaction and Arabic RTL. Reference sample claims remain
+distinct from requested facts and implemented routes.
 
 Detailed source data, asset contact sheets, section maps and audited reader tools are retained under ignored `private-references/figma/analysis/`. The preserved native copy is `private-references/figma/iresen-official-file.fig`. Public evidence contains design properties and aggregates rather than original copy, user identifiers or plugin data. A missing serialized property is absent, not a proven zero/default; instance inheritance must be resolved before asserting final appearance.
 
@@ -538,34 +539,33 @@ approval.
 
 ## Hovered-menu reference adaptation — 2026-10-08
 
-The owner's latest hovered-menu screenshot guides the desktop white panel:
-three equal columns, full-height thin vertical dividers, a connected white
-active tab and logical inline padding for RTL. The introduction is a vertical
-flex layout with title/description at the top and a figure at the bottom. The
-middle column is a single destination list in every group, including resources;
-titles keep their diagonal arrows inline. The plain white related-destination
-column centers its content vertically. The earlier intro eyebrow, filled rounded
-feature card and dense resources sub-grid are superseded.
+The latest owner clarification supersedes the earlier assumption of a universal
+three-column format and shared minimum height. The four menu screenshots define
+a coherent language of Plus Jakarta Sans type, white connected tabs/panels, thin logical dividers,
+inline diagonal arrows, navy/blue text and consistent spacing. Content determines
+the format: institute/research use featured panels; expertise/resources use compact
+panels with their destination lists occupying the remaining space.
 
-`.mega-menu-grid` uses `repeat(3, minmax(0, 1fr))`, stretched rows and a fluid
-minimum height of `clamp(26rem, 25vw, 30rem)`, with natural growth. Panel scrolling
-is bounded by `calc(100dvh - 100%)` beneath the actual header. Intro/feature
-columns use 3rem block padding and 2rem adjoining inline padding; the middle
-column uses 2rem padding and 1px logical inline borders. Links use the quiet
-action surface and primary-blue text on hover/focus, with visible keyboard focus.
-Title arrows rotate diagonally and mirror meaningfully in RTL; the related
-action retains a horizontal blue arrow. Open groups hide their closed-state
-underline so the white tab joins the panel; closed current-route markers remain.
+`navigationPanels` selects `featured` or `links` by group. The desktop grid retains
+three equal tracks: featured lists occupy one track beside intro/feature content;
+`.mega-menu-grid--links .mega-menu-links` spans `2 / -1` and uses two inner tracks.
+The compact list uses a 2rem column gap, keeps its intro-side 1px divider and
+removes the outer divider. Intro copy and its optional figure have a 1.5rem gap.
+Intro/feature columns use 3rem block and 2rem adjoining inline padding; lists use
+2rem padding. Height follows content without `min-block-size` or auto-pushed figures;
+scrolling remains bounded by `calc(100dvh - 100%)` beneath the actual header.
 
-Intro figures use the shared `.key-figure` roles, with navy values and muted labels
-on white; panel figure labels use 1.45 line height. Institute uses the established
-2011/creation label. Research, expertise
-and resources resolve 69 collaborative projects, +18 university laboratories and
-+1100 publications from the existing `homeFigures` values and localized
-`Hero.figures` labels. Existing feature destinations and `Header` draft copy
-remain authoritative; the screenshot's example project/event numbers are not
-new facts. The panel uses natural content height with bounded viewport scrolling.
-Native disclosures and the established pointer, keyboard, touch, focus and
-no-JavaScript behavior continue. See [navigation detail](navigation.md#hovered-menu-reference-adaptation--2026-10-08)
-and [current validation](validation.md); earlier screenshots/checks describe their
-original revision.
+Figures and related destinations are optional. Only research currently includes
+a menu figure: 69 collaborative projects, resolved from `homeFigures` and
+`Hero.figures` drafts, with navy value and muted label on white. Featured panels
+retain the existing institute/workWithUs and research/opportunities destinations;
+compact expertise/resources panels avoid additional feature/figure content.
+There is no universal minimum height or automatic bottom-pushed figure.
+
+White active tabs, current-route indicators, quiet hover surfaces, visible focus,
+logical RTL dividers and arrow mirroring remain shared elements. Native disclosures
+retain established pointer, keyboard, touch and no-JavaScript behavior. Panel
+height follows content with bounded viewport scrolling. The existing routes and
+localized drafts remain authoritative; new screenshot sample figures, campaigns
+and routes are design reference data. See [navigation formats](navigation.md#hovered-menu-reference-adaptation--2026-10-08)
+and [current validation](validation.md); earlier checks retain their original scope.

@@ -8,7 +8,9 @@ control width, the compact Menu centers its contents, selected languages use
 Sans. See [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe the original navigation revision; the subsequent
-hero overlay and latest hovered-menu reference adaptation are documented below.
+hero overlay and content-based menu formats are documented below. The latest
+owner clarification treats screenshots as design-element references, with layout
+chosen for each group's actual content.
 
 ## Sources and scope — 2026-10-08
 
@@ -70,7 +72,7 @@ below replaces that card treatment. Current-page
 links expose `aria-current="page"`, while the containing navigation group has a
 visible current-state underline.
 
-Related destinations live in `src/lib/navigation.ts`:
+The original featured destinations in `src/lib/navigation.ts` were:
 
 | Open group                  | Related destination      |
 | --------------------------- | ------------------------ |
@@ -150,35 +152,36 @@ header so unknown/error content is not covered. See [page heroes](heroes.md).
 
 ## Hovered-menu reference adaptation — 2026-10-08
 
-The owner's newly attached hovered-menu screenshot guides this revision's
-composition. The white active tab connects to a white panel with three equal
-columns and thin vertical dividers through their full height. Intro title and
-description sit at the top, with a figure at the bottom. The middle destinations
-stack in one column, including resources, with inline diagonal arrows and short
-descriptions. The right related-destination block is plain white and vertically
-centered, replacing the earlier colored rounded card. The extra intro eyebrow
-is removed. Logical padding/separators support Arabic; links use the quiet action
-surface with primary-blue text on hover/focus. The panel grows naturally and
-scrolls within its viewport bound when content is long. Open groups hide their
-closed-state underline to connect the white tab; closed route indicators remain.
-Title arrows mirror diagonally in RTL; the related action keeps its horizontal
-blue arrow.
+The owner's latest clarification and four menu examples define design elements,
+not one required layout: coherent type, connected white tabs/panels, thin dividers,
+navy/blue colors, inline diagonal arrows and spacing. This supersedes the earlier
+assumption that every group needed three columns, a bottom figure and a feature.
+The chat attachments are `Screenshot 2026-10-08 at 21.26.37.png`,
+`Screenshot 2026-10-08 at 21.26.42.png`,
+`Screenshot 2026-10-08 at 21.26.45.png` and
+`Screenshot 2026-10-08 at 21.26.50.png`. They illustrate optional compact/featured
+formats and shared design elements; their sample claims and routes are not adopted.
+The current formats follow each group's content:
 
-| Group     | Existing figure and French label               | Related destination      |
-| --------- | ---------------------------------------------- | ------------------------ |
-| Institute | 2011 — Création d’IRESEN                       | Travailler avec nous     |
-| Research  | 69 — Projets collaboratifs soutenus            | Opportunités & Carrières |
-| Expertise | +18 — Laboratoires universitaires mis en place | Travailler avec nous     |
-| Resources | +1100 — Publications scientifiques             | Publications & rapports  |
+| Group     | Format   | Destination arrangement                          | Optional content                |
+| --------- | -------- | ------------------------------------------------ | ------------------------------- |
+| Institute | Featured | Intro, two-item list and related destination     | Travailler avec nous; no figure |
+| Research  | Featured | Intro, three-item list and related destination   | 69 projects; opportunities link |
+| Expertise | Compact  | Intro beside two destinations in two tracks      | No extra feature or figure      |
+| Resources | Compact  | Intro beside five destinations across two tracks | No extra feature or figure      |
 
-The three totals resolve from the existing owner-supplied `homeFigures` records;
-their labels resolve from `Hero.figures` FR/EN/AR drafts. The year retains the
-existing `Hero.founded` label. On white, the shared figure role uses navy values
-and muted labels with 1.45 line height. No screenshot project count, event/funding amount or promotion
-is adopted as a new fact. The existing 22-page structure, related destinations,
-`Header` draft introductions/descriptions and native disclosure enhancements
-continue, including hover discovery, keyboard focus/dismissal, touch and
-no-JavaScript navigation.
+Only research displays a menu figure, reusing 69 and the collaborative-project
+label from the owner's existing homepage data and localized `Hero.figures`
+drafts. Institute retains its existing collaboration feature; research retains
+opportunities. Screenshot training totals, event/funding claims and proposed
+routes are styling references, not new authorized content.
 
-Executed checks and final renderings belong in [the validation log](validation.md).
-The earlier verification and screenshot links above describe the original panel.
+Panels use consistent padding and natural content height, with no universal
+minimum height or figure pushed to the bottom. White active tabs connect to the
+panel; current-route markers, quiet hover/focus surfaces and meaningful RTL arrow
+mirroring remain. The 22-page route definition, `Header` drafts, keyboard/focus
+dismissal, mouse-hover discovery, touch and no-JavaScript navigation continue.
+
+Executed checks and renderings belong in [the validation log](validation.md).
+Earlier verification and screenshots retain their original revision's scope;
+the previous universal-layout assumption is superseded by this clarification.

@@ -3,18 +3,22 @@ import type { homeFigures } from './figures'
 
 export type NavigationGroup = (typeof navigationGroups)[number]
 
-// Related destinations support the approved hierarchy without adding menu branches.
-export const navigationFeatures = {
-  institute: 'workWithUs',
-  research: 'opportunities',
-  expertise: 'workWithUs',
-  resources: 'publications',
-} as const satisfies Record<NavigationGroup['id'], PageId>
+type NavigationPanel =
+  | { layout: 'links' }
+  | {
+      layout: 'featured'
+      feature: PageId
+      figureId?: (typeof homeFigures)[number]['id']
+    }
 
-// Reuse the owner's homepage figures and the established founding year.
-export const navigationFigureIds = {
-  institute: 'founded',
-  research: 'collaborativeProjects',
-  expertise: 'universityLaboratories',
-  resources: 'publications',
-} as const satisfies Record<NavigationGroup['id'], (typeof homeFigures)[number]['id'] | 'founded'>
+// Each group uses the format its destinations need, with optional supporting content.
+export const navigationPanels = {
+  institute: { layout: 'featured', feature: 'workWithUs' },
+  research: {
+    layout: 'featured',
+    feature: 'opportunities',
+    figureId: 'collaborativeProjects',
+  },
+  expertise: { layout: 'links' },
+  resources: { layout: 'links' },
+} as const satisfies Record<NavigationGroup['id'], NavigationPanel>

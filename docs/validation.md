@@ -243,6 +243,9 @@ separate work. The figure changes remain local and have not been pushed.
 
 ## Hovered-menu reference adaptation — 2026-10-08
 
+These results describe the earlier uniform-panel revision. The later design-element
+clarification and content-based formats below supersede its layout assumptions.
+
 The desktop menu adapts the owner's attached screenshot into three equal white
 columns with full-height dividers and a connected white active tab. Introduction
 copy sits above a supporting figure; destinations form a single vertical list;
@@ -284,6 +287,9 @@ measurement. Changes are saved locally and have not been pushed.
 
 ## Reference fidelity review — 2026-10-08
 
+This review used the earlier interpretation of the screenshots as composition
+targets. The owner's later clarification below makes them design-element references.
+
 Recorded the owner's direction in AGENTS.md, DESIGN.md, the design workflow and
 shared specification: attached Figma screenshots define the visual target;
 Taste/Impeccable support refinements within that direction. Read the repository
@@ -300,6 +306,54 @@ local and have not been pushed.
 
 Targeted Markdown formatting, added local links/heading anchors and
 `git diff --check` passed.
+
+## Content-based menu formats — 2026-10-08
+
+The latest owner clarification treats screenshots as references for typography,
+colors, white tabs/panels, dividers, arrows and spacing. Actual content determines
+the layout. Institute and research use featured panels; expertise and resources
+use compact introduction/link panels. Only research includes the existing
+69-project figure. The universal minimum height and bottom-pushed statistics
+were removed; optional content is omitted structurally. Existing routes, catalog
+drafts and all homepage figures remain in place.
+
+Local lint, strict types, 8 unit tests, the production build and all 35 Chromium
+browser tests passed. The browser checks cover both featured and compact menus,
+all destinations, hover continuity, keyboard dismissal/focus, no-JavaScript
+navigation, compact headers, locale behavior and existing axe checks. CMS
+integration checks were not repeated for this presentation change.
+
+An additional 48 production-rendered cases passed: all four groups in FR/EN/AR
+at 1120/1440/1920px, plus 200% root text at 1440px. Checks cover natural height,
+the configured formats/optional content, connected white tabs, viewport containment,
+row-major visual order matching destination DOM order, RTL mirroring, individually
+reachable link text through scrolling and Escape focus restoration. Normal French
+panels at 1440px measure approximately 279px (institute), 429px (research), 225px
+(expertise) and 404px (resources); their height follows the actual content.
+
+Independent layout/source assessment identified the uniform minimum height and
+forced supporting content as the relevant structural problems. Impeccable's
+scoped layout detector returned zero findings before and after the changes;
+manual inspection confirmed the new formats resolve those problems while
+retaining shared spacing tokens, logical properties and the native focus targets.
+
+Final mouse-hover captures:
+
+- [French institute](screenshots/menu-format-institute-fr-1440.png)
+- [French research](screenshots/menu-format-research-fr-1440.png)
+- [French expertise](screenshots/menu-format-expertise-fr-1440.png)
+- [French resources](screenshots/menu-format-resources-fr-1440.png)
+- [Arabic expertise](screenshots/menu-format-expertise-ar-1440.png)
+- [English resources, 1120px](screenshots/menu-format-resources-en-1120.png)
+
+Inspected all six captures; independent review found no material issues with
+content grouping, alignment, typography, optional roles or Arabic presentation.
+Repository formatting, added screenshot links and `git diff --check` also passed.
+
+These checks cover local Chromium rendering and the documented behaviors;
+broader browser/screen-reader conformance remains separate work. Earlier captures
+and test records retain their original scope. Changes remain local and have not
+been pushed.
 
 ## Institutional reference documents — 2026-10-08
 

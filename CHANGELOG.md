@@ -4,15 +4,29 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
-## 2026-10-08 — Reference fidelity guidance
+## 2026-10-08 — Content-based menu formats and design guidance
 
-Recorded the owner's clarification that attached Figma screenshots define the
-visual target, with Taste/Impeccable guiding refinements within that design.
-Reviewed the latest menu and figure captures against this direction; no further
-UI changes were needed. See [the workflow](docs/design-workflow.md) and
+- Corrected design guidance so screenshot references define typography, colors,
+  tabs, surfaces, dividers, arrows and spacing; composition follows actual content.
+- Used featured institute/research menus and compact expertise/resources menus,
+  with optional features/figures. Research alone reuses the existing 69-project
+  figure; natural height replaces the universal minimum and bottom-pushed figures.
+- Retained the shared visual language, existing routes, localized drafts and
+  native disclosure behavior; screenshot sample claims remain reference content.
+
+See [current navigation formats](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08),
+[the workflow](docs/design-workflow.md) and [validation](docs/validation.md) for
+revision-specific checks and renderings.
+
+## 2026-10-08 — Earlier reference interpretation (superseded)
+
+The earlier reference review treated screenshots as a composition target, with
+Taste/Impeccable guiding refinements. Its menu/figure review required no further
+UI changes at that revision. The later design-element clarification above
+supersedes that layout interpretation. See [the workflow](docs/design-workflow.md) and
 [the validation record](docs/validation.md#reference-fidelity-review--2026-10-08).
 
-## 2026-10-08 — Hovered-menu reference adaptation
+## 2026-10-08 — Earlier uniform menu adaptation (superseded)
 
 - Adapted desktop mega-menus to the owner's screenshot with a connected white
   active tab, three equal columns, full-height dividers, top introduction/bottom
@@ -22,9 +36,10 @@ UI changes were needed. See [the workflow](docs/design-workflow.md) and
 - Reused the established 2011 year and owner-supplied 69 projects, +18 university
   laboratories and +1100 publications with existing localized labels and routes.
 
-See [navigation decisions](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08)
-and [current validation](docs/validation.md) for executed checks and renderings.
-Earlier navigation screenshots and verification describe their original revision.
+See [that revision's validation](docs/validation.md#hovered-menu-reference-adaptation--2026-10-08)
+for executed checks and renderings.
+Earlier navigation screenshots and verification describe their original revision;
+its universal-layout assumption is superseded by the content-based formats above.
 
 ## 2026-10-08 — Homepage key figures and typography
 

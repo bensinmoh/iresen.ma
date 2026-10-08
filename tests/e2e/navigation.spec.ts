@@ -157,7 +157,11 @@ for (const locale of locales) {
         await expect(link).toContainText(messages.Pages[id])
         if (id === 'governance') await expect(link).toHaveAttribute('aria-current', 'page')
       }
-      await expect(group.locator('.mega-menu-feature')).toBeVisible()
+      if (definition.id === 'institute' || definition.id === 'research') {
+        await expect(group.locator('.mega-menu-feature')).toBeVisible()
+      } else {
+        await expect(group.locator('.mega-menu-feature')).toHaveCount(0)
+      }
       await page.keyboard.press('Escape')
     }
 

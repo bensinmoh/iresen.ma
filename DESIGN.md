@@ -18,12 +18,13 @@ The homepage's empty state is not an established homepage composition. New page
 work can develop the visual language without replacing the identity or approved
 information architecture. CMS/admin surfaces prioritize clear editing tasks.
 
-The owner's attached Figma screenshots define the visual target, as clarified
-on 2026-10-08. Converge toward their composition, typography, spacing, alignment,
-hierarchy and surfaces. Taste and Impeccable support the craft within that
-direction. Preserve the latest owner corrections and make justified adaptations
-for contrast, responsive content, interaction and Arabic RTL; explain material
-departures. Reference sample claims remain distinct from requested factual content.
+The owner's latest clarification on 2026-10-08 makes the attached Figma screenshots
+references for design elements: typography, colors, tabs, surfaces, dividers,
+arrows and spacing. Keep this visual language coherent while choosing layouts
+for the actual content. Figures and featured destinations are optional content
+roles, not required columns. Taste and Impeccable support the craft within this
+direction, including contrast, responsive content, interaction and Arabic RTL.
+Reference sample claims remain distinct from requested factual content.
 
 ## Identity and surfaces
 
@@ -249,18 +250,17 @@ See [the hero content record](docs/heroes.md#homepage-key-figures--2026-10-08).
 
 ## Hovered-menu reference adaptation — 2026-10-08
 
-The owner's new screenshot guides a connected white active tab and three equal
-white panel columns with continuous thin dividers. The introduction places its
-title/description above a supporting figure; the middle column stacks destination
-links with inline diagonal arrows and descriptions; the related destination is
-a plain white block centered vertically. The extra introductory eyebrow,
-colored rounded feature card and two-column resources list are removed.
+The four owner-supplied menu examples establish a shared language of white tabs
+and panels, clear typography, thin dividers, diagonal destination arrows and
+generous spacing. The latest clarification supersedes the earlier interpretation
+that every panel should copy one three-column arrangement or carry a figure.
 
-Figures reuse the established year and owner-supplied homepage values: institute
-2011, research 69 projects, expertise +18 university laboratories and resources
-+1100 publications, with navy values and muted labels on white. Screenshot
-examples are composition references, not new claims or destinations. The current
-22-page structure, draft localized copy and existing keyboard/hover/touch/native
-disclosure behavior remain the basis. Natural panel height and bounded scrolling
-support long labels and short screens. See [navigation decisions](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08)
-and [the validation log](docs/validation.md) for this revision's executed coverage.
+Institute and research use introductions, destination lists and relevant featured
+links; only research includes the existing 69-project figure. Expertise and
+resources use compact introductions beside their two- and five-item lists,
+without duplicate feature links or figures. All panels grow with their content,
+using consistent padding and bounded scrolling instead of a shared minimum height
+or a figure pushed to the bottom. The 22-page structure, localized drafts and
+native disclosure behavior remain the basis. Screenshot sample claims and routes
+do not authorize new content. See [navigation decisions](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08)
+and [the validation log](docs/validation.md) for revision-specific coverage.
