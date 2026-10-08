@@ -121,9 +121,10 @@ Before heroes were implemented, navy with a delivered reversed logo was the
 homepage fallback and interior pages used white and the colored logo. The later
 hero overlay is documented below. The open desktop tab
 joins a white, full-width panel with introduction, destination list and related
-route. Fine dividers, 600-weight link titles, readable secondary descriptions,
-navy hover/focus links and a quiet selected-corner related block give each role
-a clear purpose. Current links use `aria-current` and groups have an underline.
+route. The initial panel used fine dividers, 600-weight link titles, readable
+secondary descriptions, navy hover/focus links and a quiet selected-corner related
+block. The hovered-menu adaptation below supersedes that panel layout and feature
+treatment. Current links use `aria-current` and groups have an underline.
 
 The additional `Header` UI catalog text is localized wayfinding draft copy,
 not approved institutional claims or a live campaign. Related cards use existing
@@ -133,7 +134,7 @@ access. JavaScript adds focus-aware dismissal, Escape focus return, Arrow Down
 entry and optional mouse-hover discovery. Logical layout and meaningful arrow
 mirroring support Arabic without Latin tracking or reversed brand corners.
 
-Local production verification passed across FR/EN/AR at 320–1440px, including
+Initial navigation production verification passed across FR/EN/AR at 320–1440px, including
 open navigation and 200% text at 320/1440px. The 1920px single row, touch navigation,
 reduced motion and final screenshots were checked; all 28 browser tests passed.
 See [navigation sources, decisions
@@ -482,8 +483,8 @@ The owner-attached Figma screenshot references from 2026-10-08 at 20.37.38,
 at 18px, weight 500. Both use 100% line height and 0% tracking, with white values
 and 70% white labels. These are styling hints, distinct from the five numeric
 claims explicitly supplied in the owner's later homepage request. The implemented
-style applies to those homepage values and the existing 2011 founding figure
-on institute.
+style applies to those homepage values, the existing 2011 founding figure
+on institute and the white-panel menu adaptations below.
 
 `.key-figure` stacks `.key-figure-value` over `.key-figure-label` with the shared
 spacing token. Mobile preserves this structure rather than changing to a smaller
@@ -527,3 +528,37 @@ Corrected French wording, current EN/AR drafts and the content source are record
 in [the hero guide](heroes.md#homepage-key-figures--2026-10-08). The user's explicit
 message supplies these claims; screenshot styling hints do not supply content
 approval.
+
+## Hovered-menu reference adaptation — 2026-10-08
+
+The owner's latest hovered-menu screenshot guides the desktop white panel:
+three equal columns, full-height thin vertical dividers, a connected white
+active tab and logical inline padding for RTL. The introduction is a vertical
+flex layout with title/description at the top and a figure at the bottom. The
+middle column is a single destination list in every group, including resources;
+titles keep their diagonal arrows inline. The plain white related-destination
+column centers its content vertically. The earlier intro eyebrow, filled rounded
+feature card and dense resources sub-grid are superseded.
+
+`.mega-menu-grid` uses `repeat(3, minmax(0, 1fr))`, stretched rows and a fluid
+minimum height of `clamp(26rem, 25vw, 30rem)`, with natural growth. Panel scrolling
+is bounded by `calc(100dvh - 100%)` beneath the actual header. Intro/feature
+columns use 3rem block padding and 2rem adjoining inline padding; the middle
+column uses 2rem padding and 1px logical inline borders. Links use the quiet
+action surface and primary-blue text on hover/focus, with visible keyboard focus.
+Title arrows rotate diagonally and mirror meaningfully in RTL; the related
+action retains a horizontal blue arrow. Open groups hide their closed-state
+underline so the white tab joins the panel; closed current-route markers remain.
+
+Intro figures use the shared `.key-figure` roles, with navy values and muted labels
+on white; panel figure labels use 1.45 line height. Institute uses the established
+2011/creation label. Research, expertise
+and resources resolve 69 collaborative projects, +18 university laboratories and
++1100 publications from the existing `homeFigures` values and localized
+`Hero.figures` labels. Existing feature destinations and `Header` draft copy
+remain authoritative; the screenshot's example project/event numbers are not
+new facts. The panel uses natural content height with bounded viewport scrolling.
+Native disclosures and the established pointer, keyboard, touch, focus and
+no-JavaScript behavior continue. See [navigation detail](navigation.md#hovered-menu-reference-adaptation--2026-10-08)
+and [current validation](validation.md); earlier screenshots/checks describe their
+original revision.

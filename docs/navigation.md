@@ -8,7 +8,7 @@ control width, the compact Menu centers its contents, selected languages use
 Sans. See [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe the original navigation revision; the subsequent
-hero overlay is documented at the end.
+hero overlay and latest hovered-menu reference adaptation are documented below.
 
 ## Sources and scope — 2026-10-08
 
@@ -62,10 +62,11 @@ remain distinct controls. Group destinations continue to come from
 `src/lib/site.ts`; this increment adds no page, financing branch or duplicate
 news/careers branch.
 
-Desktop group panels contain an introductory text column, destination links
+The original desktop group panels contained an introductory text column, destination links
 with short descriptions, and a related destination. Fine dividers organize the
-white panel. Links use a navy surface on hover/focus; the related destination
-uses a quiet surface and the existing physical corner signature. Current-page
+white panel. Links used a navy surface on hover/focus; the original related destination
+used a quiet surface and the physical corner signature. The latest adaptation
+below replaces that card treatment. Current-page
 links expose `aria-current="page"`, while the containing navigation group has a
 visible current-state underline.
 
@@ -109,7 +110,7 @@ navigation. Logical spacing, equivalent locale routes and meaningful arrow
 mirroring support Arabic; logos and physical brand corners retain their geometry.
 Arabic typography receives no Latin tracking or uppercase treatment.
 
-## Verification — 2026-10-08
+## Original navigation verification — 2026-10-08
 
 Lint, strict types, formatting, 8 unit tests, 4 local CMS integration tests, the
 production build and all 28 Chromium browser tests passed. The 9 dedicated
@@ -135,7 +136,7 @@ not supplied references or public application assets.
 - [Arabic mobile navigation](screenshots/navigation-ar-mobile.png)
 
 See [the validation log](validation.md#navigation-reference-adaptation--2026-10-08)
-for the current check record. Remote CI and merge status belong to the current
+for the original check record. Remote CI and merge status belong to the current
 pull request and commit history, rather than being inferred from local checks.
 
 ## Hero overlay — 2026-10-08
@@ -146,3 +147,38 @@ header height, including compact or two-row layouts. White mega-menu and compact
 disclosure panels, current-route state and equivalent-language navigation retain
 their established behavior. Routes without a rendered hero retain an in-flow
 header so unknown/error content is not covered. See [page heroes](heroes.md).
+
+## Hovered-menu reference adaptation — 2026-10-08
+
+The owner's newly attached hovered-menu screenshot guides this revision's
+composition. The white active tab connects to a white panel with three equal
+columns and thin vertical dividers through their full height. Intro title and
+description sit at the top, with a figure at the bottom. The middle destinations
+stack in one column, including resources, with inline diagonal arrows and short
+descriptions. The right related-destination block is plain white and vertically
+centered, replacing the earlier colored rounded card. The extra intro eyebrow
+is removed. Logical padding/separators support Arabic; links use the quiet action
+surface with primary-blue text on hover/focus. The panel grows naturally and
+scrolls within its viewport bound when content is long. Open groups hide their
+closed-state underline to connect the white tab; closed route indicators remain.
+Title arrows mirror diagonally in RTL; the related action keeps its horizontal
+blue arrow.
+
+| Group     | Existing figure and French label               | Related destination      |
+| --------- | ---------------------------------------------- | ------------------------ |
+| Institute | 2011 — Création d’IRESEN                       | Travailler avec nous     |
+| Research  | 69 — Projets collaboratifs soutenus            | Opportunités & Carrières |
+| Expertise | +18 — Laboratoires universitaires mis en place | Travailler avec nous     |
+| Resources | +1100 — Publications scientifiques             | Publications & rapports  |
+
+The three totals resolve from the existing owner-supplied `homeFigures` records;
+their labels resolve from `Hero.figures` FR/EN/AR drafts. The year retains the
+existing `Hero.founded` label. On white, the shared figure role uses navy values
+and muted labels with 1.45 line height. No screenshot project count, event/funding amount or promotion
+is adopted as a new fact. The existing 22-page structure, related destinations,
+`Header` draft introductions/descriptions and native disclosure enhancements
+continue, including hover discovery, keyboard focus/dismissal, touch and
+no-JavaScript navigation.
+
+Executed checks and final renderings belong in [the validation log](validation.md).
+The earlier verification and screenshot links above describe the original panel.

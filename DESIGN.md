@@ -138,10 +138,10 @@ establish native rendered fidelity. Current verification is recorded in
 
 ## Navigation reference adaptation — 2026-10-08
 
-The navigation follows the owner's two reattached header/menu screenshots: a
+The initial navigation followed the owner's two reattached header/menu screenshots: a
 wide logo and navigation arrangement, separate search/contact controls, a white
 open tab and a generous three-part mega-menu. The approved hierarchy replaces
-the reference's historical labels. The panel uses useful destination descriptions,
+the reference's historical labels. That panel used useful destination descriptions,
 fine dividers, a navy link hover/focus surface and a quiet related-route block;
 sample events and funding claims are not reproduced.
 
@@ -162,6 +162,8 @@ open menus and 200% text at 320/1440px; the 1920px single row, touch navigation,
 reduced motion and final screenshots were also checked. All 28 browser tests
 passed, including hover Escape and breakpoint focus restoration.
 [Navigation documentation](docs/navigation.md) records source limits and coverage.
+The later hovered-menu adaptation below supersedes its panel geometry and
+related-block treatment; these checks describe the initial revision.
 
 ## Introducing heroes — 2026-10-08
 
@@ -211,8 +213,9 @@ labels at 18px/500, both with 100% line height and zero tracking. Values are
 white; the source labels use 70% white. These samples establish a style reference,
 not approval of the illustrated metrics or new content.
 
-The shared key-figure style applies to the five owner-supplied homepage figures
-and the established 2011 founding year on institute. Values scale from 36px to
+The shared key-figure style applies to the five owner-supplied homepage figures,
+the established 2011 founding year on institute and the menu adaptations below.
+Values scale from 36px to
 60px at the default root size and use Plus Jakarta Sans even for isolated Latin
 numerals in Arabic. Labels
 remain 18px and stack below the value on mobile as well as desktop. Arabic labels
@@ -236,3 +239,21 @@ the requested wording with spelling corrected; English/Arabic labels are drafted
 translations. Auto-fit tracks adapt the figure count per row to available space
 and enlarged text; the hero grows on narrow screens to display all five facts.
 See [the hero content record](docs/heroes.md#homepage-key-figures--2026-10-08).
+
+## Hovered-menu reference adaptation — 2026-10-08
+
+The owner's new screenshot guides a connected white active tab and three equal
+white panel columns with continuous thin dividers. The introduction places its
+title/description above a supporting figure; the middle column stacks destination
+links with inline diagonal arrows and descriptions; the related destination is
+a plain white block centered vertically. The extra introductory eyebrow,
+colored rounded feature card and two-column resources list are removed.
+
+Figures reuse the established year and owner-supplied homepage values: institute
+2011, research 69 projects, expertise +18 university laboratories and resources
++1100 publications, with navy values and muted labels on white. Screenshot
+examples are composition references, not new claims or destinations. The current
+22-page structure, draft localized copy and existing keyboard/hover/touch/native
+disclosure behavior remain the basis. Natural panel height and bounded scrolling
+support long labels and short screens. See [navigation decisions](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08)
+and [the validation log](docs/validation.md) for this revision's executed coverage.

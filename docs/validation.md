@@ -241,6 +241,47 @@ semantic pairing, numeral isolation, typography or wrapping. These results cover
 local Chromium rendering; broader browser and screen-reader review remain
 separate work. The figure changes remain local and have not been pushed.
 
+## Hovered-menu reference adaptation — 2026-10-08
+
+The desktop menu adapts the owner's attached screenshot into three equal white
+columns with full-height dividers and a connected white active tab. Introduction
+copy sits above a supporting figure; destinations form a single vertical list;
+the plain related-destination column centers its content vertically. Existing
+routes, localized draft copy and supplied figures remain the content sources.
+See [the navigation decisions](navigation.md#hovered-menu-reference-adaptation--2026-10-08).
+
+Local lint, strict types, 8 unit tests, the production build and all 35 Chromium
+browser tests passed. The existing hover-dismissal test also verifies that the
+pointer can move from the tab into both destination columns while the panel stays
+open. Keyboard focus/dismissal, touch-compatible disclosures, no-JavaScript
+access, compact navigation, localized destinations and existing axe checks pass.
+CMS integration tests were not repeated for this presentation change.
+
+An additional 48 production-rendered cases passed: all four groups in FR/EN/AR
+at 1120/1440/1920px, plus 200% root text at 1440px. These check equal columns,
+full-height separators, connected white tabs, the viewport scroll bound,
+visible navy figures, intact signed numerals and no horizontal overflow. Each
+destination title and description remains reachable through panel scrolling;
+Escape restores trigger focus. At enlarged text size a complete link target can
+be taller than the visible panel, while its individual text blocks remain
+readable through scrolling.
+
+Final mouse-hover captures, after the color transition settles:
+
+- [French, 1920px](screenshots/hover-menu-fr-1920.png)
+- [French, 1440px](screenshots/hover-menu-fr-1440.png)
+- [Arabic, 1440px](screenshots/hover-menu-ar-1440.png)
+- [English resources, 1120px](screenshots/hover-menu-resources-en-1120.png)
+
+Rendered review confirms the reference composition, shared gutters, white-panel
+contrast, natural RTL order and mirrored diagonal title arrows. Earlier menu
+captures document their original revision. Independent source/screenshot review
+found no material menu regressions. The existing English header label
+“Experimentation” still wraps within the word at 1120px; this panel change does
+not alter that header behavior. This verification covers local
+Chromium rendering, not broad browser/screen-reader conformance or exact Figma
+measurement. Changes are saved locally and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

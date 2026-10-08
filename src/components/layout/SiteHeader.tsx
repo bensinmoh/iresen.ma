@@ -5,7 +5,8 @@ import { useCallback, useEffect, useRef, type KeyboardEvent } from 'react'
 import { isLocale, defaultLocale } from '@/i18n/locales'
 import { usePathname } from '@/i18n/navigation'
 import { navigationGroups, pageHref, pageIdFromPathname, type PageId } from '@/lib/site'
-import { navigationFeatures, type NavigationGroup } from '@/lib/navigation'
+import { navigationFeatures, navigationFigureIds, type NavigationGroup } from '@/lib/navigation'
+import { homeFigures } from '@/lib/figures'
 import { LocaleSelector } from './LocaleSelector'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 import { NavigationIcon } from './NavigationIcon'
@@ -16,6 +17,7 @@ export function SiteHeader() {
   const t = useTranslations('Navigation')
   const pageTitle = useTranslations('Pages')
   const copy = useTranslations('Header')
+  const figureCopy = useTranslations('Hero')
   const pathname = usePathname()
   const currentPageId = pageIdFromPathname(pathname)
   const headerRef = useRef<HTMLElement>(null)
@@ -135,6 +137,11 @@ export function SiteHeader() {
 
   function desktopGroup(group: NavigationGroup) {
     const featureId = navigationFeatures[group.id]
+    const figureId = navigationFigureIds[group.id]
+    const figureValue =
+      figureId === 'founded' ? '2011' : homeFigures.find(({ id }) => id === figureId)?.value
+    const figureLabel =
+      figureId === 'founded' ? figureCopy('founded') : figureCopy(`figures.${figureId}`)
     const isCurrent = group.pages.some((id) => id === currentPageId)
 
     return (
@@ -191,13 +198,20 @@ export function SiteHeader() {
           <div className="mega-menu">
             <div className="header-container mega-menu-grid">
               <div className="mega-menu-intro">
-                <span className="navigation-eyebrow">{t(group.id)}</span>
-                <h2>{copy(`groups.${group.id}.title`)}</h2>
-                <p>{copy(`groups.${group.id}.description`)}</p>
+                <div className="mega-menu-intro-copy">
+                  <h2>{copy(`groups.${group.id}.title`)}</h2>
+                  <p>{copy(`groups.${group.id}.description`)}</p>
+                </div>
+                {figureValue && (
+                  <p className="key-figure mega-menu-figure">
+                    <strong className="key-figure-value">
+                      <bdi dir="ltr">{figureValue}</bdi>
+                    </strong>
+                    <span className="key-figure-label">{figureLabel}</span>
+                  </p>
+                )}
               </div>
-              <ul
-                className={`mega-menu-links${group.id === 'resources' ? ' mega-menu-links-dense' : ''}`}
-              >
+              <ul className="mega-menu-links">
                 {group.pages.map((id) => (
                   <li key={id}>
                     <a

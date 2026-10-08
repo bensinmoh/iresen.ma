@@ -4,6 +4,20 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Hovered-menu reference adaptation
+
+- Adapted desktop mega-menus to the owner's screenshot with a connected white
+  active tab, three equal columns, full-height dividers, top introduction/bottom
+  figure, stacked destination links and a vertically centered white feature block.
+- Removed the extra intro eyebrow, colored rounded feature card and dense
+  resources sub-grid; retained natural height and bounded scrolling.
+- Reused the established 2011 year and owner-supplied 69 projects, +18 university
+  laboratories and +1100 publications with existing localized labels and routes.
+
+See [navigation decisions](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08)
+and [current validation](docs/validation.md) for executed checks and renderings.
+Earlier navigation screenshots and verification describe their original revision.
+
 ## 2026-10-08 — Homepage key figures and typography
 
 - Replaced the homepage's founding-year/pathway band with the owner's explicitly

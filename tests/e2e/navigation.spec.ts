@@ -58,6 +58,11 @@ test('desktop panels dismiss on Escape, outside pointer and focus without moving
   await trigger.hover()
   await expect(group).toHaveAttribute('open', '')
   await expect(page.locator('body')).toBeFocused()
+  // The connected tab must let the pointer reach both destination columns.
+  await group.locator('.mega-menu-links a').first().hover()
+  await expect(group).toHaveAttribute('open', '')
+  await group.locator('.mega-menu-feature').hover()
+  await expect(group).toHaveAttribute('open', '')
   await page.keyboard.press('Escape')
   await expect(group).not.toHaveAttribute('open', '')
   await expect(page.locator('body')).toBeFocused()

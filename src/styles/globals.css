@@ -497,6 +497,10 @@ body:has(.page-hero) .site-header-overlay {
     color: var(--color-navy);
   }
 
+  .desktop-navigation-group[open] > summary::before {
+    background: transparent;
+  }
+
   .navigation-icon-chevron {
     inline-size: 1rem;
     block-size: 1rem;
@@ -511,7 +515,7 @@ body:has(.page-hero) .site-header-overlay {
     position: absolute;
     inset-inline: 0;
     inset-block-start: 100%;
-    max-block-size: calc(100dvh - 10rem);
+    max-block-size: calc(100dvh - 100%);
     overflow: auto;
     background: var(--color-white);
     color: var(--color-navy);
@@ -521,12 +525,17 @@ body:has(.page-hero) .site-header-overlay {
 
   .mega-menu-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.4fr) minmax(0, 0.85fr);
-    padding-block: var(--space-12);
-    align-items: start;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    min-block-size: clamp(26rem, 25vw, 30rem);
+    align-items: stretch;
   }
 
   .mega-menu-intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    min-inline-size: 0;
+    padding-block: var(--space-12);
     padding-inline-end: var(--space-8);
   }
 
@@ -541,16 +550,6 @@ body:has(.page-hero) .site-header-overlay {
     text-transform: uppercase;
   }
 
-  .mega-menu-intro .navigation-eyebrow::before {
-    content: '';
-    display: inline-block;
-    inline-size: 0.375rem;
-    block-size: 0.375rem;
-    margin-inline-end: var(--space-2);
-    margin-block-end: 0.125rem;
-    background: var(--color-blue);
-  }
-
   .mega-menu-intro h2 {
     font-size: clamp(1.5rem, 1.8vw, 2rem);
     letter-spacing: -0.025em;
@@ -558,16 +557,30 @@ body:has(.page-hero) .site-header-overlay {
     text-wrap: pretty;
   }
 
-  .mega-menu-intro p {
+  .mega-menu-intro-copy p {
     margin: 0;
     color: var(--color-text-muted);
     line-height: 1.6;
   }
 
+  .mega-menu-intro .mega-menu-figure {
+    margin-block-start: auto;
+  }
+
+  .mega-menu-figure .key-figure-value {
+    color: var(--color-navy);
+  }
+
+  .mega-menu-figure .key-figure-label {
+    color: var(--color-text-muted);
+    line-height: 1.45;
+  }
+
   .mega-menu-links {
     display: grid;
+    align-content: start;
     gap: var(--space-2);
-    padding-inline: var(--space-8);
+    padding: var(--space-8);
     border-inline: 1px solid var(--color-border);
   }
 
@@ -587,68 +600,44 @@ body:has(.page-hero) .site-header-overlay {
   }
 
   .mega-menu-link-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
+    display: block;
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.4;
   }
 
   .mega-menu-link-title .navigation-icon {
-    color: var(--color-blue);
+    display: inline-block;
+    margin-inline-start: var(--space-2);
+    vertical-align: -0.125em;
+    color: currentColor;
+    transform: rotate(-45deg);
   }
 
   .mega-menu-link-description {
     display: block;
     margin-block-start: var(--space-2);
     color: var(--color-text-muted);
-    font-size: var(--font-size-label);
+    font-size: var(--font-size-body);
     font-weight: 400;
     line-height: 1.6;
   }
 
   .mega-menu-links a:hover,
   .mega-menu-links a:focus-visible {
-    background: var(--color-navy);
-    color: var(--color-white);
-  }
-
-  .mega-menu-links a:hover .mega-menu-link-description,
-  .mega-menu-links a:focus-visible .mega-menu-link-description {
-    color: var(--color-footer-muted);
-  }
-
-  .mega-menu-links a:hover .navigation-icon,
-  .mega-menu-links a:focus-visible .navigation-icon {
-    color: var(--color-energy-cyan);
-  }
-
-  .mega-menu-links-dense {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding-inline: var(--space-4);
-  }
-
-  .mega-menu-links-dense .mega-menu-link-title {
-    font-size: 1rem;
-  }
-
-  .mega-menu-links-dense li:last-child {
-    grid-column: 1 / -1;
+    background: var(--color-action-surface);
+    color: var(--color-blue);
   }
 
   .mega-menu-feature {
     display: flex;
     flex-direction: column;
-    align-self: stretch;
+    justify-content: center;
     gap: var(--space-4);
     min-inline-size: 0;
-    padding: var(--space-6);
-    margin-inline-start: var(--space-8);
-    background: var(--color-surface);
+    padding-block: var(--space-12);
+    padding-inline-start: var(--space-8);
     color: var(--color-navy);
-    border-radius: var(--radius-signature);
     text-decoration: none;
     transition: background-color var(--duration-fast);
   }
@@ -658,27 +647,28 @@ body:has(.page-hero) .site-header-overlay {
   }
 
   .mega-menu-feature-title {
-    font-size: 1.375rem;
+    font-size: clamp(1.375rem, 1.5vw, 1.75rem);
     font-weight: 600;
     line-height: 1.3;
   }
 
   .mega-menu-feature-description {
     color: var(--color-text-muted);
-    font-size: var(--font-size-label);
+    font-size: var(--font-size-body);
     line-height: 1.6;
   }
 
   .mega-menu-feature-action {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-block-start: auto;
-    padding-block-start: var(--space-4);
-    color: var(--color-blue);
-    font-size: var(--font-size-label);
+    gap: var(--space-3);
+    color: var(--color-navy);
+    font-size: var(--font-size-body);
     font-weight: 600;
+  }
+
+  .mega-menu-feature-action .navigation-icon {
+    color: var(--color-blue);
   }
 
   .mega-menu-feature:hover {
@@ -690,6 +680,10 @@ body:has(.page-hero) .site-header-overlay {
   html[lang='ar'] .mega-menu-intro h2 {
     letter-spacing: normal;
     text-transform: none;
+  }
+
+  html[dir='rtl'] .mega-menu-link-title .navigation-icon-arrow {
+    transform: scaleX(-1) rotate(-45deg);
   }
 }
 
