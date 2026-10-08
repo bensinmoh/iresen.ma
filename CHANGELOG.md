@@ -4,6 +4,14 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Reference fidelity guidance
+
+Recorded the owner's clarification that attached Figma screenshots define the
+visual target, with Taste/Impeccable guiding refinements within that design.
+Reviewed the latest menu and figure captures against this direction; no further
+UI changes were needed. See [the workflow](docs/design-workflow.md) and
+[the validation record](docs/validation.md#reference-fidelity-review--2026-10-08).
+
 ## 2026-10-08 — Hovered-menu reference adaptation
 
 - Adapted desktop mega-menus to the owner's screenshot with a connected white

@@ -18,6 +18,13 @@ The homepage's empty state is not an established homepage composition. New page
 work can develop the visual language without replacing the identity or approved
 information architecture. CMS/admin surfaces prioritize clear editing tasks.
 
+The owner's attached Figma screenshots define the visual target, as clarified
+on 2026-10-08. Converge toward their composition, typography, spacing, alignment,
+hierarchy and surfaces. Taste and Impeccable support the craft within that
+direction. Preserve the latest owner corrections and make justified adaptations
+for contrast, responsive content, interaction and Arabic RTL; explain material
+departures. Reference sample claims remain distinct from requested factual content.
+
 ## Identity and surfaces
 
 - The owner's selected primary blue is **#296BB4**; navy is **#12345A**. Science

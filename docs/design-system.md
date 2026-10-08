@@ -10,6 +10,13 @@ The file was read offline as data, using its embedded Kiwi schema. All 26,102,71
 
 Latest owner decisions and supplied brand assets retain precedence over Figma. The approved colors in the next section are implementation rules; the historical source palette in the native analysis is evidence. Source inspection does not change runtime tokens, approved page boundaries, SVG geometry, licensed font availability or editorial approval.
 
+The owner clarified on 2026-10-08 that attached screenshots define the visual
+target. Preserve their composition, typography, spacing, alignment, hierarchy and
+surfaces while applying Taste/Impeccable quality guidance. Latest explicit owner
+corrections, readable contrast, responsive content, interaction and Arabic RTL
+guide necessary adaptations; explain material departures. Reference sample claims
+remain distinct from requested facts and approved routes.
+
 Detailed source data, asset contact sheets, section maps and audited reader tools are retained under ignored `private-references/figma/analysis/`. The preserved native copy is `private-references/figma/iresen-official-file.fig`. Public evidence contains design properties and aggregates rather than original copy, user identifiers or plugin data. A missing serialized property is absent, not a proven zero/default; instance inheritance must be resolved before asserting final appearance.
 
 ## Initial semantic colors

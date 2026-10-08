@@ -282,6 +282,25 @@ not alter that header behavior. This verification covers local
 Chromium rendering, not broad browser/screen-reader conformance or exact Figma
 measurement. Changes are saved locally and have not been pushed.
 
+## Reference fidelity review — 2026-10-08
+
+Recorded the owner's direction in AGENTS.md, DESIGN.md, the design workflow and
+shared specification: attached Figma screenshots define the visual target;
+Taste/Impeccable support refinements within that direction. Read the repository
+overrides and relevant preservation guidance; Impeccable's context loader ran
+successfully for SiteHeader using the ignored local cache.
+
+A bounded independent review of the retained menu/figure captures found no
+unnecessary compositional or surface departure requiring a new UI edit. Existing
+adaptations retain the approved palette, owner-supplied figures, current routes,
+readable contrast, responsive content and Arabic behavior. No application source
+changed and application/database/browser checks were not repeated. This review
+does not establish pixel-exact Figma measurement. Documentation changes remain
+local and have not been pushed.
+
+Targeted Markdown formatting, added local links/heading anchors and
+`git diff --check` passed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

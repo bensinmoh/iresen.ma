@@ -5,6 +5,14 @@ guidelines for better design decisions, not a fixed checklist or new product sco
 The user's current request takes precedence over this document and skill defaults.
 Routine coherent refinements can proceed without repeated permission questions.
 
+The owner clarified on 2026-10-08 that the attached Figma screenshots are the
+visual target. Use them to converge toward the supplied layout, typography,
+spacing, alignment, hierarchy and surface treatments. Taste and Impeccable guide
+quality refinements within that design. Latest explicit owner corrections take
+precedence; contrast, responsive content, interaction and Arabic adaptations
+should preserve the reference's visual intent. Explain material departures and
+keep screenshot sample claims separate from requested facts and approved routes.
+
 ## Start with the task
 
 Read [AGENTS.md](../AGENTS.md), [PRODUCT.md](../PRODUCT.md) and [DESIGN.md](../DESIGN.md).
@@ -37,7 +45,8 @@ authoritative.
    and actual available evidence. Separate approved content from drafts and sample
    screenshots. Missing optional exports should not stop independent work.
 2. **Read the design.** Briefly explain the composition problem and improvement.
-   Choose fidelity, refinement or redesign from the request. Critique weak layout
+   Choose fidelity for the owner's supplied visual references; use refinement
+   or redesign when the request calls for it. Critique weak layout
    and type choices; preserve brand/content/page boundaries. Seek a decision only
    when it materially blocks the outcome.
 3. **Implement.** Reuse tokens and components, applying responsive, Arabic and
