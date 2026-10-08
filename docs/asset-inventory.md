@@ -135,7 +135,7 @@ Preserve source spellings in this inventory, including `Broundaries`. Proposed a
 
 Native Figma editable structure, mobile frames and serialized interaction records are now inspected. Native rendered comparison, inherited-instance behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
 
-Licensed Plus Jakarta Sans Latin webfont files are now installed independently of the unreadable ZIP; see the font record below. An approved Arabic companion and reviewed original public imagery remain follow-up inputs. Their presence in the unreadable ZIP is unknown. Once accessible, record their licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
+Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
 ## Introductory hero backgrounds — 2026-10-08
 
@@ -169,10 +169,29 @@ copied without modifying its bytes to
 `src/fonts/plus-jakarta-sans/plus-jakarta-sans-latin-variable.woff2`.
 `next/font/local` emits a same-origin public font asset with a generated filename,
 preload and swap loading through the public frontend layout. No remote font
-service or runtime font package is used. Arabic keeps its current Tahoma/Arial
-stack until its companion family is reviewed.
+service or runtime font package is used. The shared public stack now selects
+Jakarta for Latin and Alexandria for Arabic characters in every locale.
 
 The archive's npm SHA-512 integrity, repository SHA-256 values, upstream source,
 subset coverage and [OFL notice](../src/fonts/plus-jakarta-sans/OFL.txt) are recorded
 in [the font guide](fonts.md). Application verification belongs in
 [the validation log](validation.md).
+
+## Alexandria Arabic font — 2026-10-08
+
+The owner selected Alexandria for Arabic typography. The normal Arabic variable
+WOFF2 from `@fontsource-variable/alexandria` 5.3.0 is 31,348 bytes and supports
+weights 100–900. Distributor metadata records Google Fonts family v6, last
+modified 2025-09-05; font metadata records Alexandria-Regular, version 5.100.
+
+`package/files/alexandria-arabic-wght-normal.woff2` was copied byte-identically
+to `src/fonts/alexandria/alexandria-arabic-variable.woff2`; its original 2022
+copyright and SIL OFL 1.1 license are retained in
+[OFL.txt](../src/fonts/alexandria/OFL.txt). The public frontend serves it through
+`next/font/local`, using the upstream Arabic Unicode range, preload and swap
+loading. No font package or remote font request is added at runtime. The font
+license does not license IRESEN code, identity or content.
+
+Archive integrity, SHA-256 values and script-selection details are recorded in
+[the font guide](fonts.md). Earlier application checks predate this addition;
+current rendered coverage belongs in [the validation log](validation.md).

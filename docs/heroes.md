@@ -80,10 +80,12 @@ screens and gives the complete page consistent outer alignment. Individual copy
 measures and the five layout variations still control text placement within it.
 
 French/English hero H1s use −3% letter spacing (`-0.03em`) at every breakpoint;
-Arabic retains natural tracking. The public Latin font is now self-hosted Plus
-Jakarta Sans, including the Découvrir action and native button controls. See
-[font provenance and loading](fonts.md). Arabic's reviewed companion remains a
-follow-up input; its existing Tahoma/Arial stack is retained.
+Arabic retains natural tracking. Public Latin text uses self-hosted Plus Jakarta
+Sans, including Découvrir and native controls; Arabic text uses the owner's
+selected self-hosted Alexandria. Shared script selection covers mixed-language
+labels and retains Jakarta for isolated numeric figures. See
+[font provenance and loading](fonts.md). Earlier verification below predates
+Alexandria and does not establish this revision's rendered coverage.
 
 The header menu's text/arrow group centers in its full control width, and the
 compact Menu control centers its contents. Selected languages use bold 700 alone

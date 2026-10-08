@@ -55,8 +55,11 @@ a desktop arrangement on mobile.
 
 French and English use licensed, self-hosted Plus Jakarta Sans, including links
 and buttons. The Latin normal variable asset supports weights 200–800; source and
-OFL license records are in [the font guide](docs/fonts.md). Arabic retains its
-Tahoma/Arial stack while its companion family awaits review. Establish distinct
+OFL license records are in [the font guide](docs/fonts.md). Arabic uses the owner's
+selected, licensed, self-hosted Alexandria. Script-based font selection also uses
+Alexandria for Arabic language labels on Latin pages and Jakarta for Latin text
+on Arabic pages. Document defaults, Tailwind sans utilities and native controls
+share this public font policy; CMS/admin has its separate layout. Establish distinct
 heading/body/metadata roles and comfortable measure. Hero H1 tracking is −3%
 (`-0.03em`) for Latin; Arabic keeps natural shaping and letter spacing.
 
@@ -94,8 +97,9 @@ the source's visual direction. Current approved colors and product/content truth
 retain precedence over its historical palette and mockup content.
 
 The brief's standalone export boards remain unavailable in the checkout; the
-owner reattached Footer.png in chat for the footer rework. Latin font files are
-now installed separately with their verified license and provenance.
+owner reattached Footer.png in chat for the footer rework. Jakarta Latin and
+Alexandria Arabic font files are now installed separately with verified licenses
+and provenance.
 Native Figma rendering, dedicated RTL/tablet references and effective prototype
 behavior remain unverified. Verify availability/freshness before claiming a direct
 comparison. Existing footer screenshots are prior review artifacts, not supplied

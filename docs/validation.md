@@ -391,6 +391,58 @@ Both captures were inspected for placement, contrast, spacing and RTL. Checks
 cover local Chromium; broader browser and screen-reader conformance remains
 separate work. Changes remain local and have not been pushed.
 
+## Public fonts and Alexandria — 2026-10-08
+
+The owner requested Plus Jakarta Sans throughout the public site and identified
+Alexandria as the Arabic family. The initial production audit confirmed that
+French/English text already rendered Jakarta, while the document root retained
+a system stack and the Arabic body override also forced system fonts for Latin
+words. The new shared stack uses the Unicode-restricted Alexandria face for
+Arabic and Jakarta for Latin in every locale. Document defaults, Tailwind sans
+utilities, native controls and the decorative ResearchGate text mark now share
+that policy. CMS/admin retains its separate layout.
+
+Alexandria's pinned archive SHA-512, binary/license SHA-256 values, byte identity,
+source metadata, normal variable weight axis and original OFL notice were
+verified independently. The 31,348-byte Arabic subset covers every Arabic-script
+character in the current catalog; together with Jakarta it covers all 74 unique
+Arabic catalog characters. The loader preserves the upstream Unicode range.
+See [font provenance and loading](fonts.md).
+
+Lint, strict types, all 8 unit tests, the production build, formatting and all
+39 Chromium browser tests passed. Three new regression tests inspect actual
+rendered font names through Chrome's font API, covering hero copy/actions,
+figures, header and compact controls, every desktop menu, footer text and
+newsletter controls in FR/EN/AR. They also check Arabic language labels on Latin
+pages and Latin names/numerals on Arabic pages. CMS integration checks were not
+repeated for this typography change.
+
+An independent production audit passed 104 actual-font samples, including Arabic
+without JavaScript and the used 400/500/600/700 weights. Arabic glyphs rendered in
+custom Alexandria; Latin glyphs and figures rendered in custom Plus Jakarta Sans.
+Both local WOFF2 requests returned HTTP 200 with no failed or third-party font
+requests. No system-font fallback appeared in the sampled rendered text.
+
+Additional rendering checks passed 144 hero cases across all five compositions
+plus institute in FR/EN/AR at 320/390/768/1120/1440/1920px and 200% root text at
+320/1440px. After font loading and resize-observer updates, text/cue/header
+clearance, band separation, centering and horizontal containment remained sound.
+All 66 localized routes were checked for visible headings and containment, plus
+36 desktop menu cases across all groups/locales at 1120/1440/1920px.
+Impeccable's scoped type/layout detector returned zero findings.
+
+Final captures:
+
+- [Arabic desktop hero](screenshots/fonts-alexandria-ar-1440.png)
+- [Arabic mobile hero](screenshots/fonts-alexandria-ar-390.png)
+- [Arabic hovered research menu](screenshots/fonts-alexandria-menu-ar-1440.png)
+
+All three were inspected; independent review confirmed shaping, diacritics,
+hierarchy, CTA/figure spacing, mixed-script numerals and RTL arrows. Documentation
+formatting, local links and diff whitespace were checked. This records local
+Chromium coverage; broader browser/screen-reader verification remains separate.
+Changes remain local and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

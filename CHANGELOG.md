@@ -4,6 +4,19 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Shared public fonts and Alexandria
+
+- Added the owner's selected, licensed, self-hosted Alexandria for Arabic,
+  alongside the unchanged Plus Jakarta Sans Latin asset.
+- Unified public document defaults, Tailwind sans utilities, native controls and
+  the decorative ResearchGate text mark under shared script-based font selection.
+  Arabic labels use Alexandria across locales; Latin text and figures use Jakarta.
+- Preserved Arabic shaping/tracking, local font loading and the separate CMS layout;
+  recorded the new asset's provenance, hashes, Unicode range and OFL notice.
+
+See [fonts](docs/fonts.md) and [validation](docs/validation.md) for this revision's
+coverage. Earlier font checks describe their original assets and implementation.
+
 ## 2026-10-08 — Hero scroll cue and spacing
 
 - Replaced the visible continuation text/arrow with a centered native mouse/

@@ -41,7 +41,7 @@ Use `logo-color.svg` on light surfaces and the reversed variants on navy. The ne
 
 Use semantic CSS custom properties with Tailwind utilities. `--container-width` is `120rem` and `--gutter` is `clamp(1.25rem, 3.125vw, 4rem)`. Header, hero-body, narrative band, following sections and footer share `min(100% - var(--gutter) * 2, var(--container-width))` with centered inline margins. Constrain reading measure within this broad grid and keep the 4/8px spacing rhythm. Keep full-width section boundaries flat. Apply the physical top-left/bottom-right rounded signature selectively to cards and media.
 
-French and English use self-hosted Plus Jakarta Sans through `next/font/local` in the public frontend layout. The normal Latin variable file supports weights 200–800 under SIL OFL 1.1; native controls and links inherit the body family. See [fonts and provenance](fonts.md). Arabic retains Tahoma/Arial until its companion family is reviewed, with natural tracking. Latin hero H1 tracking is `-0.03em` (−3%) in all layouts. Use the received vector wordmark rather than recreating it as live text.
+Public Latin text uses self-hosted Plus Jakarta Sans (normal variable 200–800); Arabic uses the owner's selected Alexandria (normal variable 100–900), both under SIL OFL 1.1 through `next/font/local`. Script-based selection covers mixed-language text in every locale. Document defaults, Tailwind sans utilities, links and native controls share this policy; CMS/admin has a separate layout. See [fonts and provenance](fonts.md). Latin hero H1 tracking is `-0.03em` (−3%) in all layouts; Arabic retains natural tracking. Use the received vector wordmark rather than recreating it as live text.
 
 ## Interaction and acceptance
 
@@ -51,7 +51,7 @@ Check actual rendered contrast; brand colors do not automatically make accessibl
 
 Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). Their page sections and composition details remain suggestions, not a validated structure or new design rules. Final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
-Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports and the reviewed Arabic companion do not block independent work.
+Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports do not block independent work.
 
 ## Design workflow integration
 
@@ -297,8 +297,8 @@ Source
 pixels are reference sizes; use fluid scales, real long content and legible mobile
 body sizes. Do not apply Latin negative tracking or uppercase letter spacing to
 Arabic. Font names in the native document did not supply licensed usable webfont
-files. The subsequent Latin integration is sourced separately and recorded in
-[the font guide](fonts.md); the Arabic companion remains pending.
+files. The subsequent Jakarta and owner-selected Alexandria integrations are
+sourced separately and recorded in [the font guide](fonts.md).
 
 No shared text-style references were recovered. The sole serialized local style
 definition is a hidden fill style, `Faticon color` (`33:555`, `#333333`). The
@@ -422,7 +422,7 @@ The analysis originally prioritized licensed Jakarta/Arabic typography, reusable
 hero and section-heading families, shared image/card/row anatomy, and explicit
 interactive states. At that stage the homepage remained an empty shell; source
 analysis itself did not implement those families or change runtime CSS. Later
-hero and Latin-font implementations are documented separately below and in
+hero and Jakarta/Alexandria font implementations are documented separately below and in
 [the font guide](fonts.md); detailed homepage content remains unfinished.
 Tablet/RTL, focus/keyboard behavior, long CMS content, native instance rendering,
 real image crops, licenses and final approved copy remain verification inputs.
@@ -485,8 +485,9 @@ dropdown. No permanent selected background or underline is applied; hover and
 focus styles remain. Desktop `.navigation-trigger` spans its container and centers
 the label/arrow group, including wrapped text. `.menu-toggle` centers its contents.
 
-`--font-latin` resolves the local Plus Jakarta Sans variable before the system
-fallback stack; links and native buttons inherit the body font.
+`--font-latin` resolves the local Plus Jakarta Sans variable before the sans-serif
+fallback. The shared body stack selects the restricted Alexandria face for Arabic
+and Jakarta for Latin; document defaults and all native controls inherit it.
 Découvrir and other public Latin actions therefore use the intended family.
 See [the font guide](fonts.md) for loading, subset and license details, and
 [the validation log](validation.md) for this revision's executed checks and
@@ -515,8 +516,8 @@ value and horizontal label. The shared roles are:
 `--font-size-figure` is `clamp(2.25rem, 4.167vw, 3.75rem)`, corresponding to
 36–60px at the default root size. `--font-size-figure-label` is `1.125rem` (18px).
 Values deliberately use the Latin family for isolated Latin numerals in Arabic,
-including plus-prefixed homepage values. Arabic labels inherit the current
-Tahoma/Arial body stack, with line height
+including plus-prefixed homepage values. Arabic labels use Alexandria through
+the shared body stack, with line height
 1.45 and natural tracking; they do not inherit Latin numeral typography.
 
 `--color-figure-label` defaults to `rgb(255 255 255 / 70%)` for suitable dark

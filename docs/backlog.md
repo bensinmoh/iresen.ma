@@ -43,7 +43,7 @@ The 2026-10-08 structure reference supplies recommendations. Its page sections, 
 - [x] Obtain the supplied logos, apex and favicon; record owner-authorized website use and preserve originals.
 - [ ] Obtain optional website/Illustrator exports and approved imagery for visual implementation; the unreadable ZIP no longer blocks the foundation.
 - [x] Install licensed, self-hosted Plus Jakarta Sans Latin for public French/English typography and controls; record provenance and OFL in [the font guide](fonts.md).
-- [ ] Select and verify a compatible Arabic companion; current Tahoma/Arial typography retains natural tracking.
+- [x] Install the owner's selected, licensed, self-hosted Alexandria for Arabic; shared script selection retains Jakarta for Latin text and natural Arabic tracking. See [font provenance](fonts.md) and revision-specific [validation](validation.md).
 - [x] Resolve website primary blue as `#296BB4` following the owner's latest correction.
 - [ ] Inspect accessible website/Illustrator exports before finalizing visual composition.
 - [ ] Approve homepage copy and module selections around Développer · Éprouver · Valoriser.
