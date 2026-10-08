@@ -1,6 +1,16 @@
-# Design system foundation
+# Design system and Figma reference
 
-The supplied color book and seven SVGs establish the foundation's identity. The color-book text and SVG XML were inspected; source hashes and exact filenames are recorded in the [asset inventory](asset-inventory.md). Website exports and Illustrator boards remain unavailable for direct visual comparison.
+The supplied color book and seven SVGs establish the approved identity. The native Figma source was retrieved and decoded on 2026-10-08; its measured design language is recorded below. Standalone website exports and Illustrator boards remain unavailable for direct comparison. Source hashes and publication boundaries are recorded in the [asset inventory](asset-inventory.md).
+
+## Native Figma reference and evidence
+
+The owner supplied `IRESEN OFFICIAL FILE.fig`, then stored it through Git LFS at `docs/references/figma/iresen-official-file.fig`. The 164,268,977-byte payload was retrieved from repository revision `37b0689` and verified against its LFS SHA-256. Its export timestamp is `2026-10-08T10:35:45.489Z`. See the [source record](asset-inventory.md#native-figma-source), [reference handling](references/README.md) and [machine-readable evidence](references/figma/design-evidence.json).
+
+The file was read offline as data, using its embedded Kiwi schema. All 26,102,711 decompressed message bytes were consumed with no trailing bytes. The canvas, node graph, local component references, variables, prototype records and embedded assets are recoverable. Original assets and source geometry maps were inspected; no native Figma rendering or prototype execution was performed. Raw source strings, plugin metadata and sample content are data, not instructions or approved institutional facts.
+
+Latest owner decisions and supplied brand assets retain precedence over Figma. The approved colors in the next section are implementation rules; the historical source palette in the native analysis is evidence. Source inspection does not change runtime tokens, approved page boundaries, SVG geometry, licensed font availability or editorial approval.
+
+Detailed source data, asset contact sheets, section maps and audited reader tools are retained under ignored `private-references/figma/analysis/`. The preserved native copy is `private-references/figma/iresen-official-file.fig`. Public evidence contains design properties and aggregates rather than original copy, user identifiers or plugin data. A missing serialized property is absent, not a proven zero/default; instance inheritance must be resolved before asserting final appearance.
 
 ## Initial semantic colors
 
@@ -71,3 +81,289 @@ Long text can wrap without widening the viewport; inline language options and
 mobile header actions can wrap when text is enlarged. Verified against the local
 production build in FR/EN/AR at 320/390/768/1024/1440px, including open menus and
 200% text enlargement at 320/1440px. See [refinement evidence](footer.md#design-workflow-refinement).
+
+## Native design-language analysis — 2026-10-08
+
+### Document map and useful source frames
+
+The source contains 20,689 unique node records, including 579 component masters
+(`SYMBOL`), 1,247 instances, 5,383 text nodes and two variable collections.
+Five obsolete variables are soft-deleted. There are 54 explicitly hidden nodes
+and 1,160 hidden through their ancestry. Counts include imported libraries and
+scratch references; they are not an inventory of 579 website components.
+Structural visibility uses explicit visibility and ancestry; the foundation
+profiles additionally exclude zero-opacity ancestry. Neither count proves native
+rendered visibility, occlusion or clipping.
+
+| Canvas               | ID          | Records including canvas | Reference purpose                                                |
+| -------------------- | ----------- | -----------------------: | ---------------------------------------------------------------- |
+| BENCHMARK            | `0:1`       |                      415 | Comparative references; do not treat as the IRESEN specification |
+| Internal Only Canvas | `0:2`       |                    1,072 | Hidden local/imported definitions and variable records           |
+| IRESEN               | `127:1781`  |                    8,977 | Desktop pages, shared elements and alternate explorations        |
+| MOBILE               | `1128:6107` |                    8,149 | Mobile pages, menus, overlays and alternative fragments          |
+| DESIGN SYSTEM        | `2211:6298` |                    2,075 | Foundation/component presentation board and icons                |
+
+The original URL node `892:5041` is the homepage video layer, not a full page.
+Its ancestry is Slider `804:6001` → Main Banner `804:6000` → WEBSITE LAYOUT
+`804:5999` → [HOMEPAGE `804:5998`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-5998)
+→ IRESEN `127:1781`. The earlier brief's URL selected that entire canvas.
+
+Fourteen named desktop pages are 1920px wide. Thirteen have an explicit `BUILD`
+handoff flag; FORMATIONS has no serialized flag. A handoff flag does not approve
+copy or establish implementation quality. Use this mapping to preserve current
+product boundaries when adapting historical source pages:
+
+| Source frame                   | Node ID    | Approved adaptation                                       |
+| ------------------------------ | ---------- | --------------------------------------------------------- |
+| HOMEPAGE                       | `804:5998` | Accueil; new institutional narrative and reviewed modules |
+| AGENCE DE MOYENS               | `804:6193` | Programmes R&D&I and relevant calls                       |
+| DOMAINES DE RECHERCHE          | `804:6488` | Priorités & feuilles de route                             |
+| Publications & Ressources      | `804:6862` | Publications & rapports                                   |
+| ALUMNI                         | `804:7108` | Possible expert/profile patterns within approved scope    |
+| CONTACT US                     | `804:7374` | Contact onepager                                          |
+| COOPERATION ET PARTENARIATS    | `804:7609` | Travailler avec nous                                      |
+| Vulgarisation scientifique     | `804:7833` | News/editorial and media patterns                         |
+| Actualités & Événements        | `804:8049` | Separate news and event templates                         |
+| FORMATIONS                     | `804:8394` | Relevant events/network modules                           |
+| Carriéres                      | `804:8705` | Opportunités & Carrières                                  |
+| À propos                       | `804:8896` | Institut; governance retains its separate page            |
+| INFRASTRUCTURES ET PLATEFORMES | `804:9238` | Platform listing/detail patterns                          |
+| PROJETS R&D & INNOVATION       | `804:9285` | Collaborative project listing/detail patterns             |
+
+The MOBILE canvas contains 13 full 402px page frames. Homepage `1479:5838`
+is 402 × 7523.399 source pixels. There are five separate mobile menu screens
+(`1479:10344`, `10404`, `10446`, `10485`, `10516`), search `1479:10864`,
+filters `1489:11586` and project-detail modal `1479:8022`. Alternative fragments
+often use 442px widths; workshop reference `1479:10902` is 442 × 4040.
+No full 402px FORMATIONS counterpart was identified. No Arabic Unicode or
+RTL/Arabic/tablet-named frames were found, so dedicated RTL/tablet designs remain
+unestablished. Mobile existence is now verified structurally; responsive behavior
+and translated rendering still require implementation review.
+
+### Composition and spacing
+
+The source's recognizable language combines broad photographic/video or technical
+heroes, left-aligned display type, small marked section labels, restrained CTAs,
+flat alternating light/navy bands, image/text contrasts, selected diagonal-corner
+cards, grouped editorial rows and a substantial footer. This is a structural
+design read supported by measured frames and original assets, not a native
+rendered fidelity claim.
+
+Desktop HOMEPAGE measures 1920 × 7943.668. Its sequence is hero/navigation,
+statistics, section navigation, mission, research themes, financing, achievements,
+platforms, news, alliances and footer. The source's particular statistics and
+module labels are historical content. Adapt the rhythm to **Développer · Éprouver
+· Valoriser** and approved information architecture rather than copying that
+exact content sequence. Mobile omits the desktop secondary navigation and
+standalone alliances section, and rearranges sections into a narrow reading flow.
+
+| Geometry                | Exact examples                                                                    | Implementation use                                                                                 |
+| ----------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Desktop grid            | All 14 pages: 12-column STRETCH-X, 60px offset, 20px gutter                       | Alignment evidence; retain fluid layout and current 80rem maximum                                  |
+| Grid exceptions         | Design board `2211:6303`: 100px offset/50px gutter; footer `1584:6681`: 60px/50px | Source has several grids, not one universal recipe                                                 |
+| Desktop sections        | `804:6069`, `804:6093`: 60px horizontal/80px vertical padding                     | Spacious sections; translate into responsive semantic spacing                                      |
+| Desktop news/statistics | `804:6120`: 100px vertical; `804:6025`: 195px horizontal/40px vertical            | Local composition decisions, not global token defaults                                             |
+| Mobile sections         | `1479:5865`, `1479:5953`: 16px sides/56px vertical, 370px interiors               | Narrow-screen reference; preserve content fit at other widths                                      |
+| Content gaps            | 10px wrappers coexist with 30/40/60px desktop and 30/32px mobile gaps             | Retain current 4/8px implementation rhythm; source does not prove an exact universal spacing scale |
+| Navigation              | `718:5472`: 1920 × 128; inner `718:5444`: 1800 × 54 at x60/y36                    | Header proportion reference; current compact header remains implemented behavior                   |
+| Hero                    | `804:6000`: 1920 × 850; copy `804:6007`: 1094 × 463 at x60/y327.186               | Keep readable copy space and media contrast; do not lock web hero height                           |
+
+STRETCH grid `sectionSize:10` is a serialized guide parameter, not a measured
+10px column. Source absolute coordinates are canvas layout, not responsive CSS.
+The mobile hero wrapper includes 60px of device status-bar chrome; do not build
+that into the website. Its inner 874px video extends beyond an 814px hero parent,
+so native clipping/cropping needs review rather than literal reproduction.
+
+### Historical palette and variable maturity
+
+The native source uses six active unique color values, represented twice through
+local/imported variable records. There are 17 variable records in total, including
+five soft-deleted legacy entries. Both collections expose one `Mode 1`; this does
+not establish a light/dark token architecture. Source color aliases are present,
+but spacing, radius, typography and motion variables were not recovered.
+
+| Source variable          | Exact source value | Current website role/value        |
+| ------------------------ | ------------------ | --------------------------------- |
+| Prussian Blue `760:3674` | `#0C2340`          | Institutional navy `#12345A`      |
+| Dusk Blue `760:3675`     | `#1A4E8A`          | Primary action blue `#296BB4`     |
+| Blue Bell `760:3676`     | `#4698CA`          | Science Blue `#4698CA`            |
+| Icy Aqua `760:3677`      | `#B1E4E3`          | Select cyan emphasis `#77C5D5`    |
+| WHITE BLUE `760:3678`    | `#EDF5F9`          | Reading/section surface `#F4F7F8` |
+| DEEP TEAL `959:5381`     | `#507F70`          | Selected green emphasis `#50A684` |
+
+This table maps purposes; it does not recolor the source or automatically replace
+every historical accent. Current owner-approved identity wins. Imported palette
+screenshots corroborate historical values but are secondary to actual variable
+records. Additional scratch/library colors and transparencies are not new brand
+tokens. Keep Innovation Lime and the current logo variants under the approved
+color book, even where this source variable set is narrower.
+
+### Typography and hierarchy
+
+Plus Jakarta Sans is the dominant primary-page family. Exact source naming also
+uses `Plus Jakarta Sans Medium`/`SemiBold` as family strings with `Regular` styles
+and matching Medium/SemiBold PostScript names; normalize by the licensed font's
+actual metadata when implementing. Of 719 directly serialized visible desktop
+text nodes in the 14 primary roots, 536 use Jakarta families, 179 Inter Tight and
+four Aspekta. Of 678 equivalent mobile text nodes, 673 use Jakarta and five Inter.
+These counts exclude expanded master/override typography and are not a census of
+final rendered text. They demonstrate mixed serialized typography rather than an
+instruction to load three website families.
+
+| Role                                    | Source node | Size | Stored line height | Tracking |
+| --------------------------------------- | ----------- | ---: | ------------------ | -------- |
+| Desktop hero heading, Jakarta Bold      | `804:6013`  | 80px | 90px               | −3%      |
+| Desktop hero intro, Jakarta Medium      | `804:6014`  | 21px | RAW 1.5            | 0%       |
+| Desktop section heading, Jakarta Medium | `804:6066`  | 50px | 60px               | −3%      |
+| Desktop body, Jakarta Medium            | `804:6067`  | 18px | RAW 1.5            | 0%       |
+| Desktop eyebrow, Jakarta Medium         | `804:6063`  | 16px | PERCENT 100        | +10%     |
+| Mobile hero heading, Jakarta Bold       | `1479:5856` | 32px | 38px               | −2%      |
+| Mobile hero body, Jakarta Medium        | `1479:5857` | 14px | RAW 1.5            | 0%       |
+
+Preserve clear separation between display, section, body, label and metadata
+roles. The pinned Sketch converter and source baseline metrics confirm that
+`RAW` multiplies font size, with rounded pixel results: 21px × 1.5 derives 32px,
+18px × 1.5 derives 27px, and 14px × 1.5 derives 21px. `PERCENT 100` means
+natural/Auto line height, not CSS `line-height:1`; an 80px design-board specimen
+derives a 101px line box. See the pinned
+[conversion reference](https://github.com/sketch-hq/fig2sketch/blob/0ecc6e9726184746653a9f63f0a1635fa50bbc38/src/converter/text.py).
+Source
+pixels are reference sizes; use fluid scales, real long content and legible mobile
+body sizes. Do not apply Latin negative tracking or uppercase letter spacing to
+Arabic. Font names in the document do not include licensed usable webfont files;
+the current project fallbacks remain deliberate.
+
+No shared text-style references were recovered. The sole serialized local style
+definition is a hidden fill style, `Faticon color` (`33:555`, `#333333`). The
+DESIGN SYSTEM board is therefore documentation and construction evidence, not
+a complete reusable typography token library. Its captions also contain drift:
+H4 is labelled 40px but the specimen is 50px; H5's 26px caption includes an
+incorrect 3.125rem conversion; a spacing specimen measures 80px while its label
+says Spacing 60. Use measured node properties over those captions.
+
+### Shapes, components and depth
+
+The two-corner signature is verified in the native source. Buttons
+`760:3679`/`760:3692` are 59px high, with 30px horizontal/18px vertical padding,
+10px icon gap and explicit top-left/bottom-right 10px radii. Other corner fields
+are absent rather than independently measured zeros. Card `2211:6513` is
+400 × 200 and mobile card `1479:12494` is 370 × 157; both explicitly use
+20px top-left/bottom-right radii. Current CSS uses 4px general control corners
+and a 20px diagonal signature for focused elements. This source review records
+those differences without changing the implemented rules.
+
+Mobile also includes 16px diagonal-corner cards, such as `1479:6405`.
+The state board illustrates default, hover and pressed CTAs; checked/disabled
+controls; focus/error/warning/success inputs; and dropdown states. Its source
+action states use `#1A4E8A`, `#2864AA` and `#0B386D`. Adapt state distinctions
+to approved colors and accessible contrast. Source Science Blue, warning and
+success colors fail 4.5:1 against white for normal text; source state specimens
+are not automatically suitable production tokens.
+
+A repeated source drop shadow uses x0/y14, blur40, spread0, color `#0C1755`
+at 5% alpha. Other blur and inner-shadow treatments occur locally. They are not
+a published semantic depth scale; source sample effects should not become
+global menu/card styling without an intentional implementation decision.
+
+| Reusable family                     | Measured references                                 | Adaptation intent                                                                                                                                                     |
+| ----------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Main navigation and footer          | `718:5472`; `1068:6394`                             | Shared site shell, current route map, keyboard/touch operation and appropriate SVG variant                                                                            |
+| Primary/outlined/link CTAs          | `760:3679`, `760:3692`, `761:4978`                  | One action hierarchy, optional icon, clear default/focus/hover/loading/disabled behavior as needed                                                                    |
+| Image-led cards and profile blocks  | `2211:6513`, `98:3014`, `1479:12494`                | Shared image/text anatomy; accurate content and responsive crops                                                                                                      |
+| Inputs and textarea                 | Labeled wrappers `737:4209`, `737:4210`, `737:4314` | Wrappers 435 × 94 / 435 × 233; editable surfaces `737:4203`, `737:4207` are 435 × 60, textarea `737:4311` is 435 × 200; labels/errors/delivery require real semantics |
+| Mobile navigation/search/filters    | `1479:10344`, `1479:10864`, `1489:11586`            | Usable small-screen discovery, proper overlay focus and equivalent locale routes                                                                                      |
+| Project-detail overlay              | `1479:8022`; `687:4283`                             | Reference information hierarchy; retain crawlable detail pages and accessible dialog behavior if commissioned                                                         |
+| Platform/resource/event/career rows | Corresponding primary page roots above              | Prefer appropriate lists, filters and disclosures over uniform decorative cards                                                                                       |
+
+All 1,247 instance master references resolve locally. The graph contains 246
+nodes with 268 variant specs and 84 nodes storing component-property definitions
+(78 nonempty). Generic `Property 1`, icon/device library variants and retained
+overrides mean these are not one coherent website component API. The DESIGN
+SYSTEM board contains 223 masters, predominantly icons, but no native variant
+specs, component-property definitions or prototype interactions within that
+board. Its showcased states are illustrated compositions; they do not prove
+a functioning default/hover/disabled component system.
+
+### Media and crop language
+
+The archive contains 223 embedded images (209 PNG, 14 JPEG), totaling
+146,967,739 bytes, plus the archive thumbnail and one MP4. Embedded widths range
+195–4096px and heights 28–2731px. All image filename SHA-1 hashes match bytes.
+All 859 raster references across 430 IMAGE/VIDEO paints resolve to those 223
+assets. No complete website screenshot exports were found among the image
+payloads; complete pages are editable canvas structures.
+
+Original media supports wide energy/infrastructure scenes, portraits, scientific
+graphics, landscape cards and partner-logo areas. It also includes imported
+menu/sitemap/settings screenshots. Asset presence and layer names do not verify
+facility identity, usage rights, credits or documentary authenticity. For example,
+a layer named for solar panels actually references a wind-farm raster. Use visual
+inspection and reviewed metadata for captions and alternative text.
+
+| Crop family      | Desktop/source example     | Mobile/source example      |
+| ---------------- | -------------------------- | -------------------------- |
+| Landscape card   | `98:3014`, 435 × 300       | `1479:10577`, 370 × 220    |
+| News lead        | `804:8079`, 1041 × 650     | `1479:7238`, 370 × 200     |
+| News thumbnail   | `804:8105`, 140 × 140      | `1479:7257`, 370 × 160     |
+| Hero video layer | `892:5041`, 1920 × 850.650 | `1479:5841`, 402.603 × 874 |
+
+Of 427 IMAGE paints, 372 use FILL and 55 STRETCH. These are individual source
+crop decisions, not universal CSS aspect ratios. Some small thumbnails are
+enlarged substantially in mobile references; use adequate original dimensions
+and focal points instead of reproducing blur or distortion. All 430 IMAGE/VIDEO
+paint `altText` fields are empty, so the source supplies no meaningful image
+alternatives. Production alt text remains an editorial/accessibility input.
+
+The embedded MP4 is byte-identical to existing `public/videos/hero.mp4`
+(9,774,051 bytes; SHA-256 `548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb`).
+Its existence does not enable playback. The existing video inventory's poster,
+derivative, pause, audio, reduced-motion and performance requirements still apply.
+
+### Prototype behavior and unresolved source details
+
+There are 576 active direct prototype records: 302 on IRESEN, 238 on MOBILE and
+36 in hidden internal definitions. Separately, instance overrides contain 144
+active and eight deleted interaction records; 92 active overrides are partial.
+Do not add the two groups to describe effective interactive controls. Direct
+triggers include 438 clicks, 88 hovers, 14 mouse-enter events, 25 drags and
+11 timeouts. Their presence does not establish keyboard/focus semantics.
+
+Common source motion is 0.3-second Smart Animate with back-cubic overshoot;
+11 timeout loops store a 0.001-second trigger and 10-second transition. There
+are 29 explicit sticky-scroll flags and nine mobile horizontal-scroll containers.
+These establish prototype intent, not production requirements. Keep current
+native controls, subtle motion, reduced-motion support and the brief's preference
+for visible grids and non-automatic carousels. Do not install a motion library
+to imitate an unverified prototype effect.
+
+Six direct records use an unset destination sentinel; three are hidden and
+three visible desktop examples include project drag `413:2667`, research-page
+scroll `804:6488` and footer platforms action `1584:6752`. Fourteen desktop
+main-navigation partial overrides reference base interaction `785:5392`, whose
+complete trigger definition is absent from the recovered graph. Retain intended
+destination mappings while explicitly resolving actual web behavior in code.
+
+### How future work should use this reference
+
+Read this document with [DESIGN.md](../DESIGN.md), [PRODUCT.md](../PRODUCT.md)
+and the source inventory before page implementation. Reuse composition, type
+hierarchy, selected-corner geometry and component anatomy from relevant frames;
+apply current approved identity, content and routes. Keep source observations,
+proposed improvements and implemented decisions distinct.
+
+Prioritize licensed Jakarta/Arabic typography, reusable hero and section-heading
+families, shared image/card/row anatomy, and explicit interactive states when
+those implementations are requested. The current homepage remains an empty
+shell; this analysis has not implemented those families or changed runtime CSS.
+Tablet/RTL, focus/keyboard behavior, long CMS content, native instance rendering,
+real image crops, licenses and final approved copy remain verification inputs.
+
+The offline reader is based on the MIT-licensed
+[Sketch Kiwi reader](https://github.com/sketch-hq/fig2sketch/blob/0ecc6e9726184746653a9f63f0a1635fa50bbc38/src/figformat/kiwi.py)
+with canonical unsigned 64-bit handling from
+[Kiwi](https://github.com/evanw/kiwi/blob/fe3ca9484ac055ccd39fe144218ec11f720222ae/js/bb.ts).
+Audited tools, license notices, raw IEEE sentinel evidence and private reports
+are retained with the local analysis. Thirty-six non-finite max-size/spacing
+fields are normalized to JSON null, with original bits recorded privately;
+they must not be mistaken for absent properties or measured zero. Native Figma
+rendering remains the fidelity reference when connector access is restored.

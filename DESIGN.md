@@ -72,10 +72,20 @@ rendered comparison and automation does not establish full WCAG conformance.
 [Asset inventory](docs/asset-inventory.md), [reference handling](docs/references/README.md),
 [primary-blue decision](docs/adr/0003-owner-selected-primary-blue.md) and
 [footer implementation](docs/footer.md) describe the available evidence.
-The brief records earlier export observations; the current checkout does not
-contain those export boards or licensed font files. Verify availability/freshness
-before claiming a direct comparison. Existing footer screenshots are prior review
-artifacts, not supplied references or proof of a new rendering.
+The native Figma reference is now recovered and thoroughly analyzed; use
+[its measured language](docs/design-system.md#native-design-language-analysis--2026-10-08)
+and [source evidence](docs/references/figma/design-evidence.json) for page composition,
+typography, selected corners, component anatomy and mobile adaptations. Fourteen
+desktop and thirteen full mobile pages are verified structurally. Wide media,
+display type, marked section labels, flat section bands and editorial rows form
+the source's visual direction. Current approved colors and product/content truth
+retain precedence over its historical palette and mockup content.
+
+The brief's standalone export boards and licensed font files remain unavailable.
+Native Figma rendering, dedicated RTL/tablet references and effective prototype
+behavior remain unverified. Verify availability/freshness before claiming a direct
+comparison. Existing footer screenshots are prior review artifacts, not supplied
+references or proof of a new rendering.
 
 Record adopted shared improvements here and in the design-system specification,
 with the reason and verification. Keep proposals, experimental directions and

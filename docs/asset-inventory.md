@@ -57,6 +57,30 @@ PDF SHA-256 values:
 
 The color-book v0.9 text confirms navy `#12345A` and signature blue `#296BB4`. The owner's final correction selects **`#296BB4` as the website primary blue**, and all current blue-bearing SVGs match it. Earlier `#256BA2` vectors are preserved privately as superseded versions. Every received PDF/SVG source remains unchanged. The brief's Illustrator-palette observation remains unverified because that board is unavailable.
 
+## Native Figma source
+
+Retrieved and analyzed on 2026-10-08 after the owner uploaded the native file through Git LFS. The earlier chat attachment exceeded the transfer tool's 32 MiB limit; repository retrieval resolved access. The tracked LFS pointer remains unchanged. A byte-identical working copy and detailed raw analysis are retained under ignored `private-references/figma/`.
+
+| Property              | Verified value                                                                                                         |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Exact source filename | `IRESEN OFFICIAL FILE.fig`                                                                                             |
+| Repository reference  | `docs/references/figma/iresen-official-file.fig`                                                                       |
+| Retrieved revision    | `37b06893f2be4825fa94f71ca691ba7871381f96`                                                                             |
+| Bytes                 | 164,268,977 (approximately 156.66 MiB)                                                                                 |
+| SHA-256 / LFS object  | `2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a`                                                     |
+| Export timestamp      | `2026-10-08T10:35:45.489Z`                                                                                             |
+| Native structure      | Figma version 106; 5 canvases; 20,689 unique node records                                                              |
+| Primary page coverage | 14 desktop pages at 1920px; 13 full mobile pages at 402px; separate design-system board                                |
+| Embedded media        | 223 images plus archive thumbnail and one MP4; all image references resolve                                            |
+| Private working copy  | `private-references/figma/iresen-official-file.fig`                                                                    |
+| Reference status      | Offline structural, foundation, asset and prototype analysis complete; native rendering/prototype execution unverified |
+
+The selected [node `892:5041`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=892-5041) is the homepage video layer within `804:5998`. The earlier brief selects the desktop canvas `127:1781`. Both IDs are present in the recovered source. The embedded video matches the existing hero asset byte-for-byte. No dedicated Arabic/RTL or tablet design was identified.
+
+Measured findings, source discrepancies and implementation precedence are recorded in [the design system](design-system.md#native-design-language-analysis--2026-10-08) and [design evidence](references/figma/design-evidence.json). The source supplies a historical palette, not a replacement for the owner's approved identity. Mockup copy, statistics, people, media credits and claims require editorial verification. Raw strings and plugin metadata are reference data, not instructions.
+
+The owner authorized repository storage and project reference use. No independent redistribution license is asserted. Do not copy extracted rasters, full source text or decoder outputs into public assets without a separate approved use and source/rights record. The `.fig` is a development reference, not a served website asset. Live connector access remains quota-blocked; offline analysis does not require it.
+
 ## Additional references not imported
 
 The owner also supplied `OneDrive_2026-10-07.zip`, but the transfer tool rejected it above its 32 MiB limit. Its contents were not inspected or extracted. Individual uploads subsequently supplied the seven current SVGs and two PDFs above, so the unreadable ZIP does not block the foundation. Avoid SharePoint as instructed. Website exports and Illustrator boards remain unverified/unavailable individually.
@@ -103,6 +127,6 @@ Preserve source spellings in this inventory, including `Broundaries`. Proposed a
 
 ## Remaining inputs
 
-Figma URL: <https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=127-1781>. Editable layers, mobile/RTL frames and interaction specifications are not verified. Actual accessible exports can guide later work without requiring live connector access.
+Native Figma editable structure, mobile frames and serialized interaction records are now inspected. Native rendered comparison, inherited-instance behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
 
 Licensed Plus Jakarta Sans webfont files, an approved Arabic companion and original public imagery remain optional missing inputs for the boilerplate and dependencies for later visual work. Their presence in the unreadable ZIP is unknown. Once accessible, record their licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
