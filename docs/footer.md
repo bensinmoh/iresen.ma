@@ -3,13 +3,21 @@
 The footer adapts the supplied Footer.png composition: a full-width navy surface,
 reversed supplied identity, four institutional navigation groups, a contact and
 social row, a separated newsletter CTA, utilities, copyright and language
-switching. It uses the existing brand tokens, a wider footer-specific content
-area, fluid gutters and physical top-left/bottom-right button corners. Two
+switching. It uses the existing brand tokens, the shared page container,
+fluid gutters and physical top-left/bottom-right button corners. Two
 navigation columns remain available on mobile; contact details and newsletter
 controls stack. Arabic uses logical alignment, isolated Latin identifiers,
 mirrored directional arrows and no added
 letter spacing. The component stays server rendered except for the existing
 language selector's progressive keyboard/outside-dismiss enhancements.
+
+The later owner refinements promote the footer's 120rem geometry and
+`clamp(1.25rem, 3.125vw, 4rem)` gutters to the header, hero and sections, removing
+the width exception. Selected languages in the footer dropdown use 700 weight
+alone; public French/English controls use self-hosted Plus Jakarta Sans. See
+[current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
+and [the validation log](validation.md). The source observations, screenshots and
+verification below describe their earlier revisions.
 
 ## Reference rework — 2026-10-08
 
@@ -25,8 +33,9 @@ groups cover institute, science/innovation, resources and collaboration using
 approved page IDs. A contact/social row precedes the divider and the prominent
 newsletter heading, email field, subscribe button and consent line. The footer
 uses a 120rem maximum with fluid 3.125vw side gutters, clamped to 1.25–4rem,
-to retain the broad source composition. The regular 80rem reading width stays
-the default elsewhere. Responsive stacking and Arabic behavior are implemented
+to retain the broad source composition. At this revision, the regular 80rem
+reading width stayed the default elsewhere; the later shared grid supersedes it.
+Responsive stacking and Arabic behavior are implemented
 adaptations rather than layouts verified from the attached desktop export.
 
 Current approved colors, delivered SVGs, contact information, social destinations

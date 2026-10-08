@@ -37,17 +37,20 @@ information architecture. CMS/admin surfaces prioritize clear editing tasks.
 
 ## Typography, rhythm and media
 
-The current token system uses an 80rem reading-content maximum, fluid gutters
-and a 4/8px spacing rhythm. The footer has the documented wider exception below.
+The current token system uses a shared 120rem container maximum and side gutters
+of `clamp(1.25rem, 3.125vw, 4rem)` across the header, hero, content sections and
+footer. This gives the page one aligned, spacious grid; body-copy measure remains
+constrained within it. Keep the 4/8px spacing rhythm.
 Treat 12/8/4-column desktop/tablet/mobile grids as composition
 starting points. Adapt to content; a headline should not become tiny to preserve
 a desktop arrangement on mobile.
 
-Licensed, self-hosted Plus Jakarta Sans is the intended Latin family when available;
-the Arabic companion still needs review. Current Arial/Helvetica and Tahoma/Arial
-fallbacks are deliberate. Do not import a fashionable font or remote font service
-just to satisfy an upstream skill. Establish distinct heading/body/metadata roles,
-comfortable measure and readable Arabic shaping without added letter spacing.
+French and English use licensed, self-hosted Plus Jakarta Sans, including links
+and buttons. The Latin normal variable asset supports weights 200–800; source and
+OFL license records are in [the font guide](docs/fonts.md). Arabic retains its
+Tahoma/Arial stack while its companion family awaits review. Establish distinct
+heading/body/metadata roles and comfortable measure. Hero H1 tracking is −3%
+(`-0.03em`) for Latin; Arabic keeps natural shaping and letter spacing.
 
 Compose with real translated labels and variable CMS content. Use image/text
 contrasts, selected navy panels, editorial lists and coherent image crops where
@@ -82,8 +85,9 @@ display type, marked section labels, flat section bands and editorial rows form
 the source's visual direction. Current approved colors and product/content truth
 retain precedence over its historical palette and mockup content.
 
-The brief's standalone export boards and licensed font files remain unavailable
-in the checkout; the owner reattached Footer.png in chat for the current rework.
+The brief's standalone export boards remain unavailable in the checkout; the
+owner reattached Footer.png in chat for the footer rework. Latin font files are
+now installed separately with their verified license and provenance.
 Native Figma rendering, dedicated RTL/tablet references and effective prototype
 behavior remain unverified. Verify availability/freshness before claiming a direct
 comparison. Existing footer screenshots are prior review artifacts, not supplied
@@ -98,7 +102,8 @@ unfinished measurements clearly separate from implemented decisions.
 The earlier header refinement grouped language access and the menu across the
 available mobile width, with a clear border between identity and controls.
 Active language links used a quiet blue surface as well as an underline; the
-menu had an identifiable control boundary. Search retained a 44px-high target.
+menu had an identifiable control boundary. The later hero refinement below
+supersedes that selected-language treatment. Search retained a 44px-high target.
 
 The earlier footer refinement used distinct type roles: 16px body/desktop links,
 14px group headings and utility/mobile links, and 13px copyright metadata at the
@@ -119,9 +124,9 @@ browser/axe checks passed; cross-browser and screen-reader coverage remain separ
 The footer now follows the broad composition of native frame `1584:6681` and the
 owner-reattached Footer.png: identity plus four navigation groups, a contact/social
 row, a divider, prominent newsletter copy and signup controls, then compact utility
-and language access. A footer-specific 120rem maximum and fluid 3.125vw side
-gutters preserve the source's broad proportions instead of compressing it to
-the reading-content width. Group labels remain 14px; desktop links use 16px and
+and language access. The rework initially introduced a footer-specific 120rem
+maximum and fluid 3.125vw side gutters; the later hero refinement promotes that
+geometry to the shared page grid. Group labels remain 14px; desktop links use 16px and
 600 weight, while the newsletter heading has its own fluid display role.
 
 The requested newsletter form remains visible with disabled controls and a
@@ -140,12 +145,13 @@ the reference's historical labels. The panel uses useful destination description
 fine dividers, a navy link hover/focus surface and a quiet related-route block;
 sample events and funding claims are not reproduced.
 
-A header-specific 120rem maximum supports a single row from 110rem, a two-row
+A 120rem maximum supports a single row from 110rem, a two-row
 desktop layout from 70rem, and a compact disclosure menu below that. These rem
 thresholds give long French/English/Arabic labels room to remain legible. The
-homepage uses navy with the supplied reversed logo while its hero remains
-unimplemented; interior pages use white and the colored logo. No photograph or
-hero playback was added as part of navigation work.
+homepage used navy with the supplied reversed logo before heroes were implemented;
+interior pages used white and the colored logo. The hero implementation below
+adds the overlay variant. No photograph or hero playback was added as part of
+navigation work.
 
 Native disclosures preserve click, keyboard, touch and no-JavaScript access.
 Focus, current-route indicators, optional mouse-hover discovery, reduced motion
@@ -180,3 +186,18 @@ The narrow blue band presents Développer · Éprouver · Valoriser as navigatio
 with the verified 2011 founding year only on home/institute. No sample statistics,
 certification badge or long explanatory cards are included. Display type remains
 fluid; Arabic uses natural tracking, logical alignment and directional arrows.
+
+## Hero layout and typography refinements — 2026-10-08
+
+The owner's refinements align the header, hero-body, narrative band, following
+sections and footer to the shared 120rem container and fluid side gutters.
+This removes the narrower hero/content inset and the footer width exception.
+Latin hero H1s use −3% tracking in every composition; Arabic keeps natural tracking.
+Public French/English text and controls now use self-hosted Plus Jakarta Sans,
+including Découvrir and menu actions; system families remain loading/glyph fallbacks.
+
+Selected languages use 700 weight alone in the header and footer dropdown, with
+no persistent fill or underline. Hover and keyboard focus remain visible.
+Header menu labels and their arrows center together within the full control width;
+the compact Menu control also centers its contents. Current executed checks and
+rendered coverage are recorded separately in [the validation log](docs/validation.md).

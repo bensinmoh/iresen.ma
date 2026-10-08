@@ -161,3 +161,44 @@ Checks do not establish cross-browser/screen-reader conformance or native Figma
 pixel fidelity. Hero copy/translations are editorial drafts; extracted imagery
 needs final individual rights/credit review before production publication. No
 deployment was performed.
+
+## Hero layout and typography refinements — 2026-10-08
+
+The owner refinements use a shared 120rem container, aligned fluid gutters,
+−3% Latin hero H1 tracking, bold-only current-language links, centered header
+menu contents and licensed self-hosted Plus Jakarta Sans for French/English.
+The shared rule explicitly sets `max-inline-size` so Tailwind's layered
+`.container` breakpoint maximum cannot silently narrow hero/section/footer content.
+
+Final local checks passed `pnpm lint`, `pnpm typecheck`, `pnpm format:check`,
+8 unit tests, 4 CMS integration tests, the production build and all 35 Chromium
+browser tests. The final incremental build compiled without warnings. The browser
+suite checks all 22 approved heroes in FR/EN/AR, landing geometry, section anchors,
+viewport resizing, enlarged text, navigation/locale behavior, keyboard dismissal,
+no-JavaScript access and existing axe checks.
+
+An additional 30 production-rendered cases passed: FR/EN/AR at
+320/390/768/1024/1120/1440/1920/2560px, plus 200% root text at 320/1440px with
+open menu and language controls. Header, hero-body, narrative band, sections and
+footer container bounds align within 1px, with no horizontal overflow or header/
+title overlap. Default side offsets are 45px at 1440px and 60px at 1920px.
+Menu labels and chevrons center within their controls; selected header/footer
+languages use weight 700 with transparent backgrounds and no persistent underline.
+Latin H1 tracking matches −3%; Arabic retains natural tracking and Tahoma/Arial.
+
+Chromium's rendered-font inspection confirms Plus Jakarta Sans for FR/EN hero
+titles, Découvrir, visible menu controls and newsletter buttons at each normal
+width. The font request succeeds with HTTP 200 from the local application origin.
+The variable WOFF2 decodes successfully, supports weights 200–800 and covers every
+character in the current French/English catalogs. Source integrity, hashes and
+the preserved OFL notice are recorded in [the font guide](fonts.md).
+
+Inspected final full-page captures:
+
+- [French, 1440px](screenshots/hero-refinement-fr-1440.png)
+- [French, 1920px](screenshots/hero-refinement-fr-1920.png)
+- [Arabic, 390px](screenshots/hero-refinement-ar-390.png)
+
+These checks cover local Chromium rendering and the documented interactions.
+Cross-browser/screen-reader review and the reviewed Arabic companion remain
+separate work. Current PR CI and merge status are recorded by GitHub.

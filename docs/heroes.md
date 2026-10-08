@@ -58,7 +58,30 @@ shrinking typography. Without JavaScript, CSS `100dvh` and responsive header
 clearance estimates retain the layout and all native links. Arabic uses logical
 alignment, natural shaping/tracking and mirrored directional arrows.
 
-## Verification
+## Owner refinements — 2026-10-08
+
+The hero-body now uses the same centered container as the header, blue narrative
+band, sections below and footer: a 120rem maximum with side gutters of
+`clamp(1.25rem, 3.125vw, 4rem)`. This reduces the previous hero/body inset on wide
+screens and gives the complete page consistent outer alignment. Individual copy
+measures and the five layout variations still control text placement within it.
+
+French/English hero H1s use −3% letter spacing (`-0.03em`) at every breakpoint;
+Arabic retains natural tracking. The public Latin font is now self-hosted Plus
+Jakarta Sans, including the Découvrir action and native button controls. See
+[font provenance and loading](fonts.md). Arabic's reviewed companion remains a
+follow-up input; its existing Tahoma/Arial stack is retained.
+
+The header menu's text/arrow group centers in its full control width, and the
+compact Menu control centers its contents. Selected languages use bold 700 alone
+in the header and footer dropdown, retaining hover and keyboard-focus feedback.
+See [shared design rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
+and [the validation log](validation.md) for current executed checks and renderings.
+
+## Original implementation verification
+
+The following coverage belongs to the initial hero implementation, before the
+owner refinements above; retained screenshots show that earlier revision.
 
 - Lint, strict types, 8 unit tests, 4 CMS integration tests and production build
   passed. The build retains the existing next-intl webpack cache warnings.

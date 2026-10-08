@@ -1,5 +1,15 @@
 # Navigation reference adaptation
 
+The later owner refinements align this header with the hero, following sections
+and footer through the shared 120rem container and
+`clamp(1.25rem, 3.125vw, 4rem)` gutters. Menu text/arrow groups center in their full
+control width, the compact Menu centers its contents, selected languages use
+700 weight alone, and public French/English text uses self-hosted Plus Jakarta
+Sans. See [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
+and [the validation log](validation.md). The source observations, screenshots and
+verification below describe the original navigation revision; the subsequent
+hero overlay is documented at the end.
+
 ## Sources and scope — 2026-10-08
 
 The owner requested a modern, efficient navigation bar that stays close to the
@@ -22,14 +32,16 @@ historical palette and example promotional content.
 
 ## Composition and approved hierarchy
 
-The homepage header uses the approved navy and delivered reversed SVG as an
-honest fallback while a homepage hero is still unimplemented. Interior pages use
-a white header and the supplied colored SVG. The reference's full solar-field
+The original homepage header used the approved navy and delivered reversed SVG
+before heroes were implemented. Interior pages used a white header and the
+supplied colored SVG. The subsequent hero overlay is recorded below.
+The reference's full solar-field
 image is not served as an application asset; this navigation increment does not
 enable the stored hero video.
 
-The header has its own 120rem maximum with fluid gutters, allowing the complete
-approved hierarchy to breathe without changing the 80rem reading-content width.
+The original header had its own 120rem maximum with fluid gutters, allowing the
+complete approved hierarchy to breathe while the reading-content width was 80rem.
+The later refinement promotes shared broad geometry across the page.
 At the default 16px root size, its layout is:
 
 | Available width                           | Navigation layout                                                          |

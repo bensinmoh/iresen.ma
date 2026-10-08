@@ -95,8 +95,10 @@ ul {
   list-style: none;
 }
 
-.container {
+.container,
+.header-container {
   inline-size: min(100% - var(--gutter) * 2, var(--container-width));
+  max-inline-size: var(--container-width);
   margin-inline: auto;
 }
 
@@ -120,11 +122,6 @@ ul {
   z-index: var(--z-header);
   background: var(--color-white);
   border-block-end: 1px solid var(--color-border);
-}
-
-.header-container {
-  inline-size: min(100% - clamp(1.25rem, 3.125vw, 3.75rem) * 2, 120rem);
-  margin-inline: auto;
 }
 
 .site-header-inverse {
@@ -223,7 +220,6 @@ body:has(.page-hero) .site-header-overlay {
 
 .site-header-inverse .header-search:hover,
 .site-header-inverse .locale-selector a:hover,
-.site-header-inverse .locale-selector a[aria-current='true'],
 .site-header-inverse .site-menu[open] > summary,
 .site-header-inverse .menu-toggle:hover {
   color: var(--color-white);
@@ -293,8 +289,6 @@ body:has(.page-hero) .site-header-overlay {
 
 .locale-selector a[aria-current='true'] {
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
 }
 
 .site-header .locale-selector a {
@@ -302,8 +296,7 @@ body:has(.page-hero) .site-header-overlay {
   transition: background-color var(--duration-fast);
 }
 
-.site-header .locale-selector a:hover,
-.site-header .locale-selector a[aria-current='true'] {
+.site-header .locale-selector a:hover {
   color: var(--color-blue);
   background: var(--color-action-surface);
 }
@@ -311,6 +304,7 @@ body:has(.page-hero) .site-header-overlay {
 .menu-toggle {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-3);
   min-block-size: 2.75rem;
   padding-inline: var(--space-3);
@@ -453,6 +447,7 @@ body:has(.page-hero) .site-header-overlay {
     align-items: center;
     justify-content: center;
     gap: var(--space-2);
+    inline-size: 100%;
     block-size: 100%;
     min-block-size: 4.5rem;
     padding: var(--space-4);
@@ -461,6 +456,7 @@ body:has(.page-hero) .site-header-overlay {
     font-weight: 600;
     line-height: 1.4;
     text-decoration: none;
+    text-align: center;
     overflow-wrap: anywhere;
     transition:
       color var(--duration-fast),
@@ -822,7 +818,7 @@ html[dir='rtl'] .navigation-icon-arrow {
   max-inline-size: 22ch;
   font-size: var(--hero-title-size);
   line-height: 1.08;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 
 .hero-description {
@@ -1180,11 +1176,6 @@ html[lang='ar'] .hero-copy h1 {
   color: var(--color-white);
 }
 
-.site-footer > .container {
-  inline-size: min(100% - clamp(1.25rem, 3.125vw, 4rem) * 2, 120rem);
-  max-inline-size: 120rem;
-}
-
 .footer-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
@@ -1516,7 +1507,7 @@ a.footer-contact-value {
   position: absolute;
   inset-block-end: calc(100% + var(--space-2));
   inset-inline-end: 0;
-  min-inline-size: min(10rem, calc(100vw - clamp(1.25rem, 3.125vw, 4rem) * 2));
+  min-inline-size: min(10rem, calc(100vw - var(--gutter) * 2));
   padding: var(--space-2);
   border: 1px solid var(--color-footer-divider);
   border-radius: var(--radius-small);
@@ -1531,8 +1522,7 @@ a.footer-contact-value {
   border-radius: var(--radius-small);
 }
 
-.locale-dropdown-options a:hover,
-.locale-dropdown-options a[aria-current='true'] {
+.locale-dropdown-options a:hover {
   background: var(--color-footer-control);
 }
 

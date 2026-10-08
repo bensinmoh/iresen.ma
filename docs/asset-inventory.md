@@ -129,7 +129,7 @@ Preserve source spellings in this inventory, including `Broundaries`. Proposed a
 
 Native Figma editable structure, mobile frames and serialized interaction records are now inspected. Native rendered comparison, inherited-instance behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
 
-Licensed Plus Jakarta Sans webfont files, an approved Arabic companion and original public imagery remain optional missing inputs for the boilerplate and dependencies for later visual work. Their presence in the unreadable ZIP is unknown. Once accessible, record their licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
+Licensed Plus Jakarta Sans Latin webfont files are now installed independently of the unreadable ZIP; see the font record below. An approved Arabic companion and reviewed original public imagery remain follow-up inputs. Their presence in the unreadable ZIP is unknown. Once accessible, record their licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
 ## Introductory hero backgrounds — 2026-10-08
 
@@ -148,3 +148,25 @@ of facilities is inferred from Figma. Photographs are decorative and illustrate
 their topic; they do not claim to depict IRESEN researchers or assets. Verify
 individual usage rights and credits before production publication, or replace
 with approved originals. The MP4 remains unchanged and is not played.
+
+## Plus Jakarta Sans Latin font — 2026-10-08
+
+French/English public typography uses the normal Latin variable WOFF2 from
+`@fontsource-variable/plus-jakarta-sans` 5.3.0, distributed from Google Fonts
+family version v12 (last modified 2025-09-10). The 27,348-byte file supports
+weights 200–800. It is redistributable under SIL Open Font License 1.1; the original
+copyright notice and full OFL are retained alongside it. This license applies to
+the font, not IRESEN code, brand or content.
+
+The original entry `package/files/plus-jakarta-sans-latin-wght-normal.woff2` was
+copied without modifying its bytes to
+`src/fonts/plus-jakarta-sans/plus-jakarta-sans-latin-variable.woff2`.
+`next/font/local` emits a same-origin public font asset with a generated filename,
+preload and swap loading through the public frontend layout. No remote font
+service or runtime font package is used. Arabic keeps its current Tahoma/Arial
+stack until its companion family is reviewed.
+
+The archive's npm SHA-512 integrity, repository SHA-256 values, upstream source,
+subset coverage and [OFL notice](../src/fonts/plus-jakarta-sans/OFL.txt) are recorded
+in [the font guide](fonts.md). Application verification belongs in
+[the validation log](validation.md).

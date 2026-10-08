@@ -16,14 +16,14 @@
   --color-footer-divider: rgb(255 255 255 / 16%);
   --color-footer-control: #1b426b;
   --color-footer-field: rgb(255 255 255 / 5%);
-  --font-latin: Arial, Helvetica, sans-serif;
+  --font-latin: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
   --font-arabic: Tahoma, Arial, sans-serif;
   --font-body: var(--font-latin);
   --font-size-body: 1rem;
   --font-size-label: 0.875rem;
   --font-size-meta: 0.8125rem;
-  --container-width: 80rem;
-  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --container-width: 120rem;
+  --gutter: clamp(1.25rem, 3.125vw, 4rem);
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
