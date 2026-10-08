@@ -25,18 +25,26 @@ Use Node.js and pnpm versions above, plus Docker with Compose for the database. 
 ```sh
 pnpm install --frozen-lockfile
 pnpm setup:local
-docker compose up -d db
+pnpm db:up
 pnpm db:wait
 pnpm cms:migrate
+pnpm dev
 ```
 
 `setup:local` creates ignored `.env.local` with random development secrets and preserves an existing file. Inspect `.env.example` for the variable contract. Never copy live credentials into committed files.
+
+If another PostgreSQL service uses port 5432, choose a free local port before starting the database:
+
+```sh
+pnpm setup:local --db-port 5433
+```
+
+This updates `POSTGRES_PORT` and the port in `DATABASE_URL`, preserving existing credentials and other settings. Then continue with `pnpm db:up`, `pnpm db:wait`, `pnpm cms:migrate` and `pnpm dev`. Compose reads its host-port setting from `.env.local`; its container still uses port 5432. The port option requires a local PostgreSQL URL.
 
 For the first CMS administrator, supply `CMS_BOOTSTRAP_EMAIL` and `CMS_BOOTSTRAP_PASSWORD` through your secure local environment, then run:
 
 ```sh
 pnpm cms:bootstrap
-pnpm dev
 ```
 
 There is no shared/default administrator credential. Bootstrap is a controlled server operation, not public self-registration. Keep bootstrap credentials out of shell history and remove them from the environment afterward.
@@ -55,6 +63,8 @@ Public app: <http://localhost:3000> (redirects to French). Other locale shells: 
 | `pnpm test`             | Focused unit checks                        |
 | `pnpm test:integration` | CMS/database authorization checks          |
 | `pnpm test:e2e`         | Browser locale/navigation checks           |
+| `pnpm setup:local`      | Create private local configuration         |
+| `pnpm db:up`            | Start the configured Compose database      |
 | `pnpm db:wait`          | Wait for the configured PostgreSQL service |
 | `pnpm cms:migrate`      | Apply reviewed CMS migrations              |
 | `pnpm cms:bootstrap`    | Controlled first-administrator creation    |
@@ -68,6 +78,7 @@ Local foundation checks passed: 8 unit, 4 integration and 11 browser tests, plus
 | Name                                                | Purpose                                                                   |
 | --------------------------------------------------- | ------------------------------------------------------------------------- |
 | `DATABASE_URL`                                      | Server-side PostgreSQL connection                                         |
+| `POSTGRES_PORT`                                     | Local Compose host port; defaults to 5432 and must match `DATABASE_URL`   |
 | `POSTGRES_USER`, `POSTGRES_DB`, `POSTGRES_PASSWORD` | Local Compose database initialization; password must match `DATABASE_URL` |
 | `PAYLOAD_SECRET`                                    | Strong server-side CMS secret; local helper generates one                 |
 | `NEXT_PUBLIC_SITE_URL`                              | Development origin; initially `http://localhost:3000`                     |
