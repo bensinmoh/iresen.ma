@@ -231,11 +231,11 @@ export function SiteHeader() {
     )
   }
 
-  const inverse = currentPageId === 'home'
+  const inverse = currentPageId !== undefined
 
   return (
     <header
-      className={`site-header${inverse ? ' site-header-inverse' : ''}`}
+      className={`site-header${inverse ? ' site-header-inverse site-header-overlay' : ''}`}
       ref={headerRef}
       onKeyDown={closeOnEscape}
       onClick={(event) => {

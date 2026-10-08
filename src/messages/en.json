@@ -121,5 +121,45 @@
       "opportunities": "Find opportunities and calls for projects.",
       "publications": "Explore topics through publications and reports."
     }
+  },
+  "Hero": {
+    "homeTitle": "Research for the energy transition.",
+    "discover": "Discover",
+    "continue": "Explore further",
+    "founded": "IRESEN established",
+    "pathways": "Develop, test and transfer",
+    "stages": {
+      "develop": "Develop",
+      "test": "Test",
+      "transfer": "Transfer",
+      "institute": "IRESEN · Research & innovation",
+      "resources": "Sharing knowledge",
+      "collaboration": "Building together",
+      "information": "Useful information"
+    },
+    "descriptions": {
+      "home": "Develop knowledge, test technologies and transfer research for Morocco’s energy transition.",
+      "institute": "Explore our mission and the connections between research, experimentation and transfer.",
+      "governance": "Discover the governance and organisation supporting the Institute’s mission.",
+      "priorities": "Explore research directions serving the energy transition.",
+      "programmes": "Programmes that structure research and support innovation.",
+      "projects": "Collaborative research, from scientific questions to applications.",
+      "platforms": "Connecting research with experimentation and real conditions of use.",
+      "network": "Scientific expertise at the heart of research and experimentation.",
+      "transfer": "Connecting research results with their applications.",
+      "workWithUs": "Explore possibilities for collaboration in research and innovation.",
+      "news": "Follow the Institute’s news, research and innovation.",
+      "events": "Meetings to share knowledge and open dialogue.",
+      "publications": "Explore topics through publications and reports.",
+      "media": "Discover research and innovation through images.",
+      "opportunities": "Explore opportunities, careers and calls for projects.",
+      "search": "Find your way through the Institute’s pages and resources.",
+      "contact": "Connect with IRESEN and find the right point of contact.",
+      "legal": "Legal information about the IRESEN website.",
+      "privacy": "Information about privacy and personal data.",
+      "cookies": "Understand cookies and browsing preferences.",
+      "accessibility": "Information about the accessibility of this website.",
+      "sitemap": "Direct access to the Institute’s pages and resources."
+    }
   }
 }

@@ -1,0 +1,62 @@
+import type { PageId } from './site'
+
+type HeroDefinition = {
+  photo: string
+  layout: 'start' | 'end' | 'center' | 'split' | 'editorial'
+  position?: string
+  stage:
+    'develop' | 'test' | 'transfer' | 'institute' | 'resources' | 'collaboration' | 'information'
+  related: PageId
+}
+
+// Composition is independent from translated copy and the central route map.
+// Photographs are illustrative; they do not identify IRESEN facilities or people.
+export const heroes = {
+  home: { photo: 'solar-aerial', layout: 'start', stage: 'institute', related: 'platforms' },
+  institute: { photo: 'solar-sunset', layout: 'start', stage: 'institute', related: 'governance' },
+  governance: { photo: 'collaboration', layout: 'split', stage: 'institute', related: 'institute' },
+  priorities: {
+    photo: 'wind-landscape',
+    layout: 'center',
+    stage: 'develop',
+    related: 'programmes',
+  },
+  programmes: { photo: 'research', layout: 'end', stage: 'develop', related: 'projects' },
+  projects: { photo: 'team', layout: 'start', stage: 'develop', related: 'workWithUs' },
+  platforms: { photo: 'solar-field', layout: 'split', stage: 'test', related: 'network' },
+  network: { photo: 'workshop', layout: 'end', stage: 'test', related: 'platforms' },
+  transfer: { photo: 'solar-expertise', layout: 'split', stage: 'transfer', related: 'workWithUs' },
+  workWithUs: {
+    photo: 'wind-engineer',
+    layout: 'start',
+    stage: 'collaboration',
+    related: 'contact',
+  },
+  news: { photo: 'solar-city', layout: 'start', stage: 'resources', related: 'events' },
+  events: { photo: 'conference', layout: 'end', stage: 'resources', related: 'news' },
+  publications: { photo: 'reading', layout: 'split', stage: 'resources', related: 'media' },
+  media: { photo: 'solar-detail', layout: 'center', stage: 'resources', related: 'publications' },
+  opportunities: {
+    photo: 'careers',
+    layout: 'split',
+    stage: 'collaboration',
+    related: 'workWithUs',
+  },
+  search: { photo: 'solar-horizon', layout: 'center', stage: 'resources', related: 'sitemap' },
+  contact: { photo: 'wind-detail', layout: 'start', stage: 'collaboration', related: 'workWithUs' },
+  legal: { photo: 'solar-aerial', layout: 'editorial', stage: 'information', related: 'privacy' },
+  privacy: { photo: 'solar-detail', layout: 'editorial', stage: 'information', related: 'cookies' },
+  cookies: {
+    photo: 'wind-landscape',
+    layout: 'editorial',
+    stage: 'information',
+    related: 'privacy',
+  },
+  accessibility: {
+    photo: 'solar-horizon',
+    layout: 'editorial',
+    stage: 'information',
+    related: 'contact',
+  },
+  sitemap: { photo: 'solar-city', layout: 'editorial', stage: 'information', related: 'search' },
+} as const satisfies Record<PageId, HeroDefinition>

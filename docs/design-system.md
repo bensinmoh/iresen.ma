@@ -419,3 +419,27 @@ are retained with the local analysis. Thirty-six non-finite max-size/spacing
 fields are normalized to JSON null, with original bits recorded privately;
 they must not be mistaken for absent properties or measured zero. Native Figma
 rendering remains the fidelity reference when connector access is restored.
+
+## Introducing heroes — 2026-10-08
+
+All approved pages now open with a restrained introduction: a display title, one
+short sentence, a section anchor and one related destination. Five compositions
+(start, end, center, split and editorial) vary the visual rhythm across page topics.
+Seventeen individually extracted Figma images are illustrative backgrounds, not
+evidence about pictured people or IRESEN facilities. Utility pages use quieter
+navy overlays. Media provenance and remaining publication review are recorded in
+[the hero guide](heroes.md). Detailed content belongs in the sections below.
+
+The existing header overlays these heroes with the reversed supplied logo and a
+dark-to-transparent gradient; white disclosure panels retain their established
+interaction. A measured viewport minimum includes the header clearance and the
+bottom narrative band. Resize/orientation and visual-viewport changes update it;
+pinch zoom preserves layout size, and text enlargement/short screens may grow
+the hero instead of clipping content. CSS dynamic viewport units and responsive
+header estimates remain functional without JavaScript. No fixed heights or
+body overflow locks are used.
+
+The narrow blue band presents Développer · Éprouver · Valoriser as navigation,
+with the verified 2011 founding year only on home/institute. No sample statistics,
+certification badge or long explanatory cards are included. Display type remains
+fluid; Arabic uses natural tracking, logical alignment and directional arrows.
