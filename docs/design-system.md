@@ -34,3 +34,40 @@ Check actual rendered contrast; brand colors do not automatically make accessibl
 Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The internal narrative is a private working reference, not publishable copy; final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
 Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing exports/fonts do not block the foundation.
+
+## Design workflow integration
+
+[DESIGN.md](../DESIGN.md) captures current art direction;
+[PRODUCT.md](../PRODUCT.md) separates product/content truth from presentation.
+Use [the design workflow](design-workflow.md) and relevant `.agents/skills/` guidance
+for composition, token evolution, reference adaptation and verification. These
+guidelines support judgment and constructive critique, without making every
+upstream recommendation a requirement.
+
+When adopting a shared design improvement, update DESIGN.md and this specification
+with its purpose and verification. Keep task-specific proposals separate from
+implemented shared decisions. Preserve the current tokens and delivered assets
+until the requested implementation supplies a reason to change them.
+
+## Adopted type and control roles — 2026-10-08
+
+`--font-size-body` is `1rem`, `--font-size-label` is `0.875rem`, and
+`--font-size-meta` is `0.8125rem`. Use body size for reading text and desktop footer
+links, label size for footer section headings/utility links and mobile footer
+links, and metadata size for copyright. Footer navigation links use regular weight
+so the larger section labels and engagement heading establish hierarchy.
+
+`--color-action-surface` (`#EAF1F8`) is the quiet background for hover/current
+language states in the header; use primary blue text and preserve the current
+language underline. This is a control surface, not a new brand primary or status
+color. Mobile header actions span the available width beneath a divider, keeping
+language access and the outlined menu control distinct.
+
+Footer engagement groups the primary contact action above the secondary news and
+transfer links. Utility navigation has its own divider. Both patterns use logical
+alignment and shared spacing, preserving Arabic order and physical signature corners.
+
+Long text can wrap without widening the viewport; inline language options and
+mobile header actions can wrap when text is enlarged. Verified against the local
+production build in FR/EN/AR at 320/390/768/1024/1440px, including open menus and
+200% text enlargement at 320/1440px. See [refinement evidence](footer.md#design-workflow-refinement).

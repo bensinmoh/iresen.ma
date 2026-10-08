@@ -25,3 +25,27 @@ GitHub Actions passed the complete workflow in [PR #3 run 37703962430](https://g
 Automated accessibility and the tested keyboard/mobile interactions do not establish full WCAG conformance. Complete manual screen-reader, broader browser, long-content and final visual reviews with the implemented homepage. Representative performance budgets and field metrics have not been measured on final content.
 
 Search, contact delivery and CMS email are honest unavailable adapters. Production storage, identity/MFA, jobs, legal/privacy assessment, recovery and approved content/translations remain follow-up work. Missing design exports/fonts/imagery do not block this foundation. See the [backlog](backlog.md).
+
+## Design workflow and UI refinement
+
+Verified locally on 2026-10-08: lint, strict types, formatting, production build,
+8 unit tests, 4 local CMS integration tests and all 18 existing browser tests passed.
+The browser suite covers FR/EN/AR accessibility scans, navigation, RTL containment,
+equivalent locale routes/anchors, keyboard focus, no-JavaScript use and CMS access.
+An additional 21 rendered cases cover open navigation at 320/390/768/1024/1440px
+and 200% root text enlargement at 320/1440px in all three locales. Every case fits
+the viewport; reduced motion was verified. Final production captures were reviewed
+for French desktop, Arabic mobile and English tablet. Other browsers and manual
+screen-reader review remain outside this pass.
+
+The repository skills passed frontmatter/YAML/JSON, relative-link, task-routing,
+shell syntax and integrity checks: 66 pinned upstream blobs and 9 local additions
+match recorded hashes. See [refinement details and screenshots](footer.md#design-workflow-refinement)
+and [source manifest](design-skills-sources.json). The final incremental build compiled
+without warnings; the initial cold build reported the known next-intl cache warning.
+
+The owner's automatic completion instruction is recorded in AGENTS.md and
+CONTRIBUTING.md. Each requested increment updates affected documentation and
+[CHANGELOG.md](../CHANGELOG.md) before committing. Local passing checks do not
+substitute for the current PR's CI; the corresponding GitHub check runs and merge
+history provide the remote completion record.

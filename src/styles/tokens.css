@@ -11,12 +11,16 @@
   --color-text-muted: #52667a;
   --color-border: #dce4e9;
   --color-focus: #296bb4;
+  --color-action-surface: #eaf1f8;
   --color-footer-muted: #b9c9da;
   --color-footer-divider: rgb(255 255 255 / 16%);
   --color-footer-control: #1b426b;
   --font-latin: Arial, Helvetica, sans-serif;
   --font-arabic: Tahoma, Arial, sans-serif;
   --font-body: var(--font-latin);
+  --font-size-body: 1rem;
+  --font-size-label: 0.875rem;
+  --font-size-meta: 0.8125rem;
   --container-width: 80rem;
   --gutter: clamp(1.25rem, 4vw, 3rem);
   --space-1: 0.25rem;

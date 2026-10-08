@@ -1,0 +1,4 @@
+interface:
+  display_name: "Taste frontend design"
+  short_description: "Optional public composition guidance; v2 experimental"
+  default_prompt: "Use $design-taste-frontend for this IRESEN public design task, following the project context and .agents/skills/README.md overrides."

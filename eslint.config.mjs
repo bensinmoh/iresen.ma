@@ -17,6 +17,9 @@ export default defineConfig([
     'next-env.d.ts',
     'playwright-report/**',
     'test-results/**',
+    // Pinned third-party skill payloads are checked by source hashes, not application lint rules.
+    '.agents/skills/design-taste-frontend/**',
+    '.agents/skills/impeccable/**',
   ]),
   js.configs.recommended,
   ...tseslint.configs.recommended,
