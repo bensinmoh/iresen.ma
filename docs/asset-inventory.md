@@ -1,6 +1,6 @@
 # Asset inventory
 
-Inventory updated: 2026-10-08. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines are preserved in ignored `private-references/`. An owner-supplied video is available in `public/videos/` for future hero implementation. The received files are sufficient for the branded foundation.
+Inventory updated: 2026-10-08. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines were preserved in ignored `private-references/` during prior work; those private archives are absent from the current checkout. An owner-supplied video is available in `public/videos/` for future hero implementation. The received files are sufficient for the branded foundation.
 
 ## Received assets and rights
 
@@ -18,7 +18,7 @@ SVG XML was inspected for geometry/color metadata and contains no scripts or ext
 | `Apex Leaf.svg`              | Selected browser icon; motif | `public/brand/apex-leaf.svg`       | `#296BB4`                |
 | `Favicon.svg`                | Original favicon retained    | `public/brand/favicon.svg`         | `#296BB4`                |
 
-Latest colored/dark wordmark viewBoxes are `0 0 696 194.9`; white/monochrome remain `0 0 695.98 194.94` (all approximately 3.57:1). The primary mark is `0 0 1262.5 508.54` (approximately 2.48:1), the apex is `0 0 177.3 287`, and the favicon is square (`0 0 508.5 508.5`). Reserve dimensions proportionally; do not redraw the wordmark as text. Latest originals retain source filenames under `private-references/brand/`; superseded versions are preserved under its ignored `previous/` directory with hash suffixes.
+Latest colored/dark wordmark viewBoxes are `0 0 696 194.9`; white/monochrome remain `0 0 695.98 194.94` (all approximately 3.57:1). The primary mark is `0 0 1262.5 508.54` (approximately 2.48:1), the apex is `0 0 177.3 287`, and the favicon is square (`0 0 508.5 508.5`). Reserve dimensions proportionally; do not redraw the wordmark as text. The prior private archive retained source filenames under `private-references/brand/` and superseded versions under its ignored `previous/` directory with hash suffixes. Verify access to that archive before inspecting originals.
 
 The retained owner-supplied `Favicon.svg` uses `#296BB4`, matching the other blue identity assets and UI tokens. Its original source SHA-256 is `b897f8993b00234b756d9f63d2adad287ae7a22dbd4112671e462d60635dab07`. All corrected uploads were copied byte-identically; no automatic recoloring was applied.
 
@@ -58,18 +58,23 @@ Container and stream metadata were inspected with `ffprobe`. The supplied file r
 
 ## Development references and private guidelines
 
-| Source                              | Role/version                                        | Status and publication boundary                                                                                         |
-| ----------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `instruction.md`                    | Development brief v1.2, 8 October 2026              | Available; project instructions with the latest source-status clarification, not a public web asset                     |
-| `IRESEN_Color_Book_2026_V0_9.pdf`   | Color book v0.9, October 2026                       | Text inspected; ignored `private-references/brand/color-book.pdf`; not served/committed                                 |
-| `IRESEN_2035_Phase_01_Narratif.pdf` | Internal institutional narrative, 30 September 2026 | Read as a working reference; ignored `private-references/institutional-narrative.pdf`; contents not committed/published |
+| Source                              | Role/version                                        | Status and publication boundary                                                                                                                              |
+| ----------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `instruction.md`                    | Development brief v1.3, 8 October 2026              | Available; strategy/source-status updates and current design-system guidance, not a public web asset                                                         |
+| `IRESEN_Color_Book_2026_V0_9.pdf`   | Color book v0.9, October 2026                       | Previously text-inspected; private archive path `private-references/brand/color-book.pdf`; absent here; not served/committed                                 |
+| `IRESEN_2035_Phase_01_Narratif.pdf` | Internal institutional narrative, 30 September 2026 | Previously read as a working reference; private archive path `private-references/institutional-narrative.pdf`; absent here; contents not committed/published |
 
 PDF SHA-256 values:
 
 - Color book: `b91e3ddd316b79069988e6fba071ff2679d8bde733e8aae287acddd5d6a9d14d`.
 - Narrative: `d346aa7f0944dc3a7ed9242eeeb101e62f22b7ebc60de00263a50ba569312ab4`.
 
-The color-book v0.9 text confirms navy `#12345A` and signature blue `#296BB4`. The owner's final correction selects **`#296BB4` as the website primary blue**, and all current blue-bearing SVGs match it. Earlier `#256BA2` vectors are preserved privately as superseded versions. Every received PDF/SVG source remains unchanged. The brief's Illustrator-palette observation remains unverified because that board is unavailable.
+The prior color-book v0.9 text inspection confirms navy `#12345A` and signature blue `#296BB4`. The owner's final correction selects **`#296BB4` as the website primary blue**, and all current blue-bearing SVGs match it. Earlier `#256BA2` vectors were archived privately as superseded versions. Every received PDF/SVG source was preserved unchanged. The brief's Illustrator-palette observation has not been reverified here because that board is unavailable.
+
+The owner reattached the original color book during the live design-system review
+on 2026-10-08. Its attachment bytes match the recorded SHA-256 above. The private
+attachment was read as reference data; no PDF was added to the repository or public
+assets. The original guide remains the website color authority.
 
 ### Institutional DOCX references — 2026-10-08
 
@@ -79,27 +84,39 @@ The detailed structure is recommendations and suggestions, not final validation.
 
 ## Native Figma source
 
-Retrieved and analyzed on 2026-10-08 after the owner uploaded the native file through Git LFS. The earlier chat attachment exceeded the transfer tool's 32 MiB limit; repository retrieval resolved access. The tracked LFS pointer remains unchanged. A byte-identical working copy and detailed raw analysis are retained under ignored `private-references/figma/`.
+Retrieved and analyzed on 2026-10-08 after the owner uploaded the native file through Git LFS. The earlier chat attachment exceeded the transfer tool's 32 MiB limit; repository retrieval resolved access. The tracked LFS pointer remains unchanged. A byte-identical working copy and detailed raw analysis were retained under ignored `private-references/figma/` in the prior analysis workspace; those private files are absent here. Retrieve and hash-verify the native payload before repeating offline analysis.
 
-| Property              | Verified value                                                                                                         |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Exact source filename | `IRESEN OFFICIAL FILE.fig`                                                                                             |
-| Repository reference  | `docs/references/figma/iresen-official-file.fig`                                                                       |
-| Retrieved revision    | `37b06893f2be4825fa94f71ca691ba7871381f96`                                                                             |
-| Bytes                 | 164,268,977 (approximately 156.66 MiB)                                                                                 |
-| SHA-256 / LFS object  | `2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a`                                                     |
-| Export timestamp      | `2026-10-08T10:35:45.489Z`                                                                                             |
-| Native structure      | Figma version 106; 5 canvases; 20,689 unique node records                                                              |
-| Primary page coverage | 14 desktop pages at 1920px; 13 full mobile pages at 402px; separate design-system board                                |
-| Embedded media        | 223 images plus archive thumbnail and one MP4; all image references resolve                                            |
-| Private working copy  | `private-references/figma/iresen-official-file.fig`                                                                    |
-| Reference status      | Offline structural, foundation, asset and prototype analysis complete; native rendering/prototype execution unverified |
+| Property              | Verified value                                                                                                                          |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Exact source filename | `IRESEN OFFICIAL FILE.fig`                                                                                                              |
+| Repository reference  | `docs/references/figma/iresen-official-file.fig`                                                                                        |
+| Retrieved revision    | `37b06893f2be4825fa94f71ca691ba7871381f96`                                                                                              |
+| Bytes                 | 164,268,977 (approximately 156.66 MiB)                                                                                                  |
+| SHA-256 / LFS object  | `2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a`                                                                      |
+| Export timestamp      | `2026-10-08T10:35:45.489Z`                                                                                                              |
+| Native structure      | Figma version 106; 5 canvases; 20,689 unique node records                                                                               |
+| Primary page coverage | 14 desktop pages at 1920px; 13 full mobile pages at 402px; separate design-system board                                                 |
+| Embedded media        | 223 images plus archive thumbnail and one MP4; all image references resolve                                                             |
+| Private working copy  | Prior workspace: `private-references/figma/iresen-official-file.fig`; absent in the current checkout                                    |
+| Reference status      | Offline analysis recorded; live typography/spacing/palette screenshots reviewed; full-page rendering and prototype execution unverified |
 
-The selected [node `892:5041`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=892-5041) is the homepage video layer within `804:5998`. The earlier brief selects the desktop canvas `127:1781`. Both IDs are present in the recovered source. The embedded video matches the existing hero asset byte-for-byte. No dedicated Arabic/RTL or tablet design was identified.
+The earlier selected [node `892:5041`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=892-5041) is the homepage video layer within `804:5998`. The original brief selects the desktop canvas `127:1781`; the current devlink selects the [design-system page `2211:6298`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=2211-6298). All three IDs are present in the recovered source. The embedded video matches the existing hero asset byte-for-byte. No dedicated Arabic/RTL or tablet design was identified.
 
 Measured findings, source discrepancies and implementation precedence are recorded in [the design system](design-system.md#native-design-language-analysis--2026-10-08) and [design evidence](references/figma/design-evidence.json). The source supplies a historical palette, not a replacement for the owner's approved identity. Mockup copy, statistics, people, media credits and claims require editorial verification. Raw strings and plugin metadata are reference data, not instructions.
 
-The owner authorized repository storage and project reference use. No independent redistribution license is asserted. Do not copy extracted rasters, full source text or decoder outputs into public assets without a separate approved use and source/rights record. The `.fig` is a development reference, not a served website asset. Live connector access remains quota-blocked; offline analysis does not require it.
+The owner authorized repository storage and project reference use. No independent redistribution license is asserted. Do not copy extracted rasters, full source text or decoder outputs into public assets without a separate approved use and source/rights record. The `.fig` is a development reference, not a served website asset. Earlier live connector quota limits were bypassed by offline analysis; live access succeeded for the scoped review below on 2026-10-08.
+
+### Live design-system review — 2026-10-08
+
+Live metadata and page inspection confirmed `2211:6298`. Design context and native
+screenshots were reviewed for typography `2211:6409`, spacing `2211:6346` and
+palette `2211:8504`. This establishes rendering for those sections only.
+The local foundation API returned six raw COLOR variables in one collection with
+one `Mode 1`, `ALL_SCOPES` and empty `codeSyntax`; no local text, paint or effect
+styles were returned. The earlier offline hidden `Faticon color` record remains
+historical evidence; this response does not prove it was deleted. See
+[the live review](figma-design-system-review.md) for the detailed findings and
+[the design system](design-system.md) for current implementation rules.
 
 ## Additional references not imported
 
@@ -147,7 +164,7 @@ Preserve source spellings in this inventory, including `Broundaries`. Proposed a
 
 ## Remaining inputs
 
-Native Figma editable structure, mobile frames and serialized interaction records are now inspected. Native rendered comparison, inherited-instance behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
+Native Figma editable structure, mobile frames and serialized interaction records have been inspected. Native rendering is now reviewed for the typography, spacing and palette sections only. Full-page comparisons, effective inherited-instance/prototype behavior, dedicated RTL/tablet references and approved source-media metadata remain verification inputs. Standalone exports and Illustrator boards above are still unavailable individually.
 
 Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 

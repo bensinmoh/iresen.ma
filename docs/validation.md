@@ -611,6 +611,23 @@ suites were not repeated, and other browsers or an operating-system tab strip
 were not manually reviewed. Documentation formatting, local links and diff
 whitespace were checked. Changes remain local and have not been pushed.
 
+## Completed design batch before push — 2026-10-08
+
+The final built application passed all 8 unit tests and all 39 Chromium browser
+tests after the footer copy and favicon changes. These include actual custom-font
+rendering, all localized route heroes, responsive/enlarged-text layouts, keyboard
+and no-JavaScript menus, newsletter attempts, automated homepage accessibility,
+locale switching and anonymous CMS restrictions. Earlier lint, strict types,
+production build and focused visual/asset checks apply to the same runtime source.
+
+The branch incorporates the newer live-Figma guidance from `main`, retaining
+both its source evidence and the owner's latest implemented choices. Current
+font guidance names installed Alexandria and Jakarta; source-era observations
+remain historical. Documentation formatting, local links, pinned skill/brand
+hashes and diff whitespace were checked after reconciliation. GitHub CI and merge
+results are recorded by the batch's pull request; production deployment remains
+a separate action.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under
@@ -641,3 +658,23 @@ increment must pass its current CI workflow before merge.
 This review covers DOCX text, tables and visible headers/footers, not Word visual
 pagination, independent institutional fact verification, formal content approval,
 approved translations or production publication.
+
+## Live design-system guidance — 2026-10-08
+
+Read the owner's Figma page `2211:6298` through live metadata, design context and
+Plugin API inspection. Native screenshots were reviewed for typography, spacing
+and colors; node properties established selected grid, corner, component and
+control-state measurements. The original color-book attachment's SHA-256 matches
+the existing source record. See [the scoped evidence and limits](figma-design-system-review.md).
+
+Documentation checks passed: affected-file Prettier 3.9.9 formatting (retaining
+the `instruction.md` exclusion), relative Markdown links and anchors, the two
+updated skills' YAML frontmatter/routing, all 66 pinned vendor hashes and nine
+local-addition hashes, plus `git diff --check`. Updated wrapper hashes are recorded
+in `design-skills-sources.json`; vendored sources were unchanged.
+
+No runtime source, dependencies, lockfiles, assets or Figma nodes were changed.
+The application/database/browser suite was not rerun locally for this guidance
+increment; current PR CI remains required before merge. This review does not
+establish native full-page fidelity, prototype execution or new translated
+website rendering. Prior implementation checks remain separately dated above.

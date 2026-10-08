@@ -100,7 +100,7 @@ sha512-SIMkP0elELBKNl58Ak7IhTeLQqclV9ziwC/BAAF7n26cBIuz5kNFQdCUmbaHxLJW1WZlGbfK6
 
 Source inspection decoded both WOFF2 files and confirmed the metadata and weight
 axes above. Their combined glyph maps cover all 74 unique characters in the
-current Arabic message catalog, with no missing Arabic characters. Binary and
+Arabic message catalog at installation, with no missing Arabic characters. Binary and
 license hashes, archive integrity and byte identity were verified independently
 of browser rendering.
 

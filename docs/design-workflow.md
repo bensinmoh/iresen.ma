@@ -20,6 +20,14 @@ Read [AGENTS.md](../AGENTS.md), [PRODUCT.md](../PRODUCT.md) and [DESIGN.md](../D
 Inspect current code, available references, content status and the visitor's task.
 Do not load every skill. Select the relevant guidance from the table below.
 
+For cross-page coherence, read [current shared rules](design-system.md#current-coherence-rules)
+and the [live design-system review](figma-design-system-review.md) before choosing
+new typography, spacing, grids, corners or control states. Reuse an existing
+role/family first. Record a source contradiction or intentional adaptation
+explicitly instead of adding a competing page-specific rule. Reference-guidance
+updates need documentation checks; rendered verification applies when the
+website's presentation or behavior changes.
+
 | Skill                                                                                 | Use                                                                                |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | [iresen-frontend-design](../.agents/skills/iresen-frontend-design/SKILL.md)           | Public composition, art direction, constructive critique and scoped implementation |

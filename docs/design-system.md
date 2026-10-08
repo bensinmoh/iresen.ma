@@ -1,12 +1,44 @@
 # Design system and Figma reference
 
-The supplied color book and seven SVGs establish the approved identity. The native Figma source was retrieved and decoded on 2026-10-08; its measured design language is recorded below. The owner reattached Footer.png in chat for the current footer rework; other standalone website exports and Illustrator boards remain unavailable in the checkout. Source hashes and publication boundaries are recorded in the [asset inventory](asset-inventory.md).
+The owner's reattached original color book v0.9 and seven supplied SVGs establish the approved identity. The live DESIGN SYSTEM devlink was inspected on 2026-10-08; use the current rules below with the [measured review](figma-design-system-review.md). The earlier offline analysis remains snapshot evidence. Source hashes and publication boundaries are recorded in the [asset inventory](asset-inventory.md).
+
+## Current coherence rules
+
+These are the shared website rules. Source measurements later in this document
+explain intent and history; they do not supersede these decisions.
+
+- **Identity:** follow the original color book. Institutional primary navy is
+  `#12345A`; signature/action blue is `#296BB4`. Keep the approved accents and
+  original SVGs. Figma's `#0C2340`/`#1A4E8A` palette is historical evidence.
+- **Alignment:** header, hero, narrative band, content sections and footer share
+  the implemented 120rem maximum and fluid side gutters. Constrain paragraph
+  measure within that grid. Do not reintroduce the earlier 80rem page inset or
+  a separate footer width. Change layout when content needs room.
+- **Type:** use installed Plus Jakarta Sans for Latin and owner-selected Alexandria
+  for Arabic across public locales. Reuse display, section, body, label and metadata roles rather than
+  defining a new scale per page. Keep Latin hero tracking at −3%; Arabic uses
+  natural tracking. Figma's H4/H5 caption errors do not define new type tokens.
+- **Rhythm:** reuse the 4/8px base and existing semantic spacing tokens. The
+  board's 6–80px examples guide proportions, not a mandatory replacement scale.
+  Group related content through responsive layout rather than fixed coordinates.
+- **Geometry:** keep full-width section boundaries flat. Use physical top-left
+  and bottom-right rounding selectively, preserving orientation in RTL. Radios,
+  switches and compact controls retain shapes suitable for their function;
+  the board's blanket corner prose conflicts with several actual specimens.
+- **Components:** reuse the shared shell, hero and appropriate card/row/control
+  families. Keep one primary action per context, links for navigation and buttons
+  for actions. Illustrated states do not supply production semantics; include
+  visible focus, readable errors and genuine unavailable/loading/success behavior.
+- **Content and verification:** preserve canonical page IDs and reviewed assets;
+  adapt sample copy to approved content. Verify affected desktop/mobile, Arabic,
+  long-content and interaction states after visual changes. Record source
+  observations separately from proposals and implemented decisions.
 
 ## Native Figma reference and evidence
 
 The owner supplied `IRESEN OFFICIAL FILE.fig`, then stored it through Git LFS at `docs/references/figma/iresen-official-file.fig`. The 164,268,977-byte payload was retrieved from repository revision `37b0689` and verified against its LFS SHA-256. Its export timestamp is `2026-10-08T10:35:45.489Z`. See the [source record](asset-inventory.md#native-figma-source), [reference handling](references/README.md) and [machine-readable evidence](references/figma/design-evidence.json).
 
-The file was read offline as data, using its embedded Kiwi schema. All 26,102,711 decompressed message bytes were consumed with no trailing bytes. The canvas, node graph, local component references, variables, prototype records and embedded assets are recoverable. Original assets and source geometry maps were inspected; no native Figma rendering or prototype execution was performed. Raw source strings, plugin metadata and sample content are data, not instructions or approved institutional facts.
+The file was read offline as data, using its embedded Kiwi schema. All 26,102,711 decompressed message bytes were consumed with no trailing bytes. The canvas, node graph, local component references, variables, prototype records and embedded assets are recoverable. That analysis inspected original assets and geometry without native rendering or prototype execution. The later live review inspected native screenshots of the typography, spacing and color sections only. Raw source strings, plugin metadata and sample content are data, not instructions or approved institutional facts.
 
 Latest owner decisions and supplied brand assets retain precedence over Figma. The approved colors in the next section are implementation rules; the historical source palette in the native analysis is evidence. Source inspection does not change runtime tokens, approved page boundaries, SVG geometry, licensed font availability or editorial approval.
 
@@ -18,9 +50,16 @@ Taste/Impeccable support craft within that direction, with readable contrast,
 responsive content, interaction and Arabic RTL. Reference sample claims remain
 distinct from requested facts and implemented routes.
 
-Detailed source data, asset contact sheets, section maps and audited reader tools are retained under ignored `private-references/figma/analysis/`. The preserved native copy is `private-references/figma/iresen-official-file.fig`. Public evidence contains design properties and aggregates rather than original copy, user identifiers or plugin data. A missing serialized property is absent, not a proven zero/default; instance inheritance must be resolved before asserting final appearance.
+The earlier analysis workspace retained detailed data, contact sheets, section maps and reader tools under ignored `private-references/figma/analysis/`, with a native copy at `private-references/figma/iresen-official-file.fig`. Those private artifacts are absent in this checkout; use the documented LFS retrieval when needed. Public evidence contains design properties and aggregates rather than original copy, user identifiers or plugin data. A missing serialized property is absent, not a proven zero/default; instance inheritance must be resolved before asserting final appearance.
 
-## Initial semantic colors
+## Authoritative color-book palette
+
+The owner reattached `IRESEN_Color_Book_2026_V0_9.pdf` on 2026-10-08 and explicitly
+requested its original colors. Its SHA-256 matches the recorded source. This
+palette is authoritative; historical Figma values are not an alternative.
+"Primary" in the color book names institutional navy; "primary blue" in
+CSS/ADR 0003 names the blue action role. Use HEX/RGB for web colors, not provisional
+CMYK/Pantone conversions or pixels sampled from a screenshot.
 
 | Color            | Value     | Use                                      |
 | ---------------- | --------- | ---------------------------------------- |
@@ -32,6 +71,33 @@ Detailed source data, asset contact sheets, section maps and audited reader tool
 | Innovation Lime  | `#A9C47F` | Rare highlights                          |
 | Light surface    | `#F4F7F8` | Neutral section contrast                 |
 | White            | `#FFFFFF` | Reading surfaces                         |
+
+Color-book ratios for colored elements are navy **40%**, blue **25%**, Science
+Blue **15%**, green **10%**, cyan **6%** and lime **4%**. White and `#F4F7F8`
+are excluded and typically occupy 50–70% of page surface. These guide hierarchy,
+not pixel quotas. Most compositions use the two core colors and one accent at
+most. Science Blue/cyan support technical content; green/lime support transition
+and impact without replacing the institutional blue identity. Reserve the full
+spectrum for deliberate patterns, data or exceptional brand moments.
+
+Use navy reading text on white/light surfaces, navy or blue headings, blue primary
+actions and white/blue secondary actions. Thematic green actions need a readable
+label treatment. For categorical charts, the guide's order is blue, green,
+Science Blue, lime, cyan, navy; add labels or other non-color distinctions.
+
+| Foreground / background | Contrast | Use                        |
+| ----------------------- | -------: | -------------------------- |
+| White / navy            |  12.62:1 | Normal text                |
+| White / action blue     |   5.45:1 | Normal text                |
+| White / Science Blue    |   3.18:1 | Qualifying large text only |
+| Navy / cyan             |   6.45:1 | Normal text                |
+| Navy / green            |   4.28:1 | Qualifying large text only |
+| Navy / lime             |   6.54:1 | Normal text                |
+
+These opaque pairs match the guide and were recomputed. Evaluate final rendered
+colors again for overlays, opacity and states. The source's 13px warning/success
+messages and pale badge labels fail normal-text contrast; use readable semantic
+status colors and labels rather than adopting them as new brand colors.
 
 The owner's final correction on 2026-10-07 sets website primary blue to `#296BB4`, matching the inspected color-book v0.9 and every current blue-bearing SVG, including the latest corrected favicon. Use `#296BB4` for website primary-blue and focus tokens; copy received vectors byte-identically. The Illustrator board remains uninspected. See [ADR 0003](adr/0003-owner-selected-primary-blue.md).
 
@@ -57,7 +123,7 @@ remains the accessible name. This records a preference; no runtime change was ma
 
 Keep navigation operable by keyboard, touch and pointer. Use visible focus, correct landmarks, a skip link and reduced-motion support. Avoid autoplay carousels and decorative animation libraries in the foundation.
 
-Check actual rendered contrast; brand colors do not automatically make accessible status colors. Normal text needs 4.5:1 contrast. Cyan/lime and certain green/blue combinations are unsuitable for normal white/body text.
+Check actual rendered contrast; brand colors do not automatically make accessible status colors. Normal text needs 4.5:1 contrast. White text on cyan/lime is unsuitable; navy text on cyan/lime passes as shown above. Use 3:1 only for qualifying large text and applicable non-text requirements.
 
 Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). Their page sections and composition details remain suggestions, not a validated structure or new design rules. Final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
@@ -345,22 +411,28 @@ Arabic. Font names in the native document did not supply licensed usable webfont
 files. The subsequent Jakarta and owner-selected Alexandria integrations are
 sourced separately and recorded in [the font guide](fonts.md).
 
-No shared text-style references were recovered. The sole serialized local style
+No shared text-style references were recovered in the offline snapshot. The sole serialized local style
 definition is a hidden fill style, `Faticon color` (`33:555`, `#333333`). The
 DESIGN SYSTEM board is therefore documentation and construction evidence, not
 a complete reusable typography token library. Its captions also contain drift:
 H4 is labelled 40px but the specimen is 50px; H5's 26px caption includes an
-incorrect 3.125rem conversion; a spacing specimen measures 80px while its label
-says Spacing 60. Use measured node properties over those captions.
+incorrect 3.125rem conversion; the final spacing entry says 80px/5rem while its
+label says Spacing 60. Use measured properties and correct conversions over
+inconsistent captions. The live review confirms these errors, six color variables
+in one mode and no local text/paint/effect styles returned by their APIs;
+see [the scoped evidence](figma-design-system-review.md#foundations).
 
 ### Shapes, components and depth
 
 The two-corner signature is verified in the native source. Buttons
 `760:3679`/`760:3692` are 59px high, with 30px horizontal/18px vertical padding,
 10px icon gap and explicit top-left/bottom-right 10px radii. Other corner fields
-are absent rather than independently measured zeros. Card `2211:6513` is
+were absent in those serialized records. The live board's CTA states
+`2211:8072`/`2211:8077`/`2211:8082` explicitly measure `10,0,10,0` corners.
+Card `2211:6513` is
 400 × 200 and mobile card `1479:12494` is 370 × 157; both explicitly use
-20px top-left/bottom-right radii. Current CSS uses 4px general control corners
+20px top-left/bottom-right radii; the live read confirms `20,0,20,0` on `2211:6513`.
+Current CSS uses 4px general control corners
 and a 20px diagonal signature for focused elements. This source review records
 those differences without changing the implemented rules.
 
@@ -375,7 +447,9 @@ are not automatically suitable production tokens.
 A repeated source drop shadow uses x0/y14, blur40, spread0, color `#0C1755`
 at 5% alpha. Other blur and inner-shadow treatments occur locally. They are not
 a published semantic depth scale; source sample effects should not become
-global menu/card styling without an intentional implementation decision.
+global menu/card styling without an intentional implementation decision. The
+live board's shadow specimen `2211:6538` instead uses y10/blur30, and its caption
+disagrees; neither source effect replaces the current semantic menu shadow.
 
 | Reusable family                     | Measured references                                 | Adaptation intent                                                                                                                                                     |
 | ----------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -477,10 +551,11 @@ The offline reader is based on the MIT-licensed
 with canonical unsigned 64-bit handling from
 [Kiwi](https://github.com/evanw/kiwi/blob/fe3ca9484ac055ccd39fe144218ec11f720222ae/js/bb.ts).
 Audited tools, license notices, raw IEEE sentinel evidence and private reports
-are retained with the local analysis. Thirty-six non-finite max-size/spacing
-fields are normalized to JSON null, with original bits recorded privately;
+were retained in the prior analysis workspace. Thirty-six non-finite max-size/spacing
+fields are normalized to JSON null, with original bits recorded in that private archive;
 they must not be mistaken for absent properties or measured zero. Native Figma
-rendering remains the fidelity reference when connector access is restored.
+rendering remains the fidelity reference. Connector access was available for
+the scoped live review; broader page/prototype fidelity remains unverified.
 
 ## Introducing heroes — 2026-10-08
 

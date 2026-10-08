@@ -433,12 +433,12 @@
     },
     {
       "path": ".agents/skills/iresen-design-system/SKILL.md",
-      "sha256": "bc6fa0c41016a3111c4cd4ef16e8f588fbf9a33595ac74f602dcbd6d52e368da",
+      "sha256": "8b9b155f4a0566875f911408924ff5d290a095e9c1573749d1fa908b63bda2e9",
       "origin": "Authored for this integration; not upstream source"
     },
     {
       "path": ".agents/skills/iresen-figma-implementation/SKILL.md",
-      "sha256": "cb414de22062f18ffbc4f95bfcf3faad530601d90197bfcefa172924e410b2cf",
+      "sha256": "22f73c3c289808d020b09425278345a547f94bd133dfaf862cd875e047818757",
       "origin": "Authored for this integration; not upstream source"
     },
     {

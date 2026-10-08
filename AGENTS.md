@@ -8,6 +8,11 @@ The owner's standing instruction, recorded on 2026-10-08, authorizes automatic c
 
 ## Design guidance
 
+For shared design decisions, use `docs/design-system.md#current-coherence-rules`
+as the canonical rule set and `docs/figma-design-system-review.md` for the live
+DESIGN SYSTEM evidence. Figma captions, historical palettes and sample states
+do not override approved identity, current shared tokens, content or routes.
+
 For design work, also read `PRODUCT.md` (product/content truth), `DESIGN.md` (visual direction) and `docs/design-workflow.md` (task routing). The workflow is adaptable guidance: use judgment, critique weak choices constructively and apply coherent reversible improvements within the requested scope. Do not turn its examples or upstream defaults into mandatory features, dependencies, redesigns or repeated approval questions.
 
 The owner's latest clarification on 2026-10-08 makes attached Figma screenshots references for design elements: typography, colors, tabs, surfaces, dividers, arrows and spacing. Preserve that coherent visual language while choosing layouts for the actual content; screenshot composition is not a universal template. Add figures or featured destinations only where useful. Use Taste/Impeccable for craft within the approved identity, with readable contrast, responsive content, interaction and Arabic RTL. Screenshot sample claims and routes remain source data, distinct from the owner's requested facts and implemented routes.

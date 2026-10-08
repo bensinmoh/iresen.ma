@@ -154,6 +154,21 @@ and [the validation log](docs/validation.md) for executed checks and renderings.
 The user's message supplies the homepage claims; the Figma screenshots provide
 the styling hints. See [the content record](docs/heroes.md#homepage-key-figures--2026-10-08).
 
+## 2026-10-08 — Live design-system guidance
+
+- Analyzed the owner's live DESIGN SYSTEM devlink: native typography/spacing/
+  palette screenshots and measured grid, corner, component and state properties.
+- Added [a scoped source review](docs/figma-design-system-review.md) and canonical
+  coherence rules for shared typography, spacing, alignment, geometry and controls.
+  Recorded caption conflicts and illustrated-state limits instead of treating
+  them as new website tokens or functioning component APIs.
+- Updated agent/skill routing and stale reference statements against the current
+  shared 120rem grid, self-hosted Latin font and prior private-archive availability.
+  Retained the original color book as the color authority.
+- Passed focused documentation formatting, relative links/anchors, skill
+  frontmatter, pinned source hashes and whitespace checks. Website/Figma behavior
+  was unchanged. See [validation](docs/validation.md#live-design-system-guidance--2026-10-08).
+
 ## 2026-10-08 — Hero layout and typography refinements
 
 - Aligned the header, hero-body, narrative band, following sections and footer on
