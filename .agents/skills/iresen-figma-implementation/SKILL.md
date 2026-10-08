@@ -10,6 +10,12 @@ Read [reference handling](../../../docs/references/README.md),
 [DESIGN.md](../../../DESIGN.md). Inspect the actual reference and current component;
 record which file/frame/version is available and what it establishes.
 
+The DESIGN SYSTEM devlink is indexed in [the live review](../../../docs/figma-design-system-review.md).
+Use [current shared rules](../../../docs/design-system.md#current-coherence-rules)
+to bridge source evidence to the website. Prefer measured properties to mistaken
+captions, keep unresolved intent explicit and reuse existing roles/components.
+Read-only source analysis does not prove keyboard behavior or translated rendering.
+
 Editable Figma data can establish measured structure. Screenshot exports establish
 composition, not exact tokens, behavior, mobile/RTL layouts or factual truth.
 Follow the host's mandatory Figma skill prerequisites before calling Figma tools;

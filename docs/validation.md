@@ -233,3 +233,23 @@ increment must pass its current CI workflow before merge.
 This review covers DOCX text, tables and visible headers/footers, not Word visual
 pagination, independent institutional fact verification, formal content approval,
 approved translations or production publication.
+
+## Live design-system guidance — 2026-10-08
+
+Read the owner's Figma page `2211:6298` through live metadata, design context and
+Plugin API inspection. Native screenshots were reviewed for typography, spacing
+and colors; node properties established selected grid, corner, component and
+control-state measurements. The original color-book attachment's SHA-256 matches
+the existing source record. See [the scoped evidence and limits](figma-design-system-review.md).
+
+Documentation checks passed: affected-file Prettier 3.9.9 formatting (retaining
+the `instruction.md` exclusion), relative Markdown links and anchors, the two
+updated skills' YAML frontmatter/routing, all 66 pinned vendor hashes and nine
+local-addition hashes, plus `git diff --check`. Updated wrapper hashes are recorded
+in `design-skills-sources.json`; vendored sources were unchanged.
+
+No runtime source, dependencies, lockfiles, assets or Figma nodes were changed.
+The application/database/browser suite was not rerun locally for this guidance
+increment; current PR CI remains required before merge. This review does not
+establish native full-page fidelity, prototype execution or new translated
+website rendering. Prior implementation checks remain separately dated above.
