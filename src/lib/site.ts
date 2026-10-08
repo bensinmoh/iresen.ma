@@ -147,6 +147,11 @@ export const navigationGroups = [
 
 export const footerPageIds = ['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'] as const
 
+export const footerNavigationGroups = navigationGroups.map((group) => ({
+  ...group,
+  pages: group.id === 'institute' ? (['home', ...group.pages] as const) : group.pages,
+}))
+
 export function pageHref(pageId: PageId, locale: Locale, anchor?: string): string {
   const path = pages[pageId].pathnames[locale]
   const href = `/${locale}${path === '/' ? '' : path}`

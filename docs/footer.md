@@ -1,0 +1,57 @@
+# Footer implementation
+
+The footer adapts the supplied Footer.png composition: a full-width navy surface,
+reversed supplied identity, four institutional navigation groups, a contact and
+social row, a separated engagement section, utilities, copyright and language
+switching. It uses the existing brand tokens, content width, fluid gutters and
+physical top-left/bottom-right button corners. Two navigation columns remain
+available on mobile; contact details and engagement stack. Arabic uses logical
+alignment, isolated Latin identifiers, mirrored directional arrows and no added
+letter spacing. The component stays server rendered except for the existing
+language selector's progressive keyboard/outside-dismiss enhancements.
+
+## Content and sources
+
+The owner authorized public information from www.iresen.org on 2026-10-08 and
+limited networks to LinkedIn, YouTube and a scientific destination such as
+ResearchGate. The main website returned HTTP 403 during inspection. Public
+IRESEN documents, its LinkedIn profile and corroborating institutional sources
+were used instead. Copy is paraphrased and provided in French, English and Arabic;
+editorial review still applies before publication. The owner subsequently confirmed
+the move to iresen.ma; the footer retains the general contact alias on that domain.
+
+| Content                                                                   | Public source                                                                                                                                                                                                                                                                                                                                                                                                                       | Verification limits                                                                                                                      |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Founded in 2011; applied research, renewable energy and energy efficiency | [IRESEN LinkedIn profile](https://www.linkedin.com/company/iresen/) and [IRESEN terms of reference, July 2024](https://iresen.org/wp-content/uploads/2024/07/ToR-local-consultant-Version-finale-V02.pdf)                                                                                                                                                                                                                           | Concise summary, with no copied historical figures or commitments from the design screenshot.                                            |
+| 16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Morocco                  | [IRESEN LinkedIn profile](https://www.linkedin.com/company/iresen/)                                                                                                                                                                                                                                                                                                                                                                 | Street name retained in French for Latin locales; Arabic transliteration provided.                                                       |
+| +212 537 68 22 36                                                         | [IRESEN Green Africa Innovation Booster contact page](https://www.greenaib.com/contact.html) and [CDTI joint-call document](https://www.cdti.es/sites/default/files/2023-05/47012_301030102020102516.pdf)                                                                                                                                                                                                                           | Actual telephone link, isolated LTR in Arabic.                                                                                           |
+| contact@iresen.ma                                                         | Owner’s confirmation of the move to iresen.ma on 2026-10-08, following the documented contact@iresen.org alias.                                                                                                                                                                                                                                                                                                                     | Updated to the owner-confirmed domain; mailbox delivery has not been tested.                                                             |
+| LinkedIn                                                                  | [IRESEN LinkedIn profile](https://www.linkedin.com/company/iresen/)                                                                                                                                                                                                                                                                                                                                                                 | Verified institutional profile.                                                                                                          |
+| YouTube                                                                   | [Royal Scientific Society/NERC report, prepared for Friedrich Ebert Stiftung, references p. 94](https://kh.aquaenergyexpo.com/wp-content/uploads/2023/08/%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9-%D8%A5%D9%84%D9%8A-x-%D9%81%D8%B1%D8%B5-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D8%A7%D9%84%D9%87%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D8%AE%D8%B6%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86.pdf) | Identifies channel UC_EhFvR6oR3v_Ljta_K3PJw as IRESEN. Direct YouTube retrieval was throttled; reconfirm the channel before publication. |
+| ResearchGate                                                              | [IRESEN institutional directory](https://www.researchgate.net/institution/Institut-of-Research-in-Solar-Energy-and-New-Energies)                                                                                                                                                                                                                                                                                                    | ResearchGate aggregates this directory; it is not represented as an institution-managed account.                                         |
+
+Shared contact/network destinations live in `src/lib/footer.ts`. Institutional
+copy, address, contact labels and accessible names live in the complete
+`Footer` UI catalogs. Institutional and utility links use centrally localized
+page identifiers. The footer introduces no CMS schema or external embeds.
+
+The lower section links to existing collaboration, contact, news and technology
+transfer pages. A newsletter form is not displayed: no subscription service was
+commissioned or configured, and the reference is design guidance only. Current
+contact-page availability remains governed by the existing contact adapter.
+
+## Verification
+
+Run the standard lint, type, unit, integration and production-build checks, then
+`PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e`. Footer coverage checks
+localized navigation, contact/social destinations, 320/768/1440px containment,
+Arabic order/alignment, keyboard language selection, supported anchors and
+navigation without JavaScript. Existing homepage accessibility tests cover all
+three languages, including footer contrast and landmarks.
+
+Validation on 2026-10-08 passed lint, strict types, formatting, 8 unit tests,
+4 CMS integration tests, the production build and 18 browser tests (7 footer
+tests plus the 11 existing foundation tests). Local visual previews cover French
+and Arabic desktop/mobile and English tablet. The build reports the existing
+next-intl webpack cache-dependency warning on the initial cold build; the final
+incremental build compiled without warnings.
