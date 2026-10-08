@@ -66,3 +66,37 @@ references.
 ![French desktop footer](screenshots/footer-fr-desktop.png)
 
 ![Arabic mobile footer](screenshots/footer-ar-mobile.png)
+
+## Design workflow refinement
+
+On 2026-10-08, the owner requested integration of flexible design guidelines and
+a refinement of the current UI. The footer now uses 14px group labels and utility
+links, 16px body/desktop links and regular navigation weight to clarify hierarchy.
+Mobile navigation links retain a 14px role. The primary contact action is separated
+from grouped news/transfer links, and a divider introduces utilities. Shared rem
+tokens support text enlargement; long labels can wrap. Content, destinations and
+the approved physical brand corners are preserved. The header also has clearer
+current-language/menu states and a balanced, wrapping mobile control row.
+
+Validation passed lint, formatting, strict types, 8 unit tests, 4 local CMS
+integration tests, a production build and all 18 existing browser tests, including
+FR/EN/AR axe checks, footer containment, keyboard navigation and no-JavaScript use.
+An additional rendered check covered open navigation in all three locales at
+320/390/768/1024/1440px and 200% root text enlargement at 320/1440px: all 21 cases
+fit the viewport. Reduced motion was checked. French desktop, Arabic mobile and
+English tablet production captures were visually inspected. The final incremental
+build compiled without warnings; the initial cold build reported the previously
+documented next-intl webpack cache warning. Other browsers and manual screen-reader
+coverage were not exercised in this pass; automated scans do not establish conformance.
+
+The workflow itself was checked for 10 valid skill frontmatters, working local
+links, task routing, 66 matching pinned upstream Git blob/SHA-256 hashes, 9 local
+skill/metadata hashes, valid JSON/YAML and launcher shell syntax. Vendor source is
+excluded from formatting/application linting. No Impeccable engine, detector hook
+or browser extension was activated.
+
+These captures show the final local production footer after refinement:
+
+![Refined French desktop footer](screenshots/design-refinement-fr-desktop.png)
+
+![Refined Arabic mobile footer](screenshots/design-refinement-ar-mobile.png)

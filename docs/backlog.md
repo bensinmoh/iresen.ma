@@ -28,6 +28,7 @@ Local validation passed on 2026-10-07. See [validation evidence and limits](vali
 
 ## Next task: homepage/design-system implementation
 
+- [x] Integrate repository-local design skills, product/visual context, flexible task routing and pinned optional upstream references; see [design workflow](design-workflow.md).
 - [x] Obtain the supplied logos, apex and favicon; record owner-authorized website use and preserve originals.
 - [ ] Obtain optional website/Illustrator exports, licensed fonts and approved imagery for visual implementation; the unreadable ZIP no longer blocks the foundation.
 - [x] Resolve website primary blue as `#296BB4` following the owner's latest correction.

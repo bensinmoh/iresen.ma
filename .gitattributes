@@ -4,3 +4,7 @@ instruction.md whitespace=-blank-at-eol
 src/cms/migrations/*.ts whitespace=-blank-at-eol,-space-before-tab
 # Supplied brand originals must remain byte-identical across platforms.
 public/brand/*.svg -text
+
+# Preserve pinned vendor whitespace; validate these payloads against source hashes.
+.agents/skills/design-taste-frontend/** -whitespace
+.agents/skills/impeccable/** -whitespace

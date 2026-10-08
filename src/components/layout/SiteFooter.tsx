@@ -130,14 +130,16 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               {pageTitle('contact')}
               <FooterArrow />
             </a>
-            <a className="footer-news-link" href={pageHref('news', locale)}>
-              {pageTitle('news')}
-              <FooterArrow />
-            </a>
-            <a className="footer-news-link" href={pageHref('transfer', locale)}>
-              {pageTitle('transfer')}
-              <FooterArrow />
-            </a>
+            <div className="footer-discovery-links">
+              <a className="footer-news-link" href={pageHref('news', locale)}>
+                {pageTitle('news')}
+                <FooterArrow />
+              </a>
+              <a className="footer-news-link" href={pageHref('transfer', locale)}>
+                {pageTitle('transfer')}
+                <FooterArrow />
+              </a>
+            </div>
           </div>
         </section>
 
