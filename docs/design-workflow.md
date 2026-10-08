@@ -95,8 +95,8 @@ Do not auto-update during an ordinary design task. For a deliberate update, revi
 the chosen revision's changed guidance and runtime needs, replace the complete
 payload and preserve notices, then update the manifest and verify hashes together.
 Keep IRESEN overrides outside vendor SKILL.md files. Vendor directories are excluded
-from formatting and application linting so routine tooling cannot modify pinned
-source bytes or impose application rules on third-party browser helpers.
+from formatting, application linting and Git whitespace checks so routine tooling
+cannot modify pinned source bytes or impose application rules on third-party helpers.
 
 For skill/documentation edits, validate YAML frontmatter, relative paths, routing,
 source integrity and whitespace. Review a realistic task to check that routing
