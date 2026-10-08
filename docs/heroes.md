@@ -61,6 +61,16 @@ CSS `100dvh` and responsive header
 clearance estimates retain the layout and all native links. Arabic uses logical
 alignment, natural shaping/tracking and mirrored directional arrows.
 
+The visible Explorer la suite text/arrow is replaced by a centered mouse outline
+and scroll-wheel cue above the bottom band. It remains a native clickable anchor
+to `#page-sections`, with the existing translated `Hero.continue` accessible name
+and decorative icon hidden from assistive technology. The target is 44 × 44px
+and the white outline 24 × 36px at default text size. CSS transform/opacity moves
+the wheel for three 1.6-second introduction cycles; reduced motion disables it.
+The lower image reserve is now 72px rather than 80–128px, bringing the CTA closer
+to the band while allowing the hero to grow for content. This revision's checks
+and renderings belong in [the validation log](validation.md).
+
 ## Owner refinements — 2026-10-08
 
 The hero-body now uses the same centered container as the header, blue narrative

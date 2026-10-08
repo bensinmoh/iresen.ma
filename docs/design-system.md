@@ -456,6 +456,15 @@ the hero instead of clipping content. CSS dynamic viewport units and responsive
 header estimates remain functional without JavaScript. No fixed heights or
 body overflow locks are used.
 
+The hero scroll cue is a centered native anchor to `#page-sections`, positioned
+above the bottom band. Its accessible name uses the existing localized
+`Hero.continue`; the mouse outline is decorative, replacing visible text/arrow.
+At default text size, the target is 44 × 44px and the white outline is 24 × 36px.
+Wheel motion uses CSS transform/opacity for three 1.6-second cycles, with no
+animation under `prefers-reduced-motion`. The scene's bottom reserve is 72px
+instead of the former fluid 80–128px, while natural hero growth is retained.
+Executed checks and renderings remain in [the validation log](validation.md).
+
 The initial narrow blue band presented Développer · Éprouver · Valoriser as
 navigation, with the verified 2011 founding year on home/institute. The later
 homepage figure request below replaces that homepage band; other pages retain

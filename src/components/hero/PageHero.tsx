@@ -52,8 +52,9 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
             </div>
           </div>
           <a className="hero-scroll" href="#page-sections" aria-label={t('continue')}>
-            <span>{t('continue')}</span>
-            <span aria-hidden="true">↓</span>
+            <span className="hero-scroll-mouse" aria-hidden="true">
+              <span className="hero-scroll-wheel" />
+            </span>
           </a>
         </div>
       </div>

@@ -4,6 +4,17 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Hero scroll cue and spacing
+
+- Replaced the visible continuation text/arrow with a centered native mouse/
+  scroll-wheel link, retaining the translated accessible name and 44px target.
+- Added a short finite wheel animation with a reduced-motion static state.
+- Reduced the lower image reserve to 72px at default text size, bringing the
+  CTA closer to the band while retaining natural hero growth.
+
+See [hero behavior](docs/heroes.md#viewport-and-navigation) and
+[validation](docs/validation.md) for revision-specific checks and renderings.
+
 ## 2026-10-08 — Content-based menu formats and design guidance
 
 - Corrected design guidance so screenshot references define typography, colors,

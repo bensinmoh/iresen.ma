@@ -192,6 +192,13 @@ the hero instead of clipping content. CSS dynamic viewport units and responsive
 header estimates remain functional without JavaScript. No fixed heights or
 body overflow locks are used.
 
+The lower image area now uses a centered clickable mouse/scroll-wheel cue in
+place of the visible Explorer la suite text/arrow. Its white outline, 44px target
+and translated accessible label retain clear native section navigation. A short
+finite wheel animation is disabled for reduced motion. The bottom reserve is
+72px at default text size, bringing the CTA closer to the band without clipping
+growing content. Current checks belong in [the validation log](docs/validation.md).
+
 The initial narrow blue band presented Développer · Éprouver · Valoriser as
 navigation, with the verified 2011 founding year on home/institute. The later
 homepage figure request below replaces that homepage band; other pages retain

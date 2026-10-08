@@ -72,6 +72,37 @@ for (const locale of locales) {
   })
 }
 
+test('the centered scroll cue supports motion preferences and keyboard navigation', async ({
+  page,
+}) => {
+  for (const locale of locales) {
+    for (const width of [1440, 390]) {
+      await page.setViewportSize({ width, height: 900 })
+      await page.emulateMedia({ reducedMotion: width === 390 ? 'reduce' : 'no-preference' })
+      await page.goto(pageHref('home', locale))
+      const cue = page.locator('.hero-scroll')
+      await expect(cue).toHaveAccessibleName(/\S/)
+      const wheel = cue.locator('.hero-scroll-wheel')
+      await expect(wheel).toHaveCSS('animation-name', width === 390 ? 'none' : 'hero-scroll-wheel')
+      const cueBounds = (await cue.boundingBox())!
+      const actionsBounds = (await page.locator('.hero-actions').boundingBox())!
+      const bandBounds = (await page.locator('.hero-highlights').boundingBox())!
+      expect(Math.abs(cueBounds.x + cueBounds.width / 2 - width / 2)).toBeLessThan(1)
+      expect(cueBounds.width).toBeGreaterThanOrEqual(44)
+      expect(cueBounds.height).toBeGreaterThanOrEqual(44)
+      expect(cueBounds.y - actionsBounds.y - actionsBounds.height).toBeGreaterThanOrEqual(15)
+      expect(bandBounds.y - cueBounds.y - cueBounds.height).toBeGreaterThanOrEqual(11)
+      await cue.focus()
+      await expect(cue).toBeFocused()
+      await expect(cue).toHaveCSS('outline-style', 'solid')
+      await page.keyboard.press('Enter')
+      await expect(page).toHaveURL(/#page-sections$/)
+      const section = (await page.locator('#page-sections').boundingBox())!
+      expect(Math.abs(section.y)).toBeLessThanOrEqual(25)
+    }
+  }
+})
+
 test('without JavaScript the hero, section navigation and Arabic content remain usable', async ({
   browser,
 }) => {
@@ -83,7 +114,7 @@ test('without JavaScript the hero, section navigation and Arabic content remain 
   await page.goto(`http://127.0.0.1:3000${pageHref('institute', 'ar')}`)
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.locator('.page-hero h1')).toBeVisible()
-  await page.locator('.hero-primary').click()
+  await page.locator('.hero-scroll').click()
   await expect(page).toHaveURL(/#page-sections$/)
   await expect(page.locator('.section-navigation')).toBeVisible()
   await context.close()

@@ -355,6 +355,42 @@ broader browser/screen-reader conformance remains separate work. Earlier capture
 and test records retain their original scope. Changes remain local and have not
 been pushed.
 
+## Centered hero scroll cue — 2026-10-08
+
+Replaced the visible continuation text/arrow with a centered native scroll-wheel
+link above the hero band. The existing translated accessible name remains; the
+graphic is decorative. Reducing the lower reserve from 80–128px to 72px brings
+the homepage CTA 18px closer to the figures at the checked 1440 × 900px desktop
+size, with 16px between the actions and the 44px link target.
+
+Lint, strict types, all 8 unit tests, the production build, formatting and all
+36 Chromium browser tests passed. The added browser check covers FR/EN/AR,
+desktop/mobile centering, target size, action/band separation, keyboard focus
+and activation, and reduced motion. The no-JavaScript Arabic check now activates
+the scroll cue. CMS integration checks were not repeated for this presentation
+change.
+
+An additional 144 production-rendered cases passed: all five hero compositions
+plus the institute hero in FR/EN/AR at 320/390/768/1120/1440/1920px, and 200%
+root text at 320/1440px after the existing resize observer settles. Checks cover
+centering, target size, copy/header clearance, band separation, the shared bottom
+reserve and absence of horizontal overflow.
+
+Animation-frame inspection confirmed downward wheel motion and fading with
+stable outline geometry. Three 1.6-second cycles finish within 4.8 seconds, then
+restore the visible static wheel. Reduced-motion mode produces no animations.
+Impeccable's scoped layout detector returned zero findings; independent source
+review found no material motion, semantics or layout issues.
+
+Final captures:
+
+- [French desktop](screenshots/hero-scroll-fr-1440.png)
+- [Arabic mobile, reduced motion](screenshots/hero-scroll-ar-390.png)
+
+Both captures were inspected for placement, contrast, spacing and RTL. Checks
+cover local Chromium; broader browser and screen-reader conformance remains
+separate work. Changes remain local and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under
