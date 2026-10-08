@@ -4,6 +4,17 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Footer identity copy
+
+- Replaced the text beneath the footer logo with the owner's selected French
+  tagline and description, with English/Arabic draft equivalents.
+- Emphasized the tagline in native white bold at 18px/700, with an 8px gap and
+  the existing 18px/500 description. Copy selection is limited to this footer block.
+
+See [footer wording](docs/footer.md#footer-identity-copy--2026-10-08) and
+[validation](docs/validation.md) for this revision's coverage; earlier identity
+copy and verification remain historical.
+
 ## 2026-10-08 — Footer type and newsletter refinement
 
 - Adapted footer typography toward the owner's reference with larger medium-weight

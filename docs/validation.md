@@ -565,6 +565,31 @@ screenshot styling. The application's skip-link behavior was unchanged.
 Documentation formatting, local links and diff
 whitespace were checked. Changes remain local and have not been pushed.
 
+## Footer identity copy — 2026-10-08
+
+The French tagline and paragraph were compared literally with the owner's
+request. Only the below-logo text, its local emphasis/gap and the complete
+FR/EN/AR catalogs changed at runtime. English and Arabic equivalents remain drafts.
+
+Lint, strict types, formatting, all 8 unit tests, the production build and all
+11 existing footer/font browser tests passed. The latter confirm actual custom
+font rendering, footer destinations, newsletter attempts, RTL and no-JavaScript
+use. No new tests were added for this copy change; the wider browser and CMS
+integration suites were not repeated.
+
+An additional 12 identity-block cases passed: FR/EN/AR at 320/390/1440px, plus
+200% root text at 320px. Checks covered exact catalog text, two paragraphs,
+white 700-weight emphasis and text/viewport containment. The local type/layout
+detector returned zero findings. These checks do not establish other-browser or
+manual screen-reader coverage.
+
+The [French desktop identity](screenshots/footer-identity-fr-1440.png) and
+[Arabic mobile identity](screenshots/footer-identity-ar-390.png) captures were
+inspected. As in the preceding capture pass, temporary screenshot styling excluded
+the offscreen skip link without changing application behavior. Documentation
+formatting, local links and diff whitespace were checked. Changes remain local
+and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

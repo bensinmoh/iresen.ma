@@ -153,7 +153,7 @@ establish native rendered fidelity. Earlier verification is recorded in
 
 ## Footer type and newsletter refinement — 2026-10-08
 
-Our adaptation toward the owner's footer reference uses 18px/500 identity and
+Our adaptation toward the owner's footer reference uses 18px/500 identity description and
 navigation text,
 16px/500 group labels and 20px contact text (500 labels, 600 values) at the default
 root size. Narrow-screen navigation becomes 16px. The newsletter heading scales
@@ -162,6 +162,9 @@ Smaller capped vertical gaps and a broader signup column make these roles fit
 the shared footer composition. Existing colors, assets, routes, contact and social
 destinations remain; footer height follows content rather than the source frame's
 height. Exact native footer text styles were unavailable.
+The later owner-selected footer tagline uses white native bold at 18px/700 with
+an 8px gap above the description; [its wording](docs/footer.md#footer-identity-copy--2026-10-08)
+is scoped to this footer block, with English/Arabic drafts.
 
 The newsletter keeps editable email/consent controls, with the unavailable message
 hidden until Subscribe opens a native disclosure. The privacy link remains visible;

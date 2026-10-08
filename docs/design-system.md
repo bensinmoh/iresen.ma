@@ -130,11 +130,14 @@ earlier verification](footer.md#reference-rework--2026-10-08).
 ## Footer type and newsletter refinement — 2026-10-08
 
 Our adaptation toward the owner's reference uses these roles at the default root
-size: identity copy and navigation use 18px/500; navigation
+size: identity description and navigation use 18px/500; navigation
 reduces to 16px at `35rem` and below. Group labels use 16px/500. Contact labels and
 values use 20px at weights 500 and 600 respectively. The newsletter heading uses
 `clamp(1.875rem, 2.605vw, 3.125rem)` (30–50px), weight 500, line height 1.2 and
 `-0.03em` Latin tracking; Arabic keeps natural tracking.
+The owner-selected footer tagline uses white native `strong` at 18px/700 and
+an 8px gap before the description; [copy approval](footer.md#footer-identity-copy--2026-10-08)
+applies to this footer block, with English/Arabic drafts.
 
 Wide-layout spacing caps are 64px top padding, 48px from grid to contact, 32px
 before the newsletter divider, 48px after it, 32px before utilities and 40px bottom

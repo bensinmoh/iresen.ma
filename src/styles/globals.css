@@ -1382,6 +1382,11 @@ html[lang='ar'] .hero-certification-label {
   line-height: 1.55;
 }
 
+.footer-identity .footer-tagline {
+  margin-block-end: var(--space-2);
+  color: var(--color-white);
+}
+
 .footer-navigation {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

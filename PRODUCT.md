@@ -32,6 +32,8 @@ marketing page.
   [Navigation documentation](docs/navigation.md) records sources and verification.
   The substantial trilingual navy footer follows the analyzed native Figma reference
   and owner-reattached Footer.png, retaining the requested newsletter CTA.
+  Text beneath its logo uses owner-selected French copy for this footer block
+  only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
 - All 22 approved pages have lightweight introductory heroes with five composition

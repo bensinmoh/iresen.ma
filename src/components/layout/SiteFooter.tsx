@@ -47,9 +47,10 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             <a href={pageHref('home', locale)} className="site-identity" aria-label="IRESEN">
               <SiteLogo variant="dark" />
             </a>
-            <p>
-              {footer.rich('description', { brand: (chunks) => <bdi dir="ltr">{chunks}</bdi> })}
+            <p className="footer-tagline">
+              <strong>{footer('tagline')}</strong>
             </p>
+            <p>{footer('description')}</p>
           </div>
           <nav aria-label={navigation('footer')} className="footer-navigation">
             {footerNavigationGroups.map((group) => (

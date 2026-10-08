@@ -42,7 +42,8 @@
     "sitemap": "Sitemap"
   },
   "Footer": {
-    "description": "Founded in 2011, <brand>IRESEN</brand> supports Morocco’s energy transition through applied research and innovation in renewable energy and energy efficiency.",
+    "tagline": "Research that moves energy forward.",
+    "description": "Linking research to energy needs to develop, test and create value from innovative solutions with our partners.",
     "addressLabel": "Address",
     "address": "16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Morocco",
     "phoneLabel": "Call us",
