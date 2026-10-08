@@ -1,0 +1,3605 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "originalFilename": "IRESEN OFFICIAL FILE.fig",
+    "repositoryPath": "docs/references/figma/iresen-official-file.fig",
+    "retrievedCommit": "37b06893f2be4825fa94f71ca691ba7871381f96",
+    "fileKey": "0go8QANZAH73ed9AoCdHkf",
+    "exportedAt": "2026-10-08T10:35:45.489Z",
+    "sha256": "2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a",
+    "bytes": 164268977,
+    "figVersion": 106
+  },
+  "recovery": {
+    "canvasBytes": 7450493,
+    "schemaDefinitions": 653,
+    "schemaCompression": "deflate-raw",
+    "messageCompression": "zstd",
+    "schemaBytes": 75231,
+    "messageBytes": 26102711,
+    "messageBytesConsumed": 26102711,
+    "messageTrailingBytes": 0,
+    "nodeCount": 20689,
+    "nodeTypes": {
+      "DOCUMENT": 1,
+      "CANVAS": 5,
+      "ROUNDED_RECTANGLE": 824,
+      "SYMBOL": 579,
+      "VECTOR": 3128,
+      "FRAME": 8537,
+      "TEXT": 5383,
+      "INSTANCE": 1247,
+      "LINE": 615,
+      "ELLIPSE": 322,
+      "VARIABLE_SET": 2,
+      "VARIABLE": 17,
+      "BRUSH": 25,
+      "TEXT_PATH": 1,
+      "SLICE": 1,
+      "BOOLEAN_OPERATION": 2
+    },
+    "archiveMemberCount": 228,
+    "nonfiniteFloatCount": 36,
+    "nonfiniteFloatEncoding": "JSON null; exact IEEE32 bits and paths stored in nonfinite-values.json"
+  },
+  "method": {
+    "type": "offline embedded-schema Kiwi decoding and original asset inspection",
+    "nativeFigmaRenderingVerified": false,
+    "sketchReaderCommit": "0ecc6e9726184746653a9f63f0a1635fa50bbc38",
+    "kiwiUint64ReferenceCommit": "fe3ca9484ac055ccd39fe144218ec11f720222ae",
+    "sourceStringsTreatedAs": "data, not instructions or approved institutional facts",
+    "profiles": "directly serialized nodes under selected primary roots, excluding explicit hidden or zero-opacity ancestry; expanded instance text and paint overrides are not a native rendered census",
+    "structuralVisibility": "explicit visible:false ancestry and soft deletion; excludes neither opacity nor native clipping/occlusion",
+    "missingProperties": "absent, not asserted defaults or zero",
+    "lineHeightInterpretation": {
+      "RAW": "ratio multiplied by font size, rounded source pixels",
+      "PERCENT100": "natural/Auto, not CSS line-height:1",
+      "reference": "sketch-hq/fig2sketch/src/converter/text.py at pinned Sketch reader commit"
+    }
+  },
+  "structure": {
+    "totalRecords": 20689,
+    "uniqueGuids": 20689,
+    "liveRecordsExcludingSoftDeleted": 20684,
+    "ownVisibleFalse": 54,
+    "visibilityAbsent": 11,
+    "effectivelyHiddenIncludingAncestors": 1160,
+    "effectivelyVisibleAndNotDeleted": 19529,
+    "softDeleted": 5,
+    "orphanParents": 0,
+    "symbols": 579,
+    "instances": 1247,
+    "variantSpecNodes": 246,
+    "nonemptyComponentPropDefinitionNodes": 78,
+    "stackModes": {
+      "HORIZONTAL": 2888,
+      "VERTICAL": 4508,
+      "GRID": 1
+    }
+  },
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "BENCHMARK",
+      "visible": true,
+      "internalOnly": false,
+      "recordCountIncludingCanvas": 415
+    },
+    {
+      "id": "0:2",
+      "name": "Internal Only Canvas",
+      "visible": false,
+      "internalOnly": true,
+      "recordCountIncludingCanvas": 1072
+    },
+    {
+      "id": "127:1781",
+      "name": "IRESEN",
+      "visible": true,
+      "internalOnly": false,
+      "recordCountIncludingCanvas": 8977
+    },
+    {
+      "id": "1128:6107",
+      "name": "MOBILE",
+      "visible": true,
+      "internalOnly": false,
+      "recordCountIncludingCanvas": 8149
+    },
+    {
+      "id": "2211:6298",
+      "name": "DESIGN SYSTEM",
+      "visible": true,
+      "internalOnly": false,
+      "recordCountIncludingCanvas": 2075
+    }
+  ],
+  "selection": {
+    "nodeId": "892:5041",
+    "kind": "VIDEO fill",
+    "containingHomepageId": "804:5998",
+    "containingCanvasId": "127:1781"
+  },
+  "desktopPages": [
+    {
+      "id": "804:5998",
+      "name": "HOMEPAGE",
+      "size": {
+        "x": 1920.0,
+        "y": 7943.66796875
+      }
+    },
+    {
+      "id": "804:6193",
+      "name": "AGENCE DE MOYENS",
+      "size": {
+        "x": 1920.0,
+        "y": 6186.041015625
+      }
+    },
+    {
+      "id": "804:6488",
+      "name": "DOMAINES DE RECHERCHE",
+      "size": {
+        "x": 1920.0,
+        "y": 9208.0
+      }
+    },
+    {
+      "id": "804:6862",
+      "name": "Publications & Ressources",
+      "size": {
+        "x": 1920.0,
+        "y": 5594.4853515625
+      }
+    },
+    {
+      "id": "804:7108",
+      "name": "ALUMNI",
+      "size": {
+        "x": 1920.0,
+        "y": 4665.041015625
+      }
+    },
+    {
+      "id": "804:7374",
+      "name": "CONTACT US",
+      "size": {
+        "x": 1920.0,
+        "y": 4061.0
+      }
+    },
+    {
+      "id": "804:7609",
+      "name": "COOPERATION ET PARTENARIATS",
+      "size": {
+        "x": 1920.0,
+        "y": 5282.42333984375
+      }
+    },
+    {
+      "id": "804:7833",
+      "name": "Vulgarisation scientifique",
+      "size": {
+        "x": 1920.0,
+        "y": 6233.041015625
+      }
+    },
+    {
+      "id": "804:8049",
+      "name": "Actualités & Événements",
+      "size": {
+        "x": 1920.0,
+        "y": 6467.041015625
+      }
+    },
+    {
+      "id": "804:8394",
+      "name": "FORMATIONS",
+      "size": {
+        "x": 1920.0,
+        "y": 5834.041015625
+      }
+    },
+    {
+      "id": "804:8705",
+      "name": "Carriéres",
+      "size": {
+        "x": 1920.0,
+        "y": 5596.041015625
+      }
+    },
+    {
+      "id": "804:8896",
+      "name": "À propos",
+      "size": {
+        "x": 1920.0,
+        "y": 5765.0
+      }
+    },
+    {
+      "id": "804:9238",
+      "name": "INFRASTRUCTURES ET PLATEFORMES",
+      "size": {
+        "x": 1920.0,
+        "y": 2592.041015625
+      }
+    },
+    {
+      "id": "804:9285",
+      "name": "PROJETS R&D & INNOVATION",
+      "size": {
+        "x": 1920.0,
+        "y": 3521.73046875
+      }
+    }
+  ],
+  "mobilePages": [
+    {
+      "id": "1479:5838",
+      "name": "homepage-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 7523.3994140625
+      }
+    },
+    {
+      "id": "1479:6037",
+      "name": "Publications & Ressources - mobile",
+      "size": {
+        "x": 402.0,
+        "y": 6250.3994140625
+      }
+    },
+    {
+      "id": "1479:6343",
+      "name": "infrastructures-et-plateformes-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 3162.399169921875
+      }
+    },
+    {
+      "id": "1479:6372",
+      "name": "actualités",
+      "size": {
+        "x": 402.0,
+        "y": 8133.3994140625
+      }
+    },
+    {
+      "id": "1479:6578",
+      "name": "alumni-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 5210.3994140625
+      }
+    },
+    {
+      "id": "1479:6707",
+      "name": "iresen-mobile-rnd-projects",
+      "size": {
+        "x": 402.0,
+        "y": 5540.3994140625
+      }
+    },
+    {
+      "id": "1479:6934",
+      "name": "a-propos-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 6843.9228515625
+      }
+    },
+    {
+      "id": "1479:7057",
+      "name": "agence-de-moyens-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 7440.3994140625
+      }
+    },
+    {
+      "id": "1479:7212",
+      "name": "actualites-evenements-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 7845.3994140625
+      }
+    },
+    {
+      "id": "1479:7351",
+      "name": "domaine de recherche",
+      "size": {
+        "x": 402.0,
+        "y": 8432.3994140625
+      }
+    },
+    {
+      "id": "1479:7634",
+      "name": "cooperation-partenariats-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 6099.3994140625
+      }
+    },
+    {
+      "id": "1479:7713",
+      "name": "carrieres-mobile",
+      "size": {
+        "x": 402.0,
+        "y": 6302.3994140625
+      }
+    },
+    {
+      "id": "1479:7848",
+      "name": "nous contacter",
+      "size": {
+        "x": 402.0,
+        "y": 6361.3994140625
+      }
+    }
+  ],
+  "coverage": {
+    "desktopNamedFullPages": 14,
+    "desktopBuildStatusFullPages": 13,
+    "mobileNamedFullPages": 13,
+    "mobileFullPageWidth": 402,
+    "mobileFragmentCommonWidth": 442,
+    "arabicUnicodeInAnyNode": 0,
+    "rtlArabicTabletNamedNodes": 0,
+    "limits": [
+      "No native rendered comparison.",
+      "No dedicated RTL/tablet reference established.",
+      "No full402px FORMATIONS analogue identified; standalone442px Workshops_Conferences_Section1479:10902 exists.",
+      "Mobile1479:6372 named actualités is not automatically mapped to a particular approved route."
+    ]
+  },
+  "variables": [
+    {
+      "nodeId": "393:1679",
+      "name": "Main color",
+      "softDeleted": true,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#0A1C83",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.04013724625110626,
+            "g": 0.11128652840852737,
+            "b": 0.512309730052948,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "411:1693",
+      "name": "BLUE MAIN",
+      "softDeleted": true,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#00349B",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.0,
+            "g": 0.20585140585899353,
+            "b": 0.6080533266067505,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "413:2039",
+      "name": "Grey main",
+      "softDeleted": true,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#F3F4F8",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.9529411792755127,
+            "g": 0.95686274766922,
+            "b": 0.9725490212440491,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "494:2068",
+      "name": "BLUE BG",
+      "softDeleted": true,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#0C1755",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.0470588244497776,
+            "g": 0.09019608050584793,
+            "b": 0.3333333432674408,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "760:3674",
+      "name": "Colors/Prussian Blue",
+      "softDeleted": false,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#0C2340",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.0470588244497776,
+            "g": 0.13725490868091583,
+            "b": 0.250980406999588,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "760:3675",
+      "name": "Colors/Dusk Blue",
+      "softDeleted": false,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#1A4E8A",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.10196078568696976,
+            "g": 0.30588236451148987,
+            "b": 0.5411764979362488,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "760:3676",
+      "name": "Colors/Blue Bell",
+      "softDeleted": false,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#4698CA",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.27450981736183167,
+            "g": 0.5960784554481506,
+            "b": 0.7921568751335144,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "760:3677",
+      "name": "Colors/Icy Aqua",
+      "softDeleted": false,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#B1E4E3",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.6941176652908325,
+            "g": 0.8941176533699036,
+            "b": 0.8901960849761963,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "760:3678",
+      "name": "Colors/WHITE BLUE",
+      "softDeleted": false,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#EDF5F9",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.929411768913269,
+            "g": 0.9607843160629272,
+            "b": 0.9764705896377563,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "959:5381",
+      "name": "Colors/DEEP TEAL",
+      "softDeleted": false,
+      "collectionId": "393:1678",
+      "collectionReference": {
+        "guid": {
+          "sessionID": 393,
+          "localID": 1678
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#507F70",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.3137255012989044,
+            "g": 0.49803921580314636,
+            "b": 0.43921568989753723,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5096",
+      "name": "Colors/Prussian Blue",
+      "softDeleted": false,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#0C2340",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.0470588244497776,
+            "g": 0.13725490868091583,
+            "b": 0.250980406999588,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5107",
+      "name": "Colors/Dusk Blue",
+      "softDeleted": false,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#1A4E8A",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.10196078568696976,
+            "g": 0.30588236451148987,
+            "b": 0.5411764979362488,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5130",
+      "name": "Colors/WHITE BLUE",
+      "softDeleted": false,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#EDF5F9",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.929411768913269,
+            "g": 0.9607843160629272,
+            "b": 0.9764705896377563,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5143",
+      "name": "Colors/Blue Bell",
+      "softDeleted": false,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#4698CA",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.27450981736183167,
+            "g": 0.5960784554481506,
+            "b": 0.7921568751335144,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5213",
+      "name": "Colors/DEEP TEAL",
+      "softDeleted": false,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#507F70",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.3137255012989044,
+            "g": 0.49803921580314636,
+            "b": 0.43921568989753723,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5231",
+      "name": "Colors/Icy Aqua",
+      "softDeleted": false,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#B1E4E3",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.6941176652908325,
+            "g": 0.8941176533699036,
+            "b": 0.8901960849761963,
+            "a": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "nodeId": "1479:5743",
+      "name": "BLUE MAIN",
+      "softDeleted": true,
+      "collectionId": null,
+      "collectionReference": {
+        "assetRef": {
+          "key": "f573942f7df564c5bb19ced84faebd84f8c37d7f",
+          "version": "393:0"
+        }
+      },
+      "colors": [
+        {
+          "hex8bit": "#00349B",
+          "alpha": 1.0,
+          "floatRGBA": {
+            "r": 0.0,
+            "g": 0.20585140585899353,
+            "b": 0.6080533266067505,
+            "a": 1.0
+          }
+        }
+      ]
+    }
+  ],
+  "typographyRoles": [
+    {
+      "role": "desktop-hero-heading",
+      "nodeId": "804:6013",
+      "fontName": {
+        "family": "Plus Jakarta Sans",
+        "style": "Bold",
+        "postscript": "PlusJakartaSans-Bold"
+      },
+      "fontSize": 80.0,
+      "lineHeight": {
+        "value": 90.0,
+        "units": "PIXELS"
+      },
+      "letterSpacing": {
+        "value": -3.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 961.4921875,
+        "y": 270.0
+      }
+    },
+    {
+      "role": "desktop-hero-intro",
+      "nodeId": "804:6014",
+      "fontName": {
+        "family": "Plus Jakarta Sans Medium",
+        "style": "Regular",
+        "postscript": "PlusJakartaSans-Medium"
+      },
+      "fontSize": 21.0,
+      "lineHeight": {
+        "value": 1.5,
+        "units": "RAW"
+      },
+      "letterSpacing": {
+        "value": 0.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 961.0,
+        "y": 64.0
+      }
+    },
+    {
+      "role": "desktop-section-heading",
+      "nodeId": "804:6066",
+      "fontName": {
+        "family": "Plus Jakarta Sans Medium",
+        "style": "Regular",
+        "postscript": "PlusJakartaSans-Medium"
+      },
+      "fontSize": 50.0,
+      "lineHeight": {
+        "value": 60.0,
+        "units": "PIXELS"
+      },
+      "letterSpacing": {
+        "value": -3.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 1408.0,
+        "y": 60.0
+      }
+    },
+    {
+      "role": "desktop-body",
+      "nodeId": "804:6067",
+      "fontName": {
+        "family": "Plus Jakarta Sans Medium",
+        "style": "Regular",
+        "postscript": "PlusJakartaSans-Medium"
+      },
+      "fontSize": 18.0,
+      "lineHeight": {
+        "value": 1.5,
+        "units": "RAW"
+      },
+      "letterSpacing": {
+        "value": 0.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 1412.0,
+        "y": 54.0
+      }
+    },
+    {
+      "role": "desktop-eyebrow",
+      "nodeId": "804:6063",
+      "fontName": {
+        "family": "Plus Jakarta Sans Medium",
+        "style": "Regular",
+        "postscript": "PlusJakartaSans-Medium"
+      },
+      "fontSize": 16.0,
+      "lineHeight": {
+        "value": 100.0,
+        "units": "PERCENT"
+      },
+      "letterSpacing": {
+        "value": 10.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 145.0,
+        "y": 20.0
+      }
+    },
+    {
+      "role": "mobile-hero-heading",
+      "nodeId": "1479:5856",
+      "fontName": {
+        "family": "Plus Jakarta Sans",
+        "style": "Bold",
+        "postscript": "PlusJakartaSans-Bold"
+      },
+      "fontSize": 32.0,
+      "lineHeight": {
+        "value": 38.0,
+        "units": "PIXELS"
+      },
+      "letterSpacing": {
+        "value": -2.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 362.0,
+        "y": 114.0
+      }
+    },
+    {
+      "role": "mobile-hero-body",
+      "nodeId": "1479:5857",
+      "fontName": {
+        "family": "Plus Jakarta Sans Medium",
+        "style": "Regular",
+        "postscript": "PlusJakartaSans-Medium"
+      },
+      "fontSize": 14.0,
+      "lineHeight": {
+        "value": 1.5,
+        "units": "RAW"
+      },
+      "letterSpacing": {
+        "value": 0.0,
+        "units": "PERCENT"
+      },
+      "size": {
+        "x": 362.0,
+        "y": 63.0
+      }
+    }
+  ],
+  "profiles": {
+    "primaryDesktopVisible": {
+      "nodeCount": 2551,
+      "typeCounts": {
+        "SYMBOL": 3,
+        "VECTOR": 143,
+        "FRAME": 1305,
+        "ROUNDED_RECTANGLE": 104,
+        "ELLIPSE": 31,
+        "TEXT": 719,
+        "INSTANCE": 193,
+        "LINE": 52,
+        "TEXT_PATH": 1
+      },
+      "textCount": 719,
+      "fontFamilies": [
+        {
+          "value": "Plus Jakarta Sans SemiBold",
+          "count": 242
+        },
+        {
+          "value": "Plus Jakarta Sans Medium",
+          "count": 234
+        },
+        {
+          "value": "Inter Tight",
+          "count": 179
+        },
+        {
+          "value": "Plus Jakarta Sans",
+          "count": 60
+        },
+        {
+          "value": "Aspekta",
+          "count": 4
+        }
+      ],
+      "fontFamilyStylePairs": [
+        {
+          "value": {
+            "family": "Plus Jakarta Sans SemiBold",
+            "postscript": "PlusJakartaSans-SemiBold",
+            "style": "Regular"
+          },
+          "count": 242
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans Medium",
+            "postscript": "PlusJakartaSans-Medium",
+            "style": "Regular"
+          },
+          "count": 234
+        },
+        {
+          "value": {
+            "family": "Inter Tight",
+            "postscript": "InterTight-Medium",
+            "style": "Medium"
+          },
+          "count": 118
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Bold",
+            "style": "Bold"
+          },
+          "count": 53
+        },
+        {
+          "value": {
+            "family": "Inter Tight",
+            "postscript": "InterTight-SemiBold",
+            "style": "SemiBold"
+          },
+          "count": 31
+        },
+        {
+          "value": {
+            "family": "Inter Tight",
+            "postscript": "InterTight-Regular",
+            "style": "Regular"
+          },
+          "count": 30
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Medium",
+            "style": "Medium"
+          },
+          "count": 6
+        },
+        {
+          "value": {
+            "family": "Aspekta",
+            "postscript": "Aspekta-550",
+            "style": "550"
+          },
+          "count": 4
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Regular",
+            "style": "Regular"
+          },
+          "count": 1
+        }
+      ],
+      "fontSizeCounts": [
+        {
+          "value": 16.0,
+          "count": 230
+        },
+        {
+          "value": 18.0,
+          "count": 150
+        },
+        {
+          "value": 26.0,
+          "count": 100
+        },
+        {
+          "value": 14.0,
+          "count": 86
+        },
+        {
+          "value": 50.0,
+          "count": 42
+        },
+        {
+          "value": 21.0,
+          "count": 34
+        },
+        {
+          "value": 60.0,
+          "count": 32
+        },
+        {
+          "value": 80.0,
+          "count": 16
+        },
+        {
+          "value": 40.0,
+          "count": 14
+        },
+        {
+          "value": 12.0,
+          "count": 13
+        },
+        {
+          "value": 23.0,
+          "count": 1
+        },
+        {
+          "value": 300.0,
+          "count": 1
+        }
+      ],
+      "lineHeightCounts": [
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 100.0
+          },
+          "count": 381
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.5
+          },
+          "count": 241
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 60.0
+          },
+          "count": 40
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.399999976158142
+          },
+          "count": 22
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 90.0
+          },
+          "count": 14
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 28.0
+          },
+          "count": 9
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 70.0
+          },
+          "count": 5
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 24.0
+          },
+          "count": 5
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.2000000476837158
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 32.0
+          },
+          "count": 1
+        }
+      ],
+      "trackingCounts": [
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 0.0
+          },
+          "count": 347
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 10.0
+          },
+          "count": 161
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": -2.0
+          },
+          "count": 154
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": -3.0
+          },
+          "count": 42
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": -1.0
+          },
+          "count": 8
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 20.0
+          },
+          "count": 7
+        }
+      ],
+      "textStyleReferenceCount": 0,
+      "explicitEffectCount": 27,
+      "effectKinds": [
+        {
+          "value": "DROP_SHADOW",
+          "count": 11
+        },
+        {
+          "value": "BACKGROUND_BLUR",
+          "count": 8
+        },
+        {
+          "value": "FOREGROUND_BLUR",
+          "count": 5
+        },
+        {
+          "value": "INNER_SHADOW",
+          "count": 3
+        }
+      ],
+      "cornerProfiles": [
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 10.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 10.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 48
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 39
+        },
+        {
+          "value": {
+            "cornerRadius": 50.0,
+            "rectangleBottomLeftCornerRadius": 50.0,
+            "rectangleBottomRightCornerRadius": 50.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 50.0,
+            "rectangleTopRightCornerRadius": 50.0
+          },
+          "count": 14
+        },
+        {
+          "value": {
+            "cornerRadius": 4.0,
+            "rectangleBottomLeftCornerRadius": 4.0,
+            "rectangleBottomRightCornerRadius": 4.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 4.0,
+            "rectangleTopRightCornerRadius": 4.0
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "cornerRadius": 20.0,
+            "rectangleBottomLeftCornerRadius": 20.0,
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": 20.0
+          },
+          "count": 6
+        },
+        {
+          "value": {
+            "cornerRadius": 6.0,
+            "rectangleBottomLeftCornerRadius": 6.0,
+            "rectangleBottomRightCornerRadius": 6.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 6.0,
+            "rectangleTopRightCornerRadius": 6.0
+          },
+          "count": 6
+        },
+        {
+          "value": {
+            "cornerRadius": 62.5,
+            "rectangleBottomLeftCornerRadius": 62.5,
+            "rectangleBottomRightCornerRadius": 62.5,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 62.5,
+            "rectangleTopRightCornerRadius": 62.5
+          },
+          "count": 5
+        },
+        {
+          "value": {
+            "cornerRadius": 112.5,
+            "rectangleBottomLeftCornerRadius": 112.5,
+            "rectangleBottomRightCornerRadius": 112.5,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 112.5,
+            "rectangleTopRightCornerRadius": 112.5
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "cornerRadius": 80.0,
+            "rectangleBottomLeftCornerRadius": 80.0,
+            "rectangleBottomRightCornerRadius": 80.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 80.0,
+            "rectangleTopRightCornerRadius": 80.0
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "cornerRadius": 20.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 40.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 40.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 14.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 40.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 40.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 10.0,
+            "rectangleBottomLeftCornerRadius": 10.0,
+            "rectangleBottomRightCornerRadius": 10.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 10.0,
+            "rectangleTopRightCornerRadius": 10.0
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 100.0,
+            "rectangleBottomLeftCornerRadius": 100.0,
+            "rectangleBottomRightCornerRadius": 100.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 100.0,
+            "rectangleTopRightCornerRadius": 100.0
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 40.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 40.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 10.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": "<absent>",
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": "<absent>",
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 1
+        }
+      ]
+    },
+    "primaryMobileVisible": {
+      "nodeCount": 2231,
+      "typeCounts": {
+        "FRAME": 1033,
+        "ROUNDED_RECTANGLE": 58,
+        "INSTANCE": 217,
+        "SYMBOL": 2,
+        "VECTOR": 155,
+        "TEXT": 678,
+        "LINE": 75,
+        "ELLIPSE": 13
+      },
+      "textCount": 678,
+      "fontFamilies": [
+        {
+          "value": "Plus Jakarta Sans",
+          "count": 442
+        },
+        {
+          "value": "Plus Jakarta Sans Medium",
+          "count": 133
+        },
+        {
+          "value": "Plus Jakarta Sans SemiBold",
+          "count": 98
+        },
+        {
+          "value": "Inter",
+          "count": 5
+        }
+      ],
+      "fontFamilyStylePairs": [
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Bold",
+            "style": "Bold"
+          },
+          "count": 364
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans Medium",
+            "postscript": "PlusJakartaSans-Medium",
+            "style": "Regular"
+          },
+          "count": 133
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans SemiBold",
+            "postscript": "PlusJakartaSans-SemiBold",
+            "style": "Regular"
+          },
+          "count": 98
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "",
+            "style": "SemiBold"
+          },
+          "count": 46
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Regular",
+            "style": "Regular"
+          },
+          "count": 25
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "",
+            "style": "Medium"
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "family": "Inter",
+            "postscript": "",
+            "style": "Semi Bold"
+          },
+          "count": 5
+        }
+      ],
+      "fontSizeCounts": [
+        {
+          "value": 12.0,
+          "count": 228
+        },
+        {
+          "value": 14.0,
+          "count": 224
+        },
+        {
+          "value": 20.0,
+          "count": 100
+        },
+        {
+          "value": 28.0,
+          "count": 34
+        },
+        {
+          "value": 15.0,
+          "count": 30
+        },
+        {
+          "value": 13.0,
+          "count": 22
+        },
+        {
+          "value": 32.0,
+          "count": 12
+        },
+        {
+          "value": 36.0,
+          "count": 8
+        },
+        {
+          "value": 10.0,
+          "count": 6
+        },
+        {
+          "value": 16.0,
+          "count": 5
+        },
+        {
+          "value": 11.0,
+          "count": 3
+        },
+        {
+          "value": 30.0,
+          "count": 3
+        },
+        {
+          "value": 22.0,
+          "count": 1
+        },
+        {
+          "value": 24.0,
+          "count": 1
+        },
+        {
+          "value": 26.0,
+          "count": 1
+        }
+      ],
+      "lineHeightCounts": [
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 100.0
+          },
+          "count": 514
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.5
+          },
+          "count": 97
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.399999976158142
+          },
+          "count": 29
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 40.0
+          },
+          "count": 10
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 34.0
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 22.0
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 42.0
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 38.0
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.2000000476837158
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 44.0
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 28.0
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 30.0
+          },
+          "count": 1
+        }
+      ],
+      "trackingCounts": [
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 0.0
+          },
+          "count": 486
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 10.0
+          },
+          "count": 84
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 8.0
+          },
+          "count": 62
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": -2.0
+          },
+          "count": 46
+        }
+      ],
+      "textStyleReferenceCount": 0,
+      "explicitEffectCount": 32,
+      "effectKinds": [
+        {
+          "value": "DROP_SHADOW",
+          "count": 14
+        },
+        {
+          "value": "BACKGROUND_BLUR",
+          "count": 11
+        },
+        {
+          "value": "FOREGROUND_BLUR",
+          "count": 7
+        }
+      ],
+      "cornerProfiles": [
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 10.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 10.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 29
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 17
+        },
+        {
+          "value": {
+            "cornerRadius": 50.0,
+            "rectangleBottomLeftCornerRadius": 50.0,
+            "rectangleBottomRightCornerRadius": 50.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 50.0,
+            "rectangleTopRightCornerRadius": 50.0
+          },
+          "count": 13
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 16.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 16.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 11
+        },
+        {
+          "value": {
+            "cornerRadius": 100.0,
+            "rectangleBottomLeftCornerRadius": 100.0,
+            "rectangleBottomRightCornerRadius": 100.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 100.0,
+            "rectangleTopRightCornerRadius": 100.0
+          },
+          "count": 10
+        },
+        {
+          "value": {
+            "cornerRadius": 8.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 16.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 16.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 10
+        },
+        {
+          "value": {
+            "cornerRadius": 6.0,
+            "rectangleBottomLeftCornerRadius": 6.0,
+            "rectangleBottomRightCornerRadius": 6.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 6.0,
+            "rectangleTopRightCornerRadius": 6.0
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "cornerRadius": 6.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 6.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 6.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 6
+        },
+        {
+          "value": {
+            "cornerRadius": 4.0,
+            "rectangleBottomLeftCornerRadius": 4.0,
+            "rectangleBottomRightCornerRadius": 4.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 4.0,
+            "rectangleTopRightCornerRadius": 4.0
+          },
+          "count": 6
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 12.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 12.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 5
+        },
+        {
+          "value": {
+            "cornerRadius": 16.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 16.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 16.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 4
+        },
+        {
+          "value": {
+            "cornerRadius": 112.5,
+            "rectangleBottomLeftCornerRadius": 112.5,
+            "rectangleBottomRightCornerRadius": 112.5,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 112.5,
+            "rectangleTopRightCornerRadius": 112.5
+          },
+          "count": 4
+        },
+        {
+          "value": {
+            "cornerRadius": 12.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 10.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 10.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "cornerRadius": 12.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 12.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 12.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "cornerRadius": 8.0,
+            "rectangleBottomLeftCornerRadius": 8.0,
+            "rectangleBottomRightCornerRadius": 8.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 8.0,
+            "rectangleTopRightCornerRadius": 8.0
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 16.0,
+            "rectangleBottomLeftCornerRadius": 16.0,
+            "rectangleBottomRightCornerRadius": 16.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 16.0,
+            "rectangleTopRightCornerRadius": 16.0
+          },
+          "count": 1
+        }
+      ]
+    },
+    "designSystemVisible": {
+      "nodeCount": 1840,
+      "typeCounts": {
+        "FRAME": 421,
+        "ROUNDED_RECTANGLE": 44,
+        "TEXT": 309,
+        "INSTANCE": 40,
+        "LINE": 68,
+        "VECTOR": 721,
+        "SYMBOL": 223,
+        "ELLIPSE": 14
+      },
+      "textCount": 309,
+      "fontFamilies": [
+        {
+          "value": "Plus Jakarta Sans",
+          "count": 104
+        },
+        {
+          "value": "Plus Jakarta Sans Medium",
+          "count": 94
+        },
+        {
+          "value": "Plus Jakarta Sans SemiBold",
+          "count": 84
+        },
+        {
+          "value": "Inter Tight",
+          "count": 27
+        }
+      ],
+      "fontFamilyStylePairs": [
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Bold",
+            "style": "Bold"
+          },
+          "count": 94
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans Medium",
+            "postscript": "PlusJakartaSans-Medium",
+            "style": "Regular"
+          },
+          "count": 94
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans SemiBold",
+            "postscript": "PlusJakartaSans-SemiBold",
+            "style": "Regular"
+          },
+          "count": 84
+        },
+        {
+          "value": {
+            "family": "Inter Tight",
+            "postscript": "InterTight-Medium",
+            "style": "Medium"
+          },
+          "count": 23
+        },
+        {
+          "value": {
+            "family": "Plus Jakarta Sans",
+            "postscript": "PlusJakartaSans-Regular",
+            "style": "Regular"
+          },
+          "count": 10
+        },
+        {
+          "value": {
+            "family": "Inter Tight",
+            "postscript": "InterTight-Regular",
+            "style": "Regular"
+          },
+          "count": 4
+        }
+      ],
+      "fontSizeCounts": [
+        {
+          "value": 16.0,
+          "count": 72
+        },
+        {
+          "value": 14.0,
+          "count": 69
+        },
+        {
+          "value": 13.0,
+          "count": 52
+        },
+        {
+          "value": 18.0,
+          "count": 39
+        },
+        {
+          "value": 70.0,
+          "count": 16
+        },
+        {
+          "value": 30.0,
+          "count": 15
+        },
+        {
+          "value": 26.0,
+          "count": 13
+        },
+        {
+          "value": 23.0,
+          "count": 8
+        },
+        {
+          "value": 21.0,
+          "count": 4
+        },
+        {
+          "value": 27.067668914794922,
+          "count": 4
+        },
+        {
+          "value": 15.0,
+          "count": 4
+        },
+        {
+          "value": 183.16738891601562,
+          "count": 2
+        },
+        {
+          "value": 50.0,
+          "count": 2
+        },
+        {
+          "value": 32.0,
+          "count": 2
+        },
+        {
+          "value": 40.0,
+          "count": 2
+        },
+        {
+          "value": 12.0,
+          "count": 2
+        },
+        {
+          "value": 80.0,
+          "count": 1
+        },
+        {
+          "value": 60.0,
+          "count": 1
+        },
+        {
+          "value": 150.0,
+          "count": 1
+        }
+      ],
+      "lineHeightCounts": [
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 100.0
+          },
+          "count": 245
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.5
+          },
+          "count": 43
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 21.0
+          },
+          "count": 6
+        },
+        {
+          "value": {
+            "units": "RAW",
+            "value": 1.399999976158142
+          },
+          "count": 4
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 24.0
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 20.0
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 150.19725036621094
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 25.0
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "units": "PIXELS",
+            "value": 28.0
+          },
+          "count": 1
+        }
+      ],
+      "trackingCounts": [
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 0.0
+          },
+          "count": 164
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 20.0
+          },
+          "count": 50
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 10.0
+          },
+          "count": 40
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": -4.0
+          },
+          "count": 28
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": -2.0
+          },
+          "count": 25
+        },
+        {
+          "value": {
+            "units": "PERCENT",
+            "value": 8.0
+          },
+          "count": 2
+        }
+      ],
+      "textStyleReferenceCount": 0,
+      "explicitEffectCount": 4,
+      "effectKinds": [
+        {
+          "value": "DROP_SHADOW",
+          "count": 3
+        },
+        {
+          "value": "BACKGROUND_BLUR",
+          "count": 1
+        }
+      ],
+      "cornerProfiles": [
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 10.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 10.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 26
+        },
+        {
+          "value": {
+            "cornerRadius": 30.0,
+            "rectangleBottomLeftCornerRadius": 30.0,
+            "rectangleBottomRightCornerRadius": 30.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 30.0,
+            "rectangleTopRightCornerRadius": 30.0
+          },
+          "count": 7
+        },
+        {
+          "value": {
+            "cornerRadius": 20.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 5
+        },
+        {
+          "value": {
+            "cornerRadius": 4.0,
+            "rectangleBottomLeftCornerRadius": 4.0,
+            "rectangleBottomRightCornerRadius": 4.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 4.0,
+            "rectangleTopRightCornerRadius": 4.0
+          },
+          "count": 4
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "cornerRadius": 21.0,
+            "rectangleBottomLeftCornerRadius": 21.0,
+            "rectangleBottomRightCornerRadius": 21.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 21.0,
+            "rectangleTopRightCornerRadius": 21.0
+          },
+          "count": 3
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": "<absent>",
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": "<absent>",
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 10.0,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 10.0,
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": "<absent>",
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": "<absent>",
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 20.0,
+            "rectangleBottomLeftCornerRadius": 20.0,
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": 20.0
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 8.0,
+            "rectangleBottomLeftCornerRadius": 8.0,
+            "rectangleBottomRightCornerRadius": 8.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 8.0,
+            "rectangleTopRightCornerRadius": 8.0
+          },
+          "count": 2
+        },
+        {
+          "value": {
+            "cornerRadius": 20.0,
+            "rectangleBottomLeftCornerRadius": 20.0,
+            "rectangleBottomRightCornerRadius": 20.0,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 20.0,
+            "rectangleTopRightCornerRadius": 20.0
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": "<absent>",
+            "rectangleBottomLeftCornerRadius": "<absent>",
+            "rectangleBottomRightCornerRadius": 15.581100463867188,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 15.581100463867188,
+            "rectangleTopRightCornerRadius": "<absent>"
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 18.169496536254883,
+            "rectangleBottomLeftCornerRadius": 18.169496536254883,
+            "rectangleBottomRightCornerRadius": 18.169496536254883,
+            "rectangleCornerRadiiIndependent": true,
+            "rectangleTopLeftCornerRadius": 18.169496536254883,
+            "rectangleTopRightCornerRadius": 18.169496536254883
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 26.291170120239258,
+            "rectangleBottomLeftCornerRadius": 26.291170120239258,
+            "rectangleBottomRightCornerRadius": 26.291170120239258,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 26.291170120239258,
+            "rectangleTopRightCornerRadius": 26.291170120239258
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 60.0,
+            "rectangleBottomLeftCornerRadius": 60.0,
+            "rectangleBottomRightCornerRadius": 60.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 60.0,
+            "rectangleTopRightCornerRadius": 60.0
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 50.0,
+            "rectangleBottomLeftCornerRadius": 50.0,
+            "rectangleBottomRightCornerRadius": 50.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 50.0,
+            "rectangleTopRightCornerRadius": 50.0
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 18.169496536254883,
+            "rectangleBottomLeftCornerRadius": 18.169496536254883,
+            "rectangleBottomRightCornerRadius": 18.169496536254883,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 18.169496536254883,
+            "rectangleTopRightCornerRadius": 18.169496536254883
+          },
+          "count": 1
+        },
+        {
+          "value": {
+            "cornerRadius": 80.0,
+            "rectangleBottomLeftCornerRadius": 80.0,
+            "rectangleBottomRightCornerRadius": 80.0,
+            "rectangleCornerRadiiIndependent": "<absent>",
+            "rectangleTopLeftCornerRadius": 80.0,
+            "rectangleTopRightCornerRadius": 80.0
+          },
+          "count": 1
+        }
+      ]
+    }
+  },
+  "representativeGeometry": [
+    {
+      "id": "804:5998",
+      "name": "HOMEPAGE",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 7943.66796875
+      },
+      "positionInParent": {
+        "x": 9798.0,
+        "y": 12180.958984375
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "layoutGrids": [
+          {
+            "type": "STRETCH",
+            "axis": "X",
+            "visible": true,
+            "numSections": 12,
+            "offset": 60.0,
+            "sectionSize": 10.0,
+            "gutterSize": 20.0,
+            "color": {
+              "r": 1.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.10000000149011612
+            },
+            "pattern": "STRIPES"
+          }
+        ]
+      }
+    },
+    {
+      "id": "804:6000",
+      "name": "Main Banner",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 850.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "explicitLayoutProperties": {}
+    },
+    {
+      "id": "804:6007",
+      "name": "Content",
+      "type": "FRAME",
+      "size": {
+        "x": 1094.0,
+        "y": 463.0
+      },
+      "positionInParent": {
+        "x": 60.0,
+        "y": 327.18560791015625
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 10.0
+      }
+    },
+    {
+      "id": "804:6025",
+      "name": "Statistics Banner",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 175.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 850.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 10.0,
+        "stackHorizontalPadding": 195.0,
+        "stackVerticalPadding": 40.0,
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 195.0,
+        "stackPaddingBottom": 40.0
+      }
+    },
+    {
+      "id": "804:6058",
+      "name": "Section Container",
+      "type": "FRAME",
+      "size": {
+        "x": 1802.284912109375,
+        "y": 1108.9404296875
+      },
+      "positionInParent": {
+        "x": 58.8575439453125,
+        "y": 1085.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 10.0,
+        "stackVerticalPadding": 80.0,
+        "stackPaddingBottom": 80.0,
+        "stackReverseZIndex": true
+      }
+    },
+    {
+      "id": "804:6069",
+      "name": "Financement",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 790.7275390625
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 3478.9404296875
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 10.0,
+        "stackHorizontalPadding": 60.0,
+        "stackVerticalPadding": 80.0,
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 60.0,
+        "stackPaddingBottom": 80.0
+      }
+    },
+    {
+      "id": "804:6093",
+      "name": "6 Plateformes",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 1084.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 5135.66796875
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 10.0,
+        "stackHorizontalPadding": 60.0,
+        "stackVerticalPadding": 80.0,
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 60.0,
+        "stackPaddingBottom": 80.0
+      }
+    },
+    {
+      "id": "804:6120",
+      "name": "Derniers actualités",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 537.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 6219.66796875
+      },
+      "explicitLayoutProperties": {
+        "stackSpacing": 10.0,
+        "stackVerticalPadding": 100.0,
+        "stackPrimarySizing": "FIXED",
+        "stackPaddingBottom": 100.0
+      }
+    },
+    {
+      "id": "718:5472",
+      "name": "MAIN NAV",
+      "type": "SYMBOL",
+      "size": {
+        "x": 1920.0,
+        "y": 128.0
+      },
+      "positionInParent": {
+        "x": 29047.0,
+        "y": -15252.6103515625
+      },
+      "explicitLayoutProperties": {}
+    },
+    {
+      "id": "718:5444",
+      "name": "Header",
+      "type": "FRAME",
+      "size": {
+        "x": 1800.0,
+        "y": 54.0
+      },
+      "positionInParent": {
+        "x": 60.0,
+        "y": 36.0
+      },
+      "explicitLayoutProperties": {
+        "horizontalConstraint": "CENTER",
+        "stackMode": "HORIZONTAL",
+        "stackSpacing": 731.0,
+        "stackPrimarySizing": "FIXED",
+        "stackPrimaryAlignItems": "SPACE_BETWEEN",
+        "stackCounterAlignItems": "CENTER",
+        "stackCounterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+      }
+    },
+    {
+      "id": "760:3679",
+      "name": "MAIN BLUE BTN RIGHT ARROW",
+      "type": "SYMBOL",
+      "size": {
+        "x": 301.0,
+        "y": 59.0
+      },
+      "positionInParent": {
+        "x": 41266.44921875,
+        "y": -6662.669921875
+      },
+      "explicitLayoutProperties": {
+        "rectangleTopLeftCornerRadius": 10.0,
+        "rectangleBottomRightCornerRadius": 10.0,
+        "rectangleCornerRadiiIndependent": true,
+        "stackMode": "HORIZONTAL",
+        "stackSpacing": 10.0,
+        "stackHorizontalPadding": 30.0,
+        "stackVerticalPadding": 18.0,
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 30.0,
+        "stackPaddingBottom": 18.0,
+        "stackCounterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+      }
+    },
+    {
+      "id": "760:3692",
+      "name": "BORDER BTN",
+      "type": "SYMBOL",
+      "size": {
+        "x": 292.0,
+        "y": 59.0
+      },
+      "positionInParent": {
+        "x": 41412.94921875,
+        "y": -7092.6103515625
+      },
+      "explicitLayoutProperties": {
+        "rectangleTopLeftCornerRadius": 10.0,
+        "rectangleBottomRightCornerRadius": 10.0,
+        "rectangleCornerRadiiIndependent": true,
+        "stackMode": "HORIZONTAL",
+        "stackSpacing": 10.0,
+        "stackHorizontalPadding": 30.0,
+        "stackVerticalPadding": 18.0,
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 30.0,
+        "stackPaddingBottom": 18.0,
+        "stackCounterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+      }
+    },
+    {
+      "id": "737:4209",
+      "name": "INPUT BG",
+      "type": "SYMBOL",
+      "size": {
+        "x": 435.0,
+        "y": 94.0
+      },
+      "positionInParent": {
+        "x": 64932.0,
+        "y": -9676.2939453125
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 16.0
+      }
+    },
+    {
+      "id": "737:4210",
+      "name": "INPUT BORDER",
+      "type": "SYMBOL",
+      "size": {
+        "x": 435.0,
+        "y": 94.0
+      },
+      "positionInParent": {
+        "x": 64932.0,
+        "y": -9423.2939453125
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 16.0
+      }
+    },
+    {
+      "id": "737:4314",
+      "name": "TEXTAREA BORDER",
+      "type": "SYMBOL",
+      "size": {
+        "x": 435.0,
+        "y": 233.0
+      },
+      "positionInParent": {
+        "x": 60644.0,
+        "y": -9323.6103515625
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 16.0
+      }
+    },
+    {
+      "id": "2211:6513",
+      "name": "Example Card 1",
+      "type": "FRAME",
+      "size": {
+        "x": 400.0,
+        "y": 200.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "explicitLayoutProperties": {
+        "rectangleTopLeftCornerRadius": 20.0,
+        "rectangleBottomRightCornerRadius": 20.0,
+        "rectangleCornerRadiiIndependent": true,
+        "stackSpacing": 10.0,
+        "stackHorizontalPadding": 95.0,
+        "stackVerticalPadding": 58.0,
+        "stackPrimarySizing": "FIXED",
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 95.0,
+        "stackPaddingBottom": 58.0,
+        "stackLayoutVersion": 1
+      }
+    },
+    {
+      "id": "1479:5838",
+      "name": "homepage-mobile",
+      "type": "FRAME",
+      "size": {
+        "x": 402.0,
+        "y": 7523.3994140625
+      },
+      "positionInParent": {
+        "x": 19450.0,
+        "y": 913.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackLayoutVersion": 1
+      }
+    },
+    {
+      "id": "1479:5865",
+      "name": "MobileNotreMission",
+      "type": "FRAME",
+      "size": {
+        "x": 402.0,
+        "y": 864.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 994.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 30.0,
+        "stackHorizontalPadding": 16.0,
+        "stackVerticalPadding": 56.0,
+        "stackPrimaryAlignItems": "CENTER",
+        "stackCounterAlignItems": "CENTER",
+        "stackPaddingRight": 16.0,
+        "stackPaddingBottom": 56.0,
+        "stackChildAlignSelf": "STRETCH"
+      }
+    },
+    {
+      "id": "1479:5921",
+      "name": "MobileFinancement",
+      "type": "FRAME",
+      "size": {
+        "x": 402.0,
+        "y": 756.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 2948.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 30.0,
+        "stackVerticalPadding": 56.0,
+        "stackPaddingBottom": 56.0,
+        "stackChildAlignSelf": "STRETCH"
+      }
+    },
+    {
+      "id": "1479:5942",
+      "name": "MobileInfrastructures",
+      "type": "FRAME",
+      "size": {
+        "x": 402.0,
+        "y": 853.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 4341.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 30.0,
+        "stackVerticalPadding": 56.0,
+        "stackPaddingBottom": 56.0,
+        "stackChildAlignSelf": "STRETCH"
+      }
+    },
+    {
+      "id": "1479:5953",
+      "name": "MobileActualites",
+      "type": "FRAME",
+      "size": {
+        "x": 402.0,
+        "y": 889.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 5194.0
+      },
+      "explicitLayoutProperties": {
+        "stackMode": "VERTICAL",
+        "stackSpacing": 32.0,
+        "stackHorizontalPadding": 16.0,
+        "stackVerticalPadding": 56.0,
+        "stackPaddingRight": 16.0,
+        "stackPaddingBottom": 56.0,
+        "stackChildAlignSelf": "STRETCH"
+      }
+    },
+    {
+      "id": "1479:12494",
+      "name": "Pôle-Card-01",
+      "type": "FRAME",
+      "size": {
+        "x": 370.0,
+        "y": 157.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "explicitLayoutProperties": {
+        "rectangleTopLeftCornerRadius": 20.0,
+        "rectangleBottomRightCornerRadius": 20.0,
+        "rectangleCornerRadiiIndependent": true,
+        "stackMode": "VERTICAL",
+        "stackSpacing": 16.0,
+        "stackHorizontalPadding": 24.0,
+        "stackVerticalPadding": 24.0,
+        "stackPaddingRight": 24.0,
+        "stackPaddingBottom": 24.0,
+        "stackChildAlignSelf": "STRETCH",
+        "stackLayoutVersion": 1
+      }
+    },
+    {
+      "id": "2211:6303",
+      "name": "DESIGN SYSTEM 1.0",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 13973.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "explicitLayoutProperties": {
+        "stackPrimarySizing": "FIXED",
+        "layoutGrids": [
+          {
+            "type": "STRETCH",
+            "axis": "X",
+            "visible": true,
+            "numSections": 12,
+            "offset": 100.0,
+            "sectionSize": 10.0,
+            "gutterSize": 50.0,
+            "color": {
+              "r": 1.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.10000000149011612
+            },
+            "pattern": "STRIPES"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1584:6681",
+      "name": "Footer content",
+      "type": "FRAME",
+      "size": {
+        "x": 1920.0,
+        "y": 798.0
+      },
+      "positionInParent": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "explicitLayoutProperties": {
+        "layoutGrids": [
+          {
+            "type": "STRETCH",
+            "axis": "X",
+            "visible": true,
+            "numSections": 12,
+            "offset": 60.0,
+            "sectionSize": 10.0,
+            "gutterSize": 50.0,
+            "color": {
+              "r": 1.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.10000000149011612
+            },
+            "pattern": "STRIPES"
+          }
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "summary": {
+      "embedded_images": 223,
+      "archive_thumbnail": 1,
+      "total_raster_files": 224,
+      "embedded_image_bytes": 146967739,
+      "total_raster_bytes": 146982453,
+      "embedded_formats": {
+        "PNG": 209,
+        "JPEG": 14
+      },
+      "total_raster_formats": {
+        "PNG": 210,
+        "JPEG": 14
+      },
+      "embedded_dimension_range": {
+        "width": [195, 4096],
+        "height": [28, 2731]
+      },
+      "all_sha1_filenames_verified": true,
+      "referenced_paints": 430,
+      "paints_by_type": {
+        "IMAGE": 427,
+        "VIDEO": 3
+      },
+      "reference_count": 859,
+      "unique_referenced_hashes": 223,
+      "unique_source_image_hashes": 122,
+      "unique_thumbnail_hashes": 123,
+      "roles": {
+        "image": 429,
+        "imageThumbnail": 430
+      },
+      "paint_pages": {
+        "IRESEN": 196,
+        "BENCHMARK": 1,
+        "Internal Only Canvas": 64,
+        "MOBILE": 167,
+        "DESIGN SYSTEM": 2
+      },
+      "paint_scale_modes": {
+        "FILL": 374,
+        "STRETCH": 56
+      },
+      "image_only_scale_modes": {
+        "FILL": 372,
+        "STRETCH": 55
+      },
+      "unreferenced_image_assets": [],
+      "referenced_hashes_absent_from_archive": [],
+      "empty_paint_alt_text": 430,
+      "video_reference": {
+        "paint_count": 3,
+        "video_hash_ref_count": 2,
+        "unique_video_hashes": ["d4edfd7578b47366c4b1df8ab473b1c0d26b9e9d"],
+        "nodes_with_video_hash": ["892:5041", "1479:5841"],
+        "node_without_video_hash": "804:6002",
+        "verified_matches_current_public_hero": true,
+        "bytes": 9774051,
+        "sha256": "548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb"
+      }
+    },
+    "verification": {
+      "archive_images": "All 223 embedded raster payloads opened by Pillow; each hashed filename matches payload SHA-1. Archive thumbnail separately inventoried.",
+      "visual": "All eight contact sheets plus selected palette/shadow/menu source screenshots viewed. Contact sheets are local private previews, not full-frame Figma renders.",
+      "native_references": "Direct IMAGE/VIDEO paints mapped exactly; no IMAGE/VIDEO paints in instance override arrays according to the graph-format audit. Recursive instance-master mapping records inherited source uses but does not apply instance visibility/size overrides.",
+      "video": "Current public/videos/hero.mp4 independently hashed to the same SHA-256 and byte count reported from embedded-blob extraction by the main analysis."
+    },
+    "primary_desktop_frames": [
+      {
+        "frame_id": "804:5998",
+        "frame_name": "HOMEPAGE",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 7943.66796875
+        },
+        "direct_paint_usages": 4,
+        "inherited_paint_usages": 11,
+        "unique_source_paints": 15,
+        "unique_source_images": 13,
+        "scale_mode_usages": {
+          "FILL": 15
+        }
+      },
+      {
+        "frame_id": "804:6193",
+        "frame_name": "AGENCE DE MOYENS",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 6186.041015625
+        },
+        "direct_paint_usages": 3,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 3,
+        "unique_source_images": 3,
+        "scale_mode_usages": {
+          "FILL": 3
+        }
+      },
+      {
+        "frame_id": "804:6488",
+        "frame_name": "DOMAINES DE RECHERCHE",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 9208.0
+        },
+        "direct_paint_usages": 1,
+        "inherited_paint_usages": 8,
+        "unique_source_paints": 9,
+        "unique_source_images": 9,
+        "scale_mode_usages": {
+          "STRETCH": 5,
+          "FILL": 4
+        }
+      },
+      {
+        "frame_id": "804:6862",
+        "frame_name": "Publications & Ressources",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 5594.4853515625
+        },
+        "direct_paint_usages": 1,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 1,
+        "unique_source_images": 1,
+        "scale_mode_usages": {
+          "FILL": 1
+        }
+      },
+      {
+        "frame_id": "804:7108",
+        "frame_name": "ALUMNI",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 4665.041015625
+        },
+        "direct_paint_usages": 2,
+        "inherited_paint_usages": 3,
+        "unique_source_paints": 5,
+        "unique_source_images": 5,
+        "scale_mode_usages": {
+          "FILL": 3,
+          "STRETCH": 2
+        }
+      },
+      {
+        "frame_id": "804:7374",
+        "frame_name": "CONTACT US",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 4061.0
+        },
+        "direct_paint_usages": 1,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 1,
+        "unique_source_images": 1,
+        "scale_mode_usages": {
+          "STRETCH": 1
+        }
+      },
+      {
+        "frame_id": "804:7609",
+        "frame_name": "COOPERATION ET PARTENARIATS",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 5282.42333984375
+        },
+        "direct_paint_usages": 1,
+        "inherited_paint_usages": 1,
+        "unique_source_paints": 2,
+        "unique_source_images": 2,
+        "scale_mode_usages": {
+          "FILL": 2
+        }
+      },
+      {
+        "frame_id": "804:7833",
+        "frame_name": "Vulgarisation scientifique",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 6233.041015625
+        },
+        "direct_paint_usages": 7,
+        "inherited_paint_usages": 5,
+        "unique_source_paints": 12,
+        "unique_source_images": 12,
+        "scale_mode_usages": {
+          "STRETCH": 1,
+          "FILL": 11
+        }
+      },
+      {
+        "frame_id": "804:8049",
+        "frame_name": "Actualités & Événements",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 6467.041015625
+        },
+        "direct_paint_usages": 13,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 13,
+        "unique_source_images": 13,
+        "scale_mode_usages": {
+          "FILL": 13
+        }
+      },
+      {
+        "frame_id": "804:8394",
+        "frame_name": "FORMATIONS",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 5834.041015625
+        },
+        "direct_paint_usages": 8,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 8,
+        "unique_source_images": 7,
+        "scale_mode_usages": {
+          "STRETCH": 3,
+          "FILL": 5
+        }
+      },
+      {
+        "frame_id": "804:8705",
+        "frame_name": "Carriéres",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 5596.041015625
+        },
+        "direct_paint_usages": 3,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 3,
+        "unique_source_images": 3,
+        "scale_mode_usages": {
+          "FILL": 2,
+          "STRETCH": 1
+        }
+      },
+      {
+        "frame_id": "804:8896",
+        "frame_name": "À propos",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 5765.0
+        },
+        "direct_paint_usages": 3,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 3,
+        "unique_source_images": 3,
+        "scale_mode_usages": {
+          "FILL": 2,
+          "STRETCH": 1
+        }
+      },
+      {
+        "frame_id": "804:9238",
+        "frame_name": "INFRASTRUCTURES ET PLATEFORMES",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 2592.041015625
+        },
+        "direct_paint_usages": 2,
+        "inherited_paint_usages": 0,
+        "unique_source_paints": 2,
+        "unique_source_images": 2,
+        "scale_mode_usages": {
+          "FILL": 2
+        }
+      },
+      {
+        "frame_id": "804:9285",
+        "frame_name": "PROJETS R&D & INNOVATION",
+        "frame_size": {
+          "x": 1920.0,
+          "y": 3521.73046875
+        },
+        "direct_paint_usages": 5,
+        "inherited_paint_usages": 3,
+        "unique_source_paints": 8,
+        "unique_source_images": 8,
+        "scale_mode_usages": {
+          "FILL": 7,
+          "STRETCH": 1
+        }
+      }
+    ],
+    "crop_examples": [
+      {
+        "role": "Full-width accomplishments photography",
+        "hash_prefix": "8d6a95483a8d",
+        "nodes": ["804:6082", "1479:5933"],
+        "reading": "Desktop source node 1920×864.460; mobile source node 402×637. Mobile stores a different paint transform and STRETCH mode. This supports a distinct mobile crop, not simply shrinking the desktop image.",
+        "evidence": [
+          {
+            "asset_id": "8d6a95483a8d22e1645f9bc5945f7f6f947bed7b",
+            "node_id": "804:6082",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 1920.0,
+              "y": 864.4600219726562
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 0.9997609853744507,
+              "m12": 0.00011949384497711435
+            },
+            "original_image_dimensions": {
+              "width": 2880,
+              "height": 1297
+            },
+            "video_hash": null
+          },
+          {
+            "asset_id": "8d6a95483a8d22e1645f9bc5945f7f6f947bed7b",
+            "node_id": "1479:5933",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 402.0,
+              "y": 637.0
+            },
+            "scale_mode": "STRETCH",
+            "paint_transform": {
+              "m00": 0.15848705172538757,
+              "m01": 0.0,
+              "m02": 0.1746511459350586,
+              "m10": 0.0,
+              "m11": 0.672521710395813,
+              "m12": 0.23487627506256104
+            },
+            "original_image_dimensions": {
+              "width": 2880,
+              "height": 1297
+            },
+            "video_hash": null
+          }
+        ]
+      },
+      {
+        "role": "Landscape shared card photography",
+        "hash_prefix": "667199d3852f",
+        "nodes": ["98:3014", "1479:10577"],
+        "reading": "Desktop shared source 435×300 (1.45:1), mobile source 370×220 (1.682:1). Both FILL. Exact source transforms differ; source node sizes are measured reference containers, not universal CSS tokens.",
+        "evidence": [
+          {
+            "asset_id": "667199d3852f814408ad313188c8ee5ddd0306aa",
+            "node_id": "98:3014",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 435.0,
+              "y": 300.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 0.8275245428085327,
+              "m01": 0.0,
+              "m02": 0.08623772859573364,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 961,
+              "height": 707
+            },
+            "video_hash": null
+          },
+          {
+            "asset_id": "667199d3852f814408ad313188c8ee5ddd0306aa",
+            "node_id": "1479:10577",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 370.0,
+              "y": 220.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 961,
+              "height": 707
+            },
+            "video_hash": null
+          }
+        ]
+      },
+      {
+        "role": "News article lead image",
+        "hash_prefix": "18d21704a196",
+        "nodes": ["804:8079", "1479:7238"],
+        "reading": "Desktop 1041×650 (1.602:1), mobile 370×200 (1.85:1), both FILL. Use editorial landscape crops and retain the subject across narrower frames.",
+        "evidence": [
+          {
+            "asset_id": "18d21704a19621fe44db704aaeb22d67d6c541c4",
+            "node_id": "804:8079",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 1041.0,
+              "y": 650.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 0.9995733499526978,
+              "m12": 0.00021331057359930128
+            },
+            "original_image_dimensions": {
+              "width": 1562,
+              "height": 879
+            },
+            "video_hash": null
+          },
+          {
+            "asset_id": "18d21704a19621fe44db704aaeb22d67d6c541c4",
+            "node_id": "1479:7238",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 370.0,
+              "y": 200.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 1562,
+              "height": 879
+            },
+            "video_hash": null
+          }
+        ]
+      },
+      {
+        "role": "News-list image",
+        "hash_prefix": "9121cba96f83",
+        "nodes": ["804:8105", "1479:7257"],
+        "reading": "Desktop 140×140 square becomes mobile 370×160 landscape. The source bitmap is only 210×210. This reference establishes composition but would need a better source or reviewed replacement for larger production use.",
+        "evidence": [
+          {
+            "asset_id": "9121cba96f8318a8a15739a1ab641ae2e6af8acd",
+            "node_id": "804:8105",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 140.0,
+              "y": 140.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 210,
+              "height": 210
+            },
+            "video_hash": null
+          },
+          {
+            "asset_id": "9121cba96f8318a8a15739a1ab641ae2e6af8acd",
+            "node_id": "1479:7257",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 370.0,
+              "y": 160.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 210,
+              "height": 210
+            },
+            "video_hash": null
+          }
+        ]
+      },
+      {
+        "role": "Portrait card source",
+        "hash_prefix": "e0260d1786a0",
+        "nodes": ["1061:9379", "1479:5318"],
+        "reading": "Desktop library source 435×500 portrait; mobile internal master source 320×320 square. Both FILL. The mobile measurement belongs to an internal symbol master; instance sizing/visibility overrides still need resolution.",
+        "evidence": [
+          {
+            "asset_id": "e0260d1786a08c1177e8af853ede04c1e7be2d0a",
+            "node_id": "1061:9379",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 435.0,
+              "y": 500.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 0.9992343187332153,
+              "m01": 0.0,
+              "m02": 0.00038284840411506593,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 653,
+              "height": 750
+            },
+            "video_hash": null
+          },
+          {
+            "asset_id": "e0260d1786a08c1177e8af853ede04c1e7be2d0a",
+            "node_id": "1479:5318",
+            "paint_type": "IMAGE",
+            "role": "image",
+            "node_size": {
+              "x": 320.0,
+              "y": 320.0
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 0.9992343187332153,
+              "m01": 0.0,
+              "m02": 0.00038284840411506593,
+              "m10": 0.0,
+              "m11": 1.0,
+              "m12": 0.0
+            },
+            "original_image_dimensions": {
+              "width": 653,
+              "height": 750
+            },
+            "video_hash": null
+          }
+        ]
+      },
+      {
+        "role": "Hero motion and poster",
+        "hash_prefix": "ca5465646691",
+        "nodes": ["892:5041", "1479:5841"],
+        "reading": "The exact originally linked node is a VIDEO paint. Desktop node 1920×850.650; mobile node 402.603×874.000. Shared 4096×1974 poster and same embedded video hash. Mobile paint has a distinct horizontal transform, so the desktop hero composition requires an intentional mobile crop.",
+        "evidence": [
+          {
+            "asset_id": "ca5465646691f3e5aa403a402b2c172e8adacc7a",
+            "node_id": "892:5041",
+            "paint_type": "VIDEO",
+            "role": "image",
+            "node_size": {
+              "x": 1920.0,
+              "y": 850.650390625
+            },
+            "scale_mode": "FILL",
+            "paint_transform": {
+              "m00": 1.0,
+              "m01": 0.0,
+              "m02": 0.0,
+              "m10": 0.0,
+              "m11": 0.9193114638328552,
+              "m12": 0.04034426808357239
+            },
+            "original_image_dimensions": {
+              "width": 4096,
+              "height": 1974
+            },
+            "video_hash": "d4edfd7578b47366c4b1df8ab473b1c0d26b9e9d"
+          },
+          {
+            "asset_id": "ca5465646691f3e5aa403a402b2c172e8adacc7a",
+            "node_id": "1479:5841",
+            "paint_type": "VIDEO",
+            "role": "image",
+            "node_size": {
+              "x": 402.602783203125,
+              "y": 874.0000610351562
+            },
+            "scale_mode": "STRETCH",
+            "paint_transform": {
+              "m00": 0.20408692955970764,
+              "m01": 0.0,
+              "m02": 1.7288998597666378e-16,
+              "m10": 0.0,
+              "m11": 0.9193114638328552,
+              "m12": 0.04034427925944328
+            },
+            "original_image_dimensions": {
+              "width": 4096,
+              "height": 1974
+            },
+            "video_hash": "d4edfd7578b47366c4b1df8ab473b1c0d26b9e9d"
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Not a native whole-screen rendered comparison.",
+      "Image content and filenames do not establish institutional claims, subjects, people, production permissions or licensing.",
+      "Imported screenshots of variables are secondary reference evidence; recovered actual variables are authoritative for Figma analysis, and current owner-selected production identity retains precedence.",
+      "No complete website-export images were found among the embedded rasters.",
+      "Empty native altText does not establish whether final HTML can use a decorative empty alt or needs a descriptive alternative."
+    ]
+  },
+  "prototype": {
+    "directInteractions": {
+      "activeRecords": 576,
+      "deletedRecords": 0,
+      "byCanvas": {
+        "IRESEN": 302,
+        "Internal Only Canvas": 36,
+        "MOBILE": 238
+      },
+      "triggers": {
+        "ON_CLICK": 438,
+        "ON_HOVER": 88,
+        "AFTER_TIMEOUT": 11,
+        "DRAG": 25,
+        "MOUSE_ENTER": 14
+      },
+      "actions": 576,
+      "connectionTypes": {
+        "INTERNAL_NODE": 568,
+        "CLOSE": 8
+      },
+      "navigationTypes": {
+        "SWAP_STATE": 454,
+        "ABSENT": 8,
+        "OVERLAY": 33,
+        "NAVIGATE": 46,
+        "SCROLL_TO": 34,
+        "SWAP": 1
+      },
+      "transitionTypes": {
+        "SMART_ANIMATE": 438,
+        "INSTANT_TRANSITION": 16,
+        "ABSENT": 30,
+        "MOVE_FROM_RIGHT": 22,
+        "DISSOLVE": 30,
+        "SCROLL_ANIMATE": 28,
+        "MOVE_FROM_BOTTOM": 8,
+        "MOVE_FROM_LEFT": 4
+      }
+    },
+    "instanceOverrideInteractions": {
+      "activeRecords": 144,
+      "deletedRecords": 8,
+      "byCanvas": {
+        "IRESEN": 102,
+        "MOBILE": 42
+      },
+      "triggers": {
+        "ON_CLICK": 52,
+        "ABSENT": 92
+      },
+      "actions": 144,
+      "connectionTypes": {
+        "INTERNAL_NODE": 52,
+        "ABSENT": 92
+      },
+      "navigationTypes": {
+        "SWAP_STATE": 24,
+        "ABSENT": 92,
+        "NAVIGATE": 15,
+        "SCROLL_TO": 1,
+        "OVERLAY": 12
+      },
+      "transitionTypes": {
+        "SMART_ANIMATE": 24,
+        "ABSENT": 92,
+        "INSTANT_TRANSITION": 5,
+        "SCROLL_ANIMATE": 1,
+        "DISSOLVE": 10,
+        "MOVE_FROM_RIGHT": 12
+      }
+    },
+    "countsAreNotEffectiveControls": true,
+    "partialActiveOverrideCount": 92,
+    "explicitStickyScrollCount": 29,
+    "mobileHorizontalScrollCount": 9,
+    "allInstanceMastersResolved": true,
+    "instanceCount": 1247,
+    "variantNodes": 246,
+    "variantSpecs": 268,
+    "componentPropertyDefinitionNodes": 84,
+    "visibleUnsetDestinationExamples": ["413:2667", "804:6488", "1584:6752"],
+    "partialDesktopNavigationBaseInteractionMissing": "785:5392"
+  },
+  "implementationPrecedence": {
+    "primaryBlue": "#296BB4",
+    "navy": "#12345A",
+    "decision": "Owner-approved current identity supersedes historical Figma color values; source inspection does not change runtime tokens or authorize sample copy."
+  }
+}

@@ -4,6 +4,23 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Native Figma design reference
+
+- Retrieved and hash-verified the owner-uploaded 164,268,977-byte Git LFS source;
+  preserved its pointer, original bytes and private working analysis.
+- Decoded 20,689 nodes and documented 14 desktop pages, 13 full mobile pages,
+  source colors/type/layout, component anatomy/states, media crops and prototype
+  behavior with source IDs and sanitized machine-readable evidence.
+- Recorded historical palette differences, design-board caption errors,
+  inherited-interaction gaps and RTL/tablet/native-rendering limits. Owner-approved
+  identity and content remain authoritative; runtime design tokens are unchanged.
+- Verified full decode consumption, graph/asset references, source hashes,
+  evidence consistency, documentation links, formatting and whitespace.
+
+See [design language](docs/design-system.md#native-design-language-analysis--2026-10-08),
+[source record](docs/asset-inventory.md#native-figma-source) and
+[verification](docs/validation.md#native-figma-reference-analysis--2026-10-08).
+
 ## 2026-10-08 — Design workflow and UI refinement
 
 - Added eight repository-local IRESEN design skills and optional pinned Taste and

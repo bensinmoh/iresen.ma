@@ -49,3 +49,40 @@ CONTRIBUTING.md. Each requested increment updates affected documentation and
 [CHANGELOG.md](../CHANGELOG.md) before committing. Local passing checks do not
 substitute for the current PR's CI; the corresponding GitHub check runs and merge
 history provide the remote completion record.
+
+## Native Figma reference analysis — 2026-10-08
+
+The owner-uploaded Git LFS source was retrieved from revision `37b0689` and
+verified at 164,268,977 bytes with SHA-256
+`2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a`.
+The tracked pointer and original payload were preserved unchanged.
+
+Offline recovery consumed all 26,102,711 message bytes using 653 embedded
+schema definitions, with zero trailing bytes. All 20,689 node IDs are unique;
+all parent references and 1,247 instance masters resolve. Thirty Infinity
+size constraints and six NaN spacing values are represented as JSON null, with
+exact IEEE bits and paths retained privately. These are source sentinels, not
+missing fields or zeros.
+
+All 223 raster payloads opened successfully, matched their filename SHA-1 hashes
+and resolved all 859 raster references. Eight asset contact sheets and selected
+source screenshots were visually inspected. The embedded MP4 matches
+`public/videos/hero.mp4` in size and SHA-256. Desktop/mobile homepage section
+geometry was cross-checked with labeled private geometry maps; those maps are
+not native Figma screenshots.
+
+The committed [measured design language](design-system.md#native-design-language-analysis--2026-10-08)
+and [evidence JSON](references/figma/design-evidence.json) were checked against
+the raw graph and reviewed for source accuracy. JSON syntax, node IDs, measured
+properties, aggregate counts, local links/anchors, pinned reader hashes,
+documentation formatting and `git diff --check` passed. Added files contain
+selected design properties and aggregates; raw text, plugin metadata, user data
+and extracted media remain ignored. Runtime files and dependencies are unchanged.
+
+Coverage includes 14 desktop pages, 13 full mobile pages, the design-system
+board, foundation variables, typography, spacing, corners, component anatomy,
+media crops and serialized prototype behavior. It does not establish native
+rendered fidelity, effective nested inheritance, prototype execution, dedicated
+RTL/tablet layouts, font/media licensing, approved institutional copy or production
+accessibility. The application/database suite was not rerun locally for this
+reference-only increment; its pull request is subject to the current CI workflow.
