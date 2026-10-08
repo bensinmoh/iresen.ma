@@ -95,10 +95,10 @@ unfinished measurements clearly separate from implemented decisions.
 
 ## Adopted UI refinements — 2026-10-08
 
-The header groups language access and the menu across the available mobile width,
-with a clear border between identity and controls. Active language links use a
-quiet blue surface as well as an underline; the menu has an identifiable control
-boundary. Search retains a 44px-high interaction target.
+The earlier header refinement grouped language access and the menu across the
+available mobile width, with a clear border between identity and controls.
+Active language links used a quiet blue surface as well as an underline; the
+menu had an identifiable control boundary. Search retained a 44px-high target.
 
 The earlier footer refinement used distinct type roles: 16px body/desktop links,
 14px group headings and utility/mobile links, and 13px copyright metadata at the
@@ -130,3 +130,29 @@ routes, contact information and networks supersede historical mockup content.
 Mobile and Arabic reflow are adaptations; decoded source evidence does not
 establish native rendered fidelity. Current verification is recorded in
 [the footer log](docs/footer.md#reference-rework-verification--2026-10-08).
+
+## Navigation reference adaptation — 2026-10-08
+
+The navigation follows the owner's two reattached header/menu screenshots: a
+wide logo and navigation arrangement, separate search/contact controls, a white
+open tab and a generous three-part mega-menu. The approved hierarchy replaces
+the reference's historical labels. The panel uses useful destination descriptions,
+fine dividers, a navy link hover/focus surface and a quiet related-route block;
+sample events and funding claims are not reproduced.
+
+A header-specific 120rem maximum supports a single row from 110rem, a two-row
+desktop layout from 70rem, and a compact disclosure menu below that. These rem
+thresholds give long French/English/Arabic labels room to remain legible. The
+homepage uses navy with the supplied reversed logo while its hero remains
+unimplemented; interior pages use white and the colored logo. No photograph or
+hero playback was added as part of navigation work.
+
+Native disclosures preserve click, keyboard, touch and no-JavaScript access.
+Focus, current-route indicators, optional mouse-hover discovery, reduced motion
+and logical Arabic layout support the shared interaction language. New localized
+descriptions are wayfinding drafts, separate from approved institutional copy.
+Verified in the local production build across FR/EN/AR at 320–1440px, including
+open menus and 200% text at 320/1440px; the 1920px single row, touch navigation,
+reduced motion and final screenshots were also checked. All 28 browser tests
+passed, including hover Escape and breakpoint focus restoration.
+[Navigation documentation](docs/navigation.md) records source limits and coverage.

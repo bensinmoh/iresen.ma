@@ -24,8 +24,13 @@ marketing page.
 - French is the default locale; `/fr`, `/en` and `/ar` have explicit URLs. Arabic
   uses RTL. Stable page IDs and equivalent localized paths are centralized in
   [src/lib/site.ts](src/lib/site.ts) and [src/i18n/routing.ts](src/i18n/routing.ts).
-- The responsive header, language selectors and substantial trilingual navy
-  footer are implemented. The footer follows the analyzed native Figma reference
+- The responsive header follows the owner's reattached navigation screenshots
+  with desktop mega-menus, a compact grouped menu, search/contact controls and
+  equivalent-page language access. It preserves the approved hierarchy, using a
+  navy homepage fallback and white interior header. New localized descriptions
+  are wayfinding drafts; no sample event/funding promotion or hero was added.
+  [Navigation documentation](docs/navigation.md) records sources and verification.
+  The substantial trilingual navy footer follows the analyzed native Figma reference
   and owner-reattached Footer.png, retaining the requested newsletter CTA.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.

@@ -70,8 +70,8 @@ navigation weight; the reference rework below uses 600 weight for desktop links.
 `--color-action-surface` (`#EAF1F8`) is the quiet background for hover/current
 language states in the header; use primary blue text and preserve the current
 language underline. This is a control surface, not a new brand primary or status
-color. Mobile header actions span the available width beneath a divider, keeping
-language access and the outlined menu control distinct.
+color. The earlier refinement's mobile header actions spanned the available width
+beneath a divider, keeping language access and the outlined menu control distinct.
 
 The earlier footer refinement grouped the primary contact action above secondary
 news/transfer links and separated utilities with a divider. Its reference rework
@@ -103,6 +103,36 @@ a localized unavailable notice and privacy link explain the current availability
 Logical layout, isolated Latin identifiers and meaningful arrow mirroring support
 Arabic while preserving physical signature corners. See [implementation and
 current verification](footer.md#reference-rework--2026-10-08).
+
+## Navigation reference composition — 2026-10-08
+
+The owner-attached closed-header and open-institute screenshots guide this shared
+navigation. The header uses `min(100% - clamp(1.25rem, 3.125vw, 3.75rem) * 2, 120rem)`;
+the reading-content maximum remains 80rem. It has one row from `110rem`, separate
+identity/control and navigation rows from `70rem`, and a compact native Menu
+disclosure below `70rem`. Approved page groups and centralized locale routes
+retain precedence over historical source labels.
+
+Navy with a delivered reversed logo is the homepage fallback until its hero is
+implemented. Interior pages use white and the colored logo. The open desktop tab
+joins a white, full-width panel with introduction, destination list and related
+route. Fine dividers, 600-weight link titles, readable secondary descriptions,
+navy hover/focus links and a quiet selected-corner related block give each role
+a clear purpose. Current links use `aria-current` and groups have an underline.
+
+The additional `Header` UI catalog text is localized wayfinding draft copy,
+not approved institutional claims or a live campaign. Related cards use existing
+approved destinations; the example event and funding promotion are omitted.
+Native `details`/`summary` preserve click, touch, keyboard and no-JavaScript
+access. JavaScript adds focus-aware dismissal, Escape focus return, Arrow Down
+entry and optional mouse-hover discovery. Logical layout and meaningful arrow
+mirroring support Arabic without Latin tracking or reversed brand corners.
+
+Local production verification passed across FR/EN/AR at 320–1440px, including
+open navigation and 200% text at 320/1440px. The 1920px single row, touch navigation,
+reduced motion and final screenshots were checked; all 28 browser tests passed.
+See [navigation sources, decisions
+and check status](navigation.md) and [the validation log](validation.md#navigation-reference-adaptation--2026-10-08).
 
 ## Native design-language analysis — 2026-10-08
 
@@ -187,7 +217,7 @@ standalone alliances section, and rearranges sections into a narrow reading flow
 | Desktop news/statistics | `804:6120`: 100px vertical; `804:6025`: 195px horizontal/40px vertical            | Local composition decisions, not global token defaults                                             |
 | Mobile sections         | `1479:5865`, `1479:5953`: 16px sides/56px vertical, 370px interiors               | Narrow-screen reference; preserve content fit at other widths                                      |
 | Content gaps            | 10px wrappers coexist with 30/40/60px desktop and 30/32px mobile gaps             | Retain current 4/8px implementation rhythm; source does not prove an exact universal spacing scale |
-| Navigation              | `718:5472`: 1920 × 128; inner `718:5444`: 1800 × 54 at x60/y36                    | Header proportion reference; current compact header remains implemented behavior                   |
+| Navigation              | `718:5472`: 1920 × 128; inner `718:5444`: 1800 × 54 at x60/y36                    | Header proportion reference; current navigation adapts to wide, two-row and compact layouts        |
 | Hero                    | `804:6000`: 1920 × 850; copy `804:6007`: 1094 × 463 at x60/y327.186               | Keep readable copy space and media contrast; do not lock web hero height                           |
 
 STRETCH grid `sectionSize:10` is a serialized guide parameter, not a measured

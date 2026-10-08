@@ -4,6 +4,25 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Navigation reference adaptation
+
+- Reworked the header from the owner's closed-header and open-menu screenshots,
+  using the approved hierarchy, wide desktop mega-menus and a compact grouped
+  menu with separate language, search and contact access.
+- Added a single-row layout from 110rem and two-row desktop layout from 70rem;
+  the homepage uses a navy fallback while interior headers use white.
+- Retained native disclosures and no-JavaScript destinations, adding keyboard,
+  focus-aware dismissal and optional mouse-hover discovery. Arabic uses logical
+  layout and equivalent localized routes.
+- Added simple localized wayfinding drafts and related approved destinations
+  instead of reproducing the reference's example event/funding promotion.
+- Passed lint, strict types, formatting, 8 unit tests, 4 CMS integration tests,
+  the production build and all 28 browser tests. Verified 21 responsive/text-size
+  combinations, touch navigation, reduced motion and final rendered screenshots.
+
+See [navigation implementation](docs/navigation.md) and
+[current validation](docs/validation.md#navigation-reference-adaptation--2026-10-08).
+
 ## 2026-10-08 — Footer reference rework
 
 - Reworked the footer using the previously analyzed native Figma frame and the

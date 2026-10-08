@@ -80,5 +80,46 @@
     "errorDescription": "Please try again in a moment.",
     "retry": "Try again",
     "backHome": "Return to home"
+  },
+  "Header": {
+    "discover": "Discover more",
+    "explore": "Explore",
+    "groups": {
+      "institute": {
+        "title": "Discover the Institute",
+        "description": "Learn about IRESEN, its mission and its organisation."
+      },
+      "research": {
+        "title": "From research to innovation",
+        "description": "Explore research priorities, programmes and collaborative projects."
+      },
+      "expertise": {
+        "title": "Explore research capabilities",
+        "description": "Find research platforms and the network of laboratories and experts."
+      },
+      "resources": {
+        "title": "Stay informed and explore",
+        "description": "Find news, events and resources from the Institute."
+      }
+    },
+    "pages": {
+      "institute": "The Institute’s identity, mission and positioning.",
+      "governance": "The Institute’s governance and organisation.",
+      "priorities": "Research directions and roadmaps.",
+      "programmes": "Discover research and innovation programmes.",
+      "projects": "Explore collaborative research projects.",
+      "platforms": "Discover research and experimentation platforms.",
+      "network": "Explore the network of laboratories and experts.",
+      "news": "Follow news from the Institute.",
+      "events": "Find events and meetings.",
+      "publications": "Read publications and reports.",
+      "media": "Browse visual and audiovisual resources.",
+      "opportunities": "Find opportunities, careers and calls for projects."
+    },
+    "features": {
+      "workWithUs": "Discover opportunities to collaborate with IRESEN.",
+      "opportunities": "Find opportunities and calls for projects.",
+      "publications": "Explore topics through publications and reports."
+    }
   }
 }

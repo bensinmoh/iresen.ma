@@ -80,5 +80,46 @@
     "errorDescription": "Veuillez réessayer dans un instant.",
     "retry": "Réessayer",
     "backHome": "Retour à l’accueil"
+  },
+  "Header": {
+    "discover": "À découvrir",
+    "explore": "Explorer",
+    "groups": {
+      "institute": {
+        "title": "Découvrir l’Institut",
+        "description": "Comprendre IRESEN, sa mission et son organisation."
+      },
+      "research": {
+        "title": "De la recherche à l’innovation",
+        "description": "Explorer les priorités, les programmes et les projets collaboratifs."
+      },
+      "expertise": {
+        "title": "Explorer les capacités de recherche",
+        "description": "Accéder aux plateformes et au réseau de laboratoires et d’experts."
+      },
+      "resources": {
+        "title": "S’informer et approfondir",
+        "description": "Retrouver les actualités, les événements et les ressources de l’Institut."
+      }
+    },
+    "pages": {
+      "institute": "Identité, mission et positionnement de l’Institut.",
+      "governance": "Gouvernance et organisation de l’Institut.",
+      "priorities": "Orientations et feuilles de route de la recherche.",
+      "programmes": "Découvrir les programmes de recherche et d’innovation.",
+      "projects": "Explorer les projets de recherche collaborative.",
+      "platforms": "Découvrir les plateformes de recherche et d’expérimentation.",
+      "network": "Explorer le réseau de laboratoires et d’experts.",
+      "news": "Suivre les actualités de l’Institut.",
+      "events": "Retrouver les événements et les rencontres.",
+      "publications": "Consulter les publications et les rapports.",
+      "media": "Parcourir les ressources visuelles et audiovisuelles.",
+      "opportunities": "Consulter les opportunités, les carrières et les appels à projets."
+    },
+    "features": {
+      "workWithUs": "Découvrir les possibilités de collaboration avec IRESEN.",
+      "opportunities": "Retrouver les opportunités et les appels à projets.",
+      "publications": "Approfondir les sujets avec les publications et les rapports."
+    }
   }
 }
