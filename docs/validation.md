@@ -105,3 +105,33 @@ incremental build compiled without warnings. Broader browser and screen-reader
 coverage remains outside this pass. See [review captures and reference
 limits](footer.md#reference-rework-verification--2026-10-08). Current PR CI and merge
 are recorded by GitHub rather than inferred from these local results.
+
+## Navigation reference adaptation — 2026-10-08
+
+The current navigation adapts the owner's two header/menu screenshots while
+retaining the approved hierarchy and supplied brand assets. Final local checks:
+
+| Check                                                                                          | Result                                                                                            |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Lint, strict types and repository formatting                                                   | Passed                                                                                            |
+| Unit and local CMS integration checks                                                          | 8 unit / 4 integration passed                                                                     |
+| Production build                                                                               | Passed; final incremental build compiled without warnings                                         |
+| Production Chromium browser suite                                                              | 28 passed, including 9 dedicated navigation tests                                                 |
+| FR/EN/AR open-menu containment and text enlargement                                            | 21 combinations passed: 320/390/768/1024/1440px, plus 200% text at 320/1440px                     |
+| Mouse, keyboard, hover Escape, outside dismissal, current states and breakpoint focus transfer | Passed; outside focus is preserved                                                                |
+| Touch navigation                                                                               | Passed in a touch-enabled Chromium context from compact menu to governance                        |
+| No-JavaScript navigation and equivalent locale destinations                                    | Passed in browser suite                                                                           |
+| Reduced motion                                                                                 | Control transitions reduced to 0.01ms                                                             |
+| Final screenshot review                                                                        | Inspected FR 1440/1920px, AR 320/390/1440px, EN 1440px, white interior header and resources panel |
+
+The small-screen correction keeps language/search/menu on one row at normal
+text size at 320px. The hover Escape and resize regressions were corrected and
+verified in the final production build. Review artifacts are retained at
+`docs/screenshots/navigation-fr-desktop.png`,
+`docs/screenshots/navigation-fr-wide.png` and
+`docs/screenshots/navigation-ar-mobile.png`.
+
+Broader browser and manual screen-reader review remain outside this local
+Chromium/axe pass; automated scans do not establish full WCAG conformance.
+See [source limits and implementation choices](navigation.md). Current PR CI and
+merge status are recorded by GitHub, separately from these local results.
