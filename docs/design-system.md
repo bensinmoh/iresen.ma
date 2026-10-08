@@ -447,9 +447,10 @@ the hero instead of clipping content. CSS dynamic viewport units and responsive
 header estimates remain functional without JavaScript. No fixed heights or
 body overflow locks are used.
 
-The narrow blue band presents Développer · Éprouver · Valoriser as navigation,
-with the verified 2011 founding year only on home/institute. No sample statistics,
-certification badge or long explanatory cards are included. Display type remains
+The initial narrow blue band presented Développer · Éprouver · Valoriser as
+navigation, with the verified 2011 founding year on home/institute. The later
+homepage figure request below replaces that homepage band; other pages retain
+their pathways and institute retains its founding year. Display type remains
 fluid; Arabic uses natural tracking, logical alignment and directional arrows.
 
 ## Hero layout and typography refinements — 2026-10-08
@@ -473,3 +474,56 @@ See [the font guide](fonts.md) for loading, subset and license details, and
 [the validation log](validation.md) for this revision's executed checks and
 rendered coverage. Earlier verification and source measurements above describe
 their respective revisions, not this change.
+
+## Shared key-figure typography — 2026-10-08
+
+The owner-attached Figma screenshot references from 2026-10-08 at 20.37.38,
+20.41.03 and 20.41.08 show Plus Jakarta Sans values at 60px, weight 600, and labels
+at 18px, weight 500. Both use 100% line height and 0% tracking, with white values
+and 70% white labels. These are styling hints, distinct from the five numeric
+claims explicitly supplied in the owner's later homepage request. The implemented
+style applies to those homepage values and the existing 2011 founding figure
+on institute.
+
+`.key-figure` stacks `.key-figure-value` over `.key-figure-label` with the shared
+spacing token. Mobile preserves this structure rather than changing to a smaller
+value and horizontal label. The shared roles are:
+
+| Role  | Family                | Size token                 | Weight | Line height | Tracking | Color                       |
+| ----- | --------------------- | -------------------------- | ------ | ----------- | -------- | --------------------------- |
+| Value | `var(--font-latin)`   | `--font-size-figure`       | 600    | 1           | 0        | White                       |
+| Label | Inherited body family | `--font-size-figure-label` | 500    | 1 (Latin)   | 0        | `var(--color-figure-label)` |
+
+`--font-size-figure` is `clamp(2.25rem, 4.167vw, 3.75rem)`, corresponding to
+36–60px at the default root size. `--font-size-figure-label` is `1.125rem` (18px).
+Values deliberately use the Latin family for isolated Latin numerals in Arabic,
+including plus-prefixed homepage values. Arabic labels inherit the current
+Tahoma/Arial body stack, with line height
+1.45 and natural tracking; they do not inherit Latin numeral typography.
+
+`--color-figure-label` defaults to `rgb(255 255 255 / 70%)` for suitable dark
+surfaces. `.hero-highlights` overrides it to `rgb(255 255 255 / 87%)` on the
+approved `#296BB4` band, giving approximately 4.55:1 contrast instead of the
+source opacity's 3.54:1. Recheck this small-text contrast when reusing the role
+on another surface. Current application/rendered verification is recorded in
+[the validation log](validation.md); earlier hero checks are revision-specific.
+
+The homepage band uses a semantic definition list of five owner-supplied figures:
+69 supported collaborative projects, +60 patents filed, +1000 young researchers
+supported, +1100 scientific publications and +18 university laboratories
+established. Labels are definition terms and values are their descriptions;
+CSS places the values above their labels. Plus-prefixed values are isolated LTR
+in Arabic. The homepage overrides Latin label line height to 1.35 for long
+wrapping labels; Arabic retains 1.45. The grid uses auto-fit tracks with a
+minimum of `min(100%, 12rem)`,
+reduced to `min(100%, 10rem)` below `35rem`. Gaps are 24px on mobile/tablet and
+32px on wide screens at the default root size; below `35rem`, the last figure
+spans a complete row. The normal-size layout gives five columns at 1440/1920px,
+three at 768px, two at 390px and one at 320px, adapting as text is enlarged.
+The hero can grow on narrow screens to keep all five facts visible.
+This band replaces the homepage's founding-year/pathway items; the
+other pages retain their pathway behavior and institute retains its 2011 figure.
+Corrected French wording, current EN/AR drafts and the content source are recorded
+in [the hero guide](heroes.md#homepage-key-figures--2026-10-08). The user's explicit
+message supplies these claims; screenshot styling hints do not supply content
+approval.

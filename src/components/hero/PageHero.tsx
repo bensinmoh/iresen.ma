@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { heroes } from '@/lib/heroes'
+import { homeFigures } from '@/lib/figures'
 import { pageHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { HeroViewport } from './HeroViewport'
@@ -57,28 +58,41 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
         </div>
       </div>
       <div className="hero-highlights">
-        <div className="container hero-highlights-inner">
-          {(pageId === 'home' || pageId === 'institute') && (
-            <p className="hero-founding">
-              <strong>
-                <bdi>2011</bdi>
-              </strong>
-              <span>{t('founded')}</span>
-            </p>
-          )}
-          <nav aria-label={t('pathways')} className="hero-pathways">
-            {pathways.map(({ key, page }) => (
-              <a
-                key={key}
-                href={pageHref(page, locale)}
-                className={definition.stage === key ? 'hero-pathway-active' : undefined}
-              >
-                <span>{t(`stages.${key}`)}</span>
-                <NavigationIcon name="arrow" />
-              </a>
+        {pageId === 'home' ? (
+          <dl className="container hero-figures" aria-label={t('figuresLabel')}>
+            {homeFigures.map(({ id, value }) => (
+              <div className="key-figure" key={id}>
+                <dt className="key-figure-label">{t(`figures.${id}`)}</dt>
+                <dd className="key-figure-value">
+                  <bdi dir="ltr">{value}</bdi>
+                </dd>
+              </div>
             ))}
-          </nav>
-        </div>
+          </dl>
+        ) : (
+          <div className="container hero-highlights-inner">
+            {pageId === 'institute' && (
+              <p className="key-figure hero-founding">
+                <strong className="key-figure-value">
+                  <bdi>2011</bdi>
+                </strong>
+                <span className="key-figure-label">{t('founded')}</span>
+              </p>
+            )}
+            <nav aria-label={t('pathways')} className="hero-pathways">
+              {pathways.map(({ key, page }) => (
+                <a
+                  key={key}
+                  href={pageHref(page, locale)}
+                  className={definition.stage === key ? 'hero-pathway-active' : undefined}
+                >
+                  <span>{t(`stages.${key}`)}</span>
+                  <NavigationIcon name="arrow" />
+                </a>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
     </HeroViewport>
   )

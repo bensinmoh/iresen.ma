@@ -37,8 +37,14 @@ marketing page.
 - All 22 approved pages have lightweight introductory heroes with five composition
   styles, 17 illustrative backgrounds from the supplied Figma source, short FR/EN/AR
   wayfinding drafts and the Développer · Éprouver · Valoriser reading framework.
-  Only the established founding year (2011) appears as a numeric fact; screenshot
-  statistics and certification claims are omitted. The header-to-band landing
+  The homepage hero band now presents five owner-supplied figures: 69 collaborative
+  projects supported, +60 patents filed, +1000 young researchers supported, +1100
+  scientific publications and +18 university laboratories established. These
+  replace its founding-year/pathway items; other pages retain their pathways,
+  and institute retains the established 2011 founding year. French labels come
+  from the owner's request with spelling corrected; EN/AR labels remain drafted
+  translations. Figma screenshots supply typography hints, rather than approval
+  of numeric claims. The header-to-band landing
   measures the current viewport and grows for content when necessary. See
   [hero documentation](docs/heroes.md).
 - Content sections below the heroes remain honest empty states; the full
@@ -83,8 +89,11 @@ experimentation; valorisation and transfer; human capabilities and expert
 networks; partnerships, cooperation and resources. They guide editorial coverage
 rather than define six additional menu entries or an organigram.
 
-Final homepage modules, factual claims and institutional translations remain editorial
-inputs. Internal narratives and sample export content are not publishable facts.
+Remaining homepage modules, further factual claims and institutional translations
+remain editorial inputs. The five requested homepage figures are recorded in
+[the hero content guide](docs/heroes.md#homepage-key-figures--2026-10-08), sourced
+from the owner's explicit message. Internal narratives and sample export content
+are not publishable facts.
 Do not invent figures, facilities, commitments, people, testimonials or results
 to complete a composition. Draft translations must not be labelled approved.
 

@@ -4,6 +4,27 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-08 — Homepage key figures and typography
+
+- Replaced the homepage's founding-year/pathway band with the owner's explicitly
+  requested figures: 69 supported collaborative projects, +60 patents filed,
+  +1000 young researchers supported, +1100 scientific publications and +18
+  university laboratories established. Kept other pages' pathway behavior.
+- Corrected the supplied French label spelling and added drafted English/Arabic
+  labels; used a semantic definition list with LTR-isolated numeric values.
+- Applied shared value/label roles to the homepage and institute founding figure using
+  the owner's Figma typography hints: Plus Jakarta Sans 600 values, 500 labels,
+  zero tracking and a fluid 36–60px value with an 18px label at default text size.
+- Kept values and labels stacked on mobile; isolated Arabic-page numerals use
+  the Latin family while Arabic labels retain natural shaping and line height.
+- Retained the source's 70% white label token for suitable dark surfaces and
+  used 87% white on the current blue band to meet normal-text contrast.
+
+See [shared figure rules](docs/design-system.md#shared-key-figure-typography--2026-10-08)
+and [the validation log](docs/validation.md) for executed checks and renderings.
+The user's message supplies the homepage claims; the Figma screenshots provide
+the styling hints. See [the content record](docs/heroes.md#homepage-key-figures--2026-10-08).
+
 ## 2026-10-08 — Hero layout and typography refinements
 
 - Aligned the header, hero-body, narrative band, following sections and footer on

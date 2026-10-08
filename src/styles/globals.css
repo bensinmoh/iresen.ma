@@ -875,6 +875,7 @@ html[dir='rtl'] .navigation-icon-arrow {
 }
 
 .hero-highlights {
+  --color-figure-label: rgb(255 255 255 / 87%);
   flex-shrink: 0;
   padding-block: var(--space-6);
   background: var(--color-blue);
@@ -886,22 +887,71 @@ html[dir='rtl'] .navigation-icon-arrow {
   gap: clamp(1.5rem, 5vw, 5rem);
 }
 
-.hero-founding {
+.hero-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  align-items: start;
+  gap: var(--space-8);
+  margin-block: 0;
+}
+
+.hero-figures .key-figure-label {
+  order: 1;
+  line-height: 1.35;
+}
+
+.hero-figures .key-figure {
+  min-inline-size: 0;
+}
+
+.key-figure {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  gap: var(--space-2);
   margin: 0;
-  line-height: 1.2;
 }
 
-.hero-founding strong {
-  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+.key-figure-value {
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-latin);
+  font-size: var(--font-size-figure);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.key-figure-label {
+  color: var(--color-figure-label);
+  font-size: var(--font-size-figure-label);
   font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
-.hero-founding > span {
-  margin-block-start: var(--space-2);
-  font-size: var(--font-size-meta);
+html[lang='ar'] .key-figure-label {
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+
+.hero-founding {
+  flex-shrink: 0;
+}
+
+@media (max-width: 69.999rem) {
+  .hero-figures {
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 35rem) {
+  .hero-figures {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  }
+
+  .hero-figures .key-figure:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 .hero-pathways {
@@ -1072,18 +1122,7 @@ html[lang='ar'] .hero-copy h1 {
   }
 
   .hero-founding {
-    flex-direction: row;
-    align-items: baseline;
-    gap: var(--space-3);
     inline-size: 100%;
-  }
-
-  .hero-founding strong {
-    font-size: 1.5rem;
-  }
-
-  .hero-founding > span {
-    margin: 0;
   }
 
   .hero-pathways a {

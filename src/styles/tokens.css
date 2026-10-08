@@ -22,6 +22,9 @@
   --font-size-body: 1rem;
   --font-size-label: 0.875rem;
   --font-size-meta: 0.8125rem;
+  --font-size-figure: clamp(2.25rem, 4.167vw, 3.75rem);
+  --font-size-figure-label: 1.125rem;
+  --color-figure-label: rgb(255 255 255 / 70%);
   --container-width: 120rem;
   --gutter: clamp(1.25rem, 3.125vw, 4rem);
   --space-1: 0.25rem;

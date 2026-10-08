@@ -160,6 +160,14 @@
       "cookies": "Comprendre les cookies et les préférences de navigation.",
       "accessibility": "Les informations relatives à l’accessibilité du site.",
       "sitemap": "Un accès direct aux pages et aux ressources de l’Institut."
+    },
+    "figuresLabel": "Chiffres clés",
+    "figures": {
+      "collaborativeProjects": "Projets collaboratifs soutenus",
+      "patents": "Brevets déposés",
+      "youngResearchers": "Jeunes chercheurs soutenus",
+      "publications": "Publications scientifiques",
+      "universityLaboratories": "Laboratoires universitaires mis en place"
     }
   }
 }

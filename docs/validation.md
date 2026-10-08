@@ -203,6 +203,44 @@ These checks cover local Chromium rendering and the documented interactions.
 Cross-browser/screen-reader review and the reviewed Arabic companion remain
 separate work. Current PR CI and merge status are recorded by GitHub.
 
+## Homepage figures and shared figure typography — 2026-10-08
+
+The homepage band now shows the owner's five supplied values: 69, +60, +1000,
++1100 and +18, paired with corrected French labels and drafted English/Arabic
+translations. The user message supplies the content; the attached Figma
+screenshots supply the typography reference. Other pages retain their pathways,
+and institute retains its 2011 founding figure.
+
+Final local checks passed `pnpm lint`, `pnpm typecheck`, `pnpm format:check`, 8 unit tests,
+`pnpm build` and all 35 production Chromium browser tests. The build compiled
+without warnings. Existing homepage axe checks pass in all three locales; hero
+checks now verify the five values and the replacement of homepage pathway items.
+CMS integration checks were not repeated for this UI/content change.
+
+An additional 24 production-rendered cases passed: FR/EN/AR at
+320/390/768/1120/1440/1920px, plus 200% root text at 320/1440px. Checks confirmed
+no horizontal overflow or header/title overlap, all five values, unbroken signed
+numbers, labels below their values, weight 600 values, weight 500 labels and
+18px labels at default text size. Values reach 60px at 1440/1920px and use zero
+tracking; Chromium serializes this as `normal`. Enlarged text adapts the column
+count and grows the hero without clipping content. Narrow homepages may therefore
+extend beyond one viewport.
+
+Chromium's rendered-font inspection confirms the self-hosted Plus Jakarta Sans
+for figure numerals in French, English and Arabic.
+
+Inspected final full-page captures:
+
+- [French, 1440px](screenshots/home-figures-fr-1440.png)
+- [Arabic, 390px](screenshots/home-figures-ar-390.png)
+
+The French view presents five aligned figures in one row; Arabic mobile presents
+two columns followed by a full-width final item, in natural RTL reading order.
+An independent source and screenshot review found no material issues with
+semantic pairing, numeral isolation, typography or wrapping. These results cover
+local Chromium rendering; broader browser and screen-reader review remain
+separate work. The figure changes remain local and have not been pushed.
+
 ## Institutional reference documents — 2026-10-08
 
 The three owner-supplied DOCX files were read as source data and preserved under

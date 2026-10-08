@@ -182,9 +182,10 @@ the hero instead of clipping content. CSS dynamic viewport units and responsive
 header estimates remain functional without JavaScript. No fixed heights or
 body overflow locks are used.
 
-The narrow blue band presents Développer · Éprouver · Valoriser as navigation,
-with the verified 2011 founding year only on home/institute. No sample statistics,
-certification badge or long explanatory cards are included. Display type remains
+The initial narrow blue band presented Développer · Éprouver · Valoriser as
+navigation, with the verified 2011 founding year on home/institute. The later
+homepage figure request below replaces that homepage band; other pages retain
+their pathway behavior and institute retains its founding year. Display type remains
 fluid; Arabic uses natural tracking, logical alignment and directional arrows.
 
 ## Hero layout and typography refinements — 2026-10-08
@@ -201,3 +202,37 @@ no persistent fill or underline. Hover and keyboard focus remain visible.
 Header menu labels and their arrows center together within the full control width;
 the compact Menu control also centers its contents. Current executed checks and
 rendered coverage are recorded separately in [the validation log](docs/validation.md).
+
+## Shared key-figure typography — 2026-10-08
+
+The owner's Figma screenshots dated 2026-10-08 at 20.37.38, 20.41.03 and
+20.41.08 are typography hints: Plus Jakarta Sans numeric values at 60px/600,
+labels at 18px/500, both with 100% line height and zero tracking. Values are
+white; the source labels use 70% white. These samples establish a style reference,
+not approval of the illustrated metrics or new content.
+
+The shared key-figure style applies to the five owner-supplied homepage figures
+and the established 2011 founding year on institute. Values scale from 36px to
+60px at the default root size and use Plus Jakarta Sans even for isolated Latin
+numerals in Arabic. Labels
+remain 18px and stack below the value on mobile as well as desktop. Arabic labels
+retain their body family, natural tracking and a 1.45 line height for shaping.
+The homepage's longer Latin labels use a 1.35 line height for wrapping rather
+than the base figure label's 1.
+
+The label token defaults to 70% white on appropriate dark surfaces. The current
+hero band raises this to 87% white on approved blue `#296BB4`: source opacity
+would yield about 3.54:1, while the adaptation yields about 4.55:1 for normal
+label text. See [shared figure rules](docs/design-system.md#shared-key-figure-typography--2026-10-08)
+and [the validation log](docs/validation.md) for executed checks and renderings.
+
+The owner explicitly supplied the homepage's five values in the current request:
+69 Projets collaboratifs soutenus; +60 Brevets déposés; +1000 Jeunes chercheurs
+soutenus; +1100 Publications scientifiques; +18 Laboratoires universitaires mis
+en place. The homepage band now presents these as a semantic definition list,
+replacing its founding-year/pathway items. The user's message is the content
+source; the Figma screenshots supply the styling hints. French labels retain
+the requested wording with spelling corrected; English/Arabic labels are drafted
+translations. Auto-fit tracks adapt the figure count per row to available space
+and enlarged text; the hero grows on narrow screens to display all five facts.
+See [the hero content record](docs/heroes.md#homepage-key-figures--2026-10-08).

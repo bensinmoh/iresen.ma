@@ -160,6 +160,14 @@
       "cookies": "Understand cookies and browsing preferences.",
       "accessibility": "Information about the accessibility of this website.",
       "sitemap": "Direct access to the Institute’s pages and resources."
+    },
+    "figuresLabel": "Key figures",
+    "figures": {
+      "collaborativeProjects": "Collaborative projects supported",
+      "patents": "Patents filed",
+      "youngResearchers": "Young researchers supported",
+      "publications": "Scientific publications",
+      "universityLaboratories": "University laboratories established"
     }
   }
 }

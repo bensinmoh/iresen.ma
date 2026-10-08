@@ -14,6 +14,18 @@ for (const locale of locales) {
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()
       await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
       await expect(hero.locator('.hero-description')).toBeVisible()
+      if (id === 'home') {
+        await expect(hero.locator('.hero-figures dt')).toHaveCount(5)
+        await expect(hero.locator('.hero-figures dd')).toHaveText([
+          '69',
+          '+60',
+          '+1000',
+          '+1100',
+          '+18',
+        ])
+        await expect(hero.locator('.hero-pathways')).toHaveCount(0)
+        await expect(hero.locator('.hero-founding')).toHaveCount(0)
+      }
       await expect(hero.locator('.hero-photo')).toHaveJSProperty('complete', true)
       expect(
         await hero
@@ -36,7 +48,8 @@ for (const locale of locales) {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto(pageHref('home', locale))
     const hero = page.locator('.page-hero')
-    await expect.poll(async () => (await hero.boundingBox())!.height).toBe(844)
+    // Five homepage figures may require a taller landing on narrow screens.
+    await expect.poll(async () => (await hero.boundingBox())!.height).toBeGreaterThanOrEqual(844)
     await page.setViewportSize({ width: 768, height: 1024 })
     await expect.poll(async () => (await hero.boundingBox())!.height).toBe(1024)
     await page.setViewportSize({ width: 1440, height: 900 })
@@ -50,9 +63,9 @@ for (const locale of locales) {
       () => document.documentElement.scrollWidth > window.innerWidth,
     )
     expect(overflow).toBe(false)
-    const lastLink = hero.locator('.hero-pathways a').last()
-    await lastLink.scrollIntoViewIfNeeded()
-    await expect(lastLink).toBeVisible()
+    const lastFigure = hero.locator('.hero-figures .key-figure').last()
+    await lastFigure.scrollIntoViewIfNeeded()
+    await expect(lastFigure).toBeVisible()
     const headerBounds = await page.getByRole('banner').boundingBox()
     const titleBounds = await hero.locator('h1').boundingBox()
     expect(titleBounds!.y).toBeGreaterThan(headerBounds!.y + headerBounds!.height)

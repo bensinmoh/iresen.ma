@@ -48,7 +48,8 @@ The 2026-10-08 structure reference supplies recommendations. Its page sections, 
 - [ ] Inspect accessible website/Illustrator exports before finalizing visual composition.
 - [ ] Approve homepage copy and module selections around Développer · Éprouver · Valoriser.
 - [x] Build lightweight introducing heroes for every approved page, with responsive viewport sizing and an overlaid header; see [page heroes](heroes.md).
-- [ ] Build the narrative/content modules below the heroes; add key figures only from reviewed evidence.
+- [x] Replace the homepage hero band with the owner's five explicitly supplied figures, corrected French labels and drafted EN/AR equivalents; use shared figure typography and retain other pages' pathways. See [the source and label record](heroes.md#homepage-key-figures--2026-10-08).
+- [ ] Build the narrative/content modules below the heroes; obtain reviewed evidence for additional key figures and approve remaining copy/translations.
 - [ ] Compare desktop/tablet/mobile composition and Arabic adaptations; test long content and keyboard/screen-reader use.
 - [ ] Measure a representative production page's transfer, bundle size and LCP; the empty shell is not a performance baseline.
 
