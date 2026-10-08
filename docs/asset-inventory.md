@@ -1,6 +1,6 @@
 # Asset inventory
 
-Inventory date: 2026-10-07. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines are preserved in ignored `private-references/`. The received files are sufficient for the branded foundation.
+Inventory updated: 2026-10-08. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines are preserved in ignored `private-references/`. An owner-supplied video is available in `public/videos/` for future hero implementation. The received files are sufficient for the branded foundation.
 
 ## Received assets and rights
 
@@ -21,6 +21,26 @@ SVG XML was inspected for geometry/color metadata and contains no scripts or ext
 Latest colored/dark wordmark viewBoxes are `0 0 696 194.9`; white/monochrome remain `0 0 695.98 194.94` (all approximately 3.57:1). The primary mark is `0 0 1262.5 508.54` (approximately 2.48:1), the apex is `0 0 177.3 287`, and the favicon is square (`0 0 508.5 508.5`). Reserve dimensions proportionally; do not redraw the wordmark as text. Latest originals retain source filenames under `private-references/brand/`; superseded versions are preserved under its ignored `previous/` directory with hash suffixes.
 
 The latest owner-supplied favicon now uses `#296BB4`, matching the other blue identity assets and UI tokens. Its source SHA-256 is `b897f8993b00234b756d9f63d2adad287ae7a22dbd4112671e462d60635dab07`. All corrected uploads were copied byte-identically; no automatic recoloring was applied.
+
+## Hero video
+
+Received on 2026-10-08 and added at the owner's request for future website hero use. No independent redistribution license or source credit was supplied.
+
+| Property | Value |
+| --- | --- |
+| Exact source filename | `7040278-uhd_4096_1974_30fps (2).mp4` |
+| Repository file | `public/videos/hero.mp4` |
+| Public asset URL | `/videos/hero.mp4` |
+| Role/status | Future hero video; stored as a public asset, not yet referenced by a page |
+| Format | MP4; H.264 video (`yuv420p`) and AAC audio |
+| Dimensions | 4096 × 1974 pixels |
+| Frame rate | 30000/1001 fps (approximately 29.97 fps) |
+| Duration | 18.858 seconds |
+| File size | 9,774,051 bytes (approximately 9.32 MiB) |
+| SHA-256 | `548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb` |
+| Transformation | Filename normalized only; copied byte-identically without transcoding |
+
+Container and stream metadata were inspected with `ffprobe`. The supplied file retains its audio track and its end-of-file MP4 metadata. Future hero implementation should prepare appropriately sized web derivatives with streaming metadata at the start, a lightweight poster, muted playback, a pause control and reduced-motion behavior, then measure page performance as required by the project brief. Adding the asset does not enable playback or publish a deployment.
 
 ## Development references and private guidelines
 
