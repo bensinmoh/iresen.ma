@@ -1259,12 +1259,24 @@ Payload types/import map stayed unchanged. Formatting, ESLint, TypeScript,
 92 unit tests, 21 database integration tests and the production build passed.
 The existing 93 browser cases passed in the complete run; all 10 new relevance
 cases passed in the focused rerun after fixing test locators and separating axe's
-JavaScript audit from the native no-JavaScript journey. Current PR CI runs the
-complete 103-case suite against a freshly migrated PostgreSQL service.
+JavaScript audit from the native no-JavaScript journey. The initial PR CI passed
+the complete 103-case suite against a freshly migrated PostgreSQL service.
 After the final correction-link focus refinement, the rebuilt production server
 also passed all 20 header/relevance browser cases. Three focused header scans
 using the actual final CSS reported no axe violations or horizontal overflow;
 keyboard arrows and Escape restored focus correctly.
+
+The feature was subsequently integrated with the approved mobile menu revision.
+The combined production build, formatting/lint/types, 92 unit tests and all
+108 local browser cases passed. Relevance coverage now includes accepting a
+header correction inside the full-screen mobile menu, closing that menu,
+restoring interactive main content and focusing the results field. Resizing a
+focused mobile correction to the wider header closes the navigation menu while
+preserving the open search and keyboard focus, so navigation cannot cover the
+suggestions. Mobile search
+and suggestions expand in normal flow at `40rem` and below. Arabic result/menu
+captures were refreshed against this integrated build; current PR CI repeats the
+complete 108-case suite.
 
 Integration coverage includes title/body priority despite repeated later-tier
 content, literal PV priority, adjacent-letter and multiword corrections, valid
@@ -1290,6 +1302,7 @@ certification.
 - [French correction and related results, desktop](screenshots/search-relevance-fr-1440.png)
 - [Arabic correction and close result, mobile](screenshots/search-relevance-ar-390.png)
 - [Focused header correction, desktop](screenshots/search-relevance-header-fr-1440.png)
+- [Focused correction in the Arabic mobile menu](screenshots/search-relevance-menu-ar-390.png)
 
 The owner's reminder is recorded in `AGENTS.md`, `instruction.md`, the search
 guide and release backlog: once all content is ready, review/reconstruct the

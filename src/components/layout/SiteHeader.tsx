@@ -63,8 +63,8 @@ export function SiteHeader() {
         document.activeElement === document.body ? lastHeaderFocus : document.activeElement
       const searchHasFocus =
         active instanceof Element && active.closest('.header-search-disclosure')
-      if (mobile.matches && searchHasFocus && menuRef.current) {
-        menuRef.current.open = true
+      if (searchHasFocus && menuRef.current) {
+        menuRef.current.open = mobile.matches
         if (active instanceof HTMLElement) active.focus()
       }
       syncMobileMenu()

@@ -452,9 +452,9 @@ previous treatment.
 
 ## Expandable header search — 2026-10-09
 
-The existing 48/44px magnifier opens a white field with navy text and shared
-physical 10px action corners. It expands toward inline start (left FR/EN, right
-Arabic), with a 220ms width/opacity transition and stable header geometry.
+On wider headers, the existing 48/44px magnifier opens a white field with navy text
+and shared physical 10px action corners. It expands toward inline start (left
+FR/EN, right Arabic), with a 220ms width/opacity transition and stable header geometry.
 The enhanced control is capped at 22rem and available container space; expansion
 can use the other direction when needed. Reduced motion makes the change immediate.
 
@@ -462,8 +462,9 @@ Fine-pointer hover opens without taking focus; explicit keyboard/touch activatio
 focuses the labelled input. Enter or the filled icon sends a native GET query
 to the existing localized search page. Focus retains the open field; Escape,
 outside interaction and leaving disclosure focus close it. Native disclosure/form
-behavior remains without JavaScript; at `35rem` and below, the unenhanced field
-spans the action row below the controls.
+behavior remains without JavaScript. At `40rem` and below, search sits inside
+the open full-screen menu; its input and suggestions occupy the available width
+in normal flow and enlarge the scrollable menu.
 The public search engine now provides ranked results and live suggestions.
 See [the search guide](docs/search.md) and [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
 and [current validation](docs/validation.md); earlier square-control captures retain their scope.

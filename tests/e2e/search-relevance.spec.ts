@@ -93,36 +93,95 @@ test('the user example Insrastructure suggests the public infrastructure spellin
   ).toBeVisible()
 })
 
-test('header correction comes first in keyboard suggestions and preserves the typed query until accepted', async ({
+for (const width of [1440, 390]) {
+  test(`header correction comes first in keyboard suggestions and preserves the typed query until accepted at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto(searchUrl('en', { q: 'research', type: 'page', sort: 'newest', page: '2' }))
+    const header = page.getByRole('banner')
+    const menu = header.locator('.site-menu')
+    if (width === 390) {
+      await menu.locator(':scope > summary').focus()
+      await page.keyboard.press('Enter')
+      await expect(menu).toHaveAttribute('open', '')
+    }
+    const disclosure = header.locator('.header-search-disclosure')
+    const summary = disclosure.locator(':scope > summary')
+    await summary.focus()
+    await summary.press('Enter')
+    const input = disclosure.locator('input[name="q"]')
+    await expect(input).toBeFocused()
+    await input.fill('platfroms')
+    const correction = disclosure.locator('.header-search-correction [data-search-correction]')
+    await expect(correction).toBeVisible()
+    await expect(input).toHaveValue('platfroms')
+    await expect(page).toHaveURL((url) => url.searchParams.get('q') === 'research')
+    const href = (await correction.getAttribute('href'))!
+    const parameters = new URL(href, page.url()).searchParams
+    expect(normalizeSearchText(parameters.get('q')!)).toBe('platforms')
+    expect(parameters.get('type')).toBe('page')
+    expect(parameters.get('sort')).toBe('newest')
+    expect(parameters.has('page')).toBe(false)
+    if (width === 390) {
+      await input.press('Tab')
+      await expect(correction).toBeFocused()
+      await correction.press('Shift+Tab')
+      await expect(input).toBeFocused()
+    }
+    await input.press('ArrowDown')
+    await expect(correction).toBeFocused()
+    await correction.press('ArrowUp')
+    await expect(input).toBeFocused()
+    await input.press('ArrowDown')
+    await correction.press('Enter')
+    await expect(page).toHaveURL(new URL(href, page.url()).href)
+    const resultsInput = page.locator('.search-query-form input[name="q"]')
+    await expect(resultsInput).toHaveValue(parameters.get('q')!)
+    await expect(resultsInput).toBeVisible()
+    if (width === 390) {
+      await expect(menu).not.toHaveAttribute('open', '')
+      await expect(page.locator('main#main-content')).toHaveJSProperty('inert', false)
+      await resultsInput.focus()
+      await expect(resultsInput).toBeFocused()
+    }
+  })
+}
+
+test('resizing a focused mobile correction to the compact header closes the menu and keeps search usable', async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.setViewportSize({ width: 390, height: 900 })
   await page.goto(searchUrl('en', { q: 'research', type: 'page', sort: 'newest', page: '2' }))
-  const disclosure = page.getByRole('banner').locator('.header-search-disclosure')
-  const summary = disclosure.locator(':scope > summary')
-  await summary.focus()
-  await summary.press('Enter')
+  const header = page.getByRole('banner')
+  const menu = header.locator('.site-menu')
+  await menu.locator(':scope > summary').focus()
+  await page.keyboard.press('Enter')
+  await expect(menu).toHaveAttribute('open', '')
+  const disclosure = header.locator('.header-search-disclosure')
+  await disclosure.locator(':scope > summary').focus()
+  await page.keyboard.press('Enter')
   const input = disclosure.locator('input[name="q"]')
   await expect(input).toBeFocused()
   await input.fill('platfroms')
   const correction = disclosure.locator('.header-search-correction [data-search-correction]')
   await expect(correction).toBeVisible()
-  await expect(input).toHaveValue('platfroms')
-  await expect(page).toHaveURL((url) => url.searchParams.get('q') === 'research')
   const href = (await correction.getAttribute('href'))!
-  const parameters = new URL(href, page.url()).searchParams
-  expect(normalizeSearchText(parameters.get('q')!)).toBe('platforms')
-  expect(parameters.get('type')).toBe('page')
-  expect(parameters.get('sort')).toBe('newest')
-  expect(parameters.has('page')).toBe(false)
   await input.press('ArrowDown')
   await expect(correction).toBeFocused()
-  await correction.press('ArrowUp')
-  await expect(input).toBeFocused()
-  await input.press('ArrowDown')
+
+  await page.setViewportSize({ width: 700, height: 900 })
+  await expect(menu).not.toHaveAttribute('open', '')
+  await expect(disclosure).toHaveAttribute('open', '')
+  await expect(correction).toBeVisible()
+  await expect(correction).toBeFocused()
   await correction.press('Enter')
   await expect(page).toHaveURL(new URL(href, page.url()).href)
-  await expect(page.locator('.search-query-form input[name="q"]')).toHaveValue(parameters.get('q')!)
+  await expect(page.locator('main#main-content')).toHaveJSProperty('inert', false)
+  const resultsInput = page.locator('.search-query-form input[name="q"]')
+  await expect(resultsInput).toHaveValue(new URL(href, page.url()).searchParams.get('q')!)
+  await resultsInput.focus()
+  await expect(resultsInput).toBeFocused()
 })
 
 test('Arabic correction links work without JavaScript and remain accessible at 200% text', async ({

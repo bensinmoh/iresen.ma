@@ -25,8 +25,9 @@ merge results are recorded by the corresponding pull request and commit history.
   acronyms and related-term dictionary, then rebuild and verify search when the
   full website content is ready for its final sanity check.
 - Verified migration/rebuild, unchanged CMS artifacts, formatting/lint/types,
-  92 unit and 21 integration tests, production build, existing browser journeys
-  and 20 final header/relevance cases. See [validation](docs/validation.md#search-relevance-and-final-content-reminder--2026-10-09)
+  92 unit and 21 integration tests, production build and all 108 browser cases.
+  Coverage includes accepting mobile corrections, restoring background focus,
+  and keeping search usable when resizing to the wider header. See [validation](docs/validation.md#search-relevance-and-final-content-reminder--2026-10-09)
   for browser and visual coverage; current PR CI validates the complete suite.
 
 ## 2026-10-09 — Mobile reference adaptation

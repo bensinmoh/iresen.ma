@@ -4,9 +4,11 @@ Search uses PostgreSQL behind the replaceable `SearchAdapter` boundary. The
 localized search page accepts `q`, `type`, `sort` and `page` in its URL, so results
 can be bookmarked and browser history preserves the visitor's choices.
 
-The header's white magnifier expands toward inline-start on hover or explicit
-keyboard/touch activation, revealing a labeled input. This moves left in French/English and mirrors
-in Arabic, switching sides when necessary to fit the available header width. Enter or the magnifier submits a GET request. Touch, no-JavaScript
+On wider headers, the white magnifier expands toward inline-start on hover or
+explicit keyboard/touch activation, revealing a labeled input. This moves left
+in French/English and mirrors in Arabic, switching sides when necessary to fit
+the available width. At `40rem` and below, search lives in the open mobile menu;
+its full-width input and suggestions expand in normal flow. Enter or the magnifier submits a GET request. Touch, no-JavaScript
 and reduced-motion users retain the native form. Suggestions use the same public
 search service as full results, with debounce and cancellation.
 
