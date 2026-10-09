@@ -125,6 +125,14 @@ their photographic style does not establish real institutional subjects.
 
 ## Interaction and review
 
+Editable fields use a compact 2px focus outline at their edge, replacing the
+heavy separated frame shown in the owner's 2026-10-09 screenshots. Search paints
+this outline on its field surface so it follows the existing corners and stays
+blue on white inside inverse headers. Dark footer fields retain cyan. Links,
+buttons and selection controls retain their established focus treatment.
+See [shared field rules](docs/design-system.md#refined-field-focus--2026-10-09)
+and [rendered verification](docs/validation.md#refined-field-focus--2026-10-09).
+
 Functional search uses a compact heading, query form, content-type facets and
 readable editorial result rows on the shared grid. The results page supersedes
 its former full-screen introduction and section scaffolding, bringing results

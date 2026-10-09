@@ -1575,3 +1575,48 @@ not Google's live tiles, gesture behavior or exact pin. The supplied shortlink's
 pin, physical-device/Safari behavior and production privacy assessment retain
 [their documented scope](contact.md#location-and-third-party-behavior). Remote CI
 and merge results are recorded by the corresponding pull request and commit history.
+
+## Refined field focus — 2026-10-09
+
+The owner's Organisation and Arabic search screenshots identified the thick
+blue focus frame. Editable inputs, selects and textareas now use a 2px real
+outline at their edge (`outline-offset: -1px`). Header search paints one outline
+on its field surface, keeping the white field's blue indicator independent of
+inverse-header focus colors. Footer email retains cyan. Buttons, links and
+checkboxes retain their existing focus indicators.
+
+Local checks passed: `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+`pnpm build` and `pnpm format:check`. The build retained its existing next-intl
+dynamic-import cache warnings and completed successfully. The existing contact,
+header-search and footer Playwright suites passed all 35 cases against the local
+production build, including native validation/email drafting, search submission,
+Escape restoration, newsletter availability and no-JavaScript access.
+
+A separate rendered Chromium inspection covered FR/EN/AR contact and homepage
+header search at 1440, 768 and 390px. It checked pointer and keyboard focus,
+organisation/email/select/textarea, newsletter email, result-page query and sort,
+blue search on white inside inverse headers, mobile menus and Arabic RTL.
+Contact-field size and position did not change on focus; search stayed inside
+the viewport, and Escape restored the magnifier's separate 3px indicator.
+Newsletter checkboxes also retained their 3px focus indicator.
+
+At 390px with 200% root text, French/Arabic fields reflowed without horizontal
+page overflow, retained their 2px outline, and focused contact/newsletter axe
+scans returned no violations. Emulated forced colors retained a visible real
+outline on the contact field and a system `Highlight` search outline. CSS state
+measurements were made after animation frames settled. Blue contrasts 5.45:1
+against white and 4.78:1 against the pale form surface; cyan/navy is 6.45:1.
+These scoped checks do not establish complete WCAG conformance or coverage of
+other browser engines.
+
+Reviewed crops from this production build:
+
+- [French Organisation field at 1440px](screenshots/input-focus-contact-fr-1440.png)
+- [Arabic header search at 1440px](screenshots/input-focus-search-ar-1440.png)
+- [Arabic mobile-menu search at 390px](screenshots/input-focus-search-ar-390.png)
+
+The latest Contact changes were integrated before completion, preserving the
+centered Apex Leaf eyebrow, directly displayed map and canonical `contact-venue`
+search reference from main. The shared field rule and research references are
+recorded in
+[the design specification](design-system.md#refined-field-focus--2026-10-09).

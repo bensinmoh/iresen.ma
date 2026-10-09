@@ -45,6 +45,9 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   families. Keep one primary action per context, links for navigation and buttons
   for actions. Illustrated states do not supply production semantics; include
   visible focus, readable errors and genuine unavailable/loading/success behavior.
+  Editable inputs, selects and textareas use a compact 2px outline at the field
+  edge; see [field focus](#refined-field-focus--2026-10-09). Links, buttons and
+  selection controls keep the established separate focus outline.
 - **Horizontal navigation:** retain native touch/keyboard scrolling and visible
   focus, with the scrollbar hidden through `.horizontal-scroll`. Apply this to
   horizontal collections, preserving ordinary vertical scrolling controls.
@@ -57,6 +60,38 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   adapt sample copy to approved content. Verify affected desktop/mobile, Arabic,
   long-content and interaction states after visual changes. Record source
   observations separately from proposals and implemented decisions.
+
+## Refined field focus — 2026-10-09
+
+The owner's two screenshots (`Screenshot 2026-10-09 at 11.27.47.png` and
+`11.27.53.png`) identify the overly thick focus frame on Organisation and the
+Arabic search input. Their field text is reference data. This scoped refinement
+uses the restrained 2px treatment documented by
+[IBM Carbon](https://www.carbondesignsystem.com/building-blocks/core/components/text-input/specifications)
+and [Adobe Spectrum](https://spectrum.adobe.com/page/states/), adapted to the
+existing IRESEN palette and control geometry.
+
+`--focus-field-width: 2px` applies to editable inputs, selects and textareas.
+The real outline overlaps the resting edge by 1px (`outline-offset: -1px`),
+removing the former 4px gap and avoiding a second distant rectangle. Layout,
+labels, padding and corners remain stable. Native `:focus-visible` preserves
+the browser's editable-field heuristics, including pointer focus when applicable.
+Checkboxes, radios, file pickers, sliders, buttons and links retain their existing
+focus styling.
+
+The header search paints its outline on `.header-search-form` only while its
+input matches `:focus-visible`; the inner input has no additional outline.
+This follows the field's complete surface and existing physical signature
+corners, including RTL and the mobile menu. Its white surface always uses blue
+`#296BB4`, including inverse headers; focus on the separate magnifier retains
+its own indicator. Dark footer fields inherit cyan `#77C5D5`.
+The indicator uses an actual outline rather than a shadow, with explicit system
+`Highlight` for the search surface in forced-colors mode.
+
+Blue contrasts 5.45:1 against white and 4.78:1 against the pale contact form
+surface; cyan contrasts 6.45:1 against navy. This records the chosen pairs, not
+a claim of overall accessibility conformance. See
+[revision-specific validation](validation.md#refined-field-focus--2026-10-09).
 
 ## Mobile reference adaptation — 2026-10-09
 
