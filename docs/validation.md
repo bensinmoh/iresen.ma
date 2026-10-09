@@ -1472,3 +1472,38 @@ Reviewed screenshots retained for this correction:
 
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
+
+## Contact form eyebrow — 2026-10-09
+
+The owner's screenshot correction centers the form's leaf/label group above its
+title and adds the original blue Apex Leaf. The local rule removes the inherited
+paragraph-width limit; the decorative vector retains its original geometry and
+logical inline-start position in Arabic.
+
+Validation completed on the production build with a disposable local PostgreSQL
+database and Chromium:
+
+- Frozen-lockfile installation, lint, strict types, 97 unit tests and production
+  build passed. The initial sandboxed build could not capture a TypeScript
+  subprocess's configuration output; the normal build passed outside that sandbox.
+- All 19 existing Contact/search browser checks passed, covering FR/EN/AR layout,
+  keyboard FAQs, email draft validation, optional map loading, no-JavaScript
+  fallbacks and searchable section destinations.
+- A focused rendered inspection measured 30 combinations: FR/EN/AR at
+  320/390/768/1024/1440px, each at 100% and 200% root text size. The complete
+  leaf/label group's horizontal center differs from the title center by less
+  than 0.01px. The original 177.3:287 ratio, decorative semantics, logical leaf
+  placement and page containment passed throughout.
+- Inspected the [French desktop](screenshots/contact-eyebrow-fr-1440-2026-10-09.png),
+  [English tablet](screenshots/contact-eyebrow-en-768-2026-10-09.png) and
+  [Arabic mobile](screenshots/contact-eyebrow-ar-390-2026-10-09.png) captures.
+- Rebuilt the local public search catalog. Existing `send-request` metadata
+  already includes the localized eyebrow; the original Apex media entry and
+  reachable section anchors remain. No new searchable content was introduced.
+- The Apex Leaf SHA-256 remains
+  `7c51a47ea0775bd26602ce2a61c8b7dbaf8cfa5597c59189b1b85932a56c0f86`.
+
+Database integration suites and unrelated browser routes were not repeated for
+this scoped presentation correction. Current PR CI runs the complete suite.
+Safari, physical-device and manual screen-reader coverage remain unverified.
+No production deployment or visibility change was performed.
