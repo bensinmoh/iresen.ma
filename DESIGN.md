@@ -1,5 +1,16 @@
 # IRESEN visual direction
 
+## Compact menu control — 2026-10-09
+
+The compact Menu control now follows the neighboring search control: white
+surface, navy label/icon, neutral outline, shared 10px physical top-left and
+bottom-right corners, and 48px minimum height at default text size. The 16px/600
+label and regular three-line 24px icon center together; hover/open use the quiet
+action surface. The mobile header keeps its borderless icon and full-screen sheet.
+This scoped correction replaces the former small uniformly rounded transparent
+outline and fragmented icon. See [the shared rule](docs/design-system.md#compact-menu-control--2026-10-09)
+and [validation](docs/validation.md#compact-menu-control--2026-10-09).
+
 Use this document for art direction and constructive critique. Use
 [the design-system specification](docs/design-system.md) for shared implementation
 rules and [PRODUCT.md](PRODUCT.md) for product/content truth. These are working

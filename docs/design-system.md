@@ -61,6 +61,22 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   long-content and interaction states after visual changes. Record source
   observations separately from proposals and implemented decisions.
 
+## Compact menu control — 2026-10-09
+
+The owner's header capture identified the compact Menu control as inconsistent.
+Above `40rem` and below desktop navigation, it now shares the search control's
+white surface, navy text, `#858585` outline, `--radius-action` physical diagonal
+corners and 48px minimum height at default text size. Its 16px/600 label and
+24px three-line icon center together. Hover and open states use the quiet
+action surface; the close icon and visible keyboard focus remain.
+
+This treatment applies on both white and inverse headers. The narrow mobile
+header retains its borderless hamburger and localized Fermer control in the
+full-screen sheet. Arabic retains the physical corner orientation. The change
+adds no public content or search destination; existing page/section projections
+remain. See [navigation](navigation.md#compact-menu-control--2026-10-09)
+and [verification](validation.md#compact-menu-control--2026-10-09).
+
 ## Refined field focus — 2026-10-09
 
 The owner's two screenshots (`Screenshot 2026-10-09 at 11.27.47.png` and

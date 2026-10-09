@@ -410,7 +410,7 @@ export function SiteHeader() {
                 >
                   <path
                     className="menu-icon-bars"
-                    d="M3 5h11m5 0h2M11 12h10M7 19h14"
+                    d="M3 6h18M3 12h18M3 18h18"
                     stroke="currentColor"
                     strokeWidth="1.7"
                     strokeLinecap="round"
