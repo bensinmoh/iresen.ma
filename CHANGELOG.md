@@ -4,21 +4,6 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
-## 2026-10-09 — Footer address and privacy links
-
-- Made the localized footer address clickable with the existing phone/email
-  link styling and the owner-supplied Google Maps destination shared with contact.
-- Removed the duplicate privacy link beneath newsletter consent; retained the
-  localized privacy destination beside legal notices and cookie preferences.
-- Passed formatting, lint, types, 97 unit and 21 integration tests, production
-  build and all 9 footer browser tests. Reviewed French desktop and Arabic mobile renderings;
-  checked FR/EN/AR wrapping, keyboard focus, enlarged text and native navigation.
-- Rebuilt the local index and verified the inherited contact-photo search
-  reference in every locale; all 3 contact search browser cases passed.
-
-See [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09)
-and [verification](docs/validation.md#footer-address-and-privacy-links--2026-10-09).
-
 ## 2026-10-09 — Centered Contact form eyebrow
 
 - Centered the complete “Votre message” eyebrow above the form title, removing
@@ -67,6 +52,19 @@ and [revision-specific check evidence](docs/validation.md).
 - Updated the responsive browser checks and current design guidance. Reviewed
   tablet, mobile, desktop and 200% text in FR/EN/AR; see
   [validation](docs/validation.md#tablet-homepage-layout--2026-10-09).
+
+## 2026-10-09 — Direct contact map
+
+- Render the contact map directly in server HTML with native lazy loading,
+  replacing click-to-reveal and hide controls. Preserve the translated frame
+  title, exact directions link, address and full-width responsive geometry.
+- Remove the lower explanatory strip, unused styles/copy and bottom padding;
+  the map now meets the footer. Update the cookies-page service notice and
+  search projection to reflect automatic Google Maps loading.
+- Pass lint, strict types, formatting, 97 unit and 21 integration cases,
+  production build and 30 contact/search/foundation browser cases. Google Maps
+  responses are intercepted locally; live service behavior is not asserted.
+  See [validation](docs/validation.md#direct-contact-map--2026-10-09).
 
 ## 2026-10-09 — Exact-first search relevance
 
@@ -297,6 +295,21 @@ for actual bytes, rendered coverage and checks. Earlier evidence retains its sco
 See [the findings and scope](docs/site-coherence-review.md),
 [shared rules](docs/design-system.md#shared-actions--2026-10-09) and
 [revision-specific validation](docs/validation.md#site-coherence-review--2026-10-09).
+
+## 2026-10-09 — Footer address and privacy links
+
+- Made the localized footer address clickable with the existing phone/email
+  link styling and the owner-supplied Google Maps destination shared with contact.
+- Removed the duplicate privacy link beneath newsletter consent; retained the
+  localized privacy destination beside legal notices and cookie preferences.
+- Passed formatting, lint, types, 97 unit and 21 integration tests, production
+  build and all 9 footer browser tests. Reviewed French desktop and Arabic mobile renderings;
+  checked FR/EN/AR wrapping, keyboard focus, enlarged text and native navigation.
+- Rebuilt the local index and verified the inherited contact-photo search
+  reference in every locale; all 3 contact search browser cases passed.
+
+See [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09)
+and [verification](docs/validation.md#footer-address-and-privacy-links--2026-10-09).
 
 ## 2026-10-08 — Header control proportions and contact label
 

@@ -202,7 +202,7 @@ Contact uses a dedicated composition based on the owner's selected native frame
 `804:7374` and attached screenshot. Its shared header stays white; the original
 abstract background accompanies a split introduction and navy headquarters panel.
 Flat platform rows, the `--color-action-surface` form band, native FAQ disclosures
-and a full-width on-demand location section reuse existing type, spacing, focus,
+and a full-width location section reuse existing type, spacing, focus,
 container and action roles. Shared navigation/footer, approved blue/navy and
 Jakarta/Alexandria supersede the sample's historical styles and labels.
 
@@ -215,8 +215,13 @@ Other Contact eyebrows retain their text-only treatment.
 
 Use natural content height, logical CSS and responsive column reduction; isolate
 email, phone and Latin platform names in Arabic. The form prepares a local email
-draft and exposes its actual state, with direct email fallback. Google Maps is
-absent until requested and can be removed. Preserve all existing contact anchors
+draft and exposes its actual state, with direct email fallback. The owner's
+explicit 2026-10-09 refinement supersedes the earlier on-demand map: its iframe
+is rendered in the server HTML with `loading="lazy"`, without reveal/remove
+controls or client state. Remove the lower explanatory strip and its extra
+spacing so the full-width map meets the footer; retain the separate directions
+link. Native lazy loading delays network work according to browser behavior,
+without requiring a visitor click. Preserve all existing contact anchors
 within the new sections. No backend success, response deadline, opening hours or
 department mailbox is inferred from the design. See [contact sources and limits](contact.md)
 and [current check evidence](validation.md).
