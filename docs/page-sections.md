@@ -77,6 +77,27 @@ layout within their page.
 | `accessibility`   | Section 5                              | Engagement et objectif → Évaluation et périmètre → Limites et alternatives → Aide et signalement                                                                                                          |
 | `sitemap`         | Section 5                              | Les pages du site → Catalogues et ressources → Recherche et informations utiles                                                                                                                           |
 
+## Planned homepage replacement — 2026-10-09
+
+The table above records the current body: mission cards and five later
+placeholders, with figures anchored in the hero. The owner's later
+[restructuring brief](homepage-restructure.md) replaces its P01
+sequence for future homepage development with six sections: Notre mission →
+Nos réalisations emblématiques → Nos domaines de recherche → Nos capacités
+scientifiques et technologiques → Collaborer avec IRESEN → Actualités & événements.
+It moves `results` directly after `develop-test-transfer` and puts Alliances
+inside `collaboration`. The standalone figures body block is already omitted;
+keep its real hero anchor and indicators. Retain existing homepage IDs for their
+corresponding modules, and align the section navigation and search references
+with their later order/content.
+
+This request changes documentation only. `src/lib/page-sections.ts`, localized
+headings/briefs and all current anchors remain unchanged. The owner deferred
+application until development of the section after missions begins; the existing
+mission cards and navigation are preserved. Other pages keep their current
+ordered maps. The brief records the six compositions, source copy, candidate
+records, canonical destination limits and future CMS/search dependencies.
+
 ## Implementation and checks
 
 The shared renderer owns semantic heading levels, reading order and common

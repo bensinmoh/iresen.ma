@@ -32,6 +32,24 @@ roles, not required columns. Taste and Impeccable support the craft within this
 direction, including contrast, responsive content, interaction and Arabic RTL.
 Reference sample claims remain distinct from requested factual content.
 
+## Planned homepage compositions — 2026-10-09
+
+The owner's [restructuring brief](docs/homepage-restructure.md) retains the Figma
+language through six different compositions: centered mission statement and
+three photographic cards; immersive achievements with four cards at right;
+lateral research-domain navigation and panoramic image; horizontal platform
+cards; four collaboration cards with an integrated Alliances band; and four
+news/event columns. Achievements move immediately after missions. The hero keeps
+its figures, with no independent figures section in the target body.
+
+This is future composition guidance. The owner commissioned Markdown analysis
+only and deferred implementation until the section after missions begins.
+Preserve the current visual output. At that later stage, retain the source's
+composition intent within shared tokens, responsive/mobile hierarchy and Arabic
+RTL; candidate facility/achievement names and Figma photographs still require
+content and rights review. These homepage-specific layouts do not impose a new
+universal format on other pages.
+
 ## Mobile reference adaptation — 2026-10-09
 
 The owner's four attachments, `Screenshot 2026-10-09 at 09.35.58.png`,

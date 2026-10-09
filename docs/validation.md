@@ -50,6 +50,27 @@ CONTRIBUTING.md. Each requested increment updates affected documentation and
 substitute for the current PR's CI; the corresponding GitHub check runs and merge
 history provide the remote completion record.
 
+## Homepage restructuring documentation — 2026-10-09
+
+Compared the supplied `Pasted text.txt` with the current homepage renderer,
+shared section map, canonical page definitions, product/design guidance and
+earlier P01 recommendations. Recorded its 5,752-byte size and SHA-256 in
+[the new brief](homepage-restructure.md). The six-section target, supplied mission
+and collaboration wording, composition counts, named candidates and event fallback
+remain planning evidence, not implemented modules or independently verified claims.
+
+Passed focused checks for all eleven changed/new Markdown files: pinned Prettier
+3.9.9 formatting, Git whitespace, added/new local links and document anchors,
+exact supplied mission wording and candidate names, six planned sections,
+referenced current page/section IDs and unchanged strategy-source SHA-256 hashes.
+Integrated the separate mission increment from `main` and reconciled documentary
+conflicts: the current mission cards, five later body placeholders, real hero
+`figures` anchor and section navigation remain unchanged by this increment.
+No YAML frontmatter or routing definition is introduced. Application,
+database, browser and Figma checks are not rerun locally because their inputs
+are unchanged. Rendered behavior, content approval and future event automation
+are outside this increment. Current PR CI and merge evidence belong to the PR.
+
 ## Native Figma reference analysis — 2026-10-08
 
 The owner-uploaded Git LFS source was retrieved from revision `37b0689` and
@@ -1869,3 +1890,9 @@ localized search references, copy and media are retained. Documentation records
 the owner's separate image clarification for later review; no photos were changed.
 Current PR CI records the complete-suite result. Physical-device, other browser
 engines and manual screen-reader coverage are not asserted.
+
+PR #40 CI on `d1f60f6` subsequently passed all 97 unit, 21 integration and 147
+browser cases. Integrating main's separate deferred-homepage documentation then
+changed only Markdown; runtime, tests, configuration and dependencies remained
+identical to that passing revision. Merged documentation links, formatting and
+whitespace checks passed. The final current-head CI result remains recorded in GitHub.

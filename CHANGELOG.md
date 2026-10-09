@@ -19,6 +19,23 @@ See [the current composition and image guidance](docs/home-sections.md).
 Executed checks belong in [validation](docs/validation.md); earlier counts and
 captures retain their revision-specific scope.
 
+## 2026-10-09 — Deferred homepage restructuring documentation
+
+- Analyzed the supplied revised homepage layout and recorded its six-section
+  target, retained Figma compositions, French working copy and candidate references
+  in [the homepage brief](docs/homepage-restructure.md).
+- Updated the development/product/design entrypoints, scaffold documentation and
+  backlog: achievements follow missions, figures remain in the hero, collaboration
+  reuses Financement with integrated Alliances, and news/events reuse eligible records.
+- Recorded canonical route/anchor limits, content/media/translation review and
+  future event/search dependencies without implementing or publishing them.
+- Preserved the owner's explicit hold: apply the restructuring only when development
+  of “Nos réalisations emblématiques”, the section after missions, begins.
+  Runtime, localized catalogs, assets, CMS, search and Figma are unchanged.
+
+Documentation checks and their scope are recorded in
+[validation](docs/validation.md#homepage-restructuring-documentation--2026-10-09).
+
 ## 2026-10-09 — Homepage missions and section navigation
 
 - Added a homepage-only sticky submenu after the figures, with native section

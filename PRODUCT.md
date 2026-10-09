@@ -197,6 +197,27 @@ UI catalogs and CMS translations have distinct roles. Public CMS reads enforce
 access and disable translation fallback; an unfinished Arabic version must not
 silently expose French text as published Arabic content.
 
+## Planned homepage restructuring — 2026-10-09
+
+The owner's latest [homepage brief](docs/homepage-restructure.md) records six
+sections between the existing hero and footer: Notre mission → Nos réalisations
+emblématiques → Nos domaines de recherche → Nos capacités scientifiques et
+technologiques → Collaborer avec IRESEN → Actualités & événements. It supersedes
+the earlier P01 homepage sequence for future work. Figures stay in the hero;
+Financement becomes four collaboration paths with Alliances inside that section.
+News/events reuse eligible site records, with a fourth news item when no upcoming
+event is available.
+
+Only analysis and Markdown updates are authorized now. The restructuring waits
+until the owner starts development of the section after missions, “Nos
+réalisations emblématiques”. The separately delivered [mission cards and section
+navigation](docs/home-sections.md), five following placeholders, routes and CMS
+remain the implementation baseline. The `figures` anchor is already on the hero
+band, with its duplicate body block omitted.
+Named achievements/platforms, domain taxonomy, media and translations remain
+inputs to review for the corresponding future module. Source labels such as
+“Agence de Moyens” and “Collaborer avec nous” do not rename current pages.
+
 ## Delivery boundaries
 
 Use the existing repository, shared components and pinned dependency versions.

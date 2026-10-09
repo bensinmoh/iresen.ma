@@ -1,6 +1,6 @@
 # IRESEN website — project and development instructions
 
-Version: 1.5 · 9 October 2026 — exact-first search, spelling suggestions and related concepts  
+Version: 1.6 · 9 October 2026 — deferred homepage restructuring brief; exact-first search retained  
 Repository: https://github.com/bensinmoh/iresen.ma  
 Project owner: Mouhcine BENMEZIANE, Direction Partenariats & Marketing de l’Innovation, IRESEN  
 Working language for code and technical documentation: English  
@@ -9,6 +9,13 @@ Public website languages: French, English and Arabic
 Preparation status: earlier preparation recorded observations from website exports and Illustrator boards; those standalone files are unavailable in the current checkout and have not been reverified here. Supplied SVG dimensions/colors and the color book were subsequently inspected. The native Figma file was structurally analyzed on 2026-10-08, including desktop/mobile frames and serialized component/prototype records. Live access now confirms the design-system page and the reviewed typography, spacing and palette sections; native screenshots verify those sections only. Prototype execution, full-page fidelity and dedicated RTL/tablet references remain unverified. Use [the current design-system rules](docs/design-system.md), [the live review](docs/figma-design-system-review.md) and [the asset inventory](docs/asset-inventory.md) for current evidence; inspect repository state afresh for each task.
 
 Reference update — 8 October 2026: the owner supplied three DOCX documents for repository reference and analysis, explicitly describing the detailed website structure as recommendations and suggestions, not final validation. See [the source index and analysis](docs/references/strategy/README.md) and [the current route baseline/proposal comparison](docs/route-map.md#structure-recommendations-received-on-2026-10-08). Current source status is summarized above; implementation and verification are recorded in README, PRODUCT.md and docs/validation.md. This reference update does not commission page, route or CMS changes.
+
+Homepage planning update — 9 October 2026: the owner's pasted revised layout is
+recorded in [the six-section brief](docs/homepage-restructure.md). Only analysis
+and necessary Markdown updates are commissioned now. Wait to apply the
+restructuring until the owner starts developing the section after missions,
+“Nos réalisations emblématiques”. It supersedes the earlier homepage sequence
+for future planning; current runtime, routes, catalogs, assets and CMS remain.
 
 ## 1. Mission and working mandate
 
@@ -328,17 +335,23 @@ Build shared `SiteHeader`, `SiteFooter`, `PageHero`, `SectionHeading`, `KeyFigur
 
 ### Initial homepage composition to adapt
 
-Use this as a proposed content sequence within the observed visual language; approve actual copy and modules during page implementation:
+The owner's later [restructuring brief](docs/homepage-restructure.md) supersedes
+the initial sequence in this section and the earlier P01 homepage recommendation.
+Keep the existing hero and its figures, followed in the future by these six sections:
 
-1. A clear institutional hero: role/value message, one primary route to collaboration or capabilities and one secondary discovery route.
-2. A restrained verified key-figure strip, if sufficient current figures are approved.
-3. Développer · Éprouver · Valoriser as three connected functions with links into the appropriate pages.
-4. Priorities/themes and selected programmes/projects, expressed through concrete needs and results.
-5. Experimental platforms/capabilities and practical access pathways.
-6. Valorisation/transfer evidence and audience-based ways to work with IRESEN; combine modules where this avoids repetition.
-7. Curated news and upcoming events, followed by a selective partner/coalition strip and the unified footer.
+1. Notre mission: centered statement and three photographic Développer · Éprouver · Valoriser cards.
+2. Nos réalisations emblématiques: immersive background, introduction at left and four achievement cards at right.
+3. Nos domaines de recherche: lateral selection of four to six domains, changing description/axes and panoramic photograph; no sub-domain project counters.
+4. Nos capacités scientifiques et technologiques: platform/expertise introduction, two links and horizontal platform cards.
+5. Collaborer avec IRESEN: four needs-based paths using the former Financement grid, with Alliances inside this section.
+6. Actualités & événements: “À la une”, three selected news items and the next relevant event, or a fourth news item when no event is eligible.
 
-The screenshot’s exact section order is not binding after the narrative update. Keep the page focused; do not place every backend collection on the homepage or invent material to fill a template.
+There is no standalone figures or funding module in this target body. Reuse
+eligible canonical content records for news/events rather than entering separate
+homepage text. The brief preserves the supplied wording/candidates and records
+existing-route limits, source review and future translation/CMS/search dependencies.
+This update is documentation only; apply the restructuring when the owner starts
+development of the section after missions. Do not invent content to fill a layout.
 
 ### Visual acceptance and remaining gaps
 
