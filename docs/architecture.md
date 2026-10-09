@@ -26,8 +26,16 @@ Use server components for content and client components for actual interaction. 
 
 Drafts, admin, previews and personal records must stay outside public caches, sitemaps and search. Development and unapproved previews stay non-indexable. Robots directives are an indexing policy; remote preview access still needs authentication.
 
+Search relevance combines strict exact-first tiers, language normalization,
+public-derived indexed spelling vocabulary and a curated multilingual concept
+catalog. Both results and correction words recheck live source eligibility and
+revision. Vocabulary refreshes with indexed documents; it is not an independent
+cache of withdrawn text. No external model/provider or vector service is
+required. General embedding-based semantic retrieval remains a separate future
+adapter option, with relevance evidence and deployment requirements to assess.
+
 ## Portable infrastructure
 
-PostgreSQL is the only required development service. Media uses local development storage until an approved S3-compatible production provider is configured. Email, search and LinkedIn remain isolated behind adapters; unavailable services must have honest unavailable states.
+PostgreSQL is the only required development service. Media uses local development storage until an approved S3-compatible production provider is configured. Search now uses a PostgreSQL full-text/trigram index and durable job queue behind its replaceable adapter, with current public/locale source checks before returning results. Email and LinkedIn retain their isolated adapter boundaries and honest unavailable states. Public PDF extraction optionally uses Poppler on the worker host; file metadata/transcripts remain searchable without it. See [search](search.md).
 
 A portable Node.js server/container is the deployment target. Hosting region, storage, mail, identity/MFA, job scheduling, distributed rate limiting and production observability need separate decisions before launch. See [deployment](deployment.md), [security and privacy](security-and-privacy.md), and [ADR 0001](adr/0001-modular-trilingual-application.md).

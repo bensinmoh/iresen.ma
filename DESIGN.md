@@ -32,6 +32,28 @@ roles, not required columns. Taste and Impeccable support the craft within this
 direction, including contrast, responsive content, interaction and Arabic RTL.
 Reference sample claims remain distinct from requested factual content.
 
+## Mobile reference adaptation — 2026-10-09
+
+The owner's four attachments, `Screenshot 2026-10-09 at 09.35.58.png`,
+`09.36.08.png`, `09.36.37.png` and `09.36.41.png`, establish the requested mobile
+composition: a logo/hamburger header, a white full-screen menu, a generous image
+scene with low-positioned copy, and a single-column navy footer. Their sample
+copy, routes, facts, networks and sampled colors do not replace approved content
+or identity; device chrome is outside the website.
+
+At `40rem` and below, the existing header, homepage hero and footer adapt those
+proportions using the shared navy/blue, original SVGs, Jakarta/Alexandria and
+logical RTL layout. Search and all three locales remain available in the open
+menu; the two homepage actions stay full width and the five facts follow the
+image scene in their native scroll row. See [component rules](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
+and [revision-specific validation](docs/validation.md#mobile-reference-adaptation--2026-10-09).
+This is a responsive interpretation, without a pixel-exact fidelity claim.
+
+The owner's subsequent clarification adds a 320ms entrance from the physical
+right edge to the mobile menu. A transform-only CSS reveal preserves its geometry,
+including Arabic and native no-JavaScript access. Reduced motion opens directly.
+See [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
+
 ## Identity and surfaces
 
 - The owner's selected primary blue is **#296BB4**; navy is **#12345A**. Science
@@ -67,7 +89,7 @@ a desktop arrangement on mobile.
 
 The 2026-10-09 section placeholders on pages other than contact use the existing aligned grid, flat section
 boundaries, light dividers and bounded text measure. H2s identify sections and
-nested Mission/search topics use H3s; short localized draft notes describe
+nested Mission topics use H3s; short localized draft notes describe
 the content to prepare. Keep the existing heroes as introductions and the Apex
 Leaf selective on Institute's Mission H2. These placeholders establish content
 order, with final module composition still to follow the approved material.
@@ -101,6 +123,27 @@ The owner's requested generated hero placeholders are tracked separately below;
 their photographic style does not establish real institutional subjects.
 
 ## Interaction and review
+
+Functional search uses a compact heading, query form, content-type facets and
+readable editorial result rows on the shared grid. The results page supersedes
+its former full-screen introduction and section scaffolding, bringing results
+into immediate view. Matching text uses a restrained readable highlight, with
+descriptive links, excerpts and dates where available.
+
+Spelling proposals use a quiet localized “Did you mean…” link. Keep the original
+query editable; accepting a correction updates the results URL explicitly.
+Approximate and related-topic rows carry short text labels, avoiding a technical
+score or a claim of semantic certainty. Highlight actual matched public words.
+
+The resting white header magnifier preserves its shared square/corner geometry.
+A 220ms field reveal moves toward inline-start on wider headers (left in FR/EN,
+mirrored in AR), bounded by the available header width. At `40rem` and below,
+the field and suggestions expand in normal flow inside the full-screen menu.
+Keyboard focus and touch expose the same
+input; native GET forms, reduced-motion direct reveal and no-JavaScript submission
+remain usable. Live suggestions are a compact link list with arrow-key access,
+Escape/outside dismissal and abortable requests. Query/filter/pagination live in
+the URL. See [search](docs/search.md) and revision-specific validation.
 
 Use accessible native semantics and existing shared components. Show genuine
 loading, empty, error and success states. Preserve equivalent locale navigation,
@@ -345,9 +388,9 @@ The owner's later request uses the original `/videos/hero.mp4` for the homepage,
 with no playback button. Normal-motion playback starts after hydration, muted,
 looping and inline. The generated photo stays beneath it as the loading/failure,
 no-JavaScript and reduced-motion fallback; a live reduced-motion change unloads
-the video. Keep the same overlay, typography, copy, figures and layout. Twenty
-other pages retain photo heroes; contact's later split composition is described
-above.
+the video. Keep the same overlay, typography, copy, figures and layout. Nineteen
+other pages retain photo heroes; contact uses its later split composition and
+search uses its compact functional results view.
 
 The unchanged 9.32 MiB file is an owner-requested budget exception. Its
 end-of-file metadata needs byte-range delivery; web-sized, fast-start derivatives
@@ -447,9 +490,9 @@ previous treatment.
 
 ## Expandable header search — 2026-10-09
 
-The existing 48/44px magnifier opens a white field with navy text and shared
-physical 10px action corners. It expands toward inline start (left FR/EN, right
-Arabic), with a 220ms width/opacity transition and stable header geometry.
+On wider headers, the existing 48/44px magnifier opens a white field with navy text
+and shared physical 10px action corners. It expands toward inline start (left
+FR/EN, right Arabic), with a 220ms width/opacity transition and stable header geometry.
 The enhanced control is capped at 22rem and available container space; expansion
 can use the other direction when needed. Reduced motion makes the change immediate.
 
@@ -457,9 +500,11 @@ Fine-pointer hover opens without taking focus; explicit keyboard/touch activatio
 focuses the labelled input. Enter or the filled icon sends a native GET query
 to the existing localized search page. Focus retains the open field; Escape,
 outside interaction and leaving disclosure focus close it. Native disclosure/form
-behavior remains without JavaScript; at `35rem` and below, the unenhanced field
-spans the action row below the controls.
-The search engine remains unavailable. See [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
+behavior remains without JavaScript. At `40rem` and below, search sits inside
+the open full-screen menu; its input and suggestions occupy the available width
+in normal flow and enlarge the scrollable menu.
+The public search engine now provides ranked results and live suggestions.
+See [the search guide](docs/search.md) and [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
 and [current validation](docs/validation.md); earlier square-control captures retain their scope.
 
 ## Shared key-figure typography — 2026-10-08

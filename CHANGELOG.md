@@ -25,12 +25,87 @@ merge results are recorded by the corresponding pull request and commit history.
 See [contact sources and behavior](docs/contact.md), [asset provenance](docs/asset-inventory.md#contact-decorative-background--2026-10-09)
 and [revision-specific check evidence](docs/validation.md).
 
+## 2026-10-09 — Exact-first search relevance
+
+- Added explicit relevance tiers: exact, linguistic/prefix, spelling and related
+  topic matches. Numeric ranking cannot place an approximate match above an
+  exact one; the visitor's explicit date sort remains available.
+- Added conservative spelling suggestions derived from eligible public text,
+  with explicit correction links in results and header suggestions. Original
+  queries remain intact; nonliteral matches use the matched terms for excerpts
+  and safe highlights.
+- Added multilingual concept vocabulary for platforms/infrastructure,
+  PV/solar photovoltaics, solar panels, employment/careers and
+  tests/experimentation. These are curated discovery relationships, not
+  general model-based semantic understanding or an external service.
+- Improved public solar-media topic descriptions using the existing generated
+  asset provenance, preserving their fictional illustrative status.
+- Updated contributor instructions and local upgrade steps for the vocabulary
+  index and required search references.
+- Recorded the owner's reminder to review the FR/EN/AR glossary, translations,
+  acronyms and related-term dictionary, then rebuild and verify search when the
+  full website content is ready for its final sanity check.
+- Verified migration/rebuild, unchanged CMS artifacts, formatting/lint/types,
+  92 unit and 21 integration tests, production build and all 108 browser cases.
+  Coverage includes accepting mobile corrections, restoring background focus,
+  and keeping search usable when resizing to the wider header. See [validation](docs/validation.md#search-relevance-and-final-content-reminder--2026-10-09)
+  for browser and visual coverage; current PR CI validates the complete suite.
+
+## 2026-10-09 — Mobile menu entrance
+
+- Added the owner's requested entrance from the physical right edge, including
+  Arabic, with a 320ms CSS transform on the mobile full-screen sheet.
+- Preserved native no-JavaScript opening and repeat opening; reduced motion
+  reveals the menu directly. Keyboard focus, Escape and background restoration
+  remain usable during the entrance.
+- Passed lint, types, formatting, 44 unit cases, production build and all 12
+  navigation browser cases. Reviewed normal/reduced-motion FR/AR, native opening,
+  repeat opening and intermediate screenshots.
+
+See [navigation rules](docs/navigation.md#mobile-reference-adaptation--2026-10-09)
+and [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
+
+## 2026-10-09 — Mobile reference adaptation
+
+- Adapted the narrow homepage, header and footer to the owner's four mobile
+  screenshots while preserving approved content, routes, SVGs and brand colors.
+- Added a single logo/hamburger row and white full-screen grouped navigation,
+  with search/contact/legal/language access and keyboard focus containment.
+- Kept homepage copy low in a viewport-minimum image scene, with two full-width
+  actions and the five facts beneath it. Opening navigation preserves hero size.
+- Stacked footer navigation/contacts and separated the newsletter email/action.
+- Passed lint, types, formatting, 44 unit and 12 integration cases, build and
+  96 browser cases; after the final hero-measurement correction, rebuilt and
+  passed all 27 navigation/hero cases. Reviewed mobile, RTL, enlarged-text and
+  desktop screenshots.
+
+See [shared rules](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
+and [verification](docs/validation.md#mobile-reference-adaptation--2026-10-09).
+
+## 2026-10-09 — Public multilingual website search
+
+- Replaced the unavailable search page with ranked PostgreSQL full-text/trigram
+  results for public pages, anchored sections, approved CMS articles and
+  documents/media. Active-locale publication and current-source checks keep
+  private, withdrawn, deleted and stale records out of results.
+- Added the requested header input reveal, live public suggestions, keyboard and
+  touch access, native GET submission and reduced-motion behavior. Results have
+  excerpts/highlights, type filters, date sorting and URL pagination/history.
+- Added a durable indexing queue, rebuild/worker commands, approved uploaded PDF
+  extraction and localized media `searchText` for transcripts/non-extractable files.
+  Registered existing public assets once per original, with derivatives grouped.
+- Added readable published CMS page bodies and guarded news article destinations.
+  Search results remain non-indexable even when public site indexing is enabled.
+- Updated `AGENTS.md`, `instruction.md` and `CONTRIBUTING.md` to require search
+  references for every future public page, section, document, file and media item.
+  [The search guide](docs/search.md) records metadata, lifecycle and operations.
+
 ## 2026-10-09 — Current snapshot delivery scope
 
 - Recorded the owner's authorization to push the current snapshot while real
   Green Energy Park and IRESEN office photos remain pending.
-- Confirmed that the search engine is in separate development and is not
-  connected to this snapshot; the search page retains its unavailable state.
+- Recorded the earlier snapshot's separate search development and unavailable
+  search page. The later public-search implementation above supersedes that state.
 
 See [current product scope](PRODUCT.md) and [pending media](docs/contextual-hero-media.md#documentary-photos-pending).
 
@@ -42,7 +117,7 @@ See [current product scope](PRODUCT.md) and [pending media](docs/contextual-hero
 - Bounded the animated white/navy field within the header container, preserving
   closed-control geometry, RTL, physical action corners and reduced-motion behavior.
 - Retained native no-JavaScript disclosure/submission and the truthful unavailable
-  search engine; no results or backend were added.
+  search engine at that revision; the later public-search work adds results/backend.
 - Passed all 72 browser cases, then rebuilt and passed the 10 focused search
   cases after a final native Arabic corner correction. Eleven rendered states
   confirm animation, containment, focus and matching action corners.

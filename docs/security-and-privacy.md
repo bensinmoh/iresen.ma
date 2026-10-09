@@ -10,6 +10,10 @@ The foundation is a development environment, not a production compliance assessm
 - Keep private references, database dumps, local uploads and personal records outside committed/public assets.
 - Validate server input, project public fields and avoid unsanitized HTML or arbitrary remote fetch URLs.
 - Test draft/private media access through direct APIs as well as the public website. Robots directives do not protect secrets.
+- Public search rechecks current publication, locale and source revision before
+  returning indexed text. Media bytes use canonical published metadata and
+  `private, no-store`; CMS file URLs are excluded from Next's independently
+  cached image optimizer so withdrawal cannot be bypassed by cached derivatives.
 - Use baseline security headers now; verify production CSP, cookies, HTTPS and HSTS against the final domain/runtime.
 
 Production requires supported MFA/SSO, shared rate limits, scoped service accounts, redacted audit/error logs, private upload validation, encrypted backups, recovery tests and patching ownership. OWASP ASVS Level 2 and DGSSI web-application guidance are engineering references; conformance needs evidence.

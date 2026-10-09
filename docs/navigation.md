@@ -12,6 +12,38 @@ hero overlay and content-based menu formats are documented below. The latest
 owner clarification treats screenshots as design-element references, with layout
 chosen for each group's actual content.
 
+## Mobile reference adaptation — 2026-10-09
+
+The [owner's four mobile screenshots](../DESIGN.md#mobile-reference-adaptation--2026-10-09)
+guide the `40rem`-and-below shell. `SiteHeader` and the narrow-screen CSS use a
+single logo/hamburger row while closed. Opening the native menu fixes the header
+across the viewport on white, showing the supplied colored logo and localized
+Fermer control. Vertical route rows have fine horizontal dividers and blue group
+chevrons; expanded groups retain their canonical destinations from `src/lib/site.ts`.
+The screenshot's labels do not add financing/news/network branches or new routes.
+
+The owner's later clarification specifies arrival from the right. The whole mobile
+sheet enters from the physical right edge over 320ms using a CSS transform and
+`cubic-bezier(0.2, 0.7, 0.2, 1)`, in all three locales. It works with the native
+disclosure without JavaScript and opens directly with reduced motion. See
+[motion verification](validation.md#mobile-menu-entrance--2026-10-09).
+
+Search and the full-width contact action follow navigation. Legal access and
+the existing three-language selector sit below them. The integrated public search
+backend, native localized GET form and live suggestions remain; mobile search
+expands in normal flow, with static, full-width suggestions so results enlarge
+the scrollable menu. Content can grow for translation and enlarged text.
+
+With JavaScript, the open menu makes main content, footer and skip link inert;
+Tab/Shift+Tab cycle its visible controls, and Escape closes the active disclosure
+and returns focus to its summary. Closing or leaving the mobile breakpoint
+restores background access. Native menu/groups, links and search submission also
+work without JavaScript. Wider layouts retain their existing menu formats.
+Approved colors, original SVG geometry and Jakarta/Alexandria remain; Arabic uses
+logical flow and directional chevrons. See
+[this revision's validation](validation.md#mobile-reference-adaptation--2026-10-09)
+for executed checks; the screenshots establish composition, not pixel fidelity.
+
 ## Header control refinement — 2026-10-08
 
 The owner's latest screenshot gives the closed search trigger a white square with a `#858585`
@@ -69,7 +101,8 @@ opens it without autofocus; explicit keyboard/touch activation opens and focuses
 the labelled input. Enter or activation of the icon with a filled query submits
 native GET `q` to the existing canonical localized search route. An empty input
 retains required-field validation. On the search page, the enhanced header restores
-the current `q`; the engine remains unavailable and no results are invented.
+the current `q`. The integrated public search engine now returns ranked results
+and live suggestions; see [search coverage and contribution rules](search.md).
 
 The field has a programmatic label and localized placeholder: « Rechercher sur
 le site… », “Search the website…” or “ابحث في الموقع…”. Its single-line text
@@ -82,8 +115,9 @@ Focus keeps search open when the pointer leaves and prevents navigation hover
 from replacing it. Passive search hover also preserves an already focused language
 or navigation control. Escape closes and returns inside focus to the summary;
 outside pointer/focus and leaving the disclosure close it. Native click
-disclosure and GET submission remain without JavaScript; at `35rem` and below,
-the field spans the action row below controls. Contact, menus, languages and
+disclosure and GET submission remain without JavaScript. At `40rem` and below,
+the later mobile adaptation places the field and suggestions in normal flow
+inside the full-screen menu. Contact, menus, languages and
 routes retain their roles. See [shared rules](design-system.md#expandable-header-search--2026-10-09)
 and [revision-specific checks](validation.md); previous captures remain historical.
 
@@ -123,11 +157,12 @@ complete approved hierarchy to breathe while the reading-content width was 80rem
 The later refinement promotes shared broad geometry across the page.
 At the default 16px root size, its layout is:
 
-| Available width                           | Navigation layout                                                          |
-| ----------------------------------------- | -------------------------------------------------------------------------- |
-| At least `110rem` (1760px)                | One row: identity, primary navigation and language/search/contact controls |
-| At least `70rem` (1120px), below `110rem` | Identity and controls above a full primary-navigation row                  |
-| Below `70rem`                             | Compact header with a native Menu disclosure and nested navigation groups  |
+| Available width                           | Navigation layout                                                                       |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- |
+| At least `110rem` (1760px)                | One row: identity, primary navigation and language/search/contact controls              |
+| At least `70rem` (1120px), below `110rem` | Identity and controls above a full primary-navigation row                               |
+| Above `40rem`, below `70rem`              | Compact header with a native Menu disclosure and nested navigation groups               |
+| `40rem` and below                         | Logo/hamburger row; open white full-screen menu with grouped routes and bottom controls |
 
 These thresholds use rem units and wrapping labels. The two-row desktop layout
 preserves legibility for the longer approved French and translated labels.
@@ -178,11 +213,10 @@ transfer focus to the corresponding visible navigation control. Arrow Down opens
 first destination. A brief mouse-hover delay supports pointer discovery;
 keyboard focus retains control of an open panel. Touch does not depend on hover.
 
-The compact menu uses expandable groups in a bounded panel below the header.
-At 360px and below, the Menu label remains accessible while the visual control
-uses its icon. Closed language, search and menu controls share one row at normal
-text size; at `35rem` and below, an expanded no-JavaScript search field spans the
-action row below them.
+Above `40rem`, the compact menu uses expandable groups in a bounded panel below
+the header. At `40rem` and below, the full-screen adaptation documented above
+replaces that panel; the accessible Menu label accompanies the visual hamburger,
+and language/search/contact controls appear inside the open menu.
 Visible focus, minimum control targets,
 bounded panel scrolling and existing reduced-motion rules support practical
 navigation. Logical spacing, equivalent locale routes and meaningful arrow

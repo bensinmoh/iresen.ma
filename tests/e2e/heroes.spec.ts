@@ -63,7 +63,7 @@ for (const locale of locales) {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
     // Contact follows its own approved split introduction and is covered in contact.spec.ts.
-    for (const id of pageIds.filter((pageId) => pageId !== 'contact')) {
+    for (const id of pageIds.filter((pageId) => pageId !== 'contact' && pageId !== 'search')) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()

@@ -1190,3 +1190,196 @@ screen-reader certification is not asserted. The ten unaffected enhanced visual
 states precede the final fallback-only corner correction; the affected native
 Arabic state was reviewed again after it. Remote CI/push remain held for the
 earlier pending documentary-photo inputs.
+
+## Public website search — 2026-10-09
+
+Public search is now connected to PostgreSQL full-text/trigram ranking for
+FR/EN/AR pages, rendered section anchors, approved CMS content and registered
+documents/media. The animated native header disclosure keeps the latest
+navigation/focus behavior and adds cancellable public suggestions. Results use
+safe excerpts/highlights, content-type facets, date ordering and URL pagination.
+`AGENTS.md`, `instruction.md` and `CONTRIBUTING.md` require search references for
+future public additions; [the search guide](search.md) defines their metadata,
+publication lifecycle and working destinations.
+
+Formatting, lint, strict types, 44 unit tests, 12 database integration tests and
+the final production standalone build passed. The reviewed migrations and
+integration suite also passed against a newly created disposable database before
+the final runtime storage changes. Integration coverage includes actual uploaded
+PDF text extraction, normalized/typo queries, private and missing-locale
+exclusion, immediate stale/withdrawn/deleted suppression, and duplicate-slug
+withdrawal/restoration. Fixtures and the disposable database were removed.
+
+The combined Chromium run passed 92 of 93 browser cases. Its remaining file
+destination test revealed that the standalone server and CLI worker used
+different upload directories. After sharing the absolute `CMS_UPLOAD_DIRECTORY`,
+the rebuilt production server passed that focused case: published article and
+section destinations render, approved file bytes return 200 with `no-store`,
+missing-locale/private files are denied, withdrawal hides results immediately,
+and CMS file URLs are rejected by the Next image optimizer. Restricting that
+optimizer to static hero paths prevents its independent cache from bypassing
+withdrawal checks. All 44 unit and 12 integration tests passed again afterward.
+
+The other 92 cases cover the latest hero/header refinements and search hover,
+keyboard/touch, suggestion arrow navigation, Escape/focus ownership, native
+no-JavaScript GET, RTL, history/filters/pagination, semantic highlights,
+invalid-input/noindex responses and accessibility scans. Browser/visual checks
+use local Chromium and emulated touch; physical-device, Safari and screen-reader
+certification is not asserted.
+
+Six final screenshots were recaptured and visually inspected after integrating
+the native header disclosure. French 1440px uses a 352px combined field/icon and
+suggestion panel; Arabic 390px uses 216px without moving adjacent controls. At
+320px with 200% text, FR/AR fields fit the 240px container and document width
+remains 320px. Result rows, metadata and filters remain readable and contained.
+
+- [French results, desktop](screenshots/search-fr-1440.png)
+- [Arabic results, mobile](screenshots/search-ar-390.png)
+- [French header with suggestions](screenshots/header-search-fr-1440.png)
+- [Arabic header with suggestions](screenshots/header-search-ar-390.png)
+- [French enlarged narrow layout](screenshots/search-fr-320-200.png)
+- [Arabic enlarged narrow layout](screenshots/search-ar-320-200.png)
+
+PDF extraction needs Poppler; scanned PDFs and audio/video/non-extractable
+documents need approved searchable text/transcripts. This increment does not
+provide OCR or speech recognition. Production storage, rate limiting and worker
+operations retain their release requirements. PR CI and merge outcomes are
+recorded by the current pull request; no website deployment is performed here.
+
+## Search relevance and final-content reminder — 2026-10-09
+
+Relevance now uses ordered exact, linguistic/prefix, spelling and related-topic
+tiers. Corrections preserve the original query, while excerpts and highlights
+show the words that actually matched. Related vocabulary is explicitly curated
+in FR/EN/AR; it does not provide free-form model-based semantic understanding.
+
+Local verification used Node 24.19.0, pnpm 11.19.0, PostgreSQL 17 and a production
+Next build. The new vocabulary migration and public rebuild succeeded. Generated
+Payload types/import map stayed unchanged. Formatting, ESLint, TypeScript,
+92 unit tests, 21 database integration tests and the production build passed.
+The existing 93 browser cases passed in the complete run; all 10 new relevance
+cases passed in the focused rerun after fixing test locators and separating axe's
+JavaScript audit from the native no-JavaScript journey. The initial PR CI passed
+the complete 103-case suite against a freshly migrated PostgreSQL service.
+After the final correction-link focus refinement, the rebuilt production server
+also passed all 20 header/relevance browser cases. Three focused header scans
+using the actual final CSS reported no axe violations or horizontal overflow;
+keyboard arrows and Escape restored focus correctly.
+
+The feature was subsequently integrated with the approved mobile menu revision.
+The combined production build, formatting/lint/types, 92 unit tests and all
+108 local browser cases passed. Relevance coverage now includes accepting a
+header correction inside the full-screen mobile menu, closing that menu,
+restoring interactive main content and focusing the results field. Resizing a
+focused mobile correction to the wider header closes the navigation menu while
+preserving the open search and keyboard focus, so navigation cannot cover the
+suggestions. Mobile search
+and suggestions expand in normal flow at `40rem` and below. Arabic result/menu
+captures were refreshed against this integrated build; current PR CI repeats the
+complete 108-case suite.
+
+Integration coverage includes title/body priority despite repeated later-tier
+content, literal PV priority, adjacent-letter and multiword corrections, valid
+concept protection, unchanged-static vocabulary upgrade, all required query
+terms beyond 12 words, and immediate exclusion of private, draft, unapproved,
+stale, deleted and missing-language vocabulary. Browser coverage includes native
+correction links, preserved filters/sort with reset pagination, keyboard header
+suggestions, matching highlights and Arabic RTL at 320px/200% text.
+
+Manual production API checks returned HTTP 200 for “Résultats”, “Plateformes”,
+“Insrastructure”, “PV” and “الألواح الشمسية”. “Plateformes” starts with exact
+platform results; “Insrastructure” proposes “Infrastructure” without changing
+the input. PV discovers the existing public generated solar-media descriptions;
+it does not invent institutional photovoltaic records.
+
+French desktop and Arabic mobile captures were visually inspected. Corrections
+and badges remain readable; enlarged 320px EN/AR layouts retain a 320px document
+width. JavaScript-enabled axe scans reported no violations in the search region;
+the no-JavaScript Arabic correction journey also passed. Local Chromium and
+emulated viewports do not establish physical-device, Safari or screen-reader
+certification.
+
+- [French correction and related results, desktop](screenshots/search-relevance-fr-1440.png)
+- [Arabic correction and close result, mobile](screenshots/search-relevance-ar-390.png)
+- [Focused header correction, desktop](screenshots/search-relevance-header-fr-1440.png)
+- [Focused correction in the Arabic mobile menu](screenshots/search-relevance-menu-ar-390.png)
+
+The owner's reminder is recorded in `AGENTS.md`, `instruction.md`, the search
+guide and release backlog: once all content is ready, review/reconstruct the
+approved multilingual glossary/terminology, acronym and related-term dictionary,
+then rebuild and verify the public search index/vocabulary during the final sanity
+check. That future content milestone remains pending. No deployment is performed.
+
+## Mobile reference adaptation — 2026-10-09
+
+The owner's four mobile screenshots establish composition. Their sample text,
+links, contact details, social networks, historical colors and device chrome
+remain reference data. The revision adapts the existing homepage, navigation and
+footer at `40rem` and below with current brand/content/routes and the integrated
+public search implementation. See [the shared rules](design-system.md#mobile-reference-adaptation--2026-10-09).
+
+Using Node 24.19.0, pnpm 11.19.0, a migrated disposable local PostgreSQL database
+and production Chromium, lint, strict types, formatting, 44 unit tests, 12 CMS/search
+integration tests and the standalone production build passed. All 96 browser
+cases passed across navigation, search, footer, fonts, heroes/media, public route
+access and existing CMS/search destinations. After the final viewport-measurement
+correction, the app was rebuilt and all 27 navigation/hero cases passed again,
+including unchanged underlying hero size while the full-screen menu is open.
+
+The new regressions verify the complete collapsed-menu Tab sequence, expanded
+child destinations, visible Close control, focus wrapping, nested Escape and
+background inert/restoration. Mobile search covers touch and keyboard access,
+full-width suggestions, destination navigation and native GET without JavaScript.
+Existing FR/EN/AR checks cover 320/390/768/1024/1440px, 200% text, RTL, menu/form
+containment, equivalent locale access and scoped axe scans. Automated scans do
+not establish full accessibility conformance.
+
+Rendered review inspected FR390 homepage/menu/footer, AR390 menu/footer,
+FR320/640 menus, FR/AR320 menus at 200% text, and FR1440 homepage/footer.
+The reviewed states have no document overflow, page errors or logo/Close overlap;
+Close uses navy on white. Footer email and Subscribe occupy separate full-width
+rows on mobile, with consent, privacy, utilities, language and copyright retained.
+An oversized element screenshot exposed an offscreen fixed skip-link layer;
+ordinary viewport captures confirm that it is absent from the actual footer paint.
+Final footer evidence therefore uses separate top/newsletter viewport captures.
+
+Selected reviewed screenshots:
+
+- [French mobile homepage](screenshots/mobile-reference-fr-390-hero.png)
+- [French full-screen menu](screenshots/mobile-reference-fr-390-menu.png)
+- [French footer newsletter and bottom](screenshots/mobile-reference-fr-390-footer-newsletter.png)
+- [Arabic mobile footer](screenshots/mobile-reference-ar-390-footer.png)
+- [Arabic menu with enlarged text](screenshots/mobile-reference-ar-320-menu-text200.png)
+- [French desktop footer](screenshots/mobile-reference-fr-1440-footer.png)
+
+Coverage uses local Chromium and emulated touch, without claiming a pixel-exact
+match, physical-device/Safari coverage or screen-reader certification. Remote CI
+and merge results are recorded by the corresponding pull request and commit history.
+
+## Mobile menu entrance — 2026-10-09
+
+The owner's follow-up specifies arrival from the right. At `40rem` and below,
+the existing full-screen menu now enters from the physical right edge over 320ms
+using only a CSS transform. The direction is the same in Arabic. Reduced motion
+opens directly, and the native disclosure remains functional without JavaScript.
+
+Lint, strict types, formatting, all 44 unit cases, the production build and all
+12 navigation browser cases passed. The existing containment assertion now waits
+for the header's animation to finish before measuring settled control bounds.
+Its coverage retains FR/EN/AR navigation, focus, narrow/wide layouts and 200% text.
+
+Manual production Chromium sampling at 390px verified FR/AR normal motion from
+header x=390px to x=0, repeat opening restarting the entrance, and reduced-motion
+opening at x=0 throughout. Native no-JavaScript opening and repeat opening also
+complete from the physical right in both locales. Document width stays at 390px
+and scrollX stays at zero throughout the sampled entrance. Immediate Tab remains
+inside the sheet; Escape returns focus to its summary and restores background
+interaction/scrolling. English settled controls remain within the viewport.
+
+Two reviewed captures pause the entrance at 80ms:
+
+- [French intermediate entrance](screenshots/mobile-menu-slide-fr-390-intermediate.png)
+- [Arabic intermediate entrance](screenshots/mobile-menu-slide-ar-390-intermediate.png)
+
+Coverage uses local Chromium; physical-device, Safari and screen-reader validation
+is not asserted. CI and merge results remain recorded by the corresponding pull request.

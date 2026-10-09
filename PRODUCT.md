@@ -36,9 +36,20 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- Twenty approved pages have generated photo heroes with four text-placement
-  modes; the homepage uses the owner's video with its generated photo as fallback.
-  Contact now uses the separate composition described below. Short FR/EN/AR wayfinding drafts and the
+- The owner's four 2026-10-09 mobile screenshots guide composition at `40rem`
+  and below: logo/hamburger header, white full-screen navigation with search,
+  contact, legal and all three locales; a homepage image scene with low copy and
+  two full-width 48px actions before its figure row; and a single-column footer
+  with stacked contacts and separate newsletter email/action rows. Canonical
+  routes, approved identity/content and the integrated search backend remain.
+  Sample screenshot wording and colors are not new approvals. See
+  [the adaptation](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
+  and [its validation record](docs/validation.md#mobile-reference-adaptation--2026-10-09).
+- The 20 pages other than contact/search have introductory heroes with four
+  text-placement modes: 19 use generated photos, while the homepage uses the
+  owner's video with its generated photo as fallback. Contact now uses the separate
+  composition described below; search uses a compact functional results view.
+  Short FR/EN/AR wayfinding drafts and the
   Développer · Éprouver · Valoriser reading framework remain.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
   projects supported, +60 patents filed, +1000 young researchers supported, +1100
@@ -63,7 +74,7 @@ marketing page.
   [current media and readiness](docs/contextual-hero-media.md) and
   [the asset manifest](docs/hero-assets.json); earlier replacement checks retain
   their revision-specific scope.
-- The other 21 canonical pages retain section placeholders below their introducing
+- The 20 canonical pages other than contact/search retain section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests
   capacities and 2035 ambition under Mission; the sitemap retains its working
@@ -88,17 +99,20 @@ marketing page.
   and other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
   preserves essential routes, forms, feedback and facts while limiting competing
   roles. Future mission cards await approved content and follow the mobile
-  guidance. The other pages' section placeholders remain their
-  delivered body content; contact has its own populated draft composition.
-- Header search now provides an expandable, labelled native GET `q` form to the
-  existing localized search page, with keyboard/touch and no-JavaScript access.
-  The owner confirms that the search engine is being developed separately and
-  is not connected to this snapshot. Its search page retains the truthful
-  unavailable state, with no integrated results or search backend. Server-side contact
-  acceptance/delivery remains unavailable. See
-  [search interaction](docs/navigation.md#expandable-header-search--2026-10-09).
-  The newsletter keeps local editable email/consent controls; Subscribe opens a
-  native disclosure
+  guidance. The other content pages retain section placeholders; contact has
+  its own populated draft composition and search uses its functional results view.
+- Search now covers public pages/sections, published CMS pages/articles and
+  registered or uploaded public documents/media in the active locale. Ranked
+  results, normalized matching, live suggestions, URL filters/date sorting and
+  pagination follow the [search guide](docs/search.md). The header expands its
+  field on hover/focus and submits to the lean results page. Exact matches precede spelling corrections
+  and related topics; explicit correction links preserve the visitor's query.
+  The multilingual concept vocabulary includes platforms/infrastructure and
+  PV/solar photovoltaics, without claiming general model-based semantic search.
+  New public resources must supply search references and real discovery vocabulary
+  in the same change. Server-side contact acceptance/delivery remains
+  unavailable. The newsletter
+  keeps local editable email/consent controls; Subscribe opens a native disclosure
   with the localized unavailable message, hidden initially. The privacy link stays
   accessible. No subscription is submitted or stored, and no success is reported;
   signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).

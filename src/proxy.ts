@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { routing } from '@/i18n/routing'
 import { defaultLocale, isLocale } from '@/i18n/locales'
 import { pageIds, pages } from '@/lib/site'
+import { newsSlugFromPath } from '@/lib/content/routes'
 
 const handleLocaleRouting = createMiddleware(routing)
 
@@ -23,7 +24,7 @@ export default function proxy(request: NextRequest) {
     (id) => pages[id].pathnames[locale] === pagePath || pages[id].path === pagePath,
   )
 
-  if (isKnownPage) return handleLocaleRouting(request)
+  if (isKnownPage || newsSlugFromPath(pagePath, locale)) return handleLocaleRouting(request)
 
   // Set the HTTP status before rendering the localized unknown-page response.
   // Register future detail routes here alongside their shared page resolver.

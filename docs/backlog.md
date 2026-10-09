@@ -61,7 +61,9 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 
 - [ ] Expand collections and detail/list/filter templates; translations, redirects, preview and publication invalidation.
 - [ ] Add verified public media rights and private-file boundaries.
-- [ ] Implement locale-aware search and server-side contact acceptance/delivery with durable retries and retention. The existing local email-draft form has no submission endpoint, provider or storage.
+- [x] Implement public locale-aware search, expandable header field, suggestions,
+      guarded results and document/media references; see [search](search.md).
+- [ ] Implement server-side contact acceptance/delivery with durable retries and retention. The existing local email-draft form has no submission endpoint, provider or storage.
 - [ ] Add scheduled jobs, archive/withdrawal behavior and narrow locale permissions/audit.
 - [ ] Introduce optional LinkedIn official API access or an honest manual editorial queue.
 
@@ -71,6 +73,11 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 - [ ] Approve hosting/data flows, applicable CNDP/DGSSI obligations, privacy notices and retention.
 - [ ] Configure approved service credentials, CMS MFA/SSO and shared production rate limiting.
 - [ ] Approve public copy, translations, key figures, institutional contacts and legal identity.
+- [ ] Once the full website content is supplied, remind the owner at the final
+      sanity check to review/reconstruct the FR/EN/AR glossary, terminology/
+      translations, acronyms and related-term dictionary, rebuild the public
+      search index/vocabulary and verify representative queries; follow the
+      [final content search checklist](search.md#final-content-search-sanity-check).
 - [ ] Restrict staging, verify security/SEO/accessibility and measure real representative pages.
 - [ ] Test backups/restoration, jobs/mail/monitoring and accountable operations.
 - [ ] Obtain owner release authorization before deployment.

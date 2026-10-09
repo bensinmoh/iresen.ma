@@ -10,6 +10,12 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     qualities: [75, 90],
+    // Published CMS bytes must recheck access on every request; Next's image
+    // cache can outlive withdrawal even when the upstream response is no-store.
+    localPatterns: [
+      { pathname: '/images/heroes/**', search: '' },
+      { pathname: '/images/contact/contact-background-79bad501a298.png', search: '' },
+    ],
   },
   async headers() {
     return [
@@ -33,6 +39,10 @@ const nextConfig = {
         source: '/api/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
+      ...['/fr/recherche', '/en/search', '/ar/البحث', '/fr/search', '/ar/search'].map((source) => ({
+        source,
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }],
+      })),
     ]
   },
 }

@@ -243,7 +243,8 @@ Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
 their existing definitions at that revision. The replacement introduced no external image host,
 video playback or new client runtime at that revision. The later homepage video
 uses these generated photos as its fallback; contact's later decorative split
-introduction supersedes its photo hero, while 20 other pages retain photo heroes.
+introduction supersedes its photo hero. With the dedicated search page also in
+place, 19 other pages retain photo heroes alongside the homepage video.
 
 Sixteen generated source images are native 1536 × 1024px; the aerial solar scene
 is 1672 × 941px. These are not 4K sources or a blanket resolution increase over

@@ -92,7 +92,9 @@ for (const locale of locales) {
 
     await page.setViewportSize({ width: 390, height: 844 })
     await page.locator('.menu-toggle').scrollIntoViewIfNeeded()
-    await expectRenderedFonts('.menu-toggle > span')
+    await page.locator('.menu-toggle').click()
+    await expect(page.locator('.site-menu')).toHaveAttribute('open', '')
+    await expectRenderedFonts('.menu-toggle > .menu-close-label')
     await session.detach()
   })
 }

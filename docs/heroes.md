@@ -6,11 +6,12 @@ The owner's clarification keeps the heroes introductory: detailed content belong
 in the sections below. No complete homepage or editorial listing is implied.
 The generated backgrounds below replace the initial Figma-derived imagery on
 2026-10-09 while retaining that framework. The owner's subsequent homepage video
-request keeps those photos on the other 21 pages and as the homepage fallback.
+request keeps those photos on the other 20 non-search pages and as the homepage
+fallback. Search now uses its compact functional results view.
 
 ## Composition and content
 
-All 22 approved pages use the shared server-rendered `PageHero`, with composition
+The 21 non-search pages use the shared server-rendered `PageHero`, with composition
 selected by stable page ID in `src/lib/heroes.ts`. Four text-placement modes
 (start, end, center and editorial) vary alignment and reading measure over
 full-scene photographic backgrounds. The former split treatment is removed.
@@ -36,7 +37,7 @@ introductions and adopts shared action styling and selective Apex Leaf placement
 The owner explicitly requested 17 generated photographic placeholders to replace
 all hero backgrounds across the 22 pages in the initial photo-replacement revision.
 Three contextual replacements now join 14 retained generated images, still serving
-the 21 interior backgrounds and homepage fallback. These illustrate research, renewable
+the 20 interior heroes and homepage fallback. These illustrate research, renewable
 energy, collaboration and knowledge sharing through fictional, generic scenes.
 They remain decorative with empty alternatives and make no claim to depict real
 IRESEN people, facilities or events. Requested real Green Energy Park and IRESEN
@@ -100,7 +101,7 @@ and then specifies no playback button. A homepage-only client layer assigns the
 source after hydration when `prefers-reduced-motion` permits motion. Its initial
 markup has no source and uses `preload="none"`. The native video uses autoplay,
 muted, loop and playsInline, without controls. It remains
-decorative; existing text, links, figures, certification and all 21 other photo
+decorative; existing text, links, figures, certification and all 20 other photo
 heroes retain their behavior.
 
 The server-rendered generated `HeroPhoto` stays beneath the video as a lightweight
@@ -181,6 +182,30 @@ approved content and follow this mobile guidance.
 Earlier captures retain their scope; current checks belong in
 [the validation log](validation.md).
 
+## Mobile reference adaptation — 2026-10-09
+
+The [owner's mobile homepage screenshot](../DESIGN.md#mobile-reference-adaptation--2026-10-09)
+guides the `40rem`-and-below homepage: `PageHero` retains its full image/video
+scene, while `src/styles/globals.css` gives that scene a viewport minimum and
+keeps the copy low within it. The five existing facts follow the scene in their
+native horizontal scroll row instead of occupying the first image viewport.
+Content still grows naturally on short screens or with enlarged text.
+Viewport measurement ignores the open navigation sheet's height, so opening the
+mobile menu does not resize the image scene underneath it.
+
+The existing primary/secondary actions stack at full width with a 48px minimum,
+shared physical corners and label-size text at default root size. The mobile
+title uses a bounded 30–32px scale; the description uses the existing label role,
+with readable white and a stronger lower image overlay. Arabic retains its
+natural line height/tracking. These homepage-specific overrides supersede the
+earlier 56px mobile actions without changing shared typography tokens.
+
+Approved copy, canonical destinations, figures, original SVGs and the existing
+video/photo/reduced-motion policy remain. The reference's sample headline,
+actions and image do not authorize replacement content or media. See
+[revision-specific validation](validation.md#mobile-reference-adaptation--2026-10-09)
+for rendered coverage; no pixel-exact match is claimed.
+
 ## Owner refinements — 2026-10-08
 
 The hero-body now uses the same centered container as the header, blue narrative
@@ -209,8 +234,8 @@ Discovery uses the shared physical 10px top-left/bottom-right action corners,
 18px/600 text and a 12px arrow gap, replacing its earlier 20px radius and 24px
 gap. The wide defaults remain a 56px minimum height and 24px inline padding;
 at `35rem` and below, other heroes retain the 44px minimum and 16px inline
-padding. The homepage's `40rem`-and-below override gives both full-width actions
-a 56px minimum height and 16px inline padding at default text size.
+padding. This revision gave the homepage's full-width mobile actions a 56px
+minimum; the later mobile reference adaptation above replaces it with 48px.
 Hero descriptions use weight 500 without enlarging the global body role. The shared button hover
 rule keeps the styled anchor consistent with native actions.
 
