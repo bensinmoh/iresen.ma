@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Centered Contact form eyebrow
+
+- Centered the complete “Votre message” eyebrow above the form title, removing
+  the inherited paragraph-width offset.
+- Added the original decorative blue Apex Leaf at its logical inline start,
+  with proportional dimensions and shared spacing in FR/EN/AR.
+- Retained the existing contact anchors, localized search references and original
+  brand SVG bytes. See [contact guidance](docs/contact.md) and
+  [verification evidence](docs/validation.md#contact-form-eyebrow--2026-10-09).
+- Registered the Contact photograph added separately to `main` in the public
+  search catalog after CI exposed its missing reference; its bytes are retained.
+
 ## 2026-10-09 — Contact reference composition and location
 
 - Replaced contact's photo hero/scaffold with the owner-selected Figma contact
@@ -49,9 +61,6 @@ and [revision-specific check evidence](docs/validation.md).
 - Remove the lower explanatory strip, unused styles/copy and bottom padding;
   the map now meets the footer. Update the cookies-page service notice and
   search projection to reflect automatic Google Maps loading.
-- Register the owner's already-served contact venue photo in the multilingual
-  search catalog, repairing a missing reference introduced by its asset commit.
-  This registration does not change the contact introduction image.
 - Pass lint, strict types, formatting, 97 unit and 21 integration cases,
   production build and 30 contact/search/foundation browser cases. Google Maps
   responses are intercepted locally; live service behavior is not asserted.

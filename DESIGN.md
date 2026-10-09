@@ -73,9 +73,10 @@ See [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
   Arabic does not automatically reverse these brand corners.
 - The apex motif supports a few purposeful brand areas. Avoid dense decoration
   behind text, universal pills, generic gradients and effects without a visitor benefit.
-- The owner's latest clarification keeps the Apex Leaf selective. This revision
-  uses it on the homepage hero eyebrow and the Institute's Mission H2 only.
-  Preserve the supplied shape, decorative semantics and proportional spacing.
+- The owner's latest clarification keeps the Apex Leaf selective: the homepage
+  hero eyebrow, the Institute's Mission H2 and the explicitly requested Contact
+  form eyebrow. Preserve the supplied shape, decorative semantics and
+  proportional spacing.
 
 ## Typography, rhythm and media
 
@@ -211,12 +212,14 @@ narrow-screen spacing address the baseline's 320px enlarged-text overflow.
 Error content shares the page heading/content anatomy, and sitemap groups use
 consistent headings and 44px link rows.
 
-The original Apex Leaf is decorative in two places only: a white 10 × 16px CSS
-mask beside the homepage hero eyebrow, and the original blue vector at 1em height
-with a 12px gap beside the Institute's Mission H2. Other headings keep their
-existing treatment; placement changes logically in Arabic without mirroring
-the brand shape. This implements the owner's selective-use clarification rather
-than a universal heading marker.
+The original Apex Leaf has three selective decorative placements: a white
+10 × 16px CSS mask beside the homepage hero eyebrow, the original blue vector
+at 1em height with a 12px gap beside the Institute's Mission H2, and the later
+explicitly requested Contact form eyebrow. Contact uses the same blue vector
+at 1em height and 12px gap, centering the leaf and label together. Other headings
+keep their existing treatment; placement changes logically in Arabic without
+mirroring the brand shape. The [Contact record](docs/contact.md) describes the
+later addition; the coherence review's earlier checks retain their original scope.
 
 See [the review and content limits](docs/site-coherence-review.md) and
 [this revision's validation](docs/validation.md#site-coherence-review--2026-10-09).
@@ -324,8 +327,12 @@ decorative imagery, not an office photograph or a full-page screenshot.
 Approved navy `#12345A`, blue `#296BB4`, self-hosted Jakarta/Alexandria, shared
 gutters and physical action corners govern the implementation. The screenshot's
 historical colors, header/footer labels and institutional sample claims do not
-override current identity, canonical navigation or reviewed content. Avoid
-duplicating Apex markers throughout this page; the existing selective rule holds.
+override current identity, canonical navigation or reviewed content. The owner's
+later screenshot correction explicitly adds the original blue Apex Leaf before
+the form's « Votre message » label. Its 1em height, automatic width and 12px gap
+preserve the supplied proportions; the whole leaf/label group centers over the
+title. It sits at the logical inline start in Arabic without mirroring. This is
+the page's only Apex marker, within the three selective placements above.
 
 Keep the reference's hierarchy with natural text growth: split introduction on
 wide screens, stacked content on narrow screens, four/two/one platform columns,

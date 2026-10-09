@@ -23,6 +23,18 @@ Layouts reduce columns and allow natural text growth on narrow screens, with
 logical CSS and isolated Latin identifiers for Arabic. No route is added to the
 canonical 22-page map.
 
+The owner's later screenshot correction explicitly requests an Apex Leaf before
+the form's « Votre message » label and corrects its centering. The inherited
+paragraph `max-inline-size: 68ch` had constrained the eyebrow box within the wider
+centered heading, leaving that box at the inline start. The local form eyebrow
+now removes that limit and centers the leaf and label together with flex layout.
+It uses the original blue `/brand/apex-leaf.svg`, unchanged, at 1em height with
+automatic width and a 12px gap (`--space-3`). The image is decorative (`alt=""`,
+`aria-hidden="true"`); it precedes the label at the logical inline start in Arabic
+without mirroring its geometry. This is the third selective Apex placement,
+alongside the homepage hero eyebrow and Institute's Mission H2. Other Contact
+eyebrows keep their existing text-only treatment.
+
 The headquarters address, phone and email reuse the established shared
 [footer contacts and their source record](footer.md). The screenshot's opening
 hours, 48-hour response promise, departmental mailboxes and repeated platform
