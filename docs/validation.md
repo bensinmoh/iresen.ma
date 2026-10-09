@@ -1857,3 +1857,42 @@ Reviewed captures:
 The copy remains drafted wayfinding and the generated scenes do not identify
 actual IRESEN people or facilities. No deployment was performed. This Chromium
 pass does not establish complete WCAG conformance, screen-reader or Safari coverage.
+
+## Horizontal mobile mission navigation — 2026-10-09
+
+The owner's follow-up replaces the mobile mission stack with a native horizontal
+collection below 48rem (768px with the default browser font). Cards expose part of
+their neighbor when space permits, use CSS proximity snapping, and retain readable
+natural height, all three destinations and the site's hidden-scrollbar rule.
+Tablet image/body rows and the desktop three-column layout remain.
+
+Local formatting, lint, strict types, all 97 unit cases and the production build
+passed. All 30 selected Chromium homepage, foundation and rendered-font cases
+passed. Coverage includes 320/390px horizontal navigation, RTL-aware native arrow
+keys, Tab revealing each link, direct third-card hashes, no JavaScript, reduced
+motion, 200% text in all three locales and preservation of the tablet/desktop
+layouts. Homepage axe scans reported no violations in FR/EN/AR. No schema or
+database behavior changed; integration checks run in current PR CI.
+
+Emulated mobile touch gestures moved the collection in FR/EN/AR, including native
+negative RTL scroll offsets. Focusing the last destination revealed the third
+card. Every checked state fit the page width, with no nested vertical overflow.
+Rendered geometry at 768, 1024 and 1440px confirmed tablet rows and desktop columns
+without collection or page overflow. New French/Arabic 390px captures were
+reviewed, including visible next-card glimpses and the final card's focus state:
+
+- [French mobile collection](screenshots/home-missions-horizontal-fr-390.webp)
+- [Arabic mobile collection](screenshots/home-missions-horizontal-ar-390.webp)
+- [French final card and keyboard focus](screenshots/home-missions-horizontal-fr-last-390.webp)
+
+The earlier stacked-mobile captures remain historical. Card/section anchors,
+localized search references, copy and media are retained. Documentation records
+the owner's separate image clarification for later review; no photos were changed.
+Current PR CI records the complete-suite result. Physical-device, other browser
+engines and manual screen-reader coverage are not asserted.
+
+PR #40 CI on `d1f60f6` subsequently passed all 97 unit, 21 integration and 147
+browser cases. Integrating main's separate deferred-homepage documentation then
+changed only Markdown; runtime, tests, configuration and dependencies remained
+identical to that passing revision. Merged documentation links, formatting and
+whitespace checks passed. The final current-head CI result remains recorded in GitHub.

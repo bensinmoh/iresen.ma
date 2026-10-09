@@ -4,6 +4,21 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Horizontal mission cards on mobile
+
+- Changed the three homepage mission cards to a native horizontal scroll
+  collection below 48rem, with a hidden scrollbar and a neighboring-card glimpse
+  where space permits. Keyboard, touch and no-JavaScript access retain all three
+  destinations; enlarged text can use the full available card width.
+- Kept tablet image/body rows and the desktop three-column composition.
+- Recorded the owner's image direction for a later review: each photo should
+  illustrate its section, with technology breadth across the website. Current
+  mission assets remain.
+
+See [the current composition and image guidance](docs/home-sections.md).
+Executed checks belong in [validation](docs/validation.md); earlier counts and
+captures retain their revision-specific scope.
+
 ## 2026-10-09 — Deferred homepage restructuring documentation
 
 - Analyzed the supplied revised homepage layout and recorded its six-section

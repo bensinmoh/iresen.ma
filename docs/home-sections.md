@@ -42,19 +42,33 @@ Focus rings sit inside the sticky bar; active state does not rely on color alone
 
 ## Missions and media
 
-All three cards appear in one row on desktop, as image/body rows on tablet and
-as complete stacked cards below 48rem. No mission is hidden behind a carousel.
+All three cards appear in one row from 64rem and as image/body rows between
+48rem and 64rem. Below 48rem, complete image/body cards form a native horizontal
+scroll collection with CSS scroll snapping and the site's hidden scrollbar.
+Cards show a neighboring-card glimpse where space permits. Their minimum width
+is capped at the available space, so enlarged text can use a full-width card;
+copy grows naturally without a fixed height or nested vertical scroll.
+Keyboard focus reveals each destination, touch scrolls the collection and native
+scrolling works without JavaScript. All three cards remain in logical DOM order,
+including Arabic RTL, without automatic advancement or additional controls.
 Each has a semantic heading, a short description and one canonical destination:
 programmes, platforms or transfer. Arabic uses logical flow and mirrored arrows,
 with the physical diagonal brand corners preserved.
 
-The requested generated images cover battery and biomass/biofuel research;
+The current generated images depict battery and biomass/biofuel research;
 CSP, hydrogen, wind and storage testing; and smart-grid energy management.
 They illustrate fictional scenes, without identifying real IRESEN people or
 facilities. The source/output hashes, dimensions, prompts and WebP conversion
 are recorded in [the mission asset manifest](mission-assets.json). Photos load
 lazily with reserved 4:3 geometry and responsive Next Image sizes. The optimizer
 allowlist adds only `/images/missions/**`; public CMS withdrawal boundaries remain.
+
+The owner's subsequent clarification makes technology breadth a website-wide
+direction. Each photo must directly match the meaning of its section rather
+than include a prescribed technology mix. At a later mission-image review,
+Développer should depict laboratory R&D; Éprouver should depict equipment
+testing, with solar equipment as an example; Valoriser should depict a person
+holding a finished product. Current assets and their provenance remain for now.
 
 Mission section/card copy and all three image originals have explicit localized
 search references. Responsive optimizer outputs share their original's identity.

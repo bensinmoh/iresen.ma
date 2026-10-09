@@ -170,8 +170,22 @@
 }
 
 @media (max-width: 47.999rem) {
+  .cards {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(100%, max(15rem, 88%));
+    overflow-x: auto;
+    padding-block: var(--space-2);
+    scroll-snap-type: inline proximity;
+  }
+
+  .cards:focus-visible {
+    outline-offset: -3px;
+  }
+
   .card {
     display: flex;
+    scroll-snap-align: start;
   }
 
   .photo {

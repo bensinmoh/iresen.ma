@@ -78,8 +78,9 @@ The homepage now pairs a quiet, white section-navigation bar with a centered
 mission introduction and three equal image/body cards. Blue underlines identify
 the section in view; navy text stays readable on pale bodies. The existing
 Développer · Éprouver · Valoriser framework supplies content direction, while
-generated scenes show a varied energy mix. This adapts the live homepage Figma
-reference for multilingual reflow and mobile stacking. See [the section guide](docs/home-sections.md).
+the current generated scenes illustrate several energy technologies. This adapts
+the live homepage Figma reference for multilingual reflow, tablet rows and a
+native horizontal mission collection below 48rem. See [the section guide](docs/home-sections.md).
 
 - The owner's selected primary blue is **#296BB4**; navy is **#12345A**. Science
   blue **#4698CA**, transition green **#50A684**, cyan **#77C5D5** and lime
@@ -147,6 +148,14 @@ sources and rights. Complete page exports guide composition; they are never
 production hero imagery or evidence of an IRESEN facility.
 The owner's requested generated hero placeholders are tracked separately below;
 their photographic style does not establish real institutional subjects.
+
+The owner's 2026-10-09 image clarification applies technology breadth across the
+website: CSP, batteries, biomass, green hydrogen, wind, biofuels, smart grids and
+energy management should appear where they support the content. Each photo must
+directly illustrate its section's meaning. For a later mission-image review,
+Développer should show laboratory R&D; Éprouver should show equipment testing,
+with solar equipment as an example; Valoriser should show a person holding a
+finished product. The current mission images remain until that later review.
 
 ## Interaction and review
 
@@ -467,12 +476,15 @@ Other page heroes, identity, copy, header and footer remain.
 
 Horizontal navigation throughout the public site should hide its scrollbar while
 retaining native touch/keyboard scrolling and visible focus. The shared
-`.horizontal-scroll` utility currently applies to the homepage figures; ordinary
-vertical scrolling retains its controls.
+`.horizontal-scroll` utility applies to the homepage figures and the mission
+collection below 48rem; ordinary vertical scrolling retains its controls.
 
 Use [the reusable hierarchy](docs/mobile-information-hierarchy.md) for future
 sections. The requested three mission cards now follow this mobile guidance,
-using readable navy copy beneath generated technology imagery and natural stacking.
+using readable navy copy beneath generated imagery in a native horizontal
+collection below 48rem. Neighboring-card glimpses indicate more content where
+space permits; enlarged text can use full-width cards. Native keyboard/touch
+scrolling, visible focus and no-JavaScript access retain all three destinations.
 See [the homepage composition](docs/home-sections.md). Earlier captures describe earlier presentations;
 current checks belong in [validation](docs/validation.md).
 

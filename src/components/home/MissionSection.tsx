@@ -36,7 +36,13 @@ export async function MissionSection({ locale }: { locale: Locale }) {
         </h2>
         <p className={styles.description}>{sections(`${homeMissionSectionId}.description`)}</p>
       </div>
-      <div className={styles.cards}>
+      <div
+        className={`${styles.cards} horizontal-scroll`}
+        data-mission-cards
+        role="region"
+        aria-labelledby={`${homeMissionSectionId}-heading`}
+        tabIndex={0}
+      >
         {homeMissions.map((mission) => {
           const image = missionImages[mission.id]
 
