@@ -5,6 +5,8 @@ import { isLocale } from '@/i18n/locales'
 import { pageIdFromPathname } from '@/lib/site'
 import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
+import { ContactPage } from '@/components/contact/ContactPage'
+import { isContactTopic } from '@/lib/contact'
 import { createPageMetadata } from '../../page-metadata'
 import { newsHref, newsSlugFromPath } from '@/lib/content/routes'
 import { findPublishedNewsBySlug } from '@/lib/content/queries'
@@ -78,5 +80,10 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   // The proxy sets HTTP 404 for unknown paths. Render their localized content
   // directly so the HTML remains readable without a streamed error replacement.
   if (!pageId) return <NotFoundPage locale={locale} />
+  if (pageId === 'contact') {
+    const { subject } = await searchParams
+    const topic = typeof subject === 'string' && isContactTopic(subject) ? subject : undefined
+    return <ContactPage locale={locale} initialTopic={topic} />
+  }
   return <EmptyPage pageId={pageId} locale={locale} />
 }

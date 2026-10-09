@@ -59,12 +59,11 @@ async function visitFiguresWithKeyboard(page: Page, direction: 'ltr' | 'rtl') {
 }
 
 for (const locale of locales) {
-  test(`${locale}: introductory pages have a lightweight hero and a working section link`, async ({
-    page,
-  }) => {
+  test(`${locale}: standard page heroes retain a working section link`, async ({ page }) => {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
-    for (const id of pageIds.filter((id) => id !== 'search')) {
+    // Contact follows its own approved split introduction and is covered in contact.spec.ts.
+    for (const id of pageIds.filter((pageId) => pageId !== 'contact' && pageId !== 'search')) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()
@@ -134,11 +133,12 @@ for (const locale of locales) {
     expect(titleBounds!.y).toBeGreaterThan(headerBounds!.y + headerBounds!.height)
   })
 
-  test(`${locale}: the mobile homepage keeps clear actions and all five figures across its breakpoint`, async ({
+  test(`${locale}: the homepage keeps clear actions and one scrollable figure row across breakpoints`, async ({
     page,
   }) => {
+    test.setTimeout(120_000)
     await page.emulateMedia({ reducedMotion: 'reduce' })
-    for (const width of [320, 390, 640, 641, 1440]) {
+    for (const width of [320, 390, 640, 641, 768, 1024, 1119, 1120, 1280, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       await page.goto(pageHref('home', locale))
       const hero = page.locator('.page-hero')
@@ -161,6 +161,34 @@ for (const locale of locales) {
       const overflow = await figures.evaluate(
         (element) => element.scrollWidth > element.clientWidth + 1,
       )
+      const rows = await figures
+        .locator('.key-figure')
+        .evaluateAll((items) => items.map((element) => element.getBoundingClientRect().y))
+      expect(Math.max(...rows) - Math.min(...rows)).toBeLessThanOrEqual(1)
+      await expect(figures).toHaveCSS('scrollbar-width', 'none')
+      expect(
+        await figures.evaluate(
+          (element) => getComputedStyle(element, '::-webkit-scrollbar').display,
+        ),
+      ).toBe('none')
+      if (width < 1120) {
+        await expect(hero.locator('.hero-certification')).toBeHidden()
+      } else {
+        await expect(hero.locator('.hero-certification')).toBeVisible()
+      }
+      if (width <= 1120) {
+        expect(overflow, 'narrow layouts keep all five figures in their own scroll region').toBe(
+          true,
+        )
+        for (const figure of await figures.locator('.key-figure').all()) {
+          await figure.evaluate((element) =>
+            element.scrollIntoView({ block: 'nearest', inline: 'start' }),
+          )
+          await expect.poll(() => figureIsContained(figure)).toBe(true)
+        }
+      } else {
+        expect(overflow, 'wide layouts fit all five figures in one row').toBe(false)
+      }
       if (width <= 640) {
         await expect(hero.locator('.hero-certification')).toBeHidden()
         await expect(hero.locator('.hero-scroll')).toBeHidden()
@@ -178,14 +206,8 @@ for (const locale of locales) {
         expect(second.y).toBeGreaterThanOrEqual(first.y + first.height)
         expect(first.height).toBeGreaterThanOrEqual(44)
         expect(second.height).toBeGreaterThanOrEqual(44)
-        const rows = await figures
-          .locator('.key-figure')
-          .evaluateAll((items) => items.map((element) => element.getBoundingClientRect().y))
-        expect(Math.max(...rows) - Math.min(...rows)).toBeLessThanOrEqual(1)
       } else {
-        await expect(hero.locator('.hero-certification')).toBeVisible()
         await expect(hero.locator('.hero-scroll')).toBeVisible()
-        expect(overflow, 'larger layouts retain the existing wrapping figure grid').toBe(false)
       }
     }
   })

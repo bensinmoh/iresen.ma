@@ -36,28 +36,30 @@ own functional requirements.
 
 At `40rem` and below:
 
-- The homepage ISO badge and redundant mouse/scroll cue are omitted. Discovery
-  retains the cue's section destination; the badge's owner-supplied copy and
-  wider-screen treatment remain.
+- The redundant mouse/scroll cue is omitted. Discovery retains the cue's section
+  destination. The later tablet refinement also omits the homepage ISO badge
+  below `70rem`, preserving its owner-supplied copy and desktop treatment.
 - The existing discovery and related-page links stack at full width, using the
   primary blue and secondary white treatments with shared physical 10px action
   corners. The later mobile reference adaptation uses a 48px minimum at default
   text size. Labels and destinations remain.
 - All five homepage figures remain in a focusable, labelled definition list
-  with native horizontal scrolling. The scrollbar is enabled and unhidden;
-  visibility depends on the browser/OS. A neighboring-item glimpse appears where
-  space permits; enlarged text may fill the available width. Every value/label
+  with native horizontal scrolling and a hidden scrollbar. A neighboring-item
+  glimpse appears where space permits; enlarged text may fill the available width. Every value/label
   pair remains available in logical order.
 - The homepage's lower reserve becomes 32px at the default root size instead of
   72px. The image scene now has its own viewport minimum before the figures;
   the hero still grows naturally for reading or enlarged text.
 
-Wider homepage layouts and other page heroes retain their existing treatment.
+At every width, the homepage figure collection stays in one row, scrolling
+horizontally when its tracks do not fit instead of wrapping on tablet. Other
+page heroes retain their existing treatment.
 The video/photo policy, fonts, copy and routes remain. The narrow header and footer
 follow the later [mobile reference adaptation](design-system.md#mobile-reference-adaptation--2026-10-09).
-Horizontal
-scrolling is local to the figure collection; ordinary vertical page scrolling
-continues. Keyboard/touch and no-JavaScript access use native scrolling, without
+Horizontal navigation follows the owner's general preference for hidden
+scrollbars through the shared `.horizontal-scroll` utility. It currently applies
+to the figure collection; ordinary vertical page scrolling continues.
+Keyboard/touch and no-JavaScript access use native scrolling, without
 automatic advancement, carousel buttons or an additional client runtime.
 
 ## Future mission cards

@@ -91,9 +91,10 @@ See [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
   Arabic does not automatically reverse these brand corners.
 - The apex motif supports a few purposeful brand areas. Avoid dense decoration
   behind text, universal pills, generic gradients and effects without a visitor benefit.
-- The owner's latest clarification keeps the Apex Leaf selective. This revision
-  uses it on the homepage hero eyebrow and the Institute's Mission H2 only.
-  Preserve the supplied shape, decorative semantics and proportional spacing.
+- The owner's latest clarification keeps the Apex Leaf selective: the homepage
+  hero eyebrow, the Institute's Mission H2 and the explicitly requested Contact
+  form eyebrow. Preserve the supplied shape, decorative semantics and
+  proportional spacing.
 
 ## Typography, rhythm and media
 
@@ -105,7 +106,7 @@ Treat 12/8/4-column desktop/tablet/mobile grids as composition
 starting points. Adapt to content; a headline should not become tiny to preserve
 a desktop arrangement on mobile.
 
-The 2026-10-09 section placeholders use the existing aligned grid, flat section
+The 2026-10-09 section placeholders on pages other than contact use the existing aligned grid, flat section
 boundaries, light dividers and bounded text measure. H2s identify sections and
 nested Mission topics use H3s; short localized draft notes describe
 the content to prepare. Keep the existing heroes as introductions and the Apex
@@ -113,6 +114,7 @@ Leaf selective on Institute's Mission H2. These placeholders establish content
 order, with final module composition still to follow the approved material.
 Sitemap group H3s retain bold weight and can break long words within narrow
 columns. Compact header actions can shrink and wrap with enlarged text.
+Contact's later composition replaces its scaffold while preserving its anchors.
 See [section implementation](docs/page-sections.md) and
 [revision-specific validation](docs/validation.md).
 
@@ -140,6 +142,14 @@ The owner's requested generated hero placeholders are tracked separately below;
 their photographic style does not establish real institutional subjects.
 
 ## Interaction and review
+
+Editable fields use a compact 2px focus outline at their edge, replacing the
+heavy separated frame shown in the owner's 2026-10-09 screenshots. Search paints
+this outline on its field surface so it follows the existing corners and stays
+blue on white inside inverse headers. Dark footer fields retain cyan. Links,
+buttons and selection controls retain their established focus treatment.
+See [shared field rules](docs/design-system.md#refined-field-focus--2026-10-09)
+and [rendered verification](docs/validation.md#refined-field-focus--2026-10-09).
 
 Functional search uses a compact heading, query form, content-type facets and
 readable editorial result rows on the shared grid. The results page supersedes
@@ -228,12 +238,14 @@ narrow-screen spacing address the baseline's 320px enlarged-text overflow.
 Error content shares the page heading/content anatomy, and sitemap groups use
 consistent headings and 44px link rows.
 
-The original Apex Leaf is decorative in two places only: a white 10 × 16px CSS
-mask beside the homepage hero eyebrow, and the original blue vector at 1em height
-with a 12px gap beside the Institute's Mission H2. Other headings keep their
-existing treatment; placement changes logically in Arabic without mirroring
-the brand shape. This implements the owner's selective-use clarification rather
-than a universal heading marker.
+The original Apex Leaf has three selective decorative placements: a white
+10 × 16px CSS mask beside the homepage hero eyebrow, the original blue vector
+at 1em height with a 12px gap beside the Institute's Mission H2, and the later
+explicitly requested Contact form eyebrow. Contact uses the same blue vector
+at 1em height and 12px gap, centering the leaf and label together. Other headings
+keep their existing treatment; placement changes logically in Arabic without
+mirroring the brand shape. The [Contact record](docs/contact.md) describes the
+later addition; the coherence review's earlier checks retain their original scope.
 
 See [the review and content limits](docs/site-coherence-review.md) and
 [this revision's validation](docs/validation.md#site-coherence-review--2026-10-09).
@@ -328,6 +340,53 @@ passed, including hover Escape and breakpoint focus restoration.
 The later hovered-menu adaptation below supersedes its panel geometry and
 related-block treatment; these checks describe the initial revision.
 
+## Contact reference composition — 2026-10-09
+
+The owner's selected [contact frame `804:7374`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-7374)
+and attached `contact.png` guide the general composition: a white shared header,
+large split introduction with a navy headquarters panel, four platform entries,
+centered form on a pale surface, full-width location section, native FAQ rows and
+the existing navy footer. The owner's requested order places the location/map
+between the form and FAQ. The owner's headquarters
+photograph now replaces the recovered cyan/white background. Keep the original
+JPEG unchanged and use responsive Next Image delivery, with a CSS crop and
+readability overlay. No image generation or retouching is applied. The original
+curve provenance remains historical; earlier contact screenshots show that revision.
+The cover image uses `55% center` positioning. White heading/body text and the
+Energy Cyan accent/focus sit over a navy gradient: 88% at the top, 80% through
+the text area, fading to transparent over `10rem` below the actual copy. The
+overlay belongs to the text block, so a taller adjacent headquarters panel does
+not extend the shading over the lower photograph. A `10rem` lower reserve scales
+with text, keeping the fade below the copy.
+
+Approved navy `#12345A`, blue `#296BB4`, self-hosted Jakarta/Alexandria, shared
+gutters and physical action corners govern the implementation. The screenshot's
+historical colors, header/footer labels and institutional sample claims do not
+override current identity, canonical navigation or reviewed content. The owner's
+later screenshot correction explicitly adds the original blue Apex Leaf before
+the form's « Votre message » label. Its 1em height, automatic width and 12px gap
+preserve the supplied proportions; the whole leaf/label group centers over the
+title. It sits at the logical inline start in Arabic without mirroring. This is
+the page's only Apex marker, within the three selective placements above.
+
+Keep the reference's hierarchy with natural text growth: split introduction on
+wide screens, stacked content on narrow screens, four/two/one platform columns,
+and labelled form controls with a single-column narrow layout. Logical spacing
+and isolated Latin identifiers support Arabic. FAQ answers use native disclosures.
+The form action states its actual purpose: prepare a local email, then open the
+visitor's email application. The owner's explicit 2026-10-09 refinement replaces
+the earlier on-demand map with a directly rendered server iframe using native
+lazy loading. The map precedes the FAQ without the lower explanatory strip;
+reveal/remove controls and their client state are removed. A separate directions
+link preserves useful navigation and fallback access. No sample opening hours,
+48-hour promise, department mailboxes, platform addresses or phone numbers are
+presented as verified facts.
+
+Sources, service limits and the unverified map pin are recorded in
+[contact documentation](docs/contact.md). Current executed checks belong in
+[validation](docs/validation.md); this source adaptation does not establish
+production publication or final editorial approval.
+
 ## Contextual hero media — 2026-10-09
 
 Whole photographic backgrounds now support four text-placement modes: start,
@@ -337,10 +396,13 @@ over `rgb(5 17 29 / 66%)`, allowing the photograph to remain visible.
 
 New generated executive-meeting, young-adult onboarding and two-person handshake
 images fit governance, opportunities and collaboration. All 17 active photo assets
-are still fictional illustrations. Real Green Energy Park and IRESEN office
-photos await source-download access; no real image or office location is asserted.
+are still fictional illustrations. External Green Energy Park and office-photo
+candidates await source-download access; contact now uses the separate photograph
+supplied by the owner. Generated images do not assert real subjects or locations.
 See [role mapping, provenance and readiness](docs/contextual-hero-media.md).
-Copy, facts, routes, fonts, original SVGs, mobile hierarchy and homepage video remain.
+This describes the photo-hero revision; contact subsequently replaces its photo
+hero with the reference composition above. Routes, fonts, original SVGs, mobile
+hierarchy and homepage video remain.
 Earlier compositions and captures are historical; current checks belong in
 [validation](docs/validation.md).
 
@@ -373,9 +435,9 @@ The owner's later request uses the original `/videos/hero.mp4` for the homepage,
 with no playback button. Normal-motion playback starts after hydration, muted,
 looping and inline. The generated photo stays beneath it as the loading/failure,
 no-JavaScript and reduced-motion fallback; a live reduced-motion change unloads
-the video. Keep the same overlay, typography, copy, figures and layout, with the
-other 20 non-search page heroes still photographic; search uses its compact
-functional results view.
+the video. Keep the same overlay, typography, copy, figures and layout. Nineteen
+other pages retain photo heroes; contact uses its later split composition and
+search uses its compact functional results view.
 
 The unchanged 9.32 MiB file is an owner-requested budget exception. Its
 end-of-file metadata needs byte-range delivery; web-sized, fast-start derivatives
@@ -388,12 +450,18 @@ and [revision-specific validation](docs/validation.md); photo-only checks remain
 
 The homepage's `40rem`-and-below presentation prioritizes its message and two
 existing navigation actions, stacked full width in primary blue and secondary
-white. The optional ISO badge and redundant scroll cue are hidden, and the lower
-reserve reduces from 72px to 32px at default text size. All five figures remain
-in a labelled, focusable native horizontal scroll row. The native scrollbar is
-enabled and unhidden, with visibility depending on browser/OS; a neighboring-item
-glimpse appears where space permits. Preserve natural text growth and logical RTL order.
-Wider layouts, other page heroes, identity, copy, header and footer remain.
+white. The redundant scroll cue is hidden, and the lower reserve reduces from
+72px to 32px at default text size. The later tablet refinement hides the optional
+ISO badge below `70rem`, preserving its compact desktop placement. All five
+figures stay in one labelled, focusable row at every width, with native horizontal
+scrolling when needed and a hidden scrollbar. A neighboring-item glimpse appears
+where space permits on mobile. Preserve natural text growth and logical RTL order.
+Other page heroes, identity, copy, header and footer remain.
+
+Horizontal navigation throughout the public site should hide its scrollbar while
+retaining native touch/keyboard scrolling and visible focus. The shared
+`.horizontal-scroll` utility currently applies to the homepage figures; ordinary
+vertical scrolling retains its controls.
 
 Use [the reusable hierarchy](docs/mobile-information-hierarchy.md) for future
 sections. Future mission cards await approved content and follow this mobile
@@ -480,6 +548,9 @@ and shared physical 10px action corners. It expands toward inline start (left
 FR/EN, right Arabic), with a 220ms width/opacity transition and stable header geometry.
 The enhanced control is capped at 22rem and available container space; expansion
 can use the other direction when needed. Reduced motion makes the change immediate.
+The field replays this reveal after each closure, including empty hover sessions.
+The search disclosure keeps its native content wrapper renderable and explicitly
+hides closed children so browsers reset the finished CSS animation.
 
 Fine-pointer hover opens without taking focus; explicit keyboard/touch activation
 focuses the labelled input. Enter or the filled icon sends a native GET query
@@ -523,9 +594,10 @@ en place. The homepage band now presents these as a semantic definition list,
 replacing its founding-year/pathway items. The user's message is the content
 source; the Figma screenshots supply the styling hints. French labels retain
 the requested wording with spelling corrected; English/Arabic labels are drafted
-translations. Above `40rem`, auto-fit tracks adapt to available space. At `40rem`
-and below, native horizontal scrolling retains all five facts, with a
-neighboring-item glimpse where space permits. Text wraps naturally rather than being clipped.
+translations. A single row adapts to available space at every width, scrolling
+horizontally when the five tracks do not fit. Its scrollbar is hidden; at `40rem`
+and below, wider tracks retain a neighboring-item glimpse where space permits.
+Text wraps naturally rather than being clipped.
 The owner's 2026-10-09 alignment refinement centers each homepage value and label
 inside its own track. Locale-authored line breaks give the descriptions two lines
 at ordinary desktop/mobile sizes, including short labels; narrow tracks or
@@ -544,10 +616,9 @@ LTR-isolated in Plus Jakarta Sans; Arabic copy uses Alexandria.
 A translucent neutral gray surface uses actual backdrop blur and the physical
 top-left/bottom-right signature corners, preserved in RTL. At `70rem` and above,
 the 11rem badge sits at the inline end of a two-column copy grid, aligned with
-the CTA's bottom edge. Above `40rem` and below `70rem`, it wraps compactly between
-description and actions; at `40rem` and below, mobile hierarchy hides this secondary
-proof. Natural hero growth is
-retained. See [badge rules and content](docs/heroes.md#homepage-certification-badge--2026-10-08)
+the CTA's bottom edge. The owner's later tablet refinement omits it below
+`70rem`, replacing the wide badge between description and actions. Natural hero
+growth is retained. See [badge rules and content](docs/heroes.md#homepage-certification-badge--2026-10-08)
 and [current validation](docs/validation.md); earlier hero evidence predates it.
 
 ## Hovered-menu reference adaptation — 2026-10-08

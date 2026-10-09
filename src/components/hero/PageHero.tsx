@@ -73,7 +73,11 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
       </div>
       <div className="hero-highlights">
         {pageId === 'home' ? (
-          <dl className="container hero-figures" aria-label={t('figuresLabel')} tabIndex={0}>
+          <dl
+            className="container hero-figures horizontal-scroll"
+            aria-label={t('figuresLabel')}
+            tabIndex={0}
+          >
             {homeFigures.map(({ id, value }) => (
               <div className="key-figure" key={id}>
                 <dt className="key-figure-label">{t(`figures.${id}`)}</dt>

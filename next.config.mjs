@@ -12,7 +12,10 @@ const nextConfig = {
     qualities: [75, 90],
     // Published CMS bytes must recheck access on every request; Next's image
     // cache can outlive withdrawal even when the upstream response is no-store.
-    localPatterns: [{ pathname: '/images/heroes/**', search: '' }],
+    localPatterns: [
+      { pathname: '/images/heroes/**', search: '' },
+      { pathname: '/images/contact/contact-background-venue.jpg', search: '' },
+    ],
   },
   async headers() {
     return [

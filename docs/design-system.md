@@ -45,6 +45,12 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   families. Keep one primary action per context, links for navigation and buttons
   for actions. Illustrated states do not supply production semantics; include
   visible focus, readable errors and genuine unavailable/loading/success behavior.
+  Editable inputs, selects and textareas use a compact 2px outline at the field
+  edge; see [field focus](#refined-field-focus--2026-10-09). Links, buttons and
+  selection controls keep the established separate focus outline.
+- **Horizontal navigation:** retain native touch/keyboard scrolling and visible
+  focus, with the scrollbar hidden through `.horizontal-scroll`. Apply this to
+  horizontal collections, preserving ordinary vertical scrolling controls.
 - **Mobile hierarchy:** prioritize essential orientation/action, supporting
   context/facts, then optional decorative or redundant proof. Limit competing
   roles and collections rather than clipping content or fixing its height;
@@ -54,6 +60,38 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   adapt sample copy to approved content. Verify affected desktop/mobile, Arabic,
   long-content and interaction states after visual changes. Record source
   observations separately from proposals and implemented decisions.
+
+## Refined field focus — 2026-10-09
+
+The owner's two screenshots (`Screenshot 2026-10-09 at 11.27.47.png` and
+`11.27.53.png`) identify the overly thick focus frame on Organisation and the
+Arabic search input. Their field text is reference data. This scoped refinement
+uses the restrained 2px treatment documented by
+[IBM Carbon](https://www.carbondesignsystem.com/building-blocks/core/components/text-input/specifications)
+and [Adobe Spectrum](https://spectrum.adobe.com/page/states/), adapted to the
+existing IRESEN palette and control geometry.
+
+`--focus-field-width: 2px` applies to editable inputs, selects and textareas.
+The real outline overlaps the resting edge by 1px (`outline-offset: -1px`),
+removing the former 4px gap and avoiding a second distant rectangle. Layout,
+labels, padding and corners remain stable. Native `:focus-visible` preserves
+the browser's editable-field heuristics, including pointer focus when applicable.
+Checkboxes, radios, file pickers, sliders, buttons and links retain their existing
+focus styling.
+
+The header search paints its outline on `.header-search-form` only while its
+input matches `:focus-visible`; the inner input has no additional outline.
+This follows the field's complete surface and existing physical signature
+corners, including RTL and the mobile menu. Its white surface always uses blue
+`#296BB4`, including inverse headers; focus on the separate magnifier retains
+its own indicator. Dark footer fields inherit cyan `#77C5D5`.
+The indicator uses an actual outline rather than a shadow, with explicit system
+`Highlight` for the search surface in forced-colors mode.
+
+Blue contrasts 5.45:1 against white and 4.78:1 against the pale contact form
+surface; cyan contrasts 6.45:1 against navy. This records the chosen pairs, not
+a claim of overall accessibility conformance. See
+[revision-specific validation](validation.md#refined-field-focus--2026-10-09).
 
 ## Mobile reference adaptation — 2026-10-09
 
@@ -168,18 +206,21 @@ Public Latin text uses self-hosted Plus Jakarta Sans (normal variable 200–800)
 ### Section-heading marker
 
 The owner's 2026-10-09 clarification requires tasteful, selective use of the
-Apex Leaf. This revision implements the earlier preference in two places.
-The homepage hero eyebrow alone uses the
+Apex Leaf. The three implemented placements include the later explicit request
+for the Contact form label. The homepage hero eyebrow alone uses the
 original [apex-leaf.svg](../public/brand/apex-leaf.svg) as a white CSS mask at
-10 × 16px. The Institute's Mission H2 alone uses the original blue vector at
-1em height with a 12px gap. Keep its geometry and proportions; place it at the
-logical inline start in Arabic without mirroring the shape. Both marks are
-decorative, leaving the text as the accessible name. Other hero eyebrows, H2s,
+10 × 16px. The Institute's Mission H2 uses the original blue vector at
+1em height with a 12px gap. Contact's form eyebrow also uses the original blue
+vector at 1em height with a 12px gap, centering the leaf and label as one group.
+Keep its geometry and proportions; place it at the logical inline start in
+Arabic without mirroring the shape. All three marks are decorative, leaving the
+text as the accessible name. Other hero eyebrows, H2s,
 menus, footer and sitemap retain their existing treatment.
 
 ### Section placeholders — 2026-10-09
 
-The 21 non-search canonical pages share `PageSections` and the typed ID/order map in
+The initial scaffold covered all 22 canonical pages. The 20 pages other than
+contact/search retain `PageSections` and the typed ID/order map in
 `src/lib/page-sections.ts`. Introducing heroes retain each page's H1; subsequent
 sections use labelled H2s with short localized draft content notes, and nested
 Mission topics use H3s. Search has its compact functional results view.
@@ -189,6 +230,41 @@ inventing completed content modules. Institute's Mission alone retains the
 selective decorative Apex Leaf. The sitemap's real directory remains inside its
 first section; service notices retain their truthful availability state.
 See [the section guide](page-sections.md) and [validation evidence](validation.md).
+
+### Contact composition — 2026-10-09
+
+Contact uses a dedicated composition based on the owner's selected native frame
+`804:7374` and attached screenshot. Its shared header stays white; the owner's
+headquarters photo replaces the original abstract background beside the navy
+headquarters panel. Preserve the original JPEG and use responsive optimized
+delivery with a central entrance crop. White text and the energy-cyan accent sit
+over navy shading; a text-scaled bottom reserve keeps the lighter photo reveal
+below the copy, including enlarged text.
+Flat platform rows, the `--color-action-surface` form band, full-width location/map
+and subsequent native FAQ disclosures reuse existing type, spacing, focus,
+container and action roles. Shared navigation/footer, approved blue/navy and
+Jakarta/Alexandria supersede the sample's historical styles and labels.
+
+The owner's later screenshot correction centers the form eyebrow and adds its
+decorative original blue Apex Leaf. The local eyebrow resets the inherited
+paragraph `68ch` limit and centers its flex children with a 12px gap. The vector
+retains automatic width and 1em height; DOM order places it before the label
+at the logical inline start, including RTL, without mirroring the brand shape.
+Other Contact eyebrows retain their text-only treatment.
+
+Use natural content height, logical CSS and responsive column reduction; isolate
+email, phone and Latin platform names in Arabic. The form prepares a local email
+draft and exposes its actual state, with direct email fallback. The owner's
+explicit 2026-10-09 refinement supersedes the earlier on-demand map: its iframe
+is rendered in the server HTML with `loading="lazy"`, without reveal/remove
+controls or client state. Remove the lower explanatory strip and its extra
+spacing; the full-width location/map follows the form and precedes the FAQ,
+which leads to the footer. Retain the separate directions
+link. Native lazy loading delays network work according to browser behavior,
+without requiring a visitor click. Preserve all existing contact anchors
+within the new sections. No backend success, response deadline, opening hours or
+department mailbox is inferred from the design. See [contact sources and limits](contact.md)
+and [current check evidence](validation.md).
 
 ### Shared actions — 2026-10-09
 
@@ -214,15 +290,16 @@ text. See [the coherence review](site-coherence-review.md) and
 
 ### Mobile information hierarchy — 2026-10-09
 
-At `40rem` and below, the homepage omits its secondary ISO badge and redundant
-scroll cue, reduces its lower reserve to 32px at default text size, and stacks
-both existing navigation actions at full width: primary blue and secondary white
-with shared physical 10px action corners. Its five figures use a focusable,
-labelled native horizontal scroll row. Its scrollbar is enabled and unhidden,
-with browser/OS-dependent visibility; a neighboring-item glimpse appears where
-space permits. Natural height, ordinary page scrolling and FR/EN/AR order remain. Wider
-layouts and other page heroes are unchanged. This supersedes the earlier narrow
-figure grid, small-screen badge placement and homepage cue/reserve rules.
+At `40rem` and below, the homepage omits its redundant scroll cue, reduces its
+lower reserve to 32px at default text size, and stacks both existing navigation
+actions at full width: primary blue and secondary white
+with shared physical 10px action corners. The later tablet refinement hides its
+secondary ISO badge below `70rem` and keeps all five figures in one focusable,
+labelled row at every width. Native horizontal scrolling handles overflow with a
+hidden scrollbar; a neighboring-item glimpse appears on mobile where space
+permits. Natural height, ordinary page scrolling and FR/EN/AR order remain.
+Other page heroes are unchanged. These rules supersede the wrapping figure grid,
+intermediate badge placement and earlier homepage cue/reserve rules.
 
 Use [the role/count ceiling and three priority tiers](mobile-information-hierarchy.md)
 for future mobile sections. Essential content remains accessible; only optional
@@ -842,6 +919,10 @@ Expansion uses inline start (left FR/EN, right Arabic), a 220ms width/opacity
 transition and fixed header geometry. The measured combined trigger/field width
 is capped at 22rem and available container space, with the other direction used
 when needed. Global reduced-motion rules make the transition immediate.
+Each closure resets the reveal for the next opening, including empty hover
+sessions. The search-scoped `::details-content` stays renderable; direct children
+other than the summary use `display: none` while closed. This avoids retaining a
+finished animation in the native skipped subtree and hides the form/suggestions.
 
 Fine mouse hover opens without autofocus. Explicit keyboard/touch activation
 focuses the input; Enter and the filled icon submit the query. Required input
@@ -874,13 +955,12 @@ the default `rgb(52 52 52 / 94%)` provides a darker fallback. The physical
 `var(--radius-signature)` corners remain 20px top-left/bottom-right at the default
 root size, with sharp opposite corners in RTL as well.
 
-Above `40rem` and below `70rem`, the badge follows the introduction and precedes the actions in
-natural DOM flow. Its flex content wraps within `min(100%, 24rem)`, using 1rem
-padding. From `70rem`, `.hero-body--certified .hero-copy` uses
-`minmax(0, 1fr) 11rem` tracks and a `clamp(2rem, 4vw, 4rem)` column gap. The badge
+The owner's later tablet refinement hides the badge below `70rem`, replacing its
+wide placement between introduction and actions. From `70rem`,
+`.hero-body--certified .hero-copy` uses `minmax(0, 1fr) 11rem` tracks and a
+`clamp(2rem, 4vw, 4rem)` column gap. The badge
 occupies the second track across both copy/action rows and aligns at the bottom;
-no fixed hero height is added. At `40rem` and below, the badge is hidden by the
-current mobile hierarchy. The five homepage figures are retained.
+no fixed hero height is added. The five homepage figures are retained.
 See [content and behavior](heroes.md#homepage-certification-badge--2026-10-08)
 and [revision-specific validation](validation.md); earlier checks remain historical.
 
@@ -923,14 +1003,15 @@ supported, +1100 scientific publications and +18 university laboratories
 established. Labels are definition terms and values are their descriptions;
 CSS places the values above their labels. Plus-prefixed values are isolated LTR
 in Arabic. The homepage overrides Latin label line height to 1.35 for long
-wrapping labels; Arabic retains 1.45. Above `40rem`, auto-fit tracks use a
-minimum of `min(100%, 12rem)`, with 24px tablet and 32px wide gaps at the default
-root size: five columns at 1440/1920px and three at 768px. At `40rem` and below,
-the focusable, labelled list becomes a native horizontal scroll row, preserving
-all five pairs with an unhidden native scrollbar and neighboring-item glimpse
-where space permits. Scrollbar visibility depends on the browser/OS. This
-supersedes the former narrow grid and last-item row span. Text may wrap and grow;
-facts remain accessible without requiring all five to fit one view.
+wrapping labels; Arabic retains 1.45. At every width, the focusable, labelled list
+uses one row with native horizontal scrolling when needed. Above `40rem`,
+column-flow tracks use `minmax(min(100%, 12rem), 1fr)`, with 24px tablet and 32px
+wide gaps at the default root size. Wide layouts fit all five tracks; tablets
+scroll rather than wrap them. At `40rem` and below, wider tracks provide a
+neighboring-item glimpse where space permits. The shared `.horizontal-scroll`
+utility hides the scrollbar while preserving native scrolling and visible focus.
+This supersedes the wrapping grid and former last-item row span. Text may wrap
+and grow; facts remain accessible without requiring all five to fit one view.
 Each homepage pair is centered within its track. Locale-authored newlines in
 `Hero.figures` are preserved only by the homepage label's `white-space: pre-line`,
 giving even two-line descriptions at ordinary sizes. Natural wrapping can add

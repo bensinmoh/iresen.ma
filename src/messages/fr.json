@@ -1,4 +1,150 @@
 {
+  "Contact": {
+    "hero": {
+      "title": "Parlons de votre",
+      "accent": "projet.",
+      "description": "Chercheur, industriel, institution ou journaliste : présentez-nous votre besoin.",
+      "action": "Nous écrire"
+    },
+    "headquarters": {
+      "eyebrow": "Notre siège",
+      "title": "IRESEN Rabat",
+      "addressLabel": "Adresse",
+      "phoneLabel": "Téléphone",
+      "emailLabel": "Email"
+    },
+    "departments": {
+      "label": "Orienter votre demande",
+      "action": "Choisir ce sujet",
+      "agency": {
+        "title": "Projet & financement",
+        "description": "Questions sur les programmes, les appels et le dépôt de projets."
+      },
+      "partnerships": {
+        "title": "Partenariats",
+        "description": "Coopération, collaboration scientifique et partenariats institutionnels."
+      },
+      "press": {
+        "title": "Communication & presse",
+        "description": "Demandes médias, interviews et ressources institutionnelles."
+      },
+      "careers": {
+        "title": "Carrières & stages",
+        "description": "Questions sur les offres, les stages et les candidatures."
+      }
+    },
+    "platforms": {
+      "title": "Nos plateformes",
+      "description": "Pour une question sur un site, précisez la plateforme concernée dans votre message.",
+      "action": "Découvrir les plateformes",
+      "gep": {
+        "title": "Green Energy Park",
+        "description": "Énergie solaire photovoltaïque et thermique."
+      },
+      "gsbp": {
+        "title": "Green & Smart Building Park",
+        "description": "Bâtiments durables, réseaux intelligents et mobilité."
+      },
+      "greenH2": {
+        "title": "Green H2A",
+        "description": "Hydrogène vert et Power-to-X."
+      },
+      "africa": {
+        "title": "Green Energy Park Maroc–Côte d’Ivoire",
+        "description": "Énergie solaire en conditions tropicales."
+      }
+    },
+    "form": {
+      "eyebrow": "Votre message",
+      "title": "Une question ?\nUn projet ?",
+      "description": "Préparez votre message, puis ouvrez-le dans votre logiciel de messagerie pour l’envoyer.",
+      "requiredHint": "Le nom, l’email, l’objet et le message sont obligatoires.",
+      "fullName": {
+        "label": "Nom complet",
+        "placeholder": "Votre nom et prénom"
+      },
+      "organisation": {
+        "label": "Organisation",
+        "placeholder": "Votre institution ou entreprise"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "vous@exemple.com"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "+212…"
+      },
+      "subject": {
+        "label": "Objet de votre demande",
+        "placeholder": "Sélectionnez un objet"
+      },
+      "message": {
+        "label": "Votre message",
+        "placeholder": "Décrivez votre demande en quelques lignes…"
+      },
+      "topics": {
+        "agency": "Projet & financement",
+        "partnerships": "Partenariats",
+        "press": "Communication & presse",
+        "careers": "Carrières & stages",
+        "platforms": "Plateformes & visites",
+        "other": "Autre demande"
+      },
+      "optional": "facultatif",
+      "action": "Préparer mon email",
+      "openEmail": "Ouvrir dans mon application email",
+      "disclosure": "Ce formulaire prépare un email. Le site n’envoie ni n’enregistre votre message. L’envoi s’effectue depuis votre logiciel de messagerie.",
+      "privacyLink": "Informations sur la confidentialité",
+      "fallback": "Si votre messagerie ne s’ouvre pas, écrivez directement à",
+      "prepared": "Votre email est prêt. Ouvrez-le dans votre messagerie, vérifiez-le, puis envoyez-le.",
+      "mailSubject": "Demande IRESEN : {subject}"
+    },
+    "faq": {
+      "eyebrow": "Questions pratiques",
+      "title": "Les réponses à vos questions fréquentes.",
+      "description": "Quelques repères pour préparer votre demande et trouver la bonne page.",
+      "contact": "Nous écrire",
+      "questions": {
+        "calls": {
+          "question": "Comment soumettre un projet à un appel ?",
+          "answer": "Suivez les modalités et le canal indiqués dans l’appel concerné. Pour une question, précisez le nom de l’appel dans votre message.",
+          "action": "Consulter les programmes"
+        },
+        "access": {
+          "question": "Comment demander un accès aux plateformes de recherche ?",
+          "answer": "Indiquez la plateforme, l’objectif de vos essais et les dates souhaitées. Contactez-nous pour préciser les conditions d’accès.",
+          "action": "Découvrir les plateformes"
+        },
+        "visits": {
+          "question": "Puis-je visiter une plateforme ?",
+          "answer": "Contactez-nous en précisant le site, le nombre de personnes et les dates souhaitées pour connaître les possibilités de visite.",
+          "action": "Préparer une demande de visite"
+        },
+        "careers": {
+          "question": "Comment candidater à une offre d’emploi ou de stage ?",
+          "answer": "Utilisez le canal de candidature indiqué dans l’offre concernée. Pour une question, choisissez le sujet « Carrières & stages ».",
+          "action": "Consulter les opportunités"
+        },
+        "press": {
+          "question": "Comment demander une interview ou une intervention ?",
+          "answer": "Choisissez le sujet « Communication & presse » et précisez le média, le sujet, le format et la date souhaitée.",
+          "action": "Préparer une demande presse"
+        },
+        "publications": {
+          "question": "Où trouver les publications et rapports de l’Institut ?",
+          "answer": "Consultez la page Publications & rapports. Si vous cherchez un document précis, indiquez son titre ou son thème dans votre message.",
+          "action": "Consulter les publications"
+        }
+      }
+    },
+    "location": {
+      "eyebrow": "Nous trouver",
+      "title": "Retrouvez IRESEN à Rabat",
+      "mapTitle": "Localisation du siège IRESEN à Rabat sur Google Maps",
+      "externalLink": "Ouvrir l’itinéraire dans Google Maps"
+    }
+  },
   "PageSections": {
     "home": {
       "develop-test-transfer": {
@@ -584,7 +730,7 @@
     "empty": "Aucun contenu publié pour le moment.",
     "searchUnavailable": "La recherche est actuellement indisponible.",
     "contactUnavailable": "Le formulaire de contact n’est pas encore disponible.",
-    "noTracking": "Aucun cookie de suivi optionnel n’est activé.",
+    "thirdPartyMap": "La page Contact intègre une carte Google Maps qui se charge automatiquement, sans clic préalable, et transmet des données de navigation à Google.",
     "loading": "Chargement de la page…",
     "notFoundTitle": "Page introuvable",
     "notFoundDescription": "Cette page n’existe pas ou n’est plus disponible.",

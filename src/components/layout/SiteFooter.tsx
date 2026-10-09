@@ -74,7 +74,9 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               <FooterIcon name="location" />
               <div>
                 <p className="footer-contact-label">{footer('addressLabel')}</p>
-                <p className="footer-contact-value">{footer('address')}</p>
+                <a className="footer-contact-value" href={footerContact.mapsHref}>
+                  {footer('address')}
+                </a>
               </div>
             </div>
             <div className="footer-contact-item">
@@ -156,9 +158,6 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 })}
               </span>
             </label>
-            <p className="footer-newsletter-privacy">
-              <a href={pageHref('privacy', locale)}>{pageTitle('privacy')}</a>
-            </p>
           </div>
         </section>
 

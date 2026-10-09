@@ -24,6 +24,31 @@ Before live contact/recruitment/analytics collection, document purposes, control
 
 Responsible IRESEN legal/IT teams must determine system/data classification and applicability of Law 05-20, DNSSI and relevant cloud requirements including Decree 2-24-921. Do not infer blanket residency rules from the institution's name.
 
-No third-party trackers, external embeds, maps, CAPTCHA or newsletter processing are required for the foundation. Evaluate consent and data flows before introducing them. Public CMS media is unsuitable for CVs or other private submissions.
+The contact page prepares an email in browser memory, using the established
+institutional address as the recipient. It does not submit or store form data
+through the website; the visitor opens, reviews and sends the draft with their
+own email application. Name, email, topic and message are required to compose
+the draft; organisation and phone are optional. Direct email and telephone links
+remain available without JavaScript. This local composing workflow does not
+implement a server-side intake or establish delivery, retention or a response time.
+
+The contact location section includes Google Maps as a third-party embed. The
+owner's explicit 2026-10-09 refinement supersedes the earlier on-demand
+presentation: its iframe is rendered directly in the server HTML with native
+`loading="lazy"`. There is no reveal/remove control, persisted preference or
+lower explanatory strip. Browser lazy loading may defer the request until the
+map approaches the viewport; it is not a consent mechanism. Loading the map
+sends browsing data to Google. `referrerPolicy="no-referrer"` limits the referrer
+without preventing the third-party request. The cookies-page service notice
+identifies the map's automatic loading and external data flow. The separate
+directions link opens the exact owner-supplied Google Maps shortlink. Its
+destination and the address-query embed's exact pin remain unverified.
+See [map behavior and limits](contact.md).
+
+No separate analytics trackers, CAPTCHA or newsletter processing are added by
+this contact change.
+Review the map's third-party terms, consent, data flows and applicable institutional
+requirements before release; this implementation is not a compliance assessment.
+Public CMS media is unsuitable for CVs or other private submissions.
 
 See [backlog](backlog.md) for release prerequisites and [SECURITY.md](../SECURITY.md) for reporting guidance.

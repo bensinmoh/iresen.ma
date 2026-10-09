@@ -19,6 +19,9 @@ import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
+import fr from '@/messages/fr.json'
+import en from '@/messages/en.json'
+import ar from '@/messages/ar.json'
 
 describe('multilingual search text', () => {
   it('normalizes French accents and ligatures, English case, and Arabic marks without losing letters', () => {
@@ -170,6 +173,41 @@ describe('search request validation', () => {
 })
 
 describe('explicit public search catalog', () => {
+  it.each(contentLocales)(
+    '%s: indexes current contact guidance and destinations without withdrawn editorial scaffolds',
+    (locale) => {
+      const catalog = { fr, en, ar }[locale]
+      const contact = staticSearchDocuments()
+        .filter(({ id }) => id.startsWith('page:contact:') || id.startsWith('section:contact:'))
+        .filter((document) => document.locale === locale)
+      const page = contact.find(({ type }) => type === 'page')
+      expect(page).toMatchObject({
+        title: `${catalog.Contact.hero.title} ${catalog.Contact.hero.accent}`,
+        url: pageHref('contact', locale),
+      })
+      expect(page?.body).toContain(catalog.Contact.hero.description)
+      expect(page?.body).toContain(catalog.Footer.address)
+      const text = contact.map(({ title, body }) => `${title} ${body}`).join(' ')
+      expect(text).not.toMatch(/À prévoir|Content to add|محتوى مرتقب/)
+      expect(text).not.toContain(catalog.Hero.descriptions.contact)
+      const form = contact.find(({ url }) => url.endsWith('#send-request'))
+      for (const topic of Object.values(catalog.Contact.form.topics))
+        expect(form?.body).toContain(topic)
+      const platforms = contact.find(({ url }) => url.endsWith('#page-sections'))
+      expect(platforms?.title).toBe(catalog.Contact.platforms.title)
+      expect(platforms?.body).toContain('Green H2A')
+      expect(platforms?.body).toContain(catalog.Contact.platforms.greenH2.description)
+      const faq = contact.find(({ url }) => url.endsWith('#practical-questions'))
+      for (const question of Object.values(catalog.Contact.faq.questions)) {
+        expect(faq?.body).toContain(question.question)
+        expect(faq?.body).toContain(question.answer)
+      }
+      const location = contact.find(({ url }) => url.endsWith('#locations'))
+      expect(location?.title).toBe(catalog.Contact.location.title)
+      expect(location?.body).toContain(catalog.Contact.location.mapTitle)
+    },
+  )
+
   it('registers every public page and nested section in its own locale with a canonical destination', () => {
     const documents = staticSearchDocuments()
     expect(new Set(documents.map(({ id }) => id)).size).toBe(documents.length)
@@ -220,6 +258,25 @@ describe('explicit public search catalog', () => {
       }
     }
     for (const image of Object.values(heroImages)) expect(references.has(image.src)).toBe(true)
+    expect(
+      publicAssetReferences.filter(({ url }) => url.startsWith('/images/contact/')),
+    ).toMatchObject([
+      {
+        id: 'contact-venue',
+        url: '/images/contact/contact-background-venue.jpg',
+        type: 'media',
+      },
+    ])
+    expect(references.has('/images/contact/contact-background-79bad501a298.png')).toBe(false)
+    const formerContactImage = publicAssetReferences.find(({ id }) => id === 'hero-wind-detail')!
+    for (const locale of contentLocales) {
+      expect(formerContactImage.text[locale]?.title).not.toContain(
+        { fr, en, ar }[locale].Pages.contact,
+      )
+      expect(formerContactImage.text[locale]?.description).not.toContain(
+        { fr, en, ar }[locale].Hero.descriptions.contact,
+      )
+    }
   })
 
   it('changes the catalog fingerprint when approved searchable content changes', () => {

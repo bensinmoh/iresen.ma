@@ -4,14 +4,16 @@ Initially implemented on 2026-10-08 from the owner's hero screenshot (inspiratio
 recorded native Figma design language and the approved information architecture.
 The owner's clarification keeps the heroes introductory: detailed content belongs
 in the sections below. No complete homepage or editorial listing is implied.
-The generated backgrounds below replace the initial Figma-derived imagery on
+The generated backgrounds below replaced the initial Figma-derived imagery on
 2026-10-09 while retaining that framework. The owner's subsequent homepage video
-request keeps those photos on the other 20 non-search pages and as the homepage
-fallback. Search now uses its compact functional results view.
+request keeps its generated photo as the homepage fallback. The current site has
+20 shared `PageHero` introductions: the homepage and 19 photo-led pages. Search
+uses its compact functional results view, while contact uses its
+[dedicated design and location section](contact.md).
 
 ## Composition and content
 
-The 21 non-search pages use the shared server-rendered `PageHero`, with composition
+These 20 pages use the shared server-rendered `PageHero`, with composition
 selected by stable page ID in `src/lib/heroes.ts`. Four text-placement modes
 (start, end, center and editorial) vary alignment and reading measure over
 full-scene photographic backgrounds. The former split treatment is removed.
@@ -36,8 +38,8 @@ introductions and adopts shared action styling and selective Apex Leaf placement
 
 The owner explicitly requested 17 generated photographic placeholders to replace
 all hero backgrounds across the 22 pages in the initial photo-replacement revision.
-Three contextual replacements now join 14 retained generated images, still serving
-the 20 interior heroes and homepage fallback. These illustrate research, renewable
+Three contextual replacements joined 14 retained generated images. Current shared
+hero usage covers 19 interior pages and the homepage fallback. These illustrate research, renewable
 energy, collaboration and knowledge sharing through fictional, generic scenes.
 They remain decorative with empty alternatives and make no claim to depict real
 IRESEN people, facilities or events. Requested real Green Energy Park and IRESEN
@@ -50,7 +52,7 @@ original SVGs and installed fonts remain.
 Governance uses a generated executive meeting, opportunities a young-adult office
 onboarding scene, and workWithUs a two-person handshake. These fictional people
 and settings do not document IRESEN board members, staff or premises. All 17
-active photo assets remain generated; institute and platforms keep their
+served photo assets remain generated; institute and platforms keep their
 illustrative backgrounds while real office/Green Energy Park sourcing is pending.
 
 All media cover the complete scene. The five former split pages now use start
@@ -101,8 +103,9 @@ and then specifies no playback button. A homepage-only client layer assigns the
 source after hydration when `prefers-reduced-motion` permits motion. Its initial
 markup has no source and uses `preload="none"`. The native video uses autoplay,
 muted, loop and playsInline, without controls. It remains
-decorative; existing text, links, figures, certification and all 20 other photo
-heroes retain their behavior.
+decorative; at that video-only revision, existing text, links, figures,
+certification and the other photo heroes retained their behavior. Current shared
+hero usage and the search/contact exceptions are described above.
 
 The server-rendered generated `HeroPhoto` stays beneath the video as a lightweight
 visual poster and fallback. It remains visible before playback, when playback
@@ -164,17 +167,21 @@ and renderings belong in [the validation log](validation.md).
 
 ## Mobile information hierarchy — 2026-10-09
 
-At `40rem` and below, the homepage hides its secondary ISO badge and redundant
-scroll cue, and uses a 32px lower reserve at default text size. Its existing
-discovery and related-page links stack at full width: primary blue and secondary
+At `40rem` and below, the homepage hides its redundant scroll cue and uses a
+32px lower reserve at default text size. Its existing discovery and related-page
+links stack at full width: primary blue and secondary
 white, sharing physical 10px action corners. Destinations and labels remain.
+The later tablet refinement hides its secondary ISO badge below `70rem`, keeping
+the desktop badge in its existing compact placement at the lower inline end.
 
-The five-figure definition list is focusable and labelled, with native horizontal
-scrolling. Its scrollbar is enabled and unhidden, with browser/OS-dependent
-visibility; a neighboring-item glimpse appears where space permits. All five pairs
-remain accessible by keyboard/touch and without JavaScript, in logical locale
+The five-figure definition list is focusable and labelled, remaining in one row
+at every width with native horizontal scrolling when needed. Its scrollbar is
+hidden through the shared `.horizontal-scroll` utility, following the owner's
+general horizontal navigation preference; a neighboring-item glimpse appears on
+mobile where space permits. All five pairs remain accessible by keyboard/touch
+and without JavaScript, in logical locale
 order. No automatic advancement, carousel buttons or extra client runtime is
-introduced. Wider layouts and other page heroes retain their existing behavior.
+introduced. Ordinary vertical scrolling and other page heroes retain their behavior.
 
 This applies [the role-based mobile ceiling](mobile-information-hierarchy.md)
 without clipping content or fixing hero height. Future mission cards await
@@ -292,12 +299,14 @@ English and Arabic labels are draft translations of that supplied French.
 `src/lib/figures.ts` records the stable IDs and values; `Hero.figures` in the
 FR/EN/AR catalogs records the labels. A semantic definition list pairs each
 label with its value, with the value displayed above the label. Arabic uses
-LTR-isolated values so the leading plus signs remain in place. Above `40rem`,
-auto-fit tracks inside the shared container use a `min(100%, 12rem)` minimum,
-with 24px tablet and 32px wide gaps at default text size: five columns at
-1440/1920px and three at 768px. At `40rem` and below, the native horizontal
-scroll row supersedes the former narrow grid and last-item spanning. Every
-value/label pair stays stacked and all five remain available; text enlargement
+LTR-isolated values so the leading plus signs remain in place. At every width,
+one row retains all five pairs, with native horizontal scrolling when they do
+not fit. Above `40rem`, column-flow tracks inside the shared container use
+`minmax(min(100%, 12rem), 1fr)`, with 24px tablet and 32px wide gaps at default text
+size; wide layouts fit all five and tablets scroll instead of wrapping. At
+`40rem` and below, wider tracks retain the neighboring-item glimpse where space
+permits. The shared `.horizontal-scroll` utility hides the scrollbar without
+disabling native scrolling. Every value/label pair stays stacked; text enlargement
 can wrap and grow each item without truncating its label.
 Each value/label pair is centered within its own track. Locale-authored line breaks
 give short and long descriptions two lines at ordinary desktop/mobile sizes;
@@ -330,11 +339,9 @@ darker neutral `rgb(52 52 52 / 94%)` fallback. Its physical 20px top-left/bottom
 corners stay rounded and the opposite corners sharp in RTL too.
 
 From `70rem`, the homepage copy uses a two-column grid with an 11rem badge at
-inline-end, bottom-aligned with the actions. Above `40rem` and below `70rem`, the
-badge sits between description and actions in natural flow, with wrapping flex
-content and a 24rem maximum width. At `40rem` and below, it is omitted as
-secondary proof under the mobile hierarchy. All five existing figures
-remain, and the hero can grow for content. Current checks belong in
+inline-end, bottom-aligned with the actions. The owner's later tablet refinement
+omits it below `70rem`, replacing the wide badge between description and actions.
+All five existing figures remain, and the hero can grow for content. Current checks belong in
 [the validation log](validation.md); earlier hero checks and screenshots predate
 this badge.
 
