@@ -11,6 +11,15 @@ import fr from '../../src/messages/fr.json' with { type: 'json' }
 const catalogs = { ar, en, fr }
 const googleUrls =
   /^https:\/\/(?:[^/]+\.)?(?:google\.com|gstatic\.com|googleapis\.com|maps\.app\.goo\.gl)(?:\/|$)/
+
+test.beforeEach(async ({ page }) => {
+  await page.route(googleUrls, (route) =>
+    route.fulfill({
+      contentType: 'text/html',
+      body: '<!doctype html><html><body><p>Local map test response</p></body></html>',
+    }),
+  )
+})
 const sectionAnchors = [
   'route-request',
   'send-request',
@@ -268,7 +277,7 @@ for (const locale of locales) {
     expect(amended.searchParams.get('body')).toContain(`${body}\nMerci`)
   })
 
-  test(`${locale}: Google Maps loads only after a keyboard request and can be removed`, async ({
+  test(`${locale}: Google Maps displays directly and retains keyboard access to directions`, async ({
     page,
   }) => {
     const requests: string[] = []
@@ -282,32 +291,33 @@ for (const locale of locales) {
     await page.goto(pageHref('contact', locale))
     await expect(page.getByLabel(messages.form.fullName.label, { exact: true })).toBeEnabled()
     const location = page.locator('.contact-location')
-    const load = location.getByRole('button', { name: messages.location.loadMap, exact: true })
-    await load.scrollIntoViewIfNeeded()
+    const map = location.locator('iframe')
+    await map.scrollIntoViewIfNeeded()
     await settleLayout(page)
-    await expect(location.locator('iframe')).toHaveCount(0)
-    expect(requests).toEqual([])
-    await expect(
-      location.getByRole('link', { name: messages.location.externalLink }),
-    ).toHaveAttribute('href', contactLocation.directionsHref)
-    await load.focus()
-    await page.keyboard.press('Enter')
-    await expect(location.locator('iframe')).toHaveAttribute('title', messages.location.mapTitle)
-    await expect(location.locator('iframe')).toHaveAttribute('src', contactLocation.embedHref)
-    await expect(location.locator('iframe')).toBeFocused()
+    await expect(map).toHaveAttribute('title', messages.location.mapTitle)
+    await expect(map).toHaveAttribute('src', contactLocation.embedHref)
+    await expect(map).toHaveAttribute('loading', 'lazy')
+    await expect(map).toHaveAttribute('referrerpolicy', 'no-referrer')
+    await expect(location.getByRole('button')).toHaveCount(0)
+    await expect(location.locator('.contact-map-placeholder, .contact-map-note')).toHaveCount(0)
     await expect.poll(() => requests).toEqual([contactLocation.embedHref])
-    await location.getByRole('button', { name: messages.location.removeMap, exact: true }).click()
-    await expect(location.locator('iframe')).toHaveCount(0)
-    await expect(load).toBeVisible()
-    await expect(load).toBeFocused()
+    const directions = location.getByRole('link', { name: messages.location.externalLink })
+    await expect(directions).toHaveAttribute('href', contactLocation.directionsHref)
+    await directions.focus()
+    await expect(directions).toBeFocused()
+    const mapBounds = (await map.boundingBox())!
+    const sectionBounds = (await location.boundingBox())!
+    expect(sectionBounds.y + sectionBounds.height).toBeCloseTo(mapBounds.y + mapBounds.height, 0)
     await page.reload()
     await expect(page.getByLabel(messages.form.fullName.label, { exact: true })).toBeEnabled()
-    await expect(location.locator('iframe')).toHaveCount(0)
-    expect(requests).toEqual([contactLocation.embedHref])
+    await map.scrollIntoViewIfNeeded()
+    await expect
+      .poll(() => requests)
+      .toEqual([contactLocation.embedHref, contactLocation.embedHref])
   })
 }
 
-test('without JavaScript, contact email, directions and native FAQ disclosures remain available in every language', async ({
+test('without JavaScript, the map, contact links and native FAQ disclosures remain available in every language', async ({
   browser,
   baseURL,
 }) => {
@@ -321,7 +331,10 @@ test('without JavaScript, contact email, directions and native FAQ disclosures r
     const googleRequests: string[] = []
     await page.route(googleUrls, async (route) => {
       googleRequests.push(route.request().url())
-      await route.abort()
+      await route.fulfill({
+        contentType: 'text/html',
+        body: '<!doctype html><html><body><p>Local map test response</p></body></html>',
+      })
     })
     for (const locale of locales) {
       const messages = catalogs[locale].Contact
@@ -343,10 +356,14 @@ test('without JavaScript, contact email, directions and native FAQ disclosures r
       await expect(question.locator('.contact-faq-answer')).toContainText(
         messages.faq.questions.calls.answer,
       )
-      await expect(page.locator('.contact-location iframe')).toHaveCount(0)
+      const map = page.locator('.contact-location iframe')
+      await expect(map).toHaveAttribute('title', messages.location.mapTitle)
+      await expect(map).toHaveAttribute('src', contactLocation.embedHref)
+      await map.scrollIntoViewIfNeeded()
+      await expect.poll(() => googleRequests.length).toBe(locales.indexOf(locale) + 1)
       await expectContained(page, `${locale}, no JavaScript`)
     }
-    expect(googleRequests).toEqual([])
+    expect(googleRequests).toEqual(locales.map(() => contactLocation.embedHref))
   } finally {
     await context.close()
   }

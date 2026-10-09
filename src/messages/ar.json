@@ -141,12 +141,8 @@
     "location": {
       "eyebrow": "موقعنا",
       "title": "مقر IRESEN في الرباط",
-      "description": "اطّلع على مسار الوصول إلى مقرنا أو اعرض الخريطة.",
-      "loadMap": "عرض خريطة Google Maps",
-      "removeMap": "إخفاء الخريطة",
       "mapTitle": "موقع مقر IRESEN في الرباط على Google Maps",
-      "externalLink": "فتح مسار الوصول في Google Maps",
-      "privacyNotice": "تستخدم الخريطة خدمة Google Maps. لا تُحمّل إلا بطلب منك، وعندها تُرسل بيانات التصفح إلى Google."
+      "externalLink": "فتح مسار الوصول في Google Maps"
     }
   },
   "Metadata": {
@@ -224,7 +220,7 @@
     "empty": "لا يوجد محتوى منشور حتى الآن.",
     "searchUnavailable": "البحث غير متاح حاليًا.",
     "contactUnavailable": "نموذج الاتصال غير متاح بعد.",
-    "noTracking": "لم يتم تفعيل أي ملفات اختيارية لتتبع المستخدمين.",
+    "thirdPartyMap": "تتضمن صفحة الاتصال خريطة Google Maps تُحمّل تلقائيًا دون نقرة مسبقة، وتنقل بيانات التصفح إلى Google.",
     "loading": "جارٍ تحميل الصفحة…",
     "notFoundTitle": "الصفحة غير موجودة",
     "notFoundDescription": "هذه الصفحة غير موجودة أو لم تعد متاحة.",

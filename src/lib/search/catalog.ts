@@ -111,6 +111,27 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   },
   {
+    id: 'contact-venue',
+    url: '/images/contact/contact-background-venue.jpg',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Photographie fournie pour la page Contact',
+        description:
+          'Entrée d’un bâtiment derrière un mur blanc marqué IRESEN, entourée d’arbres et d’un jardin.',
+      },
+      en: {
+        title: 'Photograph supplied for the Contact page',
+        description:
+          'Building entrance behind a white wall bearing the IRESEN name, surrounded by trees and a garden.',
+      },
+      ar: {
+        title: 'صورة مقدمة لصفحة الاتصال',
+        description: 'مدخل مبنى خلف جدار أبيض يحمل اسم IRESEN، محاط بالأشجار وحديقة.',
+      },
+    },
+  },
+  {
     id: 'home-video',
     url: '/videos/hero.mp4',
     type: 'media',
@@ -218,10 +239,8 @@ function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
       body: [
         copy.location.eyebrow,
         catalog.Footer.address,
-        copy.location.description,
+        copy.location.mapTitle,
         copy.location.externalLink,
-        copy.location.loadMap,
-        copy.location.privacyNotice,
       ],
     },
     {
@@ -286,7 +305,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...homeFigures.map(({ id, value }) => `${value} ${catalog.Hero.figures[id]}`),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
-      if (pageId === 'cookies') body.push(catalog.States.noTracking)
+      if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
         id: `page:${pageId}:${locale}`,
         locale,

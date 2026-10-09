@@ -72,11 +72,20 @@ schema are required for this local workflow.
 ## Location and third-party behavior
 
 The full-width location band shows the established headquarters address and
-the owner's exact directions shortlink. Google Maps is absent until the visitor
-requests it; a remove control unmounts the iframe. A visible notice explains that
-loading the map sends browsing data to Google. The iframe uses `no-referrer`;
-its load/remove state stays local and is not persisted as a consent preference.
-Removing it cannot retract requests already sent.
+the owner's exact directions shortlink. The owner's explicit 2026-10-09
+refinement supersedes the earlier on-demand presentation: Google Maps is
+rendered directly in the server HTML with `loading="lazy"`. No reveal click,
+remove control or client state is required. The lower explanatory strip and its
+extra spacing are removed, allowing the map to meet the footer; the separate
+directions link remains useful for navigation and when the embed is unavailable.
+
+Native lazy loading lets the browser defer the request until the map approaches
+the viewport; it does not wait for consent or a visitor click. The map remains
+present without JavaScript, when browser lazy-loading behavior may differ. Once
+the iframe loads, browsing data is sent to Google. The iframe retains
+`referrerPolicy="no-referrer"`; this limits the referrer without preventing the
+third-party request. The cookies-page service notice identifies this external
+service rather than claiming that no optional tracking can occur.
 
 The shortlink could not be resolved in the available environment. The embed
 therefore uses a query for the shared Rabat headquarters address, not inferred

@@ -204,7 +204,7 @@ describe('explicit public search catalog', () => {
       }
       const location = contact.find(({ url }) => url.endsWith('#locations'))
       expect(location?.title).toBe(catalog.Contact.location.title)
-      expect(location?.body).toContain(catalog.Contact.location.privacyNotice)
+      expect(location?.body).toContain(catalog.Contact.location.mapTitle)
     },
   )
 
@@ -264,6 +264,11 @@ describe('explicit public search catalog', () => {
       {
         id: 'contact-background',
         url: '/images/contact/contact-background-79bad501a298.png',
+        type: 'media',
+      },
+      {
+        id: 'contact-venue',
+        url: '/images/contact/contact-background-venue.jpg',
         type: 'media',
       },
     ])

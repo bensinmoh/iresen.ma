@@ -1472,3 +1472,43 @@ Reviewed screenshots retained for this correction:
 
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
+
+## Direct contact map — 2026-10-09
+
+The owner's follow-up replaces the click-to-reveal presentation with a directly
+rendered Google Maps iframe. `ContactLocation` is now a server component with
+explicit locale translations, native `loading="lazy"`, a descriptive frame title
+and `no-referrer`. The directions shortlink and headquarters address are retained.
+The load/hide controls, their client state, placeholder and lower explanatory
+strip are removed, including bottom section padding. The cookies-page service
+notice and location search metadata describe the current external-map behavior.
+
+The existing owner-added `/images/contact/contact-background-venue.jpg` failed
+the public-file catalog check because it lacked a search reference. It is now
+registered with FR/EN/AR titles and descriptions grounded in the visible building
+entrance, white IRESEN wall, trees and garden. The file and the current decorative
+contact introduction remain unchanged; no exact location or new rights claim is
+inferred from the photograph.
+
+Executed local checks:
+
+- Frozen dependency installation, disposable local PostgreSQL setup and reviewed
+  migrations; public search rebuild synchronized the current static catalog.
+- `pnpm lint`, `pnpm typecheck`, `pnpm format:check`, all 97 unit cases and all
+  21 CMS/search integration cases passed.
+- The final `pnpm build` completed successfully.
+- Production Chromium ran `contact.spec.ts`, `contact-search.spec.ts` and
+  `foundation.spec.ts`: all 30 cases passed. Contact layout checks cover FR/EN/AR
+  at 320, 390, 768, 1024 and 1440px with 100% and 200% text. The map spans the
+  viewport, loads without interaction and reloads without stored state. Its
+  section ends at the iframe's bottom, and directions retain keyboard access.
+- No-JavaScript checks confirm the iframe, translated title, email/directions
+  links and native FAQ disclosures in all three locales. Search checks confirm
+  discoverable contact text and working section destinations.
+
+Google responses are intercepted locally in map-focused browser checks to avoid
+external-service dependence. They verify the rendered frame and automatic request,
+not Google's live tiles, gesture behavior or exact pin. The supplied shortlink's
+pin, physical-device/Safari behavior and production privacy assessment retain
+[their documented scope](contact.md#location-and-third-party-behavior). Remote CI
+and merge results are recorded by the corresponding pull request and commit history.

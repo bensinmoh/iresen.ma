@@ -141,12 +141,8 @@
     "location": {
       "eyebrow": "Nous trouver",
       "title": "Retrouvez IRESEN à Rabat",
-      "description": "Consultez l’itinéraire jusqu’à notre siège ou affichez la carte.",
-      "loadMap": "Afficher la carte Google Maps",
-      "removeMap": "Masquer la carte",
       "mapTitle": "Localisation du siège IRESEN à Rabat sur Google Maps",
-      "externalLink": "Ouvrir l’itinéraire dans Google Maps",
-      "privacyNotice": "La carte utilise Google Maps. Elle se charge uniquement à votre demande et transmet alors des données de navigation à Google."
+      "externalLink": "Ouvrir l’itinéraire dans Google Maps"
     }
   },
   "PageSections": {
@@ -734,7 +730,7 @@
     "empty": "Aucun contenu publié pour le moment.",
     "searchUnavailable": "La recherche est actuellement indisponible.",
     "contactUnavailable": "Le formulaire de contact n’est pas encore disponible.",
-    "noTracking": "Aucun cookie de suivi optionnel n’est activé.",
+    "thirdPartyMap": "La page Contact intègre une carte Google Maps qui se charge automatiquement, sans clic préalable, et transmet des données de navigation à Google.",
     "loading": "Chargement de la page…",
     "notFoundTitle": "Page introuvable",
     "notFoundDescription": "Cette page n’existe pas ou n’est plus disponible.",
