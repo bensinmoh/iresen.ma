@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test'
+import { expect, test, type Locator, type Page } from '@playwright/test'
 import { locales } from '../../src/i18n/locales'
 import { homeNavigation } from '../../src/lib/home-navigation'
 import { pageHref } from '../../src/lib/site'
@@ -20,6 +20,49 @@ const missions = [
 
 async function waitForFonts(page: Page) {
   await page.evaluate(() => document.fonts.ready)
+}
+
+async function horizontallyContained(element: Locator) {
+  return element.evaluate((node) => {
+    const region = node.closest('[data-mission-cards]')!.getBoundingClientRect()
+    const bounds = node.getBoundingClientRect()
+    return bounds.left >= region.left - 1 && bounds.right <= region.right + 1
+  })
+}
+
+async function visitMobileMissionsWithKeyboard(page: Page, direction: 'ltr' | 'rtl') {
+  const cards = page.locator('[data-mission-cards]')
+  await cards.focus()
+  await expect(cards).toBeFocused()
+  await expect(cards).toHaveAccessibleName(/\S/)
+  await expect(cards).toHaveCSS('outline-style', 'solid')
+  const key = direction === 'rtl' ? 'ArrowLeft' : 'ArrowRight'
+  for (const card of await cards.getByRole('article').all()) {
+    await expect
+      .poll(
+        async () => {
+          const contained = await horizontallyContained(card)
+          if (!contained) await page.keyboard.press(key)
+          return contained
+        },
+        { timeout: 10_000, intervals: [100] },
+      )
+      .toBe(true)
+  }
+}
+
+async function visitMissionLinksWithTab(page: Page) {
+  const cards = page.locator('[data-mission-cards]')
+  await cards.focus()
+  for (const link of await cards.getByRole('link').all()) {
+    await page.keyboard.press('Tab')
+    await expect(link).toBeFocused()
+    await expect(link).toBeInViewport()
+    await expect.poll(() => horizontallyContained(link)).toBe(true)
+    expect(
+      await link.evaluate((node) => node.getBoundingClientRect().height),
+    ).toBeGreaterThanOrEqual(44)
+  }
 }
 
 async function expectTargetBelowNavigation(page: Page, id: string, nativeFallback = false) {
@@ -168,28 +211,47 @@ for (const locale of locales) {
     for (const width of [320, 390, 1023]) {
       await page.setViewportSize({ width, height: 900 })
       await expect(page.locator('.home-section-navigation')).toBeHidden()
+      const cards = section.locator('[data-mission-cards]')
+      // Start each responsive view at the first mission, including the RTL scroll origin.
+      await cards.evaluate((element) => element.scrollTo({ left: 0, behavior: 'instant' }))
       const bounds = await section.getByRole('article').evaluateAll((cards) =>
         cards.map((card) => {
           const rect = card.getBoundingClientRect()
           return { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom }
         }),
       )
-      for (const [index, card] of bounds.entries()) {
+      if (width < 768) {
         expect(
-          card.left,
-          `${locale}, ${width}px: card ${index + 1} stays within the viewport`,
-        ).toBeGreaterThanOrEqual(-1)
-        expect(card.right).toBeLessThanOrEqual(width + 1)
-        if (index > 0) expect(card.top).toBeGreaterThanOrEqual(bounds[index - 1].bottom)
-      }
-      for (const card of await section.getByRole('article').all()) {
-        await card.getByRole('link').focus()
-        await expect(card.getByRole('link')).toBeFocused()
-        await expect(card.getByRole('link')).toBeInViewport()
-        await expect(card.getByRole('heading', { level: 3 })).toBeVisible()
-        expect(
-          await card.getByRole('link').evaluate((link) => link.getBoundingClientRect().height),
-        ).toBeGreaterThanOrEqual(44)
+          Math.max(...bounds.map((card) => card.top)) - Math.min(...bounds.map((card) => card.top)),
+        ).toBeLessThanOrEqual(1)
+        expect(await cards.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(
+          true,
+        )
+        expect(await horizontallyContained(section.getByRole('article').first())).toBe(true)
+        const region = (await cards.boundingBox())!
+        if (locale === 'ar') {
+          expect(bounds[1].right, 'the next mission peeks from the inline end').toBeGreaterThan(
+            region.x,
+          )
+          expect(bounds[1].left).toBeLessThan(region.x)
+        } else {
+          expect(bounds[1].left, 'the next mission peeks from the inline end').toBeLessThan(
+            region.x + region.width,
+          )
+          expect(bounds[1].right).toBeGreaterThan(region.x + region.width)
+        }
+        await visitMobileMissionsWithKeyboard(page, locale === 'ar' ? 'rtl' : 'ltr')
+        await visitMissionLinksWithTab(page)
+      } else {
+        for (const [index, card] of bounds.entries()) {
+          expect(card.left).toBeGreaterThanOrEqual(-1)
+          expect(card.right).toBeLessThanOrEqual(width + 1)
+          if (index > 0) expect(card.top).toBeGreaterThanOrEqual(bounds[index - 1].bottom)
+        }
+        expect(await cards.evaluate((element) => element.scrollWidth <= element.clientWidth)).toBe(
+          true,
+        )
+        await visitMissionLinksWithTab(page)
       }
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
@@ -213,8 +275,47 @@ for (const locale of locales) {
         'location',
       )
     }
+    await page.setViewportSize({ width: 390, height: 900 })
+    await page.goto(`${pageHref('home', locale)}#mission-transfer`)
+    await waitForFonts(page)
+    const card = page.locator('#mission-transfer')
+    await expect(page.locator('.home-section-navigation')).toBeHidden()
+    await expect.poll(() => horizontallyContained(card)).toBe(true)
+    await expect(card.getByRole('heading', { level: 3 })).toBeInViewport()
+    await expect(card.getByRole('link')).toHaveAttribute('href', pageHref('transfer', locale))
   })
 }
+
+test('mobile missions remain readable and keyboard navigable at 200% text in every locale', async ({
+  page,
+}) => {
+  test.setTimeout(60_000)
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.setViewportSize({ width: 320, height: 900 })
+  for (const locale of locales) {
+    await page.goto(pageHref('home', locale))
+    await page.evaluate(async () => {
+      document.documentElement.style.fontSize = '200%'
+      await document.fonts.ready
+    })
+    await visitMobileMissionsWithKeyboard(page, locale === 'ar' ? 'rtl' : 'ltr')
+    await visitMissionLinksWithTab(page)
+    const clippedText = await page
+      .locator('[data-mission-cards] :is(h3, p, a span)')
+      .evaluateAll((nodes) =>
+        nodes
+          .filter(
+            (node) =>
+              node.scrollWidth > node.clientWidth + 1 || node.scrollHeight > node.clientHeight + 1,
+          )
+          .map((node) => node.textContent),
+      )
+    expect(clippedText, `${locale}: enlarged mission copy wraps without clipping`).toEqual([])
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+    ).toBe(true)
+  }
+})
 
 test('wrapped home navigation uses its measured height when text is enlarged', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
@@ -242,6 +343,7 @@ test('native home anchors remain usable without JavaScript in every locale', asy
   browser,
   baseURL,
 }) => {
+  test.setTimeout(60_000)
   const context = await browser.newContext({
     baseURL,
     javaScriptEnabled: false,
@@ -251,6 +353,7 @@ test('native home anchors remain usable without JavaScript in every locale', asy
   try {
     const page = await context.newPage()
     for (const locale of locales) {
+      await page.setViewportSize({ width: 1440, height: 900 })
       await page.goto(pageHref('home', locale))
       await waitForFonts(page)
       const nav = page.locator('.home-section-navigation')
@@ -268,6 +371,21 @@ test('native home anchors remain usable without JavaScript in every locale', asy
       })
       await nav.locator('a[href="#research-priorities"]').click()
       await expectTargetBelowNavigation(page, 'research-priorities', true)
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+      ).toBe(true)
+
+      await page.setViewportSize({ width: 390, height: 900 })
+      await page.goto(pageHref('home', locale))
+      await waitForFonts(page)
+      await expect(nav).toBeHidden()
+      await visitMobileMissionsWithKeyboard(page, locale === 'ar' ? 'rtl' : 'ltr')
+      await visitMissionLinksWithTab(page)
+      await page.goto(`${pageHref('home', locale)}#mission-transfer`)
+      await waitForFonts(page)
+      const card = page.locator('#mission-transfer')
+      await expect.poll(() => horizontallyContained(card)).toBe(true)
+      await expect(card.getByRole('heading', { level: 3 })).toBeInViewport()
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
       ).toBe(true)

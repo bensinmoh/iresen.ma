@@ -305,7 +305,9 @@ Use [the role/count ceiling and three priority tiers](mobile-information-hierarc
 for future mobile sections. Essential content remains accessible; only optional
 decoration or redundant proof may be omitted. The requested homepage mission
 cards now follow this hierarchy with all three available in ordinary flow;
-see [the implemented composition](home-sections.md).
+below 48rem they use a native horizontal collection with a hidden scrollbar
+and a neighboring-card glimpse where space permits. See
+[the implemented composition](home-sections.md).
 Current checks belong in [validation](validation.md), with earlier captures historical.
 
 ## Interaction and acceptance
@@ -315,7 +317,12 @@ text roles and blue active underline. It pins above content from `64rem`; its
 measured height provides anchor clearance when labels wrap. All six destinations
 remain native links with visible focus and reduced-motion support. Mission cards
 reuse the physical 20px corner signature, aligned media/title/body/action anatomy,
-and existing Latin/Arabic families. They stack below `64rem` without hiding content.
+and existing Latin/Arabic families. Between `48rem` and `64rem`, image/body rows
+stack in page flow; below `48rem`, complete cards use native horizontal scrolling
+and CSS scroll snapping. The scrollbar stays hidden. Neighboring-card glimpses
+appear where space permits, while enlarged text can use the full available card
+width. Preserve logical RTL order, visible focus, keyboard/touch scrolling and
+no-JavaScript access to all three destinations; card text grows naturally.
 See [homepage behavior and media](home-sections.md).
 
 Keep navigation operable by keyboard, touch and pointer. Use visible focus, correct landmarks, a skip link and reduced-motion support. Avoid autoplay carousels and decorative animation libraries in the foundation.

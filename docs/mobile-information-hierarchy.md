@@ -58,7 +58,8 @@ The video/photo policy, fonts, copy and routes remain. The narrow header and foo
 follow the later [mobile reference adaptation](design-system.md#mobile-reference-adaptation--2026-10-09).
 Horizontal navigation follows the owner's general preference for hidden
 scrollbars through the shared `.horizontal-scroll` utility. It currently applies
-to the figure collection; ordinary vertical page scrolling continues.
+to the figure collection and, below 48rem, the mission collection; ordinary
+vertical page scrolling continues.
 Keyboard/touch and no-JavaScript access use native scrolling, without
 automatic advancement, carousel buttons or an additional client runtime.
 
@@ -66,13 +67,18 @@ automatic advancement, carousel buttons or an additional client runtime.
 
 The requested three mission cards now explain Développer · Éprouver · Valoriser
 with short wayfinding drafts and generated energy imagery. They stack in ordinary
-page flow below 64rem, with image/body rows on tablet and complete vertical cards
-below 48rem. All three remain visible without a carousel or nested vertical scroll.
+page flow as image/body rows between 48rem and 64rem. Below 48rem, complete cards
+form a native horizontal scroll collection with CSS scroll snapping and a hidden
+scrollbar. A neighboring-card glimpse shows that more content is available where
+space permits; enlarged text can use the full available card width. Text grows
+naturally without a nested vertical scroll. All three destinations remain
+reachable through keyboard focus, touch and no-JavaScript scrolling in logical
+FR/EN/AR order, without automatic advancement or extra carousel controls.
 The homepage section submenu is hidden below 64rem. See
 [composition, behavior and media](home-sections.md); further page sections retain
 their editorial scaffolds.
 
-Inspect reading order, all five facts, reachable links, keyboard/touch scrolling,
+Inspect reading order, all five facts, all three missions, reachable links, keyboard/touch scrolling,
 no-JavaScript behavior, Arabic RTL and enlarged text when applying the rule.
 Executed checks and captures belong in [the validation log](validation.md);
 earlier screenshots retain their revision-specific scope. See
