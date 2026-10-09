@@ -2336,3 +2336,13 @@ the existing ISO 9001:2015 claim. See [scope and captures](home-collaboration.md
 The count's perimeter/date and final FR/EN/AR wording remain editorial inputs.
 No available thesis opportunity, guaranteed service or funding is asserted.
 The final website-wide content/search sanity check remains pending.
+
+### Later certification wording correction
+
+The owner replaced the agency-only claim with “Premier institut de recherche
+certifié ISO 9001 en Afrique” in both the homepage hero and collaboration.
+FR/EN/AR copy and search references were updated together; ISO 9001:2015 remains
+the detailed standard. The corrected runtime passed lint, strict types, build,
+109 unit tests and **19 focused production browser checks** for heroes and
+collaboration, including 200% text. Final collaboration captures were refreshed
+and the French desktop rendering inspected. The local search catalog was rebuilt.

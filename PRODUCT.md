@@ -271,3 +271,11 @@ certification and links to opportunities or contact with an appropriate subject.
 FR/EN/AR remain working wording; no available thesis positions, guaranteed
 services or funding commitments are implied. Achievements and capabilities
 remain placeholders. See [scope](docs/home-collaboration.md).
+
+## Certification wording correction — 2026-10-09
+
+The owner’s later wording, “Premier institut de recherche certifié ISO 9001 en
+Afrique”, supersedes the earlier agency-only description in both homepage
+hero and collaboration. FR/EN/AR catalogs and search projections carry the
+correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
+copy, not independent certification verification.

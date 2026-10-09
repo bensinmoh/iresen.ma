@@ -1233,3 +1233,11 @@ dividers and native underlined destination links. The primary contact action
 reuses physical top-left/bottom-right action corners in both LTR and RTL.
 The proof band and all pathways remain visible on mobile. No shared token or
 image asset is added. See [composition](home-collaboration.md).
+
+## Certification wording correction — 2026-10-09
+
+The owner’s later wording, “Premier institut de recherche certifié ISO 9001 en
+Afrique”, supersedes the earlier agency-only description in both homepage
+hero and collaboration. FR/EN/AR catalogs and search projections carry the
+correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
+copy, not independent certification verification.

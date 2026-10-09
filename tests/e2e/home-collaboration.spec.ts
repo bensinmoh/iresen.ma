@@ -18,6 +18,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(section.locator('article')).toHaveCount(4)
     await expect(section).toContainText('+120')
     await expect(section).toContainText('ISO 9001:2015')
+    await expect(section.locator('aside')).toContainText(
+      catalogs[locale].Hero.certification.description,
+    )
+    await expect(page.locator('.hero-certification-description')).toHaveText(
+      catalogs[locale].HomeCollaboration.certification,
+    )
     await expect(section.locator('article a').first()).toHaveAttribute(
       'href',
       pageHref('opportunities', locale),

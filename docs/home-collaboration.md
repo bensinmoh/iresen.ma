@@ -17,9 +17,9 @@ services, funding or results.
 The owner supplied **+120** in response to the collaborator-count question. It
 is labelled Collaborateurs and kept separate from the existing +1000 young
 researchers supported. Its organisational perimeter and measurement date were
-not supplied. The certification repeats the owner's existing ISO 9001:2015 and
-“Première agence de moyens certifiée en Afrique” wording; no independent
-certification verification is asserted.
+not supplied. The owner’s later correction applies in both this section and the hero:
+“Premier institut de recherche certifié ISO 9001 en Afrique.” The detailed
+standard remains ISO 9001:2015. No independent certification verification is asserted.
 
 Research links to canonical `opportunities`. The three other links open the
 existing contact page at `send-request`, preparing `partnerships`, `platforms`

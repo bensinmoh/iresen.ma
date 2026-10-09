@@ -788,3 +788,11 @@ type roles, 120rem grid and physical action corners carry through. Tablet stacks
 the introduction; mobile stacks pathways and proof without clipping or hiding
 required content. This is a local surface application; navy/blue tokens remain.
 See [scope and captures](docs/home-collaboration.md).
+
+## Certification wording correction — 2026-10-09
+
+The owner’s later wording, “Premier institut de recherche certifié ISO 9001 en
+Afrique”, supersedes the earlier agency-only description in both homepage
+hero and collaboration. FR/EN/AR catalogs and search projections carry the
+correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
+copy, not independent certification verification.
