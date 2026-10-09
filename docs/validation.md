@@ -1512,6 +1512,16 @@ Reviewed crops from this production build:
 - [Arabic header search at 1440px](screenshots/input-focus-search-ar-1440.png)
 - [Arabic mobile-menu search at 390px](screenshots/input-focus-search-ar-390.png)
 
-No public content, search references or CMS schema changed. The shared rule and
-research references are recorded in
+Integration with the latest `main` brought in the owner's exterior photograph
+at `/images/contact/contact-background-venue.jpg`. Its missing search reference
+caused the current-head CI unit check to fail. The fix registers
+`contact-exterior-photo` with neutral explicit FR/EN/AR visual descriptions and
+updates the existing expected contact asset list. The 97 unit cases and 21
+integration cases then passed, along with lint, types, formatting and a fresh
+production build. After rebuilding the public index, API queries `entrée en
+bois`, `wooden entrance` and `مدخل خشبي` found the corresponding FR/EN/AR media
+entry; its image destination returned HTTP 200 with `image/jpeg`.
+The photograph's bytes are preserved; [asset provenance](asset-inventory.md#owner-added-contact-photograph--2026-10-09)
+records its source revision and metadata. The shared field rule and research
+references are recorded in
 [the design specification](design-system.md#refined-field-focus--2026-10-09).

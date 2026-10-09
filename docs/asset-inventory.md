@@ -211,6 +211,21 @@ replaces its former generated photo hero; other photo-hero assets remain in
 [the generated inventory](hero-assets.json). See [contact scope](contact.md)
 and [current check evidence](validation.md).
 
+## Owner-added contact photograph — 2026-10-09
+
+The owner-added file arrived from `main` in commit `92f01c3` (`added contact
+image`). It depicts a white wall and wooden entrance framed by trees and plants.
+The original bytes are preserved and registered as the standalone
+`contact-exterior-photo` public media reference with explicit FR/EN/AR descriptions.
+
+| Property                    | Value                                                              |
+| --------------------------- | ------------------------------------------------------------------ |
+| Public file                 | `public/images/contact/contact-background-venue.jpg`               |
+| Format / dimensions         | JPEG; 5797 × 3865px, inspected with Sharp metadata                 |
+| Bytes                       | 11,425,755                                                         |
+| Public file SHA-256         | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f` |
+| Transformation in this task | None                                                               |
+
 ## Contextual hero media — 2026-10-09
 
 The schema-3 [current inventory](hero-assets.json) supports per-asset provenance;

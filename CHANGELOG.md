@@ -13,6 +13,12 @@ merge results are recorded by the corresponding pull request and commit history.
 - Moved header search focus to its field surface, avoiding a second inner frame
   and preserving blue on white in inverse headers, Arabic RTL and mobile menus.
   Footer email retains cyan; forced colors use a real system-color outline.
+- Registered the existing owner-added exterior contact photograph with neutral
+  FR/EN/AR search metadata when integrating the latest `main`, resolving the
+  public-file catalog check without changing the image bytes.
+- Rechecked the integrated catalog with 97 unit and 21 integration cases,
+  rebuilt its public index and verified FR/EN/AR discovery and the image's
+  working JPEG destination.
 - Passed formatting, lint, types, 97 unit cases, production build and 35 existing
   contact/header-search/footer browser cases. Reviewed FR/EN/AR at 1440, 768 and
   390px, pointer/keyboard focus, stable geometry, 200% text and forced colors;

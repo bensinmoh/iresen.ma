@@ -111,6 +111,26 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   },
   {
+    id: 'contact-exterior-photo',
+    url: '/images/contact/contact-background-venue.jpg',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Photographie extérieure — Contact',
+        description:
+          'Photographie d’un mur blanc et d’une entrée en bois entourés d’arbres et de plantes.',
+      },
+      en: {
+        title: 'Exterior photograph — Contact',
+        description: 'Photograph of a white wall and wooden entrance framed by trees and plants.',
+      },
+      ar: {
+        title: 'صورة خارجية — التواصل',
+        description: 'صورة لجدار أبيض ومدخل خشبي تحيط بهما الأشجار والنباتات.',
+      },
+    },
+  },
+  {
     id: 'home-video',
     url: '/videos/hero.mp4',
     type: 'media',
