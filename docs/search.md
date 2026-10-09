@@ -4,9 +4,9 @@ Search uses PostgreSQL behind the replaceable `SearchAdapter` boundary. The
 localized search page accepts `q`, `type`, `sort` and `page` in its URL, so results
 can be bookmarked and browser history preserves the visitor's choices.
 
-The header's white magnifier expands toward inline-start on hover or keyboard
-focus, revealing a labeled input. This moves left in French/English and mirrors
-in Arabic. Enter or the magnifier submits a GET request. Touch, no-JavaScript
+The header's white magnifier expands toward inline-start on hover or explicit
+keyboard/touch activation, revealing a labeled input. This moves left in French/English and mirrors
+in Arabic, switching sides when necessary to fit the available header width. Enter or the magnifier submits a GET request. Touch, no-JavaScript
 and reduced-motion users retain the native form. Suggestions use the same public
 search service as full results, with debounce and cancellation.
 
@@ -67,6 +67,9 @@ caption and rights. Put an approved transcript or a searchable description in
 the localized `searchText` field when automatic extraction is unavailable. File
 bytes and metadata must both remain behind the guarded media endpoint; private
 uploads do not belong in `public/`.
+Serve CMS images directly or with an unoptimized image component. The Next image
+optimizer is restricted to static hero paths because its independent cache can
+retain withdrawn CMS bytes despite the upstream endpoint's `no-store` policy.
 
 For **static served documents/media**, add an explicit `PublicAssetReference`
 to `publicAssetReferences` in `src/lib/search/catalog.ts`, providing ID, served

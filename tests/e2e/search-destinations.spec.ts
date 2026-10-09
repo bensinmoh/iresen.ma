@@ -100,6 +100,13 @@ test('published CMS search destinations render and withdrawn files/articles are 
     expect(publicFile.status()).toBe(200)
     expect(publicFile.headers()['cache-control']).toContain('no-store')
     expect(await publicFile.text()).toContain(`${token} public document text`)
+    // CMS file endpoints must never enter Next's independently cached optimizer.
+    // The URL gate applies before MIME detection, including to real CMS images.
+    const optimizedFile = await request.get(
+      `/_next/image?url=${encodeURIComponent(document.url)}&w=640&q=75`,
+    )
+    expect(optimizedFile.status()).toBe(400)
+    expect(await optimizedFile.text()).toContain('not allowed')
     expect([403, 404]).toContain(
       (await request.get(document.url.replace('locale=fr', 'locale=ar'))).status(),
     )

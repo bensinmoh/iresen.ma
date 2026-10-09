@@ -2,8 +2,8 @@
   position: absolute;
   z-index: 2;
   inset-block-start: calc(100% + var(--space-2));
-  inset-inline: 0;
-  inline-size: 100%;
+  inset-inline-end: 0;
+  inline-size: calc(var(--header-search-field-width) + var(--header-control-size) - 1px);
   max-block-size: min(32rem, 65dvh);
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -12,6 +12,11 @@
   background: var(--color-white);
   color: var(--color-navy);
   box-shadow: var(--shadow-menu);
+}
+
+.header-search-disclosure[data-search-side='end'] .header-search-suggestions {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
 }
 
 .header-search-suggestions-label {

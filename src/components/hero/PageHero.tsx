@@ -22,7 +22,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
     <HeroViewport className={`page-hero hero--${definition.layout}`}>
       <div className="hero-scene">
         <div className="hero-media" aria-hidden="true">
-          <HeroPhoto photo={definition.photo} split={definition.layout === 'split'} />
+          <HeroPhoto photo={definition.photo} />
           {pageId === 'home' && <HomeHeroVideo />}
         </div>
         <div className="hero-shade" />
@@ -71,7 +71,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
       </div>
       <div className="hero-highlights">
         {pageId === 'home' ? (
-          <dl className="container hero-figures" aria-label={t('figuresLabel')}>
+          <dl className="container hero-figures" aria-label={t('figuresLabel')} tabIndex={0}>
             {homeFigures.map(({ id, value }) => (
               <div className="key-figure" key={id}>
                 <dt className="key-figure-label">{t(`figures.${id}`)}</dt>

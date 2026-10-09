@@ -141,7 +141,8 @@ for (const locale of locales) {
     const headerSearch = header.locator('.header-search-form')
     await expect(headerSearch).toHaveAttribute('action', pageHref('search', locale))
     await expect(headerSearch).toHaveJSProperty('method', 'get')
-    await expect(headerSearch.locator('button[type="submit"]')).toBeVisible()
+    await expect(header.locator('.header-search')).toBeVisible()
+    await expect(header.locator('.header-search')).toHaveAccessibleName(messages.Pages.search)
     await expect(
       header.locator('.header-tools').locator(`a[href="${pageHref('contact', locale)}"]`),
     ).toBeVisible()

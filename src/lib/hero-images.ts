@@ -1,22 +1,22 @@
-// Native generated placeholders and their full-height mobile crops.
+// Native photographic assets and their full-height mobile crops.
 // Provenance, prompts, pixel sizes and hashes: docs/hero-assets.json.
 export const heroImages = {
-  careers: {
-    src: '/images/heroes/careers-265dba164ad3.webp',
+  'careers-onboarding': {
+    src: '/images/heroes/careers-onboarding-a0935b018aa6.webp',
     width: 1536,
     height: 1024,
     mobile: {
-      src: '/images/heroes/careers-mobile-b2b1ca594fa0.webp',
+      src: '/images/heroes/careers-onboarding-mobile-3c9467d279e8.webp',
       width: 683,
       height: 1024,
     },
   },
-  collaboration: {
-    src: '/images/heroes/collaboration-19ed7c16b18b.webp',
+  governance: {
+    src: '/images/heroes/governance-598e07ec7988.webp',
     width: 1536,
     height: 1024,
     mobile: {
-      src: '/images/heroes/collaboration-mobile-37bfdd5d73ce.webp',
+      src: '/images/heroes/governance-mobile-b489f3c97bd6.webp',
       width: 683,
       height: 1024,
     },
@@ -141,12 +141,12 @@ export const heroImages = {
       height: 1024,
     },
   },
-  'wind-engineer': {
-    src: '/images/heroes/wind-engineer-1fc45889ff2c.webp',
+  'partnership-handshake': {
+    src: '/images/heroes/partnership-handshake-c6da03657725.webp',
     width: 1536,
     height: 1024,
     mobile: {
-      src: '/images/heroes/wind-engineer-mobile-8a4062f10302.webp',
+      src: '/images/heroes/partnership-handshake-mobile-cd8622b10825.webp',
       width: 683,
       height: 1024,
     },

@@ -24,7 +24,7 @@ export type PublicAssetReference = {
 
 const assetLabels = {
   fr: {
-    image: 'Image illustrative',
+    image: 'Image d’introduction',
     video: 'Vidéo de présentation',
     brand: 'Identité IRESEN',
     logo: 'Logo IRESEN',
@@ -32,7 +32,7 @@ const assetLabels = {
     favicon: 'Icône IRESEN',
   },
   en: {
-    image: 'Illustrative image',
+    image: 'Page introduction image',
     video: 'Introduction video',
     brand: 'IRESEN identity',
     logo: 'IRESEN logo',
@@ -40,7 +40,7 @@ const assetLabels = {
     favicon: 'IRESEN icon',
   },
   ar: {
-    image: 'صورة توضيحية',
+    image: 'صورة تقديمية',
     video: 'فيديو تقديمي',
     brand: 'الهوية البصرية لـ IRESEN',
     logo: 'شعار IRESEN',

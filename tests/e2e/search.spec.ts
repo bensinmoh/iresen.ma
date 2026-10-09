@@ -14,46 +14,62 @@ async function expectSearchUrl(page: Page, locale: (typeof locales)[number], que
   )
 }
 
+function headerSearch(page: Page) {
+  const disclosure = page.getByRole('banner').locator('.header-search-disclosure')
+  return {
+    disclosure,
+    trigger: disclosure.locator(':scope > summary'),
+    form: disclosure.locator('.header-search-form'),
+    input: disclosure.locator('input[name="q"]'),
+  }
+}
+
+async function openHeaderSearch(page: Page) {
+  const parts = headerSearch(page)
+  if ((await parts.disclosure.getAttribute('open')) === null) {
+    await parts.trigger.focus()
+    await parts.trigger.press('Enter')
+  }
+  await expect(parts.input).toBeVisible()
+  await parts.input.focus()
+  return parts
+}
+
 for (const locale of ['fr', 'ar'] as const) {
   test(`${locale}: header search reveals its input on hover and remains available by keyboard`, async ({
     page,
   }) => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto(pageHref('institute', locale))
-    const form = page.locator('.header-search-form')
-    const input = form.locator('input[name="q"]')
-    const button = form.locator('button[type="submit"]')
+    const { disclosure, trigger, form, input } = headerSearch(page)
     await expect(form).toHaveAttribute('action', pageHref('search', locale))
     await expect(form).toHaveJSProperty('method', 'get')
-    await expect(input).toHaveAccessibleName(/\S/)
     await expect(input).toHaveAttribute('placeholder', /\S/)
-    await expect(button).toHaveAccessibleName(/\S/)
-    const collapsed = (await form.boundingBox())!
-    await button.hover()
+    await expect(trigger).toHaveAccessibleName(/\S/)
+    const anchor = (await trigger.boundingBox())!
+    await trigger.hover()
+    await expect(disclosure).toHaveAttribute('open', '')
+    await expect(input).toBeVisible()
+    await expect(input).toHaveAccessibleName(/\S/)
     await expect
-      .poll(async () => (await form.boundingBox())!.width)
-      .toBeGreaterThan(collapsed.width + 100)
-    const expanded = (await form.boundingBox())!
-    if (locale === 'fr') {
-      expect(expanded.x).toBeLessThan(collapsed.x - 100)
-      expect(
-        Math.abs(expanded.x + expanded.width - collapsed.x - collapsed.width),
-      ).toBeLessThanOrEqual(2)
-    } else {
-      expect(Math.abs(expanded.x - collapsed.x)).toBeLessThanOrEqual(2)
-    }
+      .poll(async () => {
+        const expanded = (await form.boundingBox())!
+        return locale === 'fr'
+          ? anchor.x - expanded.x
+          : expanded.x + expanded.width - anchor.x - anchor.width
+      })
+      .toBeGreaterThan(100)
+    const after = (await trigger.boundingBox())!
+    expect(Math.abs(after.x - anchor.x)).toBeLessThanOrEqual(2)
+    expect(Math.abs(after.y - anchor.y)).toBeLessThanOrEqual(2)
     await page.mouse.move(1, 899)
-    await input.focus()
+    await openHeaderSearch(page)
     await expect(input).toBeFocused()
-    await expect
-      .poll(async () => (await form.boundingBox())!.width)
-      .toBeGreaterThan(collapsed.width + 100)
     await page.keyboard.press('Escape')
     await expect(input).not.toBeFocused()
-    await expect
-      .poll(async () => (await form.boundingBox())!.width)
-      .toBeLessThanOrEqual(collapsed.width + 2)
-    await input.focus()
+    await expect(disclosure).not.toHaveAttribute('open', '')
+    await expect(trigger).toBeFocused()
+    await openHeaderSearch(page)
     const query = locale === 'fr' ? 'plateformes' : 'المنصات'
     await input.fill(query)
     await page.keyboard.press('Enter')
@@ -66,10 +82,9 @@ for (const locale of ['fr', 'ar'] as const) {
 test('a populated header search button submits its retained query', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto(pageHref('institute', 'en'))
-  const form = page.locator('.header-search-form')
-  await form.locator('input[name="q"]').focus()
-  await form.locator('input[name="q"]').fill('research')
-  await form.locator('button[type="submit"]').click()
+  const { trigger, input } = await openHeaderSearch(page)
+  await input.fill('research')
+  await trigger.click()
   await expectSearchUrl(page, 'en', 'research')
   await expect(page.locator('.search-results article').first()).toBeVisible()
 })
@@ -80,20 +95,14 @@ test('leaving search by keyboard clears the reveal while the pointer is parked o
   await page.setViewportSize({ width: 1440, height: 900 })
   for (const locale of ['fr', 'ar'] as const) {
     await page.goto(pageHref('institute', locale))
-    const form = page.locator('.header-search-form')
-    const input = form.locator('input[name="q"]')
-    const collapsed = (await form.boundingBox())!.width
-    await input.focus()
-    await expect
-      .poll(async () => (await form.boundingBox())!.width)
-      .toBeGreaterThan(collapsed + 100)
+    const { disclosure, trigger, input } = await openHeaderSearch(page)
     await input.hover()
+    await page.keyboard.press('Shift+Tab')
+    await expect(trigger).toBeFocused()
     await page.keyboard.press('Shift+Tab')
     const previousLanguage = page.getByRole('banner').locator('.locale-selector a').last()
     await expect(previousLanguage).toBeFocused()
-    await expect
-      .poll(async () => (await form.boundingBox())!.width)
-      .toBeLessThanOrEqual(collapsed + 2)
+    await expect(disclosure).not.toHaveAttribute('open', '')
     expect(
       await previousLanguage.evaluate((link) => {
         const bounds = link.getBoundingClientRect()
@@ -113,9 +122,7 @@ test('public search suggestions support arrow navigation, Escape and destination
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto(pageHref('institute', 'en'))
-  const form = page.locator('.header-search-form')
-  const input = form.locator('input[name="q"]')
-  await input.focus()
+  const { trigger, input } = await openHeaderSearch(page)
   await input.fill('research')
   const suggestions = page.locator('[data-search-suggestion]')
   await expect(suggestions.first()).toBeVisible()
@@ -136,8 +143,9 @@ test('public search suggestions support arrow navigation, Escape and destination
   await input.press('ArrowDown')
   await page.keyboard.press('Escape')
   await expect(input).not.toBeFocused()
+  await expect(trigger).toBeFocused()
   await expect(suggestions).toHaveCount(0)
-  await input.focus()
+  await openHeaderSearch(page)
   await expect(suggestions.first()).toBeVisible()
   const destination = (await suggestions.first().getAttribute('href'))!
   await input.press('ArrowDown')
@@ -158,12 +166,11 @@ test('touch search opens its input before submitting, without needing hover', as
   try {
     const page = await context.newPage()
     await page.goto(pageHref('institute', 'fr'))
-    const form = page.locator('.header-search-form')
-    const input = form.locator('input[name="q"]')
-    await form.locator('button[type="submit"]').tap()
+    const { trigger, input } = headerSearch(page)
+    await trigger.tap()
     await expect(input).toBeFocused()
     await input.fill('plateformes')
-    await form.locator('button[type="submit"]').tap()
+    await trigger.tap()
     await expectSearchUrl(page, 'fr', 'plateformes')
     await expect(page.locator('.search-results article').first()).toBeVisible()
   } finally {
@@ -183,8 +190,7 @@ test('header and results native GET search remain functional without JavaScript'
   try {
     const page = await context.newPage()
     await page.goto(pageHref('institute', 'en'))
-    const headerInput = page.locator('.header-search-form input[name="q"]')
-    await headerInput.focus()
+    const { input: headerInput } = await openHeaderSearch(page)
     await headerInput.fill('research')
     await page.keyboard.press('Enter')
     await expectSearchUrl(page, 'en', 'research')
@@ -329,10 +335,14 @@ test('the reveal animation respects reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto(pageHref('institute', 'en'))
-  const form = page.locator('.header-search-form')
-  await form.locator('input[name="q"]').focus()
-  await expect(form).toHaveCSS('transition-property', 'none')
-  await expect(form.locator('input[name="q"]')).toHaveCSS('transition-property', 'none')
+  const { form } = await openHeaderSearch(page)
+  const durations = await form.evaluate((element) => {
+    const style = getComputedStyle(element)
+    return [...style.transitionDuration.split(','), ...style.animationDuration.split(',')].map(
+      (duration) => parseFloat(duration),
+    )
+  })
+  expect(Math.max(...durations)).toBeLessThanOrEqual(0.02)
 })
 
 for (const locale of locales) {
@@ -350,8 +360,7 @@ for (const locale of locales) {
           document.documentElement.style.fontSize = `${size}%`
           await document.fonts.ready
         }, textSize)
-        const headerInput = page.locator('.header-search-form input[name="q"]')
-        await headerInput.focus()
+        const { input: headerInput } = await openHeaderSearch(page)
         await expect
           .poll(async () => (await headerInput.boundingBox())!.width, {
             message: `${locale}: ${width}px, ${textSize}% text must leave a usable input`,

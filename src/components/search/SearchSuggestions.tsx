@@ -92,7 +92,7 @@ export function SearchSuggestions({
   useEffect(() => {
     if (!eligible) return
     const handlePointerDown = (event: PointerEvent) => {
-      const slot = panelRef.current?.closest('.header-search-slot')
+      const slot = panelRef.current?.closest('.header-search-disclosure')
       if (event.target instanceof Node && slot && !slot.contains(event.target)) onDismiss()
     }
     document.addEventListener('pointerdown', handlePointerDown)
@@ -120,7 +120,7 @@ export function SearchSuggestions({
         event.preventDefault()
         if (event.key === 'ArrowUp' && index === 0) {
           event.currentTarget
-            .closest('.header-search-slot')
+            .closest('.header-search-disclosure')
             ?.querySelector<HTMLInputElement>('input[name="q"]')
             ?.focus()
           return

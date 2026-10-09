@@ -10,6 +10,9 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     qualities: [75, 90],
+    // Published CMS bytes must recheck access on every request; Next's image
+    // cache can outlive withdrawal even when the upstream response is no-store.
+    localPatterns: [{ pathname: '/images/heroes/**', search: '' }],
   },
   async headers() {
     return [

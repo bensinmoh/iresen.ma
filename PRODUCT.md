@@ -36,8 +36,8 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- The 21 non-search pages have introductory heroes with five composition
-  styles: 20 use generated photos, while the homepage uses the owner's video with
+- The 21 non-search pages have introductory heroes with four text-placement
+  modes: 20 use generated photos, while the homepage uses the owner's video with
   its generated photo as fallback. Short FR/EN/AR wayfinding drafts and the
   Développer · Éprouver · Valoriser reading framework remain.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
@@ -53,10 +53,16 @@ marketing page.
 - The generated photos replace the former Figma-source backgrounds with generic
   research, renewable-energy and collaboration scenes. They do not document real
   IRESEN facilities, people or events. Landscape and portrait crops support wide
-  and mobile views while preserving the existing copy, claims, routes, fonts and
-  five layouts. [The asset manifest](docs/hero-assets.json) records provenance,
-  native dimensions and served derivatives; final checks for this replacement
-  belong in [revision-specific validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
+  and mobile views; copy, claims, routes and fonts remain. Backgrounds now fill
+  the scene with readable overlays. Former split pages use
+  start-aligned copy; utility editorial pages retain their reading measure over a
+  lighter neutral dark overlay. Three generated contextual images now illustrate
+  governance, career onboarding and collaboration; all 17 active photo assets
+  remain fictional. Real Green Energy Park and IRESEN office photos are pending
+  source-download access and have not been imported. See
+  [current media and readiness](docs/contextual-hero-media.md) and
+  [the asset manifest](docs/hero-assets.json); earlier replacement checks retain
+  their revision-specific scope.
 - The 21 non-search canonical pages have section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests
@@ -75,6 +81,15 @@ marketing page.
   Continuous motion without a pause control does not establish WCAG 2.2.2
   conformance. See [current hero behavior](docs/heroes.md#homepage-hero-video--2026-10-09)
   and [source metadata and rights limits](docs/asset-inventory.md#hero-video).
+- The 2026-10-09 mobile hierarchy at `40rem` and below hides the homepage's
+  secondary ISO badge and redundant scroll cue, uses a 32px lower reserve at
+  default text size, stacks its two existing navigation links at full width and
+  keeps all five facts in a labelled native horizontal scroll row. Wider layouts
+  and other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
+  preserves essential routes, forms, feedback and facts while limiting competing
+  roles. Future mission cards await approved content and follow the mobile
+  guidance. Section placeholders remain the
+  delivered body content.
 - Search now covers public pages/sections, published CMS pages/articles and
   registered or uploaded public documents/media in the active locale. Ranked
   results, normalized matching, live suggestions, URL filters/date sorting and
@@ -86,6 +101,9 @@ marketing page.
   with the localized unavailable message, hidden initially. The privacy link stays
   accessible. No subscription is submitted or stored, and no success is reported;
   signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).
+
+The owner's 2026-10-09 instruction authorizes pushing this snapshot with the real
+documentary photos still pending; those inputs no longer hold its delivery.
 
 See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
 for previous checks; neither proves a later change was tested.
