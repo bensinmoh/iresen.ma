@@ -63,3 +63,14 @@ does not publish or deploy the website.
 
 Executed visual, interaction and application checks are recorded in
 [the validation log](validation.md).
+
+## Deferred homepage restructuring — 2026-10-09
+
+The later [six-section brief](homepage-restructure.md) records the owner's revised
+homepage direction. Its current scope is analysis and Markdown only; preserve
+the missions and section navigation documented above until the owner starts
+development of “Nos réalisations emblématiques”, the section after missions.
+That later increment will move achievements immediately after missions and align
+the navigation with the revised body order. The real hero figures retain their
+existing anchor. Source mission wording/composition is planning evidence and
+does not replace the delivered cards through this documentation task.
