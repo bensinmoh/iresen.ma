@@ -4,6 +4,23 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Refined field focus
+
+- Replaced the thick, separated editable-field focus frame with a compact 2px
+  outline following the existing field edge and corners, informed by Carbon
+  and Spectrum input states. Contact, search inputs/selects and newsletter email
+  share the rule; buttons and selection controls retain their current indicators.
+- Moved header search focus to its field surface, avoiding a second inner frame
+  and preserving blue on white in inverse headers, Arabic RTL and mobile menus.
+  Footer email retains cyan; forced colors use a real system-color outline.
+- Passed formatting, lint, types, 97 unit cases, production build and 35 existing
+  contact/header-search/footer browser cases. Reviewed FR/EN/AR at 1440, 768 and
+  390px, pointer/keyboard focus, stable geometry, 200% text and forced colors;
+  focused contact/newsletter axe scans found no violations.
+
+See [shared styling](docs/design-system.md#refined-field-focus--2026-10-09) and
+[rendered evidence](docs/validation.md#refined-field-focus--2026-10-09).
+
 ## 2026-10-09 — Contact reference composition and location
 
 - Replaced contact's photo hero/scaffold with the owner-selected Figma contact
