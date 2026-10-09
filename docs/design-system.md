@@ -737,7 +737,10 @@ the Arabic selector overrides it to `normal`.
 
 Current language links use `font-weight: 700` only, in both the header and footer
 dropdown. No permanent selected background or underline is applied; hover and
-focus styles remain. Desktop `.navigation-trigger` spans its container and centers
+focus styles remain. Header language hover surfaces share `--radius-action`
+with search: physical 10px top-left/bottom-right corners and sharp opposites,
+preserved in RTL. Their quiet hover fill and 44px minimum targets remain.
+Desktop `.navigation-trigger` spans its container and centers
 the label/arrow group, including wrapped text. `.menu-toggle` centers its contents.
 
 `--font-latin` resolves the local Plus Jakarta Sans variable before the sans-serif

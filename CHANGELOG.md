@@ -4,6 +4,17 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Language hover geometry
+
+- Matched header language hover corners to the search control's shared action
+  radius: rounded top-left/bottom-right, sharp top-right/bottom-left in RTL too.
+- Kept the quiet hover surface, bold current language and visible keyboard focus.
+- Passed build/types, lint, formatting and three localized navigation cases;
+  six rendered desktop/mobile states confirm matching corners and usable focus.
+
+See [navigation rules](docs/navigation.md#site-coherence-review--2026-10-09)
+and [current validation](docs/validation.md).
+
 ## 2026-10-09 — Centered homepage figures
 
 - Centered each value and description inside its homepage grid/scroll track.

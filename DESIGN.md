@@ -389,7 +389,9 @@ Public French/English text and controls now use self-hosted Plus Jakarta Sans,
 including Découvrir and menu actions; system families remain loading/glyph fallbacks.
 
 Selected languages use 700 weight alone in the header and footer dropdown, with
-no persistent fill or underline. Hover and keyboard focus remain visible.
+no persistent fill or underline. Header hover surfaces use the same physical 10px
+top-left/bottom-right action corners as search; opposite corners stay sharp,
+including in Arabic. Hover and keyboard focus remain visible.
 Header menu labels and their arrows center together within the full control width;
 the compact Menu control also centers its contents. Current executed checks and
 rendered coverage are recorded separately in [the validation log](docs/validation.md).

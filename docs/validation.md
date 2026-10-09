@@ -1122,3 +1122,25 @@ Five quality-90 WebP strip captures preserve their CSS-resolution dimensions:
 
 This increment is saved locally; push remains held while the earlier requested
 documentary-photo imports await network configuration.
+
+## Header language hover — 2026-10-09
+
+Header language links now share search's `--radius-action` instead of the
+all-corner small radius. Lint, formatting, production compilation/types and the
+three existing localized desktop-navigation browser cases passed.
+
+A scoped production audit inspected FR/EN/AR at 1440 and 390px: all 18 language
+links retain physical corner radii `[10px, 0, 10px, 0]` at rest, hover and actual
+Tab focus, matching search in RTL too. Targets remain 44 × 44px; focused links
+show the 3px cyan outline with 4px offset. The current language remains weight
+700 with a transparent resting background, and hover keeps the quiet surface.
+No document overflow or page errors occurred. Checks use local Chromium, without
+a broader browser or accessibility certification claim.
+
+These quality-90 CSS-resolution crops were visually inspected:
+
+- [French header hover](screenshots/language-hover-fr.webp)
+- [Arabic header hover](screenshots/language-hover-ar.webp)
+
+The increment is saved locally with push still held for the earlier pending
+documentary-photo inputs.

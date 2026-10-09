@@ -310,7 +310,7 @@ body:has(.page-hero) .site-header-overlay {
 }
 
 .site-header .locale-selector a {
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-action);
   transition: background-color var(--duration-fast);
 }
 

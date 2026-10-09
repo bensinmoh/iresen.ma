@@ -39,6 +39,11 @@ the shared `.button` geometry and hover rule, which keeps action text free of an
 added hover underline. On its current page it retains the selected 700 weight
 without inheriting the underline used by ordinary current navigation links.
 
+Header language hover surfaces also use `--radius-action`, matching search's
+physical 10px top-left/bottom-right corners, with sharp opposites in RTL.
+Current-language weight remains 700 with no permanent fill; quiet hover colors,
+44px minimum language targets and visible keyboard focus remain.
+
 The header DOM follows logo, desktop navigation, then language/search/contact
 actions. CSS preserves the existing one-row layout from `110rem`, two-row desktop
 layout from `70rem` and compact disclosure below it. Canonical routes, contact
