@@ -240,10 +240,8 @@ function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
       body: [
         copy.location.eyebrow,
         catalog.Footer.address,
-        copy.location.description,
+        copy.location.mapTitle,
         copy.location.externalLink,
-        copy.location.loadMap,
-        copy.location.privacyNotice,
       ],
     },
     {
@@ -308,7 +306,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...homeFigures.map(({ id, value }) => `${value} ${catalog.Hero.figures[id]}`),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
-      if (pageId === 'cookies') body.push(catalog.States.noTracking)
+      if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
         id: `page:${pageId}:${locale}`,
         locale,

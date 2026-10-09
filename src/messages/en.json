@@ -141,12 +141,8 @@
     "location": {
       "eyebrow": "Find us",
       "title": "Find IRESEN in Rabat",
-      "description": "Get directions to our headquarters or display the map.",
-      "loadMap": "Display the Google Maps map",
-      "removeMap": "Hide the map",
       "mapTitle": "IRESEN headquarters location in Rabat on Google Maps",
-      "externalLink": "Open directions in Google Maps",
-      "privacyNotice": "The map uses Google Maps. It loads only when you request it and then shares browsing data with Google."
+      "externalLink": "Open directions in Google Maps"
     }
   },
   "Metadata": {
@@ -224,7 +220,7 @@
     "empty": "No published content yet.",
     "searchUnavailable": "Search is currently unavailable.",
     "contactUnavailable": "The contact form is not available yet.",
-    "noTracking": "No optional tracking cookies are enabled.",
+    "thirdPartyMap": "The Contact page includes a Google Maps map that loads automatically, without a prior click, and shares browsing data with Google.",
     "loading": "Loading the page…",
     "notFoundTitle": "Page not found",
     "notFoundDescription": "This page does not exist or is no longer available.",

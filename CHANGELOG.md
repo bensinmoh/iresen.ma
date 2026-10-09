@@ -53,6 +53,19 @@ and [revision-specific check evidence](docs/validation.md).
   tablet, mobile, desktop and 200% text in FR/EN/AR; see
   [validation](docs/validation.md#tablet-homepage-layout--2026-10-09).
 
+## 2026-10-09 — Direct contact map
+
+- Render the contact map directly in server HTML with native lazy loading,
+  replacing click-to-reveal and hide controls. Preserve the translated frame
+  title, exact directions link, address and full-width responsive geometry.
+- Remove the lower explanatory strip, unused styles/copy and bottom padding;
+  the map now meets the footer. Update the cookies-page service notice and
+  search projection to reflect automatic Google Maps loading.
+- Pass lint, strict types, formatting, 97 unit and 21 integration cases,
+  production build and 30 contact/search/foundation browser cases. Google Maps
+  responses are intercepted locally; live service behavior is not asserted.
+  See [validation](docs/validation.md#direct-contact-map--2026-10-09).
+
 ## 2026-10-09 — Exact-first search relevance
 
 - Added explicit relevance tiers: exact, linguistic/prefix, spelling and related
