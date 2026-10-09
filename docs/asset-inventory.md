@@ -211,6 +211,29 @@ replaces its former generated photo hero; other photo-hero assets remain in
 [the generated inventory](hero-assets.json). See [contact scope](contact.md)
 and [current check evidence](validation.md).
 
+## Contact entrance photograph — 2026-10-09
+
+The owner added this JPEG directly to `main` in commit
+`92f01c366993f676c25f51bb83122c19351f24e9`. It shows an entrance with the IRESEN
+name on a white wall, a wooden gate, trees and vegetation. Visual inspection
+does not establish its address, capture date or exact location.
+
+| Property            | Verified value                                                               |
+| ------------------- | ---------------------------------------------------------------------------- |
+| Repository file     | `public/images/contact/contact-background-venue.jpg`                         |
+| Public asset URL    | `/images/contact/contact-background-venue.jpg`                               |
+| Format / dimensions | JPEG RGB; 5797 × 3865px                                                      |
+| Bytes               | 11,425,755 (approximately 10.90 MiB)                                         |
+| SHA-256             | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f`           |
+| Transformation      | None; the received original remains unchanged.                               |
+| Composition use     | Not yet used; Contact still uses the abstract PNG background recorded above. |
+
+A search reference is added in `src/lib/search/catalog.ts` to satisfy the
+existing public-asset registration rule. Its FR/EN/AR metadata describes the
+visible entrance without asserting a verified headquarters address. This
+registration supplies discovery for the already served file and does not change
+the Contact composition.
+
 ## Contextual hero media — 2026-10-09
 
 The schema-3 [current inventory](hero-assets.json) supports per-asset provenance;

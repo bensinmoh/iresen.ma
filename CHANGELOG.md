@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Centered Contact form eyebrow
+
+- Centered the complete “Votre message” eyebrow above the form title, removing
+  the inherited paragraph-width offset.
+- Added the original decorative blue Apex Leaf at its logical inline start,
+  with proportional dimensions and shared spacing in FR/EN/AR.
+- Retained the existing contact anchors, localized search references and original
+  brand SVG bytes. See [contact guidance](docs/contact.md) and
+  [verification evidence](docs/validation.md#contact-form-eyebrow--2026-10-09).
+- Registered the Contact photograph added separately to `main` in the public
+  search catalog after CI exposed its missing reference; its bytes are retained.
+
 ## 2026-10-09 — Contact reference composition and location
 
 - Replaced contact's photo hero/scaffold with the owner-selected Figma contact
