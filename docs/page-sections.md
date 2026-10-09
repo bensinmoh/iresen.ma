@@ -141,3 +141,12 @@ below missions. Its seven child anchors are registered in the shared section map
 for search and locale switching, with real working theme descriptions and axes
 in FR/EN/AR. Four following modules remain placeholders. See
 [the section specification](research-domains.md).
+
+## Homepage platforms update — 2026-10-09
+
+The later owner request commissions the existing `platforms-expertise` section
+with the five supplied outdoor/platform visuals and four original SVG logos.
+See [implemented scope](home-platforms.md). This bounded increment
+supersedes only the capabilities deferral. Achievements remain the one body
+placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
+in-development wording, its 3D label, canonical destinations and search references.

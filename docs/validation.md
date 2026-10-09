@@ -2346,3 +2346,111 @@ the detailed standard. The corrected runtime passed lint, strict types, build,
 109 unit tests and **19 focused production browser checks** for heroes and
 collaboration, including 200% text. Final collaboration captures were refreshed
 and the French desktop rendering inspected. The local search catalog was rebuilt.
+
+## Homepage platforms and expertise — 2026-10-09
+
+Developed the existing `platforms-expertise` module with the owner-supplied
+outdoor photograph, four compact photographic cards, original SVG logos and a
+short two-block laboratory-network/expertise band. See [scope, sources and asset
+manifest](home-platforms.md). This is an extension of the incumbent visual
+system: aligned gutters, established typography, dark readable gradients,
+physical signature corners and existing navy/blue/cyan tokens remain.
+
+- Formatting, lint, strict typecheck and production build passed for the
+  photographic-card/two-block-band revision.
+- 109 unit tests, 22 integration checks and the full production Playwright suite
+  (**172 tests**) passed before the later decorative-icon addition.
+- Browser coverage for that revision includes FR/EN/AR at 320, 390, 768, 1024
+  and 1440px, 200% text, keyboard/focus access, canonical destinations,
+  no-JavaScript and reduced-motion behavior, and scoped axe scans with no
+  violations.
+- Six French, English and Arabic captures at 1440px desktop and 390px mobile
+  were visually reviewed for photographic hierarchy, white-text readability,
+  wrapping, compact cards, network-band composition and RTL. The reviewer
+  accepted this revision for shipping. Review captures are ignored local files
+  in `.cache/platforms-review/`, outside served assets.
+- Nine supplied asset hashes were verified; the four served SVG logo copies
+  match their delivered originals byte for byte. GreenH2A retains its explicit
+  in-development wording and 3D-visualization label. Private source chapter
+  material remains outside the repository and public search.
+- Search checks cover localized section/card/network anchors and all nine
+  supplied media references in FR/EN/AR. Responsive image derivatives share
+  their original's result; inline decorative geometry creates no separate
+  served-media item. The final website-wide content/glossary sanity check
+  remains pending until complete content exists.
+
+An earlier owner refinement added a schematic Morocco outline beside laboratories
+and a person linked to three nodes beside complementary expertise. These are
+non-focusable, accessibility-hidden inline SVGs; they retain physical orientation
+in RTL and convey no geographic coverage, precise locations or headcount claim.
+After the icon addition, lint, strict typecheck, production build and **four
+focused production Playwright checks** passed. The subsequent arrow-selector
+correction preserves the decorative icons at 44 × 56px; its production rebuild
+and all four focused browser checks also passed. All six final captures were
+refreshed with the corrected icons, and final formatting/whitespace checks
+passed. The reviewer inspected all six latest FR/EN/AR captures and accepted
+that intermediate revision for shipping: decorative icons align with headings,
+retain physical orientation and do not overflow; navigation arrows remain 20px. No
+material findings remain. The earlier full-suite result retains its pre-icon
+revision scope; that icon/selector revision has the focused coverage above.
+
+No new visual world, shared token, dependency, CMS schema or route is introduced;
+`.impeccable/design.json` remains unchanged. Achievements, full homepage reordering
+and Alliances remain deferred. FR/EN/AR copy remains working text for editorial
+review. No production deployment, DNS or visibility change was performed. PR CI
+and merge status belong to the PR and are not preclaimed here.
+
+### Later supplied map and enlarged white icons
+
+The owner's supplied `morocco.svg` supersedes the schematic laboratories icon.
+The served copy is byte-identical, with white rendering supplied by CSS only.
+Both decorative illustrations now occupy responsive 76–112px square boxes;
+the intermediate native person/network illustration used a matching-weight
+3-unit stroke on a 65-unit viewBox. The later consulting refinement below
+supersedes that drawing. Physical orientation is preserved in Arabic. The earlier
+44 × 56px review above describes the superseded intermediate revision.
+
+The map adds localized FR/EN/AR public search metadata. The four original logos
+keep their gray CSS display.
+
+### Supplied consulting illustration and enlarged-text wrapping
+
+The later owner-supplied `consulting.svg` replaces the native person/network
+drawing. Its served original remains byte-identical; the inline illustration
+retains the exact source path, white fill and an additional 8-unit stroke on
+the 512-unit viewBox, with round joins, to match the supplied map's visual weight.
+Both icons retain their white responsive 76–112px square presentation and
+physical orientation in RTL. The manifest/search catalog now covers eleven
+supplied assets, with FR/EN/AR metadata for both new illustrations.
+
+The enlarged-text check caught narrow network-block headings. Each block now
+allows its icon and text to wrap onto separate rows, reserving a 10rem flexible
+text basis instead of squeezing the heading beside the icon.
+
+That consulting/map/wrapping runtime passed lint, strict typecheck,
+production build, **109 unit tests** and **four focused production browser
+checks**. FR/EN/AR checks found no overflow at 320–1440px or with 200% text,
+and passed scoped axe, no-JavaScript and reduced-motion coverage. Public search
+API checks discover both SVG illustrations at their expected URLs in all three
+locales. Six desktop/mobile captures were refreshed for that intermediate revision.
+The later owner-requested thinner display below supersedes its icon treatment. The earlier 172-test full suite and 22 integration checks retain
+their earlier revision scope.
+
+### Later owner correction — thinner icon outlines
+
+The owner requested less thickness after seeing the supplied illustrations.
+The consulting inline display now uses the exact original filled path without
+any added stroke. The Morocco inline display also preserves the exact supplied
+path and applies a display-only SVG `feMorphology` erosion filter with radius
+0.5, reducing its approximately 3-unit outline to 2 units on the 65-unit viewBox.
+This matches consulting's approximately 16-unit outline on its 512-unit viewBox.
+Both original served files remain byte-identical. White color, responsive
+76–112px square presentation, RTL physical orientation and enlarged-text wrapping
+remain. This thinner-display revision passed lint, strict typecheck, production
+build and all **four focused production browser checks**, including all three
+locales' SVG search discovery, 200% text, no-JavaScript, reduced motion and scoped
+axe coverage. The reviewer inspected all six fresh FR/EN/AR desktop/mobile
+captures and accepted this thinner treatment for shipping: the Morocco outline
+remains continuous without gaps, consulting retains clear internal detail,
+and white sizing, alignment and RTL remain coherent. No material findings remain.
+The earlier full-suite/integration results keep their documented revision scope.

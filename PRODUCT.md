@@ -279,3 +279,17 @@ Afrique”, supersedes the earlier agency-only description in both homepage
 hero and collaboration. FR/EN/AR catalogs and search projections carry the
 correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
 copy, not independent certification verification.
+
+## Homepage platforms and expertise — 2026-10-09
+
+The owner commissioned the existing `platforms-expertise` module: outdoor GEP
+photography behind a left introduction and four compact photographic platform
+cards, with white text over dark gradients. A lower two-block band introduces
+the laboratory network and complementary expertise. Original logos remain unchanged and display in light gray through CSS.
+The section reuses the aligned grid, section-label/type roles and physical
+signature corners; below 70rem the introduction stacks, below 40rem cards stack.
+FR/EN/AR are working summaries; GreenH2A is explicitly in development and its
+image is labelled as a 3D view. Existing platforms/network destinations remain.
+Search covers the section, four card anchors and nine supplied media assets.
+Achievements are the sole remaining body placeholder; full reordering remains
+deferred. See [scope and sources](docs/home-platforms.md).

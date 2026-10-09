@@ -126,3 +126,12 @@ certification and +120 collaborators. See [scope](docs/home-collaboration.md).
 Achievements and capabilities remain two body placeholders; full reordering
 and Alliances remain deferred. Working FR/EN/AR copy does not guarantee positions,
 funding or services.
+
+## Homepage platforms update — 2026-10-09
+
+The later owner request commissions the existing `platforms-expertise` section
+with the five supplied outdoor/platform visuals and four original SVG logos.
+See [implemented scope](docs/home-platforms.md). This bounded increment
+supersedes only the capabilities deferral. Achievements remain the one body
+placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
+in-development wording, its 3D label, canonical destinations and search references.

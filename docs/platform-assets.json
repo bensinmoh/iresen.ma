@@ -1,0 +1,125 @@
+{
+  "received": "2026-10-09",
+  "authorization": "Owner supplied these individual assets for the commissioned homepage section. No independent redistribution license asserted.",
+  "assets": [
+    {
+      "id": "outdoor",
+      "source": "3A9A4006copy.jpg",
+      "sourceSha256": "ed2e69ca05590f760631dcc67cc78d091fce6a51f2cf8f98865a921139cafcaa",
+      "sourceWidth": 5557,
+      "sourceHeight": 3126,
+      "url": "/images/platforms/outdoor.webp",
+      "width": 2400,
+      "height": 1350,
+      "bytes": 558536,
+      "treatment": "EXIF orientation, proportional resize, WebP quality 83; original unchanged",
+      "kind": "owner-supplied documentary photograph"
+    },
+    {
+      "id": "gep",
+      "source": "Green Energy Park.jpg",
+      "sourceSha256": "26f5e2e37282a534edcec892fde702246ddf0e295f1dd6b29aebc98e8aa4c7f4",
+      "sourceWidth": 4000,
+      "sourceHeight": 3000,
+      "url": "/images/platforms/gep.webp",
+      "width": 1400,
+      "height": 1050,
+      "bytes": 320512,
+      "treatment": "EXIF orientation, proportional resize, WebP quality 83; original unchanged",
+      "kind": "owner-supplied documentary photograph"
+    },
+    {
+      "id": "gsbp",
+      "source": "Solar Decathlon Africa - Village Solaire.jpg",
+      "sourceSha256": "d11ccfb18ea8b64af54498d113b6717671ac6b63b97aa15f5c22bac032a758a5",
+      "sourceWidth": 4000,
+      "sourceHeight": 3000,
+      "url": "/images/platforms/gsbp.webp",
+      "width": 1400,
+      "height": 1050,
+      "bytes": 361200,
+      "treatment": "EXIF orientation, proportional resize, WebP quality 83; original unchanged",
+      "kind": "owner-supplied documentary photograph"
+    },
+    {
+      "id": "gep-mci",
+      "source": "GEPMCI.jpeg",
+      "sourceSha256": "075fa0aae646c7b3a9e58621bd18a430bf792b7f618167935d2f97d6d78df1c8",
+      "sourceWidth": 1280,
+      "sourceHeight": 960,
+      "url": "/images/platforms/gep-mci.webp",
+      "width": 1280,
+      "height": 960,
+      "bytes": 198706,
+      "treatment": "EXIF orientation, proportional resize, WebP quality 83; original unchanged",
+      "kind": "owner-supplied documentary photograph"
+    },
+    {
+      "id": "greenh2a",
+      "source": "GreenH2A.jpg",
+      "sourceSha256": "9d9f9a50da11864607802ed7f51509d2b98a5473a21e21faa5c03694101b20c1",
+      "sourceWidth": 1920,
+      "sourceHeight": 1208,
+      "url": "/images/platforms/greenh2a.webp",
+      "width": 1400,
+      "height": 881,
+      "bytes": 96104,
+      "treatment": "EXIF orientation, proportional resize, WebP quality 83; original unchanged",
+      "kind": "owner-supplied 3D visualization"
+    },
+    {
+      "id": "logo-gep",
+      "source": "GEP.svg",
+      "sourceSha256": "4b0bd993423795649256eb695aee8ae683084b4a0871a7281f8b782b151d2744",
+      "url": "/brand/platforms/gep.svg",
+      "bytes": 12864,
+      "treatment": "Byte-identical original; light-gray monochrome display with CSS filter only"
+    },
+    {
+      "id": "logo-gsbp",
+      "source": "GSBP.svg",
+      "sourceSha256": "c942bd9cc81fc22cc1871ea1040a0126031472061da58265859fa4384c7279f2",
+      "url": "/brand/platforms/gsbp.svg",
+      "bytes": 39579,
+      "treatment": "Byte-identical original; light-gray monochrome display with CSS filter only"
+    },
+    {
+      "id": "logo-gep-mci",
+      "source": "GEP MCI.svg",
+      "sourceSha256": "9506121c0a8f41199e401574a2d4c478347b26678c9416a73f93ca71dde8ab63",
+      "url": "/brand/platforms/gep-mci.svg",
+      "bytes": 17212,
+      "treatment": "Byte-identical original; light-gray monochrome display with CSS filter only"
+    },
+    {
+      "id": "logo-greenh2a",
+      "source": "GreenH2A.svg",
+      "sourceSha256": "b8fde04d928b0acc7415792634234478f704bb52afddb462931d08990c671959",
+      "url": "/brand/platforms/greenh2a.svg",
+      "bytes": 10759,
+      "treatment": "Byte-identical original; light-gray monochrome display with CSS filter only"
+    },
+    {
+      "id": "morocco",
+      "source": "morocco.svg",
+      "sourceSha256": "4045486a65b4e6a6d2c3425513478785d5e7277d06314667a26911b44db154c5",
+      "url": "/brand/platforms/morocco.svg",
+      "width": 65,
+      "height": 65,
+      "bytes": 6479,
+      "treatment": "Byte-identical original served; inline white display retains exact source path with SVG feMorphology erode radius 0.5 to lighten approximately 3/65 outline to 2/65",
+      "kind": "decorative Morocco map icon"
+    },
+    {
+      "id": "consulting",
+      "source": "consulting.svg",
+      "sourceSha256": "55715981cbd4a70732babc311dbf6ffdb003a13a88634aa646c55326736224c5",
+      "url": "/brand/platforms/consulting.svg",
+      "width": 512,
+      "height": 512,
+      "bytes": 4776,
+      "treatment": "Byte-identical original served; inline white display retains exact source path and original filled outline with no added stroke, approximately 16/512 to match lighter map display",
+      "kind": "decorative expertise/consulting icon"
+    }
+  ]
+}

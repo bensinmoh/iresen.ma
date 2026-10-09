@@ -8,6 +8,7 @@ import { ResearchSection } from './ResearchSection'
 import type { ResearchCopy } from '@/lib/home-research'
 import { MissionSection } from './MissionSection'
 import { NewsSection } from './NewsSection'
+import { PlatformsSection } from './PlatformsSection'
 import { CollaborationSection } from './CollaborationSection'
 import { homeNavigation } from '@/lib/home-navigation'
 
@@ -33,10 +34,12 @@ export async function HomePage({ locale }: { locale: Locale }) {
           'develop-test-transfer',
           'figures',
           'research-priorities',
+          'platforms-expertise',
           'collaboration',
           'news-events',
         ]}
       />
+      <PlatformsSection locale={locale} />
       <CollaborationSection locale={locale} />
       <NewsSection locale={locale} />
     </PageShell>
