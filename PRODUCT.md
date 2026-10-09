@@ -49,8 +49,13 @@ marketing page.
   of numeric claims. The header-to-band landing
   measures the current viewport and grows for content when necessary. See
   [hero documentation](docs/heroes.md).
-- Content sections below the heroes remain honest empty states; the full
-  institutional homepage is still unfinished. Page/news/media collections start empty. Empty and error states exist. Public
+- All 22 canonical pages now have section placeholders below their introducing
+  heroes, using shared IDs/order and localized headings with short draft content
+  notes in FR/EN/AR. Institute retains its three principal anchors and nests
+  capacities and 2035 ambition under Mission; the sitemap retains its working
+  directory of all 22 pages. See [the section guide](docs/page-sections.md).
+  These placeholders do not populate institutional content or CMS collections;
+  the full institutional homepage is still unfinished. Page/news/media collections start empty. Empty and error states exist. Public
   pages render their content without a locale-wide streamed loading boundary,
   so footer destinations remain readable when JavaScript is disabled.
 - An owner-supplied video is stored for future hero use; the current pages do not
@@ -79,8 +84,10 @@ records the decision and the coordinated update procedure for later changes.
 The three newly supplied strategy DOCX files are authorized for repository
 reference and analysis; see the [strategy reference index](docs/references/strategy/README.md).
 Their detailed website structure and section suggestions remain recommendations,
-not a validated replacement for the implemented navigation. Final institutional
-copy, translations and the proposed slogan still require editorial approval.
+with the owner's 2026-10-09 request authorizing their use for empty section
+placeholders on the current pages. They do not replace the implemented navigation.
+Final institutional copy, translations and the proposed slogan still require
+editorial approval.
 
 The reading framework is **Développer · Éprouver · Valoriser**. It connects needs,
 research, experimentation and use, with feedback between stages; outcomes can

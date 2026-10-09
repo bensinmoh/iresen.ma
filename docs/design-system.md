@@ -122,7 +122,23 @@ logical inline start in Arabic without mirroring the shape. Both marks are
 decorative, leaving the text as the accessible name. Other hero eyebrows, H2s,
 menus, footer and sitemap retain their existing treatment.
 
+### Section placeholders — 2026-10-09
+
+All 22 canonical pages share `PageSections` and the typed ID/order map in
+`src/lib/page-sections.ts`. Introducing heroes retain each page's H1; subsequent
+sections use labelled H2s with short localized draft content notes, and nested
+Mission/search topics use H3s. Placeholders reuse the aligned container, shared
+type roles, responsive block spacing, flat boundaries and light dividers, without
+inventing completed content modules. Institute's Mission alone retains the
+selective decorative Apex Leaf. The sitemap's real directory remains inside its
+first section; service notices retain their truthful availability state.
+See [the section guide](page-sections.md) and [validation evidence](validation.md).
+
 ### Shared actions — 2026-10-09
+
+Compact header actions can shrink and wrap within their available row width,
+including tablet layouts with enlarged text. Sitemap group headings use bold
+H3s within their parent section and wrap long labels inside their columns.
 
 `--radius-action` is `0.625rem 0 0.625rem 0`: physical 10px top-left/bottom-right
 corners at the default root size. `.button`, header search, hero discovery and
@@ -146,7 +162,7 @@ Keep navigation operable by keyboard, touch and pointer. Use visible focus, corr
 
 Check actual rendered contrast; brand colors do not automatically make accessible status colors. Normal text needs 4.5:1 contrast. White text on cyan/lime is unsuitable; navy text on cyan/lime passes as shown above. Use 3:1 only for qualifying large text and applicable non-text requirements.
 
-Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). Their page sections and composition details remain suggestions, not a validated structure or new design rules. Final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
+Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). The owner's 2026-10-09 request uses their suggested sections for empty placeholders within the current 22-page route map. Their composition details remain suggestions, and final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
 
 Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports do not block independent work.
 

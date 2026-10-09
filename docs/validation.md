@@ -763,3 +763,31 @@ Coverage is Chromium and the existing sparse public foundation. It does not
 establish cross-browser or screen-reader conformance, populated editorial/CMS
 page-body quality, native Figma pixel fidelity, institutional content approval
 or production deployment.
+
+## Page section placeholders — 2026-10-09
+
+The requested scaffold covers all 22 canonical page IDs with 116 localized
+headings and short content briefs, including the Institute's nested Mission
+topics and the search absence-of-results topic. The existing heroes introduce
+the pages; the received section recommendations supply the remaining order.
+See [the section source map](page-sections.md).
+
+Passed locally with Node 24.19.0, pnpm 11.19.0, migrated disposable PostgreSQL
+17.9 and the production standalone application:
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm format:check` and `git diff --check`.
+- `pnpm test`: 8 tests passed, including complete FR/EN/AR catalog parity.
+- `pnpm build`: passed; webpack repeated the existing next-intl dynamic-import
+  cache-analysis warning without a build failure.
+- `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e`: all 42 tests
+  passed, covering public routes, locale fragments, no-JavaScript navigation,
+  responsive/RTL shell behavior, fonts, truthful service states, automated
+  accessibility and anonymous CMS restrictions.
+- Direct section-map checks verified all 116 titles/briefs and supported section
+  and child fragments in all three locales. The source-table review verified
+  the principal-page heading sequences and the utility adaptation. Changed
+  Markdown local-file links resolve.
+
+The local CMS integration suite was not repeated for these public rendering,
+catalog and anchor changes; the PR workflow runs it separately. The CMS schema
+and collections are unchanged. Remote checks and merge status belong to the PR.

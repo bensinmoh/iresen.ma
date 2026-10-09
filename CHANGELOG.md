@@ -4,6 +4,22 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Section placeholders on all pages
+
+- Added section headings and short FR/EN/AR draft content notes below the
+  existing heroes on all 22 canonical pages, using the received section
+  recommendations within the current route map.
+- Centralized section IDs/order, nested Institute's capacities and 2035 ambition
+  under Mission, and preserved supported fragments during language switching.
+- Kept long sitemap group headings within their columns and allowed compact
+  header actions to wrap when tablet text is enlarged.
+- Retained the selective Mission Apex Leaf, working 22-page sitemap directory,
+  empty CMS collections and truthful unavailable services. Institutional copy,
+  translations and populated content modules remain editorial follow-up work.
+
+See [section coverage and source adaptation](docs/page-sections.md) and
+[revision-specific validation](docs/validation.md).
+
 ## 2026-10-09 — Site coherence review
 
 - Unified action corners at physical 10px while retaining 20px surfaces; shared
