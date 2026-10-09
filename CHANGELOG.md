@@ -12,8 +12,8 @@ merge results are recorded by the corresponding pull request and commit history.
   JavaScript and media failures; the other 21 pages retain their photo heroes.
 - Verified real playback across FR/EN/AR desktop/mobile, an actual loop,
   byte-range delivery and live reduced-motion unloading. Local lint, strict
-  types, 8 unit tests, production build, 44 existing browser cases and 11 focused
-  video cases passed.
+  types, 8 unit tests, production build and all 55 browser cases passed after
+  integrating the current page-section placeholders.
 
 See [hero behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09)
 and [revision-specific evidence](docs/validation.md#homepage-hero-video--2026-10-09).

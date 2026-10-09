@@ -978,3 +978,10 @@ The 9.32 MiB original exceeds ordinary page/image budgets; its end-of-file MP4
 metadata makes web-sized fast-start derivatives a remaining performance improvement.
 The requested absence of pause controls does not establish WCAG 2.2.2 conformance.
 Current full CI and merge results belong to the corresponding PR.
+
+The latest section-placeholder work was subsequently integrated from `main`,
+preserving both increments. Formatting, lint, strict types, 8 unit tests,
+production build and all 55 browser cases passed again on the combined source.
+The media observations and retained hero captures above describe the video
+revision before that section integration. Current remote CI and merge results
+are recorded by the PR.
