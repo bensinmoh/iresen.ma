@@ -61,6 +61,18 @@ logic changed; local integration tests were not rerun. PR CI runs the complete
 integration/browser suites. No deployment was performed. The earlier compact-menu
 capture and checks below describe the previous white resting treatment.
 
+The initial full PR CI run passed 150 browser cases and failed the French
+`direct home section and mission links` case: after a desktop-to-mobile resize
+and same-document hash navigation, the `mission-transfer` heading can land above
+the viewport. Reproduction on this increment passed 8/9 FR/EN/AR repetitions;
+comparison on unchanged main (`ebd91d9`) failed 6/10 French repetitions. This is
+an existing intermittent anchor issue, not a regression from the header controls.
+Its assertions and homepage runtime remain unchanged in this increment; see
+[the follow-up backlog](backlog.md). One unchanged CI retry passed application
+checks but remained in Chromium installation for more than ten minutes when these
+notes were recorded. Only the current PR revision's successful complete CI may
+authorize merge; earlier partial results and baseline comparison do not replace it.
+
 ## Compact menu control — 2026-10-09
 
 Passed lint, strict types, all 97 unit tests and the production build. The build
