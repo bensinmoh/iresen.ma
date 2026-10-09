@@ -779,7 +779,7 @@ Passed locally with Node 24.19.0, pnpm 11.19.0, migrated disposable PostgreSQL
 - `pnpm test`: 8 tests passed, including complete FR/EN/AR catalog parity.
 - `pnpm build`: passed; webpack repeated the existing next-intl dynamic-import
   cache-analysis warning without a build failure.
-- `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e`: all 42 tests
+- `CI=1 PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e`: all 44 tests
   passed, covering public routes, locale fragments, no-JavaScript navigation,
   responsive/RTL shell behavior, fonts, truthful service states, automated
   accessibility and anonymous CMS restrictions.
@@ -787,6 +787,32 @@ Passed locally with Node 24.19.0, pnpm 11.19.0, migrated disposable PostgreSQL
   and child fragments in all three locales. The source-table review verified
   the principal-page heading sequences and the utility adaptation. Changed
   Markdown local-file links resolve.
+
+The independent section audit checked all 66 localized pages: French at 1440px,
+English at 768px and Arabic at 390px. All returned 200 with one H1, matching
+ordered headings and briefs, unique element IDs, valid fragment targets and no
+viewport overflow. All 22 sitemap destinations remained present in each locale.
+Fifty-one section scroll targets and six actual language-switch transitions
+verified the new and nested anchors.
+
+Home, Institute and sitemap were checked in FR/EN/AR at 320, 390, 768, 1024 and
+1440px, with normal and 200% root text: 90 layout conditions in addition to the
+66 route views. Initial enlarged-text review exposed long sitemap H3s and a
+preexisting compact-header overflow at tablet width. Long-heading wrapping and
+shrinkable/wrapping compact actions resolved all 13 affected conditions; the
+final targeted audit and the complete combined-site browser suite passed without
+console or page errors. Source checks and the production build were repeated
+after incorporating the concurrent hero-imagery update.
+
+Reviewed section-area captures:
+
+- [French homepage at 1440px](screenshots/page-sections-home-fr-1440.png).
+- [Arabic Institute at 390px](screenshots/page-sections-institute-ar-390.png).
+- [English sitemap at 768px](screenshots/page-sections-sitemap-en-768.png).
+
+These checks cover Chromium, the requested placeholders and their shared shell.
+They do not establish final editorial or translation approval, populated CMS
+module quality, cross-browser/screen-reader conformance or production release.
 
 The local CMS integration suite was not repeated for these public rendering,
 catalog and anchor changes; the PR workflow runs it separately. The CMS schema
