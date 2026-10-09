@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
+import { collaborationCount } from '@/lib/home-collaboration'
 import { homeFigures } from '@/lib/figures'
 import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
@@ -312,7 +313,13 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         continue
       }
       const body = [catalog.Hero.descriptions[pageId], catalog.Hero.stages[heroes[pageId].stage]]
-      if (pageId === 'home') body.push(catalog.HomeNews.title, catalog.HomeNews.searchText)
+      if (pageId === 'home') {
+        body.push(
+          catalog.HomeNews.title,
+          catalog.HomeNews.searchText,
+          catalog.HomeCollaboration.searchText,
+        )
+      }
       if (pageId === 'home')
         body.push(
           catalog.Hero.homeTitle,
@@ -373,6 +380,21 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 return [theme.title, theme.description, ...theme.axes, theme.searchText]
               }),
             )
+          if (pageId === 'home' && entry.id === 'collaboration') {
+            const collaboration = catalog.HomeCollaboration
+            body.push(
+              collaboration.searchText,
+              `${collaborationCount} ${collaboration.collaborators}`,
+              'ISO 9001:2015',
+              collaboration.certification,
+              ...Object.values(collaboration.paths).flatMap((path) => [
+                path.audience,
+                path.title,
+                path.description,
+                path.action,
+              ]),
+            )
+          }
           if (pageId === 'home' && entry.id === homeNewsSectionId)
             body.push(catalog.HomeNews.searchText)
           if (pageId === 'home') {

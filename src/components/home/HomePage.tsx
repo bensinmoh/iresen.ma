@@ -8,6 +8,7 @@ import { ResearchSection } from './ResearchSection'
 import type { ResearchCopy } from '@/lib/home-research'
 import { MissionSection } from './MissionSection'
 import { NewsSection } from './NewsSection'
+import { CollaborationSection } from './CollaborationSection'
 import { homeNavigation } from '@/lib/home-navigation'
 
 export async function HomePage({ locale }: { locale: Locale }) {
@@ -28,8 +29,15 @@ export async function HomePage({ locale }: { locale: Locale }) {
       <PageSections
         pageId="home"
         locale={locale}
-        excludeSections={['develop-test-transfer', 'figures', 'research-priorities', 'news-events']}
+        excludeSections={[
+          'develop-test-transfer',
+          'figures',
+          'research-priorities',
+          'collaboration',
+          'news-events',
+        ]}
       />
+      <CollaborationSection locale={locale} />
       <NewsSection locale={locale} />
     </PageShell>
   )

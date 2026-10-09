@@ -1222,3 +1222,14 @@ geometry. This is an application of current shared roles, with no new tokens.
 The homepage news/footer boundary has no intervening wrapper padding. Both
 sections retain internal spacing; only the homepage shell/content bottom inset
 is removed, keeping full-width surfaces contiguous.
+
+## Homepage collaboration — 2026-10-09
+
+The local institutional ink surface uses #05111D, already used for hero shading,
+as an opaque ground. It leaves institutional navy #12345A and primary blue
+#296BB4 unchanged. White headings, footer-muted body text and energy-cyan
+audience/focus roles support readable contrast. Four open pathways share thin
+dividers and native underlined destination links. The primary contact action
+reuses physical top-left/bottom-right action corners in both LTR and RTL.
+The proof band and all pathways remain visible on mobile. No shared token or
+image asset is added. See [composition](home-collaboration.md).

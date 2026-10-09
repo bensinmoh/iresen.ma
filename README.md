@@ -171,3 +171,12 @@ It prepares a Posts API field projection; live OAuth/API synchronization is stil
 future work. Cards use owner-requested short explanatory titles in FR/EN/AR; source
 commentary stays separate. Three other body
 placeholders and the full homepage reordering remain deferred.
+
+## Homepage collaboration — 2026-10-09
+
+The [collaboration section](docs/home-collaboration.md) now guides research/thesis,
+solution development, industrial decarbonisation and technology decisions in
+FR/EN/AR on a dark institutional ink ground. It recalls the owner-supplied +120
+collaborators and existing ISO 9001:2015 claim, with canonical opportunities and
+subject-prepared contact links. Two body placeholders and full reordering remain
+deferred. See [verification](docs/validation.md#homepage-collaboration--2026-10-09).

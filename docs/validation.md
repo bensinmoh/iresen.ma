@@ -2307,3 +2307,31 @@ The owner’s final spacing instruction joins the news surface directly to the
 footer. Homepage-only shell/content bottom padding is removed; the section and
 footer retain their internal reading space. Browser checks assert no gap across
 responsive widths in FR/EN/AR.
+
+## Homepage collaboration — 2026-10-09
+
+Developed the existing collaboration anchor with four audience pathways on the
+requested institutional ink ground, the owner-supplied +120 collaborators and
+the existing ISO 9001:2015 claim. See [scope and captures](home-collaboration.md).
+
+- Formatting, lint, strict typecheck and production build passed.
+- 109 unit tests passed; 22 CMS/search integration checks passed in a dedicated
+  temporary migrated database, removed afterward. The local database was preserved.
+- Four new browser checks cover FR/EN/AR, four destinations, the prepared contact
+  subject, search discovery, keyboard access, no-JavaScript access, 320/390/768/1024/
+  1440px widths, 200% text and scoped axe scans with no violations.
+- The first full suite identified long-word overflow in the new section at 200%
+  text. The local section now permits word wrapping; follow-up checks cover 320,
+  390, 768 and 1024px at 200%, including internal heading/paragraph containment.
+- French desktop and Arabic mobile captures were inspected. Four pathways and
+  proof remain visible; arrows mirror, action corners stay physical, and no
+  illustrative image is used as institutional evidence.
+- Local public search catalog rebuilt. The existing static reference ID, section
+  type and `collaboration` anchor remain; localized metadata includes audiences,
+  thesis, R&D, decarbonisation, technology choices, +120 and certification.
+- Impeccable's scoped mechanical detector returned no findings. No CMS schema,
+  route, dependency, SVG original, production deployment, DNS or visibility changed.
+
+The count's perimeter/date and final FR/EN/AR wording remain editorial inputs.
+No available thesis opportunity, guaranteed service or funding is asserted.
+The final website-wide content/search sanity check remains pending.

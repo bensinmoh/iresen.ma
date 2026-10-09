@@ -262,3 +262,12 @@ It prepares a Posts API field projection; live OAuth/API synchronization is stil
 future work. Cards use owner-requested short explanatory titles in FR/EN/AR; source
 commentary stays separate. Three other body
 placeholders and the full homepage reordering remain deferred.
+
+## Homepage collaboration — 2026-10-09
+
+The owner commissioned four audience pathways at the existing collaboration
+location and supplied +120 collaborators. The section recalls the existing
+certification and links to opportunities or contact with an appropriate subject.
+FR/EN/AR remain working wording; no available thesis positions, guaranteed
+services or funding commitments are implied. Achievements and capabilities
+remain placeholders. See [scope](docs/home-collaboration.md).
