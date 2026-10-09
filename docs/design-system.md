@@ -30,6 +30,11 @@ explain intent and history; they do not supersede these decisions.
   families. Keep one primary action per context, links for navigation and buttons
   for actions. Illustrated states do not supply production semantics; include
   visible focus, readable errors and genuine unavailable/loading/success behavior.
+- **Mobile hierarchy:** prioritize essential orientation/action, supporting
+  context/facts, then optional decorative or redundant proof. Limit competing
+  roles and collections rather than clipping content or fixing its height;
+  preserve required routes, forms, feedback and facts. See
+  [the reusable mobile rule](mobile-information-hierarchy.md).
 - **Content and verification:** preserve canonical page IDs and reviewed assets;
   adapt sample copy to approved content. Verify affected desktop/mobile, Arabic,
   long-content and interaction states after visual changes. Record source
@@ -155,6 +160,24 @@ Compact navigation and sitemap rows retain a 44px minimum target. Labels can
 shrink and wrap; narrower Subscribe spacing preserves its target with enlarged
 text. See [the coherence review](site-coherence-review.md) and
 [revision-specific validation](validation.md#site-coherence-review--2026-10-09).
+
+### Mobile information hierarchy — 2026-10-09
+
+At `40rem` and below, the homepage omits its secondary ISO badge and redundant
+scroll cue, reduces its lower reserve to 32px at default text size, and stacks
+both existing navigation actions at full width: primary blue and secondary white
+with shared physical 10px action corners. Its five figures use a focusable,
+labelled native horizontal scroll row. Its scrollbar is enabled and unhidden,
+with browser/OS-dependent visibility; a neighboring-item glimpse appears where
+space permits. Natural height, ordinary page scrolling and FR/EN/AR order remain. Wider
+layouts and other page heroes are unchanged. This supersedes the earlier narrow
+figure grid, small-screen badge placement and homepage cue/reserve rules.
+
+Use [the role/count ceiling and three priority tiers](mobile-information-hierarchy.md)
+for future mobile sections. Essential content remains accessible; only optional
+decoration or redundant proof may be omitted. Future mission cards await
+approved content and follow this mobile guidance.
+Current checks belong in [validation](validation.md), with earlier captures historical.
 
 ## Interaction and acceptance
 
@@ -596,12 +619,30 @@ they must not be mistaken for absent properties or measured zero. Native Figma
 rendering remains the fidelity reference. Connector access was available for
 the scoped live review; broader page/prototype fidelity remains unverified.
 
+## Contextual hero media — 2026-10-09
+
+Current hero text modes are start, end, center and editorial, all over full-scene
+photographs. The five former split pages use start: no 42% media inset, opaque
+navy half, 45% copy width or separate title-scale override remains. Editorial
+utilities retain their reading measure with `rgb(5 17 29 / 66%)` shading instead
+of 90% navy. Wide image sizing always considers `100vw`, source aspect ratio ×
+viewport height and the 75rem growth guard.
+
+Governance, opportunities and workWithUs use newly generated contextual meeting,
+onboarding and handshake scenes. All 17 active photos remain generated fiction;
+real Green Energy Park and IRESEN office imports are pending source-download
+access. Copy, figures, routes, fonts, original SVGs, mobile hierarchy and homepage
+video remain. See [role mapping and media readiness](contextual-hero-media.md),
+[current provenance](hero-assets.json) and [executed checks](validation.md).
+Prior five-mode captures remain historical.
+
 ## Generated hero placeholders — 2026-10-09
 
 The photo-replacement revision supplied 17 owner-requested generated photographic
-placeholders across the 22 page introductions. They remain the 21 interior
-backgrounds and the homepage fallback. Their fictional, generic energy/science
-scenes support the existing five compositions without asserting real IRESEN
+placeholders across the 22 page introductions in that initial revision. The
+[archived generated manifest](hero-assets-generated-2026-10-09.json) retains
+that set before three contextual replacements. Its fictional, generic energy/science
+scenes supported the then-five compositions without asserting real IRESEN
 facilities, events or people. Keep approved copy, figures, routes, colors, fonts
 and original SVGs separate from generated scenery. Empty image alternatives
 retain the decorative role.
@@ -618,7 +659,7 @@ photo-replacement revision added no video or client runtime; the homepage-only
 video decision below supersedes that scope. The approximately 250KB mobile image budget is a
 target to measure against the actual derivatives and delivered responses.
 
-[Current provenance](hero-assets.json) records full prompts for 16 images, an
+[That revision's provenance](hero-assets-generated-2026-10-09.json) records full prompts for 16 images, an
 abbreviated aerial recipe, source/output hashes, native dimensions, bytes and
 mobile crops. The
 [2026-10-08 Figma manifest](hero-assets-figma-2026-10-08.json) retains superseded
@@ -649,12 +690,14 @@ See [hero behavior](heroes.md#homepage-hero-video--2026-10-09),
 ## Introducing heroes — 2026-10-08
 
 All approved pages now open with a restrained introduction: a display title, one
-short sentence, a section anchor and one related destination. Five compositions
-(start, end, center, split and editorial) vary the visual rhythm across page topics.
+short sentence, a section anchor and one related destination. The initial five
+compositions (start, end, center, split and editorial) varied the rhythm by topic;
+the contextual-media refinement above removes split and retains four text modes.
 The initial 17 individually extracted Figma images were illustrative backgrounds,
 without identifying pictured people or facilities as IRESEN. They are superseded
 by the generated placeholders above; the archived manifest retains their source
-facts. Utility pages use quieter navy overlays. Detailed content belongs in the
+facts. Initial utility pages used quieter navy overlays; the current neutral
+readability layer is documented above. Detailed content belongs in the
 sections below.
 
 The existing header overlays these heroes with the reversed supplied logo and a
@@ -671,8 +714,10 @@ above the bottom band. Its accessible name uses the existing localized
 `Hero.continue`; the mouse outline is decorative, replacing visible text/arrow.
 At default text size, the target is 44 × 44px and the white outline is 24 × 36px.
 Wheel motion uses CSS transform/opacity for three 1.6-second cycles, with no
-animation under `prefers-reduced-motion`. The scene's bottom reserve is 72px
-instead of the former fluid 80–128px, while natural hero growth is retained.
+animation under `prefers-reduced-motion`. The bottom reserve is 72px instead of
+the former fluid 80–128px, except on the homepage at `40rem` and below: its
+redundant cue is hidden and reserve reduces to 32px at default text size.
+Natural hero growth is retained.
 Executed checks and renderings remain in [the validation log](validation.md).
 
 The initial narrow blue band presented Développer · Éprouver · Valoriser as
@@ -743,12 +788,13 @@ the default `rgb(52 52 52 / 94%)` provides a darker fallback. The physical
 `var(--radius-signature)` corners remain 20px top-left/bottom-right at the default
 root size, with sharp opposite corners in RTL as well.
 
-Below `70rem`, the badge follows the introduction and precedes the actions in
+Above `40rem` and below `70rem`, the badge follows the introduction and precedes the actions in
 natural DOM flow. Its flex content wraps within `min(100%, 24rem)`, using 1rem
 padding. From `70rem`, `.hero-body--certified .hero-copy` uses
 `minmax(0, 1fr) 11rem` tracks and a `clamp(2rem, 4vw, 4rem)` column gap. The badge
 occupies the second track across both copy/action rows and aligns at the bottom;
-no fixed hero height is added. The five homepage figures are retained.
+no fixed hero height is added. At `40rem` and below, the badge is hidden by the
+current mobile hierarchy. The five homepage figures are retained.
 See [content and behavior](heroes.md#homepage-certification-badge--2026-10-08)
 and [revision-specific validation](validation.md); earlier checks remain historical.
 
@@ -791,13 +837,14 @@ supported, +1100 scientific publications and +18 university laboratories
 established. Labels are definition terms and values are their descriptions;
 CSS places the values above their labels. Plus-prefixed values are isolated LTR
 in Arabic. The homepage overrides Latin label line height to 1.35 for long
-wrapping labels; Arabic retains 1.45. The grid uses auto-fit tracks with a
-minimum of `min(100%, 12rem)`,
-reduced to `min(100%, 10rem)` below `35rem`. Gaps are 24px on mobile/tablet and
-32px on wide screens at the default root size; below `35rem`, the last figure
-spans a complete row. The normal-size layout gives five columns at 1440/1920px,
-three at 768px, two at 390px and one at 320px, adapting as text is enlarged.
-The hero can grow on narrow screens to keep all five facts visible.
+wrapping labels; Arabic retains 1.45. Above `40rem`, auto-fit tracks use a
+minimum of `min(100%, 12rem)`, with 24px tablet and 32px wide gaps at the default
+root size: five columns at 1440/1920px and three at 768px. At `40rem` and below,
+the focusable, labelled list becomes a native horizontal scroll row, preserving
+all five pairs with an unhidden native scrollbar and neighboring-item glimpse
+where space permits. Scrollbar visibility depends on the browser/OS. This
+supersedes the former narrow grid and last-item row span. Text may wrap and grow;
+facts remain accessible without requiring all five to fit one view.
 This band replaces the homepage's founding-year/pathway items; the
 other pages retain their pathway behavior and institute retains its 2011 figure.
 Corrected French wording, current EN/AR drafts and the content source are recorded

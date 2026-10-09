@@ -3,18 +3,18 @@ import type { HeroPhotoId } from './hero-images'
 
 type HeroDefinition = {
   photo: HeroPhotoId
-  layout: 'start' | 'end' | 'center' | 'split' | 'editorial'
+  layout: 'start' | 'end' | 'center' | 'editorial'
   stage:
     'develop' | 'test' | 'transfer' | 'institute' | 'resources' | 'collaboration' | 'information'
   related: PageId
 }
 
 // Composition is independent from translated copy and the central route map.
-// Photographs are illustrative; they do not identify IRESEN facilities or people.
+// The asset manifest distinguishes fictional illustrations from sourced photographs.
 export const heroes = {
   home: { photo: 'solar-aerial', layout: 'start', stage: 'institute', related: 'platforms' },
   institute: { photo: 'solar-sunset', layout: 'start', stage: 'institute', related: 'governance' },
-  governance: { photo: 'collaboration', layout: 'split', stage: 'institute', related: 'institute' },
+  governance: { photo: 'governance', layout: 'start', stage: 'institute', related: 'institute' },
   priorities: {
     photo: 'wind-landscape',
     layout: 'center',
@@ -23,22 +23,22 @@ export const heroes = {
   },
   programmes: { photo: 'research', layout: 'end', stage: 'develop', related: 'projects' },
   projects: { photo: 'team', layout: 'start', stage: 'develop', related: 'workWithUs' },
-  platforms: { photo: 'solar-field', layout: 'split', stage: 'test', related: 'network' },
+  platforms: { photo: 'solar-field', layout: 'start', stage: 'test', related: 'network' },
   network: { photo: 'workshop', layout: 'end', stage: 'test', related: 'platforms' },
-  transfer: { photo: 'solar-expertise', layout: 'split', stage: 'transfer', related: 'workWithUs' },
+  transfer: { photo: 'solar-expertise', layout: 'start', stage: 'transfer', related: 'workWithUs' },
   workWithUs: {
-    photo: 'wind-engineer',
+    photo: 'partnership-handshake',
     layout: 'start',
     stage: 'collaboration',
     related: 'contact',
   },
   news: { photo: 'solar-city', layout: 'start', stage: 'resources', related: 'events' },
   events: { photo: 'conference', layout: 'end', stage: 'resources', related: 'news' },
-  publications: { photo: 'reading', layout: 'split', stage: 'resources', related: 'media' },
+  publications: { photo: 'reading', layout: 'start', stage: 'resources', related: 'media' },
   media: { photo: 'solar-detail', layout: 'center', stage: 'resources', related: 'publications' },
   opportunities: {
-    photo: 'careers',
-    layout: 'split',
+    photo: 'careers-onboarding',
+    layout: 'start',
     stage: 'collaboration',
     related: 'workWithUs',
   },

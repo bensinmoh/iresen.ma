@@ -4,6 +4,42 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Contextual imagery and full-scene heroes
+
+- Replaced the governance, careers and collaboration illustrations with an
+  executive meeting, young-adult onboarding and a two-person handshake.
+  Generated scenes remain fictional, with native dimensions and provenance.
+- Removed the five half-photo/half-navy compositions. All photos cover the
+  complete hero; four text-placement modes and neutral readability overlays
+  retain the shared content and navigation.
+- Archived the initial generated inventory and removed its six unused served
+  replacements. The current set retains 17 photos with native-height crops.
+- Real Green Energy Park and IRESEN office photos remain pending source access:
+  cloud network policy blocks the identified external downloads.
+- Passed lint, strict types, formatting, production build and all 62 browser
+  cases after the imagery change. Image-delivery coverage now includes all three
+  new scenes and verifies full-width cover without duplicate downloads.
+
+See [current media and pending inputs](docs/contextual-hero-media.md) and
+[revision-specific evidence](docs/validation.md#contextual-hero-media--2026-10-09).
+
+## 2026-10-09 — Mobile information hierarchy
+
+- Defined essential, supporting and optional content tiers, with a role/count
+  ceiling for mobile introductions rather than clipped text or fixed heights.
+- Hid the homepage ISO badge and redundant scroll cue at `40rem` and below;
+  stacked its two existing navigation actions at full width.
+- Kept all five figures in a labelled, keyboard-focusable native horizontal
+  strip, with logical RTL scrolling and natural label wrapping.
+- Retained current content and section placeholders; future mission cards use
+  normal vertical page flow provisionally, pending the direction clarification.
+- Passed lint, strict types, 8 unit tests, 4 integration tests, production build
+  and all 62 browser cases, including mobile boundaries, keyboard and Arabic
+  no-JavaScript access, enlarged text and unchanged video behavior.
+
+See [mobile rules](docs/mobile-information-hierarchy.md) and
+[revision-specific evidence](docs/validation.md#mobile-information-hierarchy--2026-10-09).
+
 ## 2026-10-09 — Homepage hero video
 
 - Enabled the uploaded original `/videos/hero.mp4` as the homepage's muted,

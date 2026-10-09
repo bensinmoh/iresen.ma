@@ -6,6 +6,9 @@ const cases = [
   { pageId: 'home', locale: 'fr' },
   { pageId: 'priorities', locale: 'fr' },
   { pageId: 'priorities', locale: 'ar' },
+  { pageId: 'governance', locale: 'fr' },
+  { pageId: 'opportunities', locale: 'en' },
+  { pageId: 'workWithUs', locale: 'ar' },
 ] as const
 
 function isHeroImage(request: Request) {
@@ -54,7 +57,10 @@ async function delivery(
     })
     expect(rendered.dpr).toBe(2)
     expect(rendered.fit).toBe('cover')
-    expect(rendered.width).toBeGreaterThan(0)
+    expect(rendered.width, 'the photograph must cover the complete hero width').toBeCloseTo(
+      viewport.width,
+      0,
+    )
     expect(rendered.height).toBeGreaterThan(0)
     expect(
       requests,
