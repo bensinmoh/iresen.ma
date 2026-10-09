@@ -145,10 +145,13 @@ export async function SearchPage({
               <input type="hidden" name="q" value={activeQuery} />
               {type !== 'all' && <input type="hidden" name="type" value={type} />}
               <label htmlFor="search-sort">{t('sortLabel')}</label>
-              <select key={sort} id="search-sort" name="sort" defaultValue={sort}>
-                <option value="relevance">{t('relevance')}</option>
-                <option value="newest">{t('newest')}</option>
-              </select>
+              <div className="search-sort-select">
+                <select key={sort} id="search-sort" name="sort" defaultValue={sort}>
+                  <option value="relevance">{t('relevance')}</option>
+                  <option value="newest">{t('newest')}</option>
+                </select>
+                <NavigationIcon name="chevron" />
+              </div>
               <button className="button button-outline" type="submit">
                 {t('apply')}
               </button>

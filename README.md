@@ -6,6 +6,10 @@ The approved [shared glass refinement](docs/design-system.md#compact-menu-contro
 unifies existing header controls and the homepage certification surface, with a
 fine outline and finite reflection. See [current verification](docs/validation.md#refined-glass-surfaces--2026-10-09).
 
+Search results controls now share the requested diagonal action corners and a
+deliberately inset dropdown chevron. See [the control rules](docs/design-system.md#search-results-control-corners--2026-10-09)
+and [verification](docs/validation.md#search-results-control-corners--2026-10-09).
+
 ## Selected stack
 
 | Tool                                                      | Pinned version                                                         |

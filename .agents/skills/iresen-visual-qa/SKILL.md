@@ -21,6 +21,12 @@ and touch states; verify focus restoration, truthful states and reduced motion.
 Use existing behavior tests when interactions change and supplement axe with
 manual checks. Do not claim full accessibility compliance from an automated scan.
 
+Inspect control icons separately from text padding: select chevrons need a visible
+inset from the field edge and reserved space between the longest option and icon.
+Native browser arrows do not reliably follow CSS field padding. Use the shared
+icon with logical positioning when necessary, retaining the native select's
+keyboard behavior; verify the inset and text clearance in LTR, RTL and enlarged text.
+
 Batch the first inspection's findings, implement useful fixes together, then
 confirm with one follow-up pass. Stop cosmetic iteration when the scoped result
 works; unresolved functional defects still need attention. If rendering is blocked,

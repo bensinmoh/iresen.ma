@@ -1,5 +1,16 @@
 # IRESEN visual direction
 
+## Search results control corners — 2026-10-09
+
+The owner's explicit correction gives the query input, resource filters and sort
+select the same physical 10px top-left/bottom-right corners as their actions;
+top-right/bottom-left stay sharp, including Arabic RTL. This replaces the local
+4px rounding without changing the search composition, color or behavior.
+The sort chevron uses a deliberate 12px inline-end inset and 12px text clearance,
+mirrored in Arabic and retained with enlarged text, while retaining native options.
+See [the shared rule](docs/design-system.md#search-results-control-corners--2026-10-09)
+and [verification](docs/validation.md#search-results-control-corners--2026-10-09).
+
 ## Compact menu control — 2026-10-09
 
 The owner's follow-up gives Menu and Search a restrained glass surface over heroes:

@@ -4,6 +4,12 @@ Search uses PostgreSQL behind the replaceable `SearchAdapter` boundary. The
 localized search page accepts `q`, `type`, `sort` and `page` in its URL, so results
 can be bookmarked and browser history preserves the visitor's choices.
 
+The results query field, resource filters and sort select share the actions'
+physical rounded top-left/bottom-right and sharp opposite corners, including RTL.
+See [control geometry](design-system.md#search-results-control-corners--2026-10-09).
+This presentation change adds no public content or search projection; the existing
+resource references and search-page exclusion remain.
+
 On wider headers, the resting magnifier shares Menu's glass surface over heroes
 and becomes white/navy when expanded. It expands toward inline-start on hover or
 explicit keyboard/touch activation, revealing a labeled white input. This moves left

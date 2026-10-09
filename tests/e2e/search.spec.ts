@@ -415,6 +415,42 @@ for (const locale of locales) {
             .map((control) => control.textContent?.trim() || control.getAttribute('name')),
         )
         expect(overflowing, `${locale}: ${width}px, ${textSize}% text`).toEqual([])
+        const selectSpacing = await page.locator('.search-sort-select').evaluate((wrapper) => {
+          const select = wrapper.querySelector('select')!
+          const icon = wrapper.querySelector('svg')!
+          const field = select.getBoundingClientRect()
+          const arrow = icon.getBoundingClientRect()
+          const style = getComputedStyle(select)
+          const canvas = document.createElement('canvas').getContext('2d')!
+          canvas.font = style.font
+          const textWidth = Math.max(
+            ...Array.from(select.options, (option) => canvas.measureText(option.text).width),
+          )
+          return {
+            inset: style.direction === 'rtl' ? arrow.left - field.left : field.right - arrow.right,
+            textSpace:
+              select.clientWidth -
+              parseFloat(style.paddingInlineStart) -
+              parseFloat(style.paddingInlineEnd) -
+              textWidth,
+            gap:
+              parseFloat(style.paddingInlineEnd) -
+              arrow.width -
+              parseFloat(getComputedStyle(icon).insetInlineEnd),
+          }
+        })
+        expect(
+          selectSpacing.inset,
+          'select arrow needs an inset from the edge',
+        ).toBeGreaterThanOrEqual(12)
+        expect(
+          selectSpacing.textSpace,
+          'longest option must fit before the arrow reserve',
+        ).toBeGreaterThanOrEqual(-1)
+        expect(
+          selectSpacing.gap,
+          'select text needs clearance before its arrow',
+        ).toBeGreaterThanOrEqual(12)
       }
     }
     await page.setViewportSize({ width: 390, height: 844 })
