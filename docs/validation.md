@@ -1145,6 +1145,42 @@ These quality-90 CSS-resolution crops were visually inspected:
 The increment is saved locally with push still held for the earlier pending
 documentary-photo inputs.
 
+## Repeatable header search reveal — 2026-10-09
+
+The reported second-opening jump was reproduced in a native production-build
+search disclosure with application scripts blocked: its three openings yielded
+`running`, `finished`, `finished` animation states. Inspecting the hidden form's
+styles can flush the retained animation and mask this browser regression; the
+regression case leaves the closed subtree untouched between rendered frames.
+
+The search-scoped `::details-content` override and explicit hiding of closed
+non-summary children reset the CSS reveal. The same regression now yields
+`running` on all three openings. FR/EN/AR hover cases also confirm three fresh
+animation starts/ends, an intermediate field width, an empty query and unchanged
+outside keyboard focus.
+
+Passed locally against the corrected production build:
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+  `pnpm test:integration` (21 cases), `pnpm build` and formatting/whitespace checks.
+- `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e
+tests/e2e/header-search.spec.ts tests/e2e/navigation.spec.ts --workers=2`:
+  26 cases, including repeated reveals, Arabic RTL, keyboard/touch submission,
+  native no-JavaScript submission, reduced motion, focus restoration,
+  responsive containment and open-header axe checks.
+
+These local checks do not establish cross-browser or screen-reader conformance.
+Current PR CI and merge results remain recorded by GitHub.
+
+Rendered Chromium review covered institute in French at 1920px and Arabic at
+1440px, with three empty hover cycles, open/closed fields and live suggestions.
+The outside identity retains focus; a closed input cannot take focus and Tab
+reaches Contact. Escape removes suggestions. Arabic at 390px retains a contained
+full-width field and input focus inside the mobile menu; Escape restores the
+search trigger. French reduced motion at 1440px reveals the final measured width
+immediately (0.01ms duration). The captured states were inspected without a
+new layout or focus defect; the normal 220ms reveal remains on wider headers.
+
 ## Expandable header search — 2026-10-09
 
 The header magnifier now reveals a labelled search input with a localized

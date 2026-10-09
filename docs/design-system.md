@@ -918,6 +918,10 @@ Expansion uses inline start (left FR/EN, right Arabic), a 220ms width/opacity
 transition and fixed header geometry. The measured combined trigger/field width
 is capped at 22rem and available container space, with the other direction used
 when needed. Global reduced-motion rules make the transition immediate.
+Each closure resets the reveal for the next opening, including empty hover
+sessions. The search-scoped `::details-content` stays renderable; direct children
+other than the summary use `display: none` while closed. This avoids retaining a
+finished animation in the native skipped subtree and hides the form/suggestions.
 
 Fine mouse hover opens without autofocus. Explicit keyboard/touch activation
 focuses the input; Enter and the filled icon submit the query. Required input

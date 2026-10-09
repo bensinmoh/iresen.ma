@@ -53,6 +53,54 @@ async function expectSubmittedQuery(page: Page, locale: Locale, checkQueryRestor
 }
 
 for (const locale of locales) {
+  test(`${locale}: empty search replays its reveal on every hover`, async ({ page }) => {
+    await page.setViewportSize({ width: 1920, height: 900 })
+    await page.goto(pageHref('institute', locale))
+    await page.evaluate(() => document.fonts.ready)
+    const { disclosure, trigger, form, input } = searchParts(page)
+    const identity = page.locator('.site-header .site-identity')
+    await expect(disclosure).toHaveAttribute('data-search-ready', 'true')
+    await identity.focus()
+
+    // Attach once while closed; reading the hidden form's styles between cycles
+    // would flush its retained animation and conceal the browser regression.
+    await form.evaluate((element) => {
+      element.addEventListener('animationstart', (event) => {
+        if ((event as AnimationEvent).animationName !== 'header-search-reveal') return
+        element.dataset.revealStarts = String(Number(element.dataset.revealStarts ?? 0) + 1)
+        element.dataset.revealIntermediate = 'false'
+        const targetWidth = parseFloat(
+          getComputedStyle(element).getPropertyValue('--header-search-field-width'),
+        )
+        function sample() {
+          if (!element.closest('details')?.open || element.dataset.revealFinished === 'true') return
+          const width = element.getBoundingClientRect().width
+          if (width > 10 && width < targetWidth - 10) element.dataset.revealIntermediate = 'true'
+          requestAnimationFrame(sample)
+        }
+        element.dataset.revealFinished = 'false'
+        requestAnimationFrame(sample)
+      })
+      element.addEventListener('animationend', (event) => {
+        if ((event as AnimationEvent).animationName !== 'header-search-reveal') return
+        element.dataset.revealFinished = 'true'
+        element.dataset.revealEnds = String(Number(element.dataset.revealEnds ?? 0) + 1)
+      })
+    })
+
+    for (let cycle = 0; cycle < 3; cycle++) {
+      await trigger.hover()
+      await expect(disclosure).toHaveAttribute('open', '')
+      await expect(form).toHaveAttribute('data-reveal-starts', String(cycle + 1))
+      await expect(form).toHaveAttribute('data-reveal-ends', String(cycle + 1))
+      await expect(form).toHaveAttribute('data-reveal-intermediate', 'true')
+      await expect(input).toHaveValue('')
+      await expect(identity).toBeFocused()
+      await page.locator('.hero-description').hover()
+      await expect(disclosure).not.toHaveAttribute('open', '')
+    }
+  })
+
   test(`${locale}: hover expands search without moving the header or taking keyboard focus`, async ({
     page,
   }) => {
@@ -276,5 +324,40 @@ test('without JavaScript native search disclosures submit in desktop French and 
     } finally {
       await context.close()
     }
+  }
+})
+
+test('native search resets the finished reveal while its disclosure is closed', async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    viewport: { width: 1440, height: 900 },
+  })
+  try {
+    // Keep native disclosures while allowing the test's animation-frame callbacks.
+    await context.route('**/*.js', (route) => route.abort())
+    const page = await context.newPage()
+    await page.goto(pageHref('institute', 'fr'))
+    const starts = await searchParts(page).disclosure.evaluate(async (element) => {
+      const details = element as HTMLDetailsElement
+      const form = details.querySelector('form')!
+      const samples = []
+      for (let cycle = 0; cycle < 3; cycle++) {
+        details.open = true
+        const animation = form.getAnimations()[0]
+        samples.push(animation.playState)
+        await animation.finished
+        details.open = false
+        // Let the native hidden subtree settle without forcing its style/layout.
+        await new Promise(requestAnimationFrame)
+        await new Promise(requestAnimationFrame)
+      }
+      return samples
+    })
+    expect(starts).toEqual(['running', 'running', 'running'])
+  } finally {
+    await context.close()
   }
 })

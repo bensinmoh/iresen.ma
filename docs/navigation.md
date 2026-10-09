@@ -110,6 +110,10 @@ scrolls naturally. The white/navy surface expands toward inline start, reversing
 in RTL, with bounded width and fallback to the other direction when needed.
 The 220ms width/opacity motion respects reduced motion; header geometry and the
 closed 48px/44px icon remain.
+Closing search resets its reveal so every subsequent opening animates, including
+when the visitor leaves and returns without typing. The scoped native content
+wrapper stays renderable, with all non-summary children explicitly hidden while
+closed; keyboard focus and native submission keep the same behavior.
 
 Focus keeps search open when the pointer leaves and prevents navigation hover
 from replacing it. Passive search hover also preserves an already focused language
