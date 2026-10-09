@@ -66,12 +66,32 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
 
 The owner's follow-up requests glass backgrounds for Menu and Search and a white
 selected Menu tab joined to its dropdown. Above `40rem`, the resting controls
-use a 12px backdrop blur. Inverse headers use a 12% white tint, 45% white outline
+use an 18px backdrop blur with 115% saturation. Inverse headers use a 12–6% white gradient, 14% white outline
 and white text/icons; headers on white use an 88% white surface with navy text.
-Inverse controls fall back to a 90% navy surface without backdrop-filter support.
+Inverse controls fall back to a 92% navy surface without backdrop-filter support.
 The shared physical 10px action corners, 48px control size, 16px/600 Menu label
 and regular 24px icon remain. Expanded Search is opaque white/navy and retains
 its existing input geometry and functional reveal.
+
+The owner's video and approved isolated preview establish the shared `--glass-*`
+tokens in `tokens.css`: blur/filter, translucent gradient, fine outline, navy
+fallback, inset highlight/shadow and reflection strength/duration. These also
+apply to the homepage certification aside, the only other existing backdrop-glass
+surface. Its physical 20px corners, visibility breakpoint and content remain.
+The source recording is reference-only; neither its raw video nor extracted
+frames are served or committed.
+
+A decorative, `aria-hidden` `.glass-reflection` clips a 6.5% white gradient inside
+the existing corners and transforms it once over 1000ms on fine-pointer hover or
+keyboard-visible focus. Text/icon geometry and opacity stay stable. The clipped
+layer has no pointer events; controls keep their outer focus rings and the RTL
+white join remains unclipped. No idle loop, pointer-tracking code, extra media or
+animation dependency is introduced. Reduced motion has no reflection animation.
+Open Menu/Search hide the layer; the existing Search hover opens its white field
+immediately, taking priority over decoration. The narrow mobile header also hides
+the reflection, preserving its borderless control. The normal white header keeps
+the readable neutral control outline rather than the inverse white outline.
+See [current verification](validation.md#refined-glass-surfaces--2026-10-09).
 
 The selected Menu tab is opaque white/navy with a sharp bottom-right corner.
 Its dropdown starts exactly at the tab's bottom edge and uses physical 20px
@@ -999,9 +1019,10 @@ verification or adopt other screenshot content.
 `.hero-certification` is a home-only native, noninteractive aside named with the
 translated certified label and standard. ISO 9001:2015 uses LTR `bdi` isolation
 and `var(--font-latin)`; Arabic copy inherits Alexandria and natural tracking.
-The neutral surface uses `rgb(80 80 80 / 72%)` with `backdrop-filter: blur(1rem)`
-and its WebKit-prefixed equivalent. An `@supports` rule enables this treatment;
-the default `rgb(52 52 52 / 94%)` provides a darker fallback. The physical
+The owner's 2026-10-09 approved glass refinement replaces the initial gray
+surface with the shared 18px blur/115% saturation, 12–6% white gradient, 14% outline
+and navy 92% fallback. It includes the same restrained, finite hover reflection;
+the aside remains noninteractive and gains no tab stop. The physical
 `var(--radius-signature)` corners remain 20px top-left/bottom-right at the default
 root size, with sharp opposite corners in RTL as well.
 

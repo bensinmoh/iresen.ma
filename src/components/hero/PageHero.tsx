@@ -40,9 +40,10 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
             </div>
             {pageId === 'home' && (
               <aside
-                className="hero-certification"
+                className="hero-certification glass-surface"
                 aria-label={`${t('certification.label')} ISO 9001:2015`}
               >
+                <span className="glass-reflection" aria-hidden="true" />
                 <div className="hero-certification-heading">
                   <span className="hero-certification-label">{t('certification.label')}</span>
                   <bdi className="hero-certification-standard" dir="ltr">

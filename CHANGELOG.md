@@ -4,6 +4,19 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Refined glass surfaces
+
+- Applied the owner's approved preview to existing Menu/Search controls and the
+  homepage certification aside: shared 18px blur, translucent gradient, subtle
+  14% outline and inset highlight, with a navy fallback.
+- Added a clipped, finite one-second reflection on fine-pointer hover or keyboard
+  focus. Open controls remain opaque white, mobile retains its borderless header,
+  and reduced motion suppresses the reflection.
+- Preserved copy, routes, search registration and existing disclosure behavior.
+
+See [the shared material](docs/design-system.md#compact-menu-control--2026-10-09)
+and [verification](docs/validation.md#refined-glass-surfaces--2026-10-09).
+
 ## 2026-10-09 — Glass header controls and joined menu
 
 - Added the owner's requested glass treatment to resting Menu/Search controls

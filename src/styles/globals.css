@@ -514,6 +514,66 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
   background: var(--color-action-surface);
 }
 
+.glass-surface {
+  position: relative;
+}
+
+.glass-surface > :not(.glass-reflection) {
+  position: relative;
+}
+
+/* Clip the decorative light alone, preserving outside focus rings and RTL joins. */
+.glass-reflection {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.glass-reflection::before {
+  content: '';
+  position: absolute;
+  inset: -40% -80%;
+  background: linear-gradient(
+    110deg,
+    transparent 38%,
+    var(--glass-reflection) 50%,
+    transparent 62%
+  );
+  transform: translateX(-55%);
+  opacity: 0;
+}
+
+@keyframes glass-reflection-pass {
+  0% {
+    transform: translateX(-55%);
+    opacity: 0;
+  }
+
+  20%,
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(55%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .glass-surface:focus-visible > .glass-reflection::before {
+    animation: glass-reflection-pass var(--glass-reflection-duration) ease-out;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .glass-surface:hover > .glass-reflection::before {
+    animation: glass-reflection-pass var(--glass-reflection-duration) ease-out;
+  }
+}
+
 .menu-toggle {
   display: flex;
   align-items: center;
@@ -565,21 +625,22 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
   .site-header .header-search,
   .site-header .menu-toggle {
     background: rgb(255 255 255 / 88%);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    box-shadow: var(--glass-shadow);
+    -webkit-backdrop-filter: var(--glass-filter);
+    backdrop-filter: var(--glass-filter);
   }
 
   .site-header-inverse .header-search,
   .site-header-inverse .menu-toggle {
     color: var(--color-white);
-    border-color: rgb(255 255 255 / 45%);
-    background: rgb(18 52 90 / 90%);
+    border-color: var(--glass-outline);
+    background: var(--glass-fallback);
   }
 
-  @supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+  @supports (backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px)) {
     .site-header-inverse .header-search,
     .site-header-inverse .menu-toggle {
-      background: rgb(255 255 255 / 12%);
+      background: var(--glass-tint);
     }
   }
 
@@ -590,7 +651,14 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
 
   .site-header-inverse .header-search:hover,
   .site-header-inverse .menu-toggle:hover {
-    background: rgb(255 255 255 / 20%);
+    background: var(--glass-fallback);
+  }
+
+  @supports (backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px)) {
+    .site-header-inverse .header-search:hover,
+    .site-header-inverse .menu-toggle:hover {
+      background: var(--glass-tint);
+    }
   }
 
   .site-header .header-search-disclosure[open] > .header-search,
@@ -598,6 +666,7 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
     color: var(--color-navy);
     background: var(--color-white);
     transition: none;
+    box-shadow: none;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
@@ -628,6 +697,11 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
     background: var(--color-white);
     pointer-events: none;
   }
+}
+
+.site-menu[open] > summary > .glass-reflection,
+.header-search-disclosure[open] > summary > .glass-reflection {
+  display: none;
 }
 
 @media (min-width: 40.001rem) and (prefers-reduced-motion: no-preference) {
@@ -1182,18 +1256,18 @@ html[dir='rtl'] .navigation-icon-arrow {
   margin-block-start: var(--space-6);
   margin-inline-start: auto;
   padding: var(--space-4);
-  border: 1px solid rgb(255 255 255 / 20%);
+  border: 1px solid var(--glass-outline);
   border-radius: var(--radius-signature);
   color: var(--color-white);
-  background: rgb(52 52 52 / 94%);
-  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 12%);
+  background: var(--glass-fallback);
+  box-shadow: var(--glass-shadow);
 }
 
-@supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) {
+@supports (backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px)) {
   .hero-certification {
-    background: rgb(80 80 80 / 72%);
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
+    background: var(--glass-tint);
+    -webkit-backdrop-filter: var(--glass-filter);
+    backdrop-filter: var(--glass-filter);
   }
 }
 
@@ -2668,6 +2742,10 @@ html[dir='rtl'] .footer-arrow {
     border-radius: 0;
     color: inherit;
     background: transparent;
+  }
+
+  .site-header .glass-reflection {
+    display: none;
   }
 
   .menu-toggle .menu-open-label {

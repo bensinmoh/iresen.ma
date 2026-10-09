@@ -396,7 +396,8 @@ export function SiteHeader() {
               {pageLink('contact', 'button button-primary header-contact', copy('contact'))}
             </div>
             <details className="site-menu" ref={menuRef}>
-              <summary className="menu-toggle">
+              <summary className="menu-toggle glass-surface">
+                <span className="glass-reflection" aria-hidden="true" />
                 <span className="menu-open-label">{t('menu')}</span>
                 <span className="menu-close-label">{t('closeMenu')}</span>
                 <svg
