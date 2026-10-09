@@ -4,6 +4,31 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Contact reference composition and location
+
+- Replaced contact's photo hero/scaffold with the owner-selected Figma contact
+  composition: white shared header, split introduction/headquarters, platform
+  entries, pale form band, native FAQ and shared navy footer.
+- Recovered the original decorative background byte-identically from the native
+  Figma source. Reused established headquarters contacts and grounded platform
+  descriptions in institutional sources; omitted unverified sample opening hours,
+  response promises, departmental mailboxes and platform contact details.
+- Added a local email-draft workflow with field validation, subject selection,
+  explicit email-application handoff and direct fallback. It does not submit,
+  store or deliver messages through the website.
+- Added the requested full-width location section. Google Maps loads on request
+  and can be removed; the exact supplied directions shortlink is retained, and
+  the address-query embed's exact pin remains unverified.
+- Preserved the 22-page route baseline and contact anchors; FR/EN/AR copy remains
+  draft. Server-side delivery and production publication remain separate work.
+- Registered current contact guidance, FAQ/platform/location anchors and the
+  decorative background in multilingual public search, replacing retired scaffolds.
+- Isolated integration-test indexing from automatic background polling to avoid
+  a race between the parallel CMS and search suites; production behavior is unchanged.
+
+See [contact sources and behavior](docs/contact.md), [asset provenance](docs/asset-inventory.md#contact-decorative-background--2026-10-09)
+and [revision-specific check evidence](docs/validation.md).
+
 ## 2026-10-09 — Tablet homepage layout
 
 - Omitted the homepage ISO badge below `70rem`, retaining its compact desktop
@@ -95,8 +120,8 @@ and [verification](docs/validation.md#mobile-reference-adaptation--2026-10-09).
 
 - Recorded the owner's authorization to push the current snapshot while real
   Green Energy Park and IRESEN office photos remain pending.
-- Confirmed that the search engine is in separate development and is not
-  connected to this snapshot; the search page retains its unavailable state.
+- Recorded the earlier snapshot's separate search development and unavailable
+  search page. The later public-search implementation above supersedes that state.
 
 See [current product scope](PRODUCT.md) and [pending media](docs/contextual-hero-media.md#documentary-photos-pending).
 
@@ -108,7 +133,7 @@ See [current product scope](PRODUCT.md) and [pending media](docs/contextual-hero
 - Bounded the animated white/navy field within the header container, preserving
   closed-control geometry, RTL, physical action corners and reduced-motion behavior.
 - Retained native no-JavaScript disclosure/submission and the truthful unavailable
-  search engine; no results or backend were added.
+  search engine at that revision; the later public-search work adds results/backend.
 - Passed all 72 browser cases, then rebuilt and passed the 10 focused search
   cases after a final native Arabic corner correction. Eleven rendered states
   confirm animation, containment, focus and matching action corners.

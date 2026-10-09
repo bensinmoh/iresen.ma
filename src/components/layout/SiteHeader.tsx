@@ -320,7 +320,8 @@ export function SiteHeader() {
     )
   }
 
-  const inverse = currentPageId !== undefined && currentPageId !== 'search'
+  const inverse =
+    currentPageId !== undefined && currentPageId !== 'search' && currentPageId !== 'contact'
 
   return (
     <header

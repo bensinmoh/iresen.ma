@@ -4,14 +4,16 @@ Initially implemented on 2026-10-08 from the owner's hero screenshot (inspiratio
 recorded native Figma design language and the approved information architecture.
 The owner's clarification keeps the heroes introductory: detailed content belongs
 in the sections below. No complete homepage or editorial listing is implied.
-The generated backgrounds below replace the initial Figma-derived imagery on
+The generated backgrounds below replaced the initial Figma-derived imagery on
 2026-10-09 while retaining that framework. The owner's subsequent homepage video
-request keeps those photos on the other 20 non-search pages and as the homepage
-fallback. Search now uses its compact functional results view.
+request keeps its generated photo as the homepage fallback. The current site has
+20 shared `PageHero` introductions: the homepage and 19 photo-led pages. Search
+uses its compact functional results view, while contact uses its
+[dedicated design and location section](contact.md).
 
 ## Composition and content
 
-The 21 non-search pages use the shared server-rendered `PageHero`, with composition
+These 20 pages use the shared server-rendered `PageHero`, with composition
 selected by stable page ID in `src/lib/heroes.ts`. Four text-placement modes
 (start, end, center and editorial) vary alignment and reading measure over
 full-scene photographic backgrounds. The former split treatment is removed.
@@ -36,8 +38,8 @@ introductions and adopts shared action styling and selective Apex Leaf placement
 
 The owner explicitly requested 17 generated photographic placeholders to replace
 all hero backgrounds across the 22 pages in the initial photo-replacement revision.
-Three contextual replacements now join 14 retained generated images, still serving
-the 20 interior heroes and homepage fallback. These illustrate research, renewable
+Three contextual replacements joined 14 retained generated images. Current shared
+hero usage covers 19 interior pages and the homepage fallback. These illustrate research, renewable
 energy, collaboration and knowledge sharing through fictional, generic scenes.
 They remain decorative with empty alternatives and make no claim to depict real
 IRESEN people, facilities or events. Requested real Green Energy Park and IRESEN
@@ -50,7 +52,7 @@ original SVGs and installed fonts remain.
 Governance uses a generated executive meeting, opportunities a young-adult office
 onboarding scene, and workWithUs a two-person handshake. These fictional people
 and settings do not document IRESEN board members, staff or premises. All 17
-active photo assets remain generated; institute and platforms keep their
+served photo assets remain generated; institute and platforms keep their
 illustrative backgrounds while real office/Green Energy Park sourcing is pending.
 
 All media cover the complete scene. The five former split pages now use start
@@ -101,8 +103,9 @@ and then specifies no playback button. A homepage-only client layer assigns the
 source after hydration when `prefers-reduced-motion` permits motion. Its initial
 markup has no source and uses `preload="none"`. The native video uses autoplay,
 muted, loop and playsInline, without controls. It remains
-decorative; existing text, links, figures, certification and all 20 other photo
-heroes retain their behavior.
+decorative; at that video-only revision, existing text, links, figures,
+certification and the other photo heroes retained their behavior. Current shared
+hero usage and the search/contact exceptions are described above.
 
 The server-rendered generated `HeroPhoto` stays beneath the video as a lightweight
 visual poster and fallback. It remains visible before playback, when playback
