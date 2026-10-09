@@ -393,3 +393,23 @@ SHA-256 hashes are in [research-assets.json](research-assets.json); responsive
 Next derivatives share each original's search result. The source strategy and
 attached screenshots remain repository/design references outside public assets.
 See [scope and provenance](research-domains.md).
+
+## Homepage platform photographs and logos — 2026-10-09
+
+The owner supplied five individual visuals, four SVG logo originals and the
+later `morocco.svg` map and `consulting.svg` illustration for the
+platforms/expertise homepage module. See [the manifest](platform-assets.json) for
+source names, SHA-256 hashes, delivered paths/dimensions and transformations,
+and [scope and rights boundaries](home-platforms.md). The four documentary
+photographs and the separately identified GreenH2A 3D visualization are served
+as proportionally resized WebP copies. SVG bytes are unchanged; the requested
+gray logo rendering uses CSS only. Both network-band illustrations use white
+inline displays from their exact source paths. The map display has a 0.5-radius
+SVG erosion filter to lighten its outline; the consulting display retains its
+original filled outline with no added stroke. The map’s byte-identical served original is
+`/brand/platforms/morocco.svg` (65 × 65, 6,479 bytes); its hash is recorded in the
+manifest. The consulting original is also served byte-identically at
+`/brand/platforms/consulting.svg`. These display-only treatments match the lighter
+outline weights while preserving both original files. All eleven supplied assets have localized public
+search metadata. The superseded native person/network drawing is no longer used. Original sources remain unchanged locally.
+The screenshot and private SharePoint chapter are reference-only and uncommitted.

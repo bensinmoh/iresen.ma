@@ -164,8 +164,8 @@
         "description": "À prévoir : des cas documentés précisant le besoin, les contributions, les résultats et leur maturité."
       },
       "platforms-expertise": {
-        "title": "Plateformes et expertise",
-        "description": "À prévoir : un aperçu des capacités expérimentales et scientifiques et de leurs conditions d’accès."
+        "title": "Des capacités au service de l’innovation",
+        "description": "Des laboratoires aux démonstrateurs, IRESEN mobilise des infrastructures et des expertises pour éprouver les technologies, développer les savoir-faire et préparer leur passage à l’échelle."
       },
       "collaboration": {
         "title": "Collaborer avec IRESEN",
@@ -214,6 +214,30 @@
       "research-mobility": {
         "title": "Mobilité & infrastructures de transport bas carbone",
         "description": "Adapter les transports bas carbone aux profils d’usage, aux contraintes du réseau et au climat : flottes, recharge, batteries et logistique."
+      },
+      "platform-gep": {
+        "title": "Green Energy Park",
+        "description": "À Benguérir, éprouver le photovoltaïque, le solaire thermique et le stockage, du laboratoire au terrain."
+      },
+      "platform-gsbp": {
+        "title": "Green & Smart Building Park",
+        "description": "À Benguérir, relier matériaux, bâtiments efficaces et réseaux intelligents autour du Village Solaire."
+      },
+      "platform-gep-mci": {
+        "title": "Green Energy Park Maroc–Côte d’Ivoire",
+        "description": "À Yamoussoukro, étudier le solaire en climat semi-tropical et développer les compétences locales."
+      },
+      "platform-greenh2a": {
+        "title": "GreenH2A",
+        "description": "À Jorf Lasfar, étudier l’hydrogène vert et le Power-to-X à l’échelle pilote. Plateforme en développement."
+      },
+      "platform-network-laboratories": {
+        "title": "Un réseau de laboratoires",
+        "description": "Des moyens expérimentaux partagés pour relier recherche, essais et formation."
+      },
+      "platform-network-expertise": {
+        "title": "Des expertises complémentaires",
+        "description": "Chercheurs, ingénieurs et techniciens croisent leurs compétences autour des défis énergétiques."
       }
     },
     "institute": {
@@ -1106,5 +1130,60 @@
       }
     },
     "searchText": "Collaboration IRESEN, étudiants, doctorants, chercheurs, thèse, doctorat, opportunités de recherche, professeurs, porteurs de projet, recherche et développement (R&D), maturation, transfert technologique, industriels, décarbonation, décideurs, bailleurs de fonds, expertise scientifique, choix technologiques."
+  },
+  "HomePlatforms": {
+    "eyebrow": "Plateformes & expertise",
+    "title": "Des capacités au service de l’innovation",
+    "description": "Des laboratoires aux démonstrateurs, IRESEN mobilise des infrastructures et des expertises pour éprouver les technologies, développer les savoir-faire et préparer leur passage à l’échelle.",
+    "navigation": "Explorer les plateformes et les expertises",
+    "platformsLink": "Nos plateformes",
+    "expertiseLink": "Notre réseau d’expertise",
+    "cardLink": "Explorer les plateformes",
+    "visualization": "Vue 3D · en développement",
+    "outdoorTitle": "Champ expérimental outdoor du Green Energy Park",
+    "outdoorDescription": "Photographie du terrain d’expérimentation solaire du Green Energy Park à Benguérir : panneaux photovoltaïques et équipements de solaire à concentration.",
+    "logoLabel": "Logo",
+    "platforms": {
+      "gep": {
+        "name": "Green Energy Park",
+        "category": "Solaire · stockage",
+        "description": "À Benguérir, éprouver le photovoltaïque, le solaire thermique et le stockage, du laboratoire au terrain.",
+        "imageDescription": "Vue aérienne du Green Energy Park à Benguérir, avec ses laboratoires et ses champs solaires.",
+        "searchText": "GEP Green Energy Park Benguérir photovoltaïque PV solaire thermique à concentration CSP stockage essais qualification"
+      },
+      "gsbp": {
+        "name": "Green & Smart Building Park",
+        "category": "Bâtiment · réseaux intelligents",
+        "description": "À Benguérir, relier matériaux, bâtiments efficaces et réseaux intelligents autour du Village Solaire.",
+        "imageDescription": "Maisons expérimentales du Village Solaire issu du Solar Decathlon Africa, au Green & Smart Building Park.",
+        "searchText": "GSBP Green and Smart Building Park bâtiment durable efficacité énergétique smart grids Village Solaire Solar Decathlon Africa"
+      },
+      "gep-mci": {
+        "name": "Green Energy Park Maroc–Côte d’Ivoire",
+        "category": "Coopération · expérimentation",
+        "description": "À Yamoussoukro, étudier le solaire en climat semi-tropical et développer les compétences locales.",
+        "imageDescription": "Bâtiment et installations photovoltaïques du Green Energy Park Maroc–Côte d’Ivoire.",
+        "searchText": "GEP-MCI GEP MCI Green Energy Park Maroc Côte d’Ivoire Yamoussoukro INP-HB solaire coopération Sud-Sud formation"
+      },
+      "greenh2a": {
+        "name": "GreenH2A",
+        "category": "Hydrogène vert · Power-to-X",
+        "description": "À Jorf Lasfar, étudier l’hydrogène vert et le Power-to-X à l’échelle pilote. Plateforme en développement.",
+        "imageDescription": "Vue 3D d’ingénierie d’une installation pilote GreenH2A, avec équipements et tuyauteries ; illustration de conception.",
+        "searchText": "GreenH2A Green Hydrogen to Applications hydrogène vert H2 Power-to-X PtX électrolyse Jorf Lasfar pilote en développement"
+      }
+    },
+    "network": {
+      "laboratories": {
+        "title": "Un réseau de laboratoires",
+        "description": "Des moyens expérimentaux partagés pour relier recherche, essais et formation."
+      },
+      "expertise": {
+        "title": "Des expertises complémentaires",
+        "description": "Chercheurs, ingénieurs et techniciens croisent leurs compétences autour des défis énergétiques."
+      }
+    },
+    "mapLabel": "Carte du Maroc",
+    "expertiseIconLabel": "Expertise et conseil"
   }
 }

@@ -343,8 +343,8 @@
         "description": "Content to add: documented cases explaining the need, contributions, results and their maturity."
       },
       "platforms-expertise": {
-        "title": "Platforms and expertise",
-        "description": "Content to add: an overview of experimental and scientific capabilities and their access conditions."
+        "title": "Capabilities that advance innovation",
+        "description": "From laboratories to demonstrators, IRESEN brings together infrastructure and expertise to test technologies, develop skills and prepare for scale-up."
       },
       "collaboration": {
         "title": "Collaborate with IRESEN",
@@ -393,6 +393,30 @@
       "research-mobility": {
         "title": "Low-carbon mobility & transport infrastructure",
         "description": "Adapt low-carbon transport to usage patterns, grid constraints and climate through fleets, charging, batteries and logistics."
+      },
+      "platform-gep": {
+        "title": "Green Energy Park",
+        "description": "In Benguerir, test photovoltaics, solar thermal technologies and storage, from laboratory to field."
+      },
+      "platform-gsbp": {
+        "title": "Green & Smart Building Park",
+        "description": "In Benguerir, connect materials, efficient buildings and smart grids around the Solar Village."
+      },
+      "platform-gep-mci": {
+        "title": "Green Energy Park Morocco–Côte d’Ivoire",
+        "description": "In Yamoussoukro, study solar technologies in a semi-tropical climate and develop local skills."
+      },
+      "platform-greenh2a": {
+        "title": "GreenH2A",
+        "description": "In Jorf Lasfar, study green hydrogen and Power-to-X at pilot scale. A platform in development."
+      },
+      "platform-network-laboratories": {
+        "title": "A network of laboratories",
+        "description": "Shared experimental resources connecting research, testing and training."
+      },
+      "platform-network-expertise": {
+        "title": "Complementary expertise",
+        "description": "Researchers, engineers and technicians bring their skills together to address energy challenges."
       }
     },
     "institute": {
@@ -1106,5 +1130,60 @@
       }
     },
     "searchText": "IRESEN collaboration, students, doctoral candidates, researchers, thesis, PhD, research opportunities, professors, project initiators, research and development (R&D), maturation, technology transfer, industry, decarbonisation, decision-makers, funding partners, scientific expertise, technology choices."
+  },
+  "HomePlatforms": {
+    "eyebrow": "Platforms & expertise",
+    "title": "Capabilities that advance innovation",
+    "description": "From laboratories to demonstrators, IRESEN brings together infrastructure and expertise to test technologies, develop skills and prepare for scale-up.",
+    "navigation": "Explore platforms and expertise",
+    "platformsLink": "Our platforms",
+    "expertiseLink": "Our expertise network",
+    "cardLink": "Explore the platforms",
+    "visualization": "3D view · in development",
+    "outdoorTitle": "Green Energy Park outdoor experimental field",
+    "outdoorDescription": "Photograph of the Green Energy Park solar experimental field in Benguerir, with photovoltaic panels and concentrated solar equipment.",
+    "logoLabel": "Logo",
+    "platforms": {
+      "gep": {
+        "name": "Green Energy Park",
+        "category": "Solar · storage",
+        "description": "In Benguerir, test photovoltaics, solar thermal technologies and storage, from laboratory to field.",
+        "imageDescription": "Aerial view of Green Energy Park in Benguerir, showing its laboratories and solar fields.",
+        "searchText": "GEP Green Energy Park Benguerir photovoltaics PV concentrated solar power CSP solar thermal energy storage testing qualification"
+      },
+      "gsbp": {
+        "name": "Green & Smart Building Park",
+        "category": "Buildings · smart grids",
+        "description": "In Benguerir, connect materials, efficient buildings and smart grids around the Solar Village.",
+        "imageDescription": "Experimental houses in the Solar Village from Solar Decathlon Africa, at Green & Smart Building Park.",
+        "searchText": "GSBP Green and Smart Building Park sustainable buildings energy efficiency smart grids Solar Village Solar Decathlon Africa"
+      },
+      "gep-mci": {
+        "name": "Green Energy Park Morocco–Côte d’Ivoire",
+        "category": "Cooperation · experimentation",
+        "description": "In Yamoussoukro, study solar technologies in a semi-tropical climate and develop local skills.",
+        "imageDescription": "Building and photovoltaic installations at Green Energy Park Morocco–Côte d’Ivoire.",
+        "searchText": "GEP-MCI GEP MCI Green Energy Park Morocco Côte d’Ivoire Ivory Coast Yamoussoukro INP-HB solar South-South cooperation training"
+      },
+      "greenh2a": {
+        "name": "GreenH2A",
+        "category": "Green hydrogen · Power-to-X",
+        "description": "In Jorf Lasfar, study green hydrogen and Power-to-X at pilot scale. A platform in development.",
+        "imageDescription": "3D engineering view of a GreenH2A pilot installation with equipment and pipework; a design visualization.",
+        "searchText": "GreenH2A Green Hydrogen to Applications green hydrogen H2 Power-to-X PtX electrolysis Jorf Lasfar pilot in development"
+      }
+    },
+    "network": {
+      "laboratories": {
+        "title": "A network of laboratories",
+        "description": "Shared experimental resources connecting research, testing and training."
+      },
+      "expertise": {
+        "title": "Complementary expertise",
+        "description": "Researchers, engineers and technicians bring their skills together to address energy challenges."
+      }
+    },
+    "mapLabel": "Morocco map",
+    "expertiseIconLabel": "Expertise and consulting"
   }
 }

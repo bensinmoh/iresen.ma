@@ -735,3 +735,12 @@ Checked while preparing this brief on 7 October 2026. Recheck package compatibil
 ## 22. First implementation task
 
 This kickoff instruction records the original foundation mandate; that increment is now delivered. For current tasks, read this brief, [AGENTS.md](AGENTS.md), [PRODUCT.md](PRODUCT.md) and the current design reference, inspect the checkout and complete the owner's requested increment on a reviewable branch. Preserve the approved identity, existing implementation and updated content. Report blockers precisely and continue independent work; live Figma access is needed only where a specific missing detail requires it.
+
+## Homepage platforms update — 2026-10-09
+
+The later owner request commissions the existing `platforms-expertise` section
+with the five supplied outdoor/platform visuals and four original SVG logos.
+See [implemented scope](docs/home-platforms.md). This bounded increment
+supersedes only the capabilities deferral. Achievements remain the one body
+placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
+in-development wording, its 3D label, canonical destinations and search references.

@@ -4,6 +4,7 @@ import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
 import { collaborationCount } from '@/lib/home-collaboration'
+import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
 import { homeFigures } from '@/lib/figures'
 import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
@@ -74,6 +75,79 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'platform-network-consulting',
+    url: '/brand/platforms/consulting.svg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].HomePlatforms.expertiseIconLabel,
+          description: [
+            messages[locale].HomePlatforms.network.expertise.title,
+            messages[locale].HomePlatforms.network.expertise.description,
+          ].join(' '),
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  {
+    id: 'platform-network-morocco',
+    url: '/brand/platforms/morocco.svg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].HomePlatforms.mapLabel,
+          description: [
+            messages[locale].HomePlatforms.network.laboratories.title,
+            messages[locale].HomePlatforms.network.laboratories.description,
+          ].join(' '),
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  {
+    id: 'platform-outdoor',
+    url: '/images/platforms/outdoor.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].HomePlatforms.outdoorTitle,
+          description: messages[locale].HomePlatforms.outdoorDescription,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  ...homePlatforms.flatMap(({ id }) =>
+    [false, true].map((logo) => ({
+      id: `platform-${logo ? 'logo-' : 'photo-'}${id}`,
+      url: logo ? `/brand/platforms/${id}.svg` : `/images/platforms/${id}.webp`,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => {
+          const copy = messages[locale].HomePlatforms.platforms[id]
+          return [
+            locale,
+            {
+              title: logo ? `${messages[locale].HomePlatforms.logoLabel} ${copy.name}` : copy.name,
+              description: [
+                logo
+                  ? `${messages[locale].HomePlatforms.logoLabel} ${copy.name}`
+                  : copy.imageDescription,
+                copy.searchText,
+              ].join(' '),
+            },
+          ]
+        }),
+      ) as PublicAssetReference['text'],
+    })),
+  ),
+
   ...researchThemes
     .filter((id) => id !== 'renewables')
     .map((id) => ({
@@ -318,6 +392,17 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.HomeNews.title,
           catalog.HomeNews.searchText,
           catalog.HomeCollaboration.searchText,
+          catalog.HomePlatforms.title,
+          catalog.HomePlatforms.description,
+          ...Object.values(catalog.HomePlatforms.network).flatMap(({ title, description }) => [
+            title,
+            description,
+          ]),
+          ...Object.values(catalog.HomePlatforms.platforms).flatMap((platform) => [
+            platform.name,
+            platform.description,
+            platform.searchText,
+          ]),
         )
       }
       if (pageId === 'home')
@@ -380,6 +465,22 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 return [theme.title, theme.description, ...theme.axes, theme.searchText]
               }),
             )
+          if (pageId === 'home' && entry.id === homePlatformsSectionId)
+            body.push(
+              ...Object.values(catalog.HomePlatforms.network).flatMap(({ title, description }) => [
+                title,
+                description,
+              ]),
+              ...Object.values(catalog.HomePlatforms.platforms).flatMap((platform) => [
+                platform.name,
+                platform.description,
+                platform.searchText,
+              ]),
+            )
+          if (pageId === 'home') {
+            const platformId = homePlatforms.find(({ id }) => entry.id === `platform-${id}`)?.id
+            if (platformId) body.push(catalog.HomePlatforms.platforms[platformId].searchText)
+          }
           if (pageId === 'home' && entry.id === 'collaboration') {
             const collaboration = catalog.HomeCollaboration
             body.push(

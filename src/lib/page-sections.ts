@@ -1,3 +1,4 @@
+import { homePlatforms } from '@/lib/home-platforms'
 import { researchThemes } from '@/lib/home-research'
 import type { PageId } from '@/lib/site'
 
@@ -18,7 +19,14 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'figures' },
     { id: 'research-priorities', children: researchThemes.map((id) => ({ id: `research-${id}` })) },
     { id: 'results' },
-    { id: 'platforms-expertise' },
+    {
+      id: 'platforms-expertise',
+      children: [
+        ...homePlatforms.map(({ id }) => ({ id: `platform-${id}` })),
+        { id: 'platform-network-laboratories' },
+        { id: 'platform-network-expertise' },
+      ],
+    },
     { id: 'collaboration' },
     { id: 'news-events' },
   ],

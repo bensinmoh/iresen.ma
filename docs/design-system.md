@@ -1241,3 +1241,25 @@ Afrique”, supersedes the earlier agency-only description in both homepage
 hero and collaboration. FR/EN/AR catalogs and search projections carry the
 correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
 copy, not independent certification verification.
+
+## Homepage photographic capabilities — 2026-10-09
+
+The owner commissioned the existing `platforms-expertise` module: outdoor GEP
+photography behind a left introduction and four compact photographic platform
+cards, with white text over dark gradients. A lower two-block band introduces
+the laboratory network and complementary expertise. The owner-supplied
+Morocco SVG and supplied consulting illustration distinguish these two
+blocks in white, at a responsive 76–112px square size. Their physical geometry
+stays unmirrored in RTL and asserts no geographic coverage or headcount.
+Both inline displays retain the supplied paths. Consulting uses its original
+filled outline without an added stroke; a display-only erosion filter lightens
+the map outline to a matching weight. The served originals remain byte-identical. Icons and text
+can stack within each block when enlarged text needs the reading space. Original logos remain unchanged and display in light gray
+through CSS.
+The section reuses the aligned grid, section-label/type roles and physical
+signature corners; below 70rem the introduction stacks, below 40rem cards stack.
+FR/EN/AR are working summaries; GreenH2A is explicitly in development and its
+image is labelled as a 3D view. Existing platforms/network destinations remain.
+Search covers the section, four card anchors and eleven supplied media assets.
+Achievements are the sole remaining body placeholder; full reordering remains
+deferred. See [scope and sources](home-platforms.md).
