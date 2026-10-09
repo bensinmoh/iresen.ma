@@ -41,17 +41,21 @@ At `40rem` and below:
   wider-screen treatment remain.
 - The existing discovery and related-page links stack at full width, using the
   primary blue and secondary white treatments with shared physical 10px action
-  corners. Labels and destinations remain.
+  corners. The later mobile reference adaptation uses a 48px minimum at default
+  text size. Labels and destinations remain.
 - All five homepage figures remain in a focusable, labelled definition list
   with native horizontal scrolling. The scrollbar is enabled and unhidden;
   visibility depends on the browser/OS. A neighboring-item glimpse appears where
   space permits; enlarged text may fill the available width. Every value/label
   pair remains available in logical order.
 - The homepage's lower reserve becomes 32px at the default root size instead of
-  72px. The hero still grows naturally for reading or enlarged text.
+  72px. The image scene now has its own viewport minimum before the figures;
+  the hero still grows naturally for reading or enlarged text.
 
 Wider homepage layouts and other page heroes retain their existing treatment.
-The video/photo policy, header, footer, fonts, copy and routes remain. Horizontal
+The video/photo policy, fonts, copy and routes remain. The narrow header and footer
+follow the later [mobile reference adaptation](design-system.md#mobile-reference-adaptation--2026-10-09).
+Horizontal
 scrolling is local to the figure collection; ordinary vertical page scrolling
 continues. Keyboard/touch and no-JavaScript access use native scrolling, without
 automatic advancement, carousel buttons or an additional client runtime.

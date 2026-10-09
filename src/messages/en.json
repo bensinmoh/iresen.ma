@@ -6,6 +6,7 @@
   "Navigation": {
     "label": "Main navigation",
     "menu": "Menu",
+    "closeMenu": "Close",
     "skip": "Skip to main content",
     "language": "Choose a language",
     "footer": "Footer navigation",

@@ -19,7 +19,9 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
   ] as const
 
   return (
-    <HeroViewport className={`page-hero hero--${definition.layout}`}>
+    <HeroViewport
+      className={`page-hero hero--${definition.layout}${pageId === 'home' ? ' page-hero--home' : ''}`}
+    >
       <div className="hero-scene">
         <div className="hero-media" aria-hidden="true">
           <HeroPhoto photo={definition.photo} />

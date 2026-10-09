@@ -26,6 +26,13 @@ function headerSearch(page: Page) {
 
 async function openHeaderSearch(page: Page) {
   const parts = headerSearch(page)
+  if (!(await parts.trigger.isVisible())) {
+    const menu = page.getByRole('banner').locator('.site-menu')
+    if ((await menu.getAttribute('open')) === null) {
+      await menu.locator(':scope > summary').focus()
+      await page.keyboard.press('Enter')
+    }
+  }
   if ((await parts.disclosure.getAttribute('open')) === null) {
     await parts.trigger.focus()
     await parts.trigger.press('Enter')
@@ -116,42 +123,61 @@ test('leaving search by keyboard clears the reveal while the pointer is parked o
   }
 })
 
-test('public search suggestions support arrow navigation, Escape and destination links', async ({
-  page,
-  baseURL,
-}) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
-  await page.goto(pageHref('institute', 'en'))
-  const { trigger, input } = await openHeaderSearch(page)
-  await input.fill('research')
-  const suggestions = page.locator('[data-search-suggestion]')
-  await expect(suggestions.first()).toBeVisible()
-  expect(await suggestions.count()).toBeLessThanOrEqual(4)
-  await input.press('ArrowDown')
-  await expect(suggestions.first()).toBeFocused()
-  await page.keyboard.press('ArrowDown')
-  await expect(suggestions.nth(1)).toBeFocused()
-  await page.keyboard.press('ArrowUp')
-  await expect(suggestions.first()).toBeFocused()
-  await page.keyboard.press('ArrowUp')
-  await expect(input).toBeFocused()
-  const accessibility = await new AxeBuilder({ page })
-    .include('.site-header')
-    .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
-    .analyze()
-  expect(accessibility.violations).toEqual([])
-  await input.press('ArrowDown')
-  await page.keyboard.press('Escape')
-  await expect(input).not.toBeFocused()
-  await expect(trigger).toBeFocused()
-  await expect(suggestions).toHaveCount(0)
-  await openHeaderSearch(page)
-  await expect(suggestions.first()).toBeVisible()
-  const destination = (await suggestions.first().getAttribute('href'))!
-  await input.press('ArrowDown')
-  await page.keyboard.press('Enter')
-  await expect(page).toHaveURL(new URL(destination, baseURL).href)
-})
+for (const width of [1440, 390]) {
+  test(`public search suggestions support keyboard navigation, containment and destination links at ${width}px`, async ({
+    page,
+    baseURL,
+  }) => {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto(pageHref('institute', 'en'))
+    const { trigger, input } = await openHeaderSearch(page)
+    await input.fill('research')
+    const suggestions = page.locator('[data-search-suggestion]')
+    await expect(suggestions.first()).toBeVisible()
+    expect(await suggestions.count()).toBeLessThanOrEqual(4)
+    await expect
+      .poll(() =>
+        page.locator('.header-search-suggestions').evaluate((element) => {
+          const bounds = element.getBoundingClientRect()
+          return bounds.left >= -1 && bounds.right <= window.innerWidth + 1
+        }),
+      )
+      .toBe(true)
+    if (width === 390) {
+      await input.press('Tab')
+      await expect(suggestions.first()).toBeFocused()
+      await page.keyboard.press('Shift+Tab')
+      await expect(input).toBeFocused()
+    }
+    await input.press('ArrowDown')
+    await expect(suggestions.first()).toBeFocused()
+    await page.keyboard.press('ArrowDown')
+    await expect(suggestions.nth(1)).toBeFocused()
+    await page.keyboard.press('ArrowUp')
+    await expect(suggestions.first()).toBeFocused()
+    await page.keyboard.press('ArrowUp')
+    await expect(input).toBeFocused()
+    const accessibility = await new AxeBuilder({ page })
+      .include('.site-header')
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+      .analyze()
+    expect(accessibility.violations).toEqual([])
+    await input.press('ArrowDown')
+    await page.keyboard.press('Escape')
+    await expect(input).not.toBeFocused()
+    await expect(trigger).toBeFocused()
+    await expect(suggestions).toHaveCount(0)
+    if (width === 390) {
+      await expect(page.locator('.site-menu')).toHaveAttribute('open', '')
+    }
+    await openHeaderSearch(page)
+    await expect(suggestions.first()).toBeVisible()
+    const destination = (await suggestions.first().getAttribute('href'))!
+    await input.press('ArrowDown')
+    await page.keyboard.press('Enter')
+    await expect(page).toHaveURL(new URL(destination, baseURL).href)
+  })
+}
 
 test('touch search opens its input before submitting, without needing hover', async ({
   browser,
@@ -167,6 +193,8 @@ test('touch search opens its input before submitting, without needing hover', as
     const page = await context.newPage()
     await page.goto(pageHref('institute', 'fr'))
     const { trigger, input } = headerSearch(page)
+    await expect(trigger).toBeHidden()
+    await page.locator('.site-menu > summary').tap()
     await trigger.tap()
     await expect(input).toBeFocused()
     await input.fill('plateformes')
@@ -178,32 +206,34 @@ test('touch search opens its input before submitting, without needing hover', as
   }
 })
 
-test('header and results native GET search remain functional without JavaScript', async ({
-  browser,
-  baseURL,
-}) => {
-  const context = await browser.newContext({
+for (const width of [1440, 390]) {
+  test(`header and results native GET search remain functional without JavaScript at ${width}px`, async ({
+    browser,
     baseURL,
-    javaScriptEnabled: false,
-    viewport: { width: 1440, height: 900 },
+  }) => {
+    const context = await browser.newContext({
+      baseURL,
+      javaScriptEnabled: false,
+      viewport: { width, height: 900 },
+    })
+    try {
+      const page = await context.newPage()
+      await page.goto(pageHref('institute', 'en'))
+      const { input: headerInput } = await openHeaderSearch(page)
+      await headerInput.fill('research')
+      await page.keyboard.press('Enter')
+      await expectSearchUrl(page, 'en', 'research')
+      await expect(page.locator('.search-results article').first()).toBeVisible()
+      const resultForm = page.locator('.search-query-form')
+      await resultForm.locator('input[name="q"]').fill('platforms')
+      await resultForm.locator('button[type="submit"]').click()
+      await expectSearchUrl(page, 'en', 'platforms')
+      await expect(page.locator('.search-results article').first()).toBeVisible()
+    } finally {
+      await context.close()
+    }
   })
-  try {
-    const page = await context.newPage()
-    await page.goto(pageHref('institute', 'en'))
-    const { input: headerInput } = await openHeaderSearch(page)
-    await headerInput.fill('research')
-    await page.keyboard.press('Enter')
-    await expectSearchUrl(page, 'en', 'research')
-    await expect(page.locator('.search-results article').first()).toBeVisible()
-    const resultForm = page.locator('.search-query-form')
-    await resultForm.locator('input[name="q"]').fill('platforms')
-    await resultForm.locator('button[type="submit"]').click()
-    await expectSearchUrl(page, 'en', 'platforms')
-    await expect(page.locator('.search-results article').first()).toBeVisible()
-  } finally {
-    await context.close()
-  }
-})
+}
 
 test('result filters, sorting, pagination and browser history preserve the URL query', async ({
   page,

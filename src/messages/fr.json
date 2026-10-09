@@ -516,6 +516,7 @@
   "Navigation": {
     "label": "Navigation principale",
     "menu": "Menu",
+    "closeMenu": "Fermer",
     "skip": "Aller au contenu principal",
     "language": "Choisir la langue",
     "footer": "Navigation de pied de page",

@@ -221,6 +221,122 @@ test('compact Arabic navigation preserves the hierarchy, current page and nested
   expect(results.violations).toEqual([])
 })
 
+test('mobile menu covers the viewport, contains keyboard focus and restores background access on close', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto(pageHref('governance', 'fr'))
+  const header = page.getByRole('banner')
+  const menu = header.locator('.site-menu')
+  const trigger = menu.locator(':scope > summary')
+  const identity = header.locator('.site-identity')
+  const background = page.locator('#main-content, .site-footer, .skip-link')
+
+  await page.evaluate(() => document.fonts.ready)
+  const hero = page.locator('.page-hero')
+  await expect
+    .poll(() => hero.evaluate((element) => element.style.getPropertyValue('--hero-header-height')))
+    .not.toBe('')
+  const heroHeight = await hero.evaluate((element) => element.getBoundingClientRect().height)
+  await expect(header.locator('.header-tools')).toBeHidden()
+  await expect(header.locator('.header-meta')).toBeHidden()
+  await trigger.focus()
+  await page.keyboard.press('Enter')
+  await expect(menu).toHaveAttribute('open', '')
+  await expect(trigger).toHaveAccessibleName(fr.Navigation.closeMenu)
+  await expect
+    .poll(() =>
+      header.evaluate((element) => {
+        const bounds = element.getBoundingClientRect()
+        const style = getComputedStyle(element)
+        return (
+          style.position === 'fixed' &&
+          style.backgroundColor === 'rgb(255, 255, 255)' &&
+          bounds.top <= 1 &&
+          bounds.left <= 1 &&
+          bounds.right >= window.innerWidth - 1 &&
+          bounds.bottom >= window.innerHeight - 1
+        )
+      }),
+    )
+    .toBe(true)
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) => {
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+      }),
+  )
+  expect(await hero.evaluate((element) => element.getBoundingClientRect().height)).toBeCloseTo(
+    heroHeight,
+    0,
+  )
+  for (const element of await background.all()) {
+    await expect.poll(() => element.evaluate((node) => (node as HTMLElement).inert)).toBe(true)
+  }
+
+  const contact = header.locator('.header-contact')
+  const legal = header.locator('.menu-legal')
+  const languages = header.locator('.locale-selector a')
+  await expect(header.locator('.header-search')).toHaveAccessibleName(fr.Pages.search)
+  await expect(contact).toHaveAccessibleName(fr.Header.contact)
+  await expect(contact).toHaveAttribute('href', pageHref('contact', 'fr'))
+  await expect(legal).toHaveAccessibleName(fr.Pages.legal)
+  await expect(legal).toHaveAttribute('href', pageHref('legal', 'fr'))
+  await expect(languages).toHaveCount(locales.length)
+  await expect(menu.locator('.navigation-group[open]')).toHaveCount(0)
+  await expect(header.locator('.header-search-disclosure')).not.toHaveAttribute('open', '')
+  const groupSummaries = menu.locator('.navigation-group > summary')
+  const forwardControls = [
+    menu.locator(`.menu-direct-link > a[href="${pageHref('home', 'fr')}"]`),
+    groupSummaries.nth(0),
+    groupSummaries.nth(1),
+    groupSummaries.nth(2),
+    menu.locator(`.menu-direct-link > a[href="${pageHref('transfer', 'fr')}"]`),
+    menu.locator(`.menu-direct-link > a[href="${pageHref('workWithUs', 'fr')}"]`),
+    groupSummaries.nth(3),
+    header.locator('.header-search'),
+    contact,
+    legal,
+    ...(await languages.all()),
+  ]
+  // Closed native disclosures must skip their child links and search input.
+  await trigger.focus()
+  for (const control of forwardControls) {
+    await expect(control).toBeVisible()
+    await page.keyboard.press('Tab')
+    await expect(control).toBeFocused()
+  }
+
+  await page.keyboard.press('Tab')
+  await expect(identity).toBeFocused()
+  await page.keyboard.press('Shift+Tab')
+  await expect(languages.last()).toBeFocused()
+
+  const institute = menu.locator('.navigation-group').first()
+  await groupSummaries.first().focus()
+  await page.keyboard.press('Enter')
+  await expect(institute).toHaveAttribute('open', '')
+  await page.keyboard.press('Tab')
+  await expect(institute.locator('ul a').first()).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(institute).not.toHaveAttribute('open', '')
+  await expect(groupSummaries.first()).toBeFocused()
+
+  await identity.focus()
+  await page.locator('#main-content').focus()
+  await expect(identity).toBeFocused()
+  await page.keyboard.press('Tab')
+  await expect(trigger).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(menu).not.toHaveAttribute('open', '')
+  await expect(trigger).toBeFocused()
+  for (const element of await background.all()) {
+    await expect.poll(() => element.evaluate((node) => (node as HTMLElement).inert)).toBe(false)
+  }
+  await page.locator('#main-content').focus()
+  await expect(page.locator('#main-content')).toBeFocused()
+})
+
 test('desktop disclosures remain exclusive and navigable without JavaScript', async ({
   browser,
   baseURL,
@@ -347,10 +463,14 @@ test('compact navigation remains contained and usable at 200% text in every loca
         .toBeLessThanOrEqual(1)
     }
 
-    for (const link of await panel.locator('.menu-utilities a').all()) {
-      await expect(link).toBeVisible()
+    const utilities = page.locator(
+      '.site-header .header-tools summary, .site-header .header-contact, ' +
+        '.site-header .menu-legal, .site-header .header-meta .locale-selector a',
+    )
+    for (const control of await utilities.all()) {
+      await expect(control).toBeVisible()
       expect(
-        await link.evaluate((element) => element.getBoundingClientRect().height),
+        await control.evaluate((element) => element.getBoundingClientRect().height),
       ).toBeGreaterThanOrEqual(44)
     }
 

@@ -10,8 +10,10 @@ explain intent and history; they do not supersede these decisions.
 Functional search, added on 2026-10-09, uses a compact results composition rather
 than a full-screen hero. Reuse the aligned grid and navy/blue/white type and
 control roles. The white resting magnifier retains the header's square geometry;
-its input reveals toward inline-start over 220ms, bounded by available space and
-mirrored in Arabic. Focus, touch, no-JavaScript and reduced-motion states retain
+its input reveals toward inline-start over 220ms on wider headers, bounded by
+available space and mirrored in Arabic. At `40rem` and below, search lives in the
+open mobile menu, with a full-width field and suggestions in normal flow.
+Focus, touch, no-JavaScript and reduced-motion states retain
 native GET submission. Public suggestions use an accessible link list; result
 rows use safe text highlights, clear resource types and readable excerpts.
 See [the search specification](search.md) and [validation](validation.md).
@@ -52,6 +54,36 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   adapt sample copy to approved content. Verify affected desktop/mobile, Arabic,
   long-content and interaction states after visual changes. Record source
   observations separately from proposals and implemented decisions.
+
+## Mobile reference adaptation — 2026-10-09
+
+The [four owner-supplied mobile screenshots](../DESIGN.md#mobile-reference-adaptation--2026-10-09)
+guide composition at `40rem` and below. Their example content and historical
+colors do not approve new routes, facts or tokens. `SiteHeader`, `PageHero`,
+`SiteFooter` and the narrow-screen rules in `src/styles/globals.css` implement:
+
+- A single closed header row containing the original logo and hamburger. The
+  open menu fills the viewport with white, colored identity, localized Fermer,
+  vertically stacked navigation rows, fine dividers and blue chevrons. Search
+  and contact follow the routes; legal access and FR/EN/AR sit at the bottom.
+- A homepage image scene with a viewport minimum, low-positioned copy and two
+  full-width actions with a 48px minimum at default text size. Existing figures
+  follow the scene in the native horizontal scroll row; natural growth remains.
+- A single footer navigation column, stacked contact details, a distributed
+  social row, and separate full-width newsletter email/action surfaces before
+  utilities, language and copyright.
+
+These are component-specific responsive overrides, using existing color, font,
+spacing and physical corner roles. They do not define a new universal type scale.
+Native disclosure/GET search behavior remains; the existing search backend and
+live suggestions are preserved, with mobile suggestions static and full width.
+The enhanced open menu makes page content inert, cycles visible keyboard focus
+and supports Escape dismissal. Arabic keeps logical flow and directional arrows.
+See [navigation](navigation.md#mobile-reference-adaptation--2026-10-09),
+[hero](heroes.md#mobile-reference-adaptation--2026-10-09),
+[footer](footer.md#mobile-reference-adaptation--2026-10-09) and
+[validation](validation.md#mobile-reference-adaptation--2026-10-09) for details and
+actual coverage; no pixel-exact match is asserted.
 
 ## Native Figma reference and evidence
 
@@ -142,10 +174,11 @@ menus, footer and sitemap retain their existing treatment.
 
 ### Section placeholders — 2026-10-09
 
-All 22 canonical pages share `PageSections` and the typed ID/order map in
+The 21 non-search canonical pages share `PageSections` and the typed ID/order map in
 `src/lib/page-sections.ts`. Introducing heroes retain each page's H1; subsequent
 sections use labelled H2s with short localized draft content notes, and nested
-Mission/search topics use H3s. Placeholders reuse the aligned container, shared
+Mission topics use H3s. Search has its compact functional results view.
+Placeholders reuse the aligned container, shared
 type roles, responsive block spacing, flat boundaries and light dividers, without
 inventing completed content modules. Institute's Mission alone retains the
 selective decorative Apex Leaf. The sitemap's real directory remains inside its
@@ -254,7 +287,8 @@ without imposing a fixed height or universal gap on translated responsive conten
 
 Desktop uses identity beside four navigation groups, followed by contact/social
 details and a divided newsletter area. Newsletter copy and controls share a row,
-then stack on smaller screens; navigation retains two columns on mobile. Initially,
+then stack on smaller screens; this revision retained two mobile navigation columns,
+superseded at `40rem` and below by the mobile reference adaptation above. Initially,
 group labels used the shared label role, desktop links body size at 600 weight
 and the newsletter heading a 1.875–3.375rem scale. The later footer refinement
 below supersedes those roles. Utilities remain compact.
@@ -292,8 +326,9 @@ privacy link is always outside the disclosure. No form action, subscription API,
 persistence or success response is introduced.
 The field uses an 80px minimum and an 18px/600, 60px Subscribe control at the
 default root size. Modern `details::details-content` support places icon, email
-and Subscribe in one row; the progressive fallback stacks Subscribe. At `35rem`
-and below, Subscribe spans the field with a 44px minimum. The consent label also
+and Subscribe in one row; the progressive fallback stacks Subscribe. This revision
+used a 44px Subscribe minimum at `35rem` and below; the mobile reference adaptation
+now separates the email and 48px action at `40rem` and below. The consent label also
 retains a 44px target and visible checked state.
 See [footer guidance](footer.md#footer-type-and-newsletter-refinement--2026-10-08)
 and [current validation](validation.md); earlier type and disabled-state checks
@@ -688,7 +723,8 @@ requested. Native playback is autoplay, muted, looping and inline; there are no
 controls or playback button, following the owner's explicit instruction.
 The generated `HeroPhoto` remains the loading/failure, no-JavaScript and
 reduced-motion underlay/fallback. A live change to reduced motion pauses and
-unloads the video. Other 21 heroes, layout, content and identity remain.
+unloads the video. Other 20 non-search heroes remain photographic; search uses
+its compact functional results view.
 
 The unchanged 9,774,051-byte (9.32 MiB) file retains its audio track and
 end-of-file MP4 metadata; playback stays muted. This is an owner-requested
@@ -782,8 +818,9 @@ padding. Its 16px/600 text inherits the shared Jakarta/Alexandria font policy.
 
 `Header.contact` labels the CTA « Contactez-nous », “Contact us” and “اتصل بنا”;
 the English/Arabic wording remains the same. Page titles, routes, footer and
-compact-menu contact labels retain their existing source. The CTA stays hidden
-below `70rem`, with contact available in the compact menu. Current checks belong
+compact-menu contact labels retain their existing source. Between `40rem` and
+`70rem`, contact is available as a compact-menu link; the mobile open menu at
+`40rem` and below also exposes the full-width CTA. Current checks belong
 in [the validation log](validation.md); earlier 20px control checks and screenshots
 describe the superseded radius.
 
@@ -806,8 +843,9 @@ focuses the input; Enter and the filled icon submit the query. Required input
 validation rejects an empty query. Visible blue input focus remains on white.
 Focus owns the disclosure when the pointer leaves or navigation is hovered;
 Escape, outside interaction and leaving disclosure focus close it. Without
-JavaScript, native click activation and GET submission remain; at `35rem` and
-below, the field spans the action row below the controls.
+JavaScript, native click activation and GET submission remain. The mobile reference
+adaptation above places search in the open menu at `40rem` and below, with the
+field and live suggestions at full width in normal flow.
 
 The results page now uses the integrated public search engine, with ranked
 results, live suggestions, type filters and URL pagination. Its compact reading

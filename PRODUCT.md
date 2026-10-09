@@ -36,6 +36,15 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
+- The owner's four 2026-10-09 mobile screenshots guide composition at `40rem`
+  and below: logo/hamburger header, white full-screen navigation with search,
+  contact, legal and all three locales; a homepage image scene with low copy and
+  two full-width 48px actions before its figure row; and a single-column footer
+  with stacked contacts and separate newsletter email/action rows. Canonical
+  routes, approved identity/content and the integrated search backend remain.
+  Sample screenshot wording and colors are not new approvals. See
+  [the adaptation](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
+  and [its validation record](docs/validation.md#mobile-reference-adaptation--2026-10-09).
 - The 21 non-search pages have introductory heroes with four text-placement
   modes: 20 use generated photos, while the homepage uses the owner's video with
   its generated photo as fallback. Short FR/EN/AR wayfinding drafts and the
