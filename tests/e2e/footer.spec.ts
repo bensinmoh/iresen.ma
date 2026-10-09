@@ -53,6 +53,11 @@ for (const locale of locales) {
     }
 
     await expect(footer.locator('address')).toContainText(messages.Footer.address)
+    const address = footer.getByRole('link', { name: messages.Footer.address, exact: true })
+    await expect(address).toHaveAttribute('href', footerContact.mapsHref)
+    await expect(
+      footer.getByRole('link', { name: messages.Pages.privacy, exact: true }),
+    ).toHaveCount(1)
     const phone = footer.getByRole('link', { name: footerContact.phone, exact: true })
     const email = footer.getByRole('link', { name: footerContact.email, exact: true })
     await expect(phone).toHaveAttribute('href', footerContact.phoneHref)
@@ -116,7 +121,7 @@ test('newsletter explains its availability only after an attempt without sending
     await expect(subscribe).toBeEnabled()
     await expect(
       newsletter.getByRole('link', { name: messages.Pages.privacy, exact: true }),
-    ).toHaveAttribute('href', pageHref('privacy', locale))
+    ).toHaveCount(0)
 
     await email.fill('newsletter-check@example.test')
     await consent.check()

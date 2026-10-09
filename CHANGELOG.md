@@ -4,6 +4,19 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Footer address and privacy links
+
+- Made the localized footer address clickable with the existing phone/email
+  link styling and the owner-supplied Google Maps destination shared with contact.
+- Removed the duplicate privacy link beneath newsletter consent; retained the
+  localized privacy destination beside legal notices and cookie preferences.
+- Passed formatting, lint, types, 97 unit tests, production build and all 9
+  footer browser tests. Reviewed French desktop and Arabic mobile renderings;
+  checked FR/EN/AR wrapping, keyboard focus, enlarged text and native navigation.
+
+See [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09)
+and [verification](docs/validation.md#footer-address-and-privacy-links--2026-10-09).
+
 ## 2026-10-09 — Contact reference composition and location
 
 - Replaced contact's photo hero/scaffold with the owner-selected Figma contact
