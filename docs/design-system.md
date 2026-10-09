@@ -9,8 +9,9 @@ explain intent and history; they do not supersede these decisions.
 
 Functional search, added on 2026-10-09, uses a compact results composition rather
 than a full-screen hero. Reuse the aligned grid and navy/blue/white type and
-control roles. The white resting magnifier retains the header's square geometry;
-its input reveals toward inline-start over 220ms on wider headers, bounded by
+control roles. The resting magnifier retains the header's square geometry with
+the owner's glass treatment over heroes; its expanded field is opaque white.
+Its input reveals toward inline-start over 220ms on wider headers, bounded by
 available space and mirrored in Arabic. At `40rem` and below, search lives in the
 open mobile menu, with a full-width field and suggestions in normal flow.
 Focus, touch, no-JavaScript and reduced-motion states retain
@@ -63,16 +64,26 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
 
 ## Compact menu control — 2026-10-09
 
-The owner's header capture identified the compact Menu control as inconsistent.
-Above `40rem` and below desktop navigation, it now shares the search control's
-white surface, navy text, `#858585` outline, `--radius-action` physical diagonal
-corners and 48px minimum height at default text size. Its 16px/600 label and
-24px three-line icon center together. Hover and open states use the quiet
-action surface; the close icon and visible keyboard focus remain.
+The owner's follow-up requests glass backgrounds for Menu and Search and a white
+selected Menu tab joined to its dropdown. Above `40rem`, the resting controls
+use a 12px backdrop blur. Inverse headers use a 12% white tint, 45% white outline
+and white text/icons; headers on white use an 88% white surface with navy text.
+Inverse controls fall back to a 90% navy surface without backdrop-filter support.
+The shared physical 10px action corners, 48px control size, 16px/600 Menu label
+and regular 24px icon remain. Expanded Search is opaque white/navy and retains
+its existing input geometry and functional reveal.
 
-This treatment applies on both white and inverse headers. The narrow mobile
+The selected Menu tab is opaque white/navy with a sharp bottom-right corner.
+Its dropdown starts exactly at the tab's bottom edge and uses physical 20px
+top-left/bottom-right corners. In RTL, a small white bridge under the tab covers
+the panel's top-left curve where the two surfaces meet. The rest of the corner
+orientation is preserved. The dropdown reveals downward over 220ms with the
+shared ease-out curve, using clipping, translation and opacity; native reopening
+replays it. Reduced motion displays the panel directly.
+
+The narrow mobile
 header retains its borderless hamburger and localized Fermer control in the
-full-screen sheet. Arabic retains the physical corner orientation. The change
+full-screen sheet and its existing right-edge entrance. The change
 adds no public content or search destination; existing page/section projections
 remain. See [navigation](navigation.md#compact-menu-control--2026-10-09)
 and [verification](validation.md#compact-menu-control--2026-10-09).

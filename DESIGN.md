@@ -2,13 +2,17 @@
 
 ## Compact menu control — 2026-10-09
 
-The compact Menu control now follows the neighboring search control: white
-surface, navy label/icon, neutral outline, shared 10px physical top-left and
-bottom-right corners, and 48px minimum height at default text size. The 16px/600
-label and regular three-line 24px icon center together; hover/open use the quiet
-action surface. The mobile header keeps its borderless icon and full-screen sheet.
-This scoped correction replaces the former small uniformly rounded transparent
-outline and fragmented icon. See [the shared rule](docs/design-system.md#compact-menu-control--2026-10-09)
+The owner's follow-up gives Menu and Search a restrained glass surface over heroes:
+12px backdrop blur, 12% white tint, a fine white outline and white text/icons.
+The normal white header uses an 88% white surface with navy text. Expanded Search
+is opaque white. The selected Menu becomes a white/navy tab; its bottom-right
+corner flattens to join the dropdown directly. The dropdown keeps physical 20px
+top-left/bottom-right corners and reveals downward over 220ms, replaying when
+reopened. An RTL bridge covers the shared top-left curve beneath the selected
+tab. Reduced motion shows the dropdown directly; mobile retains its existing
+borderless icon and full-screen sheet entrance. Shared action corners, 48px
+height, centered 16px/600 label and regular 24px icon remain.
+See [the shared rule](docs/design-system.md#compact-menu-control--2026-10-09)
 and [validation](docs/validation.md#compact-menu-control--2026-10-09).
 
 Use this document for art direction and constructive critique. Use

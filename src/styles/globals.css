@@ -541,6 +541,14 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
   block-size: 1.5rem;
 }
 
+.site-menu::details-content {
+  content-visibility: visible;
+}
+
+.site-menu:not([open]) > :not(summary) {
+  display: none;
+}
+
 .menu-panel {
   position: absolute;
   inset-inline: 0;
@@ -551,6 +559,95 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
   background: var(--color-white);
   color: var(--color-navy);
   box-shadow: var(--shadow-menu);
+}
+
+@media (min-width: 40.001rem) {
+  .site-header .header-search,
+  .site-header .menu-toggle {
+    background: rgb(255 255 255 / 88%);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .site-header-inverse .header-search,
+  .site-header-inverse .menu-toggle {
+    color: var(--color-white);
+    border-color: rgb(255 255 255 / 45%);
+    background: rgb(18 52 90 / 90%);
+  }
+
+  @supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+    .site-header-inverse .header-search,
+    .site-header-inverse .menu-toggle {
+      background: rgb(255 255 255 / 12%);
+    }
+  }
+
+  .site-header .header-search:hover,
+  .site-header .menu-toggle:hover {
+    background: var(--color-action-surface);
+  }
+
+  .site-header-inverse .header-search:hover,
+  .site-header-inverse .menu-toggle:hover {
+    background: rgb(255 255 255 / 20%);
+  }
+
+  .site-header .header-search-disclosure[open] > .header-search,
+  .site-header .site-menu[open] > .menu-toggle {
+    color: var(--color-navy);
+    background: var(--color-white);
+    transition: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .site-header .header-search-disclosure[open] > .header-search {
+    border-color: var(--color-control-outline);
+  }
+
+  .site-header .site-menu[open] > .menu-toggle {
+    position: relative;
+    border-color: var(--color-white);
+    border-bottom-right-radius: 0;
+  }
+
+  .menu-panel {
+    border: 0;
+    border-radius: var(--radius-signature);
+  }
+
+  /* In RTL the tab covers the panel's physical top-left corner at their join. */
+  html[dir='rtl'] .site-menu[open] > .menu-toggle::after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    background: var(--color-white);
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 40.001rem) and (prefers-reduced-motion: no-preference) {
+  .site-menu[open] .menu-panel {
+    animation: compact-menu-drop 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  @keyframes compact-menu-drop {
+    from {
+      opacity: 0.4;
+      transform: translateY(-0.5rem);
+      clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      clip-path: inset(0);
+    }
+  }
 }
 
 .menu-content {

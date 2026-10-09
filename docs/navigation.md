@@ -14,14 +14,23 @@ chosen for each group's actual content.
 
 ## Compact menu control — 2026-10-09
 
-The compact Menu trigger shares search's white/navy surface, neutral outline,
-physical `--radius-action` corners and 48px minimum height above `40rem`.
-Its 16px/600 label and regular 24px three-line icon remain centered; hover/open
-use the quiet action surface. White and inverse headers share this treatment.
-The close icon, native disclosure, focus behavior and narrow mobile sheet remain.
+The owner's follow-up gives resting Menu/Search glass surfaces above `40rem`:
+12px blur, white tint/outline and white text over the inverse hero header;
+the normal header retains navy text over an 88% white surface. Expanded Search
+is white/navy. Unsupported backdrop blur falls back to a readable navy surface
+on inverse headers.
+
+The selected Menu becomes a white/navy tab with a sharp bottom-right corner,
+joined directly to the dropdown at its bottom edge. The dropdown has physical
+20px top-left/bottom-right corners; an RTL bridge fills the curve beneath the tab.
+It reveals downward over 220ms using clipping, translation and opacity, and
+replays on native reopening. Reduced motion displays it immediately. The shared
+10px control corners, 48px height, centered 16px/600 label and regular 24px icon
+remain. The close icon, native disclosure, focus behavior and narrow mobile
+sheet/entrance remain.
 No labels, canonical destinations or public search projections change.
 See [the shared rule](design-system.md#compact-menu-control--2026-10-09)
-and [this revision's checks](validation.md#compact-menu-control--2026-10-09).
+and [the follow-up checks](validation.md#glass-header-controls-and-joined-menu--2026-10-09).
 
 ## Mobile reference adaptation — 2026-10-09
 
