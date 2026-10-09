@@ -46,14 +46,14 @@ Reference sample claims remain distinct from requested factual content.
 - The active browser icon uses the supplied Apex Leaf's tight viewBox instead of
   the padded favicon canvas, preserving its blue fill, transparency and proportions;
   both originals remain in the [asset inventory](docs/asset-inventory.md#active-browser-icon--2026-10-08).
-- Keep full-width section boundaries flat. Apply the physical top-left and
-  bottom-right rounded signature selectively to cards, media and focused controls;
+- Keep full-width section boundaries flat. Actions share physical 10px top-left/
+  bottom-right corners; selected cards, media and surfaces retain the 20px signature.
   Arabic does not automatically reverse these brand corners.
 - The apex motif supports a few purposeful brand areas. Avoid dense decoration
   behind text, universal pills, generic gradients and effects without a visitor benefit.
-- The owner's section-heading reference (for example, « Notre mission ») uses the
-  standalone Apex Leaf as its bullet. Retain this preferred heading detail in
-  future section work, using the supplied vector and proportional spacing.
+- The owner's latest clarification keeps the Apex Leaf selective. This revision
+  uses it on the homepage hero eyebrow and the Institute's Mission H2 only.
+  Preserve the supplied shape, decorative semantics and proportional spacing.
 
 ## Typography, rhythm and media
 
@@ -131,6 +131,34 @@ review records them. Illustrative state frames do not supply a production
 component API. Reuse card/row families, one primary action per context and
 accessible native controls; circular radios and pill switches remain appropriate
 exceptions to the diagonal-corner language.
+
+## Site coherence review — 2026-10-09
+
+The cross-page review adopts a shared 10px action radius for search, contact,
+hero discovery, newsletter Subscribe and error/404 actions. Larger certification
+and newsletter-field surfaces retain the 20px signature. This supersedes the
+earlier 4px generic-button and 20px hero/Subscribe adaptations without changing
+the approved identity. Hero/Subscribe use an 18px/600 action role and a default
+12px icon gap; hero introductions use weight 500. The body scale stays unchanged, and
+button-like links retain the same hover treatment as native actions.
+
+Header source order is logo, navigation, actions; responsive placement retains
+the wide single row and intermediate two-row layout. Compact destination and
+utility links have 44px minimum targets. Shrinkable menu/Subscribe labels and
+narrow-screen spacing address the baseline's 320px enlarged-text overflow.
+Error content shares the page heading/content anatomy, and sitemap groups use
+consistent headings and 44px link rows.
+
+The original Apex Leaf is decorative in two places only: a white 10 × 16px CSS
+mask beside the homepage hero eyebrow, and the original blue vector at 1em height
+with a 12px gap beside the Institute's Mission H2. Other headings keep their
+existing treatment; placement changes logically in Arabic without mirroring
+the brand shape. This implements the owner's selective-use clarification rather
+than a universal heading marker.
+
+See [the review and content limits](docs/site-coherence-review.md) and
+[this revision's validation](docs/validation.md#site-coherence-review--2026-10-09).
+Earlier dated checks below describe their original implementations.
 
 ## Adopted UI refinements — 2026-10-08
 

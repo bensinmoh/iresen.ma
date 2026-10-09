@@ -709,3 +709,57 @@ The application/database/browser suite was not rerun locally for this guidance
 increment; current PR CI remains required before merge. This review does not
 establish native full-page fidelity, prototype execution or new translated
 website rendering. Prior implementation checks remain separately dated above.
+
+## Site coherence review — 2026-10-09
+
+The public-site pass used the current shared rules and the live design-system
+evidence, retaining approved content, colors, fonts, assets and routes. See
+[the findings and implemented choices](site-coherence-review.md).
+
+Local checks passed: lint, strict types, production build, all 8 unit tests and
+all 42 Chromium browser tests against the final rebuilt application. Three new
+regression tests cover actual menu/newsletter content containment at 320px with
+200% text and wide-header keyboard order. Existing tests also cover rendered
+custom fonts, all localized heroes, responsive/RTL behavior, keyboard and
+no-JavaScript navigation, newsletter availability, locale switching, automated
+accessibility and anonymous CMS restrictions. The local CMS integration suite was
+not repeated for these public JSX/CSS changes; the PR workflow runs it separately.
+
+The before/after route audit covers 22 page IDs in FR/EN/AR at 1440 × 1000 and
+390 × 844, or 132 renders per revision. All returned 200 with one H1, valid visible
+fragment targets, aligned shared containers and no horizontal overflow or thrown
+page errors. Both full 22-page French desktop and Arabic mobile overview sheets
+were inspected, alongside detailed views of all five hero modes, content families
+and the selective Apex placements. The final current-Contact decoration correction
+was followed by focused FR/EN/AR rest, hover and keyboard-focus checks and a fresh
+complete 42-test browser pass; ordinary current navigation links retain their
+underline.
+
+The shared shell passed 24 cases: FR/EN/AR at 320, 390, 768, 1024, 1440 and
+1920px, plus 200% text at 320/1440px. Open menu panels/summaries and Subscribe
+labels/arrows fit their controls, with unchanged header geometry and readable
+focus. Six genuine localized 404 desktop/mobile cases returned 404 without
+overflow. Six translated error visual specimens verified spacing and containment
+with actual public CSS/fonts; they do not exercise a runtime fault or reset.
+
+All seven original SVG SHA-256 values remain unchanged. The scoped Impeccable
+type/layout detector returned zero findings; browser measurements exposed the
+overflow defects that it missed. Formatting, local documentation links/anchors
+and diff whitespace were checked. Remote CI and merge results belong to this
+revision's PR.
+
+Selected reviewed captures:
+
+- [French homepage hero](screenshots/coherence-home-fr-1440.png)
+- [Arabic mobile hero](screenshots/coherence-home-ar-390.png)
+- [Selective Mission marker in Arabic](screenshots/coherence-institute-ar-390.png)
+- [French sitemap groups](screenshots/coherence-sitemap-fr-1440.png)
+- [Compact menu at 200% text](screenshots/coherence-menu-fr-320-200.png)
+- [Newsletter at 200% text](screenshots/coherence-newsletter-fr-320-200.png)
+- [Actual French mobile 404](screenshots/coherence-404-fr-390.png)
+- [Arabic error visual specimen](screenshots/coherence-error-specimen-ar-390.png)
+
+Coverage is Chromium and the existing sparse public foundation. It does not
+establish cross-browser or screen-reader conformance, populated editorial/CMS
+page-body quality, native Figma pixel fidelity, institutional content approval
+or production deployment.

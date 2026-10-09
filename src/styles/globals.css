@@ -130,7 +130,6 @@ ul {
 
 .site-header {
   --header-control-size: 3rem;
-  --header-control-radius: 0.625rem 0 0.625rem 0;
   position: relative;
   z-index: var(--z-header);
   background: var(--color-white);
@@ -204,7 +203,7 @@ body:has(.page-hero) .site-header-overlay {
   min-inline-size: var(--header-control-size);
   min-block-size: var(--header-control-size);
   border: 1px solid var(--color-control-outline);
-  border-radius: var(--header-control-radius);
+  border-radius: var(--radius-action);
   color: var(--color-navy);
   background: var(--color-white);
   transition: background-color var(--duration-fast);
@@ -227,11 +226,6 @@ body:has(.page-hero) .site-header-overlay {
 .button.header-contact {
   min-block-size: var(--header-control-size);
   padding-inline: var(--space-6);
-  border-radius: var(--header-control-radius);
-}
-
-.header-contact:hover {
-  text-decoration: none;
 }
 
 .site-header-inverse .menu-toggle {
@@ -262,10 +256,14 @@ body:has(.page-hero) .site-header-overlay {
   max-inline-size: 100%;
   padding: var(--space-2) var(--space-4);
   border: 1px solid transparent;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-action);
   font-weight: 600;
   text-decoration: none;
   transition: background-color var(--duration-fast);
+}
+
+.button:hover {
+  text-decoration: none;
 }
 
 .button-outline {
@@ -383,8 +381,14 @@ body:has(.page-hero) .site-header-overlay {
 
 .navigation-group > summary::after {
   content: '+';
+  flex-shrink: 0;
   font-size: 1.25rem;
   font-weight: 400;
+}
+
+.navigation-group > summary > span {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
 }
 
 .navigation-group[open] > summary::after {
@@ -396,7 +400,9 @@ body:has(.page-hero) .site-header-overlay {
 }
 
 .navigation-group li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-block-size: 2.75rem;
   padding-block: var(--space-2);
 }
 
@@ -407,12 +413,17 @@ body:has(.page-hero) .site-header-overlay {
 }
 
 .menu-utilities a {
+  display: inline-flex;
+  align-items: center;
   min-block-size: 2.75rem;
   padding-block: var(--space-2);
 }
 
 .site-header a[aria-current='page'] {
   font-weight: 700;
+}
+
+.site-header a[aria-current='page']:not(.button) {
   text-decoration: underline;
 }
 
@@ -436,12 +447,26 @@ body:has(.page-hero) .site-header-overlay {
 }
 
 @media (min-width: 70rem) {
+  .header-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: minmax(5.5rem, auto) auto;
+    gap: 0 var(--space-6);
+  }
+
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   .site-menu {
     display: none;
   }
 
   .desktop-navigation {
     display: block;
+    grid-column: 1 / -1;
+    grid-row: 2;
     border-block-start: 1px solid var(--color-border);
   }
 
@@ -888,6 +913,13 @@ html[dir='rtl'] .navigation-icon-arrow {
   background: var(--color-energy-cyan);
 }
 
+.hero-eyebrow--brand > span {
+  inline-size: 0.625rem;
+  block-size: 1rem;
+  background: currentColor;
+  mask: url('/brand/apex-leaf.svg') center / contain no-repeat;
+}
+
 .hero-copy h1 {
   max-inline-size: 22ch;
   font-size: var(--hero-title-size);
@@ -899,6 +931,7 @@ html[dir='rtl'] .navigation-icon-arrow {
   max-inline-size: 53ch;
   margin-block: var(--space-6) 0;
   font-size: clamp(1rem, 1.2vw, 1.1875rem);
+  font-weight: 500;
   line-height: 1.65;
   text-wrap: pretty;
 }
@@ -912,10 +945,10 @@ html[dir='rtl'] .navigation-icon-arrow {
 }
 
 .hero-primary {
-  gap: var(--space-6);
+  gap: var(--space-3);
   min-block-size: 3.5rem;
   padding-inline: var(--space-6);
-  border-radius: var(--radius-signature);
+  font-size: var(--font-size-action);
 }
 
 .hero-related {
@@ -1325,6 +1358,22 @@ html[lang='ar'] .hero-certification-label {
   color: var(--color-text-muted);
 }
 
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.section-heading > img {
+  flex-shrink: 0;
+  inline-size: auto;
+  block-size: 1em;
+}
+
+.section-heading > span {
+  min-inline-size: 0;
+}
+
 .sitemap-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1333,7 +1382,14 @@ html[lang='ar'] .hero-certification-label {
 
 .sitemap-grid ul {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-1);
+}
+
+.sitemap-grid a {
+  display: flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  padding-block: var(--space-2);
 }
 
 .sitemap-grid h2 {
@@ -1608,10 +1664,10 @@ a.footer-contact-value {
   min-block-size: 3.75rem;
   padding: var(--space-3) var(--space-6);
   border: 0;
-  border-radius: var(--radius-signature);
+  border-radius: var(--radius-action);
   background: var(--color-blue);
   color: var(--color-white);
-  font-size: 1.125rem;
+  font-size: var(--font-size-action);
   font-weight: 600;
   line-height: 1.5;
   cursor: pointer;
@@ -1620,6 +1676,11 @@ a.footer-contact-value {
 
 .footer-newsletter-button:hover {
   background: var(--color-footer-control);
+}
+
+.footer-newsletter-button > span {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
 }
 
 .footer-newsletter-consent {
@@ -1914,6 +1975,8 @@ html[dir='rtl'] .footer-arrow {
     grid-row: auto;
     inline-size: 100%;
     min-block-size: 2.75rem;
+    gap: var(--space-2);
+    padding-inline: var(--space-3);
   }
 
   .footer-links li a {

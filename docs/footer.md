@@ -19,6 +19,20 @@ alone; public French/English controls use self-hosted Plus Jakarta Sans. See
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe their earlier revisions.
 
+## Action coherence — 2026-10-09
+
+Subscribe now uses the shared `--font-size-action` role (18px/600 at the default
+root size), a 12px icon gap and `--radius-action`: 10px physical top-left and
+bottom-right corners, including in RTL. This supersedes the earlier 20px button
+corners; the newsletter field retains the 20px surface signature.
+
+The label sits in a shrinkable span that can wrap. At `35rem` and below, the
+full-width button uses an 8px gap and 12px inline padding to accommodate narrow
+viewports and enlarged text. Native newsletter behavior, copy, routes and footer
+spacing remain unchanged. Earlier 2026-10-08 verification describes its original
+revisions; current scope and checks belong in the [site coherence review](site-coherence-review.md)
+and [validation log](validation.md#site-coherence-review--2026-10-09).
+
 ## Footer identity copy — 2026-10-08
 
 The owner selected these French paragraphs specifically for the text beneath the

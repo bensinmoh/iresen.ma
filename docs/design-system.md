@@ -15,14 +15,15 @@ explain intent and history; they do not supersede these decisions.
   measure within that grid. Do not reintroduce the earlier 80rem page inset or
   a separate footer width. Change layout when content needs room.
 - **Type:** use installed Plus Jakarta Sans for Latin and owner-selected Alexandria
-  for Arabic across public locales. Reuse display, section, body, label and metadata roles rather than
+  for Arabic across public locales. Reuse display, section, body, label, action and metadata roles rather than
   defining a new scale per page. Keep Latin hero tracking at −3%; Arabic uses
   natural tracking. Figma's H4/H5 caption errors do not define new type tokens.
 - **Rhythm:** reuse the 4/8px base and existing semantic spacing tokens. The
   board's 6–80px examples guide proportions, not a mandatory replacement scale.
   Group related content through responsive layout rather than fixed coordinates.
-- **Geometry:** keep full-width section boundaries flat. Use physical top-left
-  and bottom-right rounding selectively, preserving orientation in RTL. Radios,
+- **Geometry:** keep full-width section boundaries flat. Actions share 10px
+  physical top-left/bottom-right corners; selected surfaces retain the 20px signature.
+  Preserve orientation in RTL. Radios,
   switches and compact controls retain shapes suitable for their function;
   the board's blanket corner prose conflicts with several actual specimens.
 - **Components:** reuse the shared shell, hero and appropriate card/row/control
@@ -111,13 +112,33 @@ Public Latin text uses self-hosted Plus Jakarta Sans (normal variable 200–800)
 
 ### Section-heading marker
 
-The owner's 2026-10-08 « Notre mission » screenshot identifies the Apex Leaf as
-the preferred bullet beside section headings. Keep this detail in mind for future
-section composition. Use the supplied [apex-leaf.svg](../public/brand/apex-leaf.svg)
-with its original geometry, proportions and approved `#296BB4` fill. Place it at
-the heading's inline start with balanced spacing; in Arabic, change its placement
-without mirroring the brand shape. Treat it as decorative so the heading text
-remains the accessible name. This records a preference; no runtime change was made.
+The owner's 2026-10-09 clarification requires tasteful, selective use of the
+Apex Leaf. This revision implements the earlier preference in two places.
+The homepage hero eyebrow alone uses the
+original [apex-leaf.svg](../public/brand/apex-leaf.svg) as a white CSS mask at
+10 × 16px. The Institute's Mission H2 alone uses the original blue vector at
+1em height with a 12px gap. Keep its geometry and proportions; place it at the
+logical inline start in Arabic without mirroring the shape. Both marks are
+decorative, leaving the text as the accessible name. Other hero eyebrows, H2s,
+menus, footer and sitemap retain their existing treatment.
+
+### Shared actions — 2026-10-09
+
+`--radius-action` is `0.625rem 0 0.625rem 0`: physical 10px top-left/bottom-right
+corners at the default root size. `.button`, header search, hero discovery and
+newsletter Subscribe share it, including error/404 actions. This supersedes the
+earlier 4px generic-button and 20px hero/Subscribe rules. The 20px
+`--radius-signature` remains for selected surfaces, including certification and
+the newsletter field; compact functional controls retain their own shapes.
+
+`--font-size-action` is `1.125rem` (18px), used by hero discovery and Subscribe at
+weight 600 with a default 12px icon gap; narrow Subscribe uses 8px. Contact retains its 16px/600 role. Hero description
+weight is 500; the 16px body, 14px label and 13px metadata roles stay unchanged.
+Button-like links suppress hover underlines through the shared `.button` rule.
+Compact navigation and sitemap rows retain a 44px minimum target. Labels can
+shrink and wrap; narrower Subscribe spacing preserves its target with enlarged
+text. See [the coherence review](site-coherence-review.md) and
+[revision-specific validation](validation.md#site-coherence-review--2026-10-09).
 
 ## Interaction and acceptance
 
@@ -432,9 +453,10 @@ were absent in those serialized records. The live board's CTA states
 Card `2211:6513` is
 400 × 200 and mobile card `1479:12494` is 370 × 157; both explicitly use
 20px top-left/bottom-right radii; the live read confirms `20,0,20,0` on `2211:6513`.
-Current CSS uses 4px general control corners
-and a 20px diagonal signature for focused elements. This source review records
-those differences without changing the implemented rules.
+At this source-review revision, CSS used 4px general control corners
+and a 20px diagonal signature for focused elements. The 2026-10-09
+[shared action rules](#shared-actions--2026-10-09) supersede those button adaptations;
+the source measurements remain historical evidence.
 
 Mobile also includes 16px diagonal-corner cards, such as `1479:6405`.
 The state board illustrates default, hover and pressed CTAs; checked/disabled
@@ -617,7 +639,8 @@ their respective revisions, not this change.
 ## Header search and contact controls — 2026-10-08
 
 The owner's re-shared screenshot supports tighter header-control proportions.
-Both controls now use the header-scoped `--header-control-radius`:
+Both controls now use the shared `--radius-action`, adopted across actions on
+2026-10-09 in place of the earlier header-scoped token:
 `0.625rem 0 0.625rem 0` rounds top-left/bottom-right by 10px at the default root
 size, with sharp opposite corners unchanged in RTL. This is an adaptation backed
 by [live 10px CTA evidence](figma-design-system-review.md#components-and-states),

@@ -35,7 +35,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
         <div className={`container hero-body${pageId === 'home' ? ' hero-body--certified' : ''}`}>
           <div className="hero-copy">
             <div className="hero-introduction">
-              <p className="hero-eyebrow">
+              <p className={`hero-eyebrow${pageId === 'home' ? ' hero-eyebrow--brand' : ''}`}>
                 <span aria-hidden="true" />
                 {t(`stages.${definition.stage}`)}
               </p>

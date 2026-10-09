@@ -125,7 +125,9 @@ export function SiteHeader() {
   function navigationGroup(group: NavigationGroup) {
     return (
       <details className="navigation-group" data-navigation-group={group.id} key={group.id}>
-        <summary>{t(group.id)}</summary>
+        <summary>
+          <span>{t(group.id)}</span>
+        </summary>
         <ul>
           {group.pages.map((pageId) => (
             <li key={pageId}>{pageLink(pageId)}</li>
@@ -271,6 +273,15 @@ export function SiteHeader() {
           <a href={pageHref('home', locale)} className="site-identity" aria-label="IRESEN">
             <SiteLogo variant={inverse ? 'dark' : 'color'} eager />
           </a>
+          <nav className="desktop-navigation" aria-label={t('label')}>
+            <ul className="desktop-navigation-list">
+              <li>{pageLink('home', 'navigation-trigger')}</li>
+              {navigationGroups.slice(0, 3).map(desktopGroup)}
+              <li>{pageLink('transfer', 'navigation-trigger')}</li>
+              <li>{pageLink('workWithUs', 'navigation-trigger')}</li>
+              {navigationGroups.slice(3).map(desktopGroup)}
+            </ul>
+          </nav>
           <div className="header-actions">
             <LocaleSelector />
             <div className="header-tools">
@@ -327,15 +338,6 @@ export function SiteHeader() {
             </details>
           </div>
         </div>
-        <nav className="desktop-navigation" aria-label={t('label')}>
-          <ul className="desktop-navigation-list">
-            <li>{pageLink('home', 'navigation-trigger')}</li>
-            {navigationGroups.slice(0, 3).map(desktopGroup)}
-            <li>{pageLink('transfer', 'navigation-trigger')}</li>
-            <li>{pageLink('workWithUs', 'navigation-trigger')}</li>
-            {navigationGroups.slice(3).map(desktopGroup)}
-          </ul>
-        </nav>
       </div>
     </header>
   )

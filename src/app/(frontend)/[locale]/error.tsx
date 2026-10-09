@@ -16,13 +16,17 @@ export default function LocaleError({
 
   return (
     <div className="container page-shell">
-      <h1>{t('errorTitle')}</h1>
-      <p>{t('errorDescription')}</p>
-      <div className="state-actions">
-        <button type="button" className="button button-primary" onClick={reset}>
-          {t('retry')}
-        </button>
-        <a href={pageHref('home', locale)}>{t('backHome')}</a>
+      <div className="page-heading">
+        <h1>{t('errorTitle')}</h1>
+      </div>
+      <div className="page-content">
+        <p>{t('errorDescription')}</p>
+        <div className="state-actions">
+          <button type="button" className="button button-primary" onClick={reset}>
+            {t('retry')}
+          </button>
+          <a href={pageHref('home', locale)}>{t('backHome')}</a>
+        </div>
       </div>
     </div>
   )

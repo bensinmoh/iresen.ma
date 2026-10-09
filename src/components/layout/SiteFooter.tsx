@@ -138,7 +138,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                   role="button"
                   aria-controls="footer-newsletter-status"
                 >
-                  {footer('newsletterSubscribe')}
+                  <span>{footer('newsletterSubscribe')}</span>
                   <FooterArrow />
                 </summary>
                 <p id="footer-newsletter-status" className="footer-newsletter-status" role="status">
