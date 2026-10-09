@@ -29,7 +29,9 @@ Highlighted excerpts are React text segments, never generated HTML. Public rich-
 
 Uploaded public PDFs can contribute extracted text when `pdftotext` from `poppler-utils`
 is installed. Extraction runs during indexing, with time/output/file limits and
-guarded local paths. Scanned PDFs need approved `searchText` or an external OCR
+guarded local paths. The web server and worker share `CMS_UPLOAD_DIRECTORY`,
+resolved by the repository launcher to `.local/uploads` by default. Scanned PDFs
+need approved `searchText` or an external OCR
 workflow. Audio/video/DOCX and other non-extractable files use approved metadata
 and localized transcripts/search text; this implementation does not perform OCR
 or speech recognition. A file can still be found by its title and description.
@@ -70,6 +72,8 @@ uploads do not belong in `public/`.
 Serve CMS images directly or with an unoptimized image component. The Next image
 optimizer is restricted to static hero paths because its independent cache can
 retain withdrawn CMS bytes despite the upstream endpoint's `no-store` policy.
+If enabling upload image derivatives later, propagate the approved locale into
+every derivative URL as well as the original; all bytes use the same access gate.
 
 For **static served documents/media**, add an explicit `PublicAssetReference`
 to `publicAssetReferences` in `src/lib/search/catalog.ts`, providing ID, served

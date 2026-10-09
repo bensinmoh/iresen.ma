@@ -11,6 +11,12 @@ or content. Install `poppler-utils` on the worker host for approved uploaded PDF
 text extraction; metadata and localized `searchText` remain available without it.
 See [search operations and publication boundaries](search.md).
 
+For local/standalone filesystem storage, set `CMS_UPLOAD_DIRECTORY` to the same
+absolute persistent directory in the web server and index worker. The repository
+launcher resolves its default to the root `.local/uploads` before standalone
+startup changes directories. This setting does not replace the approved object
+storage requirement for production.
+
 Production hosting and the canonical domain are not yet approved. Development setup does not authorize production deployment, DNS changes or repository visibility changes.
 
 ## Environment separation

@@ -16,7 +16,7 @@ test('published CMS search destinations render and withdrawn files/articles are 
   const token = `destination${randomUUID().replaceAll('-', '')}`
   const slug = `search-${token}`
   const filename = `${token}.txt`
-  const file = path.resolve(process.cwd(), '.local/uploads', filename)
+  const file = path.resolve(process.env.CMS_UPLOAD_DIRECTORY ?? '.local/uploads', filename)
   let articleID: number | undefined
   let mediaID: number | undefined
   const body = {

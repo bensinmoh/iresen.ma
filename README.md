@@ -87,16 +87,18 @@ Local foundation checks passed: 8 unit, 4 integration and 11 browser tests, plus
 
 ## Environment
 
-| Name                                                | Purpose                                                                   |
-| --------------------------------------------------- | ------------------------------------------------------------------------- |
-| `DATABASE_URL`                                      | Server-side PostgreSQL connection                                         |
-| `POSTGRES_PORT`                                     | Local Compose host port; defaults to 5432 and must match `DATABASE_URL`   |
-| `POSTGRES_USER`, `POSTGRES_DB`, `POSTGRES_PASSWORD` | Local Compose database initialization; password must match `DATABASE_URL` |
-| `PAYLOAD_SECRET`                                    | Strong server-side CMS secret; local helper generates one                 |
-| `NEXT_PUBLIC_SITE_URL`                              | Development origin; initially `http://localhost:3000`                     |
-| `SITE_INDEXING_ENABLED`                             | `false` for development/restricted previews                               |
-| `CMS_BOOTSTRAP_EMAIL`                               | First administrator identity; bootstrap only                              |
-| `CMS_BOOTSTRAP_PASSWORD`                            | Secret first-administrator password; bootstrap only                       |
+| Name                                                | Purpose                                                                          |
+| --------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `DATABASE_URL`                                      | Server-side PostgreSQL connection                                                |
+| `CMS_UPLOAD_DIRECTORY`                              | Optional shared upload path; launcher defaults to absolute root `.local/uploads` |
+| `POSTGRES_PORT`                                     | Local Compose host port; defaults to 5432 and must match `DATABASE_URL`          |
+| `POSTGRES_USER`, `POSTGRES_DB`, `POSTGRES_PASSWORD` | Local Compose database initialization; password must match `DATABASE_URL`        |
+| `PAYLOAD_SECRET`                                    | Strong server-side CMS secret; local helper generates one                        |
+| `NEXT_PUBLIC_SITE_URL`                              | Development origin; initially `http://localhost:3000`                            |
+| `SITE_INDEXING_ENABLED`                             | `false` for development/restricted previews                                      |
+| `SEARCH_WORKER_DISABLED`                            | `true` only when a separate index worker owns processing                         |
+| `CMS_BOOTSTRAP_EMAIL`                               | First administrator identity; bootstrap only                                     |
+| `CMS_BOOTSTRAP_PASSWORD`                            | Secret first-administrator password; bootstrap only                              |
 
 Development services need no production email, storage, LinkedIn or DNS credentials. Public search is implemented; contact and CMS email delivery remain explicitly unavailable until providers are implemented. Seven supplied SVGs are installed unchanged in `public/brand/`; PDF guidelines and other private originals were archived in ignored `private-references/` during prior work and are absent from this checkout. The owner selected **#296BB4** for the primary blue. The native Figma source can be retrieved through Git LFS; [reference handling](docs/references/README.md) explains payload verification and current availability. Its recorded design language and implementation rules live in [the design system](docs/design-system.md), with the current devlink analysis in [the live review](docs/figma-design-system-review.md). Public text and controls use licensed, self-hosted Plus Jakarta Sans for Latin and the owner's selected Alexandria for Arabic, with script-based selection across all three locales. CMS/admin typography has a separate layout. See [fonts and provenance](docs/fonts.md), [asset inventory](docs/asset-inventory.md) and [brand decision](docs/adr/0003-owner-selected-primary-blue.md). Approved page copy and standalone design exports remain follow-up inputs.
 

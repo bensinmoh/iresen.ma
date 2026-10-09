@@ -9,6 +9,7 @@ import { SEARCH_PAGE_SIZE, searchAdapter } from '@/lib/search/adapter'
 import { initializeSearchCatalog, processSearchJobs, stopSearchWorker } from '@/lib/search/indexer'
 import type { SearchInput, SearchLocale, SearchResult } from '@/lib/search/types'
 import { pageHref, pageIds, type PageId } from '@/lib/site'
+import { mediaDirectory } from '@/cms/media-directory'
 
 // Opt in only against a disposable migrated database. Raw fixtures never create,
 // inspect, alter or authenticate CMS users, so the CMS suite can bootstrap independently.
@@ -167,7 +168,7 @@ integration('public website search (PostgreSQL)', () => {
             : 'png'
     const filename = `search-fixture-${randomUUID()}.${extension}`
     if (contents) {
-      const uploadPath = path.resolve(process.cwd(), '.local/uploads', filename)
+      const uploadPath = path.join(mediaDirectory(), filename)
       await mkdir(path.dirname(uploadPath), { recursive: true })
       files.push(uploadPath)
       await writeFile(uploadPath, contents)

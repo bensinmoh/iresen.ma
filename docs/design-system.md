@@ -10,7 +10,7 @@ explain intent and history; they do not supersede these decisions.
 Functional search, added on 2026-10-09, uses a compact results composition rather
 than a full-screen hero. Reuse the aligned grid and navy/blue/white type and
 control roles. The white resting magnifier retains the header's square geometry;
-its input reveals toward inline-start over 250ms, bounded by available space and
+its input reveals toward inline-start over 220ms, bounded by available space and
 mirrored in Arabic. Focus, touch, no-JavaScript and reduced-motion states retain
 native GET submission. Public suggestions use an accessible link list; result
 rows use safe text highlights, clear resource types and readable excerpts.

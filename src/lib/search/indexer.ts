@@ -5,6 +5,7 @@ import { promisify } from 'node:util'
 import type { PoolClient } from 'pg'
 
 import { contentLocales } from '@/lib/content/publication'
+import { mediaDirectory } from '@/cms/media-directory'
 import { isPublicSlug, newsHref } from '@/lib/content/routes'
 import { pageHref, pageIds, type PageId } from '@/lib/site'
 import { catalogRevision, staticSearchDocuments } from './catalog'
@@ -136,7 +137,7 @@ export async function extractPublicFileText(filename: string, mimeType: string):
   )
     return ''
   try {
-    const root = await realpath(path.resolve(process.cwd(), '.local/uploads'))
+    const root = await realpath(mediaDirectory())
     const file = await realpath(path.join(root, filename))
     if (path.dirname(file) !== root) return ''
     const info = await stat(file)

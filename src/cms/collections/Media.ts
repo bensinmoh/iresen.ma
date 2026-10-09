@@ -1,11 +1,10 @@
-import path from 'node:path'
-
 import type { CollectionConfig } from 'payload'
 
 import { constrainContentOperation } from '../access/public-content'
 import { publishedMediaOnly } from '../access/public-media'
 import { administratorsOnly, staffOnly } from '../access/roles'
 import { publicationGuard } from '../hooks/publication'
+import { mediaDirectory } from '../media-directory'
 import { publicationFields } from './fields'
 
 export const Media: CollectionConfig = {
@@ -20,7 +19,7 @@ export const Media: CollectionConfig = {
   },
   versions: { drafts: true, maxPerDoc: 30 },
   upload: {
-    staticDir: path.resolve(process.cwd(), '.local/uploads'),
+    staticDir: mediaDirectory(),
     mimeTypes: [
       'image/jpeg',
       'image/png',
