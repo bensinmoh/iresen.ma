@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Tablet homepage layout
+
+- Omitted the homepage ISO badge below `70rem`, retaining its compact desktop
+  placement instead of the wide tablet band between copy and actions.
+- Kept all five homepage figures in one row at every width, using native
+  horizontal scrolling when they do not fit.
+- Added shared hidden-scrollbar styling for horizontal navigation, preserving
+  touch/keyboard scrolling, visible focus, natural text growth and Arabic RTL.
+- Updated the responsive browser checks and current design guidance. Reviewed
+  tablet, mobile, desktop and 200% text in FR/EN/AR; see
+  [validation](docs/validation.md#tablet-homepage-layout--2026-10-09).
+
 ## 2026-10-09 — Exact-first search relevance
 
 - Added explicit relevance tiers: exact, linguistic/prefix, spelling and related

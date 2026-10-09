@@ -91,10 +91,13 @@ marketing page.
   conformance. See [current hero behavior](docs/heroes.md#homepage-hero-video--2026-10-09)
   and [source metadata and rights limits](docs/asset-inventory.md#hero-video).
 - The 2026-10-09 mobile hierarchy at `40rem` and below hides the homepage's
-  secondary ISO badge and redundant scroll cue, uses a 32px lower reserve at
-  default text size, stacks its two existing navigation links at full width and
-  keeps all five facts in a labelled native horizontal scroll row. Wider layouts
-  and other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
+  redundant scroll cue, uses a 32px lower reserve at default text size, stacks
+  its two existing navigation links at full width and
+  retains all five facts. The later tablet refinement hides the secondary ISO
+  badge below `70rem` and keeps the facts in one labelled native horizontal
+  scroll row at every width. Horizontal navigation scrollbars are hidden by the
+  owner's general preference, with keyboard/touch scrolling and visible focus
+  retained. Other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
   preserves essential routes, forms, feedback and facts while limiting competing
   roles. Future mission cards await approved content and follow the mobile
   guidance. Section placeholders remain the
