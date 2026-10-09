@@ -40,6 +40,10 @@ Wikimedia Commons, but source-file downloads from `greenenergypark.ma`,
 `iresen.org` and `upload.wikimedia.org` are blocked by this cloud environment's
 network policy. No real photo has been imported or substituted yet.
 
+The owner's later 2026-10-09 instruction authorizes pushing the current snapshot
+with these photos still pending. Source access remains a follow-up input rather
+than a hold on this delivery; the generated images above remain current.
+
 The office request does not specify Rabat. A possible Green & Smart Building Park
 office context in Benguerir remains a sourcing candidate; no location is assigned
 to the current generated image. Record the retrieved photograph's exact source,

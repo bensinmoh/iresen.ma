@@ -4,6 +4,15 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Current snapshot delivery scope
+
+- Recorded the owner's authorization to push the current snapshot while real
+  Green Energy Park and IRESEN office photos remain pending.
+- Confirmed that the search engine is in separate development and is not
+  connected to this snapshot; the search page retains its unavailable state.
+
+See [current product scope](PRODUCT.md) and [pending media](docs/contextual-hero-media.md#documentary-photos-pending).
+
 ## 2026-10-09 — Expandable header search
 
 - Added a native expandable search field: fine-pointer hover reveals it without
