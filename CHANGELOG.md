@@ -4,6 +4,21 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Generated hero placeholders
+
+- Replaced all 17 Figma-derived hero backgrounds across 22 pages with the owner's
+  requested generated photographic placeholders, retaining the original media
+  manifest as a superseded source record.
+- Preserved native HD pixels without upscaling: 16 sources at 1536 × 1024 and
+  the aerial at 1672 × 941. Added quality-90 WebP, content-hashed filenames,
+  portrait mobile crops and cover-aware responsive sizing.
+- Kept existing layouts, copy, claims, figures, routes, colors, fonts and original
+  SVGs; generic generated scenes make no claim to show real IRESEN subjects.
+
+See [media provenance and behavior](docs/heroes.md#generated-hero-placeholders--2026-10-09)
+and [revision-specific validation](docs/validation.md#generated-hero-placeholders--2026-10-09)
+for actual bytes, rendered coverage and checks. Earlier evidence retains its scope.
+
 ## 2026-10-09 — Site coherence review
 
 - Unified action corners at physical 10px while retaining 20px surfaces; shared

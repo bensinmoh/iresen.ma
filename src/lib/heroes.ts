@@ -1,9 +1,9 @@
 import type { PageId } from './site'
+import type { HeroPhotoId } from './hero-images'
 
 type HeroDefinition = {
-  photo: string
+  photo: HeroPhotoId
   layout: 'start' | 'end' | 'center' | 'split' | 'editorial'
-  position?: string
   stage:
     'develop' | 'test' | 'transfer' | 'institute' | 'resources' | 'collaboration' | 'information'
   related: PageId

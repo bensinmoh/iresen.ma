@@ -80,6 +80,8 @@ contrasts, selected navy panels, editorial lists and coherent image crops where
 they serve the story. Photography, figures and partner logos require reviewed
 sources and rights. Complete page exports guide composition; they are never
 production hero imagery or evidence of an IRESEN facility.
+The owner's requested generated hero placeholders are tracked separately below;
+their photographic style does not establish real institutional subjects.
 
 ## Interaction and review
 
@@ -249,15 +251,37 @@ passed, including hover Escape and breakpoint focus restoration.
 The later hovered-menu adaptation below supersedes its panel geometry and
 related-block treatment; these checks describe the initial revision.
 
+## Generated hero placeholders — 2026-10-09
+
+The owner's explicit request replaces all 17 hero backgrounds across 22 pages
+with generated photographic placeholders. A coherent energy/science editorial
+series uses natural light, warm neutral landscapes and restrained blue, with
+credible fine geometry and room for translated text. Generic scenes and anonymous
+people illustrate the topic without identifying IRESEN sites, events or staff.
+Existing layouts, copy, claims, figures, routes, fonts and original SVGs remain.
+
+Native sources are 1536 × 1024 for 16 images and 1672 × 941 for the aerial image.
+Keep their actual HD dimensions rather than claiming native 4K or a resolution
+increase for every previous asset. Quality-90 WebP derivatives retain native
+pixels without upscaling. Content-hashed filenames, full-height portrait mobile
+crops at `40rem` and below and cover-aware sizing support sharp imagery while retaining
+one eager/high-priority hero request. The approximately 250KB mobile budget needs
+measurement against the final derivatives.
+
+See [current provenance and media behavior](docs/heroes.md#generated-hero-placeholders--2026-10-09)
+and [this revision's validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
+The earlier Figma image records and captures remain historical evidence.
+
 ## Introducing heroes — 2026-10-08
 
 All approved pages now open with a restrained introduction: a display title, one
 short sentence, a section anchor and one related destination. Five compositions
 (start, end, center, split and editorial) vary the visual rhythm across page topics.
-Seventeen individually extracted Figma images are illustrative backgrounds, not
-evidence about pictured people or IRESEN facilities. Utility pages use quieter
-navy overlays. Media provenance and remaining publication review are recorded in
-[the hero guide](docs/heroes.md). Detailed content belongs in the sections below.
+The initial 17 individually extracted Figma images were illustrative backgrounds,
+without identifying pictured people or facilities as IRESEN. They are superseded
+by the generated placeholders above; [the archived manifest](docs/hero-assets-figma-2026-10-08.json)
+retains their source facts. Utility pages use quieter navy overlays. Detailed
+content belongs in the sections below.
 
 The existing header overlays these heroes with the reversed supplied logo and a
 dark-to-transparent gradient; white disclosure panels retain their established
