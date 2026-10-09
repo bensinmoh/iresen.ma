@@ -6,6 +6,7 @@ import { pageHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { HeroViewport } from './HeroViewport'
 import { HeroPhoto } from './HeroPhoto'
+import { HomeHeroVideo } from './HomeHeroVideo'
 
 export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Hero' })
@@ -22,6 +23,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
       <div className="hero-scene">
         <div className="hero-media" aria-hidden="true">
           <HeroPhoto photo={definition.photo} split={definition.layout === 'split'} />
+          {pageId === 'home' && <HomeHeroVideo />}
         </div>
         <div className="hero-shade" />
         <div className={`container hero-body${pageId === 'home' ? ' hero-body--certified' : ''}`}>
