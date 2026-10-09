@@ -2,6 +2,10 @@
   display: none;
 }
 
+.home-section-navigation + .page-shell {
+  padding-block-start: 0;
+}
+
 /* The global header leaves with the hero; this homepage-only bar pins to the top. */
 @media (min-width: 64rem) {
   #main-content:has(> .home-section-navigation) {
@@ -68,6 +72,11 @@
 
   #main-content:has(> .home-section-navigation) :is([id], .empty-section) {
     scroll-margin-block-start: var(--home-section-nav-height);
+  }
+
+  /* Keep the first native anchor aligned while the bar reaches its sticky position. */
+  .home-section-navigation + .page-shell {
+    padding-block-start: var(--space-6);
   }
 }
 

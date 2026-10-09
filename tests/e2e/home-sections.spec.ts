@@ -22,20 +22,27 @@ async function waitForFonts(page: Page) {
   await page.evaluate(() => document.fonts.ready)
 }
 
-async function expectTargetBelowNavigation(page: Page, id: string) {
+async function expectTargetBelowNavigation(page: Page, id: string, nativeFallback = false) {
   await expect
     .poll(
       () =>
-        page.evaluate((targetId) => {
-          const nav = document.querySelector('.home-section-navigation')!
-          const target = document.getElementById(targetId)!
-          const bar = nav.getBoundingClientRect()
-          const top = target.getBoundingClientRect().top
-          const padding = parseFloat(
-            getComputedStyle(document.documentElement).scrollPaddingBlockStart,
-          )
-          return Math.abs(bar.top) <= 1 && Math.abs(top - bar.bottom - padding) <= 2
-        }, id),
+        page.evaluate(
+          ({ targetId, nativeFallback }) => {
+            const nav = document.querySelector('.home-section-navigation')!
+            const target = document.getElementById(targetId)!
+            const bar = nav.getBoundingClientRect()
+            const top = target.getBoundingClientRect().top
+            const padding = parseFloat(
+              getComputedStyle(document.documentElement).scrollPaddingBlockStart,
+            )
+            const clearance = top - bar.bottom - padding
+            return (
+              Math.abs(bar.top) <= 1 &&
+              (nativeFallback ? clearance >= -2 : Math.abs(clearance) <= 2)
+            )
+          },
+          { targetId: id, nativeFallback },
+        ),
       { message: `#${id} must align below the pinned bar and the page's scroll padding` },
     )
     .toBe(true)
@@ -250,11 +257,20 @@ test('native home anchors remain usable without JavaScript in every locale', asy
       await expect(nav).toBeVisible()
       await nav.locator('a[href="#research-priorities"]').click()
       await expect(page).toHaveURL(/#research-priorities$/)
-      await expectTargetBelowNavigation(page, 'research-priorities')
+      await expectTargetBelowNavigation(page, 'research-priorities', true)
+      await expect(nav.locator('[aria-current]')).toHaveCount(0)
       await expect(page.locator('#develop-test-transfer').getByRole('article')).toHaveCount(3)
       await page.goto(`${pageHref('home', locale)}#mission-transfer`)
       await waitForFonts(page)
-      await expectTargetBelowNavigation(page, 'mission-transfer')
+      await expectTargetBelowNavigation(page, 'mission-transfer', true)
+      await page.evaluate(() => {
+        document.documentElement.style.fontSize = '200%'
+      })
+      await nav.locator('a[href="#research-priorities"]').click()
+      await expectTargetBelowNavigation(page, 'research-priorities', true)
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+      ).toBe(true)
     }
   } finally {
     await context.close()
@@ -269,13 +285,13 @@ test('home anchor motion follows the visitor motion preference', async ({ page }
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await expect(page.locator('html')).toHaveCSS('scroll-behavior', 'auto')
   await expect(page.locator('.home-section-navigation a').first()).toHaveCSS(
-    'transition-duration',
-    '0s',
+    'transition-property',
+    'none',
   )
   expect(
     await page
       .locator('.home-section-navigation a')
       .first()
-      .evaluate((link) => getComputedStyle(link, '::after').transitionDuration),
-  ).toBe('0s')
+      .evaluate((link) => getComputedStyle(link, '::after').transitionProperty),
+  ).toBe('none')
 })

@@ -10,7 +10,7 @@ export function HomeSectionNavigation({
   items: readonly { id: string; label: string }[]
 }) {
   const navRef = useRef<HTMLElement>(null)
-  const [activeId, setActiveId] = useState(items[0]?.id)
+  const [activeId, setActiveId] = useState<string>()
 
   useEffect(() => {
     const nav = navRef.current
@@ -62,7 +62,20 @@ export function HomeSectionNavigation({
 
   return (
     <nav ref={navRef} aria-label={label} className="home-section-navigation">
-      <ul className="container home-section-navigation-list">
+      <noscript>
+        <style>{`
+          @media (min-width: 64rem) {
+            .home-section-navigation-list {
+              flex-wrap: nowrap;
+              justify-content: safe center;
+              overflow-x: auto;
+            }
+            .home-section-navigation-list li { flex: 0 0 auto; }
+            .home-section-navigation a { white-space: nowrap; }
+          }
+        `}</style>
+      </noscript>
+      <ul className="container home-section-navigation-list horizontal-scroll">
         {items.map(({ id, label: itemLabel }) => (
           <li key={id}>
             <a href={`#${id}`} aria-current={activeId === id ? 'location' : undefined}>

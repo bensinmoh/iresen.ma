@@ -27,10 +27,16 @@ bar enters in normal flow and pins to the top of the viewport. The existing
 global header scrolls away with the hero. Below 64rem the bar is hidden, including
 its focus targets. All sections and mission destinations remain available.
 Labels can wrap at enlarged text sizes; a ResizeObserver measures the whole bar
-so anchor clearance remains correct. A CSS fallback handles no-JavaScript use.
+so anchor clearance remains correct. Without JavaScript, the native bar retains
+a single horizontally scrollable row with the site's hidden-scrollbar policy,
+keeping its CSS anchor offset valid at enlarged text sizes.
+The content container uses only the native anchor clearance after the bar,
+followed by the mission section's own spacing; it avoids doubling the generic
+page-shell and section padding.
 
 Passive scroll updates the blue text and underline with `aria-current="location"`
-without moving keyboard focus. Native links retain URL hashes, history and
+without moving keyboard focus. The current marker starts after hydration, avoiding
+a misleading fixed active link when JavaScript is disabled. Native links retain URL hashes, history and
 no-JavaScript operation. CSS smooth scrolling is disabled for reduced motion.
 Focus rings sit inside the sticky bar; active state does not rely on color alone.
 
