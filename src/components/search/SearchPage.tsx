@@ -7,6 +7,8 @@ import type { SearchResult, SearchType } from '@/lib/search/adapter'
 import { highlightSearchText } from '@/lib/search/text'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { SearchSubmit } from './SearchSubmit'
+import { SearchResultPreview } from './SearchResultPreview'
+import { searchResultPreviews } from '@/lib/search/previews'
 
 type SearchPageProps = {
   locale: Locale
@@ -49,6 +51,10 @@ export async function SearchPage({
   const searchHref = pageHref('search', locale)
   const activeQuery = (result?.status === 'available' ? result.query : query).slice(0, 200)
   const suggestedQuery = result?.status === 'available' ? result.suggestedQuery : undefined
+  const previews = await searchResultPreviews(
+    result?.status === 'available' ? result.items : [],
+    locale,
+  )
 
   function resultsHref(nextType = type, page = 1, nextQuery = activeQuery) {
     const params = new URLSearchParams({ q: nextQuery })
@@ -188,35 +194,46 @@ export async function SearchPage({
             <ol className="search-results" aria-label={t('resultsLabel')}>
               {result.items.map((item) => (
                 <li key={item.id}>
-                  <article className="search-result">
-                    <div className="search-result-meta">
-                      <span className="search-result-type">{t(`types.${item.type}`)}</span>
-                      {(item.matchKind === 'typo' || item.matchKind === 'related') && (
-                        <span
-                          className="search-match-badge"
-                          data-search-match-kind={item.matchKind}
-                        >
-                          {t(item.matchKind === 'typo' ? 'matchTypo' : 'matchRelated')}
-                        </span>
+                  <article
+                    className={`search-result${previews[item.id] ? ' search-result-with-preview' : ''}`}
+                  >
+                    <div className="search-result-content">
+                      <div className="search-result-meta">
+                        <span className="search-result-type">{t(`types.${item.type}`)}</span>
+                        {(item.matchKind === 'typo' || item.matchKind === 'related') && (
+                          <span
+                            className="search-match-badge"
+                            data-search-match-kind={item.matchKind}
+                          >
+                            {t(item.matchKind === 'typo' ? 'matchTypo' : 'matchRelated')}
+                          </span>
+                        )}
+                        {item.publishedAt && Number.isFinite(Date.parse(item.publishedAt)) && (
+                          <time dateTime={item.publishedAt}>
+                            {format.dateTime(new Date(item.publishedAt), { dateStyle: 'medium' })}
+                          </time>
+                        )}
+                      </div>
+                      <h2>
+                        <a href={item.url}>
+                          <span>{highlight(item.title, item.matchedQuery || activeQuery)}</span>
+                          <NavigationIcon name="arrow" />
+                        </a>
+                      </h2>
+                      {item.excerpt && (
+                        <p>{highlight(item.excerpt, item.matchedQuery || activeQuery)}</p>
                       )}
-                      {item.publishedAt && Number.isFinite(Date.parse(item.publishedAt)) && (
-                        <time dateTime={item.publishedAt}>
-                          {format.dateTime(new Date(item.publishedAt), { dateStyle: 'medium' })}
-                        </time>
-                      )}
+                      <bdi className="search-result-url" dir="auto">
+                        {item.url}
+                      </bdi>
                     </div>
-                    <h2>
-                      <a href={item.url}>
-                        <span>{highlight(item.title, item.matchedQuery || activeQuery)}</span>
-                        <NavigationIcon name="arrow" />
-                      </a>
-                    </h2>
-                    {item.excerpt && (
-                      <p>{highlight(item.excerpt, item.matchedQuery || activeQuery)}</p>
+                    {previews[item.id] && (
+                      <SearchResultPreview
+                        preview={previews[item.id]}
+                        title={item.title}
+                        destination={item.url}
+                      />
                     )}
-                    <bdi className="search-result-url" dir="auto">
-                      {item.url}
-                    </bdi>
                   </article>
                 </li>
               ))}

@@ -888,7 +888,10 @@
     "matchRelated": "Contenu lié",
     "noSuggestions": "Aucune suggestion. Appuyez sur Entrée pour voir tous les résultats.",
     "invalidTitle": "Vérifiez votre recherche",
-    "invalidDescription": "Saisissez jusqu’à 200 caractères et choisissez les filtres proposés."
+    "invalidDescription": "Saisissez jusqu’à 200 caractères et choisissez les filtres proposés.",
+    "preview": "Aperçu",
+    "previewTitle": "Aperçu : {title}",
+    "openResource": "Ouvrir la ressource"
   },
   "HomeMissions": {
     "eyebrow": "Notre mission",

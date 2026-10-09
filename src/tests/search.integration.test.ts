@@ -13,6 +13,7 @@ import type { SearchInput, SearchLocale, SearchResult } from '@/lib/search/types
 import { VOCABULARY_VERSION } from '@/lib/search/vocabulary'
 import { pageHref, pageIds, type PageId } from '@/lib/site'
 import { mediaDirectory } from '@/cms/media-directory'
+import { searchResultPreviews } from '@/lib/search/previews'
 
 // Opt in only against a disposable migrated database. Raw fixtures never create,
 // inspect, alter or authenticate CMS users, so the CMS suite can bootstrap independently.
@@ -512,6 +513,38 @@ integration('public website search (PostgreSQL)', () => {
     expect((await query({ query: marker, locale: 'en', sort: 'newest' })).items[0]?.id).toBe(
       `news:${newsIds.at(-1)}:en`,
     )
+  })
+
+  it('previews only public locale-approved files and news lead images, including withdrawal', async () => {
+    const marker = term()
+    const image = await createMedia(marker, 'image/png')
+    const pdf = await createMedia(marker, 'application/pdf')
+    const privateImage = await createMedia(marker, 'image/png', { visibility: 'private' })
+    const otherLocale = await createMedia(marker, 'image/png', { locale: 'fr' })
+    const article = await createNews(marker)
+    await database!.query('UPDATE news SET hero_image_id=$1 WHERE id=$2', [image.id, article])
+    await processSearchJobs(50)
+    const result = await query({ query: marker, locale: 'en' })
+    const previews = await searchResultPreviews(result.items, 'en')
+    expect(previews[`media:${image.id}:en`]).toEqual({
+      kind: 'image',
+      url: `/api/media/file/${image.filename}?locale=en`,
+    })
+    expect(previews[`media:${pdf.id}:en`]?.kind).toBe('pdf')
+    expect(previews[`news:${article}:en`]).toEqual(previews[`media:${image.id}:en`])
+    const forcedItems = [privateImage, otherLocale].map((file) => ({
+      id: `media:${file.id}:en`,
+      locale: 'en' as const,
+      title: marker,
+      type: 'media' as const,
+      url: '/unused',
+      excerpt: '',
+    }))
+    expect(await searchResultPreviews(forcedItems, 'en')).toEqual({})
+    await database!.query("UPDATE media SET visibility='private' WHERE id=$1", [image.id])
+    const withdrawn = await searchResultPreviews(result.items, 'en')
+    expect(withdrawn[`media:${image.id}:en`]).toBeUndefined()
+    expect(withdrawn[`news:${article}:en`]).toEqual({ kind: 'news' })
   })
 
   it('indexes public PDF/text contents and transcript metadata while excluding a private PDF', async () => {
