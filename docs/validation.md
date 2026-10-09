@@ -2109,3 +2109,35 @@ containment. Reviewed details:
 No content, destination, asset or search projection was added. Full unit,
 integration and browser coverage runs in current PR CI before merge. This local
 review does not assert Safari, physical-device or manual screen-reader coverage.
+
+## Search result previews — 2026-10-09
+
+Full results now show public media thumbnails/native playback, document formats
+with on-demand PDF viewing, and eligible news lead images with a truthful marker
+when missing. Metadata enrichment is bounded to the result page and uses public,
+locale-specific CMS queries without translation fallback. Uploaded media bypass
+the persistent image optimizer; guarded file requests still enforce withdrawal.
+No resources, routes, schemas or index projections were added.
+
+Local formatting, lint, strict types, 97 unit tests, 22 integration tests and the
+production build passed. All 40 selected Chrome search/browser cases passed on
+the final build. New integration coverage verifies public media/news relationships,
+private and missing-locale exclusion, and lead-image withdrawal. The browser
+fixture verifies PDF mount/unmount by keyboard, direct access rejection after
+withdrawal, loaded image thumbnails, non-autoplay/preload-none video controls,
+FR/EN/AR result-region axe scans, and 320px/1440px containment at 200% text.
+Synthetic files and records are cleaned up; they are not repository/public content.
+
+Rendered media review at 390px and 1440px in FR/EN/AR confirmed the bounded rail,
+stacked mobile layout, image fitting and unchanged physical diagonal corners.
+The expanded synthetic PDF viewer was visually inspected. Reviewed public captures:
+
+- [French desktop media result](screenshots/search-previews-fr-1440.png)
+- [Arabic mobile media result](screenshots/search-previews-ar-390.png)
+
+PDF rendering and office-file support depend on the visitor's browser; direct
+resource links remain available. Native audio controls are implemented, without
+claiming playback testing of a real approved audio asset. CMS thumbnails currently
+use the original guarded image bytes lazily; no new cached derivative service was
+introduced. Full CI runs before merge. No deployment or publication was performed;
+Safari, physical-device and manual screen-reader coverage are not asserted.

@@ -888,7 +888,10 @@
     "matchRelated": "Related content",
     "noSuggestions": "No quick matches. Press Enter to see all results.",
     "invalidTitle": "Check your search",
-    "invalidDescription": "Use up to 200 characters and choose the available filters."
+    "invalidDescription": "Use up to 200 characters and choose the available filters.",
+    "preview": "Preview",
+    "previewTitle": "Preview: {title}",
+    "openResource": "Open resource"
   },
   "HomeMissions": {
     "eyebrow": "Our mission",

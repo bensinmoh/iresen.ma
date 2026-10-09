@@ -118,8 +118,13 @@ marketing page.
 - Search now covers public pages/sections, published CMS pages/articles and
   registered or uploaded public documents/media in the active locale. Ranked
   results, normalized matching, live suggestions, URL filters/date sorting and
-  pagination follow the [search guide](docs/search.md). The header expands its
-  field on hover/focus and submits to the lean results page. Exact matches precede spelling corrections
+  pagination follow the [search guide](docs/search.md).
+  Results now preview registered/public media, document formats with an expandable
+  PDF viewer, and locale-approved news lead images when available. Private,
+  withdrawn or untranslated images stay excluded; missing article imagery uses
+  a truthful text marker. Native file/open links remain. See
+  [preview behavior](docs/search.md#result-previews).
+  The header expands its field on hover/focus and submits to the lean results page. Exact matches precede spelling corrections
   and related topics; explicit correction links preserve the visitor's query.
   The multilingual concept vocabulary includes platforms/infrastructure and
   PV/solar photovoltaics, without claiming general model-based semantic search.

@@ -313,7 +313,7 @@ test('section results open their rendered anchor and registered public files are
   await expect(page.locator('#mission')).toBeVisible()
 
   await page.goto(searchUrl('en', { q: 'IRESEN', type: 'media' }))
-  const logo = page.locator('.search-results a[href="/brand/logo-color.svg"]')
+  const logo = page.locator('.search-results h2 a[href="/brand/logo-color.svg"]')
   await expect(logo).toBeVisible()
   const download = await request.get((await logo.getAttribute('href'))!)
   expect(download.status()).toBe(200)

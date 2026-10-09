@@ -21,6 +21,31 @@ search service as full results, with debounce and cancellation.
 
 ## Content coverage
 
+### Result previews
+
+Media, documents and news now have previews in full search results. Registered
+images and approved CMS images use lazy thumbnails; video/audio use native controls
+with `preload="none"` and no autoplay. PDFs show their format and an expandable
+viewer mounted only after activation; a direct resource link also works without
+JavaScript. Other documents show their format and an open link. News uses its
+public locale-approved `heroImage` when available, otherwise an honest news marker
+beside the existing title/date/excerpt. No substitute article imagery is invented.
+
+`src/lib/search/previews.ts` enriches only the current twelve-result page. Static
+assets must already be registered in `publicAssetReferences`; CMS metadata queries
+explicitly use `overrideAccess: false`, `fallbackLocale: false` and `draft: false`.
+News lead images get a separate public-media check, so private or untranslated
+relationships cannot leak through a published article. CMS bytes use the guarded
+locale file endpoint and bypass Next's persistent image cache so withdrawal still
+blocks subsequent requests. Static raster thumbnails use existing image optimization;
+original SVG geometry and appropriate light/dark surfaces remain.
+
+This adds no resources, routes or CMS fields. Existing public search projections,
+stable identifiers, localized descriptions, registration and withdrawal gates
+remain authoritative. No index rebuild is required for this presentation change.
+Header suggestions retain their compact textual layout. See
+[verification](validation.md#search-result-previews--2026-10-09).
+
 The index contains canonical public page introductions and rendered section
 headings/text, public locale-approved CMS page/article text, uploaded public
 documents/media, and registered static public resources. Section results link

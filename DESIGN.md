@@ -1,5 +1,17 @@
 # IRESEN visual direction
 
+## Search result previews — 2026-10-09
+
+Media/document/news results pair the existing reading column with a bounded
+preview rail, stacking below the text at `40rem` and below. Thumbnails preserve
+the complete image; white/dark-mode original logos have a navy surface. Preview
+surfaces reuse the physical diagonal action corners. Native video/audio controls
+and an on-demand full-width PDF viewer provide useful inspection without autoplay.
+News reuses its public lead image where available and retains truthful text when
+one is missing. Search ranking, routes and content remain. See
+[preview behavior](docs/search.md#result-previews) and
+[verification](docs/validation.md#search-result-previews--2026-10-09).
+
 ## Footer social-link corners — 2026-10-09
 
 The owner's hover screenshot identifies four-corner rounding on the footer social

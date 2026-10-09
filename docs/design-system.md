@@ -108,6 +108,18 @@ adds no public content or search destination; existing page/section projections
 remain. See [navigation](navigation.md#compact-menu-control--2026-10-09)
 and [verification](validation.md#compact-menu-control--2026-10-09).
 
+## Search result previews — 2026-10-09
+
+Result preview surfaces reuse physical action corners, navy/white/pale surfaces,
+and the existing spacing/type roles. The text-first row pairs a flexible reading
+column with a 14rem preview rail; below `40rem` it stacks naturally. Images use
+contain fitting to preserve complete assets and SVG geometry. Expanded PDF views
+use the full reading width, with a direct link retained. Preview controls keep
+native keyboard semantics and visible focus; no autoplay, invented thumbnails,
+new public content or publication bypass is introduced. See
+[the search specification](search.md#result-previews) and
+[verification](validation.md#search-result-previews--2026-10-09).
+
 ## Footer social-link corners — 2026-10-09
 
 Footer social icon links reuse `--radius-action`: physical 10px top-left and
