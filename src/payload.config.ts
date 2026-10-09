@@ -10,6 +10,7 @@ import { Media } from './cms/collections/Media'
 import { News } from './cms/collections/News'
 import { Pages } from './cms/collections/Pages'
 import { Users } from './cms/collections/Users'
+import { startSearchWorker } from './lib/search/indexer'
 
 const sourceDirectory = path.dirname(fileURLToPath(import.meta.url))
 
@@ -23,6 +24,9 @@ function requiredEnvironmentVariable(name: string): string {
 const siteURL = process.env.NEXT_PUBLIC_SITE_URL
 
 export default buildConfig({
+  onInit: () => {
+    startSearchWorker()
+  },
   admin: { user: 'users', importMap: { baseDir: path.resolve(sourceDirectory, '..') } },
   collections: [Users, Pages, News, Media],
   db: postgresAdapter({

@@ -10,6 +10,13 @@ try {
   if (error.code !== 'ENOENT') throw error
 }
 
+// Standalone Next changes cwd to its build directory. Pin web/CMS/worker uploads
+// to one location before spawning it; configured relative paths use the repo root.
+process.env.CMS_UPLOAD_DIRECTORY = path.resolve(
+  root,
+  process.env.CMS_UPLOAD_DIRECTORY || '.local/uploads',
+)
+
 // Cloud runtimes may restrict the home directory. Native loaders need a private writable cache.
 process.env.XDG_CACHE_HOME ??= path.join(root, '.cache/native')
 process.env.npm_config_cache ??= path.join(root, '.cache/npm')

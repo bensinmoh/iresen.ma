@@ -10,7 +10,8 @@ Each section contains a heading and a short content brief. French briefs start
 with “À prévoir”; equivalent English and Arabic catalogs describe the same
 unfinished content. These are editorial placeholders, not institutional facts,
 approved final copy, populated catalogs or active service controls. The existing
-search/contact unavailability notices and cookie status remain applicable. The
+contact unavailability notice and cookie status remain applicable. Search now
+uses its dedicated results interface rather than the editorial scaffold. The
 sitemap retains its working links.
 
 ## Sources and adaptation
@@ -93,3 +94,7 @@ Executed application and rendered checks are recorded in
 [the validation log](validation.md). The source-table extraction checks content
 order and scope; it does not establish Word visual fidelity or institutional
 approval of the future content.
+
+Search now renders its dedicated results interface instead of the introductory
+hero and editorial section placeholders. Its route remains one of the 22
+canonical page IDs. See [public search](search.md).

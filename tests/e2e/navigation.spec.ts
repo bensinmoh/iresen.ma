@@ -138,12 +138,11 @@ for (const locale of locales) {
         navigation.locator(`a.navigation-trigger[href="${pageHref(id, locale)}"]`),
       ).toBeVisible()
     }
+    const headerSearch = header.locator('.header-search-form')
+    await expect(headerSearch).toHaveAttribute('action', pageHref('search', locale))
+    await expect(headerSearch).toHaveJSProperty('method', 'get')
     await expect(header.locator('.header-search')).toBeVisible()
     await expect(header.locator('.header-search')).toHaveAccessibleName(messages.Pages.search)
-    await expect(header.locator('.header-search-form')).toHaveAttribute(
-      'action',
-      pageHref('search', locale),
-    )
     await expect(
       header.locator('.header-tools').locator(`a[href="${pageHref('contact', locale)}"]`),
     ).toBeVisible()

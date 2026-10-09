@@ -55,3 +55,22 @@ export async function findPublishedNews(locale: ContentLocale, limit = 12) {
     },
   })
 }
+
+export async function findPublishedNewsBySlug(slug: string, locale: ContentLocale) {
+  if (!isContentLocale(locale)) throw new Error('Unsupported content locale.')
+  const payload = await getPayload({ config })
+  const { docs } = await payload.find({
+    collection: 'news',
+    locale,
+    fallbackLocale: false,
+    overrideAccess: false,
+    draft: false,
+    depth: 0,
+    limit: 2,
+    where: { slug: { equals: slug } },
+    select: { title: true, slug: true, summary: true, body: true, seo: true, publishedAt: true },
+  })
+  // A duplicated approved slug has no unambiguous public destination. Search
+  // applies the same rule; editors must resolve the duplicate before discovery.
+  return docs.length === 1 ? docs[0]! : null
+}

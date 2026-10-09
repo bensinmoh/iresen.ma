@@ -59,12 +59,12 @@ async function visitFiguresWithKeyboard(page: Page, direction: 'ltr' | 'rtl') {
 }
 
 for (const locale of locales) {
-  test(`${locale}: every page has a lightweight hero and a working section link`, async ({
+  test(`${locale}: introductory pages have a lightweight hero and a working section link`, async ({
     page,
   }) => {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
-    for (const id of pageIds) {
+    for (const id of pageIds.filter((id) => id !== 'search')) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()

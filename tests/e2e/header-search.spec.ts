@@ -40,9 +40,10 @@ async function expectSubmittedQuery(page: Page, locale: Locale, checkQueryRestor
       decodeURI(url.pathname) === pageHref('search', locale) &&
       url.searchParams.get('q') === queries[locale],
   )
-  await expect(page.locator('.page-service-notice p')).toHaveText(
-    catalogs[locale].States.searchUnavailable,
-  )
+  await expect(page.locator('.search-page')).toBeVisible()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(catalogs[locale].Pages.search)
+  await expect(page.locator('.search-query-form input[name="q"]')).toHaveValue(queries[locale])
+  await expect(page.locator('.page-service-notice')).toHaveCount(0)
   if (checkQueryRestoration) {
     await expect(searchParts(page).input).toHaveValue(queries[locale])
   }

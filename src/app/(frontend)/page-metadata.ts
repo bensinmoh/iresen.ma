@@ -24,6 +24,6 @@ export async function createPageMetadata(pageId: PageId, locale: Locale): Promis
         'x-default': new URL(pageHref(pageId, 'fr'), baseUrl).toString(),
       },
     },
-    robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
+    robots: { index: pageId !== 'search' && isIndexingEnabled(), follow: isIndexingEnabled() },
   }
 }

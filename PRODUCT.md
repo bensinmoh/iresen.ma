@@ -36,8 +36,8 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- All 22 approved pages have introductory heroes with four text-placement
-  modes: 21 use generated photos, while the homepage uses the owner's video with
+- The 21 non-search pages have introductory heroes with four text-placement
+  modes: 20 use generated photos, while the homepage uses the owner's video with
   its generated photo as fallback. Short FR/EN/AR wayfinding drafts and the
   Développer · Éprouver · Valoriser reading framework remain.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
@@ -63,7 +63,7 @@ marketing page.
   [current media and readiness](docs/contextual-hero-media.md) and
   [the asset manifest](docs/hero-assets.json); earlier replacement checks retain
   their revision-specific scope.
-- All 22 canonical pages now have section placeholders below their introducing
+- The 21 non-search canonical pages have section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests
   capacities and 2035 ambition under Mission; the sitemap retains its working
@@ -90,15 +90,14 @@ marketing page.
   roles. Future mission cards await approved content and follow the mobile
   guidance. Section placeholders remain the
   delivered body content.
-- Header search now provides an expandable, labelled native GET `q` form to the
-  existing localized search page, with keyboard/touch and no-JavaScript access.
-  The owner confirms that the search engine is being developed separately and
-  is not connected to this snapshot. Its search page retains the truthful
-  unavailable state, with no integrated results or search backend. Contact remains
-  unavailable. See
-  [search interaction](docs/navigation.md#expandable-header-search--2026-10-09).
-  The newsletter keeps local editable email/consent controls; Subscribe opens a
-  native disclosure
+- Search now covers public pages/sections, published CMS pages/articles and
+  registered or uploaded public documents/media in the active locale. Ranked
+  results, normalized matching, live suggestions, URL filters/date sorting and
+  pagination follow the [search guide](docs/search.md). The header expands its
+  field on hover/focus and submits to the lean results page. New public resources
+  must supply search references in the same change. Contact retains its truthful
+  unavailable state. The newsletter
+  keeps local editable email/consent controls; Subscribe opens a native disclosure
   with the localized unavailable message, hidden initially. The privacy link stays
   accessible. No subscription is submitted or stored, and no success is reported;
   signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).

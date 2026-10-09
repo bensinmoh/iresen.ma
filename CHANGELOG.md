@@ -4,6 +4,24 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Public multilingual website search
+
+- Replaced the unavailable search page with ranked PostgreSQL full-text/trigram
+  results for public pages, anchored sections, approved CMS articles and
+  documents/media. Active-locale publication and current-source checks keep
+  private, withdrawn, deleted and stale records out of results.
+- Added the requested header input reveal, live public suggestions, keyboard and
+  touch access, native GET submission and reduced-motion behavior. Results have
+  excerpts/highlights, type filters, date sorting and URL pagination/history.
+- Added a durable indexing queue, rebuild/worker commands, approved uploaded PDF
+  extraction and localized media `searchText` for transcripts/non-extractable files.
+  Registered existing public assets once per original, with derivatives grouped.
+- Added readable published CMS page bodies and guarded news article destinations.
+  Search results remain non-indexable even when public site indexing is enabled.
+- Updated `AGENTS.md`, `instruction.md` and `CONTRIBUTING.md` to require search
+  references for every future public page, section, document, file and media item.
+  [The search guide](docs/search.md) records metadata, lifecycle and operations.
+
 ## 2026-10-09 — Current snapshot delivery scope
 
 - Recorded the owner's authorization to push the current snapshot while real

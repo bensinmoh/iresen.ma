@@ -21,6 +21,29 @@ For institutional content or page-structure work, read `docs/references/strategy
 
 Use the chosen 22-page working structure in `src/lib/site.ts` as the single routing authority; `docs/route-map.md` records it. Build internal links from stable IDs/shared helpers. Follow `docs/adr/0004-canonical-working-site-structure.md` when a structure change is requested so locale paths, navigation/footer, content links and affected documentation change together.
 
+## Search references for every public addition
+
+The owner's 2026-10-09 instruction requires search references whenever adding or
+changing a public page, section, document, file or media item. Follow
+`docs/search.md#adding-public-content` as part of that change, rather than leaving
+search registration for a later task. Supply a stable identifier, a reachable
+canonical URL or section anchor, a resource type, and a descriptive title and
+searchable description/body for each approved public language. Include useful
+topic terms and acronyms in real metadata, preserving the original display text.
+
+Use the public CMS workflow for CMS-managed resources; media captions and
+localized `searchText` provide descriptions/transcripts for files whose contents
+cannot be extracted. Register intentionally served static documents/media through
+`publicAssetReferences` in `src/lib/search/catalog.ts`; responsive derivatives
+share their original's result. New page/section templates must expose stable
+anchors and extend their public search projection. A new CMS collection must add
+its guarded search projection, update/delete indexing and a working destination.
+
+Search eligibility never authorizes publication. Keep drafts, missing/unapproved
+translations, private files, credentials, repository references and editorial
+notes outside the public index. Verify discovery in each eligible locale and
+exclusion after withdrawal/deletion; rebuild/process the index when required.
+
 Repository skills live in `.agents/skills/<name>/SKILL.md`. Read only relevant skills:
 
 | Task                                                 | Skills                                                            |

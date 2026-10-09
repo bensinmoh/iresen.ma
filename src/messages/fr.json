@@ -686,5 +686,45 @@
       "publications": "Publications\nscientifiques",
       "universityLaboratories": "Laboratoires\nuniversitaires mis en place"
     }
+  },
+  "Search": {
+    "headerLabel": "Recherche rapide sur le site",
+    "formLabel": "Rechercher sur le site",
+    "inputLabel": "Termes de recherche",
+    "placeholder": "Que recherchez-vous ?",
+    "submit": "Rechercher",
+    "searching": "Recherche en cours…",
+    "description": "Explorez les pages, les sections, les actualités et les fichiers publics du site.",
+    "startTitle": "Trouvez ce dont vous avez besoin",
+    "startDescription": "Saisissez un mot, un titre ou un sujet. Affinez ensuite les résultats par type de contenu.",
+    "filterLabel": "Filtrer les résultats par type de contenu",
+    "types": {
+      "all": "Tout",
+      "page": "Pages",
+      "section": "Sections",
+      "news": "Actualités",
+      "document": "Documents",
+      "media": "Médias"
+    },
+    "sortLabel": "Trier par",
+    "relevance": "Pertinence",
+    "newest": "Plus récents",
+    "apply": "Appliquer",
+    "resultCount": "{count, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
+    "resultsLabel": "Résultats de recherche",
+    "emptyTitle": "Aucun résultat correspondant",
+    "emptyDescription": "Essayez moins de mots, une autre orthographe ou un sujet plus général.",
+    "clearFilters": "Rechercher dans tous les contenus",
+    "errorTitle": "La recherche n’a pas abouti",
+    "errorDescription": "Veuillez réessayer dans un instant.",
+    "retry": "Réessayer",
+    "paginationLabel": "Pages des résultats de recherche",
+    "pageLabel": "Page {page}",
+    "previous": "Précédente",
+    "next": "Suivante",
+    "suggestions": "Suggestions de recherche",
+    "noSuggestions": "Aucune suggestion. Appuyez sur Entrée pour voir tous les résultats.",
+    "invalidTitle": "Vérifiez votre recherche",
+    "invalidDescription": "Saisissez jusqu’à 200 caractères et choisissez les filtres proposés."
   }
 }

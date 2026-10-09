@@ -1190,3 +1190,58 @@ screen-reader certification is not asserted. The ten unaffected enhanced visual
 states precede the final fallback-only corner correction; the affected native
 Arabic state was reviewed again after it. Remote CI/push remain held for the
 earlier pending documentary-photo inputs.
+
+## Public website search — 2026-10-09
+
+Public search is now connected to PostgreSQL full-text/trigram ranking for
+FR/EN/AR pages, rendered section anchors, approved CMS content and registered
+documents/media. The animated native header disclosure keeps the latest
+navigation/focus behavior and adds cancellable public suggestions. Results use
+safe excerpts/highlights, content-type facets, date ordering and URL pagination.
+`AGENTS.md`, `instruction.md` and `CONTRIBUTING.md` require search references for
+future public additions; [the search guide](search.md) defines their metadata,
+publication lifecycle and working destinations.
+
+Formatting, lint, strict types, 44 unit tests, 12 database integration tests and
+the final production standalone build passed. The reviewed migrations and
+integration suite also passed against a newly created disposable database before
+the final runtime storage changes. Integration coverage includes actual uploaded
+PDF text extraction, normalized/typo queries, private and missing-locale
+exclusion, immediate stale/withdrawn/deleted suppression, and duplicate-slug
+withdrawal/restoration. Fixtures and the disposable database were removed.
+
+The combined Chromium run passed 92 of 93 browser cases. Its remaining file
+destination test revealed that the standalone server and CLI worker used
+different upload directories. After sharing the absolute `CMS_UPLOAD_DIRECTORY`,
+the rebuilt production server passed that focused case: published article and
+section destinations render, approved file bytes return 200 with `no-store`,
+missing-locale/private files are denied, withdrawal hides results immediately,
+and CMS file URLs are rejected by the Next image optimizer. Restricting that
+optimizer to static hero paths prevents its independent cache from bypassing
+withdrawal checks. All 44 unit and 12 integration tests passed again afterward.
+
+The other 92 cases cover the latest hero/header refinements and search hover,
+keyboard/touch, suggestion arrow navigation, Escape/focus ownership, native
+no-JavaScript GET, RTL, history/filters/pagination, semantic highlights,
+invalid-input/noindex responses and accessibility scans. Browser/visual checks
+use local Chromium and emulated touch; physical-device, Safari and screen-reader
+certification is not asserted.
+
+Six final screenshots were recaptured and visually inspected after integrating
+the native header disclosure. French 1440px uses a 352px combined field/icon and
+suggestion panel; Arabic 390px uses 216px without moving adjacent controls. At
+320px with 200% text, FR/AR fields fit the 240px container and document width
+remains 320px. Result rows, metadata and filters remain readable and contained.
+
+- [French results, desktop](screenshots/search-fr-1440.png)
+- [Arabic results, mobile](screenshots/search-ar-390.png)
+- [French header with suggestions](screenshots/header-search-fr-1440.png)
+- [Arabic header with suggestions](screenshots/header-search-ar-390.png)
+- [French enlarged narrow layout](screenshots/search-fr-320-200.png)
+- [Arabic enlarged narrow layout](screenshots/search-ar-320-200.png)
+
+PDF extraction needs Poppler; scanned PDFs and audio/video/non-extractable
+documents need approved searchable text/transcripts. This increment does not
+provide OCR or speech recognition. Production storage, rate limiting and worker
+operations retain their release requirements. PR CI and merge outcomes are
+recorded by the current pull request; no website deployment is performed here.
