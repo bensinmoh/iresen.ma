@@ -183,10 +183,80 @@ Native Figma editable structure, mobile frames and serialized interaction record
 
 Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
+## Contact headquarters photo — 2026-10-09
+
+The owner supplied the photograph for the contact introduction, identifying it as
+the IRESEN headquarters. It replaces the earlier abstract Figma background.
+The visible entrance has the IRESEN name on a white wall, a wooden gate, trees
+and vegetation. Visual inspection does not independently establish its address,
+capture date or exact location.
+
+| Property            | Value                                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------------------------- |
+| Repository file     | `public/images/contact/contact-background-venue.jpg`                                                  |
+| Public asset URL    | `/images/contact/contact-background-venue.jpg`                                                        |
+| Source              | Owner-supplied photograph, introduced in repository commit `92f01c366993f676c25f51bb83122c19351f24e9` |
+| Format / dimensions | JPEG RGB; 5797 × 3865px                                                                               |
+| Original bytes      | 11,425,755 (approximately 10.90 MiB)                                                                  |
+| Original SHA-256    | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f`                                    |
+| Transformation      | Original bytes preserved; no image generation or retouching.                                          |
+
+Next Image preloads responsive optimized derivatives at quality 75, with `75vw`
+sizes from `70rem`, `100vw` from `40rem` and `225vw` below for the cover crop.
+The 11.4 MB original remains the optimizer
+input; delivered bytes require separate measurement. CSS applies the visible
+crop and readability overlay without changing
+the original file. The image remains decorative beside the contact text. The
+owner's identification and requested website use supply its source context;
+no independent redistribution license is inferred. Photo-specific delivered-byte
+and rendered evidence belongs in [validation](validation.md); earlier contact
+screenshots show the superseded curves.
+
+## Contact decorative background — 2026-10-09
+
+The owner-selected [contact frame `804:7374`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-7374)
+and attached screenshot supply the contact composition. Its abstract cyan/white
+background was extracted from the verified original native source, not cropped
+from a complete screenshot or regenerated.
+
+| Property                           | Value                                                                               |
+| ---------------------------------- | ----------------------------------------------------------------------------------- |
+| Former public file                 | `public/images/contact/contact-background-79bad501a298.png`                         |
+| Source layer                       | `804:7377`, within contact frame `804:7374`                                         |
+| Native archive entry               | `images/468725b03d7fd4a30a0fcdd12ad66b8643ecc765`                                   |
+| Native source SHA-256 / LFS object | `2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a`                  |
+| Format / dimensions                | PNG; 1672 × 941px                                                                   |
+| Bytes                              | 1,197,240                                                                           |
+| Original image SHA-1               | `468725b03d7fd4a30a0fcdd12ad66b8643ecc765`                                          |
+| Original/public file SHA-256       | `79bad501a298b27f203362cf2237e6e5f7d8f2a28c82c2f56d2fbcf9c8370152`                  |
+| Transformation                     | None; byte-identical original extracted without cropping, resampling or conversion. |
+
+The original was used as a decorative contact introduction background through
+Next Image with empty alternative text and responsive sizing. It is not a real
+IRESEN office photograph, a facility record or a published design screenshot.
+The owner's original request authorized that page use; no independent redistribution
+license or broader rights claim is inferred from the native source. The headquarters
+photo now supersedes it, and the served PNG is removed; its bytes and this
+provenance remain in Git history. Other photo-hero assets remain in
+[the generated inventory](hero-assets.json). See [contact scope](contact.md)
+and [current check evidence](validation.md).
+
+## Contact entrance photograph — 2026-10-09
+
+The photograph was first registered in `src/lib/search/catalog.ts` while Contact
+still used the abstract PNG. That earlier FR/EN/AR metadata described the visible
+entrance without inferring an address, supplying discovery for the file already
+served from `main`. The later photo replacement now uses this JPEG in the contact
+introduction and retires the PNG. Its consolidated current source, byte-preservation
+and rendering record appears [above](#contact-headquarters-photo--2026-10-09);
+the earlier registration evidence remains in [validation](validation.md#contact-form-eyebrow--2026-10-09).
+
 ## Contextual hero media — 2026-10-09
 
 The schema-3 [current inventory](hero-assets.json) supports per-asset provenance;
-all 17 active photo entries currently remain generated. Three new fictional
+its 17 photo entries remain generated. Contact subsequently replaces its photo
+hero with a dedicated introduction, now using the owner-supplied headquarters
+photo above. Three new fictional
 scenes replace the earlier careers, collaboration and wind-engineer images:
 `governance`, `careers-onboarding` and `partnership-handshake`. They are not actual
 IRESEN board members, employees or offices. Their native sources are 1536 × 1024,
@@ -198,8 +268,9 @@ WebP remain. All backgrounds are full-scene, with four text-placement modes and
 readable overlays; the original homepage video remains a separate asset above
 its generated fallback. Per-asset hashes, dimensions and crops are authoritative.
 
-Requested real Green Energy Park and IRESEN office photographs are not imported.
-Candidate source downloads are blocked by the cloud network policy; see
+Requested external Green Energy Park and office-photo candidates remain pending
+source-download access; the owner-supplied contact headquarters photo is separate.
+Candidate source downloads were blocked by the cloud network policy; see
 [documentary media readiness](contextual-hero-media.md#documentary-photos-pending).
 No real facility or office location is inferred from the generated backgrounds.
 Current delivery/render checks belong in [validation](validation.md); earlier
@@ -213,7 +284,9 @@ decorative illustrations, not records of real IRESEN facilities, people or work.
 Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
 their existing definitions at that revision. The replacement introduced no external image host,
 video playback or new client runtime at that revision. The later homepage video
-uses these generated photos as its fallback while the other 21 heroes stay photographic.
+uses these generated photos as its fallback; contact's later decorative split
+introduction supersedes its photo hero. With the dedicated search page also in
+place, 19 other pages retain photo heroes alongside the homepage video.
 
 Sixteen generated source images are native 1536 × 1024px; the aerial solar scene
 is 1672 × 941px. These are not 4K sources or a blanket resolution increase over

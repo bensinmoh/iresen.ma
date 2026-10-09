@@ -34,6 +34,10 @@ const assetLabels = {
     favicon: 'Icône IRESEN',
     solar: 'Illustration générée de panneaux solaires photovoltaïques dans un cadre fictif.',
     infrastructure: 'Illustration générée d’une infrastructure solaire dans un site fictif.',
+    wind: 'Illustration générée d’une éolienne blanche dans un paysage rocheux fictif.',
+    contactHeadquartersTitle: 'Photographie du siège IRESEN à Rabat',
+    contactHeadquartersDescription:
+      'Photographie de l’entrée du siège IRESEN à Rabat, avec un mur blanc portant l’identité IRESEN, un portail en bois et un jardin arboré.',
   },
   en: {
     image: 'Page introduction image',
@@ -44,6 +48,10 @@ const assetLabels = {
     favicon: 'IRESEN icon',
     solar: 'Generated illustration of solar photovoltaic panels in a fictional setting.',
     infrastructure: 'Generated illustration of solar infrastructure at a fictional site.',
+    wind: 'Generated illustration of a white wind turbine in a fictional rocky landscape.',
+    contactHeadquartersTitle: 'Photograph of IRESEN headquarters in Rabat',
+    contactHeadquartersDescription:
+      'Photograph of the entrance to IRESEN headquarters in Rabat, with a white wall bearing the IRESEN identity, a wooden gate and a garden with trees.',
   },
   ar: {
     image: 'صورة تقديمية',
@@ -54,6 +62,10 @@ const assetLabels = {
     favicon: 'أيقونة IRESEN',
     solar: 'صورة توضيحية مولّدة لألواح الطاقة الشمسية الكهروضوئية في موقع خيالي.',
     infrastructure: 'صورة توضيحية مولّدة لبنية تحتية للطاقة الشمسية في موقع خيالي.',
+    wind: 'صورة توضيحية مولّدة لتوربين رياح أبيض في منظر صخري خيالي.',
+    contactHeadquartersTitle: 'صورة مقر IRESEN في الرباط',
+    contactHeadquartersDescription:
+      'صورة مدخل مقر IRESEN في الرباط، مع جدار أبيض يحمل هوية IRESEN وبوابة خشبية وحديقة تضم أشجارًا.',
   },
 }
 
@@ -74,7 +86,11 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   })),
   ...Object.entries(heroImages).map(([id, image]) => {
-    const relatedPages = pageIds.filter((pageId) => heroes[pageId].photo === id)
+    // Contact has a dedicated headquarters photograph; its former illustration is
+    // still served, but must not be described as the current contact page image.
+    const relatedPages = pageIds.filter(
+      (pageId) => pageId !== 'contact' && heroes[pageId].photo === id,
+    )
     return {
       id: `hero-${id}`,
       url: image.src,
@@ -83,10 +99,14 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         contentLocales.map((locale) => [
           locale,
           {
-            title: `${assetLabels[locale].image} — ${relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ')}`,
+            title:
+              id === 'wind-detail'
+                ? assetLabels[locale].wind
+                : `${assetLabels[locale].image} — ${relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ')}`,
             description: [
               ...(id.startsWith('solar-') ? [assetLabels[locale].solar] : []),
               ...(id === 'solar-field' ? [assetLabels[locale].infrastructure] : []),
+              ...(id === 'wind-detail' ? [assetLabels[locale].wind] : []),
               ...relatedPages.map((pageId) => messages[locale].Hero.descriptions[pageId]),
             ].join(' '),
           },
@@ -94,6 +114,20 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ) as PublicAssetReference['text'],
     }
   }),
+  {
+    id: 'contact-venue',
+    url: '/images/contact/contact-background-venue.jpg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: assetLabels[locale].contactHeadquartersTitle,
+          description: assetLabels[locale].contactHeadquartersDescription,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
   {
     id: 'home-video',
     url: '/videos/hero.mp4',
@@ -132,6 +166,119 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
   })),
 ]
 
+/** The contact template replaces its earlier, no-longer-rendered editorial scaffolds. */
+function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
+  const catalog = messages[locale]
+  const copy = catalog.Contact
+  const heroTitle = `${copy.hero.title} ${copy.hero.accent}`
+  const headquarters = [
+    copy.headquarters.eyebrow,
+    copy.headquarters.title,
+    copy.headquarters.addressLabel,
+    catalog.Footer.address,
+    copy.headquarters.phoneLabel,
+    footerContact.phone,
+    copy.headquarters.emailLabel,
+    footerContact.email,
+  ]
+  const departmentText = Object.values(copy.departments).flatMap((value) =>
+    typeof value === 'string' ? [value] : [value.title, value.description],
+  )
+  const platformText = Object.values(copy.platforms).flatMap((value) =>
+    typeof value === 'string' ? [value] : [value.title, value.description],
+  )
+  const fallback = `${copy.form.fallback} ${footerContact.email}`
+  const sections = [
+    {
+      anchor: 'route-request',
+      title: copy.departments.label,
+      body: [
+        heroTitle,
+        copy.hero.description,
+        copy.hero.action,
+        ...headquarters,
+        ...departmentText,
+      ],
+    },
+    {
+      anchor: 'page-sections',
+      title: copy.platforms.title,
+      body: platformText,
+    },
+    {
+      anchor: 'send-request',
+      title: copy.form.title,
+      body: [
+        copy.form.eyebrow,
+        copy.form.description,
+        copy.form.requiredHint,
+        copy.form.fullName.label,
+        copy.form.organisation.label,
+        copy.form.email.label,
+        copy.form.phone.label,
+        copy.form.subject.label,
+        copy.form.message.label,
+        ...Object.values(copy.form.topics),
+        copy.form.action,
+        copy.form.disclosure,
+        copy.form.privacyLink,
+        fallback,
+      ],
+    },
+    {
+      anchor: 'information-use',
+      title: copy.form.privacyLink,
+      body: [copy.form.disclosure],
+    },
+    {
+      anchor: 'locations',
+      title: copy.location.title,
+      body: [
+        copy.location.eyebrow,
+        catalog.Footer.address,
+        copy.location.mapTitle,
+        copy.location.externalLink,
+      ],
+    },
+    {
+      anchor: 'practical-questions',
+      title: copy.faq.title,
+      body: [
+        copy.faq.eyebrow,
+        copy.faq.description,
+        ...Object.values(copy.faq.questions).flatMap(({ question, answer, action }) => [
+          question,
+          answer,
+          action,
+        ]),
+      ],
+    },
+    {
+      anchor: 'request-follow-up',
+      title: fallback,
+      body: [fallback],
+    },
+  ]
+  return [
+    {
+      id: `page:contact:${locale}`,
+      locale,
+      title: heroTitle,
+      body: [catalog.Pages.contact, copy.hero.description, ...headquarters].join(' '),
+      url: pageHref('contact', locale),
+      type: 'page',
+    },
+    ...sections.map(({ anchor, title, body }) => ({
+      id: `section:contact:${anchor}:${locale}`,
+      locale,
+      title,
+      body: body.join(' '),
+      url: pageHref('contact', locale, anchor),
+      type: 'section' as const,
+    })),
+  ]
+}
+
 export function staticSearchDocuments(): PublicSearchDocument[] {
   const documents: PublicSearchDocument[] = []
   for (const locale of contentLocales) {
@@ -139,6 +286,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
     for (const pageId of pageIds) {
       // Internal query/results pages must not recursively appear in their own results.
       if (pageId === 'search') continue
+      if (pageId === 'contact') {
+        documents.push(...contactSearchDocuments(locale))
+        continue
+      }
       const body = [catalog.Hero.descriptions[pageId], catalog.Hero.stages[heroes[pageId].stage]]
       if (pageId === 'home')
         body.push(
@@ -159,9 +310,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ]),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
-      if (pageId === 'contact')
-        body.push(catalog.Footer.address, footerContact.email, footerContact.phone)
-      if (pageId === 'cookies') body.push(catalog.States.noTracking)
+      if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
         id: `page:${pageId}:${locale}`,
         locale,

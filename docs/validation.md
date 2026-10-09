@@ -1145,6 +1145,42 @@ These quality-90 CSS-resolution crops were visually inspected:
 The increment is saved locally with push still held for the earlier pending
 documentary-photo inputs.
 
+## Repeatable header search reveal — 2026-10-09
+
+The reported second-opening jump was reproduced in a native production-build
+search disclosure with application scripts blocked: its three openings yielded
+`running`, `finished`, `finished` animation states. Inspecting the hidden form's
+styles can flush the retained animation and mask this browser regression; the
+regression case leaves the closed subtree untouched between rendered frames.
+
+The search-scoped `::details-content` override and explicit hiding of closed
+non-summary children reset the CSS reveal. The same regression now yields
+`running` on all three openings. FR/EN/AR hover cases also confirm three fresh
+animation starts/ends, an intermediate field width, an empty query and unchanged
+outside keyboard focus.
+
+Passed locally against the corrected production build:
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+  `pnpm test:integration` (21 cases), `pnpm build` and formatting/whitespace checks.
+- `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e
+tests/e2e/header-search.spec.ts tests/e2e/navigation.spec.ts --workers=2`:
+  26 cases, including repeated reveals, Arabic RTL, keyboard/touch submission,
+  native no-JavaScript submission, reduced motion, focus restoration,
+  responsive containment and open-header axe checks.
+
+These local checks do not establish cross-browser or screen-reader conformance.
+Current PR CI and merge results remain recorded by GitHub.
+
+Rendered Chromium review covered institute in French at 1920px and Arabic at
+1440px, with three empty hover cycles, open/closed fields and live suggestions.
+The outside identity retains focus; a closed input cannot take focus and Tab
+reaches Contact. Escape removes suggestions. Arabic at 390px retains a contained
+full-width field and input focus inside the mobile menu; Escape restores the
+search trigger. French reduced motion at 1440px reveals the final measured width
+immediately (0.01ms duration). The captured states were inspected without a
+new layout or focus defect; the normal 220ms reveal remains on wider headers.
+
 ## Expandable header search — 2026-10-09
 
 The header magnifier now reveals a labelled search input with a localized
@@ -1383,3 +1419,370 @@ Two reviewed captures pause the entrance at 80ms:
 
 Coverage uses local Chromium; physical-device, Safari and screen-reader validation
 is not asserted. CI and merge results remain recorded by the corresponding pull request.
+
+## Contact reference page and location — 2026-10-09
+
+The owner selected the general composition of Figma contact frame `804:7374`
+and requested a full-width IRESEN location section. The dedicated contact page
+uses the exact original decorative image, current shared colors/fonts/header/footer,
+verified contact values and short platform descriptions. Sample inboxes, hours
+and a response deadline are not adopted. Source and implementation decisions
+are recorded in [the contact guide](contact.md).
+
+After integrating the current main branch's search and mobile refinements:
+
+- Formatting, lint, strict types, all 97 unit cases and the production build passed.
+- All 21 CMS/search integration cases passed against the local PostgreSQL database.
+- Repeated integration runs exposed a race between the parallel CMS suite's
+  automatic search worker and the search suite's manual job processing. The
+  integration command now disables automatic polling for both suites, matching
+  CI; manual indexing and permission checks still run. All 21 cases passed with
+  this isolation and the production server stopped.
+- All 127 Chromium browser cases passed, including 16 contact cases and three
+  contact-search cases. Standard hero coverage excludes the dedicated contact
+  and search pages, which retain their own behavior coverage.
+- Contact FR/EN/AR passed at 320, 390, 768, 1024 and 1440px, with 100% and 200%
+  text and expanded FAQs. Narrow grid/flex wrapping was corrected before the
+  final pass. The old supported anchors remain visible; map width equals the viewport.
+- Native FAQ keyboard interaction, visible focus, scoped axe scans, subject
+  routing, required/email/whitespace validation, multilingual email draft encoding,
+  edit invalidation, direct no-JavaScript links and absence of form POST/storage passed.
+- Map tests confirm no Google requests before activation, a titled iframe after
+  keyboard activation, focus transfer/restoration, removal and non-persisted state.
+  Those responses were intercepted locally; they do not verify Google's live map
+  or the exact pin behind the supplied shortlink.
+- Current contact topics, platform/FAQ/location anchors and the original background
+  media are discoverable in FR/EN/AR. Retired contact scaffold notes are excluded.
+  `pnpm search:rebuild` synchronized the static catalog with zero public CMS records.
+
+Reviewed production captures show the French desktop and narrow composition,
+English tablet layout and Arabic RTL. The image's non-empty original, source hash,
+callsite, right-aligned cover geometry and successful optimized delivery were checked;
+current shared logo assets remain proportional and loaded in the captures.
+
+- [French desktop](screenshots/contact-fr-1440.webp)
+- [French narrow layout](screenshots/contact-fr-320.webp)
+- [English tablet](screenshots/contact-en-768.webp)
+- [Arabic mobile](screenshots/contact-ar-390.webp)
+
+The form prepares a draft for the visitor's email application; delivery is not
+claimed or tested. The embed queries the established Rabat address and keeps the
+owner's exact directions link; its pin remains unverified. This evidence does not
+establish physical-device/Safari coverage, screen-reader certification, production
+publication or deployment. PR CI and merge results remain recorded in GitHub.
+
+## Tablet homepage layout — 2026-10-09
+
+The owner's tablet screenshot and follow-up request define this correction:
+the homepage ISO badge is omitted below `70rem`, retaining its compact desktop
+placement; all five figures stay in one row, scrolling horizontally when needed.
+The shared `.horizontal-scroll` utility hides the scroll track while retaining
+native scrolling and visible focus. Current design guidance records this as the
+general convention for horizontal navigation.
+
+Local lint, strict types, formatting, all 92 unit and 21 integration cases, and
+the production build passed. The selected hero/navigation suite passed all 27
+cases across its first run and targeted rerun. The first four-worker run alongside
+manual QA timed out in six cases; the final two-worker rerun passed all six.
+The expanded ten-width case has a 120-second budget and requests start alignment
+when inspecting individual figures, matching their scroll-snap alignment.
+Coverage spans FR/EN/AR at 320, 390, 640, 641, 768, 1024, 1119, 1120, 1280 and
+1440px, including native keyboard access, no-JavaScript behavior, viewport
+changes, enlarged text and existing navigation checks.
+
+Manual production Chromium QA passed 18 FR/EN/AR scenarios: ordinary layouts at
+768×1024, 1024×1366, 1440×900 and 390×844, plus 200% root text at 320 and 768px.
+All five facts remain reachable with the locale-appropriate arrow key, horizontal
+wheel and emulated touch gestures. The page has no horizontal overflow, labels
+wrap without truncation and focus remains visible. Tablet/mobile ISO is hidden;
+desktop retains the existing card aligned with the bottom of the actions.
+Settled-frame rechecks confirmed the English 768px and Arabic 320px enlarged-text
+measurements. Captures use the reduced-motion photo fallback, preserving the
+existing video policy.
+
+Reviewed screenshots retained for this correction:
+
+- [French tablet, 1024px](screenshots/tablet-correction-fr-1024-2026-10-09.png)
+- [Arabic tablet, 768px](screenshots/tablet-correction-ar-768-2026-10-09.png)
+- [French desktop, 1440px](screenshots/tablet-correction-fr-1440-2026-10-09.png)
+
+Physical-device, Safari and screen-reader validation is not asserted. Current
+PR CI and merge results remain recorded by the pull request and commit history.
+
+## Contact headquarters photograph — 2026-10-09
+
+The owner supplied the headquarters photograph in commit `92f01c3`. It replaces
+the contact introduction's cyan curves. The original JPEG bytes are preserved;
+responsive optimized copies use quality 75. A navy gradient follows the text
+block and fades into a reserved 10rem area, retaining readable white/cyan text
+while revealing the entrance below. The same physical crop applies in Arabic.
+The retired curve file is removed from public delivery and search.
+
+This photo verification predates integration of the later direct-map refinement.
+Its map cases exercised the previous on-demand presentation.
+
+Formatting, lint, strict types, all 97 unit cases, all 21 integration cases and
+the production build passed. All 19 existing contact/contact-search Chromium
+cases passed, retaining form, FAQ, map, no-JavaScript and localized media discovery
+coverage. The public index rebuild synchronized the static catalog and three
+eligible public CMS records.
+
+Manual production Chromium checks covered French at 320, 390, 1024, 1120 and
+1440px, English at 768px and Arabic at 390px, each at normal and 200% text.
+All 14 states had no horizontal overflow; the text remained inside the shaded
+area, including the 1120px split-layout boundary. The lower entrance remained
+visible in reviewed desktop, narrow, tablet and Arabic captures.
+
+At device pixel ratio 1, successful initial image responses were WebP copies
+between 94,062 and 178,082 bytes (750, 828 or 1080px wide), rather than a request
+for the 11,425,755-byte original JPEG. The retired curve URL returned 404.
+These are local delivery measurements, not production loading-time results.
+
+- [French desktop](screenshots/contact-photo-fr-1440.webp)
+- [French narrow layout](screenshots/contact-photo-fr-320.webp)
+- [French mobile](screenshots/contact-photo-fr-390.webp)
+- [English tablet](screenshots/contact-photo-en-768.webp)
+- [French tablet](screenshots/contact-photo-fr-1024.webp)
+- [French split-layout boundary](screenshots/contact-photo-fr-1120.webp)
+- [Arabic mobile](screenshots/contact-photo-ar-390.webp)
+
+Earlier contact captures document the initial curved background. Physical-device,
+Safari and screen-reader coverage and production deployment are not asserted.
+Current PR checks and merge results remain recorded in GitHub.
+
+## Footer address and privacy links — 2026-10-09
+
+Verified on the current synchronized contact/tablet baseline: formatting, lint,
+strict types, 97 unit tests, production build and all 9 focused footer browser
+tests passed. The cold webpack build retained the previously documented
+next-intl cache-dependency warning. Build/browser processes ran outside the
+restricted execution sandbox to permit Next subprocesses and local services;
+the sandboxed build had returned empty TypeScript `--showConfig` output.
+
+Production Chromium checks covered FR/EN/AR at 390, 768 and 1440px: the displayed
+localized address links to the owner-supplied Maps shortlink, uses the existing
+cyan underline, and has a visible keyboard focus indicator. Every locale has
+exactly one footer privacy link, in utilities, with none beneath newsletter
+consent. Layouts fit the viewport. French 1440px and Arabic 390px footer captures
+were visually inspected:
+
+- [French desktop, 1440px](screenshots/footer-links-fr-1440.png)
+- [Arabic mobile, 390px](screenshots/footer-links-ar-390.png)
+
+Additional FR/EN/AR checks at 320px passed with 200% root text and without
+JavaScript. Native address clicks navigated to the exact supplied Maps shortlink,
+intercepted locally during testing. This verifies link activation and destination,
+not Google's shortlink resolution or map pin. The focused suite also checks
+newsletter disclosure, consent, language/utility navigation, Arabic order and
+mobile/tablet/desktop containment. No database schema or server-side behavior
+changed in the footer correction. Other browsers and manual screen-reader
+verification remain outside this pass.
+
+The synchronized base includes the contact venue photograph and its inherited
+`contact-venue` search reference. Both supplied image bytes and the rendered
+abstract contact background are preserved. The catalog covers both images with
+explicit FR/EN/AR scene descriptions and original URLs. Source provenance is
+recorded in [the asset inventory](asset-inventory.md); current PR CI and merge
+results remain recorded in GitHub.
+
+After synchronization, lint, strict types, 97 unit tests and the production
+build passed again. The local search index rebuild and all 21 CMS/search
+integration tests passed. API checks found the photo under its exact localized
+title in FR/EN/AR, with the stable original JPEG destination, which returned HTTP
+200 and `image/jpeg` from the local production server. All 3 existing contact
+search browser cases passed, preserving section discovery/navigation and the
+abstract background's search reference in each locale.
+
+## Contact form eyebrow — 2026-10-09
+
+The owner's screenshot correction centers the form's leaf/label group above its
+title and adds the original blue Apex Leaf. The local rule removes the inherited
+paragraph-width limit; the decorative vector retains its original geometry and
+logical inline-start position in Arabic.
+
+Validation completed on the production build with a disposable local PostgreSQL
+database and Chromium:
+
+- Frozen-lockfile installation, lint, strict types, 97 unit tests and production
+  build passed. The initial sandboxed build could not capture a TypeScript
+  subprocess's configuration output; the normal build passed outside that sandbox.
+- All 19 existing Contact/search browser checks passed, covering FR/EN/AR layout,
+  keyboard FAQs, email draft validation, optional map loading, no-JavaScript
+  fallbacks and searchable section destinations.
+- A focused rendered inspection measured 30 combinations: FR/EN/AR at
+  320/390/768/1024/1440px, each at 100% and 200% root text size. The complete
+  leaf/label group's horizontal center differs from the title center by less
+  than 0.01px. The original 177.3:287 ratio, decorative semantics, logical leaf
+  placement and page containment passed throughout.
+- Inspected the [French desktop](screenshots/contact-eyebrow-fr-1440-2026-10-09.png),
+  [English tablet](screenshots/contact-eyebrow-en-768-2026-10-09.png) and
+  [Arabic mobile](screenshots/contact-eyebrow-ar-390-2026-10-09.png) captures.
+- Rebuilt the local public search catalog. Existing `send-request` metadata
+  already includes the localized eyebrow; the original Apex media entry and
+  reachable section anchors remain.
+- The Apex Leaf SHA-256 remains
+  `7c51a47ea0775bd26602ce2a61c8b7dbaf8cfa5597c59189b1b85932a56c0f86`.
+
+Database integration suites and unrelated browser routes were not repeated for
+this scoped presentation correction. Current PR CI runs the complete suite.
+Safari, physical-device and manual screen-reader coverage remain unverified.
+No production deployment or visibility change was performed.
+
+The first current-head PR CI run exposed a separately added `main` asset,
+`/images/contact/contact-background-venue.jpg`, without a public search reference.
+The local unit suite reproduced that failure after synchronizing `main`. Its
+explicit media entry now describes the visible entrance in FR/EN/AR, without
+inferring an address or changing the Contact composition. The source bytes
+remain unchanged; [asset provenance](asset-inventory.md) records the addition.
+After registering that asset and extending the existing catalog expectation,
+lint, strict types, all 97 unit tests, formatting and the production build passed
+again. The three Contact search browser checks passed on the rebuilt application.
+FR/EN/AR media queries for the visible wooden gate find its localized result,
+and the canonical image destination returns HTTP 200 in each case.
+
+## Direct contact map — 2026-10-09
+
+The owner's follow-up replaces the click-to-reveal presentation with a directly
+rendered Google Maps iframe. `ContactLocation` is now a server component with
+explicit locale translations, native `loading="lazy"`, a descriptive frame title
+and `no-referrer`. The directions shortlink and headquarters address are retained.
+The load/hide controls, their client state, placeholder and lower explanatory
+strip are removed, including bottom section padding. The cookies-page service
+notice and location search metadata describe the current external-map behavior.
+
+The existing public search reference for
+`/images/contact/contact-background-venue.jpg` is preserved from the current
+main branch, including its FR/EN/AR descriptions of the visible building
+entrance, white IRESEN wall, trees and garden. The file and the current decorative
+contact introduction remain unchanged; no exact location or new rights claim is
+inferred from the photograph.
+
+Executed local checks:
+
+- Frozen dependency installation, disposable local PostgreSQL setup and reviewed
+  migrations; public search rebuild synchronized the current static catalog.
+- `pnpm lint`, `pnpm typecheck`, `pnpm format:check`, all 97 unit cases and all
+  21 CMS/search integration cases passed.
+- The final `pnpm build` completed successfully.
+- Production Chromium ran `contact.spec.ts`, `contact-search.spec.ts` and
+  `foundation.spec.ts`: all 30 cases passed. Contact layout checks cover FR/EN/AR
+  at 320, 390, 768, 1024 and 1440px with 100% and 200% text. The map spans the
+  viewport, loads without interaction and reloads without stored state. Its
+  section ends at the iframe's bottom, and directions retain keyboard access.
+- No-JavaScript checks confirm the iframe, translated title, email/directions
+  links and native FAQ disclosures in all three locales. Search checks confirm
+  discoverable contact text and working section destinations.
+
+Manual production Chromium screenshots were captured and inspected for the map
+section in French at 1440px and 390px, English at 768px and Arabic at 390px.
+Each view has one directly rendered, correctly titled lazy iframe, no reveal
+control or lower explanatory strip, and no horizontal page overflow. The map
+spans the viewport and meets the footer with a measured 0px gap in all four
+views. The directions action wraps naturally on mobile and English tablet;
+Arabic retains its RTL heading, address and action layout. A local intercepted
+HTML response stands in for Google in these captures. No live map imagery is
+presented as verified.
+
+The cookies-page notice was also rendered and visually inspected without
+JavaScript in French, English and Arabic at 390px. Each notice matches its
+locale catalog, wraps within the viewport and identifies the map's automatic
+loading and browsing-data transmission. Captures remain temporary review
+artifacts rather than committed website media.
+
+Google responses are intercepted locally in map-focused browser checks to avoid
+external-service dependence. They verify the rendered frame and automatic request,
+not Google's live tiles, gesture behavior or exact pin. The supplied shortlink's
+pin, physical-device/Safari behavior and production privacy assessment retain
+[their documented scope](contact.md#location-and-third-party-behavior). Remote CI
+and merge results are recorded by the corresponding pull request and commit history.
+
+## Combined contact photo, eyebrow and direct map — 2026-10-09
+
+After integrating main's eyebrow and direct-map refinements, full formatting,
+lint, strict types, all 97 unit cases, all 21 integration cases and the production
+build passed. All 19 contact/contact-search Chromium cases passed on this combined
+revision, including the directly rendered lazy map, keyboard directions, native
+no-JavaScript behavior, FR/EN/AR layouts and localized photo discovery.
+The latest search rebuild synchronized the static catalog with zero public CMS
+records after integration-test cleanup; the earlier photo rebuild's three records
+remain its historical result. The sections above retain their separate
+revision-specific measurements and captures. Current PR CI and merge results
+remain recorded in GitHub.
+
+These combined-state checks and PR36 CI's 127 browser cases cover `90e661c`,
+before integrating main's footer-link and field-focus changes at `6f2e246`.
+After that integration, full formatting, lint, strict types, all 97 unit cases,
+all 21 integration cases, the production build and all 28 selected contact,
+contact-search and footer Chromium cases passed. CI for the updated PR head
+remains recorded by [PR36](https://github.com/bensinmoh/iresen.ma/pull/36).
+
+## Refined field focus — 2026-10-09
+
+The owner's Organisation and Arabic search screenshots identified the thick
+blue focus frame. Editable inputs, selects and textareas now use a 2px real
+outline at their edge (`outline-offset: -1px`). Header search paints one outline
+on its field surface, keeping the white field's blue indicator independent of
+inverse-header focus colors. Footer email retains cyan. Buttons, links and
+checkboxes retain their existing focus indicators.
+
+Local checks passed: `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+`pnpm build` and `pnpm format:check`. The build retained its existing next-intl
+dynamic-import cache warnings and completed successfully. The existing contact,
+header-search and footer Playwright suites passed all 35 cases against the local
+production build, including native validation/email drafting, search submission,
+Escape restoration, newsletter availability and no-JavaScript access.
+
+A separate rendered Chromium inspection covered FR/EN/AR contact and homepage
+header search at 1440, 768 and 390px. It checked pointer and keyboard focus,
+organisation/email/select/textarea, newsletter email, result-page query and sort,
+blue search on white inside inverse headers, mobile menus and Arabic RTL.
+Contact-field size and position did not change on focus; search stayed inside
+the viewport, and Escape restored the magnifier's separate 3px indicator.
+Newsletter checkboxes also retained their 3px focus indicator.
+
+At 390px with 200% root text, French/Arabic fields reflowed without horizontal
+page overflow, retained their 2px outline, and focused contact/newsletter axe
+scans returned no violations. Emulated forced colors retained a visible real
+outline on the contact field and a system `Highlight` search outline. CSS state
+measurements were made after animation frames settled. Blue contrasts 5.45:1
+against white and 4.78:1 against the pale form surface; cyan/navy is 6.45:1.
+These scoped checks do not establish complete WCAG conformance or coverage of
+other browser engines.
+
+Reviewed crops from this production build:
+
+- [French Organisation field at 1440px](screenshots/input-focus-contact-fr-1440.png)
+- [Arabic header search at 1440px](screenshots/input-focus-search-ar-1440.png)
+- [Arabic mobile-menu search at 390px](screenshots/input-focus-search-ar-390.png)
+
+The latest Contact changes were integrated before completion, preserving the
+centered Apex Leaf eyebrow, directly displayed map and canonical `contact-venue`
+search reference from main. The shared field rule and research references are
+recorded in
+[the design specification](design-system.md#refined-field-focus--2026-10-09).
+
+## Contact location before FAQ — 2026-10-09
+
+The owner's requested swap places the existing location/map immediately after
+the form and before the FAQ. DOM order changes with the visual order in FR/EN/AR;
+the existing anchors and localized search destinations remain valid. The public
+search projection already lists location before practical questions.
+
+Full formatting, lint, strict types, all 97 unit cases, the production build and
+all 19 contact/contact-search Chromium cases passed. Manual production review
+covered French at 1440px, English at 768px and Arabic at 390px, each at normal
+and 200% text. All six states retained form → location → FAQ order, separate
+section bounds, a full-width map and no horizontal overflow. Native FAQ keyboard
+opening, answer-link focus and closing passed; its return link still targets
+the form.
+
+Reviewed captures show the reserved iframe area. Google requests were replaced
+with a local test response during layout checks. The captures verify section
+spacing and order, not live map tiles or the exact pin.
+
+- [French desktop](screenshots/contact-order-fr-1440.png)
+- [English tablet](screenshots/contact-order-en-768.png)
+- [Arabic mobile](screenshots/contact-order-ar-390.png)
+
+Current PR CI and merge results remain recorded in GitHub. Physical-device,
+Safari and screen-reader coverage is not asserted.

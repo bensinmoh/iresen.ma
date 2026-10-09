@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './tokens.css';
+@import './contact.css';
 @import './search.css';
 @import './published-content.css';
 @import './home-navigation.css';
@@ -69,6 +70,26 @@ button {
   outline-offset: 4px;
 }
 
+:is(
+  input:not(
+    [type='checkbox'],
+    [type='radio'],
+    [type='range'],
+    [type='color'],
+    [type='file'],
+    [type='hidden'],
+    [type='button'],
+    [type='submit'],
+    [type='reset'],
+    [type='image']
+  ),
+  select,
+  textarea
+):focus-visible {
+  outline-width: var(--focus-field-width);
+  outline-offset: -1px;
+}
+
 summary {
   cursor: pointer;
   list-style: none;
@@ -114,6 +135,17 @@ ul {
   inline-size: min(100% - var(--gutter) * 2, var(--container-width));
   max-inline-size: var(--container-width);
   margin-inline: auto;
+}
+
+/* Native horizontal navigation stays available without a visible scroll track. */
+.horizontal-scroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .skip-link {
@@ -210,6 +242,15 @@ body:has(.page-hero) .site-header-overlay {
 
 .header-search-disclosure[open] {
   z-index: 2;
+}
+
+/* Reset the reveal instead of retaining its finished state in a skipped subtree. */
+.header-search-disclosure::details-content {
+  content-visibility: visible;
+}
+
+.header-search-disclosure:not([open]) > :not(summary) {
+  display: none;
 }
 
 .header-search {
@@ -333,8 +374,18 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
 }
 
 .header-search-form input:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: -4px;
+  outline: none;
+}
+
+.header-search-form:has(input:focus-visible) {
+  outline: var(--focus-field-width) solid var(--color-focus);
+  outline-offset: -1px;
+}
+
+@media (forced-colors: active) {
+  .header-search-form:has(input:focus-visible) {
+    outline-color: Highlight;
+  }
 }
 
 @keyframes header-search-reveal {
@@ -1214,10 +1265,16 @@ html[dir='rtl'] .navigation-icon-arrow {
 
 .hero-figures {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(min(100%, 12rem), 1fr);
   align-items: start;
   gap: var(--space-8);
   margin-block: 0;
+  scroll-snap-type: inline proximity;
+}
+
+.hero-figures:focus-visible {
+  outline-offset: -4px;
 }
 
 .hero-figures .key-figure-label {
@@ -1231,6 +1288,7 @@ html[dir='rtl'] .navigation-icon-arrow {
   min-inline-size: 0;
   align-items: center;
   text-align: center;
+  scroll-snap-align: start;
 }
 
 .key-figure {
@@ -1268,6 +1326,10 @@ html[lang='ar'] .key-figure-label {
 }
 
 @media (max-width: 69.999rem) {
+  .hero-certification {
+    display: none;
+  }
+
   .hero-figures {
     gap: var(--space-6);
   }
@@ -1549,24 +1611,10 @@ html[lang='ar'] .hero-certification-label {
   }
 
   .hero-figures {
-    grid-template-columns: none;
-    grid-auto-flow: column;
     grid-auto-columns: min(100%, max(14rem, min(80%, 18rem)));
     inline-size: 100%;
     padding: var(--space-1) var(--gutter);
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline proximity;
     scroll-padding-inline: var(--gutter);
-    scrollbar-color: var(--color-white) transparent;
-  }
-
-  .hero-figures:focus-visible {
-    outline-offset: -4px;
-  }
-
-  .hero-figures .key-figure {
-    scroll-snap-align: start;
   }
 
   .hero-figures .key-figure-value,
@@ -2029,17 +2077,6 @@ a.footer-contact-value {
   color: var(--color-footer-muted);
   font-size: var(--font-size-meta);
   line-height: 1.6;
-}
-
-.footer-newsletter-privacy {
-  margin-block: var(--space-3) 0;
-  color: var(--color-footer-muted);
-  font-size: var(--font-size-meta);
-  line-height: 1.6;
-}
-
-.footer-newsletter-privacy a {
-  text-decoration: underline;
 }
 
 .footer-arrow {

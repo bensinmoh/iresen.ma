@@ -15,6 +15,7 @@ const nextConfig = {
     localPatterns: [
       { pathname: '/images/heroes/**', search: '' },
       { pathname: '/images/missions/**', search: '' },
+      { pathname: '/images/contact/contact-background-venue.jpg', search: '' },
     ],
   },
   async headers() {

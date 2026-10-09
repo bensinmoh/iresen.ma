@@ -27,8 +27,8 @@ marketing page.
 - The responsive header follows the owner's reattached navigation screenshots
   with desktop mega-menus, a compact grouped menu, search/contact controls and
   equivalent-page language access. It preserves the approved hierarchy. New localized descriptions are wayfinding
-  drafts. Page introductions now place this header over their imagery with a dark
-  transparent gradient; white panels retain the existing open-menu behavior.
+  drafts. Photo/video page introductions place this header over their imagery with a dark
+  transparent gradient; contact uses the normal white header. White panels retain the existing open-menu behavior.
   [Navigation documentation](docs/navigation.md) records sources and verification.
   The substantial trilingual navy footer follows the analyzed native Figma reference
   and owner-reattached Footer.png, retaining the requested newsletter CTA.
@@ -45,9 +45,11 @@ marketing page.
   Sample screenshot wording and colors are not new approvals. See
   [the adaptation](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
   and [its validation record](docs/validation.md#mobile-reference-adaptation--2026-10-09).
-- The 21 non-search pages have introductory heroes with four text-placement
-  modes: 20 use generated photos, while the homepage uses the owner's video with
-  its generated photo as fallback. Short FR/EN/AR wayfinding drafts and the
+- The 20 pages other than contact/search have introductory heroes with four
+  text-placement modes: 19 use generated photos, while the homepage uses the
+  owner's video with its generated photo as fallback. Contact now uses the separate
+  composition described below; search uses a compact functional results view.
+  Short FR/EN/AR wayfinding drafts and the
   Développer · Éprouver · Valoriser reading framework remain.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
   projects supported, +60 patents filed, +1000 young researchers supported, +1100
@@ -67,12 +69,13 @@ marketing page.
   start-aligned copy; utility editorial pages retain their reading measure over a
   lighter neutral dark overlay. Three generated contextual images now illustrate
   governance, career onboarding and collaboration; all 17 active photo assets
-  remain fictional. Real Green Energy Park and IRESEN office photos are pending
-  source-download access and have not been imported. See
+  remain fictional. External Green Energy Park and office-photo candidates remain
+  pending source-download access; the owner's separate headquarters photograph
+  now appears in the contact introduction. See
   [current media and readiness](docs/contextual-hero-media.md) and
   [the asset manifest](docs/hero-assets.json); earlier replacement checks retain
   their revision-specific scope.
-- The 21 non-search canonical pages have section placeholders below their introducing
+- The 20 canonical pages other than contact/search retain section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests
   capacities and 2035 ambition under Mission; the sitemap retains its working
@@ -91,14 +94,17 @@ marketing page.
   conformance. See [current hero behavior](docs/heroes.md#homepage-hero-video--2026-10-09)
   and [source metadata and rights limits](docs/asset-inventory.md#hero-video).
 - The 2026-10-09 mobile hierarchy at `40rem` and below hides the homepage's
-  secondary ISO badge and redundant scroll cue, uses a 32px lower reserve at
-  default text size, stacks its two existing navigation links at full width and
-  keeps all five facts in a labelled native horizontal scroll row. Wider layouts
-  and other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
+  redundant scroll cue, uses a 32px lower reserve at default text size, stacks
+  its two existing navigation links at full width and
+  retains all five facts. The later tablet refinement hides the secondary ISO
+  badge below `70rem` and keeps the facts in one labelled native horizontal
+  scroll row at every width. Horizontal navigation scrollbars are hidden by the
+  owner's general preference, with keyboard/touch scrolling and visible focus
+  retained. Other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
   preserves essential routes, forms, feedback and facts while limiting competing
   roles. Future mission cards await approved content and follow the mobile
-  guidance. Section placeholders remain the
-  delivered body content.
+  guidance. The other content pages retain section placeholders; contact has
+  its own populated draft composition and search uses its functional results view.
 - Search now covers public pages/sections, published CMS pages/articles and
   registered or uploaded public documents/media in the active locale. Ranked
   results, normalized matching, live suggestions, URL filters/date sorting and
@@ -108,15 +114,38 @@ marketing page.
   The multilingual concept vocabulary includes platforms/infrastructure and
   PV/solar photovoltaics, without claiming general model-based semantic search.
   New public resources must supply search references and real discovery vocabulary
-  in the same change. Contact retains its truthful
-  unavailable state. The newsletter
+  in the same change. Server-side contact acceptance/delivery remains
+  unavailable. The newsletter
   keeps local editable email/consent controls; Subscribe opens a native disclosure
-  with the localized unavailable message, hidden initially. The privacy link stays
-  accessible. No subscription is submitted or stored, and no success is reported;
-  signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).
+  with the localized unavailable message, hidden initially. The address links to
+  Google Maps; privacy remains in utility/legal links, with the duplicate below
+  newsletter consent removed. No subscription is submitted or stored, and no
+  success is reported; signup still has no provider or endpoint. See
+  [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09).
+- The 2026-10-09 contact page follows the owner's selected Figma contact frame
+  and attached screenshot: white shared header, split introduction/headquarters,
+  four platform entries, pale form band, full-width location/map, native FAQ and
+  shared navy footer. The owner's headquarters photo
+  now replaces the original cyan curves; original bytes remain intact, with
+  responsive optimized delivery and a CSS crop/readability overlay.
+  Existing footer address, phone
+  and email are reused; no sample opening hours, response deadline or departmental
+  mailboxes are adopted. Subject links prepare the relevant form topic, and
+  platform/FAQ links use canonical pages. Complete FR/EN/AR copy is draft copy.
+  The form prepares an email locally and lets the visitor review/send it through
+  their own email application. It does not submit or store data, and direct
+  email/telephone/directions links remain available without JavaScript.
+  The owner's explicit 2026-10-09 refinement replaces the earlier on-demand map
+  with a directly rendered server iframe using native lazy loading. It requires
+  no reveal click or client state; the lower explanatory strip is removed and
+  the separate directions link remains. Its address-query pin is not verified
+  against the unresolved owner-supplied shortlink. Third-party
+  data flows and applicable consent remain a release review. See
+  [contact sources, anchors and service limits](docs/contact.md).
 
-The owner's 2026-10-09 instruction authorizes pushing this snapshot with the real
-documentary photos still pending; those inputs no longer hold its delivery.
+The owner's earlier 2026-10-09 instruction authorized pushing the snapshot while
+documentary photos remained pending; a headquarters photo was subsequently supplied
+for contact. Remaining external-photo candidates do not hold delivery.
 
 See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
 for previous checks; neither proves a later change was tested.
