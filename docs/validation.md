@@ -1487,7 +1487,10 @@ localized address links to the owner-supplied Maps shortlink, uses the existing
 cyan underline, and has a visible keyboard focus indicator. Every locale has
 exactly one footer privacy link, in utilities, with none beneath newsletter
 consent. Layouts fit the viewport. French 1440px and Arabic 390px footer captures
-were visually inspected.
+were visually inspected:
+
+- [French desktop, 1440px](screenshots/footer-links-fr-1440.png)
+- [Arabic mobile, 390px](screenshots/footer-links-ar-390.png)
 
 Additional FR/EN/AR checks at 320px passed with 200% root text and without
 JavaScript. Native address clicks navigated to the exact supplied Maps shortlink,
