@@ -54,7 +54,7 @@ layout within their page.
 
 | Canonical page ID | Source                                 | Ordered headings below the hero                                                                                                                                                                           |
 | ----------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `home`            | P01                                    | Développer, éprouver, valoriser → IRESEN en chiffres → Priorités de recherche → Résultats et réalisations → Plateformes et expertise → Collaborer avec IRESEN → Actualités et rendez-vous                 |
+| `home`            | P01                                    | Mission (Développer · Éprouver · Valoriser) → Priorités de recherche → Résultats et réalisations → Plateformes et expertise → Collaborer avec IRESEN → Actualités et rendez-vous                          |
 | `institute`       | P02                                    | Qui sommes-nous ? → Mission et positionnement (Les capacités mobilisées; L’ambition à l’horizon 2035) → Chiffres clés → Pour approfondir                                                                  |
 | `governance`      | P03                                    | Instances et responsabilités → Conseil et représentants → Direction et organisation → Les responsabilités des directions → Articulation scientifique et plateformes → Documents et contact institutionnel |
 | `priorities`      | P04                                    | Besoins et défis à traiter → Domaines et orientations → Feuilles de route technologiques → Des priorités aux projets → Connaissances pour éclairer les choix → Ressources et collaboration                |
@@ -99,8 +99,10 @@ Apply [the mobile information hierarchy](mobile-information-hierarchy.md) when
 composing those future modules: foreground essential orientation/task content,
 then supporting details, and omit only optional decoration or redundant proof.
 Use role/count ceilings with natural flow, preserving required facts, routes,
-forms and feedback. Future mission cards await approved content and follow this
-mobile guidance. Other page scaffolds retain their current brief content.
+forms and feedback. The commissioned [homepage mission cards](home-sections.md)
+now replace the `develop-test-transfer` placeholder and expose three nested mission
+anchors. The `figures` anchor belongs to the existing hero band, so its duplicate
+placeholder is omitted. Other page scaffolds retain their current brief content.
 
 Executed application and rendered checks are recorded in
 [the validation log](validation.md). The source-table extraction checks content

@@ -1786,3 +1786,53 @@ spacing and order, not live map tiles or the exact pin.
 
 Current PR CI and merge results remain recorded in GitHub. Physical-device,
 Safari and screen-reader coverage is not asserted.
+
+## Homepage missions and section navigation — 2026-10-09
+
+The live Figma homepage submenu and mission frame were inspected through native
+screenshots and design context. The delivered composition uses the current brand,
+three-stage mission framework and canonical routes, with three newly generated
+fictional technology scenes. Source/output hashes and prompts are recorded in
+[the asset manifest](mission-assets.json); the original WebPs total 523,694 bytes.
+
+Formatting, lint, strict types, all 97 unit cases, all 21 disposable-database
+integration cases and the production build passed after integrating current main.
+The initial full Chromium suite passed 145 of 146 cases; the remaining assertion
+expected a zero transition duration, while the shared reduced-motion rule uses a
+tiny duration with transitions disabled. The assertion now checks the disabled
+transition property. After correcting that assertion and the first anchor's
+clearance, all 44 affected homepage, hero, rendered-font and foundation browser
+cases passed. All 15 focused homepage cases then passed on the final build after
+the no-JavaScript current-marker correction. Current PR CI records the final
+complete-suite result.
+
+The browser coverage verifies FR/EN/AR navigation placement and homepage-only scope,
+the 1023/1024px boundary, pinned native anchors, direct card hashes, active section
+tracking without moving focus or changing the URL, 200% text wrapping, reduced
+motion and native no-JavaScript operation. All three cards retain images and
+canonical destinations at 320, 390 and 1023px. Homepage axe scans reported no
+violations in all three locales; browser font inspection confirmed Jakarta Latin
+and Alexandria Arabic glyphs in the new menu and mission headings.
+
+Rendered review covered French/Arabic at 1440 and 390px, English at 1024px and
+Arabic at 768px. All cases fit the viewport and decoded all three photos. Tablet
+image/body rows, full mobile stacks, RTL arrows and physical diagonal corners
+were reviewed. The final desktop spacing uses the page's native anchor clearance
+followed by the section's own padding, avoiding duplicate generic shell spacing.
+
+Localized search discovery passed for French `batteries`, English `smart grids`
+and Arabic `الهيدروجين`; each found the relevant new mission media. The static
+catalog rebuild completed with zero public CMS records after fixture cleanup.
+Public CMS eligibility and withdrawal gates remain unchanged.
+
+Reviewed captures:
+
+- [French desktop](screenshots/home-missions-fr-1440.webp)
+- [Arabic desktop](screenshots/home-missions-ar-1440.webp)
+- [French mobile](screenshots/home-missions-fr-390.webp)
+- [Arabic mobile](screenshots/home-missions-ar-390.webp)
+- [Arabic tablet](screenshots/home-missions-ar-768.webp)
+
+The copy remains drafted wayfinding and the generated scenes do not identify
+actual IRESEN people or facilities. No deployment was performed. This Chromium
+pass does not establish complete WCAG conformance, screen-reader or Safari coverage.

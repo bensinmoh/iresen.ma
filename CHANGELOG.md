@@ -4,6 +4,20 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Homepage missions and section navigation
+
+- Added a homepage-only sticky submenu after the figures, with native section
+  anchors, an active underline, keyboard focus and reduced-motion behavior.
+  It hides below 64rem; enlarged labels use measured anchor clearance.
+- Replaced the first homepage scaffold with the three Développer · Éprouver ·
+  Valoriser cards, using responsive/RTL composition and canonical destinations.
+- Generated three energy images covering storage, bioenergy, CSP, hydrogen,
+  wind and smart grids; added optimized assets, provenance and localized search
+  references. The real figures retain their stable anchor without a duplicate block.
+
+See [the implementation and source decisions](docs/home-sections.md) and
+[executed verification](docs/validation.md).
+
 ## 2026-10-09 — Contact location before FAQ
 
 - Moved the location/map section before the FAQ. The contact flow now reads
