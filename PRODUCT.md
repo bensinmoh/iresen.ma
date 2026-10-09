@@ -37,7 +37,7 @@ marketing page.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
 - All 22 approved pages have lightweight introductory heroes with five composition
-  styles, 17 illustrative backgrounds from the supplied Figma source, short FR/EN/AR
+  styles, 17 owner-requested generated illustrative photo placeholders, short FR/EN/AR
   wayfinding drafts and the Développer · Éprouver · Valoriser reading framework.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
   projects supported, +60 patents filed, +1000 young researchers supported, +1100
@@ -49,6 +49,13 @@ marketing page.
   of numeric claims. The header-to-band landing
   measures the current viewport and grows for content when necessary. See
   [hero documentation](docs/heroes.md).
+- The generated photos replace the former Figma-source backgrounds with generic
+  research, renewable-energy and collaboration scenes. They do not document real
+  IRESEN facilities, people or events. Landscape and portrait crops support wide
+  and mobile views while preserving the existing copy, claims, routes, fonts and
+  five layouts. [The asset manifest](docs/hero-assets.json) records provenance,
+  native dimensions and served derivatives; final checks for this replacement
+  belong in [revision-specific validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
 - All 22 canonical pages now have section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests

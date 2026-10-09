@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { heroes } from '@/lib/heroes'
@@ -6,6 +5,7 @@ import { homeFigures } from '@/lib/figures'
 import { pageHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { HeroViewport } from './HeroViewport'
+import { HeroPhoto } from './HeroPhoto'
 
 export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Hero' })
@@ -21,15 +21,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
     <HeroViewport className={`page-hero hero--${definition.layout}`}>
       <div className="hero-scene">
         <div className="hero-media" aria-hidden="true">
-          <Image
-            src={`/images/heroes/${definition.photo}.webp`}
-            alt=""
-            fill
-            sizes={definition.layout === 'split' ? '(min-width: 70rem) 60vw, 100vw' : '100vw'}
-            loading="eager"
-            fetchPriority="high"
-            className="hero-photo"
-          />
+          <HeroPhoto photo={definition.photo} split={definition.layout === 'split'} />
         </div>
         <div className="hero-shade" />
         <div className={`container hero-body${pageId === 'home' ? ' hero-body--certified' : ''}`}>

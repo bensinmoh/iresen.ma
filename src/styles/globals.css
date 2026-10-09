@@ -810,6 +810,12 @@ html[dir='rtl'] .navigation-icon-arrow {
   overflow: hidden;
 }
 
+.hero-media > picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .hero-photo {
   object-fit: cover;
   object-position: center;

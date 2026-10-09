@@ -1,9 +1,11 @@
 # Introductory page heroes
 
-Implemented on 2026-10-08 from the owner's hero screenshot (inspiration), the
+Initially implemented on 2026-10-08 from the owner's hero screenshot (inspiration), the
 recorded native Figma design language and the approved information architecture.
 The owner's clarification keeps the heroes introductory: detailed content belongs
 in the sections below. No complete homepage or editorial listing is implied.
+The generated backgrounds below replace the initial Figma-derived imagery on
+2026-10-09 while retaining that framework.
 
 ## Composition and content
 
@@ -28,19 +30,43 @@ content and truthful unavailable states remain below the hero.
 The 2026-10-09 [coherence review](site-coherence-review.md) retains these page
 introductions and adopts shared action styling and selective Apex Leaf placement.
 
-Seventeen individual images from the owner-supplied native Figma source illustrate
-research, renewable energy, collaboration and knowledge sharing. They are
-decorative backgrounds with empty alternatives; neither the text nor the images
-identify pictured people or facilities as IRESEN assets. Derivatives are WebP,
-never upscaled, and served through responsive Next Image with eager/high-priority
-loading. Only the current page's background is requested. No video autoplay or
-external image host is involved.
+The owner explicitly requested 17 generated photographic placeholders to replace
+all hero backgrounds across the 22 pages. These illustrate research, renewable
+energy, collaboration and knowledge sharing through fictional, generic scenes.
+They remain decorative with empty alternatives and make no claim to depict real
+IRESEN people, facilities or events. Copy, claims, routes, figures, layouts,
+original SVGs and installed fonts are unchanged.
 
-[hero-assets.json](hero-assets.json) records archive entries, source/output hashes,
-dimensions, transformations and byte counts. The source remains unchanged;
-derivatives total 1,878,042 bytes. Individual licenses, credits and subjects remain
-unverified and need review or approved replacements before production publication.
-No deployment or publication was performed by this change.
+## Generated hero placeholders — 2026-10-09
+
+The native generated sources are HD: 16 are 1536 × 1024, and the aerial image is
+1672 × 941. They are not native 4K, and the replacement does not increase the
+resolution of every earlier asset. Original PNGs are preserved in the generation
+workspace outside Git and `public/`; served WebP derivatives use quality 90
+without upscaling. Content-hashed filenames distinguish
+this set from the superseded media and prevent stale image URLs.
+
+Portrait mobile derivatives retain the full native height in a 2:3 crop. At
+`40rem` and below, a native `picture` source serves that preoptimized WebP directly,
+bypassing the Next image optimizer. The wider Next Image fallback uses quality 90
+and sizes based on viewport width, aspect ratio × viewport height and a 75rem
+growth guard. Only the current hero loads eagerly with high fetch priority.
+Images remain same-origin, with no video or additional client runtime.
+
+The schema-2 [hero-assets.json](hero-assets.json) records 16 full generation prompts
+and an abbreviated aerial recipe, native dimensions, source/output SHA-256 hashes,
+derivative bytes and mobile crops. The 17 landscape files total 4,429,414 bytes;
+the 17 mobile crops total 2,001,688 bytes. The largest mobile crop is 216,272 bytes,
+within the approximately 250KB per-hero budget. Actual delivery and rendered
+checks belong in
+[this revision's validation](validation.md#generated-hero-placeholders--2026-10-09).
+Earlier checks and screenshots below describe their own media revision.
+
+The initial 2026-10-08 set contained 17 individual Figma rasters with WebP
+derivatives totaling 1,878,042 bytes. Its archive entries, hashes, transformations
+and individual rights/credit limits are preserved in the superseded
+[Figma asset manifest](hero-assets-figma-2026-10-08.json). Those source-review
+limits describe the earlier imagery rather than the generated replacement.
 
 ## Viewport and navigation
 
