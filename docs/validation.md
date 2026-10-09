@@ -2086,3 +2086,26 @@ No public content, resource, route or search projection was added; existing
 references and the search-page exclusion remain. Current PR CI runs the complete
 application suite before merging. No deployment was performed. Safari, physical
 devices and manual screen-reader coverage are not asserted.
+
+## Footer social-link corners — 2026-10-09
+
+The owner's screenshot identifies four-corner rounding on the LinkedIn hover
+surface. All three social icon actions now share the physical top-left/bottom-right
+action corners, with sharp opposite corners. Keyboard-visible focus shares the
+hover surface and retains its existing outline. Visual QA guidance now checks
+newly visible icon-link surfaces against the corner rule.
+
+Local formatting, lint, strict types and production build passed. All nine
+existing footer browser cases passed in local Chrome on that build, including
+FR/EN/AR destinations, responsive containment, Arabic reading order, 200% newsletter
+text, language switching and no-JavaScript use. Rendered inspection of every
+social link at 390px and 1440px in all three locales confirmed the hover/focus
+surface, physical `10px 0 10px 0` corners, visible keyboard outline and page
+containment. Reviewed details:
+
+- [French social hover](screenshots/footer-social-corners-fr.png)
+- [Arabic social hover](screenshots/footer-social-corners-ar.png)
+
+No content, destination, asset or search projection was added. Full unit,
+integration and browser coverage runs in current PR CI before merge. This local
+review does not assert Safari, physical-device or manual screen-reader coverage.

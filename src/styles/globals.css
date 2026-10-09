@@ -2062,10 +2062,11 @@ a.footer-contact-value {
   justify-content: center;
   inline-size: 2.75rem;
   block-size: 2.75rem;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-action);
 }
 
-.footer-social a:hover {
+.footer-social a:hover,
+.footer-social a:focus-visible {
   background: var(--color-footer-control);
   text-decoration: none;
 }
