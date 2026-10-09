@@ -36,7 +36,7 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- All 22 approved pages have lightweight introductory heroes with five composition
+- Approved pages other than search have lightweight introductory heroes with five composition
   styles, 17 owner-requested generated illustrative photo placeholders, short FR/EN/AR
   wayfinding drafts and the Développer · Éprouver · Valoriser reading framework.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
@@ -56,19 +56,41 @@ marketing page.
   five layouts. [The asset manifest](docs/hero-assets.json) records provenance,
   native dimensions and served derivatives; final checks for this replacement
   belong in [revision-specific validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
-- All 22 canonical pages now have section placeholders below their introducing
+- Canonical pages other than search retain section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests
   capacities and 2035 ambition under Mission; the sitemap retains its working
   directory of all 22 pages. See [the section guide](docs/page-sections.md).
-  These placeholders do not populate institutional content or CMS collections;
-  the full institutional homepage is still unfinished. Page/news/media collections start empty. Empty and error states exist. Public
+  Search now uses its actual form and results instead of its hero/section scaffold.
+  The placeholders do not populate institutional content or CMS collections.
+- Published CMS page content now renders below the heroes alongside the section
+  scaffolds, including on the homepage. The news route's all-news section shows
+  its latest 12 eligible articles and can open an
+  older selected article through `?article=id#news-id`, so search results lead to
+  readable content. Rich text uses safe external links and access-checked internal
+  destinations; embedded media/relationships are omitted from depth-zero reads.
+  The full institutional homepage is still unfinished. Page/news/media collections
+  start empty; no institutional records or new claims are seeded. Empty and error
+  states remain where approved content is absent. Public
   pages render their content without a locale-wide streamed loading boundary,
   so footer destinations remain readable when JavaScript is disabled.
 - An owner-supplied video is stored for future hero use; the current pages do not
   render it. See [the asset inventory](docs/asset-inventory.md#hero-video) for source
   metadata, rights limits and the future derivative/poster requirements.
-- Search and contact currently have truthful unavailable states. The newsletter
+- Site search is implemented: the header control expands physically left on
+  mouse hover, focus or tap, and submits keywords to the localized results route.
+  That route opens directly on a form and ranked links with excerpts, result counts,
+  pagination and empty/error feedback. `q` and `page` support shareable URLs and
+  browser history; language switching retains `q` and starts at page 1.
+  The live server adapter searches 16 principal routes and complete, public,
+  published CMS page/news translations without fallback. Localized section headings
+  help discover page topics; placeholder descriptions never enter search.
+  It excludes search/footer
+  utilities, drafts, private records and future news. French accent/common Arabic
+  normalization and conservative word variants support discovery; native full-text
+  indexing, stemming and typo tolerance remain future work. Search stays `noindex`
+  and outside the XML sitemap. See [search scope and limits](docs/search.md).
+- Contact retains its truthful unavailable state. The newsletter
   keeps local editable email/consent controls; Subscribe opens a native disclosure
   with the localized unavailable message, hidden initially. The privacy link stays
   accessible. No subscription is submitted or stored, and no success is reported;

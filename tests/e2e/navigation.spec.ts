@@ -138,11 +138,15 @@ for (const locale of locales) {
         navigation.locator(`a.navigation-trigger[href="${pageHref(id, locale)}"]`),
       ).toBeVisible()
     }
-    for (const id of ['search', 'contact'] as const) {
-      await expect(
-        header.locator('.header-tools').locator(`a[href="${pageHref(id, locale)}"]`),
-      ).toBeVisible()
-    }
+    await expect(header.locator('.header-search')).toHaveAttribute('role', 'search')
+    await expect(header.locator('.header-search')).toHaveAttribute(
+      'action',
+      pageHref('search', locale),
+    )
+    await expect(header.locator('.header-search-toggle')).toBeVisible()
+    await expect(
+      header.locator('.header-tools').locator(`a[href="${pageHref('contact', locale)}"]`),
+    ).toBeVisible()
 
     for (const [index, definition] of navigationGroups.entries()) {
       const group = navigation.locator('.desktop-navigation-group').nth(index)

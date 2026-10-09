@@ -71,7 +71,6 @@
   },
   "States": {
     "empty": "No published content yet.",
-    "searchUnavailable": "Search is currently unavailable.",
     "contactUnavailable": "The contact form is not available yet.",
     "noTracking": "No optional tracking cookies are enabled.",
     "loading": "Loading the page…",
@@ -80,7 +79,9 @@
     "errorTitle": "The page could not be loaded",
     "errorDescription": "Please try again in a moment.",
     "retry": "Try again",
-    "backHome": "Return to home"
+    "backHome": "Return to home",
+    "contentUnavailable": "Published content is temporarily unavailable. Please try again in a moment.",
+    "articleUnavailable": "This article is not available in this language or is no longer published."
   },
   "Header": {
     "contact": "Contact us",
@@ -684,6 +685,34 @@
         "title": "Search and useful information",
         "description": "Content to add: search and the five utility pages in the current language."
       }
+    }
+  },
+  "Search": {
+    "headerLabel": "Quick site search",
+    "resultsLabel": "Search the website",
+    "inputLabel": "Keywords",
+    "placeholder": "What are you looking for?",
+    "submit": "Search",
+    "description": "Find pages, research and news across the IRESEN website.",
+    "hint": "Enter keywords, a title or an acronym.",
+    "clear": "Clear search",
+    "startTitle": "Where would you like to go?",
+    "startDescription": "Search with a few keywords, or explore these sections.",
+    "invalidQuery": "Enter between {min} and {max} characters using words or numbers.",
+    "unavailable": "Search is temporarily unavailable. Please try again or use the sitemap.",
+    "contentUnavailable": "Some content could not be searched right now. These results include the website’s pages. Please try again in a moment.",
+    "resultsFor": "Results for",
+    "resultCount": "{count, plural, =0 {No results} one {# result} other {# results}}",
+    "noResultsTitle": "No results found",
+    "noResultsDescription": "Check the spelling or try fewer, broader keywords. You can also browse the sitemap or contact us.",
+    "pagination": "Search results pages",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {total}",
+    "browseHelp": "Need another way to find something?",
+    "types": {
+      "page": "Page",
+      "news": "News"
     }
   }
 }

@@ -4,6 +4,28 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Functional multilingual site search
+
+- Added the owner's animated header field: physical-left expansion over 220ms,
+  stable right edge, mouse/focus/tap access, dismissal and reduced-motion behavior.
+- Replaced only the search route's hero and section scaffold with a visible native GET form and ranked
+  result links, excerpts, counts, pagination and localized recovery states.
+  URL queries survive language switching; search stays `noindex` outside the XML sitemap.
+- Added a replaceable live PostgreSQL/Payload adapter for 16 principal routes and
+  eligible published page/news translations, with access enforcement, no fallback,
+  French accent/common Arabic normalization and weighted title/exact/prefix ranking.
+- Made published CMS home/page bodies readable alongside the existing section
+  scaffolds, with safe rich-text links and depth-zero reads. Selected news appears
+  within the all-news section, including older articles beyond the latest-12
+  listing. Collections remain empty until editors add approved content.
+- Documented the live scan's scale and matching limits; no dependencies, schemas,
+  stored search index or seeded institutional records were added.
+
+See [behavior, sources and limits](docs/search.md),
+[ADR 0005](docs/adr/0005-live-published-content-search.md) and
+[validation](docs/validation.md) for actual checks and coverage. Earlier search
+unavailable states and all-page hero captures remain historical.
+
 ## 2026-10-09 — Section placeholders on all pages
 
 - Added section headings and short FR/EN/AR draft content notes below the

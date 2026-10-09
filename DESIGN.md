@@ -67,10 +67,13 @@ a desktop arrangement on mobile.
 
 The 2026-10-09 section placeholders use the existing aligned grid, flat section
 boundaries, light dividers and bounded text measure. H2s identify sections and
-nested Mission/search topics use H3s; short localized draft notes describe
+nested Mission topics use H3s; short localized draft notes describe
 the content to prepare. Keep the existing heroes as introductions and the Apex
 Leaf selective on Institute's Mission H2. These placeholders establish content
 order, with final module composition still to follow the approved material.
+Published CMS page/home bodies render alongside that scaffold; published news
+renders within the all-news section. Search instead uses its actual form and
+result states without a hero or placeholder briefs.
 Sitemap group H3s retain bold weight and can break long words within narrow
 columns. Compact header actions can shrink and wrap with enlarged text.
 See [section implementation](docs/page-sections.md) and
@@ -144,6 +147,25 @@ review records them. Illustrative state frames do not supply a production
 component API. Reuse card/row families, one primary action per context and
 accessible native controls; circular radios and pill switches remain appropriate
 exceptions to the diagonal-corner language.
+
+## Search interaction and results — 2026-10-09
+
+The owner's requested header animation expands the white, navy-icon search
+control physically to the left over 220ms, keeping its right edge stable in
+French, English and Arabic. Focus and tap reveal the same labelled input;
+Escape, outside interaction and leaving an unfocused control dismiss it.
+Reduced motion removes the expansion transition. Shared action corners,
+palette, spacing and Jakarta/Alexandria fonts continue to apply.
+
+Search is a task surface: its route starts with an in-flow header, breadcrumb,
+heading and visible keyword form, followed by a count and readable result rows.
+It replaces that route's introductory photo hero and section scaffold so visitors can inspect and
+refine results immediately. Each result presents its title link, content type,
+date when relevant, excerpt and localized route. Suggestions, clear search and
+sitemap/contact links support recovery. Existing page heroes elsewhere retain
+their role. See [shared search rules](docs/design-system.md#search-interaction-and-results--2026-10-09),
+[search behavior and sources](docs/search.md) and [validation](docs/validation.md)
+for revision-specific checks; historical hero/header captures retain their scope.
 
 ## Site coherence review — 2026-10-09
 

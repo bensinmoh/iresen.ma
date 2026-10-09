@@ -30,10 +30,43 @@ explain intent and history; they do not supersede these decisions.
   families. Keep one primary action per context, links for navigation and buttons
   for actions. Illustrated states do not supply production semantics; include
   visible focus, readable errors and genuine unavailable/loading/success behavior.
+  Search results open directly on their form and result rows, with an in-flow
+  header rather than a decorative introduction; use the search rules below.
 - **Content and verification:** preserve canonical page IDs and reviewed assets;
   adapt sample copy to approved content. Verify affected desktop/mobile, Arabic,
   long-content and interaction states after visual changes. Record source
   observations separately from proposals and implemented decisions.
+
+## Search interaction and results — 2026-10-09
+
+The header search keeps the shared white surface, gray outline, navy magnifier
+and physical `--radius-action` corners. Its collapsed slot stays fixed while the
+form expands physically to the left over 220ms with its right edge anchored.
+This direction applies in Arabic too; do not mirror the owner's requested motion.
+The expanded width is responsive, and the input uses `dir="auto"` for mixed-script
+queries. Current header control dimensions remain shared with adjacent actions.
+
+Mouse hover, focus and tap reveal the labelled field and localized placeholder.
+Keep keyboard focus inside an open control when the pointer leaves. Escape
+returns focus to the magnifier and closes; outside pointer interaction or focus
+leaving the form closes. Respect reduced motion by removing transitions.
+The magnifier is a native submit button with an accessible name; the form uses
+a named search landmark. The result-page form has its own distinct landmark name.
+
+The search route replaces its hero and section scaffold with an in-flow header,
+breadcrumb, heading and visible form on
+the shared container. Results follow immediately as a count and ordered rows,
+with type/date metadata, title links, readable excerpts and localized paths.
+Use existing type, spacing, action, focus and border tokens; no new palette or
+font. Jakarta serves Latin and Alexandria Arabic, with natural Arabic tracking.
+Allow input/actions and pagination to reflow under narrow widths or enlarged text.
+Clear, empty/invalid/unavailable feedback and sitemap/contact links preserve
+useful recovery paths. The result query uses directional isolation.
+
+The remaining pages retain their introductory heroes. See [search behavior and
+sources](search.md), [navigation](navigation.md#animated-header-search--2026-10-09)
+and [validation](validation.md) for actual revision checks; historical hero/header
+captures retain their scope.
 
 ## Native Figma reference and evidence
 
@@ -124,14 +157,17 @@ menus, footer and sitemap retain their existing treatment.
 
 ### Section placeholders — 2026-10-09
 
-All 22 canonical pages share `PageSections` and the typed ID/order map in
+Canonical pages other than search share `PageSections` and the typed ID/order map in
 `src/lib/page-sections.ts`. Introducing heroes retain each page's H1; subsequent
 sections use labelled H2s with short localized draft content notes, and nested
-Mission/search topics use H3s. Placeholders reuse the aligned container, shared
+Mission topics use H3s. Placeholders reuse the aligned container, shared
 type roles, responsive block spacing, flat boundaries and light dividers, without
 inventing completed content modules. Institute's Mission alone retains the
 selective decorative Apex Leaf. The sitemap's real directory remains inside its
 first section; service notices retain their truthful availability state.
+Published page/home bodies render alongside the scaffold, and published news
+renders within the all-news section. Search uses its actual form/result states,
+retaining the canonical supported fragments without placeholder descriptions.
 See [the section guide](page-sections.md) and [validation evidence](validation.md).
 
 ### Shared actions — 2026-10-09

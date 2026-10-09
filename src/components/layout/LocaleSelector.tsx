@@ -11,7 +11,11 @@ const languageLabels = { fr: 'FR', en: 'EN', ar: 'ع' } as const
 
 function subscribeToHash(callback: () => void) {
   window.addEventListener('hashchange', callback)
-  return () => window.removeEventListener('hashchange', callback)
+  window.addEventListener('popstate', callback)
+  return () => {
+    window.removeEventListener('hashchange', callback)
+    window.removeEventListener('popstate', callback)
+  }
 }
 
 export function LocaleSelector({
@@ -31,6 +35,13 @@ export function LocaleSelector({
     () => window.location.hash,
     () => '',
   )
+  const queryString = useSyncExternalStore(
+    subscribeToHash,
+    () => window.location.search,
+    () => '',
+  )
+  const query = new URLSearchParams(queryString).get('q')
+  const searchQuery = pageId === 'search' && query ? `?${new URLSearchParams({ q: query })}` : ''
   const anchor = pageId && isSupportedAnchor(pageId, hash) ? hash : undefined
   const dropdownRef = useRef<HTMLDetailsElement>(null)
   const triggerRef = useRef<HTMLElement>(null)
@@ -56,7 +67,11 @@ export function LocaleSelector({
   const links = locales.map((targetLocale) => (
     <a
       key={targetLocale}
-      href={pageId ? pageHref(pageId, targetLocale, anchor) : `/${targetLocale}`}
+      href={
+        pageId
+          ? `${pageHref(pageId, targetLocale)}${searchQuery}${anchor ?? ''}`
+          : `/${targetLocale}`
+      }
       hrefLang={targetLocale}
       lang={targetLocale}
       dir={targetLocale === 'ar' ? 'rtl' : 'ltr'}

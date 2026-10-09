@@ -581,7 +581,6 @@
   },
   "States": {
     "empty": "Aucun contenu publié pour le moment.",
-    "searchUnavailable": "La recherche est actuellement indisponible.",
     "contactUnavailable": "Le formulaire de contact n’est pas encore disponible.",
     "noTracking": "Aucun cookie de suivi optionnel n’est activé.",
     "loading": "Chargement de la page…",
@@ -590,7 +589,9 @@
     "errorTitle": "La page n’a pas pu être chargée",
     "errorDescription": "Veuillez réessayer dans un instant.",
     "retry": "Réessayer",
-    "backHome": "Retour à l’accueil"
+    "backHome": "Retour à l’accueil",
+    "contentUnavailable": "Le contenu publié est temporairement indisponible. Réessayez dans un instant.",
+    "articleUnavailable": "Cet article n’est pas disponible dans cette langue ou n’est plus publié."
   },
   "Header": {
     "contact": "Contactez-nous",
@@ -684,6 +685,34 @@
       "youngResearchers": "Jeunes chercheurs soutenus",
       "publications": "Publications scientifiques",
       "universityLaboratories": "Laboratoires universitaires mis en place"
+    }
+  },
+  "Search": {
+    "headerLabel": "Recherche rapide",
+    "resultsLabel": "Rechercher sur le site",
+    "inputLabel": "Mots-clés",
+    "placeholder": "Que recherchez-vous ?",
+    "submit": "Rechercher",
+    "description": "Retrouvez les pages, la recherche et les actualités du site IRESEN.",
+    "hint": "Saisissez des mots-clés, un titre ou un acronyme.",
+    "clear": "Effacer la recherche",
+    "startTitle": "Que souhaitez-vous découvrir ?",
+    "startDescription": "Saisissez quelques mots-clés ou explorez ces rubriques.",
+    "invalidQuery": "Saisissez entre {min} et {max} caractères avec des lettres ou des chiffres.",
+    "unavailable": "La recherche est temporairement indisponible. Réessayez ou consultez le plan du site.",
+    "contentUnavailable": "Certains contenus n’ont pas pu être recherchés. Ces résultats incluent les pages du site. Réessayez dans un instant.",
+    "resultsFor": "Résultats pour",
+    "resultCount": "{count, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
+    "noResultsTitle": "Aucun résultat trouvé",
+    "noResultsDescription": "Vérifiez l’orthographe ou essayez des mots-clés plus courts ou plus généraux. Vous pouvez aussi consulter le plan du site ou nous contacter.",
+    "pagination": "Pages des résultats de recherche",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {page} sur {total}",
+    "browseHelp": "Besoin d’une autre façon de trouver une information ?",
+    "types": {
+      "page": "Page",
+      "news": "Actualité"
     }
   }
 }

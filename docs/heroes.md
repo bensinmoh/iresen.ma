@@ -9,7 +9,7 @@ The generated backgrounds below replace the initial Figma-derived imagery on
 
 ## Composition and content
 
-All 22 approved pages use the shared server-rendered `PageHero`, with composition
+The approved pages other than search use the shared server-rendered `PageHero`, with composition
 selected by stable page ID in `src/lib/heroes.ts`. Start, end, center, split and
 quiet editorial layouts vary by topic. Each introduction contains one title, a
 short descriptive sentence, an anchor to its content sections and one related
@@ -27,11 +27,19 @@ is a wayfinding draft, subject to editorial and translation review before
 production publication. Existing empty sections, institute anchors, sitemap
 content and truthful unavailable states remain below the hero.
 
+The 2026-10-09 search feature replaces only the search route's hero and scaffold with its
+visible keyword form, result count and links. Its header stays in normal flow;
+the route retains its canonical page ID. All other hero compositions remain.
+Published CMS page/home bodies now render below the introductions alongside the
+section scaffolds; selected news articles render within the all-news section.
+Eligible content appears with empty/unavailable states
+for missing content. Collections start empty. See [search behavior](search.md).
+
 The 2026-10-09 [coherence review](site-coherence-review.md) retains these page
 introductions and adopts shared action styling and selective Apex Leaf placement.
 
 The owner explicitly requested 17 generated photographic placeholders to replace
-all hero backgrounds across the 22 pages. These illustrate research, renewable
+all hero backgrounds across the then-22 hero pages. These illustrate research, renewable
 energy, collaboration and knowledge sharing through fictional, generic scenes.
 They remain decorative with empty alternatives and make no claim to depict real
 IRESEN people, facilities or events. Copy, claims, routes, figures, layouts,

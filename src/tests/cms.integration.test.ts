@@ -3,6 +3,10 @@ import { spawnSync } from 'node:child_process'
 
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 
+import { findPublishedNewsArticle } from '@/lib/content/queries'
+import { searchAdapter } from '@/lib/search/adapter'
+import { pageHref } from '@/lib/site'
+
 // Opt in against a disposable database after running the checked-in migrations.
 // These tests never bootstrap or operate on the owner's real administrator.
 const integration = process.env.CMS_INTEGRATION === '1' ? describe : describe.skip
@@ -13,6 +17,7 @@ integration('CMS authorization and localized publication (PostgreSQL)', () => {
   let editor: import('../payload-types').User
   let publisher: import('../payload-types').User
   const pageIDs: (number | string)[] = []
+  const newsIDs: (number | string)[] = []
   const mediaIDs: (number | string)[] = []
   const userIDs: (number | string)[] = []
   const suffix = randomUUID()
@@ -111,6 +116,7 @@ integration('CMS authorization and localized publication (PostgreSQL)', () => {
     if (!payload || !administrator) return
     for (const id of mediaIDs)
       await payload.delete({ collection: 'media', id, overrideAccess: true })
+    for (const id of newsIDs) await payload.delete({ collection: 'news', id, overrideAccess: true })
     for (const id of pageIDs)
       await payload.delete({ collection: 'pages', id, overrideAccess: true })
     for (const id of [...userIDs].reverse())
@@ -291,5 +297,192 @@ integration('CMS authorization and localized publication (PostgreSQL)', () => {
       where: { id: { equals: page.id } },
     })
     expect(live.docs[0]?.title).toBe('Approved French title')
+  })
+
+  it('searches approved canonical page text with no draft, private, note or locale disclosure', async () => {
+    const needle = `searchpage${suffix.replaceAll('-', '')}`
+    const privateNeedle = `privatenote${suffix.replaceAll('-', '')}`
+    const searchableBody = structuredClone(body)
+    searchableBody.root.children[0]!.children[0]!.text = `Texte intégral ${needle}`
+    const fixtures = [
+      {
+        pageId: 'platforms',
+        visibility: 'public',
+        publicationStatus: 'published',
+        published: true,
+      },
+      { pageId: 'projects', visibility: 'public', publicationStatus: 'draft', published: false },
+      {
+        pageId: 'programmes',
+        visibility: 'private',
+        publicationStatus: 'published',
+        published: true,
+      },
+      { pageId: 'search', visibility: 'public', publicationStatus: 'published', published: true },
+      {
+        pageId: `unknown-${suffix}`,
+        visibility: 'public',
+        publicationStatus: 'published',
+        published: true,
+      },
+    ] as const
+    let publishedId: number | undefined
+    for (const fixture of fixtures) {
+      const existing = await payload.count({
+        collection: 'pages',
+        overrideAccess: true,
+        where: { pageId: { equals: fixture.pageId } },
+      })
+      expect(existing.totalDocs, 'Canonical fixtures require an empty disposable database.').toBe(0)
+      const page = await payload.create({
+        collection: 'pages',
+        overrideAccess: false,
+        draft: !fixture.published,
+        user: { ...publisher, collection: 'users' },
+        locale: 'fr',
+        data: {
+          pageId: fixture.pageId,
+          title: 'Plateforme approuvée',
+          slug: `search-${suffix}`,
+          summary: 'Résumé public de la plateforme.',
+          body: searchableBody,
+          visibility: fixture.visibility,
+          publicationStatus: fixture.publicationStatus,
+          _status: fixture.published ? 'published' : 'draft',
+          internalNotes: privateNeedle,
+        },
+      })
+      pageIDs.push(page.id)
+      if (fixture.pageId === 'platforms') publishedId = page.id
+    }
+    const french = await searchAdapter.search({ query: needle, locale: 'fr' })
+    expect(french.status).toBe('available')
+    if (french.status !== 'available') return
+    expect(french.contentUnavailable).not.toBe(true)
+    expect(french.total).toBe(1)
+    expect(french.items[0]).toMatchObject({
+      pageId: 'platforms',
+      locale: 'fr',
+      url: pageHref('platforms', 'fr'),
+      title: 'Plateforme approuvée',
+    })
+    expect(french.items[0]?.excerpt).toContain(needle)
+    expect(french.items[0]).not.toHaveProperty('internalNotes')
+    const missingLocale = await searchAdapter.search({ query: needle, locale: 'ar' })
+    expect(missingLocale).toMatchObject({ status: 'available', total: 0 })
+    const privateNotes = await searchAdapter.search({ query: privateNeedle, locale: 'fr' })
+    expect(privateNotes).toMatchObject({ status: 'available', total: 0 })
+
+    // A live request must immediately reflect withdrawal without a stale search cache.
+    await payload.update({
+      collection: 'pages',
+      id: publishedId!,
+      overrideAccess: false,
+      user: { ...publisher, collection: 'users' },
+      locale: 'fr',
+      data: { visibility: 'private' },
+    })
+    expect(await searchAdapter.search({ query: needle, locale: 'fr' })).toMatchObject({
+      status: 'available',
+      total: 0,
+    })
+  })
+
+  it('returns reachable approved news bodies and excludes future, private, draft and missing locales', async () => {
+    const needle = `searchnews${suffix.replaceAll('-', '')}`
+    const privateNeedle = `newsnote${suffix.replaceAll('-', '')}`
+    const searchableBody = structuredClone(body)
+    searchableBody.root.children[0]!.children[0]!.text = `Texte intégral ${needle}`
+    const fixtures = [
+      {
+        visibility: 'public',
+        publicationStatus: 'published',
+        published: true,
+        publishedAt: '2000-01-01T00:00:00.000Z',
+      },
+      {
+        visibility: 'private',
+        publicationStatus: 'published',
+        published: true,
+        publishedAt: '2000-01-01T00:00:00.000Z',
+      },
+      {
+        visibility: 'public',
+        publicationStatus: 'draft',
+        published: false,
+        publishedAt: '2000-01-01T00:00:00.000Z',
+      },
+      {
+        visibility: 'public',
+        publicationStatus: 'published',
+        published: true,
+        publishedAt: '2099-01-01T00:00:00.000Z',
+      },
+    ] as const
+    const articles = []
+    for (const [index, fixture] of fixtures.entries()) {
+      const article = await payload.create({
+        collection: 'news',
+        overrideAccess: false,
+        draft: !fixture.published,
+        user: { ...publisher, collection: 'users' },
+        locale: 'fr',
+        data: {
+          title: 'Actualité approuvée',
+          type: 'news',
+          slug: `search-news-${index}-${suffix}`,
+          summary: 'Résumé public de cette actualité.',
+          body: searchableBody,
+          publishedAt: fixture.publishedAt,
+          visibility: fixture.visibility,
+          publicationStatus: fixture.publicationStatus,
+          _status: fixture.published ? 'published' : 'draft',
+          internalNotes: privateNeedle,
+        },
+      })
+      newsIDs.push(article.id)
+      articles.push(article)
+    }
+    const approved = articles[0]!
+    const french = await searchAdapter.search({ query: needle, locale: 'fr' })
+    expect(french.status).toBe('available')
+    if (french.status !== 'available') return
+    expect(french.contentUnavailable).not.toBe(true)
+    expect(french.total).toBe(1)
+    expect(french.items[0]).toMatchObject({
+      id: `news:${approved.id}`,
+      type: 'news',
+      locale: 'fr',
+      url: `${pageHref('news', 'fr')}?article=${approved.id}#news-${approved.id}`,
+    })
+    expect(french.items[0]?.excerpt).toContain(needle)
+    const destination = await findPublishedNewsArticle(String(approved.id), 'fr')
+    expect(destination?.body).toEqual(searchableBody)
+    expect(destination).not.toHaveProperty('internalNotes')
+    expect(await findPublishedNewsArticle(String(approved.id), 'ar')).toBeNull()
+    for (const article of articles.slice(1)) {
+      expect(await findPublishedNewsArticle(String(article.id), 'fr')).toBeNull()
+    }
+    expect(await searchAdapter.search({ query: needle, locale: 'ar' })).toMatchObject({
+      status: 'available',
+      total: 0,
+    })
+    expect(await searchAdapter.search({ query: privateNeedle, locale: 'fr' })).toMatchObject({
+      status: 'available',
+      total: 0,
+    })
+    await payload.update({
+      collection: 'news',
+      id: approved.id,
+      overrideAccess: false,
+      user: { ...publisher, collection: 'users' },
+      locale: 'fr',
+      data: { visibility: 'private' },
+    })
+    expect(await searchAdapter.search({ query: needle, locale: 'fr' })).toMatchObject({
+      status: 'available',
+      total: 0,
+    })
+    expect(await findPublishedNewsArticle(String(approved.id), 'fr')).toBeNull()
   })
 })

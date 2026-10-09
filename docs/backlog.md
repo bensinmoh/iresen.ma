@@ -20,7 +20,7 @@ This file separates commissioned repository/boilerplate work from later homepage
 - [x] Responsive keyboard navigation, Arabic RTL, honest loading/empty/error states.
 - [x] Empty pages/news/media collections, roles and published-locale public queries.
 - [x] SEO/header framework and non-indexable development output.
-- [x] Search/contact contracts with truthful unavailable states.
+- [x] Initial search/contact contracts with truthful unavailable states; search is now implemented below, while contact delivery remains unavailable.
 - [x] Reproducible install, lint, typecheck, focused tests, production build and browser validation.
 - [x] Import seven current approved SVGs/favicons unchanged; inspect source metadata and private PDF guidelines.
 - [x] Verify supplied-logo browser rendering during foundation validation; Latin font installation is recorded separately below.
@@ -47,18 +47,23 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 - [x] Resolve website primary blue as `#296BB4` following the owner's latest correction.
 - [ ] Inspect accessible website/Illustrator exports before finalizing visual composition.
 - [ ] Approve homepage copy and module selections around Développer · Éprouver · Valoriser.
-- [x] Build lightweight introducing heroes for every approved page, with responsive viewport sizing and an overlaid header; see [page heroes](heroes.md).
+- [x] Build lightweight introducing heroes with responsive viewport sizing and an overlaid header; the later search feature replaces only its route's hero with immediate form/results. See [page heroes](heroes.md).
 - [x] Replace the homepage hero band with the owner's five explicitly supplied figures, corrected French labels and drafted EN/AR equivalents; use shared figure typography and retain other pages' pathways. See [the source and label record](heroes.md#homepage-key-figures--2026-10-08).
-- [x] Put section placeholders below the heroes on all 22 canonical pages in FR/EN/AR, with headings, short draft content notes, shared anchor IDs/order and nested Institute Mission topics; preserve the working sitemap and existing service notices. See [the section guide](page-sections.md) and revision-specific [validation](validation.md).
+- [x] Put section placeholders below the heroes in FR/EN/AR, with headings, short draft content notes, shared anchor IDs/order and nested Institute Mission topics; preserve the working sitemap and existing service notices. The later search feature replaces only its hero/scaffold with the real form/results. See [the section guide](page-sections.md) and revision-specific [validation](validation.md).
 - [ ] Populate the narrative/content modules below the heroes; obtain reviewed evidence for additional key figures and approve remaining copy/translations.
 - [ ] Compare desktop/tablet/mobile composition and Arabic adaptations; test long content and keyboard/screen-reader use.
 - [ ] Measure a representative production page's transfer, bundle size and LCP; the empty shell is not a performance baseline.
 
 ## Later functional work
 
+- [x] Implement locale-aware public search with animated header expansion, native GET results, ranked links/excerpts, URL pagination and clear empty/error states; see [search](search.md).
+- [x] Search live eligible CMS page/news translations alongside the 16 principal routes and their localized section headings; exclude placeholder descriptions, enforce access/publication and no fallback, exclude future news and keep results `noindex` outside the XML sitemap.
+- [x] Render published page/home rich text alongside section scaffolds and selected news articles within the all-news section, with safe links, depth-zero content and honest empty states; support older article results beyond the latest-12 listing without seeding content.
 - [ ] Expand collections and detail/list/filter templates; translations, redirects, preview and publication invalidation.
 - [ ] Add verified public media rights and private-file boundaries.
-- [ ] Implement locale-aware search and real contact acceptance/delivery with durable retries and retention.
+- [ ] Add new approved collections, content-type/thematic/date filters and public document text to search when their schemas/templates exist.
+- [ ] Measure search latency/memory with a representative corpus; replace live scans with indexed retrieval when scale requires it, assess French/English stemming and Arabic relevance/typo matching. See [ADR 0005](adr/0005-live-published-content-search.md).
+- [ ] Implement real contact acceptance/delivery with durable retries and retention.
 - [ ] Add scheduled jobs, archive/withdrawal behavior and narrow locale permissions/audit.
 - [ ] Introduce optional LinkedIn official API access or an honest manual editorial queue.
 

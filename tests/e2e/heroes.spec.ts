@@ -8,7 +8,7 @@ for (const locale of locales) {
   }) => {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
-    for (const id of pageIds) {
+    for (const id of pageIds.filter((pageId) => pageId !== 'search')) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()
