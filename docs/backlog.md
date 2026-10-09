@@ -29,12 +29,12 @@ Local validation passed on 2026-10-07. See [validation evidence and limits](vali
 
 ## Structure proposal: decisions before page/CMS changes
 
-The 2026-10-08 structure reference supplies recommendations. Its page sections, 23 fixed-page count and nine detail-template count are proposed scope, not delivered work or final approval. The existing 22-page structure is the chosen working baseline; see [ADR 0004](adr/0004-canonical-working-site-structure.md) and [the canonical route map](route-map.md). The decisions below apply before adopting a proposed change, rather than blocking continued work on that baseline.
+The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10-09 request uses its suggested sections for empty placeholders on the existing 22-page working baseline; see [the section guide](page-sections.md), [ADR 0004](adr/0004-canonical-working-site-structure.md) and [the canonical route map](route-map.md). Its 23 fixed-page count and nine detail-template count remain proposed scope, not delivered work or final approval. The decisions below apply before changing routes, creating detail templates or populating institutional content.
 
 - [ ] Validate the Agence de Moyens page role, the proposed navigation labels and four main French path changes, plus footer utility scope and paths, before changing routes; document approved correspondences and any required redirects.
 - [ ] Confirm official identity, mission, 2035 ambition/convention status, current governance/organisation and scientific taxonomy before preparing public institutional sections.
 - [ ] Reconcile figures by definition, period, portfolio scope and funding category; validate project contributions/results/maturity, platform sites/operators/available capabilities and publishable transfer/IP evidence.
-- [ ] Select proposed sections and detail templates according to available public material; define shared records, per-object ownership/review dates and versioned call rules with one reference URL across agency and opportunities pages. Programme detail remains conditional.
+- [ ] Refine populated sections and select detail templates according to available public material; define shared records, per-object ownership/review dates and versioned call rules with one reference URL across programme and opportunities pages. Programme detail remains conditional.
 - [ ] Approve each FR/EN/AR version, media rights and actual contact/application/registration channels; validate processing, retention and cookie arrangements before activating the corresponding sections or services.
 
 ## Next task: homepage/design-system implementation
@@ -49,7 +49,8 @@ The 2026-10-08 structure reference supplies recommendations. Its page sections, 
 - [ ] Approve homepage copy and module selections around Développer · Éprouver · Valoriser.
 - [x] Build lightweight introducing heroes for every approved page, with responsive viewport sizing and an overlaid header; see [page heroes](heroes.md).
 - [x] Replace the homepage hero band with the owner's five explicitly supplied figures, corrected French labels and drafted EN/AR equivalents; use shared figure typography and retain other pages' pathways. See [the source and label record](heroes.md#homepage-key-figures--2026-10-08).
-- [ ] Build the narrative/content modules below the heroes; obtain reviewed evidence for additional key figures and approve remaining copy/translations.
+- [x] Put section placeholders below the heroes on all 22 canonical pages in FR/EN/AR, with headings, short draft content notes, shared anchor IDs/order and nested Institute Mission topics; preserve the working sitemap and existing service notices. See [the section guide](page-sections.md) and revision-specific [validation](validation.md).
+- [ ] Populate the narrative/content modules below the heroes; obtain reviewed evidence for additional key figures and approve remaining copy/translations.
 - [ ] Compare desktop/tablet/mobile composition and Arabic adaptations; test long content and keyboard/screen-reader use.
 - [ ] Measure a representative production page's transfer, bundle size and LCP; the empty shell is not a performance baseline.
 

@@ -175,5 +175,515 @@
       "publications": "Scientific publications",
       "universityLaboratories": "University laboratories established"
     }
+  },
+  "PageSections": {
+    "home": {
+      "develop-test-transfer": {
+        "title": "Develop, test and transfer",
+        "description": "Content to add: the role of each function and the connections between research, testing and use."
+      },
+      "figures": {
+        "title": "IRESEN in figures",
+        "description": "Content to add: verified indicators with their units, scope and period."
+      },
+      "research-priorities": {
+        "title": "Research priorities",
+        "description": "Content to add: approved themes, related needs and links to the priorities."
+      },
+      "results": {
+        "title": "Results and achievements",
+        "description": "Content to add: documented cases explaining the need, contributions, results and their maturity."
+      },
+      "platforms-expertise": {
+        "title": "Platforms and expertise",
+        "description": "Content to add: an overview of experimental and scientific capabilities and their access conditions."
+      },
+      "collaboration": {
+        "title": "Collaborate with IRESEN",
+        "description": "Content to add: pathways to develop a project, conduct tests, draw on expertise or create value from a result."
+      },
+      "news-events": {
+        "title": "News and events",
+        "description": "Content to add: a selection of news, events and open calls where available."
+      }
+    },
+    "institute": {
+      "about": {
+        "title": "Who are we?",
+        "description": "Content to add: the Institute’s identity, history, scope and partners."
+      },
+      "mission": {
+        "title": "Mission and positioning",
+        "description": "Content to add: the reference mission and the connections between needs, research, experimentation and use."
+      },
+      "capabilities": {
+        "title": "Complementary capabilities",
+        "description": "Content to add: the six complementary capabilities and links to their relevant pages."
+      },
+      "ambition-2035": {
+        "title": "Ambition for 2035",
+        "description": "Content to add: long-term directions, distinguishing ambitions from achievements."
+      },
+      "key-figures": {
+        "title": "Key figures",
+        "description": "Content to add: validated data series with definitions, dates, scopes and public references."
+      },
+      "more-resources": {
+        "title": "Explore further",
+        "description": "Content to add: links to governance, reports, priorities and collaboration."
+      }
+    },
+    "governance": {
+      "bodies-responsibilities": {
+        "title": "Governing bodies and responsibilities",
+        "description": "Content to add: the roles, membership and public documents of confirmed governing bodies."
+      },
+      "council-representatives": {
+        "title": "Council and representatives",
+        "description": "Content to add: represented organisations, mandates and confirmed office holders."
+      },
+      "leadership-organisation": {
+        "title": "Leadership and organisation",
+        "description": "Content to add: the approved organisation chart and a readable text equivalent."
+      },
+      "department-responsibilities": {
+        "title": "Department responsibilities",
+        "description": "Content to add: each department’s public remit and contribution to shared work."
+      },
+      "science-platforms": {
+        "title": "Science and platform coordination",
+        "description": "Content to add: the relationships between scientific arrangements, experimental capabilities and partners."
+      },
+      "documents-contact": {
+        "title": "Documents and institutional contact",
+        "description": "Content to add: public governance documents and directions to the institutional contact."
+      }
+    },
+    "priorities": {
+      "needs-challenges": {
+        "title": "Needs and challenges",
+        "description": "Content to add: energy, industrial and environmental needs within the approved scope."
+      },
+      "domains-directions": {
+        "title": "Domains and directions",
+        "description": "Content to add: validated domains, their barriers, research areas and intended applications."
+      },
+      "technology-roadmaps": {
+        "title": "Technology roadmaps",
+        "description": "Content to add: public time horizons, stages and milestones, with their status."
+      },
+      "priorities-projects": {
+        "title": "From priorities to projects",
+        "description": "Content to add: links to related programmes, projects, platforms and expertise."
+      },
+      "decision-resources": {
+        "title": "Knowledge to inform choices",
+        "description": "Content to add: public studies, data and expertise providing scientific input."
+      },
+      "resources-collaboration": {
+        "title": "Resources and collaboration",
+        "description": "Content to add: roadmaps suitable for publication, related resources and guidance on needs."
+      }
+    },
+    "programmes": {
+      "programmes-collaborations": {
+        "title": "Programmes and collaborations",
+        "description": "Content to add: programmes, their objectives, partners, periods and status."
+      },
+      "calls-for-projects": {
+        "title": "Calls for projects",
+        "description": "Content to add: open and archived calls with their intended participants, deadlines and documents."
+      },
+      "participate": {
+        "title": "Participate in a call",
+        "description": "Content to add: participation conditions and links to regulations and official channels."
+      },
+      "project-lifecycle": {
+        "title": "From application to project follow-up",
+        "description": "Content to add: the stages of application, evaluation, contracting, delivery and valorisation."
+      },
+      "research-results": {
+        "title": "Results of supported research",
+        "description": "Content to add: documented reviews by programme, period and scope, linked to projects."
+      },
+      "practical-questions": {
+        "title": "Practical questions",
+        "description": "Content to add: procedural answers, reference documents and relevant contacts."
+      }
+    },
+    "projects": {
+      "featured-results": {
+        "title": "Featured achievements",
+        "description": "Content to add: a selection of cases with verified public results and their maturity stage."
+      },
+      "find-project": {
+        "title": "Find a project",
+        "description": "Content to add: search criteria by priority, programme, status, period and result type."
+      },
+      "project-catalogue": {
+        "title": "Project catalogue",
+        "description": "Content to add: projects suitable for publication with their need, priority, status and period."
+      },
+      "understanding-results": {
+        "title": "Understanding results",
+        "description": "Content to add: the distinction between expected results, achievements, maturity and measured effects."
+      },
+      "related-capabilities": {
+        "title": "Projects and related capabilities",
+        "description": "Content to add: links to platforms, programmes, results with valorisation potential and collaboration pathways."
+      }
+    },
+    "platforms": {
+      "choose-by-need": {
+        "title": "Choose according to your needs",
+        "description": "Content to add: capabilities for research, testing, qualification, pilot projects and training."
+      },
+      "platform-network": {
+        "title": "The platform network",
+        "description": "Content to add: platforms, their sites, operators, domains and verified uses."
+      },
+      "capabilities-availability": {
+        "title": "Capabilities and availability",
+        "description": "Content to add: capabilities that are available, accessible under conditions or in development."
+      },
+      "testing-demonstration": {
+        "title": "From testing to demonstration",
+        "description": "Content to add: scales, protocols, measurements and possible next steps for experimental work."
+      },
+      "access-platforms": {
+        "title": "Access the platforms",
+        "description": "Content to add: intended users, technical scoping, access conditions and confidentiality."
+      },
+      "projects-resources": {
+        "title": "Projects and resources",
+        "description": "Content to add: related public work, capability profiles and topic-specific contacts."
+      }
+    },
+    "network": {
+      "competence-domains": {
+        "title": "Areas of expertise",
+        "description": "Content to add: approved specialisms, questions addressed and possible deliverables."
+      },
+      "intervention-modes": {
+        "title": "Ways of contributing",
+        "description": "Content to add: studies, testing, scientific support and training, with their conditions."
+      },
+      "scientific-network": {
+        "title": "The scientific network",
+        "description": "Content to add: laboratories, teams and organisations with confirmed relationships and contributions."
+      },
+      "skills-training": {
+        "title": "Skills and training",
+        "description": "Content to add: training through research, experimental practice and courses actually offered."
+      },
+      "expertise-in-action": {
+        "title": "Expertise in action",
+        "description": "Content to add: cases explaining the need, expertise involved and verified contribution."
+      },
+      "request-expertise": {
+        "title": "Draw on expertise",
+        "description": "Content to add: information to qualify a need and the arrangements for scoping it."
+      }
+    },
+    "transfer": {
+      "results-to-transfer": {
+        "title": "Results with valorisation potential",
+        "description": "Content to add: results suitable for sharing, their applications, maturity and partnership possibilities."
+      },
+      "research-to-use": {
+        "title": "From research to use",
+        "description": "Content to add: protection, maturation, qualification and adoption stages, with their actual status."
+      },
+      "transfer-pathways": {
+        "title": "Transfer pathways",
+        "description": "Content to add: licensing, joint development, business creation and adoption routes that are actually possible."
+      },
+      "intellectual-property": {
+        "title": "Intellectual property and confidentiality",
+        "description": "Content to add: principles for managing rights, sharing and confidential discussions."
+      },
+      "adoption-initiatives": {
+        "title": "Adopted results and initiatives",
+        "description": "Content to add: documented valorisation cases with contributions, stages and evidenced use."
+      },
+      "build-transfer": {
+        "title": "Develop a transfer",
+        "description": "Content to add: initial information on the result, need, intended use and maturity."
+      }
+    },
+    "workWithUs": {
+      "choose-pathway": {
+        "title": "Choose a pathway",
+        "description": "Content to add: project, testing, expertise and valorisation pathways linked to the relevant pages."
+      },
+      "organisation-contributions": {
+        "title": "Contributions by organisation",
+        "description": "Content to add: needs and possible contributions from businesses, institutions, researchers and partners."
+      },
+      "collaboration-arrangements": {
+        "title": "Collaboration arrangements",
+        "description": "Content to add: forms of collaboration, respective commitments and conditions to define."
+      },
+      "need-to-project": {
+        "title": "From a need to a joint project",
+        "description": "Content to add: the stages of first contact, qualification, scoping and formalisation."
+      },
+      "collaboration-references": {
+        "title": "Collaborations and references",
+        "description": "Content to add: documented collaborations with needs, partners, contributions and achievements."
+      },
+      "prepare-discussion": {
+        "title": "Prepare for the first discussion",
+        "description": "Content to add: information on the organisation, need, application, timetable and capability sought."
+      }
+    },
+    "news": {
+      "featured-news": {
+        "title": "Featured news",
+        "description": "Content to add: an editorial selection of published, dated articles illustrated with authorised media."
+      },
+      "find-news": {
+        "title": "Find a news article",
+        "description": "Content to add: search criteria by category, theme and year."
+      },
+      "all-news": {
+        "title": "All news",
+        "description": "Content to add: articles with their titles, dates, categories and summaries."
+      },
+      "related-events-resources": {
+        "title": "Related events and resources",
+        "description": "Content to add: events, publications and opportunities related to the news."
+      },
+      "follow-iresen": {
+        "title": "Follow IRESEN",
+        "description": "Content to add: links to official accounts and ways to follow updates that are actually available."
+      }
+    },
+    "events": {
+      "upcoming-events": {
+        "title": "Upcoming events",
+        "description": "Content to add: events with their dates, locations, formats, organisers and participation status."
+      },
+      "find-event": {
+        "title": "Find an event",
+        "description": "Content to add: search criteria by theme, format, period and IRESEN’s role."
+      },
+      "participate": {
+        "title": "Participate",
+        "description": "Content to add: programmes, participation arrangements and existing registration channels."
+      },
+      "past-events": {
+        "title": "Past events",
+        "description": "Content to add: reports, presentations and related media suitable for publication."
+      },
+      "propose-collaboration": {
+        "title": "Propose a collaboration",
+        "description": "Content to add: guidance for proposals for event partnerships or scientific exchanges."
+      }
+    },
+    "publications": {
+      "featured-publications": {
+        "title": "Featured publications",
+        "description": "Content to add: priority resources with their type, date, language and access method."
+      },
+      "find-publication": {
+        "title": "Find a publication",
+        "description": "Content to add: search criteria by type, domain, year, language and author."
+      },
+      "publication-catalogue": {
+        "title": "Publication catalogue",
+        "description": "Content to add: records with titles, authors, years, references, languages, formats and access rights."
+      },
+      "institutional-reports": {
+        "title": "Institutional reports",
+        "description": "Content to add: authorised reports grouped by year, with their version and scope."
+      },
+      "use-cite-resources": {
+        "title": "Use and cite resources",
+        "description": "Content to add: citation rules, licences, restrictions and accessible alternatives."
+      }
+    },
+    "media": {
+      "featured-media": {
+        "title": "Featured media",
+        "description": "Content to add: a selection of authorised media with their subjects, dates and related links."
+      },
+      "find-media": {
+        "title": "Find media",
+        "description": "Content to add: search criteria by format, theme, event and platform."
+      },
+      "collections-content": {
+        "title": "Collections and content",
+        "description": "Content to add: photographs, albums, videos, infographics and educational content suitable for publication."
+      },
+      "press-resources": {
+        "title": "Press resources",
+        "description": "Content to add: the institutional kit, authorised logos and photos, their usage rules and the press contact."
+      },
+      "credits-reuse": {
+        "title": "Credits and reuse",
+        "description": "Content to add: credits, rights, restrictions and accessible alternatives for each media item."
+      }
+    },
+    "opportunities": {
+      "open-opportunities": {
+        "title": "Open opportunities",
+        "description": "Content to add: open offers with their category, intended applicants, location and deadline."
+      },
+      "find-opportunity": {
+        "title": "Find an opportunity",
+        "description": "Content to add: useful search criteria by domain, category, location and status."
+      },
+      "working-at-iresen": {
+        "title": "Working at IRESEN",
+        "description": "Content to add: missions, professions and the scientific environment, supported by facts."
+      },
+      "apply-respond": {
+        "title": "Apply or respond",
+        "description": "Content to add: criteria, required documents and official channels for each offer or call."
+      },
+      "archives-results": {
+        "title": "Archives and public results",
+        "description": "Content to add: closed offers, their public documents and follow-up outcomes authorised for release."
+      },
+      "questions-unsolicited-applications": {
+        "title": "Questions and unsolicited applications",
+        "description": "Content to add: practical answers and application possibilities under procedures actually available."
+      }
+    },
+    "contact": {
+      "route-request": {
+        "title": "Direct your enquiry",
+        "description": "Content to add: contact purposes and directions to suitable pages and channels."
+      },
+      "send-request": {
+        "title": "Send an enquiry",
+        "description": "Content to add: useful fields for the future form and a choice of contact purpose."
+      },
+      "information-use": {
+        "title": "How your information is used",
+        "description": "Content to add: purposes, recipients, rights and information about actual processing."
+      },
+      "locations": {
+        "title": "Our locations",
+        "description": "Content to add: verified sites and public access details, identifying the relevant operators."
+      },
+      "practical-questions": {
+        "title": "Practical questions",
+        "description": "Content to add: guidance on platforms, applications, documents and press enquiries."
+      },
+      "request-follow-up": {
+        "title": "Follow up your enquiry",
+        "description": "Content to add: validation, error and actual receipt states, with an alternative contact method."
+      }
+    },
+    "search": {
+      "search-query": {
+        "title": "Enter a search",
+        "description": "Content to add: a query field for public content in the current language."
+      },
+      "refine-results": {
+        "title": "Refine results",
+        "description": "Content to add: criteria by content type and theme, with a reset option."
+      },
+      "results": {
+        "title": "Results",
+        "description": "Content to add: results with titles, types, summaries and links, organised into pages."
+      },
+      "no-results": {
+        "title": "No results",
+        "description": "Content to add: the empty result state, the retained query and suggestions to broaden the search."
+      }
+    },
+    "legal": {
+      "site-publisher": {
+        "title": "Site publisher",
+        "description": "Content to add: the confirmed official identity, status, address and institutional contact details."
+      },
+      "publication-hosting": {
+        "title": "Publication and hosting",
+        "description": "Content to add: designated responsible parties and the hosting providers actually selected."
+      },
+      "rights-data-protection": {
+        "title": "Rights and data protection",
+        "description": "Content to add: intellectual property principles and links to privacy and cookie notices."
+      },
+      "contact-version": {
+        "title": "Contact and version",
+        "description": "Content to add: the site contact, revision date and notice version."
+      }
+    },
+    "privacy": {
+      "controller-scope": {
+        "title": "Controller and scope",
+        "description": "Content to add: the controller’s identity and the scope of processing actually enabled."
+      },
+      "data-uses": {
+        "title": "Data and uses",
+        "description": "Content to add: the data, purposes, recipients and retention periods for each actual processing activity."
+      },
+      "providers-transfers": {
+        "title": "Providers and transfers",
+        "description": "Content to add: providers, countries involved and data flows actually selected."
+      },
+      "rights-contact": {
+        "title": "Rights and contact",
+        "description": "Content to add: applicable rights and the dedicated channel to exercise them, once validated."
+      },
+      "security-updates": {
+        "title": "Security and updates",
+        "description": "Content to add: general protection measures, a link to cookies and the revision date."
+      }
+    },
+    "cookies": {
+      "cookie-use": {
+        "title": "Use of cookies",
+        "description": "Content to add: an explanation of cookie uses actually present on the site."
+      },
+      "cookies-services": {
+        "title": "Cookies and services used",
+        "description": "Content to add: a verified inventory with providers, purposes, durations and categories."
+      },
+      "manage-preferences": {
+        "title": "Manage my preferences",
+        "description": "Content to add: accessible choices suited to the optional services actually installed."
+      },
+      "effects-contact": {
+        "title": "Effects and contact",
+        "description": "Content to add: the effects of choices, alternatives, contact details and the revision date."
+      }
+    },
+    "accessibility": {
+      "commitment-objective": {
+        "title": "Commitment and objective",
+        "description": "Content to add: the accessible design objective, distinguished from demonstrated compliance."
+      },
+      "evaluation-scope": {
+        "title": "Evaluation and scope",
+        "description": "Content to add: the date, method, pages, languages and conclusions of completed evaluations."
+      },
+      "limitations-alternatives": {
+        "title": "Limitations and alternatives",
+        "description": "Content to add: established difficulties, available alternatives and planned corrections."
+      },
+      "help-feedback": {
+        "title": "Help and feedback",
+        "description": "Content to add: an accessible channel and useful information for reporting a difficulty."
+      }
+    },
+    "sitemap": {
+      "site-pages": {
+        "title": "Site pages",
+        "description": "Content to add: links to the main pages within the existing navigation hierarchy."
+      },
+      "catalogues-resources": {
+        "title": "Catalogues and resources",
+        "description": "Content to add: grouped links to catalogues and public collections."
+      },
+      "search-useful-information": {
+        "title": "Search and useful information",
+        "description": "Content to add: search and the five utility pages in the current language."
+      }
+    }
   }
 }
