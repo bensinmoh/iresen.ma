@@ -672,8 +672,16 @@ body:has(.page-hero) .site-header-overlay {
 
   .mega-menu-links a:hover,
   .mega-menu-links a:focus-visible {
-    background: var(--color-action-surface);
-    color: var(--color-blue);
+    background: var(--color-navy);
+    color: var(--color-white);
+  }
+
+  .mega-menu-links a:is(:hover, :focus-visible) .mega-menu-link-description {
+    color: var(--color-footer-muted);
+  }
+
+  .mega-menu-links a:is(:hover, :focus-visible) .navigation-icon {
+    color: var(--color-science-blue);
   }
 
   .mega-menu-feature {

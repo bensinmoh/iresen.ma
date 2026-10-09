@@ -892,3 +892,42 @@ webpack dependency-cache warning. Delivery figures are local lab observations,
 not field LCP/INP/CLS or cross-browser certification. These fictional placeholders
 do not establish real IRESEN subjects, institutional content approval or deployment.
 Remote CI and merge results belong to the corresponding PR.
+
+## Desktop submenu destination states — 2026-10-09
+
+Desktop destination rows now follow the owner's latest screenshot: a full sharp
+navy rectangle, white title, pale description and light blue diagonal arrow.
+The same colors apply to keyboard-visible focus with the existing external
+outline. The change is scoped to `.mega-menu-links` from the `70rem` breakpoint;
+panel geometry, resting current-route state, copy, routes and RTL transforms
+retain their existing behavior. Screenshot sample labels are reference content.
+
+Local formatting, lint, strict types, 8 unit tests and the standalone production
+build passed. All 11 existing navigation browser tests passed in Chromium,
+covering FR/EN/AR destinations and accessibility scans, keyboard focus and Escape,
+pointer continuity and dismissal, breakpoint focus transfer, no-JavaScript
+disclosures and responsive containment through 200% text.
+
+A production-render audit recorded 40 observations at 1440 × 900 and 390 × 844:
+12 resting desktop rows (one per group/locale), all 12 French destinations and
+the first destination in each English/Arabic group on hover, keyboard-visible
+focus in each locale, a French current-route row at rest/on hover, and three
+compact-menu containment checks. All 24 active observations used the same colors
+and zero corner radii. First-row dimensions stayed identical between rest and
+hover in all groups/locales. Current-route semantics, the resting pale surface,
+mirrored Arabic arrows and the 3px/4px-offset focus outline were retained;
+no horizontal overflow occurred.
+
+Measured settled contrast on navy `#12345A` was 12.62:1 for white titles,
+7.47:1 for `#B9C9DA` descriptions and 3.97:1 for `#4698CA` arrow graphics.
+The blue focus outline contrasted 5.45:1 against the surrounding white panel.
+Retained renders were inspected for block extent, spacing, readable text,
+focus visibility and RTL alignment:
+
+- [French hover](screenshots/submenu-hover-fr-1440.png)
+- [French keyboard focus](screenshots/submenu-focus-fr-1440.png)
+- [Arabic hover](screenshots/submenu-hover-ar-1440.png)
+
+Coverage is local Chromium, not cross-browser or screen-reader certification.
+Earlier validation and captures retain their revision-specific scope. Current
+remote CI and merge results belong to the corresponding PR.
