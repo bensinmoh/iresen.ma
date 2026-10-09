@@ -4,6 +4,14 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Compact menu control coherence
+
+- Aligned the compact Menu trigger with search: white/navy, neutral outline,
+  shared diagonal action corners, 48px minimum height and centered label/icon.
+- Replaced the fragmented hamburger with three regular lines; retained the
+  borderless mobile header, close state, native disclosure and localized routes.
+- Recorded the adopted control rule and [verification](docs/validation.md#compact-menu-control--2026-10-09).
+
 ## 2026-10-09 — Full photographic mission cards
 
 - Restored the supplied Figma/video card treatment: full photographs, white text

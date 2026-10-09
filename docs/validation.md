@@ -26,6 +26,29 @@ Automated accessibility and the tested keyboard/mobile interactions do not estab
 
 Search, contact delivery and CMS email are honest unavailable adapters. Production storage, identity/MFA, jobs, legal/privacy assessment, recovery and approved content/translations remain follow-up work. Missing design exports/fonts/imagery do not block this foundation. See the [backlog](backlog.md).
 
+## Compact menu control — 2026-10-09
+
+Passed lint, strict types, all 97 unit tests and the production build. The build
+reported the previously documented next-intl webpack cache-analysis warnings.
+All 26 existing navigation and header-search browser cases passed against a
+separate production server on port 3100 using installed Chrome via Playwright;
+the owner's port-3000 development server remained running.
+
+Rendered FR/EN/AR at 320, 390, 768, 1024 and 1440px. The compact trigger at
+768/1024px has a measured 48px height, white surface, navy text and physical
+10px/0/10px/0 corners in every locale. Reviewed inverse/white headers, closed
+and open menus, hover, keyboard opening, Escape and restored focus. Existing
+browser coverage also passed touch, no-JavaScript, reduced-motion, desktop
+navigation, mobile focus containment and 200% text reflow in all locales.
+
+Reviewed captures: [French compact header](screenshots/menu-control-fr-1024.webp)
+and [Arabic mobile header](screenshots/menu-control-ar-390.webp).
+No public content, route, asset destination or search metadata changed; existing
+public page/section references remain. No CMS/database logic changed, so local
+integration tests were not rerun; PR CI runs the complete suite. This Chrome
+review does not establish Safari, physical-device or screen-reader coverage.
+No deployment was performed.
+
 ## Design workflow and UI refinement
 
 Verified locally on 2026-10-08: lint, strict types, formatting, production build,

@@ -12,6 +12,17 @@ hero overlay and content-based menu formats are documented below. The latest
 owner clarification treats screenshots as design-element references, with layout
 chosen for each group's actual content.
 
+## Compact menu control — 2026-10-09
+
+The compact Menu trigger shares search's white/navy surface, neutral outline,
+physical `--radius-action` corners and 48px minimum height above `40rem`.
+Its 16px/600 label and regular 24px three-line icon remain centered; hover/open
+use the quiet action surface. White and inverse headers share this treatment.
+The close icon, native disclosure, focus behavior and narrow mobile sheet remain.
+No labels, canonical destinations or public search projections change.
+See [the shared rule](design-system.md#compact-menu-control--2026-10-09)
+and [this revision's checks](validation.md#compact-menu-control--2026-10-09).
+
 ## Mobile reference adaptation — 2026-10-09
 
 The [owner's four mobile screenshots](../DESIGN.md#mobile-reference-adaptation--2026-10-09)
