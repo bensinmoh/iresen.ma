@@ -8,6 +8,7 @@ import { navigationGroups, pageHref, pageIdFromPathname, type PageId } from '@/l
 import { navigationPanels, type NavigationGroup } from '@/lib/navigation'
 import { homeFigures } from '@/lib/figures'
 import { LocaleSelector } from './LocaleSelector'
+import { HeaderSearch } from './HeaderSearch'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 import { NavigationIcon } from './NavigationIcon'
 
@@ -69,13 +70,17 @@ export function SiteHeader() {
       const desktopHasFocus =
         active instanceof Element && active.closest('.desktop-navigation') !== null
       const compactHasFocus = active instanceof Node && menuRef.current?.contains(active)
+      const searchHasFocus =
+        active instanceof Element && active.closest('.header-search-disclosure') !== null
       const groupId =
         active instanceof Element
           ? active.closest('[data-navigation-group]')?.getAttribute('data-navigation-group')
           : null
       closeDisclosures()
 
-      if (!desktop.matches && desktopHasFocus) {
+      if (searchHasFocus) {
+        headerRef.current?.querySelector<HTMLElement>('.header-search')?.focus()
+      } else if (!desktop.matches && desktopHasFocus) {
         menuRef.current?.querySelector<HTMLElement>(':scope > summary')?.focus()
       } else if (desktop.matches && compactHasFocus) {
         const target = groupId
@@ -172,7 +177,9 @@ export function SiteHeader() {
               // Keyboard focus owns its open panel; pointer exploration must not hide it.
               if (
                 headerRef.current
-                  ?.querySelector('.desktop-navigation-group[open]')
+                  ?.querySelector(
+                    '.desktop-navigation-group[open], .header-search-disclosure[open]',
+                  )
                   ?.contains(document.activeElement)
               )
                 return
@@ -285,13 +292,29 @@ export function SiteHeader() {
           <div className="header-actions">
             <LocaleSelector />
             <div className="header-tools">
-              <a
-                href={pageHref('search', locale)}
-                className="header-search"
-                aria-label={pageTitle('search')}
-              >
-                <NavigationIcon name="search" />
-              </a>
+              <HeaderSearch
+                action={pageHref('search', locale)}
+                label={pageTitle('search')}
+                placeholder={copy('searchPlaceholder')}
+                restoreQuery={currentPageId === 'search'}
+                onReveal={(hover) => {
+                  clearHoverTimer()
+                  const openGroup = headerRef.current?.querySelector<HTMLDetailsElement>(
+                    '.desktop-navigation-group[open]',
+                  )
+                  const active = document.activeElement
+                  if (
+                    hover &&
+                    active instanceof Element &&
+                    (openGroup?.contains(active) ||
+                      active.closest('.locale-selector, .desktop-navigation'))
+                  )
+                    return false
+                  openGroup?.removeAttribute('open')
+                  if (menuRef.current) menuRef.current.open = false
+                  return true
+                }}
+              />
               {pageLink('contact', 'button button-primary header-contact', copy('contact'))}
             </div>
             <details className="site-menu" ref={menuRef}>

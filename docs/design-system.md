@@ -761,7 +761,7 @@ Both controls now use the shared `--radius-action`, adopted across actions on
 size, with sharp opposite corners unchanged in RTL. This is an adaptation backed
 by [live 10px CTA evidence](figma-design-system-review.md#components-and-states),
 not an exact measurement from the screenshot.
-Search uses a white surface, 1px `--color-control-outline` (`#858585`) border and
+The closed search trigger uses a white surface, 1px `--color-control-outline` (`#858585`) border and
 a 24px navy (`#12345A`) magnifier. `--header-control-size` is `3rem` (48px),
 reduced to `2.75rem` (44px) at `35rem` and below; both dimensions use this size.
 Contact keeps primary `#296BB4`/white, a 48px minimum height and 24px inline
@@ -773,6 +773,32 @@ compact-menu contact labels retain their existing source. The CTA stays hidden
 below `70rem`, with contact available in the compact menu. Current checks belong
 in [the validation log](validation.md); earlier 20px control checks and screenshots
 describe the superseded radius.
+
+## Expandable header search — 2026-10-09
+
+`HeaderSearch` enhances native `details`/`summary` with a labelled, single-line
+GET search form targeting the canonical localized search page through `q`.
+The closed 48px/44px magnifier retains its white surface, gray outline and navy
+icon. Closed and expanded outer shapes use the physical 10px action signature.
+The field uses white/navy and the inherited 16px body/font role; long queries
+scroll naturally within the input.
+
+Expansion uses inline start (left FR/EN, right Arabic), a 220ms width/opacity
+transition and fixed header geometry. The measured combined trigger/field width
+is capped at 22rem and available container space, with the other direction used
+when needed. Global reduced-motion rules make the transition immediate.
+
+Fine mouse hover opens without autofocus. Explicit keyboard/touch activation
+focuses the input; Enter and the filled icon submit the query. Required input
+validation rejects an empty query. Visible blue input focus remains on white.
+Focus owns the disclosure when the pointer leaves or navigation is hovered;
+Escape, outside interaction and leaving disclosure focus close it. Without
+JavaScript, native click activation and GET submission remain; at `35rem` and
+below, the field spans the action row below the controls.
+
+The existing search-unavailable notice remains: no results, index, CMS query or
+backend is added. See [navigation behavior](navigation.md#expandable-header-search--2026-10-09)
+and [executed checks](validation.md); prior control evidence retains its scope.
 
 ## Homepage certification badge — 2026-10-08
 

@@ -84,6 +84,7 @@
   },
   "Header": {
     "contact": "اتصل بنا",
+    "searchPlaceholder": "ابحث في الموقع…",
     "discover": "اكتشف المزيد",
     "explore": "استكشف",
     "groups": {

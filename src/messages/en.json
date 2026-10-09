@@ -84,6 +84,7 @@
   },
   "Header": {
     "contact": "Contact us",
+    "searchPlaceholder": "Search the website…",
     "discover": "Discover more",
     "explore": "Explore",
     "groups": {

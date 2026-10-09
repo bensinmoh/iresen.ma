@@ -4,6 +4,22 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Expandable header search
+
+- Added a native expandable search field: fine-pointer hover reveals it without
+  focus, explicit keyboard/touch activation focuses it, and GET `q` uses the
+  existing localized search route.
+- Bounded the animated white/navy field within the header container, preserving
+  closed-control geometry, RTL, physical action corners and reduced-motion behavior.
+- Retained native no-JavaScript disclosure/submission and the truthful unavailable
+  search engine; no results or backend were added.
+- Passed all 72 browser cases, then rebuilt and passed the 10 focused search
+  cases after a final native Arabic corner correction. Eleven rendered states
+  confirm animation, containment, focus and matching action corners.
+
+See [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
+and [revision-specific validation](docs/validation.md#expandable-header-search--2026-10-09).
+
 ## 2026-10-09 — Language hover geometry
 
 - Matched header language hover corners to the search control's shared action

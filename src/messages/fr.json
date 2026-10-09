@@ -594,6 +594,7 @@
   },
   "Header": {
     "contact": "Contactez-nous",
+    "searchPlaceholder": "Rechercher sur le site…",
     "discover": "À découvrir",
     "explore": "Explorer",
     "groups": {

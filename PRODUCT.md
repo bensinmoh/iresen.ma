@@ -90,8 +90,13 @@ marketing page.
   roles. Future mission cards await approved content and follow the mobile
   guidance. Section placeholders remain the
   delivered body content.
-- Search and contact currently have truthful unavailable states. The newsletter
-  keeps local editable email/consent controls; Subscribe opens a native disclosure
+- Header search now provides an expandable, labelled native GET `q` form to the
+  existing localized search page, with keyboard/touch and no-JavaScript access.
+  Its engine still has the truthful unavailable state; no results, index, CMS
+  search or backend is implemented. Contact remains unavailable. See
+  [search interaction](docs/navigation.md#expandable-header-search--2026-10-09).
+  The newsletter keeps local editable email/consent controls; Subscribe opens a
+  native disclosure
   with the localized unavailable message, hidden initially. The privacy link stays
   accessible. No subscription is submitted or stored, and no success is reported;
   signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).

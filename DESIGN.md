@@ -398,7 +398,7 @@ rendered coverage are recorded separately in [the validation log](docs/validatio
 
 ## Header search and contact controls — 2026-10-08
 
-The owner's screenshot refinement gives search a white square, neutral gray
+The owner's screenshot refinement gives the closed search trigger a white square, neutral gray
 outline and navy magnifier; contact retains primary blue with white text.
 Both now use physical 10px top-left/bottom-right corners with sharp opposite corners,
 including in RTL. Search is 48px square, reducing to 44px at `35rem` and below;
@@ -410,6 +410,23 @@ label; shared fonts, page titles, routes and compact-menu contact access remain.
 See [control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
 and [current validation](docs/validation.md); earlier 20px checks describe the
 previous treatment.
+
+## Expandable header search — 2026-10-09
+
+The existing 48/44px magnifier opens a white field with navy text and shared
+physical 10px action corners. It expands toward inline start (left FR/EN, right
+Arabic), with a 220ms width/opacity transition and stable header geometry.
+The enhanced control is capped at 22rem and available container space; expansion
+can use the other direction when needed. Reduced motion makes the change immediate.
+
+Fine-pointer hover opens without taking focus; explicit keyboard/touch activation
+focuses the labelled input. Enter or the filled icon sends a native GET query
+to the existing localized search page. Focus retains the open field; Escape,
+outside interaction and leaving disclosure focus close it. Native disclosure/form
+behavior remains without JavaScript; at `35rem` and below, the unenhanced field
+spans the action row below the controls.
+The search engine remains unavailable. See [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
+and [current validation](docs/validation.md); earlier square-control captures retain their scope.
 
 ## Shared key-figure typography — 2026-10-08
 

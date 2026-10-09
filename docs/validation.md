@@ -1144,3 +1144,49 @@ These quality-90 CSS-resolution crops were visually inspected:
 
 The increment is saved locally with push still held for the earlier pending
 documentary-photo inputs.
+
+## Expandable header search — 2026-10-09
+
+The header magnifier now reveals a labelled search input with a localized
+placeholder. Fine-pointer hover opens without taking focus; keyboard/touch
+activation focuses the input. Enter or the filled-query icon submits native GET
+`q` to the existing localized search route. Escape restores inside focus to the
+summary; pointer departure, outside interaction, focus ownership and breakpoint
+changes retain usable dismissal. The enhanced search page restores its query.
+The search engine remains unavailable; this change adds no index, results or backend.
+
+Production build/types, lint, formatting and 8 unit tests passed. All 72 browser
+cases passed before the final narrow no-JavaScript Arabic corner reset. After
+that CSS correction, production compilation/types and lint passed again, as did
+all 10 focused search cases. The new coverage checks FR/EN/AR hover and keyboard
+submission, encoded queries, stable neighboring controls, focused language/menu
+protection, RTL resize/breakpoint behavior, narrow touch dismissal/submission,
+reduced motion and native no-JavaScript GET behavior. A scoped open-header axe
+scan reported zero violations.
+
+A focused production Chromium review inspected 11 states: FR/EN/AR at 1440 and
+390px, FR/AR at 1920px and at 320px with 200% text, plus Arabic 390px without
+JavaScript. Ten enhanced states retain unchanged header geometry and show actual
+intermediate width/opacity frames during the 220ms reveal. The desktop combined
+field/trigger measures 352px. At 320px with enlarged text, reversed expansion
+fits the full 240px container without moving other controls. White fields retain
+the physical rounded top-left/bottom-right and sharp opposite corners in RTL too.
+The final targeted Arabic no-JavaScript recheck confirms the standalone summary
+corners and the separate 350px field within 20px gutters.
+
+All reviewed states have contained fields, visible input focus, readable text
+height and no document overflow or page errors. Navy/white contrast is 12.616:1,
+placeholder/white 5.932:1 and blue input focus/white 5.445:1. Narrow enlarged
+placeholders remain native single-line text and can show only part of the hint;
+the programmatic label remains complete. These quality-90 CSS-resolution crops
+were visually inspected:
+
+- [French desktop](screenshots/header-search-expanded-fr-desktop.webp)
+- [Arabic desktop](screenshots/header-search-expanded-ar-desktop.webp)
+- [French mobile with enlarged text](screenshots/header-search-expanded-fr-mobile-enlarged.webp)
+
+Coverage uses local Chromium and emulated touch; Safari, physical-device and
+screen-reader certification is not asserted. The ten unaffected enhanced visual
+states precede the final fallback-only corner correction; the affected native
+Arabic state was reviewed again after it. Remote CI/push remain held for the
+earlier pending documentary-photo inputs.
