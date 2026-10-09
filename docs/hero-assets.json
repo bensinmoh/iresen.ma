@@ -1,211 +1,543 @@
 {
-  "schemaVersion": 1,
-  "sourceLfsSHA256": "2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a",
-  "usage": "Draft page heroes requested by the owner on 2026-10-08; supplied individual rasters, not screenshots. Independent media licenses, subjects and credits remain unverified; review before production publication.",
+  "schemaVersion": 2,
+  "date": "2026-10-09",
+  "source": "Seventeen fictional photographic placeholders generated at the owner's explicit request",
+  "previousManifest": "hero-assets-figma-2026-10-08.json",
+  "nativeResolution": "Sixteen native 1536 × 1024 images and one native 1672 × 941 aerial. No upscaling; not native 4K. Original generated PNG files are retained in the generation workspace, outside public/ and Git.",
+  "role": "Decorative topic illustrations; generated people and settings do not document IRESEN researchers, facilities or events.",
+  "encoding": {
+    "tool": "sharp",
+    "version": "0.35.5",
+    "format": "webp",
+    "quality": 90,
+    "effort": 6,
+    "resize": "None: preserve every native pixel in landscape assets; extract native-height 2:3 mobile crops without resizing."
+  },
+  "delivery": {
+    "mobile": "At 40rem and below, a picture source serves the full preoptimized native-height portrait WebP directly.",
+    "desktop": "Next Image quality 90, allowed alongside 75; cover-aware viewport/height sizes with a 75rem guard for natural content growth.",
+    "cache": "Content-hashed filenames replace former URLs; no cache-policy or image allowlist weakening.",
+    "priority": "Only the current hero: eager loading and high fetch priority; no extra preloads, external hosts or video."
+  },
   "assets": [
     {
-      "file": "public/images/heroes/solar-aerial.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/ca5465646691f3e5aa403a402b2c172e8adacc7a",
-      "sourceSHA256": "799828e30bbe20d367c761bd7e3c322f482110805a4926583dcf239d41903acf",
-      "sourceDimensions": [4096, 1974],
-      "outputDimensions": [1920, 925],
-      "bytes": 327316,
-      "outputSHA256": "d816b9a3e3611164ef6509b2f663f5661d6e8f4824b48a52f351ee93340ccec8",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "careers",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-3c2982bd-7e0d-495b-9213-16a07fe19147.png",
+      "sourceSHA256": "d32897e4c8b8bfd4b59047f59f7d3af724834e6c74c849432971306b8ef129ce",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one high-resolution photographic website hero placeholder, landscape aspect ratio 3:2, at the highest native image resolution available. Premium camera-real institutional energy and science editorial photography, crisp fine detail and believable materials, natural daylight, warm neutral tones with restrained navy and blue accents. Generic imagined adult people and facilities; do not depict or claim any real IRESEN employee or facility. Centre the main subject within the middle 45 percent of the frame, keep faces fully visible with generous headroom, and keep both far left and far right edges quiet and uncluttered for French and Arabic text overlays, full-bleed framing, and centred vertical mobile crops. Natural documentary posture rather than advertising posing. Anatomically correct faces and hands. No words, lettering, numbers, readable text, labels, logos, watermark, UI, graphics, artificial dark gradient, or cinematic colour wash. Deliver a native generated image without interpolation or artificial upscaling. Scene: a young adult researcher, around twenty-eight years old, engaged in precise energy-materials work in a bright modern laboratory. She wears unbranded navy-blue technical workwear and clear simple protective safety glasses. Centred three-quarter framing with her face fully visible, looking attentively at a compact, plausible laboratory instrument such as a precision sample holder and benchtop optical measurement device. She adjusts one simple large control with one anatomically correct hand while the other rests naturally on the bench, avoiding complicated finger poses. Brushed metal hardware, clean fixtures, orderly workbench, subtle glass apparatus, neutral pale laboratory interior and a softly lit window in the background. No crowded tubing, no impossible equipment, no fictional display content. Scientific craft and professional concentration, sharply detailed but restrained and credible. CRITICAL COMPOSITION OVERRIDE: This is a WIDE ENVIRONMENTAL PHOTOGRAPH, not a close portrait. Move the camera significantly farther back and use a wider lens while preserving natural proportions. Keep the TOP QUARTER of the frame as quiet bright room/background with no head or equipment intrusion. The TOP of the person's hair must begin around 30 PERCENT of the full image height, and their face centre must sit around 40 PERCENT of image height, near the horizontal centre. Show a smaller subject and more of the clean room, entire workstation, and orderly floor/background. Keep the person and instrument/papers in the centre, leaving the outer thirds of both sides sparse. This generous headroom is essential so a wide website crop does not cut the head. Maintain the realistic professional daylight photographic treatment, sharp engineering detail and natural hands; no text or logos.",
+      "notes": [
+        "AI-generated generic placeholder; not a real IRESEN person or facility.",
+        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
+        "Visually inspected for natural faces/hands, unbranded photographic detail and centred subject framing.",
+        "A wider environmental framing was selected after one headroom correction; the earlier original remains at exec-4e409ae7-1786-41b7-a663-adccbb9c9716.png."
+      ],
+      "file": "public/images/heroes/careers-265dba164ad3.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 120832,
+      "outputSHA256": "265dba164ad340480d5dd7271034ba8f090791a96963488d862026cd2974cd85",
+      "mobile": {
+        "file": "public/images/heroes/careers-mobile-b2b1ca594fa0.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 57330,
+        "outputSHA256": "b2b1ca594fa0cd6a59f23be09d3f197ed4b63cb8aecd7479ffed3f6e6339732f"
+      }
     },
     {
-      "file": "public/images/heroes/solar-sunset.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/087ee94c8793be005c124e3e9ecd44f67df298bf",
-      "sourceSHA256": "8953033051c6fd1d794dfef72a326c777284a5436ea77257a973fbf97382c5ca",
-      "sourceDimensions": [1440, 600],
-      "outputDimensions": [1440, 600],
-      "bytes": 77688,
-      "outputSHA256": "ce03bb4387f18d8d285539e2ad606a87ed79ee7b6ff1faedf70a22a8f3d955c6",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "collaboration",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-a673cdaa-9212-4403-a7ac-da08ceb6a508.png",
+      "sourceSHA256": "e034161bcd52adb80456b15e85bd81197af7b3edb348b187cf239cfe7e8eb601",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create ONE premium camera-real institutional science editorial photograph as a high-resolution website hero placeholder. Landscape 3:2 composition, highest available native output resolution. Fictional generic North African context, no actual identifiable IRESEN people or facility. A mixed group of four adult scientists and research partners, women and men, in a strategic discussion around a clean, unbranded small renewable-energy physical prototype on an elegant meeting table in an airy contemporary meeting room. The prototype is a credible compact solar module and energy electronics demonstration, with no readable markings. Candid thoughtful interaction, realistic hands and faces, natural professional clothing; no posing toward the camera. Restrained navy and blue scientific materials, bright natural window daylight and warm-neutral photographic grading, finely resolved skin, fabrics, glass, metal and prototype microdetails. Broad framing from a little distance: keep the people and prototype centered in the middle half of the image, with generous clear headroom, calm uncluttered architecture on BOTH the left and right for Latin/RTL text and mobile cropping. The outer sides must remain quiet yet naturally photographic; no blank artificial zones. Premium architectural editorial photography, believable room scale, realistic optical depth, sharp central subjects, subtle depth of field. Do not add text, logos, watermarks, UI, charts with text, signs, heavy dark overlays, gradients or illustration effects. Render a real-looking photograph, not a 3D render or stock advertisement.",
+      "notes": [
+        "Native landscape 3:2 PNG; no upscaling or 4K claim.",
+        "Fictional generated people and setting; does not document an IRESEN team or facility.",
+        "Reviewed central discussion/prototype, generous headroom and calm outer architecture; no visible text, branding, watermark or overlay."
+      ],
+      "file": "public/images/heroes/collaboration-19ed7c16b18b.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 243450,
+      "outputSHA256": "19ed7c16b18b7feed07f05d0741e4192eba18b36b8752838fd0416db2b586fe9",
+      "mobile": {
+        "file": "public/images/heroes/collaboration-mobile-37bfdd5d73ce.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 103972,
+        "outputSHA256": "37bfdd5d73ceed8325f62ec192831263bd226c454fa069fabd88d5d443a5c3e8"
+      }
     },
     {
-      "file": "public/images/heroes/collaboration.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/dcebbb3c01e733d0b5198349270227a1379b31c6",
-      "sourceSHA256": "9b62364372b7d80bae9554721d594793e603617c29d696284e75c1061eb98a30",
-      "sourceDimensions": [2000, 1333],
-      "outputDimensions": [1920, 1280],
-      "bytes": 143176,
-      "outputSHA256": "bc5e7eb4ae951a119e4dd43be567dca0b9a8e89b2aba4e053bf6707893a253f3",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "conference",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-30256ac4-2d16-46c3-80b0-bebfe863ca9c.png",
+      "sourceSHA256": "acd7436b8df428faaa4c013196ca5ccac491a8e34a82701b8742f716b1aef015",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one landscape 3:2 photographic image at the maximum native resolution available. A professional camera-real energy/science editorial photograph, exceptionally sharp fine details and physically accurate clean geometry, natural daylight, warm neutral earth tones with restrained navy/blue. Carefully composed with calm, low-detail areas on BOTH the left and right for French/Arabic hero text; the central portion must remain meaningful and clean when cropped vertically for a mobile centered-cover hero. Keep important subjects clear of the very top header zone and bottom scroll-cue zone. No text, lettering, logos, watermarks, branded clothing or identifiable IRESEN site, event or person. This is an illustrative generated placeholder, not a documentary depiction of any specific institution. No collage, illustration, render, infographic, banner graphics or excessive cinematic effects.\n\nShow an unbranded scientific conference about energy: a few adult listeners and one speaker in a medium-wide editorial photograph, inside a bright clear room lit with natural daylight through windows. Anonymous participants, realistic anatomy and believable spacing, plain professional attire in neutral tones. No projection text, screens with writing, posters, logos or identifiable event. Keep people toward the central third with calm uncluttered architectural space on both sides; crisp realistic faces without portrait emphasis.",
+      "notes": [
+        "Generated illustrative photographic placeholder; no actual IRESEN event or identified participants. Inspected original: one anonymous speaker and four adult listeners, bright daylight room, no readable signage or logos. Listener detail is strongest on the right; review the existing end-layout text overlay and mobile center crop. Native 1536×1024 (3:2), unchanged PNG; no resizing or upscaling performed."
+      ],
+      "file": "public/images/heroes/conference-d533b6ed6fb6.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 125216,
+      "outputSHA256": "d533b6ed6fb6f7380ad84ea7bb0f784538383d8d2b65f380b6d61b6cfb7849ad",
+      "mobile": {
+        "file": "public/images/heroes/conference-mobile-d75f64dd6787.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 68496,
+        "outputSHA256": "d75f64dd6787fdd8a55b43624ec469696b44adad7d2ba011223b3b9fcb93d88a"
+      }
     },
     {
-      "file": "public/images/heroes/wind-landscape.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/3d552a258f1228b11ca3b3b8ca6a6d4d46f25a16",
-      "sourceSHA256": "6f1b1f61bf56f48432608c3d5b4f6645fc53ddc42dfe0d17288a8506882859c4",
-      "sourceDimensions": [2880, 873],
-      "outputDimensions": [1920, 582],
-      "bytes": 151784,
-      "outputSHA256": "d6ecffcaa2d80492a9aa06d69877757548b39b7be0825090ffd26bd9bae696d4",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "reading",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-f3c6b356-c3b9-4958-9ba9-abdfbfb18dd5.png",
+      "sourceSHA256": "5a86b24cfdec6f75db29a0aaa5ef5fe34555bf2e167bdbc14c4d74c5d0f3027d",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one high-resolution photographic website hero placeholder, landscape aspect ratio 3:2, at the highest native image resolution available. Premium camera-real institutional energy and science editorial photography, crisp fine detail and believable materials, natural daylight, warm neutral tones with restrained navy and blue accents. Generic imagined adult people and facilities; do not depict or claim any real IRESEN employee or facility. Centre the main subject within the middle 45 percent of the frame, keep faces fully visible with generous headroom, and keep both far left and far right edges quiet and uncluttered for French and Arabic text overlays, full-bleed framing, and centred vertical mobile crops. Natural documentary posture rather than advertising posing. Anatomically correct faces and hands. No words, lettering, numbers, readable text, labels, logos, watermark, UI, graphics, artificial dark gradient, or cinematic colour wash. Deliver a native generated image without interpolation or artificial upscaling. Scene: an adult scientist, approximately in their forties, quietly reviewing several printed generic research chart sheets at a clean wooden desk in a modern bright technical reading room. The paper charts contain only simple unlabelled faint graph lines, no characters or numbers. The scientist wears an unbranded light stone-grey shirt with a navy cardigan, has a calm focused expression, and is seated centrally, looking down at the papers. Show one natural hand resting flat beside the pages and the other holding the paper edge lightly. Soft natural window light, subtle blurred technical bookshelves without readable spines, pale neutral walls and restrained blue seating. Believable premium camera optics and documentary detail, uncluttered composition, fully visible face, generous space above the head and quiet open side areas. No laptop screen or other text-bearing object. CRITICAL COMPOSITION OVERRIDE: This is a WIDE ENVIRONMENTAL PHOTOGRAPH, not a close portrait. Move the camera significantly farther back and use a wider lens while preserving natural proportions. Keep the TOP QUARTER of the frame as quiet bright room/background with no head or equipment intrusion. The TOP of the person's hair must begin around 30 PERCENT of the full image height, and their face centre must sit around 40 PERCENT of image height, near the horizontal centre. Show a smaller subject and more of the clean room, entire workstation, and orderly floor/background. Keep the person and instrument/papers in the centre, leaving the outer thirds of both sides sparse. This generous headroom is essential so a wide website crop does not cut the head. Maintain the realistic professional daylight photographic treatment, sharp engineering detail and natural hands; no text or logos.",
+      "notes": [
+        "AI-generated generic placeholder; not a real IRESEN person or facility.",
+        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
+        "Visually inspected for natural faces/hands, unbranded photographic detail and centred subject framing.",
+        "A wider environmental framing was selected after one headroom correction; the earlier original remains at exec-eb39edc8-5ac0-4f64-a43f-708f0a10d151.png."
+      ],
+      "file": "public/images/heroes/reading-9d347e0a2ed8.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 221912,
+      "outputSHA256": "9d347e0a2ed8a30dbd4bf1b114599c3d2a53c37ea3fad724c101e4f205f6d868",
+      "mobile": {
+        "file": "public/images/heroes/reading-mobile-d8b8e9112c6e.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 106040,
+        "outputSHA256": "d8b8e9112c6e39ccd6e77029c106b820abe1b9e205a3ca9fed6630586b5c808a"
+      }
     },
     {
-      "file": "public/images/heroes/research.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/a6d71b3fa06f8ea9fce90e590ff01fe1fff4ee8d",
-      "sourceSHA256": "b539f6320853903f2fbbd609766ed2e51e69337b2240780153a9974bc5a0176f",
-      "sourceDimensions": [4096, 2731],
-      "outputDimensions": [1920, 1280],
-      "bytes": 110702,
-      "outputSHA256": "87905ab078bff76de58b625e60780bef522580a970192230b027d8a00aeb0389",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "research",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-bc93cd77-817d-487c-8dc2-2e8bd8c7a317.png",
+      "sourceSHA256": "0b8dde905b04dfc60e775084b3241d0904ffeb8de59f4cbfc0397c09924af95d",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create ONE premium camera-real institutional science editorial photograph as a high-resolution website hero placeholder. Landscape 3:2 composition, highest available native output resolution. Fictional generic North African context, no actual identifiable IRESEN people or facility. Two adult material-and-energy researchers, a woman and a man, thoughtfully studying a precision renewable-energy materials test bench in a bright modern laboratory. Show a credible neat bench with a small thin-film solar sample fixture, metal measuring stage, compact instrument enclosures, orderly test leads and a microscope or optical measurement instrument; real plausible objects, no futuristic devices. The scientists wear understated white lab coats over navy or neutral clothing and appropriate clear laboratory safety glasses, collaborate without posing toward the camera. Natural window daylight, warm-neutral photographic grading, restrained navy and blue accents in laboratory materials, finely resolved metal machining, glass, textiles, skin and bench microdetails. Broad architectural framing from a little distance: keep the two researchers and active test bench centered in the middle half of the image, with generous clear headroom and calm uncluttered walls and laboratory architecture on BOTH the left and right so Latin/RTL hero text and mobile crops remain feasible. Quiet outer side areas must look naturally photographic, not artificial empty color panels. Premium scientific editorial photography, realistic optical depth and scale, sharply resolved central subjects, mild depth of field. Do not add any text, readable screen content, labels, logos, watermarks, UI, signs, dark overlays, graphic gradients or illustration effects. Render a believable photograph, not a 3D render or a stock advertisement.",
+      "notes": [
+        "Native landscape 3:2 PNG; no upscaling or 4K claim.",
+        "Fictional generated researchers and laboratory; does not document an IRESEN team or facility.",
+        "Reviewed central researchers, solar sample/precision test bench, daylight and generous headroom; instrument detail at the lower right, quieter upper side areas. No visible text, branding, watermark or overlay."
+      ],
+      "file": "public/images/heroes/research-1dc2b1d2ea42.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 177694,
+      "outputSHA256": "1dc2b1d2ea4276aae22da7ebe4ad576448aa6154b33116e151a221038cfa25cb",
+      "mobile": {
+        "file": "public/images/heroes/research-mobile-5c0d5e7161f2.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 86436,
+        "outputSHA256": "5c0d5e7161f2a05c78ec222e782606d4dab8c9f4950d2edcfa368abb7cfab056"
+      }
     },
     {
-      "file": "public/images/heroes/team.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/523247f7ef14fad89f36f39dc91d923de1079a47",
-      "sourceSHA256": "422f1df389d43009b46404652f2d6af414ffd9e841aab6431a900930206903f0",
-      "sourceDimensions": [2000, 1333],
-      "outputDimensions": [1920, 1280],
-      "bytes": 92602,
-      "outputSHA256": "93b14c4bb2e77a63eace2a84d5529f1ee4642432be092b3c94ceb50c4041dae6",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-aerial",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-ed72b4fa-3a02-4543-a564-d97560ef3158.png",
+      "sourceSHA256": "fa831770e520589106c33cb7561e0363487f5c4d4ccdd3a66780596f57de9e04",
+      "sourceDimensions": [1672, 941],
+      "promptSummary": "Premium camera-real aerial photograph of a generic North African photovoltaic field; precise navy-blue cell grids, warm rocky plateau, clear early-morning light, diagonal rows, calm edges, no text/logos/overlays. Landscape16:9; highest native resolution requested.",
+      "notes": [
+        "Native output1672×941. Generic generated illustrative scene, no claim about any real institution or facility. Original retained."
+      ],
+      "file": "public/images/heroes/solar-aerial-47f3d26a392b.webp",
+      "outputDimensions": [1672, 941],
+      "bytes": 564384,
+      "outputSHA256": "47f3d26a392bee39de5dd2f61d1d9c57d1a406b1d53035143b00800112b3abc8",
+      "mobile": {
+        "file": "public/images/heroes/solar-aerial-mobile-836f21a73f2a.webp",
+        "crop": {
+          "left": 523,
+          "top": 0,
+          "width": 627,
+          "height": 941
+        },
+        "outputDimensions": [627, 941],
+        "bytes": 216272,
+        "outputSHA256": "836f21a73f2acb946eba8448592dbd6071868c2f0100ecc3ce421e763fde76ca"
+      }
     },
     {
-      "file": "public/images/heroes/solar-field.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/8d6a95483a8d22e1645f9bc5945f7f6f947bed7b",
-      "sourceSHA256": "74d4c44d953f0f53bdbc6934c656b038b5d744e3f3bfc73cb795478463c88317",
-      "sourceDimensions": [2880, 1297],
-      "outputDimensions": [1920, 865],
-      "bytes": 83608,
-      "outputSHA256": "4451e72ef1a8c83fd9ae5c83ca9550aa35d9961a940615780cbf3d81176fc88c",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-city",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-926c47f1-69c1-4166-9ca8-cfcba4b0aa37.png",
+      "sourceSHA256": "7f65ec856281409d4c089b9b6e4ca3ab860a5880e7f7b27f686d046af9e2a06b",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one landscape 3:2 photographic image at the maximum native resolution available. A professional camera-real energy/science editorial photograph, exceptionally sharp fine details and physically accurate clean geometry, natural daylight, warm neutral earth tones with restrained navy/blue. Carefully composed with calm, low-detail areas on BOTH the left and right for French/Arabic hero text; the central portion must remain meaningful and clean when cropped vertically for a mobile centered-cover hero. Keep important subjects clear of the very top header zone and bottom scroll-cue zone. No text, lettering, logos, watermarks, branded clothing or identifiable IRESEN site, event or person. This is an illustrative generated placeholder, not a documentary depiction of any specific institution. No collage, illustration, render, infographic, banner graphics or excessive cinematic effects.\n\nShow a modern urban green-energy roofscape: very sharp, precise blue photovoltaic panels in the foreground, with low, clean, contemporary North African-style city architecture behind them. Bright natural daylight, subtle pale stone and sandy earthy surfaces, visually credible panel mounting and wiring. No identified city, recognizable landmark, dramatic skyline or readable signage. A balanced medium-wide editorial view with a generous clean sky and breathing space.",
+      "notes": [
+        "Generated illustrative photographic placeholder; no identified city, landmark or IRESEN facility. Inspected original: precise foreground PV arrays, low North African-style roofscape, generous sky, no readable text or logos. Native 1536×1024 (3:2), unchanged PNG; no resizing or upscaling performed."
+      ],
+      "file": "public/images/heroes/solar-city-79262d84a1ba.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 304628,
+      "outputSHA256": "79262d84a1ba657d141ad62c33b3a462cc8cd87458620b3d6aea7d3a690013d9",
+      "mobile": {
+        "file": "public/images/heroes/solar-city-mobile-7b4d48ba6244.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 142274,
+        "outputSHA256": "7b4d48ba6244e4a8b204ccdae0d73bb6ae229330c099f696bdad578bb28b98e1"
+      }
     },
     {
-      "file": "public/images/heroes/workshop.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/0a94efc9638224fc630253c72c4c80bd90b3aa00",
-      "sourceSHA256": "ef7b8067ad40c20fb1ccf21a512bf6cb2016b43e4ed6927b503f566ccef11ef5",
-      "sourceDimensions": [1200, 1800],
-      "outputDimensions": [960, 1440],
-      "bytes": 119694,
-      "outputSHA256": "2443ad6d654fe440e24d9f1dc3327cfbafb59e5f70743394902d91e78e22b271",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-detail",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-3dd35fcc-b4dc-4ba6-ad28-f317f7325764.png",
+      "sourceSHA256": "13f5b9528845596941339b65315e2484ea8d1f039ced0e1a7de52fadf971c5fc",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one landscape 3:2 photographic image at the maximum native resolution available. A professional camera-real energy/science editorial photograph, exceptionally sharp fine details and physically accurate clean geometry, natural daylight, warm neutral earth tones with restrained navy/blue. Carefully composed with calm, low-detail areas on BOTH the left and right for French/Arabic hero text; the central portion must remain meaningful and clean when cropped vertically for a mobile centered-cover hero. Keep important subjects clear of the very top header zone and bottom scroll-cue zone. No text, lettering, logos, watermarks, branded clothing or identifiable IRESEN site, event or person. This is an illustrative generated placeholder, not a documentary depiction of any specific institution. No collage, illustration, render, infographic, banner graphics or excessive cinematic effects.\n\nShow a crystal-clear close angled photographic view of a precise blue photovoltaic cell grid. Pin-sharp foreground cell geometry, credible fine metallic contacts and module seams, orderly rows receding softly with genuine optical depth. An elegant technical texture rather than an abstract pattern. Include a restrained clean blue-sky edge at the top. Natural light and controlled reflections, no exaggerated glare, no text or labels. Composition stays readable in a centered vertical crop.",
+      "notes": [
+        "Generated illustrative photographic placeholder; no actual IRESEN equipment or facility. Inspected original: crisp blue PV-cell grid, credible module seams and fine geometry, gentle receding depth and a clean sky edge, no readable text or logos. Native 1536×1024 (3:2), unchanged PNG; no resizing or upscaling performed."
+      ],
+      "file": "public/images/heroes/solar-detail-898dc69d3900.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 217306,
+      "outputSHA256": "898dc69d3900f1c3491c4811a9583d58cc8081a3f0635204a4c05b0ea45dc2a8",
+      "mobile": {
+        "file": "public/images/heroes/solar-detail-mobile-85512902dfa3.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 104462,
+        "outputSHA256": "85512902dfa370edc528f70c771461c1f3378a7eb352a85945448a13a0e6bf8e"
+      }
     },
     {
-      "file": "public/images/heroes/solar-expertise.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/4907be7fb1d97fd01071df6dc494eea6fc106b1a",
-      "sourceSHA256": "1033dd6f03400cf9288e18863acca36d688aa103e6abd7f7aba07019cbe24786",
-      "sourceDimensions": [1439, 1784],
-      "outputDimensions": [1162, 1440],
-      "bytes": 193034,
-      "outputSHA256": "6b54e0eb25d7f1dee43bf63704306c7ca17d4447bd1bb64048fb4936e0d82ea1",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-expertise",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-ab88b3e1-1fc3-415c-ab1e-4c047ae88caa.png",
+      "sourceSHA256": "5dffdad25969643606c45529a726962b15f5c7efafef23384ce4f4d76bbc7f4d",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create one high-resolution photographic website hero placeholder, landscape aspect ratio 3:2, at the highest native image resolution available. Premium camera-real institutional energy and science editorial photograph: an adult energy engineer outdoors inspecting a modular photovoltaic test panel in a plausible sunny North African research environment, looking attentively at the panel rather than at the camera. Generic imagined person and location; this is not an image of any real IRESEN employee or facility. The engineer wears unbranded navy-blue technical workwear and holds a small unbranded diagnostic device, with natural anatomically correct hands; a clean solar module test frame is visible near the centre, a few orderly photovoltaic panels and a restrained clear pale horizon behind. Crisp realistic engineering material detail, tempered glass, metal fasteners, believable tools, natural daylight, warm neutral landscape tones with navy and blue accents. Refined, documentary, scientifically credible, sharply detailed photographic optics, no stock-photo posing. Place the main engineer and test assembly centrally, keep the head and face fully visible with generous headroom, and leave both the far left and the far right edges quiet and open so the photograph supports overlay text in French or Arabic, full-bleed use, and a centred vertical mobile crop. The central subject should occupy about the middle 45 percent of the image width. No words, lettering, numbers, labels, logos, watermark, UI, graphic elements, artificial dark gradient, cinematic colour wash, or fake institutional identity. No interpolation or artificial upscaling; deliver the native generated photograph.",
+      "notes": [
+        "AI-generated generic placeholder; not a real IRESEN person or facility.",
+        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
+        "Visually inspected for natural faces/hands, unbranded photographic detail and centred subject framing."
+      ],
+      "file": "public/images/heroes/solar-expertise-d1a731bdb7ad.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 221552,
+      "outputSHA256": "d1a731bdb7ad5d12097557319b3389b904d9a003deafe30487f7cd2d85131edf",
+      "mobile": {
+        "file": "public/images/heroes/solar-expertise-mobile-ad3376396a3e.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 108476,
+        "outputSHA256": "ad3376396a3e9dd6d62eaa8ffbc9c42aac3cdd8912584f1feb99ca6ae9563625"
+      }
     },
     {
-      "file": "public/images/heroes/wind-engineer.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/eea05bdc0c071c066d0ef6d09e245aa8cfab4a1e",
-      "sourceSHA256": "184c4a27418e7a9e79061c1ef7e61afd8ead48bb5093434edf3ff28f56e479fa",
-      "sourceDimensions": [2880, 1275],
-      "outputDimensions": [1920, 850],
-      "bytes": 26680,
-      "outputSHA256": "63cd855e7e89dea116445b3826ed61874430c89c57a5d3292ec23c7a002f4b8e",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-field",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-3072d9f3-ed23-4c4c-8f10-a9dda99c835c.png",
+      "sourceSHA256": "a1269748c2810a79f06bf7205e217e8c1035666a097d4e0db9fe247e02594590",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create a single premium camera-real editorial photograph at the highest available native pixel resolution, landscape aspect ratio 3:2. Generic modern photovoltaic research test field in North Africa. A low three-quarter camera angle across neat physically correct navy-blue photovoltaic arrays on sturdy metal frames; foreground panels rendered with sharply defined silicon cell grids, subtle glass reflections and thin aluminum frames, consistent repeating geometry. Pale warm-neutral gravel ground, a clear blue horizon and distant rocky hills, with a simple understated modern white research pavilion far in the background at the right, no windows or architecture drawing excessive attention. Bright but soft natural midmorning light, crystal clear air, restrained navy-blue and warm stone palette, realistic dynamic range and precise camera optics. Approximately upper 35 percent calm open sky; photogenic central panel pattern survives a narrow central mobile crop, left and right margins visually calm for French and Arabic website text. This is a real-looking generic imagined installation, not an actual IRESEN site. No people, lettering, logos, named or identifiable buildings, flags, signs, labels, watermarks, UI, illustration, digital-art look, exaggerated lens flare, dark overlays or vignette.",
+      "notes": [
+        "Generated placeholder photography of an imagined generic renewable-energy landscape, not an actual IRESEN location.",
+        "Native image; not upscaled.",
+        "Visually inspected at generation: credible geometry, crisp photovoltaic cells or wind turbines, generous sky and balanced mobile crop."
+      ],
+      "file": "public/images/heroes/solar-field-c7bf4e8c9199.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 435390,
+      "outputSHA256": "c7bf4e8c91995ecb4e33b0147091c8cde0059b788b070bcc425954127f054c03",
+      "mobile": {
+        "file": "public/images/heroes/solar-field-mobile-4b16d7844f5a.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 191442,
+        "outputSHA256": "4b16d7844f5a1793a3a180682a3d8ba9dc0a8c1a41e3bf760f2b68bd6d2839ff"
+      }
     },
     {
-      "file": "public/images/heroes/solar-city.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/c5401e5f34606504c187432d1f195ec350408a96",
-      "sourceSHA256": "a3771cea3767de97c5de4afb3e22c2c05f5b92653be9ddf015be35e3bece9c16",
-      "sourceDimensions": [2880, 1275],
-      "outputDimensions": [1920, 850],
-      "bytes": 134654,
-      "outputSHA256": "e5e8e73bdf4fce391d53e0740c66351a258d337e8a160f1c9b22c481313ce982",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-horizon",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-8737e201-1953-4271-8730-846eb4d314b1.png",
+      "sourceSHA256": "e4a1609a3b4e031c1ba7b8a21bc50cafe9b23c396d11ee36abce1930e62c6c2e",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create one camera-real premium editorial landscape photograph, landscape 3:2, at the highest available native resolution. A serene broad photovoltaic array stretching toward a low rocky North African hill horizon during the gentle clear-air transition just before blue hour, still bright enough to reveal every panel. Navy-blue photovoltaic glass panels with precise physically consistent silicon cell grids and aluminum borders, neat parallel rows in the lower 55 percent, slight three-quarter perspective into the distance. Calm pale blue sky with a very subtle cool-to-warm horizon gradient occupies upper 45 percent, no dramatic clouds, no brilliant flare or darkness. Muted warm-neutral rocky soil and rolling hills, crisply delineated panels and realistic exposure captured by a premium full-frame camera. Simple spacious composition whose central panels and sky remain photogenic when cropped narrow for a mobile hero, calm left and right edges for French or Arabic website title placement. Refined understated energy research brand imagery, detailed and natural, not an illustration or 3D render. No people, logos, lettering, signage, identifiable real facility, flags, UI, watermarks, graphic effects, applied dark overlay or vignette. This is an imagined generic location, not a documentary photograph of an actual IRESEN site.",
+      "notes": [
+        "Generated placeholder photography of an imagined generic renewable-energy landscape, not an actual IRESEN location.",
+        "Native image; not upscaled.",
+        "Visually inspected at generation: credible geometry, crisp photovoltaic cells or wind turbines, generous sky and balanced mobile crop."
+      ],
+      "file": "public/images/heroes/solar-horizon-76a1a663a424.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 315010,
+      "outputSHA256": "76a1a663a4245017b24094f25585f4284f96653234cb1f89f7536738bbb25a8e",
+      "mobile": {
+        "file": "public/images/heroes/solar-horizon-mobile-e1d07bde00d8.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 131148,
+        "outputSHA256": "e1d07bde00d81441bfb43e73e8d8ded92a6dbcaabc9ff9319cf46df6bdf09072"
+      }
     },
     {
-      "file": "public/images/heroes/conference.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/d2caba52d3e4cec1f93628a1192071d4edd23a53",
-      "sourceSHA256": "b1e5bcc2254b61038023005b21df12589a0907376ba8aead673eaae8c0c94161",
-      "sourceDimensions": [2880, 1276],
-      "outputDimensions": [1920, 851],
-      "bytes": 35902,
-      "outputSHA256": "6442773958e673b20f0bbd7ebe115a277539d1df3ca00c69b479102830080be1",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "solar-sunset",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-dbaf253b-a00f-4f52-a963-a2c1beca98c5.png",
+      "sourceSHA256": "b28a46677164bc0ae65db7f71cf7aacca9c2cfe2d95e98753eccc9cf9a110a6e",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create one premium photographic hero background, landscape 3:2 at the highest available native pixel resolution. Camera-real editorial architectural and landscape photography, exceptionally crisp photovoltaic cell grids and physical details, natural believable light and clear atmosphere. Scene: generic North African modern solar farm, low camera angle looking over broad dark navy-blue photovoltaic panel rows across gently rocky warm-neutral terrain during late golden hour. Controlled warm light grazing panel edges, pale warm-blue sky and distant low hills; no saturated orange spectacle, no exaggerated bloom, no haze that obscures detail. Panels have precise credible construction, consistent perspective and well-defined glass surfaces, no sci-fi technology. Sky occupies the upper 35 percent with generous vertical headroom; main panel arrangement central, balanced calm left and right edges so the photograph supports French and Arabic title overlays and a narrow central mobile crop. Refined understated institutional renewable-energy imagery, candid real photograph captured with a professional full-frame camera and high-quality lens, all subjects sharply resolved. No people, logos, text, signs, UI, watermarks, graphic design, dark overlay or vignette. This depicts an imagined generic facility, not a real or identifiable institution.",
+      "notes": [
+        "Generated placeholder photography of an imagined generic renewable-energy landscape, not an actual IRESEN location.",
+        "Native image; not upscaled.",
+        "Visually inspected at generation: credible geometry, crisp photovoltaic cells or wind turbines, generous sky and balanced mobile crop."
+      ],
+      "file": "public/images/heroes/solar-sunset-a27f2d68ea29.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 379268,
+      "outputSHA256": "a27f2d68ea29ea53fe3aec8070a48e4adf269d539f075c39de81cdedfbc82a1b",
+      "mobile": {
+        "file": "public/images/heroes/solar-sunset-mobile-889101e3c5b4.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 166590,
+        "outputSHA256": "889101e3c5b4455da9a518e777513c953796be16f977f7616f656786e7ef857f"
+      }
     },
     {
-      "file": "public/images/heroes/reading.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/da9e00d4c52b2a47e985a0f4ba4877331f5d3b3c",
-      "sourceSHA256": "b94ae8dbc33fb59959a43ebe69f9d5ae2e30b4ac5240983f9411355031240959",
-      "sourceDimensions": [2000, 1333],
-      "outputDimensions": [1920, 1280],
-      "bytes": 88846,
-      "outputSHA256": "693926f9b59c40db006a8eb72484ac2083bd4166f04182b51f48ff9613a322d4",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "team",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-1a8945f6-6b39-46af-8bdf-7daf811748c9.png",
+      "sourceSHA256": "ee8e153d46de4c8113869d4b679fe4345843e9e6d4a1b828513a29f98524f88c",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create ONE premium camera-real institutional science editorial photograph as a high-resolution website hero placeholder. Landscape 3:2 composition, highest available native output resolution. Fictional generic North African context, no actual identifiable IRESEN people or facility. Exactly three adult engineers, two women and a man, collaborating naturally around a small unbranded renewable-energy prototype on a clean workshop worktable in an airy contemporary engineering studio. A credible compact solar-to-battery demonstration with a small panel, neat clear-cased electronics, a blue metal fixture and a few orderly tools; no readable markings or screen text. One engineer adjusts the prototype while the other two observe and discuss, all concentrating on the object rather than posing toward the camera. Natural professional navy, light-blue and warm-neutral work clothing, realistic hands, faces and body proportions. Bright natural daylight, warm-neutral photographic grading, restrained navy and blue materials, sharp lifelike textile, metal, wood, skin and instrument microdetails. Broad landscape framing with a little distance: keep all three engineers and their prototype centered in the middle half of the image, with generous uncluttered headroom and calm architectural areas on BOTH the left and right for Latin/RTL text and mobile cropping. A distinctive open engineering studio with neutral walls, tall windows and subtle unoccupied work surfaces, avoiding a meeting-room look. Quiet side areas should remain naturally photographic, not artificial blank color fields. Premium editorial photography, plausible objects and room scale, realistic optical depth, sharply resolved central subjects, subtle depth of field. Do not add text, logos, watermarks, UI, labels, signs, dark overlays, graphic gradients, stock-advertising smiles, CGI or illustration effects. Render a believable real photograph.",
+      "notes": [
+        "Native landscape 3:2 PNG; no upscaling or 4K claim.",
+        "Exactly three fictional generated adult engineers in a generic studio; does not document an IRESEN team or facility.",
+        "Reviewed centered collaboration around an unbranded solar/electronics prototype, navy/light-blue materials and generous headroom; no visible text, branding, watermark or overlay."
+      ],
+      "file": "public/images/heroes/team-024481368fd7.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 213450,
+      "outputSHA256": "024481368fd7dfe6fcbffdc4938f2624445df4fc6ab79d5082b610fc765f0f7a",
+      "mobile": {
+        "file": "public/images/heroes/team-mobile-657ccde90f41.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 112074,
+        "outputSHA256": "657ccde90f4172c56a9b975fc61a9b41aea04319d9439c918f6494c937d53420"
+      }
     },
     {
-      "file": "public/images/heroes/solar-detail.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/6dfa5bcac6f976b1090e8e435c1e618c58b60cc4",
-      "sourceSHA256": "e740b5409ca6af175ac4e1ca736d3db6c9972ee866121d7859bdae3add225858",
-      "sourceDimensions": [2880, 1084],
-      "outputDimensions": [1920, 723],
-      "bytes": 60540,
-      "outputSHA256": "5dbfea5446d7c64810f6b583b93b0959962f24f218fe883111476f24d1e231f2",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "wind-detail",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-a51809da-c217-4177-8f28-022a3062806d.png",
+      "sourceSHA256": "b7891b1906bf938afee2f606bbd7491da04eecdae8db367583ea748b5566cf2d",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one landscape 3:2 photographic image at the maximum native resolution available. A professional camera-real energy/science editorial photograph, exceptionally sharp fine details and physically accurate clean geometry, natural daylight, warm neutral earth tones with restrained navy/blue. Carefully composed with calm, low-detail areas on BOTH the left and right for French/Arabic hero text; the central portion must remain meaningful and clean when cropped vertically for a mobile centered-cover hero. Keep important subjects clear of the very top header zone and bottom scroll-cue zone. No text, lettering, logos, watermarks, branded clothing or identifiable IRESEN site, event or person. This is an illustrative generated placeholder, not a documentary depiction of any specific institution. No collage, illustration, render, infographic, banner graphics or excessive cinematic effects.\n\nShow a single sculptural white wind turbine against a clean blue sky, with generous headroom and a restrained rocky landscape below. One physically credible nacelle, tower and rotor with exactly three blades, realistic structural proportions and perspective; no other turbines crossing its rotor and no implausible geometry. A sharp professional medium-wide photograph in clear natural daylight with warm neutral rocky terrain, graceful calm open space on both sides. Keep the turbine centrally placed enough to survive a mobile centered crop.",
+      "notes": [
+        "Generated illustrative photographic placeholder; no identified IRESEN site. Inspected original: a single centrally placed white turbine with exactly three credible blades, clean sky and rocky terrain, no text or logos. Native 1536×1024 (3:2), unchanged PNG; no resizing or upscaling performed."
+      ],
+      "file": "public/images/heroes/wind-detail-7e64333aa06f.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 180966,
+      "outputSHA256": "7e64333aa06fee4ad69f9c0529dd42c1b437d2db29c33015284acb24c0f8916f",
+      "mobile": {
+        "file": "public/images/heroes/wind-detail-mobile-13d915f73e61.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 86720,
+        "outputSHA256": "13d915f73e6126446c4c3eb4a60af77bac8f33cd8b077e8042e83e8a26218541"
+      }
     },
     {
-      "file": "public/images/heroes/careers.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/76f06414621f35a1fe5c4cea83cbd47e7c0beb3e",
-      "sourceSHA256": "ed436a7f9ecc0a993dbd64ed9656e12a12afec67e8b8d81a05727c5b6193e3ff",
-      "sourceDimensions": [1184, 1333],
-      "outputDimensions": [1184, 1333],
-      "bytes": 82664,
-      "outputSHA256": "a7b701d1ae687cce8c7ed0f8f2eea08105fcc357ca24e1a926f1e742da887666",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "wind-engineer",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-8530323d-6279-42aa-be18-469a5d283fe1.png",
+      "sourceSHA256": "dea613dc701b58003fca334ac198bc07d2273dc42603cf2e1379466d53283325",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one high-resolution photographic website hero placeholder, landscape aspect ratio 3:2, at the highest native image resolution available. Premium camera-real institutional energy and science editorial photography, crisp fine detail and believable materials, natural daylight, warm neutral tones with restrained navy and blue accents. Generic imagined adult people and facilities; do not depict or claim any real IRESEN employee or facility. Centre the main subject within the middle 45 percent of the frame, keep faces fully visible with generous headroom, and keep both far left and far right edges quiet and uncluttered for French and Arabic text overlays, full-bleed framing, and centred vertical mobile crops. Natural documentary posture rather than advertising posing. Anatomically correct faces and hands. No words, lettering, numbers, readable text, labels, logos, watermark, UI, graphics, artificial dark gradient, or cinematic colour wash. Deliver a native generated image without interpolation or artificial upscaling. Scene: an adult woman energy engineer wearing a clean white safety hardhat and unbranded navy-blue workwear stands attentively at a wind research field in a clear, plausible North African landscape. She looks at a nearby unbranded monitoring instrument with a relaxed thoughtful expression, never directly at the camera. White modern wind turbines occupy the distant middle ground, with realistically proportioned three-bladed rotors and ordered rows extending across low sandy hills. A pale blue sky, gentle sunlight, warm dry grasses and clear air. The engineer occupies the centre, around waist-up to three-quarter framing, hands naturally relaxed around a compact unbranded inspection tablet held low; do not introduce crowded cables or complex finger gestures. Keep the landscape and both side edges open and simple.",
+      "notes": [
+        "AI-generated generic placeholder; not a real IRESEN person or facility.",
+        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
+        "Visually inspected for natural faces/hands, unbranded photographic detail and centred subject framing."
+      ],
+      "file": "public/images/heroes/wind-engineer-1fc45889ff2c.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 203118,
+      "outputSHA256": "1fc45889ff2cb8cb5d0c88d46e17df106d0a8a2bb1264b98503280b8740ea83f",
+      "mobile": {
+        "file": "public/images/heroes/wind-engineer-mobile-8a4062f10302.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 87724,
+        "outputSHA256": "8a4062f10302d5c47b8178c48ba5cc7b483d4fade86a0c5b70c339c5cfb4b969"
+      }
     },
     {
-      "file": "public/images/heroes/solar-horizon.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/9abbea411cc4bdb4b164cc54e2dd6f90342410e3",
-      "sourceSHA256": "b9f38e55af78c3a798292695b545b7bb61edef9f8ee74ee547a0027b4f5d4e91",
-      "sourceDimensions": [1200, 798],
-      "outputDimensions": [1200, 798],
-      "bytes": 105784,
-      "outputSHA256": "e0b97007234bb48829a3f799def9e2885f103f65336cd825074eb99e84cfb20a",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "wind-landscape",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-15663825-07ff-4658-98d0-f9063bdea595.png",
+      "sourceSHA256": "5e4abb39a12fece64429e337575dcd5111b1da02ddc3208ab8125f66e9228c2a",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Generate one highest-available-native-resolution photographic image, landscape 3:2, premium camera-real renewable-energy editorial landscape photography. A clean contemporary wind farm across low rocky North African hills with sparse green shrubs, under clear blue daytime sky. Several correctly engineered white three-blade wind turbines are widely and physically plausibly spaced across the landscape, their hubs and bases well resolved and turbine scales consistent with depth. One elegant turbine toward the central-right upper field, smaller turbines receding into the middle distance, no overlapping or malformed blades. Crisp clear air, neutral warm limestone terrain and natural muted vegetation, deep blue sky with a few delicate white clouds. Generous sky and vertical headroom, whole blades safely within the frame, lower hills gently occupy bottom third. Composition survives a narrow central mobile crop, calm outer left and right thirds for French and Arabic text overlays. Precise material and texture detail as a professional full-frame camera with a high-quality lens, naturally balanced exposure, restrained premium institutional look. No people, vehicles, text, signs, logos, landmarks, UI, graphic layers, watermarks, applied dark overlays or vignettes. The location is invented generic scenery, not an identifiable real institution or project.",
+      "notes": [
+        "Generated placeholder photography of an imagined generic renewable-energy landscape, not an actual IRESEN location.",
+        "Native image; not upscaled.",
+        "Visually inspected at generation: credible geometry, crisp photovoltaic cells or wind turbines, generous sky and balanced mobile crop."
+      ],
+      "file": "public/images/heroes/wind-landscape-f05d7711d8d0.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 330928,
+      "outputSHA256": "f05d7711d8d059fac6a4af9489a91f5dcb9d0890cdac4f9caeee3b680422a686",
+      "mobile": {
+        "file": "public/images/heroes/wind-landscape-mobile-545006a7b08a.webp",
+        "crop": {
+          "left": 657,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 144344,
+        "outputSHA256": "545006a7b08a0c3e6e195b505ce874e7a12652fe64d268627875cc2c3b5ce869"
+      }
     },
     {
-      "file": "public/images/heroes/wind-detail.webp",
-      "source": "Owner-supplied IRESEN OFFICIAL FILE.fig",
-      "archiveEntry": "images/f7a2ee058c28c3b792b1ff8102c8efacf1a55b57",
-      "sourceSHA256": "11b3810220076c733dbf6a5c6ec0921a40e4cadca449b29895eb0a7de465e7a3",
-      "sourceDimensions": [2560, 1444],
-      "outputDimensions": [1920, 1083],
-      "bytes": 43368,
-      "outputSHA256": "ac57f0b290f91e3f60613020e71672724478dcc13ed189da476397b4a7b2dff0",
-      "role": "Illustrative page-introduction background; no claim about pictured people or facilities",
-      "transformation": "Downsize without upscaling; convert to WebP at quality 82; responsive crop at render time"
+      "id": "workshop",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-c6f65316-4bc8-4f1c-b426-a2336c347661.png",
+      "sourceSHA256": "aad2f0be7bee97c72fead910f9fe36b44dbef75fb90a269f1fbadb7f5f52830a",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create ONE premium camera-real institutional science editorial photograph as a high-resolution website hero placeholder. Landscape 3:2 composition, highest available native output resolution. Fictional generic North African context, no actual identifiable IRESEN people or facility. An interactive scientific workshop: four adult scientists and doctoral trainees, women and men, working together around an unbranded bench-top solar testing instrument in a bright contemporary training laboratory. A more experienced adult scientist explains an adjustment while the others carefully examine a compact solar module mounted in a blue-and-metal measurement fixture, with plausible orderly test leads and a simple precision instrument. Natural collaborative concentration, no poses or looks toward the camera, realistic hands and faces. Appropriate safety glasses, understated white laboratory coats and navy or neutral clothing. Broad landscape framing taken from a little distance: center the group and the active bench in the middle half, leave generous headroom and calm uncluttered architecture on BOTH the left and right for Latin/RTL hero text and mobile cropping. Emphasize the collective workshop rather than a close-up, with unoccupied work surfaces and tall windows looking onto a quiet sunlit courtyard without identifiable landmarks. Natural daylight, warm-neutral photographic grading, restrained navy and blue scientific materials, finely resolved glass, metal, skin, textile and instrument microdetails, realistic optics and room scale, sharp central subjects with mild depth of field. Quiet outer areas must remain naturally photographic, not artificial blank panels. Do not add text, logos, watermarks, UI, readable instrument labels, screen text, wall signs, dark overlays, graphic gradients, CGI or illustration effects. Render a believable premium institutional editorial photograph, not a stock advertisement.",
+      "notes": [
+        "Native landscape 3:2 PNG; no upscaling or 4K claim.",
+        "Four fictional generated adult scientists/doctoral trainees in a generic training laboratory; does not document an IRESEN team or facility.",
+        "Reviewed collective bench-top solar/test instrument scene, broad framing, generous headroom and calm outer laboratory areas; no visible readable text, branding, watermark or overlay."
+      ],
+      "file": "public/images/heroes/workshop-f9504d1337a2.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 174310,
+      "outputSHA256": "f9504d1337a2cbc059a486f01f2f48280061d3895658571255cc56fa6c5d2bdf",
+      "mobile": {
+        "file": "public/images/heroes/workshop-mobile-8e8c5c2cc11a.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 87888,
+        "outputSHA256": "8e8c5c2cc11aed2e478485c8b873cc19f2b2f59be7ebc971e86ebda83920bd9d"
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Asset inventory
 
-Inventory updated: 2026-10-08. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines were preserved in ignored `private-references/` during prior work; those private archives are absent from the current checkout. An owner-supplied video is available in `public/videos/` for future hero implementation. The received files are sufficient for the branded foundation.
+Inventory updated: 2026-10-09. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines were preserved in ignored `private-references/` during prior work; those private archives are absent from the current checkout. An owner-supplied video is available in `public/videos/` for future hero implementation. The received files are sufficient for the branded foundation.
 
 ## Received assets and rights
 
@@ -168,23 +168,54 @@ Native Figma editable structure, mobile frames and serialized interaction record
 
 Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
-## Introductory hero backgrounds — 2026-10-08
+## Generated hero placeholders — 2026-10-09
 
-The owner's request to create varied page heroes is implemented locally using
-17 individual photographic rasters from the supplied native Figma file. These
-are optimized WebP derivatives under `public/images/heroes/`, not crops of
-complete design screenshots. [hero-assets.json](hero-assets.json) records each
+The owner requested 17 generated generic photographic placeholders to replace
+the earlier Figma backgrounds across all 22 pages. These fictional scenes are
+decorative illustrations, not records of real IRESEN facilities, people or work.
+Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
+their existing definitions. The replacement introduces no external image host,
+video playback or new client runtime.
+
+Sixteen generated source images are native 1536 × 1024px; the aerial solar scene
+is 1672 × 941px. These are not 4K sources or a blanket resolution increase over
+the earlier media. WebP conversion at quality 90 retains native dimensions
+without upscaling. Portrait 2:3 mobile crops retain the full native source height
+and are selected at `40rem` and below. Their dimensions are 683 × 1024px for the
+sixteen 3:2 sources and 627 × 941px for the aerial. Content-hash filenames
+distinguish the new assets. Original generated PNGs remain in the generation
+workspace, outside Git and `public/`.
+
+The schema-2 [hero manifest](hero-assets.json) records 16 full generation prompts
+and an abbreviated aerial prompt summary, native dimensions, source and output
+SHA-256 values, byte counts and mobile crop rectangles. The 17 landscape WebPs
+total 4,429,414 bytes; the 17 mobile crops total 2,001,688 bytes. The largest
+mobile crop is 216,272 bytes, below the approximately 250KB per-hero mobile budget.
+
+A native `<picture>` source serves the portrait WebP directly at `40rem` and
+below. Wider screens use Next Image at quality 90 with cover-aware sizes based
+on viewport width, source aspect ratio × viewport height and a 75rem content-growth
+guard. Each page selects one eager, high-priority hero background. Delivered-byte
+and rendered checks belong in [the validation log](validation.md#generated-hero-placeholders--2026-10-09).
+
+## Superseded Figma hero backgrounds — 2026-10-08
+
+The initial varied page heroes used 17 individual photographic rasters from
+the supplied native Figma file. Their optimized WebP derivatives were stored under
+`public/images/heroes/`, not cropped from complete design screenshots.
+The [archived Figma manifest](hero-assets-figma-2026-10-08.json) preserves each
 archive entry, source/output SHA-256, dimensions, transformation and byte count.
-The total derivative payload is about 1.79 MiB; each page requests one responsive
-background through Next Image, not the full set or the MP4. Originals remain in
-the supplied native source.
+That derivative set totaled about 1.79 MiB; each page requested one responsive
+background through Next Image rather than the full set or the MP4. Originals
+remain in the supplied native source. The generated placeholders above supersede
+this background set.
 
-This is draft design use within the requested local implementation. No
-independent redistribution license, image credit, model release or identification
-of facilities is inferred from Figma. Photographs are decorative and illustrate
-their topic; they do not claim to depict IRESEN researchers or assets. Verify
-individual usage rights and credits before production publication, or replace
-with approved originals. The MP4 remains unchanged and is not played.
+The earlier use was draft design work. No independent redistribution license,
+image credit, model release or identification of facilities was inferred from
+Figma. Its decorative photographs did not claim to depict IRESEN researchers or
+assets. The individual rights/credits review applied to those Figma-derived images;
+reusing them would still require that review or approved originals. It does not
+describe the generated sources above. The MP4 remains unchanged and is not played.
 
 ## Plus Jakarta Sans Latin font — 2026-10-08
 

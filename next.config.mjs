@@ -8,6 +8,9 @@ const nextConfig = {
   output: 'standalone',
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    qualities: [75, 90],
+  },
   async headers() {
     return [
       {

@@ -763,3 +763,78 @@ Coverage is Chromium and the existing sparse public foundation. It does not
 establish cross-browser or screen-reader conformance, populated editorial/CMS
 page-body quality, native Figma pixel fidelity, institutional content approval
 or production deployment.
+
+## Generated hero placeholders — 2026-10-09
+
+Replaced the 17 previous backgrounds across all 22 page introductions with the
+owner-requested generated photographic placeholders. The shared layouts, copy,
+figures, fonts, routes and original SVGs are unchanged. The
+[current manifest](hero-assets.json) records native dimensions, generation
+provenance, source/output SHA-256 values and exact crop rectangles; the
+[former Figma manifest](hero-assets-figma-2026-10-08.json) is retained as history.
+
+Local checks passed: formatting, lint, strict types, 8 unit tests, 4 CMS integration
+tests, the standalone production build and all 44 Chromium browser tests. Two new
+[image-delivery regressions](../tests/e2e/hero-images.spec.ts) inspect actual response
+pixels and requests in fresh DPR-2 contexts for FR home/priorities and AR
+priorities, checking native-height mobile delivery, desktop quality 90 and one
+selected image request. Existing tests retain all 66 localized hero routes,
+fonts, responsive/RTL, enlarged text, navigation, no-JavaScript behavior and
+accessibility coverage.
+
+The production delivery audit made 95 observations: 69 matching baseline cases,
+16 breakpoint cases, four enlarged-text cases and six English cases. Coverage
+includes every French page at 1920 × 1080 and 390 × 844/DPR 2, all five layouts
+at 1440 × 1000/DPR 1 and 2, representative 390px/DPR 1 and Arabic views,
+640/641px and 1119/1120px transitions, and 320 × 568 with 200% text. No navigation,
+image, source-selection or horizontal-overflow failures occurred. Every navigation
+requested exactly one hero; direct mobile responses matched their portrait file
+hashes, and wide optimized responses used quality 90 without exceeding native
+dimensions. All 34 WebP hashes, dimensions, filename hashes and byte counts match
+the manifest. Former image URLs are no longer referenced by runtime code.
+
+The 17 landscape files total 4,429,414 bytes, and the 17 mobile crops total
+2,001,688 bytes. A page requests one selected variant. Actual mobile image bodies
+range from 57,330 to 216,272 bytes, all below the approximately 250KB hero budget.
+The former width-only image sizing visibly undersampled tall mobile cover areas;
+native-height portrait delivery now preserves the available detail. Representative
+FR measurements at 390 × 844/DPR 2 are:
+
+| Page       | Former delivered height | New delivered height | Former pixels per CSS pixel | New pixels per CSS pixel |
+| ---------- | ----------------------: | -------------------: | --------------------------: | -----------------------: |
+| Home       |                   399px |                941px |                       0.559 |                    1.318 |
+| Priorities |                   251px |               1024px |                       0.327 |                    1.333 |
+| Platforms  |                   373px |               1024px |                       0.486 |                    1.333 |
+| Media      |                   312px |               1024px |                       0.406 |                    1.333 |
+
+These measurements use decoded response pixels and the full CSS image required
+by `object-fit: cover`, rather than density-adjusted browser `naturalWidth`.
+They do not imply a physical resolution increase for every replacement: the
+former network portrait delivered 1242px vertically versus the new 1024px. Native
+sources are HD, 1536 × 1024 or 1672 × 941; no artificial enlargement or native 4K
+is claimed. At 1920px the measured effective density is 0.800–1.036 pixels per CSS
+pixel, below full DPR-2 fidelity. Very tall enlarged-text scenes also exceed native
+image height; they retain all available pixels while growing naturally for content.
+
+Sixty individual renderings were captured. Both complete 22-page French overview
+sheets and representative detailed FR/AR/EN views were reviewed for sharpness,
+composition, headroom, readable overlays and containment. Seven review
+captures are retained as quality-90 WebP at CSS resolution, encoded from the
+original DPR-2 Chromium screenshots:
+
+- [French home](screenshots/generated-hero-home-fr-desktop.webp)
+- [Arabic mobile home](screenshots/generated-hero-home-ar-mobile.webp)
+- [French split governance](screenshots/generated-hero-governance-fr-desktop.webp)
+- [Arabic split governance](screenshots/generated-hero-governance-ar-desktop.webp)
+- [French end-aligned programmes](screenshots/generated-hero-programmes-fr-desktop.webp)
+- [French centered mobile priorities](screenshots/generated-hero-priorities-fr-mobile.webp)
+- [English editorial mobile legal](screenshots/generated-hero-legal-en-mobile.webp)
+
+The initial sandbox-restricted build attempts produced empty output from Next's
+detached TypeScript configuration subprocess. The same production build command
+passed with authorized environment network access; no compiler check or application
+configuration was bypassed. The successful build reported the existing next-intl
+webpack dependency-cache warning. Delivery figures are local lab observations,
+not field LCP/INP/CLS or cross-browser certification. These fictional placeholders
+do not establish real IRESEN subjects, institutional content approval or deployment.
+Remote CI and merge results belong to the corresponding PR.
