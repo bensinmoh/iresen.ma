@@ -189,6 +189,17 @@ and [verification](docs/validation.md#mobile-reference-adaptation--2026-10-09).
 
 See [current product scope](PRODUCT.md) and [pending media](docs/contextual-hero-media.md#documentary-photos-pending).
 
+## 2026-10-09 — Repeatable header search reveal
+
+- Reset the finished CSS reveal when the search disclosure closes, so returning
+  to an empty field replays its 220ms expansion. Native opening, keyboard/touch,
+  Arabic RTL and reduced-motion behavior retain the existing geometry.
+- Added repeated-hover checks in FR/EN/AR and a native regression case that
+  reproduces the retained animation before the correction.
+
+See [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
+and [executed validation](docs/validation.md#repeatable-header-search-reveal--2026-10-09).
+
 ## 2026-10-09 — Expandable header search
 
 - Added a native expandable search field: fine-pointer hover reveals it without
