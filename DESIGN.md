@@ -1,5 +1,15 @@
 # IRESEN visual direction
 
+## Homogeneous homepage section labels — 2026-10-09
+
+The owner selected the current domains label as the reference for the mission
+label. Both now use the existing 14px label role, regular weight, uppercase
+Latin text, a 12px-high Apex Leaf and a 12px icon/text gap at the default root
+size. Arabic preserves its natural shaping and line height. Blue on white and
+white on navy retain the appropriate section colors and original SVG geometry.
+See [the shared rule](docs/design-system.md#homepage-section-labels--2026-10-09)
+and [verification](docs/validation.md#homepage-section-labels--2026-10-09).
+
 ## Homepage mission wording — 2026-10-09
 
 The owner's final clarification defers mission-statement design. Exact supplied

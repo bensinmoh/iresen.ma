@@ -1,5 +1,28 @@
 # Foundation validation
 
+## Homepage section labels — 2026-10-09
+
+The owner's two attached crops identify inconsistent mission/domains labels.
+The mission label now matches domains: 14px/400 uppercase text, a 12px-high
+proportional Apex Leaf and a 12px gap at the default root size. Source text,
+translations, section anchors and larger headings remain unchanged.
+
+`pnpm lint`, `pnpm typecheck`, `pnpm test` (99 tests) and `pnpm build` passed.
+An isolated production server on port 3001 and installed Chrome verified both
+labels in FR/EN/AR at 390px and 1440px. Computed font size, weight, case, gap,
+line height and both icon dimensions match between labels in all six views.
+Captures were inspected for Latin capitalization, original leaf proportions,
+blue/white treatment and Arabic RTL. Each view also passed page containment at
+200% root text size. This CSS-only correction changes no interaction, schema or
+publication state; no new implementation-mirroring test was added.
+
+Search audit: the existing `home` page, `develop-test-transfer` section and
+`apex-leaf` static-media references retain their stable destinations, types and
+localized titles/descriptions. CSS casing preserves source text and introduces
+no public content or media; no index rebuild or search vocabulary change is
+required. The final-content search sanity check remains pending until the whole
+site's content is supplied. No deployment, visibility or DNS changes were made.
+
 Verified locally in the cloud workspace on 2026-10-07. Readiness checks for install, setup, migrations, generated CMS files, formatting, lint, types, unit/integration/browser tests and the standalone build passed again on 2026-10-08. The blank trilingual structure is ready for homepage implementation; no completed institutional homepage or dataset is claimed.
 
 | Check                                                        | Result and evidence                                                                                                                                                                                        |
