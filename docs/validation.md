@@ -1473,6 +1473,49 @@ Reviewed screenshots retained for this correction:
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
 
+## Footer address and privacy links — 2026-10-09
+
+Verified on the current synchronized contact/tablet baseline: formatting, lint,
+strict types, 97 unit tests, production build and all 9 focused footer browser
+tests passed. The cold webpack build retained the previously documented
+next-intl cache-dependency warning. Build/browser processes ran outside the
+restricted execution sandbox to permit Next subprocesses and local services;
+the sandboxed build had returned empty TypeScript `--showConfig` output.
+
+Production Chromium checks covered FR/EN/AR at 390, 768 and 1440px: the displayed
+localized address links to the owner-supplied Maps shortlink, uses the existing
+cyan underline, and has a visible keyboard focus indicator. Every locale has
+exactly one footer privacy link, in utilities, with none beneath newsletter
+consent. Layouts fit the viewport. French 1440px and Arabic 390px footer captures
+were visually inspected:
+
+- [French desktop, 1440px](screenshots/footer-links-fr-1440.png)
+- [Arabic mobile, 390px](screenshots/footer-links-ar-390.png)
+
+Additional FR/EN/AR checks at 320px passed with 200% root text and without
+JavaScript. Native address clicks navigated to the exact supplied Maps shortlink,
+intercepted locally during testing. This verifies link activation and destination,
+not Google's shortlink resolution or map pin. The focused suite also checks
+newsletter disclosure, consent, language/utility navigation, Arabic order and
+mobile/tablet/desktop containment. No database schema or server-side behavior
+changed in the footer correction. Other browsers and manual screen-reader
+verification remain outside this pass.
+
+The synchronized base includes the contact venue photograph and its inherited
+`contact-venue` search reference. Both supplied image bytes and the rendered
+abstract contact background are preserved. The catalog covers both images with
+explicit FR/EN/AR scene descriptions and original URLs. Source provenance is
+recorded in [the asset inventory](asset-inventory.md); current PR CI and merge
+results remain recorded in GitHub.
+
+After synchronization, lint, strict types, 97 unit tests and the production
+build passed again. The local search index rebuild and all 21 CMS/search
+integration tests passed. API checks found the photo under its exact localized
+title in FR/EN/AR, with the stable original JPEG destination, which returned HTTP
+200 and `image/jpeg` from the local production server. All 3 existing contact
+search browser cases passed, preserving section discovery/navigation and the
+abstract background's search reference in each locale.
+
 ## Contact form eyebrow — 2026-10-09
 
 The owner's screenshot correction centers the form's leaf/label group above its

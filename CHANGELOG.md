@@ -313,6 +313,21 @@ See [the findings and scope](docs/site-coherence-review.md),
 [shared rules](docs/design-system.md#shared-actions--2026-10-09) and
 [revision-specific validation](docs/validation.md#site-coherence-review--2026-10-09).
 
+## 2026-10-09 — Footer address and privacy links
+
+- Made the localized footer address clickable with the existing phone/email
+  link styling and the owner-supplied Google Maps destination shared with contact.
+- Removed the duplicate privacy link beneath newsletter consent; retained the
+  localized privacy destination beside legal notices and cookie preferences.
+- Passed formatting, lint, types, 97 unit and 21 integration tests, production
+  build and all 9 footer browser tests. Reviewed French desktop and Arabic mobile renderings;
+  checked FR/EN/AR wrapping, keyboard focus, enlarged text and native navigation.
+- Rebuilt the local index and verified the inherited contact-photo search
+  reference in every locale; all 3 contact search browser cases passed.
+
+See [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09)
+and [verification](docs/validation.md#footer-address-and-privacy-links--2026-10-09).
+
 ## 2026-10-08 — Header control proportions and contact label
 
 - Reduced only the header search/contact diagonal corners to 10px, preserving
