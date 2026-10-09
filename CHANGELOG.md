@@ -10,9 +10,15 @@ merge results are recorded by the corresponding pull request and commit history.
   link styling and the owner-supplied Google Maps destination shared with contact.
 - Removed the duplicate privacy link beneath newsletter consent; retained the
   localized privacy destination beside legal notices and cookie preferences.
+- Registered the supplied contact venue photograph already served by the latest
+  repository revision, with explicit FR/EN/AR search metadata and provenance.
+  The contact page continues to use its existing abstract background.
 - Passed formatting, lint, types, 97 unit tests, production build and all 9
   footer browser tests. Reviewed French desktop and Arabic mobile renderings;
   checked FR/EN/AR wrapping, keyboard focus, enlarged text and native navigation.
+- After completing photo search metadata, rebuilt the local index and passed
+  21 CMS/search integration tests; verified discovery and the original media URL
+  in every locale.
 
 See [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09)
 and [verification](docs/validation.md#footer-address-and-privacy-links--2026-10-09).

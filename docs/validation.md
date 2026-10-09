@@ -1498,6 +1498,22 @@ intercepted locally during testing. This verifies link activation and destinatio
 not Google's shortlink resolution or map pin. The focused suite also checks
 newsletter disclosure, consent, language/utility navigation, Arabic order and
 mobile/tablet/desktop containment. No database schema or server-side behavior
-changed; integration tests were not rerun locally. Current PR CI runs the full
-suite. Other browsers and manual screen-reader verification remain outside
-this pass.
+changed in the footer correction. Other browsers and manual screen-reader
+verification remain outside this pass.
+
+The latest base revision added the served contact venue photograph; its missing
+search reference caused the initial PR unit check to fail. The supplied JPG
+is now registered with explicit FR/EN/AR scene descriptions, a stable resource ID
+and its original URL. Its bytes and the rendered abstract contact background are
+preserved. The existing catalog coverage includes both contact images without
+relaxing public-file registration requirements. Source provenance is recorded
+in [the asset inventory](asset-inventory.md); current PR CI and merge results
+remain recorded in GitHub.
+
+After the media registration, lint, strict types, 97 unit tests and the production
+build passed again. The local search index rebuild and all 21 CMS/search
+integration tests passed. API checks found the photo under its exact localized
+title in FR/EN/AR, with the stable original JPEG destination, which returned HTTP
+200 and `image/jpeg` from the local production server. All 3 existing contact
+search browser cases passed, preserving section discovery/navigation and the
+abstract background's search reference in each locale.

@@ -266,6 +266,11 @@ describe('explicit public search catalog', () => {
         url: '/images/contact/contact-background-79bad501a298.png',
         type: 'media',
       },
+      {
+        id: 'contact-background-venue',
+        url: '/images/contact/contact-background-venue.jpg',
+        type: 'media',
+      },
     ])
     const formerContactImage = publicAssetReferences.find(({ id }) => id === 'hero-wind-detail')!
     for (const locale of contentLocales) {

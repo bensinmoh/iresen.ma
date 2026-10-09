@@ -17,6 +17,14 @@ recovered from the native Figma file rather than cropped from the screenshot.
 [Asset provenance](asset-inventory.md#contact-decorative-background--2026-10-09)
 records the exact archive entry, size, dimensions and hashes.
 
+The owner also supplied a photograph through repository commit `92f01c3` on
+2026-10-09. The unchanged `/images/contact/contact-background-venue.jpg` shows a
+building entrance, a white wall bearing the IRESEN name, a gate, trees and a
+garden. It is registered as public media with descriptive FR/EN/AR search
+metadata; the contact template still renders the abstract PNG above. No specific
+headquarters identity, geographic location or redistribution rights are inferred.
+See [the photograph's provenance](asset-inventory.md#supplied-contact-photograph--2026-10-09).
+
 Current navy `#12345A`, blue `#296BB4`, Jakarta/Alexandria fonts, aligned gutters,
 action corners, navigation and footer take precedence over the historical sample.
 Layouts reduce columns and allow natural text growth on narrow screens, with
