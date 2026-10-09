@@ -1,5 +1,16 @@
 # Design system and Figma reference
 
+## Homepage section labels — 2026-10-09
+
+Use the domains label as the owner's selected reference for the homepage mission
+label: `--font-size-label` (0.875rem), regular 400 weight, uppercase Latin text,
+a 0.75rem-high Apex Leaf with automatic proportional width, and `--space-3`
+(0.75rem) between icon and text. Values remain relative to root text size.
+Arabic retains its natural shaping and inherited line height; uppercase has no
+case effect in Arabic. Centering and section-specific blue/white colors remain.
+The delivered SVG originals and the main section headings are unchanged.
+See [verification](validation.md#homepage-section-labels--2026-10-09).
+
 The owner's reattached original color book v0.9 and seven supplied SVGs establish the approved identity. The live DESIGN SYSTEM devlink was inspected on 2026-10-08; use the current rules below with the [measured review](figma-design-system-review.md). The earlier offline analysis remains snapshot evidence. Source hashes and publication boundaries are recorded in the [asset inventory](asset-inventory.md).
 
 ## Current coherence rules
