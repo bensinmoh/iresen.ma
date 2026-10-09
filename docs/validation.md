@@ -1383,3 +1383,49 @@ Two reviewed captures pause the entrance at 80ms:
 
 Coverage uses local Chromium; physical-device, Safari and screen-reader validation
 is not asserted. CI and merge results remain recorded by the corresponding pull request.
+
+## Contact reference page and location — 2026-10-09
+
+The owner selected the general composition of Figma contact frame `804:7374`
+and requested a full-width IRESEN location section. The dedicated contact page
+uses the exact original decorative image, current shared colors/fonts/header/footer,
+verified contact values and short platform descriptions. Sample inboxes, hours
+and a response deadline are not adopted. Source and implementation decisions
+are recorded in [the contact guide](contact.md).
+
+After integrating the current main branch's search and mobile refinements:
+
+- Formatting, lint, strict types, all 97 unit cases and the production build passed.
+- All 21 CMS/search integration cases passed against the local PostgreSQL database.
+- All 127 Chromium browser cases passed, including 16 contact cases and three
+  contact-search cases. Standard hero coverage excludes the dedicated contact
+  and search pages, which retain their own behavior coverage.
+- Contact FR/EN/AR passed at 320, 390, 768, 1024 and 1440px, with 100% and 200%
+  text and expanded FAQs. Narrow grid/flex wrapping was corrected before the
+  final pass. The old supported anchors remain visible; map width equals the viewport.
+- Native FAQ keyboard interaction, visible focus, scoped axe scans, subject
+  routing, required/email/whitespace validation, multilingual email draft encoding,
+  edit invalidation, direct no-JavaScript links and absence of form POST/storage passed.
+- Map tests confirm no Google requests before activation, a titled iframe after
+  keyboard activation, focus transfer/restoration, removal and non-persisted state.
+  Those responses were intercepted locally; they do not verify Google's live map
+  or the exact pin behind the supplied shortlink.
+- Current contact topics, platform/FAQ/location anchors and the original background
+  media are discoverable in FR/EN/AR. Retired contact scaffold notes are excluded.
+  `pnpm search:rebuild` synchronized the static catalog with zero public CMS records.
+
+Reviewed production captures show the French desktop and narrow composition,
+English tablet layout and Arabic RTL. The image's non-empty original, source hash,
+callsite, right-aligned cover geometry and successful optimized delivery were checked;
+current shared logo assets remain proportional and loaded in the captures.
+
+- [French desktop](screenshots/contact-fr-1440.webp)
+- [French narrow layout](screenshots/contact-fr-320.webp)
+- [English tablet](screenshots/contact-en-768.webp)
+- [Arabic mobile](screenshots/contact-ar-390.webp)
+
+The form prepares a draft for the visitor's email application; delivery is not
+claimed or tested. The embed queries the established Rabat address and keeps the
+owner's exact directions link; its pin remains unverified. This evidence does not
+establish physical-device/Safari coverage, screen-reader certification, production
+publication or deployment. PR CI and merge results remain recorded in GitHub.

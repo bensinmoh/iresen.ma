@@ -21,6 +21,8 @@ merge results are recorded by the corresponding pull request and commit history.
   the address-query embed's exact pin remains unverified.
 - Preserved the 22-page route baseline and contact anchors; FR/EN/AR copy remains
   draft. Server-side delivery and production publication remain separate work.
+- Registered current contact guidance, FAQ/platform/location anchors and the
+  decorative background in multilingual public search, replacing retired scaffolds.
 
 See [contact sources and behavior](docs/contact.md), [asset provenance](docs/asset-inventory.md#contact-decorative-background--2026-10-09)
 and [revision-specific check evidence](docs/validation.md).

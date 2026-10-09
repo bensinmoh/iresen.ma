@@ -42,8 +42,8 @@ institutional sources:
 
 These sources support orientation text; they do not verify current booking
 availability, visitor access, hours or site-specific contact details. FAQ answers
-give short directions to canonical programmes, platforms, opportunities, media
-and publications pages, or back to the form. They do not assert a volume of
+give short directions to canonical programmes, platforms, opportunities and
+publications pages, or to visit/press topics in the form. They do not assert a volume of
 requests, guarantee access or replace the channel specified in an actual call
 or opportunity. Complete French, English and Arabic catalogs are editorial
 drafts, with no claim of approval for production publication.
@@ -94,6 +94,13 @@ The platform band also retains `page-sections`. The new visual reading order
 adapts the selected design; [the section guide](page-sections.md) records where
 the former scaffolds now land. Supported anchors survive equivalent-page
 locale switching.
+
+The public search projection indexes the current contact introduction, seven
+section destinations, request topics, platform descriptions, FAQ answers and
+headquarters location in FR/EN/AR. It replaces the old contact editorial scaffolds
+and registers the abstract background once as a media resource. The earlier
+wind photograph remains a served illustration, with its obsolete contact-page
+association removed. See [public search registration](search.md#adding-public-content).
 
 Implementation lives in `src/components/contact/`, `src/lib/contact.ts`,
 `src/styles/contact.css` and the FR/EN/AR catalogs. Executed checks and rendered
