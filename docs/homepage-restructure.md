@@ -1,5 +1,14 @@
 # Homepage restructuring brief — 2026-10-09
 
+## Scoped mission wording — 2026-10-09
+
+The owner subsequently requested the mission statement and supplied exact French,
+English and Arabic wording. This bounded exception to the earlier deferral adds
+that copy to the existing paragraph above the cards. The owner's final direction
+explicitly defers statement design: no new container or composition is delivered.
+The later five modules, navigation order and full restructuring remain deferred.
+See [the mission guide](home-sections.md#mission-wording--2026-10-09).
+
 ## Source and authorized scope
 
 The owner supplied `Pasted text.txt`, titled “IRESEN — Homepage : structure et
