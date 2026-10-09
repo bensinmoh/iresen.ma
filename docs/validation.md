@@ -985,3 +985,53 @@ production build and all 55 browser cases passed again on the combined source.
 The media observations and retained hero captures above describe the video
 revision before that section integration. Current remote CI and merge results
 are recorded by the PR.
+
+## Animated site search — 2026-10-09
+
+The header magnifier reveals a localized input by expanding physically left. Its
+icon and right edge remain fixed throughout the transition, and available-width
+capping contains the field in Arabic and compact layouts. Hover, keyboard focus
+and first tap open the field; Enter or the next submit action opens the localized
+results page. The actual search interface replaces search's hero/scaffold while
+other page sections and the homepage video remain intact.
+
+Final local checks on the combined implementation passed:
+
+- Repository formatting, lint, strict types and whitespace checks.
+- All 34 unit tests, including 21 search cases and 5 public rich-text rendering
+  cases. Coverage includes relevance, pagination, normalization, Arabic article
+  variants, snippets, section-heading discovery and placeholder exclusion.
+- All 6 CMS integration tests on a disposable PostgreSQL database. Public search
+  and article reads exclude drafts, private/future content and unavailable locale
+  revisions; updates/withdrawal take effect on the next request. Fixture cleanup
+  was independently verified with zero users/pages/news/media remaining.
+- The standalone production build. Existing generated CMS files have no drift;
+  no schema, migration, service or dependency was added.
+- All 69 production Chromium browser tests, including 14 search journeys and the
+  existing navigation, footer, hero and homepage-video checks.
+
+Search journeys cover FR/EN/AR submissions and real destination links, the fixed
+icon during every sampled animation frame, keyboard/Escape/outside dismissal,
+touch open/reopen/submit, editable retained queries, locale/query/hash ordering,
+pagination, blank/no-match/invalid states, reduced motion and no-JavaScript forms.
+Arabic 320/390px forms pass scoped axe scans and containment at 200% root text.
+A final 15-case FR/EN/AR audit at 320/390/768/1024/1440px found no page overflow or
+outside controls for expanded header and results forms.
+
+Five retained captures were inspected for field geometry, readable labels and
+result hierarchy, summaries, pagination and RTL. The expanded homepage header
+was refreshed with the uploaded video visible:
+
+- [Expanded French header](screenshots/header-search-expanded-fr-1440.png)
+- [French desktop results](screenshots/search-results-fr-1440.png)
+- [Arabic mobile results](screenshots/search-results-ar-390.png)
+- [English tablet results](screenshots/search-results-en-768.png)
+- [English wider results](screenshots/search-results-en-1024.png)
+
+Current page/news collections remain empty by default. Section headings support
+wayfinding; editorial placeholder descriptions are excluded from the corpus.
+The live adapter scans eligible news per valid query, so representative-corpus
+latency/memory and indexed retrieval remain follow-up work. Chromium and automated
+accessibility coverage do not establish other-browser or manual screen-reader
+conformance. The [search guide](search.md) records the complete contract and limits.
+Current remote CI and merge results belong to the corresponding PR.
