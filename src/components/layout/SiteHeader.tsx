@@ -254,7 +254,7 @@ export function SiteHeader() {
     )
   }
 
-  const inverse = currentPageId !== undefined
+  const inverse = currentPageId !== undefined && currentPageId !== 'contact'
 
   return (
     <header

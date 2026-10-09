@@ -4,6 +4,27 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Contact reference composition and location
+
+- Replaced contact's photo hero/scaffold with the owner-selected Figma contact
+  composition: white shared header, split introduction/headquarters, platform
+  entries, pale form band, native FAQ and shared navy footer.
+- Recovered the original decorative background byte-identically from the native
+  Figma source. Reused established headquarters contacts and grounded platform
+  descriptions in institutional sources; omitted unverified sample opening hours,
+  response promises, departmental mailboxes and platform contact details.
+- Added a local email-draft workflow with field validation, subject selection,
+  explicit email-application handoff and direct fallback. It does not submit,
+  store or deliver messages through the website.
+- Added the requested full-width location section. Google Maps loads on request
+  and can be removed; the exact supplied directions shortlink is retained, and
+  the address-query embed's exact pin remains unverified.
+- Preserved the 22-page route baseline and contact anchors; FR/EN/AR copy remains
+  draft. Server-side delivery and production publication remain separate work.
+
+See [contact sources and behavior](docs/contact.md), [asset provenance](docs/asset-inventory.md#contact-decorative-background--2026-10-09)
+and [revision-specific check evidence](docs/validation.md).
+
 ## 2026-10-09 — Current snapshot delivery scope
 
 - Recorded the owner's authorization to push the current snapshot while real

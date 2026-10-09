@@ -59,12 +59,11 @@ async function visitFiguresWithKeyboard(page: Page, direction: 'ltr' | 'rtl') {
 }
 
 for (const locale of locales) {
-  test(`${locale}: every page has a lightweight hero and a working section link`, async ({
-    page,
-  }) => {
+  test(`${locale}: standard page heroes retain a working section link`, async ({ page }) => {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
-    for (const id of pageIds) {
+    // Contact follows its own approved split introduction and is covered in contact.spec.ts.
+    for (const id of pageIds.filter((pageId) => pageId !== 'contact')) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()

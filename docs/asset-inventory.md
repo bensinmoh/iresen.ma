@@ -183,10 +183,39 @@ Native Figma editable structure, mobile frames and serialized interaction record
 
 Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
+## Contact decorative background — 2026-10-09
+
+The owner-selected [contact frame `804:7374`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-7374)
+and attached screenshot supply the contact composition. Its abstract cyan/white
+background is extracted from the verified original native source, not cropped
+from a complete screenshot or regenerated.
+
+| Property                           | Value                                                                               |
+| ---------------------------------- | ----------------------------------------------------------------------------------- |
+| Public file                        | `public/images/contact/contact-background-79bad501a298.png`                         |
+| Source layer                       | `804:7377`, within contact frame `804:7374`                                         |
+| Native archive entry               | `images/468725b03d7fd4a30a0fcdd12ad66b8643ecc765`                                   |
+| Native source SHA-256 / LFS object | `2ebebb5c633ad30094527c9ed2a5bc218b790b1f9f18fc761e191c5925b2838a`                  |
+| Format / dimensions                | PNG; 1672 × 941px                                                                   |
+| Bytes                              | 1,197,240                                                                           |
+| Original image SHA-1               | `468725b03d7fd4a30a0fcdd12ad66b8643ecc765`                                          |
+| Original/public file SHA-256       | `79bad501a298b27f203362cf2237e6e5f7d8f2a28c82c2f56d2fbcf9c8370152`                  |
+| Transformation                     | None; byte-identical original extracted without cropping, resampling or conversion. |
+
+The original is used as a decorative contact introduction background through
+Next Image with empty alternative text and responsive sizing. It is not a real
+IRESEN office photograph, a facility record or a published design screenshot.
+The owner's request authorizes this page use; no independent redistribution
+license or broader rights claim is inferred from the native source. Contact now
+replaces its former generated photo hero; other photo-hero assets remain in
+[the generated inventory](hero-assets.json). See [contact scope](contact.md)
+and [current check evidence](validation.md).
+
 ## Contextual hero media — 2026-10-09
 
 The schema-3 [current inventory](hero-assets.json) supports per-asset provenance;
-all 17 active photo entries currently remain generated. Three new fictional
+its 17 photo entries remain generated. Contact subsequently replaces its photo
+hero with the decorative source above. Three new fictional
 scenes replace the earlier careers, collaboration and wind-engineer images:
 `governance`, `careers-onboarding` and `partnership-handshake`. They are not actual
 IRESEN board members, employees or offices. Their native sources are 1536 × 1024,
@@ -213,7 +242,8 @@ decorative illustrations, not records of real IRESEN facilities, people or work.
 Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
 their existing definitions at that revision. The replacement introduced no external image host,
 video playback or new client runtime at that revision. The later homepage video
-uses these generated photos as its fallback while the other 21 heroes stay photographic.
+uses these generated photos as its fallback; contact's later decorative split
+introduction supersedes its photo hero, while 20 other pages retain photo heroes.
 
 Sixteen generated source images are native 1536 × 1024px; the aerial solar scene
 is 1672 × 941px. These are not 4K sources or a blanket resolution increase over

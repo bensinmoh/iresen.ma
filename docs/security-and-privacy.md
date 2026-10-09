@@ -20,6 +20,25 @@ Before live contact/recruitment/analytics collection, document purposes, control
 
 Responsible IRESEN legal/IT teams must determine system/data classification and applicability of Law 05-20, DNSSI and relevant cloud requirements including Decree 2-24-921. Do not infer blanket residency rules from the institution's name.
 
-No third-party trackers, external embeds, maps, CAPTCHA or newsletter processing are required for the foundation. Evaluate consent and data flows before introducing them. Public CMS media is unsuitable for CVs or other private submissions.
+The contact page prepares an email in browser memory, using the established
+institutional address as the recipient. It does not submit or store form data
+through the website; the visitor opens, reviews and sends the draft with their
+own email application. Name, email, topic and message are required to compose
+the draft; organisation and phone are optional. Direct email and telephone links
+remain available without JavaScript. This local composing workflow does not
+implement a server-side intake or establish delivery, retention or a response time.
+
+The requested contact location section includes Google Maps as an optional
+third-party embed. No iframe is mounted until the visitor selects the load-map
+control. The page discloses that loading sends browsing data to Google; a remove
+control unmounts the iframe but cannot retract requests already sent. The choice
+is not persisted as a consent preference. The separate directions link opens the
+exact owner-supplied Google Maps shortlink. Its destination and the address-query
+embed's exact pin remain unverified. See [map behavior and limits](contact.md).
+
+No trackers, CAPTCHA or newsletter processing are added by this contact change.
+Review the map's third-party terms, consent, data flows and applicable institutional
+requirements before release; this implementation is not a compliance assessment.
+Public CMS media is unsuitable for CVs or other private submissions.
 
 See [backlog](backlog.md) for release prerequisites and [SECURITY.md](../SECURITY.md) for reporting guidance.

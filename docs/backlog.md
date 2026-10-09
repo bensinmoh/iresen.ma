@@ -20,7 +20,7 @@ This file separates commissioned repository/boilerplate work from later homepage
 - [x] Responsive keyboard navigation, Arabic RTL, honest loading/empty/error states.
 - [x] Empty pages/news/media collections, roles and published-locale public queries.
 - [x] SEO/header framework and non-indexable development output.
-- [x] Search/contact contracts with truthful unavailable states.
+- [x] Search/contact contracts with truthful unavailable states in the foundation; contact's later local email-draft workflow is recorded below.
 - [x] Reproducible install, lint, typecheck, focused tests, production build and browser validation.
 - [x] Import seven current approved SVGs/favicons unchanged; inspect source metadata and private PDF guidelines.
 - [x] Verify supplied-logo browser rendering during foundation validation; Latin font installation is recorded separately below.
@@ -50,6 +50,9 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 - [x] Build lightweight introducing heroes for every approved page, with responsive viewport sizing and an overlaid header; see [page heroes](heroes.md).
 - [x] Replace the homepage hero band with the owner's five explicitly supplied figures, corrected French labels and drafted EN/AR equivalents; use shared figure typography and retain other pages' pathways. See [the source and label record](heroes.md#homepage-key-figures--2026-10-08).
 - [x] Put section placeholders below the heroes on all 22 canonical pages in FR/EN/AR, with headings, short draft content notes, shared anchor IDs/order and nested Institute Mission topics; preserve the working sitemap and existing service notices. See [the section guide](page-sections.md) and revision-specific [validation](validation.md).
+- [x] Replace contact's scaffold with the owner's selected Figma composition, original decorative background, reused headquarters contacts, subject/platform links, local email-draft form, native FAQ and requested full-width on-demand map. Preserve the route baseline and all contact anchors; FR/EN/AR copy remains draft. See [contact scope and sources](contact.md).
+- [ ] Resolve the supplied Google Maps shortlink and verify the exact headquarters pin against the current address-query embed; review the third-party map flow for release.
+- [ ] Approve contact copy/translations and any future platform addresses, department mailboxes, opening hours or response commitments before adding those claims.
 - [ ] Populate the narrative/content modules below the heroes; obtain reviewed evidence for additional key figures and approve remaining copy/translations.
 - [ ] Compare desktop/tablet/mobile composition and Arabic adaptations; test long content and keyboard/screen-reader use.
 - [ ] Measure a representative production page's transfer, bundle size and LCP; the empty shell is not a performance baseline.
@@ -58,7 +61,7 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 
 - [ ] Expand collections and detail/list/filter templates; translations, redirects, preview and publication invalidation.
 - [ ] Add verified public media rights and private-file boundaries.
-- [ ] Implement locale-aware search and real contact acceptance/delivery with durable retries and retention.
+- [ ] Implement locale-aware search and server-side contact acceptance/delivery with durable retries and retention. The existing local email-draft form has no submission endpoint, provider or storage.
 - [ ] Add scheduled jobs, archive/withdrawal behavior and narrow locale permissions/audit.
 - [ ] Introduce optional LinkedIn official API access or an honest manual editorial queue.
 

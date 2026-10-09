@@ -1,4 +1,154 @@
 {
+  "Contact": {
+    "hero": {
+      "title": "Let’s talk about your",
+      "accent": "project.",
+      "description": "Researcher, business, institution or journalist: tell us what you need.",
+      "action": "Write to us"
+    },
+    "headquarters": {
+      "eyebrow": "Our headquarters",
+      "title": "IRESEN Rabat",
+      "addressLabel": "Address",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email"
+    },
+    "departments": {
+      "label": "Choose your enquiry",
+      "action": "Choose this topic",
+      "agency": {
+        "title": "Projects & funding",
+        "description": "Questions about programmes, calls and project submissions."
+      },
+      "partnerships": {
+        "title": "Partnerships",
+        "description": "Cooperation, scientific collaboration and institutional partnerships."
+      },
+      "press": {
+        "title": "Communications & press",
+        "description": "Media enquiries, interviews and institutional resources."
+      },
+      "careers": {
+        "title": "Careers & internships",
+        "description": "Questions about vacancies, internships and applications."
+      }
+    },
+    "platforms": {
+      "title": "Our platforms",
+      "description": "For a question about a site, specify the platform in your message.",
+      "action": "Explore the platforms",
+      "gep": {
+        "title": "Green Energy Park",
+        "description": "Photovoltaic and solar thermal energy."
+      },
+      "gsbp": {
+        "title": "Green & Smart Building Park",
+        "description": "Sustainable buildings, smart grids and mobility."
+      },
+      "greenH2": {
+        "title": "Green H2A",
+        "description": "Green hydrogen and Power-to-X."
+      },
+      "africa": {
+        "title": "Green Energy Park Morocco–Côte d’Ivoire",
+        "description": "Solar energy in tropical conditions."
+      }
+    },
+    "form": {
+      "eyebrow": "Your message",
+      "title": "A question?\nA project?",
+      "description": "Prepare your message, then open it in your email application to send it.",
+      "requiredHint": "Name, email, subject and message are required.",
+      "fullName": {
+        "label": "Full name",
+        "placeholder": "Your first and last name"
+      },
+      "organisation": {
+        "label": "Organisation",
+        "placeholder": "Your institution or business"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+212…"
+      },
+      "subject": {
+        "label": "Enquiry subject",
+        "placeholder": "Select a subject"
+      },
+      "message": {
+        "label": "Your message",
+        "placeholder": "Describe your enquiry in a few lines…"
+      },
+      "topics": {
+        "agency": "Projects & funding",
+        "partnerships": "Partnerships",
+        "press": "Communications & press",
+        "careers": "Careers & internships",
+        "platforms": "Platforms & visits",
+        "other": "Other enquiry"
+      },
+      "optional": "optional",
+      "action": "Prepare my email",
+      "openEmail": "Open in my email application",
+      "disclosure": "This form prepares an email. The website does not send or store your message. You send it from your email application.",
+      "privacyLink": "Privacy information",
+      "fallback": "If your email application does not open, write directly to",
+      "prepared": "Your email is ready. Open it in your email application, review it, then send it.",
+      "mailSubject": "IRESEN enquiry: {subject}"
+    },
+    "faq": {
+      "eyebrow": "Practical questions",
+      "title": "Answers to your frequent questions.",
+      "description": "A few pointers to prepare your enquiry and find the right page.",
+      "contact": "Write to us",
+      "questions": {
+        "calls": {
+          "question": "How do I submit a project to a call?",
+          "answer": "Follow the instructions and submission channel specified in the relevant call. For a question, include the name of the call in your message.",
+          "action": "View the programmes"
+        },
+        "access": {
+          "question": "How do I request access to research platforms?",
+          "answer": "Specify the platform, the purpose of your tests and your preferred dates. Contact us to discuss access conditions.",
+          "action": "Explore the platforms"
+        },
+        "visits": {
+          "question": "Can I visit a platform?",
+          "answer": "Contact us with the site, number of visitors and preferred dates to enquire about possible visits.",
+          "action": "Prepare a visit enquiry"
+        },
+        "careers": {
+          "question": "How do I apply for a job or internship?",
+          "answer": "Use the application channel specified in the relevant vacancy. For a question, choose the “Careers & internships” subject.",
+          "action": "View opportunities"
+        },
+        "press": {
+          "question": "How do I request an interview or a speaker?",
+          "answer": "Choose the “Communications & press” subject and specify the media outlet, topic, format and preferred date.",
+          "action": "Prepare a press enquiry"
+        },
+        "publications": {
+          "question": "Where can I find the Institute’s publications and reports?",
+          "answer": "Visit the Publications & reports page. If you are looking for a particular document, include its title or topic in your message.",
+          "action": "View publications"
+        }
+      }
+    },
+    "location": {
+      "eyebrow": "Find us",
+      "title": "Find IRESEN in Rabat",
+      "description": "Get directions to our headquarters or display the map.",
+      "loadMap": "Display the Google Maps map",
+      "removeMap": "Hide the map",
+      "mapTitle": "IRESEN headquarters location in Rabat on Google Maps",
+      "externalLink": "Open directions in Google Maps",
+      "privacyNotice": "The map uses Google Maps. It loads only when you request it and then shares browsing data with Google."
+    }
+  },
   "Metadata": {
     "title": "IRESEN",
     "description": "IRESEN institutional website."

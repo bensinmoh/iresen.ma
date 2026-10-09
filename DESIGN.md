@@ -65,7 +65,7 @@ Treat 12/8/4-column desktop/tablet/mobile grids as composition
 starting points. Adapt to content; a headline should not become tiny to preserve
 a desktop arrangement on mobile.
 
-The 2026-10-09 section placeholders use the existing aligned grid, flat section
+The 2026-10-09 section placeholders on pages other than contact use the existing aligned grid, flat section
 boundaries, light dividers and bounded text measure. H2s identify sections and
 nested Mission/search topics use H3s; short localized draft notes describe
 the content to prepare. Keep the existing heroes as introductions and the Apex
@@ -73,6 +73,7 @@ Leaf selective on Institute's Mission H2. These placeholders establish content
 order, with final module composition still to follow the approved material.
 Sitemap group H3s retain bold weight and can break long words within narrow
 columns. Compact header actions can shrink and wrap with enlarged text.
+Contact's later composition replaces its scaffold while preserving its anchors.
 See [section implementation](docs/page-sections.md) and
 [revision-specific validation](docs/validation.md).
 
@@ -267,6 +268,36 @@ passed, including hover Escape and breakpoint focus restoration.
 The later hovered-menu adaptation below supersedes its panel geometry and
 related-block treatment; these checks describe the initial revision.
 
+## Contact reference composition — 2026-10-09
+
+The owner's selected [contact frame `804:7374`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-7374)
+and attached `contact.png` guide the general composition: a white shared header,
+large split introduction with a navy headquarters panel, four platform entries,
+centered form on a pale surface, native FAQ rows and the existing navy footer.
+The requested full-width location section follows the FAQ. The original abstract
+cyan/white background is recovered byte-identically from the native file; it is
+decorative imagery, not an office photograph or a full-page screenshot.
+
+Approved navy `#12345A`, blue `#296BB4`, self-hosted Jakarta/Alexandria, shared
+gutters and physical action corners govern the implementation. The screenshot's
+historical colors, header/footer labels and institutional sample claims do not
+override current identity, canonical navigation or reviewed content. Avoid
+duplicating Apex markers throughout this page; the existing selective rule holds.
+
+Keep the reference's hierarchy with natural text growth: split introduction on
+wide screens, stacked content on narrow screens, four/two/one platform columns,
+and labelled form controls with a single-column narrow layout. Logical spacing
+and isolated Latin identifiers support Arabic. FAQ answers use native disclosures.
+The form action states its actual purpose: prepare a local email, then open the
+visitor's email application. A plain directions link and an on-demand map preserve
+useful location access. No sample opening hours, 48-hour promise, department
+mailboxes, platform addresses or phone numbers are presented as verified facts.
+
+Sources, service limits and the unverified map pin are recorded in
+[contact documentation](docs/contact.md). Current executed checks belong in
+[validation](docs/validation.md); this source adaptation does not establish
+production publication or final editorial approval.
+
 ## Contextual hero media — 2026-10-09
 
 Whole photographic backgrounds now support four text-placement modes: start,
@@ -279,7 +310,9 @@ images fit governance, opportunities and collaboration. All 17 active photo asse
 are still fictional illustrations. Real Green Energy Park and IRESEN office
 photos await source-download access; no real image or office location is asserted.
 See [role mapping, provenance and readiness](docs/contextual-hero-media.md).
-Copy, facts, routes, fonts, original SVGs, mobile hierarchy and homepage video remain.
+This describes the photo-hero revision; contact subsequently replaces its photo
+hero with the reference composition above. Routes, fonts, original SVGs, mobile
+hierarchy and homepage video remain.
 Earlier compositions and captures are historical; current checks belong in
 [validation](docs/validation.md).
 
@@ -312,8 +345,9 @@ The owner's later request uses the original `/videos/hero.mp4` for the homepage,
 with no playback button. Normal-motion playback starts after hydration, muted,
 looping and inline. The generated photo stays beneath it as the loading/failure,
 no-JavaScript and reduced-motion fallback; a live reduced-motion change unloads
-the video. Keep the same overlay, typography, copy, figures and layout, with the
-other 21 page heroes still photographic.
+the video. Keep the same overlay, typography, copy, figures and layout. Twenty
+other pages retain photo heroes; contact's later split composition is described
+above.
 
 The unchanged 9.32 MiB file is an owner-requested budget exception. Its
 end-of-file metadata needs byte-range delivery; web-sized, fast-start derivatives

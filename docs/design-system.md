@@ -129,7 +129,8 @@ menus, footer and sitemap retain their existing treatment.
 
 ### Section placeholders — 2026-10-09
 
-All 22 canonical pages share `PageSections` and the typed ID/order map in
+The initial scaffold covered all 22 canonical pages. The other 21 pages retain
+`PageSections` and the typed ID/order map in
 `src/lib/page-sections.ts`. Introducing heroes retain each page's H1; subsequent
 sections use labelled H2s with short localized draft content notes, and nested
 Mission/search topics use H3s. Placeholders reuse the aligned container, shared
@@ -138,6 +139,24 @@ inventing completed content modules. Institute's Mission alone retains the
 selective decorative Apex Leaf. The sitemap's real directory remains inside its
 first section; service notices retain their truthful availability state.
 See [the section guide](page-sections.md) and [validation evidence](validation.md).
+
+### Contact composition — 2026-10-09
+
+Contact uses a dedicated composition based on the owner's selected native frame
+`804:7374` and attached screenshot. Its shared header stays white; the original
+abstract background accompanies a split introduction and navy headquarters panel.
+Flat platform rows, the `--color-action-surface` form band, native FAQ disclosures
+and a full-width on-demand location section reuse existing type, spacing, focus,
+container and action roles. Shared navigation/footer, approved blue/navy and
+Jakarta/Alexandria supersede the sample's historical styles and labels.
+
+Use natural content height, logical CSS and responsive column reduction; isolate
+email, phone and Latin platform names in Arabic. The form prepares a local email
+draft and exposes its actual state, with direct email fallback. Google Maps is
+absent until requested and can be removed. Preserve all existing contact anchors
+within the new sections. No backend success, response deadline, opening hours or
+department mailbox is inferred from the design. See [contact sources and limits](contact.md)
+and [current check evidence](validation.md).
 
 ### Shared actions — 2026-10-09
 
