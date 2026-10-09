@@ -36,8 +36,8 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- All 22 approved pages have introductory heroes with five composition
-  styles: 21 use generated photos, while the homepage uses the owner's video with
+- The 21 non-search pages have introductory heroes with five composition
+  styles: 20 use generated photos, while the homepage uses the owner's video with
   its generated photo as fallback. Short FR/EN/AR wayfinding drafts and the
   Développer · Éprouver · Valoriser reading framework remain.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
@@ -57,7 +57,7 @@ marketing page.
   five layouts. [The asset manifest](docs/hero-assets.json) records provenance,
   native dimensions and served derivatives; final checks for this replacement
   belong in [revision-specific validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
-- All 22 canonical pages now have section placeholders below their introducing
+- The 21 non-search canonical pages have section placeholders below their introducing
   heroes, using shared IDs/order and localized headings with short draft content
   notes in FR/EN/AR. Institute retains its three principal anchors and nests
   capacities and 2035 ambition under Mission; the sitemap retains its working
@@ -75,7 +75,13 @@ marketing page.
   Continuous motion without a pause control does not establish WCAG 2.2.2
   conformance. See [current hero behavior](docs/heroes.md#homepage-hero-video--2026-10-09)
   and [source metadata and rights limits](docs/asset-inventory.md#hero-video).
-- Search and contact currently have truthful unavailable states. The newsletter
+- Search now covers public pages/sections, published CMS pages/articles and
+  registered or uploaded public documents/media in the active locale. Ranked
+  results, normalized matching, live suggestions, URL filters/date sorting and
+  pagination follow the [search guide](docs/search.md). The header expands its
+  field on hover/focus and submits to the lean results page. New public resources
+  must supply search references in the same change. Contact retains its truthful
+  unavailable state. The newsletter
   keeps local editable email/consent controls; Subscribe opens a native disclosure
   with the localized unavailable message, hidden initially. The privacy link stays
   accessible. No subscription is submitted or stored, and no success is reported;

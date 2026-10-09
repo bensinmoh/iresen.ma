@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @import './tokens.css';
+@import './search.css';
+@import './published-content.css';
 
 @theme inline {
   --font-sans: var(--font-body);

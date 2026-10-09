@@ -2,7 +2,8 @@ import path from 'node:path'
 
 import type { CollectionConfig } from 'payload'
 
-import { constrainContentOperation, publishedContentOnly } from '../access/public-content'
+import { constrainContentOperation } from '../access/public-content'
+import { publishedMediaOnly } from '../access/public-media'
 import { administratorsOnly, staffOnly } from '../access/roles'
 import { publicationGuard } from '../hooks/publication'
 import { publicationFields } from './fields'
@@ -12,7 +13,7 @@ export const Media: CollectionConfig = {
   admin: { useAsTitle: 'title' },
   access: {
     create: staffOnly,
-    read: publishedContentOnly,
+    read: publishedMediaOnly,
     update: staffOnly,
     delete: administratorsOnly,
     readVersions: staffOnly,
@@ -20,8 +21,28 @@ export const Media: CollectionConfig = {
   versions: { drafts: true, maxPerDoc: 30 },
   upload: {
     staticDir: path.resolve(process.cwd(), '.local/uploads'),
-    mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'application/pdf'],
+    mimeTypes: [
+      'image/jpeg',
+      'image/png',
+      'image/webp',
+      'image/avif',
+      'application/pdf',
+      'video/mp4',
+      'video/webm',
+      'audio/mpeg',
+      'audio/wav',
+      'audio/ogg',
+      'text/plain',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    ],
     pasteURL: false,
+    modifyResponseHeaders: ({ headers }) => {
+      headers.set('Cache-Control', 'private, no-store')
+      headers.set('X-Content-Type-Options', 'nosniff')
+      return headers
+    },
   },
   hooks: {
     beforeOperation: [constrainContentOperation],
@@ -43,6 +64,15 @@ export const Media: CollectionConfig = {
     { name: 'title', type: 'text', localized: true },
     { name: 'alt', type: 'text', localized: true },
     { name: 'caption', type: 'textarea', localized: true },
+    {
+      name: 'searchText',
+      type: 'textarea',
+      localized: true,
+      admin: {
+        description:
+          'Public searchable transcript or document text. Add reviewed text for audio, video, scans and files without automatic extraction. Never put private editorial notes here.',
+      },
+    },
     {
       name: 'rights',
       type: 'textarea',

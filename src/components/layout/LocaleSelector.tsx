@@ -1,6 +1,7 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
 import { defaultLocale, isLocale, locales } from '@/i18n/locales'
 import { usePathname } from '@/i18n/navigation'
@@ -14,13 +15,16 @@ function subscribeToHash(callback: () => void) {
   return () => window.removeEventListener('hashchange', callback)
 }
 
-export function LocaleSelector({
-  fullNames = false,
-  variant = 'inline',
-}: {
-  fullNames?: boolean
-  variant?: 'inline' | 'dropdown'
-}) {
+type LocaleSelectorProps = { fullNames?: boolean; variant?: 'inline' | 'dropdown' }
+
+export function LocaleSelector({ fullNames = false, variant = 'inline' }: LocaleSelectorProps) {
+  const searchParams = useSearchParams()
+  const query = new URLSearchParams()
+  for (const key of ['q', 'type', 'sort']) {
+    const value = searchParams.get(key)
+    if (value) query.set(key, value)
+  }
+  const searchQuery = query.toString()
   const locale = useLocale()
   const currentLocale = isLocale(locale) ? locale : defaultLocale
   const t = useTranslations('Navigation')
@@ -56,7 +60,11 @@ export function LocaleSelector({
   const links = locales.map((targetLocale) => (
     <a
       key={targetLocale}
-      href={pageId ? pageHref(pageId, targetLocale, anchor) : `/${targetLocale}`}
+      href={
+        pageId
+          ? `${pageHref(pageId, targetLocale)}${pageId === 'search' && searchQuery ? `?${searchQuery}` : ''}${anchor ? (anchor.startsWith('#') ? anchor : `#${anchor}`) : ''}`
+          : `/${targetLocale}`
+      }
       hrefLang={targetLocale}
       lang={targetLocale}
       dir={targetLocale === 'ar' ? 'rtl' : 'ltr'}

@@ -28,6 +28,7 @@ pnpm setup:local
 pnpm db:up
 pnpm db:wait
 pnpm cms:migrate
+pnpm search:rebuild
 pnpm dev
 ```
 
@@ -53,21 +54,32 @@ Public app: <http://localhost:3000> (redirects to French). Other locale shells: 
 
 ## Commands
 
-| Command                 | Purpose                                    |
-| ----------------------- | ------------------------------------------ |
-| `pnpm dev`              | Development app and CMS                    |
-| `pnpm build`            | Production standalone build                |
-| `pnpm start`            | Run the production application             |
-| `pnpm lint`             | ESLint                                     |
-| `pnpm typecheck`        | Strict TypeScript                          |
-| `pnpm test`             | Focused unit checks                        |
-| `pnpm test:integration` | CMS/database authorization checks          |
-| `pnpm test:e2e`         | Browser locale/navigation checks           |
-| `pnpm setup:local`      | Create private local configuration         |
-| `pnpm db:up`            | Start the configured Compose database      |
-| `pnpm db:wait`          | Wait for the configured PostgreSQL service |
-| `pnpm cms:migrate`      | Apply reviewed CMS migrations              |
-| `pnpm cms:bootstrap`    | Controlled first-administrator creation    |
+| Command                 | Purpose                                                              |
+| ----------------------- | -------------------------------------------------------------------- |
+| `pnpm dev`              | Development app and CMS                                              |
+| `pnpm build`            | Production standalone build                                          |
+| `pnpm start`            | Run the production application                                       |
+| `pnpm lint`             | ESLint                                                               |
+| `pnpm typecheck`        | Strict TypeScript                                                    |
+| `pnpm test`             | Focused unit checks                                                  |
+| `pnpm test:integration` | CMS/database authorization checks                                    |
+| `pnpm test:e2e`         | Browser locale/navigation checks                                     |
+| `pnpm setup:local`      | Create private local configuration                                   |
+| `pnpm db:up`            | Start the configured Compose database                                |
+| `pnpm db:wait`          | Wait for the configured PostgreSQL service                           |
+| `pnpm cms:migrate`      | Apply reviewed CMS migrations                                        |
+| `pnpm cms:bootstrap`    | Controlled first-administrator creation                              |
+| `pnpm search:rebuild`   | Rebuild eligible public search content and register static resources |
+| `pnpm search:work`      | Process one bounded durable indexing batch                           |
+
+Search uses PostgreSQL with `pg_trgm`; the reviewed search migration installs the
+extension. Install `poppler-utils` on the application/worker host for automatic
+public PDF text extraction. Other files and scanned PDFs remain searchable by
+approved metadata and localized `searchText`. The app starts a bounded background
+index worker on CMS initialization or first search; production can also schedule
+`pnpm search:work`. Set `SEARCH_WORKER_DISABLED=true` when a separate worker
+owns processing. Use `pnpm search:rebuild` after migration, new static resources
+or a full recovery. See [search behavior, operations and required content references](docs/search.md).
 
 Browser checks require Playwright's browser dependencies; CI installs them. This cloud machine already provides Chromium: use `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e` after `pnpm build`. Elsewhere install the bundled browser with `node scripts/run.mjs playwright install chromium`, using the same cache as the tests. Integration checks require a disposable migrated database with no existing users; they create and remove their own accounts and content. Never point tests or development schema synchronization at production.
 
@@ -86,7 +98,7 @@ Local foundation checks passed: 8 unit, 4 integration and 11 browser tests, plus
 | `CMS_BOOTSTRAP_EMAIL`                               | First administrator identity; bootstrap only                              |
 | `CMS_BOOTSTRAP_PASSWORD`                            | Secret first-administrator password; bootstrap only                       |
 
-Development services need no production email, storage, LinkedIn or DNS credentials. Search/contact and CMS email delivery are explicitly unavailable until providers are implemented. Seven supplied SVGs are installed unchanged in `public/brand/`; PDF guidelines and other private originals were archived in ignored `private-references/` during prior work and are absent from this checkout. The owner selected **#296BB4** for the primary blue. The native Figma source can be retrieved through Git LFS; [reference handling](docs/references/README.md) explains payload verification and current availability. Its recorded design language and implementation rules live in [the design system](docs/design-system.md), with the current devlink analysis in [the live review](docs/figma-design-system-review.md). Public text and controls use licensed, self-hosted Plus Jakarta Sans for Latin and the owner's selected Alexandria for Arabic, with script-based selection across all three locales. CMS/admin typography has a separate layout. See [fonts and provenance](docs/fonts.md), [asset inventory](docs/asset-inventory.md) and [brand decision](docs/adr/0003-owner-selected-primary-blue.md). Approved page copy and standalone design exports remain follow-up inputs.
+Development services need no production email, storage, LinkedIn or DNS credentials. Public search is implemented; contact and CMS email delivery remain explicitly unavailable until providers are implemented. Seven supplied SVGs are installed unchanged in `public/brand/`; PDF guidelines and other private originals were archived in ignored `private-references/` during prior work and are absent from this checkout. The owner selected **#296BB4** for the primary blue. The native Figma source can be retrieved through Git LFS; [reference handling](docs/references/README.md) explains payload verification and current availability. Its recorded design language and implementation rules live in [the design system](docs/design-system.md), with the current devlink analysis in [the live review](docs/figma-design-system-review.md). Public text and controls use licensed, self-hosted Plus Jakarta Sans for Latin and the owner's selected Alexandria for Arabic, with script-based selection across all three locales. CMS/admin typography has a separate layout. See [fonts and provenance](docs/fonts.md), [asset inventory](docs/asset-inventory.md) and [brand decision](docs/adr/0003-owner-selected-primary-blue.md). Approved page copy and standalone design exports remain follow-up inputs.
 
 Project scripts load `.env.local` and keep caches within ignored paths. For a new install in a restricted cloud shell, set `XDG_CACHE_HOME="$PWD/.cache/native"` and `npm_config_cache="$PWD/.cache/npm"` before `pnpm install --frozen-lockfile`. The SWC compatibility pin and current lint configuration are explained in [ADR 0002](docs/adr/0002-verified-cloud-tooling.md).
 
@@ -100,7 +112,7 @@ The 22 approved routes retain their introductory heroes: 21 use generated photos
 
 The homepage video decision is dated 2026-10-09. The unchanged 9.32 MiB original is an owner-requested performance-budget exception; end-of-file MP4 metadata needs byte-range delivery, and web-sized derivatives remain follow-up work. Continuous playback without a pause control does not establish WCAG 2.2.2 conformance. See [current media behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09) and [the validation log](docs/validation.md); the earlier [photo-replacement checks](docs/validation.md#generated-hero-placeholders--2026-10-09) describe that revision.
 
-All 22 canonical pages now have introductory heroes followed by section placeholders in FR/EN/AR: headings and short draft notes describing the intended content. [The section guide](docs/page-sections.md) records their shared IDs, order and source adaptation; supported section anchors survive equivalent-page language switching. The sitemap retains its working 22-page directory. The next content task is filling these sections with approved copy and reviewed visual assets. See [page heroes](docs/heroes.md) for composition, viewport behavior and media/editorial limits, and [validation](docs/validation.md) for revision-specific check evidence. Full CMS workflows, functional search/contact, production media/email/identity and release assessment remain tracked work. No production deployment, repository visibility change or open-source licensing decision is implied by this foundation. See [deployment](docs/deployment.md) and [security/privacy](docs/security-and-privacy.md).
+The 21 content pages retain introducing heroes followed by section placeholders in FR/EN/AR; search now uses its functional compact results view. Content placeholders contain: headings and short draft notes describing the intended content. [The section guide](docs/page-sections.md) records their shared IDs, order and source adaptation; supported section anchors survive equivalent-page language switching. The sitemap retains its working 22-page directory. The next content task is filling these sections with approved copy and reviewed visual assets. See [page heroes](docs/heroes.md) for composition, viewport behavior and media/editorial limits, and [validation](docs/validation.md) for revision-specific check evidence. Full CMS workflows, functional contact, production media/email/identity and release assessment remain tracked work. No production deployment, repository visibility change or open-source licensing decision is implied by this foundation. See [deployment](docs/deployment.md) and [security/privacy](docs/security-and-privacy.md).
 
 Header, hero, following sections and footer share a 120rem container with fluid aligned gutters. Latin hero H1s use −3% letter spacing; selected languages use bold weight alone, and header menu labels/arrows center within their controls. See [current design rules](docs/design-system.md#hero-layout-and-typography-refinements--2026-10-08) and [the validation log](docs/validation.md) for each revision's check record.
 

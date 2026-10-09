@@ -31,6 +31,14 @@ Chosen on 2026-10-08 following the owner's request for one consistent structure:
 
 Cookie preferences become required if the chosen processing needs them. Legal placeholder text must not claim compliance or invent registration numbers.
 
+Search is now functional at its three equivalent paths, with query, filters,
+sort and pagination in URL parameters. Published news/press-release detail pages
+use the localized news path plus the approved slug, such as
+`/fr/ressources/actualites/{slug}`. Missing/private/unapproved locale records
+return 404. Published canonical CMS page text renders under `#published-content`;
+its headings have shared `content-section-{topLevelChildIndex}` anchors. These
+detail routes add no primary navigation branch. See [search](search.md).
+
 Language selection is a control, not a content page. Governance stays separate from the institute onepager; press releases stay within news and calls within opportunities. Do not introduce alumni, training, newsletter or application portals from screenshot labels alone.
 
 ## Section placeholders — 2026-10-09

@@ -96,6 +96,20 @@ their photographic style does not establish real institutional subjects.
 
 ## Interaction and review
 
+Functional search uses a compact heading, query form, content-type facets and
+readable editorial result rows on the shared grid. The results page supersedes
+its former full-screen introduction and section scaffolding, bringing results
+into immediate view. Matching text uses a restrained readable highlight, with
+descriptive links, excerpts and dates where available.
+
+The resting white header magnifier preserves its shared square/corner geometry.
+A 250ms field reveal moves toward inline-start (left in FR/EN, mirrored in AR),
+bounded by the available header width. Keyboard focus and touch expose the same
+input; native GET forms, reduced-motion direct reveal and no-JavaScript submission
+remain usable. Live suggestions are a compact link list with arrow-key access,
+Escape/outside dismissal and abortable requests. Query/filter/pagination live in
+the URL. See [search](docs/search.md) and revision-specific validation.
+
 Use accessible native semantics and existing shared components. Show genuine
 loading, empty, error and success states. Preserve equivalent locale navigation,
 supported anchors, keyboard focus and no-JavaScript access where applicable.

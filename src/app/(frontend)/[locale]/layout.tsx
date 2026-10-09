@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
+import { connection } from 'next/server'
 import { getTranslations } from 'next-intl/server'
 import { isLocale } from '@/i18n/locales'
 import { SiteHeader } from '@/components/layout/SiteHeader'
@@ -12,6 +13,9 @@ export default async function LocaleLayout({
   children: ReactNode
   params: Promise<{ locale: string }>
 }) {
+  // Locale links retain search parameters in the first HTML response, including
+  // without JavaScript. Public CMS content already renders at request time.
+  await connection()
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const t = await getTranslations({ locale, namespace: 'Navigation' })

@@ -1,5 +1,16 @@
 # Deployment and operations
 
+Public search now requires the reviewed PostgreSQL search migration and `pg_trgm`
+extension. Run `pnpm search:rebuild` against the intended environment after
+migration and when registering new static resources. The app starts its bounded
+index worker on CMS initialization or first search; environments without a
+persistent Node process must schedule `pnpm search:work` or provide an equivalent
+durable worker. Set `SEARCH_WORKER_DISABLED=true` only when that separate worker
+owns processing. Monitor pending jobs and retries without recording query strings
+or content. Install `poppler-utils` on the worker host for approved uploaded PDF
+text extraction; metadata and localized `searchText` remain available without it.
+See [search operations and publication boundaries](search.md).
+
 Production hosting and the canonical domain are not yet approved. Development setup does not authorize production deployment, DNS changes or repository visibility changes.
 
 ## Environment separation
