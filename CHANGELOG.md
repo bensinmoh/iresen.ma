@@ -4,6 +4,32 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Exact-first search relevance
+
+- Added explicit relevance tiers: exact, linguistic/prefix, spelling and related
+  topic matches. Numeric ranking cannot place an approximate match above an
+  exact one; the visitor's explicit date sort remains available.
+- Added conservative spelling suggestions derived from eligible public text,
+  with explicit correction links in results and header suggestions. Original
+  queries remain intact; nonliteral matches use the matched terms for excerpts
+  and safe highlights.
+- Added multilingual concept vocabulary for platforms/infrastructure,
+  PV/solar photovoltaics, solar panels, employment/careers and
+  tests/experimentation. These are curated discovery relationships, not
+  general model-based semantic understanding or an external service.
+- Improved public solar-media topic descriptions using the existing generated
+  asset provenance, preserving their fictional illustrative status.
+- Updated contributor instructions and local upgrade steps for the vocabulary
+  index and required search references.
+- Recorded the owner's reminder to review the FR/EN/AR glossary, translations,
+  acronyms and related-term dictionary, then rebuild and verify search when the
+  full website content is ready for its final sanity check.
+- Verified migration/rebuild, unchanged CMS artifacts, formatting/lint/types,
+  92 unit and 21 integration tests, production build and all 108 browser cases.
+  Coverage includes accepting mobile corrections, restoring background focus,
+  and keeping search usable when resizing to the wider header. See [validation](docs/validation.md#search-relevance-and-final-content-reminder--2026-10-09)
+  for browser and visual coverage; current PR CI validates the complete suite.
+
 ## 2026-10-09 — Mobile menu entrance
 
 - Added the owner's requested entrance from the physical right edge, including

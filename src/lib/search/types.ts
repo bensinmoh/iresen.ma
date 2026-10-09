@@ -2,6 +2,7 @@ export const searchTypes = ['page', 'section', 'news', 'document', 'media'] as c
 export type SearchType = (typeof searchTypes)[number]
 export type SearchLocale = 'fr' | 'en' | 'ar'
 export type SearchSort = 'relevance' | 'newest'
+export type SearchMatchKind = 'exact' | 'linguistic' | 'typo' | 'related'
 export type SearchItem = {
   id: string
   title: string
@@ -10,6 +11,8 @@ export type SearchItem = {
   excerpt: string
   locale: SearchLocale
   publishedAt?: string
+  matchKind?: SearchMatchKind
+  matchedQuery?: string
 }
 export type SearchInput = {
   query: string
@@ -29,6 +32,7 @@ export type SearchResult =
       totalPages: number
       sort: SearchSort
       facets: Record<SearchType, number>
+      suggestedQuery?: string
     }
   | { status: 'unavailable' }
 

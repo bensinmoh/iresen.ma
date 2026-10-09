@@ -18,6 +18,10 @@ native GET submission. Public suggestions use an accessible link list; result
 rows use safe text highlights, clear resource types and readable excerpts.
 See [the search specification](search.md) and [validation](validation.md).
 
+Spelling suggestions keep the original input and use explicit localized links.
+Related/approximate rows use quiet text labels and highlights for actual matched
+terms. Avoid exposing numeric scores or implying a general semantic model.
+
 - **Identity:** follow the original color book. Institutional primary navy is
   `#12345A`; signature/action blue is `#296BB4`. Keep the approved accents and
   original SVGs. Figma's `#0C2340`/`#1A4E8A` palette is historical evidence.

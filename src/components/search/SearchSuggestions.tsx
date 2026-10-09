@@ -1,10 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useEffect, useRef, useState } from 'react'
 import type { Locale } from '@/i18n/locales'
 import { searchTypes, type SearchItem } from '@/lib/search/types'
+import { hasControlCharacters, highlightSearchText } from '@/lib/search/text'
+import { pageHref } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 
 type SuggestionsResponse = {
@@ -12,6 +15,7 @@ type SuggestionsResponse = {
   locale: Locale
   items: SearchItem[]
   status: 'available' | 'unavailable'
+  suggestedQuery?: string
 }
 
 function isPublicSuggestion(item: unknown, locale: Locale): item is SearchItem {
@@ -25,7 +29,11 @@ function isPublicSuggestion(item: unknown, locale: Locale): item is SearchItem {
     result.url.startsWith('/') &&
     !/^\/[\\/]/.test(result.url) &&
     result.locale === locale &&
-    searchTypes.some((type) => type === result.type)
+    searchTypes.some((type) => type === result.type) &&
+    (result.matchedQuery === undefined ||
+      (typeof result.matchedQuery === 'string' && result.matchedQuery.length <= 200)) &&
+    (result.matchKind === undefined ||
+      ['exact', 'linguistic', 'typo', 'related'].some((kind) => kind === result.matchKind))
   )
 }
 
@@ -33,6 +41,12 @@ export function focusFirstSearchSuggestion(container: HTMLElement | null) {
   const link = container?.querySelector<HTMLAnchorElement>('[data-search-suggestion]')
   link?.focus()
   return Boolean(link)
+}
+
+function highlight(text: string, query: string) {
+  return highlightSearchText(text, query).map((part, index) =>
+    part.match ? <mark key={index}>{part.text}</mark> : part.text,
+  )
 }
 
 /** A small, cancellable preview; submitting the form always opens the full results. */
@@ -48,6 +62,7 @@ export function SearchSuggestions({
   onDismiss: () => void
 }) {
   const t = useTranslations('Search')
+  const searchParams = useSearchParams()
   const panelRef = useRef<HTMLDivElement>(null)
   const [response, setResponse] = useState<SuggestionsResponse | null>(null)
   const normalizedQuery = query.trim().slice(0, 200)
@@ -67,7 +82,7 @@ export function SearchSuggestions({
         if (!result.ok) throw new Error('Search suggestions unavailable')
         const data: unknown = await result.json()
         if (controller.signal.aborted) return
-        const payload = data as { status?: unknown; items?: unknown }
+        const payload = data as { status?: unknown; items?: unknown; suggestedQuery?: unknown }
         if (payload?.status !== 'available' || !Array.isArray(payload.items)) {
           throw new Error('Search suggestions unavailable')
         }
@@ -76,6 +91,12 @@ export function SearchSuggestions({
           locale,
           status: 'available',
           items: payload.items.filter((item) => isPublicSuggestion(item, locale)).slice(0, 4),
+          ...(typeof payload.suggestedQuery === 'string' &&
+          payload.suggestedQuery.trim().length > 0 &&
+          payload.suggestedQuery.length <= 200 &&
+          !hasControlCharacters(payload.suggestedQuery)
+            ? { suggestedQuery: payload.suggestedQuery.trim() }
+            : {}),
         })
       } catch {
         if (controller.signal.aborted) return
@@ -104,6 +125,12 @@ export function SearchSuggestions({
     response?.query === normalizedQuery && response.locale === locale ? response : null
   if (current?.status === 'unavailable') return null
   const items = current?.items ?? []
+  const suggestedQuery =
+    current?.suggestedQuery !== normalizedQuery ? current?.suggestedQuery : undefined
+  const correctionParams = new URLSearchParams({ q: suggestedQuery ?? '' })
+  const type = searchParams.get('type')
+  if (searchTypes.some((value) => value === type)) correctionParams.set('type', type!)
+  if (searchParams.get('sort') === 'newest') correctionParams.set('sort', 'newest')
 
   return (
     <div
@@ -132,8 +159,29 @@ export function SearchSuggestions({
         {t('suggestions')}
       </p>
       <p className={current ? 'search-sr-only' : 'header-search-suggestions-status'} role="status">
-        {!current ? t('searching') : items.length === 0 ? t('noSuggestions') : t('suggestions')}
+        {!current
+          ? t('searching')
+          : suggestedQuery
+            ? `${t('suggestionPrompt')} ${suggestedQuery}`
+            : items.length === 0
+              ? t('noSuggestions')
+              : t('suggestions')}
       </p>
+      {suggestedQuery && (
+        <div className="header-search-correction">
+          <span>{t('suggestionPrompt')}</span>
+          <Link
+            href={`${pageHref('search', locale)}?${correctionParams}`}
+            aria-label={t('useSuggestion', { query: suggestedQuery })}
+            data-search-suggestion
+            data-search-correction
+            onClick={onDismiss}
+          >
+            <bdi dir="auto">{suggestedQuery}</bdi>
+            <NavigationIcon name="arrow" />
+          </Link>
+        </div>
+      )}
       {current && items.length === 0 && (
         <p className="header-search-suggestions-status" aria-hidden="true">
           {t('noSuggestions')}
@@ -145,13 +193,20 @@ export function SearchSuggestions({
             <li key={item.id}>
               <Link href={item.url} data-search-suggestion onClick={onDismiss}>
                 <span className="header-search-suggestion-content">
-                  <span className="header-search-suggestion-type">{t(`types.${item.type}`)}</span>
+                  <span className="header-search-suggestion-meta">
+                    <span className="header-search-suggestion-type">{t(`types.${item.type}`)}</span>
+                    {(item.matchKind === 'typo' || item.matchKind === 'related') && (
+                      <span className="search-match-badge" data-search-match-kind={item.matchKind}>
+                        {t(item.matchKind === 'typo' ? 'matchTypo' : 'matchRelated')}
+                      </span>
+                    )}
+                  </span>
                   <span className="header-search-suggestion-title" dir="auto">
-                    {item.title}
+                    {highlight(item.title, item.matchedQuery || normalizedQuery)}
                   </span>
                   {item.excerpt && (
                     <span className="header-search-suggestion-excerpt" dir="auto">
-                      {item.excerpt}
+                      {highlight(item.excerpt, item.matchedQuery || normalizedQuery)}
                     </span>
                   )}
                 </span>

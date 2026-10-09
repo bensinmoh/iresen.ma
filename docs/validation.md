@@ -1246,6 +1246,70 @@ provide OCR or speech recognition. Production storage, rate limiting and worker
 operations retain their release requirements. PR CI and merge outcomes are
 recorded by the current pull request; no website deployment is performed here.
 
+## Search relevance and final-content reminder — 2026-10-09
+
+Relevance now uses ordered exact, linguistic/prefix, spelling and related-topic
+tiers. Corrections preserve the original query, while excerpts and highlights
+show the words that actually matched. Related vocabulary is explicitly curated
+in FR/EN/AR; it does not provide free-form model-based semantic understanding.
+
+Local verification used Node 24.19.0, pnpm 11.19.0, PostgreSQL 17 and a production
+Next build. The new vocabulary migration and public rebuild succeeded. Generated
+Payload types/import map stayed unchanged. Formatting, ESLint, TypeScript,
+92 unit tests, 21 database integration tests and the production build passed.
+The existing 93 browser cases passed in the complete run; all 10 new relevance
+cases passed in the focused rerun after fixing test locators and separating axe's
+JavaScript audit from the native no-JavaScript journey. The initial PR CI passed
+the complete 103-case suite against a freshly migrated PostgreSQL service.
+After the final correction-link focus refinement, the rebuilt production server
+also passed all 20 header/relevance browser cases. Three focused header scans
+using the actual final CSS reported no axe violations or horizontal overflow;
+keyboard arrows and Escape restored focus correctly.
+
+The feature was subsequently integrated with the approved mobile menu revision.
+The combined production build, formatting/lint/types, 92 unit tests and all
+108 local browser cases passed. Relevance coverage now includes accepting a
+header correction inside the full-screen mobile menu, closing that menu,
+restoring interactive main content and focusing the results field. Resizing a
+focused mobile correction to the wider header closes the navigation menu while
+preserving the open search and keyboard focus, so navigation cannot cover the
+suggestions. Mobile search
+and suggestions expand in normal flow at `40rem` and below. Arabic result/menu
+captures were refreshed against this integrated build; current PR CI repeats the
+complete 108-case suite.
+
+Integration coverage includes title/body priority despite repeated later-tier
+content, literal PV priority, adjacent-letter and multiword corrections, valid
+concept protection, unchanged-static vocabulary upgrade, all required query
+terms beyond 12 words, and immediate exclusion of private, draft, unapproved,
+stale, deleted and missing-language vocabulary. Browser coverage includes native
+correction links, preserved filters/sort with reset pagination, keyboard header
+suggestions, matching highlights and Arabic RTL at 320px/200% text.
+
+Manual production API checks returned HTTP 200 for “Résultats”, “Plateformes”,
+“Insrastructure”, “PV” and “الألواح الشمسية”. “Plateformes” starts with exact
+platform results; “Insrastructure” proposes “Infrastructure” without changing
+the input. PV discovers the existing public generated solar-media descriptions;
+it does not invent institutional photovoltaic records.
+
+French desktop and Arabic mobile captures were visually inspected. Corrections
+and badges remain readable; enlarged 320px EN/AR layouts retain a 320px document
+width. JavaScript-enabled axe scans reported no violations in the search region;
+the no-JavaScript Arabic correction journey also passed. Local Chromium and
+emulated viewports do not establish physical-device, Safari or screen-reader
+certification.
+
+- [French correction and related results, desktop](screenshots/search-relevance-fr-1440.png)
+- [Arabic correction and close result, mobile](screenshots/search-relevance-ar-390.png)
+- [Focused header correction, desktop](screenshots/search-relevance-header-fr-1440.png)
+- [Focused correction in the Arabic mobile menu](screenshots/search-relevance-menu-ar-390.png)
+
+The owner's reminder is recorded in `AGENTS.md`, `instruction.md`, the search
+guide and release backlog: once all content is ready, review/reconstruct the
+approved multilingual glossary/terminology, acronym and related-term dictionary,
+then rebuild and verify the public search index/vocabulary during the final sanity
+check. That future content milestone remains pending. No deployment is performed.
+
 ## Mobile reference adaptation — 2026-10-09
 
 The owner's four mobile screenshots establish composition. Their sample text,

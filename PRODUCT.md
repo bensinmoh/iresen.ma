@@ -103,8 +103,12 @@ marketing page.
   registered or uploaded public documents/media in the active locale. Ranked
   results, normalized matching, live suggestions, URL filters/date sorting and
   pagination follow the [search guide](docs/search.md). The header expands its
-  field on hover/focus and submits to the lean results page. New public resources
-  must supply search references in the same change. Contact retains its truthful
+  field on hover/focus and submits to the lean results page. Exact matches precede spelling corrections
+  and related topics; explicit correction links preserve the visitor's query.
+  The multilingual concept vocabulary includes platforms/infrastructure and
+  PV/solar photovoltaics, without claiming general model-based semantic search.
+  New public resources must supply search references and real discovery vocabulary
+  in the same change. Contact retains its truthful
   unavailable state. The newsletter
   keeps local editable email/consent controls; Subscribe opens a native disclosure
   with the localized unavailable message, hidden initially. The privacy link stays

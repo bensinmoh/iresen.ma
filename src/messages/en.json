@@ -724,6 +724,10 @@
     "previous": "Previous",
     "next": "Next",
     "suggestions": "Search suggestions",
+    "suggestionPrompt": "Did you mean",
+    "useSuggestion": "Search for “{query}”",
+    "matchTypo": "Close match",
+    "matchRelated": "Related content",
     "noSuggestions": "No quick matches. Press Enter to see all results.",
     "invalidTitle": "Check your search",
     "invalidDescription": "Use up to 200 characters and choose the available filters."

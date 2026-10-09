@@ -11,6 +11,12 @@ or content. Install `poppler-utils` on the worker host for approved uploaded PDF
 text extraction; metadata and localized `searchText` remain available without it.
 See [search operations and publication boundaries](search.md).
 
+The relevance migration adds a per-document spelling vocabulary and queues CMS
+sources for reindexing. Apply it before starting the updated server, then rebuild
+the public index. The existing indexing worker maintains both documents and
+vocabulary; corrections and curated related topics require no external API or
+model service. Both results and suggestions recheck current public eligibility.
+
 For local/standalone filesystem storage, set `CMS_UPLOAD_DIRECTORY` to the same
 absolute persistent directory in the web server and index worker. The repository
 launcher resolves its default to the root `.local/uploads` before standalone
@@ -32,6 +38,10 @@ The application is a portable Node.js server backed by PostgreSQL. Local media s
 3. Back up the database/media; review and apply explicit database migrations.
 4. Deploy the server as a non-root process with HTTPS and configured security/caching boundaries.
 5. Verify restricted admin, public projections, real mail delivery, worker execution, published-locale SEO and health checks.
+   When the complete website content is ready, remind the owner to run the
+   [final content search sanity check](search.md#final-content-search-sanity-check):
+   review the multilingual glossary and related terms, rebuild search and verify
+   representative queries.
 6. Enable indexing only after approved copy/translations, legal information and release authorization.
 
 Never use development schema push against production. Rehearse migrations and rollback/recovery with representative staging data. A production build passing does not prove deployment readiness.

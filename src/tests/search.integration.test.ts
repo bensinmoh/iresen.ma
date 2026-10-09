@@ -3,11 +3,14 @@ import { mkdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 import { Pool } from 'pg'
-import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 import { SEARCH_PAGE_SIZE, searchAdapter } from '@/lib/search/adapter'
+import { staticSearchDocuments } from '@/lib/search/catalog'
 import { initializeSearchCatalog, processSearchJobs, stopSearchWorker } from '@/lib/search/indexer'
+import { normalizeSearchText } from '@/lib/search/text'
 import type { SearchInput, SearchLocale, SearchResult } from '@/lib/search/types'
+import { VOCABULARY_VERSION } from '@/lib/search/vocabulary'
 import { pageHref, pageIds, type PageId } from '@/lib/site'
 import { mediaDirectory } from '@/cms/media-directory'
 
@@ -29,6 +32,19 @@ type PublicationOptions = {
 
 function term(): string {
   return `qz${randomUUID().replaceAll('-', '')}`
+}
+
+/** A unique alphabetic word suitable for testing the spelling dictionary. */
+function vocabularyWord(): string {
+  const suffix = randomUUID()
+    .replaceAll('-', '')
+    .slice(0, 8)
+    .replace(/\d/g, (digit) => String.fromCharCode(103 + Number(digit)))
+  return `zephyroscope${suffix}`
+}
+
+function misspell(word: string): string {
+  return `${word.slice(0, 4)}${word.slice(5)}`
 }
 
 function richBody(text: string, heading?: string) {
@@ -201,6 +217,41 @@ integration('public website search (PostgreSQL)', () => {
     )
     return { id, filename }
   }
+
+  it('rebuilds vocabulary at startup for an unchanged static catalog upgraded from the previous index schema', async () => {
+    const document = staticSearchDocuments().find(
+      ({ locale, type, title }) =>
+        locale === 'en' && type === 'page' && title.includes('platforms'),
+    )!
+    const previous = await database!.query<{ source_revision: string }>(
+      'SELECT source_revision FROM search_documents WHERE id=$1',
+      [document.id],
+    )
+    await database!.query('UPDATE search_documents SET vocabulary_version=0 WHERE id=$1', [
+      document.id,
+    ])
+    await database!.query('DELETE FROM search_document_vocabulary WHERE document_id=$1', [
+      document.id,
+    ])
+    // A fresh process has no cached catalog promise, as on the first startup after migration.
+    vi.resetModules()
+    const freshIndexer = await import('@/lib/search/indexer')
+    await freshIndexer.initializeSearchCatalog()
+    const rebuilt = await database!.query<{
+      source_revision: string
+      vocabulary_version: number
+      term: string
+      surface: string
+    }>(
+      `SELECT d.source_revision,d.vocabulary_version,v.term,v.surface FROM search_documents d
+       JOIN search_document_vocabulary v ON v.document_id=d.id WHERE d.id=$1 AND v.term='platforms'`,
+      [document.id],
+    )
+    expect(rebuilt.rows).toHaveLength(1)
+    expect(rebuilt.rows[0]?.source_revision).toBe(previous.rows[0]?.source_revision)
+    expect(rebuilt.rows[0]?.vocabulary_version).toBe(VOCABULARY_VERSION)
+    expect(rebuilt.rows[0]?.surface).toBe('platforms')
+  })
 
   it('ranks title matches above body matches and supports French accents, English stemming and title typos', async () => {
     const marker = term()
@@ -505,6 +556,306 @@ integration('public website search (PostgreSQL)', () => {
         ])
       ).rowCount,
     ).toBe(0)
+  })
+
+  it('keeps exact title and body phrases ahead of repeated related content and excludes near spellings of valid words', async () => {
+    const marker = term()
+    const phrase = `${marker} photovoltaic`
+    const exactTitle = await createNews(marker, {
+      title: phrase,
+      summary: '',
+      body: richBody('Reviewed technical work'),
+      date: '2026-01-01T12:00:00Z',
+    })
+    const exactBody = await createNews(marker, {
+      title: 'A published experimental report',
+      summary: '',
+      body: richBody(`${phrase} `.repeat(1000)),
+      date: '2026-02-01T12:00:00Z',
+    })
+    const typo = await createNews(marker, {
+      title: `${marker} photovoltac`,
+      summary: '',
+      body: richBody(`${marker} photovoltac `.repeat(1000)),
+      date: '2026-03-01T12:00:00Z',
+    })
+    const related = await createNews(marker, {
+      title: `${marker} solar`,
+      summary: '',
+      body: richBody(`${marker} solar `.repeat(1000)),
+      date: '2026-04-01T12:00:00Z',
+    })
+    await processSearchJobs(50)
+    const result = await query({ query: phrase, locale: 'en', type: 'news' })
+    expect(result.items.slice(0, 2).map(({ id }) => id)).toEqual([
+      `news:${exactTitle}:en`,
+      `news:${exactBody}:en`,
+    ])
+    expect(result.items.slice(0, 2).every(({ matchKind }) => matchKind === 'exact')).toBe(true)
+    expect(result.items.some(({ id }) => id === `news:${typo}:en`)).toBe(false)
+    expect(result.items.find(({ id }) => id === `news:${related}:en`)?.matchKind).toBe('related')
+    expect(result.suggestedQuery).toBeUndefined()
+    const newest = await query({ query: phrase, locale: 'en', type: 'news', sort: 'newest' })
+    expect(newest.items[0]?.id).toBe(`news:${related}:en`)
+  })
+
+  it('ranks literal PV titles before related photovoltaic content without correcting the acronym', async () => {
+    const exact = await createNews(term(), { title: 'PV', summary: '', body: richBody('Reviewed') })
+    const body = await createNews(term(), {
+      title: 'Reviewed measurement note',
+      summary: '',
+      body: richBody('PV '.repeat(1000)),
+    })
+    const related = await createNews(term(), {
+      title: 'Solar photovoltaics',
+      summary: '',
+      body: richBody('Solar photovoltaics '.repeat(1000)),
+    })
+    await processSearchJobs(50)
+    const result = await query({ query: 'PV', locale: 'en', type: 'news' })
+    expect(result.query).toBe('PV')
+    expect(result.suggestedQuery).toBeUndefined()
+    expect(result.items[0]?.id).toBe(`news:${exact}:en`)
+    const literalBodyPosition = result.items.findIndex(({ id }) => id === `news:${body}:en`)
+    const relatedPosition = result.items.findIndex(({ id }) => id === `news:${related}:en`)
+    expect(literalBodyPosition).toBeGreaterThan(0)
+    expect(relatedPosition).toBeGreaterThan(literalBodyPosition)
+    expect(result.items[relatedPosition]?.matchKind).toBe('related')
+    expect(normalizeSearchText(result.items[relatedPosition]?.matchedQuery ?? '')).toMatch(
+      /solar|photovoltaic/,
+    )
+  })
+
+  it('suggests multiple transposed public words in French, English and Arabic while retaining the original query', async () => {
+    const cases = [
+      { locale: 'fr', title: 'Énergies solaires', typo: 'eneriges soliares' },
+      { locale: 'en', title: 'Photovoltaics research', typo: 'photovoltacis reserach' },
+      { locale: 'ar', title: 'الأَوْلَوِيَات والطَّاقة', typo: 'الاولويتا والطاقه' },
+    ] as const
+    const fixtures = []
+    for (const item of cases) {
+      const marker = term()
+      const id = await createNews(marker, { locale: item.locale, title: `${marker} ${item.title}` })
+      fixtures.push({ ...item, marker, id })
+    }
+    await processSearchJobs(50)
+    for (const fixture of fixtures) {
+      const original = `${fixture.marker} ${fixture.typo}`
+      const expected = normalizeSearchText(`${fixture.marker} ${fixture.title}`)
+      const result = await query({ query: original, locale: fixture.locale, type: 'news' })
+      expect(result.query).toBe(original)
+      expect(normalizeSearchText(result.suggestedQuery ?? '')).toBe(expected)
+      const item = result.items.find(({ id }) => id === `news:${fixture.id}:${fixture.locale}`)
+      expect(item?.title).toBe(`${fixture.marker} ${fixture.title}`)
+      expect(item?.matchKind).toBe('typo')
+      expect(normalizeSearchText(item?.matchedQuery ?? '')).toBe(expected)
+    }
+  })
+
+  it('uses public Infrastructure for Insrastructure and preserves valid words and opaque identifiers', async () => {
+    const marker = term()
+    const id = await createNews(marker, { locale: 'fr', title: `${marker} Infrastructure` })
+    await createNews(term(), { title: 'color colon', body: richBody('color colon') })
+    await createNews(term(), {
+      title: 'Photovoltaics phone',
+      body: richBody('Photovoltaics phone'),
+    })
+    await processSearchJobs(50)
+    const original = `${marker} Insrastructure`
+    const result = await query({ query: original, locale: 'fr', type: 'news' })
+    expect(result.query).toBe(original)
+    expect(normalizeSearchText(result.suggestedQuery ?? '')).toBe(`${marker} infrastructure`)
+    expect(result.items.find((item) => item.id === `news:${id}:fr`)?.matchKind).toBe('typo')
+    for (const value of ['PV', 'pv', 'RDI', 'IRESEN', 'lab', 'job', 'color', 'photo', marker]) {
+      expect((await query({ query: value, locale: 'en' })).suggestedQuery, value).toBeUndefined()
+    }
+  })
+
+  it('matches curated concepts in each locale and keeps unmatched terms required', async () => {
+    const cases = [
+      { locale: 'fr', query: 'infrastructure', title: 'Plateformes' },
+      { locale: 'en', query: 'infrastructure', title: 'Platforms' },
+      { locale: 'ar', query: 'البنية التحتية', title: 'المنصات' },
+      { locale: 'fr', query: 'panneaux solaires', title: 'Photovoltaïque' },
+      { locale: 'en', query: 'solar panels', title: 'Photovoltaics' },
+      { locale: 'ar', query: 'الألواح الشمسية', title: 'كهروضوئية' },
+      { locale: 'fr', query: 'emplois', title: 'Carrières' },
+      { locale: 'en', query: 'jobs', title: 'Careers' },
+      { locale: 'ar', query: 'وظائف', title: 'مسار مهني' },
+      { locale: 'fr', query: 'tests', title: 'Expérimentation' },
+      { locale: 'en', query: 'tests', title: 'Experimentation' },
+      { locale: 'ar', query: 'اختبارات', title: 'تجريب' },
+    ] as const
+    const fixtures = []
+    for (const item of cases) {
+      const marker = term()
+      const matched = await createNews(marker, {
+        locale: item.locale,
+        title: `${marker} ${item.title}`,
+      })
+      const irrelevant = await createNews(marker, {
+        locale: item.locale,
+        title: `${marker} accounting gardens`,
+      })
+      const otherMarker = term()
+      const missingConstraint = await createNews(otherMarker, {
+        locale: item.locale,
+        title: `${otherMarker} ${item.title}`,
+      })
+      fixtures.push({ ...item, marker, matched, irrelevant, missingConstraint })
+    }
+    await processSearchJobs(100)
+    for (const fixture of fixtures) {
+      const original = `${fixture.marker} ${fixture.query}`
+      const result = await query({ query: original, locale: fixture.locale, type: 'news' })
+      expect(result.query).toBe(original)
+      expect(result.suggestedQuery, `${fixture.locale}: ${fixture.query}`).toBeUndefined()
+      const matched = result.items.find(
+        ({ id }) => id === `news:${fixture.matched}:${fixture.locale}`,
+      )
+      expect(matched, `${fixture.locale}: ${fixture.query}`).toBeDefined()
+      expect(matched?.matchKind).toBe('related')
+      expect(normalizeSearchText(matched?.matchedQuery ?? '')).toContain(fixture.marker)
+      const resultIds = result.items.map(({ id }) => id)
+      expect(resultIds).not.toContain(`news:${fixture.irrelevant}:${fixture.locale}`)
+      expect(resultIds).not.toContain(`news:${fixture.missingConstraint}:${fixture.locale}`)
+    }
+    const ordinary = await query({ query: 'accounting gardens', locale: 'en', type: 'news' })
+    expect(ordinary.suggestedQuery).toBeUndefined()
+    expect(ordinary.items.length).toBeGreaterThan(0)
+    expect(ordinary.items.every(({ matchKind }) => matchKind === 'exact')).toBe(true)
+  })
+
+  it('retains the final required term in 12- and 13-token queries and longer related expansions', async () => {
+    const constraints = [
+      'cedar',
+      'maple',
+      'willow',
+      'oak',
+      'ash',
+      'pine',
+      'birch',
+      'elm',
+      'fir',
+      'yew',
+      'beech',
+    ]
+    const fixtures = []
+    for (const count of [10, 11]) {
+      const marker = term()
+      const required = constraints.slice(0, count).join(' ')
+      const matching = await createNews(marker, {
+        title: `photovoltaic ${required} ${marker}`,
+        summary: '',
+        body: richBody('Reviewed'),
+      })
+      const unrelated = await createNews(term(), {
+        title: `solar energy ${required}`,
+        summary: '',
+        body: richBody('Reviewed'),
+      })
+      fixtures.push({ marker, matching, unrelated, original: `solar ${required} ${marker}` })
+    }
+    await processSearchJobs(50)
+    for (const fixture of fixtures) {
+      const result = await query({ query: fixture.original, locale: 'en', type: 'news' })
+      expect(
+        result.items.map(({ id }) => id),
+        fixture.original,
+      ).toEqual([`news:${fixture.matching}:en`])
+      expect(result.items[0]?.matchKind).toBe('related')
+      expect(result.items[0]?.matchedQuery).toContain(fixture.marker)
+      expect(result.items.some(({ id }) => id === `news:${fixture.unrelated}:en`)).toBe(false)
+    }
+  })
+
+  it('never suggests draft, private, unapproved, missing-locale or editorial vocabulary', async () => {
+    const secretCases: PublicationOptions[] = [
+      { visibility: 'private' },
+      { status: 'draft' },
+      { publication: 'review' },
+      { publication: 'draft' },
+      { locale: 'ar' },
+    ]
+    const secrets: string[] = []
+    for (const options of secretCases) {
+      const word = vocabularyWord()
+      secrets.push(word)
+      await createNews(term(), { ...options, title: word, body: richBody(word) })
+    }
+    const publicWord = vocabularyWord()
+    const published = await createNews(term(), { title: publicWord })
+    const editorialSecret = vocabularyWord()
+    secrets.push(editorialSecret)
+    await database!.query('UPDATE news SET internal_notes=$2 WHERE id=$1', [
+      published,
+      editorialSecret,
+    ])
+    const draftSecret = vocabularyWord()
+    secrets.push(draftSecret)
+    const version = await database!.query<{ id: number }>(
+      `INSERT INTO _news_v (parent_id,version__status,version_visibility,latest) VALUES ($1,'draft','public',true) RETURNING id`,
+      [published],
+    )
+    versionIds.push(version.rows[0]!.id)
+    await database!.query(
+      `INSERT INTO _news_v_locales (_parent_id,_locale,version_title,version_summary,version_body,version_publication_status)
+       VALUES ($1,'en',$2,$2,$3,'review')`,
+      [version.rows[0]!.id, draftSecret, richBody(draftSecret)],
+    )
+    await processSearchJobs(50)
+    expect((await query({ query: misspell(publicWord), locale: 'en' })).suggestedQuery).toBe(
+      publicWord,
+    )
+    for (const secret of secrets) {
+      const result = await query({ query: misspell(secret), locale: 'en' })
+      expect(result.suggestedQuery, secret).toBeUndefined()
+      expect(JSON.stringify(result), secret).not.toContain(secret)
+    }
+  })
+
+  it('withdraws stale, private, unapproved and deleted spelling surfaces before index jobs run', async () => {
+    const original = vocabularyWord()
+    const replacement = vocabularyWord()
+    const id = await createNews(term(), { title: original, summary: '', body: richBody(original) })
+    await processSearchJobs(50)
+    expect((await query({ query: misspell(original), locale: 'en' })).suggestedQuery).toBe(original)
+    await database!.query(
+      "UPDATE news_locales SET title=$2,summary='',body=$3 WHERE _parent_id=$1 AND _locale='en'",
+      [id, replacement, richBody(replacement)],
+    )
+    expect(
+      (await query({ query: misspell(original), locale: 'en' })).suggestedQuery,
+    ).toBeUndefined()
+    expect(
+      (await query({ query: misspell(replacement), locale: 'en' })).suggestedQuery,
+    ).toBeUndefined()
+    await processSearchJobs(50)
+    expect((await query({ query: misspell(replacement), locale: 'en' })).suggestedQuery).toBe(
+      replacement,
+    )
+    await database!.query("UPDATE news SET visibility='private' WHERE id=$1", [id])
+    expect(
+      (await query({ query: misspell(replacement), locale: 'en' })).suggestedQuery,
+    ).toBeUndefined()
+    await database!.query("UPDATE news SET visibility='public' WHERE id=$1", [id])
+    await processSearchJobs(50)
+    await database!.query(
+      "UPDATE news_locales SET publication_status='review' WHERE _parent_id=$1 AND _locale='en'",
+      [id],
+    )
+    expect(
+      (await query({ query: misspell(replacement), locale: 'en' })).suggestedQuery,
+    ).toBeUndefined()
+    await database!.query(
+      "UPDATE news_locales SET publication_status='published' WHERE _parent_id=$1 AND _locale='en'",
+      [id],
+    )
+    await processSearchJobs(50)
+    await database!.query('DELETE FROM news WHERE id=$1', [id])
+    expect(
+      (await query({ query: misspell(replacement), locale: 'en' })).suggestedQuery,
+    ).toBeUndefined()
   })
 
   it('treats SQL and tsquery syntax as text and rejects invalid or control-character inputs', async () => {

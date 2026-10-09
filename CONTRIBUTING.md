@@ -17,6 +17,12 @@ Confirm that public content is discoverable and withdrawn/private or unavailable
 translations are excluded. New collections need guarded index and destination
 adapters before their content can appear in search.
 
+Include genuine topic words and acronym expansions in resource descriptions.
+Follow the owner's exact-first relevance order and extend the documented FR/EN/AR
+concept vocabulary when adding useful synonyms. Verify corrections and related
+results with realistic queries, including exclusion after withdrawal; suggested
+spellings must come from currently eligible public content.
+
 For design work, read [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md) and [the design workflow](docs/design-workflow.md). Use relevant repository skills as adaptable guidance; record adopted shared rules and inspect actual responsive/Arabic renderings after visual edits.
 
 Before requesting review for application changes, run `pnpm lint`, `pnpm typecheck`, `pnpm test` and `pnpm build`; run the documented browser checks when changing navigation, locale routes or authorization. For skill/documentation-only changes, validate frontmatter, local links, routing, pinned source integrity and whitespace instead. Report exactly what was verified and any external dependency. Avoid broad tests that merely restate implementation.

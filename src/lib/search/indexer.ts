@@ -17,6 +17,7 @@ import {
   richTextSections,
 } from './text'
 import type { PublicSearchDocument, SearchLocale } from './types'
+import { VOCABULARY_VERSION, writePublicVocabulary } from './vocabulary'
 
 const executeFile = promisify(execFile)
 type Origin = 'pages' | 'news' | 'media'
@@ -67,6 +68,7 @@ async function writeDocument(
       normalizeSearchText(body).slice(0, 100_000),
     ],
   )
+  return { id: document.id, locale: document.locale, title, body }
 }
 
 /** Small explicit runtime catalog only; CMS reindex/extraction never runs in request latency. */
@@ -81,8 +83,8 @@ export async function initializeSearchCatalog(): Promise<string> {
       await client.query('BEGIN')
       await client.query('SELECT pg_advisory_xact_lock(739104102)')
       const existing = await client.query<{ count: string }>(
-        "SELECT count(*) FROM search_documents WHERE origin='static' AND source_revision=$1",
-        [revision],
+        "SELECT count(*) FROM search_documents WHERE origin='static' AND source_revision=$1 AND vocabulary_version=$2",
+        [revision, VOCABULARY_VERSION],
       )
       if (Number(existing.rows[0]?.count) !== documents.length) {
         // One parameterized bulk write avoids a network round trip for every catalog entry.
@@ -105,6 +107,7 @@ export async function initializeSearchCatalog(): Promise<string> {
             published_at=EXCLUDED.published_at,title_norm=EXCLUDED.title_norm,body_norm=EXCLUDED.body_norm`,
           [JSON.stringify(rows), revision],
         )
+        await writePublicVocabulary(client, documents)
       }
       await client.query(
         "DELETE FROM search_documents WHERE origin='static' AND source_revision <> $1",
@@ -207,6 +210,8 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
         job.source_id,
       ])
       let fileText: string | undefined
+      const vocabularyDocuments: Pick<PublicSearchDocument, 'id' | 'locale' | 'title' | 'body'>[] =
+        []
       for (const source of sources.rows) {
         if (!contentLocales.includes(source.locale)) continue
         const url = sourceUrl(source)
@@ -229,31 +234,36 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
             .join(' '),
           ...(source.published_at ? { publishedAt: source.published_at.toISOString() } : {}),
         }
-        await writeDocument(
-          client,
-          document,
-          source.origin,
-          source.source_id,
-          source.source_revision,
+        vocabularyDocuments.push(
+          await writeDocument(
+            client,
+            document,
+            source.origin,
+            source.source_id,
+            source.source_revision,
+          ),
         )
         if (source.origin !== 'media')
           for (const section of richTextSections(source.rich_body)) {
-            await writeDocument(
-              client,
-              {
-                ...document,
-                id: `${document.id}:${section.anchor}`,
-                title: section.title,
-                body: section.body,
-                type: 'section',
-                url: `${url.split('#')[0]}#${section.anchor}`,
-              },
-              source.origin,
-              source.source_id,
-              source.source_revision,
+            vocabularyDocuments.push(
+              await writeDocument(
+                client,
+                {
+                  ...document,
+                  id: `${document.id}:${section.anchor}`,
+                  title: section.title,
+                  body: section.body,
+                  type: 'section',
+                  url: `${url.split('#')[0]}#${section.anchor}`,
+                },
+                source.origin,
+                source.source_id,
+                source.source_revision,
+              ),
             )
           }
       }
+      await writePublicVocabulary(client, vocabularyDocuments)
       await client.query('DELETE FROM search_index_jobs WHERE origin=$1 AND source_id=$2', [
         job.origin,
         job.source_id,

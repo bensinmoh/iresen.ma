@@ -30,6 +30,8 @@ const assetLabels = {
     logo: 'Logo IRESEN',
     apex: 'Symbole Apex Leaf',
     favicon: 'Icône IRESEN',
+    solar: 'Illustration générée de panneaux solaires photovoltaïques dans un cadre fictif.',
+    infrastructure: 'Illustration générée d’une infrastructure solaire dans un site fictif.',
   },
   en: {
     image: 'Page introduction image',
@@ -38,6 +40,8 @@ const assetLabels = {
     logo: 'IRESEN logo',
     apex: 'Apex Leaf symbol',
     favicon: 'IRESEN icon',
+    solar: 'Generated illustration of solar photovoltaic panels in a fictional setting.',
+    infrastructure: 'Generated illustration of solar infrastructure at a fictional site.',
   },
   ar: {
     image: 'صورة تقديمية',
@@ -46,6 +50,8 @@ const assetLabels = {
     logo: 'شعار IRESEN',
     apex: 'رمز Apex Leaf',
     favicon: 'أيقونة IRESEN',
+    solar: 'صورة توضيحية مولّدة لألواح الطاقة الشمسية الكهروضوئية في موقع خيالي.',
+    infrastructure: 'صورة توضيحية مولّدة لبنية تحتية للطاقة الشمسية في موقع خيالي.',
   },
 }
 
@@ -62,9 +68,11 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
           locale,
           {
             title: `${assetLabels[locale].image} — ${relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ')}`,
-            description: relatedPages
-              .map((pageId) => messages[locale].Hero.descriptions[pageId])
-              .join(' '),
+            description: [
+              ...(id.startsWith('solar-') ? [assetLabels[locale].solar] : []),
+              ...(id === 'solar-field' ? [assetLabels[locale].infrastructure] : []),
+              ...relatedPages.map((pageId) => messages[locale].Hero.descriptions[pageId]),
+            ].join(' '),
           },
         ]),
       ) as PublicAssetReference['text'],

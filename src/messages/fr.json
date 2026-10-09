@@ -724,6 +724,10 @@
     "previous": "Précédente",
     "next": "Suivante",
     "suggestions": "Suggestions de recherche",
+    "suggestionPrompt": "Vouliez-vous dire",
+    "useSuggestion": "Rechercher « {query} »",
+    "matchTypo": "Correspondance proche",
+    "matchRelated": "Contenu lié",
     "noSuggestions": "Aucune suggestion. Appuyez sur Entrée pour voir tous les résultats.",
     "invalidTitle": "Vérifiez votre recherche",
     "invalidDescription": "Saisissez jusqu’à 200 caractères et choisissez les filtres proposés."
