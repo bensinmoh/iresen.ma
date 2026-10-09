@@ -1,0 +1,88 @@
+.home-section-navigation {
+  display: none;
+}
+
+/* The global header leaves with the hero; this homepage-only bar pins to the top. */
+@media (min-width: 64rem) {
+  #main-content:has(> .home-section-navigation) {
+    --home-section-nav-height: 3.75rem;
+  }
+
+  html:has(.home-section-navigation) {
+    scroll-behavior: smooth;
+  }
+
+  .home-section-navigation {
+    display: block;
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 5;
+    background: var(--color-white);
+    border-block-end: 1px solid var(--color-border);
+  }
+
+  .home-section-navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 clamp(1rem, 2.5vw, 3rem);
+  }
+
+  .home-section-navigation a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 3.75rem;
+    padding: var(--space-3) var(--space-2);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-body);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--duration-fast);
+  }
+
+  .home-section-navigation a::after {
+    content: '';
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: var(--space-2);
+    block-size: 3px;
+    background: var(--color-blue);
+    transform: scaleX(0);
+    transition: transform var(--duration-fast);
+  }
+
+  .home-section-navigation a:hover,
+  .home-section-navigation a[aria-current='location'] {
+    color: var(--color-blue);
+  }
+
+  .home-section-navigation a[aria-current='location']::after {
+    transform: scaleX(1);
+  }
+
+  .home-section-navigation a:focus-visible {
+    outline-offset: -4px;
+  }
+
+  #main-content:has(> .home-section-navigation) :is([id], .empty-section) {
+    scroll-margin-block-start: var(--home-section-nav-height);
+  }
+}
+
+#main-content:has(> .home-section-navigation) > .page-shell > .page-content {
+  padding-block-start: 0;
+  border-block-start: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.home-section-navigation) {
+    scroll-behavior: auto;
+  }
+
+  .home-section-navigation a,
+  .home-section-navigation a::after {
+    transition: none;
+  }
+}

@@ -7,6 +7,8 @@ import { homeFigures } from '@/lib/figures'
 import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
 import { heroImages } from '@/lib/hero-images'
+import { homeMissions, homeMissionSectionId } from '@/lib/home-missions'
+import { missionImages } from '@/lib/mission-images'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
 import { contentLocales } from '@/lib/content/publication'
@@ -57,6 +59,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...homeMissions.map(({ id }) => ({
+    id: `mission-${id}`,
+    url: missionImages[id].src,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].HomeMissions[id].imageTitle,
+          description: messages[locale].HomeMissions[id].imageDescription,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
   ...Object.entries(heroImages).map(([id, image]) => {
     const relatedPages = pageIds.filter((pageId) => heroes[pageId].photo === id)
     return {
@@ -133,6 +149,14 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Footer.tagline,
           catalog.Footer.description,
           ...homeFigures.map(({ id, value }) => `${value} ${catalog.Hero.figures[id]}`),
+          catalog.HomeMissions.eyebrow,
+          catalog.PageSections.home[homeMissionSectionId].title,
+          catalog.PageSections.home[homeMissionSectionId].description,
+          ...homeMissions.flatMap(({ id, anchor }) => [
+            catalog.PageSections.home[anchor].title,
+            catalog.PageSections.home[anchor].description,
+            catalog.HomeMissions[id].link,
+          ]),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
       if (pageId === 'contact')
@@ -153,11 +177,25 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       for (const section of pageSections[pageId]) {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
+          const body = [copy.description]
+          if (pageId === 'home' && entry.id === homeMissionSectionId)
+            body.push(
+              catalog.HomeMissions.eyebrow,
+              ...homeMissions.flatMap(({ id, anchor }) => [
+                catalog.PageSections.home[anchor].title,
+                catalog.PageSections.home[anchor].description,
+                catalog.HomeMissions[id].link,
+              ]),
+            )
+          if (pageId === 'home') {
+            const mission = homeMissions.find(({ anchor }) => anchor === entry.id)
+            if (mission) body.push(catalog.HomeMissions[mission.id].link)
+          }
           documents.push({
             id: `section:${pageId}:${entry.id}:${locale}`,
             locale,
             title: copy.title,
-            body: copy.description,
+            body: body.join(' '),
             url: pageHref(pageId, locale, entry.id),
             type: 'section',
           })

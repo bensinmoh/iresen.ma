@@ -2,6 +2,7 @@
 @import './tokens.css';
 @import './search.css';
 @import './published-content.css';
+@import './home-navigation.css';
 
 @theme inline {
   --font-sans: var(--font-body);

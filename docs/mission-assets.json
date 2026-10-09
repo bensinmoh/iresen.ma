@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-10-09",
+  "description": "Owner-requested AI-generated fictional editorial illustrations for the three homepage missions. These images do not document actual IRESEN facilities, people, partnerships or projects. Source PNGs remain outside Git and public/.",
+  "assets": [
+    {
+      "id": "develop",
+      "role": "Homepage mission illustration",
+      "provenance": "generated",
+      "fictionalGeneratedScene": true,
+      "sourceFilename": "exec-f847afb7-233d-4ead-8bdf-93b38b95c6a9.png",
+      "sourceSummary": "Fictional Moroccan scientists collaboratively characterizing batteries in a laboratory, with a glass bioreactor and biomass/biofuel samples.",
+      "generationTool": "image_gen.imagegen",
+      "prompt": "Create one premium editorial photograph for a Moroccan clean-energy research institution homepage mission card. Landscape 4:3 composition. Authentic contemporary Moroccan and North African laboratory, two Moroccan scientists and one doctoral student candidly collaborating and characterizing a battery cell/module at a clean laboratory bench, believable electrochemical workstation and cell test rig, a small glass bioreactor on one side, neatly arranged biomass and biofuel sample vials, subtle clean-energy materials research cues. Candid concentration and natural interaction, never posing for camera. People and key activity concentrated in upper two-thirds. Wide contextual medium shot, editorial architectural photography, authentic warm Moroccan afternoon light through a window, restrained navy and teal accents, realistic skin, textures and equipment, visually sophisticated and calm, not overly futuristic. No solar panels necessary. No text, no labels, no logos, no watermarks. One coherent realistic photograph, not a collage.",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2116749,
+        "sha256": "9ef8b9e8bbe38b7c687f7fd59e82f0d1fa0cf209ee07859ade267856c7c72dad",
+        "mimeType": "image/png"
+      },
+      "output": {
+        "src": "/images/missions/develop-cf05d9355bc5.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 135426,
+        "sha256": "cf05d9355bc5d47df9e0cbf691fe2a651a5170854bc28f91ed2bd173970531b8",
+        "mimeType": "image/webp"
+      },
+      "transformation": {
+        "resize": {
+          "width": 1200,
+          "height": 900
+        },
+        "resampling": "Lanczos",
+        "crop": null,
+        "quality": 86,
+        "method": 6
+      }
+    },
+    {
+      "id": "test",
+      "role": "Homepage mission illustration",
+      "provenance": "generated",
+      "fictionalGeneratedScene": true,
+      "sourceFilename": "exec-a356f476-e217-4963-aab7-98caa0966f6b.png",
+      "sourceSummary": "Fictional Moroccan industrial demonstration campus with engineers, CSP parabolic trough, hydrogen skid, battery storage containers and distant wind turbines.",
+      "generationTool": "image_gen.imagegen",
+      "prompt": "Create one premium editorial photograph for the industrial research and startup innovation mission card of a Moroccan clean-energy institution. Landscape 4:3 composition. Authentic outdoor energy demonstration campus in Morocco with two Moroccan engineers, a woman and man, wearing navy workwear, white hard hats and light safety vests, candidly consulting a rugged tablet and inspecting equipment. A large realistic silver curved parabolic-trough CSP collector is prominently visible left and in midground, its central thermal receiver tube clearly aligned at focus. Beside engineers is a plausible green-hydrogen electrolyzer skid with stainless steel pipes, valves and cabinets, then containerized battery storage in the rear. A few distant modern wind turbines on arid foothills. No solar photovoltaic field. Present-day equipment with believable industrial proportions, quiet documentary authenticity. Subjects and principal technology concentrated upper two-thirds, contextual wide medium shot. Warm late afternoon Moroccan light, restrained navy and teal accents, realistic skin and industrial textures, premium editorial architectural photography. No text, no readable labels, no logos, no watermarks. One coherent real photograph, not a collage.",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2740732,
+        "sha256": "10a2fe090c3337ce437190cb1af41e131644c38ccc8ab7c328f27988fd4ea622",
+        "mimeType": "image/png"
+      },
+      "output": {
+        "src": "/images/missions/test-f25f80001b78.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 240380,
+        "sha256": "f25f80001b78208094eb7c89acddbd8e3a323274c79c0116d018c9795736b81d",
+        "mimeType": "image/webp"
+      },
+      "transformation": {
+        "resize": {
+          "width": 1200,
+          "height": 900
+        },
+        "resampling": "Lanczos",
+        "crop": null,
+        "quality": 86,
+        "method": 6
+      }
+    },
+    {
+      "id": "transfer",
+      "role": "Homepage mission illustration",
+      "provenance": "generated",
+      "fictionalGeneratedScene": true,
+      "sourceFilename": "exec-39b949c1-9200-49b2-a172-a7cd651e14ab.png",
+      "sourceSummary": "Fictional diverse experts collaborating in an energy management control room, with smart-grid and bioenergy dispatch graphics, substation and wind turbines.",
+      "generationTool": "image_gen.imagegen",
+      "prompt": "Create one premium editorial photograph for the institutional collaboration mission card of a Moroccan clean-energy institution. Landscape 4:3 composition. A diverse group of four Moroccan and African energy experts, two women and two men, candidly discussing grid operations in a modern believable smart-grid energy management control room, standing and seated around a navy/teal console, one expert gesturing to a large wall monitor. Professional smart casual clothing, inclusive contemporary institutional collaboration, no posing or handshake. Realistic unlabeled energy monitoring screens with simple abstract line charts, colored electrical single-line schematic nodes, dispatch graphs and discreet bioenergy plant iconography, absolutely no legible text or numbers. Through tall side windows behind the group, an actual electrical substation and a few distant wind turbines are visible in a warm Moroccan landscape. Credible present-day architecture and technology, clean but lived-in workplace. People and main action concentrated upper two-thirds. Wide contextual composition with visual clarity at small card scale, warm natural Moroccan afternoon light balancing subdued navy and teal screen light, premium documentary editorial photography, realistic faces and equipment. No solar photovoltaic field. No text, no logos, no watermarks. One coherent photograph, not a collage.",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2112346,
+        "sha256": "00be48dc5366b0312b22fe0e3af87efbbd305388dcec2c848764abd0c08d0c72",
+        "mimeType": "image/png"
+      },
+      "output": {
+        "src": "/images/missions/transfer-6934b2efdfe4.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 147888,
+        "sha256": "6934b2efdfe40b28dda8381bdd505a2b06a4e6ff5dffd53c6a44f83f4c5d2474",
+        "mimeType": "image/webp"
+      },
+      "transformation": {
+        "resize": {
+          "width": 1200,
+          "height": 900
+        },
+        "resampling": "Lanczos",
+        "crop": null,
+        "quality": 86,
+        "method": 6
+      }
+    }
+  ]
+}

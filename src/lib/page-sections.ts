@@ -10,7 +10,10 @@ export type SectionDefinition = {
 // Titles and short content briefs live in the locale catalogs, not this map.
 export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   home: [
-    { id: 'develop-test-transfer' },
+    {
+      id: 'develop-test-transfer',
+      children: [{ id: 'mission-develop' }, { id: 'mission-test' }, { id: 'mission-transfer' }],
+    },
     { id: 'figures' },
     { id: 'research-priorities' },
     { id: 'results' },

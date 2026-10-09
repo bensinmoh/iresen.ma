@@ -181,12 +181,12 @@
   "PageSections": {
     "home": {
       "develop-test-transfer": {
-        "title": "Develop, test and transfer",
-        "description": "Content to add: the role of each function and the connections between research, testing and use."
+        "title": "Supporting the energy transition",
+        "description": "Develop knowledge, test technologies and put research results to use."
       },
       "figures": {
         "title": "IRESEN in figures",
-        "description": "Content to add: verified indicators with their units, scope and period."
+        "description": "69 collaborative projects supported, +60 patents filed, +1000 young researchers supported, +1100 scientific publications and +18 university laboratories established."
       },
       "research-priorities": {
         "title": "Research priorities",
@@ -207,6 +207,18 @@
       "news-events": {
         "title": "News and events",
         "description": "Content to add: a selection of news, events and open calls where available."
+      },
+      "mission-develop": {
+        "title": "Develop",
+        "description": "Advance knowledge and build responses to energy challenges through collaborative research."
+      },
+      "mission-test": {
+        "title": "Test",
+        "description": "Experiment with technologies and understand their performance, limitations and conditions of use."
+      },
+      "mission-transfer": {
+        "title": "Transfer",
+        "description": "Connect research results with practical use by preparing their maturation, transfer and adoption."
       }
     },
     "institute": {
@@ -731,5 +743,26 @@
     "noSuggestions": "No quick matches. Press Enter to see all results.",
     "invalidTitle": "Check your search",
     "invalidDescription": "Use up to 200 characters and choose the available filters."
+  },
+  "HomeMissions": {
+    "eyebrow": "Our mission",
+    "develop": {
+      "link": "Explore the programmes",
+      "imageAlt": "Generated illustration of researchers working on batteries, with a bioreactor and biomass and biofuel samples.",
+      "imageTitle": "Develop — batteries, biomass and biofuels",
+      "imageDescription": "Fictional generated scene of collaborative laboratory research: batteries and electrochemical storage, a bioreactor, biomass and biofuels. Illustration of the Develop mission; it does not depict an actual IRESEN facility or team."
+    },
+    "test": {
+      "link": "Discover the platforms",
+      "imageAlt": "Generated illustration of engineers at a testing site with a concentrated solar collector, battery storage, hydrogen equipment and wind turbines.",
+      "imageTitle": "Test — concentrated solar power, hydrogen and storage",
+      "imageDescription": "Fictional generated energy testing scene: concentrated solar power (CSP), a parabolic trough collector, green hydrogen equipment, battery storage and wind turbines. Illustration of the Test mission; it does not document an actual IRESEN platform."
+    },
+    "transfer": {
+      "link": "Explore research transfer",
+      "imageAlt": "Generated illustration of experts in an energy management control room, with smart-grid screens and distant wind turbines.",
+      "imageTitle": "Transfer — smart grids and energy management",
+      "imageDescription": "Fictional generated collaboration scene involving smart electricity grids, energy management and bioenergy. Control screens and wind turbines illustrate the connection between research and use; no actual IRESEN project or partnership is depicted."
+    }
   }
 }

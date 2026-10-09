@@ -71,7 +71,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
           </a>
         </div>
       </div>
-      <div className="hero-highlights">
+      <div className="hero-highlights" id={pageId === 'home' ? 'figures' : undefined}>
         {pageId === 'home' ? (
           <dl className="container hero-figures" aria-label={t('figuresLabel')} tabIndex={0}>
             {homeFigures.map(({ id, value }) => (

@@ -2,12 +2,12 @@
   "PageSections": {
     "home": {
       "develop-test-transfer": {
-        "title": "Développer, éprouver, valoriser",
-        "description": "À prévoir : le rôle de chaque fonction et les liens entre recherche, essais et usages."
+        "title": "Accompagner la transition énergétique",
+        "description": "Développer les connaissances, éprouver les technologies et valoriser les résultats de la recherche."
       },
       "figures": {
         "title": "IRESEN en chiffres",
-        "description": "À prévoir : des indicateurs vérifiés avec leur unité, leur périmètre et leur période."
+        "description": "69 projets collaboratifs soutenus, +60 brevets déposés, +1000 jeunes chercheurs soutenus, +1100 publications scientifiques et +18 laboratoires universitaires mis en place."
       },
       "research-priorities": {
         "title": "Priorités de recherche",
@@ -28,6 +28,18 @@
       "news-events": {
         "title": "Actualités et rendez-vous",
         "description": "À prévoir : une sélection d’actualités, d’événements et, lorsqu’il en existe, d’appels ouverts."
+      },
+      "mission-develop": {
+        "title": "Développer",
+        "description": "Faire progresser les connaissances et construire des réponses aux enjeux énergétiques grâce à la recherche collaborative."
+      },
+      "mission-test": {
+        "title": "Éprouver",
+        "description": "Expérimenter les technologies et comprendre leurs performances, leurs limites et leurs conditions d’utilisation."
+      },
+      "mission-transfer": {
+        "title": "Valoriser",
+        "description": "Relier les résultats de la recherche aux usages, en préparant leur maturation, leur transfert et leur adoption."
       }
     },
     "institute": {
@@ -731,5 +743,26 @@
     "noSuggestions": "Aucune suggestion. Appuyez sur Entrée pour voir tous les résultats.",
     "invalidTitle": "Vérifiez votre recherche",
     "invalidDescription": "Saisissez jusqu’à 200 caractères et choisissez les filtres proposés."
+  },
+  "HomeMissions": {
+    "eyebrow": "Notre mission",
+    "develop": {
+      "link": "Explorer les programmes",
+      "imageAlt": "Illustration générée de chercheurs travaillant sur des batteries, avec un bioréacteur et des échantillons de biomasse et de biocarburants.",
+      "imageTitle": "Développer — batteries, biomasse et biocarburants",
+      "imageDescription": "Scène fictive générée de recherche collaborative en laboratoire : batteries et stockage électrochimique, bioréacteur, biomasse et biocarburants. Illustration de la mission Développer ; elle ne représente pas un site ou une équipe IRESEN réels."
+    },
+    "test": {
+      "link": "Découvrir les plateformes",
+      "imageAlt": "Illustration générée d’ingénieurs sur un site d’essais avec un collecteur solaire à concentration, du stockage par batteries, de l’hydrogène et des éoliennes.",
+      "imageTitle": "Éprouver — solaire à concentration, hydrogène et stockage",
+      "imageDescription": "Scène fictive générée d’expérimentation énergétique : solaire thermodynamique à concentration (CSP, Concentrated Solar Power), collecteur cylindro-parabolique, équipement d’hydrogène vert, stockage par batteries et éoliennes. Illustration de la mission Éprouver ; elle ne documente pas une plateforme IRESEN réelle."
+    },
+    "transfer": {
+      "link": "Comprendre le transfert",
+      "imageAlt": "Illustration générée d’experts dans une salle de gestion de l’énergie, avec des écrans de réseaux intelligents et des éoliennes au loin.",
+      "imageTitle": "Valoriser — réseaux intelligents et gestion de l’énergie",
+      "imageDescription": "Scène fictive générée de collaboration autour de réseaux électriques intelligents (smart grids), de la gestion de l’énergie (energy management) et de la bioénergie. Des écrans de conduite et des éoliennes illustrent le lien entre recherche et usages ; aucun projet ou partenariat IRESEN réel n’est représenté."
+    }
   }
 }
