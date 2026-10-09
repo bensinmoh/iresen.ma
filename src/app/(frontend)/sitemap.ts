@@ -6,17 +6,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   if (!isIndexingEnabled()) return []
   const baseUrl = getSiteUrl()
 
-  return pageIds.flatMap((id) =>
-    locales.map((locale) => ({
-      url: new URL(pageHref(id, locale), baseUrl).toString(),
-      alternates: {
-        languages: Object.fromEntries(
-          locales.map((language) => [
-            language,
-            new URL(pageHref(id, language), baseUrl).toString(),
-          ]),
-        ),
-      },
-    })),
-  )
+  return pageIds
+    .filter((id) => id !== 'search')
+    .flatMap((id) =>
+      locales.map((locale) => ({
+        url: new URL(pageHref(id, locale), baseUrl).toString(),
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((language) => [
+              language,
+              new URL(pageHref(id, language), baseUrl).toString(),
+            ]),
+          ),
+        },
+      })),
+    )
 }

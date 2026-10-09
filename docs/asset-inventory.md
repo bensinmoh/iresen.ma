@@ -191,7 +191,8 @@ decorative illustrations, not records of real IRESEN facilities, people or work.
 Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
 their existing definitions. The replacement introduces no external image host,
 video playback or new client runtime at that revision. The later homepage video
-uses these generated photos as its fallback while the other 21 heroes stay photographic.
+uses these generated photos as its fallback while the other 20 heroes stay photographic.
+Search uses its direct form/results surface without a hero.
 
 Sixteen generated source images are native 1536 × 1024px; the aerial solar scene
 is 1672 × 941px. These are not 4K sources or a blanket resolution increase over

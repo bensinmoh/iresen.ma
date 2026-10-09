@@ -10,6 +10,7 @@ import { homeFigures } from '@/lib/figures'
 import { LocaleSelector } from './LocaleSelector'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 import { NavigationIcon } from './NavigationIcon'
+import { HeaderSearch } from './HeaderSearch'
 
 export function SiteHeader() {
   const currentLocale = useLocale()
@@ -247,7 +248,7 @@ export function SiteHeader() {
     )
   }
 
-  const inverse = currentPageId !== undefined
+  const inverse = currentPageId !== undefined && currentPageId !== 'search'
 
   return (
     <header
@@ -285,13 +286,7 @@ export function SiteHeader() {
           <div className="header-actions">
             <LocaleSelector />
             <div className="header-tools">
-              <a
-                href={pageHref('search', locale)}
-                className="header-search"
-                aria-label={pageTitle('search')}
-              >
-                <NavigationIcon name="search" />
-              </a>
+              <HeaderSearch locale={locale} />
               {pageLink('contact', 'button button-primary header-contact', copy('contact'))}
             </div>
             <details className="site-menu" ref={menuRef}>

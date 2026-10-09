@@ -9,9 +9,22 @@ pages; it does not change their names, locale paths or navigation hierarchy.
 Each section contains a heading and a short content brief. French briefs start
 with “À prévoir”; equivalent English and Arabic catalogs describe the same
 unfinished content. These are editorial placeholders, not institutional facts,
-approved final copy, populated catalogs or active service controls. The existing
-search/contact unavailability notices and cookie status remain applicable. The
+approved final copy, populated catalogs or active service controls. Contact's
+unavailability notice and cookie status remain applicable. The
 sitemap retains its working links.
+
+The later 2026-10-09 search feature replaces only the search route's hero and
+placeholder renderer with its real query form and result states. Its canonical
+fragments remain: `search-query` on the form, `results` on the result/empty/
+validation region, `no-results` on no-match feedback and `refine-results` on
+browse help, within the `page-sections` surface. The section map below records
+the scaffold source; search now uses this functional interface.
+
+Published CMS page/home bodies render alongside the remaining section scaffolds,
+and published news renders within the all-news section. Collections still start
+empty, and the briefs remain unfinished editorial notes. Search uses localized
+section heading titles for topic discovery, excluding every placeholder
+description. See [the search guide](search.md).
 
 ## Sources and adaptation
 
@@ -35,10 +48,10 @@ CMS fields and publication retain their separate scope.
   adopting the proposed “Agence de Moyens” repositioning.
 - The network and collaboration pages keep their canonical names and routes
   while using the relevant P08/P10 section suggestions.
-- Search includes the proposed query, filtering, results and absence-of-results
-  sections as briefs only. Absence of results is nested within Results and
-  describes a future result state; its
-  heading is not a report that a live query returned no result.
+- The initial search scaffold used the proposed query, filtering, results and
+  absence-of-results sections as briefs, nesting absence of results within
+  Results. The later functional search replaces those briefs with actual form,
+  results, no-match feedback and browsing help; content filters remain future work.
 - The five existing utility pages use their source tables. The suggested sixth
   utility, Conditions d’utilisation, is not added. References to useful pages
   remain limited to canonical destinations.

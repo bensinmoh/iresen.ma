@@ -12,6 +12,31 @@ hero overlay and content-based menu formats are documented below. The latest
 owner clarification treats screenshots as design-element references, with layout
 chosen for each group's actual content.
 
+## Animated header search — 2026-10-09
+
+The owner's requested search control expands physically to the left over 220ms
+on mouse hover, with a stable right edge in every locale. The revealed input has
+a localized placeholder and a persistent accessible label. Keyboard focus expands
+it; tapping an empty control expands and focuses the input. Enter or the magnifier
+submits keywords through a native GET form to the localized search route.
+Focus keeps the control open when the pointer leaves. Escape collapses it and
+returns focus to the button; outside pointer interaction and focus leaving the
+form collapse it. Reduced motion removes the expansion transition.
+
+The search uses the current shared action radius, white surface, gray outline,
+navy icon and Jakarta/Alexandria fonts. A fixed collapsed slot prevents adjacent
+controls from moving during expansion; the field width adapts to available space.
+Physical-left expansion deliberately remains the same in Arabic, while text uses
+automatic direction and the rest of the page keeps RTL. The results route uses
+an in-flow header and actual form/results instead of its photo hero and section scaffold.
+
+The compact menu and sitemap retain ordinary search-route links, and the results
+form works without JavaScript. Equivalent-language links retain `q` and start
+at result page 1. See [the search guide](search.md),
+[shared search rules](design-system.md#search-interaction-and-results--2026-10-09)
+and [validation](validation.md) for current checks. The dated control sizing and
+screenshots below describe their original revisions.
+
 ## Header control refinement — 2026-10-08
 
 The owner's latest screenshot gives search a white square with a `#858585`

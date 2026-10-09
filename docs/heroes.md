@@ -6,11 +6,13 @@ The owner's clarification keeps the heroes introductory: detailed content belong
 in the sections below. No complete homepage or editorial listing is implied.
 The generated backgrounds below replace the initial Figma-derived imagery on
 2026-10-09 while retaining that framework. The owner's subsequent homepage video
-request keeps those photos on the other 21 pages and as the homepage fallback.
+request keeps those photos on the other hero pages and as the homepage fallback.
+Search now has its functional form/results instead of a hero; 20 other routes
+retain photo heroes alongside the homepage's video.
 
 ## Composition and content
 
-All 22 approved pages use the shared server-rendered `PageHero`, with composition
+The approved pages other than search use the shared server-rendered `PageHero`, with composition
 selected by stable page ID in `src/lib/heroes.ts`. Start, end, center, split and
 quiet editorial layouts vary by topic. Each introduction contains one title, a
 short descriptive sentence, an anchor to its content sections and one related
@@ -28,12 +30,20 @@ is a wayfinding draft, subject to editorial and translation review before
 production publication. Existing empty sections, institute anchors, sitemap
 content and truthful unavailable states remain below the hero.
 
+The 2026-10-09 search feature replaces only the search route's hero and scaffold with its
+visible keyword form, result count and links. Its header stays in normal flow;
+the route retains its canonical page ID. All other hero compositions remain.
+Published CMS page/home bodies now render below the introductions alongside the
+section scaffolds; selected news articles render within the all-news section.
+Eligible content appears with empty/unavailable states
+for missing content. Collections start empty. See [search behavior](search.md).
+
 The 2026-10-09 [coherence review](site-coherence-review.md) retains these page
 introductions and adopts shared action styling and selective Apex Leaf placement.
 
 The owner explicitly requested 17 generated photographic placeholders to replace
 all hero backgrounds across the 22 pages in the photo-replacement revision. They
-remain the 21 interior backgrounds and the homepage fallback. These illustrate research, renewable
+remain the 20 interior hero backgrounds and the homepage fallback. These illustrate research, renewable
 energy, collaboration and knowledge sharing through fictional, generic scenes.
 They remain decorative with empty alternatives and make no claim to depict real
 IRESEN people, facilities or events. Copy, claims, routes, figures, layouts,
@@ -78,8 +88,8 @@ and then specifies no playback button. A homepage-only client layer assigns the
 source after hydration when `prefers-reduced-motion` permits motion. Its initial
 markup has no source and uses `preload="none"`. The native video uses autoplay,
 muted, loop and playsInline, without controls. It remains
-decorative; existing text, links, figures, certification and all 21 other photo
-heroes retain their behavior.
+decorative; existing text, links, figures, certification and the 20 other photo
+heroes retain their behavior. Search retains its direct form/results surface.
 
 The server-rendered generated `HeroPhoto` stays beneath the video as a lightweight
 visual poster and fallback. It remains visible before playback, when playback
