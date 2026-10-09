@@ -2256,7 +2256,9 @@ strip with keyboard access in both directions. Below 1024px the selected image
 covers the entire section beneath a 90% navy veil. Reviewed FR/EN/AR desktop,
 tablet and mobile captures. Production build and all **9 focused browser tests**
 passed, including four-axis alignment, icon size, tablet background geometry,
-mobile keyboard access, real search discovery and hero image delivery. The hero
+mobile keyboard access, real search discovery and hero image delivery. After
+the final mobile-background request, the production build and complete browser
+suite passed **158 tests**, including background coverage at 320/390/768px. The hero
 download test now scopes requests to that page's actual desktop/mobile variants
 rather than counting a below-fold image reused from the same asset directory.
 
