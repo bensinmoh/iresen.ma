@@ -764,3 +764,12 @@ use a keyboard-accessible horizontal strip. Below 64rem the selected
 illustration covers the section beneath a 90% navy veil.
 A changing panoramic illustration supports each theme without serving as evidence
 of an IRESEN installation. See [the specification](docs/research-domains.md).
+
+## Homepage news — 2026-10-09
+
+The news module adapts the supplied pale-blue, divider-led reference using
+existing action-surface, navy/blue type, Apex Leaf and diagonal control tokens.
+Four/two/single-card layouts preserve readable original commentary; arrows move
+one card with native smooth scrolling and immediate reduced-motion movement.
+Arabic mirrors rail navigation while preserving original text direction and SVG
+geometry. This is an application of current shared roles, with no new tokens.

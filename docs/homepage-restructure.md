@@ -237,3 +237,10 @@ this module's deferral only. The current sequence remains missions → domains �
 achievements placeholder → capabilities placeholder → collaboration placeholder
 → news placeholder. Do not infer authorization to apply the full reordering or
 to populate achievements. See [delivered domains](research-domains.md).
+
+## Later bounded news instruction — 2026-10-09
+
+The owner subsequently commissioned the [homepage news module](home-news.md)
+with five LinkedIn sources and preparation for future Posts API synchronization.
+It replaces the existing final `news-events` placeholder only. Three preceding
+body placeholders and the full reordering remain deferred.

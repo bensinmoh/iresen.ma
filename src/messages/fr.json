@@ -172,8 +172,8 @@
         "description": "À prévoir : les parcours pour développer un projet, réaliser des essais, mobiliser une expertise ou valoriser un résultat."
       },
       "news-events": {
-        "title": "Actualités et rendez-vous",
-        "description": "À prévoir : une sélection d’actualités, d’événements et, lorsqu’il en existe, d’appels ouverts."
+        "title": "Les dernières actualités",
+        "description": "Actualités IRESEN et publications LinkedIn : recherche, innovation, transition énergétique et coopération internationale."
       },
       "mission-develop": {
         "title": "Développer",
@@ -1041,5 +1041,35 @@
       }
     },
     "axesLabel": "Axes de recherche"
+  },
+  "HomeNews": {
+    "eyebrow": "Actualités",
+    "title": "Les dernières actualités",
+    "all": "Toutes les actualités",
+    "source": "LinkedIn",
+    "shared": "Publication partagée sur LinkedIn",
+    "read": "Lire sur LinkedIn",
+    "previous": "Publications précédentes",
+    "next": "Publications suivantes",
+    "list": "Les dernières publications IRESEN sur LinkedIn",
+    "empty": "Retrouvez les publications IRESEN sur LinkedIn.",
+    "searchText": "Actualités IRESEN et publications LinkedIn : recherche, innovation, transition énergétique et coopération internationale.",
+    "posts": {
+      "7514335153415131136": {
+        "title": "IRESEN participe au programme Impact Pioneers ’26 en Suède."
+      },
+      "7514300639057797120": {
+        "title": "Samir Rachidi évoque le rôle des compétences locales dans le développement industriel."
+      },
+      "7514298051914588161": {
+        "title": "IRESEN contribue aux échanges du Dii Leadership Summit à Istanbul."
+      },
+      "7510672994734727168": {
+        "title": "IRESEN renforce les échanges sur l’hydrogène vert à Oman Climate Week."
+      },
+      "7508575272049229824": {
+        "title": "IRESEN et Majan Council établissent un cadre de coopération énergétique."
+      }
+    }
   }
 }
