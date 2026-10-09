@@ -1776,9 +1776,9 @@ section bounds, a full-width map and no horizontal overflow. Native FAQ keyboard
 opening, answer-link focus and closing passed; its return link still targets
 the form.
 
-Reviewed captures use an explicitly labeled local iframe response, with Google
-requests intercepted. They verify section spacing and order, not live map tiles
-or the exact pin.
+Reviewed captures show the reserved iframe area. Google requests were replaced
+with a local test response during layout checks. The captures verify section
+spacing and order, not live map tiles or the exact pin.
 
 - [French desktop](screenshots/contact-order-fr-1440.png)
 - [English tablet](screenshots/contact-order-en-768.png)
