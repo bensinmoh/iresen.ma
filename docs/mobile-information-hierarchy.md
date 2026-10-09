@@ -66,14 +66,19 @@ automatic advancement, carousel buttons or an additional client runtime.
 ## Homepage mission cards — 2026-10-09
 
 The requested three mission cards now explain Développer · Éprouver · Valoriser
-with short wayfinding drafts and generated energy imagery. They stack in ordinary
-page flow as image/body rows between 48rem and 64rem. Below 48rem, complete cards
+with short wayfinding drafts in white over shaded full photographs, followed
+by inline underlined destinations. Full photographic cards stack in ordinary
+page flow between 48rem and 64rem. Below 48rem, they
 form a native horizontal scroll collection with CSS scroll snapping and a hidden
 scrollbar. A neighboring-card glimpse shows that more content is available where
 space permits; enlarged text can use the full available card width. Text grows
 naturally without a nested vertical scroll. All three destinations remain
 reachable through keyboard focus, touch and no-JavaScript scrolling in logical
 FR/EN/AR order, without automatic advancement or extra carousel controls.
+Fine-pointer hover and keyboard focus tint the image blue and slightly zoom it
+without moving card or text geometry. Reduced motion keeps the photograph
+still and applies the tint immediately. Touch scrolling and destinations work
+without requiring a hover state; link focus remains visible over the tint.
 The homepage section submenu is hidden below 64rem. See
 [composition, behavior and media](home-sections.md); further page sections retain
 their editorial scaffolds.

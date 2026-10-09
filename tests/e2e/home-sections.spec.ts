@@ -22,6 +22,68 @@ async function waitForFonts(page: Page) {
   await page.evaluate(() => document.fonts.ready)
 }
 
+async function expectPhotoCardComposition(card: Locator) {
+  const composition = await card.evaluate((element) => {
+    const frame = element.getBoundingClientRect()
+    const image = element.querySelector('img')!
+    const photo = image.parentElement!.getBoundingClientRect()
+    const link = element.querySelector('a')!.getBoundingClientRect()
+    return {
+      imageFillsCard:
+        Math.abs(photo.left - frame.left) <= 2 &&
+        Math.abs(photo.top - frame.top) <= 2 &&
+        Math.abs(photo.width - frame.width) <= 2 &&
+        Math.abs(photo.height - frame.height) <= 2,
+      imageCoversFrame: getComputedStyle(image).objectFit === 'cover',
+      actionAtBottom: link.bottom > frame.top + frame.height / 2 && link.bottom <= frame.bottom,
+    }
+  })
+  expect(composition).toEqual({
+    imageFillsCard: true,
+    imageCoversFrame: true,
+    actionAtBottom: true,
+  })
+  for (const text of await card.locator('h3, p, a').all()) {
+    await expect(text).toHaveCSS('color', /^rgba?\(255, 255, 255(?:, [\d.]+)?\)$/)
+  }
+}
+
+async function missionVisualState(card: Locator) {
+  return card.evaluate((element) => {
+    const image = element.querySelector('img')!
+    const imageStyle = getComputedStyle(image)
+    const overlay = getComputedStyle(element, '::after')
+    const frame = element.getBoundingClientRect()
+    const heading = element.querySelector('h3')!.getBoundingClientRect()
+    return {
+      scale: new DOMMatrixReadOnly(imageStyle.transform).a,
+      blueOpacity: Number(overlay.opacity),
+      blueColor: overlay.backgroundColor,
+      imageTransition: imageStyle.transitionProperty,
+      overlayTransition: overlay.transitionProperty,
+      width: frame.width,
+      height: frame.height,
+      headingLeft: heading.left - frame.left,
+      headingTop: heading.top - frame.top,
+      text: element.textContent,
+    }
+  })
+}
+
+async function expectMissionGeometryStable(
+  card: Locator,
+  previous: Awaited<ReturnType<typeof missionVisualState>>,
+) {
+  const current = await missionVisualState(card)
+  for (const key of ['width', 'height', 'headingLeft', 'headingTop'] as const) {
+    expect(
+      Math.abs(current[key] - previous[key]),
+      `${key} stays stable during visual feedback`,
+    ).toBeLessThanOrEqual(1)
+  }
+  expect(current.text).toBe(previous.text)
+}
+
 async function horizontallyContained(element: Locator) {
   return element.evaluate((node) => {
     const region = node.closest('[data-mission-cards]')!.getBoundingClientRect()
@@ -38,6 +100,7 @@ async function visitMobileMissionsWithKeyboard(page: Page, direction: 'ltr' | 'r
   await expect(cards).toHaveCSS('outline-style', 'solid')
   const key = direction === 'rtl' ? 'ArrowLeft' : 'ArrowRight'
   for (const card of await cards.getByRole('article').all()) {
+    const id = await card.getAttribute('id')
     await expect
       .poll(
         async () => {
@@ -45,7 +108,11 @@ async function visitMobileMissionsWithKeyboard(page: Page, direction: 'ltr' | 'r
           if (!contained) await page.keyboard.press(key)
           return contained
         },
-        { timeout: 10_000, intervals: [100] },
+        {
+          message: `#${id} fits inside the collection after native arrow scrolling`,
+          timeout: 10_000,
+          intervals: [250],
+        },
       )
       .toBe(true)
   }
@@ -202,6 +269,7 @@ for (const locale of locales) {
       ).toBeGreaterThan(0)
       await expect(card.getByRole('link')).toHaveAttribute('href', pageHref(mission.pageId, locale))
       await expect(card.getByRole('link')).toHaveAccessibleName(/\S/)
+      await expectPhotoCardComposition(card)
     }
     const desktopRows = await section
       .getByRole('article')
@@ -257,6 +325,9 @@ for (const locale of locales) {
         await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
         `${locale}, ${width}px: every mission remains available without horizontal page scrolling`,
       ).toBe(true)
+      for (const card of await section.getByRole('article').all()) {
+        await expectPhotoCardComposition(card)
+      }
     }
   })
 
@@ -298,19 +369,27 @@ test('mobile missions remain readable and keyboard navigable at 200% text in eve
       document.documentElement.style.fontSize = '200%'
       await document.fonts.ready
     })
-    await visitMobileMissionsWithKeyboard(page, locale === 'ar' ? 'rtl' : 'ltr')
-    await visitMissionLinksWithTab(page)
     const clippedText = await page
       .locator('[data-mission-cards] :is(h3, p, a span)')
       .evaluateAll((nodes) =>
         nodes
-          .filter(
-            (node) =>
-              node.scrollWidth > node.clientWidth + 1 || node.scrollHeight > node.clientHeight + 1,
-          )
+          .filter((node) => {
+            const text = node.getBoundingClientRect()
+            const card = node.closest('[data-mission]')!.getBoundingClientRect()
+            return (
+              node.scrollWidth > node.clientWidth + 1 ||
+              node.scrollHeight > node.clientHeight + 1 ||
+              text.top < card.top - 1 ||
+              text.bottom > card.bottom + 1 ||
+              text.left < card.left - 1 ||
+              text.right > card.right + 1
+            )
+          })
           .map((node) => node.textContent),
       )
     expect(clippedText, `${locale}: enlarged mission copy wraps without clipping`).toEqual([])
+    await visitMobileMissionsWithKeyboard(page, locale === 'ar' ? 'rtl' : 'ltr')
+    await visitMissionLinksWithTab(page)
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
     ).toBe(true)
@@ -412,4 +491,113 @@ test('home anchor motion follows the visitor motion preference', async ({ page }
       .first()
       .evaluate((link) => getComputedStyle(link, '::after').transitionProperty),
   ).toBe('none')
+})
+
+test('mission photos zoom gently and gain a blue tint on hover without moving the copy', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.goto(pageHref('home', 'fr'))
+  await waitForFonts(page)
+  expect(await page.evaluate(() => matchMedia('(hover: hover) and (pointer: fine)').matches)).toBe(
+    true,
+  )
+
+  for (const card of await page.locator('[data-mission]').all()) {
+    await card.scrollIntoViewIfNeeded()
+    await page.mouse.move(0, 0)
+    const initial = await missionVisualState(card)
+    expect(initial.scale).toBe(1)
+    expect(initial.blueOpacity).toBe(0)
+    const rgb = initial.blueColor.match(/\d+/g)!.map(Number)
+    expect(rgb[2], 'the feedback layer uses the institutional blue').toBeGreaterThan(rgb[0])
+    expect(rgb[2]).toBeGreaterThan(rgb[1])
+
+    await card.hover()
+    await expect.poll(async () => (await missionVisualState(card)).scale).toBeGreaterThan(1.02)
+    await expect.poll(async () => (await missionVisualState(card)).blueOpacity).toBeGreaterThan(0.1)
+    expect((await missionVisualState(card)).scale, 'zoom remains subtle').toBeLessThanOrEqual(1.08)
+    await expectMissionGeometryStable(card, initial)
+    await expectPhotoCardComposition(card)
+
+    await page.mouse.move(0, 0)
+    await expect.poll(async () => (await missionVisualState(card)).scale).toBeLessThanOrEqual(1.001)
+    await expect.poll(async () => (await missionVisualState(card)).blueOpacity).toBe(0)
+    await expectMissionGeometryStable(card, initial)
+  }
+})
+
+test('keyboard mission feedback remains visible when reduced motion disables photo zoom', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.goto(pageHref('home', 'ar'))
+  await waitForFonts(page)
+  const card = page.locator('#mission-develop')
+  const link = card.getByRole('link')
+  await page.mouse.move(0, 0)
+  const initial = await missionVisualState(card)
+  await page.locator('[data-mission-cards]').focus()
+  await page.keyboard.press('Tab')
+  await expect(link).toBeFocused()
+  await expect(link).toHaveCSS('outline-style', 'solid')
+  await expect.poll(async () => (await missionVisualState(card)).blueOpacity).toBeGreaterThan(0.1)
+  await expectMissionGeometryStable(card, initial)
+
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await expect.poll(async () => (await missionVisualState(card)).scale).toBe(1)
+  const reduced = await missionVisualState(card)
+  expect(
+    reduced.blueOpacity,
+    'focus feedback survives the motion preference change',
+  ).toBeGreaterThan(0.1)
+  expect(reduced.imageTransition).toBe('none')
+  expect(reduced.overlayTransition).toBe('none')
+  await expectMissionGeometryStable(card, initial)
+
+  // Exercise a hover independently of focus under the same reduced-motion preference.
+  await page.locator('[data-mission-cards]').focus()
+  await card.hover()
+  const hovered = await missionVisualState(card)
+  expect(hovered.scale).toBe(1)
+  expect(hovered.blueOpacity).toBeGreaterThan(0.1)
+  await page.mouse.move(0, 0)
+  expect((await missionVisualState(card)).blueOpacity).toBe(0)
+  await expectMissionGeometryStable(card, initial)
+})
+
+test('touching a mobile mission photo does not leave a hover zoom or tint', async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    hasTouch: true,
+    isMobile: true,
+    viewport: { width: 390, height: 844 },
+    reducedMotion: 'no-preference',
+  })
+  try {
+    const page = await context.newPage()
+    await page.goto(pageHref('home', 'fr'))
+    await waitForFonts(page)
+    expect(
+      await page.evaluate(() => matchMedia('(hover: none) and (pointer: coarse)').matches),
+    ).toBe(true)
+    const card = page.locator('#mission-develop')
+    await card.scrollIntoViewIfNeeded()
+    const initial = await missionVisualState(card)
+    await card.tap({ position: { x: 30, y: 30 } })
+    const tapped = await missionVisualState(card)
+    expect(tapped.scale).toBe(1)
+    expect(tapped.blueOpacity).toBe(0)
+    await expectMissionGeometryStable(card, initial)
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+    ).toBe(true)
+  } finally {
+    await context.close()
+  }
 })

@@ -103,8 +103,11 @@ marketing page.
   retained. Other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
   preserves essential routes, forms, feedback and facts while limiting competing
   roles. The requested three homepage mission cards now use drafted wayfinding
-  copy and generated energy imagery: three columns on desktop, image/body rows
-  on tablet and a native horizontal collection below 48rem. The mobile scrollbar
+  copy over full generated photographs: three columns on desktop, stacked
+  photographic cards on tablet and a native horizontal collection below 48rem.
+  White text sits near the bottom with inline underlined destinations. A blue
+  hover/focus tint and slight image zoom preserve card geometry; reduced motion
+  keeps images still and applies the tint immediately. The mobile scrollbar
   stays hidden, with a neighboring-card glimpse where space permits; all three
   destinations retain keyboard/touch and no-JavaScript access. Enlarged text can
   use the full available card width.

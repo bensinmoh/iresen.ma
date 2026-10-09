@@ -317,8 +317,15 @@ text roles and blue active underline. It pins above content from `64rem`; its
 measured height provides anchor clearance when labels wrap. All six destinations
 remain native links with visible focus and reduced-motion support. Mission cards
 reuse the physical 20px corner signature, aligned media/title/body/action anatomy,
-and existing Latin/Arabic families. Between `48rem` and `64rem`, image/body rows
-stack in page flow; below `48rem`, complete cards use native horizontal scrolling
+and existing Latin/Arabic families. Their full photographs sit behind white
+headings, descriptions and inline underlined destinations near the bottom,
+following the supplied Figma/video reference. Dark shading covers the entire
+text block, and link focus uses a light visible ring. Fine-pointer hover and
+keyboard focus tint the image blue and scale it to 1.04 without changing card
+or text geometry; reduced motion keeps the image still and applies the tint
+immediately. Text stays in normal flow for translations and enlarged sizes.
+Between `48rem` and `64rem`, full photographic cards
+stack in page flow; below `48rem`, they use native horizontal scrolling
 and CSS scroll snapping. The scrollbar stays hidden. Neighboring-card glimpses
 appear where space permits, while enlarged text can use the full available card
 width. Preserve logical RTL order, visible focus, keyboard/touch scrolling and

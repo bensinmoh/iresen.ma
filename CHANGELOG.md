@@ -4,6 +4,22 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Full photographic mission cards
+
+- Restored the supplied Figma/video card treatment: full photographs, white text
+  near the bottom, inline underlined destinations and the diagonal brand corners.
+  Full photographic cards also replace the tablet image/body rows.
+- Added a blue hover/focus tint and a slight 1.04 image zoom for fine-pointer
+  hover and keyboard focus. Card geometry stays stable; reduced motion keeps the
+  image still and applies the tint immediately.
+- Preserved the native horizontal mobile collection, current images, drafted
+  copy, routes and later image-review guidance. The private MOV is a visual
+  reference; its sample wording does not change the mission content.
+
+See [the reference record and current behavior](docs/home-sections.md).
+Earlier captures and verification counts retain their revision-specific scope;
+current checks belong in [validation](docs/validation.md).
+
 ## 2026-10-09 — Horizontal mission cards on mobile
 
 - Changed the three homepage mission cards to a native horizontal scroll
