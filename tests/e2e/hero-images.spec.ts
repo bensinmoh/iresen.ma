@@ -1,6 +1,8 @@
 import { expect, test, type Browser, type Request } from '@playwright/test'
 import sharp from 'sharp'
 import { pageHref } from '../../src/lib/site'
+import { heroImages } from '../../src/lib/hero-images'
+import { heroes } from '../../src/lib/heroes'
 
 const cases = [
   { pageId: 'home', locale: 'fr' },
@@ -11,14 +13,14 @@ const cases = [
   { pageId: 'workWithUs', locale: 'ar' },
 ] as const
 
-function isHeroImage(request: Request) {
+function isHeroImage(request: Request, sources: readonly string[]) {
   if (request.resourceType() !== 'image') return false
   const url = new URL(request.url())
   const source =
     url.pathname === '/_next/image'
       ? new URL(url.searchParams.get('url') ?? '', url).pathname
       : url.pathname
-  return source.startsWith('/images/heroes/')
+  return sources.includes(source)
 }
 
 async function delivery(
@@ -32,8 +34,12 @@ async function delivery(
   try {
     const page = await context.newPage()
     const requests: Request[] = []
+    // Other below-fold sections can reuse files from the hero asset directory.
+    // Still count both actual hero variants to detect duplicate responsive delivery.
+    const photo = heroImages[heroes[item.pageId].photo]
+    const sources = [photo.src, photo.mobile.src]
     page.on('request', (request) => {
-      if (isHeroImage(request)) requests.push(request)
+      if (isHeroImage(request, sources)) requests.push(request)
     })
     await page.goto(pageHref(item.pageId, item.locale))
     await page.evaluate(async () => {

@@ -17,6 +17,16 @@ for (const locale of ['fr', 'en', 'ar']) {
       await expect(details).toHaveAttribute('open', '')
       await expect(section.locator('details[open]')).toHaveCount(1)
       await expect(details.locator('li')).toHaveCount(4)
+      const axisRows = await details
+        .locator('li')
+        .evaluateAll((items) => items.map((item) => item.getBoundingClientRect().top))
+      expect(Math.max(...axisRows) - Math.min(...axisRows)).toBeLessThanOrEqual(1)
+      expect(
+        await details
+          .locator('summary > svg')
+          .first()
+          .evaluate((icon) => icon.getBoundingClientRect().height),
+      ).toBeGreaterThanOrEqual(48)
       await expect(details.locator('img')).toBeVisible()
       await details.locator('img').scrollIntoViewIfNeeded()
       await expect
@@ -35,6 +45,23 @@ for (const locale of ['fr', 'en', 'ar']) {
     for (const width of [320, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 1000 })
       await expect(section.locator('#research-water summary')).toBeVisible()
+      if (width < 1024) {
+        const photo = section.locator('#research-water [data-theme-image]')
+        await expect(photo).toHaveCSS('position', 'absolute')
+        const covers = await photo.evaluate((node) => {
+          const frame = node.closest('section')!.getBoundingClientRect()
+          const image = node.getBoundingClientRect()
+          return (
+            Math.abs(frame.height - image.height) <= 1 && Math.abs(frame.width - image.width) <= 1
+          )
+        })
+        expect(covers).toBe(true)
+        if (width === 768)
+          await section.screenshot({
+            style: '.skip-link, .home-section-navigation { visibility: hidden; }',
+            path: testInfo.outputPath(locale + '-tablet.png'),
+          })
+      }
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1),
       ).toBe(true)
@@ -53,6 +80,25 @@ for (const locale of ['fr', 'en', 'ar']) {
     await section.locator('#research-mobility summary').click()
     await expect(section.locator('#research-mobility')).not.toHaveAttribute('open', '')
     await section.locator('#research-hydrogen summary').click()
+    const axes = section.locator('#research-hydrogen ol')
+    await axes.focus()
+    const direction = locale === 'ar' ? 'ArrowLeft' : 'ArrowRight'
+    for (const item of await axes.locator('li').all()) {
+      await expect
+        .poll(
+          async () => {
+            const visible = await item.evaluate((node) => {
+              const frame = node.parentElement!.getBoundingClientRect()
+              const item = node.getBoundingClientRect()
+              return item.left >= frame.left - 1 && item.right <= frame.right + 1
+            })
+            if (!visible) await page.keyboard.press(direction)
+            return visible
+          },
+          { timeout: 10000 },
+        )
+        .toBe(true)
+    }
     await page.evaluate(() => {
       document.documentElement.style.fontSize = '200%'
     })

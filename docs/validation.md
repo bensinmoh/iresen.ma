@@ -2247,3 +2247,19 @@ original strategy to the public repository because local reference retention
 was not explicit public disclosure authorization. The owner then explicitly
 authorized the original document in the public repository. Source inclusion is
 therefore within that specific authorization; site publication remains separate.
+
+### Owner refinement — larger icons and horizontal axes
+
+The final refinement uses 48px thematic icons and ampersands in French/English
+theme labels. Four axes align horizontally; mobile uses a native horizontal
+strip with keyboard access in both directions. Below 1024px the selected image
+covers the entire section beneath a 90% navy veil. Reviewed FR/EN/AR desktop,
+tablet and mobile captures. Production build and all **9 focused browser tests**
+passed, including four-axis alignment, icon size, tablet background geometry,
+mobile keyboard access, real search discovery and hero image delivery. The hero
+download test now scopes requests to that page's actual desktop/mobile variants
+rather than counting a below-fold image reused from the same asset directory.
+
+- [French tablet](screenshots/2026-10-09-home-research-fr-tablet.png)
+- [English tablet](screenshots/2026-10-09-home-research-en-tablet.png)
+- [Arabic tablet](screenshots/2026-10-09-home-research-ar-tablet.png)

@@ -39,13 +39,16 @@ still requires editorial review of all locales and the proposal's positioning.
 - The section retains `research-priorities` and immediately follows missions.
 - At 64rem and above, seven native disclosure controls form lateral navigation,
   each with a thematic line icon. One panel stays selected with JavaScript.
-- Each panel has a descriptive paragraph and four transparent horizontal rows:
+- Each panel has a descriptive paragraph and four transparent columns placed side by side:
   a quiet axis number and a larger uppercase title, separated by thin dividers.
 - A panoramic thematic illustration sits below the content and changes with the
-  open theme. On smaller screens it sits inside the open accordion panel.
+  open theme. Below 64rem it covers the section beneath a 90% navy veil on both
+  tablet and mobile.
 - Below 64rem, the same semantic markup becomes an accordion, allowing the
-  current theme to close. Native grouping works without JavaScript; keyboard
+  current theme to close below 48rem. Native grouping works without JavaScript; keyboard
   Enter/Space and ordinary touch activation remain available.
+- Icons are 48px; French/English theme labels use ampersands. Below 48rem the
+  four axes remain side by side in a keyboard-accessible horizontal strip.
 - Theme anchors `research-{themeId}` are centrally registered. Search/hash links
   reveal the matching theme when JavaScript is available; without it, the
   destination summary remains reachable and can be opened natively.

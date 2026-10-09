@@ -15,7 +15,7 @@ describe('research source and public search references', () => {
     )
     for (const id of researchThemes) {
       const theme = fr.HomeResearch.themes[id]
-      expect(source).toContain(theme.title)
+      expect(source).toContain(theme.title.replaceAll(' & ', ' et '))
       expect(theme.axes).toHaveLength(4)
       for (const axis of theme.axes) expect(source).toContain(axis)
     }

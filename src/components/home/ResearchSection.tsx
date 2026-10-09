@@ -58,9 +58,9 @@ export function ResearchSection({ locale, copy }: { locale: Locale; copy: Resear
               <summary
                 style={{ gridRow: index + 1 }}
                 onClick={(event) => {
-                  // Wide layouts always keep a theme selected; mobile can close a disclosure.
+                  // Desktop and tablet keep a theme selected; mobile can close a disclosure.
                   if (
-                    window.matchMedia('(min-width: 64rem)').matches &&
+                    window.matchMedia('(min-width: 48rem)').matches &&
                     event.currentTarget.parentElement?.hasAttribute('open')
                   )
                     event.preventDefault()
@@ -72,7 +72,11 @@ export function ResearchSection({ locale, copy }: { locale: Locale; copy: Resear
               </summary>
               <div className={styles.panel}>
                 <p className={styles.description}>{text.description}</p>
-                <ol className={styles.axes}>
+                <ol
+                  className={`${styles.axes} horizontal-scroll`}
+                  tabIndex={0}
+                  aria-label={copy.axesLabel}
+                >
                   {text.axes.map((axis, axisIndex) => (
                     <li key={axis}>
                       <span className={styles.number}>

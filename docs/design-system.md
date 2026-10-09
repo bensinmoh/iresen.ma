@@ -1200,11 +1200,12 @@ and [revision-specific validation](validation.md#desktop-submenu-destination-sta
 ## Homepage research selection — 2026-10-09
 
 Reuse the current navy, blue, white/pale type and shared grid for research
-selection. Seven 24px line icons precede the titles. Transparent axis rows pair
-quiet metadata numbers with larger uppercase Latin titles and thin dividers;
+selection. Seven 48px line icons precede the titles. Four transparent axis
+columns pair quiet metadata numbers with larger uppercase Latin titles and thin dividers;
 Arabic retains natural tracking and its larger line-height. Below 64rem the
 lateral controls become native accordions, with a primary-blue selected surface
 and physical `--radius-action` corners. Text follows content height and images
-remain separate from the readable text background. No new global tokens,
-animation libraries or universal panel height are introduced.
+form a panorama on desktop. Below 64rem the selected image covers the section beneath a 90% navy veil. Below
+48rem the axes remain side by side in a keyboard-accessible horizontal strip.
+No new global tokens, animation libraries or universal panel height are introduced.
 See [the module](research-domains.md) and [validation](validation.md#homepage-research-domains--2026-10-09).

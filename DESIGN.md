@@ -756,8 +756,11 @@ and [revision-specific checks](docs/validation.md#desktop-submenu-destination-st
 
 The owner-requested domains module extends the shared navy/white composition with
 seven thematic line icons, native selection/disclosure controls and transparent
-axis rows. It uses the existing grid, type roles, thin dividers and action-blue
+axis columns. It uses the existing grid, type roles, thin dividers and action-blue
 selected mobile surfaces with physical action corners. Lateral selection becomes
 an accordion below 64rem, keeping long text readable instead of shrinking it.
+The thematic icons are 48px. Four axes sit alongside each other; on mobile they
+use a keyboard-accessible horizontal strip. Below 64rem the selected
+illustration covers the section beneath a 90% navy veil.
 A changing panoramic illustration supports each theme without serving as evidence
 of an IRESEN installation. See [the specification](docs/research-domains.md).

@@ -16,6 +16,7 @@ export type ResearchCopy = {
   title: string
   action: string
   axis: string
+  axesLabel: string
   themes: Record<
     ResearchThemeId,
     {
