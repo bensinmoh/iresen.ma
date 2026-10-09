@@ -211,31 +211,28 @@ replaces its former generated photo hero; other photo-hero assets remain in
 [the generated inventory](hero-assets.json). See [contact scope](contact.md)
 and [current check evidence](validation.md).
 
-## Supplied contact photograph — 2026-10-09
+## Contact entrance photograph — 2026-10-09
 
-The owner added this photograph to the public repository on 2026-10-09 through
-commit [`92f01c3`](https://github.com/bensinmoh/iresen.ma/commit/92f01c366993f676c25f51bb83122c19351f24e9).
-Inspection shows a building entrance, a white wall bearing the IRESEN name, a
-gate, trees and a garden. This records the visible scene and repository source;
-it does not identify a particular headquarters or infer geographic coordinates,
-the capture date, photographer or redistribution rights.
+The owner added this JPEG directly to `main` in commit
+`92f01c366993f676c25f51bb83122c19351f24e9`. It shows an entrance with the IRESEN
+name on a white wall, a wooden gate, trees and vegetation. Visual inspection
+does not establish its address, capture date or exact location.
 
-| Property                     | Value                                                              |
-| ---------------------------- | ------------------------------------------------------------------ |
-| Public file                  | `public/images/contact/contact-background-venue.jpg`               |
-| Source commit                | `92f01c366993f676c25f51bb83122c19351f24e9`                         |
-| Repository addition date     | 2026-10-09                                                         |
-| Format / dimensions          | JPEG; 5797 × 3865px                                                |
-| Bytes                        | 11,425,755                                                         |
-| Original/public file SHA-256 | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f` |
-| Transformation               | None; supplied JPEG remains byte-identical.                        |
-| Public search identifier     | `contact-background-venue`                                         |
+| Property            | Verified value                                                               |
+| ------------------- | ---------------------------------------------------------------------------- |
+| Repository file     | `public/images/contact/contact-background-venue.jpg`                         |
+| Public asset URL    | `/images/contact/contact-background-venue.jpg`                               |
+| Format / dimensions | JPEG RGB; 5797 × 3865px                                                      |
+| Bytes               | 11,425,755 (approximately 10.90 MiB)                                         |
+| SHA-256             | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f`           |
+| Transformation      | None; the received original remains unchanged.                               |
+| Composition use     | Not yet used; Contact still uses the abstract PNG background recorded above. |
 
-The original served URL is registered in `publicAssetReferences` with explicit
-French, English and Arabic titles and descriptions of the visible scene and its
-supplied contact-content role. It remains unused by the contact template, which
-renders the abstract PNG recorded above. No crop, resampling, conversion or
-background replacement accompanies this registration. See [contact scope](contact.md).
+A search reference is added in `src/lib/search/catalog.ts` to satisfy the
+existing public-asset registration rule. Its FR/EN/AR metadata describes the
+visible entrance without asserting a verified headquarters address. This
+registration supplies discovery for the already served file and does not change
+the Contact composition.
 
 ## Contextual hero media — 2026-10-09
 

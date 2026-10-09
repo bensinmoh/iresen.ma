@@ -1501,19 +1501,64 @@ mobile/tablet/desktop containment. No database schema or server-side behavior
 changed in the footer correction. Other browsers and manual screen-reader
 verification remain outside this pass.
 
-The latest base revision added the served contact venue photograph; its missing
-search reference caused the initial PR unit check to fail. The supplied JPG
-is now registered with explicit FR/EN/AR scene descriptions, a stable resource ID
-and its original URL. Its bytes and the rendered abstract contact background are
-preserved. The existing catalog coverage includes both contact images without
-relaxing public-file registration requirements. Source provenance is recorded
-in [the asset inventory](asset-inventory.md); current PR CI and merge results
-remain recorded in GitHub.
+The synchronized base includes the contact venue photograph and its inherited
+`contact-venue` search reference. Both supplied image bytes and the rendered
+abstract contact background are preserved. The catalog covers both images with
+explicit FR/EN/AR scene descriptions and original URLs. Source provenance is
+recorded in [the asset inventory](asset-inventory.md); current PR CI and merge
+results remain recorded in GitHub.
 
-After the media registration, lint, strict types, 97 unit tests and the production
+After synchronization, lint, strict types, 97 unit tests and the production
 build passed again. The local search index rebuild and all 21 CMS/search
 integration tests passed. API checks found the photo under its exact localized
 title in FR/EN/AR, with the stable original JPEG destination, which returned HTTP
 200 and `image/jpeg` from the local production server. All 3 existing contact
 search browser cases passed, preserving section discovery/navigation and the
 abstract background's search reference in each locale.
+
+## Contact form eyebrow — 2026-10-09
+
+The owner's screenshot correction centers the form's leaf/label group above its
+title and adds the original blue Apex Leaf. The local rule removes the inherited
+paragraph-width limit; the decorative vector retains its original geometry and
+logical inline-start position in Arabic.
+
+Validation completed on the production build with a disposable local PostgreSQL
+database and Chromium:
+
+- Frozen-lockfile installation, lint, strict types, 97 unit tests and production
+  build passed. The initial sandboxed build could not capture a TypeScript
+  subprocess's configuration output; the normal build passed outside that sandbox.
+- All 19 existing Contact/search browser checks passed, covering FR/EN/AR layout,
+  keyboard FAQs, email draft validation, optional map loading, no-JavaScript
+  fallbacks and searchable section destinations.
+- A focused rendered inspection measured 30 combinations: FR/EN/AR at
+  320/390/768/1024/1440px, each at 100% and 200% root text size. The complete
+  leaf/label group's horizontal center differs from the title center by less
+  than 0.01px. The original 177.3:287 ratio, decorative semantics, logical leaf
+  placement and page containment passed throughout.
+- Inspected the [French desktop](screenshots/contact-eyebrow-fr-1440-2026-10-09.png),
+  [English tablet](screenshots/contact-eyebrow-en-768-2026-10-09.png) and
+  [Arabic mobile](screenshots/contact-eyebrow-ar-390-2026-10-09.png) captures.
+- Rebuilt the local public search catalog. Existing `send-request` metadata
+  already includes the localized eyebrow; the original Apex media entry and
+  reachable section anchors remain.
+- The Apex Leaf SHA-256 remains
+  `7c51a47ea0775bd26602ce2a61c8b7dbaf8cfa5597c59189b1b85932a56c0f86`.
+
+Database integration suites and unrelated browser routes were not repeated for
+this scoped presentation correction. Current PR CI runs the complete suite.
+Safari, physical-device and manual screen-reader coverage remain unverified.
+No production deployment or visibility change was performed.
+
+The first current-head PR CI run exposed a separately added `main` asset,
+`/images/contact/contact-background-venue.jpg`, without a public search reference.
+The local unit suite reproduced that failure after synchronizing `main`. Its
+explicit media entry now describes the visible entrance in FR/EN/AR, without
+inferring an address or changing the Contact composition. The source bytes
+remain unchanged; [asset provenance](asset-inventory.md) records the addition.
+After registering that asset and extending the existing catalog expectation,
+lint, strict types, all 97 unit tests, formatting and the production build passed
+again. The three Contact search browser checks passed on the rebuilt application.
+FR/EN/AR media queries for the visible wooden gate find its localized result,
+and the canonical image destination returns HTTP 200 in each case.

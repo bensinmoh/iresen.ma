@@ -36,9 +36,9 @@ const assetLabels = {
     contactImage: 'Fond abstrait de la page Contact',
     contactBackground:
       'Courbes abstraites cyan et blanches utilisées en arrière-plan de la page de contact.',
-    contactVenueImage: 'Photographie d’une entrée portant le nom IRESEN',
+    contactVenue: 'Entrée IRESEN — photographie pour Contact',
     contactVenueDescription:
-      'Photographie fournie pour les contenus de contact : entrée d’un bâtiment, mur blanc portant le nom IRESEN, portail, arbres et jardin.',
+      'Photographie d’une entrée portant le nom IRESEN, avec un mur blanc, un portail en bois et des arbres.',
   },
   en: {
     image: 'Page introduction image',
@@ -52,9 +52,9 @@ const assetLabels = {
     wind: 'Generated illustration of a white wind turbine in a fictional rocky landscape.',
     contactImage: 'Abstract contact page background',
     contactBackground: 'Abstract cyan and white curves used as the contact page background.',
-    contactVenueImage: 'Photograph of an entrance bearing the IRESEN name',
+    contactVenue: 'IRESEN entrance — photograph for Contact',
     contactVenueDescription:
-      'Photograph supplied for contact content, showing a building entrance, a white wall bearing the IRESEN name, a gate, trees and a garden.',
+      'Photograph of an entrance bearing the IRESEN name, with a white wall, a wooden gate and trees.',
   },
   ar: {
     image: 'صورة تقديمية',
@@ -68,9 +68,8 @@ const assetLabels = {
     wind: 'صورة توضيحية مولّدة لتوربين رياح أبيض في منظر صخري خيالي.',
     contactImage: 'الخلفية التجريدية لصفحة التواصل',
     contactBackground: 'منحنيات تجريدية سماوية وبيضاء مستخدمة خلفيةً لصفحة التواصل.',
-    contactVenueImage: 'صورة لمدخل يحمل اسم IRESEN',
-    contactVenueDescription:
-      'صورة مقدمة لمحتوى التواصل، تُظهر مدخل مبنى وسورًا أبيض يحمل اسم IRESEN وبوابة وأشجارًا وحديقة.',
+    contactVenue: 'مدخل IRESEN — صورة للتواصل',
+    contactVenueDescription: 'صورة لمدخل يحمل اسم IRESEN، مع جدار أبيض وبوابة خشبية وأشجار.',
   },
 }
 
@@ -120,14 +119,14 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   },
   {
-    id: 'contact-background-venue',
+    id: 'contact-venue',
     url: '/images/contact/contact-background-venue.jpg',
     type: 'media',
     text: Object.fromEntries(
       contentLocales.map((locale) => [
         locale,
         {
-          title: assetLabels[locale].contactVenueImage,
+          title: assetLabels[locale].contactVenue,
           description: assetLabels[locale].contactVenueDescription,
         },
       ]),

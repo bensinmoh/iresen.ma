@@ -267,7 +267,7 @@ describe('explicit public search catalog', () => {
         type: 'media',
       },
       {
-        id: 'contact-background-venue',
+        id: 'contact-venue',
         url: '/images/contact/contact-background-venue.jpg',
         type: 'media',
       },

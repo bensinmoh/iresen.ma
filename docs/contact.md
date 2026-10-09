@@ -17,19 +17,23 @@ recovered from the native Figma file rather than cropped from the screenshot.
 [Asset provenance](asset-inventory.md#contact-decorative-background--2026-10-09)
 records the exact archive entry, size, dimensions and hashes.
 
-The owner also supplied a photograph through repository commit `92f01c3` on
-2026-10-09. The unchanged `/images/contact/contact-background-venue.jpg` shows a
-building entrance, a white wall bearing the IRESEN name, a gate, trees and a
-garden. It is registered as public media with descriptive FR/EN/AR search
-metadata; the contact template still renders the abstract PNG above. No specific
-headquarters identity, geographic location or redistribution rights are inferred.
-See [the photograph's provenance](asset-inventory.md#supplied-contact-photograph--2026-10-09).
-
 Current navy `#12345A`, blue `#296BB4`, Jakarta/Alexandria fonts, aligned gutters,
 action corners, navigation and footer take precedence over the historical sample.
 Layouts reduce columns and allow natural text growth on narrow screens, with
 logical CSS and isolated Latin identifiers for Arabic. No route is added to the
 canonical 22-page map.
+
+The owner's later screenshot correction explicitly requests an Apex Leaf before
+the form's « Votre message » label and corrects its centering. The inherited
+paragraph `max-inline-size: 68ch` had constrained the eyebrow box within the wider
+centered heading, leaving that box at the inline start. The local form eyebrow
+now removes that limit and centers the leaf and label together with flex layout.
+It uses the original blue `/brand/apex-leaf.svg`, unchanged, at 1em height with
+automatic width and a 12px gap (`--space-3`). The image is decorative (`alt=""`,
+`aria-hidden="true"`); it precedes the label at the logical inline start in Arabic
+without mirroring its geometry. This is the third selective Apex placement,
+alongside the homepage hero eyebrow and Institute's Mission H2. Other Contact
+eyebrows keep their existing text-only treatment.
 
 The headquarters address, phone and email reuse the established shared
 [footer contacts and their source record](footer.md). The screenshot's opening
