@@ -1071,11 +1071,15 @@ html[dir='rtl'] .navigation-icon-arrow {
 
 .hero-figures .key-figure-label {
   order: 1;
+  max-inline-size: 100%;
   line-height: 1.35;
+  white-space: pre-line;
 }
 
 .hero-figures .key-figure {
   min-inline-size: 0;
+  align-items: center;
+  text-align: center;
 }
 
 .key-figure {

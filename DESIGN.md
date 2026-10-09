@@ -443,6 +443,11 @@ the requested wording with spelling corrected; English/Arabic labels are drafted
 translations. Above `40rem`, auto-fit tracks adapt to available space. At `40rem`
 and below, native horizontal scrolling retains all five facts, with a
 neighboring-item glimpse where space permits. Text wraps naturally rather than being clipped.
+The owner's 2026-10-09 alignment refinement centers each homepage value and label
+inside its own track. Locale-authored line breaks give the descriptions two lines
+at ordinary desktop/mobile sizes, including short labels; narrow tracks or
+enlarged text can add lines naturally. Menu and founding-year alignment retain
+their existing treatment.
 See [the hero content record](docs/heroes.md#homepage-key-figures--2026-10-08).
 
 ## Homepage certification badge — 2026-10-08

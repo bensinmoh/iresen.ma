@@ -1092,3 +1092,33 @@ passed again. Three affected FR/EN/AR desktop renders confirmed clear faces,
 visible hands, full-width coverage and containment; their text contrast remained
 at least 7.919:1 for H1, 7.995:1 for introductions and 9.044:1 for related links.
 The retained partnership desktop capture reflects this final positioning.
+
+## Centered homepage figures — 2026-10-09
+
+The five homepage values and descriptions now center within their individual
+grid/scroll tracks. Locale-authored newlines give every label two lines at
+ordinary sizes; `white-space: pre-line` applies only to the homepage labels.
+The shared research-menu label still collapses that whitespace normally and
+retains its original alignment. Narrow/enlarged labels can add lines without
+fixed heights or clipping; all facts and native scrolling remain.
+
+Lint, formatting, production compilation/types, 8 unit tests and all 15 existing
+hero browser cases passed. A scoped production audit checked FR/EN/AR at 1440,
+1920, 390 and 320px, plus 320px with 200% text: 15 states and 75 complete fact
+pairs. All 60 normal-size labels occupied exactly two lines, with equal card
+height within each state. Actual value/label text centering error stayed below
+0.016px; every enlarged label and value remained contained when revealed, with
+no document overflow or page error. The normal homepage video still autoplays
+without controls. Checks use local Chromium; broader browser/accessibility
+certification is not asserted.
+
+Five quality-90 WebP strip captures preserve their CSS-resolution dimensions:
+
+- [French desktop](screenshots/home-figures-centered-fr-desktop.webp)
+- [English desktop](screenshots/home-figures-centered-en-desktop.webp)
+- [Arabic desktop](screenshots/home-figures-centered-ar-desktop.webp)
+- [French mobile](screenshots/home-figures-centered-fr-mobile.webp)
+- [French mobile with enlarged text](screenshots/home-figures-centered-fr-mobile-enlarged.webp)
+
+This increment is saved locally; push remains held while the earlier requested
+documentary-photo imports await network configuration.

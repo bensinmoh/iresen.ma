@@ -274,6 +274,9 @@ with 24px tablet and 32px wide gaps at default text size: five columns at
 scroll row supersedes the former narrow grid and last-item spanning. Every
 value/label pair stays stacked and all five remain available; text enlargement
 can wrap and grow each item without truncating its label.
+Each value/label pair is centered within its own track. Locale-authored line breaks
+give short and long descriptions two lines at ordinary desktop/mobile sizes;
+natural extra wrapping remains available for tighter tracks and enlarged text.
 Other pages keep the existing pathway band, with 2011 retained on institute.
 
 Current checks and rendered coverage belong in [the validation log](validation.md).

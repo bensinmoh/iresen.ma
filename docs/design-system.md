@@ -845,6 +845,11 @@ all five pairs with an unhidden native scrollbar and neighboring-item glimpse
 where space permits. Scrollbar visibility depends on the browser/OS. This
 supersedes the former narrow grid and last-item row span. Text may wrap and grow;
 facts remain accessible without requiring all five to fit one view.
+Each homepage pair is centered within its track. Locale-authored newlines in
+`Hero.figures` are preserved only by the homepage label's `white-space: pre-line`,
+giving even two-line descriptions at ordinary sizes. Natural wrapping can add
+lines in tighter tracks or with enlarged text; no fixed height or clipping is
+applied. Shared menu labels still collapse those newlines to normal whitespace.
 This band replaces the homepage's founding-year/pathway items; the
 other pages retain their pathway behavior and institute retains its 2011 figure.
 Corrected French wording, current EN/AR drafts and the content source are recorded

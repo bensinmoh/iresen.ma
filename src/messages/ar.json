@@ -169,11 +169,11 @@
     },
     "figuresLabel": "أرقام رئيسية",
     "figures": {
-      "collaborativeProjects": "مشاريع تعاونية مدعومة",
-      "patents": "براءات اختراع مودعة",
-      "youngResearchers": "باحثون شباب مدعومون",
-      "publications": "منشورات علمية",
-      "universityLaboratories": "مختبرات جامعية أُنشئت"
+      "collaborativeProjects": "مشاريع تعاونية\nمدعومة",
+      "patents": "براءات اختراع\nمودعة",
+      "youngResearchers": "باحثون شباب\nمدعومون",
+      "publications": "منشورات\nعلمية",
+      "universityLaboratories": "مختبرات جامعية\nأُنشئت"
     }
   },
   "PageSections": {

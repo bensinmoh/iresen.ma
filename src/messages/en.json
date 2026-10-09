@@ -169,11 +169,11 @@
     },
     "figuresLabel": "Key figures",
     "figures": {
-      "collaborativeProjects": "Collaborative projects supported",
-      "patents": "Patents filed",
-      "youngResearchers": "Young researchers supported",
-      "publications": "Scientific publications",
-      "universityLaboratories": "University laboratories established"
+      "collaborativeProjects": "Collaborative projects\nsupported",
+      "patents": "Patents\nfiled",
+      "youngResearchers": "Young researchers\nsupported",
+      "publications": "Scientific\npublications",
+      "universityLaboratories": "University laboratories\nestablished"
     }
   },
   "PageSections": {

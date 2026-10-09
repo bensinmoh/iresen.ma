@@ -4,6 +4,16 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Centered homepage figures
+
+- Centered each value and description inside its homepage grid/scroll track.
+- Added natural FR/EN/AR line breaks so short descriptions also use two lines,
+  while narrow layouts and enlarged text can still wrap without clipping.
+- Retained all five facts, typography and native horizontal mobile scrolling.
+
+See [figure rules](docs/design-system.md#shared-key-figure-typography--2026-10-08)
+and [current validation](docs/validation.md).
+
 ## 2026-10-09 — Contextual imagery and full-scene heroes
 
 - Replaced the governance, careers and collaboration illustrations with an
