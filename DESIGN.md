@@ -347,9 +347,13 @@ wide screens, stacked content on narrow screens, four/two/one platform columns,
 and labelled form controls with a single-column narrow layout. Logical spacing
 and isolated Latin identifiers support Arabic. FAQ answers use native disclosures.
 The form action states its actual purpose: prepare a local email, then open the
-visitor's email application. A plain directions link and an on-demand map preserve
-useful location access. No sample opening hours, 48-hour promise, department
-mailboxes, platform addresses or phone numbers are presented as verified facts.
+visitor's email application. The owner's explicit 2026-10-09 refinement replaces
+the earlier on-demand map with a directly rendered server iframe using native
+lazy loading. The map meets the footer without the lower explanatory strip;
+reveal/remove controls and their client state are removed. A separate directions
+link preserves useful navigation and fallback access. No sample opening hours,
+48-hour promise, department mailboxes, platform addresses or phone numbers are
+presented as verified facts.
 
 Sources, service limits and the unverified map pin are recorded in
 [contact documentation](docs/contact.md). Current executed checks belong in

@@ -133,8 +133,12 @@ marketing page.
   The form prepares an email locally and lets the visitor review/send it through
   their own email application. It does not submit or store data, and direct
   email/telephone/directions links remain available without JavaScript.
-  Google Maps loads only on request and can be removed. Its address-query pin is
-  not verified against the unresolved owner-supplied shortlink. See
+  The owner's explicit 2026-10-09 refinement replaces the earlier on-demand map
+  with a directly rendered server iframe using native lazy loading. It requires
+  no reveal click or client state; the lower explanatory strip is removed and
+  the separate directions link remains. Its address-query pin is not verified
+  against the unresolved owner-supplied shortlink. Third-party
+  data flows and applicable consent remain a release review. See
   [contact sources, anchors and service limits](docs/contact.md).
 
 The owner's earlier 2026-10-09 instruction authorized pushing the snapshot while

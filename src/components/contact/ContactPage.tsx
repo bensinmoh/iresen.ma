@@ -153,7 +153,7 @@ export async function ContactPage({
           ))}
         </div>
       </section>
-      <ContactLocation />
+      <ContactLocation locale={locale} />
     </div>
   )
 }

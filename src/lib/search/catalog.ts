@@ -35,7 +35,7 @@ const assetLabels = {
     wind: 'Illustration générée d’une éolienne blanche dans un paysage rocheux fictif.',
     contactHeadquartersTitle: 'Photographie du siège IRESEN à Rabat',
     contactHeadquartersDescription:
-      'Photographie de l’entrée du siège IRESEN à Rabat, avec un mur blanc portant l’identité IRESEN et un jardin arboré.',
+      'Photographie de l’entrée du siège IRESEN à Rabat, avec un mur blanc portant l’identité IRESEN, un portail en bois et un jardin arboré.',
   },
   en: {
     image: 'Page introduction image',
@@ -49,7 +49,7 @@ const assetLabels = {
     wind: 'Generated illustration of a white wind turbine in a fictional rocky landscape.',
     contactHeadquartersTitle: 'Photograph of IRESEN headquarters in Rabat',
     contactHeadquartersDescription:
-      'Photograph of the entrance to IRESEN headquarters in Rabat, with a white wall bearing the IRESEN identity and a garden with trees.',
+      'Photograph of the entrance to IRESEN headquarters in Rabat, with a white wall bearing the IRESEN identity, a wooden gate and a garden with trees.',
   },
   ar: {
     image: 'صورة تقديمية',
@@ -63,7 +63,7 @@ const assetLabels = {
     wind: 'صورة توضيحية مولّدة لتوربين رياح أبيض في منظر صخري خيالي.',
     contactHeadquartersTitle: 'صورة مقر IRESEN في الرباط',
     contactHeadquartersDescription:
-      'صورة مدخل مقر IRESEN في الرباط، مع جدار أبيض يحمل هوية IRESEN وحديقة تضم أشجارًا.',
+      'صورة مدخل مقر IRESEN في الرباط، مع جدار أبيض يحمل هوية IRESEN وبوابة خشبية وحديقة تضم أشجارًا.',
   },
 }
 
@@ -220,10 +220,8 @@ function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
       body: [
         copy.location.eyebrow,
         catalog.Footer.address,
-        copy.location.description,
+        copy.location.mapTitle,
         copy.location.externalLink,
-        copy.location.loadMap,
-        copy.location.privacyNotice,
       ],
     },
     {
@@ -288,7 +286,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...homeFigures.map(({ id, value }) => `${value} ${catalog.Hero.figures[id]}`),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
-      if (pageId === 'cookies') body.push(catalog.States.noTracking)
+      if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
         id: `page:${pageId}:${locale}`,
         locale,

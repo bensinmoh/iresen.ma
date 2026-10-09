@@ -43,6 +43,8 @@ and [contact behavior](docs/contact.md); photo-specific checks belong in [valida
 - Added the requested full-width location section. Google Maps loads on request
   and can be removed; the exact supplied directions shortlink is retained, and
   the address-query embed's exact pin remains unverified.
+  This records the initial presentation; the later direct-map refinement below
+  supersedes its load/remove behavior.
 - Preserved the 22-page route baseline and contact anchors; FR/EN/AR copy remains
   draft. Server-side delivery and production publication remain separate work.
 - Registered current contact guidance, FAQ/platform/location anchors and the
@@ -64,6 +66,19 @@ and [revision-specific check evidence](docs/validation.md).
 - Updated the responsive browser checks and current design guidance. Reviewed
   tablet, mobile, desktop and 200% text in FR/EN/AR; see
   [validation](docs/validation.md#tablet-homepage-layout--2026-10-09).
+
+## 2026-10-09 — Direct contact map
+
+- Render the contact map directly in server HTML with native lazy loading,
+  replacing click-to-reveal and hide controls. Preserve the translated frame
+  title, exact directions link, address and full-width responsive geometry.
+- Remove the lower explanatory strip, unused styles/copy and bottom padding;
+  the map now meets the footer. Update the cookies-page service notice and
+  search projection to reflect automatic Google Maps loading.
+- Pass lint, strict types, formatting, 97 unit and 21 integration cases,
+  production build and 30 contact/search/foundation browser cases. Google Maps
+  responses are intercepted locally; live service behavior is not asserted.
+  See [validation](docs/validation.md#direct-contact-map--2026-10-09).
 
 ## 2026-10-09 — Exact-first search relevance
 

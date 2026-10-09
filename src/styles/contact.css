@@ -423,7 +423,7 @@
 }
 
 .contact-location {
-  padding-block: var(--space-12) var(--space-6);
+  padding-block-start: var(--space-12);
   border-block-start: 1px solid var(--color-border);
 }
 
@@ -449,56 +449,6 @@
   inline-size: 100%;
   block-size: clamp(22rem, 30vw, 36rem);
   border: 0;
-}
-
-.contact-map-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-block-size: clamp(22rem, 30vw, 36rem);
-  padding: var(--space-12) var(--gutter);
-  text-align: center;
-}
-
-.contact-map-placeholder > .footer-icon {
-  inline-size: 2.5rem;
-  block-size: 2.5rem;
-  margin-block-end: var(--space-4);
-  color: var(--color-blue);
-}
-
-.contact-map-placeholder h3 {
-  margin-block-end: var(--space-3);
-}
-
-.contact-map-placeholder p {
-  max-inline-size: 45ch;
-  color: var(--color-text-muted);
-  margin-block-end: var(--space-6);
-}
-
-.contact-map-note {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: var(--space-6);
-  padding-block-start: var(--space-4);
-  font-size: var(--font-size-label);
-}
-
-.contact-map-note p {
-  color: var(--color-text-muted);
-  margin: 0;
-}
-
-.contact-text-button {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--color-blue);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }
 
 html[lang='ar'] .contact-page h1,
@@ -568,8 +518,7 @@ html[lang='ar'] .contact-field label {
     padding-block-start: var(--space-6);
   }
 
-  .contact-location-heading,
-  .contact-map-note {
+  .contact-location-heading {
     flex-direction: column;
     align-items: start;
   }
