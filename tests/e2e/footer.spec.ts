@@ -162,6 +162,56 @@ test('newsletter explains its availability only after an attempt without sending
   }
 })
 
+test('newsletter action keeps its label and arrow inside the button at 200% text in every locale', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 900 })
+
+  for (const locale of locales) {
+    await page.goto(pageHref('home', locale))
+    await page.evaluate(async () => {
+      document.documentElement.style.fontSize = '200%'
+      await document.fonts.ready
+    })
+    const subscribe = page.getByRole('contentinfo').getByRole('button', {
+      name: catalogs[locale].Footer.newsletterSubscribe,
+      exact: true,
+    })
+    await subscribe.scrollIntoViewIfNeeded()
+    await expect(subscribe).toBeVisible()
+    await expect
+      .poll(() => subscribe.evaluate((element) => element.scrollWidth - element.clientWidth), {
+        message: `${locale}: the subscription action must contain its enlarged content`,
+      })
+      .toBeLessThanOrEqual(1)
+
+    const children = subscribe.locator(':scope > span, :scope > svg')
+    await expect(children).toHaveCount(2)
+    for (const child of await children.all()) {
+      await expect(child).toBeVisible()
+    }
+    const layout = await subscribe.evaluate((element) => {
+      const button = element.getBoundingClientRect()
+      const outside = [...element.querySelectorAll(':scope > span, :scope > svg')]
+        .filter((child) => {
+          const bounds = child.getBoundingClientRect()
+          return (
+            bounds.left < button.left - 1 ||
+            bounds.right > button.right + 1 ||
+            bounds.top < button.top - 1 ||
+            bounds.bottom > button.bottom + 1
+          )
+        })
+        .map((child) => child.tagName.toLowerCase())
+      return { height: button.height, outside }
+    })
+    expect(layout.height).toBeGreaterThanOrEqual(44)
+    expect(layout.outside, `${locale}: the label and arrow must remain inside Subscribe`).toEqual(
+      [],
+    )
+  }
+})
+
 test('all footer content and open language options fit mobile, tablet and desktop in every locale', async ({
   page,
 }) => {

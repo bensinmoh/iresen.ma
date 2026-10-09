@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { footerPageIds, navigationGroups, pageHref, type PageId } from '@/lib/site'
@@ -31,20 +32,37 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
           </nav>
           {sections.map((section) => (
             <section key={section.id} id={section.id} className="empty-section">
-              <h2>{section.title}</h2>
+              {section.id === 'mission' ? (
+                <h2 className="section-heading">
+                  <Image
+                    src="/brand/apex-leaf.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width={1773}
+                    height={2870}
+                    unoptimized
+                  />
+                  <span>{section.title}</span>
+                </h2>
+              ) : (
+                <h2>{section.title}</h2>
+              )}
               <p>{states('empty')}</p>
             </section>
           ))}
         </>
       ) : pageId === 'sitemap' ? (
         <div className="sitemap-grid">
-          <ul>
-            {(['home', 'transfer', 'workWithUs', 'search', 'contact'] as const).map((id) => (
-              <li key={id}>
-                <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
-              </li>
-            ))}
-          </ul>
+          <section>
+            <h2>{navigation('label')}</h2>
+            <ul>
+              {(['home', 'transfer', 'workWithUs', 'search', 'contact'] as const).map((id) => (
+                <li key={id}>
+                  <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
           {navigationGroups.map((group) => (
             <section key={group.id}>
               <h2>{navigation(group.id)}</h2>

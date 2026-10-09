@@ -4,6 +4,22 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Site coherence review
+
+- Unified action corners at physical 10px while retaining 20px surfaces; shared
+  hero/Subscribe 18px/600 text and 12px icon gaps, with medium-weight hero intros.
+- Aligned button hover states, header reading order, compact-menu/sitemap targets
+  and error-page anatomy; made menu/Subscribe labels reflow at narrow enlarged text.
+- Applied the original Apex Leaf only to the homepage hero eyebrow and Institute
+  Mission heading, following the owner's selective-use clarification.
+- Preserved approved colors, fonts, routes, copy and original assets. Verified
+  132 page renders per revision before and after, 24 final shell cases and current Contact states;
+  local lint, types, build, 8 unit tests and all 42 browser tests passed.
+
+See [the findings and scope](docs/site-coherence-review.md),
+[shared rules](docs/design-system.md#shared-actions--2026-10-09) and
+[revision-specific validation](docs/validation.md#site-coherence-review--2026-10-09).
+
 ## 2026-10-08 — Header control proportions and contact label
 
 - Reduced only the header search/contact diagonal corners to 10px, preserving

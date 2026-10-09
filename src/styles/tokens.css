@@ -24,6 +24,7 @@
   --font-size-body: 1rem;
   --font-size-label: 0.875rem;
   --font-size-meta: 0.8125rem;
+  --font-size-action: 1.125rem;
   --font-size-figure: clamp(2.25rem, 4.167vw, 3.75rem);
   --font-size-figure-label: 1.125rem;
   --color-figure-label: rgb(255 255 255 / 70%);
@@ -38,6 +39,7 @@
   --space-12: 3rem;
   --space-16: 4rem;
   --radius-small: 0.25rem;
+  --radius-action: 0.625rem 0 0.625rem 0;
   --radius-signature: 1.25rem 0 1.25rem 0;
   --shadow-menu: 0 1rem 2rem rgb(18 52 90 / 10%);
   --duration-fast: 150ms;

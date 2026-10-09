@@ -25,6 +25,9 @@ is a wayfinding draft, subject to editorial and translation review before
 production publication. Existing empty sections, institute anchors, sitemap
 content and truthful unavailable states remain below the hero.
 
+The 2026-10-09 [coherence review](site-coherence-review.md) retains these page
+introductions and adopts shared action styling and selective Apex Leaf placement.
+
 Seventeen individual images from the owner-supplied native Figma source illustrate
 research, renewable energy, collaboration and knowledge sharing. They are
 decorative backgrounds with empty alternatives; neither the text nor the images
@@ -94,6 +97,26 @@ compact Menu control centers its contents. Selected languages use bold 700 alone
 in the header and footer dropdown, retaining hover and keyboard-focus feedback.
 See [shared design rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
 and [the validation log](validation.md) for current executed checks and renderings.
+
+## Action and marker coherence — 2026-10-09
+
+Discovery uses the shared physical 10px top-left/bottom-right action corners,
+18px/600 text and a 12px arrow gap, replacing its earlier 20px radius and 24px
+gap. The wide defaults remain a 56px minimum height and 24px inline padding;
+at `35rem` and below, the existing 44px minimum and 16px inline padding remain.
+Hero descriptions use weight 500 without enlarging the global body role. The shared button hover
+rule keeps the styled anchor consistent with native actions.
+
+Only the homepage hero eyebrow uses the original Apex Leaf as a decorative white
+CSS mask, 10 × 16px at the default root size. Other hero eyebrows retain their
+existing cyan marker. The original shape and Arabic placement are preserved
+without mirroring. The Institute's Mission H2 is the only section heading with
+the original decorative blue vector; no sections or content were added.
+
+Certification remains a 20px surface, separate from action geometry. Copy,
+figures, routes, images, font policy and the scroll cue are unchanged. Earlier
+verification below describes earlier revisions; this change's final checks and
+captures belong in [the validation log](validation.md#site-coherence-review--2026-10-09).
 
 ## Shared figure typography — 2026-10-08
 

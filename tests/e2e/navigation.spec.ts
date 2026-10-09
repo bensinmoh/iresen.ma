@@ -309,3 +309,82 @@ test('open navigation fits translated content across responsive widths and enlar
     }
   }
 })
+
+test('compact navigation remains contained and usable at 200% text in every locale', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 900 })
+
+  for (const locale of locales) {
+    await page.goto(pageHref('home', locale))
+    await page.evaluate(async () => {
+      document.documentElement.style.fontSize = '200%'
+      await document.fonts.ready
+    })
+    const menu = page.locator('.site-menu')
+    await menu.locator(':scope > summary').focus()
+    await page.keyboard.press('Enter')
+    await expect(menu).toHaveAttribute('open', '')
+    const panel = menu.locator('.menu-panel')
+
+    await expect
+      .poll(() => panel.evaluate((element) => element.scrollWidth - element.clientWidth), {
+        message: `${locale}: the compact menu must not require horizontal scrolling`,
+      })
+      .toBeLessThanOrEqual(1)
+
+    const summaries = menu.locator('.navigation-group > summary')
+    await expect(summaries).toHaveCount(navigationGroups.length)
+    for (const summary of await summaries.all()) {
+      await expect(summary).toBeVisible()
+      await expect
+        .poll(() => summary.evaluate((element) => element.scrollWidth - element.clientWidth), {
+          message: `${locale}: ${await summary.innerText()} must fit its disclosure control`,
+        })
+        .toBeLessThanOrEqual(1)
+    }
+
+    for (const link of await panel.locator('.menu-utilities a').all()) {
+      await expect(link).toBeVisible()
+      expect(
+        await link.evaluate((element) => element.getBoundingClientRect().height),
+      ).toBeGreaterThanOrEqual(44)
+    }
+
+    for (const group of await menu.locator('.navigation-group').all()) {
+      const summary = group.locator(':scope > summary')
+      await summary.focus()
+      await page.keyboard.press('Enter')
+      await expect(group).toHaveAttribute('open', '')
+      for (const link of await group.locator('ul a').all()) {
+        await expect(link).toBeVisible()
+        expect(
+          await link.evaluate((element) => element.getBoundingClientRect().height),
+        ).toBeGreaterThanOrEqual(44)
+      }
+      await page.keyboard.press('Enter')
+      await expect(group).not.toHaveAttribute('open', '')
+    }
+  }
+})
+
+test('wide header keyboard order follows navigation before language controls in every locale', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1920, height: 900 })
+
+  for (const locale of locales) {
+    await page.goto(pageHref('home', locale))
+    const header = page.getByRole('banner')
+    const triggers = header.locator('.desktop-navigation .navigation-trigger')
+    await expect(triggers).toHaveCount(7)
+    await header.getByRole('link', { name: 'IRESEN', exact: true }).focus()
+
+    for (const trigger of await triggers.all()) {
+      await page.keyboard.press('Tab')
+      await expect(trigger).toBeFocused()
+    }
+    await page.keyboard.press('Tab')
+    await expect(header.locator('.locale-selector a').first()).toBeFocused()
+  }
+})

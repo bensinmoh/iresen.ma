@@ -4,8 +4,8 @@ The later owner refinements align this header with the hero, following sections
 and footer through the shared 120rem container and
 `clamp(1.25rem, 3.125vw, 4rem)` gutters. Menu text/arrow groups center in their full
 control width, the compact Menu centers its contents, selected languages use
-700 weight alone, and public French/English text uses self-hosted Plus Jakarta
-Sans. See [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
+700 weight alone, and public text uses self-hosted Plus Jakarta Sans for Latin
+and Alexandria for Arabic. See [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe the original navigation revision; the subsequent
 hero overlay and content-based menu formats are documented below. The latest
@@ -27,6 +27,35 @@ menu below the desktop CTA's `70rem`
 threshold. See [shared control rules](design-system.md#header-search-and-contact-controls--2026-10-08)
 and [current validation](validation.md); earlier 20px control checks and screenshots
 retain their original scope.
+
+## Site coherence review — 2026-10-09
+
+Search and contact now share `--radius-action: 0.625rem 0 0.625rem 0` with the
+public action family, replacing the header-only radius token. The physical 10px
+top-left/bottom-right corners retain their orientation in Arabic. Search keeps
+its 48px square, reducing to 44px at `35rem` and below; contact keeps its 48px
+minimum height, 24px inline padding and inherited 16px/600 text. Contact inherits
+the shared `.button` geometry and hover rule, which keeps action text free of an
+added hover underline. On its current page it retains the selected 700 weight
+without inheriting the underline used by ordinary current navigation links.
+
+The header DOM follows logo, desktop navigation, then language/search/contact
+actions. CSS preserves the existing one-row layout from `110rem`, two-row desktop
+layout from `70rem` and compact disclosure below it. Canonical routes, contact
+copy, language selection and the content-based menu formats remain as documented
+here.
+
+Compact group labels now sit in shrinkable spans with `overflow-wrap: anywhere`,
+while their plus/minus disclosure marks cannot shrink. Destination and utility
+links use flex alignment with a `2.75rem` (44px) minimum target at the default
+root size. These changes support translated and enlarged text alongside the
+existing narrow-header wrapping, spacing and icon treatment.
+
+See [the site coherence review](site-coherence-review.md) for the shared decisions
+and [this revision's validation record](validation.md#site-coherence-review--2026-10-09)
+for executed checks and rendered coverage. Earlier geometry observations and
+verification retain their original scope; they do not establish results for this
+revision.
 
 ## Sources and scope — 2026-10-08
 
