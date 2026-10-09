@@ -1291,3 +1291,31 @@ Selected reviewed screenshots:
 Coverage uses local Chromium and emulated touch, without claiming a pixel-exact
 match, physical-device/Safari coverage or screen-reader certification. Remote CI
 and merge results are recorded by the corresponding pull request and commit history.
+
+## Mobile menu entrance — 2026-10-09
+
+The owner's follow-up specifies arrival from the right. At `40rem` and below,
+the existing full-screen menu now enters from the physical right edge over 320ms
+using only a CSS transform. The direction is the same in Arabic. Reduced motion
+opens directly, and the native disclosure remains functional without JavaScript.
+
+Lint, strict types, formatting, all 44 unit cases, the production build and all
+12 navigation browser cases passed. The existing containment assertion now waits
+for the header's animation to finish before measuring settled control bounds.
+Its coverage retains FR/EN/AR navigation, focus, narrow/wide layouts and 200% text.
+
+Manual production Chromium sampling at 390px verified FR/AR normal motion from
+header x=390px to x=0, repeat opening restarting the entrance, and reduced-motion
+opening at x=0 throughout. Native no-JavaScript opening and repeat opening also
+complete from the physical right in both locales. Document width stays at 390px
+and scrollX stays at zero throughout the sampled entrance. Immediate Tab remains
+inside the sheet; Escape returns focus to its summary and restores background
+interaction/scrolling. English settled controls remain within the viewport.
+
+Two reviewed captures pause the entrance at 80ms:
+
+- [French intermediate entrance](screenshots/mobile-menu-slide-fr-390-intermediate.png)
+- [Arabic intermediate entrance](screenshots/mobile-menu-slide-ar-390-intermediate.png)
+
+Coverage uses local Chromium; physical-device, Safari and screen-reader validation
+is not asserted. CI and merge results remain recorded by the corresponding pull request.

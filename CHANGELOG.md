@@ -4,6 +4,20 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Mobile menu entrance
+
+- Added the owner's requested entrance from the physical right edge, including
+  Arabic, with a 320ms CSS transform on the mobile full-screen sheet.
+- Preserved native no-JavaScript opening and repeat opening; reduced motion
+  reveals the menu directly. Keyboard focus, Escape and background restoration
+  remain usable during the entrance.
+- Passed lint, types, formatting, 44 unit cases, production build and all 12
+  navigation browser cases. Reviewed normal/reduced-motion FR/AR, native opening,
+  repeat opening and intermediate screenshots.
+
+See [navigation rules](docs/navigation.md#mobile-reference-adaptation--2026-10-09)
+and [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
+
 ## 2026-10-09 — Mobile reference adaptation
 
 - Adapted the narrow homepage, header and footer to the owner's four mobile

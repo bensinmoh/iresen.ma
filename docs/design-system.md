@@ -75,6 +75,11 @@ Native disclosure/GET search behavior remains; the existing search backend and
 live suggestions are preserved, with mobile suggestions static and full width.
 The enhanced open menu makes page content inert, cycles visible keyboard focus
 and supports Escape dismissal. Arabic keeps logical flow and directional arrows.
+The owner's later motion clarification adds a 320ms transform-only entrance
+from the physical right edge in every locale, with
+`cubic-bezier(0.2, 0.7, 0.2, 1)`. This is local to the mobile sheet and works without
+JavaScript; reduced motion opens directly. See
+[motion verification](validation.md#mobile-menu-entrance--2026-10-09).
 See [navigation](navigation.md#mobile-reference-adaptation--2026-10-09),
 [hero](heroes.md#mobile-reference-adaptation--2026-10-09),
 [footer](footer.md#mobile-reference-adaptation--2026-10-09) and

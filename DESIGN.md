@@ -49,6 +49,11 @@ image scene in their native scroll row. See [component rules](docs/design-system
 and [revision-specific validation](docs/validation.md#mobile-reference-adaptation--2026-10-09).
 This is a responsive interpretation, without a pixel-exact fidelity claim.
 
+The owner's subsequent clarification adds a 320ms entrance from the physical
+right edge to the mobile menu. A transform-only CSS reveal preserves its geometry,
+including Arabic and native no-JavaScript access. Reduced motion opens directly.
+See [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
+
 ## Identity and surfaces
 
 - The owner's selected primary blue is **#296BB4**; navy is **#12345A**. Science
