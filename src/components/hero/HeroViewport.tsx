@@ -17,10 +17,15 @@ export function HeroViewport({ children, className }: { children: ReactNode; cla
       // Pinch zoom must magnify the content without shrinking its layout box.
       const height = viewport && viewport.scale === 1 ? viewport.height : window.innerHeight
       hero.style.setProperty('--hero-viewport-height', `${Math.round(height)}px`)
-      hero.style.setProperty(
-        '--hero-header-height',
-        `${header?.getBoundingClientRect().height ?? 0}px`,
-      )
+      // A full-screen navigation sheet must not resize the page underneath it.
+      const menuOverlay =
+        window.matchMedia('(max-width: 40rem)').matches && header?.querySelector('.site-menu[open]')
+      if (!menuOverlay) {
+        hero.style.setProperty(
+          '--hero-header-height',
+          `${header?.getBoundingClientRect().height ?? 0}px`,
+        )
+      }
     }
 
     function scheduleMeasure() {

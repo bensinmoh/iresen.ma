@@ -4,9 +4,9 @@ The footer adapts the supplied Footer.png composition: a full-width navy surface
 reversed supplied identity, four institutional navigation groups, a contact and
 social row, a separated newsletter CTA, utilities, copyright and language
 switching. It uses the existing brand tokens, the shared page container,
-fluid gutters and physical top-left/bottom-right button corners. Two
-navigation columns remain available on mobile; contact details and newsletter
-controls stack. Arabic uses logical alignment, isolated Latin identifiers,
+fluid gutters and physical top-left/bottom-right button corners. At `40rem` and
+below, navigation uses one column, contact details stack, social links span a
+row, and newsletter email/action surfaces are separate. Arabic uses logical alignment, isolated Latin identifiers,
 mirrored directional arrows and no added
 letter spacing. The component stays server rendered except for the existing
 language selector's progressive keyboard/outside-dismiss enhancements.
@@ -18,6 +18,27 @@ alone; public French/English controls use self-hosted Plus Jakarta Sans. See
 [current shared rules](design-system.md#hero-layout-and-typography-refinements--2026-10-08)
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe their earlier revisions.
+
+## Mobile reference adaptation — 2026-10-09
+
+The [owner's mobile footer screenshots](../DESIGN.md#mobile-reference-adaptation--2026-10-09)
+guide the `40rem`-and-below composition in `SiteFooter` and
+`src/styles/globals.css`: reversed identity, one vertical navigation column,
+stacked address/phone/email blocks, a distributed social row, then a divided
+newsletter block. The email surface and Subscribe action each occupy a separate
+full-width row with a 48px minimum at default text size. Consent and the privacy
+link remain available, followed by utility/legal links, language access and
+copyright. The footer grows with content rather than matching a device frame.
+
+The narrow newsletter heading uses 28px/700; navigation and contact use the
+existing 16px body role with stronger link/label weight. These are footer-specific
+overrides of the earlier mobile treatment. Approved navy/blue, physical corner
+roles, original SVGs and Jakarta/Alexandria remain. Existing canonical routes,
+owner-selected identity copy, contact details and approved social destinations
+take precedence over the screenshot's examples. Subscribe still reveals the
+truthful unavailable notice without submitting or storing a subscription.
+See [this revision's validation](validation.md#mobile-reference-adaptation--2026-10-09)
+for actual coverage; earlier captures remain historical.
 
 ## Action coherence — 2026-10-09
 

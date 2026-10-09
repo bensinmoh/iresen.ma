@@ -122,16 +122,18 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           </div>
           <div className="footer-newsletter-signup">
             <div className="footer-newsletter-field">
-              <FooterIcon name="email" />
-              <label className="sr-only" htmlFor="footer-newsletter-email">
-                {footer('newsletterEmail')}
-              </label>
-              <input
-                id="footer-newsletter-email"
-                type="email"
-                autoComplete="email"
-                placeholder={footer('newsletterEmail')}
-              />
+              <div className="footer-newsletter-input">
+                <FooterIcon name="email" />
+                <label className="sr-only" htmlFor="footer-newsletter-email">
+                  {footer('newsletterEmail')}
+                </label>
+                <input
+                  id="footer-newsletter-email"
+                  type="email"
+                  autoComplete="email"
+                  placeholder={footer('newsletterEmail')}
+                />
+              </div>
               <details className="footer-newsletter-attempt">
                 <summary
                   className="footer-newsletter-button"

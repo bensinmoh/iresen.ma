@@ -4,6 +4,23 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Mobile reference adaptation
+
+- Adapted the narrow homepage, header and footer to the owner's four mobile
+  screenshots while preserving approved content, routes, SVGs and brand colors.
+- Added a single logo/hamburger row and white full-screen grouped navigation,
+  with search/contact/legal/language access and keyboard focus containment.
+- Kept homepage copy low in a viewport-minimum image scene, with two full-width
+  actions and the five facts beneath it. Opening navigation preserves hero size.
+- Stacked footer navigation/contacts and separated the newsletter email/action.
+- Passed lint, types, formatting, 44 unit and 12 integration cases, build and
+  96 browser cases; after the final hero-measurement correction, rebuilt and
+  passed all 27 navigation/hero cases. Reviewed mobile, RTL, enlarged-text and
+  desktop screenshots.
+
+See [shared rules](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
+and [verification](docs/validation.md#mobile-reference-adaptation--2026-10-09).
+
 ## 2026-10-09 — Public multilingual website search
 
 - Replaced the unavailable search page with ranked PostgreSQL full-text/trigram
