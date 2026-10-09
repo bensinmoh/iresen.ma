@@ -791,10 +791,25 @@ retain the existing institute/workWithUs and research/opportunities destinations
 compact expertise/resources panels avoid additional feature/figure content.
 There is no universal minimum height or automatic bottom-pushed figure.
 
-White active tabs, current-route indicators, quiet hover surfaces, visible focus,
+White active tabs, current-route indicators, visible focus,
 logical RTL dividers and arrow mirroring remain shared elements. Native disclosures
 retain established pointer, keyboard, touch and no-JavaScript behavior. Panel
 height follows content with bounded viewport scrolling. The existing routes and
 localized drafts remain authoritative; new screenshot sample figures, campaigns
 and routes are design reference data. See [navigation formats](navigation.md#hovered-menu-reference-adaptation--2026-10-08)
 and [current validation](validation.md); earlier checks retain their original scope.
+
+## Desktop submenu destination states — 2026-10-09
+
+Only desktop `.mega-menu-links` destinations receive the owner's clarified
+hover and `:focus-visible` treatment: a full, sharp rectangular
+`--color-navy` (`#12345A`) block, `--color-white` title,
+`--color-footer-muted` (`#B9C9DA`) description and
+`--color-science-blue` (`#4698CA`) arrow. It supersedes the earlier quiet
+destination hover surfaces. The existing focus outline, resting current-route
+state, padding, typography, panel layout and RTL arrow transforms remain.
+
+The screenshot supplies interaction styling; its sample copy and routes are
+reference data. Current catalogs and the 22-page route map remain authoritative.
+See [navigation guidance](navigation.md#desktop-submenu-destination-states--2026-10-09)
+and [revision-specific validation](validation.md#desktop-submenu-destination-states--2026-10-09).

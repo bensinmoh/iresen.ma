@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Desktop submenu destination states
+
+- Matched the owner's submenu hover reference with a full sharp navy rectangle,
+  white title, pale description and light blue diagonal arrow.
+- Applied the same state to keyboard-visible focus while retaining its outline,
+  using existing palette tokens and preserving panel geometry and localized content.
+- Passed lint, strict types, 8 unit tests, production build and all 11 navigation
+  browser tests; inspected desktop FR/EN/AR states and compact containment.
+
+See [shared state rules](docs/design-system.md#desktop-submenu-destination-states--2026-10-09)
+and [measured coverage](docs/validation.md#desktop-submenu-destination-states--2026-10-09).
+
 ## 2026-10-09 — Generated hero placeholders
 
 - Replaced all 17 Figma-derived hero backgrounds across 22 pages with the owner's
