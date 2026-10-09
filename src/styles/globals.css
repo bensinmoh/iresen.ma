@@ -69,6 +69,26 @@ button {
   outline-offset: 4px;
 }
 
+:is(
+  input:not(
+    [type='checkbox'],
+    [type='radio'],
+    [type='range'],
+    [type='color'],
+    [type='file'],
+    [type='hidden'],
+    [type='button'],
+    [type='submit'],
+    [type='reset'],
+    [type='image']
+  ),
+  select,
+  textarea
+):focus-visible {
+  outline-width: var(--focus-field-width);
+  outline-offset: -1px;
+}
+
 summary {
   cursor: pointer;
   list-style: none;
@@ -353,8 +373,18 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
 }
 
 .header-search-form input:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: -4px;
+  outline: none;
+}
+
+.header-search-form:has(input:focus-visible) {
+  outline: var(--focus-field-width) solid var(--color-focus);
+  outline-offset: -1px;
+}
+
+@media (forced-colors: active) {
+  .header-search-form:has(input:focus-visible) {
+    outline-color: Highlight;
+  }
 }
 
 @keyframes header-search-reveal {
@@ -2046,17 +2076,6 @@ a.footer-contact-value {
   color: var(--color-footer-muted);
   font-size: var(--font-size-meta);
   line-height: 1.6;
-}
-
-.footer-newsletter-privacy {
-  margin-block: var(--space-3) 0;
-  color: var(--color-footer-muted);
-  font-size: var(--font-size-meta);
-  line-height: 1.6;
-}
-
-.footer-newsletter-privacy a {
-  text-decoration: underline;
 }
 
 .footer-arrow {

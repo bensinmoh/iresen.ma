@@ -19,6 +19,22 @@ alone; public French/English controls use self-hosted Plus Jakarta Sans. See
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe their earlier revisions.
 
+## Address and privacy links — 2026-10-09
+
+The owner's correction makes the displayed address a native Google Maps link,
+using the existing underlined contact-value styling shared by phone and email.
+`footerContact.mapsHref` reuses the owner-supplied Google Maps shortlink already
+used for directions on the contact page, in all three locales; the visible
+address remains localized. The shortlink has not been independently resolved;
+no location coordinates or verified Google place identifier are assumed. See
+[contact location sources](contact.md).
+
+The duplicate privacy link beneath newsletter consent is removed. Privacy
+remains in the localized utility links beside legal notices and cookie
+preferences. This supersedes earlier references below to a separate newsletter
+privacy link. Newsletter input, consent and availability feedback retain their
+existing behavior. See [current validation](validation.md#footer-address-and-privacy-links--2026-10-09).
+
 ## Mobile reference adaptation — 2026-10-09
 
 The [owner's mobile footer screenshots](../DESIGN.md#mobile-reference-adaptation--2026-10-09)
@@ -26,8 +42,8 @@ guide the `40rem`-and-below composition in `SiteFooter` and
 `src/styles/globals.css`: reversed identity, one vertical navigation column,
 stacked address/phone/email blocks, a distributed social row, then a divided
 newsletter block. The email surface and Subscribe action each occupy a separate
-full-width row with a 48px minimum at default text size. Consent and the privacy
-link remain available, followed by utility/legal links, language access and
+full-width row with a 48px minimum at default text size. Consent remains
+available, followed by utility/legal links including privacy, language access and
 copyright. The footer grows with content rather than matching a device frame.
 
 The narrow newsletter heading uses 28px/700; navigation and contact use the
@@ -92,7 +108,8 @@ The newsletter's email and consent are editable local controls. Subscribe opens
 a native `details`/`summary` disclosure containing the localized unavailable
 `role="status"` message, initially hidden. It supports native keyboard, pointer,
 touch and no-JavaScript activation; activating it again closes the notice.
-The privacy link stays visible below consent. No form action, named submission
+The separate privacy link below consent was removed by the owner's 2026-10-09
+correction above. No form action, named submission
 fields, API, application persistence or subscription success is introduced.
 This remains server-rendered without a new client component or dependency.
 Current checks belong in [the validation log](validation.md); earlier screenshots

@@ -1145,6 +1145,42 @@ These quality-90 CSS-resolution crops were visually inspected:
 The increment is saved locally with push still held for the earlier pending
 documentary-photo inputs.
 
+## Repeatable header search reveal — 2026-10-09
+
+The reported second-opening jump was reproduced in a native production-build
+search disclosure with application scripts blocked: its three openings yielded
+`running`, `finished`, `finished` animation states. Inspecting the hidden form's
+styles can flush the retained animation and mask this browser regression; the
+regression case leaves the closed subtree untouched between rendered frames.
+
+The search-scoped `::details-content` override and explicit hiding of closed
+non-summary children reset the CSS reveal. The same regression now yields
+`running` on all three openings. FR/EN/AR hover cases also confirm three fresh
+animation starts/ends, an intermediate field width, an empty query and unchanged
+outside keyboard focus.
+
+Passed locally against the corrected production build:
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+  `pnpm test:integration` (21 cases), `pnpm build` and formatting/whitespace checks.
+- `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e
+tests/e2e/header-search.spec.ts tests/e2e/navigation.spec.ts --workers=2`:
+  26 cases, including repeated reveals, Arabic RTL, keyboard/touch submission,
+  native no-JavaScript submission, reduced motion, focus restoration,
+  responsive containment and open-header axe checks.
+
+These local checks do not establish cross-browser or screen-reader conformance.
+Current PR CI and merge results remain recorded by GitHub.
+
+Rendered Chromium review covered institute in French at 1920px and Arabic at
+1440px, with three empty hover cycles, open/closed fields and live suggestions.
+The outside identity retains focus; a closed input cannot take focus and Tab
+reaches Contact. Escape removes suggestions. Arabic at 390px retains a contained
+full-width field and input focus inside the mobile menu; Escape restores the
+search trigger. French reduced motion at 1440px reveals the final measured width
+immediately (0.01ms duration). The captured states were inspected without a
+new layout or focus defect; the normal 220ms reveal remains on wider headers.
+
 ## Expandable header search — 2026-10-09
 
 The header magnifier now reveals a labelled search input with a localized
@@ -1473,6 +1509,49 @@ Reviewed screenshots retained for this correction:
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
 
+## Footer address and privacy links — 2026-10-09
+
+Verified on the current synchronized contact/tablet baseline: formatting, lint,
+strict types, 97 unit tests, production build and all 9 focused footer browser
+tests passed. The cold webpack build retained the previously documented
+next-intl cache-dependency warning. Build/browser processes ran outside the
+restricted execution sandbox to permit Next subprocesses and local services;
+the sandboxed build had returned empty TypeScript `--showConfig` output.
+
+Production Chromium checks covered FR/EN/AR at 390, 768 and 1440px: the displayed
+localized address links to the owner-supplied Maps shortlink, uses the existing
+cyan underline, and has a visible keyboard focus indicator. Every locale has
+exactly one footer privacy link, in utilities, with none beneath newsletter
+consent. Layouts fit the viewport. French 1440px and Arabic 390px footer captures
+were visually inspected:
+
+- [French desktop, 1440px](screenshots/footer-links-fr-1440.png)
+- [Arabic mobile, 390px](screenshots/footer-links-ar-390.png)
+
+Additional FR/EN/AR checks at 320px passed with 200% root text and without
+JavaScript. Native address clicks navigated to the exact supplied Maps shortlink,
+intercepted locally during testing. This verifies link activation and destination,
+not Google's shortlink resolution or map pin. The focused suite also checks
+newsletter disclosure, consent, language/utility navigation, Arabic order and
+mobile/tablet/desktop containment. No database schema or server-side behavior
+changed in the footer correction. Other browsers and manual screen-reader
+verification remain outside this pass.
+
+The synchronized base includes the contact venue photograph and its inherited
+`contact-venue` search reference. Both supplied image bytes and the rendered
+abstract contact background are preserved. The catalog covers both images with
+explicit FR/EN/AR scene descriptions and original URLs. Source provenance is
+recorded in [the asset inventory](asset-inventory.md); current PR CI and merge
+results remain recorded in GitHub.
+
+After synchronization, lint, strict types, 97 unit tests and the production
+build passed again. The local search index rebuild and all 21 CMS/search
+integration tests passed. API checks found the photo under its exact localized
+title in FR/EN/AR, with the stable original JPEG destination, which returned HTTP
+200 and `image/jpeg` from the local production server. All 3 existing contact
+search browser cases passed, preserving section discovery/navigation and the
+abstract background's search reference in each locale.
+
 ## Contact form eyebrow — 2026-10-09
 
 The owner's screenshot correction centers the form's leaf/label group above its
@@ -1576,38 +1655,47 @@ pin, physical-device/Safari behavior and production privacy assessment retain
 [their documented scope](contact.md#location-and-third-party-behavior). Remote CI
 and merge results are recorded by the corresponding pull request and commit history.
 
-## Repeatable header search reveal — 2026-10-09
+## Refined field focus — 2026-10-09
 
-The reported second-opening jump was reproduced in a native production-build
-search disclosure with application scripts blocked: its three openings yielded
-`running`, `finished`, `finished` animation states. Inspecting the hidden form's
-styles can flush the retained animation and mask this browser regression; the
-regression case leaves the closed subtree untouched between rendered frames.
+The owner's Organisation and Arabic search screenshots identified the thick
+blue focus frame. Editable inputs, selects and textareas now use a 2px real
+outline at their edge (`outline-offset: -1px`). Header search paints one outline
+on its field surface, keeping the white field's blue indicator independent of
+inverse-header focus colors. Footer email retains cyan. Buttons, links and
+checkboxes retain their existing focus indicators.
 
-The search-scoped `::details-content` override and explicit hiding of closed
-non-summary children reset the CSS reveal. The same regression now yields
-`running` on all three openings. FR/EN/AR hover cases also confirm three fresh
-animation starts/ends, an intermediate field width, an empty query and unchanged
-outside keyboard focus.
+Local checks passed: `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+`pnpm build` and `pnpm format:check`. The build retained its existing next-intl
+dynamic-import cache warnings and completed successfully. The existing contact,
+header-search and footer Playwright suites passed all 35 cases against the local
+production build, including native validation/email drafting, search submission,
+Escape restoration, newsletter availability and no-JavaScript access.
 
-Passed locally against the corrected production build:
+A separate rendered Chromium inspection covered FR/EN/AR contact and homepage
+header search at 1440, 768 and 390px. It checked pointer and keyboard focus,
+organisation/email/select/textarea, newsletter email, result-page query and sort,
+blue search on white inside inverse headers, mobile menus and Arabic RTL.
+Contact-field size and position did not change on focus; search stayed inside
+the viewport, and Escape restored the magnifier's separate 3px indicator.
+Newsletter checkboxes also retained their 3px focus indicator.
 
-- `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
-  `pnpm test:integration` (21 cases), `pnpm build` and formatting/whitespace checks.
-- `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e
-tests/e2e/header-search.spec.ts tests/e2e/navigation.spec.ts --workers=2`:
-  26 cases, including repeated reveals, Arabic RTL, keyboard/touch submission,
-  native no-JavaScript submission, reduced motion, focus restoration,
-  responsive containment and open-header axe checks.
+At 390px with 200% root text, French/Arabic fields reflowed without horizontal
+page overflow, retained their 2px outline, and focused contact/newsletter axe
+scans returned no violations. Emulated forced colors retained a visible real
+outline on the contact field and a system `Highlight` search outline. CSS state
+measurements were made after animation frames settled. Blue contrasts 5.45:1
+against white and 4.78:1 against the pale form surface; cyan/navy is 6.45:1.
+These scoped checks do not establish complete WCAG conformance or coverage of
+other browser engines.
 
-These local checks do not establish cross-browser or screen-reader conformance.
-Current PR CI and merge results remain recorded by GitHub.
+Reviewed crops from this production build:
 
-Rendered Chromium review covered institute in French at 1920px and Arabic at
-1440px, with three empty hover cycles, open/closed fields and live suggestions.
-The outside identity retains focus; a closed input cannot take focus and Tab
-reaches Contact. Escape removes suggestions. Arabic at 390px retains a contained
-full-width field and input focus inside the mobile menu; Escape restores the
-search trigger. French reduced motion at 1440px reveals the final measured width
-immediately (0.01ms duration). The captured states were inspected without a
-new layout or focus defect; the normal 220ms reveal remains on wider headers.
+- [French Organisation field at 1440px](screenshots/input-focus-contact-fr-1440.png)
+- [Arabic header search at 1440px](screenshots/input-focus-search-ar-1440.png)
+- [Arabic mobile-menu search at 390px](screenshots/input-focus-search-ar-390.png)
+
+The latest Contact changes were integrated before completion, preserving the
+centered Apex Leaf eyebrow, directly displayed map and canonical `contact-venue`
+search reference from main. The shared field rule and research references are
+recorded in
+[the design specification](design-system.md#refined-field-focus--2026-10-09).
