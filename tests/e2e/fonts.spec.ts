@@ -50,6 +50,9 @@ for (const locale of locales) {
     )
     await expectRenderedFonts('.hero-figures dd bdi', latinFamily, [latinFamily])
     await expectRenderedFonts(
+      '.home-section-navigation a, #develop-test-transfer h2, #develop-test-transfer h3',
+    )
+    await expectRenderedFonts(
       '.site-header .locale-selector a[lang="fr"], .site-header .locale-selector a[lang="en"]',
       latinFamily,
       [latinFamily],

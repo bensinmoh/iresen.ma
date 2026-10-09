@@ -96,8 +96,14 @@ for (const locale of locales) {
       expect(Math.abs(bounds!.height - 900), id).toBeLessThanOrEqual(2)
       await hero.locator('.hero-primary').click()
       await expect(page).toHaveURL(/#page-sections$/)
-      const section = await page.locator('#page-sections').boundingBox()
-      expect(Math.abs(section!.y)).toBeLessThanOrEqual(25)
+      await expect
+        .poll(async () => {
+          const section = (await page.locator('#page-sections').boundingBox())!
+          const nav = page.locator('.home-section-navigation')
+          const clearance = (await nav.isVisible()) ? (await nav.boundingBox())!.height : 0
+          return Math.abs(section.y - clearance)
+        })
+        .toBeLessThanOrEqual(25)
     }
   })
 
@@ -246,8 +252,14 @@ test('the centered scroll cue supports motion preferences and keyboard navigatio
       await expect(cue).toHaveCSS('outline-style', 'solid')
       await page.keyboard.press('Enter')
       await expect(page).toHaveURL(/#page-sections$/)
-      const section = (await page.locator('#page-sections').boundingBox())!
-      expect(Math.abs(section.y)).toBeLessThanOrEqual(25)
+      await expect
+        .poll(async () => {
+          const section = (await page.locator('#page-sections').boundingBox())!
+          const nav = page.locator('.home-section-navigation')
+          const clearance = (await nav.isVisible()) ? (await nav.boundingBox())!.height : 0
+          return Math.abs(section.y - clearance)
+        })
+        .toBeLessThanOrEqual(25)
     }
   }
 })

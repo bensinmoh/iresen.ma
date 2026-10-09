@@ -102,8 +102,11 @@ marketing page.
   owner's general preference, with keyboard/touch scrolling and visible focus
   retained. Other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
   preserves essential routes, forms, feedback and facts while limiting competing
-  roles. Future mission cards await approved content and follow the mobile
-  guidance. The other content pages retain section placeholders; contact has
+  roles. The requested three homepage mission cards now use drafted wayfinding
+  copy and generated energy imagery, with all three stacked on smaller screens.
+  A homepage-only section submenu follows the figures and sticks from 64rem;
+  the real figure band retains the `figures` anchor. See [the section guide](docs/home-sections.md).
+  The other content pages retain section placeholders; contact has
   its own populated draft composition and search uses its functional results view.
 - Search now covers public pages/sections, published CMS pages/articles and
   registered or uploaded public documents/media in the active locale. Ranked
@@ -203,8 +206,10 @@ event is available.
 
 Only analysis and Markdown updates are authorized now. The restructuring waits
 until the owner starts development of the section after missions, “Nos
-réalisations emblématiques”. The current seven scaffolds, routes and CMS remain
-the implementation baseline; mission cards are not delivered in this snapshot.
+réalisations emblématiques”. The separately delivered [mission cards and section
+navigation](docs/home-sections.md), five following placeholders, routes and CMS
+remain the implementation baseline. The `figures` anchor is already on the hero
+band, with its duplicate body block omitted.
 Named achievements/platforms, domain taxonomy, media and translations remain
 inputs to review for the corresponding future module. Source labels such as
 “Agence de Moyens” and “Collaborer avec nous” do not rename current pages.

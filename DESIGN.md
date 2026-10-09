@@ -74,6 +74,13 @@ See [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
 
 ## Identity and surfaces
 
+The homepage now pairs a quiet, white section-navigation bar with a centered
+mission introduction and three equal image/body cards. Blue underlines identify
+the section in view; navy text stays readable on pale bodies. The existing
+Développer · Éprouver · Valoriser framework supplies content direction, while
+generated scenes show a varied energy mix. This adapts the live homepage Figma
+reference for multilingual reflow and mobile stacking. See [the section guide](docs/home-sections.md).
+
 - The owner's selected primary blue is **#296BB4**; navy is **#12345A**. Science
   blue **#4698CA**, transition green **#50A684**, cyan **#77C5D5** and lime
   **#A9C47F** are selective accents. White and **#F4F7F8** support reading.
@@ -464,8 +471,9 @@ retaining native touch/keyboard scrolling and visible focus. The shared
 vertical scrolling retains its controls.
 
 Use [the reusable hierarchy](docs/mobile-information-hierarchy.md) for future
-sections. Future mission cards await approved content and follow this mobile
-guidance. Earlier captures describe earlier presentations;
+sections. The requested three mission cards now follow this mobile guidance,
+using readable navy copy beneath generated technology imagery and natural stacking.
+See [the homepage composition](docs/home-sections.md). Earlier captures describe earlier presentations;
 current checks belong in [validation](docs/validation.md).
 
 ## Introducing heroes — 2026-10-08

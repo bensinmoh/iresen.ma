@@ -62,14 +62,15 @@ to the figure collection; ordinary vertical page scrolling continues.
 Keyboard/touch and no-JavaScript access use native scrolling, without
 automatic advancement, carousel buttons or an additional client runtime.
 
-## Future mission cards
+## Homepage mission cards — 2026-10-09
 
-Three mission cards remain a future composition pending approved content. The
-default follows the owner's literal wording: vertical stacking in normal page
-scroll, with no nested vertical scroll area. The screenshot's horizontal pattern
-is an alternative pending an explicit choice, rather than a required layout.
-This is a future assumption, with no card copy, layout or carousel implemented;
-the [existing section placeholders](page-sections.md) remain.
+The requested three mission cards now explain Développer · Éprouver · Valoriser
+with short wayfinding drafts and generated energy imagery. They stack in ordinary
+page flow below 64rem, with image/body rows on tablet and complete vertical cards
+below 48rem. All three remain visible without a carousel or nested vertical scroll.
+The homepage section submenu is hidden below 64rem. See
+[composition, behavior and media](home-sections.md); further page sections retain
+their editorial scaffolds.
 
 Inspect reading order, all five facts, reachable links, keyboard/touch scrolling,
 no-JavaScript behavior, Arabic RTL and enlarged text when applying the rule.

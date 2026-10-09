@@ -19,11 +19,16 @@ applying this restructuring. This documentation task does not commission mission
 cards, section reordering, copy/translation changes, assets, CMS fields, search
 index changes or Figma edits.
 
-The current checkout still renders seven editorial placeholders below the hero:
-`develop-test-transfer`, `figures`, `research-priorities`, `results`,
-`platforms-expertise`, `collaboration`, `news-events`. The three photographic
-mission cards are not implemented in this snapshot. The six-section target below
-is future work, not a description of delivered website behavior.
+While this analysis was in progress, the separate homepage mission increment
+was merged into `main`. The current body renders the three mission cards at
+`develop-test-transfer`, followed by five placeholders: `research-priorities`,
+`results`, `platforms-expertise`, `collaboration`, `news-events`. The `figures`
+definition remains in the shared map, but its anchor now belongs to the real hero
+figure band and its duplicate body scaffold is omitted. The desktop section
+navigation follows the current body order; see [the delivered mission/navigation
+guide](home-sections.md). Preserve that implementation in this documentation task.
+The target below moves achievements before research and defines the later modules;
+it does not claim that the restructuring has already been applied.
 
 ## Target sequence between the existing hero and footer
 
@@ -63,7 +68,8 @@ vertical photographic cards side by side on wide screens. Supplied French text:
 Each card has a photograph, title, short description and link. Preserve this
 French wording as supplied working copy; this task does not publish it or approve
 new English/Arabic translations. Mission is recorded to make the full sequence
-understandable; its development is not requested now.
+understandable. Keep the separately delivered mission cards, copy and destinations
+unchanged; replacing their wording or composition is not requested now.
 
 ## 02. Nos réalisations emblématiques
 
@@ -174,19 +180,20 @@ Use [the canonical page IDs and localized helpers](../src/lib/site.ts) and
 pages. Preserve existing section IDs where their role survives; labels can
 change without breaking an anchor.
 
-| Target module               | Existing homepage anchor to retain later | Existing destination or unresolved link decision                                                                                                                                                                                                        |
-| --------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mission                     | `develop-test-transfer`                  | `transfer` is an exact page destination. Recherche & Innovation and Expertise & Expérimentation are navigation groups: choose suitable existing pages among `priorities`/`programmes`/`projects` and `platforms`/`network` when implementing the cards. |
-| Achievements                | `results`                                | Use approved case records and working detail destinations; `projects` remains the existing project listing.                                                                                                                                             |
-| Research domains            | `research-priorities`                    | `priorities`, including its existing `domains-directions` and `technology-roadmaps` anchors.                                                                                                                                                            |
-| Capabilities                | `platforms-expertise`                    | `platforms` and `network`; platform-specific detail records are future work.                                                                                                                                                                            |
-| Collaboration and Alliances | `collaboration`                          | `workWithUs`; its current `choose-pathway` scaffold does not yet provide four individual pathway anchors.                                                                                                                                               |
-| News and events             | `news-events`                            | `news` and `events`; published news details exist, event details remain future work.                                                                                                                                                                    |
+| Target module               | Existing homepage anchor to retain later | Existing destination or unresolved link decision                                                                                                                                                                                                                          |
+| --------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mission                     | `develop-test-transfer`                  | Current cards link to `programmes`, `platforms` and `transfer`, with `mission-develop`, `mission-test` and `mission-transfer` child anchors. Preserve these links; source group labels do not create Recherche & Innovation or Expertise & Expérimentation landing pages. |
+| Achievements                | `results`                                | Use approved case records and working detail destinations; `projects` remains the existing project listing.                                                                                                                                                               |
+| Research domains            | `research-priorities`                    | `priorities`, including its existing `domains-directions` and `technology-roadmaps` anchors.                                                                                                                                                                              |
+| Capabilities                | `platforms-expertise`                    | `platforms` and `network`; platform-specific detail records are future work.                                                                                                                                                                                              |
+| Collaboration and Alliances | `collaboration`                          | `workWithUs`; its current `choose-pathway` scaffold does not yet provide four individual pathway anchors.                                                                                                                                                                 |
+| News and events             | `news-events`                            | `news` and `events`; published news details exist, event details remain future work.                                                                                                                                                                                      |
 
-The standalone `figures` scaffold is planned for removal. Before retiring that
-anchor, review its inbound links, language-switch handling and public search
-reference; preserve a useful destination to the hero figures where needed. Do
-not change its current registration during this documentation task.
+The standalone figures body scaffold has already been omitted by the separate
+mission increment. Retain the real hero's `figures` anchor, language-switch
+handling and public search reference; its stable destination needs no retirement
+for this target. When reordering the later modules, update the desktop section
+navigation to the same order without changing those existing destinations.
 
 ## Implementation dependencies for the later request
 

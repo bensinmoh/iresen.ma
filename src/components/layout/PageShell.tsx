@@ -10,18 +10,21 @@ export async function PageShell({
   children,
   home = false,
   pageId,
+  sectionNavigation,
 }: {
   title: string
   locale: Locale
   children: ReactNode
   home?: boolean
   pageId?: PageId
+  sectionNavigation?: ReactNode
 }) {
   const t = await getTranslations({ locale, namespace: 'Pages' })
 
   return (
     <>
       {pageId && <PageHero pageId={pageId} locale={locale} />}
+      {sectionNavigation}
       <div className="container page-shell" id={pageId ? 'page-sections' : undefined}>
         {!home && (
           <div className="breadcrumb">

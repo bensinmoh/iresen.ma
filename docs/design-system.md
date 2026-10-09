@@ -303,11 +303,20 @@ intermediate badge placement and earlier homepage cue/reserve rules.
 
 Use [the role/count ceiling and three priority tiers](mobile-information-hierarchy.md)
 for future mobile sections. Essential content remains accessible; only optional
-decoration or redundant proof may be omitted. Future mission cards await
-approved content and follow this mobile guidance.
+decoration or redundant proof may be omitted. The requested homepage mission
+cards now follow this hierarchy with all three available in ordinary flow;
+see [the implemented composition](home-sections.md).
 Current checks belong in [validation](validation.md), with earlier captures historical.
 
 ## Interaction and acceptance
+
+The homepage-specific submenu uses the shared container, white surface, muted/navy
+text roles and blue active underline. It pins above content from `64rem`; its
+measured height provides anchor clearance when labels wrap. All six destinations
+remain native links with visible focus and reduced-motion support. Mission cards
+reuse the physical 20px corner signature, aligned media/title/body/action anatomy,
+and existing Latin/Arabic families. They stack below `64rem` without hiding content.
+See [homepage behavior and media](home-sections.md).
 
 Keep navigation operable by keyboard, touch and pointer. Use visible focus, correct landmarks, a skip link and reduced-motion support. Avoid autoplay carousels and decorative animation libraries in the foundation.
 

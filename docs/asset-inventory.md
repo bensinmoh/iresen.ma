@@ -36,6 +36,17 @@ All seven original SVGs and their [source hashes](brand-assets.json) are unchang
 active-icon selection, with no derived SVG, ICO, PWA or touch-icon asset added.
 Current browser checks belong in [the validation log](validation.md).
 
+## Homepage mission imagery — 2026-10-09
+
+Three owner-requested generated editorial images illustrate battery and bioenergy
+research, CSP/hydrogen/wind/storage experimentation, and smart-grid energy management.
+These are fictional scenes rather than records of real IRESEN facilities or people.
+The 1448 × 1086 PNG sources were converted to full-frame 1200 × 900 quality-86
+WebPs; the three served files total 523,694 bytes. Source/output hashes and full
+prompts are in [mission-assets.json](mission-assets.json). All originals have explicit
+FR/EN/AR static-media search registrations; responsive optimizer outputs share
+those identities. This request authorizes local website implementation, not deployment.
+
 ## Hero video
 
 Received on 2026-10-08 for future website hero use; on 2026-10-09 the owner explicitly requested homepage playback of this exact original with no playback button. No independent redistribution license or source credit was supplied.

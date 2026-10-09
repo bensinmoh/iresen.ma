@@ -26,8 +26,9 @@ The owner requested analysis and Markdown updates only and deferred application
 of the restructuring until development of the section after the missions,
 “Nos réalisations emblématiques”, begins. Wait for that development request;
 do not reorder current scaffolds or modify runtime, locale catalogs, assets,
-CMS/search or Figma from this documentation task. The current checkout still has
-seven homepage placeholders, with mission cards not yet implemented.
+CMS/search or Figma from this documentation task. The separately delivered mission
+cards and section navigation remain; five following body placeholders still await
+their modules, and the `figures` anchor already belongs to the hero band.
 
 Use the chosen 22-page working structure in `src/lib/site.ts` as the single routing authority; `docs/route-map.md` records it. Build internal links from stable IDs/shared helpers. Follow `docs/adr/0004-canonical-working-site-structure.md` when a structure change is requested so locale paths, navigation/footer, content links and affected documentation change together.
 
