@@ -48,9 +48,10 @@ export async function SearchPage({
   ])
   const searchHref = pageHref('search', locale)
   const activeQuery = (result?.status === 'available' ? result.query : query).slice(0, 200)
+  const suggestedQuery = result?.status === 'available' ? result.suggestedQuery : undefined
 
-  function resultsHref(nextType = type, page = 1) {
-    const params = new URLSearchParams({ q: activeQuery })
+  function resultsHref(nextType = type, page = 1, nextQuery = activeQuery) {
+    const params = new URLSearchParams({ q: nextQuery })
     if (nextType !== 'all') params.set('type', nextType)
     if (sort !== 'relevance') params.set('sort', sort)
     if (page > 1) params.set('page', String(page))
@@ -153,6 +154,18 @@ export async function SearchPage({
               </button>
             </Form>
           </div>
+          {suggestedQuery && suggestedQuery !== activeQuery && (
+            <p className="search-correction">
+              <span>{t('suggestionPrompt')}</span>
+              <Link
+                href={resultsHref(type, 1, suggestedQuery)}
+                aria-label={t('useSuggestion', { query: suggestedQuery })}
+                data-search-correction
+              >
+                <bdi dir="auto">{suggestedQuery}</bdi>
+              </Link>
+            </p>
+          )}
           <p className="search-summary" role="status" aria-live="polite">
             {t('resultCount', { count: result.total })}
             {' · '}
@@ -175,6 +188,14 @@ export async function SearchPage({
                   <article className="search-result">
                     <div className="search-result-meta">
                       <span className="search-result-type">{t(`types.${item.type}`)}</span>
+                      {(item.matchKind === 'typo' || item.matchKind === 'related') && (
+                        <span
+                          className="search-match-badge"
+                          data-search-match-kind={item.matchKind}
+                        >
+                          {t(item.matchKind === 'typo' ? 'matchTypo' : 'matchRelated')}
+                        </span>
+                      )}
                       {item.publishedAt && Number.isFinite(Date.parse(item.publishedAt)) && (
                         <time dateTime={item.publishedAt}>
                           {format.dateTime(new Date(item.publishedAt), { dateStyle: 'medium' })}
@@ -183,11 +204,13 @@ export async function SearchPage({
                     </div>
                     <h2>
                       <a href={item.url}>
-                        <span>{highlight(item.title, activeQuery)}</span>
+                        <span>{highlight(item.title, item.matchedQuery || activeQuery)}</span>
                         <NavigationIcon name="arrow" />
                       </a>
                     </h2>
-                    {item.excerpt && <p>{highlight(item.excerpt, activeQuery)}</p>}
+                    {item.excerpt && (
+                      <p>{highlight(item.excerpt, item.matchedQuery || activeQuery)}</p>
+                    )}
                     <bdi className="search-result-url" dir="auto">
                       {item.url}
                     </bdi>

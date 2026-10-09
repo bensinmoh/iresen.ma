@@ -81,6 +81,14 @@ index worker on CMS initialization or first search; production can also schedule
 owns processing. Use `pnpm search:rebuild` after migration, new static resources
 or a full recovery. See [search behavior, operations and required content references](docs/search.md).
 
+When updating an existing local checkout after a search schema change, stop the
+development server and run `pnpm db:wait`, `pnpm cms:migrate`,
+`pnpm search:rebuild`, then `pnpm dev`. Starting Docker and Next alone does not
+apply migrations. A rebuild reporting zero public CMS records is normal when
+the CMS is empty: “static catalog synchronized” includes the public pages,
+sections and registered files. Spelling and related-topic search use the same
+public index and need no external search account or model download.
+
 Browser checks require Playwright's browser dependencies; CI installs them. This cloud machine already provides Chromium: use `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e` after `pnpm build`. Elsewhere install the bundled browser with `node scripts/run.mjs playwright install chromium`, using the same cache as the tests. Integration checks require a disposable migrated database with no existing users; they create and remove their own accounts and content. Never point tests or development schema synchronization at production.
 
 Local foundation checks passed: 8 unit, 4 integration and 11 browser tests, plus install, lint, types, formatting and the standalone build. See [validation evidence and limits](docs/validation.md).

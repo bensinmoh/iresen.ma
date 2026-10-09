@@ -723,6 +723,10 @@
     "previous": "السابقة",
     "next": "التالية",
     "suggestions": "اقتراحات البحث",
+    "suggestionPrompt": "هل تقصد",
+    "useSuggestion": "البحث عن «{query}»",
+    "matchTypo": "تطابق قريب",
+    "matchRelated": "محتوى ذو صلة",
     "noSuggestions": "لا توجد اقتراحات. اضغط على زر الإدخال لعرض جميع النتائج.",
     "invalidTitle": "تحقّق من البحث",
     "invalidDescription": "استخدم ما يصل إلى 200 حرف واختر من عوامل التصفية المتاحة."

@@ -44,6 +44,20 @@ translations, private files, credentials, repository references and editorial
 notes outside the public index. Verify discovery in each eligible locale and
 exclusion after withdrawal/deletion; rebuild/process the index when required.
 
+Keep the owner's relevance order: exact matches before linguistic, typo and
+related-concept matches. Supply useful real topic descriptions and acronym
+expansions for new public resources. Extend the documented multilingual concept
+vocabulary when a genuine synonym is needed; avoid broad aliases that change the
+meaning of a query. Spelling vocabulary must use the same current-public gates
+as results. Preserve typed queries and make suggested corrections explicit.
+
+Owner reminder — 2026-10-09: once the full website content is in place, bring up
+the [final content search sanity check](docs/search.md#final-content-search-sanity-check).
+Review/reconstruct the FR/EN/AR glossary, approved terminology/translations,
+acronyms and related-term dictionary from the final content, rebuild the public
+search index and spelling vocabulary, and verify representative queries before
+marking the final sanity check complete. Keep this reminder for future sessions.
+
 Repository skills live in `.agents/skills/<name>/SKILL.md`. Read only relevant skills:
 
 | Task                                                 | Skills                                                            |

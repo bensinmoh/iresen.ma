@@ -107,6 +107,11 @@ its former full-screen introduction and section scaffolding, bringing results
 into immediate view. Matching text uses a restrained readable highlight, with
 descriptive links, excerpts and dates where available.
 
+Spelling proposals use a quiet localized “Did you mean…” link. Keep the original
+query editable; accepting a correction updates the results URL explicitly.
+Approximate and related-topic rows carry short text labels, avoiding a technical
+score or a claim of semantic certainty. Highlight actual matched public words.
+
 The resting white header magnifier preserves its shared square/corner geometry.
 A 220ms field reveal moves toward inline-start (left in FR/EN, mirrored in AR),
 bounded by the available header width. Keyboard focus and touch expose the same
