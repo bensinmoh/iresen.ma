@@ -405,21 +405,24 @@ test('open navigation fits translated content across responsive widths and enlar
           await expect(resources).toHaveAttribute('open', '')
         }
 
-        const layout = await page.getByRole('banner').evaluate((header) => ({
-          pageFits: document.documentElement.scrollWidth <= window.innerWidth,
-          overflowingControls: [...header.querySelectorAll<HTMLElement>('a, summary')]
-            .filter((control) => {
-              const bounds = control.getBoundingClientRect()
-              const style = getComputedStyle(control)
-              return (
-                bounds.width > 0 &&
-                bounds.height > 0 &&
-                style.visibility !== 'hidden' &&
-                (bounds.left < -1 || bounds.right > window.innerWidth + 1)
-              )
-            })
-            .map((control) => control.textContent?.trim()),
-        }))
+        const layout = await page.getByRole('banner').evaluate(async (header) => {
+          await Promise.all(header.getAnimations().map((animation) => animation.finished))
+          return {
+            pageFits: document.documentElement.scrollWidth <= window.innerWidth,
+            overflowingControls: [...header.querySelectorAll<HTMLElement>('a, summary')]
+              .filter((control) => {
+                const bounds = control.getBoundingClientRect()
+                const style = getComputedStyle(control)
+                return (
+                  bounds.width > 0 &&
+                  bounds.height > 0 &&
+                  style.visibility !== 'hidden' &&
+                  (bounds.left < -1 || bounds.right > window.innerWidth + 1)
+                )
+              })
+              .map((control) => control.textContent?.trim()),
+          }
+        })
         expect(layout, `${locale}, ${width}px, ${textSize}% text`).toEqual({
           pageFits: true,
           overflowingControls: [],
