@@ -4,6 +4,20 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Homepage hero video
+
+- Enabled the uploaded original `/videos/hero.mp4` as the homepage's muted,
+  looping, inline background video, without playback controls as requested.
+- Kept the generated photo beneath it for loading, reduced motion, missing
+  JavaScript and media failures; the other 21 pages retain their photo heroes.
+- Verified real playback across FR/EN/AR desktop/mobile, an actual loop,
+  byte-range delivery and live reduced-motion unloading. Local lint, strict
+  types, 8 unit tests, production build, 44 existing browser cases and 11 focused
+  video cases passed.
+
+See [hero behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09)
+and [revision-specific evidence](docs/validation.md#homepage-hero-video--2026-10-09).
+
 ## 2026-10-09 — Desktop submenu destination states
 
 - Matched the owner's submenu hover reference with a full sharp navy rectangle,

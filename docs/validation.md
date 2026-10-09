@@ -877,3 +877,50 @@ focus visibility and RTL alignment:
 Coverage is local Chromium, not cross-browser or screen-reader certification.
 Earlier validation and captures retain their revision-specific scope. Current
 remote CI and merge results belong to the corresponding PR.
+
+## Homepage hero video — 2026-10-09
+
+The homepage now plays the original `/videos/hero.mp4` after hydration when
+motion is permitted: muted, looping and inline, without controls as requested.
+The generated photo remains the loading, reduced-motion, no-JavaScript and
+failed-media fallback. Its copy, certification, figures and layout, and all
+21 other photographic heroes retain their existing behavior.
+
+Formatting, lint, strict types, 8 unit tests and the standalone production build
+passed. All 44 existing browser cases passed in the full local run, covering
+localized routes, fonts, image delivery, responsive/RTL layout, enlarged text,
+navigation, no-JavaScript behavior and automated accessibility scans. The final
+11 [homepage-video cases](../tests/e2e/home-video.spec.ts) passed in a focused run:
+real playback advancement in FR/EN/AR at 1440px and 390px, muted/inline/looping
+playback without native controls, initial reduced motion without video requests,
+live preference changes, failed media, secondary-page isolation and Arabic
+no-JavaScript navigation. The initial draft live-preference assertion relied on
+`currentSrc` clearing; Chromium retains that last URL even after unloading.
+The final check verifies source-attribute removal, `readyState`/`networkState`
+zero, paused media and reset time, then actual playback after motion is restored.
+
+Seven sequential production-render cases were audited: normal-motion French at
+1440 × 900, 1920 × 1080 and 390 × 844, English at 1440 × 900, Arabic at
+390 × 844, and reduced-motion French desktop/Arabic mobile. Native decoded video
+dimensions were 4096 × 1974. In all five playback cases, media time advanced
+0.464–0.495 seconds during 500ms observations. A seek to 17.802 seconds wrapped
+back to zero and continued unpaused, proving an actual loop. Both reduced-motion
+cases requested no video and retained the photo. No horizontal overflow, control
+buttons, page errors or media-cover geometry mismatch occurred. Reviewed captures
+are retained at CSS resolution as quality-90 WebP without resizing:
+
+- [French video hero](screenshots/home-video-fr-desktop.webp)
+- [Arabic mobile video hero](screenshots/home-video-ar-mobile.webp)
+- [French reduced-motion photo](screenshots/home-video-reduced-fr-desktop.webp)
+
+The original file remains byte-identical: 9,774,051 bytes, SHA-256
+`548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb`.
+A `Range: bytes=0-31` request returned 206, `video/mp4`, `Accept-Ranges: bytes`
+and `Content-Range: bytes 0-31/9774051`; the 32 returned bytes matched the source.
+First-playing events occurred 366–527ms after local navigation. These loopback
+Chromium observations do not establish field performance or Safari/iOS behavior.
+Declared lengths on partial responses are not a measured total transfer.
+The 9.32 MiB original exceeds ordinary page/image budgets; its end-of-file MP4
+metadata makes web-sized fast-start derivatives a remaining performance improvement.
+The requested absence of pause controls does not establish WCAG 2.2.2 conformance.
+Current full CI and merge results belong to the corresponding PR.
