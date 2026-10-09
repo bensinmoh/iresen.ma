@@ -1499,7 +1499,7 @@ database and Chromium:
   [Arabic mobile](screenshots/contact-eyebrow-ar-390-2026-10-09.png) captures.
 - Rebuilt the local public search catalog. Existing `send-request` metadata
   already includes the localized eyebrow; the original Apex media entry and
-  reachable section anchors remain. No new searchable content was introduced.
+  reachable section anchors remain.
 - The Apex Leaf SHA-256 remains
   `7c51a47ea0775bd26602ce2a61c8b7dbaf8cfa5597c59189b1b85932a56c0f86`.
 
@@ -1507,3 +1507,15 @@ Database integration suites and unrelated browser routes were not repeated for
 this scoped presentation correction. Current PR CI runs the complete suite.
 Safari, physical-device and manual screen-reader coverage remain unverified.
 No production deployment or visibility change was performed.
+
+The first current-head PR CI run exposed a separately added `main` asset,
+`/images/contact/contact-background-venue.jpg`, without a public search reference.
+The local unit suite reproduced that failure after synchronizing `main`. Its
+explicit media entry now describes the visible entrance in FR/EN/AR, without
+inferring an address or changing the Contact composition. The source bytes
+remain unchanged; [asset provenance](asset-inventory.md) records the addition.
+After registering that asset and extending the existing catalog expectation,
+lint, strict types, all 97 unit tests, formatting and the production build passed
+again. The three Contact search browser checks passed on the rebuilt application.
+FR/EN/AR media queries for the visible wooden gate find its localized result,
+and the canonical image destination returns HTTP 200 in each case.

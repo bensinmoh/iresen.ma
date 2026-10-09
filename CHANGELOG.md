@@ -13,6 +13,8 @@ merge results are recorded by the corresponding pull request and commit history.
 - Retained the existing contact anchors, localized search references and original
   brand SVG bytes. See [contact guidance](docs/contact.md) and
   [verification evidence](docs/validation.md#contact-form-eyebrow--2026-10-09).
+- Registered the Contact photograph added separately to `main` in the public
+  search catalog after CI exposed its missing reference; its bytes are retained.
 
 ## 2026-10-09 — Contact reference composition and location
 
