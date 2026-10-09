@@ -22,6 +22,12 @@ Fermer control. Vertical route rows have fine horizontal dividers and blue group
 chevrons; expanded groups retain their canonical destinations from `src/lib/site.ts`.
 The screenshot's labels do not add financing/news/network branches or new routes.
 
+The owner's later clarification specifies arrival from the right. The whole mobile
+sheet enters from the physical right edge over 320ms using a CSS transform and
+`cubic-bezier(0.2, 0.7, 0.2, 1)`, in all three locales. It works with the native
+disclosure without JavaScript and opens directly with reduced motion. See
+[motion verification](validation.md#mobile-menu-entrance--2026-10-09).
+
 Search and the full-width contact action follow navigation. Legal access and
 the existing three-language selector sit below them. The integrated public search
 backend, native localized GET form and live suggestions remain; mobile search
