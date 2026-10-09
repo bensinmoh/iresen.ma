@@ -1245,3 +1245,49 @@ documents need approved searchable text/transcripts. This increment does not
 provide OCR or speech recognition. Production storage, rate limiting and worker
 operations retain their release requirements. PR CI and merge outcomes are
 recorded by the current pull request; no website deployment is performed here.
+
+## Mobile reference adaptation — 2026-10-09
+
+The owner's four mobile screenshots establish composition. Their sample text,
+links, contact details, social networks, historical colors and device chrome
+remain reference data. The revision adapts the existing homepage, navigation and
+footer at `40rem` and below with current brand/content/routes and the integrated
+public search implementation. See [the shared rules](design-system.md#mobile-reference-adaptation--2026-10-09).
+
+Using Node 24.19.0, pnpm 11.19.0, a migrated disposable local PostgreSQL database
+and production Chromium, lint, strict types, formatting, 44 unit tests, 12 CMS/search
+integration tests and the standalone production build passed. All 96 browser
+cases passed across navigation, search, footer, fonts, heroes/media, public route
+access and existing CMS/search destinations. After the final viewport-measurement
+correction, the app was rebuilt and all 27 navigation/hero cases passed again,
+including unchanged underlying hero size while the full-screen menu is open.
+
+The new regressions verify the complete collapsed-menu Tab sequence, expanded
+child destinations, visible Close control, focus wrapping, nested Escape and
+background inert/restoration. Mobile search covers touch and keyboard access,
+full-width suggestions, destination navigation and native GET without JavaScript.
+Existing FR/EN/AR checks cover 320/390/768/1024/1440px, 200% text, RTL, menu/form
+containment, equivalent locale access and scoped axe scans. Automated scans do
+not establish full accessibility conformance.
+
+Rendered review inspected FR390 homepage/menu/footer, AR390 menu/footer,
+FR320/640 menus, FR/AR320 menus at 200% text, and FR1440 homepage/footer.
+The reviewed states have no document overflow, page errors or logo/Close overlap;
+Close uses navy on white. Footer email and Subscribe occupy separate full-width
+rows on mobile, with consent, privacy, utilities, language and copyright retained.
+An oversized element screenshot exposed an offscreen fixed skip-link layer;
+ordinary viewport captures confirm that it is absent from the actual footer paint.
+Final footer evidence therefore uses separate top/newsletter viewport captures.
+
+Selected reviewed screenshots:
+
+- [French mobile homepage](screenshots/mobile-reference-fr-390-hero.png)
+- [French full-screen menu](screenshots/mobile-reference-fr-390-menu.png)
+- [French footer newsletter and bottom](screenshots/mobile-reference-fr-390-footer-newsletter.png)
+- [Arabic mobile footer](screenshots/mobile-reference-ar-390-footer.png)
+- [Arabic menu with enlarged text](screenshots/mobile-reference-ar-320-menu-text200.png)
+- [French desktop footer](screenshots/mobile-reference-fr-1440-footer.png)
+
+Coverage uses local Chromium and emulated touch, without claiming a pixel-exact
+match, physical-device/Safari coverage or screen-reader certification. Remote CI
+and merge results are recorded by the corresponding pull request and commit history.

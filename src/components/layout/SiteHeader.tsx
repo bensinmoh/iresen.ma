@@ -161,7 +161,7 @@ export function SiteHeader() {
         .flatMap((selector) =>
           Array.from(headerRef.current?.querySelectorAll<HTMLElement>(selector) ?? []),
         )
-        .filter((element) => element.getClientRects().length > 0)
+        .filter((element) => element.checkVisibility())
       const index = controls.indexOf(document.activeElement as HTMLElement)
       const next = (index + (event.shiftKey ? -1 : 1) + controls.length) % controls.length
       event.preventDefault()

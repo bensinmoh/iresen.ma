@@ -232,6 +232,12 @@ test('mobile menu covers the viewport, contains keyboard focus and restores back
   const identity = header.locator('.site-identity')
   const background = page.locator('#main-content, .site-footer, .skip-link')
 
+  await page.evaluate(() => document.fonts.ready)
+  const hero = page.locator('.page-hero')
+  await expect
+    .poll(() => hero.evaluate((element) => element.style.getPropertyValue('--hero-header-height')))
+    .not.toBe('')
+  const heroHeight = await hero.evaluate((element) => element.getBoundingClientRect().height)
   await expect(header.locator('.header-tools')).toBeHidden()
   await expect(header.locator('.header-meta')).toBeHidden()
   await trigger.focus()
@@ -254,6 +260,16 @@ test('mobile menu covers the viewport, contains keyboard focus and restores back
       }),
     )
     .toBe(true)
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) => {
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+      }),
+  )
+  expect(await hero.evaluate((element) => element.getBoundingClientRect().height)).toBeCloseTo(
+    heroHeight,
+    0,
+  )
   for (const element of await background.all()) {
     await expect.poll(() => element.evaluate((node) => (node as HTMLElement).inert)).toBe(true)
   }
@@ -267,9 +283,27 @@ test('mobile menu covers the viewport, contains keyboard focus and restores back
   await expect(legal).toHaveAccessibleName(fr.Pages.legal)
   await expect(legal).toHaveAttribute('href', pageHref('legal', 'fr'))
   await expect(languages).toHaveCount(locales.length)
-  for (const control of [contact, legal, ...(await languages.all())]) {
+  await expect(menu.locator('.navigation-group[open]')).toHaveCount(0)
+  await expect(header.locator('.header-search-disclosure')).not.toHaveAttribute('open', '')
+  const groupSummaries = menu.locator('.navigation-group > summary')
+  const forwardControls = [
+    menu.locator(`.menu-direct-link > a[href="${pageHref('home', 'fr')}"]`),
+    groupSummaries.nth(0),
+    groupSummaries.nth(1),
+    groupSummaries.nth(2),
+    menu.locator(`.menu-direct-link > a[href="${pageHref('transfer', 'fr')}"]`),
+    menu.locator(`.menu-direct-link > a[href="${pageHref('workWithUs', 'fr')}"]`),
+    groupSummaries.nth(3),
+    header.locator('.header-search'),
+    contact,
+    legal,
+    ...(await languages.all()),
+  ]
+  // Closed native disclosures must skip their child links and search input.
+  await trigger.focus()
+  for (const control of forwardControls) {
     await expect(control).toBeVisible()
-    await control.focus()
+    await page.keyboard.press('Tab')
     await expect(control).toBeFocused()
   }
 
@@ -277,6 +311,17 @@ test('mobile menu covers the viewport, contains keyboard focus and restores back
   await expect(identity).toBeFocused()
   await page.keyboard.press('Shift+Tab')
   await expect(languages.last()).toBeFocused()
+
+  const institute = menu.locator('.navigation-group').first()
+  await groupSummaries.first().focus()
+  await page.keyboard.press('Enter')
+  await expect(institute).toHaveAttribute('open', '')
+  await page.keyboard.press('Tab')
+  await expect(institute.locator('ul a').first()).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(institute).not.toHaveAttribute('open', '')
+  await expect(groupSummaries.first()).toBeFocused()
+
   await identity.focus()
   await page.locator('#main-content').focus()
   await expect(identity).toBeFocused()
