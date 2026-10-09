@@ -278,7 +278,7 @@
     "continue": "Explore further",
     "certification": {
       "label": "Certified",
-      "description": "Africa’s first certified research funding agency."
+      "description": "Africa’s first research institute certified to ISO 9001."
     },
     "founded": "IRESEN established",
     "pathways": "Develop, test and transfer",
@@ -348,7 +348,7 @@
       },
       "collaboration": {
         "title": "Collaborate with IRESEN",
-        "description": "Content to add: pathways to develop a project, conduct tests, draw on expertise or create value from a result."
+        "description": "From your first research question to an industrial decision, let’s shape the next step of your project together."
       },
       "news-events": {
         "title": "The latest news",
@@ -1071,5 +1071,40 @@
         "title": "IRESEN and Majan Council establish a framework for energy cooperation."
       }
     }
+  },
+  "HomeCollaboration": {
+    "title": "Collaborate with IRESEN",
+    "description": "From your first research question to an industrial decision, let’s shape the next step of your project together.",
+    "action": "Let’s discuss your project",
+    "collaborators": "Collaborators",
+    "certified": "Certified",
+    "certification": "Africa’s first research institute certified to ISO 9001.",
+    "paths": {
+      "research": {
+        "audience": "Student · Doctoral candidate · Researcher",
+        "title": "Find a setting for your research",
+        "description": "Looking for an opportunity to conduct your thesis or research? Explore ways to contribute to the energy transition.",
+        "action": "Explore opportunities"
+      },
+      "solution": {
+        "audience": "Project initiator · Professor",
+        "title": "Advance your solution",
+        "description": "Structure your collaborative research project, identify the testing required and consider how to mature and transfer your results.",
+        "action": "Discuss your solution"
+      },
+      "industry": {
+        "audience": "Industrial company",
+        "title": "Move forward with decarbonisation",
+        "description": "Share your energy challenges and process constraints to identify relevant research, experimentation and expertise pathways.",
+        "action": "Discuss your needs"
+      },
+      "decision": {
+        "audience": "Decision-maker · Funding partner",
+        "title": "Inform your technology choices",
+        "description": "Assess your priorities and investments against scientific knowledge, technological options and the conditions needed to implement them.",
+        "action": "Draw on expertise"
+      }
+    },
+    "searchText": "IRESEN collaboration, students, doctoral candidates, researchers, thesis, PhD, research opportunities, professors, project initiators, research and development (R&D), maturation, technology transfer, industry, decarbonisation, decision-makers, funding partners, scientific expertise, technology choices."
   }
 }

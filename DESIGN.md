@@ -777,3 +777,22 @@ geometry. This is an application of current shared roles, with no new tokens.
 The homepage news/footer boundary has no intervening wrapper padding. Both
 sections retain internal spacing; only the homepage shell/content bottom inset
 is removed, keeping full-width surfaces contiguous.
+
+## Homepage collaboration — 2026-10-09
+
+The requested dark institutional ink section uses the existing hero shade
+#05111D as a local opaque ground, white headings, pale blue body copy and cyan
+audience labels. An introduction/action accompanies four open divider-led
+pathways; a lower band recalls collaborators and certification. The established
+type roles, 120rem grid and physical action corners carry through. Tablet stacks
+the introduction; mobile stacks pathways and proof without clipping or hiding
+required content. This is a local surface application; navy/blue tokens remain.
+See [scope and captures](docs/home-collaboration.md).
+
+## Certification wording correction — 2026-10-09
+
+The owner’s later wording, “Premier institut de recherche certifié ISO 9001 en
+Afrique”, supersedes the earlier agency-only description in both homepage
+hero and collaboration. FR/EN/AR catalogs and search projections carry the
+correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
+copy, not independent certification verification.

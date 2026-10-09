@@ -1,0 +1,196 @@
+.section {
+  /* Existing hero ink, scoped to the owner's requested dark collaboration ground. */
+  --collaboration-ink: #05111d;
+  margin-inline: calc(-1 * var(--gutter));
+  padding: clamp(3rem, 5vw, 6rem) var(--gutter);
+  color: var(--color-white);
+  overflow-wrap: anywhere;
+  background: var(--collaboration-ink);
+  box-shadow: 0 0 0 100vmax var(--collaboration-ink);
+  clip-path: inset(0 -100vmax);
+  scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.65fr);
+  gap: clamp(3rem, 6vw, 7rem);
+}
+.introduction h2 {
+  margin: 0 0 var(--space-6);
+  max-inline-size: 12ch;
+  color: inherit;
+  font-size: clamp(2rem, 3.125vw, 3.75rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.introduction > p {
+  max-inline-size: 40ch;
+  margin-block-end: var(--space-8);
+  color: var(--color-footer-muted);
+  font-size: var(--font-size-action);
+  line-height: 1.7;
+}
+.primary,
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-block-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.primary {
+  max-inline-size: 100%;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-action);
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.primary:hover {
+  background: var(--color-navy);
+  text-decoration: none;
+}
+.primary svg,
+.link svg {
+  flex: 0 0 auto;
+}
+.paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-8);
+  row-gap: var(--space-12);
+}
+.path {
+  min-inline-size: 0;
+  display: flex;
+  flex-direction: column;
+  border-block-start: 1px solid var(--color-footer-divider);
+  padding-block-start: var(--space-6);
+}
+.audience {
+  margin: 0 0 var(--space-4);
+  color: var(--color-energy-cyan);
+  font-size: var(--font-size-label);
+  line-height: 1.6;
+}
+.path h3 {
+  margin: 0 0 var(--space-4);
+  max-inline-size: 23ch;
+  color: inherit;
+  font-size: clamp(1.375rem, 1.6vw, 1.875rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.description {
+  margin-block-end: var(--space-6);
+  color: var(--color-footer-muted);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+.link {
+  align-self: flex-start;
+  margin-block-start: auto;
+  color: var(--color-white);
+  border-block-end: 1px solid var(--color-footer-divider);
+  padding-block: var(--space-2);
+}
+.link:hover {
+  color: var(--color-energy-cyan);
+  text-decoration: none;
+  border-color: currentColor;
+}
+.section a:focus-visible {
+  outline: 2px solid var(--color-energy-cyan);
+  outline-offset: 5px;
+}
+.proof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  margin-block-start: clamp(3rem, 5vw, 6rem);
+  padding-block-start: var(--space-8);
+  border-block-start: 1px solid var(--color-footer-divider);
+}
+.count {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin: 0;
+}
+.count bdi {
+  color: var(--color-white);
+  font-size: var(--font-size-figure);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.count span {
+  color: var(--color-footer-muted);
+  font-size: var(--font-size-action);
+}
+.certification {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-inline-start: auto;
+  max-inline-size: 35rem;
+}
+.certification svg {
+  flex: 0 0 auto;
+  color: var(--color-energy-cyan);
+}
+.certification p {
+  margin: 0;
+  line-height: 1.6;
+}
+.certification p:first-child {
+  color: var(--color-white);
+  font-weight: 600;
+  margin-block-end: var(--space-1);
+}
+.certification p:last-child {
+  color: var(--color-footer-muted);
+  font-size: var(--font-size-label);
+}
+.section:dir(rtl) h2,
+.section:dir(rtl) h3 {
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+.section:dir(rtl) a svg {
+  transform: scaleX(-1);
+}
+@media (max-width: 63.999rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .introduction h2 {
+    max-inline-size: 20ch;
+  }
+  .introduction > p {
+    max-inline-size: 60ch;
+  }
+}
+@media (max-width: 39.999rem) {
+  .paths {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--space-8);
+  }
+  .primary {
+    inline-size: 100%;
+  }
+  .proof {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+  }
+  .certification {
+    margin-inline-start: 0;
+  }
+}

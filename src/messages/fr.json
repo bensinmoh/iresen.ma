@@ -169,7 +169,7 @@
       },
       "collaboration": {
         "title": "Collaborer avec IRESEN",
-        "description": "À prévoir : les parcours pour développer un projet, réaliser des essais, mobiliser une expertise ou valoriser un résultat."
+        "description": "De la première question de recherche à la décision industrielle, construisons ensemble la prochaine étape de votre projet."
       },
       "news-events": {
         "title": "Les dernières actualités",
@@ -828,7 +828,7 @@
     "continue": "Explorer la suite",
     "certification": {
       "label": "Certifié",
-      "description": "Première agence de moyens certifiée en Afrique."
+      "description": "Premier institut de recherche certifié ISO 9001 en Afrique."
     },
     "founded": "Création d’IRESEN",
     "pathways": "Développer, éprouver et valoriser",
@@ -1071,5 +1071,40 @@
         "title": "IRESEN et Majan Council établissent un cadre de coopération énergétique."
       }
     }
+  },
+  "HomeCollaboration": {
+    "title": "Collaborer avec IRESEN",
+    "description": "De la première question de recherche à la décision industrielle, construisons ensemble la prochaine étape de votre projet.",
+    "action": "Parlons de votre projet",
+    "collaborators": "Collaborateurs",
+    "certified": "Certifié",
+    "certification": "Premier institut de recherche certifié ISO 9001 en Afrique.",
+    "paths": {
+      "research": {
+        "audience": "Étudiant · Doctorant · Chercheur",
+        "title": "Donner un terrain à votre recherche",
+        "description": "Vous cherchez une opportunité pour conduire votre thèse ou vos travaux de recherche ? Explorez les possibilités de contribuer à la transition énergétique.",
+        "action": "Explorer les opportunités"
+      },
+      "solution": {
+        "audience": "Porteur de projet · Professeur",
+        "title": "Faire évoluer votre solution",
+        "description": "Structurez votre projet de recherche collaborative, précisez les essais nécessaires et envisagez la maturation et le transfert de vos résultats.",
+        "action": "Échanger sur votre solution"
+      },
+      "industry": {
+        "audience": "Industriel",
+        "title": "Avancer dans votre décarbonation",
+        "description": "Partagez vos enjeux énergétiques et les contraintes de vos procédés pour identifier les pistes de recherche, d’expérimentation et d’expertise pertinentes.",
+        "action": "Discuter de vos besoins"
+      },
+      "decision": {
+        "audience": "Décideur · Bailleur de fonds",
+        "title": "Éclairer vos choix technologiques",
+        "description": "Confrontez vos orientations et vos investissements aux connaissances scientifiques, aux options technologiques et à leurs conditions de mise en œuvre.",
+        "action": "Mobiliser une expertise"
+      }
+    },
+    "searchText": "Collaboration IRESEN, étudiants, doctorants, chercheurs, thèse, doctorat, opportunités de recherche, professeurs, porteurs de projet, recherche et développement (R&D), maturation, transfert technologique, industriels, décarbonation, décideurs, bailleurs de fonds, expertise scientifique, choix technologiques."
   }
 }

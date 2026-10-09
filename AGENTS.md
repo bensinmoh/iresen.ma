@@ -119,3 +119,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+Homepage collaboration update — 2026-10-09: the owner commissioned the existing
+`collaboration` module on institutional ink with four audience pathways,
+certification and +120 collaborators. See [scope](docs/home-collaboration.md).
+Achievements and capabilities remain two body placeholders; full reordering
+and Alliances remain deferred. Working FR/EN/AR copy does not guarantee positions,
+funding or services.

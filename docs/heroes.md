@@ -324,11 +324,11 @@ is the content source for the local homepage badge. It does not import other
 historical hero copy, figures or routes. `Hero.certification` retains the French
 wording and the English/Arabic draft translations:
 
-| Locale | Label     | Description                                       |
-| ------ | --------- | ------------------------------------------------- |
-| FR     | Certifié  | Première agence de moyens certifiée en Afrique.   |
-| EN     | Certified | Africa’s first certified research funding agency. |
-| AR     | معتمد     | أول وكالة لتمويل الأبحاث معتمدة في أفريقيا.       |
+| Locale | Label     | Description                                                 |
+| ------ | --------- | ----------------------------------------------------------- |
+| FR     | Certifié  | Premier institut de recherche certifié ISO 9001 en Afrique. |
+| EN     | Certified | Africa’s first research institute certified to ISO 9001.    |
+| AR     | معتمد     | أول معهد بحثي حاصل على شهادة ISO 9001 في إفريقيا.           |
 
 The home-only badge is a native, noninteractive `aside`, named with its localized
 certified label and ISO 9001:2015. The stable standard identifier uses an LTR `bdi`
@@ -378,3 +378,11 @@ geometry and the owner's screenshot establish composition inspiration.
 - [French split platforms hero](screenshots/hero-platforms-fr-desktop.png)
 - [French right-aligned programmes hero](screenshots/hero-programmes-fr-desktop.png)
 - [Arabic mobile homepage](screenshots/hero-ar-mobile.png)
+
+### Owner correction — 2026-10-09
+
+The owner broadened the certification wording from research funding agency to
+**Premier institut de recherche certifié ISO 9001 en Afrique**. This supersedes
+the earlier 8 October description in the homepage hero and collaboration
+section, with explicit EN/AR equivalents. ISO 9001:2015 remains the detailed
+standard. This records supplied wording rather than independent verification.

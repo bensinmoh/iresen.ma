@@ -244,3 +244,12 @@ The owner subsequently commissioned the [homepage news module](home-news.md)
 with five LinkedIn sources and preparation for future Posts API synchronization.
 It replaces the existing final `news-events` placeholder only. Three preceding
 body placeholders and the full reordering remain deferred.
+
+## Later bounded collaboration instruction — 2026-10-09
+
+The owner subsequently commissioned [homepage collaboration](home-collaboration.md)
+at its existing location on an institutional ink ground, serving research/thesis,
+solution development, industry and decision/funding audiences. The four audience
+pathways supersede this module’s earlier action-card recommendation. The owner
+supplied +120 collaborators and requested the existing certification reminder.
+Two body placeholders, Alliances and full homepage reordering remain deferred.

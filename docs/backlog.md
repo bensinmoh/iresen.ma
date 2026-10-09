@@ -94,3 +94,11 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 - [ ] Restrict staging, verify security/SEO/accessibility and measure real representative pages.
 - [ ] Test backups/restoration, jobs/mail/monitoring and accountable operations.
 - [ ] Obtain owner release authorization before deployment.
+
+## Homepage collaboration delivery — 2026-10-09
+
+Delivered [four audience pathways](home-collaboration.md), owner-supplied +120
+collaborators, certification reminder and localized search at the existing
+anchor. Review final FR/EN/AR wording and clarify the count perimeter/date before
+publication. Future work includes actual opportunity listings and collaboration
+services; achievements, capabilities, Alliances and full reordering stay deferred.
