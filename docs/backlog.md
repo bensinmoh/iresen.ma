@@ -65,6 +65,13 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 
 ## Later functional work
 
+- [ ] Investigate the existing intermittent French `mission-transfer` hash landing
+      after desktop-to-mobile resizing: the title can land above the viewport,
+      despite horizontal card containment. Reproduced on unchanged main during
+      [glass-header verification](validation.md#glass-header-controls-and-joined-menu--2026-10-09);
+      preserve the viewport assertions and verify direct-entry, same-document,
+      resizing, FR/EN/AR and no-JavaScript paths when correcting it.
+
 - [ ] Expand collections and detail/list/filter templates; translations, redirects, preview and publication invalidation.
 - [ ] Add verified public media rights and private-file boundaries.
 - [x] Implement public locale-aware search, expandable header field, suggestions,

@@ -4,6 +4,19 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Glass header controls and joined menu
+
+- Added the owner's requested glass treatment to resting Menu/Search controls
+  over the hero, with readable fallback surfaces when blur is unavailable.
+- Made the selected Menu a white/navy tab with a sharp bottom-right corner,
+  joined to a dropdown with physical top-left/bottom-right signature corners.
+  Arabic uses a white bridge beneath the tab at the shared edge.
+- Added a replayable 220ms downward reveal, with direct reduced-motion display;
+  retained the mobile full-screen sheet and existing search behavior.
+
+See [the shared rule](docs/design-system.md#compact-menu-control--2026-10-09)
+and [follow-up validation](docs/validation.md#glass-header-controls-and-joined-menu--2026-10-09).
+
 ## 2026-10-09 — Compact menu control coherence
 
 - Aligned the compact Menu trigger with search: white/navy, neutral outline,

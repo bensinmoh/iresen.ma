@@ -26,6 +26,53 @@ Automated accessibility and the tested keyboard/mobile interactions do not estab
 
 Search, contact delivery and CMS email are honest unavailable adapters. Production storage, identity/MFA, jobs, legal/privacy assessment, recovery and approved content/translations remain follow-up work. Missing design exports/fonts/imagery do not block this foundation. See the [backlog](backlog.md).
 
+## Glass header controls and joined menu — 2026-10-09
+
+Passed lint, strict types, all 97 unit tests and the final production build.
+All 26 existing navigation/header-search browser cases passed on the final build
+using installed Chrome through Playwright against port 3100. The owner's
+port-3000 development server remained running. No build warnings were reported.
+
+Rendered FR/EN/AR at 390, 768, 1024 and 1440px, plus the normal white contact
+header. Verified the resting glass tint/blur, immediate white/navy selection,
+sharp selected-tab bottom-right, physical 20px dropdown corners and exact vertical
+join: at 768/1024px the dropdown starts at y=64px, equal to the tab's bottom edge.
+Arabic's bridge closes the shared top-left curve. Panel content fits without
+horizontal scrolling. The animation replays on reopening and is absent with
+reduced motion. French and Arabic native menus also open, close and reopen without
+JavaScript with the 220ms drop animation. Existing tests cover keyboard focus,
+Escape, touch, native search, RTL, mobile focus containment and 200% text reflow.
+
+The selected surface switches immediately, avoiding a navy-on-translucent interval
+before the white tab is established. Four sampled background points on the French
+768px capture give white-text contrast from 11.47:1 to 13.17:1; these samples do
+not establish all-video-frame or all-browser contrast/performance coverage.
+The unsupported-blur navy fallback was source-reviewed, not executed in an older
+browser. No Safari, physical-device or manual screen-reader assessment was performed.
+
+Reviewed captures:
+
+- [Resting glass controls](screenshots/glass-header-fr-1024.webp)
+- [French selected tab and rounded dropdown](screenshots/glass-menu-open-fr-1024.webp)
+- [Arabic joined tab/dropdown](screenshots/glass-menu-open-ar-1024.webp)
+
+Public text, routes, anchors and search references remain unchanged. No CMS/schema
+logic changed; local integration tests were not rerun. PR CI runs the complete
+integration/browser suites. No deployment was performed. The earlier compact-menu
+capture and checks below describe the previous white resting treatment.
+
+The initial full PR CI run passed 150 browser cases and failed the French
+`direct home section and mission links` case: after a desktop-to-mobile resize
+and same-document hash navigation, the `mission-transfer` heading can land above
+the viewport. Reproduction on this increment passed 8/9 FR/EN/AR repetitions;
+comparison on unchanged main (`ebd91d9`) failed 6/10 French repetitions. This is
+an existing intermittent anchor issue, not a regression from the header controls.
+Its assertions and homepage runtime remain unchanged in this increment; see
+[the follow-up backlog](backlog.md). One unchanged CI retry passed application
+checks but remained in Chromium installation for more than ten minutes when these
+notes were recorded. Only the current PR revision's successful complete CI may
+authorize merge; earlier partial results and baseline comparison do not replace it.
+
 ## Compact menu control — 2026-10-09
 
 Passed lint, strict types, all 97 unit tests and the production build. The build
