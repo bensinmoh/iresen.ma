@@ -407,3 +407,14 @@ or a figure pushed to the bottom. The 22-page structure, localized drafts and
 native disclosure behavior remain the basis. Screenshot sample claims and routes
 do not authorize new content. See [navigation decisions](docs/navigation.md#hovered-menu-reference-adaptation--2026-10-08)
 and [the validation log](docs/validation.md) for revision-specific coverage.
+
+## Desktop submenu destination states — 2026-10-09
+
+The owner's latest submenu screenshot clarifies the destination hover treatment:
+the full link rectangle has sharp corners and a navy fill, with a white title,
+pale description and light blue diagonal arrow. Keyboard-visible focus uses the
+same treatment while retaining its outline. This supersedes the earlier quiet
+destination surfaces; panel geometry, current-route behavior, RTL, copy and routes
+remain. Screenshot sample wording does not authorize replacement content.
+See [shared state rules](docs/design-system.md#desktop-submenu-destination-states--2026-10-09)
+and [revision-specific checks](docs/validation.md#desktop-submenu-destination-states--2026-10-09).

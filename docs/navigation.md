@@ -223,10 +223,25 @@ routes are styling references, not new authorized content.
 
 Panels use consistent padding and natural content height, with no universal
 minimum height or figure pushed to the bottom. White active tabs connect to the
-panel; current-route markers, quiet hover/focus surfaces and meaningful RTL arrow
+panel; current-route markers and meaningful RTL arrow
 mirroring remain. The 22-page route definition, `Header` drafts, keyboard/focus
 dismissal, mouse-hover discovery, touch and no-JavaScript navigation continue.
 
 Executed checks and renderings belong in [the validation log](validation.md).
 Earlier verification and screenshots retain their original revision's scope;
 the previous universal-layout assumption is superseded by this clarification.
+
+## Desktop submenu destination states — 2026-10-09
+
+The owner's latest screenshot requests a full sharp rectangular navy block for
+desktop destination hover, with a white title, pale description and light blue
+arrow. `.mega-menu-links` applies the same colors on keyboard-visible focus,
+preserving the existing outline. Shared tokens supply navy `#12345A`, white,
+footer-muted `#B9C9DA` and Science Blue `#4698CA` respectively.
+
+This supersedes the earlier quiet hover/focus surfaces for these destination
+blocks. Resting current-route styling, padding, panel formats, localized copy,
+all 22 routes and RTL behavior remain. Screenshot sample labels are styling
+references, not replacement copy. See [shared state rules](design-system.md#desktop-submenu-destination-states--2026-10-09)
+and [this revision's checks](validation.md#desktop-submenu-destination-states--2026-10-09);
+earlier evidence retains its scope.
