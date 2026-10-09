@@ -39,6 +39,40 @@ export function SiteHeader() {
 
   useEffect(() => {
     let lastHeaderFocus: Element | null = null
+    const mobile = window.matchMedia('(max-width: 40rem)')
+    const background = new Map<HTMLElement, boolean>()
+
+    function syncMobileMenu() {
+      if (mobile.matches && menuRef.current?.open) {
+        document
+          .querySelectorAll<HTMLElement>('#main-content, .site-footer, .skip-link')
+          .forEach((element) => {
+            if (!background.has(element)) background.set(element, element.inert)
+            element.inert = true
+          })
+      } else {
+        background.forEach((inert, element) => {
+          element.inert = inert
+        })
+        background.clear()
+      }
+    }
+
+    function changeMobileLayout() {
+      const active =
+        document.activeElement === document.body ? lastHeaderFocus : document.activeElement
+      const searchHasFocus =
+        active instanceof Element && active.closest('.header-search-disclosure')
+      if (mobile.matches && searchHasFocus && menuRef.current) {
+        menuRef.current.open = true
+        if (active instanceof HTMLElement) active.focus()
+      }
+      syncMobileMenu()
+    }
+
+    const menu = menuRef.current
+    menu?.addEventListener('toggle', syncMobileMenu)
+    mobile.addEventListener('change', changeMobileLayout)
 
     function closeOutside(event: Event) {
       if (event.type === 'focusin' && event.target instanceof Element) {
@@ -79,6 +113,7 @@ export function SiteHeader() {
       closeDisclosures()
 
       if (searchHasFocus) {
+        if (mobile.matches && menuRef.current) menuRef.current.open = true
         headerRef.current?.querySelector<HTMLElement>('.header-search')?.focus()
       } else if (!desktop.matches && desktopHasFocus) {
         menuRef.current?.querySelector<HTMLElement>(':scope > summary')?.focus()
@@ -100,17 +135,48 @@ export function SiteHeader() {
       document.removeEventListener('focusin', closeOutside)
       document.removeEventListener('keydown', closeHoverOnEscape)
       desktop.removeEventListener('change', changeLayout)
+      menu?.removeEventListener('toggle', syncMobileMenu)
+      mobile.removeEventListener('change', changeMobileLayout)
+      background.forEach((inert, element) => {
+        element.inert = inert
+      })
     }
   }, [clearHoverTimer, closeDisclosures])
 
   function closeOnEscape(event: KeyboardEvent<HTMLElement>) {
+    if (
+      event.key === 'Tab' &&
+      menuRef.current?.open &&
+      window.matchMedia('(max-width: 40rem)').matches
+    ) {
+      const selectors = [
+        '.site-identity',
+        '.menu-toggle',
+        '.menu-panel a, .menu-panel summary',
+        '.header-tools summary, .header-tools input, .header-tools a',
+        '.menu-legal',
+        '.header-meta .locale-selector a',
+      ]
+      const controls = selectors
+        .flatMap((selector) =>
+          Array.from(headerRef.current?.querySelectorAll<HTMLElement>(selector) ?? []),
+        )
+        .filter((element) => element.getClientRects().length > 0)
+      const index = controls.indexOf(document.activeElement as HTMLElement)
+      const next = (index + (event.shiftKey ? -1 : 1) + controls.length) % controls.length
+      event.preventDefault()
+      controls[next]?.focus()
+      return
+    }
     if (event.key !== 'Escape' || !(event.target instanceof HTMLElement)) return
-    const details = event.target.closest<HTMLDetailsElement>('details[open]')
+    const details =
+      event.target.closest<HTMLDetailsElement>('details[open]') ??
+      (menuRef.current?.open ? menuRef.current : null)
     if (details) {
       clearHoverTimer()
       event.preventDefault()
       event.stopPropagation()
-      details.open = false
+      details.removeAttribute('open')
       details.querySelector<HTMLElement>(':scope > summary')?.focus()
     }
   }
@@ -278,7 +344,12 @@ export function SiteHeader() {
       <div className="header-container header-frame">
         <div className="header-row">
           <a href={pageHref('home', locale)} className="site-identity" aria-label="IRESEN">
-            <SiteLogo variant={inverse ? 'dark' : 'color'} eager />
+            <span className="header-default-logo">
+              <SiteLogo variant={inverse ? 'dark' : 'color'} eager />
+            </span>
+            <span className="header-menu-logo">
+              <SiteLogo variant="color" eager />
+            </span>
           </a>
           <nav className="desktop-navigation" aria-label={t('label')}>
             <ul className="desktop-navigation-list">
@@ -290,7 +361,10 @@ export function SiteHeader() {
             </ul>
           </nav>
           <div className="header-actions">
-            <LocaleSelector />
+            <div className="header-meta">
+              {pageLink('legal', 'menu-legal')}
+              <LocaleSelector />
+            </div>
             <div className="header-tools">
               <HeaderSearch
                 action={pageHref('search', locale)}
@@ -311,7 +385,9 @@ export function SiteHeader() {
                   )
                     return false
                   openGroup?.removeAttribute('open')
-                  if (menuRef.current) menuRef.current.open = false
+                  if (menuRef.current && !window.matchMedia('(max-width: 40rem)').matches) {
+                    menuRef.current.open = false
+                  }
                   return true
                 }}
               />
@@ -319,7 +395,8 @@ export function SiteHeader() {
             </div>
             <details className="site-menu" ref={menuRef}>
               <summary className="menu-toggle">
-                <span>{t('menu')}</span>
+                <span className="menu-open-label">{t('menu')}</span>
+                <span className="menu-close-label">{t('closeMenu')}</span>
                 <svg
                   className="menu-icon"
                   aria-hidden="true"
@@ -331,9 +408,10 @@ export function SiteHeader() {
                 >
                   <path
                     className="menu-icon-bars"
-                    d="M4 7h16M4 12h16M4 17h16"
+                    d="M3 5h11m5 0h2M11 12h10M7 19h14"
                     stroke="currentColor"
                     strokeWidth="1.7"
+                    strokeLinecap="round"
                   />
                   <path
                     className="menu-icon-close"

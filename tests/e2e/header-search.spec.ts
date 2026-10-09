@@ -44,6 +44,9 @@ async function expectSubmittedQuery(page: Page, locale: Locale, checkQueryRestor
     catalogs[locale].States.searchUnavailable,
   )
   if (checkQueryRestoration) {
+    if (await page.locator('.site-menu').isVisible()) {
+      await page.locator('.site-menu > summary').click()
+    }
     await expect(searchParts(page).input).toHaveValue(queries[locale])
   }
 }
@@ -156,6 +159,7 @@ test('focused search survives navigation hover and restores its trigger across t
   await expect(input).toBeFocused()
   await expectContained(form)
   await page.setViewportSize({ width: 390, height: 844 })
+  await expect(page.locator('.site-menu')).toHaveAttribute('open', '')
   await expect(disclosure).not.toHaveAttribute('open', '')
   await expect(trigger).toBeVisible()
   await expect(trigger).toBeFocused()
@@ -166,9 +170,11 @@ test('focused search survives navigation hover and restores its trigger across t
     true,
   )
 
-  await page.locator('#main-content').focus()
+  const instituteTrigger = page.locator('.site-menu .navigation-group > summary').first()
+  await instituteTrigger.focus()
   await expect(disclosure).not.toHaveAttribute('open', '')
-  await expect(page.locator('#main-content')).toBeFocused()
+  await expect(instituteTrigger).toBeFocused()
+  await expect(page.locator('.site-menu')).toHaveAttribute('open', '')
 })
 
 test('touch users can dismiss and submit Arabic search without overflowing a narrow header', async ({
@@ -185,13 +191,16 @@ test('touch users can dismiss and submit Arabic search without overflowing a nar
     const page = await context.newPage()
     await page.goto(pageHref('institute', 'ar'))
     const { disclosure, trigger, form, input } = searchParts(page)
+    await expect(trigger).toBeHidden()
+    await page.locator('.site-menu > summary').tap()
     await trigger.tap()
     await expect(disclosure).toHaveAttribute('open', '')
     await expect(input).toBeFocused()
     await expectContained(form)
     await input.fill(queries.ar)
-    await page.locator('.hero-description').tap()
+    await page.locator('.site-menu .navigation-group > summary').first().tap()
     await expect(disclosure).not.toHaveAttribute('open', '')
+    await expect(page.locator('.site-menu')).toHaveAttribute('open', '')
     await trigger.tap()
     await expect(input).toBeFocused()
     await input.fill(queries.ar)
@@ -251,6 +260,10 @@ test('without JavaScript native search disclosures submit in desktop French and 
       const page = await context.newPage()
       await page.goto(pageHref('institute', locale))
       const { disclosure, trigger, form, input } = searchParts(page)
+      if (width === 390) {
+        await page.locator('.site-menu > summary').focus()
+        await page.keyboard.press('Enter')
+      }
       await trigger.focus()
       await page.keyboard.press('Enter')
       await expect(disclosure).toHaveAttribute('open', '')

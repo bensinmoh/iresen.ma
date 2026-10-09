@@ -121,6 +121,7 @@ export function HeaderSearch({
     >
       <summary className="header-search" aria-label={label} onClick={activate}>
         <NavigationIcon name="search" />
+        <span className="header-search-title">{label}</span>
       </summary>
       <form
         className="header-search-form"

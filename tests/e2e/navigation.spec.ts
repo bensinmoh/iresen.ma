@@ -222,6 +222,77 @@ test('compact Arabic navigation preserves the hierarchy, current page and nested
   expect(results.violations).toEqual([])
 })
 
+test('mobile menu covers the viewport, contains keyboard focus and restores background access on close', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto(pageHref('governance', 'fr'))
+  const header = page.getByRole('banner')
+  const menu = header.locator('.site-menu')
+  const trigger = menu.locator(':scope > summary')
+  const identity = header.locator('.site-identity')
+  const background = page.locator('#main-content, .site-footer, .skip-link')
+
+  await expect(header.locator('.header-tools')).toBeHidden()
+  await expect(header.locator('.header-meta')).toBeHidden()
+  await trigger.focus()
+  await page.keyboard.press('Enter')
+  await expect(menu).toHaveAttribute('open', '')
+  await expect(trigger).toHaveAccessibleName(fr.Navigation.closeMenu)
+  await expect
+    .poll(() =>
+      header.evaluate((element) => {
+        const bounds = element.getBoundingClientRect()
+        const style = getComputedStyle(element)
+        return (
+          style.position === 'fixed' &&
+          style.backgroundColor === 'rgb(255, 255, 255)' &&
+          bounds.top <= 1 &&
+          bounds.left <= 1 &&
+          bounds.right >= window.innerWidth - 1 &&
+          bounds.bottom >= window.innerHeight - 1
+        )
+      }),
+    )
+    .toBe(true)
+  for (const element of await background.all()) {
+    await expect.poll(() => element.evaluate((node) => (node as HTMLElement).inert)).toBe(true)
+  }
+
+  const contact = header.locator('.header-contact')
+  const legal = header.locator('.menu-legal')
+  const languages = header.locator('.locale-selector a')
+  await expect(header.locator('.header-search')).toHaveAccessibleName(fr.Pages.search)
+  await expect(contact).toHaveAccessibleName(fr.Header.contact)
+  await expect(contact).toHaveAttribute('href', pageHref('contact', 'fr'))
+  await expect(legal).toHaveAccessibleName(fr.Pages.legal)
+  await expect(legal).toHaveAttribute('href', pageHref('legal', 'fr'))
+  await expect(languages).toHaveCount(locales.length)
+  for (const control of [contact, legal, ...(await languages.all())]) {
+    await expect(control).toBeVisible()
+    await control.focus()
+    await expect(control).toBeFocused()
+  }
+
+  await page.keyboard.press('Tab')
+  await expect(identity).toBeFocused()
+  await page.keyboard.press('Shift+Tab')
+  await expect(languages.last()).toBeFocused()
+  await identity.focus()
+  await page.locator('#main-content').focus()
+  await expect(identity).toBeFocused()
+  await page.keyboard.press('Tab')
+  await expect(trigger).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(menu).not.toHaveAttribute('open', '')
+  await expect(trigger).toBeFocused()
+  for (const element of await background.all()) {
+    await expect.poll(() => element.evaluate((node) => (node as HTMLElement).inert)).toBe(false)
+  }
+  await page.locator('#main-content').focus()
+  await expect(page.locator('#main-content')).toBeFocused()
+})
+
 test('desktop disclosures remain exclusive and navigable without JavaScript', async ({
   browser,
   baseURL,
@@ -348,10 +419,14 @@ test('compact navigation remains contained and usable at 200% text in every loca
         .toBeLessThanOrEqual(1)
     }
 
-    for (const link of await panel.locator('.menu-utilities a').all()) {
-      await expect(link).toBeVisible()
+    const utilities = page.locator(
+      '.site-header .header-tools summary, .site-header .header-contact, ' +
+        '.site-header .menu-legal, .site-header .header-meta .locale-selector a',
+    )
+    for (const control of await utilities.all()) {
+      await expect(control).toBeVisible()
       expect(
-        await link.evaluate((element) => element.getBoundingClientRect().height),
+        await control.evaluate((element) => element.getBoundingClientRect().height),
       ).toBeGreaterThanOrEqual(44)
     }
 
