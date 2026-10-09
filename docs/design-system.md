@@ -240,8 +240,8 @@ headquarters panel. Preserve the original JPEG and use responsive optimized
 delivery with a central entrance crop. White text and the energy-cyan accent sit
 over navy shading; a text-scaled bottom reserve keeps the lighter photo reveal
 below the copy, including enlarged text.
-Flat platform rows, the `--color-action-surface` form band, native FAQ disclosures
-and a full-width location section reuse existing type, spacing, focus,
+Flat platform rows, the `--color-action-surface` form band, full-width location/map
+and subsequent native FAQ disclosures reuse existing type, spacing, focus,
 container and action roles. Shared navigation/footer, approved blue/navy and
 Jakarta/Alexandria supersede the sample's historical styles and labels.
 
@@ -258,7 +258,8 @@ draft and exposes its actual state, with direct email fallback. The owner's
 explicit 2026-10-09 refinement supersedes the earlier on-demand map: its iframe
 is rendered in the server HTML with `loading="lazy"`, without reveal/remove
 controls or client state. Remove the lower explanatory strip and its extra
-spacing so the full-width map meets the footer; retain the separate directions
+spacing; the full-width location/map follows the form and precedes the FAQ,
+which leads to the footer. Retain the separate directions
 link. Native lazy loading delays network work according to browser behavior,
 without requiring a visitor click. Preserve all existing contact anchors
 within the new sections. No backend success, response deadline, opening hours or

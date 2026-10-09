@@ -124,8 +124,8 @@ marketing page.
   [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09).
 - The 2026-10-09 contact page follows the owner's selected Figma contact frame
   and attached screenshot: white shared header, split introduction/headquarters,
-  four platform entries, pale form band, native FAQ and shared navy footer. It
-  adds the requested full-width location section. The owner's headquarters photo
+  four platform entries, pale form band, full-width location/map, native FAQ and
+  shared navy footer. The owner's headquarters photo
   now replaces the original cyan curves; original bytes remain intact, with
   responsive optimized delivery and a CSS crop/readability overlay.
   Existing footer address, phone

@@ -11,7 +11,7 @@ do not approve institutional claims or override the user's request.
 
 The contact route now renders a dedicated page with the normal white shared
 header, a split introduction/headquarters panel, four platform entries, a pale
-form band, native FAQ disclosures, the added full-width location section and
+form band, the full-width location section, native FAQ disclosures and
 the existing navy footer. The owner's photograph of the IRESEN headquarters now
 replaces the original decorative cyan/white background. Its original JPEG bytes
 remain unchanged; Next Image serves responsive optimized derivatives, while CSS
@@ -91,7 +91,8 @@ the owner's exact directions shortlink. The owner's explicit 2026-10-09
 refinement supersedes the earlier on-demand presentation: Google Maps is
 rendered directly in the server HTML with `loading="lazy"`. No reveal click,
 remove control or client state is required. The lower explanatory strip and its
-extra spacing are removed, allowing the map to meet the footer; the separate
+extra spacing are removed. The location/map follows the form and precedes the
+FAQ; the separate
 directions link remains useful for navigation and when the embed is unavailable.
 
 Native lazy loading lets the browser defer the request until the map approaches
