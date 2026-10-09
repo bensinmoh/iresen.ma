@@ -16,6 +16,23 @@ merge results are recorded by the corresponding pull request and commit history.
 See [photo provenance](docs/asset-inventory.md#contact-headquarters-photo--2026-10-09)
 and [contact behavior](docs/contact.md); photo-specific checks belong in [validation](docs/validation.md).
 
+## 2026-10-09 — Refined field focus
+
+- Replaced the thick, separated editable-field focus frame with a compact 2px
+  outline following the existing field edge and corners, informed by Carbon
+  and Spectrum input states. Contact, search inputs/selects and newsletter email
+  share the rule; buttons and selection controls retain their current indicators.
+- Moved header search focus to its field surface, avoiding a second inner frame
+  and preserving blue on white in inverse headers, Arabic RTL and mobile menus.
+  Footer email retains cyan; forced colors use a real system-color outline.
+- Passed formatting, lint, types, 97 unit cases, production build and 35 existing
+  contact/header-search/footer browser cases. Reviewed FR/EN/AR at 1440, 768 and
+  390px, pointer/keyboard focus, stable geometry, 200% text and forced colors;
+  focused contact/newsletter axe scans found no violations.
+
+See [shared styling](docs/design-system.md#refined-field-focus--2026-10-09) and
+[rendered evidence](docs/validation.md#refined-field-focus--2026-10-09).
+
 ## 2026-10-09 — Centered Contact form eyebrow
 
 - Centered the complete “Votre message” eyebrow above the form title, removing
@@ -309,6 +326,21 @@ for actual bytes, rendered coverage and checks. Earlier evidence retains its sco
 See [the findings and scope](docs/site-coherence-review.md),
 [shared rules](docs/design-system.md#shared-actions--2026-10-09) and
 [revision-specific validation](docs/validation.md#site-coherence-review--2026-10-09).
+
+## 2026-10-09 — Footer address and privacy links
+
+- Made the localized footer address clickable with the existing phone/email
+  link styling and the owner-supplied Google Maps destination shared with contact.
+- Removed the duplicate privacy link beneath newsletter consent; retained the
+  localized privacy destination beside legal notices and cookie preferences.
+- Passed formatting, lint, types, 97 unit and 21 integration tests, production
+  build and all 9 footer browser tests. Reviewed French desktop and Arabic mobile renderings;
+  checked FR/EN/AR wrapping, keyboard focus, enlarged text and native navigation.
+- Rebuilt the local index and verified the inherited contact-photo search
+  reference in every locale; all 3 contact search browser cases passed.
+
+See [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09)
+and [verification](docs/validation.md#footer-address-and-privacy-links--2026-10-09).
 
 ## 2026-10-08 — Header control proportions and contact label
 

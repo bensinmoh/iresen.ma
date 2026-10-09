@@ -1514,6 +1514,49 @@ Earlier contact captures document the initial curved background. Physical-device
 Safari and screen-reader coverage and production deployment are not asserted.
 Current PR checks and merge results remain recorded in GitHub.
 
+## Footer address and privacy links — 2026-10-09
+
+Verified on the current synchronized contact/tablet baseline: formatting, lint,
+strict types, 97 unit tests, production build and all 9 focused footer browser
+tests passed. The cold webpack build retained the previously documented
+next-intl cache-dependency warning. Build/browser processes ran outside the
+restricted execution sandbox to permit Next subprocesses and local services;
+the sandboxed build had returned empty TypeScript `--showConfig` output.
+
+Production Chromium checks covered FR/EN/AR at 390, 768 and 1440px: the displayed
+localized address links to the owner-supplied Maps shortlink, uses the existing
+cyan underline, and has a visible keyboard focus indicator. Every locale has
+exactly one footer privacy link, in utilities, with none beneath newsletter
+consent. Layouts fit the viewport. French 1440px and Arabic 390px footer captures
+were visually inspected:
+
+- [French desktop, 1440px](screenshots/footer-links-fr-1440.png)
+- [Arabic mobile, 390px](screenshots/footer-links-ar-390.png)
+
+Additional FR/EN/AR checks at 320px passed with 200% root text and without
+JavaScript. Native address clicks navigated to the exact supplied Maps shortlink,
+intercepted locally during testing. This verifies link activation and destination,
+not Google's shortlink resolution or map pin. The focused suite also checks
+newsletter disclosure, consent, language/utility navigation, Arabic order and
+mobile/tablet/desktop containment. No database schema or server-side behavior
+changed in the footer correction. Other browsers and manual screen-reader
+verification remain outside this pass.
+
+The synchronized base includes the contact venue photograph and its inherited
+`contact-venue` search reference. Both supplied image bytes and the rendered
+abstract contact background are preserved. The catalog covers both images with
+explicit FR/EN/AR scene descriptions and original URLs. Source provenance is
+recorded in [the asset inventory](asset-inventory.md); current PR CI and merge
+results remain recorded in GitHub.
+
+After synchronization, lint, strict types, 97 unit tests and the production
+build passed again. The local search index rebuild and all 21 CMS/search
+integration tests passed. API checks found the photo under its exact localized
+title in FR/EN/AR, with the stable original JPEG destination, which returned HTTP
+200 and `image/jpeg` from the local production server. All 3 existing contact
+search browser cases passed, preserving section discovery/navigation and the
+abstract background's search reference in each locale.
+
 ## Contact form eyebrow — 2026-10-09
 
 The owner's screenshot correction centers the form's leaf/label group above its
@@ -1629,3 +1672,55 @@ records after integration-test cleanup; the earlier photo rebuild's three record
 remain its historical result. The sections above retain their separate
 revision-specific measurements and captures. Current PR CI and merge results
 remain recorded in GitHub.
+
+These combined-state checks and PR36 CI's 127 browser cases cover `90e661c`,
+before integrating main's footer-link and field-focus changes at `6f2e246`.
+After that integration, full formatting, lint, strict types, all 97 unit cases,
+all 21 integration cases, the production build and all 28 selected contact,
+contact-search and footer Chromium cases passed. CI for the updated PR head
+remains recorded by [PR36](https://github.com/bensinmoh/iresen.ma/pull/36).
+
+## Refined field focus — 2026-10-09
+
+The owner's Organisation and Arabic search screenshots identified the thick
+blue focus frame. Editable inputs, selects and textareas now use a 2px real
+outline at their edge (`outline-offset: -1px`). Header search paints one outline
+on its field surface, keeping the white field's blue indicator independent of
+inverse-header focus colors. Footer email retains cyan. Buttons, links and
+checkboxes retain their existing focus indicators.
+
+Local checks passed: `pnpm lint`, `pnpm typecheck`, `pnpm test` (97 cases),
+`pnpm build` and `pnpm format:check`. The build retained its existing next-intl
+dynamic-import cache warnings and completed successfully. The existing contact,
+header-search and footer Playwright suites passed all 35 cases against the local
+production build, including native validation/email drafting, search submission,
+Escape restoration, newsletter availability and no-JavaScript access.
+
+A separate rendered Chromium inspection covered FR/EN/AR contact and homepage
+header search at 1440, 768 and 390px. It checked pointer and keyboard focus,
+organisation/email/select/textarea, newsletter email, result-page query and sort,
+blue search on white inside inverse headers, mobile menus and Arabic RTL.
+Contact-field size and position did not change on focus; search stayed inside
+the viewport, and Escape restored the magnifier's separate 3px indicator.
+Newsletter checkboxes also retained their 3px focus indicator.
+
+At 390px with 200% root text, French/Arabic fields reflowed without horizontal
+page overflow, retained their 2px outline, and focused contact/newsletter axe
+scans returned no violations. Emulated forced colors retained a visible real
+outline on the contact field and a system `Highlight` search outline. CSS state
+measurements were made after animation frames settled. Blue contrasts 5.45:1
+against white and 4.78:1 against the pale form surface; cyan/navy is 6.45:1.
+These scoped checks do not establish complete WCAG conformance or coverage of
+other browser engines.
+
+Reviewed crops from this production build:
+
+- [French Organisation field at 1440px](screenshots/input-focus-contact-fr-1440.png)
+- [Arabic header search at 1440px](screenshots/input-focus-search-ar-1440.png)
+- [Arabic mobile-menu search at 390px](screenshots/input-focus-search-ar-390.png)
+
+The latest Contact changes were integrated before completion, preserving the
+centered Apex Leaf eyebrow, directly displayed map and canonical `contact-venue`
+search reference from main. The shared field rule and research references are
+recorded in
+[the design specification](design-system.md#refined-field-focus--2026-10-09).

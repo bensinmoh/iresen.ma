@@ -1,6 +1,7 @@
 // Public source references and verification limits are recorded in docs/footer.md.
 // Keep institutional destinations separate from the footer's presentation.
 export const footerContact = {
+  mapsHref: 'https://maps.app.goo.gl/ns5xu8p1TQVdL7Wu7',
   phone: '+212 537 68 22 36',
   phoneHref: 'tel:+212537682236',
   email: 'contact@iresen.ma',

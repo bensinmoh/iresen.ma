@@ -117,9 +117,11 @@ marketing page.
   in the same change. Server-side contact acceptance/delivery remains
   unavailable. The newsletter
   keeps local editable email/consent controls; Subscribe opens a native disclosure
-  with the localized unavailable message, hidden initially. The privacy link stays
-  accessible. No subscription is submitted or stored, and no success is reported;
-  signup still has no provider or endpoint. See [footer behavior](docs/footer.md#footer-type-and-newsletter-refinement--2026-10-08).
+  with the localized unavailable message, hidden initially. The address links to
+  Google Maps; privacy remains in utility/legal links, with the duplicate below
+  newsletter consent removed. No subscription is submitted or stored, and no
+  success is reported; signup still has no provider or endpoint. See
+  [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09).
 - The 2026-10-09 contact page follows the owner's selected Figma contact frame
   and attached screenshot: white shared header, split introduction/headquarters,
   four platform entries, pale form band, native FAQ and shared navy footer. It

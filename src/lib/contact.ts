@@ -11,7 +11,7 @@ export const contactTopics = [
 export type ContactTopic = (typeof contactTopics)[number]
 
 export const contactLocation = {
-  directionsHref: 'https://maps.app.goo.gl/ns5xu8p1TQVdL7Wu7',
+  directionsHref: footerContact.mapsHref,
   // Address query, not coordinates inferred from the unresolved short link.
   embedHref:
     'https://www.google.com/maps?q=IRESEN%2C%2016%20rue%20Amir%20Sidi%20Mohamed%2C%20Souissi%2C%20Rabat%2010090%2C%20Maroc&output=embed',
