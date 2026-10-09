@@ -22,6 +22,17 @@ top-left/bottom-right corners. The video and extracted frames are reference-only
 and are excluded from the repository. Its audience/funding examples do not
 replace the current mission copy, claims or destinations.
 
+## Mission wording — 2026-10-09
+
+The owner's latest request adopts the exact supplied French, English and Arabic
+statements in the existing introduction paragraph. A subsequent clarification
+removes the proposed visual container and explicitly defers statement design.
+The existing heading, label, typography, cards, media and destinations remain.
+`PageSections.home.develop-test-transfer.description` supplies both the rendered
+paragraph and public homepage/section search bodies. The stable anchor and
+resource identity remain; synchronize the local index with `pnpm search:rebuild`
+when applying the content update.
+
 ## Navigation behavior
 
 `HomeSectionNavigation` is rendered only by `HomePage`, directly after `PageHero`

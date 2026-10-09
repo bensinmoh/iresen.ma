@@ -1,5 +1,12 @@
 # IRESEN visual direction
 
+## Homepage mission wording — 2026-10-09
+
+The owner's final clarification defers mission-statement design. Exact supplied
+French, English and Arabic copy is rendered as the existing paragraph beneath
+the existing introduction heading. No new container or typography is delivered;
+the current cards, section sequence and visual styles remain.
+
 ## Search result previews — 2026-10-09
 
 Media/document/news results pair the existing reading column with a bounded

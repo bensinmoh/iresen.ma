@@ -5,6 +5,14 @@ institutional copy. The owner's current request defines the authorized increment
 the brief describes the broader project. Update this map when implemented scope or
 approved product decisions change.
 
+## Homepage mission wording — 2026-10-09
+
+The owner supplied French, English and Arabic mission statements for the existing
+homepage introduction. All three are now rendered as paragraph copy above the
+mission cards. The owner explicitly deferred its design; the later homepage
+restructuring remains deferred. Existing homepage and mission-section search
+bodies include the updated wording through the localized catalog descriptions.
+
 ## Purpose and visitors
 
 Build IRESEN's official French, English and Arabic institutional website. Help

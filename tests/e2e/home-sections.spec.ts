@@ -18,6 +18,18 @@ const missions = [
   { id: 'transfer', pageId: 'transfer' },
 ] as const
 
+// Chrome can expose the new media-query state before recalculating vw-based gutters.
+// Wait for layout frames before measuring or navigating to a responsive hash target.
+async function setViewportSize(page: Page, size: Parameters<Page['setViewportSize']>[0]) {
+  await page.setViewportSize(size)
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) =>
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+      ),
+  )
+}
+
 async function waitForFonts(page: Page) {
   await page.evaluate(() => document.fonts.ready)
 }
@@ -163,7 +175,7 @@ for (const locale of locales) {
     page,
   }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
-    await page.setViewportSize({ width: 1023, height: 900 })
+    await setViewportSize(page, { width: 1023, height: 900 })
     await page.goto(pageHref('home', locale))
     await waitForFonts(page)
     const nav = page.locator('.home-section-navigation')
@@ -173,7 +185,7 @@ for (const locale of locales) {
     )
     await expect(page.locator('#figures')).toHaveCount(1)
 
-    await page.setViewportSize({ width: 1024, height: 900 })
+    await setViewportSize(page, { width: 1024, height: 900 })
     await expect(nav).toBeVisible()
     await expect(nav).toHaveAccessibleName(homeNavigation[locale].label)
     await expect(nav.locator('a')).toHaveText(
@@ -197,7 +209,7 @@ for (const locale of locales) {
     page,
   }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await setViewportSize(page, { width: 1440, height: 900 })
     await page.goto(pageHref('home', locale))
     await waitForFonts(page)
     const nav = page.locator('.home-section-navigation')
@@ -248,7 +260,7 @@ for (const locale of locales) {
     page,
   }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await setViewportSize(page, { width: 1440, height: 900 })
     await page.goto(pageHref('home', locale))
     await waitForFonts(page)
     const section = page.locator('#develop-test-transfer')
@@ -277,7 +289,7 @@ for (const locale of locales) {
     expect(Math.max(...desktopRows) - Math.min(...desktopRows)).toBeLessThanOrEqual(1)
 
     for (const width of [320, 390, 1023]) {
-      await page.setViewportSize({ width, height: 900 })
+      await setViewportSize(page, { width, height: 900 })
       await expect(page.locator('.home-section-navigation')).toBeHidden()
       const cards = section.locator('[data-mission-cards]')
       // Start each responsive view at the first mission, including the RTL scroll origin.
@@ -335,7 +347,7 @@ for (const locale of locales) {
     page,
   }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await setViewportSize(page, { width: 1440, height: 900 })
     for (const id of ['platforms-expertise', 'mission-test']) {
       await page.goto(`${pageHref('home', locale)}#${id}`)
       await waitForFonts(page)
@@ -346,7 +358,7 @@ for (const locale of locales) {
         'location',
       )
     }
-    await page.setViewportSize({ width: 390, height: 900 })
+    await setViewportSize(page, { width: 390, height: 900 })
     await page.goto(`${pageHref('home', locale)}#mission-transfer`)
     await waitForFonts(page)
     const card = page.locator('#mission-transfer')
@@ -362,7 +374,7 @@ test('mobile missions remain readable and keyboard navigable at 200% text in eve
 }) => {
   test.setTimeout(60_000)
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.setViewportSize({ width: 320, height: 900 })
+  await setViewportSize(page, { width: 320, height: 900 })
   for (const locale of locales) {
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
@@ -398,7 +410,7 @@ test('mobile missions remain readable and keyboard navigable at 200% text in eve
 
 test('wrapped home navigation uses its measured height when text is enlarged', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.setViewportSize({ width: 1024, height: 900 })
+  await setViewportSize(page, { width: 1024, height: 900 })
   for (const locale of locales) {
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
@@ -475,7 +487,7 @@ test('native home anchors remain usable without JavaScript in every locale', asy
 })
 
 test('home anchor motion follows the visitor motion preference', async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
+  await setViewportSize(page, { width: 1440, height: 900 })
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   await page.goto(pageHref('home', 'fr'))
   await expect(page.locator('html')).toHaveCSS('scroll-behavior', 'smooth')
@@ -496,7 +508,7 @@ test('home anchor motion follows the visitor motion preference', async ({ page }
 test('mission photos zoom gently and gain a blue tint on hover without moving the copy', async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
+  await setViewportSize(page, { width: 1440, height: 900 })
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   await page.goto(pageHref('home', 'fr'))
   await waitForFonts(page)
@@ -531,7 +543,7 @@ test('mission photos zoom gently and gain a blue tint on hover without moving th
 test('keyboard mission feedback remains visible when reduced motion disables photo zoom', async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
+  await setViewportSize(page, { width: 1440, height: 900 })
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   await page.goto(pageHref('home', 'ar'))
   await waitForFonts(page)

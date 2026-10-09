@@ -18,6 +18,31 @@ Verified locally in the cloud workspace on 2026-10-07. Readiness checks for inst
 
 Browser accessibility checks reported no axe violations on the empty shell in all three languages. Relevant test sources are [unit/access tests](../src/tests/cms-access.test.ts), [locale tests](../src/tests/i18n.test.ts), [database integration tests](../src/tests/cms.integration.test.ts) and [browser journeys](../tests/e2e/foundation.spec.ts).
 
+## Homepage mission wording — 2026-10-09
+
+The owner supplied exact French, English and Arabic statements, then explicitly
+deferred design. The existing mission paragraph now contains that copy; no new
+container, typography, cards or section ordering is delivered.
+
+Verification:
+
+- Formatting, lint, strict types, 97 unit tests and the production build passed.
+- All 22 existing homepage/font browser cases passed against the final production
+  build, covering direct anchors, responsive cards, keyboard/touch, no-JavaScript,
+  enlarged text and reduced motion in FR/EN/AR.
+- Paragraph containment was checked in all three locales at 320, 390, 768 and
+  1440px, normally and with 200% root text. Desktop French and mobile Arabic
+  renderings were inspected; the existing visual styles remain.
+- The local public index was rebuilt. `expertises` (FR), `capabilities` (EN) and
+  `حشد` (AR) returned the mission section at its stable canonical anchor.
+- Browser resize checks initially measured mixed old/new viewport geometry.
+  Instrumentation confirmed old 45px gutters and 30px gaps for one frame before
+  the correct 20px/24px mobile layout. The existing suite now waits two layout
+  frames after resizing; assertions and product behavior remain unchanged.
+
+No publication, deployment, CMS schema changes or new media are included.
+Statement design and the later homepage restructuring remain deferred.
+
 ## Limits
 
 GitHub Actions passed the complete workflow in [PR #3 run 37703962430](https://github.com/bensinmoh/iresen.ma/actions/runs/37703962430) after browser installation was aligned with the project's test cache. Each new `main` revision is checked by its own remote CI run. Cloud verification does not establish the Mac checkout's readiness, and no production deployment or live-domain behavior is claimed.
