@@ -1473,6 +1473,47 @@ Reviewed screenshots retained for this correction:
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
 
+## Contact headquarters photograph — 2026-10-09
+
+The owner supplied the headquarters photograph in commit `92f01c3`. It replaces
+the contact introduction's cyan curves. The original JPEG bytes are preserved;
+responsive optimized copies use quality 75. A navy gradient follows the text
+block and fades into a reserved 10rem area, retaining readable white/cyan text
+while revealing the entrance below. The same physical crop applies in Arabic.
+The retired curve file is removed from public delivery and search.
+
+This photo verification predates integration of the later direct-map refinement.
+Its map cases exercised the previous on-demand presentation.
+
+Formatting, lint, strict types, all 97 unit cases, all 21 integration cases and
+the production build passed. All 19 existing contact/contact-search Chromium
+cases passed, retaining form, FAQ, map, no-JavaScript and localized media discovery
+coverage. The public index rebuild synchronized the static catalog and three
+eligible public CMS records.
+
+Manual production Chromium checks covered French at 320, 390, 1024, 1120 and
+1440px, English at 768px and Arabic at 390px, each at normal and 200% text.
+All 14 states had no horizontal overflow; the text remained inside the shaded
+area, including the 1120px split-layout boundary. The lower entrance remained
+visible in reviewed desktop, narrow, tablet and Arabic captures.
+
+At device pixel ratio 1, successful initial image responses were WebP copies
+between 94,062 and 178,082 bytes (750, 828 or 1080px wide), rather than a request
+for the 11,425,755-byte original JPEG. The retired curve URL returned 404.
+These are local delivery measurements, not production loading-time results.
+
+- [French desktop](screenshots/contact-photo-fr-1440.webp)
+- [French narrow layout](screenshots/contact-photo-fr-320.webp)
+- [French mobile](screenshots/contact-photo-fr-390.webp)
+- [English tablet](screenshots/contact-photo-en-768.webp)
+- [French tablet](screenshots/contact-photo-fr-1024.webp)
+- [French split-layout boundary](screenshots/contact-photo-fr-1120.webp)
+- [Arabic mobile](screenshots/contact-photo-ar-390.webp)
+
+Earlier contact captures document the initial curved background. Physical-device,
+Safari and screen-reader coverage and production deployment are not asserted.
+Current PR checks and merge results remain recorded in GitHub.
+
 ## Footer address and privacy links — 2026-10-09
 
 Verified on the current synchronized contact/tablet baseline: formatting, lint,
@@ -1618,6 +1659,26 @@ not Google's live tiles, gesture behavior or exact pin. The supplied shortlink's
 pin, physical-device/Safari behavior and production privacy assessment retain
 [their documented scope](contact.md#location-and-third-party-behavior). Remote CI
 and merge results are recorded by the corresponding pull request and commit history.
+
+## Combined contact photo, eyebrow and direct map — 2026-10-09
+
+After integrating main's eyebrow and direct-map refinements, full formatting,
+lint, strict types, all 97 unit cases, all 21 integration cases and the production
+build passed. All 19 contact/contact-search Chromium cases passed on this combined
+revision, including the directly rendered lazy map, keyboard directions, native
+no-JavaScript behavior, FR/EN/AR layouts and localized photo discovery.
+The latest search rebuild synchronized the static catalog with zero public CMS
+records after integration-test cleanup; the earlier photo rebuild's three records
+remain its historical result. The sections above retain their separate
+revision-specific measurements and captures. Current PR CI and merge results
+remain recorded in GitHub.
+
+These combined-state checks and PR36 CI's 127 browser cases cover `90e661c`,
+before integrating main's footer-link and field-focus changes at `6f2e246`.
+After that integration, full formatting, lint, strict types, all 97 unit cases,
+all 21 integration cases, the production build and all 28 selected contact,
+contact-search and footer Chromium cases passed. CI for the updated PR head
+remains recorded by [PR36](https://github.com/bensinmoh/iresen.ma/pull/36).
 
 ## Refined field focus — 2026-10-09
 

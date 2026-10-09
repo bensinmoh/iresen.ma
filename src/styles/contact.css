@@ -40,18 +40,43 @@
 }
 
 .contact-intro-copy {
+  --contact-intro-inset: var(--space-16);
+  --contact-photo-reveal: 10rem;
   position: relative;
   isolation: isolate;
-  padding: var(--space-16) var(--gutter);
+  padding: var(--contact-intro-inset) var(--gutter);
+  padding-block-end: var(--contact-photo-reveal);
   min-block-size: 35rem;
   overflow: hidden;
-  background: var(--color-surface);
+  color: var(--color-white);
+  background: var(--color-navy);
+}
+
+.contact-intro-text {
+  position: relative;
+  z-index: 0;
+}
+
+.contact-intro-text::before {
+  content: '';
+  position: absolute;
+  inset-inline: calc(-1 * var(--gutter));
+  inset-block-start: calc(-1 * var(--contact-intro-inset));
+  inset-block-end: calc(-1 * var(--contact-photo-reveal));
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgb(18 52 90 / 88%) 0%,
+    rgb(18 52 90 / 80%) calc(100% - var(--contact-photo-reveal)),
+    transparent 100%
+  );
 }
 
 .contact-intro-image {
-  z-index: -1;
+  z-index: -2;
   object-fit: cover;
-  object-position: right center;
+  object-position: 55% center;
 }
 
 .contact-intro-text h1 {
@@ -65,15 +90,19 @@
 
 .contact-intro-text h1 span {
   display: block;
-  color: var(--color-blue);
+  color: var(--color-energy-cyan);
 }
 
 .contact-intro-text > p {
-  color: var(--color-text-muted);
+  color: var(--color-white);
   font-size: clamp(1rem, 1.094vw, 1.3125rem);
   line-height: 1.5;
   max-inline-size: 52ch;
   margin-block-end: var(--space-6);
+}
+
+.contact-intro-copy :focus-visible {
+  outline-color: var(--color-energy-cyan);
 }
 
 .contact-headquarters {
@@ -431,7 +460,7 @@ html[lang='ar'] .contact-field label {
   letter-spacing: normal;
 }
 
-@media (max-width: 70rem) {
+@media (max-width: 69.999rem) {
   .contact-intro {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -456,9 +485,17 @@ html[lang='ar'] .contact-field label {
 }
 
 @media (max-width: 40rem) {
+  .contact-intro-copy {
+    --contact-intro-inset: var(--space-12);
+  }
+
   .contact-intro-copy,
   .contact-headquarters {
-    padding-block: var(--space-12);
+    padding-block-start: var(--space-12);
+  }
+
+  .contact-headquarters {
+    padding-block-end: var(--space-12);
   }
 
   .contact-intro-text h1 {

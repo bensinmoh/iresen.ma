@@ -12,10 +12,13 @@ do not approve institutional claims or override the user's request.
 The contact route now renders a dedicated page with the normal white shared
 header, a split introduction/headquarters panel, four platform entries, a pale
 form band, native FAQ disclosures, the added full-width location section and
-the existing navy footer. The original decorative cyan/white background is
-recovered from the native Figma file rather than cropped from the screenshot.
-[Asset provenance](asset-inventory.md#contact-decorative-background--2026-10-09)
-records the exact archive entry, size, dimensions and hashes.
+the existing navy footer. The owner's photograph of the IRESEN headquarters now
+replaces the original decorative cyan/white background. Its original JPEG bytes
+remain unchanged; Next Image serves responsive optimized derivatives, while CSS
+handles the crop and readable text overlay. No generation or retouching is applied.
+[Current photo provenance](asset-inventory.md#contact-headquarters-photo--2026-10-09)
+records the size, dimensions and hash; the earlier curve provenance remains below
+it as history.
 
 Current navy `#12345A`, blue `#296BB4`, Jakarta/Alexandria fonts, aligned gutters,
 action corners, navigation and footer take precedence over the historical sample.
@@ -119,12 +122,15 @@ locale switching.
 The public search projection indexes the current contact introduction, seven
 section destinations, request topics, platform descriptions, FAQ answers and
 headquarters location in FR/EN/AR. It replaces the old contact editorial scaffolds
-and registers the abstract background once as a media resource. The earlier
+and registers the current headquarters photograph once as a media resource,
+replacing the retired abstract background entry. The earlier
 wind photograph remains a served illustration, with its obsolete contact-page
 association removed. See [public search registration](search.md#adding-public-content).
 
 Implementation lives in `src/components/contact/`, `src/lib/contact.ts`,
 `src/styles/contact.css` and the FR/EN/AR catalogs. Executed checks and rendered
 coverage belong in [validation](validation.md); earlier hero/placeholder checks
-describe their earlier revisions. This implementation does not authorize
+describe their earlier revisions. Contact screenshots from the curve-background
+revision describe that composition; photo-specific rendered and delivery checks
+belong in a separate validation entry. This implementation does not authorize
 production deployment, publication, DNS or repository visibility changes.

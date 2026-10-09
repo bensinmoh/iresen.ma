@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Contact headquarters photograph
+
+- Replaced the contact introduction's cyan curves with the owner's headquarters
+  photograph, preserving the exact original JPEG without generation or retouching.
+- Used responsive optimized Next Image delivery and a CSS crop/readability overlay;
+  the source's 11.4 MB size is separate from the page's delivered image bytes.
+- Retired the curve's served file and search reference while keeping its provenance
+  and original bytes in Git history. Earlier contact screenshots retain their scope.
+
+See [photo provenance](docs/asset-inventory.md#contact-headquarters-photo--2026-10-09)
+and [contact behavior](docs/contact.md); photo-specific checks belong in [validation](docs/validation.md).
+
 ## 2026-10-09 — Refined field focus
 
 - Replaced the thick, separated editable-field focus frame with a compact 2px
@@ -48,6 +60,8 @@ See [shared styling](docs/design-system.md#refined-field-focus--2026-10-09) and
 - Added the requested full-width location section. Google Maps loads on request
   and can be removed; the exact supplied directions shortlink is retained, and
   the address-query embed's exact pin remains unverified.
+  This records the initial presentation; the later direct-map refinement below
+  supersedes its load/remove behavior.
 - Preserved the 22-page route baseline and contact anchors; FR/EN/AR copy remains
   draft. Server-side delivery and production publication remain separate work.
 - Registered current contact guidance, FAQ/platform/location anchors and the

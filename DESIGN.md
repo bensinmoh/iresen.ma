@@ -328,9 +328,17 @@ The owner's selected [contact frame `804:7374`](https://www.figma.com/design/0go
 and attached `contact.png` guide the general composition: a white shared header,
 large split introduction with a navy headquarters panel, four platform entries,
 centered form on a pale surface, native FAQ rows and the existing navy footer.
-The requested full-width location section follows the FAQ. The original abstract
-cyan/white background is recovered byte-identically from the native file; it is
-decorative imagery, not an office photograph or a full-page screenshot.
+The requested full-width location section follows the FAQ. The owner's headquarters
+photograph now replaces the recovered cyan/white background. Keep the original
+JPEG unchanged and use responsive Next Image delivery, with a CSS crop and
+readability overlay. No image generation or retouching is applied. The original
+curve provenance remains historical; earlier contact screenshots show that revision.
+The cover image uses `55% center` positioning. White heading/body text and the
+Energy Cyan accent/focus sit over a navy gradient: 88% at the top, 80% through
+the text area, fading to transparent over `10rem` below the actual copy. The
+overlay belongs to the text block, so a taller adjacent headquarters panel does
+not extend the shading over the lower photograph. A `10rem` lower reserve scales
+with text, keeping the fade below the copy.
 
 Approved navy `#12345A`, blue `#296BB4`, self-hosted Jakarta/Alexandria, shared
 gutters and physical action corners govern the implementation. The screenshot's
@@ -369,8 +377,9 @@ over `rgb(5 17 29 / 66%)`, allowing the photograph to remain visible.
 
 New generated executive-meeting, young-adult onboarding and two-person handshake
 images fit governance, opportunities and collaboration. All 17 active photo assets
-are still fictional illustrations. Real Green Energy Park and IRESEN office
-photos await source-download access; no real image or office location is asserted.
+are still fictional illustrations. External Green Energy Park and office-photo
+candidates await source-download access; contact now uses the separate photograph
+supplied by the owner. Generated images do not assert real subjects or locations.
 See [role mapping, provenance and readiness](docs/contextual-hero-media.md).
 This describes the photo-hero revision; contact subsequently replaces its photo
 hero with the reference composition above. Routes, fonts, original SVGs, mobile
