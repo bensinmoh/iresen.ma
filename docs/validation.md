@@ -26,6 +26,52 @@ Automated accessibility and the tested keyboard/mobile interactions do not estab
 
 Search, contact delivery and CMS email are honest unavailable adapters. Production storage, identity/MFA, jobs, legal/privacy assessment, recovery and approved content/translations remain follow-up work. Missing design exports/fonts/imagery do not block this foundation. See the [backlog](backlog.md).
 
+## Refined glass surfaces — 2026-10-09
+
+The owner approved the isolated preview after review of the privately supplied
+13.15-second recording. Shared glass tokens now apply to existing Menu/Search
+controls and the homepage certification aside: 18px blur/115% saturation,
+12–6% white gradient, 14% white outline, inset highlight and navy fallback.
+Reference video/frames and the separate preview remain outside the repository.
+
+Passed formatting, lint, strict types, all 97 unit cases and the production build.
+All 41 existing navigation/header-search/hero browser cases passed in installed
+Chrome against the production build on port 3100. The owner's port-3000 server
+remained running. No schema/database behavior changed; local integration checks
+were not rerun. Current PR CI runs the complete suite before merge.
+
+Rendered FR/EN/AR at 390, 768, 1024 and 1440px and checked the normal white
+French contact header. Controls and the certification aside retain stable bounds;
+there is no page-width overflow. The clipped reflection is pointer-transparent,
+has one iteration, is inactive after 1100ms and is absent under reduced motion.
+Keyboard focus starts the pass on resting controls; open controls hide it. Search
+keeps its immediate white hover reveal. The certification aside remains outside
+the tab order. Mobile hides the header reflection and retains its direct control.
+Open menus preserve the white tab, sharp selected bottom-right and exact tab/panel
+vertical join at 768/1024px, including Arabic's unclipped bridge. Escape restores
+trigger focus; the Arabic native compact menu also works without JavaScript.
+Existing suites additionally cover touch, accessible names, axe scans, enlarged
+text, responsive heroes and native search submission.
+
+Six background samples from the reviewed French header/certification captures
+give white-text contrast from 5.59:1 to 12.47:1. These are individual rendered
+samples, not a guarantee for every moving-video frame or browser.
+
+Reviewed captures:
+
+- [Resting French header with keyboard focus](screenshots/refined-glass-header-fr-1024.webp)
+- [French open menu](screenshots/refined-glass-open-fr-1024.webp)
+- [Arabic open menu](screenshots/refined-glass-open-ar-1024.webp)
+- [French glass certification detail](screenshots/refined-glass-certification-fr-1440.webp)
+- [Arabic glass certification detail](screenshots/refined-glass-certification-ar-1440.webp)
+- [French hero with reflection](screenshots/refined-glass-hero-fr-1440.webp)
+
+Public labels, approved imagery, URLs, anchors and searchable bodies are unchanged,
+so current localized search projections remain sufficient. There is no new public
+resource to register. Unsupported-blur fallback was source-reviewed; this pass
+does not claim older-browser, Safari, physical-device, manual screen-reader,
+all-video-frame contrast or field-performance coverage. No deployment was performed.
+
 ## Glass header controls and joined menu — 2026-10-09
 
 Passed lint, strict types, all 97 unit tests and the final production build.

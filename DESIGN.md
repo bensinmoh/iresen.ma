@@ -3,7 +3,14 @@
 ## Compact menu control — 2026-10-09
 
 The owner's follow-up gives Menu and Search a restrained glass surface over heroes:
-12px backdrop blur, 12% white tint, a fine white outline and white text/icons.
+The approved glass refinement now uses 18px backdrop blur with 115% saturation,
+a 12–6% white gradient, a 14% white outline and a subtle inset highlight.
+Shared glass tokens also govern the homepage certification surface. A clipped
+6.5% white reflection passes once over one second on fine-pointer hover or
+keyboard focus; the existing hero video supplies natural background variation.
+No reflection loops or extra video are added. Reduced motion suppresses the
+pass. Expanded controls hide it, and the narrow mobile header stays borderless.
+White text/icons remain over heroes.
 The normal white header uses an 88% white surface with navy text. Expanded Search
 is opaque white. The selected Menu becomes a white/navy tab; its bottom-right
 corner flattens to join the dropdown directly. The dropdown keeps physical 20px
@@ -13,7 +20,7 @@ tab. Reduced motion shows the dropdown directly; mobile retains its existing
 borderless icon and full-screen sheet entrance. Shared action corners, 48px
 height, centered 16px/600 label and regular 24px icon remain.
 See [the shared rule](docs/design-system.md#compact-menu-control--2026-10-09)
-and [validation](docs/validation.md#compact-menu-control--2026-10-09).
+and [current glass validation](docs/validation.md#refined-glass-surfaces--2026-10-09).
 
 Use this document for art direction and constructive critique. Use
 [the design-system specification](docs/design-system.md) for shared implementation

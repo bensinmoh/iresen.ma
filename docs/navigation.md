@@ -15,10 +15,17 @@ chosen for each group's actual content.
 ## Compact menu control — 2026-10-09
 
 The owner's follow-up gives resting Menu/Search glass surfaces above `40rem`:
-12px blur, white tint/outline and white text over the inverse hero header;
+18px blur/115% saturation, a 12–6% white gradient, fine 14% white outline and white text over the inverse hero header;
 the normal header retains navy text over an 88% white surface. Expanded Search
 is white/navy. Unsupported backdrop blur falls back to a readable navy surface
 on inverse headers.
+
+The approved glass refinement shares `--glass-*` tokens with the certification
+aside and adds a finite one-second decorative reflection on fine-pointer hover
+or keyboard focus. Reflection clipping preserves the outer focus ring and RTL
+bridge. Open controls and the narrow mobile header hide the reflection; Search's
+immediate hover reveal still takes priority. Reduced motion suppresses the pass.
+See [current checks](validation.md#refined-glass-surfaces--2026-10-09).
 
 The selected Menu becomes a white/navy tab with a sharp bottom-right corner,
 joined directly to the dropdown at its bottom edge. The dropdown has physical

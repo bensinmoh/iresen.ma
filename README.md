@@ -2,6 +2,10 @@
 
 Development foundation for IRESEN's French, English and Arabic institutional website. It provides a public locale shell, Payload CMS and PostgreSQL with introductory page heroes, honest empty content sections and a composed contact page. Read [instruction.md](instruction.md) for the development brief and [backlog](docs/backlog.md) for current scope and follow-up work.
 
+The approved [shared glass refinement](docs/design-system.md#compact-menu-control--2026-10-09)
+unifies existing header controls and the homepage certification surface, with a
+fine outline and finite reflection. See [current verification](docs/validation.md#refined-glass-surfaces--2026-10-09).
+
 ## Selected stack
 
 | Tool                                                      | Pinned version                                                         |

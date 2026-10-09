@@ -333,9 +333,13 @@ wording and the English/Arabic draft translations:
 The home-only badge is a native, noninteractive `aside`, named with its localized
 certified label and ISO 9001:2015. The stable standard identifier uses an LTR `bdi`
 and Plus Jakarta Sans; Arabic copy uses Alexandria with natural tracking.
-The surface uses actual 16px backdrop blur at the default root size, including
-the prefixed property, over `rgb(80 80 80 / 72%)`. Unsupported filters retain the
-darker neutral `rgb(52 52 52 / 94%)` fallback. Its physical 20px top-left/bottom-right
+The owner's approved 2026-10-09 glass refinement shares the header material:
+18px backdrop blur/115% saturation, a translucent 12–6% white gradient, 14% white
+outline and subtle inset highlight/shadow. Unsupported filters retain the
+92% navy fallback. A clipped, pointer-transparent decorative reflection passes
+once over one second on fine-pointer hover, with no animation under reduced
+motion. The aside remains noninteractive and has no keyboard tab stop.
+Its physical 20px top-left/bottom-right
 corners stay rounded and the opposite corners sharp in RTL too.
 
 From `70rem`, the homepage copy uses a two-column grid with an 11rem badge at

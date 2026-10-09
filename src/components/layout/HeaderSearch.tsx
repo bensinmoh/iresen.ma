@@ -143,7 +143,8 @@ export function HeaderSearch({
         }
       }}
     >
-      <summary className="header-search" aria-label={label} onClick={activate}>
+      <summary className="header-search glass-surface" aria-label={label} onClick={activate}>
+        <span className="glass-reflection" aria-hidden="true" />
         <NavigationIcon name="search" />
         <span className="header-search-title">{label}</span>
       </summary>
