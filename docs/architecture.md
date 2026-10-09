@@ -28,6 +28,6 @@ Drafts, admin, previews and personal records must stay outside public caches, si
 
 ## Portable infrastructure
 
-PostgreSQL is the only required development service. Media uses local development storage until an approved S3-compatible production provider is configured. Email, search and LinkedIn remain isolated behind adapters; unavailable services must have honest unavailable states.
+PostgreSQL is the only required development service. Media uses local development storage until an approved S3-compatible production provider is configured. Search now uses a PostgreSQL full-text/trigram index and durable job queue behind its replaceable adapter, with current public/locale source checks before returning results. Email and LinkedIn retain their isolated adapter boundaries and honest unavailable states. Public PDF extraction optionally uses Poppler on the worker host; file metadata/transcripts remain searchable without it. See [search](search.md).
 
 A portable Node.js server/container is the deployment target. Hosting region, storage, mail, identity/MFA, job scheduling, distributed rate limiting and production observability need separate decisions before launch. See [deployment](deployment.md), [security and privacy](security-and-privacy.md), and [ADR 0001](adr/0001-modular-trilingual-application.md).

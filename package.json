@@ -17,7 +17,7 @@
     "format": "node scripts/run.mjs prettier --write .",
     "format:check": "node scripts/run.mjs prettier --check .",
     "test": "node scripts/run.mjs vitest run --exclude '**/*.integration.test.ts'",
-    "test:integration": "CMS_INTEGRATION=1 node scripts/run.mjs vitest run src/tests/cms.integration.test.ts",
+    "test:integration": "CMS_INTEGRATION=1 node scripts/run.mjs vitest run src/tests/cms.integration.test.ts src/tests/search.integration.test.ts",
     "test:e2e": "node scripts/run.mjs playwright test",
     "setup:local": "node scripts/setup-local.mjs",
     "db:up": "docker compose --env-file .env.local up -d db",
@@ -26,7 +26,9 @@
     "cms:importmap": "node scripts/run.mjs payload generate:importmap",
     "cms:migrate:create": "node scripts/run.mjs payload migrate:create",
     "cms:migrate": "node scripts/run.mjs payload migrate",
-    "cms:bootstrap": "node scripts/run.mjs tsx scripts/bootstrap-admin.ts"
+    "cms:bootstrap": "node scripts/run.mjs tsx scripts/bootstrap-admin.ts",
+    "search:rebuild": "node scripts/run.mjs tsx scripts/search-index.ts rebuild",
+    "search:work": "node scripts/run.mjs tsx scripts/search-index.ts work"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.90.2",

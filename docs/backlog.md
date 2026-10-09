@@ -58,7 +58,9 @@ The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10
 
 - [ ] Expand collections and detail/list/filter templates; translations, redirects, preview and publication invalidation.
 - [ ] Add verified public media rights and private-file boundaries.
-- [ ] Implement locale-aware search and real contact acceptance/delivery with durable retries and retention.
+- [x] Implement public locale-aware search, expandable header field, suggestions,
+      guarded results and document/media references; see [search](search.md).
+- [ ] Implement real contact acceptance/delivery with durable retries and retention.
 - [ ] Add scheduled jobs, archive/withdrawal behavior and narrow locale permissions/audit.
 - [ ] Introduce optional LinkedIn official API access or an honest manual editorial queue.
 

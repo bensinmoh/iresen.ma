@@ -1,0 +1,32 @@
+.published-content {
+  max-inline-size: 75ch;
+  margin-block-end: var(--space-12);
+  overflow-wrap: anywhere;
+}
+
+.published-summary {
+  font-size: 1.125rem;
+  color: var(--color-navy);
+}
+
+.published-rich-text :is(ul, ol) {
+  padding-inline-start: 1.5rem;
+  list-style: revert;
+  margin-block: var(--space-4);
+}
+
+.published-rich-text :is(h2, h3, h4, h5, h6) {
+  margin-block: var(--space-8) var(--space-4);
+  scroll-margin-block-start: var(--space-8);
+}
+
+.published-rich-text blockquote {
+  border-inline-start: 3px solid var(--color-blue);
+  padding-inline-start: var(--space-6);
+  margin-inline: 0;
+}
+
+.published-news-list li {
+  padding-block: var(--space-6);
+  border-block-start: 1px solid var(--color-border);
+}

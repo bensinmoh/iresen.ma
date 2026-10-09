@@ -69,7 +69,8 @@ opens it without autofocus; explicit keyboard/touch activation opens and focuses
 the labelled input. Enter or activation of the icon with a filled query submits
 native GET `q` to the existing canonical localized search route. An empty input
 retains required-field validation. On the search page, the enhanced header restores
-the current `q`; the engine remains unavailable and no results are invented.
+the current `q`. The integrated public search engine now returns ranked results
+and live suggestions; see [search coverage and contribution rules](search.md).
 
 The field has a programmatic label and localized placeholder: « Rechercher sur
 le site… », “Search the website…” or “ابحث في الموقع…”. Its single-line text

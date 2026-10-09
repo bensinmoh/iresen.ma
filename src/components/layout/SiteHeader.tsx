@@ -320,7 +320,7 @@ export function SiteHeader() {
     )
   }
 
-  const inverse = currentPageId !== undefined
+  const inverse = currentPageId !== undefined && currentPageId !== 'search'
 
   return (
     <header
@@ -367,6 +367,7 @@ export function SiteHeader() {
             </div>
             <div className="header-tools">
               <HeaderSearch
+                locale={locale}
                 action={pageHref('search', locale)}
                 label={pageTitle('search')}
                 placeholder={copy('searchPlaceholder')}

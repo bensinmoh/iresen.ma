@@ -687,5 +687,45 @@
         "description": "Content to add: search and the five utility pages in the current language."
       }
     }
+  },
+  "Search": {
+    "headerLabel": "Quick site search",
+    "formLabel": "Search the website",
+    "inputLabel": "Search terms",
+    "placeholder": "What are you looking for?",
+    "submit": "Search",
+    "searching": "Searching…",
+    "description": "Explore pages, sections, news and public files across the website.",
+    "startTitle": "Find what you need",
+    "startDescription": "Enter a word, a title or a topic. Then narrow the results by content type.",
+    "filterLabel": "Filter results by content type",
+    "types": {
+      "all": "All",
+      "page": "Pages",
+      "section": "Sections",
+      "news": "News",
+      "document": "Documents",
+      "media": "Media"
+    },
+    "sortLabel": "Sort by",
+    "relevance": "Relevance",
+    "newest": "Newest",
+    "apply": "Apply",
+    "resultCount": "{count, plural, =0 {No results} one {# result} other {# results}}",
+    "resultsLabel": "Search results",
+    "emptyTitle": "No matching results",
+    "emptyDescription": "Try fewer words, another spelling or a broader topic.",
+    "clearFilters": "Search all content types",
+    "errorTitle": "Search could not be completed",
+    "errorDescription": "Please try again in a moment.",
+    "retry": "Try again",
+    "paginationLabel": "Search results pages",
+    "pageLabel": "Page {page}",
+    "previous": "Previous",
+    "next": "Next",
+    "suggestions": "Search suggestions",
+    "noSuggestions": "No quick matches. Press Enter to see all results.",
+    "invalidTitle": "Check your search",
+    "invalidDescription": "Use up to 200 characters and choose the available filters."
   }
 }

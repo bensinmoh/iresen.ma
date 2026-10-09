@@ -7,6 +7,15 @@ The owner's reattached original color book v0.9 and seven supplied SVGs establis
 These are the shared website rules. Source measurements later in this document
 explain intent and history; they do not supersede these decisions.
 
+Functional search, added on 2026-10-09, uses a compact results composition rather
+than a full-screen hero. Reuse the aligned grid and navy/blue/white type and
+control roles. The white resting magnifier retains the header's square geometry;
+its input reveals toward inline-start over 220ms, bounded by available space and
+mirrored in Arabic. Focus, touch, no-JavaScript and reduced-motion states retain
+native GET submission. Public suggestions use an accessible link list; result
+rows use safe text highlights, clear resource types and readable excerpts.
+See [the search specification](search.md) and [validation](validation.md).
+
 - **Identity:** follow the original color book. Institutional primary navy is
   `#12345A`; signature/action blue is `#296BB4`. Keep the approved accents and
   original SVGs. Figma's `#0C2340`/`#1A4E8A` palette is historical evidence.
@@ -796,8 +805,9 @@ Escape, outside interaction and leaving disclosure focus close it. Without
 JavaScript, native click activation and GET submission remain; at `35rem` and
 below, the field spans the action row below the controls.
 
-The existing search-unavailable notice remains: no results, index, CMS query or
-backend is added. See [navigation behavior](navigation.md#expandable-header-search--2026-10-09)
+The results page now uses the integrated public search engine, with ranked
+results, live suggestions, type filters and URL pagination. Its compact reading
+layout replaces the decorative search hero. See [the search guide](search.md). See [navigation behavior](navigation.md#expandable-header-search--2026-10-09)
 and [executed checks](validation.md); prior control evidence retains its scope.
 
 ## Homepage certification badge — 2026-10-08

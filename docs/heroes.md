@@ -10,7 +10,7 @@ request keeps those photos on the other 21 pages and as the homepage fallback.
 
 ## Composition and content
 
-All 22 approved pages use the shared server-rendered `PageHero`, with composition
+The 21 non-search pages use the shared server-rendered `PageHero`, with composition
 selected by stable page ID in `src/lib/heroes.ts`. Four text-placement modes
 (start, end, center and editorial) vary alignment and reading measure over
 full-scene photographic backgrounds. The former split treatment is removed.

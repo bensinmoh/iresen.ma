@@ -1,0 +1,234 @@
+import { existsSync, readdirSync } from 'node:fs'
+import path from 'node:path'
+
+import { describe, expect, it } from 'vitest'
+
+import { SEARCH_QUERY_LIMIT, validateSearchInput } from '@/lib/search/adapter'
+import { catalogRevision, publicAssetReferences, staticSearchDocuments } from '@/lib/search/catalog'
+import { extractPublicFileText } from '@/lib/search/indexer'
+import {
+  highlightSearchText,
+  normalizeSearchText,
+  richTextPlainText,
+  richTextSections,
+  searchExcerpt,
+  searchTokens,
+} from '@/lib/search/text'
+import type { SearchInput } from '@/lib/search/types'
+import { contentLocales } from '@/lib/content/publication'
+import { heroImages } from '@/lib/hero-images'
+import { pageSections } from '@/lib/page-sections'
+import { pageHref, pageIds } from '@/lib/site'
+
+describe('multilingual search text', () => {
+  it('normalizes French accents and ligatures, English case, and Arabic marks without losing letters', () => {
+    expect(normalizeSearchText('Énergies, CŒUR et ÆTHER!')).toBe('energies coeur et aether')
+    expect(normalizeSearchText('Research / IRESEN 2035')).toBe('research iresen 2035')
+    expect(normalizeSearchText('أَبْحَاث إِنْجَاز آفاق ٱلطَّاقَة علـى')).toBe(
+      'ابحاث انجاز افاق الطاقة علي',
+    )
+    expect(normalizeSearchText('IRESEN — الطَّاقَة')).toBe('iresen الطاقة')
+  })
+
+  it('deduplicates normalized tokens and bounds a query to twelve terms', () => {
+    expect(searchTokens('ÉNERGIE énergie ENERGY energy')).toEqual(['energie', 'energy'])
+    expect(
+      searchTokens(Array.from({ length: 30 }, (_, index) => `term${index}`).join(' ')),
+    ).toHaveLength(12)
+    expect(searchTokens(' + : & ! ')).toEqual([])
+  })
+
+  it('highlights original accented, ligature and Arabic text using text segments', () => {
+    const original = 'Énergies du cœur — أَبْحَاث IRESEN <script>alert(1)</script>'
+    const segments = highlightSearchText(original, 'energie coeur ابحاث')
+    expect(segments.map(({ text }) => text).join('')).toBe(original)
+    expect(segments.filter(({ match }) => match).map(({ text }) => text)).toEqual([
+      'Énergie',
+      'cœur',
+      'أَبْحَاث',
+    ])
+    expect(segments.at(-1)).toEqual({
+      text: ' IRESEN <script>alert(1)</script>',
+      match: false,
+    })
+    expect(highlightSearchText('e\u0301nergie', 'energie')).toEqual([
+      { text: 'e\u0301nergie', match: true },
+    ])
+    expect(highlightSearchText('No match', 'other')).toEqual([{ text: 'No match', match: false }])
+  })
+
+  it('centers bounded readable excerpts near accent-insensitive matches', () => {
+    const text = `${'Introduction text. '.repeat(25)}Énergie solaire remarquable. ${'Closing text. '.repeat(25)}`
+    const excerpt = searchExcerpt(text, 'energie', 120)
+    expect(excerpt).toContain('Énergie solaire remarquable.')
+    expect(excerpt.startsWith('…')).toBe(true)
+    expect(excerpt.endsWith('…')).toBe(true)
+    expect(excerpt.length).toBeLessThanOrEqual(122)
+    expect(searchExcerpt('  Reviewed\n public\t copy.  ', 'public')).toBe('Reviewed public copy.')
+  })
+
+  it('extracts public rich-text nodes and stable heading anchors, excluding serialized metadata', () => {
+    const body = {
+      internalNotes: 'Editorial secret',
+      root: {
+        children: [
+          { type: 'paragraph', children: [{ text: 'Introduction' }] },
+          { type: 'heading', children: [{ text: 'Solar research' }] },
+          {
+            type: 'paragraph',
+            children: [{ text: 'Public section copy', url: 'https://private.invalid/token' }],
+          },
+          { type: 'heading', children: [{ text: 'Transfer' }] },
+          { type: 'paragraph', children: [{ text: 'Practical applications' }] },
+        ],
+      },
+    }
+    expect(richTextPlainText(body)).toBe(
+      'Introduction Solar research Public section copy Transfer Practical applications',
+    )
+    expect(richTextSections(body)).toEqual([
+      { anchor: 'content-section-1', title: 'Solar research', body: 'Public section copy' },
+      { anchor: 'content-section-3', title: 'Transfer', body: 'Practical applications' },
+    ])
+    expect(richTextPlainText(null)).toBe('')
+    expect(richTextSections(null)).toEqual([])
+  })
+
+  it('suppresses upload relationships and bounds oversized or malformed rich-text projections', () => {
+    const secret = 'Private related upload transcription'
+    const upload = { type: 'upload', text: secret, children: [{ text: secret }] }
+    const giantParagraph = { type: 'paragraph', children: [{ text: 'x'.repeat(200_001) }] }
+    const body = {
+      root: {
+        children: [
+          { type: 'heading', children: [{ text: 'Public section' }] },
+          upload,
+          giantParagraph,
+        ],
+      },
+    }
+    const plain = richTextPlainText(body)
+    expect(plain).toContain('Public section')
+    expect(plain).not.toContain(secret)
+    expect(plain.length).toBeLessThanOrEqual(100_000)
+    const sections = richTextSections(body)
+    expect(sections).toHaveLength(1)
+    expect(sections[0]?.body).not.toContain(secret)
+    expect(
+      sections.reduce((length, section) => length + section.title.length + section.body.length, 0),
+    ).toBeLessThanOrEqual(100_000)
+    expect(
+      richTextSections({
+        root: {
+          children: Array.from({ length: 1000 }, () => ({
+            type: 'heading',
+            children: [{ text: 'Public heading' }],
+          })),
+        },
+      }),
+    ).toHaveLength(200)
+    expect(richTextSections({ root: { children: { malformed: true } } })).toEqual([])
+  })
+})
+
+describe('search request validation', () => {
+  it('accepts public locales and safely bounded options, including punctuation as ordinary query text', () => {
+    expect(validateSearchInput({ query: 'Énergie الطاقة IRESEN', locale: 'ar' })).toBe(true)
+    expect(
+      validateSearchInput({ query: '', locale: 'fr', page: 1, type: 'all', sort: 'newest' }),
+    ).toBe(true)
+    expect(validateSearchInput({ query: "' OR 1=1; DROP TABLE pages; --", locale: 'en' })).toBe(
+      true,
+    )
+    expect(validateSearchInput({ query: 'x'.repeat(SEARCH_QUERY_LIMIT), locale: 'en' })).toBe(true)
+  })
+
+  it.each([
+    { query: 'x'.repeat(SEARCH_QUERY_LIMIT + 1), locale: 'fr' },
+    { query: 'query\u0000secret', locale: 'fr' },
+    { query: 'query\nsecret', locale: 'fr' },
+    { query: 'query\u007fsecret', locale: 'fr' },
+    { query: 'query', locale: 'de' },
+    { query: 'query', locale: 'en', type: 'users' },
+    { query: 'query', locale: 'en', sort: 'score; DROP TABLE news' },
+    { query: 'query', locale: 'en', page: 0 },
+    { query: 'query', locale: 'en', page: 1001 },
+    { query: 'query', locale: 'en', page: 1.5 },
+    { query: 'query', locale: 'en', page: Number.NaN },
+  ])('rejects an invalid search request: %j', (input) => {
+    expect(validateSearchInput(input as SearchInput)).toBe(false)
+  })
+
+  it('rejects file traversal, remote URLs, control characters and unsupported extraction types', async () => {
+    await expect(extractPublicFileText('../private.pdf', 'application/pdf')).resolves.toBe('')
+    await expect(
+      extractPublicFileText('https://private.invalid/file.pdf', 'application/pdf'),
+    ).resolves.toBe('')
+    await expect(extractPublicFileText('file\u0000.pdf', 'application/pdf')).resolves.toBe('')
+    await expect(extractPublicFileText('video.mp4', 'video/mp4')).resolves.toBe('')
+  })
+})
+
+describe('explicit public search catalog', () => {
+  it('registers every public page and nested section in its own locale with a canonical destination', () => {
+    const documents = staticSearchDocuments()
+    expect(new Set(documents.map(({ id }) => id)).size).toBe(documents.length)
+    for (const locale of contentLocales) {
+      for (const pageId of pageIds) {
+        if (pageId === 'search') {
+          expect(documents.some(({ id }) => id === `page:search:${locale}`)).toBe(false)
+          continue
+        }
+        expect(documents.find(({ id }) => id === `page:${pageId}:${locale}`)).toMatchObject({
+          locale,
+          url: pageHref(pageId, locale),
+          type: 'page',
+        })
+        for (const section of pageSections[pageId]) {
+          for (const entry of [section, ...(section.children ?? [])]) {
+            expect(
+              documents.find(({ id }) => id === `section:${pageId}:${entry.id}:${locale}`),
+            ).toMatchObject({ locale, type: 'section', url: pageHref(pageId, locale, entry.id) })
+          }
+        }
+      }
+    }
+    expect(documents.every(({ title, body }) => title.trim() && body.trim())).toBe(true)
+    expect(documents.some(({ url }) => url.includes('/docs/') || url.includes('.local'))).toBe(
+      false,
+    )
+  })
+
+  it('references all served meaningful public files and keeps responsive crops under their original result', () => {
+    const references = new Set(publicAssetReferences.map(({ url }) => url))
+    const derivatives = new Set<string>(Object.values(heroImages).map(({ mobile }) => mobile.src))
+    const publicRoot = path.resolve(process.cwd(), 'public')
+    const publicFiles = readdirSync(publicRoot, { recursive: true, withFileTypes: true })
+      .filter((entry) => entry.isFile() && !entry.name.startsWith('.'))
+      .map((entry) => `/${path.relative(publicRoot, path.join(entry.parentPath, entry.name))}`)
+    expect(new Set(publicAssetReferences.map(({ id }) => id)).size).toBe(
+      publicAssetReferences.length,
+    )
+    for (const file of publicFiles)
+      expect(references.has(file) || derivatives.has(file), file).toBe(true)
+    for (const asset of publicAssetReferences) {
+      expect(existsSync(path.join(publicRoot, asset.url))).toBe(true)
+      expect(derivatives.has(asset.url)).toBe(false)
+      for (const locale of contentLocales) {
+        expect(asset.text[locale]?.title.trim()).toBeTruthy()
+        expect(asset.text[locale]?.description.trim()).toBeTruthy()
+      }
+    }
+    for (const image of Object.values(heroImages)) expect(references.has(image.src)).toBe(true)
+  })
+
+  it('changes the catalog fingerprint when approved searchable content changes', () => {
+    const documents = staticSearchDocuments()
+    expect(catalogRevision(documents)).toBe(catalogRevision([...documents]))
+    expect(catalogRevision(documents)).not.toBe(
+      catalogRevision(
+        documents.map((entry, index) => (index ? entry : { ...entry, body: 'New copy' })),
+      ),
+    )
+  })
+})

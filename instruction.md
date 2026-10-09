@@ -1,6 +1,6 @@
 # IRESEN website — project and development instructions
 
-Version: 1.3 · 8 October 2026 — strategy references and current Figma design-system reference reconciled  
+Version: 1.4 · 9 October 2026 — public search references and multilingual discovery requirements  
 Repository: https://github.com/bensinmoh/iresen.ma  
 Project owner: Mouhcine BENMEZIANE, Direction Partenariats & Marketing de l’Innovation, IRESEN  
 Working language for code and technical documentation: English  
@@ -448,6 +448,18 @@ Future website-to-LinkedIn publishing can reuse the content model but is outside
 ## 12. In-site search
 
 Implement a locale-aware, server-side search endpoint and an accessible results page.
+
+Owner addition — 9 October 2026: every newly added or modified public website
+page, section, document, file and media resource must have elements that reference
+it in search. Implement this in the same change: a stable ID, working canonical
+destination/anchor, resource type and descriptive title plus searchable body,
+summary, caption or transcript in every approved public language. Static served
+resources use the explicit public asset catalog; CMS resources use guarded public
+projections and publication-driven indexing. Responsive derivatives share an
+original resource entry. New collections/templates must extend the projection
+and verify publication, update, withdrawal and deletion behavior. See
+[the search guide](docs/search.md#adding-public-content). These references do not
+grant permission to publish private material or unapproved translations.
 
 - Index approved institutional pages, articles, events, projects, programmes, platforms, publications/reports, media metadata and opportunities/calls.
 - Filter by active locale, content type and relevant thematic/date criteria. Respect publication eligibility, withdrawal and access rights before returning results or suggestions.

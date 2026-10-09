@@ -260,6 +260,10 @@ export interface Media {
   alt?: string | null;
   caption?: string | null;
   /**
+   * Public searchable transcript or document text. Add reviewed text for audio, video, scans and files without automatic extraction. Never put private editorial notes here.
+   */
+  searchText?: string | null;
+  /**
    * Record approved usage rights before making a file public.
    */
   rights?: string | null;
@@ -453,6 +457,7 @@ export interface MediaSelect<T extends boolean = true> {
   title?: T;
   alt?: T;
   caption?: T;
+  searchText?: T;
   rights?: T;
   credit?: T;
   publicationStatus?: T;
