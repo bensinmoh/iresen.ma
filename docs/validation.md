@@ -50,6 +50,25 @@ CONTRIBUTING.md. Each requested increment updates affected documentation and
 substitute for the current PR's CI; the corresponding GitHub check runs and merge
 history provide the remote completion record.
 
+## Homepage restructuring documentation — 2026-10-09
+
+Compared the supplied `Pasted text.txt` with the current homepage renderer,
+seven-section map, canonical page definitions, product/design guidance and
+earlier P01 recommendations. Recorded its 5,752-byte size and SHA-256 in
+[the new brief](homepage-restructure.md). The six-section target, supplied mission
+and collaboration wording, composition counts, named candidates and event fallback
+remain planning evidence, not implemented modules or independently verified claims.
+
+Passed focused checks for all ten changed/new Markdown files: pinned Prettier
+3.9.9 formatting, Git whitespace, 17 added/new local links and document anchors,
+exact supplied mission wording and candidate names, six planned sections,
+referenced current page/section IDs and unchanged strategy-source SHA-256 hashes.
+The seven runtime homepage placeholders and all runtime/assets remain unchanged
+by this increment. No YAML frontmatter or routing definition is introduced. Application,
+database, browser and Figma checks are not rerun locally because their inputs
+are unchanged. Rendered behavior, content approval and future event automation
+are outside this increment. Current PR CI and merge evidence belong to the PR.
+
 ## Native Figma reference analysis — 2026-10-08
 
 The owner-uploaded Git LFS source was retrieved from revision `37b0689` and
