@@ -6,7 +6,7 @@ Chosen on 2026-10-08 following the owner's request for one consistent structure:
 
 | Page          | French path                                 | Boundary                                             |
 | ------------- | ------------------------------------------- | ---------------------------------------------------- |
-| Home          | `/fr`                                       | Introductory hero; content modules pending           |
+| Home          | `/fr`                                       | Introductory hero; section placeholders              |
 | Institute     | `/fr/institut`                              | Identity, mission and key figures in one page        |
 | Governance    | `/fr/institut/gouvernance`                  | Separate page                                        |
 | Priorities    | `/fr/recherche-innovation/priorites`        | Priorities and roadmaps                              |
@@ -32,6 +32,17 @@ Chosen on 2026-10-08 following the owner's request for one consistent structure:
 Cookie preferences become required if the chosen processing needs them. Legal placeholder text must not claim compliance or invent registration numbers.
 
 Language selection is a control, not a content page. Governance stays separate from the institute onepager; press releases stay within news and calls within opportunities. Do not introduce alumni, training, newsletter or application portals from screenshot labels alone.
+
+## Section placeholders — 2026-10-09
+
+The owner's request puts empty sections in place on all 22 pages, with headings
+and short localized draft content notes. `src/lib/page-sections.ts` supplies their
+shared IDs and order; [the section guide](page-sections.md) records the source
+adaptation. Existing heroes provide page introductions. Institute keeps `about`,
+`mission` and `key-figures` as its principal anchors, with capacities and 2035
+ambition nested under Mission. All section IDs are supported locale-switch anchors.
+The sitemap preserves links to all 22 canonical pages. CMS content, final
+institutional copy and functional service modules remain follow-up work.
 
 ## Structure recommendations received on 2026-10-08
 

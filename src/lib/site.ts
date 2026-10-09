@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n/locales'
+import { pageSections } from '@/lib/page-sections'
 
 type PageDefinition = {
   path: string
@@ -168,7 +169,15 @@ export function pageIdFromPathname(pathname: string): PageId | undefined {
 export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   const normalized = anchor.replace(/^#/, '')
   const definition: PageDefinition = pages[pageId]
-  return normalized === 'main-content' || definition.anchors?.includes(normalized) === true
+  return (
+    normalized === 'main-content' ||
+    normalized === 'page-sections' ||
+    definition.anchors?.includes(normalized) === true ||
+    pageSections[pageId].some(
+      (section) =>
+        section.id === normalized || section.children?.some((child) => child.id === normalized),
+    )
+  )
 }
 
 export function getSiteUrl(): URL {

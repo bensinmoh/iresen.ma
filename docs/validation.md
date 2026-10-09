@@ -764,6 +764,60 @@ establish cross-browser or screen-reader conformance, populated editorial/CMS
 page-body quality, native Figma pixel fidelity, institutional content approval
 or production deployment.
 
+## Page section placeholders — 2026-10-09
+
+The requested scaffold covers all 22 canonical page IDs with 116 localized
+headings and short content briefs, including the Institute's nested Mission
+topics and the search absence-of-results topic. The existing heroes introduce
+the pages; the received section recommendations supply the remaining order.
+See [the section source map](page-sections.md).
+
+Passed locally with Node 24.19.0, pnpm 11.19.0, migrated disposable PostgreSQL
+17.9 and the production standalone application:
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm format:check` and `git diff --check`.
+- `pnpm test`: 8 tests passed, including complete FR/EN/AR catalog parity.
+- `pnpm build`: passed; webpack repeated the existing next-intl dynamic-import
+  cache-analysis warning without a build failure.
+- `CI=1 PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e`: all 44 tests
+  passed, covering public routes, locale fragments, no-JavaScript navigation,
+  responsive/RTL shell behavior, fonts, truthful service states, automated
+  accessibility and anonymous CMS restrictions.
+- Direct section-map checks verified all 116 titles/briefs and supported section
+  and child fragments in all three locales. The source-table review verified
+  the principal-page heading sequences and the utility adaptation. Changed
+  Markdown local-file links resolve.
+
+The independent section audit checked all 66 localized pages: French at 1440px,
+English at 768px and Arabic at 390px. All returned 200 with one H1, matching
+ordered headings and briefs, unique element IDs, valid fragment targets and no
+viewport overflow. All 22 sitemap destinations remained present in each locale.
+Fifty-one section scroll targets and six actual language-switch transitions
+verified the new and nested anchors.
+
+Home, Institute and sitemap were checked in FR/EN/AR at 320, 390, 768, 1024 and
+1440px, with normal and 200% root text: 90 layout conditions in addition to the
+66 route views. Initial enlarged-text review exposed long sitemap H3s and a
+preexisting compact-header overflow at tablet width. Long-heading wrapping and
+shrinkable/wrapping compact actions resolved all 13 affected conditions; the
+final targeted audit and the complete combined-site browser suite passed without
+console or page errors. Source checks and the production build were repeated
+after incorporating the concurrent hero-imagery update.
+
+Reviewed section-area captures:
+
+- [French homepage at 1440px](screenshots/page-sections-home-fr-1440.png).
+- [Arabic Institute at 390px](screenshots/page-sections-institute-ar-390.png).
+- [English sitemap at 768px](screenshots/page-sections-sitemap-en-768.png).
+
+These checks cover Chromium, the requested placeholders and their shared shell.
+They do not establish final editorial or translation approval, populated CMS
+module quality, cross-browser/screen-reader conformance or production release.
+
+The local CMS integration suite was not repeated for these public rendering,
+catalog and anchor changes; the PR workflow runs it separately. The CMS schema
+and collections are unchanged. Remote checks and merge status belong to the PR.
+
 ## Generated hero placeholders — 2026-10-09
 
 Replaced the 17 previous backgrounds across all 22 page introductions with the

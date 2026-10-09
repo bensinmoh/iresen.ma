@@ -65,6 +65,17 @@ Treat 12/8/4-column desktop/tablet/mobile grids as composition
 starting points. Adapt to content; a headline should not become tiny to preserve
 a desktop arrangement on mobile.
 
+The 2026-10-09 section placeholders use the existing aligned grid, flat section
+boundaries, light dividers and bounded text measure. H2s identify sections and
+nested Mission/search topics use H3s; short localized draft notes describe
+the content to prepare. Keep the existing heroes as introductions and the Apex
+Leaf selective on Institute's Mission H2. These placeholders establish content
+order, with final module composition still to follow the approved material.
+Sitemap group H3s retain bold weight and can break long words within narrow
+columns. Compact header actions can shrink and wrap with enlarged text.
+See [section implementation](docs/page-sections.md) and
+[revision-specific validation](docs/validation.md).
+
 French and English use licensed, self-hosted Plus Jakarta Sans, including links
 and buttons. The Latin normal variable asset supports weights 200–800; source and
 OFL license records are in [the font guide](docs/fonts.md). Arabic uses the owner's

@@ -1,4 +1,514 @@
 {
+  "PageSections": {
+    "home": {
+      "develop-test-transfer": {
+        "title": "Développer, éprouver, valoriser",
+        "description": "À prévoir : le rôle de chaque fonction et les liens entre recherche, essais et usages."
+      },
+      "figures": {
+        "title": "IRESEN en chiffres",
+        "description": "À prévoir : des indicateurs vérifiés avec leur unité, leur périmètre et leur période."
+      },
+      "research-priorities": {
+        "title": "Priorités de recherche",
+        "description": "À prévoir : les thématiques approuvées, les besoins associés et les liens vers les priorités."
+      },
+      "results": {
+        "title": "Résultats et réalisations",
+        "description": "À prévoir : des cas documentés précisant le besoin, les contributions, les résultats et leur maturité."
+      },
+      "platforms-expertise": {
+        "title": "Plateformes et expertise",
+        "description": "À prévoir : un aperçu des capacités expérimentales et scientifiques et de leurs conditions d’accès."
+      },
+      "collaboration": {
+        "title": "Collaborer avec IRESEN",
+        "description": "À prévoir : les parcours pour développer un projet, réaliser des essais, mobiliser une expertise ou valoriser un résultat."
+      },
+      "news-events": {
+        "title": "Actualités et rendez-vous",
+        "description": "À prévoir : une sélection d’actualités, d’événements et, lorsqu’il en existe, d’appels ouverts."
+      }
+    },
+    "institute": {
+      "about": {
+        "title": "Qui sommes-nous ?",
+        "description": "À prévoir : l’identité de l’Institut, son histoire, son périmètre et ses partenaires."
+      },
+      "mission": {
+        "title": "Mission et positionnement",
+        "description": "À prévoir : la mission de référence et le lien entre besoins, recherche, expérimentation et usages."
+      },
+      "capabilities": {
+        "title": "Les capacités mobilisées",
+        "description": "À prévoir : les six capacités complémentaires et les liens vers leurs pages métier."
+      },
+      "ambition-2035": {
+        "title": "L’ambition à l’horizon 2035",
+        "description": "À prévoir : les orientations à long terme, en distinguant les ambitions des acquis."
+      },
+      "key-figures": {
+        "title": "Chiffres clés",
+        "description": "À prévoir : les séries validées avec définitions, dates, périmètres et références publiques."
+      },
+      "more-resources": {
+        "title": "Pour approfondir",
+        "description": "À prévoir : les liens vers la gouvernance, les rapports, les priorités et la collaboration."
+      }
+    },
+    "governance": {
+      "bodies-responsibilities": {
+        "title": "Instances et responsabilités",
+        "description": "À prévoir : les missions, la composition et les documents publics des instances confirmées."
+      },
+      "council-representatives": {
+        "title": "Conseil et représentants",
+        "description": "À prévoir : les organismes représentés, les mandats et les titulaires confirmés."
+      },
+      "leadership-organisation": {
+        "title": "Direction et organisation",
+        "description": "À prévoir : l’organigramme approuvé et un équivalent textuel lisible."
+      },
+      "department-responsibilities": {
+        "title": "Les responsabilités des directions",
+        "description": "À prévoir : le périmètre public de chaque direction et sa contribution au travail commun."
+      },
+      "science-platforms": {
+        "title": "Articulation scientifique et plateformes",
+        "description": "À prévoir : les relations entre dispositifs scientifiques, capacités expérimentales et partenaires."
+      },
+      "documents-contact": {
+        "title": "Documents et contact institutionnel",
+        "description": "À prévoir : les documents de gouvernance publics et l’orientation vers le contact institutionnel."
+      }
+    },
+    "priorities": {
+      "needs-challenges": {
+        "title": "Besoins et défis à traiter",
+        "description": "À prévoir : les besoins énergétiques, industriels et environnementaux du périmètre approuvé."
+      },
+      "domains-directions": {
+        "title": "Domaines et orientations",
+        "description": "À prévoir : les domaines validés, leurs verrous, les axes de travaux et les applications visées."
+      },
+      "technology-roadmaps": {
+        "title": "Feuilles de route technologiques",
+        "description": "À prévoir : les horizons, les étapes et les jalons publics, avec leur statut."
+      },
+      "priorities-projects": {
+        "title": "Des priorités aux projets",
+        "description": "À prévoir : les liens vers les programmes, projets, plateformes et expertises associés."
+      },
+      "decision-resources": {
+        "title": "Connaissances pour éclairer les choix",
+        "description": "À prévoir : les études, les données et les expertises publiques d’appui scientifique."
+      },
+      "resources-collaboration": {
+        "title": "Ressources et collaboration",
+        "description": "À prévoir : les feuilles de route publiables, les ressources associées et l’orientation des besoins."
+      }
+    },
+    "programmes": {
+      "programmes-collaborations": {
+        "title": "Programmes et collaborations",
+        "description": "À prévoir : les programmes, leurs objectifs, leurs partenaires, leur période et leur statut."
+      },
+      "calls-for-projects": {
+        "title": "Appels à projets",
+        "description": "À prévoir : les appels ouverts et archivés avec leur public, leurs échéances et leurs documents."
+      },
+      "participate": {
+        "title": "Participer à un appel",
+        "description": "À prévoir : les conditions de participation et les liens vers les règlements et canaux officiels."
+      },
+      "project-lifecycle": {
+        "title": "Du dépôt aux suites du projet",
+        "description": "À prévoir : les étapes de dépôt, d’évaluation, de contractualisation, de réalisation et de valorisation."
+      },
+      "research-results": {
+        "title": "Résultats de la recherche soutenue",
+        "description": "À prévoir : les bilans documentés par programme, période et périmètre, reliés aux projets."
+      },
+      "practical-questions": {
+        "title": "Questions pratiques",
+        "description": "À prévoir : les réponses procédurales, les documents de référence et les contacts fonctionnels."
+      }
+    },
+    "projects": {
+      "featured-results": {
+        "title": "Réalisations à découvrir",
+        "description": "À prévoir : une sélection de cas avec des résultats publics vérifiés et leur stade de maturité."
+      },
+      "find-project": {
+        "title": "Rechercher un projet",
+        "description": "À prévoir : les critères de recherche par priorité, programme, statut, période et type de résultat."
+      },
+      "project-catalogue": {
+        "title": "Catalogue des projets",
+        "description": "À prévoir : les projets publiables avec leur besoin, leur priorité, leur statut et leur période."
+      },
+      "understanding-results": {
+        "title": "Repères pour lire les résultats",
+        "description": "À prévoir : la distinction entre résultats attendus, acquis, maturité et effets mesurés."
+      },
+      "related-capabilities": {
+        "title": "Projets et capacités associées",
+        "description": "À prévoir : les relations vers les plateformes, programmes, résultats valorisables et parcours de collaboration."
+      }
+    },
+    "platforms": {
+      "choose-by-need": {
+        "title": "Choisir selon son besoin",
+        "description": "À prévoir : les capacités adaptées à la recherche, aux essais, à la qualification, aux pilotes et à la formation."
+      },
+      "platform-network": {
+        "title": "Le réseau de plateformes",
+        "description": "À prévoir : les plateformes, leurs sites, leurs opérateurs, leurs domaines et leurs usages vérifiés."
+      },
+      "capabilities-availability": {
+        "title": "Capacités et disponibilité",
+        "description": "À prévoir : les capacités disponibles, accessibles sous conditions et en développement."
+      },
+      "testing-demonstration": {
+        "title": "De l’essai à la démonstration",
+        "description": "À prévoir : les échelles, les protocoles, les mesures et les suites possibles des travaux expérimentaux."
+      },
+      "access-platforms": {
+        "title": "Accéder aux plateformes",
+        "description": "À prévoir : les publics concernés, le cadrage technique et les conditions d’accès et de confidentialité."
+      },
+      "projects-resources": {
+        "title": "Projets et ressources",
+        "description": "À prévoir : les travaux publics associés, les fiches de capacité et les contacts thématiques."
+      }
+    },
+    "network": {
+      "competence-domains": {
+        "title": "Domaines de compétence",
+        "description": "À prévoir : les spécialités approuvées, les questions traitées et les livrables possibles."
+      },
+      "intervention-modes": {
+        "title": "Modes d’intervention",
+        "description": "À prévoir : les études, les essais, l’appui scientifique et la formation, avec leurs conditions."
+      },
+      "scientific-network": {
+        "title": "Le réseau scientifique",
+        "description": "À prévoir : les laboratoires, les équipes et les organismes dont la relation et les contributions sont confirmées."
+      },
+      "skills-training": {
+        "title": "Compétences et formation",
+        "description": "À prévoir : la formation par la recherche, la pratique expérimentale et les formations réellement proposées."
+      },
+      "expertise-in-action": {
+        "title": "Expertises en action",
+        "description": "À prévoir : des cas précisant le besoin, les compétences mobilisées et l’apport vérifié."
+      },
+      "request-expertise": {
+        "title": "Mobiliser une expertise",
+        "description": "À prévoir : les informations utiles pour qualifier un besoin et les modalités de cadrage."
+      }
+    },
+    "transfer": {
+      "results-to-transfer": {
+        "title": "Les résultats à valoriser",
+        "description": "À prévoir : les résultats diffusables, leurs applications, leur maturité et les possibilités de partenariat."
+      },
+      "research-to-use": {
+        "title": "De la recherche à l’utilisation",
+        "description": "À prévoir : les étapes de protection, de maturation, de qualification et d’adoption, avec leur état réel."
+      },
+      "transfer-pathways": {
+        "title": "Les voies de transfert",
+        "description": "À prévoir : les voies de licence, de codéveloppement, de création d’entreprise et d’adoption effectivement possibles."
+      },
+      "intellectual-property": {
+        "title": "Propriété intellectuelle et confidentialité",
+        "description": "À prévoir : les principes de gestion des droits, de partage et de discussion confidentielle."
+      },
+      "adoption-initiatives": {
+        "title": "Résultats repris et initiatives",
+        "description": "À prévoir : les cas documentés de valorisation avec les contributions, le stade et l’utilisation attestée."
+      },
+      "build-transfer": {
+        "title": "Construire un transfert",
+        "description": "À prévoir : les informations initiales sur le résultat, le besoin, l’usage visé et la maturité."
+      }
+    },
+    "workWithUs": {
+      "choose-pathway": {
+        "title": "Choisir un parcours",
+        "description": "À prévoir : les parcours projet, essais, expertise et valorisation, reliés aux pages métier."
+      },
+      "organisation-contributions": {
+        "title": "Les apports selon votre organisation",
+        "description": "À prévoir : les besoins et les contributions possibles des entreprises, institutions, chercheurs et partenaires."
+      },
+      "collaboration-arrangements": {
+        "title": "Modalités de collaboration",
+        "description": "À prévoir : les formes de collaboration, les engagements respectifs et les conditions à cadrer."
+      },
+      "need-to-project": {
+        "title": "Du besoin au projet commun",
+        "description": "À prévoir : les étapes de premier contact, de qualification, de cadrage et de formalisation."
+      },
+      "collaboration-references": {
+        "title": "Collaborations et références",
+        "description": "À prévoir : des collaborations documentées avec les besoins, les partenaires, les contributions et les réalisations."
+      },
+      "prepare-discussion": {
+        "title": "Préparer le premier échange",
+        "description": "À prévoir : les informations sur l’organisation, le besoin, l’application, le calendrier et la capacité recherchée."
+      }
+    },
+    "news": {
+      "featured-news": {
+        "title": "À la une",
+        "description": "À prévoir : une sélection éditoriale d’articles publiés, datés et illustrés avec des médias autorisés."
+      },
+      "find-news": {
+        "title": "Rechercher une actualité",
+        "description": "À prévoir : les critères de recherche par catégorie, thématique et année."
+      },
+      "all-news": {
+        "title": "Toutes les actualités",
+        "description": "À prévoir : les articles avec leur titre, leur date, leur catégorie et leur aperçu."
+      },
+      "related-events-resources": {
+        "title": "Rendez-vous et ressources associés",
+        "description": "À prévoir : les événements, publications et opportunités liés aux actualités."
+      },
+      "follow-iresen": {
+        "title": "Suivre IRESEN",
+        "description": "À prévoir : les accès aux comptes officiels et les moyens de suivi effectivement disponibles."
+      }
+    },
+    "events": {
+      "upcoming-events": {
+        "title": "Prochains événements",
+        "description": "À prévoir : les événements avec leurs dates, lieux, formats, organisateurs et statut de participation."
+      },
+      "find-event": {
+        "title": "Trouver un événement",
+        "description": "À prévoir : les critères de recherche par thématique, format, période et rôle d’IRESEN."
+      },
+      "participate": {
+        "title": "Participer",
+        "description": "À prévoir : les programmes, les modalités de participation et les canaux d’inscription réels."
+      },
+      "past-events": {
+        "title": "Événements passés",
+        "description": "À prévoir : les comptes rendus, les interventions et les médias publiables associés aux événements."
+      },
+      "propose-collaboration": {
+        "title": "Proposer une collaboration",
+        "description": "À prévoir : l’orientation des propositions de partenariat événementiel ou d’échange scientifique."
+      }
+    },
+    "publications": {
+      "featured-publications": {
+        "title": "Publications à découvrir",
+        "description": "À prévoir : les ressources prioritaires avec leur type, leur date, leur langue et leur mode d’accès."
+      },
+      "find-publication": {
+        "title": "Rechercher une publication",
+        "description": "À prévoir : les critères de recherche par type, domaine, année, langue et auteur."
+      },
+      "publication-catalogue": {
+        "title": "Catalogue des publications",
+        "description": "À prévoir : les notices avec titre, auteurs, année, référence, langue, format et droits d’accès."
+      },
+      "institutional-reports": {
+        "title": "Rapports institutionnels",
+        "description": "À prévoir : les rapports autorisés, regroupés par année avec leur version et leur périmètre."
+      },
+      "use-cite-resources": {
+        "title": "Utiliser et citer les ressources",
+        "description": "À prévoir : les règles de citation, les licences, les restrictions et les alternatives accessibles."
+      }
+    },
+    "media": {
+      "featured-media": {
+        "title": "Médias à découvrir",
+        "description": "À prévoir : une sélection de médias autorisés avec leur sujet, leur date et leurs liens associés."
+      },
+      "find-media": {
+        "title": "Rechercher un média",
+        "description": "À prévoir : les critères de recherche par format, thème, événement et plateforme."
+      },
+      "collections-content": {
+        "title": "Collections et contenus",
+        "description": "À prévoir : les photographies, albums, vidéos, infographies et contenus pédagogiques publiables."
+      },
+      "press-resources": {
+        "title": "Ressources pour les médias",
+        "description": "À prévoir : le kit institutionnel, les logos et photos autorisés, leurs règles d’emploi et le contact presse."
+      },
+      "credits-reuse": {
+        "title": "Crédits et réutilisation",
+        "description": "À prévoir : les crédits, les droits, les restrictions et les alternatives accessibles de chaque média."
+      }
+    },
+    "opportunities": {
+      "open-opportunities": {
+        "title": "Opportunités ouvertes",
+        "description": "À prévoir : les offres ouvertes avec leur catégorie, leur public, leur lieu et leur échéance."
+      },
+      "find-opportunity": {
+        "title": "Rechercher une opportunité",
+        "description": "À prévoir : les critères de recherche utiles par domaine, catégorie, localisation et statut."
+      },
+      "working-at-iresen": {
+        "title": "Travailler à IRESEN",
+        "description": "À prévoir : les missions, les métiers et l’environnement scientifique, avec des éléments factuels."
+      },
+      "apply-respond": {
+        "title": "Candidater ou répondre",
+        "description": "À prévoir : les critères, les pièces et les canaux officiels propres à chaque offre ou appel."
+      },
+      "archives-results": {
+        "title": "Archives et résultats publiables",
+        "description": "À prévoir : les offres closes, leurs documents publics et leurs suites autorisées à la diffusion."
+      },
+      "questions-unsolicited-applications": {
+        "title": "Questions et candidature spontanée",
+        "description": "À prévoir : les réponses pratiques et les possibilités de candidature selon les procédures réellement disponibles."
+      }
+    },
+    "contact": {
+      "route-request": {
+        "title": "Orienter votre demande",
+        "description": "À prévoir : les motifs de contact et les orientations vers les pages et canaux adaptés."
+      },
+      "send-request": {
+        "title": "Envoyer une demande",
+        "description": "À prévoir : les champs utiles du futur formulaire et le choix du motif de contact."
+      },
+      "information-use": {
+        "title": "Utilisation de vos informations",
+        "description": "À prévoir : les finalités, les destinataires, les droits et les informations relatives aux traitements réels."
+      },
+      "locations": {
+        "title": "Nos implantations",
+        "description": "À prévoir : les sites et les accès publics vérifiés, en identifiant les opérateurs concernés."
+      },
+      "practical-questions": {
+        "title": "Questions pratiques",
+        "description": "À prévoir : les réponses d’orientation pour les plateformes, les candidatures, les documents et la presse."
+      },
+      "request-follow-up": {
+        "title": "Suivi de votre demande",
+        "description": "À prévoir : les états de validation, d’erreur et de réception effective, avec une solution de secours."
+      }
+    },
+    "search": {
+      "search-query": {
+        "title": "Saisir une recherche",
+        "description": "À prévoir : la saisie d’une requête dans les contenus publics de la langue active."
+      },
+      "refine-results": {
+        "title": "Affiner les résultats",
+        "description": "À prévoir : les critères par type de contenu et thème, avec leur réinitialisation."
+      },
+      "results": {
+        "title": "Résultats",
+        "description": "À prévoir : les résultats avec leur titre, leur type, leur aperçu et leur lien, organisés par pages."
+      },
+      "no-results": {
+        "title": "Aucun résultat",
+        "description": "À prévoir : l’état d’absence de résultat, la requête conservée et les suggestions d’élargissement."
+      }
+    },
+    "legal": {
+      "site-publisher": {
+        "title": "Éditeur du site",
+        "description": "À prévoir : l’identité officielle, le statut, l’adresse et les coordonnées institutionnelles confirmées."
+      },
+      "publication-hosting": {
+        "title": "Publication et hébergement",
+        "description": "À prévoir : les responsables désignés et les prestataires d’hébergement effectivement retenus."
+      },
+      "rights-data-protection": {
+        "title": "Droits et protection des données",
+        "description": "À prévoir : les principes de propriété intellectuelle et les liens vers les notices de confidentialité et de cookies."
+      },
+      "contact-version": {
+        "title": "Contact et version",
+        "description": "À prévoir : le contact relatif au site, la date de révision et la version de la notice."
+      }
+    },
+    "privacy": {
+      "controller-scope": {
+        "title": "Responsable et périmètre",
+        "description": "À prévoir : l’identité du responsable et le périmètre des traitements effectivement activés."
+      },
+      "data-uses": {
+        "title": "Données et usages",
+        "description": "À prévoir : les données, les finalités, les destinataires et les durées propres à chaque traitement réel."
+      },
+      "providers-transfers": {
+        "title": "Prestataires et transferts",
+        "description": "À prévoir : les prestataires, les pays concernés et les flux de données effectivement retenus."
+      },
+      "rights-contact": {
+        "title": "Droits et contact",
+        "description": "À prévoir : les droits applicables et le canal dédié à leur exercice, après validation."
+      },
+      "security-updates": {
+        "title": "Sécurité et mise à jour",
+        "description": "À prévoir : les mesures générales de protection, le lien vers les cookies et la date de révision."
+      }
+    },
+    "cookies": {
+      "cookie-use": {
+        "title": "Utilisation des cookies",
+        "description": "À prévoir : l’explication des usages de cookies réellement présents sur le site."
+      },
+      "cookies-services": {
+        "title": "Cookies et services utilisés",
+        "description": "À prévoir : l’inventaire vérifié avec fournisseurs, finalités, durées et catégories."
+      },
+      "manage-preferences": {
+        "title": "Gérer mes préférences",
+        "description": "À prévoir : les choix accessibles adaptés aux services facultatifs effectivement installés."
+      },
+      "effects-contact": {
+        "title": "Conséquences et contact",
+        "description": "À prévoir : les effets des choix, les alternatives, le contact et la date de révision."
+      }
+    },
+    "accessibility": {
+      "commitment-objective": {
+        "title": "Engagement et objectif",
+        "description": "À prévoir : l’objectif de conception accessible, distinct d’une conformité démontrée."
+      },
+      "evaluation-scope": {
+        "title": "Évaluation et périmètre",
+        "description": "À prévoir : la date, la méthode, les pages, les langues et les conclusions des évaluations réalisées."
+      },
+      "limitations-alternatives": {
+        "title": "Limites et alternatives",
+        "description": "À prévoir : les difficultés établies, les alternatives disponibles et les corrections prévues."
+      },
+      "help-feedback": {
+        "title": "Aide et signalement",
+        "description": "À prévoir : un canal accessible et les informations utiles pour signaler une difficulté."
+      }
+    },
+    "sitemap": {
+      "site-pages": {
+        "title": "Les pages du site",
+        "description": "À prévoir : les accès aux pages principales dans la hiérarchie de navigation existante."
+      },
+      "catalogues-resources": {
+        "title": "Catalogues et ressources",
+        "description": "À prévoir : les accès regroupés aux catalogues et aux collections publiques."
+      },
+      "search-useful-information": {
+        "title": "Recherche et informations utiles",
+        "description": "À prévoir : la recherche et les cinq pages utiles dans la langue active."
+      }
+    }
+  },
   "Metadata": {
     "title": "IRESEN",
     "description": "Site institutionnel IRESEN."
