@@ -60,7 +60,7 @@ export async function MissionSection({ locale }: { locale: Locale }) {
                   width={image.width}
                   height={image.height}
                   alt={t(`${mission.id}.imageAlt`)}
-                  sizes="(max-width: 47.999rem) calc(100vw - 2.5rem), (max-width: 63.999rem) 45vw, (min-width: 128rem) 37rem, 31vw"
+                  sizes="(max-width: 47.999rem) 140vw, (max-width: 63.999rem) 94vw, (min-width: 128rem) 62rem, 52vw"
                   quality={90}
                 />
               </div>

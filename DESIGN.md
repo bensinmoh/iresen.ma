@@ -75,12 +75,24 @@ See [motion verification](docs/validation.md#mobile-menu-entrance--2026-10-09).
 ## Identity and surfaces
 
 The homepage now pairs a quiet, white section-navigation bar with a centered
-mission introduction and three equal image/body cards. Blue underlines identify
-the section in view; navy text stays readable on pale bodies. The existing
+mission introduction and three full photographic cards. Blue underlines identify
+the section in view; white mission text sits near the bottom over a dark image
+shade, followed by an inline underlined destination. The existing
 Développer · Éprouver · Valoriser framework supplies content direction, while
 the current generated scenes illustrate several energy technologies. This adapts
-the live homepage Figma reference for multilingual reflow, tablet rows and a
+the live homepage Figma reference and the owner's later MOV for multilingual
+reflow, stacked photographic cards on tablet and a
 native horizontal mission collection below 48rem. See [the section guide](docs/home-sections.md).
+
+The latest mission-card refinement restores the photo-overlay treatment in
+`Screen Recording 2026-10-09 at 13.12.08.mov` (1242 × 1582px, 6.783 seconds).
+The privately inspected recording is reference-only, including its sample text;
+its raw video and extracted frames are excluded from the repository.
+Fine-pointer hover and keyboard focus tint the photograph blue and scale the
+image to 1.04, preserving the card and text geometry. Reduced motion keeps the
+image still and applies the tint immediately. A dark shade beneath the entire
+text block and a light link-focus ring support readability in both states.
+Card copy stays in normal flow and can grow with translations or enlarged text.
 
 - The owner's selected primary blue is **#296BB4**; navy is **#12345A**. Science
   blue **#4698CA**, transition green **#50A684**, cyan **#77C5D5** and lime
@@ -481,7 +493,7 @@ collection below 48rem; ordinary vertical scrolling retains its controls.
 
 Use [the reusable hierarchy](docs/mobile-information-hierarchy.md) for future
 sections. The requested three mission cards now follow this mobile guidance,
-using readable navy copy beneath generated imagery in a native horizontal
+using white copy over shaded full photographs in a native horizontal
 collection below 48rem. Neighboring-card glimpses indicate more content where
 space permits; enlarged text can use full-width cards. Native keyboard/touch
 scrolling, visible focus and no-JavaScript access retain all three destinations.

@@ -55,26 +55,61 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  --mission-photo-scale: 1;
+  --mission-tint-opacity: 0;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   min-inline-size: 0;
-  border: 1px solid var(--color-border);
+  inline-size: 100%;
+  min-block-size: 28rem;
   border-radius: var(--radius-signature);
-  background: var(--color-surface);
+  color: var(--color-white);
+  background: var(--color-navy);
   overflow: hidden;
   scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
-  transition: border-color var(--duration-fast) ease;
 }
 
-.card:hover,
+/* A shared grid cell preserves the photo ratio while allowing full copy growth. */
+.card::before {
+  content: '';
+  grid-area: 1 / 1;
+  align-self: start;
+  inline-size: 100%;
+  aspect-ratio: 4 / 5;
+  pointer-events: none;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--color-blue);
+  opacity: var(--mission-tint-opacity);
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
 .card:focus-within {
-  border-color: var(--color-blue);
+  --mission-photo-scale: 1.04;
+  --mission-tint-opacity: 0.22;
 }
 
 .photo {
-  aspect-ratio: 4 / 3;
-  background: var(--color-border);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
+}
+
+.photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(5 17 29 / 16%);
+  pointer-events: none;
 }
 
 .photo img {
@@ -82,19 +117,44 @@
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  transform: scale(var(--mission-photo-scale));
+  transition: transform 300ms ease;
 }
 
 .body {
+  position: relative;
+  grid-area: 1 / 1;
+  align-self: end;
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(1.5rem, 2.083vw, 2.5rem);
+  margin-block-start: clamp(8rem, 15vw, 15rem);
+  padding: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+/* The fade follows the copy when text enlargement makes the card grow. */
+.body::before {
+  content: '';
+  position: absolute;
+  inset: -5rem 0 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgb(5 17 29 / 0%) 0,
+    rgb(5 17 29 / 86%) 5rem,
+    rgb(5 17 29 / 94%) 100%
+  );
+  pointer-events: none;
+}
+
+.body > * {
+  position: relative;
+  z-index: 3;
 }
 
 .body h3 {
   margin-block: 0 var(--space-4);
-  color: var(--color-navy);
+  color: var(--color-white);
   font-size: clamp(1.75rem, 1.875vw, 2.25rem);
   font-weight: 700;
   line-height: 1.3;
@@ -104,7 +164,7 @@
 
 .body p {
   margin-block-end: var(--space-6);
-  color: var(--color-text-muted);
+  color: var(--color-white);
   font-size: var(--font-size-body);
   line-height: 1.65;
   text-wrap: pretty;
@@ -113,14 +173,12 @@
 .link {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
+  gap: var(--space-3);
   min-block-size: 2.75rem;
-  inline-size: 100%;
-  margin-block-start: auto;
-  padding-block-start: var(--space-4);
-  border-block-start: 1px solid var(--color-border);
-  color: var(--color-blue);
+  max-inline-size: 100%;
+  padding-block: var(--space-2);
+  border-block-end: 1px solid rgb(255 255 255 / 60%);
+  color: var(--color-white);
   font-size: var(--font-size-body);
   font-weight: 700;
   line-height: 1.5;
@@ -135,9 +193,13 @@
   flex: 0 0 auto;
 }
 
-.link:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+.link:hover {
+  border-color: var(--color-white);
+  text-decoration: none;
+}
+
+.link:focus-visible {
+  outline-color: var(--color-white);
 }
 
 .section:dir(rtl) .link svg {
@@ -160,12 +222,15 @@
   }
 
   .card {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-block-size: 24rem;
   }
 
-  .photo {
-    aspect-ratio: auto;
+  .card::before {
+    aspect-ratio: 16 / 9;
+  }
+
+  .body {
+    margin-block-start: 6rem;
   }
 }
 
@@ -184,15 +249,16 @@
   }
 
   .card {
-    display: flex;
+    min-block-size: 28rem;
     scroll-snap-align: start;
   }
 
-  .photo {
-    aspect-ratio: 4 / 3;
+  .card::before {
+    aspect-ratio: 4 / 5;
   }
 
   .body {
+    margin-block-start: 8rem;
     padding: var(--space-6);
   }
 
@@ -205,8 +271,20 @@
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    --mission-photo-scale: 1.04;
+    --mission-tint-opacity: 0.22;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .card {
+  .card::after,
+  .photo img {
     transition: none;
+  }
+
+  .photo img {
+    transform: none;
   }
 }

@@ -10,9 +10,17 @@ cards and diagonal corners inform the implementation.
 The current approved narrative, routes, blue/navy and Jakarta/Alexandria families
 remain authoritative. The blocks explain Développer · Éprouver · Valoriser;
 the source's audience/funding copy does not create new services or claims.
-Short French, English and Arabic wayfinding copy is a draft. Readable text on a
-light card body replaces the source's large photographic text overlay, allowing
-natural reflow and keeping each technology scene visible.
+Short French, English and Arabic wayfinding copy remains a draft. The owner's
+later video refinement restores full photographic cards with white headings,
+descriptions and inline underlined destinations near the bottom. Dark shading
+supports readability; text remains in normal flow for multilingual reflow.
+
+The supplied `Screen Recording 2026-10-09 at 13.12.08.mov` was inspected privately:
+1242 × 1582px, H.264 at a nominal 120fps, 6.783 seconds. Its still and tinted/zoomed states guide image
+coverage, bottom text placement, the underlined destination and physical
+top-left/bottom-right corners. The video and extracted frames are reference-only
+and are excluded from the repository. Its audience/funding examples do not
+replace the current mission copy, claims or destinations.
 
 ## Navigation behavior
 
@@ -42,8 +50,8 @@ Focus rings sit inside the sticky bar; active state does not rely on color alone
 
 ## Missions and media
 
-All three cards appear in one row from 64rem and as image/body rows between
-48rem and 64rem. Below 48rem, complete image/body cards form a native horizontal
+All three full photographic cards appear in one row from 64rem and stack as
+photographic cards between 48rem and 64rem. Below 48rem, they form a native horizontal
 scroll collection with CSS scroll snapping and the site's hidden scrollbar.
 Cards show a neighboring-card glimpse where space permits. Their minimum width
 is capped at the available space, so enlarged text can use a full-width card;
@@ -55,12 +63,20 @@ Each has a semantic heading, a short description and one canonical destination:
 programmes, platforms or transfer. Arabic uses logical flow and mirrored arrows,
 with the physical diagonal brand corners preserved.
 
+Fine-pointer hover and keyboard focus apply a blue image tint and a slight 1.04
+image zoom. The photograph moves within its clipped card; the card and text
+geometry stay stable. A dark shade covers the text area in both states, and
+the inline destination has a light visible focus ring. Reduced motion disables
+the zoom and transitions, while the blue tint applies immediately. Touch users
+retain the readable resting state and native destinations.
+
 The current generated images depict battery and biomass/biofuel research;
 CSP, hydrogen, wind and storage testing; and smart-grid energy management.
 They illustrate fictional scenes, without identifying real IRESEN people or
 facilities. The source/output hashes, dimensions, prompts and WebP conversion
-are recorded in [the mission asset manifest](mission-assets.json). Photos load
-lazily with reserved 4:3 geometry and responsive Next Image sizes. The optimizer
+are recorded in [the mission asset manifest](mission-assets.json). The original
+images remain 4:3 sources, cropped to fill the cards; they load lazily with
+responsive Next Image sizes. The optimizer
 allowlist adds only `/images/missions/**`; public CMS withdrawal boundaries remain.
 
 The owner's subsequent clarification makes technology breadth a website-wide

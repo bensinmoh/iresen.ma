@@ -1896,3 +1896,42 @@ browser cases. Integrating main's separate deferred-homepage documentation then
 changed only Markdown; runtime, tests, configuration and dependencies remained
 identical to that passing revision. Merged documentation links, formatting and
 whitespace checks passed. The final current-head CI result remains recorded in GitHub.
+
+## Photographic mission cards and hover — 2026-10-09
+
+The owner's supplied MOV was privately inspected for the resting and hovered
+card states. The delivered treatment restores full photographs, white bottom
+copy and inline underlined destinations, with a 1.04 photo zoom and a 22% blue
+tint over 300ms. The recording's sample content does not replace current copy,
+routes or media; raw video and extracted frames are excluded from the repository.
+
+Local formatting, lint, strict types, all 97 unit cases and the final production build passed.
+All 33 selected Chromium homepage, foundation and rendered-font cases passed on
+that build. Coverage includes all three cards' full-photo composition, stable
+card/text geometry on hover and pointer leave, Arabic keyboard focus, dynamic
+reduced motion, coarse-pointer touch, native mobile arrows/Tab, direct hashes,
+no JavaScript and 200% text in FR/EN/AR. Homepage axe scans reported no violations
+in the three locales, and the intended local fonts rendered.
+
+Rendered checks at 390, 768 and 1440px in FR/EN/AR found no page overflow or nested
+vertical collection scrolling and confirmed that the first card fits its available track. Hover
+changed only the photograph and tint. Enlarged-text review at 320px in French
+and Arabic confirmed full text containment, natural card growth and no internal
+card scroll. The final layout uses a shared grid cell for the preferred photo
+ratio and the full text body; this resolves width and height clipping discovered
+in intermediate aspect-ratio layouts. The 200% regression check now verifies
+actual text bounds inside each card as well as native navigation.
+
+Reviewed captures:
+
+- [French desktop at rest](screenshots/home-missions-photo-fr-1440.webp)
+- [French desktop with the first card hovered](screenshots/home-missions-photo-hover-fr-1440.webp)
+- [Hovered card detail](screenshots/home-missions-photo-hover-fr-card.webp)
+- [French horizontal mobile collection](screenshots/home-missions-photo-fr-390.webp)
+- [Arabic horizontal mobile collection](screenshots/home-missions-photo-ar-390.webp)
+
+The earlier split-card captures remain historical. Existing section/media search
+references, drafted content and the deferred imagery review are retained; no
+schema or database behavior changed. Current PR CI runs the complete integration
+and browser suites. No deployment was performed. This Chromium review does not
+assert physical-device, Safari, manual screen-reader or full WCAG coverage.
