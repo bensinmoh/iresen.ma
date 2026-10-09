@@ -2317,7 +2317,8 @@ the existing ISO 9001:2015 claim. See [scope and captures](home-collaboration.md
 - Formatting, lint, strict typecheck and production build passed.
 - 109 unit tests passed; 22 CMS/search integration checks passed in a dedicated
   temporary migrated database, removed afterward. The local database was preserved.
-- Four new browser checks cover FR/EN/AR, four destinations, the prepared contact
+- Full production Playwright suite passed **168 tests** on isolated port 3013
+  using installed Chrome. Four new browser checks cover FR/EN/AR, four destinations, the prepared contact
   subject, search discovery, keyboard access, no-JavaScript access, 320/390/768/1024/
   1440px widths, 200% text and scoped axe scans with no violations.
 - The first full suite identified long-word overflow in the new section at 200%
