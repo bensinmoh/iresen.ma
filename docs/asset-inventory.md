@@ -187,15 +187,19 @@ Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts a
 
 The owner supplied the photograph for the contact introduction, identifying it as
 the IRESEN headquarters. It replaces the earlier abstract Figma background.
+The visible entrance has the IRESEN name on a white wall, a wooden gate, trees
+and vegetation. Visual inspection does not independently establish its address,
+capture date or exact location.
 
-| Property            | Value                                                                |
-| ------------------- | -------------------------------------------------------------------- |
-| Repository file     | `public/images/contact/contact-background-venue.jpg`                 |
-| Source              | Owner-supplied photograph, introduced in repository commit `92f01c3` |
-| Format / dimensions | JPEG; 5797 × 3865px                                                  |
-| Original bytes      | 11,425,755                                                           |
-| Original SHA-256    | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f`   |
-| Transformation      | Original bytes preserved; no image generation or retouching.         |
+| Property            | Value                                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------------------------- |
+| Repository file     | `public/images/contact/contact-background-venue.jpg`                                                  |
+| Public asset URL    | `/images/contact/contact-background-venue.jpg`                                                        |
+| Source              | Owner-supplied photograph, introduced in repository commit `92f01c366993f676c25f51bb83122c19351f24e9` |
+| Format / dimensions | JPEG RGB; 5797 × 3865px                                                                               |
+| Original bytes      | 11,425,755 (approximately 10.90 MiB)                                                                  |
+| Original SHA-256    | `b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f`                                    |
+| Transformation      | Original bytes preserved; no image generation or retouching.                                          |
 
 Next Image preloads responsive optimized derivatives at quality 75, with `75vw`
 sizes from `70rem`, `100vw` from `40rem` and `225vw` below for the cover crop.
@@ -236,6 +240,16 @@ photo now supersedes it, and the served PNG is removed; its bytes and this
 provenance remain in Git history. Other photo-hero assets remain in
 [the generated inventory](hero-assets.json). See [contact scope](contact.md)
 and [current check evidence](validation.md).
+
+## Contact entrance photograph — 2026-10-09
+
+The photograph was first registered in `src/lib/search/catalog.ts` while Contact
+still used the abstract PNG. That earlier FR/EN/AR metadata described the visible
+entrance without inferring an address, supplying discovery for the file already
+served from `main`. The later photo replacement now uses this JPEG in the contact
+introduction and retires the PNG. Its consolidated current source, byte-preservation
+and rendering record appears [above](#contact-headquarters-photo--2026-10-09);
+the earlier registration evidence remains in [validation](validation.md#contact-form-eyebrow--2026-10-09).
 
 ## Contextual hero media — 2026-10-09
 

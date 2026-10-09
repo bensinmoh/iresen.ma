@@ -233,6 +233,25 @@
   white-space: pre-line;
 }
 
+.contact-form-heading .contact-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  max-inline-size: none;
+  margin-inline: auto;
+}
+
+.contact-form-heading .contact-eyebrow > img {
+  flex-shrink: 0;
+  inline-size: auto;
+  block-size: 1em;
+}
+
+.contact-form-heading .contact-eyebrow > span {
+  min-inline-size: 0;
+}
+
 .contact-form-heading > p:last-child {
   margin-inline: auto;
   color: var(--color-text-muted);

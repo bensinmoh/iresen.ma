@@ -48,7 +48,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     const results = await response.json()
     expect(results.items).toContainEqual(
       expect.objectContaining({
-        id: `asset:contact-headquarters:${locale}`,
+        id: `asset:contact-venue:${locale}`,
         url: '/images/contact/contact-background-venue.jpg',
         type: 'media',
       }),

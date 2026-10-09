@@ -262,7 +262,7 @@ describe('explicit public search catalog', () => {
       publicAssetReferences.filter(({ url }) => url.startsWith('/images/contact/')),
     ).toMatchObject([
       {
-        id: 'contact-headquarters',
+        id: 'contact-venue',
         url: '/images/contact/contact-background-venue.jpg',
         type: 'media',
       },

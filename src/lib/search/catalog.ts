@@ -99,7 +99,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     }
   }),
   {
-    id: 'contact-headquarters',
+    id: 'contact-venue',
     url: '/images/contact/contact-background-venue.jpg',
     type: 'media',
     text: Object.fromEntries(
