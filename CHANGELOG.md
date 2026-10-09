@@ -10,6 +10,8 @@ merge results are recorded by the corresponding pull request and commit history.
   source-derived short FR/EN/AR titles, owner-supplied month dates and the existing news route.
 - Added responsive four/two/single-card scrolling with animated one-card arrows,
   keyboard access, Arabic RTL and reduced-motion support; removed the language label.
+- Joined the news surface directly to the footer by removing homepage wrapper
+  bottom padding.
 - Added a tested Posts API projection boundary and localized section/search anchors.
   Live API synchronization remains dependent on authorized LinkedIn application access.
 

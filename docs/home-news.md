@@ -107,3 +107,10 @@ They are repository review artifacts, not served website media.
 ![French desktop news](screenshots/home-news-fr-desktop.png)
 
 ![Arabic mobile news](screenshots/home-news-ar-mobile.png)
+
+The owner’s final spacing instruction joins the news surface directly to the
+footer. Homepage-only shell/content bottom padding is removed; the section and
+footer retain their internal reading space. Browser checks assert no gap across
+responsive widths in FR/EN/AR.
+
+![French news/footer boundary without a gap](screenshots/home-news-footer-join-fr.png)

@@ -29,11 +29,19 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(section.locator('button').first()).toBeDisabled()
     await expect(section.locator('li').first()).toBeInViewport()
     await section.screenshot({ path: `.cache/news-review/${locale}-desktop.png` })
+    await page.screenshot({ path: `.cache/news-review/${locale}-footer-join.png` })
     for (const width of [320, 390, 768, 1024]) {
       await page.setViewportSize({ width, height: 1000 })
       await expect
         .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
         .toBe(true)
+      expect(
+        await page.evaluate(() => {
+          const news = document.querySelector('#news-events')!.getBoundingClientRect()
+          const footer = document.querySelector('.site-footer')!.getBoundingClientRect()
+          return Math.abs(footer.top - news.bottom)
+        }),
+      ).toBeLessThanOrEqual(1)
       await section.locator('h3 a').first().focus()
       await section.locator('h3 a').last().focus()
       await expect(section.locator('h3 a').last()).toBeInViewport()

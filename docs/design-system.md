@@ -1218,3 +1218,7 @@ Four/two/single-card layouts preserve readable original commentary; arrows move
 one card with native smooth scrolling and immediate reduced-motion movement.
 Arabic mirrors rail navigation while preserving original text direction and SVG
 geometry. This is an application of current shared roles, with no new tokens.
+
+The homepage news/footer boundary has no intervening wrapper padding. Both
+sections retain internal spacing; only the homepage shell/content bottom inset
+is removed, keeping full-width surfaces contiguous.

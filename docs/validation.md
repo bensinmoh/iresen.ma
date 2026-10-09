@@ -2302,3 +2302,8 @@ API inputs; initial source text was read from public guest pages and month dates
 were supplied by the owner. No production deployment was performed. The final
 content glossary/search sanity check remains pending until the complete content
 exists. PR CI and merge status are recorded in the PR rather than preclaimed here.
+
+The owner’s final spacing instruction joins the news surface directly to the
+footer. Homepage-only shell/content bottom padding is removed; the section and
+footer retain their internal reading space. Browser checks assert no gap across
+responsive widths in FR/EN/AR.
