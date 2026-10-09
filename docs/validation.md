@@ -1473,6 +1473,109 @@ Reviewed screenshots retained for this correction:
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
 
+## Contact form eyebrow — 2026-10-09
+
+The owner's screenshot correction centers the form's leaf/label group above its
+title and adds the original blue Apex Leaf. The local rule removes the inherited
+paragraph-width limit; the decorative vector retains its original geometry and
+logical inline-start position in Arabic.
+
+Validation completed on the production build with a disposable local PostgreSQL
+database and Chromium:
+
+- Frozen-lockfile installation, lint, strict types, 97 unit tests and production
+  build passed. The initial sandboxed build could not capture a TypeScript
+  subprocess's configuration output; the normal build passed outside that sandbox.
+- All 19 existing Contact/search browser checks passed, covering FR/EN/AR layout,
+  keyboard FAQs, email draft validation, optional map loading, no-JavaScript
+  fallbacks and searchable section destinations.
+- A focused rendered inspection measured 30 combinations: FR/EN/AR at
+  320/390/768/1024/1440px, each at 100% and 200% root text size. The complete
+  leaf/label group's horizontal center differs from the title center by less
+  than 0.01px. The original 177.3:287 ratio, decorative semantics, logical leaf
+  placement and page containment passed throughout.
+- Inspected the [French desktop](screenshots/contact-eyebrow-fr-1440-2026-10-09.png),
+  [English tablet](screenshots/contact-eyebrow-en-768-2026-10-09.png) and
+  [Arabic mobile](screenshots/contact-eyebrow-ar-390-2026-10-09.png) captures.
+- Rebuilt the local public search catalog. Existing `send-request` metadata
+  already includes the localized eyebrow; the original Apex media entry and
+  reachable section anchors remain.
+- The Apex Leaf SHA-256 remains
+  `7c51a47ea0775bd26602ce2a61c8b7dbaf8cfa5597c59189b1b85932a56c0f86`.
+
+Database integration suites and unrelated browser routes were not repeated for
+this scoped presentation correction. Current PR CI runs the complete suite.
+Safari, physical-device and manual screen-reader coverage remain unverified.
+No production deployment or visibility change was performed.
+
+The first current-head PR CI run exposed a separately added `main` asset,
+`/images/contact/contact-background-venue.jpg`, without a public search reference.
+The local unit suite reproduced that failure after synchronizing `main`. Its
+explicit media entry now describes the visible entrance in FR/EN/AR, without
+inferring an address or changing the Contact composition. The source bytes
+remain unchanged; [asset provenance](asset-inventory.md) records the addition.
+After registering that asset and extending the existing catalog expectation,
+lint, strict types, all 97 unit tests, formatting and the production build passed
+again. The three Contact search browser checks passed on the rebuilt application.
+FR/EN/AR media queries for the visible wooden gate find its localized result,
+and the canonical image destination returns HTTP 200 in each case.
+
+## Direct contact map — 2026-10-09
+
+The owner's follow-up replaces the click-to-reveal presentation with a directly
+rendered Google Maps iframe. `ContactLocation` is now a server component with
+explicit locale translations, native `loading="lazy"`, a descriptive frame title
+and `no-referrer`. The directions shortlink and headquarters address are retained.
+The load/hide controls, their client state, placeholder and lower explanatory
+strip are removed, including bottom section padding. The cookies-page service
+notice and location search metadata describe the current external-map behavior.
+
+The existing public search reference for
+`/images/contact/contact-background-venue.jpg` is preserved from the current
+main branch, including its FR/EN/AR descriptions of the visible building
+entrance, white IRESEN wall, trees and garden. The file and the current decorative
+contact introduction remain unchanged; no exact location or new rights claim is
+inferred from the photograph.
+
+Executed local checks:
+
+- Frozen dependency installation, disposable local PostgreSQL setup and reviewed
+  migrations; public search rebuild synchronized the current static catalog.
+- `pnpm lint`, `pnpm typecheck`, `pnpm format:check`, all 97 unit cases and all
+  21 CMS/search integration cases passed.
+- The final `pnpm build` completed successfully.
+- Production Chromium ran `contact.spec.ts`, `contact-search.spec.ts` and
+  `foundation.spec.ts`: all 30 cases passed. Contact layout checks cover FR/EN/AR
+  at 320, 390, 768, 1024 and 1440px with 100% and 200% text. The map spans the
+  viewport, loads without interaction and reloads without stored state. Its
+  section ends at the iframe's bottom, and directions retain keyboard access.
+- No-JavaScript checks confirm the iframe, translated title, email/directions
+  links and native FAQ disclosures in all three locales. Search checks confirm
+  discoverable contact text and working section destinations.
+
+Manual production Chromium screenshots were captured and inspected for the map
+section in French at 1440px and 390px, English at 768px and Arabic at 390px.
+Each view has one directly rendered, correctly titled lazy iframe, no reveal
+control or lower explanatory strip, and no horizontal page overflow. The map
+spans the viewport and meets the footer with a measured 0px gap in all four
+views. The directions action wraps naturally on mobile and English tablet;
+Arabic retains its RTL heading, address and action layout. A local intercepted
+HTML response stands in for Google in these captures. No live map imagery is
+presented as verified.
+
+The cookies-page notice was also rendered and visually inspected without
+JavaScript in French, English and Arabic at 390px. Each notice matches its
+locale catalog, wraps within the viewport and identifies the map's automatic
+loading and browsing-data transmission. Captures remain temporary review
+artifacts rather than committed website media.
+
+Google responses are intercepted locally in map-focused browser checks to avoid
+external-service dependence. They verify the rendered frame and automatic request,
+not Google's live tiles, gesture behavior or exact pin. The supplied shortlink's
+pin, physical-device/Safari behavior and production privacy assessment retain
+[their documented scope](contact.md#location-and-third-party-behavior). Remote CI
+and merge results are recorded by the corresponding pull request and commit history.
+
 ## Refined field focus — 2026-10-09
 
 The owner's Organisation and Arabic search screenshots identified the thick
@@ -1512,16 +1615,8 @@ Reviewed crops from this production build:
 - [Arabic header search at 1440px](screenshots/input-focus-search-ar-1440.png)
 - [Arabic mobile-menu search at 390px](screenshots/input-focus-search-ar-390.png)
 
-Integration with the latest `main` brought in the owner's exterior photograph
-at `/images/contact/contact-background-venue.jpg`. Its missing search reference
-caused the current-head CI unit check to fail. The fix registers
-`contact-exterior-photo` with neutral explicit FR/EN/AR visual descriptions and
-updates the existing expected contact asset list. The 97 unit cases and 21
-integration cases then passed, along with lint, types, formatting and a fresh
-production build. After rebuilding the public index, API queries `entrée en
-bois`, `wooden entrance` and `مدخل خشبي` found the corresponding FR/EN/AR media
-entry; its image destination returned HTTP 200 with `image/jpeg`.
-The photograph's bytes are preserved; [asset provenance](asset-inventory.md#owner-added-contact-photograph--2026-10-09)
-records its source revision and metadata. The shared field rule and research
-references are recorded in
+The latest Contact changes were integrated before completion, preserving the
+centered Apex Leaf eyebrow, directly displayed map and canonical `contact-venue`
+search reference from main. The shared field rule and research references are
+recorded in
 [the design specification](design-system.md#refined-field-focus--2026-10-09).

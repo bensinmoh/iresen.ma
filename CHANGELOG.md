@@ -13,12 +13,6 @@ merge results are recorded by the corresponding pull request and commit history.
 - Moved header search focus to its field surface, avoiding a second inner frame
   and preserving blue on white in inverse headers, Arabic RTL and mobile menus.
   Footer email retains cyan; forced colors use a real system-color outline.
-- Registered the existing owner-added exterior contact photograph with neutral
-  FR/EN/AR search metadata when integrating the latest `main`, resolving the
-  public-file catalog check without changing the image bytes.
-- Rechecked the integrated catalog with 97 unit and 21 integration cases,
-  rebuilt its public index and verified FR/EN/AR discovery and the image's
-  working JPEG destination.
 - Passed formatting, lint, types, 97 unit cases, production build and 35 existing
   contact/header-search/footer browser cases. Reviewed FR/EN/AR at 1440, 768 and
   390px, pointer/keyboard focus, stable geometry, 200% text and forced colors;
@@ -26,6 +20,18 @@ merge results are recorded by the corresponding pull request and commit history.
 
 See [shared styling](docs/design-system.md#refined-field-focus--2026-10-09) and
 [rendered evidence](docs/validation.md#refined-field-focus--2026-10-09).
+
+## 2026-10-09 — Centered Contact form eyebrow
+
+- Centered the complete “Votre message” eyebrow above the form title, removing
+  the inherited paragraph-width offset.
+- Added the original decorative blue Apex Leaf at its logical inline start,
+  with proportional dimensions and shared spacing in FR/EN/AR.
+- Retained the existing contact anchors, localized search references and original
+  brand SVG bytes. See [contact guidance](docs/contact.md) and
+  [verification evidence](docs/validation.md#contact-form-eyebrow--2026-10-09).
+- Registered the Contact photograph added separately to `main` in the public
+  search catalog after CI exposed its missing reference; its bytes are retained.
 
 ## 2026-10-09 — Contact reference composition and location
 
@@ -63,6 +69,19 @@ and [revision-specific check evidence](docs/validation.md).
 - Updated the responsive browser checks and current design guidance. Reviewed
   tablet, mobile, desktop and 200% text in FR/EN/AR; see
   [validation](docs/validation.md#tablet-homepage-layout--2026-10-09).
+
+## 2026-10-09 — Direct contact map
+
+- Render the contact map directly in server HTML with native lazy loading,
+  replacing click-to-reveal and hide controls. Preserve the translated frame
+  title, exact directions link, address and full-width responsive geometry.
+- Remove the lower explanatory strip, unused styles/copy and bottom padding;
+  the map now meets the footer. Update the cookies-page service notice and
+  search projection to reflect automatic Google Maps loading.
+- Pass lint, strict types, formatting, 97 unit and 21 integration cases,
+  production build and 30 contact/search/foundation browser cases. Google Maps
+  responses are intercepted locally; live service behavior is not asserted.
+  See [validation](docs/validation.md#direct-contact-map--2026-10-09).
 
 ## 2026-10-09 — Exact-first search relevance
 

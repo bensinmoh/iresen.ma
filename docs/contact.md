@@ -23,6 +23,18 @@ Layouts reduce columns and allow natural text growth on narrow screens, with
 logical CSS and isolated Latin identifiers for Arabic. No route is added to the
 canonical 22-page map.
 
+The owner's later screenshot correction explicitly requests an Apex Leaf before
+the form's « Votre message » label and corrects its centering. The inherited
+paragraph `max-inline-size: 68ch` had constrained the eyebrow box within the wider
+centered heading, leaving that box at the inline start. The local form eyebrow
+now removes that limit and centers the leaf and label together with flex layout.
+It uses the original blue `/brand/apex-leaf.svg`, unchanged, at 1em height with
+automatic width and a 12px gap (`--space-3`). The image is decorative (`alt=""`,
+`aria-hidden="true"`); it precedes the label at the logical inline start in Arabic
+without mirroring its geometry. This is the third selective Apex placement,
+alongside the homepage hero eyebrow and Institute's Mission H2. Other Contact
+eyebrows keep their existing text-only treatment.
+
 The headquarters address, phone and email reuse the established shared
 [footer contacts and their source record](footer.md). The screenshot's opening
 hours, 48-hour response promise, departmental mailboxes and repeated platform
@@ -72,11 +84,20 @@ schema are required for this local workflow.
 ## Location and third-party behavior
 
 The full-width location band shows the established headquarters address and
-the owner's exact directions shortlink. Google Maps is absent until the visitor
-requests it; a remove control unmounts the iframe. A visible notice explains that
-loading the map sends browsing data to Google. The iframe uses `no-referrer`;
-its load/remove state stays local and is not persisted as a consent preference.
-Removing it cannot retract requests already sent.
+the owner's exact directions shortlink. The owner's explicit 2026-10-09
+refinement supersedes the earlier on-demand presentation: Google Maps is
+rendered directly in the server HTML with `loading="lazy"`. No reveal click,
+remove control or client state is required. The lower explanatory strip and its
+extra spacing are removed, allowing the map to meet the footer; the separate
+directions link remains useful for navigation and when the embed is unavailable.
+
+Native lazy loading lets the browser defer the request until the map approaches
+the viewport; it does not wait for consent or a visitor click. The map remains
+present without JavaScript, when browser lazy-loading behavior may differ. Once
+the iframe loads, browsing data is sent to Google. The iframe retains
+`referrerPolicy="no-referrer"`; this limits the referrer without preventing the
+third-party request. The cookies-page service notice identifies this external
+service rather than claiming that no optional tracking can occur.
 
 The shortlink could not be resolved in the available environment. The embed
 therefore uses a query for the shared Rabat headquarters address, not inferred

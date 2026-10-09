@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useSyncExternalStore, type FormEvent } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
@@ -55,7 +56,17 @@ export function ContactForm({
     >
       <div className="container">
         <div className="contact-form-heading">
-          <p className="contact-eyebrow">{t('eyebrow')}</p>
+          <p className="contact-eyebrow">
+            <Image
+              src="/brand/apex-leaf.svg"
+              alt=""
+              aria-hidden="true"
+              width={1773}
+              height={2870}
+              unoptimized
+            />
+            <span>{t('eyebrow')}</span>
+          </p>
           <h2 id="contact-form-heading">{t('title')}</h2>
           <p>{t('description')}</p>
         </div>

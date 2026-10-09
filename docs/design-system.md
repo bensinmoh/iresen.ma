@@ -206,13 +206,15 @@ Public Latin text uses self-hosted Plus Jakarta Sans (normal variable 200–800)
 ### Section-heading marker
 
 The owner's 2026-10-09 clarification requires tasteful, selective use of the
-Apex Leaf. This revision implements the earlier preference in two places.
-The homepage hero eyebrow alone uses the
+Apex Leaf. The three implemented placements include the later explicit request
+for the Contact form label. The homepage hero eyebrow alone uses the
 original [apex-leaf.svg](../public/brand/apex-leaf.svg) as a white CSS mask at
-10 × 16px. The Institute's Mission H2 alone uses the original blue vector at
-1em height with a 12px gap. Keep its geometry and proportions; place it at the
-logical inline start in Arabic without mirroring the shape. Both marks are
-decorative, leaving the text as the accessible name. Other hero eyebrows, H2s,
+10 × 16px. The Institute's Mission H2 uses the original blue vector at
+1em height with a 12px gap. Contact's form eyebrow also uses the original blue
+vector at 1em height with a 12px gap, centering the leaf and label as one group.
+Keep its geometry and proportions; place it at the logical inline start in
+Arabic without mirroring the shape. All three marks are decorative, leaving the
+text as the accessible name. Other hero eyebrows, H2s,
 menus, footer and sitemap retain their existing treatment.
 
 ### Section placeholders — 2026-10-09
@@ -235,14 +237,26 @@ Contact uses a dedicated composition based on the owner's selected native frame
 `804:7374` and attached screenshot. Its shared header stays white; the original
 abstract background accompanies a split introduction and navy headquarters panel.
 Flat platform rows, the `--color-action-surface` form band, native FAQ disclosures
-and a full-width on-demand location section reuse existing type, spacing, focus,
+and a full-width location section reuse existing type, spacing, focus,
 container and action roles. Shared navigation/footer, approved blue/navy and
 Jakarta/Alexandria supersede the sample's historical styles and labels.
 
+The owner's later screenshot correction centers the form eyebrow and adds its
+decorative original blue Apex Leaf. The local eyebrow resets the inherited
+paragraph `68ch` limit and centers its flex children with a 12px gap. The vector
+retains automatic width and 1em height; DOM order places it before the label
+at the logical inline start, including RTL, without mirroring the brand shape.
+Other Contact eyebrows retain their text-only treatment.
+
 Use natural content height, logical CSS and responsive column reduction; isolate
 email, phone and Latin platform names in Arabic. The form prepares a local email
-draft and exposes its actual state, with direct email fallback. Google Maps is
-absent until requested and can be removed. Preserve all existing contact anchors
+draft and exposes its actual state, with direct email fallback. The owner's
+explicit 2026-10-09 refinement supersedes the earlier on-demand map: its iframe
+is rendered in the server HTML with `loading="lazy"`, without reveal/remove
+controls or client state. Remove the lower explanatory strip and its extra
+spacing so the full-width map meets the footer; retain the separate directions
+link. Native lazy loading delays network work according to browser behavior,
+without requiring a visitor click. Preserve all existing contact anchors
 within the new sections. No backend success, response deadline, opening hours or
 department mailbox is inferred from the design. See [contact sources and limits](contact.md)
 and [current check evidence](validation.md).

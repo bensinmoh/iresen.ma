@@ -36,6 +36,9 @@ const assetLabels = {
     contactImage: 'Fond abstrait de la page Contact',
     contactBackground:
       'Courbes abstraites cyan et blanches utilisées en arrière-plan de la page de contact.',
+    contactVenue: 'Entrée IRESEN — photographie pour Contact',
+    contactVenueDescription:
+      'Photographie d’une entrée portant le nom IRESEN, avec un mur blanc, un portail en bois et des arbres.',
   },
   en: {
     image: 'Page introduction image',
@@ -49,6 +52,9 @@ const assetLabels = {
     wind: 'Generated illustration of a white wind turbine in a fictional rocky landscape.',
     contactImage: 'Abstract contact page background',
     contactBackground: 'Abstract cyan and white curves used as the contact page background.',
+    contactVenue: 'IRESEN entrance — photograph for Contact',
+    contactVenueDescription:
+      'Photograph of an entrance bearing the IRESEN name, with a white wall, a wooden gate and trees.',
   },
   ar: {
     image: 'صورة تقديمية',
@@ -62,6 +68,8 @@ const assetLabels = {
     wind: 'صورة توضيحية مولّدة لتوربين رياح أبيض في منظر صخري خيالي.',
     contactImage: 'الخلفية التجريدية لصفحة التواصل',
     contactBackground: 'منحنيات تجريدية سماوية وبيضاء مستخدمة خلفيةً لصفحة التواصل.',
+    contactVenue: 'مدخل IRESEN — صورة للتواصل',
+    contactVenueDescription: 'صورة لمدخل يحمل اسم IRESEN، مع جدار أبيض وبوابة خشبية وأشجار.',
   },
 }
 
@@ -111,24 +119,18 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   },
   {
-    id: 'contact-exterior-photo',
+    id: 'contact-venue',
     url: '/images/contact/contact-background-venue.jpg',
     type: 'media',
-    text: {
-      fr: {
-        title: 'Photographie extérieure — Contact',
-        description:
-          'Photographie d’un mur blanc et d’une entrée en bois entourés d’arbres et de plantes.',
-      },
-      en: {
-        title: 'Exterior photograph — Contact',
-        description: 'Photograph of a white wall and wooden entrance framed by trees and plants.',
-      },
-      ar: {
-        title: 'صورة خارجية — التواصل',
-        description: 'صورة لجدار أبيض ومدخل خشبي تحيط بهما الأشجار والنباتات.',
-      },
-    },
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: assetLabels[locale].contactVenue,
+          description: assetLabels[locale].contactVenueDescription,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
   },
   {
     id: 'home-video',
@@ -238,10 +240,8 @@ function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
       body: [
         copy.location.eyebrow,
         catalog.Footer.address,
-        copy.location.description,
+        copy.location.mapTitle,
         copy.location.externalLink,
-        copy.location.loadMap,
-        copy.location.privacyNotice,
       ],
     },
     {
@@ -306,7 +306,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...homeFigures.map(({ id, value }) => `${value} ${catalog.Hero.figures[id]}`),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
-      if (pageId === 'cookies') body.push(catalog.States.noTracking)
+      if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
         id: `page:${pageId}:${locale}`,
         locale,
