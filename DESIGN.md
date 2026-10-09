@@ -76,6 +76,11 @@ columns. Compact header actions can shrink and wrap with enlarged text.
 See [section implementation](docs/page-sections.md) and
 [revision-specific validation](docs/validation.md).
 
+Apply [the mobile information hierarchy](docs/mobile-information-hierarchy.md):
+essential orientation and action first, supporting context/facts next, optional
+decoration or redundant proof last. Set a visible-content ceiling by roles and
+counts, preserving natural height, readable text and access to required content.
+
 French and English use licensed, self-hosted Plus Jakarta Sans, including links
 and buttons. The Latin normal variable asset supports weights 200–800; source and
 OFL license records are in [the font guide](docs/fonts.md). Arabic uses the owner's
@@ -262,11 +267,28 @@ passed, including hover Escape and breakpoint focus restoration.
 The later hovered-menu adaptation below supersedes its panel geometry and
 related-block treatment; these checks describe the initial revision.
 
+## Contextual hero media — 2026-10-09
+
+Whole photographic backgrounds now support four text-placement modes: start,
+end, center and editorial. The former five split pages use start, with no image
+inset or opaque navy text half. Editorial utilities retain their reading measure
+over `rgb(5 17 29 / 66%)`, allowing the photograph to remain visible.
+
+New generated executive-meeting, young-adult onboarding and two-person handshake
+images fit governance, opportunities and collaboration. All 17 active photo assets
+are still fictional illustrations. Real Green Energy Park and IRESEN office
+photos await source-download access; no real image or office location is asserted.
+See [role mapping, provenance and readiness](docs/contextual-hero-media.md).
+Copy, facts, routes, fonts, original SVGs, mobile hierarchy and homepage video remain.
+Earlier compositions and captures are historical; current checks belong in
+[validation](docs/validation.md).
+
 ## Generated hero placeholders — 2026-10-09
 
 The owner's explicit photo-replacement request supplied 17 generated photographic
-placeholders across 22 pages. They remain on 21 pages and as the homepage video's
-fallback. A coherent energy/science editorial
+placeholders across 22 pages in that initial revision. Its
+[archived generated manifest](docs/hero-assets-generated-2026-10-09.json) retains
+the original set, before three contextual replacements. A coherent energy/science editorial
 series uses natural light, warm neutral landscapes and restrained blue, with
 credible fine geometry and room for translated text. Generic scenes and anonymous
 people illustrate the topic without identifying IRESEN sites, events or staff.
@@ -280,7 +302,7 @@ crops at `40rem` and below and cover-aware sizing support sharp imagery while re
 one eager/high-priority photo request. The approximately 250KB mobile image budget needs
 measurement against the final derivatives.
 
-See [current provenance and media behavior](docs/heroes.md#generated-hero-placeholders--2026-10-09)
+See [that revision's provenance and media behavior](docs/heroes.md#generated-hero-placeholders--2026-10-09)
 and [this revision's validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
 The earlier Figma image records and captures remain historical evidence.
 
@@ -300,15 +322,33 @@ pause-control default, without establishing WCAG 2.2.2 conformance for continuou
 motion. See [media behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09)
 and [revision-specific validation](docs/validation.md); photo-only checks remain historical.
 
+## Mobile information hierarchy — 2026-10-09
+
+The homepage's `40rem`-and-below presentation prioritizes its message and two
+existing navigation actions, stacked full width in primary blue and secondary
+white. The optional ISO badge and redundant scroll cue are hidden, and the lower
+reserve reduces from 72px to 32px at default text size. All five figures remain
+in a labelled, focusable native horizontal scroll row. The native scrollbar is
+enabled and unhidden, with visibility depending on browser/OS; a neighboring-item
+glimpse appears where space permits. Preserve natural text growth and logical RTL order.
+Wider layouts, other page heroes, identity, copy, header and footer remain.
+
+Use [the reusable hierarchy](docs/mobile-information-hierarchy.md) for future
+sections. Future mission cards await approved content and follow this mobile
+guidance. Earlier captures describe earlier presentations;
+current checks belong in [validation](docs/validation.md).
+
 ## Introducing heroes — 2026-10-08
 
 All approved pages now open with a restrained introduction: a display title, one
-short sentence, a section anchor and one related destination. Five compositions
-(start, end, center, split and editorial) vary the visual rhythm across page topics.
+short sentence, a section anchor and one related destination. The initial five
+compositions (start, end, center, split and editorial) varied rhythm by page topic;
+the contextual-media refinement above removes split and retains four text modes.
 The initial 17 individually extracted Figma images were illustrative backgrounds,
 without identifying pictured people or facilities as IRESEN. They are superseded
 by the generated placeholders above; [the archived manifest](docs/hero-assets-figma-2026-10-08.json)
-retains their source facts. Utility pages use quieter navy overlays. Detailed
+retains their source facts. Initial utility pages used quieter navy overlays;
+the current neutral readability layer is documented above. Detailed
 content belongs in the sections below.
 
 The existing header overlays these heroes with the reversed supplied logo and a
@@ -324,8 +364,9 @@ The lower image area now uses a centered clickable mouse/scroll-wheel cue in
 place of the visible Explorer la suite text/arrow. Its white outline, 44px target
 and translated accessible label retain clear native section navigation. A short
 finite wheel animation is disabled for reduced motion. The bottom reserve is
-72px at default text size, bringing the CTA closer to the band without clipping
-growing content. Current checks belong in [the validation log](docs/validation.md).
+72px at default text size, except for the homepage at `40rem` and below, which
+hides the redundant cue and uses 32px. Content grows naturally. Current checks
+belong in [the validation log](docs/validation.md).
 
 The homepage now also includes the owner's explicitly requested certification
 badge, documented below. This later request supplies its claim for the local
@@ -348,14 +389,16 @@ Public French/English text and controls now use self-hosted Plus Jakarta Sans,
 including Découvrir and menu actions; system families remain loading/glyph fallbacks.
 
 Selected languages use 700 weight alone in the header and footer dropdown, with
-no persistent fill or underline. Hover and keyboard focus remain visible.
+no persistent fill or underline. Header hover surfaces use the same physical 10px
+top-left/bottom-right action corners as search; opposite corners stay sharp,
+including in Arabic. Hover and keyboard focus remain visible.
 Header menu labels and their arrows center together within the full control width;
 the compact Menu control also centers its contents. Current executed checks and
 rendered coverage are recorded separately in [the validation log](docs/validation.md).
 
 ## Header search and contact controls — 2026-10-08
 
-The owner's screenshot refinement gives search a white square, neutral gray
+The owner's screenshot refinement gives the closed search trigger a white square, neutral gray
 outline and navy magnifier; contact retains primary blue with white text.
 Both now use physical 10px top-left/bottom-right corners with sharp opposite corners,
 including in RTL. Search is 48px square, reducing to 44px at `35rem` and below;
@@ -367,6 +410,23 @@ label; shared fonts, page titles, routes and compact-menu contact access remain.
 See [control rules](docs/design-system.md#header-search-and-contact-controls--2026-10-08)
 and [current validation](docs/validation.md); earlier 20px checks describe the
 previous treatment.
+
+## Expandable header search — 2026-10-09
+
+The existing 48/44px magnifier opens a white field with navy text and shared
+physical 10px action corners. It expands toward inline start (left FR/EN, right
+Arabic), with a 220ms width/opacity transition and stable header geometry.
+The enhanced control is capped at 22rem and available container space; expansion
+can use the other direction when needed. Reduced motion makes the change immediate.
+
+Fine-pointer hover opens without taking focus; explicit keyboard/touch activation
+focuses the labelled input. Enter or the filled icon sends a native GET query
+to the existing localized search page. Focus retains the open field; Escape,
+outside interaction and leaving disclosure focus close it. Native disclosure/form
+behavior remains without JavaScript; at `35rem` and below, the unenhanced field
+spans the action row below the controls.
+The search engine remains unavailable. See [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
+and [current validation](docs/validation.md); earlier square-control captures retain their scope.
 
 ## Shared key-figure typography — 2026-10-08
 
@@ -399,8 +459,14 @@ en place. The homepage band now presents these as a semantic definition list,
 replacing its founding-year/pathway items. The user's message is the content
 source; the Figma screenshots supply the styling hints. French labels retain
 the requested wording with spelling corrected; English/Arabic labels are drafted
-translations. Auto-fit tracks adapt the figure count per row to available space
-and enlarged text; the hero grows on narrow screens to display all five facts.
+translations. Above `40rem`, auto-fit tracks adapt to available space. At `40rem`
+and below, native horizontal scrolling retains all five facts, with a
+neighboring-item glimpse where space permits. Text wraps naturally rather than being clipped.
+The owner's 2026-10-09 alignment refinement centers each homepage value and label
+inside its own track. Locale-authored line breaks give the descriptions two lines
+at ordinary desktop/mobile sizes, including short labels; narrow tracks or
+enlarged text can add lines naturally. Menu and founding-year alignment retain
+their existing treatment.
 See [the hero content record](docs/heroes.md#homepage-key-figures--2026-10-08).
 
 ## Homepage certification badge — 2026-10-08
@@ -414,8 +480,9 @@ LTR-isolated in Plus Jakarta Sans; Arabic copy uses Alexandria.
 A translucent neutral gray surface uses actual backdrop blur and the physical
 top-left/bottom-right signature corners, preserved in RTL. At `70rem` and above,
 the 11rem badge sits at the inline end of a two-column copy grid, aligned with
-the CTA's bottom edge. Below that it wraps compactly between description and
-actions, so the button remains near the five-figure band. Natural hero growth is
+the CTA's bottom edge. Above `40rem` and below `70rem`, it wraps compactly between
+description and actions; at `40rem` and below, mobile hierarchy hides this secondary
+proof. Natural hero growth is
 retained. See [badge rules and content](docs/heroes.md#homepage-certification-badge--2026-10-08)
 and [current validation](docs/validation.md); earlier hero evidence predates it.
 

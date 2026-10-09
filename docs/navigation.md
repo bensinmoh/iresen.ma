@@ -14,7 +14,7 @@ chosen for each group's actual content.
 
 ## Header control refinement — 2026-10-08
 
-The owner's latest screenshot gives search a white square with a `#858585`
+The owner's latest screenshot gives the closed search trigger a white square with a `#858585`
 outline and 24px navy magnifier: 48px square, or 44px at `35rem` and below at
 the default root size. Contact keeps primary blue/white, a 48px minimum height
 and 24px horizontal padding, with inherited 16px/600 text. Both now use physical
@@ -32,12 +32,17 @@ retain their original scope.
 
 Search and contact now share `--radius-action: 0.625rem 0 0.625rem 0` with the
 public action family, replacing the header-only radius token. The physical 10px
-top-left/bottom-right corners retain their orientation in Arabic. Search keeps
+top-left/bottom-right corners retain their orientation in Arabic. The closed search trigger keeps
 its 48px square, reducing to 44px at `35rem` and below; contact keeps its 48px
 minimum height, 24px inline padding and inherited 16px/600 text. Contact inherits
 the shared `.button` geometry and hover rule, which keeps action text free of an
 added hover underline. On its current page it retains the selected 700 weight
 without inheriting the underline used by ordinary current navigation links.
+
+Header language hover surfaces also use `--radius-action`, matching search's
+physical 10px top-left/bottom-right corners, with sharp opposites in RTL.
+Current-language weight remains 700 with no permanent fill; quiet hover colors,
+44px minimum language targets and visible keyboard focus remain.
 
 The header DOM follows logo, desktop navigation, then language/search/contact
 actions. CSS preserves the existing one-row layout from `110rem`, two-row desktop
@@ -56,6 +61,31 @@ and [this revision's validation record](validation.md#site-coherence-review--202
 for executed checks and rendered coverage. Earlier geometry observations and
 verification retain their original scope; they do not establish results for this
 revision.
+
+## Expandable header search — 2026-10-09
+
+The magnifier is now the summary of a native search disclosure. Fine mouse hover
+opens it without autofocus; explicit keyboard/touch activation opens and focuses
+the labelled input. Enter or activation of the icon with a filled query submits
+native GET `q` to the existing canonical localized search route. An empty input
+retains required-field validation. On the search page, the enhanced header restores
+the current `q`; the engine remains unavailable and no results are invented.
+
+The field has a programmatic label and localized placeholder: « Rechercher sur
+le site… », “Search the website…” or “ابحث في الموقع…”. Its single-line text
+scrolls naturally. The white/navy surface expands toward inline start, reversing
+in RTL, with bounded width and fallback to the other direction when needed.
+The 220ms width/opacity motion respects reduced motion; header geometry and the
+closed 48px/44px icon remain.
+
+Focus keeps search open when the pointer leaves and prevents navigation hover
+from replacing it. Passive search hover also preserves an already focused language
+or navigation control. Escape closes and returns inside focus to the summary;
+outside pointer/focus and leaving the disclosure close it. Native click
+disclosure and GET submission remain without JavaScript; at `35rem` and below,
+the field spans the action row below controls. Contact, menus, languages and
+routes retain their roles. See [shared rules](design-system.md#expandable-header-search--2026-10-09)
+and [revision-specific checks](validation.md); previous captures remain historical.
 
 ## Sources and scope — 2026-10-08
 
@@ -150,7 +180,9 @@ keyboard focus retains control of an open panel. Touch does not depend on hover.
 
 The compact menu uses expandable groups in a bounded panel below the header.
 At 360px and below, the Menu label remains accessible while the visual control
-uses its icon, keeping language, search and menu controls on one row at normal text size.
+uses its icon. Closed language, search and menu controls share one row at normal
+text size; at `35rem` and below, an expanded no-JavaScript search field spans the
+action row below them.
 Visible focus, minimum control targets,
 bounded panel scrolling and existing reduced-motion rules support practical
 navigation. Logical spacing, equivalent locale routes and meaningful arrow

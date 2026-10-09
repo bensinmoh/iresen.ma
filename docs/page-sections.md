@@ -82,6 +82,13 @@ inside presentation code. The ordered route map and three principal Institute
 anchors remain authoritative; section anchors are available within each existing
 page. Future content can replace the briefs without changing route IDs.
 
+Apply [the mobile information hierarchy](mobile-information-hierarchy.md) when
+composing those future modules: foreground essential orientation/task content,
+then supporting details, and omit only optional decoration or redundant proof.
+Use role/count ceilings with natural flow, preserving required facts, routes,
+forms and feedback. Future mission cards await approved content and follow this
+mobile guidance. No card content or layout replaces the current scaffold.
+
 Executed application and rendered checks are recorded in
 [the validation log](validation.md). The source-table extraction checks content
 order and scope; it does not establish Word visual fidelity or institutional

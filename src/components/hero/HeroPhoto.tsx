@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import { heroImages, type HeroPhotoId } from '@/lib/hero-images'
 
-export function HeroPhoto({ photo, split }: { photo: HeroPhotoId; split: boolean }) {
+export function HeroPhoto({ photo }: { photo: HeroPhotoId }) {
   const image = heroImages[photo]
   // Cover scales by both dimensions. Width-only sizes undersample tall heroes.
   const heightWidth = `${((image.width / image.height) * 100).toFixed(2)}dvh`
-  const desktopSizes = split
-    ? `(min-width: 70rem) max(58vw, ${heightWidth}, 75rem), max(100vw, ${heightWidth}, 75rem)`
-    : `max(100vw, ${heightWidth}, 75rem)`
+  const desktopSizes = `max(100vw, ${heightWidth}, 75rem)`
 
   return (
     <picture>
@@ -22,6 +20,7 @@ export function HeroPhoto({ photo, split }: { photo: HeroPhotoId; split: boolean
         loading="eager"
         fetchPriority="high"
         className="hero-photo"
+        data-photo={photo}
       />
     </picture>
   )

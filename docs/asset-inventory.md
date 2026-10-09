@@ -183,13 +183,35 @@ Native Figma editable structure, mobile frames and serialized interaction record
 
 Licensed Plus Jakarta Sans Latin and owner-selected Alexandria Arabic webfonts are installed independently of the unreadable ZIP; see the font records below. Reviewed original public imagery remains a follow-up input. Its presence in the unreadable ZIP is unknown. Once accessible, record licenses, source/version, credits, public/private status, final served filename and approved optimization/cropping. Never crop a screenshot to create a replacement logo or treat illustrative export statistics as verified content.
 
+## Contextual hero media — 2026-10-09
+
+The schema-3 [current inventory](hero-assets.json) supports per-asset provenance;
+all 17 active photo entries currently remain generated. Three new fictional
+scenes replace the earlier careers, collaboration and wind-engineer images:
+`governance`, `careers-onboarding` and `partnership-handshake`. They are not actual
+IRESEN board members, employees or offices. Their native sources are 1536 × 1024,
+with full-height 683 × 1024 mobile crops, without resizing or upscaling.
+
+Current landscape files total 4,422,882 bytes and mobile crops 2,005,356 bytes;
+the largest mobile crop is 216,272 bytes. Content-hashed filenames and quality-90
+WebP remain. All backgrounds are full-scene, with four text-placement modes and
+readable overlays; the original homepage video remains a separate asset above
+its generated fallback. Per-asset hashes, dimensions and crops are authoritative.
+
+Requested real Green Energy Park and IRESEN office photographs are not imported.
+Candidate source downloads are blocked by the cloud network policy; see
+[documentary media readiness](contextual-hero-media.md#documentary-photos-pending).
+No real facility or office location is inferred from the generated backgrounds.
+Current delivery/render checks belong in [validation](validation.md); earlier
+captures and inventories retain their dated scope.
+
 ## Generated hero placeholders — 2026-10-09
 
 The owner requested 17 generated generic photographic placeholders to replace
 the earlier Figma backgrounds across all 22 pages. These fictional scenes are
 decorative illustrations, not records of real IRESEN facilities, people or work.
 Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
-their existing definitions. The replacement introduces no external image host,
+their existing definitions at that revision. The replacement introduced no external image host,
 video playback or new client runtime at that revision. The later homepage video
 uses these generated photos as its fallback while the other 21 heroes stay photographic.
 
@@ -202,7 +224,7 @@ sixteen 3:2 sources and 627 × 941px for the aerial. Content-hash filenames
 distinguish the new assets. Original generated PNGs remain in the generation
 workspace, outside Git and `public/`.
 
-The schema-2 [hero manifest](hero-assets.json) records 16 full generation prompts
+The archived schema-2 [generated manifest](hero-assets-generated-2026-10-09.json) records 16 full generation prompts
 and an abbreviated aerial prompt summary, native dimensions, source and output
 SHA-256 values, byte counts and mobile crop rectangles. The 17 landscape WebPs
 total 4,429,414 bytes; the 17 mobile crops total 2,001,688 bytes. The largest

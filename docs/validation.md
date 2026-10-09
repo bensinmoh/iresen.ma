@@ -985,3 +985,208 @@ production build and all 55 browser cases passed again on the combined source.
 The media observations and retained hero captures above describe the video
 revision before that section integration. Current remote CI and merge results
 are recorded by the PR.
+
+## Mobile information hierarchy — 2026-10-09
+
+The homepage at `40rem` and below omits the secondary ISO badge and redundant
+scroll cue, gives its two existing navigation actions full-width stacked targets,
+and retains all five facts in a native horizontal definition-list strip. The
+[shared hierarchy](mobile-information-hierarchy.md) sets priorities and a
+role/count ceiling without truncating meaningful content or imposing fixed
+heights. Future mission cards remain editorial work; no new card content is
+presented.
+
+Local lint, strict types, 8 unit tests, 4 integration tests and the standalone
+production build passed. All 62 browser cases passed in the full local run,
+including seven new mobile cases. The mobile boundary sweeps cover FR/EN/AR at
+320, 390, 640, 641 and 1440px: hidden secondary home elements and stacked actions
+through 640px, the retained wider badge/cue/grid above it, all five values, named
+scroll semantics, unclipped labels and no horizontal document overflow.
+Keyboard users enter the strip from the last action and reveal each complete
+figure with native directional arrows, including Arabic without JavaScript.
+The enlarged-text cases reveal all five figures at 320px/200%. Existing cases
+also cover every canonical route, native section navigation, fonts, footer,
+menus, image delivery, automated accessibility checks and unchanged video
+playback/reduced-motion/failure behavior.
+
+Four retained production renders were inspected for hierarchy, aligned gutters,
+full-width actions, readable wrapping, signature corners and RTL. At 390 × 844,
+FR and AR both retain an 844px landing with 350px action groups and a contained
+390px scroll strip. The English 320px/200% landing grows to about 2533px instead
+of clipping content; its actions fit the available 240px width. Desktop at
+1440 × 900 retains the ISO badge and five-column grid. Captures are quality-90
+WebP at CSS resolution without resizing:
+
+- [French mobile video](screenshots/mobile-hierarchy-fr-390.webp)
+- [Arabic mobile reduced-motion fallback](screenshots/mobile-hierarchy-ar-390.webp)
+- [English 320px with enlarged text](screenshots/mobile-hierarchy-en-320-enlarged.webp)
+- [French desktop reduced-motion fallback](screenshots/mobile-hierarchy-fr-desktop.webp)
+
+These checks use local Chromium. Native scrollbar visibility follows browser/OS
+settings; its styling does not suppress it. No manual screen-reader or Safari/iOS
+certification is asserted. Prior screenshots and validation retain their original
+revision scope; current remote CI and merge results belong to the PR.
+
+A supplementary production-render audit passed 21 locale/width/text-size states,
+revealing 105 complete fact pairs and checking 210 value/label text blocks.
+At 320px/200%, 72px values and 36px labels fit their 240px tracks. Native touch
+gestures reached the last fact in French and Arabic without moving the document
+horizontally; central Arabic swipes revealed each fact in order. Three scoped
+hero axe scans found zero violations, with media color contrast marked incomplete
+by the automated scan and representative renders reviewed manually.
+
+## Contextual hero media — 2026-10-09
+
+Three generated fictional scenes now match their pages: an executive meeting for
+Governance, young-adult onboarding for Opportunities & Careers and a two-person
+handshake for Work with us. Their 1536 × 1024 landscape sources and 683 × 1024
+native-height portrait crops were inspected; original PNGs remain outside public/
+and Git. The [current inventory](hero-assets.json) records every hash, dimension,
+byte count and crop, while the [initial generated inventory](hero-assets-generated-2026-10-09.json)
+remains historical. All 17 active photos are still generated. Real Green Energy
+Park and IRESEN office imports remain blocked by external source access, as
+recorded in [media readiness](contextual-hero-media.md#documentary-photos-pending).
+
+Every photo now covers the whole hero scene. Five former split pages use start
+alignment, with no image inset or opaque navy half. Utility editorial pages use
+a neutral 66% overlay; directional overlays retain visible photography and
+strengthen the middle stop to 65% for readable text on the new bright office
+scenes. Header, facts, native actions, mobile hierarchy and homepage video remain.
+
+Lint, strict types, formatting and the standalone production build passed on the
+updated source. All 62 browser cases passed again, including the mobile hierarchy,
+all canonical routes, fonts, navigation, footer, no-JavaScript behavior and video
+states. The two image-delivery cases now exercise the three new scenes as well as
+the previous representative home/priorities cases in fresh DPR-2 contexts. They
+check one photo request, full viewport width, native-height mobile delivery and
+quality-90 desktop cover without artificial enlargement.
+
+Six retained production captures were inspected at 1440 × 900 French desktop and
+390 × 844 Arabic mobile, covering the three new scenes, text hierarchy, readable
+wrapping, full-frame media, RTL and portrait cropping. They are quality-90 WebP
+at CSS resolution without resizing:
+
+- [Governance, French desktop](screenshots/contextual-governance-fr-desktop.webp)
+- [Governance, Arabic mobile](screenshots/contextual-governance-ar-mobile.webp)
+- [Careers, French desktop](screenshots/contextual-opportunities-fr-desktop.webp)
+- [Careers, Arabic mobile](screenshots/contextual-opportunities-ar-mobile.webp)
+- [Partnership, French desktop](screenshots/contextual-workWithUs-fr-desktop.webp)
+- [Partnership, Arabic mobile](screenshots/contextual-workWithUs-ar-mobile.webp)
+
+The onboarding and handshake portrait crops retain their interactions; the
+narrow governance crop foregrounds the central executive and discussion, with
+an outer participant partly outside the frame. This is illustrative imagery,
+not evidence of actual people or premises. Coverage is local Chromium; wider
+browser, screen-reader and field-performance certification is not asserted.
+Remote CI/push remain pending the requested documentary-media inputs.
+
+A supplementary 26-render audit across FR/EN/AR and desktop/mobile passed full
+viewport media coverage, text/action containment, selected scene/crop URLs and
+44px minimum targets. Conservative rendered contrast minima were 5.813:1 for
+H1, 6.279:1 for introductions and 6.195:1 for eyebrow/related-link text; solid
+primary buttons measured 5.445:1. Decorative SVGs were excluded from text probes.
+The review identified a desktop handshake focal refinement: top alignment lowers
+faces below the navigation while retaining centered mobile framing.
+After that refinement, the build, lint, formatting and both image-delivery cases
+passed again. Three affected FR/EN/AR desktop renders confirmed clear faces,
+visible hands, full-width coverage and containment; their text contrast remained
+at least 7.919:1 for H1, 7.995:1 for introductions and 9.044:1 for related links.
+The retained partnership desktop capture reflects this final positioning.
+
+## Centered homepage figures — 2026-10-09
+
+The five homepage values and descriptions now center within their individual
+grid/scroll tracks. Locale-authored newlines give every label two lines at
+ordinary sizes; `white-space: pre-line` applies only to the homepage labels.
+The shared research-menu label still collapses that whitespace normally and
+retains its original alignment. Narrow/enlarged labels can add lines without
+fixed heights or clipping; all facts and native scrolling remain.
+
+Lint, formatting, production compilation/types, 8 unit tests and all 15 existing
+hero browser cases passed. A scoped production audit checked FR/EN/AR at 1440,
+1920, 390 and 320px, plus 320px with 200% text: 15 states and 75 complete fact
+pairs. All 60 normal-size labels occupied exactly two lines, with equal card
+height within each state. Actual value/label text centering error stayed below
+0.016px; every enlarged label and value remained contained when revealed, with
+no document overflow or page error. The normal homepage video still autoplays
+without controls. Checks use local Chromium; broader browser/accessibility
+certification is not asserted.
+
+Five quality-90 WebP strip captures preserve their CSS-resolution dimensions:
+
+- [French desktop](screenshots/home-figures-centered-fr-desktop.webp)
+- [English desktop](screenshots/home-figures-centered-en-desktop.webp)
+- [Arabic desktop](screenshots/home-figures-centered-ar-desktop.webp)
+- [French mobile](screenshots/home-figures-centered-fr-mobile.webp)
+- [French mobile with enlarged text](screenshots/home-figures-centered-fr-mobile-enlarged.webp)
+
+This increment is saved locally; push remains held while the earlier requested
+documentary-photo imports await network configuration.
+
+## Header language hover — 2026-10-09
+
+Header language links now share search's `--radius-action` instead of the
+all-corner small radius. Lint, formatting, production compilation/types and the
+three existing localized desktop-navigation browser cases passed.
+
+A scoped production audit inspected FR/EN/AR at 1440 and 390px: all 18 language
+links retain physical corner radii `[10px, 0, 10px, 0]` at rest, hover and actual
+Tab focus, matching search in RTL too. Targets remain 44 × 44px; focused links
+show the 3px cyan outline with 4px offset. The current language remains weight
+700 with a transparent resting background, and hover keeps the quiet surface.
+No document overflow or page errors occurred. Checks use local Chromium, without
+a broader browser or accessibility certification claim.
+
+These quality-90 CSS-resolution crops were visually inspected:
+
+- [French header hover](screenshots/language-hover-fr.webp)
+- [Arabic header hover](screenshots/language-hover-ar.webp)
+
+The increment is saved locally with push still held for the earlier pending
+documentary-photo inputs.
+
+## Expandable header search — 2026-10-09
+
+The header magnifier now reveals a labelled search input with a localized
+placeholder. Fine-pointer hover opens without taking focus; keyboard/touch
+activation focuses the input. Enter or the filled-query icon submits native GET
+`q` to the existing localized search route. Escape restores inside focus to the
+summary; pointer departure, outside interaction, focus ownership and breakpoint
+changes retain usable dismissal. The enhanced search page restores its query.
+The search engine remains unavailable; this change adds no index, results or backend.
+
+Production build/types, lint, formatting and 8 unit tests passed. All 72 browser
+cases passed before the final narrow no-JavaScript Arabic corner reset. After
+that CSS correction, production compilation/types and lint passed again, as did
+all 10 focused search cases. The new coverage checks FR/EN/AR hover and keyboard
+submission, encoded queries, stable neighboring controls, focused language/menu
+protection, RTL resize/breakpoint behavior, narrow touch dismissal/submission,
+reduced motion and native no-JavaScript GET behavior. A scoped open-header axe
+scan reported zero violations.
+
+A focused production Chromium review inspected 11 states: FR/EN/AR at 1440 and
+390px, FR/AR at 1920px and at 320px with 200% text, plus Arabic 390px without
+JavaScript. Ten enhanced states retain unchanged header geometry and show actual
+intermediate width/opacity frames during the 220ms reveal. The desktop combined
+field/trigger measures 352px. At 320px with enlarged text, reversed expansion
+fits the full 240px container without moving other controls. White fields retain
+the physical rounded top-left/bottom-right and sharp opposite corners in RTL too.
+The final targeted Arabic no-JavaScript recheck confirms the standalone summary
+corners and the separate 350px field within 20px gutters.
+
+All reviewed states have contained fields, visible input focus, readable text
+height and no document overflow or page errors. Navy/white contrast is 12.616:1,
+placeholder/white 5.932:1 and blue input focus/white 5.445:1. Narrow enlarged
+placeholders remain native single-line text and can show only part of the hint;
+the programmatic label remains complete. These quality-90 CSS-resolution crops
+were visually inspected:
+
+- [French desktop](screenshots/header-search-expanded-fr-desktop.webp)
+- [Arabic desktop](screenshots/header-search-expanded-ar-desktop.webp)
+- [French mobile with enlarged text](screenshots/header-search-expanded-fr-mobile-enlarged.webp)
+
+Coverage uses local Chromium and emulated touch; Safari, physical-device and
+screen-reader certification is not asserted. The ten unaffected enhanced visual
+states precede the final fallback-only corner correction; the affected native
+Arabic state was reviewed again after it. Remote CI/push remain held for the
+earlier pending documentary-photo inputs.

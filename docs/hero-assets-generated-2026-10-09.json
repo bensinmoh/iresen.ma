@@ -1,10 +1,10 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 2,
   "date": "2026-10-09",
-  "source": "Seventeen generated photographic topic illustrations, including the owner's new executive meeting, young-adult onboarding and two-person partnership handshake. Requested documentary institutional photos remain pending and are not represented by these generated assets.",
-  "previousManifest": "hero-assets-generated-2026-10-09.json",
-  "nativeResolution": "Retained sources at native 1536 × 1024 or 1672 × 941; three new contextual generated sources at native 1536 × 1024. Per-asset dimensions are authoritative. No upscaling; originals remain outside public/ and Git.",
-  "role": "Decorative photographic topic illustrations unless an asset explicitly records a verified documentary source. Generated people and settings do not document IRESEN employees, facilities or events.",
+  "source": "Seventeen fictional photographic placeholders generated at the owner's explicit request",
+  "previousManifest": "hero-assets-figma-2026-10-08.json",
+  "nativeResolution": "Sixteen native 1536 × 1024 images and one native 1672 × 941 aerial. No upscaling; not native 4K. Original generated PNG files are retained in the generation workspace, outside public/ and Git.",
+  "role": "Decorative topic illustrations; generated people and settings do not document IRESEN researchers, facilities or events.",
   "encoding": {
     "tool": "sharp",
     "version": "0.35.5",
@@ -15,11 +15,74 @@
   },
   "delivery": {
     "mobile": "At 40rem and below, a picture source serves the full preoptimized native-height portrait WebP directly.",
-    "desktop": "Next Image quality 90, allowed alongside 75; cover-aware full-scene viewport/height sizes with a 75rem guard for natural content growth. No half-image/half-color hero layout.",
+    "desktop": "Next Image quality 90, allowed alongside 75; cover-aware viewport/height sizes with a 75rem guard for natural content growth.",
     "cache": "Content-hashed filenames replace former URLs; no cache-policy or image allowlist weakening.",
-    "priority": "PHOTO-only inventory: only the current hero photo is eager with high fetch priority; no extra image preloads or external hosts. The separately documented homepage video public/videos/hero.mp4 runs above its photo fallback."
+    "priority": "Only the current hero: eager loading and high fetch priority; no extra preloads, external hosts or video."
   },
   "assets": [
+    {
+      "id": "careers",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-3c2982bd-7e0d-495b-9213-16a07fe19147.png",
+      "sourceSHA256": "d32897e4c8b8bfd4b59047f59f7d3af724834e6c74c849432971306b8ef129ce",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one high-resolution photographic website hero placeholder, landscape aspect ratio 3:2, at the highest native image resolution available. Premium camera-real institutional energy and science editorial photography, crisp fine detail and believable materials, natural daylight, warm neutral tones with restrained navy and blue accents. Generic imagined adult people and facilities; do not depict or claim any real IRESEN employee or facility. Centre the main subject within the middle 45 percent of the frame, keep faces fully visible with generous headroom, and keep both far left and far right edges quiet and uncluttered for French and Arabic text overlays, full-bleed framing, and centred vertical mobile crops. Natural documentary posture rather than advertising posing. Anatomically correct faces and hands. No words, lettering, numbers, readable text, labels, logos, watermark, UI, graphics, artificial dark gradient, or cinematic colour wash. Deliver a native generated image without interpolation or artificial upscaling. Scene: a young adult researcher, around twenty-eight years old, engaged in precise energy-materials work in a bright modern laboratory. She wears unbranded navy-blue technical workwear and clear simple protective safety glasses. Centred three-quarter framing with her face fully visible, looking attentively at a compact, plausible laboratory instrument such as a precision sample holder and benchtop optical measurement device. She adjusts one simple large control with one anatomically correct hand while the other rests naturally on the bench, avoiding complicated finger poses. Brushed metal hardware, clean fixtures, orderly workbench, subtle glass apparatus, neutral pale laboratory interior and a softly lit window in the background. No crowded tubing, no impossible equipment, no fictional display content. Scientific craft and professional concentration, sharply detailed but restrained and credible. CRITICAL COMPOSITION OVERRIDE: This is a WIDE ENVIRONMENTAL PHOTOGRAPH, not a close portrait. Move the camera significantly farther back and use a wider lens while preserving natural proportions. Keep the TOP QUARTER of the frame as quiet bright room/background with no head or equipment intrusion. The TOP of the person's hair must begin around 30 PERCENT of the full image height, and their face centre must sit around 40 PERCENT of image height, near the horizontal centre. Show a smaller subject and more of the clean room, entire workstation, and orderly floor/background. Keep the person and instrument/papers in the centre, leaving the outer thirds of both sides sparse. This generous headroom is essential so a wide website crop does not cut the head. Maintain the realistic professional daylight photographic treatment, sharp engineering detail and natural hands; no text or logos.",
+      "notes": [
+        "AI-generated generic placeholder; not a real IRESEN person or facility.",
+        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
+        "Visually inspected for natural faces/hands, unbranded photographic detail and centred subject framing.",
+        "A wider environmental framing was selected after one headroom correction; the earlier original remains at exec-4e409ae7-1786-41b7-a663-adccbb9c9716.png."
+      ],
+      "file": "public/images/heroes/careers-265dba164ad3.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 120832,
+      "outputSHA256": "265dba164ad340480d5dd7271034ba8f090791a96963488d862026cd2974cd85",
+      "mobile": {
+        "file": "public/images/heroes/careers-mobile-b2b1ca594fa0.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 57330,
+        "outputSHA256": "b2b1ca594fa0cd6a59f23be09d3f197ed4b63cb8aecd7479ffed3f6e6339732f"
+      }
+    },
+    {
+      "id": "collaboration",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-a673cdaa-9212-4403-a7ac-da08ceb6a508.png",
+      "sourceSHA256": "e034161bcd52adb80456b15e85bd81197af7b3edb348b187cf239cfe7e8eb601",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create ONE premium camera-real institutional science editorial photograph as a high-resolution website hero placeholder. Landscape 3:2 composition, highest available native output resolution. Fictional generic North African context, no actual identifiable IRESEN people or facility. A mixed group of four adult scientists and research partners, women and men, in a strategic discussion around a clean, unbranded small renewable-energy physical prototype on an elegant meeting table in an airy contemporary meeting room. The prototype is a credible compact solar module and energy electronics demonstration, with no readable markings. Candid thoughtful interaction, realistic hands and faces, natural professional clothing; no posing toward the camera. Restrained navy and blue scientific materials, bright natural window daylight and warm-neutral photographic grading, finely resolved skin, fabrics, glass, metal and prototype microdetails. Broad framing from a little distance: keep the people and prototype centered in the middle half of the image, with generous clear headroom, calm uncluttered architecture on BOTH the left and right for Latin/RTL text and mobile cropping. The outer sides must remain quiet yet naturally photographic; no blank artificial zones. Premium architectural editorial photography, believable room scale, realistic optical depth, sharp central subjects, subtle depth of field. Do not add text, logos, watermarks, UI, charts with text, signs, heavy dark overlays, gradients or illustration effects. Render a real-looking photograph, not a 3D render or stock advertisement.",
+      "notes": [
+        "Native landscape 3:2 PNG; no upscaling or 4K claim.",
+        "Fictional generated people and setting; does not document an IRESEN team or facility.",
+        "Reviewed central discussion/prototype, generous headroom and calm outer architecture; no visible text, branding, watermark or overlay."
+      ],
+      "file": "public/images/heroes/collaboration-19ed7c16b18b.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 243450,
+      "outputSHA256": "19ed7c16b18b7feed07f05d0741e4192eba18b36b8752838fd0416db2b586fe9",
+      "mobile": {
+        "file": "public/images/heroes/collaboration-mobile-37bfdd5d73ce.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 103972,
+        "outputSHA256": "37bfdd5d73ceed8325f62ec192831263bd226c454fa069fabd88d5d443a5c3e8"
+      }
+    },
     {
       "id": "conference",
       "source": "Owner-requested generated photographic placeholder",
@@ -47,8 +110,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 68496,
         "outputSHA256": "d75f64dd6787fdd8a55b43624ec469696b44adad7d2ba011223b3b9fcb93d88a"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "reading",
@@ -80,8 +142,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 106040,
         "outputSHA256": "d8b8e9112c6e39ccd6e77029c106b820abe1b9e205a3ca9fed6630586b5c808a"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "research",
@@ -112,8 +173,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 86436,
         "outputSHA256": "5c0d5e7161f2a05c78ec222e782606d4dab8c9f4950d2edcfa368abb7cfab056"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-aerial",
@@ -142,8 +202,7 @@
         "outputDimensions": [627, 941],
         "bytes": 216272,
         "outputSHA256": "836f21a73f2acb946eba8448592dbd6071868c2f0100ecc3ce421e763fde76ca"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-city",
@@ -172,8 +231,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 142274,
         "outputSHA256": "7b4d48ba6244e4a8b204ccdae0d73bb6ae229330c099f696bdad578bb28b98e1"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-detail",
@@ -202,8 +260,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 104462,
         "outputSHA256": "85512902dfa370edc528f70c771461c1f3378a7eb352a85945448a13a0e6bf8e"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-expertise",
@@ -234,8 +291,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 108476,
         "outputSHA256": "ad3376396a3e9dd6d62eaa8ffbc9c42aac3cdd8912584f1feb99ca6ae9563625"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-field",
@@ -266,8 +322,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 191442,
         "outputSHA256": "4b16d7844f5a1793a3a180682a3d8ba9dc0a8c1a41e3bf760f2b68bd6d2839ff"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-horizon",
@@ -298,8 +353,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 131148,
         "outputSHA256": "e1d07bde00d81441bfb43e73e8d8ded92a6dbcaabc9ff9319cf46df6bdf09072"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "solar-sunset",
@@ -330,8 +384,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 166590,
         "outputSHA256": "889101e3c5b4455da9a518e777513c953796be16f977f7616f656786e7ef857f"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "team",
@@ -362,8 +415,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 112074,
         "outputSHA256": "657ccde90f4172c56a9b975fc61a9b41aea04319d9439c918f6494c937d53420"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "wind-detail",
@@ -392,8 +444,38 @@
         "outputDimensions": [683, 1024],
         "bytes": 86720,
         "outputSHA256": "13d915f73e6126446c4c3eb4a60af77bac8f33cd8b077e8042e83e8a26218541"
-      },
-      "sourceType": "generated"
+      }
+    },
+    {
+      "id": "wind-engineer",
+      "source": "Owner-requested generated photographic placeholder",
+      "tool": "image_gen.imagegen",
+      "date": "2026-10-09",
+      "sourceFileName": "exec-8530323d-6279-42aa-be18-469a5d283fe1.png",
+      "sourceSHA256": "dea613dc701b58003fca334ac198bc07d2273dc42603cf2e1379466d53283325",
+      "sourceDimensions": [1536, 1024],
+      "prompt": "Create exactly one high-resolution photographic website hero placeholder, landscape aspect ratio 3:2, at the highest native image resolution available. Premium camera-real institutional energy and science editorial photography, crisp fine detail and believable materials, natural daylight, warm neutral tones with restrained navy and blue accents. Generic imagined adult people and facilities; do not depict or claim any real IRESEN employee or facility. Centre the main subject within the middle 45 percent of the frame, keep faces fully visible with generous headroom, and keep both far left and far right edges quiet and uncluttered for French and Arabic text overlays, full-bleed framing, and centred vertical mobile crops. Natural documentary posture rather than advertising posing. Anatomically correct faces and hands. No words, lettering, numbers, readable text, labels, logos, watermark, UI, graphics, artificial dark gradient, or cinematic colour wash. Deliver a native generated image without interpolation or artificial upscaling. Scene: an adult woman energy engineer wearing a clean white safety hardhat and unbranded navy-blue workwear stands attentively at a wind research field in a clear, plausible North African landscape. She looks at a nearby unbranded monitoring instrument with a relaxed thoughtful expression, never directly at the camera. White modern wind turbines occupy the distant middle ground, with realistically proportioned three-bladed rotors and ordered rows extending across low sandy hills. A pale blue sky, gentle sunlight, warm dry grasses and clear air. The engineer occupies the centre, around waist-up to three-quarter framing, hands naturally relaxed around a compact unbranded inspection tablet held low; do not introduce crowded cables or complex finger gestures. Keep the landscape and both side edges open and simple.",
+      "notes": [
+        "AI-generated generic placeholder; not a real IRESEN person or facility.",
+        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
+        "Visually inspected for natural faces/hands, unbranded photographic detail and centred subject framing."
+      ],
+      "file": "public/images/heroes/wind-engineer-1fc45889ff2c.webp",
+      "outputDimensions": [1536, 1024],
+      "bytes": 203118,
+      "outputSHA256": "1fc45889ff2cb8cb5d0c88d46e17df106d0a8a2bb1264b98503280b8740ea83f",
+      "mobile": {
+        "file": "public/images/heroes/wind-engineer-mobile-8a4062f10302.webp",
+        "crop": {
+          "left": 427,
+          "top": 0,
+          "width": 683,
+          "height": 1024
+        },
+        "outputDimensions": [683, 1024],
+        "bytes": 87724,
+        "outputSHA256": "8a4062f10302d5c47b8178c48ba5cc7b483d4fade86a0c5b70c339c5cfb4b969"
+      }
     },
     {
       "id": "wind-landscape",
@@ -424,8 +506,7 @@
         "outputDimensions": [683, 1024],
         "bytes": 144344,
         "outputSHA256": "545006a7b08a0c3e6e195b505ce874e7a12652fe64d268627875cc2c3b5ce869"
-      },
-      "sourceType": "generated"
+      }
     },
     {
       "id": "workshop",
@@ -456,113 +537,6 @@
         "outputDimensions": [683, 1024],
         "bytes": 87888,
         "outputSHA256": "8e8c5c2cc11aed2e478485c8b873cc19f2b2f59be7ebc971e86ebda83920bd9d"
-      },
-      "sourceType": "generated"
-    },
-    {
-      "id": "governance",
-      "source": "Owner-requested generated contextual photographic placeholder",
-      "sourceType": "generated",
-      "tool": "image_gen.imagegen",
-      "date": "2026-10-09",
-      "sourceFileName": "exec-5e0b25d1-5a51-42b1-a5ec-d57e1c7d91dd.png",
-      "sourcePreservedPath": "/workspace/contextual-media/generated/governance.png",
-      "sourceSHA256": "b3a7a77ac2a0683fe92ecdd1f7e2152f76ceec6e6393f6938bc1553f97ab6bcc",
-      "sourceDimensions": [1536, 1024],
-      "sourceBytes": 2113673,
-      "prompt": "Create exactly one high-native-resolution (highest native resolution available, landscape 3:2) camera-real editorial photograph for a professional institutional energy research website. This is a FICTIONAL ILLUSTRATIVE scene set in a plausible contemporary Moroccan / North African professional office, depicting fictional adult professionals, not identifiable real people or any actual IRESEN team or facility. Full-frame true photograph edge to edge: NO split composition, no empty blue half, no gradient, no graphic overlay, no borders. Realistic materials, accurate anatomy, natural expressions, restrained neutral warm palette, subtle navy clothing, real soft daylight, crisp fine photographic detail, natural gentle depth of field. Wide environmental framing from a little distance rather than cropped portraits. Group and relevant interaction centred in the middle 45 percent of the frame, with all heads beginning below the top quarter and complete faces visible, generous real architectural background above. Keep both outer edges quieter but physically complete office scenery, so later left/right text overlays and a centred narrow portrait crop work. No words, readable letters or numbers, logos, nameplates, watermark, flags, charts with lettering, presentation slides, artificial cinematic colour cast, or stock-photo posing. Scene: A small board / governance meeting of five diverse adult Moroccan / North African executives, women and men ages roughly 35–60, seated in discussion around an elegant contemporary conference table in a light modern office. The central trio of executives have natural engaged eye contact while an executive on one side calmly explains a strategic decision using a simple open-palmed gesture. All participants wear tasteful business attire with no neckties required, natural modest styling. Table holds only a few unbranded closed folders, blank notepads, one plain carafe and glasses, no screens. The scene unmistakably communicates executive decision-making, governance and professional collegial discussion, never laboratory work or a classroom. Show real balanced window architecture and warm wall panels throughout the frame, sharp natural faces, complete heads and normal restrained hand gestures. Documentary institutional photography, believable candid moment.",
-      "notes": [
-        "Owner-requested fictional topic illustrations; people and offices are fictional and do not document real IRESEN staff or premises.",
-        "Five adult executives discuss around a conference table; the native portrait crop preserves the central executive, the speaker and the meeting context, with the right-hand participant partly cropped. Realistic understated hands, no readable text or logos.",
-        "Full photographic frame, no artificial gradient, blue half, graphic division or overlay.",
-        "Original native PNG preserved in the generation workspace; no interpolation or upscaling."
-      ],
-      "file": "public/images/heroes/governance-598e07ec7988.webp",
-      "outputDimensions": [1536, 1024],
-      "bytes": 200674,
-      "outputSHA256": "598e07ec7988628e83c6eca92aa1eb6ef70a66679d49c2ee285292f722ba73bb",
-      "mobile": {
-        "file": "public/images/heroes/governance-mobile-b489f3c97bd6.webp",
-        "crop": {
-          "left": 427,
-          "top": 0,
-          "width": 683,
-          "height": 1024
-        },
-        "outputDimensions": [683, 1024],
-        "bytes": 87874,
-        "outputSHA256": "b489f3c97bd6410cf2e5ce605ef823f1e4a76a3a1de4f922b53af5bc49a49039"
-      }
-    },
-    {
-      "id": "careers-onboarding",
-      "source": "Owner-requested generated contextual photographic placeholder",
-      "sourceType": "generated",
-      "tool": "image_gen.imagegen",
-      "date": "2026-10-09",
-      "sourceFileName": "exec-6b5a0ede-6737-4a43-a2e5-a1de955dbf0d.png",
-      "sourcePreservedPath": "/workspace/contextual-media/generated/careers-onboarding.png",
-      "sourceSHA256": "5ae83d82b8a384787b3b6d01b77bbaaf94c9b00e31a87e6764b07ce4f28146ca",
-      "sourceDimensions": [1536, 1024],
-      "sourceBytes": 2120695,
-      "prompt": "Create exactly one high-native-resolution (highest native resolution available, landscape 3:2) camera-real editorial photograph for a professional institutional energy research website. This is a FICTIONAL ILLUSTRATIVE scene set in a plausible contemporary Moroccan / North African professional office, depicting fictional adult professionals, not identifiable real people or any actual IRESEN team or facility. Full-frame true photograph edge to edge: NO split composition, no empty blue half, no gradient, no graphic overlay, no borders. Realistic materials, accurate anatomy, natural expressions, restrained neutral warm palette, subtle navy clothing, real soft daylight, crisp fine photographic detail, natural gentle depth of field. Wide environmental framing from a little distance rather than cropped portraits. Group and relevant interaction centred in the middle 45 percent of the frame, with all heads beginning below the top quarter and complete faces visible, generous real architectural background above. Keep both outer edges quieter but physically complete office scenery, so later left/right text overlays and a centred narrow portrait crop work. No words, readable letters or numbers, logos, nameplates, watermark, flags, charts with lettering, presentation slides, artificial cinematic colour cast, or stock-photo posing. Scene: A warm professional onboarding welcome for TWO young adult new colleagues (women and men approximately 24–30) with ONE experienced female mentor / team manager approximately 40, all fictional Moroccan / North African adults. They stand together near the centre of a welcoming modern office lounge with warm neutral walls, subtle blue chairs, real windows and one indoor plant. The mentor is explaining their first-day orientation in friendly conversation, holding a simple plain closed folder at waist height while the two new adults attentively listen with natural modest smiles. Smart professional casual clothing, no laboratory coats, no helmets, no lab experiment, no school or graduation setting, no handshake so it reads distinct from partnerships. A believable unposed first-day welcome emphasizing careers, team integration and collaboration. Wide enough to show upper bodies and some office interior, heads fully visible with generous headroom, natural relaxed anatomically correct hands. CRITICAL FRAMING OVERRIDE: Place the camera much farther away so all THREE people are shown FULL LENGTH from top of hair to shoes, together as a relatively small group wholly contained within the CENTRAL 45 PERCENT of the image width. The tall man's head and BOTH women's heads must ALL begin at or BELOW 30 PERCENT of the full image height. The TOP 30 PERCENT is pure natural office architecture and quiet daylight room, without any part of a head, body or prop. The group height must be ONLY 60 PERCENT of the full frame height, ending around 90 PERCENT, with a real floor strip beneath. Add considerably more physical office room around them while maintaining believable perspective, no giant heads, no tight portrait crop, no artificial gradients. The three people must remain visibly engaged in the same first-day welcome conversation, not pose for the camera. Every face fully visible. Wide 3:2 environmental frame.",
-      "notes": [
-        "Owner-requested fictional topic illustrations; people and offices are fictional and do not document real IRESEN staff or premises.",
-        "Selected a wider second framing: three adult colleagues converse naturally in a realistic fictional office setting, all faces visible with headroom; centred narrow portrait crop retains all three.",
-        "Full photographic frame, no artificial gradient, blue half, graphic division or overlay.",
-        "Original native PNG preserved in the generation workspace; no interpolation or upscaling.",
-        "The wider onboarding version replaces an earlier generated framing retained at exec-a47b35bf-7257-4927-a426-333e53c768c4.png."
-      ],
-      "file": "public/images/heroes/careers-onboarding-a0935b018aa6.webp",
-      "outputDimensions": [1536, 1024],
-      "bytes": 184660,
-      "outputSHA256": "a0935b018aa6a210b119a9d9cb3b2958f82547c60561be53bcbbc9169c2f8558",
-      "mobile": {
-        "file": "public/images/heroes/careers-onboarding-mobile-3c9467d279e8.webp",
-        "crop": {
-          "left": 427,
-          "top": 0,
-          "width": 683,
-          "height": 1024
-        },
-        "outputDimensions": [683, 1024],
-        "bytes": 84798,
-        "outputSHA256": "3c9467d279e8ee405b0830e88fd3f34d401c50bb0b57eda1883ef340736c94a3"
-      }
-    },
-    {
-      "id": "partnership-handshake",
-      "source": "Owner-requested generated contextual photographic placeholder",
-      "sourceType": "generated",
-      "tool": "image_gen.imagegen",
-      "date": "2026-10-09",
-      "sourceFileName": "exec-ed4e6b71-52c1-4494-8e23-2c64a1071429.png",
-      "sourcePreservedPath": "/workspace/contextual-media/generated/partnership-handshake.png",
-      "sourceSHA256": "c9486415b055482aea64c14acdad9504ce78241d2d2d327517e4378049d0863b",
-      "sourceDimensions": [1536, 1024],
-      "sourceBytes": 2133391,
-      "prompt": "Create exactly one high-native-resolution (highest native resolution available, landscape 3:2) camera-real editorial photograph for a professional institutional energy research website. This is a FICTIONAL ILLUSTRATIVE scene set in a plausible contemporary Moroccan / North African professional office, depicting fictional adult professionals, not identifiable real people or any actual IRESEN team or facility. Full-frame true photograph edge to edge: NO split composition, no empty blue half, no gradient, no graphic overlay, no borders. Realistic materials, accurate anatomy, natural expressions, restrained neutral warm palette, subtle navy clothing, real soft daylight, crisp fine photographic detail, natural gentle depth of field. Wide environmental framing from a little distance rather than cropped portraits. Group and relevant interaction centred in the middle 45 percent of the frame, with all heads beginning below the top quarter and complete faces visible, generous real architectural background above. Keep both outer edges quieter but physically complete office scenery, so later left/right text overlays and a centred narrow portrait crop work. No words, readable letters or numbers, logos, nameplates, watermark, flags, charts with lettering, presentation slides, artificial cinematic colour cast, or stock-photo posing. Scene: Exactly TWO fictional adult Moroccan / North African business professionals, one woman around 35 in a tailored navy jacket and one man around 45 in a light neutral jacket, meeting as equal partners in a modern warm office reception / meeting space. They look at one another with natural professional expressions and exchange a clear ordinary RIGHT-HAND handshake at the centre of the image, each having only two arms, precisely two natural right hands joined, correct normal fingers and thumbs, no overlapping third hand or extraneous fingers. The handshake is a recognisable central focal interaction. The other arms hang relaxed naturally; no folder or complicated objects. Wide three-quarter environmental framing showing their complete faces and most of both bodies, professional daylight, realistic subtle wood and glass architecture. It should clearly illustrate partnership and cooperation, not a formal contract signing or press event.",
-      "notes": [
-        "Owner-requested fictional topic illustrations; people and offices are fictional and do not document real IRESEN staff or premises.",
-        "Exactly two adult professionals exchange a central right-hand handshake; correct natural visible hands and faces, realistic complete office background. Mobile centred portrait crop keeps handshake and both faces.",
-        "Full photographic frame, no artificial gradient, blue half, graphic division or overlay.",
-        "Original native PNG preserved in the generation workspace; no interpolation or upscaling."
-      ],
-      "file": "public/images/heroes/partnership-handshake-c6da03657725.webp",
-      "outputDimensions": [1536, 1024],
-      "bytes": 175534,
-      "outputSHA256": "c6da03657725a6c013f50d384dc9b823d50fcf5e047def111f7dc7bdd7bef49c",
-      "mobile": {
-        "file": "public/images/heroes/partnership-handshake-mobile-cd8622b10825.webp",
-        "crop": {
-          "left": 427,
-          "top": 0,
-          "width": 683,
-          "height": 1024
-        },
-        "outputDimensions": [683, 1024],
-        "bytes": 80022,
-        "outputSHA256": "cd8622b108251074391c6c018dce8c8436fc5ed97ae6777902e3166f1bf23bfb"
       }
     }
   ]

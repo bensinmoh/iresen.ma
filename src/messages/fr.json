@@ -594,6 +594,7 @@
   },
   "Header": {
     "contact": "Contactez-nous",
+    "searchPlaceholder": "Rechercher sur le site…",
     "discover": "À découvrir",
     "explore": "Explorer",
     "groups": {
@@ -679,11 +680,11 @@
     },
     "figuresLabel": "Chiffres clés",
     "figures": {
-      "collaborativeProjects": "Projets collaboratifs soutenus",
-      "patents": "Brevets déposés",
-      "youngResearchers": "Jeunes chercheurs soutenus",
-      "publications": "Publications scientifiques",
-      "universityLaboratories": "Laboratoires universitaires mis en place"
+      "collaborativeProjects": "Projets collaboratifs\nsoutenus",
+      "patents": "Brevets\ndéposés",
+      "youngResearchers": "Jeunes chercheurs\nsoutenus",
+      "publications": "Publications\nscientifiques",
+      "universityLaboratories": "Laboratoires\nuniversitaires mis en place"
     }
   }
 }
