@@ -1520,6 +1520,62 @@ again. The three Contact search browser checks passed on the rebuilt application
 FR/EN/AR media queries for the visible wooden gate find its localized result,
 and the canonical image destination returns HTTP 200 in each case.
 
+## Direct contact map — 2026-10-09
+
+The owner's follow-up replaces the click-to-reveal presentation with a directly
+rendered Google Maps iframe. `ContactLocation` is now a server component with
+explicit locale translations, native `loading="lazy"`, a descriptive frame title
+and `no-referrer`. The directions shortlink and headquarters address are retained.
+The load/hide controls, their client state, placeholder and lower explanatory
+strip are removed, including bottom section padding. The cookies-page service
+notice and location search metadata describe the current external-map behavior.
+
+The existing public search reference for
+`/images/contact/contact-background-venue.jpg` is preserved from the current
+main branch, including its FR/EN/AR descriptions of the visible building
+entrance, white IRESEN wall, trees and garden. The file and the current decorative
+contact introduction remain unchanged; no exact location or new rights claim is
+inferred from the photograph.
+
+Executed local checks:
+
+- Frozen dependency installation, disposable local PostgreSQL setup and reviewed
+  migrations; public search rebuild synchronized the current static catalog.
+- `pnpm lint`, `pnpm typecheck`, `pnpm format:check`, all 97 unit cases and all
+  21 CMS/search integration cases passed.
+- The final `pnpm build` completed successfully.
+- Production Chromium ran `contact.spec.ts`, `contact-search.spec.ts` and
+  `foundation.spec.ts`: all 30 cases passed. Contact layout checks cover FR/EN/AR
+  at 320, 390, 768, 1024 and 1440px with 100% and 200% text. The map spans the
+  viewport, loads without interaction and reloads without stored state. Its
+  section ends at the iframe's bottom, and directions retain keyboard access.
+- No-JavaScript checks confirm the iframe, translated title, email/directions
+  links and native FAQ disclosures in all three locales. Search checks confirm
+  discoverable contact text and working section destinations.
+
+Manual production Chromium screenshots were captured and inspected for the map
+section in French at 1440px and 390px, English at 768px and Arabic at 390px.
+Each view has one directly rendered, correctly titled lazy iframe, no reveal
+control or lower explanatory strip, and no horizontal page overflow. The map
+spans the viewport and meets the footer with a measured 0px gap in all four
+views. The directions action wraps naturally on mobile and English tablet;
+Arabic retains its RTL heading, address and action layout. A local intercepted
+HTML response stands in for Google in these captures. No live map imagery is
+presented as verified.
+
+The cookies-page notice was also rendered and visually inspected without
+JavaScript in French, English and Arabic at 390px. Each notice matches its
+locale catalog, wraps within the viewport and identifies the map's automatic
+loading and browsing-data transmission. Captures remain temporary review
+artifacts rather than committed website media.
+
+Google responses are intercepted locally in map-focused browser checks to avoid
+external-service dependence. They verify the rendered frame and automatic request,
+not Google's live tiles, gesture behavior or exact pin. The supplied shortlink's
+pin, physical-device/Safari behavior and production privacy assessment retain
+[their documented scope](contact.md#location-and-third-party-behavior). Remote CI
+and merge results are recorded by the corresponding pull request and commit history.
+
 ## Repeatable header search reveal — 2026-10-09
 
 The reported second-opening jump was reproduced in a native production-build

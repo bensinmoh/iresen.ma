@@ -12,7 +12,7 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
   const navigation = await getTranslations({ locale, namespace: 'Navigation' })
   let emptyMessage: string | undefined
   if (pageId === 'contact') emptyMessage = states('contactUnavailable')
-  if (pageId === 'cookies') emptyMessage = states('noTracking')
+  if (pageId === 'cookies') emptyMessage = states('thirdPartyMap')
 
   const directory =
     pageId === 'sitemap' ? (
