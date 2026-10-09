@@ -18,14 +18,15 @@
   margin-inline: auto;
   margin-block-end: var(--space-4);
   color: var(--color-blue);
-  font-size: var(--font-size-body);
-  font-weight: 600;
+  font-size: var(--font-size-label);
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .eyebrow img {
   flex: 0 0 auto;
   inline-size: auto;
-  block-size: 1.75rem;
+  block-size: 0.75rem;
 }
 
 .eyebrow span {
