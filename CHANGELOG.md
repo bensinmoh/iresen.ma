@@ -4,6 +4,14 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Contact location before FAQ
+
+- Moved the location/map section before the FAQ. The contact flow now reads
+  introduction, platforms, form, location/map, FAQ and footer, retaining the
+  existing sections and anchors.
+
+See [contact composition](docs/contact.md); current checks belong in [validation](docs/validation.md).
+
 ## 2026-10-09 — Contact headquarters photograph
 
 - Replaced the contact introduction's cyan curves with the owner's headquarters

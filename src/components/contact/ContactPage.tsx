@@ -115,6 +115,7 @@ export async function ContactPage({
         </div>
       </section>
       <ContactForm locale={locale} initialTopic={initialTopic} />
+      <ContactLocation locale={locale} />
       <section
         className="container contact-faq"
         id="practical-questions"
@@ -153,7 +154,6 @@ export async function ContactPage({
           ))}
         </div>
       </section>
-      <ContactLocation locale={locale} />
     </div>
   )
 }

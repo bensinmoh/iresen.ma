@@ -1760,3 +1760,29 @@ centered Apex Leaf eyebrow, directly displayed map and canonical `contact-venue`
 search reference from main. The shared field rule and research references are
 recorded in
 [the design specification](design-system.md#refined-field-focus--2026-10-09).
+
+## Contact location before FAQ — 2026-10-09
+
+The owner's requested swap places the existing location/map immediately after
+the form and before the FAQ. DOM order changes with the visual order in FR/EN/AR;
+the existing anchors and localized search destinations remain valid. The public
+search projection already lists location before practical questions.
+
+Full formatting, lint, strict types, all 97 unit cases, the production build and
+all 19 contact/contact-search Chromium cases passed. Manual production review
+covered French at 1440px, English at 768px and Arabic at 390px, each at normal
+and 200% text. All six states retained form → location → FAQ order, separate
+section bounds, a full-width map and no horizontal overflow. Native FAQ keyboard
+opening, answer-link focus and closing passed; its return link still targets
+the form.
+
+Reviewed captures show the reserved iframe area. Google requests were replaced
+with a local test response during layout checks. The captures verify section
+spacing and order, not live map tiles or the exact pin.
+
+- [French desktop](screenshots/contact-order-fr-1440.png)
+- [English tablet](screenshots/contact-order-en-768.png)
+- [Arabic mobile](screenshots/contact-order-ar-390.png)
+
+Current PR CI and merge results remain recorded in GitHub. Physical-device,
+Safari and screen-reader coverage is not asserted.

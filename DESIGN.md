@@ -327,8 +327,9 @@ related-block treatment; these checks describe the initial revision.
 The owner's selected [contact frame `804:7374`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-7374)
 and attached `contact.png` guide the general composition: a white shared header,
 large split introduction with a navy headquarters panel, four platform entries,
-centered form on a pale surface, native FAQ rows and the existing navy footer.
-The requested full-width location section follows the FAQ. The owner's headquarters
+centered form on a pale surface, full-width location section, native FAQ rows and
+the existing navy footer. The owner's requested order places the location/map
+between the form and FAQ. The owner's headquarters
 photograph now replaces the recovered cyan/white background. Keep the original
 JPEG unchanged and use responsive Next Image delivery, with a CSS crop and
 readability overlay. No image generation or retouching is applied. The original
@@ -357,7 +358,7 @@ and isolated Latin identifiers support Arabic. FAQ answers use native disclosure
 The form action states its actual purpose: prepare a local email, then open the
 visitor's email application. The owner's explicit 2026-10-09 refinement replaces
 the earlier on-demand map with a directly rendered server iframe using native
-lazy loading. The map meets the footer without the lower explanatory strip;
+lazy loading. The map precedes the FAQ without the lower explanatory strip;
 reveal/remove controls and their client state are removed. A separate directions
 link preserves useful navigation and fallback access. No sample opening hours,
 48-hour promise, department mailboxes, platform addresses or phone numbers are
