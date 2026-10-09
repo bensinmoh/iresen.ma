@@ -193,3 +193,17 @@ copies are checked against the upload bytes and SHA-256 values above. This is a
 text/content review; no Word page-rendering or visual pagination audit, independent
 fact verification, native approval record or translated copy approval is claimed.
 See [the validation record](../../validation.md#institutional-reference-documents--2026-10-08).
+
+## Consolidated R&D proposal — 2026-10-09
+
+The owner supplied and asked to retain
+[proposition-consolidee-rd-dprdire.md](proposition-consolidee-rd-dprdire.md) as a
+project reference while commissioning the homepage domains section. Original
+UTF-8 bytes are preserved; SHA-256:
+`49f268cead01766b8bbc4d180142c76e0eade0076c0bcd95a6e3b5eceb97d817`.
+The owner explicitly authorized inclusion of the original in the public GitHub
+repository after a dedicated disclosure question. This is not a website download
+or strategy adoption. Its working-proposal status, embedded instructions, suggested decisions,
+indicators and citations remain source material. The implementation uses its
+seven themes and 28 axis titles; accompanying copy is a condensed working draft.
+See [analysis and delivered scope](../../research-domains.md).

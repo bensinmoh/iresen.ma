@@ -154,3 +154,11 @@ The owner's four 2026-10-09 mobile screenshots now guide the narrow header, home
 Design work now uses [PRODUCT.md](PRODUCT.md) for product context, [DESIGN.md](DESIGN.md) for visual direction and [the repository design workflow](docs/design-workflow.md) for task-specific skills. The workflow is flexible guidance with constructive critique, shared tokens, FR/EN/AR responsiveness and rendered verification. Eight IRESEN skills and optional pinned Taste/Impeccable references live in `.agents/skills/`; they do not install personal/global skills or activate an engine or hook. See [source and license records](docs/design-skills-sources.json).
 
 Completed requested increments are logged in [CHANGELOG.md](CHANGELOG.md). The owner has authorized automatic merge after passing local and current PR CI checks, followed by checkout synchronization and cleanup of completed task branches; see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+### Homepage research domains — 2026-10-09
+
+The commissioned section below missions now provides seven thematic selectors,
+four research axes per theme, changing generated illustrations and a native mobile
+accordion in FR/EN/AR working copy. The supplied strategy is preserved as a
+repository reference, not a public download or adopted roadmap. Themes and imagery
+are registered in local search. See [the module guide](docs/research-domains.md).

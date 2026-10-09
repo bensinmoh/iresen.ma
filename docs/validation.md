@@ -2166,3 +2166,61 @@ claiming playback testing of a real approved audio asset. CMS thumbnails current
 use the original guarded image bytes lazily; no new cached derivative service was
 introduced. Full CI runs before merge. No deployment or publication was performed;
 Safari, physical-device and manual screen-reader coverage are not asserted.
+
+## Homepage research domains — 2026-10-09
+
+Delivered the owner-requested seven-theme module directly below missions, using
+source-preserved French axis titles and explicitly requested FR/EN/AR working
+copy. Preserved the strategy bytes and SHA-256, analyzed its proposal status and
+registered central theme anchors plus search descriptions and six new media.
+The original source document and screenshot references are not public assets.
+
+Checks passed: `pnpm lint`, `pnpm typecheck`, `pnpm test` (99 tests),
+`pnpm test:integration` (22 tests), `pnpm build`, `pnpm format:check`, and
+`git diff --check`. The complete production-browser suite passed **155 tests**
+before the final removal of optional word hyphenation. The final build's focused
+research suite then passed **7 tests**, including three new real search-to-theme
+and media-discovery cases. No application/database dependency changed.
+
+Browser execution used the installed Google Chrome executable because the pinned
+Playwright headless-shell binary was absent. A temporary config served the
+production build on port 3001, preserving the unrelated existing 3000 server.
+FR/EN/AR: all seven themes selected by Enter; exactly one panel open on desktop;
+four axes and the correct loaded image per selection; hash results reveal the
+matching theme; mobile controls can open and close; 320/390/768/1024/1440px
+containment and 390px at 200% text pass. Native no-JavaScript grouping and the
+canonical discovery action pass. Scoped axe scans at enlarged text report no
+violations, with existing whole-homepage axe coverage passing in the full suite.
+These checks do not establish screen-reader or full WCAG conformance.
+
+Rendered desktop and mobile captures were inspected for hierarchy, wrapping,
+navy/blue surfaces, dividers, image composition and Arabic direction. Removed
+optional automatic word hyphenation after review; long words still wrap safely.
+At mobile sizes the axis label sits above its title for readable enlarged text.
+The illustrative scenes were inspected together, confirming seven relevant
+subjects (including the reused renewable-energy image) without facility claims.
+Review captures isolate the component by hiding the existing fixed skip link
+and sticky section bar only during screenshot capture; those controls remain in
+the real page and retain their established behaviour.
+
+- [French desktop](screenshots/2026-10-09-home-research-fr-desktop.png)
+- [French mobile](screenshots/2026-10-09-home-research-fr-mobile.png)
+- [English desktop](screenshots/2026-10-09-home-research-en-desktop.png)
+- [English mobile](screenshots/2026-10-09-home-research-en-mobile.png)
+- [Arabic desktop](screenshots/2026-10-09-home-research-ar-desktop.png)
+- [Arabic mobile](screenshots/2026-10-09-home-research-ar-mobile.png)
+
+Local `pnpm search:rebuild` synchronized the static catalog; no public CMS
+records existed, and `pnpm search:work` found no pending jobs. New theme queries
+and media destinations work in all three local languages; the source reference
+is excluded. Existing integration/browser withdrawal and private-media checks
+passed. The final website-wide glossary/search sanity check remains pending,
+as the website content is incomplete. No production deployment, DNS, visibility
+or indexing permission was changed. Strategy adoption and final locale copy
+still require editorial decisions; the discovery page remains a scaffold.
+
+The automatic approval reviewer initially rejected committing/pushing the
+original strategy to the public repository because local reference retention
+was not explicit public disclosure authorization. The owner then explicitly
+authorized the original document in the public repository. Source inclusion is
+therefore within that specific authorization; site publication remains separate.

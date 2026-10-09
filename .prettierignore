@@ -14,3 +14,6 @@ public/brand
 next-env.d.ts
 .agents/skills/design-taste-frontend
 .agents/skills/impeccable
+
+# Preserve owner-supplied strategy bytes and provenance.
+docs/references/strategy/proposition-consolidee-rd-dprdire.md

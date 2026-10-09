@@ -133,3 +133,11 @@ approval of the future content.
 Search now renders its dedicated results interface instead of the introductory
 hero and editorial section placeholders. Its route remains one of the 22
 canonical page IDs. See [public search](search.md).
+
+## Homepage research replacement — 2026-10-09
+
+The commissioned domains component replaces the `research-priorities` scaffold
+below missions. Its seven child anchors are registered in the shared section map
+for search and locale switching, with real working theme descriptions and axes
+in FR/EN/AR. Four following modules remain placeholders. See
+[the section specification](research-domains.md).

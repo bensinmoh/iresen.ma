@@ -156,8 +156,8 @@
         "description": "69 projets collaboratifs soutenus, +60 brevets déposés, +1000 jeunes chercheurs soutenus, +1100 publications scientifiques et +18 laboratoires universitaires mis en place."
       },
       "research-priorities": {
-        "title": "Priorités de recherche",
-        "description": "À prévoir : les thématiques approuvées, les besoins associés et les liens vers les priorités."
+        "title": "Nos thématiques de recherche au service de la transition énergétique",
+        "description": "Produire une énergie renouvelable fiable et l’intégrer aux systèmes électriques : durabilité, stockage, réseaux actifs et flexibilité des usages. Développer des chaînes d’hydrogène renouvelable et de molécules dérivées en articulant production, ressources en eau, logistique et usages industriels pertinents. Réduire les besoins énergétiques et les émissions des procédés industriels, en combinant récupération de chaleur, électrification et mesure des performances. Articuler les besoins en eau, en énergie et en agriculture pour préserver les ressources et renforcer la résilience des systèmes. Valoriser les ressources résiduelles et prolonger la vie des équipements, en tenant compte des gisements disponibles, des usages concurrents et des bilans environnementaux. Préserver le confort et les services essentiels avec moins d’énergie, grâce à des solutions adaptées au bâti, aux territoires et aux conditions climatiques. Adapter les transports bas carbone aux profils d’usage, aux contraintes du réseau et au climat : flottes, recharge, batteries et logistique."
       },
       "results": {
         "title": "Résultats et réalisations",
@@ -186,6 +186,34 @@
       "mission-transfer": {
         "title": "Valoriser",
         "description": "Relier les résultats de la recherche aux usages, en préparant leur maturation, leur transfert et leur adoption."
+      },
+      "research-renewables": {
+        "title": "Énergies renouvelables et systèmes électriques flexibles",
+        "description": "Produire une énergie renouvelable fiable et l’intégrer aux systèmes électriques : durabilité, stockage, réseaux actifs et flexibilité des usages."
+      },
+      "research-hydrogen": {
+        "title": "Hydrogène renouvelable et molécules dérivées",
+        "description": "Développer des chaînes d’hydrogène renouvelable et de molécules dérivées en articulant production, ressources en eau, logistique et usages industriels pertinents."
+      },
+      "research-industry": {
+        "title": "Industrie sobre et procédés bas carbone",
+        "description": "Réduire les besoins énergétiques et les émissions des procédés industriels, en combinant récupération de chaleur, électrification et mesure des performances."
+      },
+      "research-water": {
+        "title": "Nexus eau–énergie–agriculture et résilience",
+        "description": "Articuler les besoins en eau, en énergie et en agriculture pour préserver les ressources et renforcer la résilience des systèmes."
+      },
+      "research-circular": {
+        "title": "Bioénergies et valorisation circulaire des ressources",
+        "description": "Valoriser les ressources résiduelles et prolonger la vie des équipements, en tenant compte des gisements disponibles, des usages concurrents et des bilans environnementaux."
+      },
+      "research-buildings": {
+        "title": "Bâtiments et territoires sobres et résilients",
+        "description": "Préserver le confort et les services essentiels avec moins d’énergie, grâce à des solutions adaptées au bâti, aux territoires et aux conditions climatiques."
+      },
+      "research-mobility": {
+        "title": "Mobilité et infrastructures de transport bas carbone",
+        "description": "Adapter les transports bas carbone aux profils d’usage, aux contraintes du réseau et au climat : flottes, recharge, batteries et logistique."
       }
     },
     "institute": {
@@ -912,6 +940,105 @@
       "imageAlt": "Illustration générée d’experts dans une salle de gestion de l’énergie, avec des écrans de réseaux intelligents et des éoliennes au loin.",
       "imageTitle": "Valoriser — réseaux intelligents et gestion de l’énergie",
       "imageDescription": "Scène fictive générée de collaboration autour de réseaux électriques intelligents (smart grids), de la gestion de l’énergie (energy management) et de la bioénergie. Des écrans de conduite et des éoliennes illustrent le lien entre recherche et usages ; aucun projet ou partenariat IRESEN réel n’est représenté."
+    }
+  },
+  "HomeResearch": {
+    "eyebrow": "Domaines",
+    "title": "Nos thématiques de recherche au service de la transition énergétique",
+    "action": "Explorer nos domaines de recherche",
+    "axis": "Axe",
+    "themes": {
+      "renewables": {
+        "title": "Énergies renouvelables et systèmes électriques flexibles",
+        "description": "Produire une énergie renouvelable fiable et l’intégrer aux systèmes électriques : durabilité, stockage, réseaux actifs et flexibilité des usages.",
+        "axes": [
+          "Performance et durabilité en conditions sévères",
+          "Stockage et hybridation multi-échelles",
+          "Réseaux actifs et intégration des renouvelables",
+          "Flexibilité des consommations"
+        ],
+        "imageTitle": "Illustration générée — Énergies renouvelables et systèmes électriques flexibles",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Produire une énergie renouvelable fiable et l’intégrer aux systèmes électriques : durabilité, stockage, réseaux actifs et flexibilité des usages.",
+        "searchText": "Production solaire photovoltaïque (PV), solaire thermique à concentration (CSP), éolien, stockage et réseaux électriques."
+      },
+      "hydrogen": {
+        "title": "Hydrogène renouvelable et molécules dérivées",
+        "description": "Développer des chaînes d’hydrogène renouvelable et de molécules dérivées en articulant production, ressources en eau, logistique et usages industriels pertinents.",
+        "axes": [
+          "Électrolyse dynamique et durabilité",
+          "Intégration eau–énergie–hydrogène",
+          "Conversion, stockage et logistique",
+          "Substitution dans les usages prioritaires"
+        ],
+        "imageTitle": "Illustration générée — Hydrogène renouvelable et molécules dérivées",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Développer des chaînes d’hydrogène renouvelable et de molécules dérivées en articulant production, ressources en eau, logistique et usages industriels pertinents.",
+        "searchText": "Hydrogène renouvelable (H2), électrolyse, ammoniac et molécules dérivées."
+      },
+      "industry": {
+        "title": "Industrie sobre et procédés bas carbone",
+        "description": "Réduire les besoins énergétiques et les émissions des procédés industriels, en combinant récupération de chaleur, électrification et mesure des performances.",
+        "axes": [
+          "Efficacité et récupération de chaleur",
+          "Électrification et chaleur renouvelable",
+          "Matériaux, procédés et carbone résiduel",
+          "Mesure et optimisation de la performance industrielle"
+        ],
+        "imageTitle": "Illustration générée — Industrie sobre et procédés bas carbone",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Réduire les besoins énergétiques et les émissions des procédés industriels, en combinant récupération de chaleur, électrification et mesure des performances.",
+        "searchText": "Efficacité énergétique industrielle, chaleur renouvelable et décarbonation des procédés."
+      },
+      "water": {
+        "title": "Nexus eau–énergie–agriculture et résilience",
+        "description": "Articuler les besoins en eau, en énergie et en agriculture pour préserver les ressources et renforcer la résilience des systèmes.",
+        "axes": [
+          "Dessalement et traitement sobres",
+          "Irrigation et pompage pilotés",
+          "Réutilisation et boucles locales d’eau",
+          "Agrivoltaïsme et systèmes agricoles intégrés"
+        ],
+        "imageTitle": "Illustration générée — Nexus eau–énergie–agriculture et résilience",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Articuler les besoins en eau, en énergie et en agriculture pour préserver les ressources et renforcer la résilience des systèmes.",
+        "searchText": "Dessalement, réutilisation des eaux, irrigation, pompage et agrivoltaïsme."
+      },
+      "circular": {
+        "title": "Bioénergies et valorisation circulaire des ressources",
+        "description": "Valoriser les ressources résiduelles et prolonger la vie des équipements, en tenant compte des gisements disponibles, des usages concurrents et des bilans environnementaux.",
+        "axes": [
+          "Gisements et chaînes d’approvisionnement durables",
+          "Biogaz, biométhane et valorisation des coproduits",
+          "Conversion thermochimique et produits biosourcés",
+          "Circularité des équipements de la transition"
+        ],
+        "imageTitle": "Illustration générée — Bioénergies et valorisation circulaire des ressources",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Valoriser les ressources résiduelles et prolonger la vie des équipements, en tenant compte des gisements disponibles, des usages concurrents et des bilans environnementaux.",
+        "searchText": "Biomasse résiduelle, biogaz, biométhane, recyclage, réparation et économie circulaire."
+      },
+      "buildings": {
+        "title": "Bâtiments et territoires sobres et résilients",
+        "description": "Préserver le confort et les services essentiels avec moins d’énergie, grâce à des solutions adaptées au bâti, aux territoires et aux conditions climatiques.",
+        "axes": [
+          "Enveloppes et rénovation bioclimatiques",
+          "Rafraîchissement et équipements efficaces",
+          "Services territoriaux et systèmes énergétiques locaux",
+          "Résilience à la chaleur et adoption"
+        ],
+        "imageTitle": "Illustration générée — Bâtiments et territoires sobres et résilients",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Préserver le confort et les services essentiels avec moins d’énergie, grâce à des solutions adaptées au bâti, aux territoires et aux conditions climatiques.",
+        "searchText": "Rénovation bioclimatique, confort thermique, rafraîchissement et résilience à la chaleur."
+      },
+      "mobility": {
+        "title": "Mobilité et infrastructures de transport bas carbone",
+        "description": "Adapter les transports bas carbone aux profils d’usage, aux contraintes du réseau et au climat : flottes, recharge, batteries et logistique.",
+        "axes": [
+          "Électrification des flottes à usage intensif",
+          "Recharge pilotée et intégration réseau",
+          "Batteries, diagnostic et durabilité en usage",
+          "Logistique et choix de modes ou vecteurs"
+        ],
+        "imageTitle": "Illustration générée — Mobilité et infrastructures de transport bas carbone",
+        "imageDescription": "Scène fictive illustrant cette thématique, sans représenter une installation IRESEN. Adapter les transports bas carbone aux profils d’usage, aux contraintes du réseau et au climat : flottes, recharge, batteries et logistique.",
+        "searchText": "Mobilité électrique, véhicules électriques, recharge pilotée, batteries et transport bas carbone."
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import { researchThemes } from '@/lib/home-research'
 import type { PageId } from '@/lib/site'
 
 export type SectionDefinition = {
@@ -15,7 +16,7 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
       children: [{ id: 'mission-develop' }, { id: 'mission-test' }, { id: 'mission-transfer' }],
     },
     { id: 'figures' },
-    { id: 'research-priorities' },
+    { id: 'research-priorities', children: researchThemes.map((id) => ({ id: `research-${id}` })) },
     { id: 'results' },
     { id: 'platforms-expertise' },
     { id: 'collaboration' },

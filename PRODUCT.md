@@ -13,6 +13,15 @@ mission cards. The owner explicitly deferred its design; the later homepage
 restructuring remains deferred. Existing homepage and mission-section search
 bodies include the updated wording through the localized catalog descriptions.
 
+## Homepage research domains — 2026-10-09
+
+The owner commissioned domains directly below missions: seven themes and four
+axes from the supplied consolidated R&D proposal, thematic icons, changing
+illustrations and a native mobile accordion. FR/EN/AR are explicitly requested
+working texts to review. This bounded request replaces the domains placeholder;
+it does not apply the earlier full homepage reordering or adopt the strategy.
+Four following modules remain placeholders. See [scope and sources](docs/research-domains.md).
+
 ## Purpose and visitors
 
 Build IRESEN's official French, English and Arabic institutional website. Help

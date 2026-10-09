@@ -227,3 +227,13 @@ This repository planning document stays outside the public search index. Rendere
 responsive/RTL and interaction checks belong to the later implementation; the
 current [validation entry](validation.md#homepage-restructuring-documentation--2026-10-09)
 covers documentation only.
+
+## Later commissioned domains section — 2026-10-09
+
+The owner's subsequent explicit request commissions domains **directly below
+missions**, with **seven** themes and four axes per theme, source strategy and
+new screenshots. It overrides the earlier four-to-six-domain recommendation and
+this module's deferral only. The current sequence remains missions → domains →
+achievements placeholder → capabilities placeholder → collaboration placeholder
+→ news placeholder. Do not infer authorization to apply the full reordering or
+to populate achievements. See [delivered domains](research-domains.md).

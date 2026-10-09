@@ -115,3 +115,12 @@ That later increment will move achievements immediately after missions and align
 the navigation with the revised body order. The real hero figures retain their
 existing anchor. Source mission wording/composition is planning evidence and
 does not replace the delivered cards through this documentation task.
+
+## Research domains — 2026-10-09
+
+The `research-priorities` placeholder is replaced by the commissioned seven-theme
+section immediately below missions. Seven icons, a descriptive paragraph, four
+axis rows and a changing panoramic illustration form the wide layout; native
+accordions provide the small-screen layout. Shared child anchors support search
+and locale switching. Four following body placeholders remain. See
+[content sources and behaviour](research-domains.md).

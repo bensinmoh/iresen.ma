@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-09",
+  "assets": [
+    {
+      "id": "hydrogen",
+      "source": "exec-8590940a-f725-4941-ac75-d7edbf5f224c.png",
+      "file": "public/images/domains/hydrogen.webp",
+      "width": 1600,
+      "height": 596,
+      "sha256": "c8dee90d40f3b25e7ef83c85277cde7bd640bb5c7477c33ae5efd07d4c9ef7a8",
+      "bytes": 193588,
+      "method": "Built-in ImageGen; generic fictional scene, not an IRESEN facility",
+      "prompt": "Use case: photorealistic-natural. Asset: wide panoramic homepage background illustration. A renewable hydrogen electrolyzer facility, orderly stainless steel piping, cylindrical tanks and solar panels in the distance. Fictional generic location, no real facility, no logos, no people, no labels, no text or watermark. Photorealistic editorial style matching an institutional energy research website. Very wide landscape composition, natural soft late afternoon light, muted blue sky, crisp materials, foreground and subject concentrated in the lower two thirds, horizon near upper third. No graphics or collage. Generate one landscape image."
+    },
+    {
+      "id": "industry",
+      "source": "exec-911075f7-bff4-4b35-a85b-97d25f379256.png",
+      "file": "public/images/domains/industry.webp",
+      "width": 1600,
+      "height": 600,
+      "sha256": "a2b2ecd6d6c3b24efaac7e1c20d1226411c12f4c4254e0de6b8c5f422cb5b02d",
+      "bytes": 172122,
+      "method": "Built-in ImageGen; generic fictional scene, not an IRESEN facility",
+      "prompt": "Use case: photorealistic-natural. Asset: wide panoramic homepage background illustration. An industrial heat recovery installation with large insulated pipes and heat exchangers, clean factory architecture. Fictional generic location, no real facility, no logos, no people, no labels, no text or watermark. Photorealistic editorial style matching an institutional energy research website. Very wide landscape composition, natural soft late afternoon light, muted blue sky, crisp materials, foreground and subject concentrated in the lower two thirds, horizon near upper third. No graphics or collage. Generate one landscape image."
+    },
+    {
+      "id": "water",
+      "source": "exec-0deb0de7-27d4-490b-b10b-173532b6621c.png",
+      "file": "public/images/domains/water.webp",
+      "width": 1600,
+      "height": 600,
+      "sha256": "52e5270e553254f83d7746555cbf3a0afc730afe592fcb3d562042ed3b273d02",
+      "bytes": 254024,
+      "method": "Built-in ImageGen; generic fictional scene, not an IRESEN facility",
+      "prompt": "Use case: photorealistic-natural. Asset: wide panoramic homepage background illustration. Water treatment and solar powered irrigation infrastructure adjoining cultivated green fields, reservoir and dry hills. Fictional generic location, no real facility, no logos, no people, no labels, no text or watermark. Photorealistic editorial style matching an institutional energy research website. Very wide landscape composition, natural soft late afternoon light, muted blue sky, crisp materials, foreground and subject concentrated in the lower two thirds, horizon near upper third. No graphics or collage. Generate one landscape image."
+    },
+    {
+      "id": "circular",
+      "source": "exec-6f124b8c-b897-44fc-b945-747a4a7ba29d.png",
+      "file": "public/images/domains/circular.webp",
+      "width": 1600,
+      "height": 595,
+      "sha256": "69722d2e23b2a101cf2fee76b61554d3f32f7056a4f08718c36b327de4983160",
+      "bytes": 206842,
+      "method": "Built-in ImageGen; generic fictional scene, not an IRESEN facility",
+      "prompt": "Use case: photorealistic-natural. Asset: wide panoramic homepage background illustration. A biogas installation with rounded digestion tanks adjoining cultivated fields, organic resource recovery landscape. Fictional generic location, no real facility, no logos, no people, no labels, no text or watermark. Photorealistic editorial style matching an institutional energy research website. Very wide landscape composition, natural soft late afternoon light, muted blue sky, crisp materials, foreground and subject concentrated in the lower two thirds, horizon near upper third. No graphics or collage. Generate one landscape image."
+    },
+    {
+      "id": "buildings",
+      "source": "exec-ac198da4-2b9f-4c84-a247-b8eff725e405.png",
+      "file": "public/images/domains/buildings.webp",
+      "width": 1600,
+      "height": 596,
+      "sha256": "1a1e64fa44a8ac2ac8c274f1a51068fb0a4fa2efaf969c4dcd04ee2a49074fdc",
+      "bytes": 236512,
+      "method": "Built-in ImageGen; generic fictional scene, not an IRESEN facility",
+      "prompt": "Use case: photorealistic-natural. Asset: wide panoramic homepage background illustration. Contemporary bioclimatic buildings with shaded facades, rooftop solar, trees and passive cooling architectural features. Fictional generic location, no real facility, no logos, no people, no labels, no text or watermark. Photorealistic editorial style matching an institutional energy research website. Very wide landscape composition, natural soft late afternoon light, muted blue sky, crisp materials, foreground and subject concentrated in the lower two thirds, horizon near upper third. No graphics or collage. Generate one landscape image."
+    },
+    {
+      "id": "mobility",
+      "source": "exec-a5fd7917-2d50-4add-a9da-9cdd2b13660d.png",
+      "file": "public/images/domains/mobility.webp",
+      "width": 1600,
+      "height": 596,
+      "sha256": "5ff7a68e1f0f34f93b7f0b02cb2d587c132e943e2fb210a4edde34652aa88091",
+      "bytes": 212562,
+      "method": "Built-in ImageGen; generic fictional scene, not an IRESEN facility",
+      "prompt": "Use case: photorealistic-natural. Asset: wide panoramic homepage background illustration. Electric buses charging at a spacious modern depot with solar canopies. Fictional generic location, no real facility, no logos, no people, no labels, no text or watermark. Photorealistic editorial style matching an institutional energy research website. Very wide landscape composition, natural soft late afternoon light, muted blue sky, crisp materials, foreground and subject concentrated in the lower two thirds, horizon near upper third. No graphics or collage. Generate one landscape image."
+    }
+  ]
+}

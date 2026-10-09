@@ -8,6 +8,7 @@ import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
 import { heroImages } from '@/lib/hero-images'
 import { homeMissions, homeMissionSectionId } from '@/lib/home-missions'
+import { researchThemes, researchImages, homeResearchSectionId } from '@/lib/home-research'
 import { missionImages } from '@/lib/mission-images'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
@@ -71,6 +72,25 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...researchThemes
+    .filter((id) => id !== 'renewables')
+    .map((id) => ({
+      id: `research-${id}`,
+      url: researchImages[id].src,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => [
+          locale,
+          {
+            title: messages[locale].HomeResearch.themes[id].imageTitle,
+            description: [
+              messages[locale].HomeResearch.themes[id].imageDescription,
+              messages[locale].HomeResearch.themes[id].searchText,
+            ].join(' '),
+          },
+        ]),
+      ) as PublicAssetReference['text'],
+    })),
   ...homeMissions.map(({ id }) => ({
     id: `mission-${id}`,
     url: missionImages[id].src,
@@ -309,6 +329,14 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             catalog.HomeMissions[id].link,
           ]),
         )
+      if (pageId === 'home')
+        body.push(
+          catalog.HomeResearch.title,
+          ...researchThemes.flatMap((id) => {
+            const theme = catalog.HomeResearch.themes[id]
+            return [theme.title, theme.description, ...theme.axes, theme.searchText]
+          }),
+        )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
       if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
@@ -336,7 +364,19 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 catalog.HomeMissions[id].link,
               ]),
             )
+          if (pageId === 'home' && entry.id === homeResearchSectionId)
+            body.push(
+              ...researchThemes.flatMap((id) => {
+                const theme = catalog.HomeResearch.themes[id]
+                return [theme.title, theme.description, ...theme.axes, theme.searchText]
+              }),
+            )
           if (pageId === 'home') {
+            const themeId = researchThemes.find((id) => entry.id === `research-${id}`)
+            if (themeId) {
+              const theme = catalog.HomeResearch.themes[themeId]
+              body.push(...theme.axes, theme.searchText)
+            }
             const mission = homeMissions.find(({ anchor }) => anchor === entry.id)
             if (mission) body.push(catalog.HomeMissions[mission.id].link)
           }
