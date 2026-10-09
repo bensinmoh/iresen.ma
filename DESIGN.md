@@ -1,5 +1,14 @@
 # IRESEN visual direction
 
+## Footer social-link corners — 2026-10-09
+
+The owner's hover screenshot identifies four-corner rounding on the footer social
+links. These icon actions now use the shared physical 10px top-left/bottom-right
+corners, with sharp opposite corners in all locales. Keyboard-visible focus uses
+the same navy-tinted surface with its existing focus outline.
+See [the rule](docs/design-system.md#footer-social-link-corners--2026-10-09)
+and [verification](docs/validation.md#footer-social-link-corners--2026-10-09).
+
 ## Search results control corners — 2026-10-09
 
 The owner's explicit correction gives the query input, resource filters and sort

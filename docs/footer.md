@@ -19,6 +19,15 @@ alone; public French/English controls use self-hosted Plus Jakarta Sans. See
 and [the validation log](validation.md). The source observations, screenshots and
 verification below describe their earlier revisions.
 
+## Social-link corners — 2026-10-09
+
+The social icon links now share the physical 10px rounded top-left/bottom-right
+and sharp top-right/bottom-left action corners in resting, hover and keyboard-focus
+states, including Arabic RTL. Focus shares the hover surface while retaining its
+outline. Icons and existing destinations remain. See
+[the shared rule](design-system.md#footer-social-link-corners--2026-10-09)
+and [verification](validation.md#footer-social-link-corners--2026-10-09).
+
 ## Address and privacy links — 2026-10-09
 
 The owner's correction makes the displayed address a native Google Maps link,

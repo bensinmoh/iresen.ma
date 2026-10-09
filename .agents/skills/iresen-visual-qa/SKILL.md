@@ -21,6 +21,9 @@ and touch states; verify focus restoration, truthful states and reduced motion.
 Use existing behavior tests when interactions change and supplement axe with
 manual checks. Do not claim full accessibility compliance from an automated scan.
 
+Inspect newly visible hover/focus surfaces, including icon-only links, against the
+physical top-left/bottom-right corner rule; do not check only the resting state.
+
 Inspect control icons separately from text padding: select chevrons need a visible
 inset from the field edge and reserved space between the longest option and icon.
 Native browser arrows do not reliably follow CSS field padding. Use the shared

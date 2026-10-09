@@ -108,6 +108,15 @@ adds no public content or search destination; existing page/section projections
 remain. See [navigation](navigation.md#compact-menu-control--2026-10-09)
 and [verification](validation.md#compact-menu-control--2026-10-09).
 
+## Footer social-link corners — 2026-10-09
+
+Footer social icon links reuse `--radius-action`: physical 10px top-left and
+bottom-right corners at the default root size, with sharp opposite corners.
+Their navy-tinted hover and keyboard-focus surfaces keep this orientation in RTL;
+focus retains its separate visible outline. This replaces the previous local
+four-4px-corner rounding. Icon shapes, 44px targets and destinations remain.
+See [verification](validation.md#footer-social-link-corners--2026-10-09).
+
 ## Search results control corners — 2026-10-09
 
 The owner's screenshot and explicit clarification require rounded physical
