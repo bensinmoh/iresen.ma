@@ -30,6 +30,14 @@ CMS/search or Figma from this documentation task. The separately delivered missi
 cards and section navigation remain; five following body placeholders still await
 their modules, and the `figures` anchor already belongs to the hero band.
 
+Homepage domains update — 2026-10-09: the later owner request commissions the
+seven-theme domains section directly below missions, with four axes, thematic
+icons, changing illustrations and mobile accordions. This bounded increment
+overrides the earlier module deferral only; the full reordering and achievements
+remain deferred. FR/EN/AR are owner-requested working texts to review. See
+[the implemented section](docs/research-domains.md) and its preserved strategy
+reference. Four following body placeholders remain.
+
 Use the chosen 22-page working structure in `src/lib/site.ts` as the single routing authority; `docs/route-map.md` records it. Build internal links from stable IDs/shared helpers. Follow `docs/adr/0004-canonical-working-site-structure.md` when a structure change is requested so locale paths, navigation/footer, content links and affected documentation change together.
 
 ## Search references for every public addition

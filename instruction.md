@@ -17,6 +17,12 @@ restructuring until the owner starts developing the section after missions,
 “Nos réalisations emblématiques”. It supersedes the earlier homepage sequence
 for future planning; current runtime, routes, catalogs, assets and CMS remain.
 
+Later homepage development — 9 October 2026: the owner explicitly commissioned
+the seven-theme domains module directly below missions, using the supplied
+consolidated R&D proposal. This bounded request supersedes that module's earlier
+deferral only; full reordering and achievements remain deferred. FR/EN/AR are
+requested working texts to review. See [the delivered section](docs/research-domains.md).
+
 ## 1. Mission and working mandate
 
 Build the new official IRESEN website as a premium, accessible, fast and maintainable institutional platform. It must explain IRESEN’s role, showcase research and experimental capabilities, support partnerships and make institutional resources easy to find. It must also give the communications team a practical interface for managing content without developer intervention.

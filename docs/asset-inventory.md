@@ -381,3 +381,15 @@ license does not license IRESEN code, identity or content.
 Archive integrity, SHA-256 values and script-selection details are recorded in
 [the font guide](fonts.md). Earlier application checks predate this addition;
 current rendered coverage belongs in [the validation log](validation.md).
+
+## Homepage research illustrations — 2026-10-09
+
+The owner requested backgrounds matching the seven research themes. Renewables
+reuse the existing generated wind landscape. Six new built-in ImageGen scenes
+illustrate hydrogen, industrial heat, water/agriculture, bioenergy, bioclimatic
+buildings and electric mobility. They are generic fictional scenes, not evidence
+of named IRESEN facilities. Optimized served WebP copies, prompts, sizes and
+SHA-256 hashes are in [research-assets.json](research-assets.json); responsive
+Next derivatives share each original's search result. The source strategy and
+attached screenshots remain repository/design references outside public assets.
+See [scope and provenance](research-domains.md).

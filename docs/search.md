@@ -217,3 +217,17 @@ site indexing is enabled. Queries have bounded length/token/page limits, with
 parameterized SQL and database timeouts. The application does not record query
 strings in analytics or logs; production reverse-proxy logging must preserve
 that policy. Production shared rate limiting remains part of release setup.
+
+## Homepage research discovery — 2026-10-09
+
+The owner-commissioned domains module supplies seven stable child anchors under
+`research-priorities`, localized descriptions and all four axes per theme. Its
+FR/EN/AR working versions are explicitly requested for local integration and
+review; this does not authorize production publication or change indexing
+visibility. Metadata expands actual topic names including photovoltaics (PV),
+concentrated solar power (CSP), hydrogen, biogas and electric mobility. Six new
+served illustrations have explicit media references; the existing wind result
+is reused. The preserved strategy is a repository reference outside the public
+catalog. Local rebuild synchronizes these static projections and their spelling
+vocabulary. The final-content sanity check above remains pending.
+See [sources and destinations](research-domains.md).

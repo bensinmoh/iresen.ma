@@ -335,8 +335,8 @@
         "description": "69 collaborative projects supported, +60 patents filed, +1000 young researchers supported, +1100 scientific publications and +18 university laboratories established."
       },
       "research-priorities": {
-        "title": "Research priorities",
-        "description": "Content to add: approved themes, related needs and links to the priorities."
+        "title": "Research themes serving the energy transition",
+        "description": "Produce reliable renewable energy and integrate it into electricity systems through durability, storage, active grids and demand flexibility. Develop renewable hydrogen and derived molecule value chains by connecting production, water resources, logistics and relevant industrial uses. Reduce industrial energy demand and process emissions through heat recovery, electrification and performance measurement. Connect water, energy and agriculture needs to preserve resources and strengthen system resilience. Recover value from residual resources and extend equipment life, considering available feedstocks, competing uses and environmental balances. Preserve comfort and essential services with less energy through solutions adapted to buildings, territories and climatic conditions. Adapt low-carbon transport to usage patterns, grid constraints and climate through fleets, charging, batteries and logistics."
       },
       "results": {
         "title": "Results and achievements",
@@ -365,6 +365,34 @@
       "mission-transfer": {
         "title": "Transfer",
         "description": "Connect research results with practical use by preparing their maturation, transfer and adoption."
+      },
+      "research-renewables": {
+        "title": "Renewable energy & flexible electricity systems",
+        "description": "Produce reliable renewable energy and integrate it into electricity systems through durability, storage, active grids and demand flexibility."
+      },
+      "research-hydrogen": {
+        "title": "Renewable hydrogen & derived molecules",
+        "description": "Develop renewable hydrogen and derived molecule value chains by connecting production, water resources, logistics and relevant industrial uses."
+      },
+      "research-industry": {
+        "title": "Resource-efficient industry & low-carbon processes",
+        "description": "Reduce industrial energy demand and process emissions through heat recovery, electrification and performance measurement."
+      },
+      "research-water": {
+        "title": "Water–energy–agriculture nexus & resilience",
+        "description": "Connect water, energy and agriculture needs to preserve resources and strengthen system resilience."
+      },
+      "research-circular": {
+        "title": "Bioenergy & circular resource recovery",
+        "description": "Recover value from residual resources and extend equipment life, considering available feedstocks, competing uses and environmental balances."
+      },
+      "research-buildings": {
+        "title": "Resource-efficient & resilient buildings & territories",
+        "description": "Preserve comfort and essential services with less energy through solutions adapted to buildings, territories and climatic conditions."
+      },
+      "research-mobility": {
+        "title": "Low-carbon mobility & transport infrastructure",
+        "description": "Adapt low-carbon transport to usage patterns, grid constraints and climate through fleets, charging, batteries and logistics."
       }
     },
     "institute": {
@@ -913,5 +941,105 @@
       "imageTitle": "Transfer — smart grids and energy management",
       "imageDescription": "Fictional generated collaboration scene involving smart electricity grids, energy management and bioenergy. Control screens and wind turbines illustrate the connection between research and use; no actual IRESEN project or partnership is depicted."
     }
+  },
+  "HomeResearch": {
+    "eyebrow": "Research domains",
+    "title": "Research themes serving the energy transition",
+    "action": "Explore our research domains",
+    "axis": "Axis",
+    "themes": {
+      "renewables": {
+        "title": "Renewable energy & flexible electricity systems",
+        "description": "Produce reliable renewable energy and integrate it into electricity systems through durability, storage, active grids and demand flexibility.",
+        "axes": [
+          "Performance and durability in harsh conditions",
+          "Storage and hybrid systems across scales",
+          "Active grids and renewable energy integration",
+          "Demand flexibility"
+        ],
+        "imageTitle": "Generated illustration — Renewable energy & flexible electricity systems",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Produce reliable renewable energy and integrate it into electricity systems through durability, storage, active grids and demand flexibility.",
+        "searchText": "Solar photovoltaics (PV), concentrated solar power (CSP), wind power, storage and electricity grids."
+      },
+      "hydrogen": {
+        "title": "Renewable hydrogen & derived molecules",
+        "description": "Develop renewable hydrogen and derived molecule value chains by connecting production, water resources, logistics and relevant industrial uses.",
+        "axes": [
+          "Dynamic electrolysis and durability",
+          "Water–energy–hydrogen integration",
+          "Conversion, storage and logistics",
+          "Substitution in priority uses"
+        ],
+        "imageTitle": "Generated illustration — Renewable hydrogen & derived molecules",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Develop renewable hydrogen and derived molecule value chains by connecting production, water resources, logistics and relevant industrial uses.",
+        "searchText": "Renewable hydrogen (H2), electrolysis, ammonia and derived molecules."
+      },
+      "industry": {
+        "title": "Resource-efficient industry & low-carbon processes",
+        "description": "Reduce industrial energy demand and process emissions through heat recovery, electrification and performance measurement.",
+        "axes": [
+          "Efficiency and heat recovery",
+          "Electrification and renewable heat",
+          "Materials, processes and residual carbon",
+          "Industrial performance measurement and optimisation"
+        ],
+        "imageTitle": "Generated illustration — Resource-efficient industry & low-carbon processes",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Reduce industrial energy demand and process emissions through heat recovery, electrification and performance measurement.",
+        "searchText": "Industrial energy efficiency, renewable heat and process decarbonisation."
+      },
+      "water": {
+        "title": "Water–energy–agriculture nexus & resilience",
+        "description": "Connect water, energy and agriculture needs to preserve resources and strengthen system resilience.",
+        "axes": [
+          "Resource-efficient desalination and treatment",
+          "Controlled irrigation and pumping",
+          "Water reuse and local loops",
+          "Agrivoltaics and integrated agricultural systems"
+        ],
+        "imageTitle": "Generated illustration — Water–energy–agriculture nexus & resilience",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Connect water, energy and agriculture needs to preserve resources and strengthen system resilience.",
+        "searchText": "Desalination, water reuse, irrigation, pumping and agrivoltaics."
+      },
+      "circular": {
+        "title": "Bioenergy & circular resource recovery",
+        "description": "Recover value from residual resources and extend equipment life, considering available feedstocks, competing uses and environmental balances.",
+        "axes": [
+          "Sustainable feedstocks and supply chains",
+          "Biogas, biomethane and co-product recovery",
+          "Thermochemical conversion and bio-based products",
+          "Circularity of energy transition equipment"
+        ],
+        "imageTitle": "Generated illustration — Bioenergy & circular resource recovery",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Recover value from residual resources and extend equipment life, considering available feedstocks, competing uses and environmental balances.",
+        "searchText": "Residual biomass, biogas, biomethane, recycling, repair and circular economy."
+      },
+      "buildings": {
+        "title": "Resource-efficient & resilient buildings & territories",
+        "description": "Preserve comfort and essential services with less energy through solutions adapted to buildings, territories and climatic conditions.",
+        "axes": [
+          "Bioclimatic envelopes and renovation",
+          "Efficient cooling and equipment",
+          "Territorial services and local energy systems",
+          "Heat resilience and adoption"
+        ],
+        "imageTitle": "Generated illustration — Resource-efficient & resilient buildings & territories",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Preserve comfort and essential services with less energy through solutions adapted to buildings, territories and climatic conditions.",
+        "searchText": "Bioclimatic renovation, thermal comfort, cooling and heat resilience."
+      },
+      "mobility": {
+        "title": "Low-carbon mobility & transport infrastructure",
+        "description": "Adapt low-carbon transport to usage patterns, grid constraints and climate through fleets, charging, batteries and logistics.",
+        "axes": [
+          "Electrification of intensive-use fleets",
+          "Smart charging and grid integration",
+          "Battery diagnostics and durability in use",
+          "Logistics and choice of modes or energy carriers"
+        ],
+        "imageTitle": "Generated illustration — Low-carbon mobility & transport infrastructure",
+        "imageDescription": "Fictional scene illustrating this theme; it does not depict an IRESEN facility. Adapt low-carbon transport to usage patterns, grid constraints and climate through fleets, charging, batteries and logistics.",
+        "searchText": "Electric mobility, electric vehicles, smart charging, batteries and low-carbon transport."
+      }
+    },
+    "axesLabel": "Research axes"
   }
 }

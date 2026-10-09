@@ -1196,3 +1196,16 @@ The screenshot supplies interaction styling; its sample copy and routes are
 reference data. Current catalogs and the 22-page route map remain authoritative.
 See [navigation guidance](navigation.md#desktop-submenu-destination-states--2026-10-09)
 and [revision-specific validation](validation.md#desktop-submenu-destination-states--2026-10-09).
+
+## Homepage research selection — 2026-10-09
+
+Reuse the current navy, blue, white/pale type and shared grid for research
+selection. Seven 48px line icons precede the titles. Four transparent axis
+columns pair quiet metadata numbers with larger uppercase Latin titles and thin dividers;
+Arabic retains natural tracking and its larger line-height. Below 64rem the
+lateral controls become native accordions, with a primary-blue selected surface
+and physical `--radius-action` corners. Text follows content height and images
+form a panorama on desktop. Below 64rem the selected image covers the section beneath a 90% navy veil. Below
+48rem the axes remain side by side in a keyboard-accessible horizontal strip.
+No new global tokens, animation libraries or universal panel height are introduced.
+See [the module](research-domains.md) and [validation](validation.md#homepage-research-domains--2026-10-09).
