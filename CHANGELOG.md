@@ -23,6 +23,8 @@ merge results are recorded by the corresponding pull request and commit history.
   draft. Server-side delivery and production publication remain separate work.
 - Registered current contact guidance, FAQ/platform/location anchors and the
   decorative background in multilingual public search, replacing retired scaffolds.
+- Isolated integration-test indexing from automatic background polling to avoid
+  a race between the parallel CMS and search suites; production behavior is unchanged.
 
 See [contact sources and behavior](docs/contact.md), [asset provenance](docs/asset-inventory.md#contact-decorative-background--2026-10-09)
 and [revision-specific check evidence](docs/validation.md).

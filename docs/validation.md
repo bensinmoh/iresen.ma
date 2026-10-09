@@ -1397,6 +1397,11 @@ After integrating the current main branch's search and mobile refinements:
 
 - Formatting, lint, strict types, all 97 unit cases and the production build passed.
 - All 21 CMS/search integration cases passed against the local PostgreSQL database.
+- Repeated integration runs exposed a race between the parallel CMS suite's
+  automatic search worker and the search suite's manual job processing. The
+  integration command now disables automatic polling for both suites, matching
+  CI; manual indexing and permission checks still run. All 21 cases passed with
+  this isolation and the production server stopped.
 - All 127 Chromium browser cases passed, including 16 contact cases and three
   contact-search cases. Standard hero coverage excludes the dedicated contact
   and search pages, which retain their own behavior coverage.

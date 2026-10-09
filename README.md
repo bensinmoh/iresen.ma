@@ -81,6 +81,10 @@ index worker on CMS initialization or first search; production can also schedule
 owns processing. Use `pnpm search:rebuild` after migration, new static resources
 or a full recovery. See [search behavior, operations and required content references](docs/search.md).
 
+Run integration checks against a disposable migrated database with the development
+or production server stopped. `pnpm test:integration` disables automatic search
+polling across both test suites so their explicit indexing checks own job processing.
+
 When updating an existing local checkout after a search schema change, stop the
 development server and run `pnpm db:wait`, `pnpm cms:migrate`,
 `pnpm search:rebuild`, then `pnpm dev`. Starting Docker and Next alone does not
@@ -104,7 +108,7 @@ Local foundation checks passed: 8 unit, 4 integration and 11 browser tests, plus
 | `PAYLOAD_SECRET`                                    | Strong server-side CMS secret; local helper generates one                        |
 | `NEXT_PUBLIC_SITE_URL`                              | Development origin; initially `http://localhost:3000`                            |
 | `SITE_INDEXING_ENABLED`                             | `false` for development/restricted previews                                      |
-| `SEARCH_WORKER_DISABLED`                            | `true` only when a separate index worker owns processing                         |
+| `SEARCH_WORKER_DISABLED`                            | `true` when a separate index worker or integration suite owns processing         |
 | `CMS_BOOTSTRAP_EMAIL`                               | First administrator identity; bootstrap only                                     |
 | `CMS_BOOTSTRAP_PASSWORD`                            | Secret first-administrator password; bootstrap only                              |
 
