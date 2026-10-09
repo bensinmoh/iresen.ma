@@ -286,8 +286,9 @@ related-block treatment; these checks describe the initial revision.
 
 ## Generated hero placeholders — 2026-10-09
 
-The owner's explicit request replaces all 17 hero backgrounds across 22 pages
-with generated photographic placeholders. A coherent energy/science editorial
+The owner's explicit photo-replacement request supplied 17 generated photographic
+placeholders across 22 pages. They remain on 20 interior hero pages and as the homepage video's
+fallback. A coherent energy/science editorial
 series uses natural light, warm neutral landscapes and restrained blue, with
 credible fine geometry and room for translated text. Generic scenes and anonymous
 people illustrate the topic without identifying IRESEN sites, events or staff.
@@ -298,12 +299,29 @@ Keep their actual HD dimensions rather than claiming native 4K or a resolution
 increase for every previous asset. Quality-90 WebP derivatives retain native
 pixels without upscaling. Content-hashed filenames, full-height portrait mobile
 crops at `40rem` and below and cover-aware sizing support sharp imagery while retaining
-one eager/high-priority hero request. The approximately 250KB mobile budget needs
+one eager/high-priority photo request. The approximately 250KB mobile image budget needs
 measurement against the final derivatives.
 
 See [current provenance and media behavior](docs/heroes.md#generated-hero-placeholders--2026-10-09)
 and [this revision's validation](docs/validation.md#generated-hero-placeholders--2026-10-09).
 The earlier Figma image records and captures remain historical evidence.
+
+## Homepage hero video — 2026-10-09
+
+The owner's later request uses the original `/videos/hero.mp4` for the homepage,
+with no playback button. Normal-motion playback starts after hydration, muted,
+looping and inline. The generated photo stays beneath it as the loading/failure,
+no-JavaScript and reduced-motion fallback; a live reduced-motion change unloads
+the video. Keep the same overlay, typography, copy, figures and layout, with the
+other 20 page heroes still photographic. Search retains its direct form/results
+without a hero.
+
+The unchanged 9.32 MiB file is an owner-requested budget exception. Its
+end-of-file metadata needs byte-range delivery; web-sized, fast-start derivatives
+remain follow-up work. The no-button instruction supersedes the earlier
+pause-control default, without establishing WCAG 2.2.2 conformance for continuous
+motion. See [media behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09)
+and [revision-specific validation](docs/validation.md); photo-only checks remain historical.
 
 ## Introducing heroes — 2026-10-08
 

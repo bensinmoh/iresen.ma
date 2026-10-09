@@ -36,9 +36,10 @@ marketing page.
   only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
   [Footer documentation](docs/footer.md) records content sources, owner corrections,
   verification and outstanding editorial limits.
-- Approved pages other than search have lightweight introductory heroes with five composition
-  styles, 17 owner-requested generated illustrative photo placeholders, short FR/EN/AR
-  wayfinding drafts and the Développer · Éprouver · Valoriser reading framework.
+- Approved pages other than search have introductory heroes with five composition
+  styles: 20 use generated photos, while the homepage uses the owner's video with
+  its generated photo as fallback. Short FR/EN/AR wayfinding drafts and the
+  Développer · Éprouver · Valoriser reading framework remain.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
   projects supported, +60 patents filed, +1000 young researchers supported, +1100
   scientific publications and +18 university laboratories established. These
@@ -74,9 +75,15 @@ marketing page.
   states remain where approved content is absent. Public
   pages render their content without a locale-wide streamed loading boundary,
   so footer destinations remain readable when JavaScript is disabled.
-- An owner-supplied video is stored for future hero use; the current pages do not
-  render it. See [the asset inventory](docs/asset-inventory.md#hero-video) for source
-  metadata, rights limits and the future derivative/poster requirements.
+- On 2026-10-09 the owner explicitly requested the original `/videos/hero.mp4`
+  for the homepage, with no playback button. Normal-motion playback starts after
+  hydration, muted, looping and inline. No-JavaScript, reduced-motion and failure
+  states retain the generated photo; a live reduced-motion change unloads the
+  video. The unchanged 9.32 MiB file is a requested budget exception, with
+  byte-range delivery and future web derivatives still performance concerns.
+  Continuous motion without a pause control does not establish WCAG 2.2.2
+  conformance. See [current hero behavior](docs/heroes.md#homepage-hero-video--2026-10-09)
+  and [source metadata and rights limits](docs/asset-inventory.md#hero-video).
 - Site search is implemented: the header control expands physically left on
   mouse hover, focus or tap, and submits keywords to the localized results route.
   That route opens directly on a form and ranked links with excerpts, result counts,

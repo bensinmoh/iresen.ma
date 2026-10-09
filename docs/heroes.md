@@ -5,7 +5,10 @@ recorded native Figma design language and the approved information architecture.
 The owner's clarification keeps the heroes introductory: detailed content belongs
 in the sections below. No complete homepage or editorial listing is implied.
 The generated backgrounds below replace the initial Figma-derived imagery on
-2026-10-09 while retaining that framework.
+2026-10-09 while retaining that framework. The owner's subsequent homepage video
+request keeps those photos on the other hero pages and as the homepage fallback.
+Search now has its functional form/results instead of a hero; 20 other routes
+retain photo heroes alongside the homepage's video.
 
 ## Composition and content
 
@@ -39,7 +42,8 @@ The 2026-10-09 [coherence review](site-coherence-review.md) retains these page
 introductions and adopts shared action styling and selective Apex Leaf placement.
 
 The owner explicitly requested 17 generated photographic placeholders to replace
-all hero backgrounds across the then-22 hero pages. These illustrate research, renewable
+all hero backgrounds across the 22 pages in the photo-replacement revision. They
+remain the 20 interior hero backgrounds and the homepage fallback. These illustrate research, renewable
 energy, collaboration and knowledge sharing through fictional, generic scenes.
 They remain decorative with empty alternatives and make no claim to depict real
 IRESEN people, facilities or events. Copy, claims, routes, figures, layouts,
@@ -58,8 +62,9 @@ Portrait mobile derivatives retain the full native height in a 2:3 crop. At
 `40rem` and below, a native `picture` source serves that preoptimized WebP directly,
 bypassing the Next image optimizer. The wider Next Image fallback uses quality 90
 and sizes based on viewport width, aspect ratio × viewport height and a 75rem
-growth guard. Only the current hero loads eagerly with high fetch priority.
-Images remain same-origin, with no video or additional client runtime.
+growth guard. Only the current photo loads eagerly with high fetch priority.
+Images remain same-origin. The photo-replacement revision added no video or
+client runtime; the later homepage-only video behavior below supersedes that scope.
 
 The schema-2 [hero-assets.json](hero-assets.json) records 16 full generation prompts
 and an abbreviated aerial recipe, native dimensions, source/output SHA-256 hashes,
@@ -75,6 +80,37 @@ derivatives totaling 1,878,042 bytes. Its archive entries, hashes, transformatio
 and individual rights/credit limits are preserved in the superseded
 [Figma asset manifest](hero-assets-figma-2026-10-08.json). Those source-review
 limits describe the earlier imagery rather than the generated replacement.
+
+## Homepage hero video — 2026-10-09
+
+The owner explicitly requests the unchanged `/videos/hero.mp4` on the homepage,
+and then specifies no playback button. A homepage-only client layer assigns the
+source after hydration when `prefers-reduced-motion` permits motion. Its initial
+markup has no source and uses `preload="none"`. The native video uses autoplay,
+muted, loop and playsInline, without controls. It remains
+decorative; existing text, links, figures, certification and the 20 other photo
+heroes retain their behavior. Search retains its direct form/results surface.
+
+The server-rendered generated `HeroPhoto` stays beneath the video as a lightweight
+visual poster and fallback. It remains visible before playback, when playback
+fails, without JavaScript and for reduced motion. Changing to reduced motion
+while the page is open pauses and unloads the video source, stopping playback and
+further loading. No external player or media host is introduced.
+
+The exact owner-supplied H.264/AAC original is 4096 × 1974px, 18.858 seconds and
+9,774,051 bytes (9.32 MiB); it is not a transcoded or fast-start derivative.
+The file size is an owner-requested exception to the usual approximately 250KB
+hero-image and 1MB initial-page-transfer targets. End-of-file MP4 metadata needs
+byte-range delivery; future web-sized, fast-start derivatives remain a
+performance follow-up. File size is not a measured initial transfer or field result.
+See [source provenance and rights](asset-inventory.md#hero-video) and
+[the validation log](validation.md) for revision-specific checks.
+
+The explicit no-button request supersedes the brief's earlier pause-control
+default for this increment. Continuous motion without a pause/stop control does
+not establish WCAG 2.2.2 conformance; the reduced-motion photo fallback does not
+remove that boundary. Earlier photo checks and captures do not verify video
+playback, browser support or performance.
 
 ## Viewport and navigation
 

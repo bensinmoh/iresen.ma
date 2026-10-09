@@ -576,8 +576,9 @@ alternatives. Production alt text remains an editorial/accessibility input.
 
 The embedded MP4 is byte-identical to existing `public/videos/hero.mp4`
 (9,774,051 bytes; SHA-256 `548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb`).
-Its existence does not enable playback. The existing video inventory's poster,
-derivative, pause, audio, reduced-motion and performance requirements still apply.
+This source analysis did not enable playback. The later
+[homepage video decision](#homepage-hero-video--2026-10-09) records the owner's
+exact-file/no-button request, fallback behavior and performance/accessibility limits.
 
 ### Prototype behavior and unresolved source details
 
@@ -633,8 +634,9 @@ the scoped live review; broader page/prototype fidelity remains unverified.
 
 ## Generated hero placeholders — 2026-10-09
 
-All 17 backgrounds used across the 22 page introductions are owner-requested
-generated photographic placeholders. Their fictional, generic energy/science
+The photo-replacement revision supplied 17 owner-requested generated photographic
+placeholders across the 22 page introductions. They remain the 20 interior
+backgrounds and the homepage fallback. Their fictional, generic energy/science
 scenes support the existing five compositions without asserting real IRESEN
 facilities, events or people. Keep approved copy, figures, routes, colors, fonts
 and original SVGs separate from generated scenery. Empty image alternatives
@@ -647,8 +649,9 @@ content-hashed filenames. At `40rem` and below, a native `picture` source serves
 full-native-height 2:3 portrait WebP directly without the Next optimizer. The wider
 Next Image fallback uses quality 90 and sizes based on width, aspect ratio ×
 viewport height and a 75rem growth guard.
-Only the current hero is eager/high priority, with same-origin delivery and no
-added video or client runtime. The approximately 250KB mobile hero budget is a
+Only the current photo is eager/high priority, with same-origin delivery. This
+photo-replacement revision added no video or client runtime; the homepage-only
+video decision below supersedes that scope. The approximately 250KB mobile image budget is a
 target to measure against the actual derivatives and delivered responses.
 
 [Current provenance](hero-assets.json) records full prompts for 16 images, an
@@ -658,6 +661,27 @@ mobile crops. The
 source facts. See [media behavior](heroes.md#generated-hero-placeholders--2026-10-09)
 and [this revision's checks](validation.md#generated-hero-placeholders--2026-10-09);
 earlier tests and captures describe their own asset set.
+
+## Homepage hero video — 2026-10-09
+
+Only the homepage adds the original same-origin `/videos/hero.mp4`. A small
+client layer assigns its source after hydration when reduced motion is not
+requested. Native playback is autoplay, muted, looping and inline; there are no
+controls or playback button, following the owner's explicit instruction.
+The generated `HeroPhoto` remains the loading/failure, no-JavaScript and
+reduced-motion underlay/fallback. A live change to reduced motion pauses and
+unloads the video. The other 20 photo heroes, layout, content and identity remain;
+search retains its direct form/results surface without a hero.
+
+The unchanged 9,774,051-byte (9.32 MiB) file retains its audio track and
+end-of-file MP4 metadata; playback stays muted. This is an owner-requested
+exception to the approximately 250KB image and 1MB initial-transfer budgets,
+requiring byte-range delivery and a later web-sized, fast-start derivative review.
+No measured transfer, browser or field-performance result follows from file size.
+The no-button request supersedes earlier pause-control guidance; continuous
+motion without a pause/stop control does not establish WCAG 2.2.2 conformance.
+See [hero behavior](heroes.md#homepage-hero-video--2026-10-09),
+[source metadata](asset-inventory.md#hero-video) and [current checks](validation.md).
 
 ## Introducing heroes — 2026-10-08
 

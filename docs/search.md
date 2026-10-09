@@ -16,6 +16,8 @@ Enter or the magnifier submits a native GET form. Escape collapses and returns
 focus to the button; outside pointer interaction, focus leaving the form or
 pointer departure without internal focus collapses it. Reduced motion removes
 the expansion transition. Shared action corners and public fonts still apply.
+The header interaction remains available over the homepage's video/photo fallback;
+the dedicated results route retains its in-flow header and has no hero media.
 
 The existing localized search route opens directly with its in-flow header,
 breadcrumb, heading and visible form, replacing only that page's photo hero and

@@ -1194,6 +1194,20 @@ html[dir='rtl'] .navigation-icon-arrow {
   object-position: center;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+}
+
+.hero-video--ready {
+  opacity: 1;
+}
+
 .hero-shade {
   background: linear-gradient(
     var(--hero-direction),

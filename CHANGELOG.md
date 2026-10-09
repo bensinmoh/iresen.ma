@@ -26,6 +26,20 @@ See [behavior, sources and limits](docs/search.md),
 [validation](docs/validation.md) for actual checks and coverage. Earlier search
 unavailable states and all-page hero captures remain historical.
 
+## 2026-10-09 — Homepage hero video
+
+- Enabled the uploaded original `/videos/hero.mp4` as the homepage's muted,
+  looping, inline background video, without playback controls as requested.
+- Kept the generated photo beneath it for loading, reduced motion, missing
+  JavaScript and media failures; the other 21 pages retain their photo heroes.
+- Verified real playback across FR/EN/AR desktop/mobile, an actual loop,
+  byte-range delivery and live reduced-motion unloading. Local lint, strict
+  types, 8 unit tests, production build and all 55 browser cases passed after
+  integrating the current page-section placeholders.
+
+See [hero behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09)
+and [revision-specific evidence](docs/validation.md#homepage-hero-video--2026-10-09).
+
 ## 2026-10-09 — Section placeholders on all pages
 
 - Added section headings and short FR/EN/AR draft content notes below the

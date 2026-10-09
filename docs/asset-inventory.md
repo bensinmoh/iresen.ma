@@ -1,6 +1,6 @@
 # Asset inventory
 
-Inventory updated: 2026-10-09. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines were preserved in ignored `private-references/` during prior work; those private archives are absent from the current checkout. An owner-supplied video is available in `public/videos/` for future hero implementation. The received files are sufficient for the branded foundation.
+Inventory updated: 2026-10-09. Seven owner-supplied SVGs are available in `public/brand/` under concise filenames, including the latest corrected logos/apex and primary mark. Byte-identical originals and the two supplied PDF guidelines were preserved in ignored `private-references/` during prior work; those private archives are absent from the current checkout. The unchanged owner-supplied `public/videos/hero.mp4` now serves the homepage hero under the motion conditions below. The received files are sufficient for the branded foundation.
 
 ## Received assets and rights
 
@@ -38,23 +38,38 @@ Current browser checks belong in [the validation log](validation.md).
 
 ## Hero video
 
-Received on 2026-10-08 and added at the owner's request for future website hero use. No independent redistribution license or source credit was supplied.
+Received on 2026-10-08 for future website hero use; on 2026-10-09 the owner explicitly requested homepage playback of this exact original with no playback button. No independent redistribution license or source credit was supplied.
 
-| Property              | Value                                                                     |
-| --------------------- | ------------------------------------------------------------------------- |
-| Exact source filename | `7040278-uhd_4096_1974_30fps (2).mp4`                                     |
-| Repository file       | `public/videos/hero.mp4`                                                  |
-| Public asset URL      | `/videos/hero.mp4`                                                        |
-| Role/status           | Future hero video; stored as a public asset, not yet referenced by a page |
-| Format                | MP4; H.264 video (`yuv420p`) and AAC audio                                |
-| Dimensions            | 4096 × 1974 pixels                                                        |
-| Frame rate            | 30000/1001 fps (approximately 29.97 fps)                                  |
-| Duration              | 18.858 seconds                                                            |
-| File size             | 9,774,051 bytes (approximately 9.32 MiB)                                  |
-| SHA-256               | `548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb`        |
-| Transformation        | Filename normalized only; copied byte-identically without transcoding     |
+| Property              | Value                                                                    |
+| --------------------- | ------------------------------------------------------------------------ |
+| Exact source filename | `7040278-uhd_4096_1974_30fps (2).mp4`                                    |
+| Repository file       | `public/videos/hero.mp4`                                                 |
+| Public asset URL      | `/videos/hero.mp4`                                                       |
+| Role/status           | Homepage hero video; generated photo retained as motion/failure fallback |
+| Format                | MP4; H.264 High level 5.1 (`yuv420p`) and AAC audio                      |
+| Dimensions            | 4096 × 1974 pixels                                                       |
+| Frame rate            | 30000/1001 fps (approximately 29.97 fps)                                 |
+| Duration              | 18.858 seconds                                                           |
+| File size             | 9,774,051 bytes (approximately 9.32 MiB)                                 |
+| SHA-256               | `548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb`       |
+| Transformation        | Filename normalized only; copied byte-identically without transcoding    |
 
-Container and stream metadata were inspected with `ffprobe`. The supplied file retains its audio track and its end-of-file MP4 metadata. Future hero implementation should prepare appropriately sized web derivatives with streaming metadata at the start, a lightweight poster, muted playback, a pause control and reduced-motion behavior, then measure page performance as required by the project brief. Adding the asset does not enable playback or publish a deployment.
+Container and stream metadata were inspected with `ffprobe`. The original retains
+its audio track and end-of-file MP4 metadata, with no transcoding or fast-start
+transformation. A homepage-only client layer assigns `/videos/hero.mp4` after
+hydration for normal motion, using native muted, looping, inline autoplay and no
+controls. The generated photo stays as the loading/failure, no-JavaScript and
+reduced-motion visual poster/fallback; a live reduced-motion change unloads the source.
+
+The 9.32 MiB original is an owner-requested exception to the usual mobile-image
+and initial-transfer budgets. Byte-range delivery is needed for its end-of-file
+metadata; appropriately sized, fast-start derivatives remain a performance
+follow-up. The explicit no-button request supersedes the earlier pause-control
+default, without establishing WCAG 2.2.2 conformance for continuous motion.
+See [current hero behavior](heroes.md#homepage-hero-video--2026-10-09) and
+[revision-specific checks](validation.md). File metadata and historical photo
+checks do not establish browser playback or field performance, and this local
+implementation does not authorize deployment.
 
 ## Development references and private guidelines
 
@@ -175,7 +190,9 @@ the earlier Figma backgrounds across all 22 pages. These fictional scenes are
 decorative illustrations, not records of real IRESEN facilities, people or work.
 Brand assets, fonts, institutional claims, copy, routes and hero layouts retain
 their existing definitions. The replacement introduces no external image host,
-video playback or new client runtime.
+video playback or new client runtime at that revision. The later homepage video
+uses these generated photos as its fallback while the other 20 heroes stay photographic.
+Search uses its direct form/results surface without a hero.
 
 Sixteen generated source images are native 1536 × 1024px; the aerial solar scene
 is 1672 × 941px. These are not 4K sources or a blanket resolution increase over
@@ -195,7 +212,8 @@ mobile crop is 216,272 bytes, below the approximately 250KB per-hero mobile budg
 A native `<picture>` source serves the portrait WebP directly at `40rem` and
 below. Wider screens use Next Image at quality 90 with cover-aware sizes based
 on viewport width, source aspect ratio × viewport height and a 75rem content-growth
-guard. Each page selects one eager, high-priority hero background. Delivered-byte
+guard. Each page selects one eager, high-priority photo, including the homepage
+video fallback. Delivered-byte
 and rendered checks belong in [the validation log](validation.md#generated-hero-placeholders--2026-10-09).
 
 ## Superseded Figma hero backgrounds — 2026-10-08
@@ -215,7 +233,8 @@ image credit, model release or identification of facilities was inferred from
 Figma. Its decorative photographs did not claim to depict IRESEN researchers or
 assets. The individual rights/credits review applied to those Figma-derived images;
 reusing them would still require that review or approved originals. It does not
-describe the generated sources above. The MP4 remains unchanged and is not played.
+describe the generated sources above. The MP4 remains unchanged; its later
+[homepage playback request](#hero-video) supersedes the historical no-playback state.
 
 ## Plus Jakarta Sans Latin font — 2026-10-08
 
