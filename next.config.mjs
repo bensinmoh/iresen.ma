@@ -14,7 +14,7 @@ const nextConfig = {
     // cache can outlive withdrawal even when the upstream response is no-store.
     localPatterns: [
       { pathname: '/images/heroes/**', search: '' },
-      { pathname: '/images/contact/contact-background-79bad501a298.png', search: '' },
+      { pathname: '/images/contact/contact-background-venue.jpg', search: '' },
     ],
   },
   async headers() {

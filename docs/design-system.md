@@ -197,8 +197,12 @@ See [the section guide](page-sections.md) and [validation evidence](validation.m
 ### Contact composition — 2026-10-09
 
 Contact uses a dedicated composition based on the owner's selected native frame
-`804:7374` and attached screenshot. Its shared header stays white; the original
-abstract background accompanies a split introduction and navy headquarters panel.
+`804:7374` and attached screenshot. Its shared header stays white; the owner's
+headquarters photo replaces the original abstract background beside the navy
+headquarters panel. Preserve the original JPEG and use responsive optimized
+delivery with a central entrance crop. White text and the energy-cyan accent sit
+over navy shading; a text-scaled bottom reserve keeps the lighter photo reveal
+below the copy, including enlarged text.
 Flat platform rows, the `--color-action-surface` form band, native FAQ disclosures
 and a full-width on-demand location section reuse existing type, spacing, focus,
 container and action roles. Shared navigation/footer, approved blue/navy and

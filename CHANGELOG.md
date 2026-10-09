@@ -4,6 +4,18 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Contact headquarters photograph
+
+- Replaced the contact introduction's cyan curves with the owner's headquarters
+  photograph, preserving the exact original JPEG without generation or retouching.
+- Used responsive optimized Next Image delivery and a CSS crop/readability overlay;
+  the source's 11.4 MB size is separate from the page's delivered image bytes.
+- Retired the curve's served file and search reference while keeping its provenance
+  and original bytes in Git history. Earlier contact screenshots retain their scope.
+
+See [photo provenance](docs/asset-inventory.md#contact-headquarters-photo--2026-10-09)
+and [contact behavior](docs/contact.md); photo-specific checks belong in [validation](docs/validation.md).
+
 ## 2026-10-09 — Contact reference composition and location
 
 - Replaced contact's photo hero/scaffold with the owner-selected Figma contact

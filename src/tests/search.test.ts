@@ -262,11 +262,12 @@ describe('explicit public search catalog', () => {
       publicAssetReferences.filter(({ url }) => url.startsWith('/images/contact/')),
     ).toMatchObject([
       {
-        id: 'contact-background',
-        url: '/images/contact/contact-background-79bad501a298.png',
+        id: 'contact-headquarters',
+        url: '/images/contact/contact-background-venue.jpg',
         type: 'media',
       },
     ])
+    expect(references.has('/images/contact/contact-background-79bad501a298.png')).toBe(false)
     const formerContactImage = publicAssetReferences.find(({ id }) => id === 'hero-wind-detail')!
     for (const locale of contentLocales) {
       expect(formerContactImage.text[locale]?.title).not.toContain(

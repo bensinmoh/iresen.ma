@@ -33,9 +33,9 @@ const assetLabels = {
     solar: 'Illustration générée de panneaux solaires photovoltaïques dans un cadre fictif.',
     infrastructure: 'Illustration générée d’une infrastructure solaire dans un site fictif.',
     wind: 'Illustration générée d’une éolienne blanche dans un paysage rocheux fictif.',
-    contactImage: 'Fond abstrait de la page Contact',
-    contactBackground:
-      'Courbes abstraites cyan et blanches utilisées en arrière-plan de la page de contact.',
+    contactHeadquartersTitle: 'Photographie du siège IRESEN à Rabat',
+    contactHeadquartersDescription:
+      'Photographie de l’entrée du siège IRESEN à Rabat, avec un mur blanc portant l’identité IRESEN et un jardin arboré.',
   },
   en: {
     image: 'Page introduction image',
@@ -47,8 +47,9 @@ const assetLabels = {
     solar: 'Generated illustration of solar photovoltaic panels in a fictional setting.',
     infrastructure: 'Generated illustration of solar infrastructure at a fictional site.',
     wind: 'Generated illustration of a white wind turbine in a fictional rocky landscape.',
-    contactImage: 'Abstract contact page background',
-    contactBackground: 'Abstract cyan and white curves used as the contact page background.',
+    contactHeadquartersTitle: 'Photograph of IRESEN headquarters in Rabat',
+    contactHeadquartersDescription:
+      'Photograph of the entrance to IRESEN headquarters in Rabat, with a white wall bearing the IRESEN identity and a garden with trees.',
   },
   ar: {
     image: 'صورة تقديمية',
@@ -60,15 +61,16 @@ const assetLabels = {
     solar: 'صورة توضيحية مولّدة لألواح الطاقة الشمسية الكهروضوئية في موقع خيالي.',
     infrastructure: 'صورة توضيحية مولّدة لبنية تحتية للطاقة الشمسية في موقع خيالي.',
     wind: 'صورة توضيحية مولّدة لتوربين رياح أبيض في منظر صخري خيالي.',
-    contactImage: 'الخلفية التجريدية لصفحة التواصل',
-    contactBackground: 'منحنيات تجريدية سماوية وبيضاء مستخدمة خلفيةً لصفحة التواصل.',
+    contactHeadquartersTitle: 'صورة مقر IRESEN في الرباط',
+    contactHeadquartersDescription:
+      'صورة مدخل مقر IRESEN في الرباط، مع جدار أبيض يحمل هوية IRESEN وحديقة تضم أشجارًا.',
   },
 }
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   ...Object.entries(heroImages).map(([id, image]) => {
-    // Contact has a dedicated abstract background; its former photograph is
+    // Contact has a dedicated headquarters photograph; its former illustration is
     // still served, but must not be described as the current contact page image.
     const relatedPages = pageIds.filter(
       (pageId) => pageId !== 'contact' && heroes[pageId].photo === id,
@@ -97,15 +99,15 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     }
   }),
   {
-    id: 'contact-background',
-    url: '/images/contact/contact-background-79bad501a298.png',
+    id: 'contact-headquarters',
+    url: '/images/contact/contact-background-venue.jpg',
     type: 'media',
     text: Object.fromEntries(
       contentLocales.map((locale) => [
         locale,
         {
-          title: assetLabels[locale].contactImage,
-          description: assetLabels[locale].contactBackground,
+          title: assetLabels[locale].contactHeadquartersTitle,
+          description: assetLabels[locale].contactHeadquartersDescription,
         },
       ]),
     ) as PublicAssetReference['text'],

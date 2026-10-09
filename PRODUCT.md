@@ -69,8 +69,9 @@ marketing page.
   start-aligned copy; utility editorial pages retain their reading measure over a
   lighter neutral dark overlay. Three generated contextual images now illustrate
   governance, career onboarding and collaboration; all 17 active photo assets
-  remain fictional. Real Green Energy Park and IRESEN office photos are pending
-  source-download access and have not been imported. See
+  remain fictional. External Green Energy Park and office-photo candidates remain
+  pending source-download access; the owner's separate headquarters photograph
+  now appears in the contact introduction. See
   [current media and readiness](docs/contextual-hero-media.md) and
   [the asset manifest](docs/hero-assets.json); earlier replacement checks retain
   their revision-specific scope.
@@ -122,7 +123,10 @@ marketing page.
 - The 2026-10-09 contact page follows the owner's selected Figma contact frame
   and attached screenshot: white shared header, split introduction/headquarters,
   four platform entries, pale form band, native FAQ and shared navy footer. It
-  adds the requested full-width location section. Existing footer address, phone
+  adds the requested full-width location section. The owner's headquarters photo
+  now replaces the original cyan curves; original bytes remain intact, with
+  responsive optimized delivery and a CSS crop/readability overlay.
+  Existing footer address, phone
   and email are reused; no sample opening hours, response deadline or departmental
   mailboxes are adopted. Subject links prepare the relevant form topic, and
   platform/FAQ links use canonical pages. Complete FR/EN/AR copy is draft copy.
@@ -133,8 +137,9 @@ marketing page.
   not verified against the unresolved owner-supplied shortlink. See
   [contact sources, anchors and service limits](docs/contact.md).
 
-The owner's 2026-10-09 instruction authorizes pushing this snapshot with the real
-documentary photos still pending; those inputs no longer hold its delivery.
+The owner's earlier 2026-10-09 instruction authorized pushing the snapshot while
+documentary photos remained pending; a headquarters photo was subsequently supplied
+for contact. Remaining external-photo candidates do not hold delivery.
 
 See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
 for previous checks; neither proves a later change was tested.

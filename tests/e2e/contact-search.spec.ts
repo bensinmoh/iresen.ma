@@ -6,9 +6,9 @@ import fr from '../../src/messages/fr.json' with { type: 'json' }
 
 const catalogs = { ar, en, fr }
 const queries = {
-  fr: { interview: 'demander une interview', media: 'courbes abstraites' },
-  en: { interview: 'request an interview', media: 'abstract cyan' },
-  ar: { interview: 'أطلب مقابلة', media: 'منحنيات تجريدية' },
+  fr: { interview: 'demander une interview', media: 'entrée siège' },
+  en: { interview: 'request an interview', media: 'headquarters entrance' },
+  ar: { interview: 'أطلب مقابلة', media: 'مدخل مقر' },
 }
 
 for (const locale of ['fr', 'en', 'ar'] as const) {
@@ -48,8 +48,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     const results = await response.json()
     expect(results.items).toContainEqual(
       expect.objectContaining({
-        id: `asset:contact-background:${locale}`,
-        url: '/images/contact/contact-background-79bad501a298.png',
+        id: `asset:contact-headquarters:${locale}`,
+        url: '/images/contact/contact-background-venue.jpg',
         type: 'media',
       }),
     )

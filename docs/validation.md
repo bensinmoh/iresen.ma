@@ -1472,3 +1472,41 @@ Reviewed screenshots retained for this correction:
 
 Physical-device, Safari and screen-reader validation is not asserted. Current
 PR CI and merge results remain recorded by the pull request and commit history.
+
+## Contact headquarters photograph — 2026-10-09
+
+The owner supplied the headquarters photograph in commit `92f01c3`. It replaces
+the contact introduction's cyan curves. The original JPEG bytes are preserved;
+responsive optimized copies use quality 75. A navy gradient follows the text
+block and fades into a reserved 10rem area, retaining readable white/cyan text
+while revealing the entrance below. The same physical crop applies in Arabic.
+The retired curve file is removed from public delivery and search.
+
+Formatting, lint, strict types, all 97 unit cases, all 21 integration cases and
+the production build passed. All 19 existing contact/contact-search Chromium
+cases passed, retaining form, FAQ, map, no-JavaScript and localized media discovery
+coverage. The public index rebuild synchronized the static catalog and three
+eligible public CMS records.
+
+Manual production Chromium checks covered French at 320, 390, 1024, 1120 and
+1440px, English at 768px and Arabic at 390px, each at normal and 200% text.
+All 14 states had no horizontal overflow; the text remained inside the shaded
+area, including the 1120px split-layout boundary. The lower entrance remained
+visible in reviewed desktop, narrow, tablet and Arabic captures.
+
+At device pixel ratio 1, successful initial image responses were WebP copies
+between 94,062 and 178,082 bytes (750, 828 or 1080px wide), rather than a request
+for the 11,425,755-byte original JPEG. The retired curve URL returned 404.
+These are local delivery measurements, not production loading-time results.
+
+- [French desktop](screenshots/contact-photo-fr-1440.webp)
+- [French narrow layout](screenshots/contact-photo-fr-320.webp)
+- [French mobile](screenshots/contact-photo-fr-390.webp)
+- [English tablet](screenshots/contact-photo-en-768.webp)
+- [French tablet](screenshots/contact-photo-fr-1024.webp)
+- [French split-layout boundary](screenshots/contact-photo-fr-1120.webp)
+- [Arabic mobile](screenshots/contact-photo-ar-390.webp)
+
+Earlier contact captures document the initial curved background. Physical-device,
+Safari and screen-reader coverage and production deployment are not asserted.
+Current PR checks and merge results remain recorded in GitHub.

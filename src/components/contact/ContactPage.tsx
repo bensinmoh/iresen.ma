@@ -36,11 +36,11 @@ export async function ContactPage({
         <div className="contact-intro-copy">
           <Image
             className="contact-intro-image"
-            src="/images/contact/contact-background-79bad501a298.png"
+            src="/images/contact/contact-background-venue.jpg"
             alt=""
             fill
-            sizes="(min-width: 70rem) 85vw, (min-width: 40rem) 100vw, 225vw"
-            quality={90}
+            sizes="(min-width: 70rem) 75vw, (min-width: 40rem) 100vw, 225vw"
+            quality={75}
             preload
           />
           <div className="contact-intro-text">
