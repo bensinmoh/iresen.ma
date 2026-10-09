@@ -4,6 +4,17 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — Repeatable header search reveal
+
+- Reset the finished CSS reveal when the search disclosure closes, so returning
+  to an empty field replays its 220ms expansion. Native opening, keyboard/touch,
+  Arabic RTL and reduced-motion behavior retain the existing geometry.
+- Added repeated-hover checks in FR/EN/AR and a native regression case that
+  reproduces the retained animation before the correction.
+
+See [interaction rules](docs/navigation.md#expandable-header-search--2026-10-09)
+and [executed validation](docs/validation.md#repeatable-header-search-reveal--2026-10-09).
+
 ## 2026-10-09 — Centered Contact form eyebrow
 
 - Centered the complete “Votre message” eyebrow above the form title, removing

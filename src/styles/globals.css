@@ -223,6 +223,15 @@ body:has(.page-hero) .site-header-overlay {
   z-index: 2;
 }
 
+/* Reset the reveal instead of retaining its finished state in a skipped subtree. */
+.header-search-disclosure::details-content {
+  content-visibility: visible;
+}
+
+.header-search-disclosure:not([open]) > :not(summary) {
+  display: none;
+}
+
 .header-search {
   display: inline-flex;
   align-items: center;

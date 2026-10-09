@@ -508,6 +508,9 @@ and shared physical 10px action corners. It expands toward inline start (left
 FR/EN, right Arabic), with a 220ms width/opacity transition and stable header geometry.
 The enhanced control is capped at 22rem and available container space; expansion
 can use the other direction when needed. Reduced motion makes the change immediate.
+The field replays this reveal after each closure, including empty hover sessions.
+The search disclosure keeps its native content wrapper renderable and explicitly
+hides closed children so browsers reset the finished CSS animation.
 
 Fine-pointer hover opens without taking focus; explicit keyboard/touch activation
 focuses the labelled input. Enter or the filled icon sends a native GET query
