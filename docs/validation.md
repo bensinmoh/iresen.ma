@@ -1434,3 +1434,41 @@ claimed or tested. The embed queries the established Rabat address and keeps the
 owner's exact directions link; its pin remains unverified. This evidence does not
 establish physical-device/Safari coverage, screen-reader certification, production
 publication or deployment. PR CI and merge results remain recorded in GitHub.
+
+## Tablet homepage layout — 2026-10-09
+
+The owner's tablet screenshot and follow-up request define this correction:
+the homepage ISO badge is omitted below `70rem`, retaining its compact desktop
+placement; all five figures stay in one row, scrolling horizontally when needed.
+The shared `.horizontal-scroll` utility hides the scroll track while retaining
+native scrolling and visible focus. Current design guidance records this as the
+general convention for horizontal navigation.
+
+Local lint, strict types, formatting, all 92 unit and 21 integration cases, and
+the production build passed. The selected hero/navigation suite passed all 27
+cases across its first run and targeted rerun. The first four-worker run alongside
+manual QA timed out in six cases; the final two-worker rerun passed all six.
+The expanded ten-width case has a 120-second budget and requests start alignment
+when inspecting individual figures, matching their scroll-snap alignment.
+Coverage spans FR/EN/AR at 320, 390, 640, 641, 768, 1024, 1119, 1120, 1280 and
+1440px, including native keyboard access, no-JavaScript behavior, viewport
+changes, enlarged text and existing navigation checks.
+
+Manual production Chromium QA passed 18 FR/EN/AR scenarios: ordinary layouts at
+768×1024, 1024×1366, 1440×900 and 390×844, plus 200% root text at 320 and 768px.
+All five facts remain reachable with the locale-appropriate arrow key, horizontal
+wheel and emulated touch gestures. The page has no horizontal overflow, labels
+wrap without truncation and focus remains visible. Tablet/mobile ISO is hidden;
+desktop retains the existing card aligned with the bottom of the actions.
+Settled-frame rechecks confirmed the English 768px and Arabic 320px enlarged-text
+measurements. Captures use the reduced-motion photo fallback, preserving the
+existing video policy.
+
+Reviewed screenshots retained for this correction:
+
+- [French tablet, 1024px](screenshots/tablet-correction-fr-1024-2026-10-09.png)
+- [Arabic tablet, 768px](screenshots/tablet-correction-ar-768-2026-10-09.png)
+- [French desktop, 1440px](screenshots/tablet-correction-fr-1440-2026-10-09.png)
+
+Physical-device, Safari and screen-reader validation is not asserted. Current
+PR CI and merge results remain recorded by the pull request and commit history.

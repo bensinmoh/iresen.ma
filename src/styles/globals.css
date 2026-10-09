@@ -116,6 +116,17 @@ ul {
   margin-inline: auto;
 }
 
+/* Native horizontal navigation stays available without a visible scroll track. */
+.horizontal-scroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .skip-link {
   position: fixed;
   inset-block-start: var(--space-4);
@@ -1214,10 +1225,16 @@ html[dir='rtl'] .navigation-icon-arrow {
 
 .hero-figures {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(min(100%, 12rem), 1fr);
   align-items: start;
   gap: var(--space-8);
   margin-block: 0;
+  scroll-snap-type: inline proximity;
+}
+
+.hero-figures:focus-visible {
+  outline-offset: -4px;
 }
 
 .hero-figures .key-figure-label {
@@ -1231,6 +1248,7 @@ html[dir='rtl'] .navigation-icon-arrow {
   min-inline-size: 0;
   align-items: center;
   text-align: center;
+  scroll-snap-align: start;
 }
 
 .key-figure {
@@ -1268,6 +1286,10 @@ html[lang='ar'] .key-figure-label {
 }
 
 @media (max-width: 69.999rem) {
+  .hero-certification {
+    display: none;
+  }
+
   .hero-figures {
     gap: var(--space-6);
   }
@@ -1549,24 +1571,10 @@ html[lang='ar'] .hero-certification-label {
   }
 
   .hero-figures {
-    grid-template-columns: none;
-    grid-auto-flow: column;
     grid-auto-columns: min(100%, max(14rem, min(80%, 18rem)));
     inline-size: 100%;
     padding: var(--space-1) var(--gutter);
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline proximity;
     scroll-padding-inline: var(--gutter);
-    scrollbar-color: var(--color-white) transparent;
-  }
-
-  .hero-figures:focus-visible {
-    outline-offset: -4px;
-  }
-
-  .hero-figures .key-figure {
-    scroll-snap-align: start;
   }
 
   .hero-figures .key-figure-value,

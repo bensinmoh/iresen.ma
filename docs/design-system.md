@@ -45,6 +45,9 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   families. Keep one primary action per context, links for navigation and buttons
   for actions. Illustrated states do not supply production semantics; include
   visible focus, readable errors and genuine unavailable/loading/success behavior.
+- **Horizontal navigation:** retain native touch/keyboard scrolling and visible
+  focus, with the scrollbar hidden through `.horizontal-scroll`. Apply this to
+  horizontal collections, preserving ordinary vertical scrolling controls.
 - **Mobile hierarchy:** prioritize essential orientation/action, supporting
   context/facts, then optional decorative or redundant proof. Limit competing
   roles and collections rather than clipping content or fixing its height;
@@ -233,15 +236,16 @@ text. See [the coherence review](site-coherence-review.md) and
 
 ### Mobile information hierarchy — 2026-10-09
 
-At `40rem` and below, the homepage omits its secondary ISO badge and redundant
-scroll cue, reduces its lower reserve to 32px at default text size, and stacks
-both existing navigation actions at full width: primary blue and secondary white
-with shared physical 10px action corners. Its five figures use a focusable,
-labelled native horizontal scroll row. Its scrollbar is enabled and unhidden,
-with browser/OS-dependent visibility; a neighboring-item glimpse appears where
-space permits. Natural height, ordinary page scrolling and FR/EN/AR order remain. Wider
-layouts and other page heroes are unchanged. This supersedes the earlier narrow
-figure grid, small-screen badge placement and homepage cue/reserve rules.
+At `40rem` and below, the homepage omits its redundant scroll cue, reduces its
+lower reserve to 32px at default text size, and stacks both existing navigation
+actions at full width: primary blue and secondary white
+with shared physical 10px action corners. The later tablet refinement hides its
+secondary ISO badge below `70rem` and keeps all five figures in one focusable,
+labelled row at every width. Native horizontal scrolling handles overflow with a
+hidden scrollbar; a neighboring-item glimpse appears on mobile where space
+permits. Natural height, ordinary page scrolling and FR/EN/AR order remain.
+Other page heroes are unchanged. These rules supersede the wrapping figure grid,
+intermediate badge placement and earlier homepage cue/reserve rules.
 
 Use [the role/count ceiling and three priority tiers](mobile-information-hierarchy.md)
 for future mobile sections. Essential content remains accessible; only optional
@@ -893,13 +897,12 @@ the default `rgb(52 52 52 / 94%)` provides a darker fallback. The physical
 `var(--radius-signature)` corners remain 20px top-left/bottom-right at the default
 root size, with sharp opposite corners in RTL as well.
 
-Above `40rem` and below `70rem`, the badge follows the introduction and precedes the actions in
-natural DOM flow. Its flex content wraps within `min(100%, 24rem)`, using 1rem
-padding. From `70rem`, `.hero-body--certified .hero-copy` uses
-`minmax(0, 1fr) 11rem` tracks and a `clamp(2rem, 4vw, 4rem)` column gap. The badge
+The owner's later tablet refinement hides the badge below `70rem`, replacing its
+wide placement between introduction and actions. From `70rem`,
+`.hero-body--certified .hero-copy` uses `minmax(0, 1fr) 11rem` tracks and a
+`clamp(2rem, 4vw, 4rem)` column gap. The badge
 occupies the second track across both copy/action rows and aligns at the bottom;
-no fixed hero height is added. At `40rem` and below, the badge is hidden by the
-current mobile hierarchy. The five homepage figures are retained.
+no fixed hero height is added. The five homepage figures are retained.
 See [content and behavior](heroes.md#homepage-certification-badge--2026-10-08)
 and [revision-specific validation](validation.md); earlier checks remain historical.
 
@@ -942,14 +945,15 @@ supported, +1100 scientific publications and +18 university laboratories
 established. Labels are definition terms and values are their descriptions;
 CSS places the values above their labels. Plus-prefixed values are isolated LTR
 in Arabic. The homepage overrides Latin label line height to 1.35 for long
-wrapping labels; Arabic retains 1.45. Above `40rem`, auto-fit tracks use a
-minimum of `min(100%, 12rem)`, with 24px tablet and 32px wide gaps at the default
-root size: five columns at 1440/1920px and three at 768px. At `40rem` and below,
-the focusable, labelled list becomes a native horizontal scroll row, preserving
-all five pairs with an unhidden native scrollbar and neighboring-item glimpse
-where space permits. Scrollbar visibility depends on the browser/OS. This
-supersedes the former narrow grid and last-item row span. Text may wrap and grow;
-facts remain accessible without requiring all five to fit one view.
+wrapping labels; Arabic retains 1.45. At every width, the focusable, labelled list
+uses one row with native horizontal scrolling when needed. Above `40rem`,
+column-flow tracks use `minmax(min(100%, 12rem), 1fr)`, with 24px tablet and 32px
+wide gaps at the default root size. Wide layouts fit all five tracks; tablets
+scroll rather than wrap them. At `40rem` and below, wider tracks provide a
+neighboring-item glimpse where space permits. The shared `.horizontal-scroll`
+utility hides the scrollbar while preserving native scrolling and visible focus.
+This supersedes the wrapping grid and former last-item row span. Text may wrap
+and grow; facts remain accessible without requiring all five to fit one view.
 Each homepage pair is centered within its track. Locale-authored newlines in
 `Hero.figures` are preserved only by the homepage label's `white-space: pre-line`,
 giving even two-line descriptions at ordinary sizes. Natural wrapping can add

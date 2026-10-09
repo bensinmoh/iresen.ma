@@ -403,12 +403,18 @@ and [revision-specific validation](docs/validation.md); photo-only checks remain
 
 The homepage's `40rem`-and-below presentation prioritizes its message and two
 existing navigation actions, stacked full width in primary blue and secondary
-white. The optional ISO badge and redundant scroll cue are hidden, and the lower
-reserve reduces from 72px to 32px at default text size. All five figures remain
-in a labelled, focusable native horizontal scroll row. The native scrollbar is
-enabled and unhidden, with visibility depending on browser/OS; a neighboring-item
-glimpse appears where space permits. Preserve natural text growth and logical RTL order.
-Wider layouts, other page heroes, identity, copy, header and footer remain.
+white. The redundant scroll cue is hidden, and the lower reserve reduces from
+72px to 32px at default text size. The later tablet refinement hides the optional
+ISO badge below `70rem`, preserving its compact desktop placement. All five
+figures stay in one labelled, focusable row at every width, with native horizontal
+scrolling when needed and a hidden scrollbar. A neighboring-item glimpse appears
+where space permits on mobile. Preserve natural text growth and logical RTL order.
+Other page heroes, identity, copy, header and footer remain.
+
+Horizontal navigation throughout the public site should hide its scrollbar while
+retaining native touch/keyboard scrolling and visible focus. The shared
+`.horizontal-scroll` utility currently applies to the homepage figures; ordinary
+vertical scrolling retains its controls.
 
 Use [the reusable hierarchy](docs/mobile-information-hierarchy.md) for future
 sections. Future mission cards await approved content and follow this mobile
@@ -538,9 +544,10 @@ en place. The homepage band now presents these as a semantic definition list,
 replacing its founding-year/pathway items. The user's message is the content
 source; the Figma screenshots supply the styling hints. French labels retain
 the requested wording with spelling corrected; English/Arabic labels are drafted
-translations. Above `40rem`, auto-fit tracks adapt to available space. At `40rem`
-and below, native horizontal scrolling retains all five facts, with a
-neighboring-item glimpse where space permits. Text wraps naturally rather than being clipped.
+translations. A single row adapts to available space at every width, scrolling
+horizontally when the five tracks do not fit. Its scrollbar is hidden; at `40rem`
+and below, wider tracks retain a neighboring-item glimpse where space permits.
+Text wraps naturally rather than being clipped.
 The owner's 2026-10-09 alignment refinement centers each homepage value and label
 inside its own track. Locale-authored line breaks give the descriptions two lines
 at ordinary desktop/mobile sizes, including short labels; narrow tracks or
@@ -559,10 +566,9 @@ LTR-isolated in Plus Jakarta Sans; Arabic copy uses Alexandria.
 A translucent neutral gray surface uses actual backdrop blur and the physical
 top-left/bottom-right signature corners, preserved in RTL. At `70rem` and above,
 the 11rem badge sits at the inline end of a two-column copy grid, aligned with
-the CTA's bottom edge. Above `40rem` and below `70rem`, it wraps compactly between
-description and actions; at `40rem` and below, mobile hierarchy hides this secondary
-proof. Natural hero growth is
-retained. See [badge rules and content](docs/heroes.md#homepage-certification-badge--2026-10-08)
+the CTA's bottom edge. The owner's later tablet refinement omits it below
+`70rem`, replacing the wide badge between description and actions. Natural hero
+growth is retained. See [badge rules and content](docs/heroes.md#homepage-certification-badge--2026-10-08)
 and [current validation](docs/validation.md); earlier hero evidence predates it.
 
 ## Hovered-menu reference adaptation — 2026-10-08
