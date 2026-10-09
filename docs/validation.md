@@ -2051,3 +2051,38 @@ references, drafted content and the deferred imagery review are retained; no
 schema or database behavior changed. Current PR CI runs the complete integration
 and browser suites. No deployment was performed. This Chromium review does not
 assert physical-device, Safari, manual screen-reader or full WCAG coverage.
+
+## Search results control corners — 2026-10-09
+
+The owner's screenshot and explicit clarification require rounded top-left and
+bottom-right corners, with sharp opposite corners. The results query field,
+resource filters and sort select now reuse the existing action geometry. The
+owner's subsequent screenshot identified insufficient native-arrow inset; the
+sort select now uses the shared decorative chevron with a 12px inline-end inset
+and 12px text clearance. Native options, keyboard behavior and GET submission
+remain. The visual QA skill now explicitly checks icon inset and text clearance.
+
+Final local formatting, lint, strict types, 97 unit tests, 21 integration tests
+and the production build passed. All 39 selected search/contact-search/header-search
+browser cases passed on that build in local Chrome with two workers. An earlier
+seven-worker run missed an intermediate header-animation frame; the complete
+selected suite passed on rerun. The initially unavailable PDF extractor was
+installed and initialized locally before the full integration suite passed.
+
+Rendered FR/EN/AR checks at 320, 390, 768, 1024 and 1440px confirmed the physical
+corner orientation and page containment. The existing multilingual reflow test
+now measures arrow inset, text reserve for the longest option and text/icon gap,
+including 320px and 1440px at 200% text. Field keyboard focus retains its 2px
+edge outline. Search-region axe scans found no violations in all three locales.
+Native no-JavaScript submission, filters, sorting, pagination, browser history,
+touch, reduced motion and localized destinations passed in the selected suite.
+
+Reviewed captures:
+
+- [French desktop controls](screenshots/search-controls-fr-1440.png)
+- [Arabic mobile controls](screenshots/search-controls-ar-390.png)
+
+No public content, resource, route or search projection was added; existing
+references and the search-page exclusion remain. Current PR CI runs the complete
+application suite before merging. No deployment was performed. Safari, physical
+devices and manual screen-reader coverage are not asserted.

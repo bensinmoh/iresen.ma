@@ -108,6 +108,28 @@ adds no public content or search destination; existing page/section projections
 remain. See [navigation](navigation.md#compact-menu-control--2026-10-09)
 and [verification](validation.md#compact-menu-control--2026-10-09).
 
+## Search results control corners — 2026-10-09
+
+The owner's screenshot and explicit clarification require rounded physical
+top-left/bottom-right corners and sharp top-right/bottom-left corners on the
+search results controls. The query field, resource filters and sort select now
+reuse `--radius-action` (`10px 0 10px 0` at the default root size), matching
+their existing search/apply buttons. The physical orientation stays fixed in
+Arabic RTL and scales with enlarged text.
+
+The sort select retains its native options and keyboard behavior with the shared
+decorative chevron positioned 12px from inline end at the default text size.
+An additional 12px separates its 20px icon box from the text reserve; logical
+padding/positioning mirrors this placement in Arabic. These clearances remain
+12px as text enlarges, leaving room for translated options at 320px/200% text.
+Do not rely on a native browser arrow respecting field
+padding; inspect these clearances independently for future select controls.
+
+This supersedes the earlier four-4px-corner adaptation for these search controls;
+Figma's square input specimens remain historical evidence. Other field families
+retain their current treatment. Layout, labels, colors, focus and native GET
+behavior remain. See [rendered verification](validation.md#search-results-control-corners--2026-10-09).
+
 ## Refined field focus — 2026-10-09
 
 The owner's two screenshots (`Screenshot 2026-10-09 at 11.27.47.png` and
