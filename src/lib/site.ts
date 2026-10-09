@@ -1,5 +1,6 @@
 import type { Locale } from '@/i18n/locales'
 import { pageSections } from '@/lib/page-sections'
+import { homeNewsPosts } from '@/lib/home-news'
 
 type PageDefinition = {
   path: string
@@ -172,6 +173,8 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   return (
     normalized === 'main-content' ||
     normalized === 'page-sections' ||
+    (pageId === 'home' &&
+      homeNewsPosts.some((post) => normalized === `news-${post.id.split(':').at(-1)}`)) ||
     definition.anchors?.includes(normalized) === true ||
     pageSections[pageId].some(
       (section) =>

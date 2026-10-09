@@ -1209,3 +1209,16 @@ form a panorama on desktop. Below 64rem the selected image covers the section be
 48rem the axes remain side by side in a keyboard-accessible horizontal strip.
 No new global tokens, animation libraries or universal panel height are introduced.
 See [the module](research-domains.md) and [validation](validation.md#homepage-research-domains--2026-10-09).
+
+## Homepage news — 2026-10-09
+
+The news module adapts the supplied pale-blue, divider-led reference using
+existing action-surface, navy/blue type, Apex Leaf and diagonal control tokens.
+Four/two/single-card layouts preserve readable original commentary; arrows move
+one card with native smooth scrolling and immediate reduced-motion movement.
+Arabic mirrors rail navigation while preserving original text direction and SVG
+geometry. This is an application of current shared roles, with no new tokens.
+
+The homepage news/footer boundary has no intervening wrapper padding. Both
+sections retain internal spacing; only the homepage shell/content bottom inset
+is removed, keeping full-width surfaces contiguous.

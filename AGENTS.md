@@ -38,6 +38,13 @@ remain deferred. FR/EN/AR are owner-requested working texts to review. See
 [the implemented section](docs/research-domains.md) and its preserved strategy
 reference. Four following body placeholders remain.
 
+Homepage news update — 2026-10-09: the owner commissioned the news module at
+its existing `news-events` location with five LinkedIn sources, short explanatory
+FR/EN/AR headings, month-level dates and animated arrow navigation. See
+[delivered scope and API boundary](docs/home-news.md). Live LinkedIn OAuth and
+synchronization are future work. Three preceding body placeholders and the full
+homepage reordering remain deferred.
+
 Use the chosen 22-page working structure in `src/lib/site.ts` as the single routing authority; `docs/route-map.md` records it. Build internal links from stable IDs/shared helpers. Follow `docs/adr/0004-canonical-working-site-structure.md` when a structure change is requested so locale paths, navigation/footer, content links and affected documentation change together.
 
 ## Search references for every public addition

@@ -162,3 +162,12 @@ four research axes per theme, changing generated illustrations and a native mobi
 accordion in FR/EN/AR working copy. The supplied strategy is preserved as a
 repository reference, not a public download or adopted roadmap. Themes and imagery
 are registered in local search. See [the module guide](docs/research-domains.md).
+
+## Homepage news — 2026-10-09
+
+The [homepage news module](docs/home-news.md) displays five owner-selected
+LinkedIn sources, month-level dates, responsive scrolling and animated arrows.
+It prepares a Posts API field projection; live OAuth/API synchronization is still
+future work. Cards use owner-requested short explanatory titles in FR/EN/AR; source
+commentary stays separate. Three other body
+placeholders and the full homepage reordering remain deferred.

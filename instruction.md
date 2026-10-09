@@ -23,6 +23,12 @@ consolidated R&D proposal. This bounded request supersedes that module's earlier
 deferral only; full reordering and achievements remain deferred. FR/EN/AR are
 requested working texts to review. See [the delivered section](docs/research-domains.md).
 
+Homepage news development — 9 October 2026: the owner later commissioned the
+existing final news section with five LinkedIn sources, source-derived short
+FR/EN/AR titles, month-level dates and animated arrows. See
+[scope and future API boundary](docs/home-news.md). This does not commission live
+OAuth/synchronization, achievements or the deferred homepage reordering.
+
 ## 1. Mission and working mandate
 
 Build the new official IRESEN website as a premium, accessible, fast and maintainable institutional platform. It must explain IRESEN’s role, showcase research and experimental capabilities, support partnerships and make institutional resources easy to find. It must also give the communications team a practical interface for managing content without developer intervention.

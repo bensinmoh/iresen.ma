@@ -351,8 +351,8 @@
         "description": "Content to add: pathways to develop a project, conduct tests, draw on expertise or create value from a result."
       },
       "news-events": {
-        "title": "News and events",
-        "description": "Content to add: a selection of news, events and open calls where available."
+        "title": "The latest news",
+        "description": "IRESEN news and LinkedIn posts: research, innovation, energy transition and international cooperation."
       },
       "mission-develop": {
         "title": "Develop",
@@ -1041,5 +1041,35 @@
       }
     },
     "axesLabel": "Research axes"
+  },
+  "HomeNews": {
+    "eyebrow": "News",
+    "title": "The latest news",
+    "all": "All news",
+    "source": "LinkedIn",
+    "shared": "Post shared on LinkedIn",
+    "read": "Read on LinkedIn",
+    "previous": "Previous posts",
+    "next": "Next posts",
+    "list": "Latest IRESEN posts on LinkedIn",
+    "empty": "Explore IRESEN’s posts on LinkedIn.",
+    "searchText": "IRESEN news and LinkedIn posts: research, innovation, energy transition and international cooperation.",
+    "posts": {
+      "7514335153415131136": {
+        "title": "IRESEN takes part in the Impact Pioneers ’26 programme in Sweden."
+      },
+      "7514300639057797120": {
+        "title": "Samir Rachidi discusses how local expertise can support industrial development."
+      },
+      "7514298051914588161": {
+        "title": "IRESEN contributes to discussions at the Dii Leadership Summit in Istanbul."
+      },
+      "7510672994734727168": {
+        "title": "IRESEN strengthens dialogue on green hydrogen at Oman Climate Week."
+      },
+      "7508575272049229824": {
+        "title": "IRESEN and Majan Council establish a framework for energy cooperation."
+      }
+    }
   }
 }

@@ -2265,3 +2265,45 @@ rather than counting a below-fold image reused from the same asset directory.
 - [French tablet](screenshots/2026-10-09-home-research-fr-tablet.png)
 - [English tablet](screenshots/2026-10-09-home-research-en-tablet.png)
 - [Arabic tablet](screenshots/2026-10-09-home-research-ar-tablet.png)
+
+## Homepage news — 2026-10-09
+
+Implemented the requested `news-events` module, five LinkedIn source links,
+short explanatory FR/EN/AR headings, owner-supplied month-only dates, animated
+one-card navigation and removal of the visible original-language indicator.
+See [scope, sources and screenshots](home-news.md).
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm test`: passed (109 unit tests).
+- `pnpm test:integration`: passed (22 checks) in a dedicated temporary migrated
+  database, removed afterward; the existing local database was preserved.
+- `pnpm build`: passed for the final runtime.
+- Full Playwright suite: 164 passed using installed Chrome and the production
+  build on isolated port 3012. The initial direct `pnpm exec` invocation omitted
+  local database environment variables; rerunning through `scripts/run.mjs`
+  resolved those two environment failures. An earlier run against the existing
+  port 3000 was discarded in favor of the dedicated production preview.
+- New module checks cover FR/EN/AR at 320, 390, 768, 1024 and 1440px, all five
+  links, localized titles, monthly `time` semantics, scroll/focus access, arrows,
+  no-JavaScript scrolling, normal/reduced motion and zero scoped axe violations.
+- Rebuilt the local search catalog. API checks discover each locale's localized
+  Majan Council title at its stable homepage card anchor. Unit checks verify all
+  15 localized card references, section references and Posts API eligibility
+  exclusions, including foreign-author, dark, sponsored, draft and unselected posts.
+- Inspected actual French desktop and Arabic mobile screenshots for reading order,
+  typography, wrapping, surfaces, dates and RTL arrows. Browser coverage also
+  includes the existing enlarged-text and navigation/accessibility suites.
+- Focused formatting and `git diff --check`: passed. No dependencies, CMS schema,
+  source SVGs or public media files were changed; screenshot files are review
+  evidence outside `public/`.
+
+Live LinkedIn API calls, OAuth, scheduled imports and external deletion events
+are not implemented or claimed. The projection boundary is tested with synthetic
+API inputs; initial source text was read from public guest pages and month dates
+were supplied by the owner. No production deployment was performed. The final
+content glossary/search sanity check remains pending until the complete content
+exists. PR CI and merge status are recorded in the PR rather than preclaimed here.
+
+The owner’s final spacing instruction joins the news surface directly to the
+footer. Homepage-only shell/content bottom padding is removed; the section and
+footer retain their internal reading space. Browser checks assert no gap across
+responsive widths in FR/EN/AR.

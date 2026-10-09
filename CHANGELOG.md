@@ -4,6 +4,19 @@ Record delivered changes and meaningful verification here. Detailed implementati
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.
 
+## 2026-10-09 — LinkedIn-ready homepage news
+
+- Replaced the homepage news placeholder with five owner-selected LinkedIn links,
+  source-derived short FR/EN/AR titles, owner-supplied month dates and the existing news route.
+- Added responsive four/two/single-card scrolling with animated one-card arrows,
+  keyboard access, Arabic RTL and reduced-motion support; removed the language label.
+- Joined the news surface directly to the footer by removing homepage wrapper
+  bottom padding.
+- Added a tested Posts API projection boundary and localized section/search anchors.
+  Live API synchronization remains dependent on authorized LinkedIn application access.
+
+See [scope and sources](docs/home-news.md) and [validation](docs/validation.md#homepage-news--2026-10-09).
+
 ## 2026-10-09 — Refined glass surfaces
 
 - Applied the owner's approved preview to existing Menu/Search controls and the

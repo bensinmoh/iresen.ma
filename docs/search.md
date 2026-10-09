@@ -231,3 +231,11 @@ is reused. The preserved strategy is a repository reference outside the public
 catalog. Local rebuild synchronizes these static projections and their spelling
 vocabulary. The final-content sanity check above remains pending.
 See [sources and destinations](research-domains.md).
+
+## Homepage LinkedIn references — 2026-10-09
+
+The [news module](home-news.md) registers its localized `news-events` section
+and stable card anchors. The five owner-requested short editorial titles are indexed in FR/EN/AR, each
+with its explicit localized text. Full-post translations are not inferred. A
+future API importer must use CMS publication/locale gates and withdrawal handling.
+The final-content glossary and search sanity-check reminder remains pending.

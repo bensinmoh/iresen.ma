@@ -253,3 +253,12 @@ rules. A design workflow does not authorize publication or a new product feature
 
 Read [DESIGN.md](DESIGN.md) for visual direction and
 [the design workflow](docs/design-workflow.md) for task routing.
+
+## Homepage news — 2026-10-09
+
+The [homepage news module](docs/home-news.md) displays five owner-selected
+LinkedIn sources, month-level dates, responsive scrolling and animated arrows.
+It prepares a Posts API field projection; live OAuth/API synchronization is still
+future work. Cards use owner-requested short explanatory titles in FR/EN/AR; source
+commentary stays separate. Three other body
+placeholders and the full homepage reordering remain deferred.

@@ -4,6 +4,7 @@
 
 .home-section-navigation + .page-shell {
   padding-block-start: 0;
+  padding-block-end: 0;
 }
 
 /* The global header leaves with the hero; this homepage-only bar pins to the top. */
@@ -82,6 +83,7 @@
 
 #main-content:has(> .home-section-navigation) > .page-shell > .page-content {
   padding-block-start: 0;
+  padding-block-end: 0;
   border-block-start: 0;
 }
 

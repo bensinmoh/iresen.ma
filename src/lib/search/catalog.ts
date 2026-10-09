@@ -8,6 +8,7 @@ import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
 import { heroImages } from '@/lib/hero-images'
 import { homeMissions, homeMissionSectionId } from '@/lib/home-missions'
+import { homeNewsPosts, homeNewsSectionId } from '@/lib/home-news'
 import { researchThemes, researchImages, homeResearchSectionId } from '@/lib/home-research'
 import { missionImages } from '@/lib/mission-images'
 import { pageSections } from '@/lib/page-sections'
@@ -311,6 +312,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         continue
       }
       const body = [catalog.Hero.descriptions[pageId], catalog.Hero.stages[heroes[pageId].stage]]
+      if (pageId === 'home') body.push(catalog.HomeNews.title, catalog.HomeNews.searchText)
       if (pageId === 'home')
         body.push(
           catalog.Hero.homeTitle,
@@ -371,6 +373,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 return [theme.title, theme.description, ...theme.axes, theme.searchText]
               }),
             )
+          if (pageId === 'home' && entry.id === homeNewsSectionId)
+            body.push(catalog.HomeNews.searchText)
           if (pageId === 'home') {
             const themeId = researchThemes.find((id) => entry.id === `research-${id}`)
             if (themeId) {
@@ -390,6 +394,21 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           })
         }
       }
+    }
+    // Owner-requested localized editorial headings; no full-post translation fallback.
+    for (const post of homeNewsPosts) {
+      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
+      const title = catalog.HomeNews.posts[key]?.title
+      if (!title?.trim()) continue
+      documents.push({
+        id: `section:home:linkedin:${post.id}:${locale}`,
+        locale,
+        title,
+        body: `IRESEN LinkedIn ${title}`,
+        url: pageHref('home', locale, `news-${post.id.split(':').at(-1)}`),
+        type: 'section',
+        ...(post.publishedAt ? { publishedAt: post.publishedAt } : {}),
+      })
     }
     for (const asset of publicAssetReferences) {
       const copy = asset.text[locale]
