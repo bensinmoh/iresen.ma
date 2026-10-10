@@ -82,6 +82,7 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
               previous={t('previousVideos')}
               next={t('nextVideos')}
               close={t('close')}
+              download={t('downloadVideo')}
             />
           ) : (
             <p className={styles.notice} role={failed ? 'alert' : undefined}>

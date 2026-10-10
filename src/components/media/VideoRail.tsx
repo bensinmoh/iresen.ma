@@ -22,6 +22,7 @@ export function VideoRail({
   previous,
   next,
   close,
+  download,
 }: {
   videos: Video[]
   locale: Locale
@@ -29,6 +30,7 @@ export function VideoRail({
   previous: string
   next: string
   close: string
+  download: string
 }) {
   const rail = useRef<HTMLDivElement>(null)
   const dialog = useRef<HTMLDialogElement>(null)
@@ -147,15 +149,23 @@ export function VideoRail({
           <h2 id="video-dialog-title">
             <bdi>{active?.title}</bdi>
           </h2>
-          <button
-            type="button"
-            className={styles.iconButton}
-            aria-label={close}
-            title={close}
-            onClick={() => dialog.current?.close()}
-          >
-            <ViewerIcon name="close" />
-          </button>
+          <div className={styles.videoActions}>
+            {active && (
+              <a href={active.url} download dir="auto">
+                {download}
+                <ViewerIcon name="download" />
+              </a>
+            )}
+            <button
+              type="button"
+              className={styles.iconButton}
+              aria-label={close}
+              title={close}
+              onClick={() => dialog.current?.close()}
+            >
+              <ViewerIcon name="close" />
+            </button>
+          </div>
         </div>
         {active && (
           <video

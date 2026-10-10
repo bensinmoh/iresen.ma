@@ -66,6 +66,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     if (await videoCard.count()) {
       await videoCard.click()
       await expect(page.getByRole('dialog')).toBeVisible()
+      await expect(
+        page.getByRole('dialog').getByRole('link', { name: copy.downloadVideo }),
+      ).toHaveAttribute('download', '')
       const video = page.getByRole('dialog').locator('video')
       await expect(video).toHaveAttribute('preload', 'none')
       await expect(video.locator('source')).toHaveAttribute(

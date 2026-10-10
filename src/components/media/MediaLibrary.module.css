@@ -356,7 +356,9 @@
 }
 .videoCard {
   position: relative;
-  display: block;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  padding: 0;
   inline-size: 100%;
   aspect-ratio: 3 / 4;
   text-align: start;
@@ -402,10 +404,10 @@
   pointer-events: none;
 }
 .videoCopy {
-  position: absolute;
+  position: relative;
+  grid-row: 2;
   z-index: 1;
-  inset-inline: 1.1rem;
-  inset-block-end: 1.1rem;
+  margin: 0 1.1rem 1.1rem;
 }
 .videoTitle {
   display: block;
@@ -422,10 +424,13 @@
   color: var(--color-footer-muted);
 }
 .videoPlay {
-  position: absolute;
+  position: relative;
+  grid-row: 1;
+  place-self: center;
+  inline-size: 64px;
+  block-size: 64px;
   z-index: 1;
-  inset-block-start: calc(50% - 32px);
-  inset-inline-start: calc(50% - 32px);
+
   color: white;
   filter: drop-shadow(0 2px 6px rgb(5 17 29 / 80%));
   opacity: 0;
@@ -677,10 +682,19 @@
     scroll-behavior: auto;
   }
   .page *,
+  .videoCard::before,
   .dialog[open],
   .dialog[open] .dialogBar,
   .dialog[open] .photoStage button {
     animation: none;
     transition: none;
   }
+}
+
+.videoActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  direction: ltr;
+  min-inline-size: 0;
 }
