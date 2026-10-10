@@ -2887,3 +2887,28 @@ pass before merge. No deployment or website publication is authorized.
 
 No deployment, DNS or visibility change was performed. Remote CI and merge
 results are recorded by the task pull request and Git history.
+
+
+## Collaborer need and benefits refinement — 2026-10-10
+
+- Lint, strict types and 122 unit tests passed. Production build passed in
+  `.local/collaborate-build`; next-intl emitted its existing webpack cache warnings.
+- All 26 database integration tests passed on confirmation. The first run had
+  one isolated spelling-suggestion failure; no search logic was changed.
+- All nine engagement Chromium tests passed on the corrected production build:
+  FR/EN/AR, six anchors, removed breadcrumb/navigation, four vector icons, compact
+  CTA, partnership contact subject, 1440/768/390/320px, 200% text, scoped axe scans,
+  old URL redirects and Arabic transfer without JavaScript.
+- Captured FR 1440/390px, EN 768px and AR 1440/390px. Inspected desktop needs and
+  Arabic mobile benefits after correction; no document overflow at those widths.
+  A navy-link contrast defect from the first pass was corrected with white links.
+  Rebuilding the first server's active directory interrupted a broader browser
+  run; confirmation used an isolated build. No passing whole-suite claim is made.
+- Search catalog rebuilt; the new cooperation anchor was discovered through
+  localized FR/EN/AR queries. Section registry preserves six IDs and moves the
+  cooperation entry ahead of benefits. Old reference/checklist copy is removed.
+- Impeccable's mechanical detector returned no findings; this supplements the
+  rendered checks. No new images, countries, numerical claims or partner
+  commitments are introduced. Final editorial/translation review remains due.
+- PR scope excludes the pre-existing careers changes, fixtures removal and SVG
+  conversion. No deployment, DNS or repository visibility change.

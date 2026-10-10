@@ -4,126 +4,73 @@ import type { Locale } from '@/i18n/locales'
 import { PageShell } from '@/components/layout/PageShell'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
-import { homeAchievements } from '@/lib/home-achievements'
+import { ValorisationIcon, type ValorisationIconName } from '@/components/transfer/ValorisationIcon'
+import { heroImages } from '@/lib/hero-images'
 import { pageHref } from '@/lib/site'
 import {
   engagementSections,
   engagementContactHref,
-  type EngagementPageId,
   type EngagementSectionCopy,
 } from '@/lib/engagement'
 import styles from './EngagementPage.module.css'
 
-export async function EngagementPage({
-  pageId,
-  locale,
-}: {
-  pageId: EngagementPageId
-  locale: Locale
-}) {
+const audienceIcons: ValorisationIconName[] = [
+  'building-factory-2',
+  'flask',
+  'chart-line',
+  'arrows-exchange',
+]
+
+export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs'; locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Engagement' })
   const sections = await getTranslations({ locale, namespace: `PageSections.${pageId}` })
   const pages = await getTranslations({ locale, namespace: 'Pages' })
-  const achievements = await getTranslations({ locale, namespace: 'HomeAchievements' })
-  const definitions = engagementSections[pageId]
-  const related = pageId === 'workWithUs' ? 'transfer' : 'workWithUs'
+  const photo = heroImages.team
 
   return (
-    <PageShell title={pages(pageId)} locale={locale} pageId={pageId}>
+    <PageShell title={pages(pageId)} locale={locale} pageId={pageId} showBreadcrumb={false}>
       <PublishedPageContent pageId={pageId} locale={locale} />
       <div className={styles.page} data-engagement-page={pageId}>
-        <nav aria-label={t('navigation')} className={styles.navigation}>
-          {definitions.map(({ id }) => (
-            <a key={id} href={`#${id}`}>
-              {t(`${pageId}.sections.${id}.label`)}
-            </a>
-          ))}
-        </nav>
-        {definitions.map(({ id, kind, destinations, references }) => {
+        {engagementSections[pageId].map(({ id, kind, destinations }) => {
           const copy = t.raw(`${pageId}.sections.${id}`) as EngagementSectionCopy
+          const needs = kind === 'pathways'
+          const contact = kind === 'contact'
           return (
             <section
               key={id}
               id={id}
               aria-labelledby={`${id}-heading`}
-              className={`${styles.section} ${kind === 'audiences' || kind === 'contact' ? styles.ink : ''} ${kind === 'pathways' || kind === 'process' ? styles.light : ''}`}
+              className={`${styles.section} ${needs || kind === 'audiences' || contact ? styles.ink : ''} ${kind === 'partnerships' || kind === 'process' ? styles.light : ''} ${needs ? styles.needs : ''} ${contact ? styles.contact : ''}`}
               data-kind={kind}
             >
-              <header className={styles.introduction}>
-                <div>
-                  <p className={styles.eyebrow}>{copy.label}</p>
-                  <h2 id={`${id}-heading`}>{sections(`${id}.title`)}</h2>
-                </div>
-                <p>{sections(`${id}.description`)}</p>
-              </header>
-              <div className={styles.content}>
-                {kind === 'disclosures' ? (
-                  <div className={styles.disclosures}>
-                    {copy.items.map(({ title, description }) => (
-                      <details key={title}>
-                        <summary>
-                          {title}
-                          <span aria-hidden="true">+</span>
-                        </summary>
-                        <p>{description}</p>
-                      </details>
-                    ))}
+              <div className={styles.editorial}>
+                <header className={styles.introduction}>
+                  <div>
+                    <p className={styles.eyebrow}>{copy.label}</p>
+                    <h2 id={`${id}-heading`}>{sections(`${id}.title`)}</h2>
                   </div>
-                ) : kind === 'references' ? (
-                  <div className={styles.references}>
-                    {references?.map((reference, index) => {
-                      const image = homeAchievements.find(({ id }) => id === reference)!
-                      return (
-                        <article key={reference}>
-                          <Image
-                            src={`/images/achievements/${reference}.webp`}
-                            alt={achievements(`items.${reference}.imageDescription`)}
-                            width={image.width}
-                            height={image.height}
-                            sizes="(max-width: 63.999rem) 94vw, (min-width: 128rem) 40rem, 32vw"
-                          />
-                          <h3>
-                            <bdi>{achievements(`items.${reference}.name`)}</bdi>
-                          </h3>
-                          <p>{copy.items[index].description}</p>
-                          <a
-                            className={styles.link}
-                            href={pageHref('home', locale, `achievement-${reference}`)}
-                          >
-                            {t('referenceAction')}
-                            <NavigationIcon name="arrow" />
-                          </a>
-                        </article>
-                      )
-                    })}
-                  </div>
-                ) : kind === 'contact' ? (
-                  <>
-                    <ul className={styles.checklist}>
-                      {copy.checklist.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                    <div className={styles.actions}>
-                      <a className="button button-primary" href={engagementContactHref(locale)}>
-                        {t('contactAction')}
-                        <NavigationIcon name="arrow" />
-                      </a>
-                      <a className={styles.link} href={pageHref(related, locale)}>
-                        {pages(related)}
-                        <NavigationIcon name="arrow" />
-                      </a>
-                    </div>
-                  </>
+                  <p>{sections(`${id}.description`)}</p>
+                </header>
+                {contact ? (
+                  <a className="button button-primary" href={engagementContactHref(locale)}>
+                    {t('workWithUs.contactAction')}
+                    <NavigationIcon name="arrow" />
+                  </a>
                 ) : (
                   <div
-                    className={`${styles.items} ${kind === 'audiences' || kind === 'arrangements' ? styles.rows : ''} ${kind === 'process' ? styles.process : ''}`}
+                    className={`${styles.items} ${needs ? styles.needItems : ''} ${kind === 'audiences' ? styles.audiences : ''} ${kind === 'partnerships' || kind === 'arrangements' ? styles.rows : ''} ${kind === 'process' ? styles.process : ''}`}
                   >
                     {copy.items.map(({ title, description }, index) => {
                       const destination = destinations?.[index]
                       return (
                         <article key={title}>
-                          {(kind === 'process' || kind === 'pathways') && (
+                          {kind === 'audiences' && (
+                            <ValorisationIcon
+                              className={styles.audienceIcon}
+                              name={audienceIcons[index]}
+                            />
+                          )}
+                          {kind === 'process' && (
                             <span className={styles.number} aria-hidden="true">
                               {new Intl.NumberFormat(locale, { minimumIntegerDigits: 2 }).format(
                                 index + 1,
@@ -135,11 +82,7 @@ export async function EngagementPage({
                           {destination && (
                             <a
                               className={styles.link}
-                              href={
-                                destination.pageId === 'contact'
-                                  ? engagementContactHref(locale)
-                                  : pageHref(destination.pageId, locale, destination.anchor)
-                              }
+                              href={pageHref(destination.pageId, locale, destination.anchor)}
                             >
                               {pages(destination.pageId)}
                               <NavigationIcon name="arrow" />
@@ -152,6 +95,17 @@ export async function EngagementPage({
                 )}
                 {copy.note && <p className={styles.note}>{copy.note}</p>}
               </div>
+              {needs && (
+                <div className={styles.needPhoto}>
+                  <Image
+                    src={photo.src}
+                    width={photo.width}
+                    height={photo.height}
+                    alt=""
+                    sizes="(max-width: 63.999rem) 100vw, 50vw"
+                  />
+                </div>
+              )}
             </section>
           )
         })}

@@ -14,6 +14,7 @@ type EngagementSection = {
     | 'contact'
     | 'results'
     | 'disclosures'
+    | 'partnerships'
   destinations?: readonly Destination[]
   references?: readonly string[]
 }
@@ -30,10 +31,10 @@ export const engagementSections: Record<EngagementPageId, readonly EngagementSec
         { pageId: 'transfer' },
       ],
     },
+    { id: 'collaboration-references', kind: 'partnerships' },
     { id: 'organisation-contributions', kind: 'audiences' },
     { id: 'collaboration-arrangements', kind: 'arrangements' },
     { id: 'need-to-project', kind: 'process' },
-    { id: 'collaboration-references', kind: 'references', references: ['cartography', 'worldptx'] },
     { id: 'prepare-discussion', kind: 'contact' },
   ],
   transfer: [

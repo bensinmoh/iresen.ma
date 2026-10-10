@@ -13,10 +13,15 @@ for (const locale of locales) {
       const content = page.locator(`[data-engagement-page="${pageId}"]`)
       await expect(content.locator('section')).toHaveCount(6)
       await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
-      if (pageId === 'transfer') await expect(content.locator('nav')).toHaveCount(0)
+      await expect(content.locator('nav')).toHaveCount(0)
+      if (pageId === 'workWithUs') {
+        await expect(page.locator('.breadcrumb')).toHaveCount(0)
+        await expect(content.locator('#organisation-contributions svg')).toHaveCount(4)
+        await expect(content.locator('#prepare-discussion .button')).toHaveCount(1)
+        await expect(content.locator('#prepare-discussion ul')).toHaveCount(0)
+      }
       for (const { id } of engagementSections[pageId]) {
-        if (pageId === 'workWithUs') await content.locator(`nav a[href="#${id}"]`).click()
-        else await page.goto(pageHref(pageId, locale, id))
+        await page.goto(pageHref(pageId, locale, id))
         await expect(page).toHaveURL(new RegExp(`#${id}$`))
         await expect(content.locator(`#${id} h2`)).toBeVisible()
       }

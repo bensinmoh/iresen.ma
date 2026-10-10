@@ -1021,3 +1021,15 @@ live Figma cooperation frame within the current shared rules. FR/EN canonical
 paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
+
+
+## Collaborer need and benefits refinement — 2026-10-10
+
+The owner's attached composition is adapted as a navy text/photo split with open
+four-need columns, using an existing generated collaboration illustration. A pale
+cooperation transition precedes four audience-benefit blocks with oversized,
+low-opacity decorative vector icons. Formats and preparation remain, followed by
+a shorter centered contact CTA. Breadcrumb/submenu and former reference/checklist
+modules are removed, with legacy anchors retained. Shared tokens, route helpers,
+RTL, photo provenance and working editorial-copy status remain. This is a local
+composition, not a new shared design rule. See [scope](docs/collaborate-page.md).

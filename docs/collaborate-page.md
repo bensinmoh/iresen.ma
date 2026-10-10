@@ -51,3 +51,30 @@ index was rebuilt; private sources remain excluded. The final whole-site
 
 See [validation](validation.md#collaboration-page-redevelopment--2026-10-10).
 No deployment or visibility change is authorized by this increment.
+
+## Need, cooperation and visitor benefits refinement — 2026-10-10
+
+The owner's later request replaces the need panels with a navy text/photo split,
+removes the breadcrumb and body submenu, and replaces actor contributions with
+**what IRESEN brings to each audience**. Four large, low-opacity decorative SVG
+icons reuse the licensed Tabler outline subset; readable copy carries all meaning.
+The supplied vision screenshot informs the split, typography and divided need
+columns only: its sample vision copy, portrait and hotspot controls are not imported.
+The existing generated team/solar experiment photograph illustrates collaboration;
+it does not document a particular IRESEN team or facility. Existing media search
+provenance remains authoritative.
+
+A pale cooperation section now follows the needs. The supplied partnership map
+supports a restrained synthesis of scientific exchange, research/industry dialogue
+and cooperation networks. No countries, counts, named partner commitments or
+new service guarantees are added. The screenshot is reference-only, not a public
+asset or repository import. FR/EN/AR are working editorial adaptations.
+
+The former reference cards/checklist give way to this cooperation section and a
+compact centered contact CTA. Cooperation formats and the preparation sequence
+remain. All six legacy anchors remain reachable; `collaboration-references` now
+identifies cooperation and precedes `organisation-contributions`. The central
+section registry and detailed localized search projections change together;
+removed reference/checklist wording leaves the catalog. Contact links preserve
+the existing partnership subject and local email-draft workflow. Routes, CMS
+approval gates and the final content-search reminder remain unchanged.

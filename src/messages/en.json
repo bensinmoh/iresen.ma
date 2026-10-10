@@ -673,8 +673,8 @@
         "description": "A decision to inform, a solution to advance or capabilities to strengthen: begin with the need and its intended use."
       },
       "organisation-contributions": {
-        "title": "Shared work, complementary contributions",
-        "description": "Collaboration brings together knowledge of the context, scientific capabilities and each partner’s resources."
+        "title": "Support shaped around your work",
+        "description": "Connect your needs with scientific expertise, experimental capabilities and relevant partners."
       },
       "collaboration-arrangements": {
         "title": "Choose a suitable form of cooperation",
@@ -685,12 +685,12 @@
         "description": "Four pointers for preparing joint work. The pathway adapts to the nature and maturity of your request."
       },
       "collaboration-references": {
-        "title": "Discover different contributions",
-        "description": "The achievements presented on the homepage offer concrete entry points into IRESEN’s range of contributions."
+        "title": "Connecting expertise, advancing projects",
+        "description": "The partnership map brings together a diverse range of actors: scientific teams, industry, institutions and multilateral networks. Their complementary expertise supports cooperation for the energy transition."
       },
       "prepare-discussion": {
-        "title": "Describe the need and its context",
-        "description": "A clear initial description helps prepare the discussion and identify contributions to examine."
+        "title": "Get in touch",
+        "description": "A question, an idea or a project to build together? Let’s discuss your needs."
       }
     },
     "news": {
@@ -1372,23 +1372,23 @@
           "checklist": []
         },
         "organisation-contributions": {
-          "label": "Your contribution",
+          "label": "What we bring to you",
           "items": [
             {
               "title": "Businesses and industry",
-              "description": "Bring a practical problem, process constraints, shareable data and an experimentation setting. Joint work helps clarify options and implementation conditions."
+              "description": "Inform your technology choices, explore development pathways and prepare relevant testing for your solution. We connect your application challenges with research and experimentation expertise."
             },
             {
               "title": "Research teams",
-              "description": "Bring a scientific question, methods and expertise. Define the work, experimental resources and ways to document results together."
+              "description": "Structure joint work, combine expertise and identify suitable experimental capabilities. Cooperation creates scientific exchanges and connections with practical needs."
             },
             {
               "title": "Institutions and territories",
-              "description": "Share a decision-making need, local characteristics and the actors concerned. Connect analysis and research with local application conditions."
+              "description": "Bring analysis, knowledge and technology options to inform your decisions. We connect energy transition challenges with application contexts and the actors involved."
             },
             {
               "title": "Partners and funders",
-              "description": "Connect teams and contribute resources, knowledge or cooperation. Clarify roles, shared objectives and each partner’s contribution."
+              "description": "Connect your priorities with research questions and complementary teams. We contribute to framing cooperation, sharing knowledge and connecting actors."
             }
           ],
           "checklist": []
@@ -1436,33 +1436,30 @@
           "checklist": []
         },
         "collaboration-references": {
-          "label": "Examples",
+          "label": "Cooperation in action",
           "items": [
             {
-              "title": "Mapping",
-              "description": "An example of decision support: mapping the country’s renewable resources and zoning to inform energy choices."
+              "title": "Sharing knowledge",
+              "description": "Exchanges between research organisations and universities connect methods, knowledge and scientific questions."
             },
             {
-              "title": "WorldPtX Summit",
-              "description": "An example of connection and exchange around Power-to-X. An event is a means of cooperation; its results should be documented against its objectives."
+              "title": "Connecting research with applications",
+              "description": "Dialogue with industry places technology challenges and application conditions at the heart of shared work."
+            },
+            {
+              "title": "Building active networks",
+              "description": "Cooperation programmes and networks create opportunities for dialogue, knowledge exchange and the development of joint projects."
             }
           ],
-          "note": "Read a reference alongside its need, partner roles and stage. It does not establish that an equivalent arrangement is available for every new request.",
           "checklist": []
         },
         "prepare-discussion": {
-          "label": "First discussion",
+          "label": "First conversation",
           "items": [],
-          "note": "Start with a non-confidential summary. Arrangements for sharing sensitive documents and carrying out the work are clarified later with the relevant teams.",
-          "checklist": [
-            "Your organisation, your role and partners already involved.",
-            "The problem, the people concerned and the intended application.",
-            "Work completed, available results and remaining uncertainties.",
-            "The expertise, facilities or forms of cooperation you are seeking.",
-            "Timing, field conditions, data and resource constraints to discuss."
-          ]
+          "checklist": []
         }
-      }
+      },
+      "contactAction": "Contact us"
     },
     "transfer": {
       "sections": {
@@ -1511,7 +1508,14 @@
       "label": "From research to impact",
       "title": "One journey, multiple pathways",
       "description": "Detect, evaluate, protect, mature, transfer, deploy: connect scientific potential with industry and market needs.",
-      "steps": ["Detect", "Evaluate", "Protect", "Mature", "Transfer", "Deploy"],
+      "steps": [
+        "Detect",
+        "Evaluate",
+        "Protect",
+        "Mature",
+        "Transfer",
+        "Deploy"
+      ],
       "note": "This is not a rigid process: each innovation follows a pathway tailored to its maturity, potential and opportunities."
     },
     "ip": {

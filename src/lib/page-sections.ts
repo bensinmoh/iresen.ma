@@ -102,10 +102,10 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   ],
   workWithUs: [
     { id: 'choose-pathway' },
+    { id: 'collaboration-references' },
     { id: 'organisation-contributions' },
     { id: 'collaboration-arrangements' },
     { id: 'need-to-project' },
-    { id: 'collaboration-references' },
     { id: 'prepare-discussion' },
   ],
   news: [

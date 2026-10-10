@@ -242,3 +242,10 @@ live Figma cooperation frame within the current shared rules. FR/EN canonical
 paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
+
+
+Collaborer refinement (2026-10-10): navy text/photo needs, a pale cooperation
+transition, audience-specific benefits with decorative SVG icons and a compact
+contact CTA replace the former panels/reference checklist. Breadcrumb/submenu
+are removed; six legacy anchors and localized search destinations remain.
+See [scope](docs/collaborate-page.md).
