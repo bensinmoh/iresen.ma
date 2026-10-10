@@ -3016,7 +3016,7 @@ news/listing/disclosure/search browser coverage remains. Scoped accessibility
 scans do not establish full conformance. Local formatting, lint, strict types, 126 unit checks, production build and all
 ten targeted browser cases pass. FR/AR mobile captures were inspected. The CI
 zoom regression prompted a page-scoped long-text wrapping guard and verification
-after fonts settle; all ten cases pass again on the corrected production build.
+after fonts settle. Repeated Arabic zoom coverage identified compact-news link overflow; viewport-based thumbnail spacing and shrinkable link text address it without clipping content.
 Final CI results are recorded in the task PR; no deployment is authorized.
 
 ## News events — 2026-10-10

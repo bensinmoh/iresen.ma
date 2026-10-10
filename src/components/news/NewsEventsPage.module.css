@@ -646,11 +646,6 @@
   }
 }
 @media (max-width: 40rem) {
-  .compact,
-  .listing .compact {
-    grid-template-columns: minmax(0, min(5rem, 22%)) minmax(0, 1fr);
-    gap: min(1.5rem, 4vw);
-  }
   .page :global(.button) {
     padding: 0.875rem 1rem;
   }
@@ -660,11 +655,6 @@
 }
 
 @media (max-width: 40rem) {
-  .compact,
-  .listing .compact {
-    grid-template-columns: minmax(0, min(5rem, 22%)) minmax(0, 1fr);
-    gap: min(1.5rem, 4vw);
-  }
   .events:has([data-event-navigation]) {
     padding-block-end: 0;
   }
@@ -674,11 +664,6 @@
 }
 
 @media (max-width: 40rem) {
-  .compact,
-  .listing .compact {
-    grid-template-columns: minmax(0, min(5rem, 22%)) minmax(0, 1fr);
-    gap: min(1.5rem, 4vw);
-  }
   .socials {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
