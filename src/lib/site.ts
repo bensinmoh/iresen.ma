@@ -3,6 +3,7 @@ import mediaPhotoRecords from '@/data/media-photos.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
 import { pageSections } from '@/lib/page-sections'
 import { homeNewsPosts } from '@/lib/home-news'
+import { selectedNews, newsEvents } from '@/lib/news-events'
 import { legacyMissionAnchors } from '@/lib/home-missions'
 
 type PageDefinition = {
@@ -184,11 +185,9 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
         'news',
         'events',
         'follow-iresen',
-        'event-oman',
-        'event-cop31',
-        'event-irsecx',
+        ...newsEvents.map((event) => `event-${event.id}`),
         'knowledge-sharing',
-        ...homeNewsPosts.map((post) => `news-${post.id.split(':').at(-1)}`),
+        ...selectedNews.map((post) => `news-${post.id.split(':').at(-1)}`),
       ].includes(normalized)) ||
     (pageId === 'home' && legacyMissionAnchors.some((id) => id === normalized)) ||
     (pageId === 'home' &&

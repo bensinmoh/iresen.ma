@@ -89,8 +89,15 @@ test('the user example Insrastructure suggests the public infrastructure spellin
   )!
   expect(normalizeSearchText(corrected)).toBe('infrastructure')
   await expect(
-    page.locator('.search-results [data-search-match-kind="related"]').first(),
+    page.locator('.search-results [data-search-match-kind="typo"]').first(),
   ).toBeVisible()
+  // Public content can fill the first page with closer matches before related results.
+  await page.locator('a[href="' + searchUrl('fr', { q: original, type: 'page' }) + '"]').click()
+  await expect(page.locator('.search-query-form input[name="q"]')).toHaveValue(original)
+  const platform = page.locator('.search-results article').filter({
+    has: page.locator(`h2 a[href="${pageHref('platforms', 'fr')}"]`),
+  })
+  await expect(platform.locator('[data-search-match-kind="related"]')).toBeVisible()
 })
 
 for (const width of [1440, 390]) {
