@@ -457,4 +457,3 @@ page's individual assets; no broader license, real employee identity or IRESEN
 workspace provenance is inferred. Full-page screenshots are not served. All three
 photographs have descriptive localized search references. Deleted demo content
 and obsolete raster-icon URLs are excluded.
-

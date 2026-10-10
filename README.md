@@ -262,4 +262,3 @@ owner-requested programme examples, with a subtle coast-only SVG world backdrop.
 For an isolated production check alongside the local development server, set
 `NEXT_BUILD_DIRECTORY=.local/careers-build` for both `pnpm build` and
 `scripts/start-production.mjs`, and use a separate `PORT`. The default remains `.next`.
-

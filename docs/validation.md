@@ -2976,4 +2976,3 @@ use isolated Latin text and punctuation for exact acronym search discovery.
 
 No deployment, DNS or visibility change was performed. Remote CI and merge
 status are recorded by the task PR and Git history.
-

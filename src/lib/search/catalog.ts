@@ -119,7 +119,6 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     },
   },
 
-
   ...(['hero', 'environment', 'internship'] as const).map((id) => ({
     id: `careers-photo-${id}`,
     url: `/images/careers/${id}.webp`,
