@@ -2635,3 +2635,17 @@ typecheck, 116 unit tests and production build passed. Chromium confirms both
 rendered labels and mobile containment at 390px. The local search catalogue
 was synchronized; source provenance, quarter, data and other locales remain.
 Remote CI and merge are recorded in the pull request.
+
+## Patent filing dates from the official register — 2026-10-10
+
+All 21 supplied links with missing years were consulted. Twelve dossiers
+matched the application reference and supplied an explicit filing date; nine
+returned the unavailable/non-published message documented in the provenance
+table. Only the twelve verified dates and their years were added.
+Formatting, lint, typecheck, 116 unit tests and production build passed.
+Eight affected Chromium browser journeys passed, including the new 2014
+filter and nine missing-year matches in FR/EN/AR, 320–1440px, 200% text, axe,
+no JavaScript and card motion. The local index was rebuilt; searching
+2014-07-01 via the real API returns the exact 37172 anchor in each locale.
+No CMS schema, publication gate or deployment change is introduced.
+Remote full-suite CI and merge outcomes are recorded on the pull request.

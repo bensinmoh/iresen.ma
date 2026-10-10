@@ -330,8 +330,8 @@ The revised transfer page presents the owner's research-to-impact pathway,
 intellectual-property support, four possible valorisation routes and two visitor
 entry points. A dedicated minimal JSON database stores 59 selected filed patent
 references, without project relationships or annuities. Original titles and
-applicants, localized short summaries, themes, filing year and PatentRegister
-links feed an interactive catalogue and public search. Patent-specific contact
+applicants, localized short summaries, themes, filing year (and exact filing
+date where verified in the register) and PatentRegister links feed an interactive catalogue and public search. Patent-specific contact
 links prefill the existing local email draft. Missing years stay unknown;
 filings do not imply active rights or commercial adoption. See
 [scope, provenance and maintenance](docs/valorisation-patents.md).

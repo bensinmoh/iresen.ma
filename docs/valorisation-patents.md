@@ -23,15 +23,16 @@ requested catalogue count without asserting active rights or commercial adoption
 
 [src/data/patents.json](../src/data/patents.json) is the dedicated, versioned
 structured catalogue database. Its sole row fields are reference, original
-title, short FR/EN/AR description, thematic IDs, applicant, filing year and
-PatentRegister URL. No project, financing, source relationship, annuity,
+title, short FR/EN/AR description, thematic IDs, applicant, filing year,
+optional verified ISO filing date and PatentRegister URL. No project, financing, source relationship, annuity,
 private tracking note or legal-status field is imported. Applicant names remain
 as supplied, including co-applicants; the internal qualification appended to one
 applicant field is removed. Bibliographic titles and applicant names retain
 their original language, explicitly identified in the interface.
 
-Thirty-eight rows have a sourced filing year; **21** remain null and display a
-localized “not provided” label. Do not infer years from reference numbers,
+The initial import had 38 sourced filing years and 21 missing values. The
+register enrichment below supplies 12 exact dates and derived years; 50 records
+now have a sourced year and **9** retain the localized “not provided” label. Do not infer years from reference numbers,
 publication dates or source project names. Short descriptions paraphrase only
 the invention title. The ten browsing themes are editorial classifications,
 not official patent classes or claims about technical readiness.
@@ -126,3 +127,48 @@ is introduced. All 59 references and no-JavaScript reading remain.
 The owner’s later French label correction abbreviates this period to **T4 2026**,
 both in the figures and the catalogue footer. The quarter and source provenance
 remain the same.
+
+## Official register filing-date enrichment — 2026-10-10
+
+The owner authorizes consulting each of the 21 supplied PatentRegister links
+whose filing year was missing. All links were checked. For the twelve accessible
+dossiers, both the displayed application reference and the field
+“Date de depôt de la demande” were verified. Publication dates were not used.
+The exact date is stored as optional `filingDate` (ISO 8601), and its year
+updates `filingYear`, the existing card/filter field. Other data stays untouched.
+Existing search projections now include this sourced date.
+
+| Reference | Filing date | Official source                                                                                                        |
+| --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 37172     | 2014-07-01  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37172&count=0&lang=FR) |
+| 37225     | 2014-07-18  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37225&count=0&lang=FR) |
+| 37414     | 2014-10-10  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37414&count=0&lang=FR) |
+| 37655     | 2014-12-12  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37655&count=0&lang=FR) |
+| 37705     | 2014-12-25  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37705&count=0&lang=FR) |
+| 38683     | 2015-12-16  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=38683&count=0&lang=FR) |
+| 39325     | 2016-09-05  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=39325&count=0&lang=FR) |
+| 41069     | 2017-09-12  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41069&count=0&lang=FR) |
+| 43487     | 2018-10-22  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43487&count=0&lang=FR) |
+| 43620     | 2018-11-14  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43620&count=0&lang=FR) |
+| 44300     | 2018-12-19  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44300&count=0&lang=FR) |
+| 54581     | 2021-10-04  | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54581&count=0&lang=FR) |
+
+The nine remaining pages all return “Ce brevet n'existe pas ou n'est pas encore
+publié”; they do not disclose a filing date. This message does not determine
+which of those alternatives applies. Their years remain null and no date is
+inferred from numbers, source projects or other dates.
+
+| Reference | Official page checked                                                                                                  |
+| --------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 71194     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71194&count=0&lang=FR) |
+| 71521     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71521&count=0&lang=FR) |
+| 71776     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71776&count=0&lang=FR) |
+| 71777     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71777&count=0&lang=FR) |
+| 72762     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72762&count=0&lang=FR) |
+| 72763     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72763&count=0&lang=FR) |
+| 73157     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=73157&count=0&lang=FR) |
+| 74890     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74890&count=0&lang=FR) |
+| 74893     | [PatentRegister](https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74893&count=0&lang=FR) |
+
+Raw register pages remain temporary local inspection material, outside the
+repository and public search. No annuity, project or relationship field is imported.

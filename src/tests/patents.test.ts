@@ -19,6 +19,7 @@ describe('owner-selected patent catalogue', () => {
           'themes',
           'depositor',
           'filingYear',
+          ...(p.filingDate ? ['filingDate'] : []),
           'registerUrl',
         ].sort(),
       )
@@ -31,7 +32,15 @@ describe('owner-selected patent catalogue', () => {
       expect(p.themes.length).toBeGreaterThan(0)
       expect(p.themes.every((theme) => patentThemes.includes(theme))).toBe(true)
     }
-    expect(findPatent('37172')?.filingYear).toBeNull()
+    expect(findPatent('37172')?.filingYear).toBe(2014)
+    expect(findPatent('37172')?.filingDate).toBe('2014-07-01')
+    expect(patents.filter((p) => p.filingDate)).toHaveLength(12)
+    for (const p of patents.filter((p) => p.filingDate)) {
+      expect(p.filingDate).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+      expect(new Date(p.filingDate!).toISOString().slice(0, 10)).toBe(p.filingDate)
+      expect(p.filingYear).toBe(Number(p.filingDate!.slice(0, 4)))
+    }
+    expect(findPatent('71194')?.filingYear).toBeNull()
     expect(findPatent('53044')?.filingYear).toBe(2021)
   })
   it('combines accent-insensitive search, theme, year and individual co-applicant filters', () => {
@@ -44,7 +53,7 @@ describe('owner-selected patent catalogue', () => {
     expect(filterPatents('', 'mobility', '2024', 'IRESEN', 'fr').map((p) => p.reference)).toEqual([
       '68028',
     ])
-    expect(filterPatents('', '', 'unknown', '', 'fr')).toHaveLength(21)
+    expect(filterPatents('', '', 'unknown', '', 'fr')).toHaveLength(9)
     expect(filterPatents('not-a-patent', '', '', '', 'en')).toEqual([])
     expect(filterPatents('الهيدروجين', '', '', '', 'ar').length).toBeGreaterThan(0)
     expect(filterPatents('', '', '', '', 'fr')).toHaveLength(59)
@@ -68,6 +77,7 @@ describe('owner-selected patent catalogue', () => {
         expect(record.url).toContain(`#patent-${p.reference}`)
         expect(record.body).toContain(p.description[locale])
         expect(record.body).toContain(p.depositor)
+        if (p.filingDate) expect(record.body).toContain(p.filingDate)
       }
     }
     const withdrawn = patents.pop()!
