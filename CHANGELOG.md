@@ -5,6 +5,10 @@
 - Hide enhanced event scrollbars; add six synchronized mobile navigation pills.
 - Show the five social SVG icons in one fixed mobile row, retaining accessible names.
 - Preserve native scrolling, equal card heights, desktop labels and existing search references.
+## 2026-10-10 — Arabic video download placement
+
+- Mirror video-popup actions in Arabic: download sits to the right of close.
+- Preserve French/English ordering and the guarded original-file download.
 
 ## 2026-10-10 — Actualités & événements
 
@@ -852,3 +856,22 @@ See [the specification](docs/horizontal-scroll-indicators.md).
 ## Samir portrait biography — 2026-10-10
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
+
+## Samir portrait download — 2026-10-10
+
+The portrait download now serves a high-quality JPG generated from the supplied official original. Biography copying no longer displays success text; failure feedback remains.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
+
+## 2026-10-10 — Video-library scroll pills
+
+- Applied the recorded horizontal-navigation effect to the video library with one
+  borderless pill per video, equal inter-block spacing and native scroll tracking.
+- Updated the effect requirements to retain per-element count on mobile,
+  including shared terminal offsets, and prohibit decorative pill borders.
+- Preserved localized anchors, public video/search gates, keyboard/no-JavaScript
+  access and reduced motion.
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

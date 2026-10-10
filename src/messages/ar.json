@@ -1886,5 +1886,9 @@
     "copiedBiography": "تم نسخ السيرة الذاتية",
     "copyBiographyError": "النسخ التلقائي غير متاح. يمكنك تحديد النص ونسخه.",
     "downloadPortrait": "تنزيل الصورة الشخصية"
+  },
+  "VideoRailNavigation": {
+    "label": "التنقل في مكتبة الفيديو",
+    "position": "الموضع {current} من {total}"
   }
 }

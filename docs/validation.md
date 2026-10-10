@@ -3068,3 +3068,32 @@ documentation-only task. See [the specification](horizontal-scroll-indicators.md
 ## Samir biography popup — 2026-10-10
 
 Lint, typecheck, 126 unit checks and the isolated production build passed. Eight scoped production Chrome cases passed: FR/EN/AR media filters and modal access, no-JavaScript photo links, reduced motion, supplied biography, real clipboard copy, image-only download, 320/390/768/1440px containment, 200% mobile text, Escape/focus restoration, scoped axe scan and portrait frame meeting the desktop popup bottom edge. Desktop rendering and headroom were manually inspected. The local search rebuild synchronized the static catalog; French-only biography eligibility is covered by a regression test. No database schema changes or deployment. See [scope](samir-biography.md).
+
+## Samir JPG download and quiet copy — 2026-10-10
+
+The downloadable portrait is converted from the official original to JPG (1024 × 1536). The viewer links to this format; successful clipboard copying clears visible status. Unit/search coverage treats the JPG as a derivative of the original photo. Scoped browser checks verify clipboard content, empty success status and JPG-only download.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
+
+## Video-library scroll pills — 2026-10-10
+
+Lint, TypeScript/production compilation, formatting and 126 unit tests passed.
+All 27 CMS/search/careers integration checks passed in a freshly migrated temporary
+database, removed afterwards. An initial run against the existing content database
+was unsuitable (existing users) and had a withdrawal queue failure; the isolated
+confirmation passed. The existing content database was preserved.
+
+Ten focused Chrome production-browser checks cover FR/EN/AR, 390px mobile and
+1440px desktop with pills and native scrollbar hidden, one pill per
+video on mobile, all item buttons, native manual scroll tracking, keyboard selection, centered control
+geometry, no pill borders/shadows, no overflow at 320px/200% text, controls hidden
+when all items fit, no-JavaScript and reduced/normal motion. Existing media
+filters/dialog/file-link and scoped axe checks passed. The first browser launcher
+needed the installed Chrome path; no library content was fabricated for tests.
+
+Visually inspected FR/AR mobile/desktop captures from the local eight-video
+collection; desktop captures confirm no pills. Approved Science Blue on ink supplies borderless active contrast;
+keyboard focus is separate. Existing stable media/video anchors, public search
+references and withdrawal gates remain. No new public resource or index rebuild
+is needed for this interaction change. No Safari/Firefox or screen-reader pass
+was performed. See [scope](media-library.md#video-navigation-pills--2026-10-10).

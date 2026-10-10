@@ -1122,3 +1122,15 @@ not implemented UI. See [the specification](docs/horizontal-scroll-indicators.md
 ## Samir portrait biography — 2026-10-10
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
+
+## Video-library scroll pills — 2026-10-10
+
+The first implementation of the recorded horizontal-navigation effect uses one
+borderless expanding pill per video, centered in the inter-block gap. Institutional
+ink uses approved Science Blue for sufficient active contrast without a stroke.
+Native scrolling, per-item navigation, RTL, keyboard focus and reduced motion
+remain. Other rails await commissioning. See [requirements](docs/horizontal-scroll-indicators.md).
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

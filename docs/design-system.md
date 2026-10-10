@@ -1540,3 +1540,16 @@ horizontal-navigation behavior above remains the implemented baseline.
 ## Samir portrait biography — 2026-10-10
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](samir-biography.md).
+
+## Video-library scroll pills — 2026-10-10
+
+The owner requires one pill per element and no pill border or decorative stroke.
+The video library implements the [updated specification](horizontal-scroll-indicators.md):
+20/60px marks, 8px height, coordinated 220ms transitions and a centered control
+group with equal space above/below. On ink, Science Blue supplies active contrast.
+Keyboard focus remains distinct; no-JavaScript retains native overflow access.
+Other collections retain their current treatment until commissioned.
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

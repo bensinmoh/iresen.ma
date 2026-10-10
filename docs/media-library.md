@@ -56,7 +56,7 @@ visitors retain direct guarded-file links. The horizontal rail supports native
 scrolling, keyboard access and SVG controls.
 The centered native dialog enlarges from the clicked photo using a scoped
 transform animation, then reveals icon controls; download remains a text action.
-Photos fill their frames without exposed borders, with Samir’s face positioned centrally. The centered popup is limited to 80vw and 80dvh; its image covers the available stage. Download includes a downward SVG arrow. Video cards use cover cropping and a larger play icon that appears on hover or keyboard focus, arriving from above while the thumbnail enlarges slightly and a 15% black overlay appears. The keyboard focus ring sits inside video cards so the horizontal rail cannot clip its top edge. The play control is centered in the area above each card’s title. The video popup offers a guarded original-file download immediately left of close. Grid sizing reserves space for controls within the 80% viewport cap, without inner scrolling. Filtering uses scoped
+Photos fill their frames without exposed borders, with Samir’s face positioned centrally. The centered popup is limited to 80vw and 80dvh; its image covers the available stage. Download includes a downward SVG arrow. Video cards use cover cropping and a larger play icon that appears on hover or keyboard focus, arriving from above while the thumbnail enlarges slightly and a 15% black overlay appears. The keyboard focus ring sits inside video cards so the horizontal rail cannot clip its top edge. The play control is centered in the area above each card’s title. The video popup offers a guarded original-file download immediately left of close in French and English, and right of close in Arabic. Grid sizing reserves space for controls within the 80% viewport cap, without inner scrolling. Filtering uses scoped
 FLIP transforms for retained tiles and short reveals for incoming photos.
 Reduced motion bypasses image/control/tile animation and smooth scrolling. Scoped light/ink surfaces,
 vector controls and logical CSS follow the current shared design rules.
@@ -94,3 +94,17 @@ the development site, as explicitly requested by the owner.
 ## Samir portrait biography — 2026-10-10
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](samir-biography.md).
+
+## Video navigation pills — 2026-10-10
+
+The video rail now has one expanding pill per approved video, with no border or
+inset stroke. The group sits below the thumbnails, centered within the equal
+32px gaps before the reports link. Pills reveal their associated video and follow
+native scrolling, resize and RTL; shared terminal offsets retain separate item
+selection. Controls disappear without overflow. Reduced motion is direct;
+no-JavaScript retains native scrollbars and guarded file links. Existing anchors,
+CMS/media gates and search references remain. See [requirements](horizontal-scroll-indicators.md).
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.
