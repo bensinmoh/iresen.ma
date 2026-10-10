@@ -42,6 +42,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     expect(centered!.height).toBeLessThanOrEqual(viewport.height * 0.8 + 2)
     expect(Math.abs(centered!.x + centered!.width / 2 - viewport.width / 2)).toBeLessThan(2)
     expect(Math.abs(centered!.y + centered!.height / 2 - viewport.height / 2)).toBeLessThan(2)
+    await dialog.evaluate((el) =>
+      Promise.all(el.getAnimations({ subtree: true }).map((animation) => animation.finished)),
+    )
     expect(await dialog.evaluate((el) => el.scrollHeight <= el.clientHeight)).toBe(true)
     await expect(dialog.locator('img')).toHaveJSProperty('complete', true)
     await expect
@@ -86,6 +89,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.setViewportSize({ width: 390, height: 844 })
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     await library.locator('figure > a').first().click()
+    await dialog.evaluate((el) =>
+      Promise.all(el.getAnimations({ subtree: true }).map((animation) => animation.finished)),
+    )
     expect(
       await dialog.evaluate(
         (el) => el.scrollHeight <= el.clientHeight && el.scrollWidth <= el.clientWidth,
