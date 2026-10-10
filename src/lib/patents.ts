@@ -23,6 +23,8 @@ export type Patent = {
   themes: PatentTheme[]
   depositor: string | null
   filingYear: number | null
+  /** Exact ISO filing date when verified in the official register. */
+  filingDate?: string
   registerUrl: string
 }
 

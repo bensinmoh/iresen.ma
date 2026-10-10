@@ -627,6 +627,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           patent.description[locale],
           patent.depositor,
           patent.filingYear,
+          patent.filingDate,
           ...patent.themes.map((id) => catalog.Transfer.themes[id]),
           catalog.Transfer.catalog.label,
           'OMPIC Office Marocain de la Propriété Industrielle et Commerciale PatentRegister PI propriété intellectuelle',
