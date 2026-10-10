@@ -1836,7 +1836,9 @@
     "newsPlaceholder": "خبر مرتقب",
     "eventPlaceholder": "فعالية مرتقبة",
     "pendingContent": "المحتوى قيد الإعداد",
-    "placeholderDescription": "ستُضاف التفاصيل قريبًا."
+    "placeholderDescription": "ستُضاف التفاصيل قريبًا.",
+    "eventNavigation": "التنقل بين الفعاليات",
+    "eventPosition": "الفعالية {current} من {total}"
   },
   "MediaLibrary": {
     "label": "المكتبة الإعلامية",

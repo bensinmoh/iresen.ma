@@ -1495,6 +1495,23 @@ paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](collaborate-page.md).
 
+## Mobile event navigation and social icons — 2026-10-10
+
+The owner requested hidden event scrollbars and mobile pills, then a fixed row
+of five social icons without visible labels/arrows. The event rail keeps native
+scrolling and equal-height cards; six borderless pills appear only for mobile
+overflow at 40rem or below. Active marks expand from 20px to 60px with 220ms
+transitions, or change immediately with reduced motion. Marker navigation and
+native scroll position stay synchronized in FR/EN/AR. The controls occupy a
+centered band between the cards and the section boundary. Desktop/tablet retain
+native scrolling without the scrollbar after enhancement; without JavaScript,
+the scrollbar remains available. Mobile social links retain accessible names,
+28px vector icons and one non-scrolling row. Desktop labels remain.
+
+This scoped change adds no public resource or destination: existing event,
+social-link and section search references remain authoritative. See
+[page scope](news-events.md) and [indicator reference](horizontal-scroll-indicators.md).
+
 ## News & events — 2026-10-10
 
 The owner commissioned the combined news/events page and its thumbnail listing
