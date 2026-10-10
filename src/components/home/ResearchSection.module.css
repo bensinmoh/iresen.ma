@@ -123,7 +123,8 @@
 }
 .axes {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(8rem, 1fr));
+  overflow-x: auto;
   gap: var(--space-4);
   list-style: none;
   padding: 0;

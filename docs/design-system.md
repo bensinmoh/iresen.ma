@@ -1455,3 +1455,7 @@ continuous navy gradient starts opaque, remains 95% at 25% and 88% at 55%, then
 fades to 35% at 75% and 12% at the bottom. Below 64rem the existing full-section
 photograph and 90% navy veil keep changing-length accordion text readable.
 See [verification](validation.md#compact-homepage-rhythm--2026-10-10).
+
+Research axes retain a minimum 8rem column width, using their existing native
+focusable horizontal rail when enlarged text or available width requires it.
+This preserves legible words and the four-axis sequence without page overflow.

@@ -2835,3 +2835,9 @@ Additional 1440px/390px FR/EN/AR captures have no page overflow; inspected Frenc
 desktop domains/mission-to-achievement transition and Arabic mobile domains
 confirm tighter rhythm, raised image and readable text. Local review captures
 are temporary and not public assets. Deployment remains uncommissioned.
+
+The additional 1920px French and 1440px Arabic/200% text inspection confirms the
+photo fade. At enlarged text sizes the four axes now retain an 8rem minimum
+column width and scroll within their existing focusable native rail rather than
+breaking words into narrow fragments. This does not change the four-axis content
+or create page overflow.
