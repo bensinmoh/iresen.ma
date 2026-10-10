@@ -818,36 +818,6 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         type: 'section' as const,
       })),
     )
-    documents.push({
-      id: `page:news-listing:${locale}`,
-      locale,
-      title: catalog.NewsEvents.allNews,
-      body: `${catalog.NewsEvents.description} ${Object.values(catalog.NewsEvents.summaries).join(' ')}`,
-      url: newsListingHref(locale),
-      type: 'page',
-    })
-    for (const post of selectedNews) {
-      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
-      documents.push({
-        id: `section:news:linkedin:${post.id}:${locale}`,
-        locale,
-        title: catalog.HomeNews.posts[key].title,
-        body: `IRESEN LinkedIn ${catalog.NewsEvents.summaries[key]}`,
-        url: pageHref('news', locale, `news-${key}`),
-        type: 'news',
-      })
-    }
-    for (const event of newsEvents) {
-      const copy = catalog.NewsEvents.events[event.id]
-      documents.push({
-        id: `section:news:event-${event.id}:${locale}`,
-        locale,
-        title: copy.name,
-        body: engagementSearchText(copy).join(' '),
-        url: pageHref('news', locale, `event-${event.id}`),
-        type: 'section',
-      })
-    }
     for (const asset of publicAssetReferences) {
       const copy = asset.text[locale]
       if (copy?.title.trim() && copy.description.trim())
