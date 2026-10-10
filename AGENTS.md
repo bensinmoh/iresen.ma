@@ -143,3 +143,12 @@ no outgoing card links and a stacked-report cover mockup. See [scope](docs/home-
 The request activates the agreed six-section ordering: missions, achievements,
 research, capabilities, collaboration, news. No body placeholders remain;
 Alliances and final editorial/translation review remain deferred.
+
+## Homepage innovation pathway update — 2026-10-10
+
+The owner commissioned a compact light innovation-value-chain transition between
+research domains and platforms, retaining the hero figure band. See
+[scope](docs/home-innovation.md). Five stages connect national needs/ideation,
+R&D&I support, development/experimentation, maturation/transfer and adoption/
+evaluation. The six main navigation entries remain. FR/EN/AR working copy awaits
+final editorial review; the transfer destination retains its existing scope.

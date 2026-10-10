@@ -273,3 +273,7 @@ and earlier immersive four-card achievement recommendation. The implemented
 order is missions → achievements → research → capabilities → collaboration →
 news, with unchanged anchors. Existing delivered modules remain; Alliances
 stay deferred. See [implementation](home-achievements.md).
+
+## Compact innovation transition — 2026-10-10
+
+The later owner request adds the short light [innovation pathway](home-innovation.md) between domains and platforms. It supplements the six principal modules without changing their order or navigation, and keeps the existing hero figures.

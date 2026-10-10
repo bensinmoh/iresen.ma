@@ -449,6 +449,10 @@
       "achievement-hydrogen-roadmap": {
         "title": "Green hydrogen roadmap",
         "description": "A contribution to the development of Morocco’s green hydrogen roadmap."
+      },
+      "innovation-value-chain": {
+        "title": "A pathway to advance innovation",
+        "description": "Connecting research, support, experimentation and valorisation, from national needs to the adoption of solutions."
       }
     },
     "institute": {
@@ -1283,5 +1287,36 @@
         "searchText": "green hydrogen roadmap Green H2 Morocco strategy energy transition"
       }
     }
+  },
+  "HomeInnovation": {
+    "eyebrow": "From idea to impact",
+    "title": "A pathway to advance innovation",
+    "description": "Connecting research, support, experimentation and valorisation, from national needs to the adoption of solutions.",
+    "support": "Support and increasing maturity throughout the pathway.",
+    "feedback": "Assess contributions to inform future needs.",
+    "action": "Explore valorisation and transfer",
+    "steps": {
+      "anticipate": {
+        "title": "Anticipate needs",
+        "description": "National needs, foresight and ideation."
+      },
+      "support": {
+        "title": "Structure and support",
+        "description": "R&D&I programming, partners and project support."
+      },
+      "develop": {
+        "title": "Develop and test",
+        "description": "Research, development, experimentation and demonstration."
+      },
+      "mature": {
+        "title": "Mature and valorise",
+        "description": "Maturation and preparation for transfer."
+      },
+      "adopt": {
+        "title": "Support adoption",
+        "description": "Use of solutions and assessment of their contribution."
+      }
+    },
+    "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment."
   }
 }

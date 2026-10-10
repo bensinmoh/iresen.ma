@@ -55,3 +55,7 @@ institutional copy and functional service modules remain follow-up work.
 ## Structure recommendations received on 2026-10-08
 
 The supplied structure document is a set of recommendations and suggestions, not a final validated structure, as the owner explicitly clarified. Its references to a “validated menu” do not approve its differences from this baseline. The [source analysis](references/strategy/README.md#differences-from-the-chosen-baseline) contains the proposal comparison, 23-page count and nine suggested detail types. Keep alternatives in that reference analysis; use only the working routes above for application links. Decisions still pending are tracked in the [backlog](backlog.md#structure-proposal-decisions-before-pagecms-changes).
+
+## Innovation transition anchor — 2026-10-10
+
+The homepage registers `innovation-value-chain` between `research-priorities` and `platforms-expertise`, in FR/EN/AR. Its action uses the existing `transfer` page ID. The six major navigation entries remain; no page route is added. See [scope](home-innovation.md).
