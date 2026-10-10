@@ -1,6 +1,6 @@
 .section {
   margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(3rem, 5vw, 6rem) var(--gutter);
+  padding: var(--home-section-padding) var(--gutter);
   background: var(--color-white);
   scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
   overflow-wrap: anywhere;
@@ -10,7 +10,7 @@
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
   gap: var(--space-8);
   align-items: start;
-  margin-block-end: clamp(2.5rem, 4.5vw, 5rem);
+  margin-block-end: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .eyebrow {
   display: flex;

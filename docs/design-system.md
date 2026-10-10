@@ -1440,3 +1440,18 @@ copy. The existing platforms overview remains its destination: individual
 platform sections/routes have not been implemented. Existing homepage card
 anchors, localized search descriptions and media references remain unchanged;
 no content, file or public destination is added. FR/EN/AR remain working copy.
+
+## Compact homepage rhythm — 2026-10-10
+
+Homepage modules inherit `--home-section-padding: clamp(2rem, 3vw, 3rem)` from
+the homepage shell. Use it for missions, achievements, research top padding,
+platforms, collaboration and news, preserving the innovation transition's
+existing compact spacing. Achievements/news header gaps are 24–40px. Interior
+pages and global spacing tokens retain their current rules.
+
+At desktop sizes, research bottom padding is 128–192px and its panorama is
+480–608px high. This intentionally overlaps the lower text/navigation; the
+continuous navy gradient starts opaque, remains 95% at 25% and 88% at 55%, then
+fades to 35% at 75% and 12% at the bottom. Below 64rem the existing full-section
+photograph and 90% navy veil keep changing-length accordion text readable.
+See [verification](validation.md#compact-homepage-rhythm--2026-10-10).

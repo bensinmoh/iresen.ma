@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
   margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(3rem, 5vw, 6rem) var(--gutter) 27rem;
+  padding: var(--home-section-padding) var(--gutter) clamp(8rem, 10vw, 12rem);
   color: var(--color-white);
   background: var(--color-navy);
   box-shadow: 0 0 0 100vmax var(--color-navy);
@@ -174,7 +174,7 @@
   z-index: -1;
   inset-inline: 0;
   inset-block-end: 0;
-  block-size: 30rem;
+  block-size: clamp(30rem, 32vw, 38rem);
   pointer-events: none;
 }
 .panorama img {
@@ -190,7 +190,9 @@
   background: linear-gradient(
     180deg,
     var(--color-navy) 0,
-    rgb(18 52 90 / 35%) 45%,
+    rgb(18 52 90 / 95%) 25%,
+    rgb(18 52 90 / 88%) 55%,
+    rgb(18 52 90 / 35%) 75%,
     rgb(18 52 90 / 12%) 100%
   );
 }

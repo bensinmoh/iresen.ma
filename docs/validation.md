@@ -2815,3 +2815,23 @@ uses the installed Chrome executable and a separate production server on port
 3015: rebuilding while reusing the pre-existing server exposed stale JavaScript
 chunks, resolved by starting this distinct server. Remote CI/merge is recorded
 on the focused PR.
+
+## Compact homepage rhythm — 2026-10-10
+
+The owner requested smaller section gaps and a raised domains photograph.
+Main homepage module padding now spans 32–48px; achievements/news header gaps
+span 24–40px. The desktop domains photo overlaps lower navigation beneath a
+strong navy fade, with 128–192px reserved below the action instead of 432px.
+Mobile/tablet retain the existing full-section photograph and 90% navy veil.
+No content, asset, route, anchor or search projection changed.
+
+Verification: lint, typecheck, 122 unit tests, production build and 24 PostgreSQL
+integration tests pass. An initial database withdrawal test failed once and
+passed on immediate rerun; no search code changed. All 53 existing scoped home
+browser journeys pass against the production build on port 3101 using installed
+Chrome, covering FR/EN/AR, 320/390/768/1024/1440px, 200% text, native disclosures,
+search destinations, no JavaScript, reduced motion, keyboard and scoped axe.
+Additional 1440px/390px FR/EN/AR captures have no page overflow; inspected French
+desktop domains/mission-to-achievement transition and Arabic mobile domains
+confirm tighter rhythm, raised image and readable text. Local review captures
+are temporary and not public assets. Deployment remains uncommissioned.

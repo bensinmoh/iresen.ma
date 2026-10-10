@@ -1,6 +1,6 @@
 .section {
   margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(3rem, 5vw, 6rem) var(--gutter);
+  padding: var(--home-section-padding) var(--gutter);
   background: var(--color-action-surface);
   box-shadow: 0 0 0 100vmax var(--color-action-surface);
   clip-path: inset(0 -100vmax);
@@ -12,7 +12,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-8);
-  margin-block-end: clamp(2.5rem, 4.5vw, 5rem);
+  margin-block-end: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 
 .eyebrow {
