@@ -1,0 +1,769 @@
+[
+  {
+    "reference": "37172",
+    "title": "Système de tracking solaire à 3 capteurs photosensibles",
+    "description": {
+      "fr": "Un système de suivi solaire utilisant trois capteurs photosensibles.",
+      "en": "A solar tracking system using three photosensitive sensors.",
+      "ar": "نظام لتتبع الشمس باستخدام ثلاثة مستشعرات حساسة للضوء."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Hassan 1er Settat",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37172&count=0&lang=FR"
+  },
+  {
+    "reference": "37225",
+    "title": "Materiau composite ecologique a base du polyurethane et de fibres vegetales adapte a l'isolantion thermique",
+    "description": {
+      "fr": "Un matériau composite associant polyuréthane et fibres végétales pour l’isolation thermique.",
+      "en": "A composite combining polyurethane and plant fibres for thermal insulation.",
+      "ar": "مادة مركبة تجمع بين البولي يوريثان والألياف النباتية للعزل الحراري."
+    },
+    "themes": ["buildings"],
+    "depositor": "Université Hassan II",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37225&count=0&lang=FR"
+  },
+  {
+    "reference": "37414",
+    "title": "Maintien en chauffe d'un stockage de bitume par des panneaux solaires à haute énergie",
+    "description": {
+      "fr": "Un dispositif utilisant des panneaux solaires pour maintenir un stockage de bitume en température.",
+      "en": "A system using solar panels to keep stored bitumen warm.",
+      "ar": "نظام يستخدم الألواح الشمسية للحفاظ على حرارة البيتومين المخزن."
+    },
+    "themes": ["solar", "thermal"],
+    "depositor": "Université Internationale de Rabat Privée (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37414&count=0&lang=FR"
+  },
+  {
+    "reference": "37655",
+    "title": "Système de chauffage économique de rouleau de bitume pour étanchéité",
+    "description": {
+      "fr": "Un système de chauffage de rouleaux de bitume destinés à l’étanchéité.",
+      "en": "A heating system for bitumen rolls used in waterproofing.",
+      "ar": "نظام لتسخين لفائف البيتومين المستخدمة في العزل المائي."
+    },
+    "themes": ["thermal"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37655&count=0&lang=FR"
+  },
+  {
+    "reference": "37705",
+    "title": "Unite pilote de sechage des residus",
+    "description": {
+      "fr": "Une unité pilote consacrée au séchage de résidus.",
+      "en": "A pilot unit for drying residues.",
+      "ar": "وحدة تجريبية لتجفيف المخلفات."
+    },
+    "themes": ["bioenergy"],
+    "depositor": "Université Moulay Ismaïl",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37705&count=0&lang=FR"
+  },
+  {
+    "reference": "38683",
+    "title": "Optimisation énergétique d'un capteur solaire plan thermique par utilisation d'un traqueur mono axial",
+    "description": {
+      "fr": "Un capteur solaire thermique plan associé à un traqueur à un axe.",
+      "en": "A flat solar thermal collector combined with a single-axis tracker.",
+      "ar": "مجمع حراري شمسي مسطح مرتبط بمتتبع أحادي المحور."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=38683&count=0&lang=FR"
+  },
+  {
+    "reference": "39325",
+    "title": "Système de climatisation utilisant l’énergie thermique solaire",
+    "description": {
+      "fr": "Un système de climatisation alimenté par l’énergie thermique solaire.",
+      "en": "An air-conditioning system powered by solar thermal energy.",
+      "ar": "نظام تكييف يعتمد على الطاقة الشمسية الحرارية."
+    },
+    "themes": ["solar", "thermal"],
+    "depositor": "Université Internationale de Rabat (UIR) ; E-ENERGIE",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=39325&count=0&lang=FR"
+  },
+  {
+    "reference": "39365",
+    "title": "Stockage d'énergie pour climatisation solaire hybride",
+    "description": {
+      "fr": "Un système de stockage d’énergie destiné à la climatisation solaire hybride.",
+      "en": "An energy storage system for hybrid solar air conditioning.",
+      "ar": "نظام لتخزين الطاقة مخصص للتكييف الشمسي الهجين."
+    },
+    "themes": ["solar", "storage"],
+    "depositor": "Université Internationale de Rabat (UIR) ; E-ENERGIE",
+    "filingYear": 2016,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=39365&count=0&lang=FR"
+  },
+  {
+    "reference": "40800",
+    "title": "Refroidissement par évaporation (pad cooling) à base de faux palmier doum (chamaerops humilis l.)",
+    "description": {
+      "fr": "Un dispositif de refroidissement par évaporation utilisant le palmier nain doum.",
+      "en": "An evaporative cooling device using doum dwarf palm.",
+      "ar": "جهاز تبريد بالتبخر باستخدام النخيل القزم الدوم."
+    },
+    "themes": ["thermal"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": 2017,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=40800&count=0&lang=FR"
+  },
+  {
+    "reference": "41069",
+    "title": "Suiveur solaire double axe à faible consommation avec grande précision angulaire",
+    "description": {
+      "fr": "Un suiveur solaire à deux axes visant une faible consommation et une précision angulaire élevée.",
+      "en": "A dual-axis solar tracker designed for low consumption and high angular precision.",
+      "ar": "متتبع شمسي ثنائي المحور يستهدف استهلاكًا منخفضًا ودقة زاوية عالية."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41069&count=0&lang=FR"
+  },
+  {
+    "reference": "41528",
+    "title": "PROCÉDÉ ET SYSTÈME POUR LE NETTOYAGE DES PANNEAUX PHOTOVOLTAÏQUES AVEC UN SYSTÈME DE COLLECTE, DE TRAITEMENT, DE STOCKAGE ET DE RECYCLAGE DE L'EAU",
+    "description": {
+      "fr": "Un système de nettoyage photovoltaïque intégrant la collecte, le traitement, le stockage et le recyclage de l’eau.",
+      "en": "A photovoltaic cleaning system integrating water collection, treatment, storage and recycling.",
+      "ar": "نظام لتنظيف الألواح الكهروضوئية يدمج جمع المياه ومعالجتها وتخزينها وإعادة تدويرها."
+    },
+    "themes": ["solar", "water"],
+    "depositor": "IRESEN",
+    "filingYear": 2017,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41528&count=0&lang=FR"
+  },
+  {
+    "reference": "41738",
+    "title": "PROCÉDÉ ET APPAREIL DE MESURE ET SURVEILLANCE DE LA DIMINUTION DES PROPRIÉTÉS OPTIQUES DUE À L'ENCRASSEMENT DANS LES CENTRALES PHOTOVOLTAÏQUES",
+    "description": {
+      "fr": "Un appareil de mesure et de surveillance des pertes de propriétés optiques liées à l’encrassement photovoltaïque.",
+      "en": "A device measuring and monitoring optical losses caused by photovoltaic soiling.",
+      "ar": "جهاز لقياس ومراقبة تراجع الخصائص البصرية الناجم عن اتساخ المنشآت الكهروضوئية."
+    },
+    "themes": ["solar"],
+    "depositor": "IRESEN",
+    "filingYear": 2017,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41738&count=0&lang=FR"
+  },
+  {
+    "reference": "41925",
+    "title": "SMART FICHE PRISE (PV/HYBRID/GRID)",
+    "description": {
+      "fr": "Une fiche-prise intelligente pour des configurations photovoltaïques, hybrides ou raccordées au réseau.",
+      "en": "A smart plug for photovoltaic, hybrid or grid-connected configurations.",
+      "ar": "قابس ذكي للأنظمة الكهروضوئية أو الهجينة أو المتصلة بالشبكة."
+    },
+    "themes": ["solar", "grids"],
+    "depositor": "IRESEN",
+    "filingYear": 2018,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41925&count=0&lang=FR"
+  },
+  {
+    "reference": "42862",
+    "title": "PROCÉDÉ ET APPAREIL DE MESURE AUTOMATISÉ DE COURBE CARACTÉRISTIQUE DES SYSTÈMES PHOTOVOLTAÏQUES À TEMPS RÉEL",
+    "description": {
+      "fr": "Un appareil de mesure automatisée, en temps réel, des courbes caractéristiques de systèmes photovoltaïques.",
+      "en": "A device for automated real-time measurement of photovoltaic characteristic curves.",
+      "ar": "جهاز للقياس الآلي الآني للمنحنيات المميزة للأنظمة الكهروضوئية."
+    },
+    "themes": ["solar"],
+    "depositor": "IRESEN",
+    "filingYear": 2018,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=42862&count=0&lang=FR"
+  },
+  {
+    "reference": "43487",
+    "title": "Procédé de suivi solaire mono-axial à trois positions pour collecteur thermique plat",
+    "description": {
+      "fr": "Un procédé de suivi solaire à un axe et trois positions pour un collecteur thermique plat.",
+      "en": "A three-position single-axis solar tracking method for a flat thermal collector.",
+      "ar": "طريقة لتتبع الشمس بمحور واحد وثلاثة مواضع لمجمع حراري مسطح."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43487&count=0&lang=FR"
+  },
+  {
+    "reference": "43502",
+    "title": "Procédé et système de mesure d'encrassement et de prise de décision de nettoyage des centrales solaires en temps réel et à base d'images",
+    "description": {
+      "fr": "Un système fondé sur l’image pour mesurer l’encrassement et guider le nettoyage des centrales solaires en temps réel.",
+      "en": "An image-based system measuring soiling and guiding solar plant cleaning in real time.",
+      "ar": "نظام قائم على الصور لقياس الاتساخ وتوجيه تنظيف المحطات الشمسية آنيًا."
+    },
+    "themes": ["solar"],
+    "depositor": "IRESEN",
+    "filingYear": 2018,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43502&count=0&lang=FR"
+  },
+  {
+    "reference": "43620",
+    "title": "Banc d'essai pour la caractérisation thermo-hydraulique d'un échangeur tubulaire",
+    "description": {
+      "fr": "Un banc d’essai pour caractériser le comportement thermique et hydraulique d’un échangeur tubulaire.",
+      "en": "A test bench for thermal and hydraulic characterisation of a tubular heat exchanger.",
+      "ar": "منصة اختبار لتوصيف السلوك الحراري والهيدروليكي لمبادل أنبوبي."
+    },
+    "themes": ["thermal"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43620&count=0&lang=FR"
+  },
+  {
+    "reference": "44192",
+    "title": "Unité de charge pour véhicule électrique",
+    "description": {
+      "fr": "Une unité destinée à la recharge des véhicules électriques.",
+      "en": "A unit for charging electric vehicles.",
+      "ar": "وحدة لشحن المركبات الكهربائية."
+    },
+    "themes": ["mobility"],
+    "depositor": "IRESEN",
+    "filingYear": 2018,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44192&count=0&lang=FR"
+  },
+  {
+    "reference": "44300",
+    "title": "Suiveur solaire double axe avec grande précision angulaire basée sur une horloge radio-pilotée",
+    "description": {
+      "fr": "Un suiveur solaire à deux axes utilisant une horloge radio-pilotée pour le positionnement angulaire.",
+      "en": "A dual-axis solar tracker using a radio-controlled clock for angular positioning.",
+      "ar": "متتبع شمسي ثنائي المحور يستخدم ساعة موجهة لاسلكيًا للتموضع الزاوي."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44300&count=0&lang=FR"
+  },
+  {
+    "reference": "44798",
+    "title": "BORNE DE RECHARGE HYBRIDE, INTELLIGENTE ET PARAMÉTRABLE SUR CANDÉLABRE POUR LA RECHARGE DES VOITURES, MOTOS ET VÉLOS ÉLECTRIQUES",
+    "description": {
+      "fr": "Une borne de recharge hybride et paramétrable sur candélabre pour voitures, motos et vélos électriques.",
+      "en": "A configurable hybrid charging point on a lamppost for electric cars, motorcycles and bicycles.",
+      "ar": "محطة شحن هجينة قابلة للضبط على عمود إنارة للسيارات والدراجات الكهربائية."
+    },
+    "themes": ["mobility"],
+    "depositor": "IRESEN",
+    "filingYear": 2019,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44798&count=0&lang=FR"
+  },
+  {
+    "reference": "51690",
+    "title": "Chauffe-eau solaire à miroir de fresnel hybride",
+    "description": {
+      "fr": "Un chauffe-eau solaire hybride reposant sur un miroir de Fresnel.",
+      "en": "A hybrid solar water heater using a Fresnel mirror.",
+      "ar": "سخان مياه شمسي هجين يستخدم مرآة فرينل."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Hassan Premier",
+    "filingYear": 2020,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=51690&count=0&lang=FR"
+  },
+  {
+    "reference": "51802",
+    "title": "Système et procédé de charge en courant alternatif de véhicule électrique.",
+    "description": {
+      "fr": "Un système et un procédé de recharge des véhicules électriques en courant alternatif.",
+      "en": "A system and method for alternating-current electric vehicle charging.",
+      "ar": "نظام وطريقة لشحن المركبات الكهربائية بالتيار المتناوب."
+    },
+    "themes": ["mobility"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2020,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=51802&count=0&lang=FR"
+  },
+  {
+    "reference": "52677",
+    "title": "Système de stockage d’énergie gravitationnelle reposant sur une installation hydraulique et utilisant un système de poulies",
+    "description": {
+      "fr": "Un stockage d’énergie gravitationnelle associant installation hydraulique et système de poulies.",
+      "en": "A gravitational energy storage system combining hydraulics and pulleys.",
+      "ar": "نظام لتخزين الطاقة بالجاذبية يجمع بين تجهيز هيدروليكي وبكرات."
+    },
+    "themes": ["storage"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": 2021,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=52677&count=0&lang=FR"
+  },
+  {
+    "reference": "52823",
+    "title": "Champs de concentrations solaires à héliostats –adaptation à plusieurs applications : chauffage, solaire climatisation solaire, dessalement",
+    "description": {
+      "fr": "Un champ de concentration solaire à héliostats adapté au chauffage, à la climatisation et au dessalement.",
+      "en": "A heliostat solar concentration field for heating, air conditioning and desalination.",
+      "ar": "حقل تركيز شمسي بمرايا موجهة للتدفئة والتكييف وتحلية المياه."
+    },
+    "themes": ["solar", "water"],
+    "depositor": "Université Hassan Premier",
+    "filingYear": 2021,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=52823&count=0&lang=FR"
+  },
+  {
+    "reference": "53044",
+    "title": "Système de recharge hybride et bidirectionnel par induction et/ou par câble pour les véhicules électriques à technologie v2x",
+    "description": {
+      "fr": "Un système de recharge hybride bidirectionnelle, par induction ou câble, pour véhicules électriques à technologie V2X.",
+      "en": "A bidirectional hybrid charging system using induction or cable for V2X electric vehicles.",
+      "ar": "نظام شحن هجين ثنائي الاتجاه بالحث أو الكابل للمركبات الكهربائية بتقنية V2X."
+    },
+    "themes": ["mobility", "storage"],
+    "depositor": "Université Ibn Tofail ; IRESEN",
+    "filingYear": 2021,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=53044&count=0&lang=FR"
+  },
+  {
+    "reference": "54581",
+    "title": "Système hybride (solaire/biomasse) pour la carbonisation hydrothermale d'une biomasse lignocellulosique",
+    "description": {
+      "fr": "Un système hybride solaire et biomasse pour la carbonisation hydrothermale de biomasse lignocellulosique.",
+      "en": "A solar and biomass hybrid system for hydrothermal carbonisation of lignocellulosic biomass.",
+      "ar": "نظام هجين شمسي وكتلة حيوية للكربنة الحرارية المائية للكتلة الحيوية اللجنوسليلوزية."
+    },
+    "themes": ["solar", "bioenergy"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54581&count=0&lang=FR"
+  },
+  {
+    "reference": "54779",
+    "title": "Système de stockage d’énergie gravitaire à air comprimé",
+    "description": {
+      "fr": "Un système de stockage d’énergie combinant gravité et air comprimé.",
+      "en": "An energy storage system combining gravity and compressed air.",
+      "ar": "نظام لتخزين الطاقة يجمع بين الجاذبية والهواء المضغوط."
+    },
+    "themes": ["storage"],
+    "depositor": "Université Internationale de Rabat (UIR)",
+    "filingYear": 2021,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54779&count=0&lang=FR"
+  },
+  {
+    "reference": "54913",
+    "title": "DISPOSITIF POLYMORPHIQUE ADAPTATIF BIDIRECTIONNEL ET RÉVERSIBLE DE CONVERSION D’ÉNERGIE ÉLECTRIQUE",
+    "description": {
+      "fr": "Un dispositif de conversion d’énergie électrique adaptatif, bidirectionnel et réversible.",
+      "en": "An adaptive, bidirectional and reversible electrical energy conversion device.",
+      "ar": "جهاز تكيفي ثنائي الاتجاه وقابل للعكس لتحويل الطاقة الكهربائية."
+    },
+    "themes": ["grids"],
+    "depositor": "Université Hassan II de Casablanca ; IRESEN",
+    "filingYear": 2021,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54913&count=0&lang=FR"
+  },
+  {
+    "reference": "55243",
+    "title": "Système intelligent pour gestion de l'énergie solaire photovoltaïque par onduleurs ongrid avec injection sécurisée même en absence du réseau de distribution",
+    "description": {
+      "fr": "Un système de gestion photovoltaïque par onduleurs réseau avec injection sécurisée en l’absence du réseau de distribution.",
+      "en": "A photovoltaic management system using grid inverters with secured injection when the distribution grid is absent.",
+      "ar": "نظام لإدارة الطاقة الكهروضوئية عبر عواكس شبكية مع حقن آمن عند غياب شبكة التوزيع."
+    },
+    "themes": ["solar"],
+    "depositor": "Université Hassan 1er",
+    "filingYear": 2021,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=55243&count=0&lang=FR"
+  },
+  {
+    "reference": "55408",
+    "title": "Système de conversion, stockage d'énergie et contrôle des dispositifs associés dans les milieux résidentiels.",
+    "description": {
+      "fr": "Un système résidentiel associant conversion, stockage d’énergie et contrôle des dispositifs.",
+      "en": "A residential system combining energy conversion, storage and device control.",
+      "ar": "نظام سكني يجمع بين تحويل الطاقة وتخزينها والتحكم في الأجهزة."
+    },
+    "themes": ["buildings", "storage"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=55408&count=0&lang=FR"
+  },
+  {
+    "reference": "56302",
+    "title": "Système intelligent de surveillance, traitement, prédiction et de contrôle de la consommation d’électricité des bâtiments en temps réel",
+    "description": {
+      "fr": "Un système de surveillance, de prédiction et de contrôle en temps réel de la consommation électrique des bâtiments.",
+      "en": "A system for real-time monitoring, prediction and control of building electricity consumption.",
+      "ar": "نظام للمراقبة والتنبؤ والتحكم الآني في استهلاك الكهرباء بالمباني."
+    },
+    "themes": ["buildings"],
+    "depositor": "Université Internationale de Rabat ; IRESEN",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56302&count=0&lang=FR"
+  },
+  {
+    "reference": "56600",
+    "title": "GEP-PVSMS : Système de mesure, quantification et de traitement des données d'encrassement des centrales photovoltaïques en temps réel.",
+    "description": {
+      "fr": "Un système de mesure et de traitement en temps réel des données d’encrassement des centrales photovoltaïques.",
+      "en": "A system for real-time measurement and processing of photovoltaic plant soiling data.",
+      "ar": "نظام للقياس والمعالجة الآنية لبيانات اتساخ المحطات الكهروضوئية."
+    },
+    "themes": ["solar"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56600&count=0&lang=FR"
+  },
+  {
+    "reference": "56609",
+    "title": "Nouveaux matériaux composites à base de fluorophosphates comme électrodes positives des batteries",
+    "description": {
+      "fr": "Des matériaux composites à base de fluorophosphates pour les électrodes positives de batteries.",
+      "en": "Fluorophosphate-based composites for positive battery electrodes.",
+      "ar": "مواد مركبة أساسها الفلوروفوسفات للأقطاب الموجبة للبطاريات."
+    },
+    "themes": ["storage"],
+    "depositor": "Université Internationale de Rabat ; IRESEN",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56609&count=0&lang=FR"
+  },
+  {
+    "reference": "57941",
+    "title": "Dispositif de stockage d’énergie gravitaire renforcé par des ressorts de compression et de traction à fonctionnement simultané",
+    "description": {
+      "fr": "Un stockage d’énergie gravitaire renforcé par des ressorts de compression et de traction simultanés.",
+      "en": "Gravitational energy storage reinforced by simultaneous compression and tension springs.",
+      "ar": "تخزين للطاقة بالجاذبية معزز بنوابض ضغط وشد تعمل معًا."
+    },
+    "themes": ["storage"],
+    "depositor": "Université Internationale de Rabat ; IRESEN",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=57941&count=0&lang=FR"
+  },
+  {
+    "reference": "58719",
+    "title": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de palmier nain (DOUM) BrickDOUM",
+    "description": {
+      "fr": "Une brique de terre crue comprimée et stabilisée, renforcée par des fibres de palmier nain doum.",
+      "en": "A compressed and stabilised earth brick reinforced with doum dwarf palm fibres.",
+      "ar": "لبنة ترابية مضغوطة ومثبتة ومعززة بألياف النخيل القزم الدوم."
+    },
+    "themes": ["buildings"],
+    "depositor": "IRESEN ; Université Cadi Ayyad",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=58719&count=0&lang=FR"
+  },
+  {
+    "reference": "58999",
+    "title": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de déchets de textile",
+    "description": {
+      "fr": "Une brique de terre crue comprimée et stabilisée, renforcée par des fibres issues de déchets textiles.",
+      "en": "A compressed and stabilised earth brick reinforced with textile waste fibres.",
+      "ar": "لبنة ترابية مضغوطة ومثبتة ومعززة بألياف مخلفات النسيج."
+    },
+    "themes": ["buildings"],
+    "depositor": "Université Cadi Ayyad ; IRESEN ; Green Energy Park (GEP) ; CETEMCO ; STE Briqueterie Bati Chaouia",
+    "filingYear": 2022,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=58999&count=0&lang=FR"
+  },
+  {
+    "reference": "60000",
+    "title": "Borne de recharge rapide universelle pour batterie de scooters électriques",
+    "description": {
+      "fr": "Une borne de recharge rapide universelle pour les batteries de scooters électriques.",
+      "en": "A universal fast charging station for electric scooter batteries.",
+      "ar": "محطة شحن سريع عامة لبطاريات الدراجات الكهربائية الصغيرة."
+    },
+    "themes": ["mobility"],
+    "depositor": "MAScIR ; IRESEN ; Tronico Atlas",
+    "filingYear": 2023,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=60000&count=0&lang=FR"
+  },
+  {
+    "reference": "62359",
+    "title": "Procédé et méthode pour l'inspection automatique des centrales solaires photovoltaïques (PV) à large échelle à base de la photogrammétrie aérienne multi-vues et des modèles coopératifs d'intelligence",
+    "description": {
+      "fr": "Une méthode d’inspection photovoltaïque à grande échelle utilisant photogrammétrie aérienne multi-vues et modèles coopératifs d’intelligence.",
+      "en": "A large-scale photovoltaic inspection method using multi-view aerial photogrammetry and cooperative intelligence models.",
+      "ar": "طريقة لفحص المحطات الكهروضوئية على نطاق واسع باستخدام التصوير المساحي الجوي متعدد الزوايا ونماذج ذكاء تعاونية."
+    },
+    "themes": ["solar"],
+    "depositor": "Institut Agronomique et Vétérinaire Hassan II ; IRESEN",
+    "filingYear": 2023,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=62359&count=0&lang=FR"
+  },
+  {
+    "reference": "62697",
+    "title": "RÉSEAU ÉNERGÉTIQUE HYBRIDE ET SON SYSTÈME DE GESTION DES DONNÉES PAR INTELLIGENCE ARTIFICIELLE",
+    "description": {
+      "fr": "Un réseau énergétique hybride associé à une gestion des données par intelligence artificielle.",
+      "en": "A hybrid energy network with artificial-intelligence-based data management.",
+      "ar": "شبكة طاقة هجينة مع إدارة بيانات تعتمد على الذكاء الاصطناعي."
+    },
+    "themes": ["grids"],
+    "depositor": "IRESEN ; MAScIR",
+    "filingYear": 2023,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=62697&count=0&lang=FR"
+  },
+  {
+    "reference": "63542",
+    "title": "Méthode de Contrôle Prédictif pour la Gestion des Micro-réseaux par un Système Embarqué Intelligent",
+    "description": {
+      "fr": "Une méthode de contrôle prédictif des micro-réseaux reposant sur un système embarqué intelligent.",
+      "en": "A predictive microgrid control method using an intelligent embedded system.",
+      "ar": "طريقة للتحكم التنبؤي في الشبكات المصغرة باستخدام نظام مدمج ذكي."
+    },
+    "themes": ["grids"],
+    "depositor": "Université Internationale de Rabat ; IRESEN",
+    "filingYear": 2023,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=63542&count=0&lang=FR"
+  },
+  {
+    "reference": "64167",
+    "title": "Eco-plaques multicouche pour l'isolation thermique et acoustique du bâtiment",
+    "description": {
+      "fr": "Des plaques multicouches destinées à l’isolation thermique et acoustique des bâtiments.",
+      "en": "Multilayer panels for thermal and acoustic building insulation.",
+      "ar": "ألواح متعددة الطبقات للعزل الحراري والصوتي للمباني."
+    },
+    "themes": ["buildings"],
+    "depositor": "IRESEN ; ESSTI ; ENSMR ; Green Energy Park (GEP)",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=64167&count=0&lang=FR"
+  },
+  {
+    "reference": "65166",
+    "title": "Dispositif de tête d'impression de béton avec changement automatique des buses",
+    "description": {
+      "fr": "Une tête d’impression de béton intégrant un changement automatique des buses.",
+      "en": "A concrete printing head with automatic nozzle changes.",
+      "ar": "رأس لطباعة الخرسانة مع تغيير تلقائي للفوهات."
+    },
+    "themes": ["buildings"],
+    "depositor": "Université Sidi Mohammed Ben Abdellah ; IRESEN",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=65166&count=0&lang=FR"
+  },
+  {
+    "reference": "68026",
+    "title": "Système de maintien en place des centrales photovoltaïques flottantes et de suivi des variations du niveau de l'eau.",
+    "description": {
+      "fr": "Un système de maintien de centrales photovoltaïques flottantes suivant les variations du niveau de l’eau.",
+      "en": "A system securing floating photovoltaic plants while tracking water-level changes.",
+      "ar": "نظام لتثبيت المحطات الكهروضوئية العائمة وتتبع تغيرات مستوى المياه."
+    },
+    "themes": ["solar", "water"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68026&count=0&lang=FR"
+  },
+  {
+    "reference": "68027",
+    "title": "Conception de réacteur photo catalytique à base d’électrode d’hétérojonction de silicium modifié et micro structuré pour traitement des eaux usées par illumination ultraviolet.",
+    "description": {
+      "fr": "Un réacteur photocatalytique à électrode de silicium modifié et microstructuré pour traiter les eaux usées sous ultraviolet.",
+      "en": "A photocatalytic reactor with a modified microstructured silicon electrode for ultraviolet wastewater treatment.",
+      "ar": "مفاعل تحفيز ضوئي بقطب سيليكون معدل ذي بنية دقيقة لمعالجة المياه العادمة بالأشعة فوق البنفسجية."
+    },
+    "themes": ["water"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68027&count=0&lang=FR"
+  },
+  {
+    "reference": "68028",
+    "title": "Méthode et système d’optimisation basé sur l’analyse multicritère et l’intelligence artificielle pour la localisation optimale des bornes de recharge pour véhicules électriques",
+    "description": {
+      "fr": "Une méthode associant analyse multicritère et intelligence artificielle pour localiser les bornes de recharge électrique.",
+      "en": "A method combining multicriteria analysis and artificial intelligence to locate electric charging stations.",
+      "ar": "طريقة تجمع بين التحليل متعدد المعايير والذكاء الاصطناعي لتحديد مواقع محطات الشحن الكهربائي."
+    },
+    "themes": ["mobility"],
+    "depositor": "Green Energy Park (GEP) ; IRESEN ; Université Hassan II de Casablanca",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68028&count=0&lang=FR"
+  },
+  {
+    "reference": "68605",
+    "title": "Système photovoltaïque bifacial à prismes orientables pour accroître la production énergétique",
+    "description": {
+      "fr": "Un système photovoltaïque bifacial à prismes orientables visant à accroître la production énergétique.",
+      "en": "A bifacial photovoltaic system with adjustable prisms intended to increase energy production.",
+      "ar": "نظام كهروضوئي ثنائي الوجه بموشورات قابلة للتوجيه يهدف إلى زيادة إنتاج الطاقة."
+    },
+    "themes": ["solar"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68605&count=0&lang=FR"
+  },
+  {
+    "reference": "68606",
+    "title": "Nouveau procédé de production d’hydrogène vert à partir des plaquettes solaires de silicium en fin de vie.",
+    "description": {
+      "fr": "Un procédé de production d’hydrogène vert utilisant des plaquettes de silicium solaire en fin de vie.",
+      "en": "A green hydrogen production method using end-of-life solar silicon wafers.",
+      "ar": "طريقة لإنتاج الهيدروجين الأخضر باستخدام رقائق السيليكون الشمسية المنتهية العمر."
+    },
+    "themes": ["hydrogen", "solar"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2024,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68606&count=0&lang=FR"
+  },
+  {
+    "reference": "70688",
+    "title": "Séchoir hybride solaire électrique contrôlé à large gamme de température à fonctionnement continue",
+    "description": {
+      "fr": "Un séchoir hybride solaire et électrique à fonctionnement continu et large gamme de température.",
+      "en": "A continuous solar and electric hybrid dryer operating across a wide temperature range.",
+      "ar": "مجفف هجين شمسي وكهربائي يعمل باستمرار ضمن نطاق حراري واسع."
+    },
+    "themes": ["solar"],
+    "depositor": "IRESEN ; Université Cadi Ayyad",
+    "filingYear": 2025,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=70688&count=0&lang=FR"
+  },
+  {
+    "reference": "71194",
+    "title": "Intel.PV : Système avancé de gestion unifiée des centrales photovoltaïques distantes basé sur une architecture modulaire et distribuée",
+    "description": {
+      "fr": "Un système modulaire et distribué de gestion unifiée de centrales photovoltaïques distantes.",
+      "en": "A modular distributed system for unified management of remote photovoltaic plants.",
+      "ar": "نظام معياري موزع لإدارة موحدة لمحطات كهروضوئية بعيدة."
+    },
+    "themes": ["solar"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71194&count=0&lang=FR"
+  },
+  {
+    "reference": "71200",
+    "title": "Procédé et système pour déterminer le taux de réflectivité des miroirs dans les centrales solaires à concentration par analyse d'images nocturnes et intelligence artificielle",
+    "description": {
+      "fr": "Une méthode de mesure de la réflectivité des miroirs solaires par images nocturnes et intelligence artificielle.",
+      "en": "A method measuring solar mirror reflectivity through nighttime images and artificial intelligence.",
+      "ar": "طريقة لقياس انعكاسية المرايا الشمسية بالصور الليلية والذكاء الاصطناعي."
+    },
+    "themes": ["solar"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": 2025,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71200&count=0&lang=FR"
+  },
+  {
+    "reference": "71297",
+    "title": "Station météorologique mobile autonome et intelligente",
+    "description": {
+      "fr": "Une station météorologique mobile, autonome et intelligente.",
+      "en": "A mobile, autonomous and intelligent weather station.",
+      "ar": "محطة أرصاد جوية متنقلة ومستقلة وذكية."
+    },
+    "themes": ["measurement"],
+    "depositor": "CNESTEN ; IRESEN ; FSTM",
+    "filingYear": 2025,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71297&count=0&lang=FR"
+  },
+  {
+    "reference": "71521",
+    "title": "Conception de réacteur photo catalytique pour traitement des eaux usées par illumination ultraviolet.",
+    "description": {
+      "fr": "Un réacteur photocatalytique destiné au traitement des eaux usées sous ultraviolet.",
+      "en": "A photocatalytic reactor for ultraviolet wastewater treatment.",
+      "ar": "مفاعل تحفيز ضوئي لمعالجة المياه العادمة بالأشعة فوق البنفسجية."
+    },
+    "themes": ["water"],
+    "depositor": "DIV GEP",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71521&count=0&lang=FR"
+  },
+  {
+    "reference": "71776",
+    "title": "Méthode d’optimisation multiparamétrique de la performance technico-économique de micro-réseaux autonomes intégrant une installation photovoltaïque et un système de stockage hybride à hydrogène et batterie",
+    "description": {
+      "fr": "Une méthode d’optimisation technico-économique de micro-réseaux photovoltaïques autonomes avec stockage hydrogène et batterie.",
+      "en": "A techno-economic optimisation method for autonomous photovoltaic microgrids with hydrogen and battery storage.",
+      "ar": "طريقة لتحسين الأداء التقني والاقتصادي لشبكات كهروضوئية مصغرة مستقلة مع تخزين بالهيدروجين والبطاريات."
+    },
+    "themes": ["solar", "storage", "hydrogen"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71776&count=0&lang=FR"
+  },
+  {
+    "reference": "71777",
+    "title": "Tube absorbant Rotatif.",
+    "description": {
+      "fr": "Un tube absorbant rotatif.",
+      "en": "A rotating absorber tube.",
+      "ar": "أنبوب امتصاص دوار."
+    },
+    "themes": ["thermal"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71777&count=0&lang=FR"
+  },
+  {
+    "reference": "72762",
+    "title": "Méthode et système d’optimisation technico-économique multiparamétrique pour micro-réseaux autonomes et connectés aux réseaux à base de PV/BIPV et stockage hybride hydrogène-batterie",
+    "description": {
+      "fr": "Une méthode d’optimisation de micro-réseaux PV/BIPV autonomes ou connectés, avec stockage hybride hydrogène et batterie.",
+      "en": "An optimisation method for standalone or connected PV/BIPV microgrids with hybrid hydrogen and battery storage.",
+      "ar": "طريقة لتحسين شبكات PV/BIPV المصغرة المستقلة أو المتصلة مع تخزين هجين بالهيدروجين والبطاريات."
+    },
+    "themes": ["solar", "storage", "hydrogen"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72762&count=0&lang=FR"
+  },
+  {
+    "reference": "72763",
+    "title": "Un système d'amarrage autonome à rideau pour installations photovoltaïques flottantes",
+    "description": {
+      "fr": "Un système d’amarrage autonome à rideau pour installations photovoltaïques flottantes.",
+      "en": "An autonomous curtain mooring system for floating photovoltaic installations.",
+      "ar": "نظام ربط مستقل بستارة للمنشآت الكهروضوئية العائمة."
+    },
+    "themes": ["solar", "water"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72763&count=0&lang=FR"
+  },
+  {
+    "reference": "73157",
+    "title": "Méthode d’optimisation technico-économique pour la planification de microgrids hybrides multi-sources intégrant des modèles tarifaires horaires et contractuels",
+    "description": {
+      "fr": "Une méthode de planification technico-économique de micro-réseaux hybrides intégrant des tarifs horaires et contractuels.",
+      "en": "A techno-economic planning method for hybrid microgrids incorporating hourly and contractual tariffs.",
+      "ar": "طريقة للتخطيط التقني والاقتصادي للشبكات المصغرة الهجينة تشمل تعريفات ساعية وتعاقدية."
+    },
+    "themes": ["solar", "storage"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=73157&count=0&lang=FR"
+  },
+  {
+    "reference": "74890",
+    "title": "Procédé de démontage sélectif à basse énergie de modules photovoltaïques à base de silicium en fin de vie pour valorisation",
+    "description": {
+      "fr": "Un procédé de démontage sélectif à basse énergie de modules photovoltaïques au silicium en fin de vie.",
+      "en": "A low-energy selective dismantling method for end-of-life silicon photovoltaic modules.",
+      "ar": "طريقة لتفكيك انتقائي منخفض الطاقة للوحدات الكهروضوئية السيليكونية المنتهية العمر."
+    },
+    "themes": ["solar"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74890&count=0&lang=FR"
+  },
+  {
+    "reference": "74893",
+    "title": "Procédé de granulation à froid de liants à prise rapide pour la production de granulats artificiels destinés à l’imprégnation sous vide de matériaux à changement de phase",
+    "description": {
+      "fr": "Un procédé de granulation à froid pour produire des granulats artificiels destinés aux matériaux à changement de phase.",
+      "en": "A cold granulation method producing artificial aggregates for phase-change materials.",
+      "ar": "طريقة للتحبيب البارد لإنتاج حبيبات اصطناعية مخصصة لمواد تغيير الطور."
+    },
+    "themes": ["buildings", "storage"],
+    "depositor": "Green Energy Park (GEP)",
+    "filingYear": null,
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74893&count=0&lang=FR"
+  }
+]

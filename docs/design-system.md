@@ -1309,3 +1309,21 @@ The innovation transition reuses `--color-surface`, navy, primary blue, shared g
 ## Engagement page composition
 
 The collaboration/valorisation server template uses existing blue/ink tokens, open item grids, split headings, signature corners on selected ink panels/images and native disclosures. Its six-link navigation wraps; tablet/mobile stack and Arabic follows logical properties. These are page composition conventions, not new global tokens. See [scope](collaboration-transfer-pages.md).
+
+## Valorisation patent catalogue — 2026-10-10
+
+The page applies existing `--color-action-surface`, white/navy/blue roles,
+`--radius-signature`, shared type and aligned gutters to the live Figma patent
+component reference. Cards retain physical top-left/bottom-right corners in RTL
+and natural height. Three/two/one columns replace fixed prototype dimensions.
+Labels, accessible native filters, inset select chevrons and ordinary links reuse
+current control roles. Filing years replace unsupported sample calendar dates.
+No shared token changes are introduced. See [scope](valorisation-patents.md).
+
+The final visual follow-up adds Tabler outline icons (v3.35.0, MIT license
+retained beside the component), an existing outdoor experimentation photograph
+in the introduction and a restrained existing platform photograph behind the
+navy pathways section. Photographs illustrate the research environment; they
+do not identify an individual patent, project relationship or adoption outcome.
+The existing media search references are reused. No asset, dependency, brand
+token or institutional claim is added.

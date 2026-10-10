@@ -6,6 +6,8 @@ import { pageIdFromPathname } from '@/lib/site'
 import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
 import { ContactPage } from '@/components/contact/ContactPage'
+import { TransferPage } from '@/components/transfer/TransferPage'
+import { findPatent } from '@/lib/patents'
 import { EngagementPage } from '@/components/engagement/EngagementPage'
 import { isContactTopic } from '@/lib/contact'
 import { createPageMetadata } from '../../page-metadata'
@@ -82,11 +84,11 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   // directly so the HTML remains readable without a streamed error replacement.
   if (!pageId) return <NotFoundPage locale={locale} />
   if (pageId === 'contact') {
-    const { subject } = await searchParams
+    const { subject, patent } = await searchParams
     const topic = typeof subject === 'string' && isContactTopic(subject) ? subject : undefined
-    return <ContactPage locale={locale} initialTopic={topic} />
+    return <ContactPage locale={locale} initialTopic={topic} initialPatent={findPatent(patent)} />
   }
-  if (pageId === 'workWithUs' || pageId === 'transfer')
-    return <EngagementPage pageId={pageId} locale={locale} />
+  if (pageId === 'transfer') return <TransferPage locale={locale} />
+  if (pageId === 'workWithUs') return <EngagementPage pageId={pageId} locale={locale} />
   return <EmptyPage pageId={pageId} locale={locale} />
 }

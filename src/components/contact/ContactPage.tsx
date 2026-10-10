@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import type { Patent } from '@/lib/patents'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { pageHref, type PageId } from '@/lib/site'
@@ -21,9 +22,11 @@ const faqRoutes = {
 export async function ContactPage({
   locale,
   initialTopic,
+  initialPatent,
 }: {
   locale: Locale
   initialTopic?: ContactTopic
+  initialPatent?: Patent
 }) {
   const t = await getTranslations({ locale, namespace: 'Contact' })
   const footer = await getTranslations({ locale, namespace: 'Footer' })
@@ -114,7 +117,7 @@ export async function ContactPage({
           ))}
         </div>
       </section>
-      <ContactForm locale={locale} initialTopic={initialTopic} />
+      <ContactForm locale={locale} initialTopic={initialTopic} initialPatent={initialPatent} />
       <ContactLocation locale={locale} />
       <section
         className="container contact-faq"

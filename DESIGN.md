@@ -866,3 +866,22 @@ A light transition uses the shared surface/navy/action-blue roles, compact 32–
 ## Collaboration and valorisation composition
 
 These two pages retain the shared photo hero and use editorial split sections with compact anchor navigation, open item grids, ink contribution/checklist panels, existing achievement photographs and native disclosures. Tablet/mobile stack naturally; Arabic keeps logical alignment and natural tracking. See [scope](docs/collaboration-transfer-pages.md).
+
+## Valorisation catalogue — 2026-10-10
+
+The revised page applies the live Figma patent component's white surface,
+physical signature corners, generous padding, strong title and arrow-link
+hierarchy within a pale catalogue band. The existing approved navy/action blue,
+fonts, icons and Apex Leaf remain authoritative. Cards grow with source titles
+and co-applicants; three/two/one columns adapt to the available width. Six stages,
+five native disclosures and four open navy pathways prepare the catalogue.
+This is a local composition using current shared tokens, without a new universal
+card family. See [source and interaction details](docs/valorisation-patents.md).
+
+The final visual follow-up adds Tabler outline icons (v3.35.0, MIT license
+retained beside the component), an existing outdoor experimentation photograph
+in the introduction and a restrained existing platform photograph behind the
+navy pathways section. Photographs illustrate the research environment; they
+do not identify an individual patent, project relationship or adoption outcome.
+The existing media search references are reused. No asset, dependency, brand
+token or institutional claim is added.

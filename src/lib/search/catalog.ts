@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto'
+import { patents, patentAnchor } from '@/lib/patents'
 import { engagementSearchText } from '@/lib/engagement'
 
 import fr from '@/messages/fr.json'
@@ -408,6 +409,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         body.push(...engagementSearchText(catalog.Engagement[pageId]))
         body.push(...engagementSearchText(catalog.PageSections[pageId]))
       }
+      if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'home') {
         body.push(
           catalog.HomeAchievements.title,
@@ -486,6 +488,18 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           if (pageId === 'workWithUs' || pageId === 'transfer') {
             const engagementCopy = catalog.Engagement[pageId].sections as Record<string, unknown>
             body.push(...engagementSearchText(engagementCopy[entry.id]))
+          }
+          if (pageId === 'transfer') {
+            const keys = {
+              'results-to-transfer': ['title', 'intro'],
+              'research-to-use': ['process'],
+              'intellectual-property': ['ip'],
+              'transfer-pathways': ['pathways'],
+              'adoption-initiatives': ['catalog', 'figures', 'themes'],
+              'build-transfer': ['doors'],
+            } as const
+            for (const key of keys[entry.id as keyof typeof keys] ?? [])
+              body.push(...engagementSearchText(catalog.Transfer[key]))
           }
           if (pageId === 'home' && entry.id === homeAchievementsSectionId)
             body.push(
@@ -593,6 +607,35 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           })
         }
       }
+    }
+    documents.push({
+      id: `section:transfer:valorisation-figures:${locale}`,
+      locale,
+      title: catalog.Transfer.figures.label,
+      body: `${patents.length} ${engagementSearchText(catalog.Transfer.figures).join(' ')}`,
+      url: pageHref('transfer', locale, 'valorisation-figures'),
+      type: 'section',
+    })
+    for (const patent of patents) {
+      documents.push({
+        id: `section:transfer:patent-${patent.reference}:${locale}`,
+        locale,
+        title: `${catalog.Transfer.catalog.reference} ${patent.reference} — ${patent.title}`,
+        body: [
+          patent.reference,
+          patent.title,
+          patent.description[locale],
+          patent.depositor,
+          patent.filingYear,
+          ...patent.themes.map((id) => catalog.Transfer.themes[id]),
+          catalog.Transfer.catalog.label,
+          'OMPIC Office Marocain de la Propriété Industrielle et Commerciale PatentRegister PI propriété intellectuelle',
+        ]
+          .filter(Boolean)
+          .join(' '),
+        url: pageHref('transfer', locale, patentAnchor(patent.reference)),
+        type: 'section',
+      })
     }
     // Owner-requested localized editorial headings; no full-post translation fallback.
     for (const post of homeNewsPosts) {

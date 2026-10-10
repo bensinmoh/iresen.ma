@@ -323,3 +323,15 @@ The owner commissioned a compact light transition between research and platforms
 ## Collaboration and valorisation — 10 October 2026
 
 The owner commissioned the existing workWithUs and transfer pages. Their six canonical sections are populated with working FR/EN/AR content, complementary contributions, adaptive maturation/use pathways, existing reference achievements and contact preparation. No funding, access, commercial outcome or service availability is promised. Published CMS gates and routes remain. See [scope](docs/collaboration-transfer-pages.md).
+
+## Valorisation and patent catalogue — 2026-10-10
+
+The revised transfer page presents the owner's research-to-impact pathway,
+intellectual-property support, four possible valorisation routes and two visitor
+entry points. A dedicated minimal JSON database stores 59 selected filed patent
+references, without project relationships or annuities. Original titles and
+applicants, localized short summaries, themes, filing year and PatentRegister
+links feed an interactive catalogue and public search. Patent-specific contact
+links prefill the existing local email draft. Missing years stay unknown;
+filings do not imply active rights or commercial adoption. See
+[scope, provenance and maintenance](docs/valorisation-patents.md).

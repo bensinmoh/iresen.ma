@@ -13,8 +13,10 @@ for (const locale of locales) {
       const content = page.locator(`[data-engagement-page="${pageId}"]`)
       await expect(content.locator('section')).toHaveCount(6)
       await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
+      if (pageId === 'transfer') await expect(content.locator('nav')).toHaveCount(0)
       for (const { id } of engagementSections[pageId]) {
-        await content.locator(`nav a[href="#${id}"]`).click()
+        if (pageId === 'workWithUs') await content.locator(`nav a[href="#${id}"]`).click()
+        else await page.goto(pageHref(pageId, locale, id))
         await expect(page).toHaveURL(new RegExp(`#${id}$`))
         await expect(content.locator(`#${id} h2`)).toBeVisible()
       }

@@ -39,18 +39,9 @@ export const engagementSections: Record<EngagementPageId, readonly EngagementSec
   transfer: [
     { id: 'results-to-transfer', kind: 'results' },
     { id: 'research-to-use', kind: 'process' },
-    {
-      id: 'transfer-pathways',
-      kind: 'pathways',
-      destinations: [
-        { pageId: 'publications' },
-        { pageId: 'workWithUs' },
-        { pageId: 'contact', anchor: 'send-request' },
-        { pageId: 'workWithUs' },
-      ],
-    },
     { id: 'intellectual-property', kind: 'disclosures' },
-    { id: 'adoption-initiatives', kind: 'references', references: ['ismart', 'aquasolar'] },
+    { id: 'transfer-pathways', kind: 'pathways' },
+    { id: 'adoption-initiatives', kind: 'references' },
     { id: 'build-transfer', kind: 'contact' },
   ],
 }

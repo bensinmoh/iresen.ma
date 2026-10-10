@@ -249,3 +249,13 @@ broad synonym aliases. Page and section bodies include the new content. Static
 synchronization uses the catalog revision; rebuild the index after updating.
 The supplied report cover is media, not an available full report download.
 Repository references and source filenames are outside the public index.
+
+## Valorisation patent catalogue — 2026-10-10
+
+The owner-selected minimal patent database registers all 59 current records in
+FR/EN/AR at `#patent-{reference}` on the canonical transfer page, plus its revised
+sections and figures. Original bibliographic titles and applicants accompany
+localized source-derived descriptions and thematic terms. No original workbook,
+project relationship or annuity field enters search. Removing a JSON record
+withdraws its projection and vocabulary on catalog synchronization/rebuild.
+See [database maintenance](valorisation-patents.md).

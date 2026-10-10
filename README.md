@@ -214,3 +214,9 @@ FR/EN/AR working copy and searchable anchors/media accompany the implementation.
 Alliances and final editorial review remain future work.
 
 The existing [collaboration and valorisation pages](docs/collaboration-transfer-pages.md) now contain their six sections in FR/EN/AR, with preparation checklists and existing contact pathways.
+
+The [revised Valorisation page and patent catalogue](docs/valorisation-patents.md)
+now present the owner-selected 59 filed references, source-derived short
+summaries, theme/year/applicant filters, PatentRegister links and a contact draft
+prefilled with the selected patent. The minimal structured database excludes
+project relationships and annuities; the original workbook is not imported.

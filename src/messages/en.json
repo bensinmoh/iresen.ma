@@ -299,7 +299,7 @@
       "projects": "From the need addressed to the results achieved: understand the work, IRESEN’s and its partners’ contributions, and their actual stage.",
       "platforms": "Research, testing, experimentation and training resources to understand technology performance and conditions of use.",
       "network": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities.",
-      "transfer": "Prepare results for maturation, transfer and use according to their actual stage and the needs of the people and organisations concerned.",
+      "transfer": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
       "workWithUs": "Bring together people, expertise and resources around needs for analysis, research, experimentation or skills development.",
       "news": "Follow studies, research, skills and cooperation contributing to the energy transition and sustainable development.",
       "events": "Meetings to connect people, share expertise and build cooperation in Morocco and internationally.",
@@ -643,28 +643,28 @@
     },
     "transfer": {
       "results-to-transfer": {
-        "title": "Valorisation makes results useful",
-        "description": "A result’s value depends on what it enables people to understand, decide, practise or develop. It extends beyond commercialisation."
+        "title": "Turning research into impact",
+        "description": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market."
       },
       "research-to-use": {
-        "title": "Connect work with use, including feedback",
-        "description": "Develop, test and valorise are functions within Research & Innovation. Each result follows the stages useful to its need and maturity."
-      },
-      "transfer-pathways": {
-        "title": "Choose according to the result and its use",
-        "description": "Dissemination, joint work, technology transfer or an entrepreneurial initiative: possibilities are examined case by case."
+        "title": "One journey, multiple pathways",
+        "description": "Detect, evaluate, protect, mature, transfer, deploy: connect scientific potential with industry and market needs."
       },
       "intellectual-property": {
-        "title": "Frame rights and exchanges",
-        "description": "Intellectual property (IP), contributions and confidentiality are part of defining the work with the relevant specialists."
+        "title": "Protect to create value",
+        "description": "Protection is not an end in itself. Patents, know-how, software and other intellectual property assets help secure and facilitate innovation valorisation."
+      },
+      "transfer-pathways": {
+        "title": "A pathway suited to each innovation",
+        "description": "Depending on the technology and opportunity, several routes to valorisation are possible."
       },
       "adoption-initiatives": {
-        "title": "Explore achievements, understand their stage",
-        "description": "Homepage achievements illustrate different results and applications. They are starting points for an evidence-based account."
+        "title": "Explore our technologies",
+        "description": "Browse 59 filed patent references and identify technologies relevant to your needs."
       },
       "build-transfer": {
-        "title": "Build the next step",
-        "description": "Do you have a research result or a need for its use? Prepare an initial description to examine possible next steps."
+        "title": "Move your innovation forward",
+        "description": "For an initial discussion, present your need or result without sending confidential information."
       }
     },
     "workWithUs": {
@@ -1463,121 +1463,164 @@
     "transfer": {
       "sections": {
         "results-to-transfer": {
-          "label": "The results",
-          "items": [
-            {
-              "title": "Knowledge and methods",
-              "description": "Scientific results, protocols and methods can be shared, reused or adapted to advance other work."
-            },
-            {
-              "title": "Technologies and prototypes",
-              "description": "Equipment, a process or a prototype opens up possible uses. Its performance, limitations and actual stage need to be explained."
-            },
-            {
-              "title": "Skills and know-how",
-              "description": "Lessons from research and experimentation can strengthen practice, training and team capabilities."
-            },
-            {
-              "title": "Data and decision tools",
-              "description": "Analysis, datasets and tools can inform choices. Their scope, use conditions and limitations matter as much as their dissemination."
-            }
-          ],
-          "note": "Begin by identifying what was produced, by whom, for which need and with what evidence.",
+          "label": "Valorisation & transfer",
+          "items": [],
           "checklist": []
         },
         "research-to-use": {
-          "label": "Maturation",
-          "items": [
-            {
-              "title": "Establish the result’s stage",
-              "description": "Describe its origin, the need addressed, contributions and available evidence. Distinguish what is demonstrated from what still needs checking."
-            },
-            {
-              "title": "Test the conditions",
-              "description": "Examine performance, constraints and limitations in relevant conditions. Testing may lead back to further research."
-            },
-            {
-              "title": "Prepare for use",
-              "description": "Identify users, necessary adaptations, resources and partners. Clarify technical and organisational conditions for use."
-            },
-            {
-              "title": "Document and learn",
-              "description": "Follow use where it exists, qualify observed contributions and share lessons for future work."
-            }
-          ],
-          "note": "Maturation is not automatic progression. A result can contribute to research, a decision or training without leading to commercial transfer.",
-          "checklist": []
-        },
-        "transfer-pathways": {
-          "label": "Possible pathways",
-          "items": [
-            {
-              "title": "Share knowledge",
-              "description": "Publications, learning resources, methods and scientific exchanges make lessons accessible through suitable dissemination arrangements."
-            },
-            {
-              "title": "Co-develop with partners",
-              "description": "Continue work with actors involved in use to adapt, qualify or test a solution and clarify respective contributions."
-            },
-            {
-              "title": "Prepare technology transfer",
-              "description": "Examine access or licensing arrangements where the result, rights and partners allow. Conditions still need to be established."
-            },
-            {
-              "title": "Explore an entrepreneurial initiative",
-              "description": "Consider creating or developing an activity around a result where the team, need and maturation conditions are suitable."
-            }
-          ],
-          "note": "No pathway is guaranteed by a prototype, publication or patent filing. Choices depend on evidence, rights, capabilities and the partners involved.",
+          "label": "From research to impact",
+          "items": [],
           "checklist": []
         },
         "intellectual-property": {
-          "label": "The conditions",
-          "items": [
-            {
-              "title": "Which result and contributions?",
-              "description": "Describe the origins of knowledge, data and work, the partners involved and material already shared. Contributions should be clearly attributable."
-            },
-            {
-              "title": "Which rights and uses should be examined?",
-              "description": "Clarify existing rights, intended uses, sharing conditions and responsibilities to discuss. The applicable framework is defined with the relevant teams; this page does not provide a standard contract."
-            },
-            {
-              "title": "How should a first discussion be prepared?",
-              "description": "Begin with a non-confidential description of the result and need. Before sharing sensitive material, clarify confidentiality arrangements and useful documents with the relevant contact."
-            }
-          ],
-          "note": "A patent application, a granted right and an active right are distinct situations. None alone establishes transfer or adoption.",
+          "label": "Intellectual property",
+          "items": [],
+          "checklist": []
+        },
+        "transfer-pathways": {
+          "label": "Valorisation pathways",
+          "items": [],
           "checklist": []
         },
         "adoption-initiatives": {
-          "label": "Concrete examples",
-          "items": [
-            {
-              "title": "iSmart",
-              "description": "An electric-vehicle charging station presented among IRESEN’s achievements. To examine its valorisation, distinguish the product, contributions and uses actually documented."
-            },
-            {
-              "title": "AquaSolar",
-              "description": "A mobile, modular desalination unit powered by solar energy. The demonstrator illustrates an application; its presentation alone does not establish commercial transfer."
-            }
-          ],
-          "note": "Evidence of use or impact should specify the actors, context, stage, period and observed results. Intentions remain distinct from measured effects.",
+          "label": "Technology portfolio",
+          "items": [],
           "checklist": []
         },
         "build-transfer": {
-          "label": "Your result",
+          "label": "Two ways to get started",
           "items": [],
-          "note": "The first discussion addresses the result, the need and conditions to examine. It is neither a funding commitment nor a transfer agreement.",
-          "checklist": [
-            "The result or technology, its origin and contributing actors.",
-            "The need, potential users and application context.",
-            "Existing work, testing and evidence, including known limitations.",
-            "The maturity stage and adaptations or checks still needed.",
-            "Partners, rights and constraints to discuss, without sharing confidential material."
-          ]
+          "checklist": []
         }
       }
     }
+  },
+  "Transfer": {
+    "navigation": "On this page",
+    "eyebrow": "Valorisation & transfer",
+    "title": "Turning research into impact",
+    "intro": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
+    "innovationAction": "Develop your innovation",
+    "exploreAction": "Explore our technologies",
+    "process": {
+      "label": "From research to impact",
+      "title": "One journey, multiple pathways",
+      "description": "Detect, evaluate, protect, mature, transfer, deploy: connect scientific potential with industry and market needs.",
+      "steps": ["Detect", "Evaluate", "Protect", "Mature", "Transfer", "Deploy"],
+      "note": "This is not a rigid process: each innovation follows a pathway tailored to its maturity, potential and opportunities."
+    },
+    "ip": {
+      "label": "Intellectual property",
+      "title": "Protect to create value",
+      "description": "Protection is not an end in itself. Patents, know-how, software and other intellectual property assets help secure and facilitate innovation valorisation.",
+      "items": [
+        {
+          "title": "Identify potential",
+          "description": "Identify research results that could meet a need and open a route to valorisation."
+        },
+        {
+          "title": "Evaluate and define an IP strategy",
+          "description": "Examine intellectual property assets and prepare a suitable protection strategy."
+        },
+        {
+          "title": "File and monitor protections",
+          "description": "Support the filing and monitoring of the chosen protections."
+        },
+        {
+          "title": "Manage the IP portfolio",
+          "description": "Organise asset monitoring and prepare the next valorisation steps."
+        },
+        {
+          "title": "Prepare transfer",
+          "description": "Connect protection, maturation and discussions with potential partners."
+        }
+      ]
+    },
+    "pathways": {
+      "label": "Valorisation pathways",
+      "title": "A pathway suited to each innovation",
+      "description": "Depending on the technology and opportunity, several routes to valorisation are possible.",
+      "items": [
+        {
+          "title": "Licensing & transfer",
+          "description": "Technology → Partner → Licence / Transfer → Use"
+        },
+        {
+          "title": "Industrial partnership",
+          "description": "Technology + Industry need → Co-development → Demonstration → Industrialisation"
+        },
+        {
+          "title": "Startup / Spin-off",
+          "description": "Innovation → Market validation → Creation → Development"
+        },
+        {
+          "title": "Deployment",
+          "description": "Prototype → Demonstration → Validation → Deployment"
+        }
+      ]
+    },
+    "catalog": {
+      "label": "Technology portfolio",
+      "title": "Explore our technologies",
+      "description": "Browse 59 filed patent references and identify technologies relevant to your needs.",
+      "search": "Search patents",
+      "placeholder": "Reference, title, keyword or applicant…",
+      "theme": "Theme",
+      "year": "Filing year",
+      "depositor": "Applicant",
+      "all": "All",
+      "unknown": "Not provided",
+      "reset": "Reset",
+      "count": "{count} of {total} references",
+      "empty": "No patents match these criteria.",
+      "view": "Access the patent",
+      "discuss": "Discuss with IRESEN",
+      "reference": "Reference",
+      "showMore": "Show more",
+      "showAll": "Show all",
+      "original": "Titles and applicant names are kept in their original language.",
+      "note": "Not all recorded filings correspond to patents currently in force. Consult each record through PatentRegister.",
+      "updated": "Dataset as of 7 October 2026",
+      "noJavaScript": "Without JavaScript, all 59 references are displayed. Filters require JavaScript."
+    },
+    "figures": {
+      "label": "Valorisation in figures",
+      "title": "A portfolio to explore",
+      "filed": "filed patent references",
+      "themes": "browsing themes",
+      "date": "Dataset date",
+      "note": "These indicators describe this catalogue; they do not measure licences, transfers or industrial adoption."
+    },
+    "doors": {
+      "label": "Two ways to get started",
+      "title": "Move your innovation forward",
+      "items": [
+        {
+          "title": "Do you have an innovation?",
+          "description": "Researchers, laboratories and project holders: share your result and explore its valorisation potential with us.",
+          "action": "Develop my innovation"
+        },
+        {
+          "title": "Looking for a technology?",
+          "description": "Companies, manufacturers and investors: explore our portfolio to identify technologies that meet your needs.",
+          "action": "Explore technologies"
+        }
+      ],
+      "contact": "Contact the Valorisation team",
+      "note": "For an initial discussion, present your need or result without sending confidential information."
+    },
+    "themes": {
+      "solar": "Solar energy",
+      "storage": "Energy storage",
+      "buildings": "Buildings & materials",
+      "mobility": "Electric mobility",
+      "water": "Water & treatment",
+      "hydrogen": "Hydrogen",
+      "bioenergy": "Biomass & residues",
+      "grids": "Grids & electrical conversion",
+      "measurement": "Measurement & instrumentation",
+      "thermal": "Thermal systems"
+    },
+    "contactMessage": "I would like to discuss patent {reference} with IRESEN: {title}."
   }
 }

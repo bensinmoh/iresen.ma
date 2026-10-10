@@ -1,3 +1,4 @@
+import patentRecords from '@/data/patents.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
 import { pageSections } from '@/lib/page-sections'
 import { homeNewsPosts } from '@/lib/home-news'
@@ -177,6 +178,9 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
     (pageId === 'home' && legacyMissionAnchors.some((id) => id === normalized)) ||
     (pageId === 'home' &&
       homeNewsPosts.some((post) => normalized === `news-${post.id.split(':').at(-1)}`)) ||
+    (pageId === 'transfer' &&
+      (normalized === 'valorisation-figures' ||
+        patentRecords.some((p) => normalized === `patent-${p.reference}`))) ||
     definition.anchors?.includes(normalized) === true ||
     pageSections[pageId].some(
       (section) =>
