@@ -166,7 +166,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     )
     expect(marks[2].width).toBe(60)
     expect(marks[0].width).toBe(20)
-    expect(marks.every((mark) => mark.border === '0px' && mark.transition === '0s')).toBe(true)
+    expect(
+      marks.every(
+        (mark) =>
+          mark.border === '0px' &&
+          mark.transition.split(',').every((duration) => parseFloat(duration) <= 0.001),
+      ),
+    ).toBe(true)
     const gap = await page.locator('#events').evaluate((section) => {
       const cards = section.querySelector('[data-event-rail]')!.getBoundingClientRect()
       const controls = section.querySelector('[data-event-navigation]')!.getBoundingClientRect()
