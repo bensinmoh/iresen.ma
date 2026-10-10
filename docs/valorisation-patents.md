@@ -249,3 +249,15 @@ precedes the introduction text (left in FR/EN, mirrored in AR), with the existin
 internal section spacing retained. Mobile stacks the photograph before the copy.
 Other pages keep their breadcrumbs and shell defaults; existing anchors and
 search projections remain unchanged.
+
+## Localized patent titles — 2026-10-10
+
+The owner requests all 59 patent titles in the selected FR/EN/AR language.
+`title` now stores complete locale-keyed text, preserving the existing French
+bibliographic wording. English/Arabic display translations retain scientific
+names, product names and acronyms without changing filing identifiers, dates,
+applicants or register links. They are website translations, not official
+translated register titles. Cards use the selected language/direction; catalogue
+filtering, public search title/body and contact drafts use the same title.
+Stable patent anchors and search identifiers remain unchanged. These working
+translations remain subject to the site's final editorial review.

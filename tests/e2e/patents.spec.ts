@@ -25,6 +25,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       page.locator('#ismart-example').getByRole('link', { name: copy.example.visit }),
     ).toHaveAttribute('href', 'https://www.i-smart.ma/')
     await expect(section.locator('article:visible')).toHaveCount(6)
+    await expect(section.locator('article h3').first()).toHaveText(patents[0].title[locale])
     await section.getByRole('button', { name: copy.catalog.showMore, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(12)
     await section.getByRole('button', { name: copy.catalog.showAll, exact: true }).click()
@@ -38,9 +39,11 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(section.locator('article:visible')).toHaveCount(1)
     await expect(section.locator('#patent-37172').getByText('2014', { exact: true })).toBeVisible()
     await section.getByRole('button', { name: copy.catalog.reset, exact: true }).click()
-    await section.getByRole('searchbox').fill('41528')
+    await section
+      .getByRole('searchbox')
+      .fill(patents.find((p) => p.reference === '41528')!.title[locale])
     await expect(section.locator('#patent-41528 h3')).toHaveText(
-      patents.find((patent) => patent.reference === '41528')!.title,
+      patents.find((patent) => patent.reference === '41528')!.title[locale],
     )
     await section.getByRole('searchbox').fill('53044')
     await expect(section.locator('article:visible')).toHaveCount(1)
@@ -60,6 +63,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.locator('#patent-74893').getByRole('link', { name: copy.catalog.discuss }).click()
     await expect(page.locator('select[name="subject"]')).toHaveValue('partnerships')
     await expect(page.locator('textarea[name="message"]')).toHaveValue(/74893/)
+    await expect(page.locator('textarea[name="message"]')).toHaveValue(
+      new RegExp(patents.find((p) => p.reference === '74893')!.title[locale]),
+    )
     await page.goto(pageHref('transfer', locale))
     for (const width of [1440, 1024, 768, 390, 320]) {
       await page.setViewportSize({ width, height: 900 })

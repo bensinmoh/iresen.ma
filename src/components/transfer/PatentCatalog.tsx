@@ -211,8 +211,8 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
                 <span key={id}>{t(`themes.${id}`)}</span>
               ))}
             </div>
-            <h3 lang="fr" dir="ltr">
-              {patent.title}
+            <h3 lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+              {patent.title[locale]}
             </h3>
             <p>{patent.description[locale]}</p>
             <p className={styles.applicant}>

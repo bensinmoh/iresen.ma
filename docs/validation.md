@@ -2747,3 +2747,35 @@ sequential rerun passes. Browser assertions verify hero/intro attachment,
 FR/EN image-left and AR image-right layout, no breadcrumb, footer attachment,
 320–1440px, enlarged text and shared hero behavior. French desktop/mobile and
 Arabic desktop screenshots were inspected. Whitespace and design scan pass.
+
+## Homepage platform card hover — 2026-10-10
+
+The requested hover uses a 1.05 photo zoom, fading gradient, upward identity
+exit, downward secondary-copy exit and measured title movement to the bottom.
+A single native link covers each card; its localized name remains stable while
+visual copy fades. Individual platform destinations are not yet implemented,
+so the existing canonical platforms overview remains the honest destination.
+Existing localized search references and homepage anchors remain unchanged.
+
+Lint, typecheck, 120 unit tests, 22 local PostgreSQL integration tests and the
+production build pass. All seven scoped Chromium journeys pass: FR/EN/AR,
+320/390/768/1024/1440px, 200% text, scoped axe, media/search discovery,
+no JavaScript, full-surface clicking, unchanged card geometry, keyboard focus,
+photo zoom/title travel and reduced motion. The reduced-motion assertion accounts
+for the shared global 0.01ms transition override. Sandbox socket restrictions
+required rerunning browser/database checks with local execution permissions.
+FR mobile and FR/AR hover plus AR desktop renderings were inspected; title
+backgrounds remain transparent over the softened, lower original gradient. Ignored screenshots
+are in `.cache/platforms-review/`. Formatting, whitespace and the mechanical
+design scan pass. Remote CI and merge status are recorded on the PR. No deployment.
+
+## Patent title localization — 2026-10-10
+
+All 59 titles now include FR/EN/AR; card language/direction, filtering, indexed
+search titles/body and prefilled contact drafts use the selected locale. Lint,
+typecheck, 121 unit tests, production build and all 8 patent Chromium journeys
+pass. Tests verify every localized title is searchable, names/acronyms remain,
+locale-specific card/contact text, canonical anchors, responsive containment,
+200% text, no JavaScript and scoped accessibility. English desktop and Arabic
+mobile patent renderings were inspected. The local public search catalog was
+rebuilt; no deployment or CMS publication. Final translations remain working copy.
