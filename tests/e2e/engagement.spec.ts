@@ -76,3 +76,22 @@ test('Arabic transfer disclosures and contact remain usable without JavaScript',
     await context.close()
   }
 })
+
+for (const [locale, oldPath] of [
+  ['fr', '/fr/travailler-avec-nous'],
+  ['en', '/en/work-with-us'],
+] as const) {
+  test(`${locale}: the former collaboration URL preserves query and section`, async ({
+    page,
+    request,
+  }) => {
+    const response = await request.get(`${oldPath}?source=partner`, { maxRedirects: 0 })
+    expect(response.status()).toBe(308)
+    expect(response.headers().location).toBe(`${pageHref('workWithUs', locale)}?source=partner`)
+    await page.goto(`${oldPath}?source=partner#prepare-discussion`)
+    await expect(page).toHaveURL(
+      `${pageHref('workWithUs', locale)}?source=partner#prepare-discussion`,
+    )
+    await expect(page.locator('#prepare-discussion h2')).toBeVisible()
+  })
+}

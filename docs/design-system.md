@@ -1459,3 +1459,14 @@ See [verification](validation.md#compact-homepage-rhythm--2026-10-10).
 Research axes retain a minimum 8rem column width, using their existing native
 focusable horizontal rail when enlarged text or available width requires it.
 This preserves legible words and the four-axis sequence without page overflow.
+
+## Collaboration page redevelopment — 2026-10-10
+
+The owner's later request renames and redevelops the existing `workWithUs` page as
+“Collaborer avec nous”. The six anchors and working FR/EN/AR content remain.
+Need-based light entry panels, open contribution/format rows, a four-stage
+sequence, existing reference photographs and an ink contact checklist adapt the
+live Figma cooperation frame within the current shared rules. FR/EN canonical
+paths change together; permanent redirects retain the former URLs. Shared
+navigation, footer, SEO and search consume the updated central definition.
+See [scope and reference decisions](collaborate-page.md).

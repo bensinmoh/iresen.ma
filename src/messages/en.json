@@ -174,7 +174,7 @@
     "platforms": "Research platforms",
     "network": "Laboratory & expert network",
     "transfer": "Valorisation & Transfer",
-    "workWithUs": "Work with us",
+    "workWithUs": "Collaborate with us",
     "news": "News",
     "events": "Events",
     "publications": "Publications & reports",
@@ -1497,7 +1497,8 @@
           "checklist": []
         }
       }
-    }
+    },
+    "pathwayAction": "Choose your pathway"
   },
   "Transfer": {
     "navigation": "On this page",

@@ -2857,3 +2857,33 @@ The source is excluded from formatting to preserve its bytes. Application/databa
 and rendered checks are unnecessary for this documentation-only change; the
 linked benchmark websites were not independently audited. Current PR CI must
 pass before merge. No deployment or website publication is authorized.
+
+## Collaboration page redevelopment — 2026-10-10
+
+- Live Figma context/screenshot inspected for cooperation frame `804:7609` after
+  resolving the supplied full canvas. Adaptation and omitted sample content are
+  recorded in [scope](collaborate-page.md).
+- `pnpm lint`, `pnpm typecheck` and `pnpm build` passed. Build retained existing
+  next-intl webpack dependency-analysis warnings.
+- All 122 unit tests passed in a temporary verification export containing tracked
+  files and this change, with the existing dependency runtime linked. The direct
+  checkout run found unrelated untracked careers media missing search references;
+  those files were preserved and excluded from this change/export.
+- All 24 integration tests passed on the second execution. The first run missed
+  a temporary document facet; no implementation change was made between runs.
+- All 68 scoped Chromium tests passed: engagement/hero (24), navigation/footer/
+  search (44). Checked six stable section anchors, FR/EN 308 redirects, retained
+  query and fragment, contact subject, language equivalence, keyboard navigation,
+  native behavior and axe coverage. FR/EN/AR reflow passed at 320, 390, 768 and
+  1440px and with 200% text.
+- Inspected real FR desktop, Arabic mobile and loaded reference photographs;
+  captured FR/AR at 390/1440 and English at 768. No horizontal overflow was found.
+  Local review files remain ignored in `.cache/collaboration-review/`.
+- Impeccable's mechanical detector returned no findings. Shared brand rules and
+  image provenance remain; no new assets or dependency were introduced.
+- `pnpm search:rebuild` synchronized the static catalog (zero public CMS records).
+  Existing tests verify localized page/section bodies and reachable destinations.
+  Final whole-site glossary/editorial review remains pending.
+
+No deployment, DNS or visibility change was performed. Remote CI and merge
+results are recorded by the task pull request and Git history.

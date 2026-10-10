@@ -231,3 +231,14 @@ now present the owner-selected 59 filed references, source-derived short
 summaries, theme/year/applicant filters, PatentRegister links and a contact draft
 prefilled with the selected patent. The minimal structured database excludes
 project relationships and annuities; the original workbook is not imported.
+
+## Collaboration page redevelopment — 2026-10-10
+
+The owner's later request renames and redevelops the existing `workWithUs` page as
+“Collaborer avec nous”. The six anchors and working FR/EN/AR content remain.
+Need-based light entry panels, open contribution/format rows, a four-stage
+sequence, existing reference photographs and an ink contact checklist adapt the
+live Figma cooperation frame within the current shared rules. FR/EN canonical
+paths change together; permanent redirects retain the former URLs. Shared
+navigation, footer, SEO and search consume the updated central definition.
+See [scope and reference decisions](docs/collaborate-page.md).

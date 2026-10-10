@@ -59,3 +59,14 @@ copy above with a research-to-impact pathway, PI support, four valorisation
 routes and the 59-reference patent catalogue. Collaboration remains unchanged;
 all six transfer section anchors remain. See
 [the current scope](valorisation-patents.md).
+
+## Collaboration page redevelopment — 2026-10-10
+
+The owner's later request renames and redevelops the existing `workWithUs` page as
+“Collaborer avec nous”. The six anchors and working FR/EN/AR content remain.
+Need-based light entry panels, open contribution/format rows, a four-stage
+sequence, existing reference photographs and an ink contact checklist adapt the
+live Figma cooperation frame within the current shared rules. FR/EN canonical
+paths change together; permanent redirects retain the former URLs. Shared
+navigation, footer, SEO and search consume the updated central definition.
+See [scope and reference decisions](collaborate-page.md).
