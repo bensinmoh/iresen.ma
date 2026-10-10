@@ -2738,3 +2738,12 @@ pass after these refinements. French desktop/mobile crops were inspected;
 the browser journeys also verify the external href in all three languages.
 The served logo variant is registered in localized media search, the original
 is excluded from public files, and the local search catalogue was rebuilt.
+
+The final introduction refinement removes the transfer breadcrumb and outer
+spacing/divider, and places its laboratory image before the text. Lint,
+typecheck, 120 unit tests, production build and 30 Chromium journeys pass.
+The first parallel typecheck raced the build's generated route files; the
+sequential rerun passes. Browser assertions verify hero/intro attachment,
+FR/EN image-left and AR image-right layout, no breadcrumb, footer attachment,
+320–1440px, enlarged text and shared hero behavior. French desktop/mobile and
+Arabic desktop screenshots were inspected. Whitespace and design scan pass.

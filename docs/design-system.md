@@ -1413,3 +1413,10 @@ Very narrow/enlarged-text screens permit wrapping instead of overflowing.
 The product photograph links directly to the owner-specified
 `https://www.i-smart.ma/`, with a localized accessible name and visible keyboard
 focus. The native link adds no annotation arrows or automatic navigation.
+
+The transfer introduction now meets the hero directly: its breadcrumb, shell
+padding and content divider are removed only on this page. The lab photograph
+precedes the introduction text (left in FR/EN, mirrored in AR), with the existing
+internal section spacing retained. Mobile stacks the photograph before the copy.
+Other pages keep their breadcrumbs and shell defaults; existing anchors and
+search projections remain unchanged.

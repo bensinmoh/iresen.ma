@@ -3,12 +3,15 @@
 }
 :global(.page-shell):has(.page),
 :global(.page-content):has(> .page) {
-  padding-block-end: 0;
+  padding-block: 0;
+}
+:global(.page-content):has(> .page) {
+  border-block-start: 0;
 }
 .intro {
   padding-block: var(--space-12) var(--space-16);
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
 }

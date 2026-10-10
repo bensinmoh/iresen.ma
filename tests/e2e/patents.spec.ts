@@ -12,6 +12,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     page,
   }) => {
     await page.goto(pageHref('transfer', locale))
+    await expect(page.locator('.breadcrumb')).toHaveCount(0)
     const section = page.locator('#adoption-initiatives')
     const product = page.locator('#ismart-example img[src*="ismart-product"]')
     await product.scrollIntoViewIfNeeded()
@@ -65,6 +66,15 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
         true,
       )
+      const hero = await page.locator('.page-hero').boundingBox()
+      const intro = await page.locator('#results-to-transfer').boundingBox()
+      expect(Math.abs(intro!.y - hero!.y - hero!.height)).toBeLessThan(1)
+      if (width >= 1024) {
+        const photo = await page.locator('#results-to-transfer img').boundingBox()
+        const heading = await page.locator('#results-to-transfer-heading').boundingBox()
+        if (locale === 'ar') expect(photo!.x).toBeGreaterThan(heading!.x)
+        else expect(photo!.x + photo!.width).toBeLessThan(heading!.x)
+      }
       const lastSection = await page.locator('#build-transfer').boundingBox()
       const footer = await page.locator('.site-footer').boundingBox()
       expect(Math.abs(footer!.y - lastSection!.y - lastSection!.height)).toBeLessThan(1)

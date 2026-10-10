@@ -41,7 +41,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
     </header>
   )
   return (
-    <PageShell title={pages('transfer')} locale={locale} pageId="transfer">
+    <PageShell title={pages('transfer')} locale={locale} pageId="transfer" showBreadcrumb={false}>
       <PublishedPageContent pageId="transfer" locale={locale} />
       <div className={styles.page} data-engagement-page="transfer">
         <section
@@ -49,6 +49,14 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           aria-labelledby="results-to-transfer-heading"
           className={styles.intro}
         >
+          <div className={styles.introPhoto}>
+            <Image
+              src="/images/missions/develop-cf05d9355bc5.webp"
+              alt={t('photos.intro')}
+              fill
+              sizes="(max-width: 1023px) 100vw, 45vw"
+            />
+          </div>
           <div className={styles.introCopy}>
             <p className={styles.eyebrow}>{t('eyebrow')}</p>
             <h2 id="results-to-transfer-heading">{t('title')}</h2>
@@ -63,14 +71,6 @@ export async function TransferPage({ locale }: { locale: Locale }) {
                 <NavigationIcon name="arrow" />
               </a>
             </div>
-          </div>
-          <div className={styles.introPhoto}>
-            <Image
-              src="/images/missions/develop-cf05d9355bc5.webp"
-              alt={t('photos.intro')}
-              fill
-              sizes="(max-width: 1023px) 100vw, 45vw"
-            />
           </div>
         </section>
         <section

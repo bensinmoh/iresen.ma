@@ -9,6 +9,7 @@ export async function PageShell({
   locale,
   children,
   home = false,
+  showBreadcrumb = true,
   pageId,
   sectionNavigation,
 }: {
@@ -16,6 +17,7 @@ export async function PageShell({
   locale: Locale
   children: ReactNode
   home?: boolean
+  showBreadcrumb?: boolean
   pageId?: PageId
   sectionNavigation?: ReactNode
 }) {
@@ -26,7 +28,7 @@ export async function PageShell({
       {pageId && <PageHero pageId={pageId} locale={locale} />}
       {sectionNavigation}
       <div className="container page-shell" id={pageId ? 'page-sections' : undefined}>
-        {!home && (
+        {!home && showBreadcrumb && (
           <div className="breadcrumb">
             <a href={pageHref('home', locale)}>{t('home')}</a>
           </div>
