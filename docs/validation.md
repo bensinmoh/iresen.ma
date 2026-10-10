@@ -2995,14 +2995,16 @@ actionable links and no standalone index entries.
 
 The focused source snapshot was verified separately from the concurrent media
 library work, using Node 24.19.0 and the existing dependencies. Formatting, lint,
-type checks, 125 unit checks, 26 integration checks on a disposable migrated
+type checks, 125 unit checks, 27 integration checks on a disposable migrated
 database and the production build passed. All 209 existing browser checks passed;
 the six news/event browser checks passed after correcting the test's language
 selector for the gradient header. These cover FR/EN/AR at 320/390/768/1440 pixels,
 200% text, loaded visible photos, same-height cards, highlight alignment, native
 keyboard scrolling/disclosures, listing locale links, legacy redirects and
 MENALINKS search discovery. Scoped axe found no violations; this does not claim
-complete accessibility compliance.
+complete accessibility compliance. CMS thumbnails use encoded filenames and
+locale-guarded endpoints; an additional database test verifies exclusion of
+unapproved-language media and withdrawal of private images/articles.
 
 Actual FR desktop, AR mobile and listing captures were inspected. The mobile
 portrait minimum-size issue was corrected before final verification. Review

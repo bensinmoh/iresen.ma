@@ -37,16 +37,14 @@ export async function findPublicNewsCards(locale: Locale, page = 1) {
           depth: 0,
           limit: 1,
           where: { id: { equals: article.heroImage } },
-          select: { url: true, alt: true, mimeType: true },
+          select: { filename: true, alt: true, mimeType: true },
         })
         const media = docs[0]
-        if (
-          media?.url &&
-          media.alt &&
-          media.mimeType?.startsWith('image/') &&
-          media.url.startsWith('/api/media/file/')
-        )
-          image = { src: media.url, alt: media.alt }
+        if (media?.filename && media.alt && media.mimeType?.startsWith('image/'))
+          image = {
+            src: `/api/media/file/${encodeURIComponent(media.filename)}?locale=${locale}`,
+            alt: media.alt,
+          }
       }
       return {
         id: `cms-${article.id}`,

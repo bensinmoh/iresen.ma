@@ -104,5 +104,6 @@ DNS or visibility change is included.
 New overview sections, selected notices, event details, listing and every served
 photo/vector have explicit localized search references. Aliases redirect to the
 same canonical result. CMS news/media retain guarded publication and withdrawal
-behaviour. The final-content multilingual glossary sanity check remains due when
+behaviour. CMS thumbnails use encoded filenames with locale-guarded file URLs;
+unapproved-language or withdrawn media are excluded. The final-content multilingual glossary sanity check remains due when
 all website content is finished. See [validation](validation.md#news-events--2026-10-10).
