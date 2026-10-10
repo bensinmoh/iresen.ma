@@ -33,9 +33,6 @@
 }
 
 .statement {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: var(--space-4);
   margin: 0;
   padding-block-end: var(--space-6);
   border-block-end: 1px solid var(--color-border);
@@ -52,17 +49,12 @@
   max-inline-size: none;
 }
 
-.quoteMark,
-.closeQuote {
+.quoteMark {
   color: var(--color-blue);
   font-size: 1em;
-  font-weight: inherit;
+  font-weight: 500;
   letter-spacing: normal;
   line-height: inherit;
-}
-
-.closeQuote {
-  margin-inline-start: 0.2em;
 }
 
 .cooperation {
@@ -318,9 +310,6 @@
 }
 
 @media (max-width: 47.999rem) {
-  .statement {
-    gap: var(--space-2);
-  }
   .cards {
     grid-template-columns: none;
     grid-auto-flow: column;

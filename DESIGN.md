@@ -4,7 +4,7 @@
 
 The owner now commissions the previously deferred mission-statement design.
 A full-width, start-aligned editorial quotation uses fluid 20–32px regular text
-and compact 1.38 Latin/1.4 Arabic line height, a separate blue quote mark and a
+and compact 1.38 Latin/1.4 Arabic line height, blue inline quotation marks and a
 fine lower rule, following the owner’s later size/line-height correction. It is followed by
 three photographic contribution cards and a shorter navy cooperation band
 aligned to the outer card edges. R&I alone carries Développer · Éprouver · Valoriser.
@@ -13,8 +13,10 @@ physical signature corners remain; the quote/band reflow naturally in Arabic and
 at enlarged text sizes. See [scope and narrative](docs/narrative-alignment.md).
 Earlier centred-mission and design-deferral descriptions are historical.
 
-Opening and closing quotation marks use the same inherited size, weight and
-line height, after the owner identified the former enlarged opening glyph.
+Opening and closing quotation marks are directly inside the paragraph, with
+identical inherited size/line height, blue color and weight 500. French uses
+symmetrical narrow non-breaking spaces. This supersedes the detached opening
+glyph after the owner's spacing correction.
 
 The owner's later photographic-card reference places the three purposes above
 the domain headings, as light uppercase overlines (label size, weight 400,

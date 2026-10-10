@@ -265,6 +265,22 @@ for (const locale of locales) {
     await expect(section.getByRole('heading', { level: 2 })).toHaveCount(1)
     await expect(section.getByRole('article')).toHaveCount(3)
     await expect(section.locator('blockquote')).toContainText(/IRESEN/)
+    const quotationMarks = section.locator('blockquote > p > span')
+    await expect(quotationMarks).toHaveCount(2)
+    const pairedStyles = await quotationMarks.evaluateAll((marks) =>
+      marks.map((mark) => {
+        const style = getComputedStyle(mark)
+        return {
+          display: style.display,
+          size: style.fontSize,
+          weight: style.fontWeight,
+          margin: style.marginInline,
+          color: style.color,
+        }
+      }),
+    )
+    expect(pairedStyles[0]).toEqual(pairedStyles[1])
+    expect(pairedStyles[0].display).toBe('inline')
     const band = section.locator('#mission-cooperation')
     await expect(band).toHaveAccessibleName(/\S/)
     await expect(band.getByRole('link')).toHaveAttribute('href', pageHref('workWithUs', locale))

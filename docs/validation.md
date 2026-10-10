@@ -2555,6 +2555,12 @@ lets the preference-change event settle before measuring sustained inactivity.
   weight, line height and color for each opening/closing pair. FR was visually
   inspected, and the owner's existing local preview was reloaded. Lint, build,
   typecheck and all 19 mission/navigation browser tests passed again.
+- The owner's subsequent spacing correction supersedes the detached opening
+  layout: both marks are inline in the same paragraph, sharing blue color and
+  weight 500, with symmetrical French narrow non-breaking spaces. The production
+  preview was reloaded and FR visually inspected. Build, lint, typecheck and all
+  19 mission/navigation browser tests passed; paired inline typography is now
+  covered by the existing localized mission browser checks.
 - The three previously indexed repository DOCX originals retain their pinned
   hashes. The new DOCX was read locally; only derived editorial guidance was
   added. No original, private download, CMS schema or new route was imported.

@@ -127,9 +127,10 @@ source's English signature does not independently approve a global slogan change
 A small shared Apex Leaf mission heading introduces a start-aligned editorial
 blockquote over the full available content width. The owner’s later request
 reduces its typography to fluid 20–32px regular text (about 24px at 1440px), with
-1.38 Latin / 1.4 Arabic line height, a separate blue quotation mark and a fine
-lower rule. French uses guillemets. Opening and closing marks now have identical
-inherited size, weight and line height after the owner's visual correction.
+1.38 Latin / 1.4 Arabic line height, blue inline quotation marks and a fine
+lower rule. French uses guillemets with symmetrical narrow non-breaking spaces.
+Both marks sit directly in the paragraph and share inherited size/line height
+and weight 500 after the owner's size and spacing corrections.
 This replaces the former centred heading/paragraph measure. Three photographic
 cards present domains, purpose,
 short explanation and one useful destination. R&I alone displays the three

@@ -37,12 +37,14 @@ export async function MissionSection({ locale }: { locale: Locale }) {
           <span>{t('eyebrow')}</span>
         </h2>
         <blockquote className={styles.statement}>
-          <span className={styles.quoteMark} aria-hidden="true">
-            {t('openQuote')}
-          </span>
           <p>
+            <span className={styles.quoteMark} aria-hidden="true">
+              {t('openQuote')}
+            </span>
+            {locale === 'fr' ? '\u202f' : ''}
             {sections(`${homeMissionSectionId}.description`)}
-            <span className={styles.closeQuote} aria-hidden="true">
+            {locale === 'fr' ? '\u202f' : ''}
+            <span className={styles.quoteMark} aria-hidden="true">
               {t('closeQuote')}
             </span>
           </p>

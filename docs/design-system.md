@@ -6,7 +6,7 @@ The current mission introduction uses the shared Apex Leaf section label as its
 h2 and a full-available-width, start-aligned blockquote (fluid 20–32px at default
 root size, regular weight, 1.38 line height). Arabic uses natural tracking and 1.4
 line height. The owner’s later refinement reduces its size and compacts its rhythm;
-a separate blue opening quotation mark and a fine lower rule give it editorial
+blue inline quotation marks and a fine lower rule give it editorial
 structure without an enclosing card. French uses guillemets. Three contribution cards retain the existing photographic family.
 The shorter navy cooperation band spans their outer edges, with title, explanatory
 copy and one canonical link. It stacks internally below 64rem and grows with text.
@@ -14,8 +14,9 @@ This is a local mission composition, with no new shared tokens or universal quot
 requirement. The former mission-design deferral is superseded. See
 [the narrative alignment](narrative-alignment.md).
 
-Both quotation marks inherit the statement's size, weight and line height;
-the opening mark is no longer enlarged independently of the closing mark.
+Both quotation marks sit directly within the paragraph, inherit its size and
+line height and share blue color/weight 500. French uses symmetrical narrow
+non-breaking spaces; no detached column or asymmetric margin remains.
 
 The three card purposes now precede their domain h3 as light uppercase overlines,
 matching the owner's later card screenshot: shared label size, regular 400 weight,
