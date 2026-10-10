@@ -7,7 +7,7 @@ import type { PoolClient } from 'pg'
 import { careerHref, careerDownloadHref } from '@/lib/careers'
 import { contentLocales } from '@/lib/content/publication'
 import { mediaDirectory } from '@/cms/media-directory'
-import { isPublicSlug, newsHref } from '@/lib/content/routes'
+import { isPublicSlug, isNewsSlug, newsHref } from '@/lib/content/routes'
 import { pageHref, pageIds, type PageId } from '@/lib/site'
 import { catalogRevision, staticSearchDocuments } from './catalog'
 import { searchDatabase } from './database'
@@ -169,7 +169,7 @@ function sourceUrl(source: Source): string | undefined {
     return `${pageHref(source.page_id as PageId, source.locale)}#published-content`
   if (source.origin === 'opportunities' && isPublicSlug(source.slug))
     return careerHref(source.slug, source.locale)
-  if (source.origin === 'news' && isPublicSlug(source.slug))
+  if (source.origin === 'news' && isNewsSlug(source.slug, source.locale))
     return newsHref(source.slug, source.locale)
   if (
     source.origin === 'media' &&

@@ -1,4 +1,5 @@
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
+import { selectedNews, newsEvents, newsImages, newsSocialLinks } from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
 import { engagementSearchText } from '@/lib/engagement'
@@ -19,7 +20,7 @@ import { homeNewsPosts, homeNewsSectionId } from '@/lib/home-news'
 import { researchThemes, researchImages, homeResearchSectionId } from '@/lib/home-research'
 import { missionImages } from '@/lib/mission-images'
 import { pageSections } from '@/lib/page-sections'
-import { pageHref, pageIds } from '@/lib/site'
+import { pageHref, pageIds, newsListingHref } from '@/lib/site'
 import { contentLocales } from '@/lib/content/publication'
 import type { PublicSearchDocument, SearchLocale } from './types'
 
@@ -94,6 +95,60 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   },
+  ...['hero', 'learning', 'exchange'].map((id) => ({
+    id: `news-reference-${id}`,
+    url: `/images/news/${id}.webp`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title:
+            id === 'hero'
+              ? messages[locale].NewsEvents.photos.hero
+              : messages[locale].NewsEvents.trainingAlt,
+          description:
+            id === 'hero'
+              ? messages[locale].NewsEvents.photos.hero
+              : messages[locale].NewsEvents.trainingAlt,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
+  ...Object.entries(newsImages).map(([id, image]) => ({
+    id: `news-image-${id}`,
+    url: image.src,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title:
+            messages[locale].HomeNews.posts[id as keyof typeof messages.fr.HomeNews.posts].title,
+          description:
+            messages[locale].NewsEvents.photos[
+              image.altKey as keyof typeof messages.fr.NewsEvents.photos
+            ],
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
+  ...newsSocialLinks
+    .filter((social) => ['facebook', 'instagram', 'researchgate'].includes(social.id))
+    .map((social) => ({
+      id: `social-logo-${social.id}`,
+      url: `/brand/social/${social.id}.svg`,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => [
+          locale,
+          {
+            title: social.name,
+            description: `${social.name} — ${messages[locale].NewsEvents.followDescription}`,
+          },
+        ]),
+      ) as PublicAssetReference['text'],
+    })),
   ...mediaPhotos.map((photo) => ({
     id: `library-photo-${photo.id}`,
     url: photo.src,
@@ -512,7 +567,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
     const catalog = messages[locale]
     for (const pageId of pageIds) {
       // Internal query/results pages must not recursively appear in their own results.
-      if (pageId === 'search') continue
+      if (pageId === 'search' || pageId === 'events') continue
       if (pageId === 'contact') {
         documents.push(...contactSearchDocuments(locale))
         continue
@@ -522,6 +577,13 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         body.push(...engagementSearchText(catalog.Engagement[pageId]))
         body.push(...engagementSearchText(catalog.PageSections[pageId]))
       }
+      if (pageId === 'news')
+        body.push(
+          catalog.NewsEvents.description,
+          catalog.NewsEvents.trainingDescription,
+          ...engagementSearchText(catalog.NewsEvents.summaries),
+          ...engagementSearchText(catalog.NewsEvents.events),
+        )
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')
         body.push(
@@ -608,6 +670,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'news') {
+            if (entry.id === 'news')
+              body.push(...engagementSearchText(catalog.NewsEvents.summaries))
+            if (entry.id === 'events') body.push(...engagementSearchText(catalog.NewsEvents.events))
+            if (entry.id === 'follow-iresen')
+              body.push(
+                catalog.NewsEvents.followDescription,
+                ...newsSocialLinks.map((social) => social.name),
+              )
+          }
           if (pageId === 'opportunities') {
             const keys = {
               'working-at-iresen': catalog.Careers.environment,
@@ -818,6 +890,36 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         type: 'section' as const,
       })),
     )
+    documents.push({
+      id: `page:news-listing:${locale}`,
+      locale,
+      title: catalog.NewsEvents.allNews,
+      body: `${catalog.NewsEvents.description} ${Object.values(catalog.NewsEvents.summaries).join(' ')}`,
+      url: newsListingHref(locale),
+      type: 'page',
+    })
+    for (const post of selectedNews) {
+      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
+      documents.push({
+        id: `section:news:linkedin:${post.id}:${locale}`,
+        locale,
+        title: catalog.HomeNews.posts[key].title,
+        body: `IRESEN LinkedIn ${catalog.NewsEvents.summaries[key]}`,
+        url: pageHref('news', locale, `news-${key}`),
+        type: 'news',
+      })
+    }
+    for (const event of newsEvents) {
+      const copy = catalog.NewsEvents.events[event.id]
+      documents.push({
+        id: `section:news:event-${event.id}:${locale}`,
+        locale,
+        title: copy.name,
+        body: engagementSearchText(copy).join(' '),
+        url: pageHref('news', locale, `event-${event.id}`),
+        type: 'section',
+      })
+    }
     for (const asset of publicAssetReferences) {
       const copy = asset.text[locale]
       if (copy?.title.trim() && copy.description.trim())

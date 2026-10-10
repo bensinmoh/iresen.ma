@@ -4,7 +4,14 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useCallback, useEffect, useRef, type KeyboardEvent } from 'react'
 import { isLocale, defaultLocale } from '@/i18n/locales'
 import { usePathname } from '@/i18n/navigation'
-import { navigationGroups, pageHref, pageIdFromPathname, type PageId } from '@/lib/site'
+import {
+  navigationGroups,
+  pageHref,
+  pageLinkHref,
+  pageIdFromPathname,
+  isNewsListingPath,
+  type PageId,
+} from '@/lib/site'
 import { navigationPanels, type NavigationGroup } from '@/lib/navigation'
 import { homeFigures } from '@/lib/figures'
 import { LocaleSelector } from './LocaleSelector'
@@ -20,7 +27,7 @@ export function SiteHeader() {
   const copy = useTranslations('Header')
   const figureCopy = useTranslations('Hero')
   const pathname = usePathname()
-  const currentPageId = pageIdFromPathname(pathname)
+  const currentPageId = isNewsListingPath(pathname, locale) ? 'news' : pageIdFromPathname(pathname)
   const headerRef = useRef<HTMLElement>(null)
   const menuRef = useRef<HTMLDetailsElement>(null)
   const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -184,7 +191,7 @@ export function SiteHeader() {
   function pageLink(pageId: PageId, className?: string, label = pageTitle(pageId)) {
     return (
       <a
-        href={pageHref(pageId, locale)}
+        href={pageLinkHref(pageId, locale)}
         aria-current={currentPageId === pageId ? 'page' : undefined}
         className={className}
       >
@@ -288,7 +295,7 @@ export function SiteHeader() {
                 {group.pages.map((id) => (
                   <li key={id}>
                     <a
-                      href={pageHref(id, locale)}
+                      href={pageLinkHref(id, locale)}
                       aria-current={currentPageId === id ? 'page' : undefined}
                     >
                       <span className="mega-menu-link-title">

@@ -17,6 +17,7 @@ const nextConfig = {
     localPatterns: [
       { pathname: '/images/heroes/**', search: '' },
       { pathname: '/images/media-library/**', search: '' },
+      { pathname: '/images/news/**', search: '' },
       { pathname: '/images/missions/**', search: '' },
       { pathname: '/images/domains/**', search: '' },
       { pathname: '/images/platforms/**', search: '' },

@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
-import { footerNavigationGroups, footerPageIds, pageHref } from '@/lib/site'
+import { footerNavigationGroups, footerPageIds, pageHref, pageLinkHref } from '@/lib/site'
 import { footerContact, footerSocialLinks } from '@/lib/footer'
 import { LocaleSelector } from './LocaleSelector'
 import { FooterIcon } from './FooterIcon'
@@ -59,7 +59,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 <ul>
                   {group.pages.map((id) => (
                     <li key={id}>
-                      <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
+                      <a href={pageLinkHref(id, locale)}>{pageTitle(id)}</a>
                     </li>
                   ))}
                 </ul>
@@ -165,7 +165,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           <ul>
             {footerPageIds.map((id) => (
               <li key={id}>
-                <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
+                <a href={pageLinkHref(id, locale)}>{pageTitle(id)}</a>
               </li>
             ))}
           </ul>

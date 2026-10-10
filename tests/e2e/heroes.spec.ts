@@ -64,7 +64,12 @@ for (const locale of locales) {
     await page.setViewportSize({ width: 1440, height: 900 })
     // Contact and Careers have dedicated introductions covered by their own browser suites.
     for (const id of pageIds.filter(
-      (pageId) => pageId !== 'contact' && pageId !== 'search' && pageId !== 'opportunities',
+      (pageId) =>
+        pageId !== 'contact' &&
+        pageId !== 'search' &&
+        pageId !== 'opportunities' &&
+        pageId !== 'news' &&
+        pageId !== 'events',
     )) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')

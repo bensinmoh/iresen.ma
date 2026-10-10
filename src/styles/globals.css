@@ -177,7 +177,8 @@ ul {
   border-color: var(--color-footer-divider);
 }
 
-body:is(:has(.page-hero), :has([data-careers-page])) .site-header-overlay {
+body:is(:has(.page-hero), :has([data-careers-page]), :has([data-news-events-page]))
+  .site-header-overlay {
   position: absolute;
   inset-block-start: 0;
   inset-inline: 0;

@@ -2,7 +2,7 @@ import Form from 'next/form'
 import Link from 'next/link'
 import { getFormatter, getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
-import { pageHref } from '@/lib/site'
+import { pageHref, pageLinkHref } from '@/lib/site'
 import { searchTypes } from '@/lib/search/types'
 import type { SearchResult, SearchType } from '@/lib/search/adapter'
 import { highlightSearchText } from '@/lib/search/text'
@@ -110,7 +110,7 @@ export async function SearchPage({
           <p>{t('startDescription')}</p>
           <div className="search-state-actions">
             {(['institute', 'programmes', 'publications', 'media'] as const).map((id) => (
-              <a href={pageHref(id, locale)} key={id}>
+              <a href={pageLinkHref(id, locale)} key={id}>
                 {pages(id)}
               </a>
             ))}

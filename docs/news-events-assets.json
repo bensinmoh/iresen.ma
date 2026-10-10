@@ -1,0 +1,69 @@
+{
+  "received": "2026-10-10",
+  "assets": [
+    {
+      "id": "hero",
+      "source": "Figma 804:8049",
+      "sourceSha256": "b1e5bcc2254b61038023005b21df12589a0907376ba8aead673eaae8c0c94161",
+      "servedPath": "/images/news/hero.webp",
+      "servedSha256": "b1551f58de7277c0cf835f5a93581a5d7b94b960fdf1780cb2808de25a106cf5",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "learning",
+      "source": "Figma 804:8049",
+      "sourceSha256": "42b44ba30cee2d54c7fcb7061662a3ccfdf4d00530e8f1f00af6eb07b15964eb",
+      "servedPath": "/images/news/learning.webp",
+      "servedSha256": "ef3b7173dc4379ec61af7edbc01bcdbd6c5547a4151e2eba5284e0e6fc83872b",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "exchange",
+      "source": "Figma 804:8049",
+      "sourceSha256": "d66834aece9a0ce7a859b992b2fa7cc8aeaeff198ae15cb831ff5d134a268e20",
+      "servedPath": "/images/news/exchange.webp",
+      "servedSha256": "a6fe8409cac2df6141db94bc1374c254cc42684819c9b2a5a9fdc4ecbd035f4c",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "podcast",
+      "source": "Owner-selected LinkedIn publication",
+      "sourceSha256": "8acc34eaae84307a4e08f2e59db33797436f982e71c954008373e04369d806d1",
+      "servedPath": "/images/news/podcast.webp",
+      "servedSha256": "01592e9473d2d9c72884fd977aa28ba27173fad25252cdad821503ddfed5d61d",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "oman",
+      "source": "Owner-selected LinkedIn publication",
+      "sourceSha256": "d467368bff6d3fd294416b3d8d03edc8c24ef1c5f8d4f5e2accb69673f04b53f",
+      "servedPath": "/images/news/oman.webp",
+      "servedSha256": "4f0be632c7cb73f1e1c5ad1ffe9ddb3475c4c6eaa1f32cd17daadac7644215f9",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "sweden",
+      "source": "Owner-selected LinkedIn publication",
+      "sourceSha256": "c863718de7ddf879d9e26d0faf16549554b39752365335ef8e4e201ada7cdfbe",
+      "servedPath": "/images/news/sweden.webp",
+      "servedSha256": "b05fd6c14efd92624f4a5d9f011208267953c11f739e7f87d19105a0b54215aa",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "istanbul",
+      "source": "Owner-selected LinkedIn publication",
+      "sourceSha256": "986176164251ecdc24f2aafd1121c86c860d6a04b1893c45acb01f105eebae13",
+      "servedPath": "/images/news/istanbul.webp",
+      "servedSha256": "a056aa01a981f277b50e1d1c01c5c828f425f1640a6636141b5fda21ffaca359",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "majan",
+      "source": "Owner-selected LinkedIn publication",
+      "sourceSha256": "9db1af4f9f4a643d2ecc19bbf3f5d915f0c14b8d88e9ff52120ba035ff39b86e",
+      "servedPath": "/images/news/majan.webp",
+      "servedSha256": "dc741e5b9fbef52fb763b7f4abdb036cf3786dc64de83d123e048c3386b90940",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    }
+  ]
+}

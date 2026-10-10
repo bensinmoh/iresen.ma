@@ -81,3 +81,14 @@ anchors remain; FR/EN use `/fr/collaborer-avec-nous` and
 `/en/collaborate-with-us`, with permanent redirects from their former paths.
 Arabic retains `/ar/التعاون-معنا`. Shared helpers supply all current destinations.
 See [scope](collaborate-page.md).
+
+## News & events — 2026-10-10
+
+The owner commissioned the combined news/events page and its thumbnail listing
+with a shared hero. Existing news paths host the overview; former events paths
+redirect to its events anchor. Navigation news links reach its news anchor;
+“All news” reaches the localized child listing. Five selected LinkedIn notices,
+three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
+social links, shared physical two-rounded/two-sharp corners and localized search
+references are included. FR/EN/AR copy remains working editorial text. No deployment
+or publication-gate change is authorized. See [scope](news-events.md).

@@ -3006,6 +3006,43 @@ use isolated Latin text and punctuation for exact acronym search discovery.
 No deployment, DNS or visibility change was performed. Remote CI and merge
 status are recorded by the task PR and Git history.
 
+## News events — 2026-10-10
+
+Implemented the combined overview, separate thumbnail listing with the same
+hero, localized news/events section destinations and permanent legacy event
+redirects. The owner-confirmed COP31 edition retains two proposed subjects and
+programme times to confirm. Source photos, eight WebP derivatives and three
+original social SVG marks have localized public search references. See
+[scope and provenance](news-events.md).
+
+The owner follow-ups add a fifth pending secondary news slot aligned with the
+highlight, a contained portrait with blurred photo echo, the shared gradient
+header in both views, expanded knowledge-sharing copy and three pending events.
+Six equal-height event cards scroll horizontally with three/two/one visible at
+desktop/tablet/mobile widths. Placeholder slots have no fabricated facts or
+actionable links and no standalone index entries.
+
+The focused source snapshot was verified separately from the concurrent media
+library work, using Node 24.19.0 and the existing dependencies. Formatting, lint,
+type checks, 125 unit checks, 27 integration checks on a disposable migrated
+database and the production build passed. All 209 existing browser checks passed;
+the six news/event browser checks passed after correcting the test's language
+selector for the gradient header. These cover FR/EN/AR at 320/390/768/1440 pixels,
+200% text, loaded visible photos, same-height cards, highlight alignment, native
+keyboard scrolling/disclosures, listing locale links, legacy redirects and
+MENALINKS search discovery. Scoped axe found no violations; this does not claim
+complete accessibility compliance. CMS thumbnails use encoded filenames and
+locale-guarded endpoints; an additional database test verifies exclusion of
+unapproved-language media and withdrawal of private images/articles.
+
+Actual FR desktop, AR mobile and listing captures were inspected. The mobile
+portrait minimum-size issue was corrected before final verification. Review
+artifacts remain ignored under `.local/news-review/`. Original/private sources,
+existing CMS uploads, accounts and unrelated changes are preserved. FR/EN/AR
+copy remains editorial working text. No deployment, DNS or visibility change.
+Final glossary/search sanity review remains due after complete site content;
+remote CI and merge are recorded in the task PR and Git history.
+
 ## Horizontal scroll indicator documentation — 2026-10-10
 
 Extracted six local frames from each of four supplied recordings; visually compared

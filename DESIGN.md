@@ -1077,6 +1077,23 @@ and is centered with the title/action. This is a local color application; shared
 brand tokens remain unchanged. The generated audience photos are reflected in
 Arabic following the owner's explicit correction; the world silhouette is not.
 
+## News & events — 2026-10-10
+
+The owner commissioned the combined news/events page and its thumbnail listing
+with a shared hero. Existing news paths host the overview; former events paths
+redirect to its events anchor. Navigation news links reach its news anchor;
+“All news” reaches the localized child listing. Five selected LinkedIn notices,
+three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
+social links, shared physical two-rounded/two-sharp corners and localized search
+references are included. FR/EN/AR copy remains working editorial text. No deployment
+or publication-gate change is authorized. See [scope](docs/news-events.md).
+
+Owner follow-up for news/events: one pending secondary news slot and three
+pending event cards are explicitly labelled and have no invented content,
+dates or signup links. The highlight uses a blurred photo echo, and its five
+secondary entries align with its height. Both views use the shared gradient
+header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md).
+
 ## Horizontal collection indicators — 2026-10-10
 
 The owner requested a reference specification from four videos: expanding active

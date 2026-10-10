@@ -273,6 +273,17 @@ For an isolated production check alongside the local development server, set
 `NEXT_BUILD_DIRECTORY=.local/careers-build` for both `pnpm build` and
 `scripts/start-production.mjs`, and use a separate `PORT`. The default remains `.next`.
 
+## News & events — 2026-10-10
+
+The owner commissioned the combined news/events page and its thumbnail listing
+with a shared hero. Existing news paths host the overview; former events paths
+redirect to its events anchor. Navigation news links reach its news anchor;
+“All news” reaches the localized child listing. Five selected LinkedIn notices,
+three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
+social links, shared physical two-rounded/two-sharp corners and localized search
+references are included. FR/EN/AR copy remains working editorial text. No deployment
+or publication-gate change is authorized. See [scope](docs/news-events.md).
+
 ## Horizontal scroll reference — 2026-10-10
 
 The [recorded indicator design](docs/horizontal-scroll-indicators.md) distinguishes

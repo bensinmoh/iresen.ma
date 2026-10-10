@@ -133,3 +133,14 @@ final multilingual glossary/index sanity check after complete content delivery.
 
 - [x] Develop the existing two pages with six canonical sections each, working FR/EN/AR copy, responsive/RTL layout, native IP disclosures, existing references, contact preparation and complete search projection. See [scope](collaboration-transfer-pages.md).
 - [ ] Complete institutional review, supported outcome/case evidence and final translations before final launch approval.
+
+## News & events — 2026-10-10
+
+The owner commissioned the combined news/events page and its thumbnail listing
+with a shared hero. Existing news paths host the overview; former events paths
+redirect to its events anchor. Navigation news links reach its news anchor;
+“All news” reaches the localized child listing. Five selected LinkedIn notices,
+three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
+social links, shared physical two-rounded/two-sharp corners and localized search
+references are included. FR/EN/AR copy remains working editorial text. No deployment
+or publication-gate change is authorized. See [scope](news-events.md).

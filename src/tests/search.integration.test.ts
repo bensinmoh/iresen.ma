@@ -278,6 +278,32 @@ integration('public website search (PostgreSQL)', () => {
     return { id, filename }
   }
 
+  it('news cards use locale-guarded thumbnails and remove them after media withdrawal', async () => {
+    const { findPublicNewsCards } = await import('@/lib/content/news-cards')
+    const media = await createMedia(term(), 'image/png', { locale: 'en' })
+    const english = await createNews(term(), { locale: 'en' })
+    const french = await createNews(term(), { locale: 'fr' })
+    await database!.query('UPDATE news SET hero_image_id=$1 WHERE id=ANY($2::int[])', [
+      media.id,
+      [english, french],
+    ])
+    const cards = await findPublicNewsCards('en')
+    expect(cards.cards.find((card) => card.id === `cms-${english}`)?.image?.src).toBe(
+      `/api/media/file/${encodeURIComponent(media.filename)}?locale=en`,
+    )
+    expect(
+      (await findPublicNewsCards('fr')).cards.find((card) => card.id === `cms-${french}`)?.image,
+    ).toBeUndefined()
+    await database!.query("UPDATE media SET visibility='private' WHERE id=$1", [media.id])
+    expect(
+      (await findPublicNewsCards('en')).cards.find((card) => card.id === `cms-${english}`)?.image,
+    ).toBeUndefined()
+    await database!.query("UPDATE news SET visibility='private' WHERE id=$1", [english])
+    expect(
+      (await findPublicNewsCards('en')).cards.some((card) => card.id === `cms-${english}`),
+    ).toBe(false)
+  })
+
   it('rebuilds vocabulary at startup for an unchanged static catalog upgraded from the previous index schema', async () => {
     const document = staticSearchDocuments().find(
       ({ locale, type, title }) =>

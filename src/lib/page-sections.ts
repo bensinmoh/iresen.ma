@@ -108,20 +108,8 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'need-to-project' },
     { id: 'prepare-discussion' },
   ],
-  news: [
-    { id: 'featured-news' },
-    { id: 'find-news' },
-    { id: 'all-news' },
-    { id: 'related-events-resources' },
-    { id: 'follow-iresen' },
-  ],
-  events: [
-    { id: 'upcoming-events' },
-    { id: 'find-event' },
-    { id: 'participate' },
-    { id: 'past-events' },
-    { id: 'propose-collaboration' },
-  ],
+  news: [{ id: 'news' }, { id: 'events' }, { id: 'follow-iresen' }],
+  events: [],
   publications: [
     { id: 'featured-publications' },
     { id: 'find-publication' },

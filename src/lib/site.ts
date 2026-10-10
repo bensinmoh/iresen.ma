@@ -80,6 +80,7 @@ export const pages = {
     pathnames: { fr: '/collaborer-avec-nous', en: '/collaborate-with-us', ar: '/التعاون-معنا' },
   },
   news: {
+    anchors: ['featured-news', 'find-news', 'all-news', 'related-events-resources'],
     path: '/resources/news',
     pathnames: { fr: '/ressources/actualites', en: '/resources/news', ar: '/الموارد/الأخبار' },
   },
@@ -159,6 +160,7 @@ export const footerNavigationGroups = [
 ] as const satisfies ReadonlyArray<{ id: string; pages: readonly PageId[] }>
 
 export function pageHref(pageId: PageId, locale: Locale, anchor?: string): string {
+  if (pageId === 'events') return pageHref('news', locale, 'events')
   const path = pages[pageId].pathnames[locale]
   const href = `/${locale}${path === '/' ? '' : path}`
   return anchor && isSupportedAnchor(pageId, anchor) ? `${href}#${anchor.replace(/^#/, '')}` : href
@@ -175,6 +177,17 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   return (
     normalized === 'main-content' ||
     normalized === 'page-sections' ||
+    (pageId === 'news' &&
+      [
+        'news',
+        'events',
+        'follow-iresen',
+        'event-oman',
+        'event-cop31',
+        'event-irsecx',
+        'knowledge-sharing',
+        ...homeNewsPosts.map((post) => `news-${post.id.split(':').at(-1)}`),
+      ].includes(normalized)) ||
     (pageId === 'home' && legacyMissionAnchors.some((id) => id === normalized)) ||
     (pageId === 'home' &&
       homeNewsPosts.some((post) => normalized === `news-${post.id.split(':').at(-1)}`)) ||
@@ -196,4 +209,21 @@ export function getSiteUrl(): URL {
 
 export function isIndexingEnabled(): boolean {
   return process.env.SITE_INDEXING_ENABLED === 'true'
+}
+
+// The listing is a child view of the news page, not a new institutional page ID.
+export const newsListingPaths: Record<Locale, string> = {
+  fr: '/ressources/actualites/liste',
+  en: '/resources/news/list',
+  ar: '/الموارد/الأخبار/القائمة',
+}
+export const newsListingPath = '/resources/news/list'
+export function newsListingHref(locale: Locale): string {
+  return `/${locale}${newsListingPaths[locale]}`
+}
+export function isNewsListingPath(path: string, locale: Locale): boolean {
+  return path === newsListingPath || path === newsListingPaths[locale]
+}
+export function pageLinkHref(pageId: PageId, locale: Locale): string {
+  return pageHref(pageId, locale, pageId === 'news' ? 'news' : undefined)
 }

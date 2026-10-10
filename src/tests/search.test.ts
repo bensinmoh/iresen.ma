@@ -262,8 +262,8 @@ describe('explicit public search catalog', () => {
     expect(new Set(documents.map(({ id }) => id)).size).toBe(documents.length)
     for (const locale of contentLocales) {
       for (const pageId of pageIds) {
-        if (pageId === 'search') {
-          expect(documents.some(({ id }) => id === `page:search:${locale}`)).toBe(false)
+        if (pageId === 'search' || pageId === 'events') {
+          expect(documents.some(({ id }) => id === `page:${pageId}:${locale}`)).toBe(false)
           continue
         }
         expect(documents.find(({ id }) => id === `page:${pageId}:${locale}`)).toMatchObject({

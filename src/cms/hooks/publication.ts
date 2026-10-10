@@ -1,6 +1,7 @@
 import { APIError, type CollectionBeforeChangeHook } from 'payload'
 
 import { isContentLocale, missingPublicationFields } from '../../lib/content/publication'
+import { isNewsSlug } from '../../lib/content/routes'
 import { canPublish, isStaff } from '../access/roles'
 
 export function publicationGuard(kind: 'pages' | 'news' | 'media'): CollectionBeforeChangeHook {
@@ -24,6 +25,8 @@ export function publicationGuard(kind: 'pages' | 'news' | 'media'): CollectionBe
 
     if (current.publicationStatus === 'published') {
       const missing = missingPublicationFields(current, kind)
+      if (kind === 'news' && !isNewsSlug(current.slug, req.locale) && !missing.includes('slug'))
+        missing.push('slug (invalid or reserved)')
       if (missing.length) {
         throw new APIError(
           `Complete the ${req.locale} translation before publication: ${missing.join(', ')}.`,

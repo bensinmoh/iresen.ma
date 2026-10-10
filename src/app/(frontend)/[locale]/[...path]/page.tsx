@@ -1,9 +1,10 @@
 import { MediaLibraryPage } from '@/components/media/MediaLibraryPage'
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { isLocale } from '@/i18n/locales'
-import { pageIdFromPathname } from '@/lib/site'
+import { pageIdFromPathname, isNewsListingPath, newsListingHref, pageHref } from '@/lib/site'
+import { NewsEventsPage } from '@/components/news/NewsEventsPage'
 import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
 import { ContactPage } from '@/components/contact/ContactPage'
@@ -29,6 +30,22 @@ export async function generateMetadata({ params }: ContentPageProps): Promise<Me
   const { locale, path } = await params
   const pageId = pageIdFromPathname(`/${path.join('/')}`)
   if (!isLocale(locale)) notFound()
+  if (isNewsListingPath(`/${path.join('/')}`, locale)) {
+    const t = await getTranslations({ locale, namespace: 'NewsEvents' })
+    return {
+      title: t('allNews'),
+      alternates: {
+        canonical: new URL(newsListingHref(locale), getSiteUrl()).toString(),
+        languages: Object.fromEntries(
+          ['fr', 'en', 'ar'].map((language) => [
+            language,
+            new URL(newsListingHref(language as 'fr' | 'en' | 'ar'), getSiteUrl()).toString(),
+          ]),
+        ),
+      },
+      robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
+    }
+  }
   if (!pageId) {
     const slug = newsSlugFromPath(`/${path.join('/')}`, locale)
     const article = slug ? await findPublishedNewsBySlug(slug, locale) : null
@@ -49,6 +66,16 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   const { locale, path } = await params
   const pageId = pageIdFromPathname(`/${path.join('/')}`)
   if (!isLocale(locale)) notFound()
+  if (isNewsListingPath(`/${path.join('/')}`, locale)) {
+    const parameters = await searchParams
+    const currentPage =
+      typeof parameters.page === 'string' && /^[1-9]\d*$/.test(parameters.page)
+        ? Number(parameters.page)
+        : 1
+    return <NewsEventsPage locale={locale} listing page={Math.min(currentPage, 1000)} />
+  }
+  if (pageId === 'events') permanentRedirect(pageHref('events', locale))
+  if (pageId === 'news') return <NewsEventsPage locale={locale} />
   if (pageId === 'search') {
     const parameters = await searchParams
     const query = typeof parameters.q === 'string' ? parameters.q : ''

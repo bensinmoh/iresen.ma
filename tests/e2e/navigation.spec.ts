@@ -1,7 +1,7 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 import { locales } from '../../src/i18n/locales'
-import { navigationGroups, pageHref } from '../../src/lib/site'
+import { navigationGroups, pageHref, pageLinkHref } from '../../src/lib/site'
 import ar from '../../src/messages/ar.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
 import fr from '../../src/messages/fr.json' with { type: 'json' }
@@ -135,7 +135,7 @@ for (const locale of locales) {
     await expect(navigation).toHaveAccessibleName(messages.Navigation.label)
     for (const id of ['home', 'transfer', 'workWithUs'] as const) {
       await expect(
-        navigation.locator(`a.navigation-trigger[href="${pageHref(id, locale)}"]`),
+        navigation.locator(`a.navigation-trigger[href="${pageLinkHref(id, locale)}"]`),
       ).toBeVisible()
     }
     const headerSearch = header.locator('.header-search-form')
@@ -155,7 +155,9 @@ for (const locale of locales) {
       await page.keyboard.press('Enter')
       await expect(group).toHaveAttribute('open', '')
       for (const id of definition.pages) {
-        const link = group.locator('.mega-menu-links').locator(`a[href="${pageHref(id, locale)}"]`)
+        const link = group
+          .locator('.mega-menu-links')
+          .locator(`a[href="${pageLinkHref(id, locale)}"]`)
         await expect(link).toBeVisible()
         await expect(link).toContainText(messages.Pages[id])
         if (id === 'governance') await expect(link).toHaveAttribute('aria-current', 'page')

@@ -1495,6 +1495,23 @@ paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](collaborate-page.md).
 
+## News & events — 2026-10-10
+
+The owner commissioned the combined news/events page and its thumbnail listing
+with a shared hero. Existing news paths host the overview; former events paths
+redirect to its events anchor. Navigation news links reach its news anchor;
+“All news” reaches the localized child listing. Five selected LinkedIn notices,
+three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
+social links, shared physical two-rounded/two-sharp corners and localized search
+references are included. FR/EN/AR copy remains working editorial text. No deployment
+or publication-gate change is authorized. See [scope](news-events.md).
+
+Owner follow-up for news/events: one pending secondary news slot and three
+pending event cards are explicitly labelled and have no invented content,
+dates or signup links. The highlight uses a blurred photo echo, and its five
+secondary entries align with its height. Both views use the shared gradient
+header and consistent SVG action-arrow spacing. See [scope](news-events.md).
+
 ## Horizontal collection indicators — recorded 2026-10-10
 
 See [the video analysis and future variants](horizontal-scroll-indicators.md).

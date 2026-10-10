@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
-import { pageHref } from '@/lib/site'
+import { newsListingHref } from '@/lib/site'
 import {
   homeNewsPosts,
   homeNewsSectionId,
@@ -37,7 +37,7 @@ export async function NewsSection({
           </p>
           <h2 id="home-news-heading">{t('title')}</h2>
         </div>
-        <a href={pageHref('news', locale)} className={styles.all}>
+        <a href={newsListingHref(locale)} className={styles.all}>
           {t('all')}
           <NavigationIcon name="arrow" />
         </a>
