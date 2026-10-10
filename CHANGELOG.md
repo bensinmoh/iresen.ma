@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-10-10 — Selected publications ingestion
+
+- Imported 1,181 owner-selected bibliographic records into the staged structured
+  database, with **T4 2026** as the reference period; excluded 202 other rows.
+- Kept DOI, year, original title/authors, source theme/type, SJR quartile and
+  dated Scopus citation counts. Removed administrative author IDs; preserved
+  unknown values and the separate metric dates.
+- Added a deterministic standard-library importer and source fingerprint.
+  The private workbook, internal fields and source instructions are not imported.
+  Future section rendering and public search registration remain uncommissioned.
+
+See [scope](docs/publications.md) and [verification](docs/validation.md#publications-ingestion--2026-10-10).
+
 ## 2026-10-10 — Compact homepage innovation pathway
 
 - Added the requested light five-stage innovation transition between research and platforms, with support/maturity continuity and a canonical transfer link.

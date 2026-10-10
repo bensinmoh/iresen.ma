@@ -1,0 +1,29 @@
+{
+  "sourceFilename": "IRESEN_2026.xlsx",
+  "sourceSha256": "4298c85423a3199a15ab64efd2e975d32ce53e9cfdfb995d920c4924acab6529",
+  "sourceSheet": "Publications",
+  "referencePeriod": "T4 2026",
+  "publicationStatus": "staged-not-public",
+  "selection": {
+    "sourceRows": 1383,
+    "imported": 1181,
+    "excluded": 202,
+    "sourceValue": "Comptabilisée"
+  },
+  "quartileBasis": "SJR 2025 — best journal quartile across categories, as supplied",
+  "missing": {
+    "doiUrl": 18,
+    "year": 0,
+    "authors": 0,
+    "theme": 175,
+    "scopusCitations": 141
+  },
+  "quartiles": {
+    "Q1": 423,
+    "Q2": 38,
+    "Q3": 21,
+    "not-applicable": 413,
+    "unknown": 286
+  },
+  "futureYearIds": ["PUB_8ED0E05D3824", "PUB_14D944DBDDBB", "PUB_161A579E510C", "PUB_9DA97225C634"]
+}
