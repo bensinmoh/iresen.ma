@@ -2779,3 +2779,10 @@ build and all seven scoped browser journeys pass again. FR/AR hover captures
 were inspected; the lower fade is visible, title backgrounds remain transparent
 and card geometry stays fixed. Other active patent/localization edits in the
 shared checkout are excluded from this focused commit and preserved.
+
+
+The owner's final readability adjustment strengthens the lower stop to 65%
+opacity, with a 45% stop at 55% of the fade and 0% at the title top. The title
+remains transparent and the gradient stays seamless and above the zoomed photo.
+Lint, production build and all seven browser journeys pass after this adjustment;
+the updated FR hover capture was inspected. No other scope change is included.

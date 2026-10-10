@@ -446,7 +446,12 @@
   block-size: calc(
     var(--platform-title-height, 3rem) + var(--platform-card-padding, 1.25rem) + var(--space-3)
   );
-  background: linear-gradient(to top, rgb(5 17 29 / 50%), rgb(5 17 29 / 0%));
+  background: linear-gradient(
+    to top,
+    rgb(5 17 29 / 65%) 0%,
+    rgb(5 17 29 / 45%) 55%,
+    rgb(5 17 29 / 0%) 100%
+  );
   opacity: 0;
 }
 .card:has(.cardDestination:focus-visible) .visual::before {

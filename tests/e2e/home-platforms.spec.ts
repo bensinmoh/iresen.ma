@@ -166,7 +166,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         }
       })
     expect(fade.opacity).toBe('1')
-    expect(fade.background).toContain('0.5')
+    expect(fade.background).toContain('0.65')
     expect(fade.background).toContain('rgba(5, 17, 29, 0)')
     await expect(photo).toHaveCSS('transform', 'matrix(1.05, 0, 0, 1.05, 0, 0)')
     await expect
