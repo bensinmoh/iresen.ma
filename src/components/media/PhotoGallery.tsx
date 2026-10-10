@@ -196,6 +196,7 @@ export function PhotoGallery({
           {active && (
             <Image
               ref={fullPhoto}
+              data-photo-id={active.id}
               src={active.src}
               alt={active.title[locale]}
               width={active.width}
@@ -224,7 +225,7 @@ export function PhotoGallery({
           </span>
           {active && (
             <a href={active.src} download>
-              {copy.download} <NavigationIcon name="arrow" />
+              {copy.download} <ViewerIcon name="download" />
             </a>
           )}
         </div>

@@ -1,207 +1,207 @@
 {
   "referenceDate": "2026-10-10",
   "authorization": "Owner explicitly requested public selection of approximately twenty project photos including the CEO portrait.",
-  "derivative": "Orientation corrected; WebP quality 84; maximum width 1600; no enlargement.",
+  "derivative": "Orientation corrected; WebP quality 90; width at least 1920 or height at least 1080. Higher-resolution supplied originals reused; proportional enlargement only where both dimensions are below the requested minimum.",
   "photos": [
+    {
+      "id": "portrait-dg-iresen-samir-rachidi",
+      "sourceFilename": "I_03_DG_IRESEN_Samir_Rachidi.jpeg",
+      "sourceSha256": "75ab7fc39f5d5fe87f743baf3623de32039271e7255ba384ab0346e924f97ab6",
+      "publicPath": "/images/media-library/portrait-dg-iresen-samir-rachidi.webp",
+      "sha256": "84ac97290be944fab8c551c3c24198280c5466d106c235024ab0dcf2450510c7",
+      "bytes": 167994,
+      "width": 1024,
+      "height": 1536
+    },
     {
       "id": "gep-vue-aerienne",
       "sourceFilename": "Green Energy Park.jpg",
       "sourceSha256": "26f5e2e37282a534edcec892fde702246ddf0e295f1dd6b29aebc98e8aa4c7f4",
       "publicPath": "/images/media-library/gep-vue-aerienne.webp",
-      "sha256": "496740c9e460bbb6db02eb88adeda2d22182445c728724c2f8039aaaa263220b",
-      "bytes": 422050,
-      "width": 1600,
-      "height": 1200
+      "sha256": "8547d9867b988747f1a45892b960ce5a54fe7d50b89330ec49ed30f7e140d59d",
+      "bytes": 775832,
+      "width": 1920,
+      "height": 1440
     },
     {
       "id": "gep-facade-batiment",
       "sourceFilename": "GEP_Photo 07.jpg",
       "sourceSha256": "4270f2c08a7ba59c043d709e05dd9030273d98538ab569e83172c9e5d4233fc2",
       "publicPath": "/images/media-library/gep-facade-batiment.webp",
-      "sha256": "cabee14ad83cead8e456aaa3b4cc5c6a944a944c405995b1e922ffa897349447",
-      "bytes": 101802,
-      "width": 1600,
-      "height": 900
+      "sha256": "df604748bd402bf6dd67eb8428bef09760cb5fd177ef3540f550dc8ced07ab74",
+      "bytes": 205698,
+      "width": 1920,
+      "height": 1080
     },
     {
       "id": "gep-centrale-solaire-thermique",
       "sourceFilename": "Plateforme - Centrale Solaire Thermique - GEP.jpg",
       "sourceSha256": "0e0e898fc9d496966a8b958e8739622a502f9f84b70b343d522559fab739825e",
       "publicPath": "/images/media-library/gep-centrale-solaire-thermique.webp",
-      "sha256": "bb981c0acdc0dbfd11fa5aba07b5bc0c058093106da86455cbcdb682a024cd2a",
-      "bytes": 409006,
-      "width": 1600,
-      "height": 1067
+      "sha256": "edcfe161e96b4626cfd043edadaaf8a20354a66fefa28e47c58a09aa2fd30caf",
+      "bytes": 809404,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "green-smart-building-park-vue-aerienne",
       "sourceFilename": "Green & Smart Building Park.jpg",
       "sourceSha256": "54dd82686b6dc77146da30192d509f720fec353584cb3a18ec40c3523c203b8e",
       "publicPath": "/images/media-library/green-smart-building-park-vue-aerienne.webp",
-      "sha256": "9a13553626847dca8920dae7e6de4e579014439e74c0f61bf16b7f46e93b439a",
-      "bytes": 591726,
-      "width": 1600,
-      "height": 1200
+      "sha256": "a440f5e230c08509890a1b0a915acc837e65582fdafb8f051c896ef2cd8d5388",
+      "bytes": 1133716,
+      "width": 1920,
+      "height": 1440
     },
     {
       "id": "gep-laboratoire-indoor-vue-ensemble",
       "sourceFilename": "Laboratoires - Indoor - GEP.jpg",
       "sourceSha256": "edbd8137b3ba51af47369b9941d68bcf6c579fff5908aca56bb35c0dea0d5a7c",
       "publicPath": "/images/media-library/gep-laboratoire-indoor-vue-ensemble.webp",
-      "sha256": "7e03a80c7ce7fbdd8ade5ece6adb4a2d445f39cd01d6038de43164247b9b8ef5",
-      "bytes": 177940,
-      "width": 1600,
-      "height": 1067
+      "sha256": "45369a5aa026eed6d864c195e6e6552cc57dc65c5cac02b03b0da58dd840c676",
+      "bytes": 421070,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "caracterisation-materiaux",
       "sourceFilename": "Caractérisation matériaux.jpg",
       "sourceSha256": "d0f59cdae0f83f010dc6886864fb8692a2888ad2ccda86b10637380ed16d295e",
       "publicPath": "/images/media-library/caracterisation-materiaux.webp",
-      "sha256": "0d8676e286d166a4679555a363fba58722e320f155c87c48d2dd8149fbccc39c",
-      "bytes": 76560,
-      "width": 1600,
-      "height": 1066
+      "sha256": "280e713ec89c4f41616284e202e4332b9c451386b9816870ff004cbc27c3f78f",
+      "bytes": 151968,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "chimie-verte",
       "sourceFilename": "Chimie verte.jpg",
       "sourceSha256": "ac12b105f0119f7ee6e1707c879ad1e3454b65b053af2707e49aa4e99fdc05ab",
       "publicPath": "/images/media-library/chimie-verte.webp",
-      "sha256": "195f2e5ce1769e755648ad8070300b465a6cd0253daa49223d755b1584322aed",
-      "bytes": 46450,
-      "width": 1600,
-      "height": 1066
+      "sha256": "23985c6b5421ac93deaa532cad72c159c4e0af96b9959f7f5fa86415e9a4634a",
+      "bytes": 115258,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "electronique-assemblage",
       "sourceFilename": "Electronics.jpg",
       "sourceSha256": "6a8924076045ea62a64fccc2434e1ac9d2bb1fcabb7684d6b6d3774bfc8a0800",
       "publicPath": "/images/media-library/electronique-assemblage.webp",
-      "sha256": "068146903b7883684d8e63712e6cfbebccfd9ed041aa5e14235261c53e05f723",
-      "bytes": 110512,
-      "width": 1600,
-      "height": 1066
+      "sha256": "4fbd0e619668bca0d05cc13c632cce37adb38c238d65a817ca6f1016a92cf7c3",
+      "bytes": 231396,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "cellules-pv-echantillons",
       "sourceFilename": "PV Cell test.jpg",
       "sourceSha256": "260e175e57fd5091319fb7ce1c8e78f554e0c8cd6414dff60209c24e840bfef3",
       "publicPath": "/images/media-library/cellules-pv-echantillons.webp",
-      "sha256": "3e429204e13ee7f4407ce8f58d79de8b3d956d94c0167b2b2ecf648c39d099ba",
-      "bytes": 83724,
-      "width": 1600,
-      "height": 1066
+      "sha256": "dec952afeb1f53df966036e77f102cc01da66b1e763daf6409fc96d43cd0973d",
+      "bytes": 175320,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "essai-pv-simulateur-solaire",
       "sourceFilename": "Solar testing.jpg",
       "sourceSha256": "8d89ee8954e2040e04edeb4df81227216cad71f8c693061fdbcdc74a9ba2897e",
       "publicPath": "/images/media-library/essai-pv-simulateur-solaire.webp",
-      "sha256": "91107cd79b272600216625f8199ff57820d85e27715a464c6be0a921ab2fd6f1",
-      "bytes": 59580,
-      "width": 1600,
-      "height": 1066
+      "sha256": "2c9c5fcf7793fc556aef3b7be614ba6f4f94d59c111f1b36b79c9e3b17f24292",
+      "bytes": 127146,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "essai-pv-exterieur-operateur",
       "sourceFilename": "Test outdoor.jpg",
       "sourceSha256": "a32e15c0cd8b802a2cbbdf824461427a2af34bfc6ddb78951f87ec568361c915",
       "publicPath": "/images/media-library/essai-pv-exterieur-operateur.webp",
-      "sha256": "ce18d51abe9877738b08ea43112162a8f1f30687710577adf4af9c10b359476e",
-      "bytes": 36118,
-      "width": 1600,
-      "height": 1066
+      "sha256": "6622ef6eec39d8d1cf6a0a6a20b073a88eb2ea1b5f489ecd89df848fda62c065",
+      "bytes": 69802,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "essai-charge-pv-operateur",
       "sourceFilename": "PV Load testing.jpg",
       "sourceSha256": "506235c5a310d204429df0e18627017c29e1a6e95de5a751b71f075b36ecae05",
       "publicPath": "/images/media-library/essai-charge-pv-operateur.webp",
-      "sha256": "e35ee7cda07e88c4fdaf419cd920dbee3eab58113c48a31b2455250d9f31bd4d",
-      "bytes": 69684,
-      "width": 1600,
-      "height": 1066
+      "sha256": "15c09109f5e6996d8c0fd789f906608df11b150a4341a7df6bab8c4740fc243c",
+      "bytes": 155698,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "pilote-experimentation",
       "sourceFilename": "Pilote Projet.jpg",
       "sourceSha256": "bbdddc9fc6eeacd2ef1961909c3d2d3149e68c0148757264d68a8959e0a47675",
       "publicPath": "/images/media-library/pilote-experimentation.webp",
-      "sha256": "f9c1f5461fa2b10db5af3f24e5a30f545284af45386d5fbe88db270f56d8950e",
-      "bytes": 56656,
-      "width": 1600,
-      "height": 1066
+      "sha256": "25d98118faf724fda3b4bc82e9a499300b9ab7deaa79d33ad08fec2042279629",
+      "bytes": 120756,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "propre-ma-pv-toitures",
       "sourceFilename": "PROPRE.ma.jpeg",
       "sourceSha256": "34756cb895bb4cbc21e1ec11c9868c1800af00e1da573e47833fd4f1b90a8015",
       "publicPath": "/images/media-library/propre-ma-pv-toitures.webp",
-      "sha256": "d2dccceccc3fb7b78b20af6edaa5e041cd997b7fd532b4650762d29518e19e73",
-      "bytes": 44144,
-      "width": 766,
-      "height": 400
+      "sha256": "3ff8a472c60b6d6d60b52f8a44a432fa54b8406beb064dcc0fadf81310af4eda",
+      "bytes": 155472,
+      "width": 1920,
+      "height": 1003
     },
     {
       "id": "aquasolar-installation",
       "sourceFilename": "AquaSolar.jpg",
       "sourceSha256": "75c43ccaa4cd36f8a3f8b5c04224412582088e5ba3ceceefe414ca9fc2642408",
       "publicPath": "/images/media-library/aquasolar-installation.webp",
-      "sha256": "79f2f050d6af32ff6d7e8681dd361162d70869ce12f79bff912578460ab0c32a",
-      "bytes": 256080,
-      "width": 1600,
-      "height": 1067
+      "sha256": "92fc33ab7770acc517cffe2c88acc7977ad72752d3f3e71c7a5999fc94151ac8",
+      "bytes": 481678,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "moroccan-solar-race-challenge-2016",
       "sourceFilename": "Moroccan Solar Race Challenge - 2016.jpg",
       "sourceSha256": "cfedd72ff2f643561f849e0c914a7e9958943ba49d951ac23f11bc0199cf4cd4",
       "publicPath": "/images/media-library/moroccan-solar-race-challenge-2016.webp",
-      "sha256": "c54ec86c342ecda8b798cd390d1dbf4d3fe776bdffa18b30efbdf0a59bafd5ca",
-      "bytes": 141784,
-      "width": 1600,
-      "height": 1067
+      "sha256": "d1742c131ad42314a25a5dcaa997a770ce93a6345dbdeee91e95e92867253c32",
+      "bytes": 262090,
+      "width": 1920,
+      "height": 1280
     },
     {
       "id": "world-ptx-summit-pleniere",
       "sourceFilename": "Worldptxsummit.jpg",
       "sourceSha256": "fa59c8ba1069c77835c28d592d2755dcb5ca9c7cd8f9c6ce491fea71ce1a6839",
       "publicPath": "/images/media-library/world-ptx-summit-pleniere.webp",
-      "sha256": "cf58bd4504b5e154794f70b656fe3a64afd2787b67da73c00473a1b8e3192aaf",
-      "bytes": 70408,
-      "width": 1000,
-      "height": 666
+      "sha256": "1080f2c67793eeb22715790da7858b5006fafa83da06c13d8d5ab157d6ece03e",
+      "bytes": 193952,
+      "width": 1920,
+      "height": 1279
     },
     {
       "id": "solar-decathlon-africa-village-solaire",
       "sourceFilename": "Solar Decathlon Africa - Village Solaire.jpg",
       "sourceSha256": "d11ccfb18ea8b64af54498d113b6717671ac6b63b97aa15f5c22bac032a758a5",
       "publicPath": "/images/media-library/solar-decathlon-africa-village-solaire.webp",
-      "sha256": "eed739455ca24efe6244bd182f2b0a2faabe87a1e761a1d7b7c152c648768a74",
-      "bytes": 489226,
-      "width": 1600,
-      "height": 1200
+      "sha256": "2f74724c8339720f98970a755d8ff906dd983ae9fdb48f4c24c787e727aea806",
+      "bytes": 997498,
+      "width": 1920,
+      "height": 1440
     },
     {
       "id": "equipe-iresen-15-ans",
       "sourceFilename": "I_02_Equipe_IRESEN_15_ans.jpg",
       "sourceSha256": "0ec54f35607ac219b3e29f64c1f91c6c88474aebc9d636312063a0a49b4fd1ca",
       "publicPath": "/images/media-library/equipe-iresen-15-ans.webp",
-      "sha256": "5bc674ac3846aedd2242cd0489d60bb97f43394e9695dca743c4794630a04d5a",
-      "bytes": 265900,
-      "width": 1600,
-      "height": 1067
-    },
-    {
-      "id": "portrait-dg-iresen-samir-rachidi",
-      "sourceFilename": "I_03_DG_IRESEN_Samir_Rachidi.jpeg",
-      "sourceSha256": "75ab7fc39f5d5fe87f743baf3623de32039271e7255ba384ab0346e924f97ab6",
-      "publicPath": "/images/media-library/portrait-dg-iresen-samir-rachidi.webp",
-      "sha256": "6ab872f4de91cd4de605dbfab8eaf6499a7069f8fc3c1e84a0d7aab0b62007ac",
-      "bytes": 107438,
-      "width": 1024,
-      "height": 1536
+      "sha256": "86dc3631e6bacb21644ee570ee02ab802479c93a7e37b55e9accb389f8d74818",
+      "bytes": 522124,
+      "width": 1920,
+      "height": 1280
     }
   ]
 }

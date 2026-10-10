@@ -38,6 +38,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(dialog).toBeVisible()
     const centered = await dialog.boundingBox()
     const viewport = page.viewportSize()!
+    expect(centered!.width).toBeLessThanOrEqual(viewport.width * 0.8 + 2)
+    expect(centered!.height).toBeLessThanOrEqual(viewport.height * 0.8 + 2)
     expect(Math.abs(centered!.x + centered!.width / 2 - viewport.width / 2)).toBeLessThan(2)
     expect(Math.abs(centered!.y + centered!.height / 2 - viewport.height / 2)).toBeLessThan(2)
     await expect(dialog.locator('img')).toHaveJSProperty('complete', true)

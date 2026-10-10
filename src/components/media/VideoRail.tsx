@@ -98,7 +98,7 @@ export function VideoRail({
                 />
               )}
               <span className={styles.videoPlay} aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <svg width="64" height="64" viewBox="0 0 40 40" fill="none">
                   <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="1.2" />
                   <path d="m17 12 12 8-12 8z" fill="currentColor" />
                 </svg>

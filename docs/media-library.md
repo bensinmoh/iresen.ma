@@ -11,7 +11,7 @@ source information. Its source remains unchanged; no additional route is introdu
   projects, events and institutional life, including the supplied portrait of
   Samir Rachidi, Directeur général d’IRESEN. The owner explicitly authorized their
   public inclusion. Originals remain private; orientation-corrected WebP copies
-  are at most 1600 pixels wide, without enlargement. See the hash manifest below.
+  meet at least 1920 pixels in width or 1080 pixels in height, resized from verified originals with proportional enlargement only where needed. See the hash manifest below.
 - A filterable gallery with native full-image links, an accessible modal,
   previous/next controls, Escape dismissal, restored focus and derivative download.
 - Eight locally imported owner-supplied videos, excluding Drone. The owner
@@ -50,14 +50,13 @@ fingerprints are in `docs/media-library-hero.json`. Other shared heroes and
 brand SVG geometry are preserved. The media hero is 76dvh minimum, with natural
 growth for enlarged/long text. The supplied Samir Rachidi portrait appears first. A large photo and four smaller
 photos compose each desktop group, alternating the large image left/right; tablet/mobile reflow retains the source order. The video cards use full-height thumbnails with a softly blurred blue-tinted
-background and uncropped foreground. Activating a card opens a centered native
+background and a cover-cropped foreground. Activating a card opens a centered native
 video dialog; actual films retain their original 16:9 framing. No-JavaScript
 visitors retain direct guarded-file links. The horizontal rail supports native
 scrolling, keyboard access and SVG controls.
 The centered native dialog enlarges from the clicked photo using a scoped
 transform animation, then reveals icon controls; download remains a text action.
-Image ratios are preserved using translucent blue letter/pillar boxing, with the
-viewer image fitted to the largest practical viewport area. Filtering uses scoped
+Photos fill their frames without exposed borders, with Samir’s face positioned centrally. The centered popup is limited to 80vw and 80dvh; its image covers the available stage. Download includes a downward SVG arrow. Video cards use cover cropping and a larger play icon that appears on hover or keyboard focus. Filtering uses scoped
 FLIP transforms for retained tiles and short reveals for incoming photos.
 Reduced motion bypasses image/control/tile animation and smooth scrolling. Scoped light/ink surfaces,
 vector controls and logical CSS follow the current shared design rules.

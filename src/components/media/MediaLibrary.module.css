@@ -161,14 +161,14 @@
   inline-size: 100%;
   block-size: 100%;
   aspect-ratio: 4/3;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 450ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .photo > a:hover img {
   transform: scale(1.035);
 }
-.photo:last-child img {
-  object-position: center 35%;
+.photo[id='photo-portrait-dg-iresen-samir-rachidi'] img {
+  object-position: center 20%;
 }
 .enlarge {
   position: absolute;
@@ -204,8 +204,8 @@
   padding: 0.8rem;
   background: rgb(18 52 90 / 86%);
   color: white;
-  inline-size: min(92vw, 85rem);
-  max-block-size: 94dvh;
+  inline-size: 80vw;
+  max-block-size: 80dvh;
   border-radius: var(--radius-signature);
   overflow: auto;
 }
@@ -257,19 +257,22 @@
   display: grid;
   place-items: center;
   position: relative;
-  block-size: min(78dvh, calc(94dvh - 8rem));
+  block-size: calc(80dvh - 8rem);
   grid-template-rows: minmax(0, 1fr);
   background: rgb(255 255 255 / 3%);
   margin-block: 0.8rem;
 }
 .fullPhoto {
   display: block;
-  object-fit: contain;
-  inline-size: auto;
-  block-size: auto;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
   max-inline-size: 100%;
-  max-block-size: min(78dvh, calc(94dvh - 8rem));
+  max-block-size: 100%;
   transform-origin: top left;
+}
+.fullPhoto[data-photo-id='portrait-dg-iresen-samir-rachidi'] {
+  object-position: center 25%;
 }
 .previousPhoto,
 .nextPhoto {
@@ -350,7 +353,7 @@
   opacity: 0.28;
 }
 .videoThumbnail {
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 350ms;
 }
 .videoCard:hover .videoBackdrop {
@@ -391,21 +394,27 @@
 .videoPlay {
   position: absolute;
   z-index: 1;
-  inset-block-start: 24%;
-  inset-inline-start: calc(50% - 20px);
+  inset-block-start: calc(50% - 32px);
+  inset-inline-start: calc(50% - 32px);
   color: white;
   filter: drop-shadow(0 2px 6px rgb(5 17 29 / 80%));
-  transition: transform 200ms;
+  opacity: 0;
+  transform: translateY(8px) scale(0.8);
+  transition:
+    opacity 220ms,
+    transform 220ms;
 }
-.videoCard:hover .videoPlay {
-  transform: scale(1.1);
+.videoCard:hover .videoPlay,
+.videoCard:focus-visible .videoPlay {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 .popupVideo {
   display: block;
   inline-size: 100%;
-  max-block-size: 80dvh;
+  max-block-size: calc(80dvh - 6rem);
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
   background: rgb(5 17 29 / 35%);
   margin-block-start: 1rem;
 }
@@ -571,14 +580,14 @@
     margin-block-start: 0.5rem;
   }
   .dialog {
-    inline-size: 96vw;
+    inline-size: 80vw;
     padding: 0.75rem;
   }
   .photoStage {
-    block-size: min(74dvh, calc(94dvh - 8rem));
+    block-size: calc(80dvh - 8rem);
   }
   .fullPhoto {
-    max-block-size: min(74dvh, calc(94dvh - 8rem));
+    max-block-size: 100%;
   }
 }
 

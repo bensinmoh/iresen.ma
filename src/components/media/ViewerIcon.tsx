@@ -1,4 +1,4 @@
-export function ViewerIcon({ name }: { name: 'close' | 'previous' | 'next' }) {
+export function ViewerIcon({ name }: { name: 'close' | 'previous' | 'next' | 'download' }) {
   return (
     <svg
       width="24"
@@ -10,11 +10,13 @@ export function ViewerIcon({ name }: { name: 'close' | 'previous' | 'next' }) {
     >
       <path
         d={
-          name === 'close'
-            ? 'm6 6 12 12M18 6 6 18'
-            : name === 'previous'
-              ? 'm14 5-7 7 7 7'
-              : 'm10 5 7 7-7 7'
+          name === 'download'
+            ? 'M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5'
+            : name === 'close'
+              ? 'm6 6 12 12M18 6 6 18'
+              : name === 'previous'
+                ? 'm14 5-7 7 7 7'
+                : 'm10 5 7 7-7 7'
         }
         stroke="currentColor"
         strokeWidth="1.6"

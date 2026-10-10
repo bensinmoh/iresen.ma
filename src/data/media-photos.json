@@ -20,8 +20,8 @@
       "en": "Green Energy Park — aerial view",
       "ar": "Green Energy Park — منظر جوي"
     },
-    "width": 1600,
-    "height": 1200
+    "width": 1920,
+    "height": 1440
   },
   {
     "id": "gep-facade-batiment",
@@ -32,8 +32,8 @@
       "en": "Green Energy Park — façade",
       "ar": "Green Energy Park — واجهة المبنى"
     },
-    "width": 1600,
-    "height": 900
+    "width": 1920,
+    "height": 1080
   },
   {
     "id": "gep-centrale-solaire-thermique",
@@ -44,8 +44,8 @@
       "en": "Green Energy Park — solar thermal plant",
       "ar": "Green Energy Park — محطة شمسية حرارية"
     },
-    "width": 1600,
-    "height": 1067
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "green-smart-building-park-vue-aerienne",
@@ -56,8 +56,8 @@
       "en": "Green & Smart Building Park — aerial view",
       "ar": "Green & Smart Building Park — منظر جوي"
     },
-    "width": 1600,
-    "height": 1200
+    "width": 1920,
+    "height": 1440
   },
   {
     "id": "gep-laboratoire-indoor-vue-ensemble",
@@ -68,8 +68,8 @@
       "en": "Green Energy Park — indoor laboratory",
       "ar": "Green Energy Park — المختبر الداخلي"
     },
-    "width": 1600,
-    "height": 1067
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "caracterisation-materiaux",
@@ -80,8 +80,8 @@
       "en": "Materials characterization",
       "ar": "توصيف المواد"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "chimie-verte",
@@ -92,8 +92,8 @@
       "en": "Green chemistry in the laboratory",
       "ar": "الكيمياء الخضراء في المختبر"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "electronique-assemblage",
@@ -104,8 +104,8 @@
       "en": "Electronics assembly",
       "ar": "تجميع الدوائر الإلكترونية"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "cellules-pv-echantillons",
@@ -116,8 +116,8 @@
       "en": "Photovoltaic cell samples",
       "ar": "عينات الخلايا الكهروضوئية"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "essai-pv-simulateur-solaire",
@@ -128,8 +128,8 @@
       "en": "Photovoltaic testing with a solar simulator",
       "ar": "اختبار كهروضوئي بمحاكي شمسي"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "essai-pv-exterieur-operateur",
@@ -140,8 +140,8 @@
       "en": "Outdoor photovoltaic testing",
       "ar": "اختبار كهروضوئي خارجي"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "essai-charge-pv-operateur",
@@ -152,8 +152,8 @@
       "en": "Photovoltaic mechanical load testing",
       "ar": "اختبار الحمل الميكانيكي للوحدات الكهروضوئية"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "pilote-experimentation",
@@ -164,8 +164,8 @@
       "en": "Work on pilot equipment",
       "ar": "العمل على معدات تجريبية"
     },
-    "width": 1600,
-    "height": 1066
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "propre-ma-pv-toitures",
@@ -176,8 +176,8 @@
       "en": "PROPRE.ma — rooftop photovoltaics",
       "ar": "PROPRE.ma — ألواح كهروضوئية على الأسطح"
     },
-    "width": 766,
-    "height": 400
+    "width": 1920,
+    "height": 1003
   },
   {
     "id": "aquasolar-installation",
@@ -188,8 +188,8 @@
       "en": "AquaSolar — installation",
       "ar": "AquaSolar — التجهيزات"
     },
-    "width": 1600,
-    "height": 1067
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "moroccan-solar-race-challenge-2016",
@@ -200,8 +200,8 @@
       "en": "Moroccan Solar Race Challenge — 2016",
       "ar": "Moroccan Solar Race Challenge — 2016"
     },
-    "width": 1600,
-    "height": 1067
+    "width": 1920,
+    "height": 1280
   },
   {
     "id": "world-ptx-summit-pleniere",
@@ -212,8 +212,8 @@
       "en": "World Power-to-X Summit — plenary",
       "ar": "World Power-to-X Summit — جلسة عامة"
     },
-    "width": 1000,
-    "height": 666
+    "width": 1920,
+    "height": 1279
   },
   {
     "id": "solar-decathlon-africa-village-solaire",
@@ -224,8 +224,8 @@
       "en": "Solar Decathlon Africa — solar village",
       "ar": "Solar Decathlon Africa — القرية الشمسية"
     },
-    "width": 1600,
-    "height": 1200
+    "width": 1920,
+    "height": 1440
   },
   {
     "id": "equipe-iresen-15-ans",
@@ -236,7 +236,7 @@
       "en": "IRESEN team",
       "ar": "فريق IRESEN"
     },
-    "width": 1600,
-    "height": 1067
+    "width": 1920,
+    "height": 1280
   }
 ]

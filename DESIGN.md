@@ -10,6 +10,8 @@ and a shorter generated-photo hero without the missions band. Reduced motion is
 respected; the generated still-life is identified as illustrative in search and
 its provenance manifest.
 
+Photos now meet 1920px width or 1080px height and fill their frames, with Samir’s face centered. The viewer is capped at 80% of viewport width and height and fills its image stage. Download uses a downward SVG arrow; the larger video play control appears on hover or keyboard focus.
+
 ## Careers reference composition — 2026-10-10
 
 The [careers composition](docs/careers.md) follows the native Figma hero, pale
