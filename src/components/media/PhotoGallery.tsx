@@ -8,10 +8,11 @@ import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import styles from './MediaLibrary.module.css'
 import { ViewerIcon } from './ViewerIcon'
 import {
-  samirBiography,
-  samirBiographyText,
+  samirBiographies,
+  samirBiographyTexts,
   samirCutout,
   samirPhotoId,
+  samirPortraitDownload,
 } from '@/lib/samir-biography'
 
 type Copy = {
@@ -40,6 +41,7 @@ export function PhotoGallery({
   locale: Locale
   copy: Copy
 }) {
+  const samirBiography = samirBiographies[locale]
   const [category, setCategory] = useState('all')
   const [active, setActive] = useState<MediaPhoto | null>(null)
   const [copyStatus, setCopyStatus] = useState('')
@@ -206,10 +208,11 @@ export function PhotoGallery({
         {isBiography ? (
           <div className={styles.biographyLayout}>
             <section className={styles.biographyContent} aria-label={copy.biography} tabIndex={0}>
-              {locale !== 'fr' && (
-                <p className={styles.biographyLanguage}>{copy.biographyLanguage}</p>
-              )}
-              <div lang="fr" dir="ltr" className={styles.biographyText}>
+              <div
+                lang={locale}
+                dir={locale === 'ar' ? 'rtl' : 'ltr'}
+                className={styles.biographyText}
+              >
                 <h3>{samirBiography.name}</h3>
                 <div className={styles.biographyRoles}>
                   {samirBiography.roles.map((role) => (
@@ -307,8 +310,8 @@ export function PhotoGallery({
                   className={styles.copyBiography}
                   onClick={async () => {
                     try {
-                      await navigator.clipboard.writeText(samirBiographyText)
-                      setCopyStatus(copy.copiedBiography)
+                      await navigator.clipboard.writeText(samirBiographyTexts[locale])
+                      setCopyStatus('')
                     } catch {
                       setCopyStatus(copy.copyBiographyError)
                     }
@@ -322,7 +325,7 @@ export function PhotoGallery({
               </>
             )}
             {active && (
-              <a href={active.src} download>
+              <a href={isBiography ? samirPortraitDownload : active.src} download>
                 {isBiography ? copy.downloadPortrait : copy.download} <ViewerIcon name="download" />
               </a>
             )}

@@ -18,7 +18,7 @@ import { searchTypes, type SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
 import libraryVideos from '@/data/media-videos.json'
-import { samirCutout } from '@/lib/samir-biography'
+import { samirCutout, samirPortraitDownload } from '@/lib/samir-biography'
 import { homeMissions, legacyMissionAnchors, homeCooperationAnchor } from '@/lib/home-missions'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
@@ -27,16 +27,22 @@ import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
 
 describe('multilingual search text', () => {
-  it('registers the supplied biography in French without pretending to have approved translations', () => {
+  it('registers the supplied biography and requested English and Arabic translations', () => {
     const biographies = staticSearchDocuments().filter((item) =>
       item.id.includes('samir-biography'),
     )
-    expect(biographies).toHaveLength(1)
+    expect(biographies).toHaveLength(3)
     expect(biographies[0]).toMatchObject({
       locale: 'fr',
       type: 'section',
       url: '/fr/ressources/mediatheque#photo-portrait-dg-iresen-samir-rachidi',
     })
+    for (const locale of ['fr', 'en', 'ar'] as const) {
+      const item = biographies.find((entry) => entry.locale === locale)!
+      expect(item.url).toBe(pageHref('media', locale, 'photo-portrait-dg-iresen-samir-rachidi'))
+      expect(item.body).toContain('RespInnovation')
+      expect(item.body).toContain('Cluster Green H2')
+    }
     expect(biographies[0].body).toContain('RespInnovation')
     expect(biographies[0].body).toContain('Cluster Green H2')
   })
@@ -308,6 +314,7 @@ describe('explicit public search catalog', () => {
         .map(({ mobile }) => mobile.src),
       ...libraryVideos.map(({ poster }) => poster),
       samirCutout,
+      samirPortraitDownload,
     ])
     const publicRoot = path.resolve(process.cwd(), 'public')
     const publicFiles = readdirSync(publicRoot, { recursive: true, withFileTypes: true })
