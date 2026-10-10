@@ -285,3 +285,12 @@ unavailable full reports and future project records remain outside search. Addin
 filters authorizes no new content, download, route or publication. Future resource
 projections require reachable destinations, localized approved metadata and the
 publication/withdrawal gates described above.
+
+## Careers opportunities — 2026-10-10
+
+[Careers](careers.md) registers its localized page/sections and served assets.
+The opportunity collection extends the guarded public-source view, indexing
+triggers and rebuild queue. Only open, non-demo, published and locale-approved
+complete notices enter section/document results and spelling vocabulary.
+Local mockup records and controls are excluded; closure, withdrawal and deletion
+revoke current eligibility before asynchronous reindexing.

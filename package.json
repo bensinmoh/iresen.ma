@@ -17,7 +17,7 @@
     "format": "node scripts/run.mjs prettier --write .",
     "format:check": "node scripts/run.mjs prettier --check .",
     "test": "node scripts/run.mjs vitest run --exclude '**/*.integration.test.ts'",
-    "test:integration": "CMS_INTEGRATION=1 SEARCH_WORKER_DISABLED=true node scripts/run.mjs vitest run src/tests/cms.integration.test.ts src/tests/search.integration.test.ts",
+    "test:integration": "CMS_INTEGRATION=1 SEARCH_WORKER_DISABLED=true node scripts/run.mjs vitest run src/tests/cms.integration.test.ts src/tests/search.integration.test.ts src/tests/careers.integration.test.ts",
     "test:e2e": "node scripts/run.mjs playwright test",
     "setup:local": "node scripts/setup-local.mjs",
     "db:up": "docker compose --env-file .env.local up -d db",

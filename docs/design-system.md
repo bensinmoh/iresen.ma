@@ -1,5 +1,15 @@
 # Design system and Figma reference
 
+## Careers disclosure composition — 2026-10-10
+
+The [careers page](careers.md) uses shared identity, typography, section labels
+and action corners with native disclosure rows, compact metadata and a two-column
+detail body. Fields reuse the compact outline and a logically inset select
+chevron. The shared overlay-header selector recognizes the dedicated careers
+hero as well as PageHero; header content and other page layouts are unchanged.
+The owner requires SVG UI icons instead of PNG/JPEG. Careers uses owner-requested white decorative strokes
+on approved green/cyan badges, accompanied by explicit text labels and the shared surface token.
+
 ## Mission quotation and common enabler — 2026-10-10
 
 The current mission introduction uses the shared Apex Leaf section label as its

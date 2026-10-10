@@ -1,5 +1,16 @@
 # IRESEN visual direction
 
+## Careers reference composition — 2026-10-10
+
+The [careers composition](docs/careers.md) follows the native Figma hero, pale
+environment block, restrained disclosure rows, photographic internship block and
+centered form. Responsive disclosures replace fixed prototype coordinates. Shared
+identity and header/footer remain; actual empty and unavailable states are distinct.
+The final refinements use compact section rhythm, a centered mobile JOIN/logo
+composition and vector-only UI icons colored through approved tokens. SVG icons
+are the owner preference for future interfaces. No new universal visual tokens
+or generic page template are introduced.
+
 ## Homepage contribution domains — 2026-10-10
 
 The owner now commissions the previously deferred mission-statement design.

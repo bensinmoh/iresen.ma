@@ -79,6 +79,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...(['hero', 'environment', 'internship'] as const).map((id) => ({
+    id: `careers-photo-${id}`,
+    url: `/images/careers/${id}.webp`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Careers.photos[id],
+          description: messages[locale].Careers.photos[id],
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
   {
     id: 'transfer-ismart-logo',
     url: '/brand/transfer/ismart-iresen.svg',
@@ -438,6 +452,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         body.push(...engagementSearchText(catalog.PageSections[pageId]))
       }
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
+      if (pageId === 'opportunities')
+        body.push(
+          ...engagementSearchText({
+            description: catalog.Careers.description,
+            environment: catalog.Careers.environment,
+            internship: catalog.Careers.internship,
+            searchText: catalog.Careers.searchText,
+            form: catalog.Careers.form.notice.replace(/<\/?privacy>/g, ''),
+          }),
+        )
       if (pageId === 'home') {
         body.push(
           catalog.HomeAchievements.title,
@@ -513,6 +537,19 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'opportunities') {
+            const keys = {
+              'working-at-iresen': catalog.Careers.environment,
+              'apply-respond': catalog.Careers.internship,
+              'questions-unsolicited-applications': {
+                notice: catalog.Careers.form.notice.replace(/<\/?privacy>/g, ''),
+                searchText: catalog.Careers.searchText,
+              },
+              'open-opportunities': catalog.Careers.searchText,
+              'find-opportunity': catalog.Careers.searchText,
+            }
+            body.push(...engagementSearchText(keys[entry.id as keyof typeof keys]))
+          }
           if (pageId === 'workWithUs' || pageId === 'transfer') {
             const engagementCopy = catalog.Engagement[pageId].sections as Record<string, unknown>
             body.push(...engagementSearchText(engagementCopy[entry.id]))

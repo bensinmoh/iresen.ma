@@ -1,5 +1,12 @@
 # IRESEN website
 
+## Careers page and opportunity database — 2026-10-10
+
+The [careers page](docs/careers.md) now follows the supplied Figma composition.
+The CMS collection drives detailed accordions and TXT notices through existing
+publication/locale gates. The owner validated and removed the four examples;
+no mockup data or seed command remains. Without eligible offers the section retains its designed empty state. Applications retain the local email-draft workflow.
+
 The [new narrative alignment](docs/narrative-alignment.md) introduces three
 contribution domains and a shared cooperation enabler. The homepage now presents
 a full-width mission quotation, three domain cards and a shorter cooperation
@@ -242,3 +249,7 @@ live Figma cooperation frame within the current shared rules. FR/EN canonical
 paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
+
+For an isolated production check alongside the local development server, set
+`NEXT_BUILD_DIRECTORY=.local/careers-build` for both `pnpm build` and
+`scripts/start-production.mjs`, and use a separate `PORT`. The default remains `.next`.

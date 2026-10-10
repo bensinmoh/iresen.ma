@@ -9,7 +9,6 @@ const cases = [
   { pageId: 'priorities', locale: 'fr' },
   { pageId: 'priorities', locale: 'ar' },
   { pageId: 'governance', locale: 'fr' },
-  { pageId: 'opportunities', locale: 'en' },
   { pageId: 'workWithUs', locale: 'ar' },
 ] as const
 

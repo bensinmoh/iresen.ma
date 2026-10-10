@@ -4,6 +4,7 @@ import path from 'node:path'
 import { promisify } from 'node:util'
 import type { PoolClient } from 'pg'
 
+import { careerHref, careerDownloadHref } from '@/lib/careers'
 import { contentLocales } from '@/lib/content/publication'
 import { mediaDirectory } from '@/cms/media-directory'
 import { isPublicSlug, newsHref } from '@/lib/content/routes'
@@ -20,7 +21,7 @@ import type { PublicSearchDocument, SearchLocale } from './types'
 import { VOCABULARY_VERSION, writePublicVocabulary } from './vocabulary'
 
 const executeFile = promisify(execFile)
-type Origin = 'pages' | 'news' | 'media'
+type Origin = 'pages' | 'news' | 'media' | 'opportunities'
 type Source = {
   origin: Origin
   source_id: string
@@ -166,6 +167,8 @@ function sourceUrl(source: Source): string | undefined {
     source.page_id !== 'search'
   )
     return `${pageHref(source.page_id as PageId, source.locale)}#published-content`
+  if (source.origin === 'opportunities' && isPublicSlug(source.slug))
+    return careerHref(source.slug, source.locale)
   if (source.origin === 'news' && isPublicSlug(source.slug))
     return newsHref(source.slug, source.locale)
   if (
@@ -226,9 +229,11 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
           type:
             source.origin === 'pages'
               ? 'page'
-              : source.origin === 'news'
-                ? 'news'
-                : mediaType(source.mime_type),
+              : source.origin === 'opportunities'
+                ? 'section'
+                : source.origin === 'news'
+                  ? 'news'
+                  : mediaType(source.mime_type),
           body: [source.body_text, richTextPlainText(source.rich_body), fileText]
             .filter(Boolean)
             .join(' '),
@@ -243,6 +248,22 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
             source.source_revision,
           ),
         )
+        if (source.origin === 'opportunities' && source.slug) {
+          vocabularyDocuments.push(
+            await writeDocument(
+              client,
+              {
+                ...document,
+                id: `${document.id}:download`,
+                type: 'document',
+                url: careerDownloadHref(source.slug, source.locale),
+              },
+              source.origin,
+              source.source_id,
+              source.source_revision,
+            ),
+          )
+        }
         if (source.origin !== 'media')
           for (const section of richTextSections(source.rich_body)) {
             vocabularyDocuments.push(
@@ -322,7 +343,7 @@ export function stopSearchWorker(): void {
 export async function rebuildSearchIndex(): Promise<number> {
   await initializeSearchCatalog()
   await searchDatabase().query(`INSERT INTO search_index_jobs (origin, source_id)
-    SELECT 'pages', id::text FROM pages UNION ALL SELECT 'news', id::text FROM news UNION ALL SELECT 'media', id::text FROM media
+    SELECT 'pages', id::text FROM pages UNION ALL SELECT 'news', id::text FROM news UNION ALL SELECT 'media', id::text FROM media UNION ALL SELECT 'opportunities', id::text FROM opportunities
     ON CONFLICT (origin, source_id) DO UPDATE SET next_try=now(), attempts=0`)
   // Removed/private/stale rows cannot survive even an interrupted rebuild.
   await searchDatabase()
