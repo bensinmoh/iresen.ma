@@ -350,3 +350,97 @@
 .network a span {
   min-inline-size: 0;
 }
+
+/* A single native destination covers the photograph and all its copy. */
+.cardDestination {
+  display: flex;
+  flex: 1;
+  min-inline-size: 0;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+  overflow: hidden;
+  font-weight: 400;
+}
+.cardDestination:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.photo,
+.visual::after,
+.identity,
+.details,
+.card h3 {
+  transition:
+    transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 300ms ease-out;
+}
+.card h3 {
+  position: relative;
+  z-index: 1;
+}
+.card h3 bdi {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background-color 300ms ease-out,
+    box-shadow 300ms ease-out;
+}
+.card:has(.cardDestination:focus-visible) .photo {
+  transform: scale(1.05);
+}
+.card:has(.cardDestination:focus-visible) .visual::after,
+.card:has(.cardDestination:focus-visible) .identity,
+.card:has(.cardDestination:focus-visible) .details {
+  opacity: 0;
+}
+.card:has(.cardDestination:focus-visible) .identity {
+  transform: translateY(-3rem);
+}
+.card:has(.cardDestination:focus-visible) .details {
+  transform: translateY(3rem);
+}
+.card:has(.cardDestination:focus-visible) h3 {
+  transform: translateY(var(--platform-title-travel, 0px));
+}
+.card:has(.cardDestination:focus-visible) h3 bdi {
+  background-color: var(--color-navy);
+  box-shadow: 0 0 0 0.25rem var(--color-navy);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .photo {
+    transform: scale(1.05);
+  }
+  .card:hover .visual::after,
+  .card:hover .identity,
+  .card:hover .details {
+    opacity: 0;
+  }
+  .card:hover .identity {
+    transform: translateY(-3rem);
+  }
+  .card:hover .details {
+    transform: translateY(3rem);
+  }
+  .card:hover h3 {
+    transform: translateY(var(--platform-title-travel, 0px));
+  }
+  .card:hover h3 bdi {
+    background-color: var(--color-navy);
+    box-shadow: 0 0 0 0.25rem var(--color-navy);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card .photo,
+  .card .visual::after,
+  .card .identity,
+  .card .details,
+  .card h3,
+  .card h3 bdi {
+    transition: none;
+  }
+  .card:hover .photo,
+  .card:has(.cardDestination:focus-visible) .photo {
+    transform: none;
+  }
+}

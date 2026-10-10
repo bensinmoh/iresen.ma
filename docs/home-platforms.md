@@ -113,3 +113,22 @@ FR/EN/AR glossary sanity-check reminder remains pending until full content exist
 See [the validation log](validation.md#homepage-platforms-and-expertise--2026-10-09)
 for actual check results and coverage. Review screenshots live in ignored
 `.cache/platforms-review/`; they contain only public development content.
+
+## Platform card hover — 2026-10-10
+
+The owner requests photo-first hover: the photograph scales to 1.05, its
+readability gradient fades away, category/logo exit upward, description/action
+exit downward, and the title moves to the bottom. The title retains a small
+navy backing for contrast over the unshaded photograph. Native 300–400ms
+transform/opacity transitions keep card geometry fixed; a scoped ResizeObserver
+measures localized secondary copy for the title travel, including font/reflow
+changes. No animation dependency is added. Keyboard focus receives the same
+state with a visible external outline; fine-pointer hover only avoids sticky
+touch states. Reduced motion applies the end state immediately with no photo
+zoom. The native full-surface link and resting content work without JavaScript.
+
+Each card has one localized accessible destination covering the full photo and
+copy. The existing platforms overview remains its destination: individual
+platform sections/routes have not been implemented. Existing homepage card
+anchors, localized search descriptions and media references remain unchanged;
+no content, file or public destination is added. FR/EN/AR remain working copy.

@@ -125,3 +125,45 @@ test('platforms remain readable without JavaScript and with reduced motion', asy
   await expect(page.locator('#platform-greenh2a a')).toBeFocused()
   await context.close()
 })
+
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: full platform card hover and keyboard motion`, async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 })
+    await page.goto(pageHref('home', locale, 'platforms-expertise'))
+    const card = page.locator('#platform-gep')
+    const link = card.locator('a')
+    const photo = card.locator('img').first()
+    const title = card.locator('h3')
+    const details = card.locator('[data-platform-details]')
+    await card.scrollIntoViewIfNeeded()
+    await expect
+      .poll(() =>
+        card.evaluate((el) => parseFloat(el.style.getPropertyValue('--platform-title-travel'))),
+      )
+      .toBeGreaterThan(0)
+    const before = await card.boundingBox()
+    const titleBefore = await title.boundingBox()
+    await link.hover({ position: { x: 20, y: 20 } })
+    await expect(details).toHaveCSS('opacity', '0')
+    await expect(photo).toHaveCSS('transform', 'matrix(1.05, 0, 0, 1.05, 0, 0)')
+    await expect
+      .poll(async () => (await title.boundingBox())!.y)
+      .toBeGreaterThan(titleBefore!.y + 20)
+    expect(await card.boundingBox()).toEqual(before)
+    const after = await title.boundingBox()
+    expect(after!.y + after!.height).toBeLessThan(before!.y + before!.height)
+    await card.screenshot({ path: `.cache/platforms-review/${locale}-hover.png` })
+    await page.mouse.move(0, 0)
+    await expect(details).toHaveCSS('opacity', '1')
+    await link.focus()
+    await expect(details).toHaveCSS('opacity', '0')
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await expect(photo).toHaveCSS('transform', 'none')
+    expect(
+      await title.evaluate((el) => parseFloat(getComputedStyle(el).transitionDuration)),
+    ).toBeLessThanOrEqual(0.00001)
+    await page.emulateMedia({ reducedMotion: 'no-preference' })
+    await link.click({ position: { x: 20, y: 20 } })
+    await expect(page).toHaveURL(pageHref('platforms', locale))
+  })
+}

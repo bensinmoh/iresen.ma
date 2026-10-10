@@ -4,6 +4,7 @@ import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
 import { pageHref } from '@/lib/site'
+import { PlatformCard } from './PlatformCard'
 import { PlatformNetworkIcon } from './PlatformNetworkIcon'
 import styles from './PlatformsSection.module.css'
 
@@ -39,53 +40,54 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
         </header>
         <div className={styles.cards}>
           {homePlatforms.map((platform) => (
-            <article
-              key={platform.id}
-              id={`platform-${platform.id}`}
-              aria-labelledby={`platform-${platform.id}-heading`}
-              className={styles.card}
-            >
-              <div className={styles.visual}>
-                <Image
-                  className={styles.photo}
-                  src={`/images/platforms/${platform.id}.webp`}
-                  alt={t(`platforms.${platform.id}.imageDescription`)}
-                  width={platform.width}
-                  height={platform.height}
-                  sizes="(max-width: 39.999rem) 94vw, (max-width: 69.999rem) 46vw, (min-width: 128rem) 34rem, 29vw"
-                />
-              </div>
-              <div className={styles.body}>
-                <div className={styles.identity}>
-                  <p className={styles.category}>{t(`platforms.${platform.id}.category`)}</p>
+            <PlatformCard key={platform.id} id={`platform-${platform.id}`} className={styles.card}>
+              <a
+                className={styles.cardDestination}
+                href={pageHref('platforms', locale)}
+                aria-label={`${t('cardLink')} — ${t(`platforms.${platform.id}.name`)}`}
+              >
+                <div className={styles.visual}>
                   <Image
-                    className={styles.logo}
-                    src={`/brand/platforms/${platform.id}.svg`}
-                    alt=""
-                    aria-hidden="true"
-                    width={platform.logoWidth}
-                    height={platform.logoHeight}
-                    unoptimized
+                    className={styles.photo}
+                    src={`/images/platforms/${platform.id}.webp`}
+                    alt={t(`platforms.${platform.id}.imageDescription`)}
+                    width={platform.width}
+                    height={platform.height}
+                    sizes="(max-width: 39.999rem) 94vw, (max-width: 69.999rem) 46vw, (min-width: 128rem) 34rem, 29vw"
                   />
                 </div>
-                <div className={styles.summary}>
-                  <h3 id={`platform-${platform.id}-heading`}>
-                    <bdi>{t(`platforms.${platform.id}.name`)}</bdi>
-                  </h3>
-                  <p className={styles.description}>{t(`platforms.${platform.id}.description`)}</p>
-                  <a
-                    className={styles.link}
-                    href={pageHref('platforms', locale)}
-                    aria-label={`${t('cardLink')} — ${t(`platforms.${platform.id}.name`)}`}
-                  >
-                    {t('cardLink')} <NavigationIcon name="arrow" />
-                  </a>
-                  {platform.id === 'greenh2a' && (
-                    <p className={styles.visualLabel}>{t('visualization')}</p>
-                  )}
+                <div className={styles.body}>
+                  <div className={styles.identity}>
+                    <p className={styles.category}>{t(`platforms.${platform.id}.category`)}</p>
+                    <Image
+                      className={styles.logo}
+                      src={`/brand/platforms/${platform.id}.svg`}
+                      alt=""
+                      aria-hidden="true"
+                      width={platform.logoWidth}
+                      height={platform.logoHeight}
+                      unoptimized
+                    />
+                  </div>
+                  <div className={styles.summary}>
+                    <h3 id={`platform-${platform.id}-heading`}>
+                      <bdi>{t(`platforms.${platform.id}.name`)}</bdi>
+                    </h3>
+                    <div className={styles.details} data-platform-details>
+                      <p className={styles.description}>
+                        {t(`platforms.${platform.id}.description`)}
+                      </p>
+                      <span className={styles.link}>
+                        {t('cardLink')} <NavigationIcon name="arrow" />
+                      </span>
+                      {platform.id === 'greenh2a' && (
+                        <p className={styles.visualLabel}>{t('visualization')}</p>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </a>
+            </PlatformCard>
           ))}
         </div>
       </div>
