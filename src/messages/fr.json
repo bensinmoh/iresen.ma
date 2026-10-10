@@ -958,6 +958,10 @@
       "page": "Pages",
       "section": "Sections",
       "news": "Actualités",
+      "publication": "Publications",
+      "report": "Rapports",
+      "patent": "Brevets",
+      "project": "Projets",
       "document": "Documents",
       "media": "Médias"
     },
@@ -1578,7 +1582,7 @@
       "reference": "Référence",
       "showMore": "Afficher les suivants",
       "showAll": "Tout afficher",
-      "original": "Titres et noms des déposants conservés dans leur langue d’origine.",
+      "original": "Les titres sont présentés dans la langue sélectionnée ; les noms des déposants conservent leur forme originale.",
       "note": "Les dépôts recensés ne correspondent pas tous à des brevets en vigueur. Les informations disponibles sur PatentRegister permettent de consulter chaque dossier.",
       "updated": "Base au T4 2026",
       "noJavaScript": "Sans JavaScript, les 59 références sont affichées intégralement. Les filtres nécessitent JavaScript."

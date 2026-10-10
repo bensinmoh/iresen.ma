@@ -115,6 +115,7 @@ describe('owner-selected patent catalogue', () => {
         const record = records.find(
           (r) => r.id === `section:transfer:patent-${p.reference}:${locale}`,
         )!
+        expect(record.type).toBe('patent')
         expect(record.url).toBe(pageHref('transfer', locale, `patent-${p.reference}`))
         expect(record.url).toContain(`#patent-${p.reference}`)
         expect(record.title).toContain(p.title[locale])

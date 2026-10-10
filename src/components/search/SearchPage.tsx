@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getFormatter, getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
+import { searchTypes } from '@/lib/search/types'
 import type { SearchResult, SearchType } from '@/lib/search/adapter'
 import { highlightSearchText } from '@/lib/search/text'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -19,7 +20,7 @@ type SearchPageProps = {
   error?: 'invalid'
 }
 
-const resultTypes = ['page', 'section', 'news', 'document', 'media'] as const
+const resultTypes = searchTypes
 
 function highlight(text: string, query: string) {
   return highlightSearchText(text, query).map((part, index) =>

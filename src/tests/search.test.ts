@@ -14,7 +14,7 @@ import {
   searchExcerpt,
   searchTokens,
 } from '@/lib/search/text'
-import type { SearchInput } from '@/lib/search/types'
+import { searchTypes, type SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
 import { homeMissions, legacyMissionAnchors, homeCooperationAnchor } from '@/lib/home-missions'
@@ -25,6 +25,20 @@ import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
 
 describe('multilingual search text', () => {
+  it('accepts explicit resource types with complete localized labels, without reclassifying their overview pages', () => {
+    for (const type of searchTypes) {
+      expect(validateSearchInput({ query: 'IRESEN', locale: 'fr', type })).toBe(true)
+      for (const messages of [fr, en, ar]) expect(messages.Search.types[type].trim()).not.toBe('')
+    }
+    const documents = staticSearchDocuments()
+    for (const locale of contentLocales) {
+      expect(documents.find((item) => item.id === `page:publications:${locale}`)?.type).toBe('page')
+      expect(documents.find((item) => item.id === `page:projects:${locale}`)?.type).toBe('page')
+      expect(
+        documents.filter((item) => item.type === 'patent' && item.locale === locale),
+      ).toHaveLength(59)
+    }
+  })
   it('normalizes French accents and ligatures, English case, and Arabic marks without losing letters', () => {
     expect(normalizeSearchText('Énergies, CŒUR et ÆTHER!')).toBe('energies coeur et aether')
     expect(normalizeSearchText('Research / IRESEN 2035')).toBe('research iresen 2035')

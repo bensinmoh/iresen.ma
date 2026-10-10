@@ -1,4 +1,14 @@
-export const searchTypes = ['page', 'section', 'news', 'document', 'media'] as const
+export const searchTypes = [
+  'page',
+  'section',
+  'news',
+  'publication',
+  'report',
+  'patent',
+  'project',
+  'document',
+  'media',
+] as const
 export type SearchType = (typeof searchTypes)[number]
 export type SearchLocale = 'fr' | 'en' | 'ar'
 export type SearchSort = 'relevance' | 'newest'
