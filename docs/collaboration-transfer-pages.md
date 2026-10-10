@@ -51,3 +51,11 @@ Further institutional records, supported transfer cases, outcome measurements,
 availability conditions and final translations require their own review. The
 [final content search sanity check](search.md#final-content-search-sanity-check)
 remains pending for the completed website.
+
+## Later transfer-page revision
+
+The owner's later 10 October request supersedes the transfer composition and
+copy above with a research-to-impact pathway, PI support, four valorisation
+routes and the 59-reference patent catalogue. Collaboration remains unchanged;
+all six transfer section anchors remain. See
+[the current scope](valorisation-patents.md).

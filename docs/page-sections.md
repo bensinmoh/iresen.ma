@@ -157,3 +157,14 @@ The final `results` scaffold is replaced by eight server-rendered achievements
 with `achievement-*` child anchors. Homepage order and section navigation now
 follow missions, achievements, research, capabilities, collaboration and news.
 Existing section anchors are preserved. See [scope](home-achievements.md).
+
+## Transfer catalogue update — 2026-10-10
+
+All six existing transfer anchors remain. Intellectual property now precedes
+valorisation pathways; `adoption-initiatives` contains the patent catalogue and
+`valorisation-figures`. Supported `patent-{reference}` hashes derive from the
+59-record database and preserve equivalent-locale navigation. See
+[scope](valorisation-patents.md).
+
+The owner’s follow-up removes the six-link body section navigation from
+Valorisation. Its section anchors, hero actions and search destinations remain.

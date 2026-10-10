@@ -3,6 +3,7 @@
 import { useState, useSyncExternalStore, type FormEvent } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import type { Patent } from '@/lib/patents'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
 import { footerContact } from '@/lib/footer'
@@ -13,11 +14,14 @@ const subscribeToHydration = () => () => {}
 export function ContactForm({
   locale,
   initialTopic,
+  initialPatent,
 }: {
   locale: Locale
   initialTopic?: ContactTopic
+  initialPatent?: Patent
 }) {
   const t = useTranslations('Contact.form')
+  const transfer = useTranslations('Transfer')
   const ready = useSyncExternalStore(
     subscribeToHydration,
     () => true,
@@ -140,6 +144,14 @@ export function ContactForm({
             <textarea
               id="contact-message"
               name="message"
+              defaultValue={
+                initialPatent
+                  ? transfer('contactMessage', {
+                      reference: initialPatent.reference,
+                      title: initialPatent.title,
+                    })
+                  : undefined
+              }
               placeholder={t('message.placeholder')}
               required
               disabled={!ready}

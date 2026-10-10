@@ -95,8 +95,8 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   transfer: [
     { id: 'results-to-transfer' },
     { id: 'research-to-use' },
-    { id: 'transfer-pathways' },
     { id: 'intellectual-property' },
+    { id: 'transfer-pathways' },
     { id: 'adoption-initiatives' },
     { id: 'build-transfer' },
   ],

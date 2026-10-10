@@ -2591,3 +2591,15 @@ is claimed. The final-content search sanity check remains due.
 - Routes, all twelve anchors, existing hero/assets, public CMS eligibility and local contact-draft behavior remain. No deployment or final institutional/translation approval is claimed. Scoped axe coverage is not whole-site conformance certification.
 
 See [delivered scope](collaboration-transfer-pages.md). The final-content search sanity check remains pending. Current remote CI and merge outcomes are recorded in the pull request.
+
+## Valorisation and patent catalogue — 2026-10-10
+
+- Formatting, lint, sequential typecheck, 116 unit tests and production build passed.
+- 22 integration tests passed against a fresh temporary database, removed afterwards; the existing local database was preserved.
+- All 196 Chromium browser tests passed locally. The seven new patent journeys cover combined filters, 59 records, original register links, contact prefill, canonical search destinations, direct late-record anchors and Arabic without JavaScript. Existing hero tests now verify the commissioned transfer action destination.
+- FR/EN/AR checks cover 1440/1024/768/390/320 widths, 200% text and scoped axe scans. Desktop/mobile captures cover the process, catalogue, cards and new photographic sections. French desktop and Arabic mobile were visually inspected.
+- The final source review removed a repeated metadata label ID; the affected catalogue journeys were rechecked after the final build.
+- The Impeccable mechanical scan of the transfer components reported no findings. Existing platform photographs and licensed Tabler paths were reused; no generated imagery or new dependency was introduced.
+- The local search index was rebuilt with 177 localized patent destinations. Source workbook and omitted administrative fields remain outside the public index. CMS access/publication gates and the contact email-draft workflow remain.
+
+See [scope and provenance](valorisation-patents.md). No deployment, visibility change, final translation approval or patent legal-status verification is claimed. Scoped accessibility checks do not certify the whole site. The final-content search sanity check remains pending; remote CI and merge outcomes are recorded on the pull request.

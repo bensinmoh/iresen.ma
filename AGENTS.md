@@ -170,3 +170,12 @@ an authorized public download or newly imported repository original.
 ## Collaboration and valorisation update — 2026-10-10
 
 The owner commissioned development of the existing workWithUs and transfer pages, preserving their six-section anchors. See [scope](docs/collaboration-transfer-pages.md). FR/EN/AR are working editorial copy. Existing references do not establish commercial adoption; contact retains its local email-draft workflow. Routes, public CMS gates and publication approval remain unchanged.
+
+## Valorisation catalogue and visual refinement — 2026-10-10
+
+The owner commissioned the Valorisation redesign and a minimal database of
+59 filed patent records from the supplied workbook. See [scope and provenance](docs/valorisation-patents.md). Six legacy anchors remain; the body section
+navigation is removed. Existing approved platform photographs and licensed
+outline icons supply restrained visual context. Patent summaries and EN/AR
+copy remain editorial working texts. The workbook and excluded administrative
+fields are neither public assets nor repository imports. No deployment is authorized.

@@ -460,28 +460,28 @@
     },
     "transfer": {
       "results-to-transfer": {
-        "title": "Valoriser, c’est rendre les résultats utiles",
-        "description": "La valeur d’un résultat dépend de ce qu’il permet de comprendre, de décider, de pratiquer ou de développer. Elle ne se limite pas à une commercialisation."
+        "title": "Transformer la recherche en impact",
+        "description": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché."
       },
       "research-to-use": {
-        "title": "Relier les travaux aux usages, avec des retours",
-        "description": "Développer, éprouver et valoriser sont des fonctions de Recherche & Innovation. Chaque résultat suit les étapes utiles à son besoin et à son niveau de maturité."
-      },
-      "transfer-pathways": {
-        "title": "Choisir une voie selon le résultat et son usage",
-        "description": "Diffusion, travail commun, transfert technologique ou initiative entrepreneuriale : les possibilités s’examinent au cas par cas."
+        "title": "Un parcours, plusieurs trajectoires",
+        "description": "Détecter, évaluer, protéger, maturer, transférer, déployer : relier le potentiel scientifique aux besoins de l’industrie et du marché."
       },
       "intellectual-property": {
-        "title": "Cadrer les droits et les échanges",
-        "description": "La propriété intellectuelle (PI), les contributions et la confidentialité font partie du travail de cadrage, avec les interlocuteurs compétents."
+        "title": "Protéger pour valoriser",
+        "description": "La protection n’est pas une finalité en soi. Brevets, savoir-faire, logiciels et autres actifs de propriété intellectuelle sont des outils permettant de sécuriser et faciliter la valorisation des innovations."
+      },
+      "transfer-pathways": {
+        "title": "Des trajectoires adaptées à chaque innovation",
+        "description": "Selon la technologie et l’opportunité, plusieurs voies de valorisation sont possibles."
       },
       "adoption-initiatives": {
-        "title": "Explorer des réalisations, comprendre leur stade",
-        "description": "Les réalisations de l’accueil illustrent la diversité des résultats et des applications. Elles constituent des points de départ pour une lecture documentée."
+        "title": "Explorez nos technologies",
+        "description": "Découvrez 59 références de brevets déposés et identifiez les technologies en lien avec vos besoins."
       },
       "build-transfer": {
-        "title": "Construire la prochaine étape",
-        "description": "Vous disposez d’un résultat de recherche ou d’un besoin d’utilisation ? Préparez une première description pour examiner les suites possibles."
+        "title": "Faisons avancer votre innovation",
+        "description": "Pour un premier échange, présentez votre besoin ou votre résultat sans transmettre d’informations confidentielles."
       }
     },
     "workWithUs": {
@@ -913,7 +913,7 @@
       "projects": "Du besoin traité aux résultats obtenus : comprendre les travaux, les apports d’IRESEN et de ses partenaires, et leur stade réel.",
       "platforms": "Des moyens de recherche, d’essais, d’expérimentation et de formation pour connaître les performances et les conditions d’utilisation des technologies.",
       "network": "Mobiliser les études et l’expertise, partager les savoir-faire et renforcer les capacités scientifiques et techniques des équipes.",
-      "transfer": "Préparer la maturation, le transfert et l’utilisation des résultats, selon leur stade réel et les besoins des acteurs concernés.",
+      "transfer": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
       "workWithUs": "Réunir les acteurs, les expertises et les ressources autour de besoins d’analyse, de recherche, d’expérimentation ou de montée en compétences.",
       "news": "Suivre les études, les recherches, les compétences et les coopérations qui contribuent à la transition énergétique et au développement durable.",
       "events": "Des rencontres pour relier les acteurs, partager les expertises et construire des coopérations au Maroc et à l’international.",
@@ -1463,121 +1463,164 @@
     "transfer": {
       "sections": {
         "results-to-transfer": {
-          "label": "Les résultats",
-          "items": [
-            {
-              "title": "Connaissances et méthodes",
-              "description": "Des résultats scientifiques, des protocoles et des méthodes peuvent être partagés, repris ou adaptés pour faire progresser d’autres travaux."
-            },
-            {
-              "title": "Technologies et prototypes",
-              "description": "Un équipement, un procédé ou un prototype ouvre des usages possibles. Ses performances, ses limites et son stade réel doivent être explicités."
-            },
-            {
-              "title": "Compétences et savoir-faire",
-              "description": "Les enseignements de la recherche et de l’expérimentation peuvent renforcer les pratiques, la formation et les capacités des équipes."
-            },
-            {
-              "title": "Données et outils de décision",
-              "description": "Des analyses, des jeux de données ou des outils peuvent éclairer des choix. Leur périmètre, leurs conditions d’utilisation et leurs limites comptent autant que leur diffusion."
-            }
-          ],
-          "note": "Identifier ce qui a été produit, par qui, pour quel besoin et avec quelles preuves constitue le point de départ.",
+          "label": "Valorisation & transfert",
+          "items": [],
           "checklist": []
         },
         "research-to-use": {
-          "label": "La maturation",
-          "items": [
-            {
-              "title": "Situer le résultat",
-              "description": "Décrire l’origine, le besoin traité, les contributions et les preuves disponibles. Distinguer ce qui est démontré de ce qui reste à vérifier."
-            },
-            {
-              "title": "Éprouver les conditions",
-              "description": "Examiner les performances, les contraintes et les limites dans des conditions pertinentes. Les essais peuvent conduire à reprendre les travaux."
-            },
-            {
-              "title": "Préparer l’utilisation",
-              "description": "Identifier les utilisateurs, les adaptations nécessaires, les moyens et les partenaires. Préciser les conditions techniques et organisationnelles de l’usage."
-            },
-            {
-              "title": "Documenter et apprendre",
-              "description": "Suivre l’utilisation lorsqu’elle existe, qualifier les contributions observées et partager les enseignements pour les travaux à venir."
-            }
-          ],
-          "note": "La maturation n’est pas une progression automatique. Un résultat peut alimenter la recherche, une décision ou une formation sans conduire à un transfert commercial.",
-          "checklist": []
-        },
-        "transfer-pathways": {
-          "label": "Les voies possibles",
-          "items": [
-            {
-              "title": "Partager les connaissances",
-              "description": "Publications, ressources pédagogiques, méthodes et échanges scientifiques rendent les enseignements accessibles dans un cadre de diffusion adapté."
-            },
-            {
-              "title": "Codévelopper avec des partenaires",
-              "description": "Poursuivre les travaux avec les acteurs de l’usage pour adapter, qualifier ou expérimenter une solution et préciser les contributions respectives."
-            },
-            {
-              "title": "Préparer un transfert technologique",
-              "description": "Examiner les modalités de mise à disposition ou de licence lorsque le résultat, les droits et les partenaires le permettent. Les conditions restent à établir."
-            },
-            {
-              "title": "Explorer une initiative entrepreneuriale",
-              "description": "Envisager la création ou le développement d’une activité autour d’un résultat lorsque l’équipe, le besoin et les conditions de maturation s’y prêtent."
-            }
-          ],
-          "note": "Aucune voie n’est garantie par l’existence d’un prototype, d’une publication ou d’un dépôt de brevet. Le choix dépend des preuves, des droits, des capacités et des partenaires concernés.",
+          "label": "De la recherche à l’impact",
+          "items": [],
           "checklist": []
         },
         "intellectual-property": {
-          "label": "Les conditions",
-          "items": [
-            {
-              "title": "Quel résultat et quelles contributions ?",
-              "description": "Décrire l’origine des connaissances, des données et des travaux, les partenaires associés et les éléments déjà diffusés. Les contributions doivent pouvoir être attribuées clairement."
-            },
-            {
-              "title": "Quels droits et quels usages à examiner ?",
-              "description": "Préciser les droits existants, les usages envisagés, les conditions de partage et les responsabilités à discuter. Le cadre applicable se définit avec les équipes concernées ; cette page ne présente pas un contrat type."
-            },
-            {
-              "title": "Comment préparer un premier échange ?",
-              "description": "Transmettre d’abord une description non confidentielle du résultat et du besoin. Avant tout partage sensible, préciser les modalités de confidentialité et les documents utiles avec l’interlocuteur concerné."
-            }
-          ],
-          "note": "Un dépôt de brevet, un droit accordé et un droit actif sont des situations distinctes. Leur existence ne prouve pas, à elle seule, un transfert ou une adoption.",
+          "label": "Propriété intellectuelle",
+          "items": [],
+          "checklist": []
+        },
+        "transfer-pathways": {
+          "label": "Voies de valorisation",
+          "items": [],
           "checklist": []
         },
         "adoption-initiatives": {
-          "label": "Repères concrets",
-          "items": [
-            {
-              "title": "iSmart",
-              "description": "Une borne de recharge pour véhicules électriques, présentée parmi les réalisations d’IRESEN. Pour analyser sa valorisation, distinguer le produit, les contributions et les usages effectivement documentés."
-            },
-            {
-              "title": "AquaSolar",
-              "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire. La présentation du démonstrateur illustre une application ; elle ne suffit pas à établir un transfert commercial."
-            }
-          ],
-          "note": "Une preuve d’utilisation ou d’impact doit préciser les acteurs, le contexte, le stade, la période et les résultats observés. Les intentions restent distinctes des effets mesurés.",
+          "label": "Portefeuille technologique",
+          "items": [],
           "checklist": []
         },
         "build-transfer": {
-          "label": "Votre résultat",
+          "label": "Deux portes d’entrée",
           "items": [],
-          "note": "Le premier échange porte sur le résultat, le besoin et les conditions à examiner. Il ne vaut ni engagement de financement ni accord de transfert.",
-          "checklist": [
-            "Le résultat ou la technologie, son origine et les contributeurs associés.",
-            "Le besoin, les utilisateurs possibles et le contexte d’application.",
-            "Les travaux, essais et preuves déjà disponibles, avec les limites connues.",
-            "Le stade de maturité et les adaptations ou vérifications encore nécessaires.",
-            "Les partenaires, les droits et les contraintes à discuter, sans transmettre d’éléments confidentiels."
-          ]
+          "checklist": []
         }
       }
     }
+  },
+  "Transfer": {
+    "navigation": "Sur cette page",
+    "eyebrow": "Valorisation & transfert",
+    "title": "Transformer la recherche en impact",
+    "intro": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
+    "innovationAction": "Valoriser une innovation",
+    "exploreAction": "Explorer nos technologies",
+    "process": {
+      "label": "De la recherche à l’impact",
+      "title": "Un parcours, plusieurs trajectoires",
+      "description": "Détecter, évaluer, protéger, maturer, transférer, déployer : relier le potentiel scientifique aux besoins de l’industrie et du marché.",
+      "steps": ["Détecter", "Évaluer", "Protéger", "Maturer", "Transférer", "Déployer"],
+      "note": "Ce parcours ne constitue pas un processus rigide : chaque innovation suit une trajectoire adaptée à sa maturité, son potentiel et ses opportunités."
+    },
+    "ip": {
+      "label": "Propriété intellectuelle",
+      "title": "Protéger pour valoriser",
+      "description": "La protection n’est pas une finalité en soi. Brevets, savoir-faire, logiciels et autres actifs de propriété intellectuelle sont des outils permettant de sécuriser et faciliter la valorisation des innovations.",
+      "items": [
+        {
+          "title": "Identifier le potentiel",
+          "description": "Repérer les résultats de recherche susceptibles de répondre à un besoin et d’ouvrir une voie de valorisation."
+        },
+        {
+          "title": "Évaluer et définir la stratégie PI",
+          "description": "Examiner les actifs de propriété intellectuelle et préparer une stratégie de protection adaptée."
+        },
+        {
+          "title": "Déposer et suivre les protections",
+          "description": "Accompagner le dépôt et le suivi des protections retenues."
+        },
+        {
+          "title": "Gérer le portefeuille PI",
+          "description": "Organiser le suivi des actifs et préparer les prochaines étapes de valorisation."
+        },
+        {
+          "title": "Préparer le transfert",
+          "description": "Relier protection, maturation et échanges avec les partenaires potentiels."
+        }
+      ]
+    },
+    "pathways": {
+      "label": "Voies de valorisation",
+      "title": "Des trajectoires adaptées à chaque innovation",
+      "description": "Selon la technologie et l’opportunité, plusieurs voies de valorisation sont possibles.",
+      "items": [
+        {
+          "title": "Licence & transfert",
+          "description": "Technologie → Partenaire → Licence / Transfert → Exploitation"
+        },
+        {
+          "title": "Partenariat industriel",
+          "description": "Technologie + Besoin industriel → Co-développement → Démonstration → Industrialisation"
+        },
+        {
+          "title": "Startup / Spin-off",
+          "description": "Innovation → Validation marché → Création → Développement"
+        },
+        {
+          "title": "Déploiement",
+          "description": "Prototype → Démonstration → Validation → Déploiement"
+        }
+      ]
+    },
+    "catalog": {
+      "label": "Portefeuille technologique",
+      "title": "Explorez nos technologies",
+      "description": "Découvrez 59 références de brevets déposés et identifiez les technologies en lien avec vos besoins.",
+      "search": "Rechercher un brevet",
+      "placeholder": "Référence, titre, mot-clé ou déposant…",
+      "theme": "Thématique",
+      "year": "Année de dépôt",
+      "depositor": "Déposant",
+      "all": "Tous",
+      "unknown": "Non renseignée",
+      "reset": "Réinitialiser",
+      "count": "{count} sur {total} références",
+      "empty": "Aucun brevet ne correspond à ces critères.",
+      "view": "Accéder au brevet",
+      "discuss": "En parler avec IRESEN",
+      "reference": "Référence",
+      "showMore": "Afficher les suivants",
+      "showAll": "Tout afficher",
+      "original": "Titres et noms des déposants conservés dans leur langue d’origine.",
+      "note": "Les dépôts recensés ne correspondent pas tous à des brevets en vigueur. Les informations disponibles sur PatentRegister permettent de consulter chaque dossier.",
+      "updated": "Base au 7 octobre 2026",
+      "noJavaScript": "Sans JavaScript, les 59 références sont affichées intégralement. Les filtres nécessitent JavaScript."
+    },
+    "figures": {
+      "label": "La valorisation en chiffres",
+      "title": "Un portefeuille à explorer",
+      "filed": "références de brevets déposés",
+      "themes": "thématiques de consultation",
+      "date": "Date du référentiel",
+      "note": "Ces indicateurs décrivent le catalogue présenté ici ; ils ne mesurent pas les licences, les transferts ou l’adoption industrielle."
+    },
+    "doors": {
+      "label": "Deux portes d’entrée",
+      "title": "Faisons avancer votre innovation",
+      "items": [
+        {
+          "title": "Vous avez une innovation ?",
+          "description": "Chercheur, laboratoire ou porteur de projet : faites-nous découvrir votre résultat et explorons ensemble son potentiel de valorisation.",
+          "action": "Valoriser mon innovation"
+        },
+        {
+          "title": "Vous recherchez une technologie ?",
+          "description": "Entreprise, industriel ou investisseur : explorez notre portefeuille et identifiez des technologies répondant à vos besoins.",
+          "action": "Explorer les technologies"
+        }
+      ],
+      "contact": "Contacter l’équipe Valorisation",
+      "note": "Pour un premier échange, présentez votre besoin ou votre résultat sans transmettre d’informations confidentielles."
+    },
+    "themes": {
+      "solar": "Énergie solaire",
+      "storage": "Stockage d’énergie",
+      "buildings": "Bâtiment & matériaux",
+      "mobility": "Mobilité électrique",
+      "water": "Eau & traitement",
+      "hydrogen": "Hydrogène",
+      "bioenergy": "Biomasse & résidus",
+      "grids": "Réseaux & conversion électrique",
+      "measurement": "Mesure & instrumentation",
+      "thermal": "Systèmes thermiques"
+    },
+    "contactMessage": "Je souhaite échanger avec IRESEN au sujet du brevet {reference} : {title}."
   }
 }
