@@ -2768,3 +2768,14 @@ FR mobile and FR/AR hover plus AR desktop renderings were inspected; title
 backings preserve contrast once the gradient disappears. Ignored screenshots
 are in `.cache/platforms-review/`. Formatting, whitespace and the mechanical
 design scan pass. Remote CI and merge status are recorded on the PR. No deployment.
+
+
+The owner's hover follow-ups remove the solid title backing, slow transforms to
+800ms and fades to 700ms, and request a lower-edge gradient from exactly 50%
+opacity to 0% at the title top. The gradient height follows the real localized
+title and card padding, with an explicit foreground stacking order during photo
+zoom; no translated gradient edge creates a seam. Lint, typecheck, production
+build and all seven scoped browser journeys pass again. FR/AR hover captures
+were inspected; the lower fade is visible, title backgrounds remain transparent
+and card geometry stays fixed. Other active patent/localization edits in the
+shared checkout are excluded from this focused commit and preserved.
