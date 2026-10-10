@@ -13,6 +13,8 @@ import {
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import styles from './TransferPage.module.css'
 
+const pageSize = 6
+
 const subscribeHash = (notify: () => void) => {
   window.addEventListener('hashchange', notify)
   return () => window.removeEventListener('hashchange', notify)
@@ -27,7 +29,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
   const [year, setYear] = useState('')
   const [depositor, setDepositor] = useState('')
   // All records remain in server HTML for anchor discovery and no-JavaScript reading.
-  const [limit, setLimit] = useState<number | null>(12)
+  const [limit, setLimit] = useState<number | null>(pageSize)
   const hash = useSyncExternalStore(subscribeHash, currentHash, serverHash)
   const results = filterPatents(query, theme, year, depositor, locale)
   const grid = useRef<HTMLDivElement>(null)
@@ -91,7 +93,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
   const change = (setter: (value: string) => void, value: string) => {
     rememberPositions()
     setter(value)
-    setLimit(12)
+    setLimit(pageSize)
   }
   const reset = () => {
     rememberPositions()
@@ -99,7 +101,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
     setTheme('')
     setYear('')
     setDepositor('')
-    setLimit(12)
+    setLimit(pageSize)
   }
   return (
     <div>
@@ -238,7 +240,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
             className="button button-primary"
             onClick={() => {
               rememberPositions()
-              setLimit(limit + 12)
+              setLimit(limit + pageSize)
             }}
           >
             {t('catalog.showMore')}

@@ -17,7 +17,7 @@ export const patentThemes = [
 export type PatentTheme = (typeof patentThemes)[number]
 export type Patent = {
   reference: string
-  /** Original bibliographic title and applicant names are not translated. */
+  /** Bibliographic wording is not translated; titles use reviewed sentence case. */
   title: string
   description: Record<Locale, string>
   themes: PatentTheme[]

@@ -112,7 +112,7 @@
   },
   {
     "reference": "40800",
-    "title": "Refroidissement par évaporation (pad cooling) à base de faux palmier doum (chamaerops humilis l.)",
+    "title": "Refroidissement par évaporation (pad cooling) à base de faux palmier doum (Chamaerops humilis L.)",
     "description": {
       "fr": "Un dispositif de refroidissement par évaporation utilisant le palmier nain doum.",
       "en": "An evaporative cooling device using doum dwarf palm.",
@@ -139,7 +139,7 @@
   },
   {
     "reference": "41528",
-    "title": "PROCÉDÉ ET SYSTÈME POUR LE NETTOYAGE DES PANNEAUX PHOTOVOLTAÏQUES AVEC UN SYSTÈME DE COLLECTE, DE TRAITEMENT, DE STOCKAGE ET DE RECYCLAGE DE L'EAU",
+    "title": "Procédé et système pour le nettoyage des panneaux photovoltaïques avec un système de collecte, de traitement, de stockage et de recyclage de l'eau",
     "description": {
       "fr": "Un système de nettoyage photovoltaïque intégrant la collecte, le traitement, le stockage et le recyclage de l’eau.",
       "en": "A photovoltaic cleaning system integrating water collection, treatment, storage and recycling.",
@@ -152,7 +152,7 @@
   },
   {
     "reference": "41738",
-    "title": "PROCÉDÉ ET APPAREIL DE MESURE ET SURVEILLANCE DE LA DIMINUTION DES PROPRIÉTÉS OPTIQUES DUE À L'ENCRASSEMENT DANS LES CENTRALES PHOTOVOLTAÏQUES",
+    "title": "Procédé et appareil de mesure et surveillance de la diminution des propriétés optiques due à l'encrassement dans les centrales photovoltaïques",
     "description": {
       "fr": "Un appareil de mesure et de surveillance des pertes de propriétés optiques liées à l’encrassement photovoltaïque.",
       "en": "A device measuring and monitoring optical losses caused by photovoltaic soiling.",
@@ -165,7 +165,7 @@
   },
   {
     "reference": "41925",
-    "title": "SMART FICHE PRISE (PV/HYBRID/GRID)",
+    "title": "Smart fiche prise (PV/hybrid/grid)",
     "description": {
       "fr": "Une fiche-prise intelligente pour des configurations photovoltaïques, hybrides ou raccordées au réseau.",
       "en": "A smart plug for photovoltaic, hybrid or grid-connected configurations.",
@@ -178,7 +178,7 @@
   },
   {
     "reference": "42862",
-    "title": "PROCÉDÉ ET APPAREIL DE MESURE AUTOMATISÉ DE COURBE CARACTÉRISTIQUE DES SYSTÈMES PHOTOVOLTAÏQUES À TEMPS RÉEL",
+    "title": "Procédé et appareil de mesure automatisé de courbe caractéristique des systèmes photovoltaïques à temps réel",
     "description": {
       "fr": "Un appareil de mesure automatisée, en temps réel, des courbes caractéristiques de systèmes photovoltaïques.",
       "en": "A device for automated real-time measurement of photovoltaic characteristic curves.",
@@ -259,7 +259,7 @@
   },
   {
     "reference": "44798",
-    "title": "BORNE DE RECHARGE HYBRIDE, INTELLIGENTE ET PARAMÉTRABLE SUR CANDÉLABRE POUR LA RECHARGE DES VOITURES, MOTOS ET VÉLOS ÉLECTRIQUES",
+    "title": "Borne de recharge hybride, intelligente et paramétrable sur candélabre pour la recharge des voitures, motos et vélos électriques",
     "description": {
       "fr": "Une borne de recharge hybride et paramétrable sur candélabre pour voitures, motos et vélos électriques.",
       "en": "A configurable hybrid charging point on a lamppost for electric cars, motorcycles and bicycles.",
@@ -272,7 +272,7 @@
   },
   {
     "reference": "51690",
-    "title": "Chauffe-eau solaire à miroir de fresnel hybride",
+    "title": "Chauffe-eau solaire à miroir de Fresnel hybride",
     "description": {
       "fr": "Un chauffe-eau solaire hybride reposant sur un miroir de Fresnel.",
       "en": "A hybrid solar water heater using a Fresnel mirror.",
@@ -324,7 +324,7 @@
   },
   {
     "reference": "53044",
-    "title": "Système de recharge hybride et bidirectionnel par induction et/ou par câble pour les véhicules électriques à technologie v2x",
+    "title": "Système de recharge hybride et bidirectionnel par induction et/ou par câble pour les véhicules électriques à technologie V2X",
     "description": {
       "fr": "Un système de recharge hybride bidirectionnelle, par induction ou câble, pour véhicules électriques à technologie V2X.",
       "en": "A bidirectional hybrid charging system using induction or cable for V2X electric vehicles.",
@@ -364,7 +364,7 @@
   },
   {
     "reference": "54913",
-    "title": "DISPOSITIF POLYMORPHIQUE ADAPTATIF BIDIRECTIONNEL ET RÉVERSIBLE DE CONVERSION D’ÉNERGIE ÉLECTRIQUE",
+    "title": "Dispositif polymorphique adaptatif bidirectionnel et réversible de conversion d’énergie électrique",
     "description": {
       "fr": "Un dispositif de conversion d’énergie électrique adaptatif, bidirectionnel et réversible.",
       "en": "An adaptive, bidirectional and reversible electrical energy conversion device.",
@@ -416,7 +416,7 @@
   },
   {
     "reference": "56600",
-    "title": "GEP-PVSMS : Système de mesure, quantification et de traitement des données d'encrassement des centrales photovoltaïques en temps réel.",
+    "title": "GEP-PVSMS : système de mesure, quantification et de traitement des données d'encrassement des centrales photovoltaïques en temps réel.",
     "description": {
       "fr": "Un système de mesure et de traitement en temps réel des données d’encrassement des centrales photovoltaïques.",
       "en": "A system for real-time measurement and processing of photovoltaic plant soiling data.",
@@ -455,7 +455,7 @@
   },
   {
     "reference": "58719",
-    "title": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de palmier nain (DOUM) BrickDOUM",
+    "title": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de palmier nain (doum) BrickDOUM",
     "description": {
       "fr": "Une brique de terre crue comprimée et stabilisée, renforcée par des fibres de palmier nain doum.",
       "en": "A compressed and stabilised earth brick reinforced with doum dwarf palm fibres.",
@@ -507,7 +507,7 @@
   },
   {
     "reference": "62697",
-    "title": "RÉSEAU ÉNERGÉTIQUE HYBRIDE ET SON SYSTÈME DE GESTION DES DONNÉES PAR INTELLIGENCE ARTIFICIELLE",
+    "title": "Réseau énergétique hybride et son système de gestion des données par intelligence artificielle",
     "description": {
       "fr": "Un réseau énergétique hybride associé à une gestion des données par intelligence artificielle.",
       "en": "A hybrid energy network with artificial-intelligence-based data management.",
@@ -520,7 +520,7 @@
   },
   {
     "reference": "63542",
-    "title": "Méthode de Contrôle Prédictif pour la Gestion des Micro-réseaux par un Système Embarqué Intelligent",
+    "title": "Méthode de contrôle prédictif pour la gestion des micro-réseaux par un système embarqué intelligent",
     "description": {
       "fr": "Une méthode de contrôle prédictif des micro-réseaux reposant sur un système embarqué intelligent.",
       "en": "A predictive microgrid control method using an intelligent embedded system.",
@@ -637,7 +637,7 @@
   },
   {
     "reference": "71194",
-    "title": "Intel.PV : Système avancé de gestion unifiée des centrales photovoltaïques distantes basé sur une architecture modulaire et distribuée",
+    "title": "Intel.PV : système avancé de gestion unifiée des centrales photovoltaïques distantes basé sur une architecture modulaire et distribuée",
     "description": {
       "fr": "Un système modulaire et distribué de gestion unifiée de centrales photovoltaïques distantes.",
       "en": "A modular distributed system for unified management of remote photovoltaic plants.",
@@ -702,7 +702,7 @@
   },
   {
     "reference": "71777",
-    "title": "Tube absorbant Rotatif.",
+    "title": "Tube absorbant rotatif.",
     "description": {
       "fr": "Un tube absorbant rotatif.",
       "en": "A rotating absorber tube.",
