@@ -565,6 +565,9 @@
   outline: 2px solid var(--color-science-blue);
   outline-offset: 4px;
 }
+.page .videoCard:focus-visible {
+  outline-offset: -4px;
+}
 .page :global(.navigation-icon) {
   flex-shrink: 0;
 }
