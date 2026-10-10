@@ -20,6 +20,7 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'figures' },
     { id: 'results', children: homeAchievements.map(({ id }) => ({ id: `achievement-${id}` })) },
     { id: 'research-priorities', children: researchThemes.map((id) => ({ id: `research-${id}` })) },
+    { id: 'innovation-value-chain' },
     {
       id: 'platforms-expertise',
       children: [

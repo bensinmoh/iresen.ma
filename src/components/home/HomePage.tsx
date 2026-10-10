@@ -9,6 +9,7 @@ import { ResearchSection } from './ResearchSection'
 import type { ResearchCopy } from '@/lib/home-research'
 import { MissionSection } from './MissionSection'
 import { NewsSection } from './NewsSection'
+import { InnovationSection } from './InnovationSection'
 import { PlatformsSection } from './PlatformsSection'
 import { CollaborationSection } from './CollaborationSection'
 import { homeNavigation } from '@/lib/home-navigation'
@@ -28,6 +29,7 @@ export async function HomePage({ locale }: { locale: Locale }) {
       <MissionSection locale={locale} />
       <AchievementsSection locale={locale} />
       <ResearchSection locale={locale} copy={messages.HomeResearch as unknown as ResearchCopy} />
+      <InnovationSection locale={locale} />
       <PublishedPageContent pageId="home" locale={locale} />
       <PageSections
         pageId="home"
@@ -37,6 +39,7 @@ export async function HomePage({ locale }: { locale: Locale }) {
           'figures',
           'results',
           'research-priorities',
+          'innovation-value-chain',
           'platforms-expertise',
           'collaboration',
           'news-events',

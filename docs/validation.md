@@ -2494,3 +2494,29 @@ Working translations and owner-supplied “first”/“100%” claims still requ
 final editorial review; no independent factual verification, deployment, DNS or
 visibility change is claimed. The final-content search sanity check remains due
 when all website content is ready.
+
+## Homepage innovation pathway — 2026-10-10
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm test` (109 tests), `pnpm build` and
+  `pnpm format:check` passed with Node 24.19.0 / pnpm 11.19.0.
+- All 22 CMS/search integration tests passed on a freshly migrated, isolated
+  temporary local database, removed afterward. The initial shared-database run
+  had two search lifecycle failures; isolation removed concurrent worker effects.
+- Production rendering on port 3100: FR/EN/AR inspected at 1440px and 390px;
+  component reflow checked at 1440, 768, 390 and 320px. Desktop height is about
+  394px in FR/EN and 409px in AR, shorter than domains/platforms. Following the
+  horizontal-scroll refinement, mobile height is about 600px FR, 577px EN and
+  506px AR. Arabic at 200%
+  root text size grows without horizontal overflow.
+- Local search catalog/index rebuilt with `pnpm search:rebuild`. Stable section
+  identity, reachable localized anchor and expanded search body exist in each
+  locale. Existing catalog tests verify registration and non-empty text.
+- Dedicated browser checks verify horizontal mobile/tablet reflow, automatic progression/reversal, focus and reduced motion, five stages, retained hero figures, section
+  order, localized transfer link/navigation, responsive containment and axe scan.
+  Full browser-suite results and remote checks are recorded on the pull request.
+- Review captures remain ignored under `.cache/innovation-review/`. No deployment,
+  visibility change or final editorial/translation approval is claimed.
+
+The remote Chromium run additionally exposed an in-flight smooth scroll when
+reduced motion changed. The rail now cancels that motion immediately; the test
+lets the preference-change event settle before measuring sustained inactivity.

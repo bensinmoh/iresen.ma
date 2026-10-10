@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-10 — Compact homepage innovation pathway
+
+- Added the requested light five-stage innovation transition between research and platforms, with support/maturity continuity and a canonical transfer link.
+- Retained hero figures; added explicit FR/EN/AR section/search references and responsive RTL presentation.
+- Kept the pathway horizontal on tablet/mobile with native scrolling and automatic six-second progression like achievements, respecting interaction and reduced motion.
+
+See [scope](docs/home-innovation.md) and [verification](docs/validation.md#homepage-innovation-pathway--2026-10-10).
+
 Record delivered changes and meaningful verification here. Detailed implementation,
 content sources and test limits remain in the linked documentation. Remote CI and
 merge results are recorded by the corresponding pull request and commit history.

@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
+import { homeInnovationSectionId, innovationSteps } from '@/lib/home-innovation'
 import { collaborationCount } from '@/lib/home-collaboration'
 import { homeAchievements, homeAchievementsSectionId } from '@/lib/home-achievements'
 import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
@@ -411,6 +412,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             item.description,
             item.searchText,
           ]),
+          catalog.HomeInnovation.title,
+          catalog.HomeInnovation.searchText,
           catalog.HomeNews.title,
           catalog.HomeNews.searchText,
           catalog.HomeCollaboration.searchText,
@@ -504,6 +507,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 const theme = catalog.HomeResearch.themes[id]
                 return [theme.title, theme.description, ...theme.axes, theme.searchText]
               }),
+            )
+          if (pageId === 'home' && entry.id === homeInnovationSectionId)
+            body.push(
+              catalog.HomeInnovation.searchText,
+              catalog.HomeInnovation.support,
+              catalog.HomeInnovation.feedback,
+              ...innovationSteps.flatMap((id) => [
+                catalog.HomeInnovation.steps[id].title,
+                catalog.HomeInnovation.steps[id].description,
+              ]),
             )
           if (pageId === 'home' && entry.id === homePlatformsSectionId)
             body.push(

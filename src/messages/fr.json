@@ -270,6 +270,10 @@
       "achievement-hydrogen-roadmap": {
         "title": "Feuille de route hydrogène vert",
         "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert."
+      },
+      "innovation-value-chain": {
+        "title": "Un parcours pour faire progresser l’innovation",
+        "description": "Des besoins nationaux à l’adoption de solutions, articuler recherche, soutien, expérimentation et valorisation."
       }
     },
     "institute": {
@@ -1283,5 +1287,37 @@
         "searchText": "feuille de route hydrogène vert Green H2 Maroc stratégie transition énergétique"
       }
     }
+  },
+  "HomeInnovation": {
+    "eyebrow": "De l’idée à l’impact",
+    "title": "Un parcours pour faire progresser l’innovation",
+    "description": "Des besoins nationaux à l’adoption de solutions, articuler recherche, soutien, expérimentation et valorisation.",
+    "support": "Soutien et montée en maturité tout au long du parcours.",
+    "feedback": "Évaluer les contributions pour éclairer les besoins à venir.",
+    "action": "Découvrir la valorisation et le transfert",
+    "steps": {
+      "anticipate": {
+        "title": "Anticiper les besoins",
+        "description": "Besoins nationaux, prospective et idéation."
+      },
+      "support": {
+        "title": "Structurer et soutenir",
+        "description": "Programmation R&D&I, partenaires et soutien aux projets."
+      },
+      "develop": {
+        "title": "Développer et éprouver",
+        "description": "Recherche, développement, expérimentation et démonstration."
+      },
+      "mature": {
+        "title": "Faire mûrir et valoriser",
+        "description": "Maturation et préparation du transfert."
+      },
+      "adopt": {
+        "title": "Accompagner l’adoption",
+        "description": "Utilisation des solutions et évaluation de leur contribution."
+      }
+    },
+    "searchText": "Chaîne de valeur de l’innovation : besoins nationaux, anticipation, idéation, programmation de la recherche, du développement et de l’innovation (R&D&I), soutien, montée en puissance, expérimentation, démonstration, maturation, valorisation, transfert, adoption et évaluation de l’impact.",
+    "label": "Les étapes du parcours d’innovation"
   }
 }

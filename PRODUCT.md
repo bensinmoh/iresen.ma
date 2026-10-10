@@ -302,3 +302,7 @@ reports with one standing copy. This request activates the previously agreed
 missions → achievements → research → capabilities → collaboration → news order.
 FR/EN/AR are working copy for review; the user supplies claims and photos.
 See [scope](docs/home-achievements.md). Alliances remain deferred.
+
+## Homepage innovation pathway — 2026-10-10
+
+The owner commissioned a compact light transition between research and platforms, explaining five stages from national needs/ideation to adoption and evaluation. Support and maturation span the pathway. It links to the canonical transfer page and retains the hero figures and six principal navigation entries. FR/EN/AR are working copy for review. See [scope](docs/home-innovation.md).

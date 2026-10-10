@@ -1,5 +1,7 @@
 # IRESEN website
 
+The homepage now includes a compact light [innovation pathway](docs/home-innovation.md) between research domains and platforms, linking to valorisation and transfer. The existing hero figures remain.
+
 Development foundation for IRESEN's French, English and Arabic institutional website. It provides a public locale shell, Payload CMS and PostgreSQL with introductory page heroes, honest empty content sections and a composed contact page. Read [instruction.md](instruction.md) for the development brief and [backlog](docs/backlog.md) for current scope and follow-up work.
 
 The approved [shared glass refinement](docs/design-system.md#compact-menu-control--2026-10-09)
