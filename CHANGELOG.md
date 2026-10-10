@@ -824,3 +824,11 @@ See [workflow](docs/design-workflow.md), [design rules](docs/design-system.md),
 - Extended page/section search bodies without changing routes, CMS gates, assets or service commitments.
 
 See [scope](docs/collaboration-transfer-pages.md) and [verification](docs/validation.md#collaboration-and-valorisation-pages--2026-10-10).
+
+## 2026-10-10 — Horizontal scroll indicator reference
+
+- Analyzed four owner-supplied recordings and recorded pill/fill-bar variants,
+  numbering rules, inter-block centering, future native-scroll behavior and RTL.
+- Kept implementation deferred and source recordings/frames outside the repository.
+
+See [the specification](docs/horizontal-scroll-indicators.md).

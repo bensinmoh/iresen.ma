@@ -1494,3 +1494,11 @@ live Figma cooperation frame within the current shared rules. FR/EN canonical
 paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](collaborate-page.md).
+
+## Horizontal collection indicators — recorded 2026-10-10
+
+See [the video analysis and future variants](horizontal-scroll-indicators.md).
+The owner selects bottom indicators with an elongated active pill, or a fill bar
+with a counter and SVG arrows, centered vertically in the actual inter-block gap.
+This documentary specification awaits a later implementation request; existing
+horizontal-navigation behavior above remains the implemented baseline.
