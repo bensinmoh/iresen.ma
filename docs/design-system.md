@@ -1327,3 +1327,19 @@ navy pathways section. Photographs illustrate the research environment; they
 do not identify an individual patent, project relationship or adoption outcome.
 The existing media search references are reused. No asset, dependency, brand
 token or institutional claim is added.
+
+## Compact patent catalogue — 2026-10-10
+
+The owner requests a shorter search area and smaller cards. Search, theme,
+filing year and applicant share one desktop row; tablet uses two columns,
+mobile groups the two short filters while search/applicant span the width,
+and very narrow/enlarged-text layouts stack. Visible labels and 44px minimum
+control targets remain. Card padding, gaps, title scale, metadata and action
+layout are compacted without clipping titles, summaries or applicant names.
+
+A native 240ms transform/opacity transition introduces new cards and animates
+retained cards from their previous grid positions when criteria change.
+Keys and links remain stable; changing criteria or limits cancels an earlier
+transition. Reduced motion disables the effect and cancels active movement.
+No fake loading state, delay, new dependency, content or search destination
+is introduced. All 59 references and no-JavaScript reading remain.

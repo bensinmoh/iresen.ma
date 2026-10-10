@@ -2614,3 +2614,16 @@ and Arabic mobile captures were inspected. The local search catalogue was
 synchronized after the wording change. Exact source provenance stays internal;
 no database/schema, route, deployment or visibility change is introduced.
 Remote CI and automatic merge are recorded on the corresponding pull request.
+
+## Compact patent catalogue — 2026-10-10
+
+Formatting, lint, typecheck, 116 unit tests and production build passed.
+The 15 affected browser journeys passed in Chromium: FR/EN/AR filters, direct
+anchors, search/contact, 320–1440px, 200% text, scoped axe and no JavaScript.
+A new motion check verifies the desktop filter row, control target sizes,
+actual card animation frames and dynamic/static reduced motion. French
+desktop and Arabic mobile captures were inspected. At 1440px the first card
+row measures about 334px instead of 513px before this change (35% less).
+The mechanical design scan reports no findings. Data, text, public search
+references, routes and publication gates remain; no deployment is performed.
+Remote full-suite CI and merge outcomes are recorded on the pull request.

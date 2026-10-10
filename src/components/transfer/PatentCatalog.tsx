@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useSyncExternalStore } from 'react'
+import { useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import {
@@ -30,17 +30,71 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
   const [limit, setLimit] = useState<number | null>(12)
   const hash = useSyncExternalStore(subscribeHash, currentHash, serverHash)
   const results = filterPatents(query, theme, year, depositor, locale)
+  const grid = useRef<HTMLDivElement>(null)
+  const positions = useRef(new Map<string, { x: number; y: number }>())
+  const visibleKey = results
+    .filter(
+      (patent, index) =>
+        hash === 'server' ||
+        limit === null ||
+        index < limit ||
+        hash === `#${patentAnchor(patent.reference)}`,
+    )
+    .map((patent) => patent.reference)
+    .join(',')
+  useLayoutEffect(() => {
+    if (hash === 'server' || !grid.current) return
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const animations: Animation[] = []
+    const next = new Map<string, { x: number; y: number }>()
+    grid.current.querySelectorAll<HTMLElement>('article:not([hidden])').forEach((card) => {
+      // Offset coordinates describe layout, independent of an animation or page scroll.
+      const position = { x: card.offsetLeft, y: card.offsetTop }
+      next.set(card.id, position)
+      const previous = positions.current.get(card.id)
+      if (motion.matches || !card.animate) return
+      const dx = previous ? previous.x - position.x : 0
+      const dy = previous ? previous.y - position.y : 8
+      if (previous && Math.abs(dx) < 1 && Math.abs(dy) < 1) return
+      animations.push(
+        card.animate(
+          [
+            { opacity: previous ? 1 : 0, transform: `translate(${dx}px, ${dy}px)` },
+            { opacity: 1, transform: 'translate(0, 0)' },
+          ],
+          { duration: 240, easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)' },
+        ),
+      )
+    })
+    positions.current = next
+    const stop = () => animations.forEach((animation) => animation.cancel())
+    motion.addEventListener('change', stop)
+    return () => {
+      stop()
+      motion.removeEventListener('change', stop)
+    }
+  }, [visibleKey, hash])
   const years = [
     ...new Set(patents.flatMap((p) => (p.filingYear === null ? [] : [p.filingYear]))),
   ].sort((a, b) => b - a)
   const depositors = [...new Set(patents.flatMap((p) => p.depositor?.split(' ; ') ?? []))].sort(
     (a, b) => a.localeCompare(b, 'fr'),
   )
+  const rememberPositions = () => {
+    positions.current = new Map(
+      Array.from(
+        grid.current?.querySelectorAll<HTMLElement>('article:not([hidden])') ?? [],
+        (card) => [card.id, { x: card.offsetLeft, y: card.offsetTop }],
+      ),
+    )
+  }
   const change = (setter: (value: string) => void, value: string) => {
+    rememberPositions()
     setter(value)
     setLimit(12)
   }
   const reset = () => {
+    rememberPositions()
     setQuery('')
     setTheme('')
     setYear('')
@@ -129,7 +183,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
         </button>
       </div>
       <p className={styles.meta}>{t('catalog.original')}</p>
-      <div className={styles.patentGrid}>
+      <div className={styles.patentGrid} ref={grid}>
         {results.map((patent, index) => (
           <article
             key={patent.reference}
@@ -182,11 +236,20 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
           <button
             type="button"
             className="button button-primary"
-            onClick={() => setLimit(limit + 12)}
+            onClick={() => {
+              rememberPositions()
+              setLimit(limit + 12)
+            }}
           >
             {t('catalog.showMore')}
           </button>
-          <button type="button" onClick={() => setLimit(null)}>
+          <button
+            type="button"
+            onClick={() => {
+              rememberPositions()
+              setLimit(null)
+            }}
+          >
             {t('catalog.showAll')}
           </button>
         </div>

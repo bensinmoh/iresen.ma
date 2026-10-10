@@ -93,3 +93,57 @@ test('all patents remain readable without JavaScript', async ({ browser, baseURL
     await context.close()
   }
 })
+
+test('compact desktop filters and classic card motion respect reduced motion', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.goto(pageHref('transfer', 'fr', 'adoption-initiatives'))
+  const section = page.locator('#adoption-initiatives')
+  const controls = section.locator('input[type="search"], select')
+  await expect(controls).toHaveCount(4)
+  const boxes = await controls.evaluateAll((elements) =>
+    elements.map((element) => {
+      const rect = element.getBoundingClientRect()
+      return { y: rect.y, height: rect.height }
+    }),
+  )
+  expect(
+    Math.max(...boxes.map((box) => box.y)) - Math.min(...boxes.map((box) => box.y)),
+  ).toBeLessThan(1)
+  expect(boxes.every((box) => box.height >= 44)).toBe(true)
+  await page.waitForTimeout(300)
+  await page.evaluate(() => {
+    const original = Element.prototype.animate
+    const recorded: Animation[] = []
+    Element.prototype.animate = function (...args: Parameters<typeof original>) {
+      const animation = original.apply(this, args)
+      recorded.push(animation)
+      return animation
+    }
+    ;(window as unknown as { patentAnimations: Animation[] }).patentAnimations = recorded
+  })
+  await section.getByLabel(fr.Transfer.catalog.theme, { exact: true }).selectOption('solar')
+  const frames = await page.evaluate(() =>
+    (window as unknown as { patentAnimations: Animation[] }).patentAnimations.flatMap((animation) =>
+      (animation.effect as KeyframeEffect).getKeyframes(),
+    ),
+  )
+  expect(frames.some((frame) => frame.transform && frame.transform !== 'translate(0, 0)')).toBe(
+    true,
+  )
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await expect
+    .poll(() =>
+      section
+        .locator('article:visible')
+        .evaluateAll((cards) => cards.flatMap((card) => card.getAnimations()).length),
+    )
+    .toBe(0)
+  await section.getByLabel(fr.Transfer.catalog.theme, { exact: true }).selectOption('')
+  await expect(section.locator('article:visible')).toHaveCount(12)
+  expect(
+    await section
+      .locator('article:visible')
+      .evaluateAll((cards) => cards.flatMap((card) => card.getAnimations()).length),
+  ).toBe(0)
+})

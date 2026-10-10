@@ -106,3 +106,19 @@ The owner's date-display follow-up presents the reference period as the fourth
 quarter of 2026 in FR/EN/AR, both in the figures and the catalogue footer. The
 exact source date remains internal provenance; public search inherits the
 localized quarter from the same content catalogue. No 2024 source is asserted.
+
+## Compact patent catalogue — 2026-10-10
+
+The owner requests a shorter search area and smaller cards. Search, theme,
+filing year and applicant share one desktop row; tablet uses two columns,
+mobile groups the two short filters while search/applicant span the width,
+and very narrow/enlarged-text layouts stack. Visible labels and 44px minimum
+control targets remain. Card padding, gaps, title scale, metadata and action
+layout are compacted without clipping titles, summaries or applicant names.
+
+A native 240ms transform/opacity transition introduces new cards and animates
+retained cards from their previous grid positions when criteria change.
+Keys and links remain stable; changing criteria or limits cancels an earlier
+transition. Reduced motion disables the effect and cancels active movement.
+No fake loading state, delay, new dependency, content or search destination
+is introduced. All 59 references and no-JavaScript reading remain.

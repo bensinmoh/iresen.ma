@@ -231,18 +231,15 @@
 }
 .filters {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: var(--space-3);
 }
 .filters label {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   min-inline-size: 0;
   font-size: var(--font-size-label);
-}
-.searchField {
-  grid-column: 1/-1;
 }
 .filters input,
 .filters select {
@@ -250,8 +247,8 @@
   color: var(--color-navy);
   border: 1px solid var(--color-control-outline);
   border-radius: var(--radius-action);
-  min-block-size: 3.5rem;
-  padding: var(--space-4);
+  min-block-size: 2.75rem;
+  padding: var(--space-3);
   inline-size: 100%;
   font: inherit;
 }
@@ -274,7 +271,13 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  margin-block: var(--space-6);
+  margin-block: var(--space-2);
+}
+.catalogBar p {
+  margin: 0;
+}
+.catalogBar + .meta {
+  margin-block: 0 var(--space-3);
 }
 .catalogBar button,
 .more > button:not(:first-child) {
@@ -289,16 +292,17 @@
 .patentGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
-  margin-block-start: var(--space-6);
+  gap: var(--space-4);
+  margin-block-start: var(--space-3);
+  position: relative;
 }
 .patent {
-  padding: clamp(1.25rem, 2vw, 2rem);
+  padding: 1.25rem;
   border-radius: var(--radius-signature);
   background: var(--color-white);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
   scroll-margin-block-start: var(--space-8);
   box-shadow: 0 0.875rem 1.25rem rgb(18 52 90 / 5%);
   overflow-wrap: anywhere;
@@ -312,9 +316,10 @@
 }
 .patentMeta {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: var(--space-2);
-  font-size: var(--font-size-label);
+  font-size: var(--font-size-meta);
   color: var(--color-text-muted);
 }
 .tags {
@@ -329,7 +334,7 @@
   padding-block-end: var(--space-1);
 }
 .patent h3 {
-  font-size: clamp(1.25rem, 1.4vw, 1.625rem);
+  font-size: 1.125rem;
   line-height: 1.4;
   letter-spacing: -0.02em;
   margin: 0;
@@ -337,13 +342,15 @@
 }
 .patent p {
   margin: 0;
-  line-height: 1.7;
+  font-size: var(--font-size-label);
+  line-height: 1.5;
   color: var(--color-text-muted);
 }
 .patent .applicant {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-2);
   font-size: var(--font-size-label);
 }
 .applicant > span {
@@ -356,12 +363,14 @@
 }
 .patentActions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-block-start: var(--space-4);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-4);
+  padding-block-start: var(--space-1);
   margin-block-start: auto;
 }
 .patentActions .link {
+  gap: var(--space-2);
   font-size: var(--font-size-label);
 }
 .empty {
@@ -405,6 +414,9 @@
   }
 }
 @media (max-width: 63.999rem) {
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .header {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-4);
@@ -414,7 +426,6 @@
   }
 }
 @media (max-width: 39.999rem) {
-  .filters,
   .patentGrid,
   .pathways,
   .doors {
@@ -434,8 +445,9 @@
   .catalogBar {
     flex-wrap: wrap;
   }
-  .searchField {
-    grid-column: auto;
+  .searchField,
+  .filters label:last-child {
+    grid-column: 1 / -1;
   }
 }
 .page h3 {
@@ -504,5 +516,11 @@
   }
   .introPhoto {
     aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 23.999rem) {
+  .filters {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
