@@ -158,9 +158,12 @@ content and layout work. Consult it when that work is commissioned; its lessons
 are guidance, without changing current routes, content or feature scope.
 
 The [staged publications database](docs/publications.md) ingests the owner's
-1,181 selected bibliographic records for a future section, reference **T4 2026**.
+1,199 selected bibliographic records after the owner-approved consolidated
+cross-check, reference **T4 2026**. The update adds 22 records and withdraws
+the four 2027 references, retaining dated Scopus counts and distinct historical/
+2025 SJR rankings with their source evidence.
 Only minimal bibliographic fields and dated metrics are retained; the workbook,
-202 excluded rows and administrative evidence stay outside the repository.
+184 excluded rows and administrative evidence stay outside the repository.
 The records are not yet served or indexed publicly.
 
 `src/app` contains public locale/CMS routes; `src/components` the UI shell; `src/i18n` and `src/messages` locale routing/catalogs; `src/cms` collections/access/migrations; `src/lib` content and integration boundaries. Technical guides are in [docs](docs/architecture.md). Read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before contributing/reporting.

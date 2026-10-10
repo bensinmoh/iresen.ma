@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-10-10 — Consolidated publications cross-check
+
+- Adopted the owner's new 1,199-record selection: 22 additions and removal of
+  four 2027 references; retained **T4 2026** as the dataset reference period.
+- Refreshed 619 Scopus snapshots, including 15 increased counts; added journal
+  names, 395 historical rankings and evidence for 439 SJR 2025 rankings.
+- Preserved missing values, original titles/authors, provisional-ranking labels
+  and source review flags. Both source workbooks and internal evidence remain
+  outside the repository/public index; no section or deployment is introduced.
+
+See [scope](docs/publications.md#consolidated-update--10-october-2026) and
+[verification](docs/publications-update-validation.md).
+
 ## 2026-10-10 — Event pills and mobile social icons
 
 - Hide enhanced event scrollbars; add six synchronized mobile navigation pills.

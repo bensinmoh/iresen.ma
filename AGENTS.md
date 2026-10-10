@@ -2,13 +2,16 @@
 
 ## Publications ingestion — 2026-10-10
 
-The owner selected 1,181 counted records from `IRESEN_2026.xlsx` for the future
-publications section, with **T4 2026** as the dataset reference period. See
+The owner initially selected 1,181 records from `IRESEN_2026.xlsx`, then approved
+the consolidated update to **1,199** retained publications: 22 additions and
+withdrawal of the four 2027 records. **T4 2026** remains the reference period. See
 [ingestion scope](docs/publications.md). The minimal structured database is staged;
 no public section, download, CMS collection or search projection is added now.
-The 202 other records and original workbook remain excluded. Preserve original
+The 184 other records and both original workbooks remain excluded. Preserve original
 bibliographic titles/authors and sourced years, distinguish SJR 2025 quartiles
-from dated Scopus citations, and do not invent missing values. Register approved
+from publication-year historical rankings and dated Scopus citations. Keep
+inherited provisional quartiles and editorial review flags explicit, and do not
+invent missing values. Register approved
 localized search references when section development is commissioned.
 
 Read `instruction.md`, `README.md` and `docs/design-system.md` before implementation. The latest owner-selected website primary blue is `#296BB4`; preserve delivered SVG originals. The brief provides project requirements; the user's current request defines the work authorized now. Preserve existing work and do not deploy, change visibility, publish content or alter DNS without explicit authorization.
