@@ -1,5 +1,11 @@
 # Change log
 
+## 2026-10-10 — Event pills and mobile social icons
+
+- Hide enhanced event scrollbars; add six synchronized mobile navigation pills.
+- Show the five social SVG icons in one fixed mobile row, retaining accessible names.
+- Preserve native scrolling, equal card heights, desktop labels and existing search references.
+
 ## 2026-10-10 — Actualités & événements
 
 Developed the combined news/events page and separate thumbnail listing with a shared hero. Generic news/events navigation targets their sections; legacy events paths redirect. Five selected LinkedIn sources, the Masarat podcast highlight, Oman participation, COP31 side events in preparation and IRSEC’X 2027 are included, along with five vector social links and localized search references. See [scope](docs/news-events.md). No deployment.

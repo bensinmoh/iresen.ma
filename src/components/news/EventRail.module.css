@@ -1,0 +1,58 @@
+.enhanced[data-event-rail] {
+  scrollbar-width: none;
+  padding-block-end: 0;
+}
+.enhanced::-webkit-scrollbar {
+  display: none;
+}
+.controls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-block-size: max(4rem, var(--section-space));
+}
+.pill {
+  display: grid;
+  place-items: center;
+  inline-size: 28px;
+  block-size: 44px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: inline-size 220ms ease-out;
+}
+.pill::after {
+  content: '';
+  inline-size: 20px;
+  block-size: 8px;
+  border-radius: 999px;
+  background: var(--color-text-muted);
+  opacity: 1;
+  transition:
+    inline-size 220ms ease-out,
+    background 220ms ease-out,
+    opacity 220ms ease-out;
+}
+.pill[aria-current='true'] {
+  inline-size: 60px;
+}
+.pill[aria-current='true']::after {
+  inline-size: 60px;
+  background: var(--color-blue);
+  opacity: 1;
+}
+@media (max-width: 40rem) {
+  .controls {
+    display: flex;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill,
+  .pill::after {
+    transition: none;
+  }
+}

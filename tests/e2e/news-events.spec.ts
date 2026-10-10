@@ -108,3 +108,101 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     )
   })
 }
+
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: mobile event pills track native scrolling and keyboard navigation`, async ({
+    page,
+  }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.goto(pageHref('news', locale))
+    const rail = page.locator('[data-event-rail]')
+    const navigation = page.locator('[data-event-navigation]')
+    await expect.poll(() => rail.evaluate((el) => getComputedStyle(el).scrollbarWidth)).toBe('none')
+    await expect(navigation).toBeHidden()
+    await page.setViewportSize({ width: 390, height: 900 })
+    await expect(navigation).toBeVisible()
+    const socials = page.locator('#follow-iresen ul')
+    const socialLinks = socials.getByRole('link')
+    await expect(socialLinks).toHaveCount(5)
+    for (const name of ['Facebook', 'Instagram', 'LinkedIn', 'YouTube', 'ResearchGate'])
+      await expect(socials.getByRole('link', { name, exact: true })).toBeVisible()
+    expect(await socials.evaluate((el) => el.scrollWidth <= el.clientWidth + 1)).toBe(true)
+    const rows = await socialLinks.evaluateAll((links) =>
+      links.map((link) => link.getBoundingClientRect().y),
+    )
+    expect(Math.max(...rows) - Math.min(...rows)).toBeLessThan(1)
+    expect(
+      await socials
+        .locator('bdi')
+        .first()
+        .evaluate((el) => getComputedStyle(el).display),
+    ).toBe('none')
+    const pills = navigation.getByRole('button')
+    await expect(pills).toHaveCount(6)
+    await expect(pills.first()).toHaveAttribute('aria-current', 'true')
+    await pills.last().click()
+    await expect(pills.last()).toHaveAttribute('aria-current', 'true')
+    await expect
+      .poll(() =>
+        rail.evaluate((el) => Math.abs(el.scrollLeft) >= el.scrollWidth - el.clientWidth - 2),
+      )
+      .toBe(true)
+    await rail.evaluate((el) => el.scrollTo({ left: 0, behavior: 'instant' }))
+    await expect(pills.first()).toHaveAttribute('aria-current', 'true')
+    await pills.nth(2).focus()
+    await page.keyboard.press('Enter')
+    await expect(pills.nth(2)).toHaveAttribute('aria-current', 'true')
+    expect(await pills.nth(2).evaluate((el) => el.matches(':focus-visible'))).toBe(true)
+    const marks = await pills.evaluateAll((buttons) =>
+      buttons.map((button) => {
+        const mark = getComputedStyle(button, '::after')
+        return {
+          width: parseFloat(mark.width),
+          border: getComputedStyle(button).borderWidth,
+          transition: mark.transitionDuration,
+        }
+      }),
+    )
+    expect(marks[2].width).toBe(60)
+    expect(marks[0].width).toBe(20)
+    expect(marks.every((mark) => mark.border === '0px' && mark.transition === '0s')).toBe(true)
+    const gap = await page.locator('#events').evaluate((section) => {
+      const cards = section.querySelector('[data-event-rail]')!.getBoundingClientRect()
+      const controls = section.querySelector('[data-event-navigation]')!.getBoundingClientRect()
+      return Math.abs(
+        controls.y +
+          controls.height / 2 -
+          (cards.bottom + section.getBoundingClientRect().bottom) / 2,
+      )
+    })
+    expect(gap).toBeLessThan(2)
+    await page.setViewportSize({ width: 320, height: 900 })
+    await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
+      true,
+    )
+    await expect(navigation).toBeVisible()
+    await expect(pills).toHaveCount(6)
+    const scan = await new AxeBuilder({ page })
+      .include('#events')
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+      .analyze()
+    expect(scan.violations).toEqual([])
+  })
+}
+
+test('events retain native scrolling without JavaScript', async ({ browser }) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 900 },
+  })
+  const page = await context.newPage()
+  await page.goto(pageHref('news', 'fr'))
+  await expect(page.locator('#events article')).toHaveCount(6)
+  await expect(page.locator('[data-event-navigation]')).toHaveCount(0)
+  expect(
+    await page.locator('[data-event-rail]').evaluate((el) => el.scrollWidth > el.clientWidth),
+  ).toBe(true)
+  await context.close()
+})

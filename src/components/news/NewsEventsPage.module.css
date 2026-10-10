@@ -643,3 +643,35 @@
     aspect-ratio: 1.6;
   }
 }
+
+@media (max-width: 40rem) {
+  .events:has([data-event-navigation]) {
+    padding-block-end: 0;
+  }
+}
+
+@media (max-width: 40rem) {
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .socials li {
+    padding: 1rem 0;
+  }
+  .socials a {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    min-block-size: 44px;
+  }
+  .socials a > :first-child {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+  .socials bdi,
+  .socials a > svg:last-child {
+    display: none;
+  }
+}

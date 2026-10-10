@@ -107,3 +107,14 @@ same canonical result. CMS news/media retain guarded publication and withdrawal
 behaviour. CMS thumbnails use encoded filenames with locale-guarded file URLs;
 unapproved-language or withdrawn media are excluded. The final-content multilingual glossary sanity check remains due when
 all website content is finished. See [validation](validation.md#news-events--2026-10-10).
+
+## Mobile rail and social refinement
+
+The event rail hides its scrollbar after client enhancement and exposes one
+localized borderless navigation pill per event on mobile (40rem or below).
+Touch, trackpad and keyboard scrolling update the active pill; marker buttons
+reveal their corresponding card. Reduced motion disables smooth travel and
+width/color animation. With scripts disabled, native scrolling remains visible.
+The five social vector icons occupy a fixed, non-scrolling mobile row without
+visible labels or arrows; explicit accessible names preserve their identities.
+No route, content record or search projection is added.

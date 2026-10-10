@@ -1836,7 +1836,9 @@
     "newsPlaceholder": "News to come",
     "eventPlaceholder": "Event to come",
     "pendingContent": "Content pending",
-    "placeholderDescription": "Details will be added soon."
+    "placeholderDescription": "Details will be added soon.",
+    "eventNavigation": "Event navigation",
+    "eventPosition": "Event {current} of {total}"
   },
   "MediaLibrary": {
     "label": "Media library",
