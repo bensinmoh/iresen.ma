@@ -5,7 +5,7 @@ type HeroDefinition = {
   photo: HeroPhotoId
   layout: 'start' | 'end' | 'center' | 'editorial'
   stage:
-    'develop' | 'test' | 'transfer' | 'institute' | 'resources' | 'collaboration' | 'information'
+    'research' | 'expertiseSkills' | 'institute' | 'resources' | 'collaboration' | 'information'
   related: PageId
 }
 
@@ -18,14 +18,14 @@ export const heroes = {
   priorities: {
     photo: 'wind-landscape',
     layout: 'center',
-    stage: 'develop',
+    stage: 'research',
     related: 'programmes',
   },
-  programmes: { photo: 'research', layout: 'end', stage: 'develop', related: 'projects' },
-  projects: { photo: 'team', layout: 'start', stage: 'develop', related: 'workWithUs' },
-  platforms: { photo: 'solar-field', layout: 'start', stage: 'test', related: 'network' },
-  network: { photo: 'workshop', layout: 'end', stage: 'test', related: 'platforms' },
-  transfer: { photo: 'solar-expertise', layout: 'start', stage: 'transfer', related: 'workWithUs' },
+  programmes: { photo: 'research', layout: 'end', stage: 'research', related: 'projects' },
+  projects: { photo: 'team', layout: 'start', stage: 'research', related: 'workWithUs' },
+  platforms: { photo: 'solar-field', layout: 'start', stage: 'research', related: 'network' },
+  network: { photo: 'workshop', layout: 'end', stage: 'expertiseSkills', related: 'platforms' },
+  transfer: { photo: 'solar-expertise', layout: 'start', stage: 'research', related: 'workWithUs' },
   workWithUs: {
     photo: 'partnership-handshake',
     layout: 'start',

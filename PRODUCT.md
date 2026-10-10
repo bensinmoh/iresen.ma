@@ -1,5 +1,20 @@
 # IRESEN product context
 
+## Current narrative — 2026-10-10
+
+The owner's new Phase I narrative supersedes the former institute-wide
+Développer · Éprouver · Valoriser framework. Use **Études & Expertise**, **Recherche
+& Innovation** and **Compétences & Capacités**, with **Coopération & Rayonnement**
+as their shared enabler. The three functions remain within R&I. The owner's later
+§4.4 correction supplies partnerships, networks, institutional exchanges and events
+as intervention modes, and connected actors, mobilised resources, concrete
+cooperation and recognition as contributions. See [analysis and whole-site disposition](docs/narrative-alignment.md).
+
+The current request authorizes content alignment and homepage mission design.
+The mission-design deferral below is historical. New FR/EN mission statements are
+source copy; other summaries and AR are working adaptations. The 22 routes,
+existing facts/media, honest service boundaries and final editorial review remain.
+
 This is a concise working map of [the development brief](instruction.md), not new
 institutional copy. The owner's current request defines the authorized increment;
 the brief describes the broader project. Update this map when implemented scope or
@@ -67,7 +82,7 @@ marketing page.
   owner's video with its generated photo as fallback. Contact now uses the separate
   composition described below; search uses a compact functional results view.
   Short FR/EN/AR wayfinding drafts and the
-  Développer · Éprouver · Valoriser reading framework remain.
+  three contribution domains and common cooperation enabler now guide orientation.
   The homepage hero band now presents five owner-supplied figures: 69 collaborative
   projects supported, +60 patents filed, +1000 young researchers supported, +1100
   scientific publications and +18 university laboratories established. These
@@ -201,14 +216,12 @@ placeholders on the current pages. They do not replace the implemented navigatio
 Final institutional copy, translations and the proposed slogan still require
 editorial approval.
 
-The reading framework is **Développer · Éprouver · Valoriser**. It connects needs,
-research, experimentation and use, with feedback between stages; outcomes can
-include knowledge, methods, skills and informed decisions as well as transferred
-solutions. Six cross-cutting capacities support this reading: scientific and
-technological expertise; collaborative R&D&I and programming; platforms and
-experimentation; valorisation and transfer; human capabilities and expert
-networks; partnerships, cooperation and resources. They guide editorial coverage
-rather than define six additional menu entries or an organigram.
+The contribution framework has three domains and one shared enabler, as described
+in [the current narrative](docs/narrative-alignment.md). Develop, test and valorise
+are functions within Research & Innovation. Studies/expertise and skills/capabilities
+can also address independent needs. Cross-domain cooperation mobilises actors,
+expertise, resources and networks. Existing platform/programme/transfer pages
+remain the canonical destinations; this is not a new organigram or route map.
 
 Remaining homepage modules, further factual claims and institutional translations
 remain editorial inputs. The five requested homepage figures are recorded in

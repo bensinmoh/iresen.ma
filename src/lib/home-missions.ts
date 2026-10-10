@@ -1,12 +1,38 @@
 import type { PageId } from '@/lib/site'
 
-// The three reading stages are shared institutional wayfinding, not new services.
+// The legacy section URL remains stable; domains replace the former stage cards.
 export const homeMissionSectionId = 'develop-test-transfer'
+export const homeCooperationAnchor = 'mission-cooperation'
+export const legacyMissionAnchors = ['mission-develop', 'mission-test', 'mission-transfer'] as const
 
 export const homeMissions = [
-  { id: 'develop', anchor: 'mission-develop', pageId: 'programmes' },
-  { id: 'test', anchor: 'mission-test', pageId: 'platforms' },
-  { id: 'transfer', anchor: 'mission-transfer', pageId: 'transfer' },
-] as const satisfies readonly { id: string; anchor: string; pageId: PageId }[]
+  {
+    id: 'studies',
+    anchor: 'mission-studies',
+    pageId: 'network',
+    destinationAnchor: 'intervention-modes',
+    imageId: 'transfer',
+  },
+  {
+    id: 'research',
+    anchor: 'mission-research',
+    pageId: 'programmes',
+    destinationAnchor: undefined,
+    imageId: 'develop',
+  },
+  {
+    id: 'skills',
+    anchor: 'mission-skills',
+    pageId: 'network',
+    destinationAnchor: 'skills-training',
+    imageId: 'test',
+  },
+] as const satisfies readonly {
+  id: string
+  anchor: string
+  pageId: PageId
+  destinationAnchor?: string
+  imageId: string
+}[]
 
 export type HomeMissionId = (typeof homeMissions)[number]['id']

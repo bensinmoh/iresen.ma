@@ -2520,3 +2520,62 @@ when all website content is ready.
 The remote Chromium run additionally exposed an in-flight smooth scroll when
 reduced motion changed. The rail now cancels that motion immediately; the test
 lets the preference-change event settle before measuring sustained inactivity.
+
+## Revised narrative and homepage missions — 2026-10-10
+
+- `pnpm lint`, `pnpm typecheck`, `pnpm test` (112 tests),
+  `pnpm test:integration` (22 tests), `pnpm build` and `pnpm format:check`
+  passed with Node 24.19.0 / pnpm 11.19.0. The quotation-refinement production Chromium suite
+  passed all 182 browser tests, including localized mission destinations,
+  full-width quote/band alignment, keyboard operation and enlarged text.
+- Additional production review visited all 22 canonical pages in FR/EN/AR
+  (66 page visits, HTTP 200), checked every registered static section destination,
+  the three retained legacy mission anchors and all new card destinations.
+- Fifteen mission captures cover 1440, 1024, 768, 390 and 320px in each locale.
+  FR desktop/mobile, EN mobile and AR desktop were visually inspected after the
+  owner's smaller-quotation refinement. All locales passed page containment,
+  200% text at 320px and scoped mission axe scans without reported violations.
+  The card-region name was differentiated from its parent section after axe
+  identified a duplicate landmark name; cooperation headings now wrap under
+  enlargement. This is scoped verification, not whole-site conformance.
+- `pnpm search:rebuild` synchronized the static catalog (zero public CMS records).
+  Live API checks found all four contribution section destinations by their
+  localized titles in FR/EN/AR. Unit checks cover stable identities, current copy,
+  retained legacy destinations and exclusion of the private source.
+- After the owner's additional card reference, the three purpose overlines moved
+  above the domain h3 titles: label size (14px at default root), weight 400,
+  uppercase with 0.08em Latin tracking and natural Arabic. Lint, build and
+  sequential typecheck passed again; all 19 mission/navigation browser tests
+  passed, including 200% text. FR/EN/AR computed-style/position checks and scoped
+  axe scans passed; six desktop/mobile captures were produced and FR desktop
+  was visually inspected. The visual H4 role remains introductory text so the
+  domain headings preserve their coherent semantic outline.
+- After the owner identified unequal quotation marks, both inherited glyphs
+  were harmonized. FR/EN/AR browser measurements confirm identical font, size,
+  weight, line height and color for each opening/closing pair. FR was visually
+  inspected, and the owner's existing local preview was reloaded. Lint, build,
+  typecheck and all 19 mission/navigation browser tests passed again.
+- The owner's subsequent spacing correction supersedes the detached opening
+  layout: both marks are inline in the same paragraph, sharing blue color and
+  weight 500, with symmetrical French narrow non-breaking spaces. The production
+  preview was reloaded and FR visually inspected. Build, lint, typecheck and all
+  19 mission/navigation browser tests passed; paired inline typography is now
+  covered by the existing localized mission browser checks.
+- The owner's latest refinement centers “Notre mission” and the statement, with
+  balanced line wrapping and retained full available width. Lint, build,
+  sequential typecheck and all 19 mission/navigation browser tests passed again.
+  FR/EN/AR computed alignment and desktop/mobile containment passed; six captures
+  were produced and FR desktop visually inspected. The owner's preview was reloaded.
+- The three previously indexed repository DOCX originals retain their pinned
+  hashes. The new DOCX was read locally; only derived editorial guidance was
+  added. No original, private download, CMS schema or new route was imported.
+- The Impeccable mechanical detector reported no findings before the final
+  bounded typography refinement. Formatting and whitespace were checked again.
+  A simultaneous typecheck/build attempt encountered generated-type churn;
+  the sequential final typecheck passed after build completion.
+
+The whole-site disposition and source correction are recorded in
+[narrative alignment](narrative-alignment.md). Catalog adaptations and AR copy
+remain working editorial texts; institutional scaffolds still await supported
+final content. No deployment, visibility change or final translation approval
+is claimed. The final-content search sanity check remains due.

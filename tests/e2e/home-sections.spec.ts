@@ -1,5 +1,6 @@
 import { expect, test, type Locator, type Page } from '@playwright/test'
 import { locales } from '../../src/i18n/locales'
+import { homeMissions } from '../../src/lib/home-missions'
 import { homeNavigation } from '../../src/lib/home-navigation'
 import { pageHref } from '../../src/lib/site'
 
@@ -12,11 +13,7 @@ const sectionIds = [
   'news-events',
 ] as const
 
-const missions = [
-  { id: 'develop', pageId: 'programmes' },
-  { id: 'test', pageId: 'platforms' },
-  { id: 'transfer', pageId: 'transfer' },
-] as const
+const missions = homeMissions
 
 // Chrome can expose the new media-query state before recalculating vw-based gutters.
 // Wait for layout frames before measuring or navigating to a responsive hash target.
@@ -267,6 +264,34 @@ for (const locale of locales) {
     await expect(section).toHaveAccessibleName(/\S/)
     await expect(section.getByRole('heading', { level: 2 })).toHaveCount(1)
     await expect(section.getByRole('article')).toHaveCount(3)
+    await expect(section.locator('blockquote')).toContainText(/IRESEN/)
+    const quotationMarks = section.locator('blockquote > p > span')
+    await expect(quotationMarks).toHaveCount(2)
+    const pairedStyles = await quotationMarks.evaluateAll((marks) =>
+      marks.map((mark) => {
+        const style = getComputedStyle(mark)
+        return {
+          display: style.display,
+          size: style.fontSize,
+          weight: style.fontWeight,
+          margin: style.marginInline,
+          color: style.color,
+        }
+      }),
+    )
+    expect(pairedStyles[0]).toEqual(pairedStyles[1])
+    expect(pairedStyles[0].display).toBe('inline')
+    const band = section.locator('#mission-cooperation')
+    await expect(band).toHaveAccessibleName(/\S/)
+    await expect(band.getByRole('link')).toHaveAttribute('href', pageHref('workWithUs', locale))
+    const alignment = await section.evaluate((node) => {
+      const quote = node.querySelector('blockquote')!.getBoundingClientRect()
+      const cards = node.querySelector('[data-mission-cards]')!.getBoundingClientRect()
+      const band = node.querySelector('#mission-cooperation')!.getBoundingClientRect()
+      return { quoteWidth: quote.width, cardsWidth: cards.width, bandWidth: band.width }
+    })
+    expect(alignment.quoteWidth).toBeCloseTo(alignment.cardsWidth, 0)
+    expect(alignment.bandWidth).toBeCloseTo(alignment.cardsWidth, 0)
 
     for (const mission of missions) {
       const card = section.locator(`#mission-${mission.id}[data-mission="${mission.id}"]`)
@@ -279,7 +304,10 @@ for (const locale of locales) {
       expect(
         await photo.evaluate((image) => (image as HTMLImageElement).naturalWidth),
       ).toBeGreaterThan(0)
-      await expect(card.getByRole('link')).toHaveAttribute('href', pageHref(mission.pageId, locale))
+      await expect(card.getByRole('link')).toHaveAttribute(
+        'href',
+        pageHref(mission.pageId, locale, mission.destinationAnchor),
+      )
       await expect(card.getByRole('link')).toHaveAccessibleName(/\S/)
       await expectPhotoCardComposition(card)
     }
@@ -348,24 +376,27 @@ for (const locale of locales) {
   }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await setViewportSize(page, { width: 1440, height: 900 })
-    for (const id of ['platforms-expertise', 'mission-test']) {
+    for (const id of ['platforms-expertise', 'mission-research']) {
       await page.goto(`${pageHref('home', locale)}#${id}`)
       await waitForFonts(page)
       await expectTargetBelowNavigation(page, id)
-      const activeId = id === 'mission-test' ? 'develop-test-transfer' : id
+      const activeId = id === 'mission-research' ? 'develop-test-transfer' : id
       await expect(page.locator(`.home-section-navigation a[href="#${activeId}"]`)).toHaveAttribute(
         'aria-current',
         'location',
       )
     }
     await setViewportSize(page, { width: 390, height: 900 })
-    await page.goto(`${pageHref('home', locale)}#mission-transfer`)
+    await page.goto(`${pageHref('home', locale)}#mission-skills`)
     await waitForFonts(page)
-    const card = page.locator('#mission-transfer')
+    const card = page.locator('#mission-skills')
     await expect(page.locator('.home-section-navigation')).toBeHidden()
     await expect.poll(() => horizontallyContained(card)).toBe(true)
     await expect(card.getByRole('heading', { level: 3 })).toBeInViewport()
-    await expect(card.getByRole('link')).toHaveAttribute('href', pageHref('transfer', locale))
+    await expect(card.getByRole('link')).toHaveAttribute(
+      'href',
+      pageHref('network', locale, 'skills-training'),
+    )
   })
 }
 
@@ -454,9 +485,9 @@ test('native home anchors remain usable without JavaScript in every locale', asy
       await expectTargetBelowNavigation(page, 'research-priorities', true)
       await expect(nav.locator('[aria-current]')).toHaveCount(0)
       await expect(page.locator('#develop-test-transfer').getByRole('article')).toHaveCount(3)
-      await page.goto(`${pageHref('home', locale)}#mission-transfer`)
+      await page.goto(`${pageHref('home', locale)}#mission-skills`)
       await waitForFonts(page)
-      await expectTargetBelowNavigation(page, 'mission-transfer', true)
+      await expectTargetBelowNavigation(page, 'mission-skills', true)
       await page.evaluate(() => {
         document.documentElement.style.fontSize = '200%'
       })
@@ -472,9 +503,9 @@ test('native home anchors remain usable without JavaScript in every locale', asy
       await expect(nav).toBeHidden()
       await visitMobileMissionsWithKeyboard(page, locale === 'ar' ? 'rtl' : 'ltr')
       await visitMissionLinksWithTab(page)
-      await page.goto(`${pageHref('home', locale)}#mission-transfer`)
+      await page.goto(`${pageHref('home', locale)}#mission-skills`)
       await waitForFonts(page)
-      const card = page.locator('#mission-transfer')
+      const card = page.locator('#mission-skills')
       await expect.poll(() => horizontallyContained(card)).toBe(true)
       await expect(card.getByRole('heading', { level: 3 })).toBeInViewport()
       expect(
@@ -547,7 +578,7 @@ test('keyboard mission feedback remains visible when reduced motion disables pho
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   await page.goto(pageHref('home', 'ar'))
   await waitForFonts(page)
-  const card = page.locator('#mission-develop')
+  const card = page.locator('#mission-studies')
   const link = card.getByRole('link')
   await page.mouse.move(0, 0)
   const initial = await missionVisualState(card)
@@ -598,7 +629,7 @@ test('touching a mobile mission photo does not leave a hover zoom or tint', asyn
     expect(
       await page.evaluate(() => matchMedia('(hover: none) and (pointer: coarse)').matches),
     ).toBe(true)
-    const card = page.locator('#mission-develop')
+    const card = page.locator('#mission-studies')
     await card.scrollIntoViewIfNeeded()
     const initial = await missionVisualState(card)
     await card.tap({ position: { x: 30, y: 30 } })

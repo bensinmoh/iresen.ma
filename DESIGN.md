@@ -1,5 +1,31 @@
 # IRESEN visual direction
 
+## Homepage contribution domains — 2026-10-10
+
+The owner now commissions the previously deferred mission-statement design.
+A full-width, centered editorial quotation uses fluid 20–32px regular text
+and compact 1.38 Latin/1.4 Arabic line height, blue inline quotation marks and a
+fine lower rule, following the owner’s later size/line-height correction. It is followed by
+three photographic contribution cards and a shorter navy cooperation band
+aligned to the outer card edges. R&I alone carries Développer · Éprouver · Valoriser.
+The existing type roles, photo shading, hover/focus feedback, original SVGs and
+physical signature corners remain; the quote/band reflow naturally in Arabic and
+at enlarged text sizes. See [scope and narrative](docs/narrative-alignment.md).
+The owner’s latest refinement centers both the section label and statement,
+with balanced line wrapping. Earlier stage-card and design-deferral descriptions
+are historical.
+
+Opening and closing quotation marks are directly inside the paragraph, with
+identical inherited size/line height, blue color and weight 500. French uses
+symmetrical narrow non-breaking spaces. This supersedes the detached opening
+glyph after the owner's spacing correction.
+
+The owner's later photographic-card reference places the three purposes above
+the domain headings, as light uppercase overlines (label size, weight 400,
+0.08em Latin tracking). Arabic retains natural case and tracking. This is the
+requested H4 visual role; the domain retains its semantic h3 and the introductory
+overline remains text so the heading outline stays coherent.
+
 ## Homogeneous homepage section labels — 2026-10-09
 
 The owner selected the current domains label as the reference for the mission

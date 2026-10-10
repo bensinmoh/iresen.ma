@@ -1,5 +1,4 @@
 // Fictional generated illustrations; provenance and transformations: docs/mission-assets.json.
-import type { HomeMissionId } from '@/lib/home-missions'
 
 export const missionImages = {
   develop: {
@@ -17,4 +16,4 @@ export const missionImages = {
     width: 1200,
     height: 900,
   },
-} as const satisfies Record<HomeMissionId, { src: string; width: number; height: number }>
+} as const

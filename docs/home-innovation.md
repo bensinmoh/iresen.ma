@@ -42,3 +42,11 @@ and withdrawal mechanism handles addition/removal. Repository references stay ou
 of search. The final-content glossary sanity check remains pending.
 
 See [verification](validation.md#homepage-innovation-pathway--2026-10-10).
+
+## Narrative scope correction — 2026-10-10
+
+The [new narrative](narrative-alignment.md) places develop/test/valorise within
+Research & Innovation. Its description and supporting copy now explicitly frame
+this commissioned five-landmark transition as adaptable, with feedback and
+stages selected for each project's needs. It does not describe all institutional
+contributions as a mandatory sequence; studies and skills can respond independently.

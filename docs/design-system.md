@@ -1,5 +1,32 @@
 # Design system and Figma reference
 
+## Mission quotation and common enabler — 2026-10-10
+
+The current mission introduction uses the shared Apex Leaf section label as its
+h2 and a full-available-width, centered blockquote (fluid 20–32px at default
+root size, regular weight, 1.38 line height). Arabic uses natural tracking and 1.4
+line height. The owner’s later refinement reduces its size and compacts its rhythm;
+blue inline quotation marks and a fine lower rule give it editorial
+structure without an enclosing card. French uses guillemets. Three contribution cards retain the existing photographic family.
+The shorter navy cooperation band spans their outer edges, with title, explanatory
+copy and one canonical link. It stacks internally below 64rem and grows with text.
+This is a local mission composition, with no new shared tokens or universal quote
+requirement. The former mission-design deferral is superseded. See
+[the narrative alignment](narrative-alignment.md).
+
+Both quotation marks sit directly within the paragraph, inherit its size and
+line height and share blue color/weight 500. French uses symmetrical narrow
+non-breaking spaces; no detached column or asymmetric margin remains.
+
+The owner's latest refinement centers the section label and statement, retaining
+full available width with balanced line wrapping.
+
+The three card purposes now precede their domain h3 as light uppercase overlines,
+matching the owner's later card screenshot: shared label size, regular 400 weight,
+0.08em Latin tracking and 1.5 line height. Keep Arabic natural. H4 here describes
+the requested visual hierarchy; introductory text does not create an out-of-order
+heading before the domain's h3.
+
 ## Homepage section labels — 2026-10-09
 
 Use the domains label as the owner's selected reference for the homepage mission
@@ -437,7 +464,7 @@ Keep navigation operable by keyboard, touch and pointer. Use visible focus, corr
 
 Check actual rendered contrast; brand colors do not automatically make accessible status colors. Normal text needs 4.5:1 contrast. White text on cyan/lime is unsuitable; navy text on cyan/lime passes as shown above. Use 3:1 only for qualifying large text and applicable non-text requirements.
 
-Next homepage work uses the supplied brand identity and the approved Développer · Éprouver · Valoriser reading framework. The earlier narrative PDF remains private; the three newly supplied DOCX files are authorized repository references, indexed in [the strategy analysis](references/strategy/README.md). The owner's 2026-10-09 request uses their suggested sections for empty placeholders within the current 22-page route map. Their composition details remain suggestions, and final wording/translations and claims require approval. Distinguish verified current capabilities from ambitions and never invent key figures.
+Future homepage work uses the supplied brand identity and the current three contribution domains with their shared cooperation enabler, as recorded in [the new narrative alignment](narrative-alignment.md). Développer · Éprouver · Valoriser belongs within Research & Innovation. The earlier private sources stay private; the three authorized repository DOCX originals are historical references, indexed in [the strategy analysis](references/strategy/README.md). Their detailed composition remains recommendations within the 22-page route map. Final wording, translations and claims require editorial review. Distinguish verified current capabilities from ambitions and never invent key figures.
 
 Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports do not block independent work.
 

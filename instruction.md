@@ -1,5 +1,20 @@
 # IRESEN website — project and development instructions
 
+## Current narrative — 2026-10-10
+
+The owner's new Phase I narrative supersedes the former institute-wide
+Développer · Éprouver · Valoriser framework. Use **Études & Expertise**, **Recherche
+& Innovation** and **Compétences & Capacités**, with **Coopération & Rayonnement**
+as their shared enabler. The three functions remain within R&I. The owner's later
+§4.4 correction supplies partnerships, networks, institutional exchanges and events
+as intervention modes, and connected actors, mobilised resources, concrete
+cooperation and recognition as contributions. See [analysis and whole-site disposition](docs/narrative-alignment.md).
+
+The current request authorizes content alignment and homepage mission design.
+The mission-design deferral below is historical. New FR/EN mission statements are
+source copy; other summaries and AR are working adaptations. The 22 routes,
+existing facts/media, honest service boundaries and final editorial review remain.
+
 Version: 1.6 · 9 October 2026 — deferred homepage restructuring brief; exact-first search retained  
 Repository: https://github.com/bensinmoh/iresen.ma  
 Project owner: Mouhcine BENMEZIANE, Direction Partenariats & Marketing de l’Innovation, IRESEN  
@@ -97,7 +112,7 @@ The owner's 8 October request explicitly authorizes repository inclusion of the 
 
 ### Editorial direction
 
-Present IRESEN through the accessible reading framework **Développer · Éprouver · Valoriser**. Explain the supporting scientific expertise, collaborative programmes, platforms, human capabilities and networks, partnerships and resources without turning the homepage into an internal organigram.
+Present IRESEN through three contribution domains: **Études & Expertise**, **Recherche & Innovation**, **Compétences & Capacités**, supported by **Coopération & Rayonnement**. Use **Développer · Éprouver · Valoriser** within Research & Innovation only. Explain the need, audiences, work, partner contributions, real stage, result and evidence; funding and infrastructure are instruments rather than the whole institutional identity.
 
 Show the connection between research, Morocco’s energy needs, experimentation, transfer and usable results. Distinguish established achievements, current capabilities and future ambitions. Describe platforms and technologies at their actual maturity and availability. Never manufacture performance claims, project results, partner commitments, testimonials or numerical indicators.
 

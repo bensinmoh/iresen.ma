@@ -152,3 +152,17 @@ research domains and platforms, retaining the hero figure band. See
 R&D&I support, development/experimentation, maturation/transfer and adoption/
 evaluation. The six main navigation entries remain. FR/EN/AR working copy awaits
 final editorial review; the transfer destination retains its existing scope.
+
+## Current narrative and mission design — 2026-10-10
+
+Read [the new narrative alignment](docs/narrative-alignment.md) for future
+institutional content work. The owner now commissions whole-site content alignment
+and the formerly deferred mission design: full-width quotation, three contribution
+cards and a shorter common cooperation band. Études & Expertise, Recherche &
+Innovation, Compétences & Capacités are the three domains; Coopération & Rayonnement
+is their shared enabler. Développer · Éprouver · Valoriser belongs within R&I.
+The owner's §4.4 correction overrides its duplicated source paragraphs. Preserve
+canonical routes, legacy anchors, supplied claims and imagery provenance. Other
+summaries/AR translations remain working copy; complete Phase III drafting,
+Alliances and final editorial review remain deferred. The new private DOCX is not
+an authorized public download or newly imported repository original.

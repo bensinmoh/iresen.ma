@@ -3,7 +3,7 @@
     "hero": {
       "title": "Let’s talk about your",
       "accent": "project.",
-      "description": "Researcher, business, institution or journalist: tell us what you need.",
+      "description": "Describe your business, institution, research team or territory’s need: a study, research, testing, skills or cooperation.",
       "action": "Write to us"
     },
     "headquarters": {
@@ -47,7 +47,7 @@
       },
       "greenH2": {
         "title": "Green H2A",
-        "description": "Green hydrogen and Power-to-X."
+        "description": "Green hydrogen and Power-to-X. Platform in development."
       },
       "africa": {
         "title": "Green Energy Park Morocco–Côte d’Ivoire",
@@ -147,7 +147,7 @@
   },
   "Metadata": {
     "title": "IRESEN",
-    "description": "IRESEN institutional website."
+    "description": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners."
   },
   "Navigation": {
     "label": "Main navigation",
@@ -190,7 +190,7 @@
   },
   "Footer": {
     "tagline": "Research that moves energy forward.",
-    "description": "Linking research to energy needs to develop, test and create value from innovative solutions with our partners.",
+    "description": "Together with its partners, IRESEN helps inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development.",
     "addressLabel": "Address",
     "address": "16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Morocco",
     "phoneLabel": "Call us",
@@ -245,7 +245,7 @@
       },
       "expertise": {
         "title": "Explore research capabilities",
-        "description": "Find research platforms and the network of laboratories and experts."
+        "description": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities."
       },
       "resources": {
         "title": "Stay informed and explore",
@@ -259,7 +259,7 @@
       "programmes": "Discover research and innovation programmes.",
       "projects": "Explore collaborative research projects.",
       "platforms": "Discover research and experimentation platforms.",
-      "network": "Explore the network of laboratories and experts.",
+      "network": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities.",
       "news": "Follow news from the Institute.",
       "events": "Find events and meetings.",
       "publications": "Read publications and reports.",
@@ -281,32 +281,31 @@
       "description": "Africa’s first research institute certified to ISO 9001."
     },
     "founded": "IRESEN established",
-    "pathways": "Develop, test and transfer",
+    "pathways": "The three domains of contribution",
     "stages": {
-      "develop": "Develop",
-      "test": "Test",
-      "transfer": "Transfer",
-      "institute": "IRESEN · Research & innovation",
+      "institute": "IRESEN · Energy transition & sustainable development",
       "resources": "Sharing knowledge",
       "collaboration": "Building together",
-      "information": "Useful information"
+      "information": "Useful information",
+      "research": "Research & Innovation",
+      "expertiseSkills": "Expertise & Skills"
     },
     "descriptions": {
-      "home": "Develop knowledge, test technologies and transfer research for Morocco’s energy transition.",
-      "institute": "Explore our mission and the connections between research, experimentation and transfer.",
-      "governance": "Discover the governance and organisation supporting the Institute’s mission.",
-      "priorities": "Explore research directions serving the energy transition.",
-      "programmes": "Programmes that structure research and support innovation.",
-      "projects": "Collaborative research, from scientific questions to applications.",
-      "platforms": "Connecting research with experimentation and real conditions of use.",
-      "network": "Scientific expertise at the heart of research and experimentation.",
-      "transfer": "Connecting research results with their applications.",
-      "workWithUs": "Explore possibilities for collaboration in research and innovation.",
-      "news": "Follow the Institute’s news, research and innovation.",
-      "events": "Meetings to share knowledge and open dialogue.",
-      "publications": "Explore topics through publications and reports.",
-      "media": "Discover research and innovation through images.",
-      "opportunities": "Explore opportunities, careers and calls for projects.",
+      "home": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners.",
+      "institute": "Three domains of contribution — studies and expertise, research and innovation, skills and capabilities — supported by cooperation and outreach.",
+      "governance": "The bodies, teams and support functions that sustain scientific rigour and the continuity of the Institute’s contributions.",
+      "priorities": "Connect scientific, industrial and territorial needs with research priorities for the energy transition and sustainable development.",
+      "programmes": "Programme, fund and support collaborative research by linking needs to scientific objectives and usable results.",
+      "projects": "From the need addressed to the results achieved: understand the work, IRESEN’s and its partners’ contributions, and their actual stage.",
+      "platforms": "Research, testing, experimentation and training resources to understand technology performance and conditions of use.",
+      "network": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities.",
+      "transfer": "Prepare results for maturation, transfer and use according to their actual stage and the needs of the people and organisations concerned.",
+      "workWithUs": "Bring together people, expertise and resources around needs for analysis, research, experimentation or skills development.",
+      "news": "Follow studies, research, skills and cooperation contributing to the energy transition and sustainable development.",
+      "events": "Meetings to connect people, share expertise and build cooperation in Morocco and internationally.",
+      "publications": "Documented analysis, knowledge and results to inform decisions and share lessons.",
+      "media": "Discover the work, capabilities and contributions of IRESEN and its partners through images.",
+      "opportunities": "Explore offers and calls contributing to research, skills and collaborations, subject to their actual conditions.",
       "search": "Find your way through the Institute’s pages and resources.",
       "contact": "Connect with IRESEN and find the right point of contact.",
       "legal": "Legal information about the IRESEN website.",
@@ -322,13 +321,18 @@
       "youngResearchers": "Young researchers\nsupported",
       "publications": "Scientific\npublications",
       "universityLaboratories": "University laboratories\nestablished"
+    },
+    "domains": {
+      "studies": "Studies & Expertise",
+      "research": "Research & Innovation",
+      "skills": "Skills & Capabilities"
     }
   },
   "PageSections": {
     "home": {
       "develop-test-transfer": {
-        "title": "Supporting the energy transition",
-        "description": "IRESEN connects research with the needs of the energy transition and sustainable development and, together with its partners, mobilizes the expertise and capabilities needed to develop, test and translate innovative solutions into value to meet those needs."
+        "title": "Our mission",
+        "description": "IRESEN connects research with Morocco’s energy transition and sustainable development needs. Together with its partners, it helps inform decisions, advance solutions and strengthen capabilities by bringing together people, expertise and resources."
       },
       "figures": {
         "title": "IRESEN in figures",
@@ -344,27 +348,15 @@
       },
       "platforms-expertise": {
         "title": "Capabilities that advance innovation",
-        "description": "From laboratories to demonstrators, IRESEN brings together infrastructure and expertise to test technologies, develop skills and prepare for scale-up."
+        "description": "From laboratories to demonstrators, mobilise resources for research, testing and training according to capabilities available or in development."
       },
       "collaboration": {
         "title": "Collaborate with IRESEN",
-        "description": "From your first research question to an industrial decision, let’s shape the next step of your project together."
+        "description": "A need for analysis, research or skills? Let us bring together expertise and resources to build joint work."
       },
       "news-events": {
         "title": "The latest news",
         "description": "IRESEN news and LinkedIn posts: research, innovation, energy transition and international cooperation."
-      },
-      "mission-develop": {
-        "title": "Develop",
-        "description": "Advance knowledge and build responses to energy challenges through collaborative research."
-      },
-      "mission-test": {
-        "title": "Test",
-        "description": "Experiment with technologies and understand their performance, limitations and conditions of use."
-      },
-      "mission-transfer": {
-        "title": "Transfer",
-        "description": "Connect research results with practical use by preparing their maturation, transfer and adoption."
       },
       "research-renewables": {
         "title": "Renewable energy & flexible electricity systems",
@@ -452,7 +444,23 @@
       },
       "innovation-value-chain": {
         "title": "A pathway to advance innovation",
-        "description": "Connecting research, support, experimentation and valorisation, from national needs to the adoption of solutions."
+        "description": "Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work."
+      },
+      "mission-studies": {
+        "title": "Studies & Expertise",
+        "description": "Knowledge, data and analysis to understand options and prepare decisions."
+      },
+      "mission-research": {
+        "title": "Research & Innovation",
+        "description": "Programmes, scientific work and experimental resources to develop, test and valorise."
+      },
+      "mission-skills": {
+        "title": "Skills & Capabilities",
+        "description": "Skills and know-how to understand technologies, practise them and pass them on."
+      },
+      "mission-cooperation": {
+        "title": "Cooperation & Outreach",
+        "description": "Connect people and organisations, mobilise resources and build concrete cooperation to raise recognition of scientific and technological contributions."
       }
     },
     "institute": {
@@ -462,15 +470,15 @@
       },
       "mission": {
         "title": "Mission and positioning",
-        "description": "Content to add: the reference mission and the connections between needs, research, experimentation and use."
+        "description": "To prepare: the three domains of contribution and their shared enabler, connected to Morocco’s and the region’s needs."
       },
       "capabilities": {
         "title": "Complementary capabilities",
-        "description": "Content to add: the six complementary capabilities and links to their relevant pages."
+        "description": "To prepare: studies and expertise, research and innovation, skills and capabilities; cooperation and outreach as a shared enabler. Develop, test and valorise belong within Research & Innovation."
       },
       "ambition-2035": {
         "title": "Ambition for 2035",
-        "description": "Content to add: long-term directions, distinguishing ambitions from achievements."
+        "description": "To prepare: the ambition to become a reference for excellence in Africa across the three domains, separate from achievements and the status of the proposed 2026–2035 agreement."
       },
       "key-figures": {
         "title": "Key figures",
@@ -510,7 +518,7 @@
     "priorities": {
       "needs-challenges": {
         "title": "Needs and challenges",
-        "description": "Content to add: energy, industrial and environmental needs within the approved scope."
+        "description": "To prepare: scientific and socioeconomic needs, industrial decarbonisation, energy performance and Moroccan and regional conditions."
       },
       "domains-directions": {
         "title": "Domains and directions",
@@ -536,7 +544,7 @@
     "programmes": {
       "programmes-collaborations": {
         "title": "Programmes and collaborations",
-        "description": "Content to add: programmes, their objectives, partners, periods and status."
+        "description": "To prepare: needs and scientific objectives, programmes, support for teams, partners, period and status; funding is an instrument within Research & Innovation."
       },
       "calls-for-projects": {
         "title": "Calls for projects",
@@ -570,7 +578,7 @@
       },
       "project-catalogue": {
         "title": "Project catalogue",
-        "description": "Content to add: projects suitable for publication with their need, priority, status and period."
+        "description": "To prepare: the need, intended users, IRESEN’s and partners’ contributions, work, results, actual stage and publishable evidence."
       },
       "understanding-results": {
         "title": "Understanding results",
@@ -610,7 +618,7 @@
     "network": {
       "competence-domains": {
         "title": "Areas of expertise",
-        "description": "Content to add: approved specialisms, questions addressed and possible deliverables."
+        "description": "To prepare: studies, monitoring, foresight, analysis and expertise, with their needs, audiences and contributions to preparing decisions."
       },
       "intervention-modes": {
         "title": "Ways of contributing",
@@ -622,7 +630,7 @@
       },
       "skills-training": {
         "title": "Skills and training",
-        "description": "Content to add: training through research, experimental practice and courses actually offered."
+        "description": "To prepare: specialised and research-based training, methods and know-how transmission, team support and learning resources actually available."
       },
       "expertise-in-action": {
         "title": "Expertise in action",
@@ -640,7 +648,7 @@
       },
       "research-to-use": {
         "title": "From research to use",
-        "description": "Content to add: protection, maturation, qualification and adoption stages, with their actual status."
+        "description": "To prepare: develop, test and valorise within Research & Innovation, with feedback between trials and uses; not every project follows every stage and commercialisation is not guaranteed."
       },
       "transfer-pathways": {
         "title": "Transfer pathways",
@@ -662,11 +670,11 @@
     "workWithUs": {
       "choose-pathway": {
         "title": "Choose a pathway",
-        "description": "Content to add: project, testing, expertise and valorisation pathways linked to the relevant pages."
+        "description": "To prepare: needs for studies and expertise, research and innovation, skills and capabilities, with cooperation as the shared enabler."
       },
       "organisation-contributions": {
         "title": "Contributions by organisation",
-        "description": "Content to add: needs and possible contributions from businesses, institutions, researchers and partners."
+        "description": "To prepare: value for institutions, businesses, research teams, territories and international partners, without promising services or funding."
       },
       "collaboration-arrangements": {
         "title": "Collaboration arrangements",
@@ -722,7 +730,7 @@
       },
       "past-events": {
         "title": "Past events",
-        "description": "Content to add: reports, presentations and related media suitable for publication."
+        "description": "To prepare: shared expertise, joint work and documented lessons from meetings, with partners and authorised media."
       },
       "propose-collaboration": {
         "title": "Propose a collaboration",
@@ -740,7 +748,7 @@
       },
       "publication-catalogue": {
         "title": "Publication catalogue",
-        "description": "Content to add: records with titles, authors, years, references, languages, formats and access rights."
+        "description": "To prepare: studies, analysis, publications and learning resources; records with authors, date, language, rights and documented uses."
       },
       "institutional-reports": {
         "title": "Institutional reports",
@@ -983,24 +991,34 @@
   },
   "HomeMissions": {
     "eyebrow": "Our mission",
-    "develop": {
-      "link": "Explore the programmes",
-      "imageAlt": "Generated illustration of researchers working on batteries, with a bioreactor and biomass and biofuel samples.",
-      "imageTitle": "Develop — batteries, biomass and biofuels",
-      "imageDescription": "Fictional generated scene of collaborative laboratory research: batteries and electrochemical storage, a bioreactor, biomass and biofuels. Illustration of the Develop mission; it does not depict an actual IRESEN facility or team."
-    },
-    "test": {
-      "link": "Discover the platforms",
-      "imageAlt": "Generated illustration of engineers at a testing site with a concentrated solar collector, battery storage, hydrogen equipment and wind turbines.",
-      "imageTitle": "Test — concentrated solar power, hydrogen and storage",
-      "imageDescription": "Fictional generated energy testing scene: concentrated solar power (CSP), a parabolic trough collector, green hydrogen equipment, battery storage and wind turbines. Illustration of the Test mission; it does not document an actual IRESEN platform."
-    },
-    "transfer": {
-      "link": "Explore research transfer",
+    "functions": "Develop · Test · Valorise",
+    "studies": {
+      "link": "Explore studies and expertise",
       "imageAlt": "Generated illustration of experts in an energy management control room, with smart-grid screens and distant wind turbines.",
-      "imageTitle": "Transfer — smart grids and energy management",
-      "imageDescription": "Fictional generated collaboration scene involving smart electricity grids, energy management and bioenergy. Control screens and wind turbines illustrate the connection between research and use; no actual IRESEN project or partnership is depicted."
-    }
+      "imageTitle": "Studies & Expertise",
+      "imageDescription": "Generated illustration of experts in an energy management control room, with smart-grid screens and distant wind turbines. Fictional scene; no actual IRESEN site, team or partnership is depicted.",
+      "purpose": "Inform decisions"
+    },
+    "research": {
+      "link": "Explore programmes",
+      "imageAlt": "Generated illustration of researchers working on batteries, with a bioreactor and biomass and biofuel samples.",
+      "imageTitle": "Research & Innovation",
+      "imageDescription": "Generated illustration of researchers working on batteries, with a bioreactor and biomass and biofuel samples. Fictional scene; no actual IRESEN site, team or partnership is depicted.",
+      "purpose": "Advance solutions"
+    },
+    "skills": {
+      "link": "Explore skills and training",
+      "imageAlt": "Generated illustration of engineers at a testing site with a concentrated solar collector, battery storage, hydrogen equipment and wind turbines.",
+      "imageTitle": "Skills & Capabilities",
+      "imageDescription": "Generated illustration of engineers at a testing site with a concentrated solar collector, battery storage, hydrogen equipment and wind turbines. Fictional scene; no actual IRESEN site, team or partnership is depicted.",
+      "purpose": "Strengthen capabilities"
+    },
+    "cooperation": {
+      "link": "Build a cooperation"
+    },
+    "openQuote": "“",
+    "closeQuote": "”",
+    "domainsLabel": "The three domains of contribution"
   },
   "HomeResearch": {
     "eyebrow": "Research domains",
@@ -1134,7 +1152,7 @@
   },
   "HomeCollaboration": {
     "title": "Collaborate with IRESEN",
-    "description": "From your first research question to an industrial decision, let’s shape the next step of your project together.",
+    "description": "A need for analysis, research or skills? Let us bring together expertise and resources to build joint work.",
     "action": "Let’s discuss your project",
     "collaborators": "Collaborators",
     "certified": "Certified",
@@ -1170,7 +1188,7 @@
   "HomePlatforms": {
     "eyebrow": "Platforms & expertise",
     "title": "Capabilities that advance innovation",
-    "description": "From laboratories to demonstrators, IRESEN brings together infrastructure and expertise to test technologies, develop skills and prepare for scale-up.",
+    "description": "From laboratories to demonstrators, mobilise resources for research, testing and training according to capabilities available or in development.",
     "navigation": "Explore platforms and expertise",
     "platformsLink": "Our platforms",
     "expertiseLink": "Our expertise network",
@@ -1291,9 +1309,9 @@
   "HomeInnovation": {
     "eyebrow": "From idea to impact",
     "title": "A pathway to advance innovation",
-    "description": "Connecting research, support, experimentation and valorisation, from national needs to the adoption of solutions.",
-    "support": "Support and increasing maturity throughout the pathway.",
-    "feedback": "Assess contributions to inform future needs.",
+    "description": "Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work.",
+    "support": "An adaptable pathway: each project follows the stages relevant to its needs.",
+    "feedback": "Document how results are used and share lessons.",
     "action": "Explore valorisation and transfer",
     "steps": {
       "anticipate": {
@@ -1317,7 +1335,7 @@
         "description": "Use of solutions and assessment of their contribution."
       }
     },
-    "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment.",
-    "label": "Stages of the innovation pathway"
+    "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment. Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work. An adaptable pathway: each project follows the stages relevant to its needs.",
+    "label": "Landmarks in the research and innovation pathway"
   }
 }

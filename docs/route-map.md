@@ -59,3 +59,13 @@ The supplied structure document is a set of recommendations and suggestions, not
 ## Innovation transition anchor — 2026-10-10
 
 The homepage registers `innovation-value-chain` between `research-priorities` and `platforms-expertise`, in FR/EN/AR. Its action uses the existing `transfer` page ID. The six major navigation entries remain; no page route is added. See [scope](home-innovation.md).
+
+## Contribution-domain anchors — 2026-10-10
+
+The new narrative changes content orientation within the same 22 routes.
+Homepage `mission-studies`, `mission-research`, `mission-skills` and
+`mission-cooperation` link respectively to `network#intervention-modes`,
+`programmes`, `network#skills-training` and `workWithUs`, through shared helpers.
+`develop-test-transfer` remains the section-navigation URL. Former mission stage
+anchors resolve within the R&I card and remain supported in locale switching.
+See [scope](narrative-alignment.md).
