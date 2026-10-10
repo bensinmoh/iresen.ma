@@ -6,24 +6,99 @@
   "publicationStatus": "staged-not-public",
   "selection": {
     "sourceRows": 1383,
-    "imported": 1181,
-    "excluded": 202,
-    "sourceValue": "Comptabilisée"
+    "imported": 1199,
+    "excluded": 184,
+    "sourceValue": "Retenue rapport 2011–2026 = 1"
   },
   "quartileBasis": "SJR 2025 — best journal quartile across categories, as supplied",
   "missing": {
-    "doiUrl": 18,
+    "doiUrl": 29,
     "year": 0,
-    "authors": 0,
-    "theme": 175,
-    "scopusCitations": 141
+    "authors": 13,
+    "theme": 187,
+    "scopusCitations": 161
   },
   "quartiles": {
-    "Q1": 423,
-    "Q2": 38,
+    "Q1": 436,
+    "Q2": 44,
     "Q3": 21,
-    "not-applicable": 413,
-    "unknown": 286
+    "not-applicable": 426,
+    "unknown": 272
   },
-  "futureYearIds": ["PUB_8ED0E05D3824", "PUB_14D944DBDDBB", "PUB_161A579E510C", "PUB_9DA97225C634"]
+  "futureYearIds": [],
+  "reconciliation": {
+    "sourceFilename": "IRESEN_GEP_Recensement_Publications_Dashboard.xlsx",
+    "sourceSha256": "e339ce9a4af1d0c8eee9d3adfd253f6e3ee654eedb27dbb0317bc40ff79bf312",
+    "sourceSheet": "Publications consolidées",
+    "sourceRows": 1383,
+    "scopusExportRows": 623,
+    "addedIds": [
+      "PUB_06A9E78BC7FF",
+      "PUB_19574F19F657",
+      "PUB_19F0F988AEFA",
+      "PUB_1A7C2293065E",
+      "PUB_2B4138E64692",
+      "PUB_2F10E5F0304A",
+      "PUB_3ECE56D63EF9",
+      "PUB_44304FB6A084",
+      "PUB_74BA46B0535D",
+      "PUB_83E444E8B36A",
+      "PUB_8C9FF3F7E228",
+      "PUB_919F61634511",
+      "PUB_AEB44D8F624E",
+      "PUB_C3DD6ADBAEAF",
+      "PUB_C69EA28A84A1",
+      "PUB_CEE3E254424C",
+      "PUB_D7786D1E03FB",
+      "PUB_DC0C076C28D8",
+      "PUB_E0B8705A105F",
+      "PUB_E1FFA3C7B29A",
+      "PUB_FDA53384018E",
+      "PUB_FE08D9A270D0"
+    ],
+    "removedIds": ["PUB_14D944DBDDBB", "PUB_161A579E510C", "PUB_8ED0E05D3824", "PUB_9DA97225C634"],
+    "changes": {
+      "quartileValues": 16,
+      "scopusCitationSnapshots": 619,
+      "scopusCitationValues": 15
+    },
+    "editorialReviewRequiredIds": [
+      "PUB_06A9E78BC7FF",
+      "PUB_1A7C2293065E",
+      "PUB_2F10E5F0304A",
+      "PUB_3ECE56D63EF9",
+      "PUB_44304FB6A084",
+      "PUB_83E444E8B36A",
+      "PUB_919F61634511",
+      "PUB_AEB44D8F624E",
+      "PUB_C3DD6ADBAEAF",
+      "PUB_C6B4F1284690",
+      "PUB_CEE3E254424C",
+      "PUB_DC0C076C28D8",
+      "PUB_E0B8705A105F",
+      "PUB_FE08D9A270D0"
+    ],
+    "scopusTitleVariantIds": [
+      "PUB_06A9E78BC7FF",
+      "PUB_229E6688F66E",
+      "PUB_27B622A5CA91",
+      "PUB_8EC56E42A839",
+      "PUB_ADDEC922A8AC"
+    ],
+    "historicalQuartiles": {
+      "Q1": 335,
+      "Q2": 45,
+      "Q3": 14,
+      "Q4": 1,
+      "edition-unavailable": 95,
+      "not-applicable": 426,
+      "unknown": 283
+    },
+    "quartileEvidence": {
+      "inherited-provisional": 62,
+      "not-applicable": 426,
+      "source-reported": 439,
+      "unknown": 272
+    }
+  }
 }
