@@ -3127,3 +3127,16 @@ was performed. See [scope](media-library.md#video-navigation-pills--2026-10-10).
   unit assertions exclude withdrawn IDs and both original workbooks.
 - Deployment, final editorial translation approval and the full-site final
   content/glossary search sanity check remain pending/outside this increment.
+
+Full PR CI initially passed 231/240 browser cases. Six generic hero/footer tests
+still expected the former Publications scaffold; their destination/title assertions
+now use the commissioned heading and the dedicated Publications suite. The expanded
+corpus also changes search fixtures: `résulats` is ambiguous between French
+`résultats` and original English `results`, so the existing conservative corrector
+properly refuses a guess. The unambiguous French typo case now uses `réalisatons`.
+Direct publication PV/Infrastructure matches may fill the first result page;
+related platform matches are still checked with the page filter. Exact-first
+ranking and explicit correction behavior are unchanged.
+
+All twelve local search browser cases and six affected footer/standard-hero cases
+pass after the updated assertions. No runtime search behavior was changed.

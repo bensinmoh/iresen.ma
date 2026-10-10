@@ -80,7 +80,9 @@ for (const locale of locales) {
     await expect(page).toHaveURL(
       (url) => decodeURI(url.pathname) === pageHref('publications', locale),
     )
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText(messages.Pages.publications)
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(
+      `${messages.Publications.accent} ${messages.Publications.title}`,
+    )
     await utilities.getByRole('link', { name: messages.Pages.privacy, exact: true }).click()
     await expect(page).toHaveURL((url) => decodeURI(url.pathname) === pageHref('privacy', locale))
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(messages.Pages.privacy)
