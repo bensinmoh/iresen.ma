@@ -5,11 +5,11 @@
   "photos": [
     {
       "id": "portrait-dg-iresen-samir-rachidi",
-      "sourceFilename": "I_03_DG_IRESEN_Samir_Rachidi.jpeg",
-      "sourceSha256": "75ab7fc39f5d5fe87f743baf3623de32039271e7255ba384ab0346e924f97ab6",
-      "publicPath": "/images/media-library/portrait-dg-iresen-samir-rachidi.webp",
-      "sha256": "84ac97290be944fab8c551c3c24198280c5466d106c235024ab0dcf2450510c7",
-      "bytes": 167994,
+      "sourceFilename": "Samir RACHIDI.png",
+      "sourceSha256": "e574a2cb6b7828ff0f9332ee510d1f08eb047aaa6096233fb0bb182d798ed290",
+      "publicPath": "/images/media-library/portrait-dg-iresen-samir-rachidi-official.webp",
+      "sha256": "6dfaf652b97f850911d253c7a7e4a30c87df513f9d713f588ef0664dcd55b994",
+      "bytes": 119898,
       "width": 1024,
       "height": 1536
     },

@@ -1,4 +1,5 @@
 import patentRecords from '@/data/patents.json' with { type: 'json' }
+import mediaPhotoRecords from '@/data/media-photos.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
 import { pageSections } from '@/lib/page-sections'
 import { homeNewsPosts } from '@/lib/home-news'
@@ -177,6 +178,7 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   return (
     normalized === 'main-content' ||
     normalized === 'page-sections' ||
+    (pageId === 'media' && mediaPhotoRecords.some((photo) => normalized === `photo-${photo.id}`)) ||
     (pageId === 'news' &&
       [
         'news',

@@ -18,6 +18,7 @@ import { searchTypes, type SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
 import libraryVideos from '@/data/media-videos.json'
+import { samirCutout } from '@/lib/samir-biography'
 import { homeMissions, legacyMissionAnchors, homeCooperationAnchor } from '@/lib/home-missions'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
@@ -26,6 +27,19 @@ import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
 
 describe('multilingual search text', () => {
+  it('registers the supplied biography in French without pretending to have approved translations', () => {
+    const biographies = staticSearchDocuments().filter((item) =>
+      item.id.includes('samir-biography'),
+    )
+    expect(biographies).toHaveLength(1)
+    expect(biographies[0]).toMatchObject({
+      locale: 'fr',
+      type: 'section',
+      url: '/fr/ressources/mediatheque#photo-portrait-dg-iresen-samir-rachidi',
+    })
+    expect(biographies[0].body).toContain('RespInnovation')
+    expect(biographies[0].body).toContain('Cluster Green H2')
+  })
   it('accepts explicit resource types with complete localized labels, without reclassifying their overview pages', () => {
     for (const type of searchTypes) {
       expect(validateSearchInput({ query: 'IRESEN', locale: 'fr', type })).toBe(true)
@@ -293,6 +307,7 @@ describe('explicit public search catalog', () => {
         .filter(({ src, mobile }) => src !== mobile.src)
         .map(({ mobile }) => mobile.src),
       ...libraryVideos.map(({ poster }) => poster),
+      samirCutout,
     ])
     const publicRoot = path.resolve(process.cwd(), 'public')
     const publicFiles = readdirSync(publicRoot, { recursive: true, withFileTypes: true })

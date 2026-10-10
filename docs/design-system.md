@@ -1519,3 +1519,7 @@ The owner selects bottom indicators with an elongated active pill, or a fill bar
 with a counter and SVG arrows, centered vertically in the actual inter-block gap.
 This documentary specification awaits a later implementation request; existing
 horizontal-navigation behavior above remains the implemented baseline.
+
+## Samir portrait biography — 2026-10-10
+
+The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](samir-biography.md).

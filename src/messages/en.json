@@ -1877,6 +1877,12 @@
     "nextVideos": "Next videos",
     "heroTitle": "Media library — scientific resources illustration",
     "heroDescription": "Generated illustration: reports, photographic prints of solar panels and laboratory equipment, and a camera on a table. An illustrative media-library scene, not an actual IRESEN location.",
-    "downloadVideo": "Download video"
+    "downloadVideo": "Download video",
+    "biography": "Biography",
+    "biographyLanguage": "Biography in French",
+    "copyBiography": "Copy biography",
+    "copiedBiography": "Biography copied",
+    "copyBiographyError": "Automatic copying is unavailable. You can select and copy the text.",
+    "downloadPortrait": "Download portrait"
   }
 }

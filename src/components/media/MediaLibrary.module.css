@@ -167,9 +167,6 @@
 .photo > a:hover img {
   transform: scale(1.035);
 }
-.photo[id='photo-portrait-dg-iresen-samir-rachidi'] img {
-  object-position: center 20%;
-}
 .enlarge {
   position: absolute;
   inset-inline-end: 0.65rem;
@@ -705,4 +702,256 @@
   gap: 0.6rem;
   direction: ltr;
   min-inline-size: 0;
+}
+
+/* The official portrait has its own framing and editorial viewer. */
+.photo[id='photo-portrait-dg-iresen-samir-rachidi'] img {
+  object-position: center 8%;
+  transform-origin: center 8%;
+}
+.dialog[data-viewer='biography'] {
+  background: var(--color-surface);
+  color: var(--color-navy);
+  padding: clamp(0.75rem, 2vw, 1.75rem);
+  gap: 1rem;
+}
+.dialog[data-viewer='biography'] .dialogBar {
+  flex-wrap: wrap;
+}
+.dialog[data-viewer='biography'] .dialogBar:first-child {
+  flex-wrap: nowrap;
+}
+.dialog[data-viewer='biography'] .dialogBar a,
+.dialog[data-viewer='biography'] .iconButton,
+.copyBiography {
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+  background: white;
+}
+.dialog[data-viewer='biography'] .iconButton:hover,
+.copyBiography:hover {
+  background: var(--color-action-surface);
+}
+.biographyLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  direction: ltr;
+  min-block-size: 0;
+  gap: clamp(1rem, 3vw, 3rem);
+}
+.biographyContent {
+  overflow-y: auto;
+  min-inline-size: 0;
+  min-block-size: 0;
+  padding-inline-end: 1rem;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-blue) var(--color-surface);
+}
+.biographyText {
+  user-select: text;
+  max-inline-size: 70ch;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.biographyText::selection,
+.biographyText ::selection {
+  background: var(--color-navy);
+  color: white;
+}
+.biographyText h3 {
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  line-height: 1.2;
+  margin-block: 0 1rem;
+}
+.biographyRoles {
+  font-weight: 600;
+  margin-block-end: 2rem;
+}
+.biographyRoles p {
+  margin-block: 0 0.7rem;
+}
+.biographyText > p {
+  margin-block: 0 1.25rem;
+}
+.biographyLanguage {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-meta);
+}
+.biographyPortrait {
+  min-block-size: 0;
+  min-inline-size: 0;
+  display: grid;
+  align-items: end;
+}
+.biographyPortrait img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  min-block-size: 0;
+}
+.photoNavigation,
+.biographyActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  min-inline-size: 0;
+}
+.dialog[data-viewer='biography'] .photoPosition {
+  color: var(--color-text-muted);
+}
+.copyBiography {
+  font: inherit;
+  font-size: clamp(0.7rem, 1.3vw, 1rem);
+  min-block-size: 44px;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-action);
+  cursor: pointer;
+}
+.copyStatus:empty {
+  display: none;
+}
+.copyStatus {
+  font-size: var(--font-size-meta);
+  max-inline-size: 30ch;
+}
+@media (max-width: 64rem) {
+  .biographyLayout {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-blue) var(--color-surface);
+  }
+  .biographyContent {
+    overflow: visible;
+    flex-shrink: 0;
+    padding-inline: 0;
+  }
+  .biographyPortrait {
+    flex: 0 0 14rem;
+    align-self: center;
+    inline-size: min(100%, 16rem);
+    block-size: 14rem;
+  }
+  .dialog[data-viewer='biography'] .dialogBar:last-child {
+    gap: 0.5rem;
+  }
+  .biographyActions {
+    flex: 1;
+    justify-content: end;
+  }
+}
+@media (max-width: 40rem) {
+  .biographyActions {
+    justify-content: start;
+    inline-size: 100%;
+  }
+}
+@media (max-width: 64rem) {
+  .dialog[data-viewer='biography'] .dialogBar:last-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .biographyActions {
+    inline-size: 100%;
+    justify-content: start;
+  }
+  .biographyActions > button,
+  .biographyActions > a {
+    flex: 1 1 10rem;
+    overflow-wrap: anywhere;
+    justify-content: center;
+  }
+  .copyStatus {
+    order: 1;
+    flex-basis: 100%;
+  }
+}
+.biographyText h3 {
+  color: var(--color-navy);
+  font-weight: 900;
+}
+.biographyRoles {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.biographyRoles p {
+  margin-block-end: 0.5rem;
+}
+.biographyPortrait {
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-block-end: calc(-44px - 1rem - clamp(0.75rem, 2vw, 1.75rem));
+}
+.biographyImage {
+  min-block-size: 0;
+  overflow: hidden;
+  align-self: stretch;
+}
+.biographyPortrait img {
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.04);
+  transform-origin: center top;
+}
+.biographyActions {
+  align-items: start;
+  direction: inherit;
+}
+.biographyActions > a {
+  color: var(--color-navy);
+  background: white;
+  border: 1px solid var(--color-border);
+  padding: 0.7rem 1rem;
+  min-block-size: 44px;
+  border-radius: var(--radius-action);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: clamp(0.7rem, 1.3vw, 1rem);
+  line-height: 1.3;
+}
+.biographyActions > a svg {
+  flex-shrink: 0;
+}
+.biographyActions > a:hover {
+  background: var(--color-action-surface);
+}
+@media (max-width: 64rem) {
+  .biographyPortrait {
+    margin-block-end: 0;
+    inline-size: 100%;
+    block-size: auto;
+    flex-basis: auto;
+  }
+  .biographyImage {
+    block-size: 20rem;
+    inline-size: min(100%, 20rem);
+    justify-self: center;
+  }
+}
+.biographyPortrait {
+  grid-template-rows: minmax(0, 1fr);
+}
+.dialog[data-viewer='biography'] .dialogBar:last-child {
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 64.001rem) {
+  .biographyPortrait {
+    margin-block-end: 0;
+  }
+  .biographyImage {
+    position: absolute;
+    inset-block-start: calc(clamp(0.75rem, 2vw, 1.75rem) + 44px + 1rem);
+    inset-block-end: 0;
+    right: clamp(0.75rem, 2vw, 1.75rem);
+    inline-size: calc(40% - clamp(0.75rem, 2vw, 1.75rem) * 0.8 - clamp(1rem, 3vw, 3rem) * 0.4);
+    pointer-events: none;
+  }
 }

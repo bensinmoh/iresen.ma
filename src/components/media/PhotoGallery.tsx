@@ -7,6 +7,12 @@ import type { MediaPhoto } from '@/lib/media-library'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import styles from './MediaLibrary.module.css'
 import { ViewerIcon } from './ViewerIcon'
+import {
+  samirBiography,
+  samirBiographyText,
+  samirCutout,
+  samirPhotoId,
+} from '@/lib/samir-biography'
 
 type Copy = {
   all: string
@@ -17,6 +23,12 @@ type Copy = {
   next: string
   found: string
   categories: Record<string, string>
+  biography: string
+  biographyLanguage: string
+  copyBiography: string
+  copiedBiography: string
+  copyBiographyError: string
+  downloadPortrait: string
 }
 
 export function PhotoGallery({
@@ -30,6 +42,8 @@ export function PhotoGallery({
 }) {
   const [category, setCategory] = useState('all')
   const [active, setActive] = useState<MediaPhoto | null>(null)
+  const [copyStatus, setCopyStatus] = useState('')
+  const isBiography = active?.id === samirPhotoId
   const dialog = useRef<HTMLDialogElement>(null)
   const gallery = useRef<HTMLDivElement>(null)
   const previousTiles = useRef<Map<string, DOMRect> | null>(null)
@@ -39,6 +53,7 @@ export function PhotoGallery({
   const move = (step: number) => {
     if (!active) return
     const index = visible.findIndex((photo) => photo.id === active.id)
+    setCopyStatus('')
     setActive(visible[(index + step + visible.length) % visible.length])
   }
 
@@ -132,6 +147,7 @@ export function PhotoGallery({
                     openingRect.current =
                       event.currentTarget.querySelector('img')?.getBoundingClientRect() ?? null
                     setActive(photo)
+                    setCopyStatus('')
                     dialog.current?.showModal()
                   }}
                 >
@@ -158,9 +174,11 @@ export function PhotoGallery({
       <dialog
         ref={dialog}
         className={styles.dialog}
+        data-viewer={isBiography ? 'biography' : 'photo'}
         aria-labelledby="photo-dialog-title"
         onClose={() => setActive(null)}
         onKeyDown={(event) => {
+          if (window.getSelection()?.toString()) return
           if (event.key === 'ArrowRight') {
             event.preventDefault()
             move(locale === 'ar' ? -1 : 1)
@@ -172,7 +190,9 @@ export function PhotoGallery({
         }}
       >
         <div className={styles.dialogBar}>
-          <h2 id="photo-dialog-title">{active?.title[locale]}</h2>
+          <h2 id="photo-dialog-title">
+            {isBiography ? `${copy.biography} — ${samirBiography.name}` : active?.title[locale]}
+          </h2>
           <button
             type="button"
             className={styles.iconButton}
@@ -183,51 +203,130 @@ export function PhotoGallery({
             <ViewerIcon name="close" />
           </button>
         </div>
-        <div className={styles.photoStage}>
-          <button
-            type="button"
-            className={`${styles.iconButton} ${styles.previousPhoto}`}
-            aria-label={copy.previous}
-            title={copy.previous}
-            onClick={() => move(-1)}
-          >
-            <ViewerIcon name={locale === 'ar' ? 'next' : 'previous'} />
-          </button>
-          {active && (
-            <Image
-              ref={fullPhoto}
-              data-photo-id={active.id}
-              src={active.src}
-              alt={active.title[locale]}
-              width={active.width}
-              height={active.height}
-              sizes="90vw"
-              loading="eager"
-              className={styles.fullPhoto}
-            />
-          )}
-          <button
-            type="button"
-            className={`${styles.iconButton} ${styles.nextPhoto}`}
-            aria-label={copy.next}
-            title={copy.next}
-            onClick={() => move(1)}
-          >
-            <ViewerIcon name={locale === 'ar' ? 'previous' : 'next'} />
-          </button>
-        </div>
+        {isBiography ? (
+          <div className={styles.biographyLayout}>
+            <section className={styles.biographyContent} aria-label={copy.biography} tabIndex={0}>
+              {locale !== 'fr' && (
+                <p className={styles.biographyLanguage}>{copy.biographyLanguage}</p>
+              )}
+              <div lang="fr" dir="ltr" className={styles.biographyText}>
+                <h3>{samirBiography.name}</h3>
+                <div className={styles.biographyRoles}>
+                  {samirBiography.roles.map((role) => (
+                    <p key={role}>{role}</p>
+                  ))}
+                </div>
+                {samirBiography.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </section>
+            <div className={styles.biographyPortrait}>
+              <div className={styles.biographyImage}>
+                <Image
+                  src={samirCutout}
+                  alt={active.title[locale]}
+                  width={919}
+                  height={1711}
+                  sizes="(max-width: 64rem) 60vw, 32vw"
+                  loading="eager"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className={styles.photoStage}>
+            <button
+              type="button"
+              className={`${styles.iconButton} ${styles.previousPhoto}`}
+              aria-label={copy.previous}
+              title={copy.previous}
+              onClick={() => move(-1)}
+            >
+              <ViewerIcon name={locale === 'ar' ? 'next' : 'previous'} />
+            </button>
+            {active && (
+              <Image
+                ref={fullPhoto}
+                data-photo-id={active.id}
+                src={active.src}
+                alt={active.title[locale]}
+                width={active.width}
+                height={active.height}
+                sizes="90vw"
+                loading="eager"
+                className={styles.fullPhoto}
+              />
+            )}
+            <button
+              type="button"
+              className={`${styles.iconButton} ${styles.nextPhoto}`}
+              aria-label={copy.next}
+              title={copy.next}
+              onClick={() => move(1)}
+            >
+              <ViewerIcon name={locale === 'ar' ? 'previous' : 'next'} />
+            </button>
+          </div>
+        )}
         <div className={styles.dialogBar}>
-          <span className={styles.photoPosition}>
-            <bdi>
-              {active ? visible.findIndex((photo) => photo.id === active.id) + 1 : 0} /{' '}
-              {visible.length}
-            </bdi>
-          </span>
-          {active && (
-            <a href={active.src} download>
-              {copy.download} <ViewerIcon name="download" />
-            </a>
-          )}
+          <div className={styles.photoNavigation}>
+            {isBiography && (
+              <button
+                type="button"
+                className={styles.iconButton}
+                aria-label={copy.previous}
+                onClick={() => move(-1)}
+              >
+                <ViewerIcon name={locale === 'ar' ? 'next' : 'previous'} />
+              </button>
+            )}
+            <span className={styles.photoPosition}>
+              <bdi>
+                {active ? visible.findIndex((photo) => photo.id === active.id) + 1 : 0} /{' '}
+                {visible.length}
+              </bdi>
+            </span>
+            {isBiography && (
+              <button
+                type="button"
+                className={styles.iconButton}
+                aria-label={copy.next}
+                onClick={() => move(1)}
+              >
+                <ViewerIcon name={locale === 'ar' ? 'previous' : 'next'} />
+              </button>
+            )}
+          </div>
+          <div className={styles.biographyActions}>
+            {isBiography && (
+              <>
+                <button
+                  type="button"
+                  className={styles.copyBiography}
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(samirBiographyText)
+                      setCopyStatus(copy.copiedBiography)
+                    } catch {
+                      setCopyStatus(copy.copyBiographyError)
+                    }
+                  }}
+                >
+                  {copy.copyBiography}
+                </button>
+                <span role="status" className={styles.copyStatus}>
+                  {copyStatus}
+                </span>
+              </>
+            )}
+            {active && (
+              <a href={active.src} download>
+                {isBiography ? copy.downloadPortrait : copy.download} <ViewerIcon name="download" />
+              </a>
+            )}
+          </div>
         </div>
       </dialog>
     </>
