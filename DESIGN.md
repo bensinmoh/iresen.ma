@@ -1093,3 +1093,10 @@ pending event cards are explicitly labelled and have no invented content,
 dates or signup links. The highlight uses a blurred photo echo, and its five
 secondary entries align with its height. Both views use the shared gradient
 header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md).
+## Horizontal collection indicators — 2026-10-10
+
+The owner requested a reference specification from four videos: expanding active
+pills for short collections, or cumulative fill with a current/total counter and
+SVG arrows. Center the complete control row in the gap between the upper block
+and the next CTA/content boundary. This is recorded direction for a later review,
+not implemented UI. See [the specification](docs/horizontal-scroll-indicators.md).

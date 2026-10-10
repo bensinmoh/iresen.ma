@@ -3042,3 +3042,11 @@ existing CMS uploads, accounts and unrelated changes are preserved. FR/EN/AR
 copy remains editorial working text. No deployment, DNS or visibility change.
 Final glossary/search sanity review remains due after complete site content;
 remote CI and merge are recorded in the task PR and Git history.
+## Horizontal scroll indicator documentation — 2026-10-10
+
+Extracted six local frames from each of four supplied recordings; visually compared
+16 frames across start, transition and end states. Recorded source durations and
+SHA-256 hashes; observations are distinguished from future implementation proposals.
+Checked local documentation links, formatting and focused diff whitespace. No
+runtime change: application/database/browser suites are not required for this
+documentation-only task. See [the specification](horizontal-scroll-indicators.md).

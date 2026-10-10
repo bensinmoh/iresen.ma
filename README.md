@@ -283,3 +283,8 @@ three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
 social links, shared physical two-rounded/two-sharp corners and localized search
 references are included. FR/EN/AR copy remains working editorial text. No deployment
 or publication-gate change is authorized. See [scope](docs/news-events.md).
+## Horizontal scroll reference — 2026-10-10
+
+The [recorded indicator design](docs/horizontal-scroll-indicators.md) distinguishes
+short expanding pills from numbered fill-bar navigation and specifies the owner’s
+vertical centering correction. Analysis only; site-wide adaptation is deferred.
