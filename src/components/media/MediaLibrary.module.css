@@ -704,6 +704,10 @@
   min-inline-size: 0;
 }
 
+:global([dir='rtl']) .videoActions {
+  direction: rtl;
+}
+
 /* The official portrait has its own framing and editorial viewer. */
 .photo[id='photo-portrait-dg-iresen-samir-rachidi'] img {
   object-position: center 8%;
