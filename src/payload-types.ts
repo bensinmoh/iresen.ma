@@ -71,6 +71,7 @@ export interface Config {
     pages: Page;
     news: News;
     media: Media;
+    opportunities: Opportunity;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -82,6 +83,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     news: NewsSelect<false> | NewsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    opportunities: OpportunitiesSelect<false> | OpportunitiesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -293,6 +295,50 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "opportunities".
+ */
+export interface Opportunity {
+  id: number;
+  reference: string;
+  /**
+   * Private design example. Never publish. Remove only when the owner requests it.
+   */
+  isDemo?: boolean | null;
+  state: 'open' | 'closed';
+  contract: 'CDI' | 'CDD' | 'internship' | 'apprenticeship';
+  title?: string | null;
+  department?: string | null;
+  location?: string | null;
+  experience?: string | null;
+  availability?: string | null;
+  /**
+   * Offer overview.
+   */
+  summary?: string | null;
+  /**
+   * One item per line.
+   */
+  missions?: string | null;
+  /**
+   * One item per line.
+   */
+  profile?: string | null;
+  /**
+   * Approval applies only to the selected language. A publisher then publishes the revision.
+   */
+  publicationStatus: 'draft' | 'review' | 'published';
+  visibility: 'private' | 'public';
+  editorialOwner?: (number | null) | User;
+  /**
+   * Private editorial notes; excluded from public API responses.
+   */
+  internalNotes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -330,6 +376,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'opportunities';
+        value: number | Opportunity;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -476,6 +526,31 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "opportunities_select".
+ */
+export interface OpportunitiesSelect<T extends boolean = true> {
+  reference?: T;
+  isDemo?: T;
+  state?: T;
+  contract?: T;
+  title?: T;
+  department?: T;
+  location?: T;
+  experience?: T;
+  availability?: T;
+  summary?: T;
+  missions?: T;
+  profile?: T;
+  publicationStatus?: T;
+  visibility?: T;
+  editorialOwner?: T;
+  internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

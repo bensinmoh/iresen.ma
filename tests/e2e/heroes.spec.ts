@@ -62,8 +62,10 @@ for (const locale of locales) {
   test(`${locale}: standard page heroes retain a working section link`, async ({ page }) => {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
-    // Contact follows its own approved split introduction and is covered in contact.spec.ts.
-    for (const id of pageIds.filter((pageId) => pageId !== 'contact' && pageId !== 'search')) {
+    // Contact and Careers have dedicated introductions covered by their own browser suites.
+    for (const id of pageIds.filter(
+      (pageId) => pageId !== 'contact' && pageId !== 'search' && pageId !== 'opportunities',
+    )) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()

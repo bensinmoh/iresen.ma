@@ -177,7 +177,7 @@ ul {
   border-color: var(--color-footer-divider);
 }
 
-body:has(.page-hero) .site-header-overlay {
+body:is(:has(.page-hero), :has([data-careers-page])) .site-header-overlay {
   position: absolute;
   inset-block-start: 0;
   inset-inline: 0;
@@ -563,6 +563,9 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  html:has([data-careers-page]) {
+    scroll-behavior: smooth;
+  }
   .glass-surface:focus-visible > .glass-reflection::before {
     animation: glass-reflection-pass var(--glass-reflection-duration) ease-out;
   }

@@ -442,3 +442,19 @@ are served under `/images/collaborate/`. These fictional explanatory scenes are
 owner-requested, not evidence of actual IRESEN people, infrastructure, partners
 or agreements. Each has explicit FR/EN/AR searchable provenance. Next Image's
 static local allowlist includes only the new scoped directory.
+
+## Careers Figma assets — 2026-10-10
+
+The owner commissioned the careers frame and supplied page/detail screenshots.
+[Scope](careers.md) maps its isolated photograph layers to served callsites;
+[dimensions, bytes and SHA-256 hashes](careers-assets.json) record the derivatives.
+The Figma connector exported photo layers at 1920×851, 825×800 and 1920×900.
+Quality-90 WebP conversions preserve their appearance, crop and mirroring; the
+three files total 402,512 bytes (hero 151,056 bytes). The owner later replaced the five PNG icons with lightweight inline SVG
+outlines; no raster icon files remain served. Shared
+approved SVG identity remains unchanged. This authorization is specific to this
+page's individual assets; no broader license, real employee identity or IRESEN
+workspace provenance is inferred. Full-page screenshots are not served. All three
+photographs have descriptive localized search references. Deleted demo content
+and obsolete raster-icon URLs are excluded.
+

@@ -1,0 +1,26 @@
+{
+  "source": "Figma file 0go8QANZAH73ed9AoCdHkf, frame 804:8705; live exports 2026-10-10",
+  "records": [
+    {
+      "file": "public/images/careers/environment.webp",
+      "bytes": 71036,
+      "width": 825,
+      "height": 800,
+      "sha256": "405f81febde0334003f1a16576c6ef839bace977e12d8dbe5f1f510ce5ed1905"
+    },
+    {
+      "file": "public/images/careers/hero.webp",
+      "bytes": 151056,
+      "width": 1920,
+      "height": 851,
+      "sha256": "b2a6e0e46ac91ded72c578c927e88116cdfc5f35323d474a2841b15bd5c1c767"
+    },
+    {
+      "file": "public/images/careers/internship.webp",
+      "bytes": 180420,
+      "width": 1920,
+      "height": 900,
+      "sha256": "ef5e53abcedde7b79416621c291fa13436ebbaff498d51cbc28491b38d0aae79"
+    }
+  ]
+}

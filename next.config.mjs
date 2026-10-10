@@ -6,6 +6,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  // Allow a production review build while the owner's development server keeps running.
+  distDir: process.env.NEXT_BUILD_DIRECTORY || '.next',
   poweredByHeader: false,
   reactStrictMode: true,
   images: {

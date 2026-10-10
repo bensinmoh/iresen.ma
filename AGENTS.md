@@ -198,3 +198,20 @@ and narrow full-height portrait strips in the two entry-point blocks. Licensed
 outline icons remain in the process/pathways; the entry-point icons are removed. Patent summaries and EN/AR
 copy remain editorial working texts. The workbook and excluded administrative
 fields are neither public assets nor repository imports. No deployment is authorized.
+
+## Careers page and dynamic database — 2026-10-10
+
+The owner commissioned the Figma careers page and opportunity database, then
+explicitly validated and requested removal of all four fictional offers. Their
+records, versions and search entries were deleted; fixture definitions, seed
+commands and mockup controls are removed. Do not reintroduce filler offers.
+See [scope](docs/careers.md). Only published, open, locale-approved complete
+records drive the list; the section remains visible with its designed empty state when no offer is eligible. FR/EN/AR adaptations
+remain working copy. Applications retain the local email-draft workflow;
+no applicant upload, online receipt or deployment is authorized.
+
+## Owner icon preference — 2026-10-10
+
+Use vector SVG icons, never PNG/JPEG icons, for future UI work. Follow the
+original color book and current approved shared color tokens; screenshot sample
+colors do not supersede them. Preserve original brand SVG geometry.
