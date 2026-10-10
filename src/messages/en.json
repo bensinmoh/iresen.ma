@@ -761,24 +761,32 @@
     },
     "media": {
       "featured-media": {
-        "title": "Featured media",
-        "description": "Content to add: a selection of authorised media with their subjects, dates and related links."
+        "title": "Explore the energy transition through images and resources.",
+        "description": "Photographs, films and reference documents to discover research, platforms and the energy transition ecosystem."
       },
       "find-media": {
-        "title": "Find media",
-        "description": "Content to add: search criteria by format, theme, event and platform."
+        "title": "Media library",
+        "description": "Photographs, films and reference documents to discover research, platforms and the energy transition ecosystem."
       },
       "collections-content": {
-        "title": "Collections and content",
-        "description": "Content to add: photographs, albums, videos, infographics and educational content suitable for publication."
+        "title": "Photo library",
+        "description": "Platforms Research & testing Projects Events Institution"
       },
       "press-resources": {
-        "title": "Press resources",
-        "description": "Content to add: the institutional kit, authorised logos and photos, their usage rules and the press contact."
+        "title": "Useful links",
+        "description": "Visit the institutions of Morocco’s energy ecosystem."
       },
       "credits-reuse": {
-        "title": "Credits and reuse",
-        "description": "Content to add: credits, rights, restrictions and accessible alternatives for each media item."
+        "title": "Credits & reuse",
+        "description": "Selection published at IRESEN’s request. File availability does not grant a reuse licence: please request the applicable credits and terms before editorial use."
+      },
+      "videos": {
+        "title": "Video library",
+        "description": "Films in their original language. Playback starts only when requested."
+      },
+      "reports": {
+        "title": "Reports & strategies",
+        "description": "External documents from the supplied reference folder. Original file titles and languages are retained."
       }
     },
     "opportunities": {
@@ -1740,5 +1748,46 @@
       "internship": "Reference photograph: a group talking in a shared workspace."
     },
     "searchText": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition."
+  },
+  "MediaLibrary": {
+    "label": "Media library",
+    "intro": "Explore the energy transition through images and resources.",
+    "description": "Photographs, films and reference documents to discover research, platforms and the energy transition ecosystem.",
+    "photos": "Photo library",
+    "videos": "Video library",
+    "reports": "Reports & strategies",
+    "links": "Useful links",
+    "all": "All photographs",
+    "open": "Enlarge",
+    "download": "Download image",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "source": "View document",
+    "sourceNote": "External documents from the supplied reference folder. Original file titles and languages are retained.",
+    "videoNote": "Films in their original language. Playback starts only when requested.",
+    "empty": "No videos are published in this language yet.",
+    "credits": "Credits & reuse",
+    "rights": "Selection published at IRESEN’s request. File availability does not grant a reuse licence: please request the applicable credits and terms before editorial use.",
+    "contact": "Request reuse terms",
+    "found": "photographs",
+    "categories": {
+      "platforms": "Platforms",
+      "research": "Research & testing",
+      "projects": "Projects",
+      "events": "Events",
+      "institution": "Institution"
+    },
+    "languages": {
+      "fr": "French",
+      "en": "English"
+    },
+    "linkNote": "Visit the institutions of Morocco’s energy ecosystem.",
+    "unavailable": "The video library is temporarily unavailable. Please try again later.",
+    "previousVideos": "Previous videos",
+    "nextVideos": "Next videos",
+    "heroTitle": "Media library — scientific resources illustration",
+    "heroDescription": "Generated illustration: reports, photographic prints of solar panels and laboratory equipment, and a camera on a table. An illustrative media-library scene, not an actual IRESEN location.",
+    "downloadVideo": "Download video"
   }
 }

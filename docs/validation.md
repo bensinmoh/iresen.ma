@@ -1,5 +1,34 @@
 # Foundation validation
 
+## Media-library development — 2026-10-10
+
+The existing media page presents twenty owner-approved supplied photos, the eight
+explicitly authorized local-CMS videos, ten Ministry PDF source links and five
+official destinations. The later owner refinements add a varied-size gallery,
+full-height video thumbnails opening a native player dialog, alternating large
+photo placement with Samir first, animated filters/native section links, a
+centered photo viewer with SVG controls and a shorter generated-photo hero without
+the missions strip. See [scope and provenance](media-library.md).
+
+Local lint, typecheck, production compilation and the unit suite pass. The
+CMS/search/careers integration suites pass all 26 checks against a disposable
+migrated database; only that temporary database is removed. Existing uploaded
+files, CMS accounts and source manifests are preserved. Browser checks cover
+FR/EN/AR at 320, 768 and 1440 pixels, category filtering, full portrait delivery,
+centered dialog, arrow keys, Escape/focus restoration, 200% text at 390 pixels,
+no-JavaScript source links and reduced-motion behavior. Scoped axe excludes the
+video-caption rule because the supplied originals have no reviewed subtitles;
+this does not claim full accessibility compliance. Actual local video delivery
+passes 24 anonymous 1KiB range checks (eight × three languages) with 206 responses
+and no-store caching, and a player decodes 1920×1080 and advances playback time.
+
+The local search index contains 20 photo references, 10 document references,
+five institutional links, one generated hero and eight CMS videos per locale.
+Video titles remain in their original language, as explicitly approved by the
+owner. Existing shared integration tests cover withdrawal/private/locale
+exclusion. No actual owner video is withdrawn or deleted during verification.
+Final whole-site content/glossary review and deployment remain separate.
+
 ## Publications ingestion — 2026-10-10
 
 Imported the owner's selected 1,181 counted bibliography rows, reference

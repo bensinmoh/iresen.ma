@@ -35,7 +35,7 @@ export const heroes = {
   news: { photo: 'solar-city', layout: 'start', stage: 'resources', related: 'events' },
   events: { photo: 'conference', layout: 'end', stage: 'resources', related: 'news' },
   publications: { photo: 'reading', layout: 'start', stage: 'resources', related: 'media' },
-  media: { photo: 'solar-detail', layout: 'center', stage: 'resources', related: 'publications' },
+  media: { photo: 'media-library', layout: 'center', stage: 'resources', related: 'publications' },
   opportunities: {
     photo: 'careers-onboarding',
     layout: 'start',

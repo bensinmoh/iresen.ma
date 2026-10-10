@@ -1,5 +1,17 @@
 # Design system and Figma reference
 
+## Médiathèque — 2026-10-10
+
+The media page reuses current shared tokens and signature/action corners with SVG navigation/document marks. Four desktop photo columns become two then one; native image links remain usable without JavaScript, with a keyboard-operated modal when available. Video controls are native; public upload bytes bypass persistent Next image caching. See [scope](media-library.md).
+
+The owner’s refinement adds an alternating photo mosaic with Samir first, a compact
+horizontal rail of full-height video thumbnails opening a native player dialog, animated section links, a centered icon-operated viewer
+and a shorter generated-photo hero without the missions band. Reduced motion is
+respected; the generated still-life is identified as illustrative in search and
+its provenance manifest.
+
+Photos now meet 1920px width or 1080px height and fill their frames, with Samir’s face centered. The viewer is capped at 80% of viewport width and height and fills its image stage. Download uses a downward SVG arrow; the larger video play control appears on hover or keyboard focus.
+
 ## Careers disclosure composition — 2026-10-10
 
 The [careers page](careers.md) uses shared identity, typography, section labels

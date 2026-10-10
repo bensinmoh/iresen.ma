@@ -135,6 +135,8 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'collections-content' },
     { id: 'press-resources' },
     { id: 'credits-reuse' },
+    { id: 'videos' },
+    { id: 'reports' },
   ],
   opportunities: [
     { id: 'open-opportunities' },

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "portrait-dg-iresen-samir-rachidi",
+    "src": "/images/media-library/portrait-dg-iresen-samir-rachidi.webp",
+    "category": "institution",
+    "title": {
+      "fr": "Samir Rachidi — Directeur général d’IRESEN",
+      "en": "Samir Rachidi — Director General of IRESEN",
+      "ar": "سمير رشيدي — المدير العام لـ IRESEN"
+    },
+    "width": 1024,
+    "height": 1536
+  },
+  {
+    "id": "gep-vue-aerienne",
+    "src": "/images/media-library/gep-vue-aerienne.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — vue aérienne",
+      "en": "Green Energy Park — aerial view",
+      "ar": "Green Energy Park — منظر جوي"
+    },
+    "width": 1920,
+    "height": 1440
+  },
+  {
+    "id": "gep-facade-batiment",
+    "src": "/images/media-library/gep-facade-batiment.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — façade",
+      "en": "Green Energy Park — façade",
+      "ar": "Green Energy Park — واجهة المبنى"
+    },
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "id": "gep-centrale-solaire-thermique",
+    "src": "/images/media-library/gep-centrale-solaire-thermique.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — centrale solaire thermique",
+      "en": "Green Energy Park — solar thermal plant",
+      "ar": "Green Energy Park — محطة شمسية حرارية"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "green-smart-building-park-vue-aerienne",
+    "src": "/images/media-library/green-smart-building-park-vue-aerienne.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green & Smart Building Park — vue aérienne",
+      "en": "Green & Smart Building Park — aerial view",
+      "ar": "Green & Smart Building Park — منظر جوي"
+    },
+    "width": 1920,
+    "height": 1440
+  },
+  {
+    "id": "gep-laboratoire-indoor-vue-ensemble",
+    "src": "/images/media-library/gep-laboratoire-indoor-vue-ensemble.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — laboratoire indoor",
+      "en": "Green Energy Park — indoor laboratory",
+      "ar": "Green Energy Park — المختبر الداخلي"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "caracterisation-materiaux",
+    "src": "/images/media-library/caracterisation-materiaux.webp",
+    "category": "research",
+    "title": {
+      "fr": "Caractérisation des matériaux",
+      "en": "Materials characterization",
+      "ar": "توصيف المواد"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "chimie-verte",
+    "src": "/images/media-library/chimie-verte.webp",
+    "category": "research",
+    "title": {
+      "fr": "Chimie verte en laboratoire",
+      "en": "Green chemistry in the laboratory",
+      "ar": "الكيمياء الخضراء في المختبر"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "electronique-assemblage",
+    "src": "/images/media-library/electronique-assemblage.webp",
+    "category": "research",
+    "title": {
+      "fr": "Assemblage électronique",
+      "en": "Electronics assembly",
+      "ar": "تجميع الدوائر الإلكترونية"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "cellules-pv-echantillons",
+    "src": "/images/media-library/cellules-pv-echantillons.webp",
+    "category": "research",
+    "title": {
+      "fr": "Échantillons de cellules photovoltaïques",
+      "en": "Photovoltaic cell samples",
+      "ar": "عينات الخلايا الكهروضوئية"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "essai-pv-simulateur-solaire",
+    "src": "/images/media-library/essai-pv-simulateur-solaire.webp",
+    "category": "research",
+    "title": {
+      "fr": "Essai photovoltaïque au simulateur solaire",
+      "en": "Photovoltaic testing with a solar simulator",
+      "ar": "اختبار كهروضوئي بمحاكي شمسي"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "essai-pv-exterieur-operateur",
+    "src": "/images/media-library/essai-pv-exterieur-operateur.webp",
+    "category": "research",
+    "title": {
+      "fr": "Essai photovoltaïque extérieur avec opérateur",
+      "en": "Outdoor photovoltaic testing",
+      "ar": "اختبار كهروضوئي خارجي"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "essai-charge-pv-operateur",
+    "src": "/images/media-library/essai-charge-pv-operateur.webp",
+    "category": "research",
+    "title": {
+      "fr": "Essai de charge photovoltaïque avec opérateur",
+      "en": "Photovoltaic mechanical load testing",
+      "ar": "اختبار الحمل الميكانيكي للوحدات الكهروضوئية"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "pilote-experimentation",
+    "src": "/images/media-library/pilote-experimentation.webp",
+    "category": "research",
+    "title": {
+      "fr": "Intervention sur un équipement pilote",
+      "en": "Work on pilot equipment",
+      "ar": "العمل على معدات تجريبية"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "propre-ma-pv-toitures",
+    "src": "/images/media-library/propre-ma-pv-toitures.webp",
+    "category": "projects",
+    "title": {
+      "fr": "PROPRE.ma — photovoltaïque en toiture",
+      "en": "PROPRE.ma — rooftop photovoltaics",
+      "ar": "PROPRE.ma — ألواح كهروضوئية على الأسطح"
+    },
+    "width": 1920,
+    "height": 1003
+  },
+  {
+    "id": "aquasolar-installation",
+    "src": "/images/media-library/aquasolar-installation.webp",
+    "category": "projects",
+    "title": {
+      "fr": "AquaSolar — installation",
+      "en": "AquaSolar — installation",
+      "ar": "AquaSolar — التجهيزات"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "moroccan-solar-race-challenge-2016",
+    "src": "/images/media-library/moroccan-solar-race-challenge-2016.webp",
+    "category": "events",
+    "title": {
+      "fr": "Moroccan Solar Race Challenge — 2016",
+      "en": "Moroccan Solar Race Challenge — 2016",
+      "ar": "Moroccan Solar Race Challenge — 2016"
+    },
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "world-ptx-summit-pleniere",
+    "src": "/images/media-library/world-ptx-summit-pleniere.webp",
+    "category": "events",
+    "title": {
+      "fr": "World Power-to-X Summit — plénière",
+      "en": "World Power-to-X Summit — plenary",
+      "ar": "World Power-to-X Summit — جلسة عامة"
+    },
+    "width": 1920,
+    "height": 1279
+  },
+  {
+    "id": "solar-decathlon-africa-village-solaire",
+    "src": "/images/media-library/solar-decathlon-africa-village-solaire.webp",
+    "category": "events",
+    "title": {
+      "fr": "Solar Decathlon Africa — village solaire",
+      "en": "Solar Decathlon Africa — solar village",
+      "ar": "Solar Decathlon Africa — القرية الشمسية"
+    },
+    "width": 1920,
+    "height": 1440
+  },
+  {
+    "id": "equipe-iresen-15-ans",
+    "src": "/images/media-library/equipe-iresen-15-ans.webp",
+    "category": "institution",
+    "title": {
+      "fr": "Équipe IRESEN — 15 ans",
+      "en": "IRESEN team",
+      "ar": "فريق IRESEN"
+    },
+    "width": 1920,
+    "height": 1280
+  }
+]
