@@ -1800,14 +1800,19 @@
       "oman": "Photographs of IRESEN’s participation in Oman Climate Week 2026.",
       "sweden": "IRESEN post about the Impact Pioneers ’26 MENA week in Sweden.",
       "istanbul": "IRESEN post about the Dii Desert Energy Leadership Summit in Istanbul.",
-      "majan": "IRESEN post about cooperation with the Majan Council."
+      "majan": "IRESEN post about cooperation with the Majan Council.",
+      "montpellier": "Group photograph published for the Cap sur le Maroc forum in Montpellier.",
+      "cop31": "Owner-provided COP31 reference image in Antalya illustrating the side events.",
+      "irsecx": "Owner-provided photograph from IRSEC’X 2025 illustrating the congress.",
+      "worldptx": "Official visual announcing the sixth World Power-to-X Summit in 2027."
     },
     "summaries": {
       "7514300639057797120": "In Oman Climate Week’s Masarat podcast, Samir Rachidi discusses local skills, knowledge transfer and support for ideas and startups to develop industrial solutions.",
       "7514335153415131136": "A week of shared learning and connections in Sweden through Impact Pioneers ’26 MENA.",
       "7514298051914588161": "Highlights from IRESEN’s participation in the Dii Desert Energy Leadership Summit in Istanbul, connecting clean energy, continents and markets.",
       "7510672994734727168": "In Muscat, discussions on climate action, green hydrogen and cooperation between Moroccan and Omani energy ecosystems.",
-      "7508575272049229824": "A new step in cooperation between IRESEN and the Majan Council for Foresight, Strategic Affairs and Energy."
+      "7508575272049229824": "A new step in cooperation between IRESEN and the Majan Council for Foresight, Strategic Affairs and Energy.",
+      "7504120625519583232": "In Montpellier, IRESEN joins the France–Morocco economic forum and discussions on a joint sustainable aviation fuel industry, alongside MGH Energy and Air Arabia."
     },
     "events": {
       "oman": {
@@ -1831,6 +1836,20 @@
         "place": "Morocco",
         "description": "The International Renewable Energy Congress brings together researchers, engineers and institutional stakeholders to discuss innovations in sustainable energy systems.",
         "detail": "Led by IRESEN alongside its historic partners, the congress covers renewables, energy efficiency, smart grids, storage, artificial intelligence and the water–energy nexus."
+      },
+      "dii": {
+        "name": "Dii Desert Energy Leadership Summit",
+        "meta": "29 September–1 October 2026",
+        "place": "Istanbul · Türkiye",
+        "description": "IRESEN takes part in the 16th edition, exploring connections between continents and clean-energy markets.",
+        "detail": "The summit brings energy stakeholders together to discuss Europe–MENA cooperation, low-emission hydrogen, storage and renewable integration. IRESEN’s participation is covered in its event highlights publication."
+      },
+      "worldptx": {
+        "name": "World Power-to-X Summit 2027",
+        "meta": "October 2027",
+        "place": "Morocco · venue to be confirmed",
+        "description": "The summit returns in 2027 with a biennial format aligned with the industrial scale-up of green hydrogen and Power-to-X in Morocco.",
+        "detail": "The sixth edition aims to connect Power-to-X value-chain stakeholders through partnerships, finance, infrastructure and industrial deployment. Technical and thematic meetings maintain engagement between editions. The venue, programme and speakers will be announced later."
       }
     },
     "newsPlaceholder": "News to come",
@@ -1838,7 +1857,15 @@
     "pendingContent": "Content pending",
     "placeholderDescription": "Details will be added soon.",
     "eventNavigation": "Event navigation",
-    "eventPosition": "Event {current} of {total}"
+    "eventPosition": "Event {current} of {total}",
+    "newsTitles": {
+      "7514335153415131136": "IRESEN takes part in the Impact Pioneers ’26 programme in Sweden.",
+      "7514300639057797120": "Samir Rachidi discusses how local expertise can support industrial development.",
+      "7514298051914588161": "IRESEN contributes to discussions at the Dii Leadership Summit in Istanbul.",
+      "7510672994734727168": "IRESEN strengthens dialogue on green hydrogen at Oman Climate Week.",
+      "7508575272049229824": "IRESEN and Majan Council establish a framework for energy cooperation.",
+      "7504120625519583232": "Cap sur le Maroc: cooperation on sustainable aviation fuels"
+    }
   },
   "MediaLibrary": {
     "label": "Media library",

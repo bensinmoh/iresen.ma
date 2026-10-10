@@ -13,6 +13,8 @@
 
 ## 2026-10-10 — Actualités & événements
 
+Owner content completion: replace the remaining news slot with Cap sur le Maroc, add Dii Summit participation and World Power-to-X Summit in October 2027, remove the final event slot and supply the COP31/IRSEC’X visuals. Five actual event cards and five mobile pills remain.
+
 Developed the combined news/events page and separate thumbnail listing with a shared hero. Generic news/events navigation targets their sections; legacy events paths redirect. Five selected LinkedIn sources, the Masarat podcast highlight, Oman participation, COP31 side events in preparation and IRSEC’X 2027 are included, along with five vector social links and localized search references. See [scope](docs/news-events.md). No deployment.
 
 ## 2026-10-10 — Médiathèque

@@ -10,8 +10,8 @@ instructions or publication approvals.
 ## Routes and visitor journeys
 
 The existing `news` page ID and its FR/EN/AR paths host the combined overview.
-`#news`, `#events`, `#follow-iresen`, `#knowledge-sharing`, the five `news-{activity}`
-anchors and `#event-oman`, `#event-cop31`, `#event-irsecx` are stable destinations.
+`#news`, `#events`, `#follow-iresen`, `#knowledge-sharing`, the six `news-{activity}`
+anchors and the five `#event-{id}` anchors (Oman, COP31, IRSEC’X, Dii and World Power-to-X) are stable destinations.
 The old news scaffold anchors are retained beside their replacement sections.
 `events` remains a compatibility ID; its old locale URLs redirect permanently to
 `news#events`. Generic news links use `pageLinkHref` to reach `news#news`.
@@ -24,8 +24,7 @@ CMS news slugs; publication and search exclude conflicting/invalid slugs.
 Existing news detail routes remain unchanged. Sitemap and search expose the
 listing and combined page, without indexing the former events page again.
 
-The five owner-selected LinkedIn notices are reused from the homepage, with the
-requested podcast first. The existing short localized headings/month dates are
+The five homepage notices retain the requested podcast first; the owner’s additional Cap sur le Maroc publication completes the five secondary news entries. Homepage selection stays unchanged. The existing short localized headings/month dates are
 preserved; no day is inferred from an activity URN. Links open the original
 publications rather than fabricated local full articles. Public CMS articles
 also appear with pagination, their existing publication/locale gates and unique
@@ -59,17 +58,15 @@ new CMS schema in this increment.
   congress scope and IRESEN's leadership alongside historic partners. Programme
   access uses the actual official website; no fictional registration is added.
 
-The owner’s follow-up adds one explicitly labelled pending news slot beside the
-four secondary sources, distributed along the featured article, and three
-pending event cards. They have no invented date, image, content or actionable
-link and are excluded as standalone search resources. The listing continues to
-contain real source notices and eligible CMS articles only.
+The later owner follow-up replaces all pending slots with sourced content: one highlighted notice plus five secondary notices and five actual event cards. The listing contains the six selected source notices and eligible CMS articles.
 
-Event cards distinguish participation from organisation/coorganisation. The six equal-height event cards use a native horizontal scroll track with
-three visible cards on desktop, two on tablet and one on small screens. The
-track accepts keyboard scrolling and keeps each event anchor reachable. Native
-keyboard-accessible disclosures show additional information. COP31 and IRSEC’X
-use typographic event panels rather than invented event photos or raster logos.
+- [Cap sur le Maroc](https://www.linkedin.com/feed/update/urn:li:activity:7504120625519583232/) was read in LinkedIn’s public guest view. Its source publication date is 11 September 2026; the display retains month-level dates. IRESEN’s contribution in Montpellier concerns a joint France–Morocco sustainable aviation fuel industry with MGH Energy and Air Arabia.
+- [Dii Summit](https://diisummit.org/) confirms 29 September–1 October 2026 in Istanbul. Participation is also supported by the existing IRESEN notice. The 2027 interest invitation on the same website does not change the edition of this participation record.
+- [IRESEN’s World Power-to-X announcement](https://mailchi.mp/iresen/world-power-to-x-summit-to-return-in-2027-with-a-biennial-format-aligned-with-moroccos-power-to-x-industrial-scale-up) confirms the 2027 return and biennial format. The owner specifies October 2027; the venue, programme and speakers remain to be announced. The source visual identifies its sixth edition and organisers.
+
+The five equal-height cards distinguish participation from organisation/coorganisation and scroll horizontally with three visible on desktop, two on tablet and one on mobile. Native keyboard-accessible disclosures expose further information; mobile navigation has one pill per actual event. No placeholder remains.
+
+The owner supplies the COP31 group visual and a photograph from IRSEC’X 2025. These are illustrations of the event cards, not evidence that the planned COP31 side events or IRSEC’X 2027 have occurred. Their localized alternative descriptions and public search metadata retain that distinction. Dii reuses its existing Istanbul visual; World Power-to-X uses the supplied announcement’s official banner. No event date is inferred from an image caption.
 
 ## Design and assets
 
@@ -117,4 +114,4 @@ reveal their corresponding card. Reduced motion disables smooth travel and
 width/color animation. With scripts disabled, native scrolling remains visible.
 The five social vector icons occupy a fixed, non-scrolling mobile row without
 visible labels or arrows; explicit accessible names preserve their identities.
-No route, content record or search projection is added.
+The later content completion adds one news notice, two event records and four public images with FR/EN/AR search references. Existing routes and publication gates remain.

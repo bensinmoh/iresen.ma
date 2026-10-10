@@ -3,7 +3,13 @@ import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { findPublicNewsCards, type PublicNewsCard } from '@/lib/content/news-cards'
-import { selectedNews, newsImages, newsEvents, newsSocialLinks } from '@/lib/news-events'
+import {
+  selectedNews,
+  newsImages,
+  eventImages,
+  newsEvents,
+  newsSocialLinks,
+} from '@/lib/news-events'
 import { linkedInPostHref } from '@/lib/home-news'
 import { pageHref, newsListingHref } from '@/lib/site'
 import { SocialIcon } from './SocialIcon'
@@ -22,13 +28,12 @@ export async function NewsEventsPage({
   page?: number
 }) {
   const t = await getTranslations({ locale, namespace: 'NewsEvents' })
-  const home = await getTranslations({ locale, namespace: 'HomeNews' })
   const news: Card[] = selectedNews.map((post) => {
     const id = post.id.split(':').at(-1)!
     const image = newsImages[id]
     return {
       id: `news-${id}`,
-      title: home(`posts.${id}.title`),
+      title: t(`newsTitles.${id}`),
       summary: t(`summaries.${id}`),
       href: linkedInPostHref(post.id),
       date: post.publicationMonth,
@@ -172,19 +177,6 @@ export async function NewsEventsPage({
                 <div>{article(news[0]!)}</div>
                 <div className={styles.sideNews}>
                   {news.slice(1).map((card) => article(card, true))}
-                  <article
-                    className={`${styles.compact} ${styles.placeholder}`}
-                    data-news-placeholder
-                  >
-                    <div className={styles.placeholderThumb} aria-hidden="true">
-                      <NavigationIcon name="arrow" />
-                    </div>
-                    <div className={styles.articleCopy}>
-                      <p className={styles.meta}>{t('pendingContent')}</p>
-                      <h3>{t('newsPlaceholder')}</h3>
-                      <p>{t('placeholderDescription')}</p>
-                    </div>
-                  </article>
                 </div>
               </div>
             )}
@@ -259,37 +251,21 @@ export async function NewsEventsPage({
                   locale={locale}
                   label={t('eventTitle')}
                   navigationLabel={t('eventNavigation')}
-                  itemLabels={[
-                    ...newsEvents.map(
-                      (event, index) =>
-                        `${t('eventPosition', { current: index + 1, total: 6 })} — ${t(`events.${event.id}.name`)}`,
-                    ),
-                    ...[1, 2, 3].map(
-                      (number) =>
-                        `${t('eventPosition', { current: number + 3, total: 6 })} — ${t('eventPlaceholder')}`,
-                    ),
-                  ]}
+                  itemLabels={newsEvents.map(
+                    (event, index) =>
+                      `${t('eventPosition', { current: index + 1, total: newsEvents.length })} — ${t(`events.${event.id}.name`)}`,
+                  )}
                 >
                   {newsEvents.map((event) => (
                     <article key={event.id} id={`event-${event.id}`} className={styles.eventCard}>
-                      {event.id === 'oman' ? (
-                        <div className={styles.eventMedia}>
-                          <Image
-                            src="/images/news/oman.webp"
-                            alt={t('photos.oman')}
-                            fill
-                            sizes="(max-width: 800px) 100vw, 32vw"
-                          />
-                        </div>
-                      ) : (
-                        <div
-                          className={`${styles.eventPoster} ${event.id === 'irsecx' ? styles.irsecx : ''}`}
-                          aria-hidden="true"
-                        >
-                          <span>{event.id === 'cop31' ? 'COP31' : 'IRSEC’X'}</span>
-                          <span>{event.id === 'cop31' ? 'MENALINKS · LEAP' : '2027'}</span>
-                        </div>
-                      )}
+                      <div className={styles.eventMedia}>
+                        <Image
+                          src={eventImages[event.id].src}
+                          alt={t(`photos.${eventImages[event.id].altKey}`)}
+                          fill
+                          sizes="(max-width: 800px) 100vw, 32vw"
+                        />
+                      </div>
                       <div className={styles.eventCopy}>
                         <p className={styles.role}>{t(event.role)}</p>
                         <h3>{t(`events.${event.id}.name`)}</h3>
@@ -332,22 +308,6 @@ export async function NewsEventsPage({
                             )}
                           </div>
                         </details>
-                      </div>
-                    </article>
-                  ))}
-                  {[1, 2, 3].map((number) => (
-                    <article
-                      className={`${styles.eventCard} ${styles.eventPlaceholder}`}
-                      key={number}
-                      data-event-placeholder
-                    >
-                      <div className={styles.placeholderPoster} aria-hidden="true">
-                        <span>0{number}</span>
-                      </div>
-                      <div className={styles.eventCopy}>
-                        <p className={styles.role}>{t('pendingContent')}</p>
-                        <h3>{t('eventPlaceholder')}</h3>
-                        <p>{t('placeholderDescription')}</p>
                       </div>
                     </article>
                   ))}

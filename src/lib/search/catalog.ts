@@ -1,6 +1,13 @@
+import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
-import { selectedNews, newsEvents, newsImages, newsSocialLinks } from '@/lib/news-events'
+import {
+  selectedNews,
+  newsEvents,
+  newsImages,
+  eventImages,
+  newsSocialLinks,
+} from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
 import { engagementSearchText } from '@/lib/engagement'
@@ -83,6 +90,20 @@ const assetLabels = {
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   {
+    id: 'publications-hero',
+    url: '/images/publications/hero.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Publications.label,
+          description: messages[locale].Publications.description,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  {
     id: 'library-hero',
     url: '/images/media-library/media-library-hero.webp',
     type: 'media',
@@ -125,7 +146,9 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title:
-            messages[locale].HomeNews.posts[id as keyof typeof messages.fr.HomeNews.posts].title,
+            messages[locale].NewsEvents.newsTitles[
+              id as keyof typeof messages.fr.NewsEvents.newsTitles
+            ],
           description:
             messages[locale].NewsEvents.photos[
               image.altKey as keyof typeof messages.fr.NewsEvents.photos
@@ -134,6 +157,26 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   })),
+  ...Object.entries(eventImages)
+    .filter(
+      ([, image]) => !Object.values(newsImages).some((newsImage) => newsImage.src === image.src),
+    )
+    .map(([id, image]) => ({
+      id: `news-event-image-${id}`,
+      url: image.src,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => [
+          locale,
+          {
+            title:
+              messages[locale].NewsEvents.events[id as keyof typeof messages.fr.NewsEvents.events]
+                .name,
+            description: messages[locale].NewsEvents.photos[image.altKey],
+          },
+        ]),
+      ) as PublicAssetReference['text'],
+    })),
   ...newsSocialLinks
     .filter((social) => ['facebook', 'instagram', 'researchgate'].includes(social.id))
     .map((social) => ({
@@ -585,6 +628,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.summaries),
           ...engagementSearchText(catalog.NewsEvents.events),
         )
+      if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')
         body.push(
@@ -836,6 +880,27 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       url: pageHref('transfer', locale, 'ismart-example'),
       type: 'section',
     })
+    for (const publication of publications) {
+      documents.push({
+        id: `publication:${publication.id}:${locale}`,
+        locale,
+        title: publication.title,
+        body: [
+          catalog.Publications.articles,
+          publication.authors,
+          publication.year,
+          publication.doiUrl,
+          publication.theme,
+          publication.journal,
+          publication.type,
+          ...titleTopics(publication.title).map((id) => catalog.Publications.topics[id]),
+        ]
+          .filter(Boolean)
+          .join(' '),
+        url: `${pageHref('publications', locale)}?publication=${encodeURIComponent(publication.id)}#${publicationAnchor(publication.id)}`,
+        type: 'publication',
+      })
+    }
     for (const patent of patents) {
       documents.push({
         id: `section:transfer:patent-${patent.reference}:${locale}`,
@@ -914,7 +979,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       documents.push({
         id: `section:news:linkedin:${post.id}:${locale}`,
         locale,
-        title: catalog.HomeNews.posts[key].title,
+        title: catalog.NewsEvents.newsTitles[key],
         body: `IRESEN LinkedIn ${catalog.NewsEvents.summaries[key]}`,
         url: pageHref('news', locale, `news-${key}`),
         type: 'news',

@@ -3019,6 +3019,10 @@ zoom regression prompted a page-scoped long-text wrapping guard and verification
 after fonts settle. Repeated Arabic zoom coverage identified compact-news link overflow; viewport-based thumbnail spacing and shrinkable link text address it without clipping content.
 Final CI results are recorded in the task PR; no deployment is authorized.
 
+## News and event content completion — 2026-10-10
+
+The owner’s final secondary news source and the two additional events replace all placeholders. Public guest/official sources establish Cap sur le Maroc, Dii’s 2026 Istanbul edition and the World Power-to-X 2027 return; October is owner-specified, with venue/programme unconfirmed. COP31 and IRSEC’X illustration metadata distinguish reference imagery from completed future events. Four source/derivative hashes and explicit FR/EN/AR news/event/media search references are registered. Browser checks now assert six notices, five actual events and five pills. Local and CI verification results are recorded in the task PR; no deployment is authorized.
+
 ## News events — 2026-10-10
 
 Implemented the combined overview, separate thumbnail listing with the same

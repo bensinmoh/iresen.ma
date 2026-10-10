@@ -87,8 +87,8 @@ See [scope](collaborate-page.md).
 The owner commissioned the combined news/events page and its thumbnail listing
 with a shared hero. Existing news paths host the overview; former events paths
 redirect to its events anchor. Navigation news links reach its news anchor;
-“All news” reaches the localized child listing. Five selected LinkedIn notices,
-three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
+“All news” reaches the localized child listing. Six selected LinkedIn notices,
+five role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027, Dii Summit 2026 and World Power-to-X Summit 2027), vector
 social links, shared physical two-rounded/two-sharp corners and localized search
 references are included. FR/EN/AR copy remains working editorial text. No deployment
 or publication-gate change is authorized. See [scope](news-events.md).
