@@ -1,6 +1,7 @@
 import { homeAchievements } from '@/lib/home-achievements'
 import { homePlatforms } from '@/lib/home-platforms'
 import { researchThemes } from '@/lib/home-research'
+import { homeMissions, homeCooperationAnchor } from '@/lib/home-missions'
 import type { PageId } from '@/lib/site'
 
 export type SectionDefinition = {
@@ -15,7 +16,10 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   home: [
     {
       id: 'develop-test-transfer',
-      children: [{ id: 'mission-develop' }, { id: 'mission-test' }, { id: 'mission-transfer' }],
+      children: [
+        ...homeMissions.map(({ anchor }) => ({ id: anchor })),
+        { id: homeCooperationAnchor },
+      ],
     },
     { id: 'figures' },
     { id: 'results', children: homeAchievements.map(({ id }) => ({ id: `achievement-${id}` })) },

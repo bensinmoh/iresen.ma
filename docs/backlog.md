@@ -119,3 +119,12 @@ implemented; no body placeholder remains. See [scope](home-achievements.md).
 Final copy/translation review, Alliances and future CMS case-management remain
 open. The final-content search sanity check in [search](search.md#final-content-search-sanity-check)
 is still due once all website content is in place.
+
+## New narrative editorial follow-up — 2026-10-10
+
+Whole-site introductory/scaffold alignment and mission design follow the
+[new narrative](narrative-alignment.md). Complete Phase III page writing remains
+pending supported cases, actual capacity/access conditions, figure periods and
+per-locale editorial review. Confirm the proposed convention status separately.
+The owner's §4.4 correction resolves the duplicated cooperation text. Retain the
+final multilingual glossary/index sanity check after complete content delivery.

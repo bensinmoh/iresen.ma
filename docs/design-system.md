@@ -1,5 +1,19 @@
 # Design system and Figma reference
 
+## Mission quotation and common enabler — 2026-10-10
+
+The current mission introduction uses the shared Apex Leaf section label as its
+h2 and a full-available-width, start-aligned blockquote (fluid 20–32px at default
+root size, regular weight, 1.38 line height). Arabic uses natural tracking and 1.4
+line height. The owner’s later refinement reduces its size and compacts its rhythm;
+a separate blue opening quotation mark and a fine lower rule give it editorial
+structure without an enclosing card. French uses guillemets. Three contribution cards retain the existing photographic family.
+The shorter navy cooperation band spans their outer edges, with title, explanatory
+copy and one canonical link. It stacks internally below 64rem and grows with text.
+This is a local mission composition, with no new shared tokens or universal quote
+requirement. The former mission-design deferral is superseded. See
+[the narrative alignment](narrative-alignment.md).
+
 ## Homepage section labels — 2026-10-09
 
 Use the domains label as the owner's selected reference for the homepage mission

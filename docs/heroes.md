@@ -20,8 +20,9 @@ full-scene photographic backgrounds. The former split treatment is removed.
 Each introduction contains one title, a
 short descriptive sentence, an anchor to its content sections and one related
 page. The homepage's narrow blue band now displays five owner-supplied key figures.
-Other pages link the approved **Développer · Éprouver · Valoriser** reading
-framework; institute additionally shows the established 2011 founding year,
+Since the new 2026-10-10 narrative, other pages link the three contribution
+domains: studies/expertise, research/innovation and skills/capabilities. These
+use existing programme/network destinations and supported section anchors; institute additionally shows the established 2011 founding year,
 already supported by the existing institutional footer source.
 
 The initial implementation omitted historical mockup statistics and certification.

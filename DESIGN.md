@@ -1,5 +1,18 @@
 # IRESEN visual direction
 
+## Homepage contribution domains — 2026-10-10
+
+The owner now commissions the previously deferred mission-statement design.
+A full-width, start-aligned editorial quotation uses fluid 20–32px regular text
+and compact 1.38 Latin/1.4 Arabic line height, a separate blue quote mark and a
+fine lower rule, following the owner’s later size/line-height correction. It is followed by
+three photographic contribution cards and a shorter navy cooperation band
+aligned to the outer card edges. R&I alone carries Développer · Éprouver · Valoriser.
+The existing type roles, photo shading, hover/focus feedback, original SVGs and
+physical signature corners remain; the quote/band reflow naturally in Arabic and
+at enlarged text sizes. See [scope and narrative](docs/narrative-alignment.md).
+Earlier centred-mission and design-deferral descriptions are historical.
+
 ## Homogeneous homepage section labels — 2026-10-09
 
 The owner selected the current domains label as the reference for the mission

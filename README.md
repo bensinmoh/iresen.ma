@@ -1,5 +1,12 @@
 # IRESEN website
 
+The [new narrative alignment](docs/narrative-alignment.md) introduces three
+contribution domains and a shared cooperation enabler. The homepage now presents
+a full-width mission quotation, three domain cards and a shorter cooperation
+band. Interior introductions, header/footer orientation and affected FR/EN/AR
+scaffolds/search references follow this framework. Earlier deferrals below are
+historical; complete Phase III copy and final editorial review remain pending.
+
 The homepage now includes a compact light [innovation pathway](docs/home-innovation.md) between research domains and platforms, linking to valorisation and transfer. The existing hero figures remain.
 
 Development foundation for IRESEN's French, English and Arabic institutional website. It provides a public locale shell, Payload CMS and PostgreSQL with introductory page heroes, honest empty content sections and a composed contact page. Read [instruction.md](instruction.md) for the development brief and [backlog](docs/backlog.md) for current scope and follow-up work.

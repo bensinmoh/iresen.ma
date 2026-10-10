@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { heroes } from '@/lib/heroes'
 import { homeFigures } from '@/lib/figures'
+import { homeMissions } from '@/lib/home-missions'
 import { pageHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { HeroViewport } from './HeroViewport'
@@ -12,11 +13,6 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
   const t = await getTranslations({ locale, namespace: 'Hero' })
   const titles = await getTranslations({ locale, namespace: 'Pages' })
   const definition = heroes[pageId]
-  const pathways = [
-    { key: 'develop', page: 'programmes' },
-    { key: 'test', page: 'platforms' },
-    { key: 'transfer', page: 'transfer' },
-  ] as const
 
   return (
     <HeroViewport
@@ -99,13 +95,9 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
               </p>
             )}
             <nav aria-label={t('pathways')} className="hero-pathways">
-              {pathways.map(({ key, page }) => (
-                <a
-                  key={key}
-                  href={pageHref(page, locale)}
-                  className={definition.stage === key ? 'hero-pathway-active' : undefined}
-                >
-                  <span>{t(`stages.${key}`)}</span>
+              {homeMissions.map(({ id, pageId, destinationAnchor }) => (
+                <a key={id} href={pageHref(pageId, locale, destinationAnchor)}>
+                  <span>{t(`domains.${id}`)}</span>
                   <NavigationIcon name="arrow" />
                 </a>
               ))}

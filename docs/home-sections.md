@@ -1,5 +1,15 @@
 # Homepage mission cards and section navigation
 
+## Current mission composition — 2026-10-10
+
+The [new narrative and owner request](narrative-alignment.md) supersede the stage
+cards and the statement-design deferral below. A full-width quotation precedes
+Études & Expertise, Recherche & Innovation and Compétences & Capacités. A shorter
+Coopération & Rayonnement band spans all three. Their four descriptive anchors,
+canonical destinations and retained legacy URLs are documented in that analysis.
+The current six-section navigation order is missions, achievements, research,
+platforms, collaboration, news. Earlier sequences below describe prior revisions.
+
 The owner's 9 October 2026 request adds a homepage-only submenu immediately after
 the existing five figures, followed by the three mission blocks. The live
 [homepage reference](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-5998)

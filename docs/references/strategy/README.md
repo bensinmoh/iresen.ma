@@ -1,5 +1,16 @@
 # Institutional strategy and website references
 
+## Latest Phase I narrative — received 2026-10-10
+
+The owner supplied `IRESEN_Phase_01_Narratif.docx` from a local `Narratif Nouveau`
+directory. It supersedes N1 as the current narrative: three contribution domains,
+one shared cooperation/outreach enabler, with Développer · Éprouver · Valoriser
+inside R&I. The owner's direct §4.4 correction supersedes duplicated source text.
+See [source fingerprint, analysis and authorized site changes](../../narrative-alignment.md).
+The private original is read locally and is not newly imported into the repository
+or public search. The three originals below remain byte-identical historical
+references; N2/S's older framework is not the current narrative authority.
+
 Received and analyzed on 2026-10-08. The owner requested that these three DOCX
 files be included in the repository as references and explicitly clarified that
 the website structure contains **recommendations and suggestions, not a final

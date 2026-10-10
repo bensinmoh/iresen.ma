@@ -17,6 +17,7 @@ import {
 import type { SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
+import { homeMissions, legacyMissionAnchors, homeCooperationAnchor } from '@/lib/home-missions'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
 import fr from '@/messages/fr.json'
@@ -173,6 +174,39 @@ describe('search request validation', () => {
 })
 
 describe('explicit public search catalog', () => {
+  it.each(contentLocales)(
+    '%s: discovers the three domains and shared enabler at rendered anchors',
+    (locale) => {
+      const copy = { fr, en, ar }[locale]
+      const documents = staticSearchDocuments().filter((document) => document.locale === locale)
+      for (const anchor of [
+        ...homeMissions.map((mission) => mission.anchor),
+        homeCooperationAnchor,
+      ]) {
+        const document = documents.find(({ id }) => id === `section:home:${anchor}:${locale}`)
+        expect(document).toMatchObject({
+          type: 'section',
+          url: pageHref('home', locale, anchor),
+          title: copy.PageSections.home[anchor as keyof typeof copy.PageSections.home].title,
+        })
+        expect(document?.body).toContain(
+          copy.PageSections.home[anchor as keyof typeof copy.PageSections.home].description,
+        )
+      }
+      for (const anchor of legacyMissionAnchors) {
+        expect(documents.some(({ id }) => id === `section:home:${anchor}:${locale}`)).toBe(false)
+        expect(pageHref('home', locale, anchor)).toBe(`${pageHref('home', locale)}#${anchor}`)
+      }
+      expect(
+        documents.some(({ url }) => /narratif|narrative-alignment|private-references/.test(url)),
+      ).toBe(false)
+      for (const mission of homeMissions) {
+        expect(pageHref(mission.pageId, locale, mission.destinationAnchor)).not.toContain(
+          'undefined',
+        )
+      }
+    },
+  )
   it.each(contentLocales)(
     '%s: indexes current contact guidance and destinations without withdrawn editorial scaffolds',
     (locale) => {
