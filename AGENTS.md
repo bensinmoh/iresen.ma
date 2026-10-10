@@ -166,3 +166,7 @@ canonical routes, legacy anchors, supplied claims and imagery provenance. Other
 summaries/AR translations remain working copy; complete Phase III drafting,
 Alliances and final editorial review remain deferred. The new private DOCX is not
 an authorized public download or newly imported repository original.
+
+## Collaboration and valorisation update — 2026-10-10
+
+The owner commissioned development of the existing workWithUs and transfer pages, preserving their six-section anchors. See [scope](docs/collaboration-transfer-pages.md). FR/EN/AR are working editorial copy. Existing references do not establish commercial adoption; contact retains its local email-draft workflow. Routes, public CMS gates and publication approval remain unchanged.

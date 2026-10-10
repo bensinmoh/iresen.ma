@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto'
+import { engagementSearchText } from '@/lib/engagement'
 
 import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
@@ -403,6 +404,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         continue
       }
       const body = [catalog.Hero.descriptions[pageId], catalog.Hero.stages[heroes[pageId].stage]]
+      if (pageId === 'workWithUs' || pageId === 'transfer') {
+        body.push(...engagementSearchText(catalog.Engagement[pageId]))
+        body.push(...engagementSearchText(catalog.PageSections[pageId]))
+      }
       if (pageId === 'home') {
         body.push(
           catalog.HomeAchievements.title,
@@ -478,6 +483,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'workWithUs' || pageId === 'transfer') {
+            const engagementCopy = catalog.Engagement[pageId].sections as Record<string, unknown>
+            body.push(...engagementSearchText(engagementCopy[entry.id]))
+          }
           if (pageId === 'home' && entry.id === homeAchievementsSectionId)
             body.push(
               ...Object.values(catalog.HomeAchievements.items).flatMap((item) => [

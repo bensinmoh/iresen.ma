@@ -460,54 +460,54 @@
     },
     "transfer": {
       "results-to-transfer": {
-        "title": "Les résultats à valoriser",
-        "description": "À prévoir : les résultats diffusables, leurs applications, leur maturité et les possibilités de partenariat."
+        "title": "Valoriser, c’est rendre les résultats utiles",
+        "description": "La valeur d’un résultat dépend de ce qu’il permet de comprendre, de décider, de pratiquer ou de développer. Elle ne se limite pas à une commercialisation."
       },
       "research-to-use": {
-        "title": "De la recherche à l’utilisation",
-        "description": "À prévoir : développer, éprouver et valoriser au sein de Recherche & Innovation, avec des retours entre essais et usages ; tous les projets ne suivent pas toutes les étapes et la commercialisation n’est pas garantie."
+        "title": "Relier les travaux aux usages, avec des retours",
+        "description": "Développer, éprouver et valoriser sont des fonctions de Recherche & Innovation. Chaque résultat suit les étapes utiles à son besoin et à son niveau de maturité."
       },
       "transfer-pathways": {
-        "title": "Les voies de transfert",
-        "description": "À prévoir : les voies de licence, de codéveloppement, de création d’entreprise et d’adoption effectivement possibles."
+        "title": "Choisir une voie selon le résultat et son usage",
+        "description": "Diffusion, travail commun, transfert technologique ou initiative entrepreneuriale : les possibilités s’examinent au cas par cas."
       },
       "intellectual-property": {
-        "title": "Propriété intellectuelle et confidentialité",
-        "description": "À prévoir : les principes de gestion des droits, de partage et de discussion confidentielle."
+        "title": "Cadrer les droits et les échanges",
+        "description": "La propriété intellectuelle (PI), les contributions et la confidentialité font partie du travail de cadrage, avec les interlocuteurs compétents."
       },
       "adoption-initiatives": {
-        "title": "Résultats repris et initiatives",
-        "description": "À prévoir : les cas documentés de valorisation avec les contributions, le stade et l’utilisation attestée."
+        "title": "Explorer des réalisations, comprendre leur stade",
+        "description": "Les réalisations de l’accueil illustrent la diversité des résultats et des applications. Elles constituent des points de départ pour une lecture documentée."
       },
       "build-transfer": {
-        "title": "Construire un transfert",
-        "description": "À prévoir : les informations initiales sur le résultat, le besoin, l’usage visé et la maturité."
+        "title": "Construire la prochaine étape",
+        "description": "Vous disposez d’un résultat de recherche ou d’un besoin d’utilisation ? Préparez une première description pour examiner les suites possibles."
       }
     },
     "workWithUs": {
       "choose-pathway": {
-        "title": "Choisir un parcours",
-        "description": "À prévoir : les besoins d’études et d’expertise, de recherche et d’innovation, de compétences et de capacités, avec la coopération comme levier commun."
+        "title": "Partir de votre besoin, construire une contribution utile",
+        "description": "Une question à éclairer, une solution à faire progresser ou des compétences à renforcer : le point de départ est le besoin et l’usage visé."
       },
       "organisation-contributions": {
-        "title": "Les apports selon votre organisation",
-        "description": "À prévoir : la valeur pour les institutions, les entreprises, les équipes de recherche, les territoires et les partenaires internationaux, sans promettre des services ou des financements."
+        "title": "Un travail commun, des apports complémentaires",
+        "description": "Une collaboration se construit avec les connaissances du terrain, les capacités scientifiques et les ressources de chacun."
       },
       "collaboration-arrangements": {
-        "title": "Modalités de collaboration",
-        "description": "À prévoir : les formes de collaboration, les engagements respectifs et les conditions à cadrer."
+        "title": "Choisir une forme de coopération adaptée",
+        "description": "Le format suit le travail à accomplir. Il se précise avec les équipes concernées, sans présumer de l’ouverture d’un service ou d’un financement."
       },
       "need-to-project": {
         "title": "Du besoin au projet commun",
-        "description": "À prévoir : les étapes de premier contact, de qualification, de cadrage et de formalisation."
+        "description": "Quatre repères pour préparer un travail partagé. Le parcours s’adapte à la nature et à la maturité de votre demande."
       },
       "collaboration-references": {
-        "title": "Collaborations et références",
-        "description": "À prévoir : des collaborations documentées avec les besoins, les partenaires, les contributions et les réalisations."
+        "title": "Des contributions à découvrir",
+        "description": "Les réalisations présentées sur l’accueil donnent des points d’entrée concrets pour comprendre la diversité des contributions."
       },
       "prepare-discussion": {
-        "title": "Préparer le premier échange",
-        "description": "À prévoir : les informations sur l’organisation, le besoin, l’application, le calendrier et la capacité recherchée."
+        "title": "Présentez le besoin et le contexte",
+        "description": "Une première description claire permet de préparer la discussion et d’identifier les contributions à examiner."
       }
     },
     "news": {
@@ -1337,5 +1337,247 @@
     },
     "searchText": "Chaîne de valeur de l’innovation : besoins nationaux, anticipation, idéation, programmation de la recherche, du développement et de l’innovation (R&D&I), soutien, montée en puissance, expérimentation, démonstration, maturation, valorisation, transfert, adoption et évaluation de l’impact. Dans Recherche & Innovation, développer, éprouver et valoriser relient les besoins aux usages, avec des retours entre les travaux. Un parcours adaptable : chaque projet suit les étapes utiles à son besoin.",
     "label": "Repères du parcours de recherche et d’innovation"
+  },
+  "Engagement": {
+    "navigation": "Explorer cette page",
+    "contactAction": "Préparer un échange",
+    "referenceAction": "Voir la réalisation",
+    "workWithUs": {
+      "sections": {
+        "choose-pathway": {
+          "label": "Votre besoin",
+          "items": [
+            {
+              "title": "Éclairer une décision",
+              "description": "Confronter une question aux connaissances, aux données et aux options technologiques. Précisez le contexte, les choix à préparer et les acteurs concernés."
+            },
+            {
+              "title": "Faire avancer une solution",
+              "description": "Relier une question de recherche à des travaux, des essais ou une expérimentation. Situez ce qui existe déjà et les incertitudes qu’il reste à lever."
+            },
+            {
+              "title": "Renforcer les compétences",
+              "description": "Partager des méthodes et des savoir-faire, apprendre par la recherche et la pratique. Identifiez les publics, les compétences recherchées et les situations d’application."
+            },
+            {
+              "title": "Préparer l’utilisation d’un résultat",
+              "description": "Explorer la maturation, la valorisation ou le transfert au sein de Recherche & Innovation. Présentez le résultat, son stade et les usages envisagés."
+            }
+          ],
+          "note": "Ces entrées se complètent. Les expertises, les moyens et les partenaires à mobiliser dépendent du besoin, des capacités disponibles et du cadre de collaboration.",
+          "checklist": []
+        },
+        "organisation-contributions": {
+          "label": "Vos contributions",
+          "items": [
+            {
+              "title": "Entreprises et industriels",
+              "description": "Apporter un problème d’usage, des contraintes de procédé, des données partageables et un terrain d’expérimentation. Le travail commun cherche à préciser les options et les conditions de mise en œuvre."
+            },
+            {
+              "title": "Équipes de recherche",
+              "description": "Apporter une question scientifique, des méthodes et des compétences. Définir ensemble les travaux, les moyens expérimentaux et la manière de documenter les résultats."
+            },
+            {
+              "title": "Institutions et territoires",
+              "description": "Partager un besoin de décision, les caractéristiques du territoire et les acteurs concernés. Relier l’analyse et la recherche aux conditions locales d’application."
+            },
+            {
+              "title": "Partenaires et bailleurs",
+              "description": "Mettre en relation des équipes et contribuer aux ressources, aux connaissances ou à la coopération. Préciser les rôles, les objectifs communs et les contributions de chaque partenaire."
+            }
+          ],
+          "checklist": []
+        },
+        "collaboration-arrangements": {
+          "label": "Le cadre",
+          "items": [
+            {
+              "title": "Recherche collaborative",
+              "description": "Articuler objectifs scientifiques, contributions des partenaires, moyens, résultats attendus et modalités de suivi dans un projet ou un programme."
+            },
+            {
+              "title": "Expertise et moyens partagés",
+              "description": "Examiner les besoins d’analyse, d’essais, d’expérimentation ou de formation et les conditions de mobilisation des compétences et des infrastructures."
+            },
+            {
+              "title": "Réseaux et échanges",
+              "description": "Connecter les acteurs par les partenariats, les réseaux, les échanges institutionnels et les événements. Le World Power-to-X Summit et IRSEC’X illustrent ces modalités selon les objectifs poursuivis."
+            }
+          ],
+          "note": "Le périmètre, les responsabilités, les ressources, le calendrier, les conditions d’accès et les règles de partage des résultats sont à cadrer avant d’engager le travail.",
+          "checklist": []
+        },
+        "need-to-project": {
+          "label": "Construire ensemble",
+          "items": [
+            {
+              "title": "Clarifier le besoin",
+              "description": "Identifier le problème, les utilisateurs ou bénéficiaires, le contexte d’application et la décision ou le résultat recherché."
+            },
+            {
+              "title": "Examiner les contributions",
+              "description": "Mettre en regard les compétences, les données, les moyens et les partenaires utiles. Repérer les incertitudes, les contraintes et les disponibilités à confirmer."
+            },
+            {
+              "title": "Cadrer le travail",
+              "description": "Définir les objectifs, les tâches, les livrables, les ressources et les critères de suivi, en distinguant résultats attendus et effets à mesurer."
+            },
+            {
+              "title": "Formaliser et apprendre",
+              "description": "Préciser le cadre de collaboration, puis documenter les travaux, l’utilisation des résultats et les enseignements à partager."
+            }
+          ],
+          "note": "Ces repères ne constituent pas une procédure d’admission. Les conditions d’un appel à projets ou d’un dispositif particulier restent propres à ce dispositif.",
+          "checklist": []
+        },
+        "collaboration-references": {
+          "label": "Repères",
+          "items": [
+            {
+              "title": "Cartographie",
+              "description": "Un exemple de contribution à l’aide à la décision : la cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques."
+            },
+            {
+              "title": "WorldPtX Summit",
+              "description": "Un exemple de mise en relation et d’échanges autour du Power-to-X. La rencontre est un moyen de coopération ; ses résultats se documentent selon les objectifs poursuivis."
+            }
+          ],
+          "note": "Une référence se lit avec son besoin, les rôles des partenaires et son stade. Elle ne garantit pas qu’un dispositif équivalent soit disponible pour toute nouvelle demande.",
+          "checklist": []
+        },
+        "prepare-discussion": {
+          "label": "Premier échange",
+          "items": [],
+          "note": "Commencez par une synthèse non confidentielle. Le partage de documents sensibles et les conditions du travail se précisent ensuite avec les interlocuteurs concernés.",
+          "checklist": [
+            "Votre organisation, votre rôle et les partenaires déjà associés.",
+            "Le problème à traiter, les publics concernés et l’application visée.",
+            "Les travaux déjà réalisés, les résultats disponibles et les incertitudes restantes.",
+            "Les compétences, les moyens ou les formes de coopération recherchés.",
+            "Les contraintes de calendrier, de terrain, de données et de ressources à discuter."
+          ]
+        }
+      }
+    },
+    "transfer": {
+      "sections": {
+        "results-to-transfer": {
+          "label": "Les résultats",
+          "items": [
+            {
+              "title": "Connaissances et méthodes",
+              "description": "Des résultats scientifiques, des protocoles et des méthodes peuvent être partagés, repris ou adaptés pour faire progresser d’autres travaux."
+            },
+            {
+              "title": "Technologies et prototypes",
+              "description": "Un équipement, un procédé ou un prototype ouvre des usages possibles. Ses performances, ses limites et son stade réel doivent être explicités."
+            },
+            {
+              "title": "Compétences et savoir-faire",
+              "description": "Les enseignements de la recherche et de l’expérimentation peuvent renforcer les pratiques, la formation et les capacités des équipes."
+            },
+            {
+              "title": "Données et outils de décision",
+              "description": "Des analyses, des jeux de données ou des outils peuvent éclairer des choix. Leur périmètre, leurs conditions d’utilisation et leurs limites comptent autant que leur diffusion."
+            }
+          ],
+          "note": "Identifier ce qui a été produit, par qui, pour quel besoin et avec quelles preuves constitue le point de départ.",
+          "checklist": []
+        },
+        "research-to-use": {
+          "label": "La maturation",
+          "items": [
+            {
+              "title": "Situer le résultat",
+              "description": "Décrire l’origine, le besoin traité, les contributions et les preuves disponibles. Distinguer ce qui est démontré de ce qui reste à vérifier."
+            },
+            {
+              "title": "Éprouver les conditions",
+              "description": "Examiner les performances, les contraintes et les limites dans des conditions pertinentes. Les essais peuvent conduire à reprendre les travaux."
+            },
+            {
+              "title": "Préparer l’utilisation",
+              "description": "Identifier les utilisateurs, les adaptations nécessaires, les moyens et les partenaires. Préciser les conditions techniques et organisationnelles de l’usage."
+            },
+            {
+              "title": "Documenter et apprendre",
+              "description": "Suivre l’utilisation lorsqu’elle existe, qualifier les contributions observées et partager les enseignements pour les travaux à venir."
+            }
+          ],
+          "note": "La maturation n’est pas une progression automatique. Un résultat peut alimenter la recherche, une décision ou une formation sans conduire à un transfert commercial.",
+          "checklist": []
+        },
+        "transfer-pathways": {
+          "label": "Les voies possibles",
+          "items": [
+            {
+              "title": "Partager les connaissances",
+              "description": "Publications, ressources pédagogiques, méthodes et échanges scientifiques rendent les enseignements accessibles dans un cadre de diffusion adapté."
+            },
+            {
+              "title": "Codévelopper avec des partenaires",
+              "description": "Poursuivre les travaux avec les acteurs de l’usage pour adapter, qualifier ou expérimenter une solution et préciser les contributions respectives."
+            },
+            {
+              "title": "Préparer un transfert technologique",
+              "description": "Examiner les modalités de mise à disposition ou de licence lorsque le résultat, les droits et les partenaires le permettent. Les conditions restent à établir."
+            },
+            {
+              "title": "Explorer une initiative entrepreneuriale",
+              "description": "Envisager la création ou le développement d’une activité autour d’un résultat lorsque l’équipe, le besoin et les conditions de maturation s’y prêtent."
+            }
+          ],
+          "note": "Aucune voie n’est garantie par l’existence d’un prototype, d’une publication ou d’un dépôt de brevet. Le choix dépend des preuves, des droits, des capacités et des partenaires concernés.",
+          "checklist": []
+        },
+        "intellectual-property": {
+          "label": "Les conditions",
+          "items": [
+            {
+              "title": "Quel résultat et quelles contributions ?",
+              "description": "Décrire l’origine des connaissances, des données et des travaux, les partenaires associés et les éléments déjà diffusés. Les contributions doivent pouvoir être attribuées clairement."
+            },
+            {
+              "title": "Quels droits et quels usages à examiner ?",
+              "description": "Préciser les droits existants, les usages envisagés, les conditions de partage et les responsabilités à discuter. Le cadre applicable se définit avec les équipes concernées ; cette page ne présente pas un contrat type."
+            },
+            {
+              "title": "Comment préparer un premier échange ?",
+              "description": "Transmettre d’abord une description non confidentielle du résultat et du besoin. Avant tout partage sensible, préciser les modalités de confidentialité et les documents utiles avec l’interlocuteur concerné."
+            }
+          ],
+          "note": "Un dépôt de brevet, un droit accordé et un droit actif sont des situations distinctes. Leur existence ne prouve pas, à elle seule, un transfert ou une adoption.",
+          "checklist": []
+        },
+        "adoption-initiatives": {
+          "label": "Repères concrets",
+          "items": [
+            {
+              "title": "iSmart",
+              "description": "Une borne de recharge pour véhicules électriques, présentée parmi les réalisations d’IRESEN. Pour analyser sa valorisation, distinguer le produit, les contributions et les usages effectivement documentés."
+            },
+            {
+              "title": "AquaSolar",
+              "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire. La présentation du démonstrateur illustre une application ; elle ne suffit pas à établir un transfert commercial."
+            }
+          ],
+          "note": "Une preuve d’utilisation ou d’impact doit préciser les acteurs, le contexte, le stade, la période et les résultats observés. Les intentions restent distinctes des effets mesurés.",
+          "checklist": []
+        },
+        "build-transfer": {
+          "label": "Votre résultat",
+          "items": [],
+          "note": "Le premier échange porte sur le résultat, le besoin et les conditions à examiner. Il ne vaut ni engagement de financement ni accord de transfert.",
+          "checklist": [
+            "Le résultat ou la technologie, son origine et les contributeurs associés.",
+            "Le besoin, les utilisateurs possibles et le contexte d’application.",
+            "Les travaux, essais et preuves déjà disponibles, avec les limites connues.",
+            "Le stade de maturité et les adaptations ou vérifications encore nécessaires.",
+            "Les partenaires, les droits et les contraintes à discuter, sans transmettre d’éléments confidentiels."
+          ]
+        }
+      }
+    }
   }
 }

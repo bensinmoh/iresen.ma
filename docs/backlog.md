@@ -128,3 +128,8 @@ pending supported cases, actual capacity/access conditions, figure periods and
 per-locale editorial review. Confirm the proposed convention status separately.
 The owner's §4.4 correction resolves the duplicated cooperation text. Retain the
 final multilingual glossary/index sanity check after complete content delivery.
+
+## Collaboration and valorisation pages
+
+- [x] Develop the existing two pages with six canonical sections each, working FR/EN/AR copy, responsive/RTL layout, native IP disclosures, existing references, contact preparation and complete search projection. See [scope](collaboration-transfer-pages.md).
+- [ ] Complete institutional review, supported outcome/case evidence and final translations before final launch approval.

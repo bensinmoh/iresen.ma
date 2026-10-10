@@ -319,3 +319,7 @@ See [scope](docs/home-achievements.md). Alliances remain deferred.
 ## Homepage innovation pathway — 2026-10-10
 
 The owner commissioned a compact light transition between research and platforms, explaining five stages from national needs/ideation to adoption and evaluation. Support and maturation span the pathway. It links to the canonical transfer page and retains the hero figures and six principal navigation entries. FR/EN/AR are working copy for review. See [scope](docs/home-innovation.md).
+
+## Collaboration and valorisation — 10 October 2026
+
+The owner commissioned the existing workWithUs and transfer pages. Their six canonical sections are populated with working FR/EN/AR content, complementary contributions, adaptive maturation/use pathways, existing reference achievements and contact preparation. No funding, access, commercial outcome or service availability is promised. Published CMS gates and routes remain. See [scope](docs/collaboration-transfer-pages.md).

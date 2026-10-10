@@ -212,3 +212,5 @@ and native responsive rail navigation without outgoing card links. This request
 activates the agreed six-section order, reflected in section navigation.
 FR/EN/AR working copy and searchable anchors/media accompany the implementation.
 Alliances and final editorial review remain future work.
+
+The existing [collaboration and valorisation pages](docs/collaboration-transfer-pages.md) now contain their six sections in FR/EN/AR, with preparation checklists and existing contact pathways.

@@ -6,6 +6,7 @@ import { pageIdFromPathname } from '@/lib/site'
 import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
 import { ContactPage } from '@/components/contact/ContactPage'
+import { EngagementPage } from '@/components/engagement/EngagementPage'
 import { isContactTopic } from '@/lib/contact'
 import { createPageMetadata } from '../../page-metadata'
 import { newsHref, newsSlugFromPath } from '@/lib/content/routes'
@@ -85,5 +86,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
     const topic = typeof subject === 'string' && isContactTopic(subject) ? subject : undefined
     return <ContactPage locale={locale} initialTopic={topic} />
   }
+  if (pageId === 'workWithUs' || pageId === 'transfer')
+    return <EngagementPage pageId={pageId} locale={locale} />
   return <EmptyPage pageId={pageId} locale={locale} />
 }

@@ -2579,3 +2579,15 @@ The whole-site disposition and source correction are recorded in
 remain working editorial texts; institutional scaffolds still await supported
 final content. No deployment, visibility change or final translation approval
 is claimed. The final-content search sanity check remains due.
+
+## Collaboration and valorisation pages — 2026-10-10
+
+- Formatting, lint, sequential typecheck and production build passed.
+- 113 unit tests and 22 database integration tests passed. The new search contract verifies detailed page and section bodies in every locale.
+- All 189 Chromium browser tests passed locally, including seven new collaboration/transfer journeys. Those cover six reachable sections, contact topic selection, keyboard disclosures, 1440/768/390/320 widths, 200% text, scoped axe scans and Arabic without JavaScript.
+- The initial checks identified checklist/disclosure min-content overflow at 200% text and ink-panel contrast; the final runs include their corrections.
+- Twelve desktop/mobile captures were generated for both pages in FR/EN/AR. French desktop and Arabic mobile were visually inspected; native viewport inspection confirms that fixed skip-link artifacts in tall element captures are not visible in ordinary browsing.
+- The local search index was rebuilt; all six localized closing-section titles retrieve their exact reachable section URLs through the real API. No public CMS record was created.
+- Routes, all twelve anchors, existing hero/assets, public CMS eligibility and local contact-draft behavior remain. No deployment or final institutional/translation approval is claimed. Scoped axe coverage is not whole-site conformance certification.
+
+See [delivered scope](collaboration-transfer-pages.md). The final-content search sanity check remains pending. Current remote CI and merge outcomes are recorded in the pull request.

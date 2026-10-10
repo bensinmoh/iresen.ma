@@ -779,3 +779,11 @@ See [design language](docs/design-system.md#native-design-language-analysis--202
 See [workflow](docs/design-workflow.md), [design rules](docs/design-system.md),
 [UI verification and screenshots](docs/footer.md#design-workflow-refinement) and
 [validation log](docs/validation.md#design-workflow-and-ui-refinement).
+
+## 2026-10-10 — Collaboration and valorisation pages
+
+- Developed the existing two pages around their six canonical sections, with working FR/EN/AR copy aligned to the revised narrative.
+- Added responsive editorial layouts, native IP disclosures, existing reference photographs and contact preparation checklists.
+- Extended page/section search bodies without changing routes, CMS gates, assets or service commitments.
+
+See [scope](docs/collaboration-transfer-pages.md) and [verification](docs/validation.md#collaboration-and-valorisation-pages--2026-10-10).

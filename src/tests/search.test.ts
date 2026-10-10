@@ -323,3 +323,29 @@ describe('explicit public search catalog', () => {
     )
   })
 })
+
+it('indexes the detailed collaboration and transfer content in every language at reachable anchors', () => {
+  const documents = staticSearchDocuments()
+  for (const locale of contentLocales) {
+    const catalog = { fr, en, ar }[locale]
+    for (const pageId of ['workWithUs', 'transfer'] as const) {
+      const page = documents.find(({ id }) => id === `page:${pageId}:${locale}`)!
+      for (const section of pageSections[pageId]) {
+        const copies = catalog.Engagement[pageId].sections as Record<
+          string,
+          { items: { description: string }[]; checklist: string[] }
+        >
+        const copy = copies[section.id]
+        const item = documents.find(({ url }) => url === pageHref(pageId, locale, section.id))!
+        expect(item.type).toBe('section')
+        for (const text of [
+          ...copy.items.map(({ description }) => description),
+          ...copy.checklist,
+        ]) {
+          expect(item.body).toContain(text)
+          expect(page.body).toContain(text)
+        }
+      }
+    }
+  }
+})
