@@ -659,10 +659,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       documents.push({
         id: `section:transfer:patent-${patent.reference}:${locale}`,
         locale,
-        title: `${catalog.Transfer.catalog.reference} ${patent.reference} — ${patent.title}`,
+        title: `${catalog.Transfer.catalog.reference} ${patent.reference} — ${patent.title[locale]}`,
         body: [
           patent.reference,
-          patent.title,
+          patent.title[locale],
           patent.description[locale],
           patent.depositor,
           patent.filingYear,

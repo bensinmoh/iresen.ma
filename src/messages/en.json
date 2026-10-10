@@ -1578,7 +1578,7 @@
       "reference": "Reference",
       "showMore": "Show more",
       "showAll": "Show all",
-      "original": "Titles and applicant names are kept in their original language.",
+      "original": "Titles follow the selected language; applicant names retain their original wording.",
       "note": "Not all recorded filings correspond to patents currently in force. Consult each record through PatentRegister.",
       "updated": "Dataset as of the fourth quarter of 2026",
       "noJavaScript": "Without JavaScript, all 59 references are displayed. Filters require JavaScript."

@@ -17,8 +17,8 @@ export const patentThemes = [
 export type PatentTheme = (typeof patentThemes)[number]
 export type Patent = {
   reference: string
-  /** Bibliographic wording is not translated; titles use reviewed sentence case. */
-  title: string
+  /** French bibliographic wording with owner-requested English/Arabic display translations. */
+  title: Record<Locale, string>
   description: Record<Locale, string>
   themes: PatentTheme[]
   depositor: string | null
@@ -53,7 +53,7 @@ export function filterPatents(
   const terms = normalize(query.trim()).split(/\s+/).filter(Boolean)
   return patents.filter((p) => {
     const text = normalize(
-      [p.reference, p.title, p.description[locale], p.depositor ?? ''].join(' '),
+      [p.reference, p.title[locale], p.description[locale], p.depositor ?? ''].join(' '),
     )
     return (
       terms.every((term) => text.includes(term)) &&
