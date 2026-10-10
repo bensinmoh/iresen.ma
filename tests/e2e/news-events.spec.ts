@@ -115,6 +115,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       .analyze()
     expect(scan.violations).toEqual([])
     const rail = page.locator('#events [role="region"]')
+    await rail.evaluate((el) => el.scrollTo({ left: 0, behavior: 'instant' }))
+    await expect.poll(() => rail.evaluate((el) => Math.abs(el.scrollLeft))).toBe(0)
     await rail.focus()
     const before = await rail.evaluate((el) => el.scrollLeft)
     await page.keyboard.press(locale === 'ar' ? 'ArrowLeft' : 'ArrowRight')
@@ -236,7 +238,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       )
       .toBe('fits')
     await expect(navigation).toBeVisible()
-    await expect(pills).toHaveCount(6)
+    await expect(pills).toHaveCount(newsEvents.length)
     const scan = await new AxeBuilder({ page })
       .include('#events')
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
@@ -252,7 +254,7 @@ test('events retain native scrolling without JavaScript', async ({ browser }) =>
   })
   const page = await context.newPage()
   await page.goto(pageHref('news', 'fr'))
-  await expect(page.locator('#events article')).toHaveCount(6)
+  await expect(page.locator('#events article')).toHaveCount(newsEvents.length)
   await expect(page.locator('[data-event-navigation]')).toHaveCount(0)
   expect(
     await page.locator('[data-event-rail]').evaluate((el) => el.scrollWidth > el.clientWidth),
