@@ -1,4 +1,5 @@
 .page {
+  overflow-wrap: anywhere;
   color: var(--color-text);
   --section-space: clamp(2.5rem, 4.167vw, 5rem);
 }

@@ -185,9 +185,33 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     expect(gap).toBeLessThan(2)
     await page.setViewportSize({ width: 320, height: 900 })
     await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
-      true,
-    )
+    await page.evaluate(() => document.fonts.ready)
+    await expect
+      .poll(() =>
+        page.evaluate(() => ({
+          fits: document.documentElement.scrollWidth <= innerWidth + 1,
+          width: document.documentElement.scrollWidth,
+          viewport: innerWidth,
+          overflowing: Array.from(
+            document.querySelectorAll('h1,h2,h3,p,a,button,section,header,footer'),
+          )
+            .filter(
+              (el) =>
+                !el.closest('[data-event-rail]') &&
+                el.getBoundingClientRect().width > 0 &&
+                (el.getBoundingClientRect().right > innerWidth + 1 ||
+                  el.getBoundingClientRect().left < -1),
+            )
+            .slice(0, 12)
+            .map((el) => ({
+              tag: el.tagName,
+              className: el.className,
+              text: el.textContent?.trim().slice(0, 60),
+              width: el.getBoundingClientRect().width,
+            })),
+        })),
+      )
+      .toMatchObject({ fits: true })
     await expect(navigation).toBeVisible()
     await expect(pills).toHaveCount(6)
     const scan = await new AxeBuilder({ page })
