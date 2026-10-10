@@ -1,4 +1,5 @@
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
+import { samirBiography, samirBiographyText, samirPhotoId } from '@/lib/samir-biography'
 import { selectedNews, newsEvents, newsImages, newsSocialLinks } from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
@@ -158,7 +159,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: photo.title[locale],
-          description: `${messages[locale].MediaLibrary.categories[photo.category as keyof typeof messages.fr.MediaLibrary.categories]} — ${photo.title[locale]}. IRESEN. ${messages[locale].MediaLibrary.rights}`,
+          description: `${messages[locale].MediaLibrary.categories[photo.category as keyof typeof messages.fr.MediaLibrary.categories]} — ${photo.title[locale]}. IRESEN. ${messages[locale].MediaLibrary.rights}${photo.id === samirPhotoId && locale === 'fr' ? ` ${samirBiographyText}` : ''}`,
         },
       ]),
     ),
@@ -870,6 +871,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         url: pageHref('home', locale, `news-${post.id.split(':').at(-1)}`),
         type: 'section',
         ...(post.publishedAt ? { publishedAt: post.publishedAt } : {}),
+      })
+    }
+    if (locale === 'fr') {
+      documents.push({
+        id: 'section:library:samir-biography:fr',
+        locale,
+        title: `${samirBiography.name} — Biographie`,
+        body: samirBiographyText,
+        url: pageHref('media', locale, `photo-${samirPhotoId}`),
+        type: 'section',
       })
     }
     documents.push(

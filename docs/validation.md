@@ -3052,6 +3052,10 @@ Checked local documentation links, formatting and focused diff whitespace. No
 runtime change: application/database/browser suites are not required for this
 documentation-only task. See [the specification](horizontal-scroll-indicators.md).
 
+## Samir biography popup — 2026-10-10
+
+Lint, typecheck, 126 unit checks and the isolated production build passed. Eight scoped production Chrome cases passed: FR/EN/AR media filters and modal access, no-JavaScript photo links, reduced motion, supplied biography, real clipboard copy, image-only download, 320/390/768/1440px containment, 200% mobile text, Escape/focus restoration, scoped axe scan and portrait frame meeting the desktop popup bottom edge. Desktop rendering and headroom were manually inspected. The local search rebuild synchronized the static catalog; French-only biography eligibility is covered by a regression test. No database schema changes or deployment. See [scope](samir-biography.md).
+
 ## Video-library scroll pills — 2026-10-10
 
 Lint, TypeScript/production compilation, formatting and 126 unit tests passed.

@@ -1,0 +1,13 @@
+{
+  "referenceDate": "2026-10-10",
+  "sourceFilename": "Samir découpé.png",
+  "sourceSha256": "a445a5c2e57ddf27dff83f98af65719c97c65269eb190a6e24f5e5b788093d85",
+  "transformation": "Background extraction using built-in ImageGen; generated derivative for popup only. Official photograph remains the download.",
+  "prompt": "Remove only the pale studio background; preserve face, expression, hair, pose, suit, tie, hands, lighting and full visible body. Transparent cutout for biography popup.",
+  "publicPath": "/images/media-library/samir-rachidi-cutout-v2.webp",
+  "sha256": "36baac103d00d556967948499dccf76f707fc01cb00556c08c82b08c719398a2",
+  "width": 919,
+  "height": 1711,
+  "bytes": 187312,
+  "search": "Derivative shares the official portrait search reference; biography has a French-only section reference."
+}

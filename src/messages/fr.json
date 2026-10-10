@@ -1880,7 +1880,13 @@
     "nextVideos": "Vidéos suivantes",
     "heroTitle": "Médiathèque — illustration de ressources scientifiques",
     "heroDescription": "Illustration générée : rapports, tirages photographiques sur le solaire et le laboratoire, appareil photo sur une table. Visuel évocateur de la médiathèque, sans représenter un lieu réel d’IRESEN.",
-    "downloadVideo": "Télécharger la vidéo"
+    "downloadVideo": "Télécharger la vidéo",
+    "biography": "Biographie",
+    "biographyLanguage": "Biographie en français",
+    "copyBiography": "Copier la biographie",
+    "copiedBiography": "Biographie copiée",
+    "copyBiographyError": "La copie automatique est indisponible. Vous pouvez sélectionner et copier le texte.",
+    "downloadPortrait": "Télécharger le portrait"
   },
   "VideoRailNavigation": {
     "label": "Navigation de la vidéothèque",

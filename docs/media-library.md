@@ -91,6 +91,10 @@ references stay excluded. No fictional content, new CMS collection, deployment,
 DNS change or production publication is introduced. Public inclusion here is on
 the development site, as explicitly requested by the owner.
 
+## Samir portrait biography — 2026-10-10
+
+The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](samir-biography.md).
+
 ## Video navigation pills — 2026-10-10
 
 The video rail now has one expanding pill per approved video, with no border or

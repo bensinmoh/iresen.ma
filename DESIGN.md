@@ -1102,6 +1102,10 @@ SVG arrows. Center the complete control row in the gap between the upper block
 and the next CTA/content boundary. This is recorded direction for a later review,
 not implemented UI. See [the specification](docs/horizontal-scroll-indicators.md).
 
+## Samir portrait biography — 2026-10-10
+
+The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
+
 ## Video-library scroll pills — 2026-10-10
 
 The first implementation of the recorded horizontal-navigation effect uses one

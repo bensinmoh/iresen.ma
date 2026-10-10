@@ -120,7 +120,7 @@ test('photos and report source links remain available without JavaScript', async
   await expect(page.locator('#reports article a')).toHaveCount(10)
   await expect(page.locator('figure[id^="photo-"] > a').first()).toHaveAttribute(
     'href',
-    '/images/media-library/portrait-dg-iresen-samir-rachidi.webp',
+    photos[0].src,
   )
   await context.close()
 })
