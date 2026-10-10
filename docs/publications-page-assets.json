@@ -1,0 +1,16 @@
+{
+  "received": "2026-10-10",
+  "figmaFile": "0go8QANZAH73ed9AoCdHkf",
+  "frame": "804:6862",
+  "assets": [
+    {
+      "id": "publications-hero",
+      "sourceNode": "804:6864",
+      "sourceSha256": "3723e62ff373814b45e8c6502169848795b734ed99a78614a1ae41f79e8802c5",
+      "servedPath": "/images/publications/hero.webp",
+      "servedSha256": "9c19824c21009ee237f49fc31a696b378c8cfb3d9910a52918d29b8a03f0d47e",
+      "transformation": "Original Figma background converted to WebP quality 85, no crop or recoloring; responsive object-fit cover.",
+      "role": "Decorative blue abstract background, not a facility photograph."
+    }
+  ]
+}

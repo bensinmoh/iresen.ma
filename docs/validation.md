@@ -3101,3 +3101,54 @@ keyboard focus is separate. Existing stable media/video anchors, public search
 references and withdrawal gates remain. No new public resource or index rebuild
 is needed for this interaction change. No Safari/Firefox or screen-reader pass
 was performed. See [scope](media-library.md#video-navigation-pills--2026-10-10).
+
+## Publications & reports page — 2026-10-10
+
+- Figma frame `804:6862` and supplied `publications.png` inspected; full frame
+  metadata followed by high-fidelity header, filters and notice context.
+- Current owner-selected 1,199 records projected with source titles/all authors,
+  source years and HTTPS DOI links. The owner approved year-only presentation
+  because publication months are unavailable. The ten reports share the unchanged
+  media-library component/data.
+- Lint, typecheck and 128 unit tests pass. Production build passes, with the
+  existing next-intl webpack extractor cache warning. No CMS schema change.
+- Eight scoped production browser tests pass in Chrome: FR/EN/AR query/filter/
+  DOI/empty/specific-record destinations, automatic checkbox updates and crossed
+  facet counts, frequent-search alignment, reduced motion, responsive containment,
+  axe and native no-JavaScript search. Visual captures inspected at FR 1440/390, EN 768 and AR
+  1440/390; no horizontal overflow. Mobile uses a native filter disclosure.
+  Responsive follow-up checks cover separated search surfaces, two compact text
+  lines and all four figures in a native horizontal rail at 320/390/768/1024px in
+  FR/EN/AR, including 200% text and the last figure in Arabic reading direction.
+- Integration uses a separately created/migrated disposable PostgreSQL database
+  and removes it after verification, preserving the populated working database.
+  All 28 integration tests pass, including FR/EN/AR discovery of publication notices.
+  The running local production API also returns the expected stable notice with
+  HTTP 200 in each locale after static-catalogue synchronization.
+  The expanded catalogue refreshes PostgreSQL planner statistics after rewrites
+  to avoid expensive first-query plans seen with the larger corpus.
+  Public search references use the static fingerprint/current-public lifecycle;
+  unit assertions exclude withdrawn IDs and both original workbooks.
+- Deployment, final editorial translation approval and the full-site final
+  content/glossary search sanity check remain pending/outside this increment.
+
+Full PR CI initially passed 231/240 browser cases. Six generic hero/footer tests
+still expected the former Publications scaffold; their destination/title assertions
+now use the commissioned heading and the dedicated Publications suite. The expanded
+corpus also changes search fixtures: `résulats` is ambiguous between French
+`résultats` and original English `results`, so the existing conservative corrector
+properly refuses a guess. The unambiguous French typo case now uses `réalisatons`.
+Direct publication PV/Infrastructure matches may fill the first result page;
+related platform matches are still checked with the page filter. Exact-first
+ranking and explicit correction behavior are unchanged.
+
+All twelve local search browser cases and six affected footer/standard-hero cases
+pass after the updated assertions. No runtime search behavior was changed.
+
+A subsequent CI run exposed a five-second vocabulary bulk-insert timeout during
+cold catalogue initialization. Static vocabulary writes now use batches of 100
+notices inside the existing atomic transaction, preserving the SQL deadline and
+search ranking/access rules. Planner statistics still refresh after the full write.
+
+The 28 integration tests pass again in a newly migrated disposable database
+with the bounded vocabulary write; the existing local database is preserved.

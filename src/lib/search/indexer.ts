@@ -72,7 +72,7 @@ async function writeDocument(
   return { id: document.id, locale: document.locale, title, body }
 }
 
-/** Small explicit runtime catalog only; CMS reindex/extraction never runs in request latency. */
+/** Explicit runtime catalog only; CMS reindex/extraction never runs in request latency. */
 export async function initializeSearchCatalog(): Promise<string> {
   if (currentRevision) return currentRevision
   catalogReady ??= (async () => {
@@ -108,12 +108,23 @@ export async function initializeSearchCatalog(): Promise<string> {
             published_at=EXCLUDED.published_at,title_norm=EXCLUDED.title_norm,body_norm=EXCLUDED.body_norm`,
           [JSON.stringify(rows), revision],
         )
-        await writePublicVocabulary(client, documents)
+        // Bound vocabulary writes as the static bibliographic corpus grows;
+        // each statement keeps the normal search-pool deadline. The surrounding
+        // transaction still makes the complete catalogue revision atomic.
+        for (let offset = 0; offset < documents.length; offset += 100)
+          await writePublicVocabulary(client, documents.slice(offset, offset + 100))
       }
       await client.query(
         "DELETE FROM search_documents WHERE origin='static' AND source_revision <> $1",
         [revision],
       )
+      if (Number(existing.rows[0]?.count) !== documents.length) {
+        // A newly expanded bibliographic corpus needs current planner statistics
+        // before the first search; waiting for autovacuum can produce costly plans.
+        await client.query(
+          'ANALYZE search_documents, search_document_vocabulary, search_vocabulary_terms',
+        )
+      }
       await client.query('COMMIT')
       currentRevision = revision
       return revision

@@ -62,12 +62,13 @@ for (const locale of locales) {
   test(`${locale}: standard page heroes retain a working section link`, async ({ page }) => {
     test.setTimeout(120_000)
     await page.setViewportSize({ width: 1440, height: 900 })
-    // Contact and Careers have dedicated introductions covered by their own browser suites.
+    // Dedicated page introductions, including Publications, have their own browser suites.
     for (const id of pageIds.filter(
       (pageId) =>
         pageId !== 'contact' &&
         pageId !== 'search' &&
         pageId !== 'opportunities' &&
+        pageId !== 'publications' &&
         pageId !== 'news' &&
         pageId !== 'events',
     )) {

@@ -1553,3 +1553,17 @@ Other collections retain their current treatment until commissioned.
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## Publication catalogue — 2026-10-10
+
+The publications page uses existing tokens and action geometry. Its label/link
+search row shares centered alignment, equal vertical padding and line-height.
+Automatic native-checkbox filters preserve focus, with conditional topic/year
+counts and 280ms per-notice view transitions; reduced-motion users see direct
+updates. This is a scoped catalogue pattern, not a change to other filters.
+See [scope](publications-page.md).
+
+Owner responsive follow-up: mobile/tablet search field and button are separate;
+frequent searches keep the most common themes fitting two compact lines. Key
+figures use the existing native horizontal figure-rail pattern at these widths,
+with all four figures, keyboard access and Arabic direction preserved.

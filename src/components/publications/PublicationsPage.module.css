@@ -1,0 +1,417 @@
+.page {
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+.hero {
+  position: relative;
+  isolation: isolate;
+  color: white;
+  background: var(--color-navy);
+}
+.heroImage {
+  object-fit: cover;
+  z-index: -1;
+}
+.heroContent {
+  text-align: center;
+  padding-block: clamp(10rem, 13.5vw, 16rem) clamp(4rem, 7vw, 8rem);
+}
+.hero h1 {
+  max-inline-size: 88rem;
+  font-size: var(--hero-title-size);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 1rem auto;
+  font-weight: 700;
+}
+.hero h1 span {
+  color: var(--color-science-blue);
+}
+.heroContent > p {
+  margin: 0 auto 2rem;
+}
+.eyebrow {
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.hero .eyebrow {
+  justify-content: center;
+}
+.eyebrow::before {
+  content: '';
+  inline-size: 0.46rem;
+  block-size: 0.75rem;
+  background: currentColor;
+  mask: url('/brand/apex-leaf.svg') center/contain no-repeat;
+}
+.search {
+  max-inline-size: 88rem;
+  margin: 2rem auto 1.5rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: var(--radius-action);
+  color: var(--color-text);
+}
+.search input {
+  flex: 1;
+  min-inline-size: 0;
+  border: 0;
+  padding: 1rem;
+  background: white;
+}
+.frequent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.2rem;
+  font-size: var(--font-size-label);
+}
+.frequent a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  padding-block: 0.5rem;
+}
+.figures {
+  background: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(10px);
+}
+.figures > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-block: 1.5rem;
+}
+.figures > div > div {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  padding-inline: 2rem;
+  border-inline-end: 1px solid rgb(255 255 255 / 25%);
+}
+.figures > div > div:first-child {
+  padding-inline-start: 0;
+}
+.figures > div > div:last-child {
+  border: 0;
+}
+.figures strong {
+  font-size: var(--font-size-figure);
+  font-weight: 600;
+}
+.figures span {
+  font-size: var(--font-size-label);
+  max-inline-size: 17ch;
+}
+.section,
+.reports {
+  padding-block: clamp(3rem, 4.167vw, 5rem);
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+  margin-block-end: 2.5rem;
+}
+.heading > p {
+  max-inline-size: 46ch;
+  line-height: 1.7;
+  margin: 0;
+}
+.heading .eyebrow {
+  color: var(--color-blue);
+  margin: 0 0 0.75rem;
+}
+.page h2 {
+  font-size: clamp(1.75rem, 2.6vw, 3.125rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0;
+}
+.catalogue {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.32fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: start;
+}
+.filters {
+  background: var(--color-action-surface);
+  padding: 1.75rem;
+}
+.filters fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 2rem;
+  min-inline-size: 0;
+}
+.filters fieldset + fieldset {
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: 1.5rem;
+}
+.filters legend {
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-block-end: 1rem;
+}
+.filters label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-block-size: 2.75rem;
+  cursor: pointer;
+}
+.filters input {
+  accent-color: var(--color-blue);
+  inline-size: 1.1rem;
+  block-size: 1.1rem;
+  flex: none;
+}
+.filters small {
+  margin-inline-start: auto;
+}
+.filters .button {
+  inline-size: 100%;
+  font-size: var(--font-size-label);
+}
+.reset {
+  display: block;
+  text-align: center;
+  margin-block-start: 1rem;
+  text-decoration: underline;
+}
+.results > p:first-child {
+  margin-block: 0 1.5rem;
+  font-weight: 600;
+}
+.article {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.28fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 2rem;
+  border-block-start: 1px solid var(--color-border);
+  scroll-margin-block-start: 7rem;
+}
+.topic {
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.6;
+}
+.article h3 {
+  font-size: clamp(1.125rem, 1.4vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+.article h3 a:hover {
+  color: var(--color-blue);
+}
+.meta {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  font-size: var(--font-size-meta);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+.meta time {
+  white-space: nowrap;
+}
+.read {
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  color: var(--color-blue);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  padding-block: 0.75rem;
+  margin-block-start: 0.75rem;
+}
+.missing {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-meta);
+}
+.more {
+  border-block-start: 1px solid var(--color-border);
+  text-align: center;
+  padding-block-start: 2.5rem;
+}
+.reports {
+  background: var(--color-surface);
+}
+.cite {
+  padding-block: 3rem;
+}
+.cite p {
+  max-inline-size: 75ch;
+  line-height: 1.7;
+}
+:global([dir='rtl']) .page :is(h1, h2, h3, .eyebrow) {
+  letter-spacing: normal;
+}
+@media (max-width: 70rem) {
+  .figures > div > div {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+  .article {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+@media (max-width: 48rem) {
+  .catalogue {
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    flex-direction: column;
+  }
+  .search {
+    flex-direction: column;
+  }
+  .heroContent {
+    padding-block: 10rem 3rem;
+  }
+  .meta {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.frequent a {
+  color: white;
+}
+.article h3 a {
+  color: inherit;
+}
+
+.filterDisclosure {
+  background: var(--color-action-surface);
+}
+.filterDisclosure summary {
+  padding: 1.25rem 1.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  min-block-size: 2.75rem;
+}
+
+.search button {
+  gap: 0.65rem;
+}
+
+.frequent {
+  align-items: center;
+}
+.frequent > span,
+.frequent > a {
+  margin: 0;
+  padding-block: 0.5rem;
+  line-height: 1.5;
+}
+.fallbackLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.fallbackLinks a {
+  text-decoration: underline;
+}
+
+.filterDisclosure summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.filterDisclosure[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.frequentWrap {
+  position: relative;
+}
+.frequentProbe {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  visibility: hidden;
+  pointer-events: none;
+}
+.frequentTopic {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.figureTrack {
+  margin-block: 0;
+  scroll-snap-type: inline proximity;
+}
+.figureTrack > div {
+  scroll-snap-align: start;
+}
+.figureTrack:focus-visible {
+  outline-offset: -4px;
+}
+@media (max-width: 64rem) {
+  .search {
+    flex-direction: column;
+    padding: 0;
+    gap: 0.75rem;
+    background: transparent;
+    border-radius: 0;
+  }
+  .search input {
+    flex: none;
+    min-block-size: 3.5rem;
+    border-radius: var(--radius-action);
+    padding: 1rem 1.25rem;
+  }
+  .search button {
+    inline-size: 100%;
+    min-block-size: 3rem;
+  }
+  .frequent {
+    gap: 0.2rem 1rem;
+    align-items: baseline;
+  }
+  .frequent > span,
+  .frequent > a {
+    padding-block: 0.15rem;
+    line-height: 1.35;
+  }
+  .figures > .figureTrack {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(80%, 18rem);
+    inline-size: 100%;
+    max-inline-size: none;
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+    gap: 1.5rem;
+  }
+  .figureTrack > div {
+    padding-inline: 0 1.5rem;
+    align-items: start;
+  }
+}

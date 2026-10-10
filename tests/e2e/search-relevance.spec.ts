@@ -9,7 +9,8 @@ function searchUrl(locale: 'fr' | 'en' | 'ar', parameters: Record<string, string
 }
 
 for (const { locale, original, expected } of [
-  { locale: 'fr', original: 'résulats', expected: 'resultats' },
+  // English bibliographic titles now make résulats ambiguous between results/resultats.
+  { locale: 'fr', original: 'réalisatons', expected: 'realisations' },
   { locale: 'en', original: 'platfroms', expected: 'platforms' },
   { locale: 'ar', original: 'الاولويتا', expected: 'الاولويات' },
 ] as const) {
@@ -258,6 +259,20 @@ test('valid public words, short terms and acronyms stay unchanged without a corr
   }
   await page.goto(searchUrl('fr', { q: 'PV' }))
   await expect(page.locator('.search-query-form input[name="q"]')).toHaveValue('PV')
+  await expect(page.locator('.search-correction')).toHaveCount(0)
+  // The publication corpus supplies direct PV matches before concept matches.
+  const pv = await request.get('/api/search?locale=fr&q=PV')
+  expect(pv.status()).toBe(200)
+  const direct = await pv.json()
+  expect(direct.items[0].matchKind).toBe('exact')
+  expect(
+    direct.items.some(
+      (item: { type: string; matchKind: string }) =>
+        item.type === 'publication' && item.matchKind === 'exact',
+    ),
+  ).toBe(true)
+  await expect(page.locator('.search-results article').first()).toBeVisible()
+  await page.goto(searchUrl('fr', { q: 'PV', type: 'page' }))
   await expect(page.locator('.search-correction')).toHaveCount(0)
   await expect(page.locator('[data-search-match-kind="related"]').first()).toBeVisible()
 })

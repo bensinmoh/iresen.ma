@@ -891,3 +891,16 @@ The owner also requested complete English and Arabic biography translations. Eac
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## 2026-10-10 — Publications & reports page
+
+- Implement the commissioned Figma page with 1,199 publications, 59 filed patents,
+  69 projects and 18 calls since 2011.
+- Add corpus-only GET search, title-derived thematic suggestions, topic/year
+  filters, progressive results, all authors and DOI title/read links.
+- Preserve years without fabricated months; reuse all ten media-library reports.
+- Register stable FR/EN/AR publication search destinations and the original
+  abstract hero asset, preserving source exclusions and existing routes.
+- Apply checkbox filters immediately with crossed topic/year counts and notice
+  transitions; separate mobile/tablet search surfaces, keep two compact frequent
+  search lines and allow native horizontal navigation of the four figures.

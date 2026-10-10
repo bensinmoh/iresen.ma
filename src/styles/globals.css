@@ -177,7 +177,12 @@ ul {
   border-color: var(--color-footer-divider);
 }
 
-body:is(:has(.page-hero), :has([data-careers-page]), :has([data-news-events-page]))
+body:is(
+    :has(.page-hero),
+    :has([data-careers-page]),
+    :has([data-news-events-page]),
+    :has([data-publications-page])
+  )
   .site-header-overlay {
   position: absolute;
   inset-block-start: 0;
@@ -2987,4 +2992,20 @@ html[dir='rtl'] .footer-arrow {
       transform: translateX(0);
     }
   }
+}
+
+/* The publication catalogue uses native snapshots to explain filter changes. */
+@media (prefers-reduced-motion: no-preference) {
+  html:has([data-publications-page])::view-transition-group(*) {
+    animation-duration: 280ms;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  html:has([data-publications-page])::view-transition-old(root),
+  html:has([data-publications-page])::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+html:has([data-publications-page])::view-transition {
+  pointer-events: none;
 }
