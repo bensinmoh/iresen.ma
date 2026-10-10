@@ -1,5 +1,29 @@
 # Foundation validation
 
+## Publications ingestion — 2026-10-10
+
+Imported the owner's selected 1,181 counted bibliography rows, reference
+**T4 2026**, into a staged versioned JSON database. The source workbook and
+202 excluded rows remain outside the repository. No public renderer, CMS schema,
+route, locale catalogue, API or search projection is changed.
+
+The standard-library importer regenerates the dataset deterministically and its
+`--check` comparison passes. An independent bundled openpyxl extraction confirms
+all selected IDs and every imported title, year, author string (after removal
+of numeric Scopus IDs), source theme/type, DOI, quartile and Scopus citation
+count/date against the workbook. Unique IDs/normalized DOIs, the exact field
+allowlist, zero-versus-null semantics, SJR edition and staged exclusion from
+public search are covered by two unit checks. All 118 unit tests pass; lint,
+typecheck, production build, scoped formatting and whitespace checks pass.
+
+Missing values remain missing: 18 DOI links, 175 themes and 141 Scopus counts.
+Four source years of 2027 remain unchanged and flagged for chronology review in
+the import metadata. No live DOI/Scopus/SJR verification is claimed. Browser and
+database integration checks were not repeated locally because no runtime,
+visual, database, routing or authorization behavior changed. Full PR CI and
+merge outcomes are recorded on the pull request. Publication-section development
+and its localized search references remain a future commissioned increment.
+
 ## Homepage section labels — 2026-10-09
 
 The owner's two attached crops identify inconsistent mission/domains labels.

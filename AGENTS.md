@@ -1,5 +1,16 @@
 # IRESEN coding entrypoint
 
+## Publications ingestion — 2026-10-10
+
+The owner selected 1,181 counted records from `IRESEN_2026.xlsx` for the future
+publications section, with **T4 2026** as the dataset reference period. See
+[ingestion scope](docs/publications.md). The minimal structured database is staged;
+no public section, download, CMS collection or search projection is added now.
+The 202 other records and original workbook remain excluded. Preserve original
+bibliographic titles/authors and sourced years, distinguish SJR 2025 quartiles
+from dated Scopus citations, and do not invent missing values. Register approved
+localized search references when section development is commissioned.
+
 Read `instruction.md`, `README.md` and `docs/design-system.md` before implementation. The latest owner-selected website primary blue is `#296BB4`; preserve delivered SVG originals. The brief provides project requirements; the user's current request defines the work authorized now. Preserve existing work and do not deploy, change visibility, publish content or alter DNS without explicit authorization.
 
 ## Automatic completion

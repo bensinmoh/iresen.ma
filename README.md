@@ -135,6 +135,12 @@ Project scripts load `.env.local` and keep caches within ignored paths. For a ne
 
 ## Repository map and next work
 
+The [staged publications database](docs/publications.md) ingests the owner's
+1,181 selected bibliographic records for a future section, reference **T4 2026**.
+Only minimal bibliographic fields and dated metrics are retained; the workbook,
+202 excluded rows and administrative evidence stay outside the repository.
+The records are not yet served or indexed publicly.
+
 `src/app` contains public locale/CMS routes; `src/components` the UI shell; `src/i18n` and `src/messages` locale routing/catalogs; `src/cms` collections/access/migrations; `src/lib` content and integration boundaries. Technical guides are in [docs](docs/architecture.md). Read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before contributing/reporting.
 
 The three owner-supplied strategy DOCX originals and their [source index and analysis](docs/references/strategy/README.md) are in `docs/references/strategy/`. They cover the institutional narrative, communications supports and suggested website sections. The detailed structure is **recommendations, not a final validated structure**. The owner's 2026-10-09 request uses its section recommendations for empty placeholders within the existing 22-page structure, the single working route baseline in `src/lib/site.ts`; see [the canonical route map](docs/route-map.md) and [ADR 0004](docs/adr/0004-canonical-working-site-structure.md) for consistent links and coordinated future changes. Repository reference inclusion does not approve website copy, translations or new services.
