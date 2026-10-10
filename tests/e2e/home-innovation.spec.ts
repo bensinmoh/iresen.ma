@@ -83,6 +83,8 @@ for (const locale of ['fr', 'ar']) {
     await page.clock.runFor(6500)
     await expect.poll(position).toBeLessThan(end - 2)
     await page.emulateMedia({ reducedMotion: 'reduce' })
+    // Let the preference-change event cancel any in-flight native smooth scroll.
+    await page.clock.runFor(1000)
     const reduced = await position()
     await page.clock.fastForward(12000)
     expect(await position()).toBeCloseTo(reduced, 0)

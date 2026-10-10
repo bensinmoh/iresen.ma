@@ -2516,3 +2516,7 @@ when all website content is ready.
   Full browser-suite results and remote checks are recorded on the pull request.
 - Review captures remain ignored under `.cache/innovation-review/`. No deployment,
   visibility change or final editorial/translation approval is claimed.
+
+The remote Chromium run additionally exposed an in-flight smooth scroll when
+reduced motion changed. The rail now cancels that motion immediately; the test
+lets the preference-change event settle before measuring sustained inactivity.

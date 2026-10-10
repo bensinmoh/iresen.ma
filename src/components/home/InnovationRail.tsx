@@ -52,6 +52,10 @@ export function InnovationRail({ children, label }: { children: ReactNode; label
       touching = false
       restart()
     }
+    const motionChanged = () => {
+      if (motion.matches) element.scrollTo({ left: element.scrollLeft, behavior: 'instant' })
+      restart()
+    }
     restart()
     element.addEventListener('pointerenter', enter)
     element.addEventListener('pointerleave', leave)
@@ -60,7 +64,7 @@ export function InnovationRail({ children, label }: { children: ReactNode; label
     window.addEventListener('pointercancel', up)
     element.addEventListener('wheel', restart, { passive: true })
     element.addEventListener('blur', restart)
-    motion.addEventListener('change', restart)
+    motion.addEventListener('change', motionChanged)
     return () => {
       window.clearInterval(timer)
       element.removeEventListener('pointerenter', enter)
@@ -70,7 +74,7 @@ export function InnovationRail({ children, label }: { children: ReactNode; label
       window.removeEventListener('pointercancel', up)
       element.removeEventListener('wheel', restart)
       element.removeEventListener('blur', restart)
-      motion.removeEventListener('change', restart)
+      motion.removeEventListener('change', motionChanged)
     }
   }, [])
   return (
