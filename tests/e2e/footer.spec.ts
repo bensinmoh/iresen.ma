@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 import { locales, type Locale } from '../../src/i18n/locales'
 import { footerContact, footerSocialLinks } from '../../src/lib/footer'
-import { footerNavigationGroups, footerPageIds, pageHref } from '../../src/lib/site'
+import { footerNavigationGroups, footerPageIds, pageHref, pageLinkHref } from '../../src/lib/site'
 import ar from '../../src/messages/ar.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
 import fr from '../../src/messages/fr.json' with { type: 'json' }
@@ -39,17 +39,17 @@ for (const locale of locales) {
       await navigation
         .getByRole('link')
         .evaluateAll((links) => links.map((link) => link.getAttribute('href')).sort()),
-    ).toEqual(navigationPageIds.map((id) => pageHref(id, locale)).sort())
+    ).toEqual(navigationPageIds.map((id) => pageLinkHref(id, locale)).sort())
 
     for (const id of navigationPageIds) {
       await expect(
         navigation.getByRole('link', { name: messages.Pages[id], exact: true }),
-      ).toHaveAttribute('href', pageHref(id, locale))
+      ).toHaveAttribute('href', pageLinkHref(id, locale))
     }
     for (const id of footerPageIds) {
       await expect(
         utilities.getByRole('link', { name: messages.Pages[id], exact: true }),
-      ).toHaveAttribute('href', pageHref(id, locale))
+      ).toHaveAttribute('href', pageLinkHref(id, locale))
     }
 
     await expect(footer.locator('address')).toContainText(messages.Footer.address)

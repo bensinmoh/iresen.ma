@@ -301,7 +301,7 @@
       "network": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities.",
       "transfer": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
       "workWithUs": "Bring together people, expertise and resources around needs for analysis, research, experimentation or skills development.",
-      "news": "Follow studies, research, skills and cooperation contributing to the energy transition and sustainable development.",
+      "news": "Research, scientific exchange and cooperation: explore IRESEN news and the meetings we organise or participate in.",
       "events": "Meetings to connect people, share expertise and build cooperation in Morocco and internationally.",
       "publications": "Documented analysis, knowledge and results to inform decisions and share lessons.",
       "media": "Discover the work, capabilities and contributions of IRESEN and its partners through images.",
@@ -711,8 +711,16 @@
         "description": "Content to add: events, publications and opportunities related to the news."
       },
       "follow-iresen": {
-        "title": "Follow IRESEN",
-        "description": "Content to add: links to official accounts and ways to follow updates that are actually available."
+        "title": "Follow us",
+        "description": "Continue the conversation and explore our posts on social media."
+      },
+      "news": {
+        "title": "News",
+        "description": "Research, scientific exchange and cooperation: explore IRESEN news and the meetings we organise or participate in."
+      },
+      "events": {
+        "title": "Featured events",
+        "description": "Meetings that share research, connect people and advance the energy transition."
       }
     },
     "events": {
@@ -1740,5 +1748,86 @@
       "internship": "Reference photograph: a group talking in a shared workspace."
     },
     "searchText": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition."
+  },
+  "NewsEvents": {
+    "eyebrow": "News & events",
+    "titleStart": "The institute in motion,",
+    "titleMiddle": "to the rhythm of",
+    "titleAccent": "research.",
+    "description": "Research, scientific exchange and cooperation: explore IRESEN news and the meetings we organise or participate in.",
+    "eventsAction": "Our events",
+    "news": "News",
+    "allNews": "All news",
+    "back": "News & events",
+    "read": "Read the post",
+    "featured": "In focus · Podcast",
+    "eventTitle": "Featured events",
+    "eventIntro": "Meetings that share research, connect people and advance the energy transition.",
+    "participation": "Participation",
+    "organisation": "Organisation / coorganisation",
+    "details": "Explore the event",
+    "date": "Date",
+    "location": "Location",
+    "past": "Past event",
+    "planned": "In preparation",
+    "programmePending": "Programme and session times to be confirmed.",
+    "official": "Official website",
+    "source": "IRESEN post",
+    "illustration": "Conference illustration · reference image",
+    "follow": "Follow us",
+    "followDescription": "Continue the conversation and explore our posts on social media.",
+    "trainingTitle": "Research is shared. Skills are built.",
+    "trainingHeading": "Exchange & knowledge sharing",
+    "trainingDescription": "Scientific meetings, peer exchanges and specialist training connect research with the people shaping the energy transition. They create spaces to compare approaches, share lessons from projects and exchange know-how among researchers, academic partners and professionals. These exchanges build collective skills and bring scientific knowledge closer to the needs encountered in practice.",
+    "trainingAction": "Explore our network",
+    "trainingAlt": "Participants at a scientific meeting — Figma reference photograph.",
+    "unavailable": "Website publications are temporarily unavailable. The selected posts below remain available on LinkedIn.",
+    "previous": "Previous page",
+    "next": "Next page",
+    "pagination": "News pagination",
+    "noImage": "IRESEN publication",
+    "photos": {
+      "hero": "Speaker addressing an audience — Figma reference photograph.",
+      "podcast": "Samir Rachidi in Oman Climate Week’s Masarat podcast.",
+      "oman": "Photographs of IRESEN’s participation in Oman Climate Week 2026.",
+      "sweden": "IRESEN post about the Impact Pioneers ’26 MENA week in Sweden.",
+      "istanbul": "IRESEN post about the Dii Desert Energy Leadership Summit in Istanbul.",
+      "majan": "IRESEN post about cooperation with the Majan Council."
+    },
+    "summaries": {
+      "7514300639057797120": "In Oman Climate Week’s Masarat podcast, Samir Rachidi discusses local skills, knowledge transfer and support for ideas and startups to develop industrial solutions.",
+      "7514335153415131136": "A week of shared learning and connections in Sweden through Impact Pioneers ’26 MENA.",
+      "7514298051914588161": "Highlights from IRESEN’s participation in the Dii Desert Energy Leadership Summit in Istanbul, connecting clean energy, continents and markets.",
+      "7510672994734727168": "In Muscat, discussions on climate action, green hydrogen and cooperation between Moroccan and Omani energy ecosystems.",
+      "7508575272049229824": "A new step in cooperation between IRESEN and the Majan Council for Foresight, Strategic Affairs and Energy."
+    },
+    "events": {
+      "oman": {
+        "name": "Oman Climate Week",
+        "meta": "14–16 September 2026",
+        "place": "Muscat · Oman",
+        "description": "IRESEN participated in Oman Climate Week 2026, exchanging perspectives on climate action, green hydrogen and the energy transition.",
+        "detail": "Samir Rachidi joined the UNFCCC-led peer exchange on Nationally Determined Contribution (NDC) implementation in the MENA region. The mission also included discussions with Hydrom and the Oman Hydrogen Centre and a framework memorandum with the Majan Council."
+      },
+      "cop31": {
+        "name": "Side events · COP31",
+        "meta": "November 2026",
+        "place": "Antalya · Türkiye",
+        "description": "Two IRESEN-organised meetings in preparation: energy flexibility with MENALINKS and collaborative Africa–Europe research.",
+        "detail": "Demand-side management, storage and sector coupling underpin the flexibility discussion. The second side event explores cofinancing energy research, the LEAP-RE / LEAP-SE experience and Morocco’s involvement.",
+        "topics": ["Energy flexibility · MENALINKS", "Collaborative research · LEAP-RE / LEAP-SE"]
+      },
+      "irsecx": {
+        "name": "IRSEC’X",
+        "meta": "16–17 March 2027",
+        "place": "Morocco",
+        "description": "The International Renewable Energy Congress brings together researchers, engineers and institutional stakeholders to discuss innovations in sustainable energy systems.",
+        "detail": "Led by IRESEN alongside its historic partners, the congress covers renewables, energy efficiency, smart grids, storage, artificial intelligence and the water–energy nexus."
+      }
+    },
+    "newsPlaceholder": "News to come",
+    "eventPlaceholder": "Event to come",
+    "pendingContent": "Content pending",
+    "placeholderDescription": "Details will be added soon."
   }
 }

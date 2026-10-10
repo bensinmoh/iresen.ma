@@ -215,3 +215,17 @@ no applicant upload, online receipt or deployment is authorized.
 Use vector SVG icons, never PNG/JPEG icons, for future UI work. Follow the
 original color book and current approved shared color tokens; screenshot sample
 colors do not supersede them. Preserve original brand SVG geometry.
+
+## News & events update — 2026-10-10
+
+The owner commissioned the combined news/events page, its separate news listing
+with the same hero, Follow us social row and three featured events. COP31 is the
+owner-confirmed edition; its two side events remain in preparation. Preserve
+news/events anchors, alias redirects, listing locale switching, source-derived
+miniatures and the CMS publication/media gates. See [scope](docs/news-events.md).
+
+Owner follow-up for news/events: one pending secondary news slot and three
+pending event cards are explicitly labelled and have no invented content,
+dates or signup links. The highlight uses a blurred photo echo, and its five
+secondary entries align with its height. Both views use the shared gradient
+header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md).

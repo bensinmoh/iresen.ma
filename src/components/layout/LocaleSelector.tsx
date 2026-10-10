@@ -5,7 +5,13 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
 import { defaultLocale, isLocale, locales } from '@/i18n/locales'
 import { usePathname } from '@/i18n/navigation'
-import { isSupportedAnchor, pageHref, pageIdFromPathname } from '@/lib/site'
+import {
+  isSupportedAnchor,
+  pageHref,
+  pageIdFromPathname,
+  isNewsListingPath,
+  newsListingHref,
+} from '@/lib/site'
 
 const languageNames = { fr: 'Français', en: 'English', ar: 'العربية' } as const
 const languageLabels = { fr: 'FR', en: 'EN', ar: 'ع' } as const
@@ -61,9 +67,11 @@ export function LocaleSelector({ fullNames = false, variant = 'inline' }: Locale
     <a
       key={targetLocale}
       href={
-        pageId
-          ? `${pageHref(pageId, targetLocale)}${pageId === 'search' && searchQuery ? `?${searchQuery}` : ''}${anchor ? (anchor.startsWith('#') ? anchor : `#${anchor}`) : ''}`
-          : `/${targetLocale}`
+        isNewsListingPath(pathname, currentLocale)
+          ? newsListingHref(targetLocale)
+          : pageId
+            ? `${pageHref(pageId, targetLocale)}${pageId === 'search' && searchQuery ? `?${searchQuery}` : ''}${anchor ? (anchor.startsWith('#') ? anchor : `#${anchor}`) : ''}`
+            : `/${targetLocale}`
       }
       hrefLang={targetLocale}
       lang={targetLocale}

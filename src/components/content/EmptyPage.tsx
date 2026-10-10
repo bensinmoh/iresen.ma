@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
-import { footerPageIds, navigationGroups, pageHref, type PageId } from '@/lib/site'
+import { footerPageIds, navigationGroups, pageLinkHref, type PageId } from '@/lib/site'
 import { PageShell } from '@/components/layout/PageShell'
 import { PageSections } from '@/components/content/PageSections'
 import { PublishedPageContent } from './PublishedPageContent'
@@ -22,7 +22,7 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
           <ul>
             {(['home', 'transfer', 'workWithUs', 'search', 'contact'] as const).map((id) => (
               <li key={id}>
-                <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
+                <a href={pageLinkHref(id, locale)}>{pageTitle(id)}</a>
               </li>
             ))}
           </ul>
@@ -33,7 +33,7 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
             <ul>
               {group.pages.map((id) => (
                 <li key={id}>
-                  <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
+                  <a href={pageLinkHref(id, locale)}>{pageTitle(id)}</a>
                 </li>
               ))}
             </ul>
@@ -44,7 +44,7 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
           <ul>
             {footerPageIds.map((id) => (
               <li key={id}>
-                <a href={pageHref(id, locale)}>{pageTitle(id)}</a>
+                <a href={pageLinkHref(id, locale)}>{pageTitle(id)}</a>
               </li>
             ))}
           </ul>

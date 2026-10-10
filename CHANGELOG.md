@@ -1,5 +1,9 @@
 # Change log
 
+## 2026-10-10 — Actualités & événements
+
+Developed the combined news/events page and separate thumbnail listing with a shared hero. Generic news/events navigation targets their sections; legacy events paths redirect. Five selected LinkedIn sources, the Masarat podcast highlight, Oman participation, COP31 side events in preparation and IRSEC’X 2027 are included, along with five vector social links and localized search references. See [scope](docs/news-events.md). No deployment.
+
 ## 2026-10-10 — Collaborer avec nous
 
 - Redeveloped the existing collaboration page from the live Figma cooperation
@@ -812,3 +816,9 @@ See [workflow](docs/design-workflow.md), [design rules](docs/design-system.md),
 - Extended page/section search bodies without changing routes, CMS gates, assets or service commitments.
 
 See [scope](docs/collaboration-transfer-pages.md) and [verification](docs/validation.md#collaboration-and-valorisation-pages--2026-10-10).
+
+Owner follow-up for news/events: one pending secondary news slot and three
+pending event cards are explicitly labelled and have no invented content,
+dates or signup links. The highlight uses a blurred photo echo, and its five
+secondary entries align with its height. Both views use the shared gradient
+header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md).

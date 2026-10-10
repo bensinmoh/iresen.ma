@@ -6,12 +6,13 @@ import { getSiteUrl, isIndexingEnabled, pageHref, type PageId } from '@/lib/site
 export async function createPageMetadata(pageId: PageId, locale: Locale): Promise<Metadata> {
   const title = await getTranslations({ locale, namespace: 'Pages' })
   const metadata = await getTranslations({ locale, namespace: 'Metadata' })
+  const news = await getTranslations({ locale, namespace: 'NewsEvents' })
   const baseUrl = getSiteUrl()
   const canonical = new URL(pageHref(pageId, locale), baseUrl).toString()
 
   return {
-    title: title(pageId),
-    description: metadata('description'),
+    title: pageId === 'news' ? news('eyebrow') : title(pageId),
+    description: pageId === 'news' ? news('description') : metadata('description'),
     alternates: {
       canonical,
       languages: {

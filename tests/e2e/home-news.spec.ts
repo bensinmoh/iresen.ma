@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
-import { pageHref } from '../../src/lib/site'
+import { pageHref, newsListingHref } from '../../src/lib/site'
 import { homeNewsPosts } from '../../src/lib/home-news'
 import fr from '../../src/messages/fr.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
@@ -20,7 +20,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(section.locator(`h3[lang="${locale}"]`)).toHaveCount(5)
     await expect(section.locator('time[datetime="2026-10"]')).toHaveCount(2)
     await expect(section.locator('time[datetime="2026-09"]')).toHaveCount(3)
-    await expect(section.locator('header a')).toHaveAttribute('href', pageHref('news', locale))
+    await expect(section.locator('header a')).toHaveAttribute('href', newsListingHref(locale))
     await expect(section.locator('button').first()).toBeDisabled()
     await section.locator('button').last().click()
     await expect(section.locator('button').last()).toBeDisabled()

@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/locales'
 import { heroes } from '@/lib/heroes'
 import { homeFigures } from '@/lib/figures'
 import { homeMissions } from '@/lib/home-missions'
-import { pageHref, type PageId } from '@/lib/site'
+import { pageHref, pageLinkHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { HeroViewport } from './HeroViewport'
 import { HeroPhoto } from './HeroPhoto'
@@ -77,7 +77,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
                     ? '#adoption-initiatives'
                     : pageId === 'workWithUs'
                       ? '#choose-pathway'
-                      : pageHref(definition.related, locale)
+                      : pageLinkHref(definition.related, locale)
                 }
               >
                 {pageId === 'transfer'

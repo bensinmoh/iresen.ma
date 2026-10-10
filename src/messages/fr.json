@@ -528,8 +528,16 @@
         "description": "À prévoir : les événements, publications et opportunités liés aux actualités."
       },
       "follow-iresen": {
-        "title": "Suivre IRESEN",
-        "description": "À prévoir : les accès aux comptes officiels et les moyens de suivi effectivement disponibles."
+        "title": "Suivez-nous",
+        "description": "Poursuivez les échanges et retrouvez nos publications sur les réseaux sociaux."
+      },
+      "news": {
+        "title": "Actualités",
+        "description": "Recherche, échanges scientifiques et coopération : retrouvez les actualités de l’IRESEN et les rencontres que nous organisons ou auxquelles nous participons."
+      },
+      "events": {
+        "title": "Événements phares",
+        "description": "Des rencontres pour partager la recherche, rapprocher les acteurs et faire avancer la transition énergétique."
       }
     },
     "events": {
@@ -915,7 +923,7 @@
       "network": "Mobiliser les études et l’expertise, partager les savoir-faire et renforcer les capacités scientifiques et techniques des équipes.",
       "transfer": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
       "workWithUs": "Réunir les acteurs, les expertises et les ressources autour de besoins d’analyse, de recherche, d’expérimentation ou de montée en compétences.",
-      "news": "Suivre les études, les recherches, les compétences et les coopérations qui contribuent à la transition énergétique et au développement durable.",
+      "news": "Recherche, échanges scientifiques et coopération : retrouvez les actualités de l’IRESEN et les rencontres que nous organisons ou auxquelles nous participons.",
       "events": "Des rencontres pour relier les acteurs, partager les expertises et construire des coopérations au Maroc et à l’international.",
       "publications": "Des analyses, des connaissances et des résultats documentés pour éclairer les choix et partager les enseignements.",
       "media": "Découvrir les travaux, les capacités et les contributions d’IRESEN et de ses partenaires en images.",
@@ -1740,5 +1748,89 @@
       "internship": "Photographie de référence : un groupe échange dans un espace de travail partagé."
     },
     "searchText": "Carrières, recrutement, emploi, stage, doctorat, candidature spontanée, recherche appliquée, recherche et développement et innovation (R&D&I), transition énergétique."
+  },
+  "NewsEvents": {
+    "eyebrow": "Actualités & événements",
+    "titleStart": "L’institut en mouvement,",
+    "titleMiddle": "au rythme de la",
+    "titleAccent": "recherche.",
+    "description": "Recherche, échanges scientifiques et coopération : retrouvez les actualités de l’IRESEN et les rencontres que nous organisons ou auxquelles nous participons.",
+    "eventsAction": "Nos événements",
+    "news": "Actualités",
+    "allNews": "Toutes les actualités",
+    "back": "Actualités & événements",
+    "read": "Lire la publication",
+    "featured": "À la une · Podcast",
+    "eventTitle": "Événements phares",
+    "eventIntro": "Des rencontres pour partager la recherche, rapprocher les acteurs et faire avancer la transition énergétique.",
+    "participation": "Participation",
+    "organisation": "Organisation / coorganisation",
+    "details": "Découvrir l’événement",
+    "date": "Date",
+    "location": "Lieu",
+    "past": "Événement passé",
+    "planned": "En préparation",
+    "programmePending": "Programme et créneaux à confirmer.",
+    "official": "Site officiel",
+    "source": "Publication IRESEN",
+    "illustration": "Illustration de conférence · visuel de référence",
+    "follow": "Suivez-nous",
+    "followDescription": "Poursuivez les échanges et retrouvez nos publications sur les réseaux sociaux.",
+    "trainingTitle": "La recherche se partage. Les compétences se construisent.",
+    "trainingHeading": "Échanges & transmission des savoirs",
+    "trainingDescription": "Les rencontres scientifiques, les échanges entre pairs et la formation spécialisée relient la recherche aux acteurs de la transition énergétique. Ils créent des espaces pour confronter les approches, partager les enseignements des projets et faire circuler les savoir-faire entre chercheurs, partenaires académiques et professionnels. Ces échanges nourrissent les compétences collectives et rapprochent les connaissances scientifiques des besoins rencontrés sur le terrain.",
+    "trainingAction": "Découvrir notre réseau",
+    "trainingAlt": "Participants à une rencontre scientifique — photographie de référence Figma.",
+    "unavailable": "Les publications du site sont momentanément indisponibles. Les publications sélectionnées ci-dessous restent accessibles sur LinkedIn.",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "pagination": "Pagination des actualités",
+    "noImage": "Publication IRESEN",
+    "photos": {
+      "hero": "Conférencier devant un auditoire — photographie de référence Figma.",
+      "podcast": "Samir Rachidi dans le podcast Masarat d’Oman Climate Week.",
+      "oman": "Photographies de la participation d’IRESEN à Oman Climate Week 2026.",
+      "sweden": "Publication IRESEN sur la semaine Impact Pioneers ’26 MENA en Suède.",
+      "istanbul": "Publication IRESEN sur le Dii Desert Energy Leadership Summit à Istanbul.",
+      "majan": "Publication IRESEN sur la coopération avec le Majan Council."
+    },
+    "summaries": {
+      "7514300639057797120": "Dans le podcast « Masarat » d’Oman Climate Week, Samir Rachidi évoque les compétences locales, le transfert de savoir-faire et l’accompagnement des idées et startups pour développer des solutions industrielles.",
+      "7514335153415131136": "Une semaine d’apprentissage partagé et de rencontres en Suède dans le cadre d’Impact Pioneers ’26 MENA.",
+      "7514298051914588161": "Retour sur la participation d’IRESEN au Dii Desert Energy Leadership Summit à Istanbul, autour des liens entre énergie propre, continents et marchés.",
+      "7510672994734727168": "À Mascate, échanges sur l’action climatique, l’hydrogène vert et la coopération entre les écosystèmes énergétiques marocain et omanais.",
+      "7508575272049229824": "Une nouvelle étape dans la coopération entre IRESEN et le Majan Council for Foresight, Strategic Affairs and Energy."
+    },
+    "events": {
+      "oman": {
+        "name": "Oman Climate Week",
+        "meta": "14–16 septembre 2026",
+        "place": "Mascate · Oman",
+        "description": "IRESEN a participé à Oman Climate Week 2026, avec des échanges sur l’action climatique, l’hydrogène vert et la transition énergétique.",
+        "detail": "Samir Rachidi a pris part à la session d’échange sur la mise en œuvre des contributions déterminées au niveau national (CDN) dans la région MENA, menée par la CCNUCC. La mission comprenait également des échanges avec Hydrom et l’Oman Hydrogen Centre, ainsi qu’un protocole-cadre avec le Majan Council."
+      },
+      "cop31": {
+        "name": "Side events · COP31",
+        "meta": "Novembre 2026",
+        "place": "Antalya · Türkiye",
+        "description": "Deux rencontres en préparation organisées par IRESEN : la flexibilité énergétique avec MENALINKS et la recherche collaborative Afrique–Europe.",
+        "detail": "La gestion de la demande, le stockage et le couplage sectoriel sont au cœur des échanges sur la flexibilité. Le second side event porte sur le cofinancement de la recherche énergétique, l’expérience LEAP-RE / LEAP-SE et l’engagement du Maroc.",
+        "topics": [
+          "Flexibilité énergétique · MENALINKS",
+          "Recherche collaborative · LEAP-RE / LEAP-SE"
+        ]
+      },
+      "irsecx": {
+        "name": "IRSEC’X",
+        "meta": "16–17 mars 2027",
+        "place": "Maroc",
+        "description": "L’International Renewable Energy Congress réunit chercheurs, ingénieurs et acteurs institutionnels autour des innovations pour les systèmes énergétiques durables.",
+        "detail": "Organisé sous le leadership d’IRESEN avec ses partenaires historiques, le congrès aborde notamment les renouvelables, l’efficacité énergétique, les réseaux intelligents, le stockage, l’intelligence artificielle et le nexus eau–énergie."
+      }
+    },
+    "newsPlaceholder": "Actualité à venir",
+    "eventPlaceholder": "Événement à venir",
+    "pendingContent": "Contenu à compléter",
+    "placeholderDescription": "Les informations seront ajoutées prochainement."
   }
 }

@@ -1,6 +1,6 @@
 import { defineRouting } from 'next-intl/routing'
 import { defaultLocale, locales } from './locales'
-import { pathnames } from '@/lib/site'
+import { pathnames, newsListingPath, newsListingPaths } from '@/lib/site'
 
 export const routing = defineRouting({
   locales,
@@ -8,5 +8,5 @@ export const routing = defineRouting({
   localePrefix: 'always',
   localeDetection: false,
   localeCookie: false,
-  pathnames,
+  pathnames: { ...pathnames, [newsListingPath]: newsListingPaths },
 })
