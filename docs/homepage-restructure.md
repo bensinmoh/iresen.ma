@@ -262,3 +262,14 @@ See [implemented scope](home-platforms.md). This bounded increment
 supersedes only the capabilities deferral. Achievements remain the one body
 placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
 in-development wording, its 3D label, canonical destinations and search references.
+
+## Achievements request activates ordering — 2026-10-10
+
+The owner now commissions the eight-item white achievements section with no
+outgoing card links and a stacked-report mockup for the supplied hydrogen
+roadmap cover. This starts the previously named development entry point and
+activates the six-section order recorded above, superseding the deferred order
+and earlier immersive four-card achievement recommendation. The implemented
+order is missions → achievements → research → capabilities → collaboration →
+news, with unchanged anchors. Existing delivered modules remain; Alliances
+stay deferred. See [implementation](home-achievements.md).

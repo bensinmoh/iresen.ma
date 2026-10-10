@@ -194,3 +194,12 @@ image is labelled as a 3D view. Existing platforms/network destinations remain.
 Search covers the section, four card anchors and nine supplied media assets.
 Achievements are the sole remaining body placeholder; full reordering remains
 deferred. See [scope and sources](docs/home-platforms.md).
+
+## Homepage achievements — 2026-10-10
+
+The [eight achievements](docs/home-achievements.md) now replace the last body
+placeholder on white, using supplied photographs, a stacked-report cover mockup
+and native responsive rail navigation without outgoing card links. This request
+activates the agreed six-section order, reflected in section navigation.
+FR/EN/AR working copy and searchable anchors/media accompany the implementation.
+Alliances and final editorial review remain future work.

@@ -4,6 +4,7 @@ import { PageShell } from '@/components/layout/PageShell'
 import { PageSections } from '@/components/content/PageSections'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { HomeSectionNavigation } from './HomeSectionNavigation'
+import { AchievementsSection } from './AchievementsSection'
 import { ResearchSection } from './ResearchSection'
 import type { ResearchCopy } from '@/lib/home-research'
 import { MissionSection } from './MissionSection'
@@ -25,6 +26,7 @@ export async function HomePage({ locale }: { locale: Locale }) {
       sectionNavigation={<HomeSectionNavigation {...homeNavigation[locale]} />}
     >
       <MissionSection locale={locale} />
+      <AchievementsSection locale={locale} />
       <ResearchSection locale={locale} copy={messages.HomeResearch as unknown as ResearchCopy} />
       <PublishedPageContent pageId="home" locale={locale} />
       <PageSections
@@ -33,6 +35,7 @@ export async function HomePage({ locale }: { locale: Locale }) {
         excludeSections={[
           'develop-test-transfer',
           'figures',
+          'results',
           'research-priorities',
           'platforms-expertise',
           'collaboration',

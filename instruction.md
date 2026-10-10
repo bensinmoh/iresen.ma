@@ -744,3 +744,11 @@ See [implemented scope](docs/home-platforms.md). This bounded increment
 supersedes only the capabilities deferral. Achievements remain the one body
 placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
 in-development wording, its 3D label, canonical destinations and search references.
+
+## Homepage achievements — 2026-10-10
+
+The later owner request commissions the eight-card white photographic
+achievements rail and activates the previously deferred six-section order.
+See [scope and sources](docs/home-achievements.md). No outgoing card links or
+new routes are added. All body modules are implemented; Alliances and final
+editorial review remain future work.

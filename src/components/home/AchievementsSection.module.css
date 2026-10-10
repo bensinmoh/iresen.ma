@@ -1,0 +1,239 @@
+.section {
+  margin-inline: calc(-1 * var(--gutter));
+  padding: clamp(3rem, 5vw, 6rem) var(--gutter);
+  background: var(--color-white);
+  scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
+  overflow-wrap: anywhere;
+}
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+  margin-block-end: clamp(2.5rem, 4.5vw, 5rem);
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-4);
+  color: var(--color-blue);
+  font-size: var(--font-size-label);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.eyebrow img {
+  inline-size: auto;
+  block-size: 0.75rem;
+}
+.header h2 {
+  max-inline-size: 22ch;
+  margin: 0;
+  font-size: clamp(2rem, 3.125vw, 3.75rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.introduction {
+  margin: 0;
+  max-inline-size: 48ch;
+  font-size: var(--font-size-action);
+  line-height: 1.7;
+}
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * var(--space-6)) / 4);
+  gap: var(--space-6);
+  margin: 0;
+  padding: var(--space-2) 0 var(--space-4);
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: inline proximity;
+  scrollbar-width: none;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  min-inline-size: 0;
+  scroll-snap-align: start;
+}
+.card article {
+  scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
+}
+.visual {
+  position: relative;
+  aspect-ratio: 1.44;
+  overflow: hidden;
+  background: var(--color-action-surface);
+  margin-block-end: var(--space-6);
+}
+.photo {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+.category {
+  margin: 0 0 var(--space-3);
+  color: var(--color-blue);
+  font-size: var(--font-size-label);
+  font-weight: 400;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+.card h3 {
+  margin: 0 0 var(--space-3);
+  font-size: clamp(1.25rem, 1.4vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.description {
+  margin: 0;
+  line-height: 1.7;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block-start: var(--space-8);
+}
+.controls[hidden] {
+  display: none;
+}
+.progress {
+  inline-size: clamp(5rem, 18vw, 16rem);
+  block-size: 0.375rem;
+  margin-inline-end: var(--space-4);
+  background: var(--color-action-surface);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.progress span {
+  display: block;
+  block-size: 100%;
+  background: var(--color-blue);
+  border-radius: inherit;
+}
+.controls button {
+  display: grid;
+  place-items: center;
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: var(--radius-action);
+  color: var(--color-white);
+  background: var(--color-blue);
+  cursor: pointer;
+}
+.controls button:disabled {
+  color: var(--color-blue);
+  background: var(--color-action-surface);
+  cursor: default;
+}
+.controls button:hover:not(:disabled) {
+  background: var(--color-navy);
+}
+.controls button svg {
+  transition: translate var(--duration-fast) ease-out;
+}
+.previous svg {
+  transform: scaleX(-1);
+}
+.section:dir(rtl) .controls button:not(.previous) svg {
+  transform: scaleX(-1);
+}
+.section:dir(rtl) .previous svg {
+  transform: none;
+}
+.rail:focus-visible,
+.controls button:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
+}
+.section:dir(rtl) h2,
+.section:dir(rtl) h3,
+.section:dir(rtl) .category {
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+/* Physical report placement preserves the supplied French cover in every locale. */
+.reports {
+  perspective: 900px;
+}
+.reportCover {
+  position: absolute;
+  left: 48%;
+  bottom: 13%;
+  inline-size: 34%;
+  block-size: 78%;
+  object-fit: contain;
+  transform: rotateY(-16deg) rotateZ(6deg);
+  transform-origin: bottom center;
+  box-shadow: 6px 8px 12px rgb(18 52 90 / 20%);
+}
+.stackBottom,
+.stackTop {
+  position: absolute;
+  left: 12%;
+  bottom: 10%;
+  inline-size: 48%;
+  block-size: 52%;
+  background: url('/images/achievements/hydrogen-roadmap.webp') center / 100% 100%;
+  transform: rotateX(62deg) rotateZ(-20deg);
+  transform-origin: bottom center;
+  border-block-end: 5px solid var(--color-white);
+  box-shadow: 4px 10px 12px rgb(18 52 90 / 16%);
+}
+.stackTop {
+  bottom: 14%;
+  left: 14%;
+  transform: rotateX(62deg) rotateZ(-16deg);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .controls button:hover:not(:disabled) svg {
+    translate: 3px 0;
+  }
+  .controls .previous:hover:not(:disabled) svg {
+    translate: -3px 0;
+  }
+  .section:dir(rtl) .controls button:hover:not(:disabled) svg {
+    translate: -3px 0;
+  }
+  .section:dir(rtl) .controls .previous:hover:not(:disabled) svg {
+    translate: 3px 0;
+  }
+}
+@media (max-width: 69.999rem) {
+  .rail {
+    grid-auto-columns: calc((100% - var(--space-6)) / 2);
+  }
+}
+@media (max-width: 47.999rem) {
+  .header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+}
+@media (max-width: 39.999rem) {
+  .rail {
+    grid-auto-columns: min(88%, 28rem);
+  }
+  .controls {
+    justify-content: flex-end;
+    gap: var(--space-3);
+  }
+  .progress {
+    margin-inline-end: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .controls button svg {
+    transition: none;
+  }
+}

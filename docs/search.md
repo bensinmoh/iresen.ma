@@ -239,3 +239,13 @@ and stable card anchors. The five owner-requested short editorial titles are ind
 with its explicit localized text. Full-post translations are not inferred. A
 future API importer must use CMS publication/locale gates and withdrawal handling.
 The final-content glossary and search sanity-check reminder remains pending.
+
+## Homepage achievement references — 2026-10-10
+
+The [achievements module](home-achievements.md) adds eight stable child anchors
+under `results` and eight explicitly registered static media references. FR/EN/AR
+metadata includes contribution descriptions and real topic terms, without new
+broad synonym aliases. Page and section bodies include the new content. Static
+synchronization uses the catalog revision; rebuild the index after updating.
+The supplied report cover is media, not an available full report download.
+Repository references and source filenames are outside the public index.

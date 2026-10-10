@@ -413,3 +413,11 @@ manifest. The consulting original is also served byte-identically at
 outline weights while preserving both original files. All eleven supplied assets have localized public
 search metadata. The superseded native person/network drawing is no longer used. Original sources remain unchanged locally.
 The screenshot and private SharePoint chapter are reference-only and uncommitted.
+
+## Homepage achievement photographs — 2026-10-10
+
+Eight individual owner-supplied images are served as 1200px-or-smaller WebP
+copies. See [filenames, dimensions and hashes](achievement-assets.json) and
+[usage/provenance](home-achievements.md#supplied-assets). Source files remain
+untouched; the screenshot composition reference is not served. The roadmap
+cover is displayed through CSS as stacked reports, without rewriting its pixels.

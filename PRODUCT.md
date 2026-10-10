@@ -293,3 +293,12 @@ image is labelled as a 3D view. Existing platforms/network destinations remain.
 Search covers the section, four card anchors and nine supplied media assets.
 Achievements are the sole remaining body placeholder; full reordering remains
 deferred. See [scope and sources](docs/home-platforms.md).
+
+## Homepage achievements — 2026-10-10
+
+Eight owner-selected achievements replace the last homepage placeholder on
+white with no outgoing card links. The supplied report cover appears in stacked
+reports with one standing copy. This request activates the previously agreed
+missions → achievements → research → capabilities → collaboration → news order.
+FR/EN/AR are working copy for review; the user supplies claims and photos.
+See [scope](docs/home-achievements.md). Alliances remain deferred.

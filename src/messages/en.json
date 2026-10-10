@@ -339,8 +339,8 @@
         "description": "Produce reliable renewable energy and integrate it into electricity systems through durability, storage, active grids and demand flexibility. Develop renewable hydrogen and derived molecule value chains by connecting production, water resources, logistics and relevant industrial uses. Reduce industrial energy demand and process emissions through heat recovery, electrification and performance measurement. Connect water, energy and agriculture needs to preserve resources and strengthen system resilience. Recover value from residual resources and extend equipment life, considering available feedstocks, competing uses and environmental balances. Preserve comfort and essential services with less energy through solutions adapted to buildings, territories and climatic conditions. Adapt low-carbon transport to usage patterns, grid constraints and climate through fleets, charging, batteries and logistics."
       },
       "results": {
-        "title": "Results and achievements",
-        "description": "Content to add: documented cases explaining the need, contributions, results and their maturity."
+        "title": "Our landmark achievements",
+        "description": "From infrastructure to startups, demonstrators and strategic directions: eight achievements illustrating the range of IRESEN’s contributions."
       },
       "platforms-expertise": {
         "title": "Capabilities that advance innovation",
@@ -417,6 +417,38 @@
       "platform-network-expertise": {
         "title": "Complementary expertise",
         "description": "Researchers, engineers and technicians bring their skills together to address energy challenges."
+      },
+      "achievement-village-solaire": {
+        "title": "Solar Village",
+        "description": "A village of solar buildings, born from the Solar Decathlon Africa competition."
+      },
+      "achievement-ismart": {
+        "title": "iSmart",
+        "description": "A 100% Moroccan charging station for electric vehicles."
+      },
+      "achievement-aquasolar": {
+        "title": "AquaSolar",
+        "description": "A mobile, modular desalination unit powered by solar energy."
+      },
+      "achievement-worldptx": {
+        "title": "WorldPtX Summit",
+        "description": "A global summit dedicated to Power-to-X and its applications."
+      },
+      "achievement-upilot-h2": {
+        "title": "uPilot H₂",
+        "description": "Morocco’s first pilot for green hydrogen production."
+      },
+      "achievement-propre-ma": {
+        "title": "PROPRE.MA",
+        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield."
+      },
+      "achievement-cartography": {
+        "title": "Resource mapping",
+        "description": "Mapping the country’s renewable resources and zoning to inform energy decisions."
+      },
+      "achievement-hydrogen-roadmap": {
+        "title": "Green hydrogen roadmap",
+        "description": "A contribution to the development of Morocco’s green hydrogen roadmap."
       }
     },
     "institute": {
@@ -1185,5 +1217,71 @@
     },
     "mapLabel": "Morocco map",
     "expertiseIconLabel": "Expertise and consulting"
+  },
+  "HomeAchievements": {
+    "eyebrow": "Achievements",
+    "title": "Our landmark achievements",
+    "description": "From infrastructure to startups, demonstrators and strategic directions: eight achievements illustrating the range of IRESEN’s contributions.",
+    "label": "The eight achievements",
+    "previous": "Previous achievements",
+    "next": "Next achievements",
+    "items": {
+      "village-solaire": {
+        "name": "Solar Village",
+        "category": "Infrastructure",
+        "description": "A village of solar buildings, born from the Solar Decathlon Africa competition.",
+        "imageDescription": "View of the Solar Village and its houses equipped with photovoltaic panels.",
+        "searchText": "Solar Decathlon Africa SDA sustainable buildings solar housing"
+      },
+      "ismart": {
+        "name": "iSmart",
+        "category": "Startup",
+        "description": "A 100% Moroccan charging station for electric vehicles.",
+        "imageDescription": "iSmart charging station and product presentation.",
+        "searchText": "electric mobility electric vehicle charging Moroccan startup"
+      },
+      "aquasolar": {
+        "name": "AquaSolar",
+        "category": "Demonstrator",
+        "description": "A mobile, modular desalination unit powered by solar energy.",
+        "imageDescription": "AquaSolar unit with photovoltaic panels on its roof.",
+        "searchText": "solar desalination water mobile modular unit"
+      },
+      "worldptx": {
+        "name": "WorldPtX Summit",
+        "category": "Event",
+        "description": "A global summit dedicated to Power-to-X and its applications.",
+        "imageDescription": "Panel discussion at the WorldPtX Summit.",
+        "searchText": "World Power-to-X Summit PtX hydrogen energy global summit"
+      },
+      "upilot-h2": {
+        "name": "uPilot H₂",
+        "category": "Pilot",
+        "description": "Morocco’s first pilot for green hydrogen production.",
+        "imageDescription": "uPilot H₂ green hydrogen production unit.",
+        "searchText": "uPilot H2 micro pilot green hydrogen production Morocco"
+      },
+      "propre-ma": {
+        "name": "PROPRE.MA",
+        "category": "R&D project",
+        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield.",
+        "imageDescription": "Rooftop photovoltaic panels, image supplied for PROPRE.MA.",
+        "searchText": "research and development R&D photovoltaics solar energy yield Moroccan universities"
+      },
+      "cartography": {
+        "name": "Resource mapping",
+        "category": "Decision support",
+        "description": "Mapping the country’s renewable resources and zoning to inform energy decisions.",
+        "imageDescription": "Map of Morocco showing multiple layers of resource and territorial data.",
+        "searchText": "renewable resource mapping zoning solar wind GHI global horizontal irradiance DNI direct normal irradiance"
+      },
+      "hydrogen-roadmap": {
+        "name": "Green hydrogen roadmap",
+        "category": "Strategic directions",
+        "description": "A contribution to the development of Morocco’s green hydrogen roadmap.",
+        "imageDescription": "Cover of Morocco’s green hydrogen roadmap, displayed as stacked reports.",
+        "searchText": "green hydrogen roadmap Green H2 Morocco strategy energy transition"
+      }
+    }
   }
 }

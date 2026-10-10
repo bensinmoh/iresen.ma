@@ -818,3 +818,17 @@ image is labelled as a 3D view. Existing platforms/network destinations remain.
 Search covers the section, four card anchors and eleven supplied media assets.
 Achievements are the sole remaining body placeholder; full reordering remains
 deferred. See [scope and sources](docs/home-platforms.md).
+
+## Homepage achievements — 2026-10-10
+
+The white, open photographic rail applies the existing section typography,
+blue Apex Leaf label, aligned gutters and physical action corners. Four/two/one
+visible cards adapt to desktop/tablet/mobile, retaining natural copy growth and
+a neighboring mobile glimpse. A quiet progress line and arrow buttons support
+native scrolling with automatic six-second single-card steps, reversing at both
+ends. Hover/focus suspend automatic movement; reduced motion disables it. The
+owner explicitly requested no pause button. Categories precede names and descriptions;
+no card links imply unavailable detail routes. The original roadmap cover is
+shown in a CSS report stack with a standing copy, unchanged in Arabic. This
+is a local composition within current shared rules, with no new shared tokens.
+See [scope](docs/home-achievements.md).
