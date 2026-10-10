@@ -2717,7 +2717,7 @@ alpha preserved (128,506 bytes), without generative editing or new product
 geometry. The IP copy and disclosures move into the first column, with a
 localized product feature in the second; mobile stacks the feature below.
 Lint, typecheck, 120 unit tests, production build and 15 Chromium journeys
-pass. Build reports existing next-intl dynamic-import cache warnings.
+pass. The initial build reported existing next-intl dynamic-import cache warnings.
 Checks cover the loaded product, FR/EN/AR, 320–1440px, 200% text, disclosures,
 no JavaScript, scoped axe, catalogue motion/search/contact and footer attachment.
 French desktop/mobile and Arabic desktop renderings were inspected: full
@@ -2726,3 +2726,15 @@ The localized example anchor and media/section search projections are verified
 in unit checks, and the local public search catalogue was synchronized.
 Formatting/whitespace and the mechanical design scan pass. No deployment.
 Remote full-suite CI and merge outcomes are recorded on the pull request.
+
+The owner’s follow-ups replace the typed name with the supplied vector logo,
+using the authorized navy letters/blue dot while preserving a byte-identical
+original in non-served source assets. The caption is tiny uppercase; the
+description is light italic and one line at desktop/390px, wrapping only when
+needed for narrow/enlarged text. The product links to the exact supplied
+`https://www.i-smart.ma/` URL with a localized name and visible focus.
+Lint, typecheck, 120 unit tests, production build and all 15 browser journeys
+pass after these refinements. French desktop/mobile crops were inspected;
+the browser journeys also verify the external href in all three languages.
+The served logo variant is registered in localized media search, the original
+is excluded from public files, and the local search catalogue was rebuilt.

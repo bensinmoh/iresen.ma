@@ -118,20 +118,31 @@ export async function TransferPage({ locale }: { locale: Locale }) {
               aria-labelledby="ismart-example-heading"
             >
               <h3 id="ismart-example-heading">{t('example.title')}</h3>
-              <p className={styles.productName}>
-                <bdi>iSmart</bdi>
-              </p>
+              <Image
+                className={styles.productLogo}
+                src="/brand/transfer/ismart-iresen.svg"
+                alt={t('example.logoAlt')}
+                width={1656.57}
+                height={362.63}
+                unoptimized
+              />
               <p className={styles.productDescription}>{t('example.description')}</p>
               <p className={styles.productOrigin}>{t('example.origin')}</p>
-              <Image
-                className={styles.productImage}
-                src="/images/transfer/ismart-product.webp"
-                alt={t('example.imageAlt')}
-                width={1200}
-                height={1312}
-                sizes="(max-width: 639px) 90vw, (max-width: 1023px) 384px, 30vw"
-                quality={90}
-              />
+              <a
+                className={styles.productLink}
+                href="https://www.i-smart.ma/"
+                aria-label={t('example.visit')}
+              >
+                <Image
+                  className={styles.productImage}
+                  src="/images/transfer/ismart-product.webp"
+                  alt={t('example.imageAlt')}
+                  width={1200}
+                  height={1312}
+                  sizes="(max-width: 639px) 90vw, (max-width: 1023px) 384px, 30vw"
+                  quality={90}
+                />
+              </a>
             </aside>
           </div>
         </section>

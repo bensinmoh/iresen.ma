@@ -1632,7 +1632,9 @@
       "title": "Exemple de valorisation réussie",
       "description": "Borne de recharge pour véhicules électriques.",
       "origin": "100 % marocaine",
-      "imageAlt": "Borne de recharge iSmart, avec ses prises protégées et son indicateur lumineux, sur fond transparent."
+      "imageAlt": "Borne de recharge iSmart, avec ses prises protégées et son indicateur lumineux, sur fond transparent.",
+      "logoAlt": "Logo iSmart aux couleurs IRESEN.",
+      "visit": "Visiter le site iSmart"
     }
   }
 }

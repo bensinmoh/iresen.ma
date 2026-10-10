@@ -80,6 +80,20 @@ const assetLabels = {
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   {
+    id: 'transfer-ismart-logo',
+    url: '/brand/transfer/ismart-iresen.svg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Transfer.example.logoAlt,
+          description: `iSmart ${messages[locale].Transfer.example.description} ${messages[locale].Transfer.example.origin}`,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  {
     id: 'transfer-ismart-product',
     url: '/images/transfer/ismart-product.webp',
     type: 'media',

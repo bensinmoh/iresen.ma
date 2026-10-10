@@ -957,3 +957,17 @@ The original and reference screenshots remain outside the repository.
 FR/EN/AR working copy, informative alt text, the `ismart-example` anchor and
 its localized section/media search references ship together. Six canonical
 sections, catalogue behavior and existing routes remain. No deployment.
+
+The owner's next refinement replaces the typed iSmart name with the supplied
+vector wordmark. `src/assets/brand/ismart-original.svg` preserves its bytes
+(SHA-256 `49da4a8df99b159ff240e5d886b87ebe59532b329db8929a91af5531c47c8ed0`).
+The authorized color variant uses institutional navy for the letters and primary
+blue for the i dot; all paths/viewBox remain unchanged. The original remains a non-served source; the displayed variant
+has one localized media search reference. The example heading is now a tiny
+0.75rem uppercase label with natural Arabic tracking; the description is light
+300-weight italic in the existing muted text color, on one line where it fits.
+Very narrow/enlarged-text screens permit wrapping instead of overflowing.
+
+The product photograph links directly to the owner-specified
+`https://www.i-smart.ma/`, with a localized accessible name and visible keyboard
+focus. The native link adds no annotation arrows or automatic navigation.

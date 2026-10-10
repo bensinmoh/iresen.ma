@@ -13,13 +13,16 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   }) => {
     await page.goto(pageHref('transfer', locale))
     const section = page.locator('#adoption-initiatives')
-    const product = page.locator('#ismart-example img')
+    const product = page.locator('#ismart-example img[src*="ismart-product"]')
     await product.scrollIntoViewIfNeeded()
     await expect(product).toHaveJSProperty('complete', true)
     expect(await product.evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(
       0,
     )
     await expect(page.locator('#ismart-example')).toContainText(copy.example.origin)
+    await expect(
+      page.locator('#ismart-example').getByRole('link', { name: copy.example.visit }),
+    ).toHaveAttribute('href', 'https://www.i-smart.ma/')
     await expect(section.locator('article:visible')).toHaveCount(6)
     await section.getByRole('button', { name: copy.catalog.showMore, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(12)

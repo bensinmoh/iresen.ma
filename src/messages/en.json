@@ -1632,7 +1632,9 @@
       "title": "An example of successful research valorisation",
       "description": "Charging station for electric vehicles.",
       "origin": "100% Moroccan",
-      "imageAlt": "iSmart charging station with protected sockets and an illuminated indicator, on a transparent background."
+      "imageAlt": "iSmart charging station with protected sockets and an illuminated indicator, on a transparent background.",
+      "logoAlt": "iSmart logo in IRESEN colours.",
+      "visit": "Visit the iSmart website"
     }
   }
 }

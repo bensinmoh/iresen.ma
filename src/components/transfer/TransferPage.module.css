@@ -168,24 +168,44 @@
   pointer-events: none;
 }
 .ipExample h3 {
-  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
   margin: 0;
 }
-.productName {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  line-height: 1.1;
-  font-weight: 500;
-  color: var(--color-blue);
-  margin-block: var(--space-4) var(--space-3);
+.ipExample:dir(rtl) h3 {
+  letter-spacing: normal;
+}
+.productLogo {
+  display: block;
+  inline-size: min(65%, 16rem);
+  block-size: auto;
+  margin-inline: auto;
+  margin-block: var(--space-6) var(--space-4);
 }
 .productDescription {
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
   line-height: 1.5;
-  max-inline-size: 28ch;
+  color: var(--color-text-muted);
   margin-inline: auto;
   margin-block: 0;
+  white-space: nowrap;
+}
+@media (max-width: 79.999rem) {
+  .productDescription {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 23.999rem) {
+  .productDescription {
+    font-size: 0.75rem;
+    white-space: normal;
+  }
 }
 .productOrigin {
   font-size: 1.125rem;
@@ -193,11 +213,21 @@
   color: var(--color-blue);
   margin-block: var(--space-3) var(--space-6);
 }
-.productImage {
+.productLink {
   display: block;
   inline-size: min(100%, 24rem);
-  block-size: auto;
   margin-inline: auto;
+  border-top-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+.productLink:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 6px;
+}
+.productImage {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
 }
 @media (max-width: 63.999rem) {
   .ipLayout {
