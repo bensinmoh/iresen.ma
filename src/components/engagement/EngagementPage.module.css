@@ -230,8 +230,7 @@
 .page:dir(rtl) h2 {
   line-height: 1.45;
 }
-.page:dir(rtl) .link svg,
-.page:dir(rtl) .contact .button svg {
+.page:dir(rtl) .link svg {
   transform: scaleX(-1);
 }
 @media (max-width: 63.999rem) {
@@ -257,4 +256,126 @@
   .audienceIcon {
     inline-size: 9rem;
   }
+}
+
+.section[data-kind='partnerships'] {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.section[data-kind='partnerships']::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url('/illustrations/world-land.svg') center / min(80rem, 95%) auto no-repeat;
+  opacity: 0.09;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 75%, transparent);
+  pointer-events: none;
+}
+@media (max-width: 39.999rem) {
+  .section[data-kind='partnerships']::before {
+    background-size: auto 65%;
+    background-position: center;
+    opacity: 0.065;
+  }
+}
+
+.audiences article {
+  padding-inline-start: 38%;
+  border: 0;
+  background: var(--color-navy);
+}
+.audiencePhoto {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inline-size: 55%;
+  block-size: 100%;
+  max-inline-size: none;
+  z-index: -2;
+  object-fit: cover;
+  object-position: 22% center;
+}
+.audiences article::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to right,
+    rgb(18 52 90 / 5%) 0%,
+    rgb(18 52 90 / 15%) 18%,
+    rgb(18 52 90 / 88%) 35%,
+    var(--color-navy) 50%
+  );
+  pointer-events: none;
+}
+.page:dir(rtl) .audiencePhoto {
+  transform: scaleX(-1);
+  object-position: 22% center;
+}
+.page:dir(rtl) .audiences article::before {
+  background: linear-gradient(
+    to left,
+    rgb(18 52 90 / 5%) 0%,
+    rgb(18 52 90 / 15%) 18%,
+    rgb(18 52 90 / 88%) 35%,
+    var(--color-navy) 50%
+  );
+}
+@media (max-width: 39.999rem) {
+  .audiences article {
+    padding-inline-end: var(--space-6);
+    padding-inline-start: 36%;
+  }
+}
+@media (max-width: 24rem) {
+  .audiences article {
+    padding-inline-start: 30%;
+  }
+  .audiences article::before {
+    background: linear-gradient(
+      to right,
+      rgb(18 52 90 / 8%),
+      rgb(18 52 90 / 96%) 30%,
+      var(--color-navy) 45%
+    );
+  }
+  .page:dir(rtl) .audiences article::before {
+    background: linear-gradient(
+      to left,
+      rgb(18 52 90 / 8%),
+      rgb(18 52 90 / 96%) 30%,
+      var(--color-navy) 45%
+    );
+  }
+}
+
+.contact {
+  background: var(--color-innovation-lime);
+  color: var(--color-navy);
+}
+.contact .eyebrow {
+  max-inline-size: none;
+  margin-inline: auto;
+  color: var(--color-navy);
+}
+.contact .introduction > p {
+  color: var(--color-navy);
+}
+.contact :global(.button-primary),
+.contact :global(.button-primary:hover) {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.contact :global(.button-primary:hover) {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.contact :global(.button-primary:focus-visible) {
+  outline-color: var(--color-navy);
+}
+.page:dir(rtl) .contact :global(.button) svg {
+  transform: scaleX(-1);
 }

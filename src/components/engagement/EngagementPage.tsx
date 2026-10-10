@@ -14,12 +14,32 @@ import {
 } from '@/lib/engagement'
 import styles from './EngagementPage.module.css'
 
+const audiencePhotos = [
+  { id: 'industry', height: 480 },
+  { id: 'research', height: 600 },
+  { id: 'institutions', height: 600 },
+  { id: 'partners', height: 600 },
+] as const
+
 const audienceIcons: ValorisationIconName[] = [
   'building-factory-2',
   'flask',
   'chart-line',
   'arrows-exchange',
 ]
+
+// Keep Latin programme names readable inside Arabic sentences.
+function ProgrammeText({ text }: { text: string }) {
+  return text
+    .split(/(LEAP-RE|LEAP-SE|MED-GEM|World Power-to-X Summit|IRSEC’X)/g)
+    .map((part, index) =>
+      /^(LEAP-RE|LEAP-SE|MED-GEM|World Power-to-X Summit|IRSEC’X)$/.test(part) ? (
+        <bdi key={index}>{part}</bdi>
+      ) : (
+        part
+      ),
+    )
+}
 
 export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs'; locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Engagement' })
@@ -40,7 +60,7 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
               key={id}
               id={id}
               aria-labelledby={`${id}-heading`}
-              className={`${styles.section} ${needs || kind === 'audiences' || contact ? styles.ink : ''} ${kind === 'partnerships' || kind === 'process' ? styles.light : ''} ${needs ? styles.needs : ''} ${contact ? styles.contact : ''}`}
+              className={`${styles.section} ${needs || kind === 'audiences' ? styles.ink : ''} ${kind === 'partnerships' || kind === 'process' ? styles.light : ''} ${needs ? styles.needs : ''} ${contact ? styles.contact : ''}`}
               data-kind={kind}
             >
               <div className={styles.editorial}>
@@ -65,10 +85,20 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                       return (
                         <article key={title}>
                           {kind === 'audiences' && (
-                            <ValorisationIcon
-                              className={styles.audienceIcon}
-                              name={audienceIcons[index]}
-                            />
+                            <>
+                              <Image
+                                className={styles.audiencePhoto}
+                                src={`/images/collaborate/${audiencePhotos[index].id}.webp`}
+                                alt=""
+                                width={1200}
+                                height={audiencePhotos[index].height}
+                                sizes="(max-width: 39.999rem) 55vw, 28vw"
+                              />
+                              <ValorisationIcon
+                                className={styles.audienceIcon}
+                                name={audienceIcons[index]}
+                              />
+                            </>
                           )}
                           {kind === 'process' && (
                             <span className={styles.number} aria-hidden="true">
@@ -78,7 +108,9 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                             </span>
                           )}
                           <h3>{title}</h3>
-                          <p>{description}</p>
+                          <p>
+                            <ProgrammeText text={description} />
+                          </p>
                           {destination && (
                             <a
                               className={styles.link}

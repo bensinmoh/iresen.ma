@@ -78,3 +78,40 @@ section registry and detailed localized search projections change together;
 removed reference/checklist wording leaves the catalog. Contact links preserve
 the existing partnership subject and local email-draft workflow. Routes, CMS
 approval gates and the final content-search reminder remain unchanged.
+
+### Owner correction: mission copy and world backdrop
+
+The later owner correction replaces the map-analysis wording with direct website
+copy about what IRESEN does: structure scientific/industrial/institutional
+partnerships, contribute to cooperation programmes, and animate networks,
+scientific/institutional exchanges and events. The owner explicitly requests
+programme examples; LEAP-RE, LEAP-SE and MED-GEM come from the supplied map.
+The current narrative supplies World Power-to-X Summit and IRSEC’X. These names
+illustrate intervention modes, without invented roles, dates, funding or outcomes.
+
+A quiet SVG world-land backdrop adds geographic context, without borders, named
+countries, partner markers, routes or coverage claims. It remains unmirrored in
+Arabic and decorative to assistive technology. Mobile crops the geography as a
+background, preserving readable copy. One explicit localized media search record
+covers the SVG; section search copy updates automatically in all three locales.
+
+### Owner follow-up: illustrated audience blocks
+
+Each audience block receives its own newly generated photographic illustration:
+industrial engineers, battery research, an energy-planning site visit and
+cooperation coordinators. The image occupies the reading-start side, fades into
+the institutional navy, and the text gains logical start padding. Arabic moves
+the photo zone and gradient to the right; the owner’s later correction also
+reflects these four generated photos horizontally toward the text. Quiet SVG
+icons remain decorative. Mobile and enlarged text retain natural card height.
+
+These are fictional explanatory scenes, not actual IRESEN personnel, facilities,
+partners, funding agreements or project evidence. Four explicit FR/EN/AR media
+search records preserve that distinction. Image sources remain in the generation
+library; responsive WebP copies live in the project. No new service is introduced.
+
+The final owner correction centers the contact overline as well as its title,
+copy and button. It uses the guide's Innovation Lime `#A9C47F` with navy text and
+a navy/white action, separating the compact CTA from the navy footer. French
+labels this section “Premier contact”. The four audience photos are horizontally
+reflected in Arabic at the owner's explicit request; the world map is unchanged.

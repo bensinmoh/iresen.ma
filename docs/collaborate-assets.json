@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-10",
+  "generator": "Built-in ImageGen",
+  "composition": "Landscape editorial photographic scenes, subjects on left third, natural daylight, no logos or text. Categories: industrial engineers; battery research; energy-planning site visit; cooperation coordinators. CSS crops and fades into navy; RTL changes placement and horizontally reflects the generated photos, as explicitly requested by the owner.",
+  "assets": [
+    {
+      "id": "industry",
+      "sourceFilename": "exec-16e28e46-882a-40cc-adf4-ef6aa54f0bc0.png",
+      "sourceSha256": "fc57a710a26e2522d5a770901d3a3c72842f8b346a1b30513d116891440d625a",
+      "servedPath": "/images/collaborate/industry.webp",
+      "servedSha256": "d80ae04cc6c7a51986f7cafd1a10cd826c4126a722b3ce604e39df7a23cb49e5",
+      "bytes": 52718,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements"
+    },
+    {
+      "id": "research",
+      "sourceFilename": "exec-9b4d59da-1d81-4017-9920-d8c13bc297d1.png",
+      "sourceSha256": "3cb0e5bda6780cc61b9fcddcb37dbdb37b475bf8399edfdb4cbb345a941e9039",
+      "servedPath": "/images/collaborate/research.webp",
+      "servedSha256": "e90e938c9305676c121f8d955a3da721f720af0116e27f4e2523d74d3ffb5d41",
+      "bytes": 55148,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements"
+    },
+    {
+      "id": "institutions",
+      "sourceFilename": "exec-cf4582c2-9e93-48ed-8c74-142625ae10bf.png",
+      "sourceSha256": "1132821aa74a329dd09da909d2da9d586f33125b400ce79ebb4ca4256a362e20",
+      "servedPath": "/images/collaborate/institutions.webp",
+      "servedSha256": "832232ce6f68dd25d51223640aad6a1a069e27e9056a669dc6428d3debbd2e2f",
+      "bytes": 71784,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements"
+    },
+    {
+      "id": "partners",
+      "sourceFilename": "exec-87d2c022-f5d9-40d2-8f15-b5007f7a2f7b.png",
+      "sourceSha256": "8087534400ae29e4ea7bf891ffefd68bf395aad949ca710f5f43b4b4cf7e61d5",
+      "servedPath": "/images/collaborate/partners.webp",
+      "servedSha256": "87851044cb20dfda9ff3a052ff49eab12034750e6b2ab90bc27b0c2844455c1d",
+      "bytes": 52028,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements"
+    }
+  ]
+}

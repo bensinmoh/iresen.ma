@@ -502,8 +502,8 @@
         "description": "Quatre repères pour préparer un travail partagé. Le parcours s’adapte à la nature et à la maturité de votre demande."
       },
       "collaboration-references": {
-        "title": "Connecter les expertises, faire progresser les projets",
-        "description": "La carte des partenariats révèle une diversité d’acteurs : équipes scientifiques, industriels, institutions et réseaux multilatéraux. Leur complémentarité nourrit la coopération autour de la transition énergétique."
+        "title": "Faire de la coopération un levier d’innovation",
+        "description": "Nous développons des partenariats scientifiques, industriels et institutionnels pour relier les compétences, mobiliser les ressources et faire avancer la transition énergétique."
       },
       "prepare-discussion": {
         "title": "Prenez contact",
@@ -1436,30 +1436,36 @@
           "checklist": []
         },
         "collaboration-references": {
-          "label": "La coopération en action",
+          "label": "Coopération & rayonnement",
           "items": [
             {
-              "title": "Croiser les savoirs",
-              "description": "Les échanges entre organismes de recherche et universités rapprochent les méthodes, les connaissances et les questions scientifiques."
+              "title": "Structurer des partenariats",
+              "description": "Nous rapprochons les équipes de recherche, les industriels et les institutions autour de besoins communs, et contribuons à définir les objectifs et les complémentarités du travail partagé."
             },
             {
-              "title": "Relier la recherche aux usages",
-              "description": "Le dialogue avec les acteurs industriels met les enjeux technologiques et les conditions d’application au cœur des travaux partagés."
+              "title": "Participer aux programmes de coopération",
+              "description": "Nous contribuons à des cadres de coopération qui relient recherche, innovation et transition énergétique. LEAP-RE, LEAP-SE et MED-GEM en sont des exemples."
             },
             {
-              "title": "Faire vivre les réseaux",
-              "description": "Les programmes et réseaux de coopération créent des espaces de dialogue, de partage d’expertise et de construction de projets communs."
+              "title": "Animer les réseaux et les échanges",
+              "description": "Nous favorisons le partage d’expertise et les échanges scientifiques et institutionnels, à travers les réseaux et les événements. Le World Power-to-X Summit et IRSEC’X participent à ce dialogue."
             }
           ],
           "checklist": []
         },
         "prepare-discussion": {
-          "label": "Premier échange",
+          "label": "Premier contact",
           "items": [],
           "checklist": []
         }
       },
-      "contactAction": "Contactez-nous"
+      "contactAction": "Contactez-nous",
+      "photos": {
+        "industry": "Illustration générée d’ingénieurs examinant un équipement industriel énergétique. Scène fictive, sans installation ni personnel IRESEN réel.",
+        "research": "Illustration générée d’une scientifique étudiant un prototype de batterie au laboratoire. Scène fictive, sans équipe ni laboratoire IRESEN réel.",
+        "institutions": "Illustration générée de professionnels de la planification énergétique lors d’une visite de terrain. Scène fictive, sans institution, territoire ni projet IRESEN réel identifié.",
+        "partners": "Illustration générée de coordinateurs de coopération discutant d’un projet. Scène fictive, sans partenaire, bailleur ni accord IRESEN réel identifié."
+      }
     },
     "transfer": {
       "sections": {

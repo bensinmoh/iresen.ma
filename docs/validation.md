@@ -2911,3 +2911,36 @@ results are recorded by the task pull request and Git history.
   commitments are introduced. Final editorial/translation review remains due.
 - PR scope excludes the pre-existing careers changes, fixtures removal and SVG
   conversion. No deployment, DNS or repository visibility change.
+
+### Collaborer follow-up verification
+
+The owner replaces the map-analysis copy with direct mission/action copy and
+explicitly requests LEAP-RE, LEAP-SE and MED-GEM examples. A 52,479-byte coast-only
+Natural Earth SVG is served as a quiet backdrop, with source/derivative hashes,
+public-domain provenance and explicit FR/EN/AR search metadata.
+
+Four distinct generated photographic scenes are served as 1200px WebPs, each
+roughly 52–72 KiB. The generation originals remain in the image library; prompts,
+source/derivative hashes and fictional-scene provenance are recorded in
+`collaborate-assets.json`. Localized media references and the scoped Next Image
+allowlist ship together. RTL moves the photo zone and, by the owner's later
+explicit request, reflects these four generated images horizontally. The world
+silhouette is not reflected.
+
+The contact overline now spans the full available width, centered with the title
+and action. Approved Innovation Lime/navy provide 6.54:1 text contrast and a
+clear boundary with the navy footer; the navy/white button retains readable
+hover and focus states. No new shared color token or publication is introduced.
+
+Review also corrected an undefined mobile spacing token and replaced forced
+Next Image fill overrides with explicit derivative dimensions and logical CSS.
+The latest lint and 122 unit tests pass. A final review build initially collided
+with concurrent regeneration of Carrières type artifacts; the previously successful production build and nine focused browser checks cover
+the visual changes; fresh PR CI verifies the final source in a clean environment. Carrières source
+and unrelated working changes remain outside this PR.
+
+The final focused browser pass covers all nine Collaborer tests (FR/EN/AR),
+including narrow layouts, enlarged text, axe checks, preserved anchors and the
+contact route. Manual captures confirm four loaded photos, opposite RTL gradients,
+explicit Arabic reflection and the centered green CTA. Arabic programme names
+use isolated Latin text and punctuation for exact acronym search discovery.

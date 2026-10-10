@@ -685,8 +685,8 @@
         "description": "Four pointers for preparing joint work. The pathway adapts to the nature and maturity of your request."
       },
       "collaboration-references": {
-        "title": "Connecting expertise, advancing projects",
-        "description": "The partnership map brings together a diverse range of actors: scientific teams, industry, institutions and multilateral networks. Their complementary expertise supports cooperation for the energy transition."
+        "title": "Making cooperation a driver of innovation",
+        "description": "We develop scientific, industrial and institutional partnerships to connect expertise, mobilise resources and advance the energy transition."
       },
       "prepare-discussion": {
         "title": "Get in touch",
@@ -1436,30 +1436,36 @@
           "checklist": []
         },
         "collaboration-references": {
-          "label": "Cooperation in action",
+          "label": "Cooperation & outreach",
           "items": [
             {
-              "title": "Sharing knowledge",
-              "description": "Exchanges between research organisations and universities connect methods, knowledge and scientific questions."
+              "title": "Structuring partnerships",
+              "description": "We bring research teams, industry and institutions together around shared needs, helping to define common objectives and complementary contributions."
             },
             {
-              "title": "Connecting research with applications",
-              "description": "Dialogue with industry places technology challenges and application conditions at the heart of shared work."
+              "title": "Contributing to cooperation programmes",
+              "description": "We contribute to cooperation frameworks connecting research, innovation and the energy transition. Examples include LEAP-RE, LEAP-SE and MED-GEM."
             },
             {
-              "title": "Building active networks",
-              "description": "Cooperation programmes and networks create opportunities for dialogue, knowledge exchange and the development of joint projects."
+              "title": "Connecting networks and exchanges",
+              "description": "We encourage knowledge sharing and scientific and institutional exchanges through networks and events. The World Power-to-X Summit and IRSEC’X contribute to this dialogue."
             }
           ],
           "checklist": []
         },
         "prepare-discussion": {
-          "label": "First conversation",
+          "label": "First contact",
           "items": [],
           "checklist": []
         }
       },
-      "contactAction": "Contact us"
+      "contactAction": "Contact us",
+      "photos": {
+        "industry": "Generated illustration of engineers examining industrial energy equipment. Fictional scene, without real IRESEN staff or facilities.",
+        "research": "Generated illustration of a scientist studying a battery prototype in a laboratory. Fictional scene, without a real IRESEN team or laboratory.",
+        "institutions": "Generated illustration of energy planning professionals on a site visit. Fictional scene, without an identified real IRESEN institution, territory or project.",
+        "partners": "Generated illustration of cooperation coordinators discussing a project. Fictional scene, without an identified real IRESEN partner, funder or agreement."
+      }
     },
     "transfer": {
       "sections": {

@@ -248,3 +248,6 @@ transition, audience-specific benefits with decorative SVG icons and a compact
 contact CTA replace the former panels/reference checklist. Breadcrumb/submenu
 are removed; six legacy anchors and localized search destinations remain.
 See [scope](docs/collaborate-page.md).
+
+The cooperation transition now explains IRESEN's actions directly and includes
+owner-requested programme examples, with a subtle coast-only SVG world backdrop.
