@@ -48,12 +48,15 @@ The source controls remain below the rail rather than moving with its contents.
 
 ## Current requirements — owner correction, 2026-10-10
 
-The later explicit owner requests take precedence over the earlier proposed
-thresholds and reachable-stop counting rules:
+The latest explicit owner requests take precedence over earlier proposed
+thresholds, desktop variants and reachable-stop counting rules:
 
-- **One pill per content element.** Eight videos produce eight pills on desktop
-  and mobile; the count does not become a count of visible pages or unique scroll
-  offsets. Hide the whole control only when no horizontal overflow exists.
+- **Mobile only.** Show pills at the existing mobile breakpoint, at or below
+  `40rem` (640px at the default root size). Hide them on tablet/desktop; retain
+  native horizontal scrolling there, with the native scrollbar hidden. This overrides
+  the earlier desktop pill treatment.
+- **One pill per content element.** Eight videos produce eight pills on mobile;
+  the count does not become a count of visible pages or unique scroll offsets. Hide the whole control only when no horizontal overflow exists.
 - **No borders on pills.** Neither inactive nor active pills have a border,
   decorative outline or inset stroke/shadow. A separate keyboard-visible focus
   ring remains an interaction requirement; it is absent in ordinary resting states.
@@ -74,9 +77,9 @@ family is a retained optional reference, not an automatic replacement for the
 owner's one-pill-per-element requirement. Use it only when later explicitly
 selected for a particular block; it must not silently reduce pill count.
 
-The video library uses the pill family for every overflowing collection. Visible
+The video library uses the pill family only for overflowing mobile collections. Visible
 marks are 8px high, 20px inactive and 60px active. Their targets are 44px high,
-44px wide on larger screens and 28px wide on narrow screens (the active target
+28px wide on mobile (the active target
 is 60px). Four-pixel gaps and wrapping accommodate enlarged/narrow layouts
 without overlapping targets or overflowing the page. On institutional ink, the
 approved Science Blue `#4698CA` gives the active mark sufficient contrast without
@@ -131,7 +134,7 @@ Keep a usable fallback until enhancement succeeds before hiding an existing
 scrollbar. Proposed control transitions are 180–250ms with the current easing;
 reduced motion changes state immediately and avoids smooth forced travel.
 
-The later site review should inspect actual overflow at each breakpoint rather
+The later site review should inspect actual mobile overflow rather
 than add controls to every block automatically. Initial candidates found in the
 checkout include hero figures, homepage mission/achievement/news collections,
 research axes, innovation steps, section navigation, news/event mobile rails and

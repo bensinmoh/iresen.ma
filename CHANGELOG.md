@@ -851,7 +851,11 @@ The official portrait now has a dedicated light biography viewer with selectable
 
 - Applied the recorded horizontal-navigation effect to the video library with one
   borderless pill per video, equal inter-block spacing and native scroll tracking.
-- Updated the effect requirements to retain per-element count at every width,
+- Updated the effect requirements to retain per-element count on mobile,
   including shared terminal offsets, and prohibit decorative pill borders.
 - Preserved localized anchors, public video/search gates, keyboard/no-JavaScript
   access and reduced motion.
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

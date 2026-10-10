@@ -1532,3 +1532,7 @@ The video library implements the [updated specification](horizontal-scroll-indic
 group with equal space above/below. On ink, Science Blue supplies active contrast.
 Keyboard focus remains distinct; no-JavaScript retains native overflow access.
 Other collections retain their current treatment until commissioned.
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

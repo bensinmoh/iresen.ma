@@ -104,3 +104,7 @@ native scrolling, resize and RTL; shared terminal offsets retain separate item
 selection. Controls disappear without overflow. Reduced motion is direct;
 no-JavaScript retains native scrollbars and guarded file links. Existing anchors,
 CMS/media gates and search references remain. See [requirements](horizontal-scroll-indicators.md).
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

@@ -50,6 +50,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       fullPage: false,
     })
     await page.setViewportSize({ width: 1440, height: 1000 })
+    await expect(controls).not.toBeVisible()
+    expect(await rail.evaluate((el) => getComputedStyle(el).scrollbarWidth)).toBe('none')
+    await page.locator('#videos').scrollIntoViewIfNeeded()
+    await page.screenshot({
+      path: `.cache/video-rail-screenshots/${locale}-desktop.png`,
+      fullPage: false,
+    })
+    await page.setViewportSize({ width: 390, height: 844 })
     await expect(controls).toBeVisible()
     await expect(buttons).toHaveCount(await rail.locator('article').count())
     for (let index = 0; index < (await buttons.count()); index++) {
@@ -64,11 +72,6 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         }),
       ).toBe(true)
     }
-    await page.locator('#videos').scrollIntoViewIfNeeded()
-    await page.screenshot({
-      path: `.cache/video-rail-screenshots/${locale}-desktop.png`,
-      fullPage: false,
-    })
     await page.evaluate(() => {
       document.documentElement.style.fontSize = '200%'
     })

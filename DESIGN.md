@@ -1113,3 +1113,7 @@ borderless expanding pill per video, centered in the inter-block gap. Institutio
 ink uses approved Science Blue for sufficient active contrast without a stroke.
 Native scrolling, per-item navigation, RTL, keyboard focus and reduced motion
 remain. Other rails await commissioning. See [requirements](docs/horizontal-scroll-indicators.md).
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

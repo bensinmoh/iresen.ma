@@ -3065,15 +3065,15 @@ was unsuitable (existing users) and had a withdrawal queue failure; the isolated
 confirmation passed. The existing content database was preserved.
 
 Ten focused Chrome production-browser checks cover FR/EN/AR, 390px mobile and
-1440px desktop, one pill per video, all item buttons including shared terminal
-offsets, native manual scroll tracking, keyboard selection, centered control
+1440px desktop with pills and native scrollbar hidden, one pill per
+video on mobile, all item buttons, native manual scroll tracking, keyboard selection, centered control
 geometry, no pill borders/shadows, no overflow at 320px/200% text, controls hidden
 when all items fit, no-JavaScript and reduced/normal motion. Existing media
 filters/dialog/file-link and scoped axe checks passed. The first browser launcher
 needed the installed Chrome path; no library content was fabricated for tests.
 
 Visually inspected FR/AR mobile/desktop captures from the local eight-video
-collection. Approved Science Blue on ink supplies borderless active contrast;
+collection; desktop captures confirm no pills. Approved Science Blue on ink supplies borderless active contrast;
 keyboard focus is separate. Existing stable media/video anchors, public search
 references and withdrawal gates remain. No new public resource or index rebuild
 is needed for this interaction change. No Safari/Firefox or screen-reader pass

@@ -234,6 +234,10 @@ header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md)
 
 The owner commissioned the effect first in the video library and requires one
 pill per content element, with no border or decorative outline/inset stroke.
-Preserve per-item count at every width, center the group in the inter-block gap,
+Preserve per-item count on mobile, center the group in the inter-block gap,
 and keep keyboard focus/native scrolling/RTL. Other rails await commissioning.
 See [the current requirements](docs/horizontal-scroll-indicators.md).
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.
