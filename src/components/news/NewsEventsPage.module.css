@@ -1,4 +1,5 @@
 .page {
+  overflow-wrap: anywhere;
   color: var(--color-text);
   --section-space: clamp(2.5rem, 4.167vw, 5rem);
 }
@@ -171,12 +172,16 @@
   letter-spacing: 0.045em;
 }
 .read {
+  max-inline-size: 100%;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   min-block-size: 2.75rem;
   font-size: var(--font-size-label);
   font-weight: 600;
+}
+.read > span {
+  min-inline-size: 0;
 }
 .read svg,
 .details svg {
@@ -541,6 +546,11 @@
   }
 }
 @media (max-width: 40rem) {
+  .compact,
+  .listing .compact {
+    grid-template-columns: minmax(0, min(5rem, 22%)) minmax(0, 1fr);
+    gap: min(1.5rem, 4vw);
+  }
   .hero {
     min-block-size: 36rem;
   }
@@ -641,5 +651,40 @@
   }
   .placeholderPoster {
     aspect-ratio: 1.6;
+  }
+}
+
+@media (max-width: 40rem) {
+  .events:has([data-event-navigation]) {
+    padding-block-end: 0;
+  }
+  .eventCopy {
+    padding: min(1.5rem, 6vw);
+  }
+}
+
+@media (max-width: 40rem) {
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .socials li {
+    padding: 1rem 0;
+  }
+  .socials a {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    min-block-size: 44px;
+  }
+  .socials a > :first-child {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+  .socials bdi,
+  .socials a > svg:last-child {
+    display: none;
   }
 }

@@ -3006,6 +3006,19 @@ use isolated Latin text and punctuation for exact acronym search discovery.
 No deployment, DNS or visibility change was performed. Remote CI and merge
 status are recorded by the task PR and Git history.
 
+## Event pills and mobile social icons — 2026-10-10
+
+The targeted browser regression covers FR/EN/AR, desktop-hidden/mobile-visible
+pills, six item destinations, first/last positions, native scroll synchronization,
+keyboard focus, borderless marks, reduced motion, centered placement, 320px at
+200% text, fixed social icons and native discovery without JavaScript. Existing
+news/listing/disclosure/search browser coverage remains. Scoped accessibility
+scans do not establish full conformance. Local formatting, lint, strict types, 126 unit checks, production build and all
+ten targeted browser cases pass. FR/AR mobile captures were inspected. The CI
+zoom regression prompted a page-scoped long-text wrapping guard and verification
+after fonts settle. Repeated Arabic zoom coverage identified compact-news link overflow; viewport-based thumbnail spacing and shrinkable link text address it without clipping content.
+Final CI results are recorded in the task PR; no deployment is authorized.
+
 ## News events — 2026-10-10
 
 Implemented the combined overview, separate thumbnail listing with the same

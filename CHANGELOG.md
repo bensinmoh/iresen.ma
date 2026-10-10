@@ -13,6 +13,12 @@
 See [scope](docs/publications.md#consolidated-update--10-october-2026) and
 [verification](docs/publications-update-validation.md).
 
+## 2026-10-10 — Event pills and mobile social icons
+
+- Hide enhanced event scrollbars; add six synchronized mobile navigation pills.
+- Show the five social SVG icons in one fixed mobile row, retaining accessible names.
+- Preserve native scrolling, equal card heights, desktop labels and existing search references.
+
 ## 2026-10-10 — Arabic video download placement
 
 - Mirror video-popup actions in Arabic: download sits to the right of close.

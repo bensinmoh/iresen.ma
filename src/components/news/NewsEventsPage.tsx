@@ -7,6 +7,7 @@ import { selectedNews, newsImages, newsEvents, newsSocialLinks } from '@/lib/new
 import { linkedInPostHref } from '@/lib/home-news'
 import { pageHref, newsListingHref } from '@/lib/site'
 import { SocialIcon } from './SocialIcon'
+import { EventRail } from './EventRail'
 import styles from './NewsEventsPage.module.css'
 
 type Card = Omit<PublicNewsCard, 'source'> & { source: 'cms' | 'linkedin' }
@@ -105,7 +106,7 @@ export async function NewsEventsPage({
           </h3>
           {!compact && <p>{card.summary}</p>}
           <a className={styles.read} href={card.href}>
-            {t('read')}
+            <span>{t('read')}</span>
             <NavigationIcon name="arrow" />
           </a>
         </div>
@@ -253,11 +254,21 @@ export async function NewsEventsPage({
                   <h2 id="events-title">{t('eventTitle')}</h2>
                   <p>{t('eventIntro')}</p>
                 </header>
-                <div
+                <EventRail
                   className={styles.eventGrid}
-                  role="region"
-                  aria-label={t('eventTitle')}
-                  tabIndex={0}
+                  locale={locale}
+                  label={t('eventTitle')}
+                  navigationLabel={t('eventNavigation')}
+                  itemLabels={[
+                    ...newsEvents.map(
+                      (event, index) =>
+                        `${t('eventPosition', { current: index + 1, total: 6 })} — ${t(`events.${event.id}.name`)}`,
+                    ),
+                    ...[1, 2, 3].map(
+                      (number) =>
+                        `${t('eventPosition', { current: number + 3, total: 6 })} — ${t('eventPlaceholder')}`,
+                    ),
+                  ]}
                 >
                   {newsEvents.map((event) => (
                     <article key={event.id} id={`event-${event.id}`} className={styles.eventCard}>
@@ -315,7 +326,7 @@ export async function NewsEventsPage({
                             )}
                             {event.href && (
                               <a href={event.href} className={styles.read}>
-                                {event.id === 'oman' ? t('source') : t('official')}
+                                <span>{event.id === 'oman' ? t('source') : t('official')}</span>
                                 <NavigationIcon name="arrow" />
                               </a>
                             )}
@@ -340,7 +351,7 @@ export async function NewsEventsPage({
                       </div>
                     </article>
                   ))}
-                </div>
+                </EventRail>
               </div>
             </section>
             <section className={styles.follow} id="follow-iresen" aria-labelledby="follow-title">
@@ -352,7 +363,7 @@ export async function NewsEventsPage({
                 <ul className={styles.socials}>
                   {newsSocialLinks.map((social) => (
                     <li key={social.id}>
-                      <a href={social.href}>
+                      <a href={social.href} aria-label={social.name}>
                         <SocialIcon name={social.id} />
                         <bdi>{social.name}</bdi>
                         <NavigationIcon name="arrow" />
