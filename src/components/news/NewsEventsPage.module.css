@@ -649,6 +649,9 @@
   .events:has([data-event-navigation]) {
     padding-block-end: 0;
   }
+  .eventCopy {
+    padding: min(1.5rem, 6vw);
+  }
 }
 
 @media (max-width: 40rem) {
