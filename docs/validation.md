@@ -3140,3 +3140,11 @@ ranking and explicit correction behavior are unchanged.
 
 All twelve local search browser cases and six affected footer/standard-hero cases
 pass after the updated assertions. No runtime search behavior was changed.
+
+A subsequent CI run exposed a five-second vocabulary bulk-insert timeout during
+cold catalogue initialization. Static vocabulary writes now use batches of 100
+notices inside the existing atomic transaction, preserving the SQL deadline and
+search ranking/access rules. Planner statistics still refresh after the full write.
+
+The 28 integration tests pass again in a newly migrated disposable database
+with the bounded vocabulary write; the existing local database is preserved.

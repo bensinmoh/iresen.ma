@@ -93,7 +93,9 @@ anchors remain: `featured-publications`, `find-publication`,
 Each retained publication has a stable typed search reference in all three
 locales, with original title, searchable bibliographic metadata and localized
 context/topic labels. No missing translation fallback is used. The hero asset
-is explicitly registered. Catalogue fingerprints update index and spelling
+is explicitly registered. Cold initialization bounds vocabulary writes to 100 notices per batch within one
+atomic transaction and refreshes planner statistics after the complete write.
+Catalogue fingerprints update index and spelling
 vocabulary and remove withdrawn records through the existing static lifecycle.
 The four withdrawn 2027 IDs and both workbooks remain excluded. Rankings,
 private editorial notes and Scopus metrics are not part of this page projection;

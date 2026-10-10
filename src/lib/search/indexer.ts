@@ -108,7 +108,11 @@ export async function initializeSearchCatalog(): Promise<string> {
             published_at=EXCLUDED.published_at,title_norm=EXCLUDED.title_norm,body_norm=EXCLUDED.body_norm`,
           [JSON.stringify(rows), revision],
         )
-        await writePublicVocabulary(client, documents)
+        // Bound vocabulary writes as the static bibliographic corpus grows;
+        // each statement keeps the normal search-pool deadline. The surrounding
+        // transaction still makes the complete catalogue revision atomic.
+        for (let offset = 0; offset < documents.length; offset += 100)
+          await writePublicVocabulary(client, documents.slice(offset, offset + 100))
       }
       await client.query(
         "DELETE FROM search_documents WHERE origin='static' AND source_revision <> $1",
