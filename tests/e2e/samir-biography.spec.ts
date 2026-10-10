@@ -1,21 +1,21 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import { pageHref } from '../../src/lib/site'
-import photos from '../../src/data/media-photos.json' with { type: 'json' }
-import biography from '../../src/data/samir-biography.json' with { type: 'json' }
+import { samirPortraitDownload, samirBiographies } from '../../src/lib/samir-biography'
 
 for (const locale of ['fr', 'en', 'ar'] as const) {
   test(`${locale} official portrait biography, copy and image-only download`, async ({
     page,
     context,
   }) => {
+    const biography = samirBiographies[locale]
     await context.grantPermissions(['clipboard-read', 'clipboard-write'])
     await page.goto(pageHref('media', locale))
     const portrait = page.locator('#photo-portrait-dg-iresen-samir-rachidi > a')
     await portrait.click()
     const dialog = page.getByRole('dialog')
     await expect(dialog).toHaveAttribute('data-viewer', 'biography')
-    await expect(dialog.locator('[lang="fr"]')).toContainText(biography.paragraphs.at(-1)!)
+    await expect(dialog.locator(`[lang="${locale}"]`)).toContainText(biography.paragraphs.at(-1)!)
     await expect(dialog.locator('img')).toHaveAttribute(
       'src',
       '/images/media-library/samir-rachidi-cutout-v2.webp',
@@ -27,11 +27,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect
       .poll(() => page.evaluate(() => navigator.clipboard.readText()))
       .toContain(biography.paragraphs.at(-1)!)
-    await expect(dialog.locator('a[download]')).toHaveAttribute('href', photos[0].src)
+    await expect(dialog.locator('a[download]')).toHaveAttribute('href', samirPortraitDownload)
+    await expect(dialog.locator('[role="status"]')).toBeEmpty()
     const downloadEvent = page.waitForEvent('download')
     await dialog.locator('a[download]').click()
     const download = await downloadEvent
-    expect(download.suggestedFilename()).toBe('portrait-dg-iresen-samir-rachidi-official.webp')
+    expect(download.suggestedFilename()).toBe('portrait-dg-iresen-samir-rachidi-official.jpg')
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(

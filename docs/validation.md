@@ -3055,3 +3055,9 @@ documentation-only task. See [the specification](horizontal-scroll-indicators.md
 ## Samir biography popup — 2026-10-10
 
 Lint, typecheck, 126 unit checks and the isolated production build passed. Eight scoped production Chrome cases passed: FR/EN/AR media filters and modal access, no-JavaScript photo links, reduced motion, supplied biography, real clipboard copy, image-only download, 320/390/768/1440px containment, 200% mobile text, Escape/focus restoration, scoped axe scan and portrait frame meeting the desktop popup bottom edge. Desktop rendering and headroom were manually inspected. The local search rebuild synchronized the static catalog; French-only biography eligibility is covered by a regression test. No database schema changes or deployment. See [scope](samir-biography.md).
+
+## Samir JPG download and quiet copy — 2026-10-10
+
+The downloadable portrait is converted from the official original to JPG (1024 × 1536). The viewer links to this format; successful clipboard copying clears visible status. Unit/search coverage treats the JPG as a derivative of the original photo. Scoped browser checks verify clipboard content, empty success status and JPG-only download.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
