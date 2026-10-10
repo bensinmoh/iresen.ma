@@ -2976,3 +2976,12 @@ use isolated Latin text and punctuation for exact acronym search discovery.
 
 No deployment, DNS or visibility change was performed. Remote CI and merge
 status are recorded by the task PR and Git history.
+
+## Horizontal scroll indicator documentation — 2026-10-10
+
+Extracted six local frames from each of four supplied recordings; visually compared
+16 frames across start, transition and end states. Recorded source durations and
+SHA-256 hashes; observations are distinguished from future implementation proposals.
+Checked local documentation links, formatting and focused diff whitespace. No
+runtime change: application/database/browser suites are not required for this
+documentation-only task. See [the specification](horizontal-scroll-indicators.md).

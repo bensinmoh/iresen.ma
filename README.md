@@ -262,3 +262,9 @@ owner-requested programme examples, with a subtle coast-only SVG world backdrop.
 For an isolated production check alongside the local development server, set
 `NEXT_BUILD_DIRECTORY=.local/careers-build` for both `pnpm build` and
 `scripts/start-production.mjs`, and use a separate `PORT`. The default remains `.next`.
+
+## Horizontal scroll reference — 2026-10-10
+
+The [recorded indicator design](docs/horizontal-scroll-indicators.md) distinguishes
+short expanding pills from numbered fill-bar navigation and specifies the owner’s
+vertical centering correction. Analysis only; site-wide adaptation is deferred.

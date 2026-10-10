@@ -1064,3 +1064,11 @@ navy/white button to contrast with the footer. Its overline spans the full width
 and is centered with the title/action. This is a local color application; shared
 brand tokens remain unchanged. The generated audience photos are reflected in
 Arabic following the owner's explicit correction; the world silhouette is not.
+
+## Horizontal collection indicators — 2026-10-10
+
+The owner requested a reference specification from four videos: expanding active
+pills for short collections, or cumulative fill with a current/total counter and
+SVG arrows. Center the complete control row in the gap between the upper block
+and the next CTA/content boundary. This is recorded direction for a later review,
+not implemented UI. See [the specification](docs/horizontal-scroll-indicators.md).
