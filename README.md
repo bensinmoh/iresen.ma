@@ -289,3 +289,7 @@ or publication-gate change is authorized. See [scope](docs/news-events.md).
 The [recorded indicator design](docs/horizontal-scroll-indicators.md) distinguishes
 short expanding pills from numbered fill-bar navigation and specifies the owner’s
 vertical centering correction. Analysis only; site-wide adaptation is deferred.
+
+## Samir portrait biography — 2026-10-10
+
+The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).

@@ -67,6 +67,12 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
               previous: t('previous'),
               next: t('next'),
               found: t('found'),
+              biography: t('biography'),
+              biographyLanguage: t('biographyLanguage'),
+              copyBiography: t('copyBiography'),
+              copiedBiography: t('copiedBiography'),
+              copyBiographyError: t('copyBiographyError'),
+              downloadPortrait: t('downloadPortrait'),
               categories: t.raw('categories'),
             }}
           />
