@@ -1622,6 +1622,11 @@
       "measurement": "Mesure & instrumentation",
       "thermal": "Systèmes thermiques"
     },
-    "contactMessage": "Je souhaite échanger avec IRESEN au sujet du brevet {reference} : {title}."
+    "contactMessage": "Je souhaite échanger avec IRESEN au sujet du brevet {reference} : {title}.",
+    "photos": {
+      "intro": "Illustration générée de chercheurs examinant un prototype et ses instruments de mesure en laboratoire.",
+      "innovation": "Illustration générée d’une chercheuse étudiant un échantillon solaire sur un banc de mesure.",
+      "technology": "Illustration générée d’une spécialiste présentant un schéma de réseau énergétique sur écran."
+    }
   }
 }

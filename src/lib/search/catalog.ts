@@ -500,6 +500,9 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             } as const
             for (const key of keys[entry.id as keyof typeof keys] ?? [])
               body.push(...engagementSearchText(catalog.Transfer[key]))
+            if (entry.id === 'results-to-transfer') body.push(catalog.Transfer.photos.intro)
+            if (entry.id === 'build-transfer')
+              body.push(catalog.Transfer.photos.innovation, catalog.Transfer.photos.technology)
           }
           if (pageId === 'home' && entry.id === homeAchievementsSectionId)
             body.push(

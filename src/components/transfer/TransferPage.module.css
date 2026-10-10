@@ -390,7 +390,32 @@
   margin-block-end: var(--space-8);
 }
 .doors article {
+  display: grid;
+  grid-template-columns: 22% minmax(0, 1fr);
+  gap: var(--space-6);
   border-block-start: 1px solid var(--color-border);
+  padding-block-start: var(--space-6);
+}
+.doorPhoto {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+.doorPhoto img {
+  object-fit: cover;
+}
+.innovationPhoto img {
+  object-position: 44% center;
+}
+.technologyPhoto img {
+  object-position: 54% center;
+}
+.doors .doorCopy h3 {
+  margin-block-start: 0;
+}
+.doorCopy {
+  min-inline-size: 0;
 }
 .doors a {
   margin-block-start: var(--space-6);
@@ -500,15 +525,6 @@
 .pathwayIcon {
   inline-size: 2.25rem;
   block-size: 2.25rem;
-}
-.doors .doorIcon {
-  inline-size: 2rem;
-  block-size: 2rem;
-  color: var(--color-blue);
-  margin-block-start: var(--space-6);
-}
-.page:dir(rtl) .doors .doorIcon {
-  transform: none;
 }
 @media (max-width: 63.999rem) {
   .intro {

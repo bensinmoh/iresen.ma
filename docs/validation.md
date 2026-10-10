@@ -2649,3 +2649,18 @@ no JavaScript and card motion. The local index was rebuilt; searching
 2014-07-01 via the real API returns the exact 37172 anchor in each locale.
 No CMS schema, publication gate or deployment change is introduced.
 Remote full-suite CI and merge outcomes are recorded on the pull request.
+
+## Valorisation photos and portrait entry points — 2026-10-10
+
+The photo follow-up replaces generic platform/solar scenes with existing
+laboratory, testing and energy-network illustrations. Both entry-point photos
+are narrow portrait crops stretched to the block height, replacing the icons.
+Lint, typecheck, 116 unit tests and production build passed. Thirty Chromium
+journeys passed across patents, engagement pages and heroes, including loaded
+portrait images and their geometry, FR/EN/AR, 320–1440px, 200% text, scoped axe,
+no JavaScript and reduced motion. French desktop/mobile, Arabic mobile and
+French introduction captures were inspected. The portrait image request sizes
+account for the full-height cover crop to avoid magnifying small thumbnails.
+The mechanical design scan has no findings and the local search catalogue was
+synchronized. Existing asset provenance/media references, data and routes remain.
+Remote full-suite CI and merge outcomes are recorded on the pull request.
