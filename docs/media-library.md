@@ -94,3 +94,17 @@ the development site, as explicitly requested by the owner.
 ## Samir portrait biography — 2026-10-10
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](samir-biography.md).
+
+## Video navigation pills — 2026-10-10
+
+The video rail now has one expanding pill per approved video, with no border or
+inset stroke. The group sits below the thumbnails, centered within the equal
+32px gaps before the reports link. Pills reveal their associated video and follow
+native scrolling, resize and RTL; shared terminal offsets retain separate item
+selection. Controls disappear without overflow. Reduced motion is direct;
+no-JavaScript retains native scrollbars and guarded file links. Existing anchors,
+CMS/media gates and search references remain. See [requirements](horizontal-scroll-indicators.md).
+
+Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
+retains native horizontal scrolling; its default scrollbar is hidden and no pills
+are displayed.

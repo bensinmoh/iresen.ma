@@ -1884,5 +1884,9 @@
     "copiedBiography": "Biography copied",
     "copyBiographyError": "Automatic copying is unavailable. You can select and copy the text.",
     "downloadPortrait": "Download portrait"
+  },
+  "VideoRailNavigation": {
+    "label": "Video library navigation",
+    "position": "Position {current} of {total}"
   }
 }

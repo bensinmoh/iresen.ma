@@ -1,10 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import { ViewerIcon } from './ViewerIcon'
 import styles from './MediaLibrary.module.css'
+import navigation from './VideoRail.module.css'
 
 type Video = {
   id: number
@@ -19,8 +21,6 @@ export function VideoRail({
   videos,
   locale,
   label,
-  previous,
-  next,
   close,
   download,
 }: {
@@ -36,39 +36,98 @@ export function VideoRail({
   const dialog = useRef<HTMLDialogElement>(null)
   const player = useRef<HTMLVideoElement>(null)
   const [active, setActive] = useState<Video | null>(null)
-  const scroll = (step: number) => {
+  const t = useTranslations('VideoRailNavigation')
+  const railId = useId()
+  const requestedItem = useRef<number | null>(null)
+  const [position, setPosition] = useState({
+    stops: [] as number[],
+    current: 0,
+    ready: false,
+    overflow: false,
+  })
+  useEffect(() => {
     const element = rail.current
     if (!element) return
-    element.scrollBy({
-      left: step * (locale === 'ar' ? -1 : 1) * element.clientWidth * 0.8,
+    let frame = 0
+    const measure = () => {
+      const maximum = Math.max(0, element.scrollWidth - element.clientWidth)
+      const cards = Array.from(element.querySelectorAll(':scope > article'))
+      const first = cards[0]?.getBoundingClientRect()
+      const stops: number[] = []
+      if (first) {
+        for (const card of cards) {
+          const rect = card.getBoundingClientRect()
+          const offset = locale === 'ar' ? first.right - rect.right : rect.left - first.left
+          const stop = Math.min(maximum, Math.max(0, offset))
+          stops.push(stop)
+        }
+      }
+      const offset = Math.min(maximum, Math.max(0, element.scrollLeft * (locale === 'ar' ? -1 : 1)))
+      const requested = requestedItem.current
+      const current =
+        requested !== null && Math.abs(stops[requested] - offset) < 1
+          ? requested
+          : maximum > 1 && maximum - offset < 1
+            ? stops.length - 1
+            : stops.reduce(
+                (nearest, stop, index) =>
+                  Math.abs(stop - offset) < Math.abs(stops[nearest] - offset) ? index : nearest,
+                0,
+              )
+      setPosition((previous) =>
+        previous.ready &&
+        previous.overflow === maximum > 1 &&
+        previous.current === current &&
+        previous.stops.length === stops.length &&
+        previous.stops.every((stop, index) => Math.abs(stop - stops[index]) < 0.5)
+          ? previous
+          : { stops, current, ready: true, overflow: maximum > 1 },
+      )
+    }
+    const schedule = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(measure)
+    }
+    const clearRequest = () => {
+      requestedItem.current = null
+    }
+    for (const event of ['wheel', 'pointerdown', 'keydown'])
+      element.addEventListener(event, clearRequest, { passive: true })
+    const observer = new ResizeObserver(schedule)
+    observer.observe(element)
+    for (const card of element.children) observer.observe(card)
+    element.addEventListener('scroll', schedule, { passive: true })
+    schedule()
+    return () => {
+      cancelAnimationFrame(frame)
+      observer.disconnect()
+      for (const event of ['wheel', 'pointerdown', 'keydown'])
+        element.removeEventListener(event, clearRequest)
+      element.removeEventListener('scroll', schedule)
+    }
+  }, [locale, videos])
+  const goTo = (index: number) => {
+    requestedItem.current = index
+    setPosition((previous) => ({ ...previous, current: index }))
+    rail.current?.scrollTo({
+      left: position.stops[index] * (locale === 'ar' ? -1 : 1),
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
         ? 'instant'
         : 'smooth',
     })
   }
+  const total = position.stops.length
   return (
     <>
-      <div className={styles.railControls}>
-        <button
-          type="button"
-          className={styles.iconButton}
-          aria-label={previous}
-          title={previous}
-          onClick={() => scroll(-1)}
-        >
-          <ViewerIcon name={locale === 'ar' ? 'next' : 'previous'} />
-        </button>
-        <button
-          type="button"
-          className={styles.iconButton}
-          aria-label={next}
-          title={next}
-          onClick={() => scroll(1)}
-        >
-          <ViewerIcon name={locale === 'ar' ? 'previous' : 'next'} />
-        </button>
-      </div>
-      <div ref={rail} className={styles.videos} aria-label={label} role="group" tabIndex={0}>
+      <div
+        ref={rail}
+        id={railId}
+        className={`${styles.videos} ${navigation.rail} ${position.ready ? navigation.enhanced : ''}`}
+        aria-label={label}
+        role="group"
+        tabIndex={0}
+        data-video-rail
+      >
         {videos.map((video, index) => (
           <article id={`video-${video.id}`} key={video.id}>
             <button
@@ -135,6 +194,28 @@ export function VideoRail({
           </article>
         ))}
       </div>
+      {position.overflow && total > 1 && (
+        <div
+          className={navigation.controls}
+          role="group"
+          aria-label={t('label')}
+          data-video-navigation
+        >
+          <div className={navigation.pills}>
+            {videos.map((video, index) => (
+              <button
+                key={video.id}
+                type="button"
+                className={navigation.pill}
+                aria-label={`${t('position', { current: index + 1, total })} — ${video.title}`}
+                aria-controls={railId}
+                aria-current={index === position.current ? 'true' : undefined}
+                onClick={() => goTo(index)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
       <dialog
         ref={dialog}
         data-viewer="video"
