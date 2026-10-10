@@ -1511,14 +1511,7 @@
       "label": "De la recherche à l’impact",
       "title": "Un parcours, plusieurs trajectoires",
       "description": "Détecter, évaluer, protéger, maturer, transférer, déployer : relier le potentiel scientifique aux besoins de l’industrie et du marché.",
-      "steps": [
-        "Détecter",
-        "Évaluer",
-        "Protéger",
-        "Maturer",
-        "Transférer",
-        "Déployer"
-      ],
+      "steps": ["Détecter", "Évaluer", "Protéger", "Maturer", "Transférer", "Déployer"],
       "note": "Ce parcours ne constitue pas un processus rigide : chaque innovation suit une trajectoire adaptée à sa maturité, son potentiel et ses opportunités."
     },
     "ip": {

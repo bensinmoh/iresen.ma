@@ -1511,14 +1511,7 @@
       "label": "From research to impact",
       "title": "One journey, multiple pathways",
       "description": "Detect, evaluate, protect, mature, transfer, deploy: connect scientific potential with industry and market needs.",
-      "steps": [
-        "Detect",
-        "Evaluate",
-        "Protect",
-        "Mature",
-        "Transfer",
-        "Deploy"
-      ],
+      "steps": ["Detect", "Evaluate", "Protect", "Mature", "Transfer", "Deploy"],
       "note": "This is not a rigid process: each innovation follows a pathway tailored to its maturity, potential and opportunities."
     },
     "ip": {
