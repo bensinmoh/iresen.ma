@@ -128,7 +128,7 @@ export function VideoRail({
       </div>
       <dialog
         ref={dialog}
-        className={`${styles.dialog} ${styles.videoDialog}`}
+        className={styles.dialog}
         aria-labelledby="video-dialog-title"
         onClose={() => {
           player.current?.pause()
