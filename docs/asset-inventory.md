@@ -422,6 +422,27 @@ copies. See [filenames, dimensions and hashes](achievement-assets.json) and
 untouched; the screenshot composition reference is not served. The roadmap
 cover is displayed through CSS as stacked reports, without rewriting its pixels.
 
+## Collaborer world silhouette — 2026-10-10
+
+Owner-requested decorative world backdrop: `public/illustrations/world-land.svg`.
+Derived from [Natural Earth 1:110m land polygons](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson), retrieved 2026-10-10.
+Natural Earth confirms [public-domain terms](https://www.naturalearthdata.com/about/terms-of-use/).
+Source SHA-256: `9e0729ee253ca7d7a5c4ae9395fb1902264c5377c52e224d13dd85010e2835d9`.
+SVG SHA-256: `118ec81486b0d04ea8aab53baaa8b55bd736ad0461ec2bbc9b44eef2c3c90dd4`.
+Equirectangular projection, one-decimal coordinate precision, Antarctica omitted
+from the decorative viewport. Coastlines only; no political boundaries, partner
+locations, connection routes or asserted reach. Primary blue with low CSS opacity,
+no geographic mirroring in RTL. The original dataset stays outside the repository.
+Localized search asset ID: `collaborate-world-land`, type `media`; one served SVG.
+
+Four newly generated audience photographs are recorded in
+[the asset manifest](collaborate-assets.json): industry, research, institutions and
+partners. Originals remain in the generation library; 1200px WebP derivatives
+are served under `/images/collaborate/`. These fictional explanatory scenes are
+owner-requested, not evidence of actual IRESEN people, infrastructure, partners
+or agreements. Each has explicit FR/EN/AR searchable provenance. Next Image's
+static local allowlist includes only the new scoped directory.
+
 ## Careers Figma assets — 2026-10-10
 
 The owner commissioned the careers frame and supplied page/detail screenshots.

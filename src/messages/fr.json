@@ -490,8 +490,8 @@
         "description": "Une question à éclairer, une solution à faire progresser ou des compétences à renforcer : le point de départ est le besoin et l’usage visé."
       },
       "organisation-contributions": {
-        "title": "Un travail commun, des apports complémentaires",
-        "description": "Une collaboration se construit avec les connaissances du terrain, les capacités scientifiques et les ressources de chacun."
+        "title": "Des apports adaptés à votre activité",
+        "description": "Relier votre besoin aux compétences scientifiques, aux moyens expérimentaux et aux partenaires utiles."
       },
       "collaboration-arrangements": {
         "title": "Choisir une forme de coopération adaptée",
@@ -502,12 +502,12 @@
         "description": "Quatre repères pour préparer un travail partagé. Le parcours s’adapte à la nature et à la maturité de votre demande."
       },
       "collaboration-references": {
-        "title": "Des contributions à découvrir",
-        "description": "Les réalisations présentées sur l’accueil donnent des points d’entrée concrets pour comprendre la diversité des contributions."
+        "title": "Faire de la coopération un levier d’innovation",
+        "description": "Nous développons des partenariats scientifiques, industriels et institutionnels pour relier les compétences, mobiliser les ressources et faire avancer la transition énergétique."
       },
       "prepare-discussion": {
-        "title": "Présentez le besoin et le contexte",
-        "description": "Une première description claire permet de préparer la discussion et d’identifier les contributions à examiner."
+        "title": "Prenez contact",
+        "description": "Une question, une idée ou un projet à construire ensemble ? Parlons de votre besoin."
       }
     },
     "news": {
@@ -1372,23 +1372,23 @@
           "checklist": []
         },
         "organisation-contributions": {
-          "label": "Vos contributions",
+          "label": "Ce que l’on vous apporte",
           "items": [
             {
               "title": "Entreprises et industriels",
-              "description": "Apporter un problème d’usage, des contraintes de procédé, des données partageables et un terrain d’expérimentation. Le travail commun cherche à préciser les options et les conditions de mise en œuvre."
+              "description": "Éclairer vos choix technologiques, explorer les voies de développement et préparer les essais utiles à votre solution. Nous rapprochons vos enjeux d’usage des compétences de recherche et d’expérimentation."
             },
             {
               "title": "Équipes de recherche",
-              "description": "Apporter une question scientifique, des méthodes et des compétences. Définir ensemble les travaux, les moyens expérimentaux et la manière de documenter les résultats."
+              "description": "Structurer des travaux communs, croiser les expertises et identifier les moyens expérimentaux pertinents. La coopération ouvre des échanges scientifiques et des liens avec les besoins de terrain."
             },
             {
               "title": "Institutions et territoires",
-              "description": "Partager un besoin de décision, les caractéristiques du territoire et les acteurs concernés. Relier l’analyse et la recherche aux conditions locales d’application."
+              "description": "Apporter des analyses, des connaissances et des options technologiques pour éclairer vos décisions. Nous relions les enjeux de transition énergétique aux contextes d’application et aux acteurs concernés."
             },
             {
               "title": "Partenaires et bailleurs",
-              "description": "Mettre en relation des équipes et contribuer aux ressources, aux connaissances ou à la coopération. Préciser les rôles, les objectifs communs et les contributions de chaque partenaire."
+              "description": "Faire converger vos priorités avec des questions de recherche et des équipes complémentaires. Nous contribuons au cadrage de coopérations, au partage des connaissances et à la mise en relation des acteurs."
             }
           ],
           "checklist": []
@@ -1436,32 +1436,35 @@
           "checklist": []
         },
         "collaboration-references": {
-          "label": "Repères",
+          "label": "Coopération & rayonnement",
           "items": [
             {
-              "title": "Cartographie",
-              "description": "Un exemple de contribution à l’aide à la décision : la cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques."
+              "title": "Structurer des partenariats",
+              "description": "Nous rapprochons les équipes de recherche, les industriels et les institutions autour de besoins communs, et contribuons à définir les objectifs et les complémentarités du travail partagé."
             },
             {
-              "title": "WorldPtX Summit",
-              "description": "Un exemple de mise en relation et d’échanges autour du Power-to-X. La rencontre est un moyen de coopération ; ses résultats se documentent selon les objectifs poursuivis."
+              "title": "Participer aux programmes de coopération",
+              "description": "Nous contribuons à des cadres de coopération qui relient recherche, innovation et transition énergétique. LEAP-RE, LEAP-SE et MED-GEM en sont des exemples."
+            },
+            {
+              "title": "Animer les réseaux et les échanges",
+              "description": "Nous favorisons le partage d’expertise et les échanges scientifiques et institutionnels, à travers les réseaux et les événements. Le World Power-to-X Summit et IRSEC’X participent à ce dialogue."
             }
           ],
-          "note": "Une référence se lit avec son besoin, les rôles des partenaires et son stade. Elle ne garantit pas qu’un dispositif équivalent soit disponible pour toute nouvelle demande.",
           "checklist": []
         },
         "prepare-discussion": {
-          "label": "Premier échange",
+          "label": "Premier contact",
           "items": [],
-          "note": "Commencez par une synthèse non confidentielle. Le partage de documents sensibles et les conditions du travail se précisent ensuite avec les interlocuteurs concernés.",
-          "checklist": [
-            "Votre organisation, votre rôle et les partenaires déjà associés.",
-            "Le problème à traiter, les publics concernés et l’application visée.",
-            "Les travaux déjà réalisés, les résultats disponibles et les incertitudes restantes.",
-            "Les compétences, les moyens ou les formes de coopération recherchés.",
-            "Les contraintes de calendrier, de terrain, de données et de ressources à discuter."
-          ]
+          "checklist": []
         }
+      },
+      "contactAction": "Contactez-nous",
+      "photos": {
+        "industry": "Illustration générée d’ingénieurs examinant un équipement industriel énergétique. Scène fictive, sans installation ni personnel IRESEN réel.",
+        "research": "Illustration générée d’une scientifique étudiant un prototype de batterie au laboratoire. Scène fictive, sans équipe ni laboratoire IRESEN réel.",
+        "institutions": "Illustration générée de professionnels de la planification énergétique lors d’une visite de terrain. Scène fictive, sans institution, territoire ni projet IRESEN réel identifié.",
+        "partners": "Illustration générée de coordinateurs de coopération discutant d’un projet. Scène fictive, sans partenaire, bailleur ni accord IRESEN réel identifié."
       }
     },
     "transfer": {

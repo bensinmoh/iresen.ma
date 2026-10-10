@@ -250,6 +250,15 @@ paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
 
+Collaborer refinement (2026-10-10): navy text/photo needs, a pale cooperation
+transition, audience-specific benefits with decorative SVG icons and a compact
+contact CTA replace the former panels/reference checklist. Breadcrumb/submenu
+are removed; six legacy anchors and localized search destinations remain.
+See [scope](docs/collaborate-page.md).
+
+The cooperation transition now explains IRESEN's actions directly and includes
+owner-requested programme examples, with a subtle coast-only SVG world backdrop.
+
 For an isolated production check alongside the local development server, set
 `NEXT_BUILD_DIRECTORY=.local/careers-build` for both `pnpm build` and
 `scripts/start-production.mjs`, and use a separate `PORT`. The default remains `.next`.

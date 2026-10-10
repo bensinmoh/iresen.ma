@@ -1034,3 +1034,33 @@ live Figma cooperation frame within the current shared rules. FR/EN canonical
 paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
+
+## Collaborer need and benefits refinement — 2026-10-10
+
+The owner's attached composition is adapted as a navy text/photo split with open
+four-need columns, using an existing generated collaboration illustration. A pale
+cooperation transition precedes four audience-benefit blocks with oversized,
+low-opacity decorative vector icons. Formats and preparation remain, followed by
+a shorter centered contact CTA. Breadcrumb/submenu and former reference/checklist
+modules are removed, with legacy anchors retained. Shared tokens, route helpers,
+RTL, photo provenance and working editorial-copy status remain. This is a local
+composition, not a new shared design rule. See [scope](docs/collaborate-page.md).
+
+The owner's follow-up gives the cooperation transition direct mission language
+and programme examples (LEAP-RE, LEAP-SE, MED-GEM). A quiet Natural Earth coast-only
+SVG backdrop in primary blue fades vertically into the pale section. No partner
+markers or political borders imply coverage; geography keeps its orientation in
+RTL. This remains a local composition within the current shared tokens.
+
+The four audience blocks now use distinct generated photographic backgrounds,
+visible at reading-start and fading into navy beneath the padded text. The
+photo/gradient zone swaps sides in Arabic; the owner subsequently requests
+horizontal reflection of these generated people scenes toward the text. Low-opacity
+outline icons remain subordinate to readable copy. This owner-requested local
+image treatment adds no new shared typography, colors or component convention.
+
+The compact final CTA uses approved Innovation Lime with navy copy and a
+navy/white button to contrast with the footer. Its overline spans the full width
+and is centered with the title/action. This is a local color application; shared
+brand tokens remain unchanged. The generated audience photos are reflected in
+Arabic following the owner's explicit correction; the world silhouette is not.

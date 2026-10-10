@@ -2888,6 +2888,63 @@ pass before merge. No deployment or website publication is authorized.
 No deployment, DNS or visibility change was performed. Remote CI and merge
 results are recorded by the task pull request and Git history.
 
+## Collaborer need and benefits refinement — 2026-10-10
+
+- Lint, strict types and 122 unit tests passed. Production build passed in
+  `.local/collaborate-build`; next-intl emitted its existing webpack cache warnings.
+- All 26 database integration tests passed on confirmation. The first run had
+  one isolated spelling-suggestion failure; no search logic was changed.
+- All nine engagement Chromium tests passed on the corrected production build:
+  FR/EN/AR, six anchors, removed breadcrumb/navigation, four vector icons, compact
+  CTA, partnership contact subject, 1440/768/390/320px, 200% text, scoped axe scans,
+  old URL redirects and Arabic transfer without JavaScript.
+- Captured FR 1440/390px, EN 768px and AR 1440/390px. Inspected desktop needs and
+  Arabic mobile benefits after correction; no document overflow at those widths.
+  A navy-link contrast defect from the first pass was corrected with white links.
+  Rebuilding the first server's active directory interrupted a broader browser
+  run; confirmation used an isolated build. No passing whole-suite claim is made.
+- Search catalog rebuilt; the new cooperation anchor was discovered through
+  localized FR/EN/AR queries. Section registry preserves six IDs and moves the
+  cooperation entry ahead of benefits. Old reference/checklist copy is removed.
+- Impeccable's mechanical detector returned no findings; this supplements the
+  rendered checks. No new images, countries, numerical claims or partner
+  commitments are introduced. Final editorial/translation review remains due.
+- PR scope excludes the pre-existing careers changes, fixtures removal and SVG
+  conversion. No deployment, DNS or repository visibility change.
+
+### Collaborer follow-up verification
+
+The owner replaces the map-analysis copy with direct mission/action copy and
+explicitly requests LEAP-RE, LEAP-SE and MED-GEM examples. A 52,479-byte coast-only
+Natural Earth SVG is served as a quiet backdrop, with source/derivative hashes,
+public-domain provenance and explicit FR/EN/AR search metadata.
+
+Four distinct generated photographic scenes are served as 1200px WebPs, each
+roughly 52–72 KiB. The generation originals remain in the image library; prompts,
+source/derivative hashes and fictional-scene provenance are recorded in
+`collaborate-assets.json`. Localized media references and the scoped Next Image
+allowlist ship together. RTL moves the photo zone and, by the owner's later
+explicit request, reflects these four generated images horizontally. The world
+silhouette is not reflected.
+
+The contact overline now spans the full available width, centered with the title
+and action. Approved Innovation Lime/navy provide 6.54:1 text contrast and a
+clear boundary with the navy footer; the navy/white button retains readable
+hover and focus states. No new shared color token or publication is introduced.
+
+Review also corrected an undefined mobile spacing token and replaced forced
+Next Image fill overrides with explicit derivative dimensions and logical CSS.
+The latest lint and 122 unit tests pass. A final review build initially collided
+with concurrent regeneration of Carrières type artifacts; the previously successful production build and nine focused browser checks cover
+the visual changes; fresh PR CI verifies the final source in a clean environment. Carrières source
+and unrelated working changes remain outside this PR.
+
+The final focused browser pass covers all nine Collaborer tests (FR/EN/AR),
+including narrow layouts, enlarged text, axe checks, preserved anchors and the
+contact route. Manual captures confirm four loaded photos, opposite RTL gradients,
+explicit Arabic reflection and the centered green CTA. Arabic programme names
+use isolated Latin text and punctuation for exact acronym search discovery.
+
 ## Careers implementation — 2026-10-10
 
 - Implemented the Figma careers page, CMS collection/migration, native accordion

@@ -79,6 +79,46 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...(['industry', 'research', 'institutions', 'partners'] as const).map((id, index) => ({
+    id: `collaborate-audience-${id}`,
+    url: `/images/collaborate/${id}.webp`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title:
+            messages[locale].Engagement.workWithUs.sections['organisation-contributions'].items[
+              index
+            ].title,
+          description: messages[locale].Engagement.workWithUs.photos[id],
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
+  {
+    id: 'collaborate-world-land',
+    url: '/illustrations/world-land.svg',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Carte du monde — coopération et rayonnement',
+        description:
+          'Silhouette vectorielle décorative des terres émergées, sans frontières, pays partenaires ni données de couverture. Illustration de la section coopération IRESEN : partenariats, programmes LEAP-RE, LEAP-SE, MED-GEM, réseaux et échanges scientifiques.',
+      },
+      en: {
+        title: 'World map — cooperation and outreach',
+        description:
+          'Decorative vector land silhouette without borders, partner countries or coverage data. Illustration for IRESEN cooperation: partnerships, LEAP-RE, LEAP-SE, MED-GEM programmes, networks and scientific exchanges.',
+      },
+      ar: {
+        title: 'خريطة العالم — التعاون والإشعاع',
+        description:
+          'صورة ظلية متجهية زخرفية لليابسة دون حدود أو بلدان شريكة أو بيانات تغطية. توضيح لقسم تعاون IRESEN: الشراكات وبرامج LEAP-RE، LEAP-SE، MED-GEM والشبكات والتبادلات العلمية.',
+      },
+    },
+  },
+
   ...(['hero', 'environment', 'internship'] as const).map((id) => ({
     id: `careers-photo-${id}`,
     url: `/images/careers/${id}.webp`,
