@@ -1,5 +1,10 @@
 # Change log
 
+## 2026-10-10 — Arabic video download placement
+
+- Mirror video-popup actions in Arabic: download sits to the right of close.
+- Preserve French/English ordering and the guarded original-file download.
+
 ## 2026-10-10 — Actualités & événements
 
 Developed the combined news/events page and separate thumbnail listing with a shared hero. Generic news/events navigation targets their sections; legacy events paths redirect. Five selected LinkedIn sources, the Masarat podcast highlight, Oman participation, COP31 side events in preparation and IRSEC’X 2027 are included, along with five vector social links and localized search references. See [scope](docs/news-events.md). No deployment.
