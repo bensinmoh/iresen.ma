@@ -888,7 +888,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
     }
     // Owner-requested localized editorial headings; no full-post translation fallback.
     for (const post of homeNewsPosts) {
-      const key = post.id.split(':').at(-1)! as keyof typeof catalog.NewsEvents.newsTitles
+      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
       const title = catalog.HomeNews.posts[key]?.title
       if (!title?.trim()) continue
       documents.push({
