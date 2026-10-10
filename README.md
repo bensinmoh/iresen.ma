@@ -135,6 +135,11 @@ Project scripts load `.env.local` and keep caches within ignored paths. For a ne
 
 ## Repository map and next work
 
+The owner-retained [research institute benchmark](docs/references/benchmark/README.md)
+contains an unchanged source and an IRESEN-specific analysis for future new-page
+content and layout work. Consult it when that work is commissioned; its lessons
+are guidance, without changing current routes, content or feature scope.
+
 The [staged publications database](docs/publications.md) ingests the owner's
 1,181 selected bibliographic records for a future section, reference **T4 2026**.
 Only minimal bibliographic fields and dated metrics are retained; the workbook,
