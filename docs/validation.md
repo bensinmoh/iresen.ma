@@ -2915,5 +2915,7 @@ results are recorded by the task pull request and Git history.
   and enlarge JOIN/logo on tablets. Rendered 768px FR and desktop AR captures
   confirm the composition; the privacy paragraph's center matches its form.
 
+- CI exposed a timing failure in enlarged-text homepage anchor alignment (208 browser checks passed). The browser check now forces enlarged layout before awaiting its requested fonts and navigation measurement. The existing anchor/Carrières checks passed locally (25 browser tests). Failure diagnostics retain the original alignment tolerance and now include geometry.
+
 No deployment, DNS or visibility change was performed. Remote CI and merge
 status are recorded by the task PR and Git history.

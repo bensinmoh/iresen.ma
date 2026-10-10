@@ -10,6 +10,8 @@ hero as well as PageHero; header content and other page layouts are unchanged.
 The owner requires SVG UI icons instead of PNG/JPEG. Careers uses owner-requested white decorative strokes
 on approved green/cyan badges, accompanied by explicit text labels and the shared surface token.
 
+Browser checks force enlarged layout before awaiting its requested fonts and the measured navigation height. Native links, clearance tolerances and reduced-motion behavior remain.
+
 ## Mission quotation and common enabler — 2026-10-10
 
 The current mission introduction uses the shared Apex Leaf section label as its

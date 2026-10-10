@@ -11,6 +11,8 @@ composition and vector-only UI icons colored through approved tokens. SVG icons
 are the owner preference for future interfaces. No new universal visual tokens
 or generic page template are introduced.
 
+The CI follow-up makes enlarged-text homepage checks wait for fonts requested by the new layout before testing native anchors.
+
 ## Homepage contribution domains — 2026-10-10
 
 The owner now commissions the previously deferred mission-statement design.
