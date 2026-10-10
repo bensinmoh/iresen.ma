@@ -46,12 +46,14 @@ export async function EngagementPage({
               key={id}
               id={id}
               aria-labelledby={`${id}-heading`}
-              className={`${styles.section} ${kind === 'audiences' || kind === 'contact' ? styles.ink : ''}`}
+              className={`${styles.section} ${kind === 'audiences' || kind === 'contact' ? styles.ink : ''} ${kind === 'pathways' || kind === 'process' ? styles.light : ''}`}
               data-kind={kind}
             >
               <header className={styles.introduction}>
-                <p className={styles.eyebrow}>{copy.label}</p>
-                <h2 id={`${id}-heading`}>{sections(`${id}.title`)}</h2>
+                <div>
+                  <p className={styles.eyebrow}>{copy.label}</p>
+                  <h2 id={`${id}-heading`}>{sections(`${id}.title`)}</h2>
+                </div>
                 <p>{sections(`${id}.description`)}</p>
               </header>
               <div className={styles.content}>
@@ -114,12 +116,14 @@ export async function EngagementPage({
                     </div>
                   </>
                 ) : (
-                  <div className={`${styles.items} ${kind === 'audiences' ? styles.rows : ''}`}>
+                  <div
+                    className={`${styles.items} ${kind === 'audiences' || kind === 'arrangements' ? styles.rows : ''} ${kind === 'process' ? styles.process : ''}`}
+                  >
                     {copy.items.map(({ title, description }, index) => {
                       const destination = destinations?.[index]
                       return (
                         <article key={title}>
-                          {kind === 'process' && (
+                          {(kind === 'process' || kind === 'pathways') && (
                             <span className={styles.number} aria-hidden="true">
                               {new Intl.NumberFormat(locale, { minimumIntegerDigits: 2 }).format(
                                 index + 1,

@@ -22,6 +22,18 @@ const nextConfig = {
       { pathname: '/images/contact/contact-background-venue.jpg', search: '' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/fr/travailler-avec-nous',
+        destination: '/fr/collaborer-avec-nous',
+        permanent: true,
+      },
+      { source: '/en/work-with-us', destination: '/en/collaborate-with-us', permanent: true },
+      { source: '/travailler-avec-nous', destination: '/fr/collaborer-avec-nous', permanent: true },
+      { source: '/work-with-us', destination: '/en/collaborate-with-us', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {

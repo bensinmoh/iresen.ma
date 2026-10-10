@@ -15,7 +15,7 @@ Chosen on 2026-10-08 following the owner's request for one consistent structure:
 | Platforms     | `/fr/expertise-experimentation/plateformes` | Listing, then platform details                       |
 | Network       | `/fr/expertise-experimentation/reseau`      | Laboratory/expert network                            |
 | Transfer      | `/fr/valorisation-transfert`                | Onepager                                             |
-| Collaboration | `/fr/travailler-avec-nous`                  | Onepager                                             |
+| Collaboration | `/fr/collaborer-avec-nous`                  | Onepager                                             |
 | News          | `/fr/ressources/actualites`                 | News/press release listing and articles              |
 | Events        | `/fr/ressources/evenements`                 | Event listing and details                            |
 | Publications  | `/fr/ressources/publications-rapports`      | Unified publication/report listing and details       |
@@ -73,3 +73,11 @@ See [scope](narrative-alignment.md).
 ## Collaboration and valorisation development
 
 workWithUs and transfer now render dedicated six-section editorial pages; their canonical paths and all twelve section IDs remain unchanged. Contact actions use the existing partnerships topic. See [scope](collaboration-transfer-pages.md).
+
+## Collaboration rename — 2026-10-10
+
+The owner commissioned “Collaborer avec nous”. The stable `workWithUs` ID and six
+anchors remain; FR/EN use `/fr/collaborer-avec-nous` and
+`/en/collaborate-with-us`, with permanent redirects from their former paths.
+Arabic retains `/ar/التعاون-معنا`. Shared helpers supply all current destinations.
+See [scope](collaborate-page.md).
