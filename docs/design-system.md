@@ -1263,3 +1263,14 @@ image is labelled as a 3D view. Existing platforms/network destinations remain.
 Search covers the section, four card anchors and eleven supplied media assets.
 Achievements are the sole remaining body placeholder; full reordering remains
 deferred. See [scope and sources](home-platforms.md).
+
+## Homepage achievements — 2026-10-10
+
+The [white photographic achievements rail](home-achievements.md) uses existing
+section/body/label type, blue labels and 10px physical action corners. Native
+scrolling, visible focus and hidden horizontal scrollbars follow current rules.
+Four/two/single-card responsive widths preserve required text and imagery;
+Arabic mirrors directional controls, preserving cover pixels and physical report
+placement. The owner subsequently requested automatic six-second single-card
+steps, reversing at each end, without a pause button. Hover/focus suspend it;
+reduced motion disables it. No new tokens. Natural content heights remain essential.

@@ -111,3 +111,11 @@ See [implemented scope](home-platforms.md). This bounded increment
 supersedes only the capabilities deferral. Achievements remain the one body
 placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
 in-development wording, its 3D label, canonical destinations and search references.
+
+## Homepage achievements delivered — 2026-10-10
+
+The eight owner-selected achievements and six-section homepage order are
+implemented; no body placeholder remains. See [scope](home-achievements.md).
+Final copy/translation review, Alliances and future CMS case-management remain
+open. The final-content search sanity check in [search](search.md#final-content-search-sanity-check)
+is still due once all website content is in place.

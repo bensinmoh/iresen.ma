@@ -135,3 +135,11 @@ See [implemented scope](docs/home-platforms.md). This bounded increment
 supersedes only the capabilities deferral. Achievements remain the one body
 placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
 in-development wording, its 3D label, canonical destinations and search references.
+
+## Homepage achievements update — 2026-10-10
+
+The owner commissioned eight achievements on white with supplied photographs,
+no outgoing card links and a stacked-report cover mockup. See [scope](docs/home-achievements.md).
+The request activates the agreed six-section ordering: missions, achievements,
+research, capabilities, collaboration, news. No body placeholders remain;
+Alliances and final editorial/translation review remain deferred.

@@ -5,8 +5,8 @@ import { pageHref } from '../../src/lib/site'
 
 const sectionIds = [
   'develop-test-transfer',
-  'research-priorities',
   'results',
+  'research-priorities',
   'platforms-expertise',
   'collaboration',
   'news-events',

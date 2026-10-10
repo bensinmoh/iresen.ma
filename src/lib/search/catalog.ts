@@ -4,6 +4,7 @@ import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
 import { collaborationCount } from '@/lib/home-collaboration'
+import { homeAchievements, homeAchievementsSectionId } from '@/lib/home-achievements'
 import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
 import { homeFigures } from '@/lib/figures'
 import { footerContact } from '@/lib/footer'
@@ -75,6 +76,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...homeAchievements.map(({ id }) => ({
+    id: `achievement-photo-${id}`,
+    url: `/images/achievements/${id}.webp`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const copy = messages[locale].HomeAchievements.items[id]
+        return [
+          locale,
+          { title: copy.name, description: `${copy.imageDescription} ${copy.searchText}` },
+        ]
+      }),
+    ) as PublicAssetReference['text'],
+  })),
   {
     id: 'platform-network-consulting',
     url: '/brand/platforms/consulting.svg',
@@ -389,6 +404,13 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       const body = [catalog.Hero.descriptions[pageId], catalog.Hero.stages[heroes[pageId].stage]]
       if (pageId === 'home') {
         body.push(
+          catalog.HomeAchievements.title,
+          ...Object.values(catalog.HomeAchievements.items).flatMap((item) => [
+            item.name,
+            item.category,
+            item.description,
+            item.searchText,
+          ]),
           catalog.HomeNews.title,
           catalog.HomeNews.searchText,
           catalog.HomeCollaboration.searchText,
@@ -449,6 +471,24 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'home' && entry.id === homeAchievementsSectionId)
+            body.push(
+              ...Object.values(catalog.HomeAchievements.items).flatMap((item) => [
+                item.name,
+                item.category,
+                item.description,
+                item.searchText,
+              ]),
+            )
+          if (pageId === 'home') {
+            const achievementId = homeAchievements.find(
+              ({ id }) => entry.id === `achievement-${id}`,
+            )?.id
+            if (achievementId) {
+              const item = catalog.HomeAchievements.items[achievementId]
+              body.push(item.category, item.searchText)
+            }
+          }
           if (pageId === 'home' && entry.id === homeMissionSectionId)
             body.push(
               catalog.HomeMissions.eyebrow,

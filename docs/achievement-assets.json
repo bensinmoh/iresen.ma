@@ -1,0 +1,74 @@
+[
+  {
+    "id": "village-solaire",
+    "source": "SDA.jpg",
+    "width": 1200,
+    "height": 900,
+    "bytes": 279298,
+    "servedSha256": "7ebc71f2383b51675b14a4b7c7ed816cbc053c06fb3d008b281b2e0498abcbe0",
+    "sourceSha256": "d11ccfb18ea8b64af54498d113b6717671ac6b63b97aa15f5c22bac032a758a5"
+  },
+  {
+    "id": "ismart",
+    "source": "ismart.avif",
+    "width": 1200,
+    "height": 675,
+    "bytes": 34348,
+    "servedSha256": "dd65ae0e1f48c3d3a1f8ef3a454033b076214b2cb1bd948d3803c6d9c1edbe74",
+    "sourceSha256": "f3cf185d8d43b13f3eff89cc3ee45620a789e2b3f0f6487588487c8b7f0951f4"
+  },
+  {
+    "id": "aquasolar",
+    "source": "AquaSolar.jpg",
+    "width": 1200,
+    "height": 800,
+    "bytes": 158854,
+    "servedSha256": "2b816cd64907ecfbc083bac381274b1d0be3468dae8e2f699b51f13e3b5ad369",
+    "sourceSha256": "75c43ccaa4cd36f8a3f8b5c04224412582088e5ba3ceceefe414ca9fc2642408"
+  },
+  {
+    "id": "worldptx",
+    "source": "WPTX.jpg",
+    "width": 1000,
+    "height": 666,
+    "bytes": 71812,
+    "servedSha256": "74f602951edea70cbbe15e956b95a4f61c59d4aef68d8758054fafdfe1edbd47",
+    "sourceSha256": "fa59c8ba1069c77835c28d592d2755dcb5ca9c7cd8f9c6ce491fea71ce1a6839"
+  },
+  {
+    "id": "upilot-h2",
+    "source": "Untitled-1.jpg",
+    "width": 1200,
+    "height": 624,
+    "bytes": 68352,
+    "servedSha256": "ae26791d124da187046ee4ef7cca5b62cbf788471712c10306818500e8295fc7",
+    "sourceSha256": "40baaa2b34e20b6788f8b9f64ab1237a2cc53fba50a07f8aaedcea87f8b9fd40"
+  },
+  {
+    "id": "propre-ma",
+    "source": "propre.ma.jpeg",
+    "width": 766,
+    "height": 400,
+    "bytes": 45426,
+    "servedSha256": "f4dd59246ab39635a1698c5f72a5b996c8a8b35f2108766cb4b881273c60a3cf",
+    "sourceSha256": "34756cb895bb4cbc21e1ec11c9868c1800af00e1da573e47833fd4f1b90a8015"
+  },
+  {
+    "id": "cartography",
+    "source": "Mode\u0301lisation, Simulation _ Sciences de la donne\u0301e pour l_e\u0301nergie.jpg",
+    "width": 909,
+    "height": 792,
+    "bytes": 82982,
+    "servedSha256": "b48908a8de8a903b1677fb7960caa014a11add9fdec42419f516289ce14c2d43",
+    "sourceSha256": "71f70d0f10ae1d75ff873562ef3699da3a017135cf977904ec8ac90a5557cea8"
+  },
+  {
+    "id": "hydrogen-roadmap",
+    "source": "Screenshot 2026-10-09 at 23.58.42.png",
+    "width": 1182,
+    "height": 1658,
+    "bytes": 55806,
+    "servedSha256": "b71eb13e0b0f18f15353debb15486f9b9b77e4b9c87aabd54f03f1ee7559d65d",
+    "sourceSha256": "1601e471d1d59a59c1fa47fc7ac0fc97d408a3af447d5b72177eceedc5df234d"
+  }
+]

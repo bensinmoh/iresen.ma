@@ -2,8 +2,8 @@ import type { Locale } from '@/i18n/locales'
 
 const sectionIds = [
   'develop-test-transfer',
-  'research-priorities',
   'results',
+  'research-priorities',
   'platforms-expertise',
   'collaboration',
   'news-events',
@@ -14,8 +14,8 @@ const copy: Record<Locale, { label: string; sections: readonly string[] }> = {
     label: 'Les sections de l’accueil',
     sections: [
       'Notre mission',
-      'Recherche',
       'Réalisations',
+      'Recherche',
       'Plateformes',
       'Collaborer',
       'Actualités',
@@ -23,11 +23,11 @@ const copy: Record<Locale, { label: string; sections: readonly string[] }> = {
   },
   en: {
     label: 'Homepage sections',
-    sections: ['Our mission', 'Research', 'Results', 'Platforms', 'Collaborate', 'News'],
+    sections: ['Our mission', 'Results', 'Research', 'Platforms', 'Collaborate', 'News'],
   },
   ar: {
     label: 'أقسام الصفحة الرئيسية',
-    sections: ['مهمتنا', 'البحث', 'الإنجازات', 'المنصات', 'التعاون', 'المستجدات'],
+    sections: ['مهمتنا', 'الإنجازات', 'البحث', 'المنصات', 'التعاون', 'المستجدات'],
   },
 }
 

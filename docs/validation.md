@@ -2454,3 +2454,43 @@ captures and accepted this thinner treatment for shipping: the Morocco outline
 remains continuous without gaps, consulting retains clear internal detail,
 and white sizing, alignment and RTL remain coherent. No material findings remain.
 The earlier full-suite/integration results keep their documented revision scope.
+
+## Homepage achievements — 2026-10-10
+
+Implemented the owner’s eight supplied achievements on white, without outgoing
+card links, including the original hydrogen roadmap cover in a CSS report stack.
+The request activates the previously agreed six-section order; existing modules,
+anchors, routes and SVG originals remain. The later instruction adds slow
+six-second automatic single-card movement reversing at both ends, explicitly
+without a pause button. Hover/focus suspend it; hidden tabs do not advance;
+reduced motion disables automatic movement and keeps manual arrows direct.
+
+Local checks: lint, strict types, formatting, 109 unit tests, 22 integration tests
+and the production build passed. The static search index was rebuilt on local
+PostgreSQL. FR/EN/AR browser coverage verifies all eight cards and image loads,
+no outgoing links, white background, arrow direction/edges, discovery of each
+card and media result, direct later-card anchors and no-JavaScript access.
+The existing 19 homepage navigation/mission tests passed after reordering.
+The additional automatic-rail browser test passed using the browser clock: one
+card per interval, reversal at each edge, hover/focus suspension and live
+reduced-motion preference changes. Five achievement browser tests passed.
+
+Rendered captures in `.cache/achievements-review/` cover FR/EN/AR at 1440px and
+390px plus the final four cards/report mockup. FR desktop, FR mobile, AR mobile
+and the FR report presentation were visually inspected. All three locales also
+passed containment at 320/390/768/1024px, 200% text at 320px, keyboard rail focus,
+reduced-motion checks and scoped axe scans with no reported violations. This
+is scoped verification, not a claim of overall accessibility conformance.
+
+The first browser attempt lacked the bundled Chromium; installed Chrome was
+used through `PLAYWRIGHT_EXECUTABLE_PATH`. Rendered checks found the missing
+Next image-optimizer allowlist entry, now limited to `/images/achievements/**`.
+Test setup was corrected to scroll an already-focused rail after viewport
+changes and to accept the existing global near-zero reduced-motion duration.
+No public CMS access gate was relaxed. The Impeccable mechanical detector
+returned no findings; local documentation targets and whitespace passed.
+
+Working translations and owner-supplied “first”/“100%” claims still require
+final editorial review; no independent factual verification, deployment, DNS or
+visibility change is claimed. The final-content search sanity check remains due
+when all website content is ready.

@@ -150,3 +150,10 @@ See [implemented scope](home-platforms.md). This bounded increment
 supersedes only the capabilities deferral. Achievements remain the one body
 placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
 in-development wording, its 3D label, canonical destinations and search references.
+
+## Homepage achievements — 2026-10-10
+
+The final `results` scaffold is replaced by eight server-rendered achievements
+with `achievement-*` child anchors. Homepage order and section navigation now
+follow missions, achievements, research, capabilities, collaboration and news.
+Existing section anchors are preserved. See [scope](home-achievements.md).

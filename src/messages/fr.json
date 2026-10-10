@@ -160,8 +160,8 @@
         "description": "Produire une énergie renouvelable fiable et l’intégrer aux systèmes électriques : durabilité, stockage, réseaux actifs et flexibilité des usages. Développer des chaînes d’hydrogène renouvelable et de molécules dérivées en articulant production, ressources en eau, logistique et usages industriels pertinents. Réduire les besoins énergétiques et les émissions des procédés industriels, en combinant récupération de chaleur, électrification et mesure des performances. Articuler les besoins en eau, en énergie et en agriculture pour préserver les ressources et renforcer la résilience des systèmes. Valoriser les ressources résiduelles et prolonger la vie des équipements, en tenant compte des gisements disponibles, des usages concurrents et des bilans environnementaux. Préserver le confort et les services essentiels avec moins d’énergie, grâce à des solutions adaptées au bâti, aux territoires et aux conditions climatiques. Adapter les transports bas carbone aux profils d’usage, aux contraintes du réseau et au climat : flottes, recharge, batteries et logistique."
       },
       "results": {
-        "title": "Résultats et réalisations",
-        "description": "À prévoir : des cas documentés précisant le besoin, les contributions, les résultats et leur maturité."
+        "title": "Nos réalisations emblématiques",
+        "description": "Des infrastructures aux startups, des démonstrateurs aux orientations stratégiques : huit réalisations qui illustrent la diversité des contributions d’IRESEN."
       },
       "platforms-expertise": {
         "title": "Des capacités au service de l’innovation",
@@ -238,6 +238,38 @@
       "platform-network-expertise": {
         "title": "Des expertises complémentaires",
         "description": "Chercheurs, ingénieurs et techniciens croisent leurs compétences autour des défis énergétiques."
+      },
+      "achievement-village-solaire": {
+        "title": "Village Solaire",
+        "description": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa."
+      },
+      "achievement-ismart": {
+        "title": "iSmart",
+        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine."
+      },
+      "achievement-aquasolar": {
+        "title": "AquaSolar",
+        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire."
+      },
+      "achievement-worldptx": {
+        "title": "WorldPtX Summit",
+        "description": "Un sommet mondial consacré au Power-to-X et à ses applications."
+      },
+      "achievement-upilot-h2": {
+        "title": "uPilot H₂",
+        "description": "Le premier pilote de production d’hydrogène vert au Maroc."
+      },
+      "achievement-propre-ma": {
+        "title": "PROPRE.MA",
+        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire."
+      },
+      "achievement-cartography": {
+        "title": "Cartographie",
+        "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques."
+      },
+      "achievement-hydrogen-roadmap": {
+        "title": "Feuille de route hydrogène vert",
+        "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert."
       }
     },
     "institute": {
@@ -1185,5 +1217,71 @@
     },
     "mapLabel": "Carte du Maroc",
     "expertiseIconLabel": "Expertise et conseil"
+  },
+  "HomeAchievements": {
+    "eyebrow": "Réalisations",
+    "title": "Nos réalisations emblématiques",
+    "description": "Des infrastructures aux startups, des démonstrateurs aux orientations stratégiques : huit réalisations qui illustrent la diversité des contributions d’IRESEN.",
+    "label": "Les huit réalisations",
+    "previous": "Réalisations précédentes",
+    "next": "Réalisations suivantes",
+    "items": {
+      "village-solaire": {
+        "name": "Village Solaire",
+        "category": "Infrastructure",
+        "description": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa.",
+        "imageDescription": "Vue du Village Solaire et de ses maisons équipées de panneaux photovoltaïques.",
+        "searchText": "Solar Decathlon Africa SDA bâtiments durables habitat solaire"
+      },
+      "ismart": {
+        "name": "iSmart",
+        "category": "Startup",
+        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine.",
+        "imageDescription": "Borne de recharge iSmart et présentation du produit.",
+        "searchText": "mobilité électrique recharge véhicules électriques startup marocaine"
+      },
+      "aquasolar": {
+        "name": "AquaSolar",
+        "category": "Démonstrateur",
+        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire.",
+        "imageDescription": "Unité AquaSolar avec des panneaux photovoltaïques sur sa toiture.",
+        "searchText": "dessalement eau solaire unité mobile modulaire"
+      },
+      "worldptx": {
+        "name": "WorldPtX Summit",
+        "category": "Événement",
+        "description": "Un sommet mondial consacré au Power-to-X et à ses applications.",
+        "imageDescription": "Table ronde du WorldPtX Summit.",
+        "searchText": "World Power-to-X Summit PtX hydrogène énergie sommet mondial"
+      },
+      "upilot-h2": {
+        "name": "uPilot H₂",
+        "category": "Pilote",
+        "description": "Le premier pilote de production d’hydrogène vert au Maroc.",
+        "imageDescription": "Unité uPilot H₂ de production d’hydrogène vert.",
+        "searchText": "uPilot H2 micro pilote hydrogène vert production Maroc"
+      },
+      "propre-ma": {
+        "name": "PROPRE.MA",
+        "category": "Projet R&D",
+        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire.",
+        "imageDescription": "Panneaux photovoltaïques sur une toiture, visuel fourni pour PROPRE.MA.",
+        "searchText": "recherche et développement R&D photovoltaïque productible solaire universités marocaines"
+      },
+      "cartography": {
+        "name": "Cartographie",
+        "category": "Aide à la décision",
+        "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques.",
+        "imageDescription": "Carte du Maroc présentant plusieurs couches de données sur les ressources et le territoire.",
+        "searchText": "cartographie ressources renouvelables zoning solaire éolien GHI irradiation globale horizontale DNI irradiation directe normale"
+      },
+      "hydrogen-roadmap": {
+        "name": "Feuille de route hydrogène vert",
+        "category": "Orientations stratégiques",
+        "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert.",
+        "imageDescription": "Couverture de la feuille de route hydrogène vert du Maroc, présentée en rapports empilés.",
+        "searchText": "feuille de route hydrogène vert Green H2 Maroc stratégie transition énergétique"
+      }
+    }
   }
 }
