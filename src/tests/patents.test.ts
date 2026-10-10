@@ -75,6 +75,22 @@ describe('owner-selected patent catalogue', () => {
       'subject=partnerships&patent=53044#send-request',
     )
   })
+  it('registers the supplied iSmart product and localized example destinations', () => {
+    const documents = staticSearchDocuments()
+    for (const locale of contentLocales) {
+      const example = documents.find(
+        (record) => record.id === `section:transfer:ismart-example:${locale}`,
+      )
+      expect(example?.url).toBe(pageHref('transfer', locale, 'ismart-example'))
+      expect(example?.body).toContain('iSmart')
+      expect(
+        documents.some(
+          (record) =>
+            record.locale === locale && record.url === '/images/transfer/ismart-product.webp',
+        ),
+      ).toBe(true)
+    }
+  })
   it('projects every record to reachable localized anchors and removes withdrawn records', () => {
     const documents = staticSearchDocuments()
     for (const locale of contentLocales) {

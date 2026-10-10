@@ -2709,3 +2709,20 @@ padding layers. Lint and production build pass after this adjustment; all
 eight catalogue journeys pass again, now asserting that the final section's
 bottom equals the footer's top in FR/EN/AR at 320, 390, 768, 1024 and 1440px.
 The updated desktop section/footer rendering was inspected.
+
+## iSmart product example in intellectual property — 2026-10-10
+
+The owner-supplied transparent product is converted to a 1200×1312 WebP with
+alpha preserved (128,506 bytes), without generative editing or new product
+geometry. The IP copy and disclosures move into the first column, with a
+localized product feature in the second; mobile stacks the feature below.
+Lint, typecheck, 120 unit tests, production build and 15 Chromium journeys
+pass. Build reports existing next-intl dynamic-import cache warnings.
+Checks cover the loaded product, FR/EN/AR, 320–1440px, 200% text, disclosures,
+no JavaScript, scoped axe, catalogue motion/search/contact and footer attachment.
+French desktop/mobile and Arabic desktop renderings were inspected: full
+transparent product, original unmirrored artwork and no annotation arrows.
+The localized example anchor and media/section search projections are verified
+in unit checks, and the local public search catalogue was synchronized.
+Formatting/whitespace and the mechanical design scan pass. No deployment.
+Remote full-suite CI and merge outcomes are recorded on the pull request.

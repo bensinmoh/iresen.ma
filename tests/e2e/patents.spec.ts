@@ -13,6 +13,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   }) => {
     await page.goto(pageHref('transfer', locale))
     const section = page.locator('#adoption-initiatives')
+    const product = page.locator('#ismart-example img')
+    await product.scrollIntoViewIfNeeded()
+    await expect(product).toHaveJSProperty('complete', true)
+    expect(await product.evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(
+      0,
+    )
+    await expect(page.locator('#ismart-example')).toContainText(copy.example.origin)
     await expect(section.locator('article:visible')).toHaveCount(6)
     await section.getByRole('button', { name: copy.catalog.showMore, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(12)
@@ -72,7 +79,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     ).toEqual([])
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 })
-      for (const id of ['results-to-transfer', 'transfer-pathways', 'build-transfer']) {
+      for (const id of [
+        'results-to-transfer',
+        'intellectual-property',
+        'transfer-pathways',
+        'build-transfer',
+      ]) {
         await page.locator(`#${id}`).scrollIntoViewIfNeeded()
         await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-${id}.png` })
       }

@@ -97,17 +97,42 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           aria-labelledby="intellectual-property-heading"
           className={styles.section}
         >
-          {header('ip', 'intellectual-property')}
-          <div className={styles.disclosures}>
-            {(t.raw('ip.items') as Item[]).map((item) => (
-              <details key={item.title}>
-                <summary>
-                  <span>{item.title}</span>
-                  <span aria-hidden="true">+</span>
-                </summary>
-                <p>{item.description}</p>
-              </details>
-            ))}
+          <div className={styles.ipLayout}>
+            <div className={styles.ipCopy}>
+              {header('ip', 'intellectual-property')}
+              <div className={styles.disclosures}>
+                {(t.raw('ip.items') as Item[]).map((item) => (
+                  <details key={item.title}>
+                    <summary>
+                      <span>{item.title}</span>
+                      <span aria-hidden="true">+</span>
+                    </summary>
+                    <p>{item.description}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+            <aside
+              id="ismart-example"
+              className={styles.ipExample}
+              aria-labelledby="ismart-example-heading"
+            >
+              <h3 id="ismart-example-heading">{t('example.title')}</h3>
+              <p className={styles.productName}>
+                <bdi>iSmart</bdi>
+              </p>
+              <p className={styles.productDescription}>{t('example.description')}</p>
+              <p className={styles.productOrigin}>{t('example.origin')}</p>
+              <Image
+                className={styles.productImage}
+                src="/images/transfer/ismart-product.webp"
+                alt={t('example.imageAlt')}
+                width={1200}
+                height={1312}
+                sizes="(max-width: 639px) 90vw, (max-width: 1023px) 384px, 30vw"
+                quality={90}
+              />
+            </aside>
           </div>
         </section>
         <section

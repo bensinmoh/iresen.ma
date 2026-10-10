@@ -180,6 +180,7 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
       homeNewsPosts.some((post) => normalized === `news-${post.id.split(':').at(-1)}`)) ||
     (pageId === 'transfer' &&
       (normalized === 'valorisation-figures' ||
+        normalized === 'ismart-example' ||
         patentRecords.some((p) => normalized === `patent-${p.reference}`))) ||
     definition.anchors?.includes(normalized) === true ||
     pageSections[pageId].some(

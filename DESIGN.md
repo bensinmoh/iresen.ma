@@ -934,3 +934,26 @@ The owner's next correction joins the final innovation entry-point section
 directly to the footer by removing only the transfer page's outer trailing
 padding (page, content wrapper and shell). Section-internal breathing space
 remains. The override is scoped through the transfer module, not shared pages.
+
+## iSmart valorisation example — 2026-10-10
+
+The owner commissions an iSmart product feature within the existing intellectual
+property section. Its heading, introductory copy and five native disclosures
+form a left column; the supplied transparent product visual occupies the right
+column under “Exemple de valorisation réussie”, iSmart, electric-vehicle charging
+and the owner's existing 100% Moroccan claim. Below 64rem the example follows
+the disclosures. Arabic mirrors the columns through logical layout, never the
+product or original Apex Leaf artwork. No reference diagram arrows, product
+callouts, invented patent attribution, license or commercialization figures
+are added. The pale original Apex Leaf sits behind the product at low opacity.
+
+The supplied PNG already contains an alpha channel; it is not regenerated or
+retouched. A 1200×1312 WebP derivative preserves transparency (128,506 bytes).
+Source `iSmart Product.png` SHA-256:
+`d9dc2d11823cef1712d4c6b184b34509cf64178ede03d15fcd8f1b105d3700bf`.
+Derivative SHA-256:
+`931a1ff250c7bc6a284bae4ae964083c9b6c6ce8b2d29e778162fbd080bf75dd`.
+The original and reference screenshots remain outside the repository.
+FR/EN/AR working copy, informative alt text, the `ismart-example` anchor and
+its localized section/media search references ship together. Six canonical
+sections, catalogue behavior and existing routes remain. No deployment.

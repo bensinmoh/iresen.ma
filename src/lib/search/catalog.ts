@@ -79,6 +79,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'transfer-ismart-product',
+    url: '/images/transfer/ismart-product.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: `iSmart — ${messages[locale].Transfer.example.title}`,
+          description: Object.values(messages[locale].Transfer.example).join(' '),
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
   ...homeAchievements.map(({ id }) => ({
     id: `achievement-photo-${id}`,
     url: `/images/achievements/${id}.webp`,
@@ -493,7 +507,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             const keys = {
               'results-to-transfer': ['title', 'intro'],
               'research-to-use': ['process'],
-              'intellectual-property': ['ip'],
+              'intellectual-property': ['ip', 'example'],
               'transfer-pathways': ['pathways'],
               'adoption-initiatives': ['catalog', 'figures', 'themes'],
               'build-transfer': ['doors'],
@@ -617,6 +631,14 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       title: catalog.Transfer.figures.label,
       body: `${patents.length} ${engagementSearchText(catalog.Transfer.figures).join(' ')}`,
       url: pageHref('transfer', locale, 'valorisation-figures'),
+      type: 'section',
+    })
+    documents.push({
+      id: `section:transfer:ismart-example:${locale}`,
+      locale,
+      title: `iSmart — ${catalog.Transfer.example.title}`,
+      body: `iSmart ${engagementSearchText(catalog.Transfer.example).join(' ')}`,
+      url: pageHref('transfer', locale, 'ismart-example'),
       type: 'section',
     })
     for (const patent of patents) {

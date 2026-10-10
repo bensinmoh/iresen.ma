@@ -1627,6 +1627,12 @@
       "intro": "Generated illustration of researchers examining a prototype and measurement instruments in a laboratory.",
       "innovation": "Generated illustration of a researcher studying a solar sample on a measurement bench.",
       "technology": "Generated illustration of a specialist presenting an energy network diagram on a screen."
+    },
+    "example": {
+      "title": "An example of successful research valorisation",
+      "description": "Charging station for electric vehicles.",
+      "origin": "100% Moroccan",
+      "imageAlt": "iSmart charging station with protected sockets and an illuminated indicator, on a transparent background."
     }
   }
 }
