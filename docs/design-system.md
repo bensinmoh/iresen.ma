@@ -3,7 +3,7 @@
 ## Mission quotation and common enabler — 2026-10-10
 
 The current mission introduction uses the shared Apex Leaf section label as its
-h2 and a full-available-width, start-aligned blockquote (fluid 20–32px at default
+h2 and a full-available-width, centered blockquote (fluid 20–32px at default
 root size, regular weight, 1.38 line height). Arabic uses natural tracking and 1.4
 line height. The owner’s later refinement reduces its size and compacts its rhythm;
 blue inline quotation marks and a fine lower rule give it editorial
@@ -17,6 +17,9 @@ requirement. The former mission-design deferral is superseded. See
 Both quotation marks sit directly within the paragraph, inherit its size and
 line height and share blue color/weight 500. French uses symmetrical narrow
 non-breaking spaces; no detached column or asymmetric margin remains.
+
+The owner's latest refinement centers the section label and statement, retaining
+full available width with balanced line wrapping.
 
 The three card purposes now precede their domain h3 as light uppercase overlines,
 matching the owner's later card screenshot: shared label size, regular 400 weight,

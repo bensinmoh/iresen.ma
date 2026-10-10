@@ -3,7 +3,7 @@
 ## Homepage contribution domains — 2026-10-10
 
 The owner now commissions the previously deferred mission-statement design.
-A full-width, start-aligned editorial quotation uses fluid 20–32px regular text
+A full-width, centered editorial quotation uses fluid 20–32px regular text
 and compact 1.38 Latin/1.4 Arabic line height, blue inline quotation marks and a
 fine lower rule, following the owner’s later size/line-height correction. It is followed by
 three photographic contribution cards and a shorter navy cooperation band
@@ -11,7 +11,9 @@ aligned to the outer card edges. R&I alone carries Développer · Éprouver · V
 The existing type roles, photo shading, hover/focus feedback, original SVGs and
 physical signature corners remain; the quote/band reflow naturally in Arabic and
 at enlarged text sizes. See [scope and narrative](docs/narrative-alignment.md).
-Earlier centred-mission and design-deferral descriptions are historical.
+The owner’s latest refinement centers both the section label and statement,
+with balanced line wrapping. Earlier stage-card and design-deferral descriptions
+are historical.
 
 Opening and closing quotation marks are directly inside the paragraph, with
 identical inherited size/line height, blue color and weight 500. French uses

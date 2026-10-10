@@ -2561,6 +2561,11 @@ lets the preference-change event settle before measuring sustained inactivity.
   preview was reloaded and FR visually inspected. Build, lint, typecheck and all
   19 mission/navigation browser tests passed; paired inline typography is now
   covered by the existing localized mission browser checks.
+- The owner's latest refinement centers “Notre mission” and the statement, with
+  balanced line wrapping and retained full available width. Lint, build,
+  sequential typecheck and all 19 mission/navigation browser tests passed again.
+  FR/EN/AR computed alignment and desktop/mobile containment passed; six captures
+  were produced and FR desktop visually inspected. The owner's preview was reloaded.
 - The three previously indexed repository DOCX originals retain their pinned
   hashes. The new DOCX was read locally; only derived editorial guidance was
   added. No original, private download, CMS schema or new route was imported.

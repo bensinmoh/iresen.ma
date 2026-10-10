@@ -6,13 +6,13 @@
 .introduction {
   margin-inline: auto;
   margin-block-end: clamp(2rem, 3.5vw, 4rem);
-  text-align: start;
+  text-align: center;
 }
 
 .eyebrow {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--space-3);
   margin-inline: auto;
   margin-block-end: var(--space-4);
@@ -41,7 +41,7 @@
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.38;
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .statement p {

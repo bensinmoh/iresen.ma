@@ -124,14 +124,15 @@ source's English signature does not independently approve a global slogan change
 
 ## Homepage composition and destinations
 
-A small shared Apex Leaf mission heading introduces a start-aligned editorial
+A small shared Apex Leaf mission heading introduces a centered editorial
 blockquote over the full available content width. The owner’s later request
 reduces its typography to fluid 20–32px regular text (about 24px at 1440px), with
 1.38 Latin / 1.4 Arabic line height, blue inline quotation marks and a fine
 lower rule. French uses guillemets with symmetrical narrow non-breaking spaces.
 Both marks sit directly in the paragraph and share inherited size/line height
 and weight 500 after the owner's size and spacing corrections.
-This replaces the former centred heading/paragraph measure. Three photographic
+The owner's latest refinement centers both the label and statement, using
+balanced wrapping while retaining full available width. Three photographic
 cards present domains, purpose,
 short explanation and one useful destination. R&I alone displays the three
 functions. White text, dark photo shading, blue hover/focus feedback and original
@@ -187,6 +188,7 @@ Reviewed [Carbon’s expressive typography](https://v10.carbondesignsystem.com/g
 [Red Hat’s blockquote guidance](https://ux.redhat.com/elements/blockquote/guidelines/)
 and [Ontario’s quotation component](https://designsystem.ontario.ca/components/detail/blockquote.html)
 on 2026-10-10 after the owner requested design models. Adopted principles are a
-modest quotation size, regular weight, start alignment for long copy and
-locale-appropriate quotation punctuation. Fonts, colors, content width and
+modest quotation size, regular weight and locale-appropriate quotation punctuation.
+The initial start alignment was subsequently centered at the owner's request.
+Fonts, colors, content width and
 geometry remain IRESEN’s; no foreign component or attribution is imported.
