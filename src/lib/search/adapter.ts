@@ -32,7 +32,17 @@ export const SEARCH_QUERY_LIMIT = 200
 export const SEARCH_MAX_PAGE = 1000
 
 function emptyFacets(): Record<SearchType, number> {
-  return { page: 0, section: 0, news: 0, document: 0, media: 0 }
+  return {
+    page: 0,
+    section: 0,
+    news: 0,
+    publication: 0,
+    report: 0,
+    patent: 0,
+    project: 0,
+    document: 0,
+    media: 0,
+  }
 }
 
 export function validateSearchInput(input: SearchInput): boolean {
