@@ -2525,7 +2525,7 @@ lets the preference-change event settle before measuring sustained inactivity.
 
 - `pnpm lint`, `pnpm typecheck`, `pnpm test` (112 tests),
   `pnpm test:integration` (22 tests), `pnpm build` and `pnpm format:check`
-  passed with Node 24.19.0 / pnpm 11.19.0. The final production Chromium suite
+  passed with Node 24.19.0 / pnpm 11.19.0. The quotation-refinement production Chromium suite
   passed all 182 browser tests, including localized mission destinations,
   full-width quote/band alignment, keyboard operation and enlarged text.
 - Additional production review visited all 22 canonical pages in FR/EN/AR
@@ -2542,6 +2542,14 @@ lets the preference-change event settle before measuring sustained inactivity.
   Live API checks found all four contribution section destinations by their
   localized titles in FR/EN/AR. Unit checks cover stable identities, current copy,
   retained legacy destinations and exclusion of the private source.
+- After the owner's additional card reference, the three purpose overlines moved
+  above the domain h3 titles: label size (14px at default root), weight 400,
+  uppercase with 0.08em Latin tracking and natural Arabic. Lint, build and
+  sequential typecheck passed again; all 19 mission/navigation browser tests
+  passed, including 200% text. FR/EN/AR computed-style/position checks and scoped
+  axe scans passed; six desktop/mobile captures were produced and FR desktop
+  was visually inspected. The visual H4 role remains introductory text so the
+  domain headings preserve their coherent semantic outline.
 - The three previously indexed repository DOCX originals retain their pinned
   hashes. The new DOCX was read locally; only derived editorial guidance was
   added. No original, private download, CMS schema or new route was imported.

@@ -81,8 +81,8 @@ export async function MissionSection({ locale }: { locale: Locale }) {
                   legacyMissionAnchors.map((id) => (
                     <span key={id} id={id} className={styles.legacyAnchor} aria-hidden="true" />
                   ))}
-                <h3 id={`${mission.anchor}-heading`}>{sections(`${mission.anchor}.title`)}</h3>
                 <p className={styles.purpose}>{t(`${mission.id}.purpose`)}</p>
+                <h3 id={`${mission.anchor}-heading`}>{sections(`${mission.anchor}.title`)}</h3>
                 {mission.id === 'research' && <p className={styles.functions}>{t('functions')}</p>}
                 <p>{sections(`${mission.anchor}.description`)}</p>
                 <a

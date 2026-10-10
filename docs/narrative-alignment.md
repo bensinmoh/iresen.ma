@@ -134,6 +134,12 @@ short explanation and one useful destination. R&I alone displays the three
 functions. White text, dark photo shading, blue hover/focus feedback and original
 physical signature corners remain.
 
+The owner's later screenshot refinement moves “Éclairer les choix”, “Faire avancer
+les solutions” and “Renforcer les capacités” above the domain titles as light
+uppercase overlines. They use the shared label size and regular 400 weight;
+Arabic keeps its natural case/tracking. The H4 visual role is introductory text,
+while the domain titles retain semantic h3 headings.
+
 A shorter institutional-navy cooperation band aligns with the first and third
 card edges. It combines the common enabler, its contribution and a collaboration
 link. Below 64rem it stacks internally; the existing card collection stacks on

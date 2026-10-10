@@ -13,6 +13,12 @@ physical signature corners remain; the quote/band reflow naturally in Arabic and
 at enlarged text sizes. See [scope and narrative](docs/narrative-alignment.md).
 Earlier centred-mission and design-deferral descriptions are historical.
 
+The owner's later photographic-card reference places the three purposes above
+the domain headings, as light uppercase overlines (label size, weight 400,
+0.08em Latin tracking). Arabic retains natural case and tracking. This is the
+requested H4 visual role; the domain retains its semantic h3 and the introductory
+overline remains text so the heading outline stays coherent.
+
 ## Homogeneous homepage section labels — 2026-10-09
 
 The owner selected the current domains label as the reference for the mission

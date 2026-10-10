@@ -14,6 +14,12 @@ This is a local mission composition, with no new shared tokens or universal quot
 requirement. The former mission-design deferral is superseded. See
 [the narrative alignment](narrative-alignment.md).
 
+The three card purposes now precede their domain h3 as light uppercase overlines,
+matching the owner's later card screenshot: shared label size, regular 400 weight,
+0.08em Latin tracking and 1.5 line height. Keep Arabic natural. H4 here describes
+the requested visual hierarchy; introductory text does not create an out-of-order
+heading before the domain's h3.
+
 ## Homepage section labels — 2026-10-09
 
 Use the domains label as the owner's selected reference for the homepage mission
