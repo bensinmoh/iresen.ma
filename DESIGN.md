@@ -1022,7 +1022,6 @@ paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
 
-
 ## Collaborer need and benefits refinement — 2026-10-10
 
 The owner's attached composition is adapted as a navy text/photo split with open

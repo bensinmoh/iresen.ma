@@ -243,7 +243,6 @@ paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](docs/collaborate-page.md).
 
-
 Collaborer refinement (2026-10-10): navy text/photo needs, a pale cooperation
 transition, audience-specific benefits with decorative SVG icons and a compact
 contact CTA replace the former panels/reference checklist. Breadcrumb/submenu
