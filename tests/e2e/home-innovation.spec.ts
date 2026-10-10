@@ -51,3 +51,40 @@ for (const locale of locales) {
     await expect(page).toHaveURL((url) => decodeURI(url.pathname) === pageHref('transfer', locale))
   })
 }
+
+for (const locale of ['fr', 'ar']) {
+  test(`${locale}: mobile pathway scrolls automatically and respects focus and reduced motion`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 900 })
+    await page.clock.install()
+    await page.goto(`/${locale}#innovation-value-chain`)
+    const rail = page.locator('#innovation-value-chain ol')
+    await expect(rail).toHaveAttribute('tabindex', '0')
+    await page.mouse.move(0, 0)
+    const position = () => rail.evaluate((el) => Math.abs(el.scrollLeft))
+    const step = await rail.evaluate(
+      (el) =>
+        el.firstElementChild!.getBoundingClientRect().width +
+        parseFloat(getComputedStyle(el).columnGap),
+    )
+    await page.clock.runFor(6500)
+    await expect.poll(position).toBeGreaterThan(step - 2)
+    expect(await position()).toBeLessThan(step + 2)
+    await rail.focus()
+    const focused = await position()
+    await page.clock.fastForward(12000)
+    expect(await position()).toBeCloseTo(focused, 0)
+    await rail.evaluate((el) => {
+      el.blur()
+      el.scrollLeft = getComputedStyle(el).direction === 'rtl' ? -el.scrollWidth : el.scrollWidth
+    })
+    const end = await position()
+    await page.clock.runFor(6500)
+    await expect.poll(position).toBeLessThan(end - 2)
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    const reduced = await position()
+    await page.clock.fastForward(12000)
+    expect(await position()).toBeCloseTo(reduced, 0)
+  })
+}

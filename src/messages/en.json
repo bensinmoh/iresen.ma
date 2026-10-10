@@ -1317,6 +1317,7 @@
         "description": "Use of solutions and assessment of their contribution."
       }
     },
-    "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment."
+    "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment.",
+    "label": "Stages of the innovation pathway"
   }
 }

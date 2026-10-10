@@ -17,11 +17,16 @@ funding, service availability or measurable impact for every project.
 
 The pale shared surface, compact 32–48px vertical padding, open five-column
 sequence and thin directional arrows create a shorter desktop section than its
-neighbors. Below 64rem it becomes a vertical numbered sequence with a continuous
-rule. Height grows naturally for translations and enlarged text; no clipping or
+neighbors. Below 64rem it stays horizontal with native scrolling: two full stages
+and a neighboring glimpse on tablet, one stage and a glimpse on mobile. Height
+grows naturally for translations and enlarged text; no clipping or
 fixed height. Arabic mirrors sequence/arrows. The single link uses the canonical
 `transfer` page in each language; the destination's editorial scaffold remains.
-No images, animation, client component or dependency is added.
+A small client rail advances one stage every six seconds and reverses at each
+end, like the achievements rail. Hover, keyboard focus, touch interaction, hidden
+tabs and reduced motion suspend progression. Native scrolling and all five
+server-rendered stages remain available without JavaScript. No images or new
+dependencies are added.
 
 French follows the agreed conversational proposal. English and Arabic are working
 translations to review, consistent with the other homepage sections. This increment

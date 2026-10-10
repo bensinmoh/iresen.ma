@@ -1317,6 +1317,7 @@
         "description": "Utilisation des solutions et évaluation de leur contribution."
       }
     },
-    "searchText": "Chaîne de valeur de l’innovation : besoins nationaux, anticipation, idéation, programmation de la recherche, du développement et de l’innovation (R&D&I), soutien, montée en puissance, expérimentation, démonstration, maturation, valorisation, transfert, adoption et évaluation de l’impact."
+    "searchText": "Chaîne de valeur de l’innovation : besoins nationaux, anticipation, idéation, programmation de la recherche, du développement et de l’innovation (R&D&I), soutien, montée en puissance, expérimentation, démonstration, maturation, valorisation, transfert, adoption et évaluation de l’impact.",
+    "label": "Les étapes du parcours d’innovation"
   }
 }

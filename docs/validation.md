@@ -2504,12 +2504,14 @@ when all website content is ready.
   had two search lifecycle failures; isolation removed concurrent worker effects.
 - Production rendering on port 3100: FR/EN/AR inspected at 1440px and 390px;
   component reflow checked at 1440, 768, 390 and 320px. Desktop height is about
-  394px in FR/EN and 409px in AR, shorter than domains/platforms. Arabic at 200%
+  394px in FR/EN and 409px in AR, shorter than domains/platforms. Following the
+  horizontal-scroll refinement, mobile height is about 600px FR, 577px EN and
+  506px AR. Arabic at 200%
   root text size grows without horizontal overflow.
 - Local search catalog/index rebuilt with `pnpm search:rebuild`. Stable section
   identity, reachable localized anchor and expanded search body exist in each
   locale. Existing catalog tests verify registration and non-empty text.
-- Dedicated browser checks verify five stages, retained hero figures, section
+- Dedicated browser checks verify horizontal mobile/tablet reflow, automatic progression/reversal, focus and reduced motion, five stages, retained hero figures, section
   order, localized transfer link/navigation, responsive containment and axe scan.
   Full browser-suite results and remote checks are recorded on the pull request.
 - Review captures remain ignored under `.cache/innovation-review/`. No deployment,

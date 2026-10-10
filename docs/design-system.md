@@ -1277,4 +1277,4 @@ reduced motion disables it. No new tokens. Natural content heights remain essent
 
 ## Compact homepage pathway — 2026-10-10
 
-The innovation transition reuses `--color-surface`, navy, primary blue, shared gutters and type roles. Its 32–48px vertical padding is deliberately tighter than neighboring feature modules. Five open stages become a vertical sequence below 64rem; logical spacing and mirrored arrows support Arabic. Content/enlarged text determines height. Scope: [innovation pathway](home-innovation.md).
+The innovation transition reuses `--color-surface`, navy, primary blue, shared gutters and type roles. Its 32–48px vertical padding is deliberately tighter than neighboring feature modules. Five open stages keep horizontal scrolling below 64rem, with automatic six-second progression; logical spacing and mirrored arrows support Arabic. Content/enlarged text determines height. Scope: [innovation pathway](home-innovation.md).
