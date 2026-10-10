@@ -842,3 +842,12 @@ header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md)
 - Kept implementation deferred and source recordings/frames outside the repository.
 
 See [the specification](docs/horizontal-scroll-indicators.md).
+
+## 2026-10-10 — Video-library scroll pills
+
+- Applied the recorded horizontal-navigation effect to the video library with one
+  borderless pill per video, equal inter-block spacing and native scroll tracking.
+- Updated the effect requirements to retain per-element count at every width,
+  including shared terminal offsets, and prohibit decorative pill borders.
+- Preserved localized anchors, public video/search gates, keyboard/no-JavaScript
+  access and reduced motion.

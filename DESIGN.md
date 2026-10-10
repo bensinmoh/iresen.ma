@@ -1101,3 +1101,11 @@ pills for short collections, or cumulative fill with a current/total counter and
 SVG arrows. Center the complete control row in the gap between the upper block
 and the next CTA/content boundary. This is recorded direction for a later review,
 not implemented UI. See [the specification](docs/horizontal-scroll-indicators.md).
+
+## Video-library scroll pills — 2026-10-10
+
+The first implementation of the recorded horizontal-navigation effect uses one
+borderless expanding pill per video, centered in the inter-block gap. Institutional
+ink uses approved Science Blue for sufficient active contrast without a stroke.
+Native scrolling, per-item navigation, RTL, keyboard focus and reduced motion
+remain. Other rails await commissioning. See [requirements](docs/horizontal-scroll-indicators.md).

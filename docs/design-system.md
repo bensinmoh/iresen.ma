@@ -1519,3 +1519,12 @@ The owner selects bottom indicators with an elongated active pill, or a fill bar
 with a counter and SVG arrows, centered vertically in the actual inter-block gap.
 This documentary specification awaits a later implementation request; existing
 horizontal-navigation behavior above remains the implemented baseline.
+
+## Video-library scroll pills — 2026-10-10
+
+The owner requires one pill per element and no pill border or decorative stroke.
+The video library implements the [updated specification](horizontal-scroll-indicators.md):
+20/60px marks, 8px height, coordinated 220ms transitions and a centered control
+group with equal space above/below. On ink, Science Blue supplies active contrast.
+Keyboard focus remains distinct; no-JavaScript retains native overflow access.
+Other collections retain their current treatment until commissioned.

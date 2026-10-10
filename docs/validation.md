@@ -3051,3 +3051,26 @@ SHA-256 hashes; observations are distinguished from future implementation propos
 Checked local documentation links, formatting and focused diff whitespace. No
 runtime change: application/database/browser suites are not required for this
 documentation-only task. See [the specification](horizontal-scroll-indicators.md).
+
+## Video-library scroll pills — 2026-10-10
+
+Lint, TypeScript/production compilation, formatting and 126 unit tests passed.
+All 27 CMS/search/careers integration checks passed in a freshly migrated temporary
+database, removed afterwards. An initial run against the existing content database
+was unsuitable (existing users) and had a withdrawal queue failure; the isolated
+confirmation passed. The existing content database was preserved.
+
+Ten focused Chrome production-browser checks cover FR/EN/AR, 390px mobile and
+1440px desktop, one pill per video, all item buttons including shared terminal
+offsets, native manual scroll tracking, keyboard selection, centered control
+geometry, no pill borders/shadows, no overflow at 320px/200% text, controls hidden
+when all items fit, no-JavaScript and reduced/normal motion. Existing media
+filters/dialog/file-link and scoped axe checks passed. The first browser launcher
+needed the installed Chrome path; no library content was fabricated for tests.
+
+Visually inspected FR/AR mobile/desktop captures from the local eight-video
+collection. Approved Science Blue on ink supplies borderless active contrast;
+keyboard focus is separate. Existing stable media/video anchors, public search
+references and withdrawal gates remain. No new public resource or index rebuild
+is needed for this interaction change. No Safari/Firefox or screen-reader pass
+was performed. See [scope](media-library.md#video-navigation-pills--2026-10-10).

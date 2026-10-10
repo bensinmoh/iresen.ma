@@ -90,3 +90,13 @@ Other photographs, source archives, local import manifests, credentials and priv
 references stay excluded. No fictional content, new CMS collection, deployment,
 DNS change or production publication is introduced. Public inclusion here is on
 the development site, as explicitly requested by the owner.
+
+## Video navigation pills — 2026-10-10
+
+The video rail now has one expanding pill per approved video, with no border or
+inset stroke. The group sits below the thumbnails, centered within the equal
+32px gaps before the reports link. Pills reveal their associated video and follow
+native scrolling, resize and RTL; shared terminal offsets retain separate item
+selection. Controls disappear without overflow. Reduced motion is direct;
+no-JavaScript retains native scrollbars and guarded file links. Existing anchors,
+CMS/media gates and search references remain. See [requirements](horizontal-scroll-indicators.md).

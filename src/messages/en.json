@@ -1530,7 +1530,14 @@
       "label": "From research to impact",
       "title": "One journey, multiple pathways",
       "description": "Detect, evaluate, protect, mature, transfer, deploy: connect scientific potential with industry and market needs.",
-      "steps": ["Detect", "Evaluate", "Protect", "Mature", "Transfer", "Deploy"],
+      "steps": [
+        "Detect",
+        "Evaluate",
+        "Protect",
+        "Mature",
+        "Transfer",
+        "Deploy"
+      ],
       "note": "This is not a rigid process: each innovation follows a pathway tailored to its maturity, potential and opportunities."
     },
     "ip": {
@@ -1823,7 +1830,10 @@
         "place": "Antalya · Türkiye",
         "description": "Two IRESEN-organised meetings in preparation: energy flexibility with MENALINKS and collaborative Africa–Europe research.",
         "detail": "Demand-side management, storage and sector coupling underpin the flexibility discussion. The second side event explores cofinancing energy research, the LEAP-RE / LEAP-SE experience and Morocco’s involvement.",
-        "topics": ["Energy flexibility · MENALINKS", "Collaborative research · LEAP-RE / LEAP-SE"]
+        "topics": [
+          "Energy flexibility · MENALINKS",
+          "Collaborative research · LEAP-RE / LEAP-SE"
+        ]
       },
       "irsecx": {
         "name": "IRSEC’X",
@@ -1878,5 +1888,9 @@
     "heroTitle": "Media library — scientific resources illustration",
     "heroDescription": "Generated illustration: reports, photographic prints of solar panels and laboratory equipment, and a camera on a table. An illustrative media-library scene, not an actual IRESEN location.",
     "downloadVideo": "Download video"
+  },
+  "VideoRailNavigation": {
+    "label": "Video library navigation",
+    "position": "Position {current} of {total}"
   }
 }

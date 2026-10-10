@@ -1,8 +1,8 @@
 # Horizontal scroll indicators — reference specification
 
 Recorded 2026-10-10. Mode: Operate (orient visitors within a collection).
-Status: owner-requested analysis and design record only; implementation and the
-site-wide review await the owner's later request.
+Status: the owner has commissioned the first implementation in the video library;
+other site-wide applications await a later request.
 
 ## Request and boundaries
 
@@ -46,35 +46,42 @@ change width and tint together. This suggests coordinated interpolation rather
 than a detached blue slider jumping across the group. Exact timing is unverified.
 The source controls remain below the rail rather than moving with its contents.
 
-## Recorded design direction and options
+## Current requirements — owner correction, 2026-10-10
 
-| Situation                                                | Recommended future variant                          | Reason                                                                                       |
-| -------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Small collection with distinct card stops, typically 2–5 | Separate pills without visible numbers              | Compact visual orientation; active shape identifies the current stop.                        |
-| Longer collection, or when exact position matters        | Fill bar + current/total + previous/next SVG arrows | Explicit progress without an excessive row of markers.                                       |
-| Intermediate collection, typically 6–7                   | Choose by available width and visitor task          | Thresholds are proposals; a meaningful counter can outweigh compactness.                     |
-| Free continuous rail without discrete card/page stops    | Continuous proportional progress, optionally arrows | Avoid a fake current-item counter. This is a proposed extension, not observed in the videos. |
-| No actual overflow, empty list or one reachable stop     | Hide navigation                                     | No redundant controls; recompute on resizing and content changes.                            |
+The later explicit owner requests take precedence over the earlier proposed
+thresholds and reachable-stop counting rules:
 
-For pills, one mark represents a **reachable stop**, not necessarily one record:
-when several cards fit, define card-based or page-based navigation consistently.
-The terminal stop must reach the last card without duplicate unreachable marks.
-For a numbered collection, define whether the counter reports the current card
-or the current page; its total and arrows must use the same unit. Do not use raw
-card count as page count. The reference fill rule is `current / total`, so the
-first stop has a nonzero fill. For a genuinely continuous variant, use normalized
-scroll distance from 0 to 1 instead; do not confuse the two formulas.
+- **One pill per content element.** Eight videos produce eight pills on desktop
+  and mobile; the count does not become a count of visible pages or unique scroll
+  offsets. Hide the whole control only when no horizontal overflow exists.
+- **No borders on pills.** Neither inactive nor active pills have a border,
+  decorative outline or inset stroke/shadow. A separate keyboard-visible focus
+  ring remains an interaction requirement; it is absent in ordinary resting states.
+- **Active shape:** the active pill is approximately three times the inactive
+  length, with a coordinated 220ms width/color transition. Inactive pills retain
+  their shorter rounded shape. Reduced motion changes state immediately.
+- **Placement:** center the complete group horizontally in the visible rail and
+  vertically in the gap between the content block and its next CTA/content block.
+- **Real navigation:** each pill identifies and reveals its corresponding item;
+  native scrolling updates the current pill. Multiple items can share a clamped
+  terminal scroll offset when several cards fit. Selecting such an item must
+  retain its own active pill rather than reduce the number of pills or add empty
+  trailing card widths solely to manufacture distinct positions.
 
-Proposed starting dimensions, to verify in the later implementation: 8px visual
-height, 20px inactive width, 60px active width, 8–12px visual gaps. Keep the group’s
-outer width stable while active/inactive marks exchange widths. Small visible
-marks need separate usable targets; aim for 44px-high targets and enough horizontal
-separation without overlap, allowing the control group to grow if necessary.
-Reuse approved blue `#296BB4`, current surface/navy tokens and SVG arrows. Pale
-or white inactive marks adapt to the background; a required identifying control
-boundary must remain legible. A busy photograph may need a quiet backing surface.
-These pill/circle shapes are functional-control exceptions within the current
-brand geometry, not a change to card or action corners.
+The videos still establish two visual reference families: separate expanding
+pills, and a cumulative fill bar with a counter and circular arrows. The numbered
+family is a retained optional reference, not an automatic replacement for the
+owner's one-pill-per-element requirement. Use it only when later explicitly
+selected for a particular block; it must not silently reduce pill count.
+
+The video library uses the pill family for every overflowing collection. Visible
+marks are 8px high, 20px inactive and 60px active. Their targets are 44px high,
+44px wide on larger screens and 28px wide on narrow screens (the active target
+is 60px). Four-pixel gaps and wrapping accommodate enlarged/narrow layouts
+without overlapping targets or overflowing the page. On institutional ink, the
+approved Science Blue `#4698CA` gives the active mark sufficient contrast without
+adding a border; light surfaces can use primary `#296BB4`. No new palette token
+or brand asset alteration is introduced.
 
 ## Placement: owner's centering correction
 
@@ -111,7 +118,7 @@ stops/visibility with a stable dominant item and no rapid flicker between adjace
 states. Normalize browser RTL scroll coordinates; visual order and previous/next
 follow Arabic reading direction while the shared brand geometry is preserved.
 
-Marker buttons may navigate to their associated stops; arrows move one defined
+Marker buttons navigate to their associated content elements; optional arrows move one defined
 stop and become unavailable at boundaries. No automatic looping or autoplay is
 inferred from the recordings. A fill bar is informational by default; draggable
 scrubbing is an optional later feature requiring its own keyboard semantics, not
@@ -135,7 +142,8 @@ not approval to modify all these surfaces.
 Verify desktop/mobile, FR/EN/AR, enlarged text, no overflow, empty/one/many items,
 first/last stops, manual gestures, resize/content changes, keyboard focus and
 reduced motion. Confirm real discovery/navigation remains available with scripts
-disabled. This documentation adds no public resource or search projection.
+disabled. The video-library implementation retains its existing section/video anchors and
+public search references; no new resource, media asset or search destination is added.
 
 ## Local provenance
 
