@@ -145,6 +145,29 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     const titleBefore = await title.boundingBox()
     await link.hover({ position: { x: 20, y: 20 } })
     await expect(details).toHaveCSS('opacity', '0')
+    await expect(title.locator('bdi')).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)')
+    await expect
+      .poll(() =>
+        card
+          .locator('div')
+          .first()
+          .evaluate((el) => getComputedStyle(el, '::after').opacity),
+      )
+      .toBe('0')
+    const fade = await card
+      .locator('div')
+      .first()
+      .evaluate((el) => {
+        const style = getComputedStyle(el, '::before')
+        return {
+          opacity: style.opacity,
+          background: style.backgroundImage,
+          height: parseFloat(style.height),
+        }
+      })
+    expect(fade.opacity).toBe('1')
+    expect(fade.background).toContain('0.65')
+    expect(fade.background).toContain('rgba(5, 17, 29, 0)')
     await expect(photo).toHaveCSS('transform', 'matrix(1.05, 0, 0, 1.05, 0, 0)')
     await expect
       .poll(async () => (await title.boundingBox())!.y)

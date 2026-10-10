@@ -114,6 +114,7 @@
   display: flex;
   min-inline-size: 0;
   min-block-size: 18rem;
+  --platform-card-padding: 1.25rem;
   background: var(--color-navy);
   color: var(--color-white);
   border-radius: var(--radius-signature);
@@ -154,7 +155,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 1.25rem;
+  padding: var(--platform-card-padding);
   min-inline-size: 0;
 }
 .summary {
@@ -326,8 +327,8 @@
     padding-inline-start: 0;
     padding-block-start: var(--space-6);
   }
-  .body {
-    padding: var(--space-6);
+  .card {
+    --platform-card-padding: var(--space-6);
   }
   .destinations {
     flex-direction: column;
@@ -367,29 +368,25 @@
   text-decoration: none;
 }
 .photo,
+.visual::before,
 .visual::after,
 .identity,
 .details,
 .card h3 {
   transition:
-    transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 300ms ease-out;
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 700ms ease-out;
 }
 .card h3 {
   position: relative;
   z-index: 1;
 }
-.card h3 bdi {
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  transition:
-    background-color 300ms ease-out,
-    box-shadow 300ms ease-out;
-}
 .card:has(.cardDestination:focus-visible) .photo {
   transform: scale(1.05);
 }
-.card:has(.cardDestination:focus-visible) .visual::after,
+.card:has(.cardDestination:focus-visible) .visual::after {
+  opacity: 0;
+}
 .card:has(.cardDestination:focus-visible) .identity,
 .card:has(.cardDestination:focus-visible) .details {
   opacity: 0;
@@ -403,15 +400,13 @@
 .card:has(.cardDestination:focus-visible) h3 {
   transform: translateY(var(--platform-title-travel, 0px));
 }
-.card:has(.cardDestination:focus-visible) h3 bdi {
-  background-color: var(--color-navy);
-  box-shadow: 0 0 0 0.25rem var(--color-navy);
-}
 @media (hover: hover) and (pointer: fine) {
   .card:hover .photo {
     transform: scale(1.05);
   }
-  .card:hover .visual::after,
+  .card:hover .visual::after {
+    opacity: 0;
+  }
   .card:hover .identity,
   .card:hover .details {
     opacity: 0;
@@ -425,22 +420,45 @@
   .card:hover h3 {
     transform: translateY(var(--platform-title-travel, 0px));
   }
-  .card:hover h3 bdi {
-    background-color: var(--color-navy);
-    box-shadow: 0 0 0 0.25rem var(--color-navy);
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   .card .photo,
+  .card .visual::before,
   .card .visual::after,
   .card .identity,
   .card .details,
-  .card h3,
-  .card h3 bdi {
+  .card h3 {
     transition: none;
   }
   .card:hover .photo,
   .card:has(.cardDestination:focus-visible) .photo {
     transform: none;
+  }
+}
+
+/* Fade up from the lower edge, with a transparent upper stop and no seam. */
+.visual::before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  block-size: calc(
+    var(--platform-title-height, 3rem) + var(--platform-card-padding, 1.25rem) + var(--space-3)
+  );
+  background: linear-gradient(
+    to top,
+    rgb(5 17 29 / 65%) 0%,
+    rgb(5 17 29 / 45%) 55%,
+    rgb(5 17 29 / 0%) 100%
+  );
+  opacity: 0;
+}
+.card:has(.cardDestination:focus-visible) .visual::before {
+  opacity: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .visual::before {
+    opacity: 1;
   }
 }

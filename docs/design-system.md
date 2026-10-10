@@ -1425,8 +1425,9 @@ search projections remain unchanged.
 
 The owner requests photo-first hover: the photograph scales to 1.05, its
 readability gradient fades away, category/logo exit upward, description/action
-exit downward, and the title moves to the bottom. The title retains a small
-navy backing for contrast over the unshaded photograph. Native 300–400ms
+exit downward, and the title moves to the bottom. The title background stays transparent; a continuous gradient rises from 65% opacity (with a 45% midpoint for stronger text shading) at the lower edge to 0% at the
+measured title top, with no visible boundary. Its explicit stacking order keeps
+it above the photograph during zoom. Native 700–800ms
 transform/opacity transitions keep card geometry fixed; a scoped ResizeObserver
 measures localized secondary copy for the title travel, including font/reflow
 changes. No animation dependency is added. Keyboard focus receives the same
