@@ -22,12 +22,12 @@ The owner's earlier approximate active-patent sentence is replaced by the
 requested catalogue count without asserting active rights or commercial adoption.
 
 [src/data/patents.json](../src/data/patents.json) is the dedicated, versioned
-structured catalogue database. Its sole row fields are reference, original
-title, short FR/EN/AR description, thematic IDs, applicant, filing year,
+structured catalogue database. Its sole row fields are reference, bibliographic
+title (reviewed sentence case), short FR/EN/AR description, thematic IDs, applicant, filing year,
 optional verified ISO filing date and PatentRegister URL. No project, financing, source relationship, annuity,
 private tracking note or legal-status field is imported. Applicant names remain
 as supplied, including co-applicants; the internal qualification appended to one
-applicant field is removed. Bibliographic titles and applicant names retain
+applicant field is removed. Bibliographic title wording and applicant names retain
 their original language, explicitly identified in the interface.
 
 The initial import had 38 sourced filing years and 21 missing values. The
@@ -65,9 +65,9 @@ pathways, the catalogue, figures and two visitor entry points.
 
 Catalogue search matches reference, original title, localized summary and
 applicant, ignoring accents and case. Theme, sourced year (including missing
-years) and individual applicant filters combine. Twelve cards initially display
-with JavaScript; “show more” adds twelve and “show all” opens all matches. Reset
-restores the full set and the initial twelve-card view. A direct patent hash
+years) and individual applicant filters combine. Six cards initially display
+with JavaScript; “show more” adds six and “show all” opens all matches. Reset
+restores the full set and the initial six-card view. A direct patent hash
 always reveals its record, even beyond the initial slice. Without JavaScript,
 all 59 records remain readable and controls are disabled with an explanation.
 
@@ -190,3 +190,13 @@ and CTA arrows remain readable alongside them in FR/EN/AR and on mobile.
 No new bitmap, dependency, shared token, route or publication is added.
 Localized informative alt text is included in the existing section search
 projections; the decorative hero/background remain silent to screen readers.
+
+## Patent title case and initial display — 2026-10-10
+
+The owner's later correction uses sentence case for all 59 bibliographic titles,
+preserving wording, proper/scientific names and technical acronyms (PV, BIPV,
+V2X, GEP-PVSMS, Intel.PV and BrickDOUM). No CSS text transform hides inconsistent
+data. Cards, contact drafts and public search use the same reviewed titles.
+The catalogue initially displays six cards, two desktop rows of three; show
+more adds six, criteria changes/reset return to six, and show-all, direct
+anchors and all 59 no-JavaScript records remain available.

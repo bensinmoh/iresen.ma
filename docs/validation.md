@@ -2688,3 +2688,18 @@ account for the full-height cover crop to avoid magnifying small thumbnails.
 The mechanical design scan has no findings and the local search catalogue was
 synchronized. Existing asset provenance/media references, data and routes remain.
 Remote full-suite CI and merge outcomes are recorded on the pull request.
+
+## Patent sentence case and six-card initial view — 2026-10-10
+
+All 59 titles were reviewed for sentence case, preserving bibliographic wording,
+proper/scientific names and technical acronyms. Six cards display initially and
+show-more adds six; filters/reset return to six. Lint, typecheck, 119 unit tests
+and production build pass. The first build overlapped another local build and
+lost temporary manifests; a retry after that build finished passed.
+Eight Chromium catalogue journeys pass across FR/EN/AR, filters, show-more/all,
+missing years, canonical search/contact/anchors, no JavaScript, 320–1440px,
+200% text, scoped axe and reduced motion. The desktop assertion confirms six
+cards in exactly two rows; the formerly uppercase 41528 rendering was inspected.
+The local search catalogue was rebuilt; formatting, whitespace and the design
+detector pass. No publication/deployment change. Remote full-suite CI and merge
+outcomes are recorded on the pull request.

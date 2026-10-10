@@ -43,6 +43,19 @@ describe('owner-selected patent catalogue', () => {
     expect(findPatent('71194')?.filingYear).toBeNull()
     expect(findPatent('53044')?.filingYear).toBe(2021)
   })
+  it('uses sentence-case titles while preserving scientific names and acronyms', () => {
+    expect(findPatent('41528')?.title).toBe(
+      "Procédé et système pour le nettoyage des panneaux photovoltaïques avec un système de collecte, de traitement, de stockage et de recyclage de l'eau",
+    )
+    expect(findPatent('41925')?.title).toBe('Smart fiche prise (PV/hybrid/grid)')
+    expect(findPatent('53044')?.title).toContain('V2X')
+    expect(findPatent('56600')?.title).toMatch(/^GEP-PVSMS : système/)
+    expect(findPatent('71194')?.title).toMatch(/^Intel.PV : système/)
+    expect(findPatent('58719')?.title).toContain('(doum) BrickDOUM')
+    expect(findPatent('51690')?.title).toContain('Fresnel')
+    expect(findPatent('40800')?.title).toContain('Chamaerops humilis L.')
+    expect(findPatent('72762')?.title).toContain('PV/BIPV')
+  })
   it('combines accent-insensitive search, theme, year and individual co-applicant filters', () => {
     expect(
       filterPatents('53044', 'mobility', '2021', 'IRESEN', 'fr').map((p) => p.reference),

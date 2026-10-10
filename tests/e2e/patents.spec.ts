@@ -13,18 +13,24 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   }) => {
     await page.goto(pageHref('transfer', locale))
     const section = page.locator('#adoption-initiatives')
-    await expect(section.locator('article:visible')).toHaveCount(12)
+    await expect(section.locator('article:visible')).toHaveCount(6)
     await section.getByRole('button', { name: copy.catalog.showMore, exact: true }).click()
-    await expect(section.locator('article:visible')).toHaveCount(24)
+    await expect(section.locator('article:visible')).toHaveCount(12)
     await section.getByRole('button', { name: copy.catalog.showAll, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(59)
     await section.getByLabel(copy.catalog.year, { exact: true }).selectOption('unknown')
+    await expect(section.locator('article:visible')).toHaveCount(6)
+    await section.getByRole('button', { name: copy.catalog.showAll, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(9)
     await section.getByLabel(copy.catalog.year, { exact: true }).selectOption('2014')
     await section.getByRole('searchbox').fill('37172')
     await expect(section.locator('article:visible')).toHaveCount(1)
     await expect(section.locator('#patent-37172').getByText('2014', { exact: true })).toBeVisible()
     await section.getByRole('button', { name: copy.catalog.reset, exact: true }).click()
+    await section.getByRole('searchbox').fill('41528')
+    await expect(section.locator('#patent-41528 h3')).toHaveText(
+      patents.find((patent) => patent.reference === '41528')!.title,
+    )
     await section.getByRole('searchbox').fill('53044')
     await expect(section.locator('article:visible')).toHaveCount(1)
     await section.getByLabel(copy.catalog.theme, { exact: true }).selectOption('mobility')
@@ -37,7 +43,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await section.getByRole('searchbox').fill('no-such-patent')
     await expect(section.getByText(copy.catalog.empty, { exact: true })).toBeVisible()
     await section.getByRole('button', { name: copy.catalog.reset, exact: true }).click()
-    await expect(section.locator('article:visible')).toHaveCount(12)
+    await expect(section.locator('article:visible')).toHaveCount(6)
     await page.goto(pageHref('transfer', locale, 'patent-74893'))
     await expect(page.locator('#patent-74893')).toBeVisible()
     await page.locator('#patent-74893').getByRole('link', { name: copy.catalog.discuss }).click()
@@ -130,6 +136,12 @@ test('compact desktop filters and classic card motion respect reduced motion', a
     Math.max(...boxes.map((box) => box.y)) - Math.min(...boxes.map((box) => box.y)),
   ).toBeLessThan(1)
   expect(boxes.every((box) => box.height >= 44)).toBe(true)
+  const initialCards = section.locator('article:visible')
+  await expect(initialCards).toHaveCount(6)
+  const rows = await initialCards.evaluateAll((cards) =>
+    cards.map((card) => Math.round(card.getBoundingClientRect().top)),
+  )
+  expect(new Set(rows).size).toBe(2)
   await page.waitForTimeout(300)
   await page.evaluate(() => {
     const original = Element.prototype.animate
@@ -159,7 +171,7 @@ test('compact desktop filters and classic card motion respect reduced motion', a
     )
     .toBe(0)
   await section.getByLabel(fr.Transfer.catalog.theme, { exact: true }).selectOption('')
-  await expect(section.locator('article:visible')).toHaveCount(12)
+  await expect(section.locator('article:visible')).toHaveCount(6)
   expect(
     await section
       .locator('article:visible')

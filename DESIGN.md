@@ -919,3 +919,13 @@ and CTA arrows remain readable alongside them in FR/EN/AR and on mobile.
 No new bitmap, dependency, shared token, route or publication is added.
 Localized informative alt text is included in the existing section search
 projections; the decorative hero/background remain silent to screen readers.
+
+## Patent title case and initial display — 2026-10-10
+
+The owner's later correction uses sentence case for all 59 bibliographic titles,
+preserving wording, proper/scientific names and technical acronyms (PV, BIPV,
+V2X, GEP-PVSMS, Intel.PV and BrickDOUM). No CSS text transform hides inconsistent
+data. Cards, contact drafts and public search use the same reviewed titles.
+The catalogue initially displays six cards, two desktop rows of three; show
+more adds six, criteria changes/reset return to six, and show-all, direct
+anchors and all 59 no-JavaScript records remain available.
