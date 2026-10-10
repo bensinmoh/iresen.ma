@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-10 — Médiathèque
+
+Developed the canonical media page with twenty supplied photos (including the CEO), eight explicitly authorized public local-CMS videos, ten source PDF links and five official institutional links. Added localized search references, filtered photo viewing, source-derived video posters and responsive RTL composition. Private originals/uploads/credentials remain outside Git; no deployment. See [scope](docs/media-library.md).
+
+The owner’s refinement adds an alternating photo mosaic with Samir first, a compact
+horizontal rail of full-height video thumbnails opening a native player dialog, animated section links, a centered icon-operated viewer
+and a shorter generated-photo hero without the missions band. Reduced motion is
+respected; the generated still-life is identified as illustrative in search and
+its provenance manifest.
+
 ## 2026-10-10 — Collaborer avec nous
 
 - Redeveloped the existing collaboration page from the live Figma cooperation
