@@ -148,7 +148,7 @@ export function ContactForm({
                 initialPatent
                   ? transfer('contactMessage', {
                       reference: initialPatent.reference,
-                      title: initialPatent.title,
+                      title: initialPatent.title[locale],
                     })
                   : undefined
               }

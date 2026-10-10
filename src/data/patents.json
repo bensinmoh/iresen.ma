@@ -1,7 +1,11 @@
 [
   {
     "reference": "37172",
-    "title": "Système de tracking solaire à 3 capteurs photosensibles",
+    "title": {
+      "fr": "Système de tracking solaire à 3 capteurs photosensibles",
+      "en": "Solar tracking system with three photosensitive sensors",
+      "ar": "نظام تتبع شمسي بثلاثة مستشعرات حساسة للضوء"
+    },
     "description": {
       "fr": "Un système de suivi solaire utilisant trois capteurs photosensibles.",
       "en": "A solar tracking system using three photosensitive sensors.",
@@ -15,7 +19,11 @@
   },
   {
     "reference": "37225",
-    "title": "Materiau composite ecologique a base du polyurethane et de fibres vegetales adapte a l'isolantion thermique",
+    "title": {
+      "fr": "Materiau composite ecologique a base du polyurethane et de fibres vegetales adapte a l'isolantion thermique",
+      "en": "Eco-friendly composite material based on polyurethane and plant fibres for thermal insulation",
+      "ar": "مادة مركبة صديقة للبيئة من البولي يوريثان والألياف النباتية للعزل الحراري"
+    },
     "description": {
       "fr": "Un matériau composite associant polyuréthane et fibres végétales pour l’isolation thermique.",
       "en": "A composite combining polyurethane and plant fibres for thermal insulation.",
@@ -29,7 +37,11 @@
   },
   {
     "reference": "37414",
-    "title": "Maintien en chauffe d'un stockage de bitume par des panneaux solaires à haute énergie",
+    "title": {
+      "fr": "Maintien en chauffe d'un stockage de bitume par des panneaux solaires à haute énergie",
+      "en": "Maintaining bitumen storage temperature using high-energy solar panels",
+      "ar": "الحفاظ على حرارة مخزون البيتومين باستخدام ألواح شمسية عالية الطاقة"
+    },
     "description": {
       "fr": "Un dispositif utilisant des panneaux solaires pour maintenir un stockage de bitume en température.",
       "en": "A system using solar panels to keep stored bitumen warm.",
@@ -43,7 +55,11 @@
   },
   {
     "reference": "37655",
-    "title": "Système de chauffage économique de rouleau de bitume pour étanchéité",
+    "title": {
+      "fr": "Système de chauffage économique de rouleau de bitume pour étanchéité",
+      "en": "Economical heating system for bitumen waterproofing rolls",
+      "ar": "نظام اقتصادي لتسخين لفائف البيتومين للعزل المائي"
+    },
     "description": {
       "fr": "Un système de chauffage de rouleaux de bitume destinés à l’étanchéité.",
       "en": "A heating system for bitumen rolls used in waterproofing.",
@@ -57,7 +73,11 @@
   },
   {
     "reference": "37705",
-    "title": "Unite pilote de sechage des residus",
+    "title": {
+      "fr": "Unite pilote de sechage des residus",
+      "en": "Pilot unit for drying residues",
+      "ar": "وحدة تجريبية لتجفيف المخلفات"
+    },
     "description": {
       "fr": "Une unité pilote consacrée au séchage de résidus.",
       "en": "A pilot unit for drying residues.",
@@ -71,7 +91,11 @@
   },
   {
     "reference": "38683",
-    "title": "Optimisation énergétique d'un capteur solaire plan thermique par utilisation d'un traqueur mono axial",
+    "title": {
+      "fr": "Optimisation énergétique d'un capteur solaire plan thermique par utilisation d'un traqueur mono axial",
+      "en": "Energy optimisation of a flat-plate solar thermal collector using a single-axis tracker",
+      "ar": "تحسين الأداء الطاقي لمجمع شمسي حراري مسطح باستخدام متتبع أحادي المحور"
+    },
     "description": {
       "fr": "Un capteur solaire thermique plan associé à un traqueur à un axe.",
       "en": "A flat solar thermal collector combined with a single-axis tracker.",
@@ -85,7 +109,11 @@
   },
   {
     "reference": "39325",
-    "title": "Système de climatisation utilisant l’énergie thermique solaire",
+    "title": {
+      "fr": "Système de climatisation utilisant l’énergie thermique solaire",
+      "en": "Air-conditioning system using solar thermal energy",
+      "ar": "نظام تكييف باستخدام الطاقة الحرارية الشمسية"
+    },
     "description": {
       "fr": "Un système de climatisation alimenté par l’énergie thermique solaire.",
       "en": "An air-conditioning system powered by solar thermal energy.",
@@ -99,7 +127,11 @@
   },
   {
     "reference": "39365",
-    "title": "Stockage d'énergie pour climatisation solaire hybride",
+    "title": {
+      "fr": "Stockage d'énergie pour climatisation solaire hybride",
+      "en": "Energy storage for hybrid solar air conditioning",
+      "ar": "تخزين الطاقة للتكييف الشمسي الهجين"
+    },
     "description": {
       "fr": "Un système de stockage d’énergie destiné à la climatisation solaire hybride.",
       "en": "An energy storage system for hybrid solar air conditioning.",
@@ -112,7 +144,11 @@
   },
   {
     "reference": "40800",
-    "title": "Refroidissement par évaporation (pad cooling) à base de faux palmier doum (Chamaerops humilis L.)",
+    "title": {
+      "fr": "Refroidissement par évaporation (pad cooling) à base de faux palmier doum (Chamaerops humilis L.)",
+      "en": "Evaporative pad cooling using doum dwarf palm (Chamaerops humilis L.)",
+      "ar": "تبريد تبخيري بالوسائد باستخدام نخيل الدوم القزم (Chamaerops humilis L.)"
+    },
     "description": {
       "fr": "Un dispositif de refroidissement par évaporation utilisant le palmier nain doum.",
       "en": "An evaporative cooling device using doum dwarf palm.",
@@ -125,7 +161,11 @@
   },
   {
     "reference": "41069",
-    "title": "Suiveur solaire double axe à faible consommation avec grande précision angulaire",
+    "title": {
+      "fr": "Suiveur solaire double axe à faible consommation avec grande précision angulaire",
+      "en": "Low-power dual-axis solar tracker with high angular accuracy",
+      "ar": "متتبع شمسي ثنائي المحور منخفض الاستهلاك وعالي الدقة الزاوية"
+    },
     "description": {
       "fr": "Un suiveur solaire à deux axes visant une faible consommation et une précision angulaire élevée.",
       "en": "A dual-axis solar tracker designed for low consumption and high angular precision.",
@@ -139,7 +179,11 @@
   },
   {
     "reference": "41528",
-    "title": "Procédé et système pour le nettoyage des panneaux photovoltaïques avec un système de collecte, de traitement, de stockage et de recyclage de l'eau",
+    "title": {
+      "fr": "Procédé et système pour le nettoyage des panneaux photovoltaïques avec un système de collecte, de traitement, de stockage et de recyclage de l'eau",
+      "en": "Method and system for cleaning photovoltaic panels with water collection, treatment, storage and recycling",
+      "ar": "طريقة ونظام لتنظيف الألواح الكهروضوئية مع جمع المياه ومعالجتها وتخزينها وإعادة تدويرها"
+    },
     "description": {
       "fr": "Un système de nettoyage photovoltaïque intégrant la collecte, le traitement, le stockage et le recyclage de l’eau.",
       "en": "A photovoltaic cleaning system integrating water collection, treatment, storage and recycling.",
@@ -152,7 +196,11 @@
   },
   {
     "reference": "41738",
-    "title": "Procédé et appareil de mesure et surveillance de la diminution des propriétés optiques due à l'encrassement dans les centrales photovoltaïques",
+    "title": {
+      "fr": "Procédé et appareil de mesure et surveillance de la diminution des propriétés optiques due à l'encrassement dans les centrales photovoltaïques",
+      "en": "Method and apparatus for measuring and monitoring the decline in optical properties caused by soiling in photovoltaic plants",
+      "ar": "طريقة وجهاز لقياس ومراقبة تراجع الخصائص البصرية بسبب الاتساخ في المحطات الكهروضوئية"
+    },
     "description": {
       "fr": "Un appareil de mesure et de surveillance des pertes de propriétés optiques liées à l’encrassement photovoltaïque.",
       "en": "A device measuring and monitoring optical losses caused by photovoltaic soiling.",
@@ -165,7 +213,11 @@
   },
   {
     "reference": "41925",
-    "title": "Smart fiche prise (PV/hybrid/grid)",
+    "title": {
+      "fr": "Smart fiche prise (PV/hybrid/grid)",
+      "en": "Smart plug connector (PV/hybrid/grid)",
+      "ar": "موصل قابس ذكي (PV/هجين/شبكة)"
+    },
     "description": {
       "fr": "Une fiche-prise intelligente pour des configurations photovoltaïques, hybrides ou raccordées au réseau.",
       "en": "A smart plug for photovoltaic, hybrid or grid-connected configurations.",
@@ -178,7 +230,11 @@
   },
   {
     "reference": "42862",
-    "title": "Procédé et appareil de mesure automatisé de courbe caractéristique des systèmes photovoltaïques à temps réel",
+    "title": {
+      "fr": "Procédé et appareil de mesure automatisé de courbe caractéristique des systèmes photovoltaïques à temps réel",
+      "en": "Method and apparatus for automated real-time measurement of photovoltaic system characteristic curves",
+      "ar": "طريقة وجهاز للقياس الآلي الآني للمنحنيات المميزة للأنظمة الكهروضوئية"
+    },
     "description": {
       "fr": "Un appareil de mesure automatisée, en temps réel, des courbes caractéristiques de systèmes photovoltaïques.",
       "en": "A device for automated real-time measurement of photovoltaic characteristic curves.",
@@ -191,7 +247,11 @@
   },
   {
     "reference": "43487",
-    "title": "Procédé de suivi solaire mono-axial à trois positions pour collecteur thermique plat",
+    "title": {
+      "fr": "Procédé de suivi solaire mono-axial à trois positions pour collecteur thermique plat",
+      "en": "Three-position single-axis solar tracking method for flat-plate thermal collectors",
+      "ar": "طريقة تتبع شمسي أحادي المحور بثلاث وضعيات للمجمعات الحرارية المسطحة"
+    },
     "description": {
       "fr": "Un procédé de suivi solaire à un axe et trois positions pour un collecteur thermique plat.",
       "en": "A three-position single-axis solar tracking method for a flat thermal collector.",
@@ -205,7 +265,11 @@
   },
   {
     "reference": "43502",
-    "title": "Procédé et système de mesure d'encrassement et de prise de décision de nettoyage des centrales solaires en temps réel et à base d'images",
+    "title": {
+      "fr": "Procédé et système de mesure d'encrassement et de prise de décision de nettoyage des centrales solaires en temps réel et à base d'images",
+      "en": "Image-based method and system for real-time solar plant soiling measurement and cleaning decisions",
+      "ar": "طريقة ونظام قائم على الصور لقياس اتساخ المحطات الشمسية واتخاذ قرارات التنظيف آنياً"
+    },
     "description": {
       "fr": "Un système fondé sur l’image pour mesurer l’encrassement et guider le nettoyage des centrales solaires en temps réel.",
       "en": "An image-based system measuring soiling and guiding solar plant cleaning in real time.",
@@ -218,7 +282,11 @@
   },
   {
     "reference": "43620",
-    "title": "Banc d'essai pour la caractérisation thermo-hydraulique d'un échangeur tubulaire",
+    "title": {
+      "fr": "Banc d'essai pour la caractérisation thermo-hydraulique d'un échangeur tubulaire",
+      "en": "Test bench for thermohydraulic characterisation of a tubular heat exchanger",
+      "ar": "منصة اختبار للتوصيف الحراري والهيدروليكي لمبادل حراري أنبوبي"
+    },
     "description": {
       "fr": "Un banc d’essai pour caractériser le comportement thermique et hydraulique d’un échangeur tubulaire.",
       "en": "A test bench for thermal and hydraulic characterisation of a tubular heat exchanger.",
@@ -232,7 +300,11 @@
   },
   {
     "reference": "44192",
-    "title": "Unité de charge pour véhicule électrique",
+    "title": {
+      "fr": "Unité de charge pour véhicule électrique",
+      "en": "Charging unit for electric vehicles",
+      "ar": "وحدة شحن للمركبات الكهربائية"
+    },
     "description": {
       "fr": "Une unité destinée à la recharge des véhicules électriques.",
       "en": "A unit for charging electric vehicles.",
@@ -245,7 +317,11 @@
   },
   {
     "reference": "44300",
-    "title": "Suiveur solaire double axe avec grande précision angulaire basée sur une horloge radio-pilotée",
+    "title": {
+      "fr": "Suiveur solaire double axe avec grande précision angulaire basée sur une horloge radio-pilotée",
+      "en": "Dual-axis solar tracker with high angular accuracy based on a radio-controlled clock",
+      "ar": "متتبع شمسي ثنائي المحور عالي الدقة الزاوية يعتمد على ساعة مضبوطة لاسلكياً"
+    },
     "description": {
       "fr": "Un suiveur solaire à deux axes utilisant une horloge radio-pilotée pour le positionnement angulaire.",
       "en": "A dual-axis solar tracker using a radio-controlled clock for angular positioning.",
@@ -259,7 +335,11 @@
   },
   {
     "reference": "44798",
-    "title": "Borne de recharge hybride, intelligente et paramétrable sur candélabre pour la recharge des voitures, motos et vélos électriques",
+    "title": {
+      "fr": "Borne de recharge hybride, intelligente et paramétrable sur candélabre pour la recharge des voitures, motos et vélos électriques",
+      "en": "Hybrid, smart and configurable lamp-post charging station for electric cars, motorcycles and bicycles",
+      "ar": "محطة شحن هجينة وذكية وقابلة للتهيئة على عمود إنارة للسيارات والدراجات النارية والهوائية الكهربائية"
+    },
     "description": {
       "fr": "Une borne de recharge hybride et paramétrable sur candélabre pour voitures, motos et vélos électriques.",
       "en": "A configurable hybrid charging point on a lamppost for electric cars, motorcycles and bicycles.",
@@ -272,7 +352,11 @@
   },
   {
     "reference": "51690",
-    "title": "Chauffe-eau solaire à miroir de Fresnel hybride",
+    "title": {
+      "fr": "Chauffe-eau solaire à miroir de Fresnel hybride",
+      "en": "Hybrid Fresnel-mirror solar water heater",
+      "ar": "سخان مياه شمسي هجين بمرآة Fresnel"
+    },
     "description": {
       "fr": "Un chauffe-eau solaire hybride reposant sur un miroir de Fresnel.",
       "en": "A hybrid solar water heater using a Fresnel mirror.",
@@ -285,7 +369,11 @@
   },
   {
     "reference": "51802",
-    "title": "Système et procédé de charge en courant alternatif de véhicule électrique.",
+    "title": {
+      "fr": "Système et procédé de charge en courant alternatif de véhicule électrique.",
+      "en": "System and method for alternating-current charging of electric vehicles",
+      "ar": "نظام وطريقة لشحن المركبات الكهربائية بالتيار المتردد"
+    },
     "description": {
       "fr": "Un système et un procédé de recharge des véhicules électriques en courant alternatif.",
       "en": "A system and method for alternating-current electric vehicle charging.",
@@ -298,7 +386,11 @@
   },
   {
     "reference": "52677",
-    "title": "Système de stockage d’énergie gravitationnelle reposant sur une installation hydraulique et utilisant un système de poulies",
+    "title": {
+      "fr": "Système de stockage d’énergie gravitationnelle reposant sur une installation hydraulique et utilisant un système de poulies",
+      "en": "Gravity energy storage system based on a hydraulic installation and a pulley system",
+      "ar": "نظام تخزين طاقة بالجاذبية يعتمد على منشأة هيدروليكية ونظام بكرات"
+    },
     "description": {
       "fr": "Un stockage d’énergie gravitationnelle associant installation hydraulique et système de poulies.",
       "en": "A gravitational energy storage system combining hydraulics and pulleys.",
@@ -311,7 +403,11 @@
   },
   {
     "reference": "52823",
-    "title": "Champs de concentrations solaires à héliostats –adaptation à plusieurs applications : chauffage, solaire climatisation solaire, dessalement",
+    "title": {
+      "fr": "Champs de concentrations solaires à héliostats –adaptation à plusieurs applications : chauffage, solaire climatisation solaire, dessalement",
+      "en": "Heliostat solar concentration fields for heating, solar air conditioning and desalination",
+      "ar": "حقول تركيز شمسي بمرايا متتبعة للشمس للتدفئة والتكييف الشمسي وتحلية المياه"
+    },
     "description": {
       "fr": "Un champ de concentration solaire à héliostats adapté au chauffage, à la climatisation et au dessalement.",
       "en": "A heliostat solar concentration field for heating, air conditioning and desalination.",
@@ -324,7 +420,11 @@
   },
   {
     "reference": "53044",
-    "title": "Système de recharge hybride et bidirectionnel par induction et/ou par câble pour les véhicules électriques à technologie V2X",
+    "title": {
+      "fr": "Système de recharge hybride et bidirectionnel par induction et/ou par câble pour les véhicules électriques à technologie V2X",
+      "en": "Hybrid bidirectional inductive and/or wired charging system for electric vehicles with V2X technology",
+      "ar": "نظام شحن هجين ثنائي الاتجاه بالحث و/أو بالكابل للمركبات الكهربائية بتقنية V2X"
+    },
     "description": {
       "fr": "Un système de recharge hybride bidirectionnelle, par induction ou câble, pour véhicules électriques à technologie V2X.",
       "en": "A bidirectional hybrid charging system using induction or cable for V2X electric vehicles.",
@@ -337,7 +437,11 @@
   },
   {
     "reference": "54581",
-    "title": "Système hybride (solaire/biomasse) pour la carbonisation hydrothermale d'une biomasse lignocellulosique",
+    "title": {
+      "fr": "Système hybride (solaire/biomasse) pour la carbonisation hydrothermale d'une biomasse lignocellulosique",
+      "en": "Hybrid solar/biomass system for hydrothermal carbonisation of lignocellulosic biomass",
+      "ar": "نظام هجين شمسي/كتلة حيوية للكربنة الحرارية المائية للكتلة الحيوية اللجنوسليلوزية"
+    },
     "description": {
       "fr": "Un système hybride solaire et biomasse pour la carbonisation hydrothermale de biomasse lignocellulosique.",
       "en": "A solar and biomass hybrid system for hydrothermal carbonisation of lignocellulosic biomass.",
@@ -351,7 +455,11 @@
   },
   {
     "reference": "54779",
-    "title": "Système de stockage d’énergie gravitaire à air comprimé",
+    "title": {
+      "fr": "Système de stockage d’énergie gravitaire à air comprimé",
+      "en": "Compressed-air gravity energy storage system",
+      "ar": "نظام تخزين طاقة بالجاذبية والهواء المضغوط"
+    },
     "description": {
       "fr": "Un système de stockage d’énergie combinant gravité et air comprimé.",
       "en": "An energy storage system combining gravity and compressed air.",
@@ -364,7 +472,11 @@
   },
   {
     "reference": "54913",
-    "title": "Dispositif polymorphique adaptatif bidirectionnel et réversible de conversion d’énergie électrique",
+    "title": {
+      "fr": "Dispositif polymorphique adaptatif bidirectionnel et réversible de conversion d’énergie électrique",
+      "en": "Adaptive polymorphic bidirectional and reversible electrical energy conversion device",
+      "ar": "جهاز متكيف متعدد الأشكال وثنائي الاتجاه وقابل للعكس لتحويل الطاقة الكهربائية"
+    },
     "description": {
       "fr": "Un dispositif de conversion d’énergie électrique adaptatif, bidirectionnel et réversible.",
       "en": "An adaptive, bidirectional and reversible electrical energy conversion device.",
@@ -377,7 +489,11 @@
   },
   {
     "reference": "55243",
-    "title": "Système intelligent pour gestion de l'énergie solaire photovoltaïque par onduleurs ongrid avec injection sécurisée même en absence du réseau de distribution",
+    "title": {
+      "fr": "Système intelligent pour gestion de l'énergie solaire photovoltaïque par onduleurs ongrid avec injection sécurisée même en absence du réseau de distribution",
+      "en": "Smart photovoltaic energy management system using grid-connected inverters with safe injection even without the distribution grid",
+      "ar": "نظام ذكي لإدارة الطاقة الكهروضوئية باستخدام عواكس مرتبطة بالشبكة مع حقن آمن حتى في غياب شبكة التوزيع"
+    },
     "description": {
       "fr": "Un système de gestion photovoltaïque par onduleurs réseau avec injection sécurisée en l’absence du réseau de distribution.",
       "en": "A photovoltaic management system using grid inverters with secured injection when the distribution grid is absent.",
@@ -390,7 +506,11 @@
   },
   {
     "reference": "55408",
-    "title": "Système de conversion, stockage d'énergie et contrôle des dispositifs associés dans les milieux résidentiels.",
+    "title": {
+      "fr": "Système de conversion, stockage d'énergie et contrôle des dispositifs associés dans les milieux résidentiels.",
+      "en": "System for energy conversion, storage and control of associated devices in residential environments",
+      "ar": "نظام لتحويل الطاقة وتخزينها والتحكم في الأجهزة المرتبطة بها في البيئات السكنية"
+    },
     "description": {
       "fr": "Un système résidentiel associant conversion, stockage d’énergie et contrôle des dispositifs.",
       "en": "A residential system combining energy conversion, storage and device control.",
@@ -403,7 +523,11 @@
   },
   {
     "reference": "56302",
-    "title": "Système intelligent de surveillance, traitement, prédiction et de contrôle de la consommation d’électricité des bâtiments en temps réel",
+    "title": {
+      "fr": "Système intelligent de surveillance, traitement, prédiction et de contrôle de la consommation d’électricité des bâtiments en temps réel",
+      "en": "Smart system for real-time monitoring, processing, prediction and control of building electricity consumption",
+      "ar": "نظام ذكي للمراقبة والمعالجة والتنبؤ والتحكم الآني في استهلاك الكهرباء بالمباني"
+    },
     "description": {
       "fr": "Un système de surveillance, de prédiction et de contrôle en temps réel de la consommation électrique des bâtiments.",
       "en": "A system for real-time monitoring, prediction and control of building electricity consumption.",
@@ -416,7 +540,11 @@
   },
   {
     "reference": "56600",
-    "title": "GEP-PVSMS : système de mesure, quantification et de traitement des données d'encrassement des centrales photovoltaïques en temps réel.",
+    "title": {
+      "fr": "GEP-PVSMS : système de mesure, quantification et de traitement des données d'encrassement des centrales photovoltaïques en temps réel.",
+      "en": "GEP-PVSMS: system for real-time measurement, quantification and processing of photovoltaic plant soiling data",
+      "ar": "GEP-PVSMS: نظام لقياس وتحديد ومعالجة بيانات اتساخ المحطات الكهروضوئية آنياً"
+    },
     "description": {
       "fr": "Un système de mesure et de traitement en temps réel des données d’encrassement des centrales photovoltaïques.",
       "en": "A system for real-time measurement and processing of photovoltaic plant soiling data.",
@@ -429,7 +557,11 @@
   },
   {
     "reference": "56609",
-    "title": "Nouveaux matériaux composites à base de fluorophosphates comme électrodes positives des batteries",
+    "title": {
+      "fr": "Nouveaux matériaux composites à base de fluorophosphates comme électrodes positives des batteries",
+      "en": "Novel fluorophosphate-based composite materials as positive battery electrodes",
+      "ar": "مواد مركبة جديدة قائمة على الفلوروفوسفات كأقطاب موجبة للبطاريات"
+    },
     "description": {
       "fr": "Des matériaux composites à base de fluorophosphates pour les électrodes positives de batteries.",
       "en": "Fluorophosphate-based composites for positive battery electrodes.",
@@ -442,7 +574,11 @@
   },
   {
     "reference": "57941",
-    "title": "Dispositif de stockage d’énergie gravitaire renforcé par des ressorts de compression et de traction à fonctionnement simultané",
+    "title": {
+      "fr": "Dispositif de stockage d’énergie gravitaire renforcé par des ressorts de compression et de traction à fonctionnement simultané",
+      "en": "Gravity energy storage device reinforced by simultaneously operating compression and tension springs",
+      "ar": "جهاز تخزين طاقة بالجاذبية معزز بنوابض ضغط وشد تعمل بالتزامن"
+    },
     "description": {
       "fr": "Un stockage d’énergie gravitaire renforcé par des ressorts de compression et de traction simultanés.",
       "en": "Gravitational energy storage reinforced by simultaneous compression and tension springs.",
@@ -455,7 +591,11 @@
   },
   {
     "reference": "58719",
-    "title": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de palmier nain (doum) BrickDOUM",
+    "title": {
+      "fr": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de palmier nain (doum) BrickDOUM",
+      "en": "BrickDOUM compressed earth brick stabilised and reinforced with doum dwarf palm fibres",
+      "ar": "طوب ترابي مضغوط ومثبت ومعزز بألياف نخيل الدوم القزم BrickDOUM"
+    },
     "description": {
       "fr": "Une brique de terre crue comprimée et stabilisée, renforcée par des fibres de palmier nain doum.",
       "en": "A compressed and stabilised earth brick reinforced with doum dwarf palm fibres.",
@@ -468,7 +608,11 @@
   },
   {
     "reference": "58999",
-    "title": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de déchets de textile",
+    "title": {
+      "fr": "Brique de terre crue comprimée, stabilisée et renforcée par des fibres de déchets de textile",
+      "en": "Compressed earth brick stabilised and reinforced with textile waste fibres",
+      "ar": "طوب ترابي مضغوط ومثبت ومعزز بألياف مخلفات النسيج"
+    },
     "description": {
       "fr": "Une brique de terre crue comprimée et stabilisée, renforcée par des fibres issues de déchets textiles.",
       "en": "A compressed and stabilised earth brick reinforced with textile waste fibres.",
@@ -481,7 +625,11 @@
   },
   {
     "reference": "60000",
-    "title": "Borne de recharge rapide universelle pour batterie de scooters électriques",
+    "title": {
+      "fr": "Borne de recharge rapide universelle pour batterie de scooters électriques",
+      "en": "Universal fast-charging station for electric scooter batteries",
+      "ar": "محطة شحن سريع شاملة لبطاريات السكوترات الكهربائية"
+    },
     "description": {
       "fr": "Une borne de recharge rapide universelle pour les batteries de scooters électriques.",
       "en": "A universal fast charging station for electric scooter batteries.",
@@ -494,7 +642,11 @@
   },
   {
     "reference": "62359",
-    "title": "Procédé et méthode pour l'inspection automatique des centrales solaires photovoltaïques (PV) à large échelle à base de la photogrammétrie aérienne multi-vues et des modèles coopératifs d'intelligence",
+    "title": {
+      "fr": "Procédé et méthode pour l'inspection automatique des centrales solaires photovoltaïques (PV) à large échelle à base de la photogrammétrie aérienne multi-vues et des modèles coopératifs d'intelligence",
+      "en": "Process and method for automated large-scale photovoltaic (PV) plant inspection using multi-view aerial photogrammetry and cooperative intelligence models",
+      "ar": "عملية وطريقة للفحص الآلي واسع النطاق للمحطات الكهروضوئية (PV) باستخدام المسح التصويري الجوي متعدد الرؤى ونماذج الذكاء التعاونية"
+    },
     "description": {
       "fr": "Une méthode d’inspection photovoltaïque à grande échelle utilisant photogrammétrie aérienne multi-vues et modèles coopératifs d’intelligence.",
       "en": "A large-scale photovoltaic inspection method using multi-view aerial photogrammetry and cooperative intelligence models.",
@@ -507,7 +659,11 @@
   },
   {
     "reference": "62697",
-    "title": "Réseau énergétique hybride et son système de gestion des données par intelligence artificielle",
+    "title": {
+      "fr": "Réseau énergétique hybride et son système de gestion des données par intelligence artificielle",
+      "en": "Hybrid energy network and its artificial intelligence-based data management system",
+      "ar": "شبكة طاقة هجينة ونظامها لإدارة البيانات بالذكاء الاصطناعي"
+    },
     "description": {
       "fr": "Un réseau énergétique hybride associé à une gestion des données par intelligence artificielle.",
       "en": "A hybrid energy network with artificial-intelligence-based data management.",
@@ -520,7 +676,11 @@
   },
   {
     "reference": "63542",
-    "title": "Méthode de contrôle prédictif pour la gestion des micro-réseaux par un système embarqué intelligent",
+    "title": {
+      "fr": "Méthode de contrôle prédictif pour la gestion des micro-réseaux par un système embarqué intelligent",
+      "en": "Predictive control method for microgrid management using a smart embedded system",
+      "ar": "طريقة تحكم تنبؤي لإدارة الشبكات المصغرة باستخدام نظام مدمج ذكي"
+    },
     "description": {
       "fr": "Une méthode de contrôle prédictif des micro-réseaux reposant sur un système embarqué intelligent.",
       "en": "A predictive microgrid control method using an intelligent embedded system.",
@@ -533,7 +693,11 @@
   },
   {
     "reference": "64167",
-    "title": "Eco-plaques multicouche pour l'isolation thermique et acoustique du bâtiment",
+    "title": {
+      "fr": "Eco-plaques multicouche pour l'isolation thermique et acoustique du bâtiment",
+      "en": "Multilayer eco-panels for building thermal and acoustic insulation",
+      "ar": "ألواح بيئية متعددة الطبقات للعزل الحراري والصوتي للمباني"
+    },
     "description": {
       "fr": "Des plaques multicouches destinées à l’isolation thermique et acoustique des bâtiments.",
       "en": "Multilayer panels for thermal and acoustic building insulation.",
@@ -546,7 +710,11 @@
   },
   {
     "reference": "65166",
-    "title": "Dispositif de tête d'impression de béton avec changement automatique des buses",
+    "title": {
+      "fr": "Dispositif de tête d'impression de béton avec changement automatique des buses",
+      "en": "Concrete printhead device with automatic nozzle switching",
+      "ar": "جهاز رأس طباعة الخرسانة مع تبديل آلي للفوهات"
+    },
     "description": {
       "fr": "Une tête d’impression de béton intégrant un changement automatique des buses.",
       "en": "A concrete printing head with automatic nozzle changes.",
@@ -559,7 +727,11 @@
   },
   {
     "reference": "68026",
-    "title": "Système de maintien en place des centrales photovoltaïques flottantes et de suivi des variations du niveau de l'eau.",
+    "title": {
+      "fr": "Système de maintien en place des centrales photovoltaïques flottantes et de suivi des variations du niveau de l'eau.",
+      "en": "System for securing floating photovoltaic plants and tracking water-level variations",
+      "ar": "نظام لتثبيت المحطات الكهروضوئية العائمة وتتبع تغيرات مستوى المياه"
+    },
     "description": {
       "fr": "Un système de maintien de centrales photovoltaïques flottantes suivant les variations du niveau de l’eau.",
       "en": "A system securing floating photovoltaic plants while tracking water-level changes.",
@@ -572,7 +744,11 @@
   },
   {
     "reference": "68027",
-    "title": "Conception de réacteur photo catalytique à base d’électrode d’hétérojonction de silicium modifié et micro structuré pour traitement des eaux usées par illumination ultraviolet.",
+    "title": {
+      "fr": "Conception de réacteur photo catalytique à base d’électrode d’hétérojonction de silicium modifié et micro structuré pour traitement des eaux usées par illumination ultraviolet.",
+      "en": "Photocatalytic reactor design using a modified microstructured silicon heterojunction electrode for wastewater treatment under ultraviolet illumination",
+      "ar": "تصميم مفاعل تحفيز ضوئي قائم على قطب سيليكوني بوصلة غير متجانسة معدل وذو بنية مجهرية لمعالجة المياه العادمة بالإضاءة فوق البنفسجية"
+    },
     "description": {
       "fr": "Un réacteur photocatalytique à électrode de silicium modifié et microstructuré pour traiter les eaux usées sous ultraviolet.",
       "en": "A photocatalytic reactor with a modified microstructured silicon electrode for ultraviolet wastewater treatment.",
@@ -585,7 +761,11 @@
   },
   {
     "reference": "68028",
-    "title": "Méthode et système d’optimisation basé sur l’analyse multicritère et l’intelligence artificielle pour la localisation optimale des bornes de recharge pour véhicules électriques",
+    "title": {
+      "fr": "Méthode et système d’optimisation basé sur l’analyse multicritère et l’intelligence artificielle pour la localisation optimale des bornes de recharge pour véhicules électriques",
+      "en": "Multi-criteria analysis and artificial intelligence-based optimisation method and system for optimal electric vehicle charging station locations",
+      "ar": "طريقة ونظام تحسين قائم على التحليل متعدد المعايير والذكاء الاصطناعي لتحديد المواقع المثلى لمحطات شحن المركبات الكهربائية"
+    },
     "description": {
       "fr": "Une méthode associant analyse multicritère et intelligence artificielle pour localiser les bornes de recharge électrique.",
       "en": "A method combining multicriteria analysis and artificial intelligence to locate electric charging stations.",
@@ -598,7 +778,11 @@
   },
   {
     "reference": "68605",
-    "title": "Système photovoltaïque bifacial à prismes orientables pour accroître la production énergétique",
+    "title": {
+      "fr": "Système photovoltaïque bifacial à prismes orientables pour accroître la production énergétique",
+      "en": "Bifacial photovoltaic system with adjustable prisms to increase energy production",
+      "ar": "نظام كهروضوئي ثنائي الوجه بمواشير قابلة للتوجيه لزيادة إنتاج الطاقة"
+    },
     "description": {
       "fr": "Un système photovoltaïque bifacial à prismes orientables visant à accroître la production énergétique.",
       "en": "A bifacial photovoltaic system with adjustable prisms intended to increase energy production.",
@@ -611,7 +795,11 @@
   },
   {
     "reference": "68606",
-    "title": "Nouveau procédé de production d’hydrogène vert à partir des plaquettes solaires de silicium en fin de vie.",
+    "title": {
+      "fr": "Nouveau procédé de production d’hydrogène vert à partir des plaquettes solaires de silicium en fin de vie.",
+      "en": "Novel process for producing green hydrogen from end-of-life silicon solar wafers",
+      "ar": "عملية جديدة لإنتاج الهيدروجين الأخضر من رقائق السيليكون الشمسية في نهاية عمرها"
+    },
     "description": {
       "fr": "Un procédé de production d’hydrogène vert utilisant des plaquettes de silicium solaire en fin de vie.",
       "en": "A green hydrogen production method using end-of-life solar silicon wafers.",
@@ -624,7 +812,11 @@
   },
   {
     "reference": "70688",
-    "title": "Séchoir hybride solaire électrique contrôlé à large gamme de température à fonctionnement continue",
+    "title": {
+      "fr": "Séchoir hybride solaire électrique contrôlé à large gamme de température à fonctionnement continue",
+      "en": "Controlled hybrid solar-electric dryer with a wide temperature range and continuous operation",
+      "ar": "مجفف هجين شمسي كهربائي متحكم فيه بنطاق حراري واسع وتشغيل مستمر"
+    },
     "description": {
       "fr": "Un séchoir hybride solaire et électrique à fonctionnement continu et large gamme de température.",
       "en": "A continuous solar and electric hybrid dryer operating across a wide temperature range.",
@@ -637,7 +829,11 @@
   },
   {
     "reference": "71194",
-    "title": "Intel.PV : système avancé de gestion unifiée des centrales photovoltaïques distantes basé sur une architecture modulaire et distribuée",
+    "title": {
+      "fr": "Intel.PV : système avancé de gestion unifiée des centrales photovoltaïques distantes basé sur une architecture modulaire et distribuée",
+      "en": "Intel.PV: advanced unified management system for remote photovoltaic plants based on a modular distributed architecture",
+      "ar": "Intel.PV: نظام متقدم للإدارة الموحدة للمحطات الكهروضوئية البعيدة يعتمد على بنية معيارية موزعة"
+    },
     "description": {
       "fr": "Un système modulaire et distribué de gestion unifiée de centrales photovoltaïques distantes.",
       "en": "A modular distributed system for unified management of remote photovoltaic plants.",
@@ -650,7 +846,11 @@
   },
   {
     "reference": "71200",
-    "title": "Procédé et système pour déterminer le taux de réflectivité des miroirs dans les centrales solaires à concentration par analyse d'images nocturnes et intelligence artificielle",
+    "title": {
+      "fr": "Procédé et système pour déterminer le taux de réflectivité des miroirs dans les centrales solaires à concentration par analyse d'images nocturnes et intelligence artificielle",
+      "en": "Method and system for determining mirror reflectivity in concentrated solar power plants using night-time image analysis and artificial intelligence",
+      "ar": "طريقة ونظام لتحديد انعكاسية المرايا في محطات الطاقة الشمسية المركزة باستخدام تحليل الصور الليلية والذكاء الاصطناعي"
+    },
     "description": {
       "fr": "Une méthode de mesure de la réflectivité des miroirs solaires par images nocturnes et intelligence artificielle.",
       "en": "A method measuring solar mirror reflectivity through nighttime images and artificial intelligence.",
@@ -663,7 +863,11 @@
   },
   {
     "reference": "71297",
-    "title": "Station météorologique mobile autonome et intelligente",
+    "title": {
+      "fr": "Station météorologique mobile autonome et intelligente",
+      "en": "Autonomous smart mobile weather station",
+      "ar": "محطة أرصاد جوية متنقلة وذكية ومستقلة"
+    },
     "description": {
       "fr": "Une station météorologique mobile, autonome et intelligente.",
       "en": "A mobile, autonomous and intelligent weather station.",
@@ -676,7 +880,11 @@
   },
   {
     "reference": "71521",
-    "title": "Conception de réacteur photo catalytique pour traitement des eaux usées par illumination ultraviolet.",
+    "title": {
+      "fr": "Conception de réacteur photo catalytique pour traitement des eaux usées par illumination ultraviolet.",
+      "en": "Photocatalytic reactor design for wastewater treatment under ultraviolet illumination",
+      "ar": "تصميم مفاعل تحفيز ضوئي لمعالجة المياه العادمة بالإضاءة فوق البنفسجية"
+    },
     "description": {
       "fr": "Un réacteur photocatalytique destiné au traitement des eaux usées sous ultraviolet.",
       "en": "A photocatalytic reactor for ultraviolet wastewater treatment.",
@@ -689,7 +897,11 @@
   },
   {
     "reference": "71776",
-    "title": "Méthode d’optimisation multiparamétrique de la performance technico-économique de micro-réseaux autonomes intégrant une installation photovoltaïque et un système de stockage hybride à hydrogène et batterie",
+    "title": {
+      "fr": "Méthode d’optimisation multiparamétrique de la performance technico-économique de micro-réseaux autonomes intégrant une installation photovoltaïque et un système de stockage hybride à hydrogène et batterie",
+      "en": "Multi-parameter optimisation method for the techno-economic performance of stand-alone microgrids integrating photovoltaics and hybrid hydrogen-battery storage",
+      "ar": "طريقة تحسين متعددة المعلمات للأداء التقني والاقتصادي للشبكات المصغرة المستقلة التي تدمج منظومة كهروضوئية وتخزيناً هجيناً بالهيدروجين والبطاريات"
+    },
     "description": {
       "fr": "Une méthode d’optimisation technico-économique de micro-réseaux photovoltaïques autonomes avec stockage hydrogène et batterie.",
       "en": "A techno-economic optimisation method for autonomous photovoltaic microgrids with hydrogen and battery storage.",
@@ -702,7 +914,11 @@
   },
   {
     "reference": "71777",
-    "title": "Tube absorbant rotatif.",
+    "title": {
+      "fr": "Tube absorbant rotatif.",
+      "en": "Rotating absorber tube",
+      "ar": "أنبوب امتصاص دوار"
+    },
     "description": {
       "fr": "Un tube absorbant rotatif.",
       "en": "A rotating absorber tube.",
@@ -715,7 +931,11 @@
   },
   {
     "reference": "72762",
-    "title": "Méthode et système d’optimisation technico-économique multiparamétrique pour micro-réseaux autonomes et connectés aux réseaux à base de PV/BIPV et stockage hybride hydrogène-batterie",
+    "title": {
+      "fr": "Méthode et système d’optimisation technico-économique multiparamétrique pour micro-réseaux autonomes et connectés aux réseaux à base de PV/BIPV et stockage hybride hydrogène-batterie",
+      "en": "Multi-parameter techno-economic optimisation method and system for stand-alone and grid-connected microgrids based on PV/BIPV and hybrid hydrogen-battery storage",
+      "ar": "طريقة ونظام تحسين تقني واقتصادي متعدد المعلمات للشبكات المصغرة المستقلة والمتصلة بالشبكة القائمة على PV/BIPV والتخزين الهجين بالهيدروجين والبطاريات"
+    },
     "description": {
       "fr": "Une méthode d’optimisation de micro-réseaux PV/BIPV autonomes ou connectés, avec stockage hybride hydrogène et batterie.",
       "en": "An optimisation method for standalone or connected PV/BIPV microgrids with hybrid hydrogen and battery storage.",
@@ -728,7 +948,11 @@
   },
   {
     "reference": "72763",
-    "title": "Un système d'amarrage autonome à rideau pour installations photovoltaïques flottantes",
+    "title": {
+      "fr": "Un système d'amarrage autonome à rideau pour installations photovoltaïques flottantes",
+      "en": "Autonomous curtain mooring system for floating photovoltaic installations",
+      "ar": "نظام إرساء مستقل بستارة للمنشآت الكهروضوئية العائمة"
+    },
     "description": {
       "fr": "Un système d’amarrage autonome à rideau pour installations photovoltaïques flottantes.",
       "en": "An autonomous curtain mooring system for floating photovoltaic installations.",
@@ -741,7 +965,11 @@
   },
   {
     "reference": "73157",
-    "title": "Méthode d’optimisation technico-économique pour la planification de microgrids hybrides multi-sources intégrant des modèles tarifaires horaires et contractuels",
+    "title": {
+      "fr": "Méthode d’optimisation technico-économique pour la planification de microgrids hybrides multi-sources intégrant des modèles tarifaires horaires et contractuels",
+      "en": "Techno-economic optimisation method for planning multi-source hybrid microgrids incorporating hourly and contractual tariff models",
+      "ar": "طريقة تحسين تقني واقتصادي لتخطيط شبكات مصغرة هجينة متعددة المصادر تدمج نماذج تسعير ساعية وتعاقدية"
+    },
     "description": {
       "fr": "Une méthode de planification technico-économique de micro-réseaux hybrides intégrant des tarifs horaires et contractuels.",
       "en": "A techno-economic planning method for hybrid microgrids incorporating hourly and contractual tariffs.",
@@ -754,7 +982,11 @@
   },
   {
     "reference": "74890",
-    "title": "Procédé de démontage sélectif à basse énergie de modules photovoltaïques à base de silicium en fin de vie pour valorisation",
+    "title": {
+      "fr": "Procédé de démontage sélectif à basse énergie de modules photovoltaïques à base de silicium en fin de vie pour valorisation",
+      "en": "Low-energy selective disassembly process for end-of-life silicon photovoltaic modules for valorisation",
+      "ar": "عملية تفكيك انتقائي منخفض الطاقة للوحدات الكهروضوئية السيليكونية في نهاية عمرها للتثمين"
+    },
     "description": {
       "fr": "Un procédé de démontage sélectif à basse énergie de modules photovoltaïques au silicium en fin de vie.",
       "en": "A low-energy selective dismantling method for end-of-life silicon photovoltaic modules.",
@@ -767,7 +999,11 @@
   },
   {
     "reference": "74893",
-    "title": "Procédé de granulation à froid de liants à prise rapide pour la production de granulats artificiels destinés à l’imprégnation sous vide de matériaux à changement de phase",
+    "title": {
+      "fr": "Procédé de granulation à froid de liants à prise rapide pour la production de granulats artificiels destinés à l’imprégnation sous vide de matériaux à changement de phase",
+      "en": "Cold granulation process for fast-setting binders to produce artificial aggregates for vacuum impregnation of phase-change materials",
+      "ar": "عملية تحبيب بارد لمواد رابطة سريعة التصلب لإنتاج ركام اصطناعي للتشريب تحت الفراغ بمواد متغيرة الطور"
+    },
     "description": {
       "fr": "Un procédé de granulation à froid pour produire des granulats artificiels destinés aux matériaux à changement de phase.",
       "en": "A cold granulation method producing artificial aggregates for phase-change materials.",
