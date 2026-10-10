@@ -1580,7 +1580,7 @@
       "showAll": "Tout afficher",
       "original": "Titres et noms des déposants conservés dans leur langue d’origine.",
       "note": "Les dépôts recensés ne correspondent pas tous à des brevets en vigueur. Les informations disponibles sur PatentRegister permettent de consulter chaque dossier.",
-      "updated": "Base au quatrième trimestre 2026",
+      "updated": "Base au T4 2026",
       "noJavaScript": "Sans JavaScript, les 59 références sont affichées intégralement. Les filtres nécessitent JavaScript."
     },
     "figures": {
@@ -1589,7 +1589,7 @@
       "filed": "références de brevets déposés",
       "themes": "thématiques de consultation",
       "date": "Date du référentiel",
-      "period": "Quatrième trimestre 2026",
+      "period": "T4 2026",
       "note": "Ces indicateurs décrivent le catalogue présenté ici ; ils ne mesurent pas les licences, les transferts ou l’adoption industrielle."
     },
     "doors": {

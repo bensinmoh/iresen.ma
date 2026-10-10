@@ -122,3 +122,7 @@ Keys and links remain stable; changing criteria or limits cancels an earlier
 transition. Reduced motion disables the effect and cancels active movement.
 No fake loading state, delay, new dependency, content or search destination
 is introduced. All 59 references and no-JavaScript reading remain.
+
+The owner’s later French label correction abbreviates this period to **T4 2026**,
+both in the figures and the catalogue footer. The quarter and source provenance
+remain the same.
