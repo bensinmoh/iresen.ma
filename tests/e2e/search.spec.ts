@@ -2,6 +2,35 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, test, type Page } from '@playwright/test'
 import { locales } from '../../src/i18n/locales'
 import { pageHref } from '../../src/lib/site'
+import { patents } from '../../src/lib/patents'
+
+test('patent result types and resource filters work in FR/EN/AR', async ({ page }) => {
+  const labels = {
+    fr: ['Publications', 'Rapports', 'Brevets', 'Projets'],
+    en: ['Publications', 'Reports', 'Patents', 'Projects'],
+    ar: ['المنشورات', 'التقارير', 'براءات الاختراع', 'المشاريع'],
+  }
+  for (const locale of locales) {
+    const patent = patents[0]!
+    await page.goto(searchUrl(locale, { q: patent.title[locale], type: 'patent' }))
+    const results = page.locator('.search-results article')
+    await expect(results.first()).toBeVisible()
+    await expect(results.first().locator('.search-result-type')).toHaveText(labels[locale][2]!)
+    await expect(
+      page.locator(
+        `.search-results h2 a[href="${pageHref('transfer', locale, `patent-${patent.reference}`)}"]`,
+      ),
+    ).toBeVisible()
+    for (const label of labels[locale])
+      await expect(
+        page.locator('.search-facets').getByRole('link', { name: new RegExp(label) }),
+      ).toBeVisible()
+    for (const type of ['publication', 'report', 'project']) {
+      await page.goto(searchUrl(locale, { q: patent.title[locale], type }))
+      await expect(page.locator('.search-results article')).toHaveCount(0)
+    }
+  }
+})
 
 function searchUrl(locale: (typeof locales)[number], parameters: Record<string, string>) {
   return `${pageHref('search', locale)}?${new URLSearchParams(parameters)}`

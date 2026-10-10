@@ -122,7 +122,7 @@ include its search reference in the same change. This is the owner's explicit
 | ----------------- | -------------------------------------------------------------------------------------------- |
 | Stable identity   | Canonical page ID, stable section anchor, CMS ID or explicit static asset ID                 |
 | Destination       | Working public canonical URL, download/view URL or section anchor                            |
-| Resource type     | Page, section, news, document or media                                                       |
+| Resource type     | Page, section, news, publication, report, patent, project, document or media                 |
 | Localized text    | Descriptive title and body, summary, caption or transcript for each approved public language |
 | Discovery terms   | Useful topic vocabulary, full names and acronyms in genuine descriptive metadata             |
 | Eligibility       | Explicit public visibility, published revision and approval for the current locale           |
@@ -259,3 +259,29 @@ localized source-derived descriptions and thematic terms. No original workbook,
 project relationship or annuity field enters search. Removing a JSON record
 withdraws its projection and vocabulary on catalog synchronization/rebuild.
 See [database maintenance](valorisation-patents.md).
+
+## Semantic resource types — 2026-10-10
+
+Search distinguishes `publication`, `report`, `patent` and `project` from
+`page`, `section`, `news`, `document` and `media`. FR/EN/AR filters, result badges,
+header suggestions, API validation and PostgreSQL facets share the same type
+catalogue. Classification comes from explicit resource projections, never a
+keyword, filename, page name or query. A publications/projects overview remains
+a page; its actual resource records receive their own type when commissioned.
+
+The 59 public patent records now use `patent`, retaining their stable
+`section:transfer:patent-{reference}:{locale}` identities and canonical anchors.
+The historical identity prefix does not determine the result type. Individual
+patent titles/descriptions are indexed only in those record projections; generic
+page/section copy remains website content. Apply
+`20261010_230000_search_resource_types` before running the updated app, then rebuild
+or let catalogue initialization refresh static documents and spelling vocabulary.
+
+Intentionally served publication/report files can use the corresponding explicit
+`PublicAssetReference.type`; their existing file previews remain available.
+Generic CMS uploads remain documents/media until an explicit editorial subtype
+and its guarded projection are commissioned. The staged 1,181 publication records,
+unavailable full reports and future project records remain outside search. Adding
+filters authorizes no new content, download, route or publication. Future resource
+projections require reachable destinations, localized approved metadata and the
+publication/withdrawal gates described above.

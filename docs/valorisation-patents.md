@@ -81,7 +81,9 @@ references cannot become prefilled messages. Nothing is sent automatically.
 
 Page, six legacy sections, figures and each patent have localized search
 references. Patent IDs are `section:transfer:patent-{reference}:{locale}` with
-reachable `#patent-{reference}` destinations. Supported hashes and locale
+reachable `#patent-{reference}` destinations. Since 10 October 2026 these
+individual records carry the semantic search type `patent`; the historical
+identity prefix remains stable and does not classify them as sections. Supported hashes and locale
 switching derive from the current database. Original workbook and omitted fields
 stay outside public projections. Search remains exact-first; no relevance rule
 or broad synonym is changed. CMS publication/access gates remain unchanged.
