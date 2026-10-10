@@ -188,30 +188,32 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.evaluate(() => document.fonts.ready)
     await expect
       .poll(() =>
-        page.evaluate(() => ({
-          fits: document.documentElement.scrollWidth <= innerWidth + 1,
-          width: document.documentElement.scrollWidth,
-          viewport: innerWidth,
-          overflowing: Array.from(
-            document.querySelectorAll('h1,h2,h3,p,a,button,section,header,footer'),
-          )
-            .filter(
-              (el) =>
-                !el.closest('[data-event-rail]') &&
-                el.getBoundingClientRect().width > 0 &&
-                (el.getBoundingClientRect().right > innerWidth + 1 ||
-                  el.getBoundingClientRect().left < -1),
+        page
+          .evaluate(() => ({
+            fits: document.documentElement.scrollWidth <= innerWidth + 1,
+            width: document.documentElement.scrollWidth,
+            viewport: innerWidth,
+            overflowing: Array.from(
+              document.querySelectorAll('h1,h2,h3,p,a,button,section,header,footer'),
             )
-            .slice(0, 12)
-            .map((el) => ({
-              tag: el.tagName,
-              className: el.className,
-              text: el.textContent?.trim().slice(0, 60),
-              width: el.getBoundingClientRect().width,
-            })),
-        })),
+              .filter(
+                (el) =>
+                  !el.closest('[data-event-rail]') &&
+                  el.getBoundingClientRect().width > 0 &&
+                  (el.getBoundingClientRect().right > innerWidth + 1 ||
+                    el.getBoundingClientRect().left < -1),
+              )
+              .slice(0, 12)
+              .map((el) => ({
+                tag: el.tagName,
+                className: el.className,
+                text: el.textContent?.trim().slice(0, 60),
+                width: el.getBoundingClientRect().width,
+              })),
+          }))
+          .then((result) => (result.fits ? 'fits' : JSON.stringify(result))),
       )
-      .toMatchObject({ fits: true })
+      .toBe('fits')
     await expect(navigation).toBeVisible()
     await expect(pills).toHaveCount(6)
     const scan = await new AxeBuilder({ page })

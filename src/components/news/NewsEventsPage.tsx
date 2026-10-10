@@ -106,7 +106,7 @@ export async function NewsEventsPage({
           </h3>
           {!compact && <p>{card.summary}</p>}
           <a className={styles.read} href={card.href}>
-            {t('read')}
+            <span>{t('read')}</span>
             <NavigationIcon name="arrow" />
           </a>
         </div>
@@ -326,7 +326,7 @@ export async function NewsEventsPage({
                             )}
                             {event.href && (
                               <a href={event.href} className={styles.read}>
-                                {event.id === 'oman' ? t('source') : t('official')}
+                                <span>{event.id === 'oman' ? t('source') : t('official')}</span>
                                 <NavigationIcon name="arrow" />
                               </a>
                             )}
