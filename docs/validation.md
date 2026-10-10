@@ -2627,3 +2627,11 @@ row measures about 334px instead of 513px before this change (35% less).
 The mechanical design scan reports no findings. Data, text, public search
 references, routes and publication gates remain; no deployment is performed.
 Remote full-suite CI and merge outcomes are recorded on the pull request.
+
+## French T4 label — 2026-10-10
+
+The two French reference-period labels now use **T4 2026**. Formatting, lint,
+typecheck, 116 unit tests and production build passed. Chromium confirms both
+rendered labels and mobile containment at 390px. The local search catalogue
+was synchronized; source provenance, quarter, data and other locales remain.
+Remote CI and merge are recorded in the pull request.
