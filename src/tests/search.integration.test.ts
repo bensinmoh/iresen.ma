@@ -162,6 +162,26 @@ integration('public website search (PostgreSQL)', () => {
     }
   })
 
+  it('discovers the commissioned bibliographic corpus in all locales at stable notices', async () => {
+    const documents = staticSearchDocuments()
+    for (const locale of ['fr', 'en', 'ar'] as const) {
+      const publication = documents.find(
+        (item) => item.type === 'publication' && item.locale === locale && item.title.length < 120,
+      )!
+      const result = await query({ query: publication.title, locale, type: 'publication' })
+      expect(result.items).toContainEqual(
+        expect.objectContaining({
+          id: publication.id,
+          title: publication.title,
+          url: publication.url,
+          type: 'publication',
+        }),
+      )
+      expect(publication.url).toContain('?publication=PUB_')
+      expect(result.items.every((item) => item.type === 'publication')).toBe(true)
+    }
+  })
+
   it('retrieves and filters explicitly typed publication, report and project projections without name inference', async () => {
     const revision = await initializeSearchCatalog()
     const marker = term()

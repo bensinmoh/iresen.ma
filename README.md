@@ -164,7 +164,8 @@ the four 2027 references, retaining dated Scopus counts and distinct historical/
 2025 SJR rankings with their source evidence.
 Only minimal bibliographic fields and dated metrics are retained; the workbook,
 184 excluded rows and administrative evidence stay outside the repository.
-The records are not yet served or indexed publicly.
+The commissioned [Publications & Reports page](docs/publications-page.md) now
+projects the retained bibliographic records and their localized search references.
 
 `src/app` contains public locale/CMS routes; `src/components` the UI shell; `src/i18n` and `src/messages` locale routing/catalogs; `src/cms` collections/access/migrations; `src/lib` content and integration boundaries. Technical guides are in [docs](docs/architecture.md). Read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before contributing/reporting.
 
@@ -296,3 +297,7 @@ vertical centering correction. Analysis only; site-wide adaptation is deferred.
 ## Samir portrait biography — 2026-10-10
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
+
+Publications & Reports now uses the 1,199-record retained database, a corpus-only
+GET search, title-derived topic filters, source years, all authors and DOI links.
+Reports share the media library renderer. See [scope](docs/publications-page.md).

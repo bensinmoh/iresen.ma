@@ -174,3 +174,15 @@ raw Scopus export, abstracts, author IDs, funding/affiliation data, institutiona
 attribution and editorial notes remain excluded. No search rebuild is needed
 for this update. Localized destinations, metadata and withdrawal handling are
 required when the section is commissioned. See [update verification](publications-update-validation.md).
+
+## Commissioned public page — 10 October 2026
+
+The later owner request now commissions the canonical Publications & Reports page,
+its search restricted to the retained corpus, title-derived frequent themes and
+reports reused from the media library. The staged-only assertions above describe
+the ingestion milestone and are superseded for this bounded page increment.
+See [implemented scope](publications-page.md). The importer metadata’s
+`staged-not-public` value records the ingestion output, not current renderer
+eligibility. Both source workbooks, review notes and excluded records remain
+outside public assets and search. Publication months are absent; the owner
+explicitly approved displaying the available year.

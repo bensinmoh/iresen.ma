@@ -1134,3 +1134,17 @@ remain. Other rails await commissioning. See [requirements](docs/horizontal-scro
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## Publication catalogue interaction — 2026-10-10
+
+The commissioned library retains the shared hero/grid/tokens and original
+bibliographic metadata. Its frequent-search label and links share line-height
+and centered alignment. Native checkboxes immediately filter notices; facet
+counts condition on query and the other filter group. Per-notice view transitions
+explain removal and movement without a library; reduced motion updates directly.
+See [scope](docs/publications-page.md).
+
+Owner responsive follow-up: mobile/tablet search field and button are separate;
+frequent searches keep the most common themes fitting two compact lines. Key
+figures use the existing native horizontal figure-rail pattern at these widths,
+with all four figures, keyboard access and Arabic direction preserved.

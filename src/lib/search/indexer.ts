@@ -72,7 +72,7 @@ async function writeDocument(
   return { id: document.id, locale: document.locale, title, body }
 }
 
-/** Small explicit runtime catalog only; CMS reindex/extraction never runs in request latency. */
+/** Explicit runtime catalog only; CMS reindex/extraction never runs in request latency. */
 export async function initializeSearchCatalog(): Promise<string> {
   if (currentRevision) return currentRevision
   catalogReady ??= (async () => {
@@ -114,6 +114,13 @@ export async function initializeSearchCatalog(): Promise<string> {
         "DELETE FROM search_documents WHERE origin='static' AND source_revision <> $1",
         [revision],
       )
+      if (Number(existing.rows[0]?.count) !== documents.length) {
+        // A newly expanded bibliographic corpus needs current planner statistics
+        // before the first search; waiting for autovacuum can produce costly plans.
+        await client.query(
+          'ANALYZE search_documents, search_document_vocabulary, search_vocabulary_terms',
+        )
+      }
       await client.query('COMMIT')
       currentRevision = revision
       return revision

@@ -244,3 +244,22 @@ See [the current requirements](docs/horizontal-scroll-indicators.md).
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## Publications & reports page — 2026-10-10
+
+The owner now commissioned the canonical publications page, its search restricted
+to the 1,199 retained records, six title-derived frequent themes, DOI title/read
+links, all supplied authors and reports reused from the media library. See
+[scope](docs/publications-page.md). The earlier section deferral is superseded.
+Months are absent and the owner explicitly chose the available year. Preserve
+T4 2026, missing values, original bibliographic wording and source exclusions.
+FR/EN/AR interface copy remains working editorial text. No deployment is authorized.
+
+Owner follow-up: publication checkboxes apply immediately; topic counts respect
+selected years/query and year counts respect selected topics/query. Notices use
+reduced-motion-aware transitions. Frequent-search labels/links share alignment.
+
+Owner responsive follow-up: mobile/tablet search field and button are separate;
+frequent searches keep the most common themes fitting two compact lines. Key
+figures use the existing native horizontal figure-rail pattern at these widths,
+with all four figures, keyboard access and Arabic direction preserved.

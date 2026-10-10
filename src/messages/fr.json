@@ -564,24 +564,24 @@
     },
     "publications": {
       "featured-publications": {
-        "title": "Publications à découvrir",
-        "description": "À prévoir : les ressources prioritaires avec leur type, leur date, leur langue et leur mode d’accès."
+        "title": "Publications & rapports",
+        "description": "Explorez les publications scientifiques et les rapports de référence."
       },
       "find-publication": {
-        "title": "Rechercher une publication",
-        "description": "À prévoir : les critères de recherche par type, domaine, année, langue et auteur."
+        "title": "Rechercher",
+        "description": "Titre, auteur, mot-clé ou DOI"
       },
       "publication-catalogue": {
-        "title": "Catalogue des publications",
-        "description": "À prévoir : études, analyses, publications et ressources pédagogiques ; notices avec auteurs, date, langue, droits et usages documentés."
+        "title": "Publications scientifiques",
+        "description": "Titres et auteurs conservés dans leur langue d’origine. Corpus de référence : T4 2026."
       },
       "institutional-reports": {
-        "title": "Rapports institutionnels",
-        "description": "À prévoir : les rapports autorisés, regroupés par année avec leur version et leur périmètre."
+        "title": "Rapports & stratégies",
+        "description": "Documents externes regroupés dans le dossier de référence fourni. Le titre et la langue du fichier original sont conservés."
       },
       "use-cite-resources": {
         "title": "Utiliser et citer les ressources",
-        "description": "À prévoir : les règles de citation, les licences, les restrictions et les alternatives accessibles."
+        "description": "Consultez le DOI pour les conditions d’accès et de réutilisation propres à chaque publication."
       }
     },
     "media": {
@@ -1893,5 +1893,49 @@
   "VideoRailNavigation": {
     "label": "Navigation de la vidéothèque",
     "position": "Position {current} sur {total}"
+  },
+  "Publications": {
+    "label": "Publications & rapports",
+    "accent": "Quinze ans",
+    "title": "de savoir documenté.",
+    "description": "Explorez les publications scientifiques et les rapports de référence.",
+    "search": "Rechercher",
+    "placeholder": "Titre, auteur, mot-clé ou DOI",
+    "frequent": "Recherches fréquentes",
+    "articles": "Publications scientifiques",
+    "note": "Titres et auteurs conservés dans leur langue d’origine. Corpus de référence : T4 2026.",
+    "domain": "Thématique",
+    "year": "Année",
+    "apply": "Appliquer les filtres",
+    "reset": "Réinitialiser",
+    "count": "{count} publications recensées",
+    "read": "Lire la publication",
+    "noDoi": "DOI non renseigné",
+    "noAuthors": "Auteurs non renseignés",
+    "other": "Autres sujets",
+    "more": "Afficher plus",
+    "empty": "Aucune publication ne correspond à ces critères.",
+    "patents": "Brevets déposés",
+    "projects": "Projets soutenus",
+    "calls": "Appels à projets depuis 2011",
+    "publications": "Publications recensées",
+    "cite": "Utiliser et citer les ressources",
+    "rights": "Consultez le DOI pour les conditions d’accès et de réutilisation propres à chaque publication.",
+    "topics": {
+      "solar": "Solaire (PV + CSP)",
+      "materials": "Matériaux",
+      "thermal": "Thermique",
+      "water": "Eau & traitement",
+      "storage": "Stockage",
+      "grids": "Réseaux électriques",
+      "hydrogen": "Hydrogène",
+      "wind": "Éolien",
+      "buildings": "Bâtiments & efficacité",
+      "bioenergy": "Bioénergie",
+      "mobility": "Mobilité"
+    },
+    "filters": "Filtres des publications",
+    "noScript": "Sans JavaScript, utilisez les liens de thématique et d’année ci-dessous.",
+    "figures": "Chiffres clés"
   }
 }

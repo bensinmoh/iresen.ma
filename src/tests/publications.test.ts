@@ -3,7 +3,7 @@ import records from '@/data/publications.json'
 import metadata from '../../docs/publications-import.json'
 import { staticSearchDocuments } from '@/lib/search/catalog'
 
-describe('staged owner-selected publication database', () => {
+describe('owner-selected publication database', () => {
   it('contains the updated 1,199 selected records with no withdrawn IDs or private fields', () => {
     expect(records).toHaveLength(1199)
     expect(new Set(records.map((r) => r.id)).size).toBe(1199)
@@ -86,13 +86,23 @@ describe('staged owner-selected publication database', () => {
     expect(records.find((r) => r.id === 'PUB_056FC0C588DD')?.quartile).toBe('Q1')
   })
 
-  it('keeps staged records out of every public locale search projection', () => {
-    expect(metadata.publicationStatus).toBe('staged-not-public')
+  it('registers retained bibliographic records in all three locales without importing workbooks', () => {
     const documents = staticSearchDocuments()
+    const notices = documents.filter(
+      (d) => d.type === 'publication' && d.id.startsWith('publication:'),
+    )
+    expect(notices).toHaveLength(records.length * 3)
+    for (const locale of ['fr', 'en', 'ar']) {
+      for (const record of records) {
+        const notice = notices.find((d) => d.id === `publication:${record.id}:${locale}`)!
+        expect(notice.title).toBe(record.title)
+        expect(notice.url).toContain(`?publication=${record.id}#publication-${record.id}`)
+        if (record.authors) expect(notice.body).toContain(record.authors)
+      }
+    }
     const publicText = documents.map((d) => `${d.id} ${d.body} ${d.url}`).join('\n')
-    for (const record of records) expect(publicText).not.toContain(record.id)
     expect(publicText).not.toContain(metadata.sourceFilename)
     expect(publicText).not.toContain(metadata.reconciliation.sourceFilename)
-    for (const record of records.slice(0, 10)) expect(publicText).not.toContain(record.title)
+    for (const id of metadata.reconciliation.removedIds) expect(publicText).not.toContain(id)
   })
 })

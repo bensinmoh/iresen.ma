@@ -747,24 +747,24 @@
     },
     "publications": {
       "featured-publications": {
-        "title": "Featured publications",
-        "description": "Content to add: priority resources with their type, date, language and access method."
+        "title": "Publications & reports",
+        "description": "Explore scientific publications and reference reports."
       },
       "find-publication": {
-        "title": "Find a publication",
-        "description": "Content to add: search criteria by type, domain, year, language and author."
+        "title": "Search",
+        "description": "Title, author, keyword or DOI"
       },
       "publication-catalogue": {
-        "title": "Publication catalogue",
-        "description": "To prepare: studies, analysis, publications and learning resources; records with authors, date, language, rights and documented uses."
+        "title": "Scientific publications",
+        "description": "Titles and authors retain their original language. Reference corpus: Q4 2026."
       },
       "institutional-reports": {
-        "title": "Institutional reports",
-        "description": "Content to add: authorised reports grouped by year, with their version and scope."
+        "title": "Reports & strategies",
+        "description": "External documents from the supplied reference folder. Original file titles and languages are retained."
       },
       "use-cite-resources": {
-        "title": "Use and cite resources",
-        "description": "Content to add: citation rules, licences, restrictions and accessible alternatives."
+        "title": "Using and citing resources",
+        "description": "Follow the DOI for each publication’s access and reuse conditions."
       }
     },
     "media": {
@@ -1890,5 +1890,49 @@
   "VideoRailNavigation": {
     "label": "Video library navigation",
     "position": "Position {current} of {total}"
+  },
+  "Publications": {
+    "label": "Publications & reports",
+    "accent": "Fifteen years",
+    "title": "of documented knowledge.",
+    "description": "Explore scientific publications and reference reports.",
+    "search": "Search",
+    "placeholder": "Title, author, keyword or DOI",
+    "frequent": "Frequent searches",
+    "articles": "Scientific publications",
+    "note": "Titles and authors retain their original language. Reference corpus: Q4 2026.",
+    "domain": "Topic",
+    "year": "Year",
+    "apply": "Apply filters",
+    "reset": "Reset",
+    "count": "{count} publications recorded",
+    "read": "Read publication",
+    "noDoi": "DOI unavailable",
+    "noAuthors": "Authors unavailable",
+    "other": "Other topics",
+    "more": "Show more",
+    "empty": "No publications match these criteria.",
+    "patents": "Filed patents",
+    "projects": "Supported projects",
+    "calls": "Calls for projects since 2011",
+    "publications": "Recorded publications",
+    "cite": "Using and citing resources",
+    "rights": "Follow the DOI for each publication’s access and reuse conditions.",
+    "topics": {
+      "solar": "Solar (PV + CSP)",
+      "materials": "Materials",
+      "thermal": "Thermal energy",
+      "water": "Water & treatment",
+      "storage": "Storage",
+      "grids": "Power grids",
+      "hydrogen": "Hydrogen",
+      "wind": "Wind energy",
+      "buildings": "Buildings & efficiency",
+      "bioenergy": "Bioenergy",
+      "mobility": "Mobility"
+    },
+    "filters": "Publication filters",
+    "noScript": "Without JavaScript, use the topic and year links below.",
+    "figures": "Key figures"
   }
 }
