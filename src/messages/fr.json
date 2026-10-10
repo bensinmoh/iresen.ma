@@ -586,24 +586,32 @@
     },
     "media": {
       "featured-media": {
-        "title": "Médias à découvrir",
-        "description": "À prévoir : une sélection de médias autorisés avec leur sujet, leur date et leurs liens associés."
+        "title": "Explorer la transition énergétique en images et en ressources.",
+        "description": "Photographies, films et documents de référence pour découvrir les travaux, les plateformes et les acteurs de la transition énergétique."
       },
       "find-media": {
-        "title": "Rechercher un média",
-        "description": "À prévoir : les critères de recherche par format, thème, événement et plateforme."
+        "title": "Médiathèque",
+        "description": "Photographies, films et documents de référence pour découvrir les travaux, les plateformes et les acteurs de la transition énergétique."
       },
       "collections-content": {
-        "title": "Collections et contenus",
-        "description": "À prévoir : les photographies, albums, vidéos, infographies et contenus pédagogiques publiables."
+        "title": "Photothèque",
+        "description": "Plateformes Recherche & essais Projets Événements Institution"
       },
       "press-resources": {
-        "title": "Ressources pour les médias",
-        "description": "À prévoir : le kit institutionnel, les logos et photos autorisés, leurs règles d’emploi et le contact presse."
+        "title": "Liens utiles",
+        "description": "Accéder aux sites des institutions de l’écosystème énergétique marocain."
       },
       "credits-reuse": {
-        "title": "Crédits et réutilisation",
-        "description": "À prévoir : les crédits, les droits, les restrictions et les alternatives accessibles de chaque média."
+        "title": "Crédits & réutilisation",
+        "description": "Sélection publiée à la demande d’IRESEN. La disponibilité d’un fichier ne vaut pas licence de réutilisation : pour toute utilisation éditoriale, demandez les crédits et conditions applicables."
+      },
+      "videos": {
+        "title": "Vidéothèque",
+        "description": "Films en version originale. La lecture démarre uniquement à votre demande."
+      },
+      "reports": {
+        "title": "Rapports & stratégies",
+        "description": "Documents externes regroupés dans le dossier de référence fourni. Le titre et la langue du fichier original sont conservés."
       }
     },
     "opportunities": {
@@ -1832,5 +1840,46 @@
     "eventPlaceholder": "Événement à venir",
     "pendingContent": "Contenu à compléter",
     "placeholderDescription": "Les informations seront ajoutées prochainement."
+  },
+  "MediaLibrary": {
+    "label": "Médiathèque",
+    "intro": "Explorer la transition énergétique en images et en ressources.",
+    "description": "Photographies, films et documents de référence pour découvrir les travaux, les plateformes et les acteurs de la transition énergétique.",
+    "photos": "Photothèque",
+    "videos": "Vidéothèque",
+    "reports": "Rapports & stratégies",
+    "links": "Liens utiles",
+    "all": "Toutes les photos",
+    "open": "Agrandir",
+    "download": "Télécharger l’image",
+    "close": "Fermer",
+    "previous": "Photo précédente",
+    "next": "Photo suivante",
+    "source": "Consulter le document",
+    "sourceNote": "Documents externes regroupés dans le dossier de référence fourni. Le titre et la langue du fichier original sont conservés.",
+    "videoNote": "Films en version originale. La lecture démarre uniquement à votre demande.",
+    "empty": "Aucune vidéo publiée dans cette langue pour le moment.",
+    "credits": "Crédits & réutilisation",
+    "rights": "Sélection publiée à la demande d’IRESEN. La disponibilité d’un fichier ne vaut pas licence de réutilisation : pour toute utilisation éditoriale, demandez les crédits et conditions applicables.",
+    "contact": "Demander les conditions de réutilisation",
+    "found": "photos",
+    "categories": {
+      "platforms": "Plateformes",
+      "research": "Recherche & essais",
+      "projects": "Projets",
+      "events": "Événements",
+      "institution": "Institution"
+    },
+    "languages": {
+      "fr": "Français",
+      "en": "Anglais"
+    },
+    "linkNote": "Accéder aux sites des institutions de l’écosystème énergétique marocain.",
+    "unavailable": "La vidéothèque est temporairement indisponible. Réessayez plus tard.",
+    "previousVideos": "Vidéos précédentes",
+    "nextVideos": "Vidéos suivantes",
+    "heroTitle": "Médiathèque — illustration de ressources scientifiques",
+    "heroDescription": "Illustration générée : rapports, tirages photographiques sur le solaire et le laboratoire, appareil photo sur une table. Visuel évocateur de la médiathèque, sans représenter un lieu réel d’IRESEN.",
+    "downloadVideo": "Télécharger la vidéo"
   }
 }

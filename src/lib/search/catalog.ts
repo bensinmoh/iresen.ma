@@ -1,3 +1,4 @@
+import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { selectedNews, newsEvents, newsImages, newsSocialLinks } from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
@@ -80,6 +81,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'library-hero',
+    url: '/images/media-library/media-library-hero.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].MediaLibrary.heroTitle,
+          description: messages[locale].MediaLibrary.heroDescription,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
   ...['hero', 'learning', 'exchange'].map((id) => ({
     id: `news-reference-${id}`,
     url: `/images/news/${id}.webp`,
@@ -134,6 +149,20 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         ]),
       ) as PublicAssetReference['text'],
     })),
+  ...mediaPhotos.map((photo) => ({
+    id: `library-photo-${photo.id}`,
+    url: photo.src,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: photo.title[locale],
+          description: `${messages[locale].MediaLibrary.categories[photo.category as keyof typeof messages.fr.MediaLibrary.categories]} — ${photo.title[locale]}. IRESEN. ${messages[locale].MediaLibrary.rights}`,
+        },
+      ]),
+    ),
+  })),
   ...(['industry', 'research', 'institutions', 'partners'] as const).map((id, index) => ({
     id: `collaborate-audience-${id}`,
     url: `/images/collaborate/${id}.webp`,
@@ -336,35 +365,37 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   })),
-  ...Object.entries(heroImages).map(([id, image]) => {
-    // Contact has a dedicated headquarters photograph; its former illustration is
-    // still served, but must not be described as the current contact page image.
-    const relatedPages = pageIds.filter(
-      (pageId) => pageId !== 'contact' && heroes[pageId].photo === id,
-    )
-    return {
-      id: `hero-${id}`,
-      url: image.src,
-      type: 'media' as const,
-      text: Object.fromEntries(
-        contentLocales.map((locale) => [
-          locale,
-          {
-            title:
-              id === 'wind-detail'
-                ? assetLabels[locale].wind
-                : `${assetLabels[locale].image} — ${relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ')}`,
-            description: [
-              ...(id.startsWith('solar-') ? [assetLabels[locale].solar] : []),
-              ...(id === 'solar-field' ? [assetLabels[locale].infrastructure] : []),
-              ...(id === 'wind-detail' ? [assetLabels[locale].wind] : []),
-              ...relatedPages.map((pageId) => messages[locale].Hero.descriptions[pageId]),
-            ].join(' '),
-          },
-        ]),
-      ) as PublicAssetReference['text'],
-    }
-  }),
+  ...Object.entries(heroImages)
+    .filter(([id]) => id !== 'media-library')
+    .map(([id, image]) => {
+      // Contact has a dedicated headquarters photograph; its former illustration is
+      // still served, but must not be described as the current contact page image.
+      const relatedPages = pageIds.filter(
+        (pageId) => pageId !== 'contact' && heroes[pageId].photo === id,
+      )
+      return {
+        id: `hero-${id}`,
+        url: image.src,
+        type: 'media' as const,
+        text: Object.fromEntries(
+          contentLocales.map((locale) => [
+            locale,
+            {
+              title:
+                id === 'wind-detail'
+                  ? assetLabels[locale].wind
+                  : `${assetLabels[locale].image} — ${relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ')}`,
+              description: [
+                ...(id.startsWith('solar-') ? [assetLabels[locale].solar] : []),
+                ...(id === 'solar-field' ? [assetLabels[locale].infrastructure] : []),
+                ...(id === 'wind-detail' ? [assetLabels[locale].wind] : []),
+                ...relatedPages.map((pageId) => messages[locale].Hero.descriptions[pageId]),
+              ].join(' '),
+            },
+          ]),
+        ) as PublicAssetReference['text'],
+      }
+    }),
   {
     id: 'contact-venue',
     url: '/images/contact/contact-background-venue.jpg',
@@ -841,6 +872,24 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         ...(post.publishedAt ? { publishedAt: post.publishedAt } : {}),
       })
     }
+    documents.push(
+      ...mediaReports.map((report) => ({
+        id: `report:library:${report.id}:${locale}`,
+        locale,
+        title: report.title,
+        body: `${report.description[locale]} MTEDD Ministère de la Transition Énergétique et du Développement Durable PDF ${report.language === 'fr' ? 'CDN NDC Contribution déterminée au niveau national Nationally Determined Contribution' : ''}`,
+        url: pageHref('media', locale, `report-${report.id}`),
+        type: 'report' as const,
+      })),
+      ...mediaLinks.map((link) => ({
+        id: `section:library:link-${link.id}:${locale}`,
+        locale,
+        title: link.name,
+        body: `${link.title} ${catalog.MediaLibrary.linkNote}`,
+        url: pageHref('media', locale, `link-${link.id}`),
+        type: 'section' as const,
+      })),
+    )
     documents.push({
       id: `page:news-listing:${locale}`,
       locale,

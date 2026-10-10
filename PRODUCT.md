@@ -1,5 +1,15 @@
 # IRESEN product context
 
+## Médiathèque — 2026-10-10
+
+The media route is a resource directory for photos, videos, Ministry reports/strategies and useful institutional links. It includes the owner-supplied CEO portrait and only approved public CMS videos. Original document/video titles remain; localized descriptions are working copy. See [scope](docs/media-library.md).
+
+The owner’s refinement adds an alternating photo mosaic with Samir first, a compact
+horizontal rail of full-height video thumbnails opening a native player dialog, animated section links, a centered icon-operated viewer
+and a shorter generated-photo hero without the missions band. Reduced motion is
+respected; the generated still-life is identified as illustrative in search and
+its provenance manifest.
+
 ## Careers and opportunities — 2026-10-10
 
 The commissioned careers page and opportunity database are described in

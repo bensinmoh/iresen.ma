@@ -1,3 +1,4 @@
+import { MediaLibraryPage } from '@/components/media/MediaLibraryPage'
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
@@ -116,6 +117,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
     const topic = typeof subject === 'string' && isContactTopic(subject) ? subject : undefined
     return <ContactPage locale={locale} initialTopic={topic} initialPatent={findPatent(patent)} />
   }
+  if (pageId === 'media') return <MediaLibraryPage locale={locale} />
   if (pageId === 'opportunities') return <CareersPage locale={locale} />
   if (pageId === 'transfer') return <TransferPage locale={locale} />
   if (pageId === 'workWithUs') return <EngagementPage pageId={pageId} locale={locale} />

@@ -100,7 +100,11 @@ for (const locale of locales) {
       ).toBeGreaterThan(0)
       const bounds = await hero.boundingBox()
       expect(bounds!.y).toBe(0)
-      expect(Math.abs(bounds!.height - 900), id).toBeLessThanOrEqual(2)
+      if (id === 'media') {
+        expect(bounds!.height).toBeLessThan(900)
+        expect(bounds!.height).toBeGreaterThan(600)
+        await expect(hero.locator('.hero-pathways')).toHaveCount(0)
+      } else expect(Math.abs(bounds!.height - 900), id).toBeLessThanOrEqual(2)
       await hero.locator('.hero-primary').click()
       const target =
         id === 'transfer'

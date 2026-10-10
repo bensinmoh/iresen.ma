@@ -1,6 +1,12 @@
 // Native photographic assets and their full-height mobile crops.
 // Provenance, prompts, pixel sizes and hashes: docs/hero-assets.json.
 export const heroImages = {
+  'media-library': {
+    src: '/images/media-library/media-library-hero.webp',
+    width: 1536,
+    height: 1024,
+    mobile: { src: '/images/media-library/media-library-hero.webp', width: 1536, height: 1024 },
+  },
   'careers-onboarding': {
     src: '/images/heroes/careers-onboarding-a0935b018aa6.webp',
     width: 1536,

@@ -1,5 +1,15 @@
 # IRESEN website
 
+## Médiathèque — 2026-10-10
+
+The existing media page now presents twenty selected supplied photos, eight owner-authorized public CMS videos, ten Ministry PDF source links and five official institutional destinations. See [scope and provenance](docs/media-library.md). No deployment is authorized.
+
+The owner’s refinement adds an alternating photo mosaic with Samir first, a compact
+horizontal rail of full-height video thumbnails opening a native player dialog, animated section links, a centered icon-operated viewer
+and a shorter generated-photo hero without the missions band. Reduced motion is
+respected; the generated still-life is identified as illustrative in search and
+its provenance manifest.
+
 ## Careers page and opportunity database — 2026-10-10
 
 The [careers page](docs/careers.md) now follows the supplied Figma composition.

@@ -17,6 +17,7 @@ import {
 import { searchTypes, type SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
+import libraryVideos from '@/data/media-videos.json'
 import { homeMissions, legacyMissionAnchors, homeCooperationAnchor } from '@/lib/home-missions'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, pageIds } from '@/lib/site'
@@ -287,7 +288,12 @@ describe('explicit public search catalog', () => {
 
   it('references all served meaningful public files and keeps responsive crops under their original result', () => {
     const references = new Set(publicAssetReferences.map(({ url }) => url))
-    const derivatives = new Set<string>(Object.values(heroImages).map(({ mobile }) => mobile.src))
+    const derivatives = new Set<string>([
+      ...Object.values(heroImages)
+        .filter(({ src, mobile }) => src !== mobile.src)
+        .map(({ mobile }) => mobile.src),
+      ...libraryVideos.map(({ poster }) => poster),
+    ])
     const publicRoot = path.resolve(process.cwd(), 'public')
     const publicFiles = readdirSync(publicRoot, { recursive: true, withFileTypes: true })
       .filter((entry) => entry.isFile() && !entry.name.startsWith('.'))

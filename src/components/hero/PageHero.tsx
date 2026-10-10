@@ -18,7 +18,7 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
 
   return (
     <HeroViewport
-      className={`page-hero hero--${definition.layout}${pageId === 'home' ? ' page-hero--home' : ''}`}
+      className={`page-hero hero--${definition.layout}${pageId === 'home' ? ' page-hero--home' : pageId === 'media' ? ' page-hero--media' : ''}`}
     >
       <div className="hero-scene">
         <div className="hero-media" aria-hidden="true">
@@ -96,43 +96,45 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
           </a>
         </div>
       </div>
-      <div className="hero-highlights" id={pageId === 'home' ? 'figures' : undefined}>
-        {pageId === 'home' ? (
-          <dl
-            className="container hero-figures horizontal-scroll"
-            aria-label={t('figuresLabel')}
-            tabIndex={0}
-          >
-            {homeFigures.map(({ id, value }) => (
-              <div className="key-figure" key={id}>
-                <dt className="key-figure-label">{t(`figures.${id}`)}</dt>
-                <dd className="key-figure-value">
-                  <bdi dir="ltr">{value}</bdi>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        ) : (
-          <div className="container hero-highlights-inner">
-            {pageId === 'institute' && (
-              <p className="key-figure hero-founding">
-                <strong className="key-figure-value">
-                  <bdi>2011</bdi>
-                </strong>
-                <span className="key-figure-label">{t('founded')}</span>
-              </p>
-            )}
-            <nav aria-label={t('pathways')} className="hero-pathways">
-              {homeMissions.map(({ id, pageId, destinationAnchor }) => (
-                <a key={id} href={pageHref(pageId, locale, destinationAnchor)}>
-                  <span>{t(`domains.${id}`)}</span>
-                  <NavigationIcon name="arrow" />
-                </a>
+      {pageId !== 'media' && (
+        <div className="hero-highlights" id={pageId === 'home' ? 'figures' : undefined}>
+          {pageId === 'home' ? (
+            <dl
+              className="container hero-figures horizontal-scroll"
+              aria-label={t('figuresLabel')}
+              tabIndex={0}
+            >
+              {homeFigures.map(({ id, value }) => (
+                <div className="key-figure" key={id}>
+                  <dt className="key-figure-label">{t(`figures.${id}`)}</dt>
+                  <dd className="key-figure-value">
+                    <bdi dir="ltr">{value}</bdi>
+                  </dd>
+                </div>
               ))}
-            </nav>
-          </div>
-        )}
-      </div>
+            </dl>
+          ) : (
+            <div className="container hero-highlights-inner">
+              {pageId === 'institute' && (
+                <p className="key-figure hero-founding">
+                  <strong className="key-figure-value">
+                    <bdi>2011</bdi>
+                  </strong>
+                  <span className="key-figure-label">{t('founded')}</span>
+                </p>
+              )}
+              <nav aria-label={t('pathways')} className="hero-pathways">
+                {homeMissions.map(({ id, pageId, destinationAnchor }) => (
+                  <a key={id} href={pageHref(pageId, locale, destinationAnchor)}>
+                    <span>{t(`domains.${id}`)}</span>
+                    <NavigationIcon name="arrow" />
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+        </div>
+      )}
     </HeroViewport>
   )
 }
