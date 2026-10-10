@@ -3042,6 +3042,7 @@ existing CMS uploads, accounts and unrelated changes are preserved. FR/EN/AR
 copy remains editorial working text. No deployment, DNS or visibility change.
 Final glossary/search sanity review remains due after complete site content;
 remote CI and merge are recorded in the task PR and Git history.
+
 ## Horizontal scroll indicator documentation — 2026-10-10
 
 Extracted six local frames from each of four supplied recordings; visually compared

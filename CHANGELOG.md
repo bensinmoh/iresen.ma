@@ -834,6 +834,7 @@ pending event cards are explicitly labelled and have no invented content,
 dates or signup links. The highlight uses a blurred photo echo, and its five
 secondary entries align with its height. Both views use the shared gradient
 header and consistent SVG action-arrow spacing. See [scope](docs/news-events.md).
+
 ## 2026-10-10 — Horizontal scroll indicator reference
 
 - Analyzed four owner-supplied recordings and recorded pill/fill-bar variants,
