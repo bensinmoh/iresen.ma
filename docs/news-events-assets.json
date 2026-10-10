@@ -64,6 +64,38 @@
       "servedPath": "/images/news/majan.webp",
       "servedSha256": "dc741e5b9fbef52fb763b7f4abdb036cf3786dc64de83d123e048c3386b90940",
       "transformation": "Rotate according to source metadata; resize without enlargement to 1920px hero or 1440px other; WebP quality 85."
+    },
+    {
+      "id": "montpellier",
+      "source": "IRESEN LinkedIn activity 7504120625519583232",
+      "sourceSha256": "83c49658944982b5746ddd1a8e7a1481482943b053cf35076128d1890b9cde80",
+      "servedPath": "/images/news/montpellier.webp",
+      "servedSha256": "aadee3e6f45f31fc399f60f73d19052974af741a7a70180f84134fe0bd2ef997",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1440px maximum; WebP quality 85."
+    },
+    {
+      "id": "cop31",
+      "source": "Owner-supplied COP31 Antalya reference visual",
+      "sourceSha256": "2e798ae9930f47c0faf22387941b9a67e02c576ce6ad46b1c427255b996904af",
+      "servedPath": "/images/news/cop31.webp",
+      "servedSha256": "e95ab462ac28458bfad3dbdbaf2a38127fc01e31aa01c1c5e2df622b74a43199",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1440px maximum; WebP quality 85."
+    },
+    {
+      "id": "irsecx",
+      "source": "Owner-supplied IRSEC’X 2025 photograph",
+      "sourceSha256": "ca67ca3de7153b9bcf9f789339b8c7bb0a2c40c67c73b9eb6037902454a81d76",
+      "servedPath": "/images/news/irsecx.webp",
+      "servedSha256": "941311a51fc3bba92508c8c5668f47a969c4262c1c452255b8e89717a5188bcd",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1440px maximum; WebP quality 85."
+    },
+    {
+      "id": "worldptx",
+      "source": "IRESEN announcement of World Power-to-X Summit 2027",
+      "sourceSha256": "77d68f5db549737baf9b4c8d5281ae16e407925beed75ee15c8d706fcc93a7e6",
+      "servedPath": "/images/news/worldptx.webp",
+      "servedSha256": "f8e8e2dc3e58cdf8c520dea75c7ff003aa1fed65e0eeff5a5e6f15d3845e054d",
+      "transformation": "Rotate according to source metadata; resize without enlargement to 1440px maximum; WebP quality 85."
     }
   ]
 }

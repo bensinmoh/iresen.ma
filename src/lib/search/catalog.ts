@@ -1,7 +1,13 @@
 import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
-import { selectedNews, newsEvents, newsImages, newsSocialLinks } from '@/lib/news-events'
+import {
+  selectedNews,
+  newsEvents,
+  newsImages,
+  eventImages,
+  newsSocialLinks,
+} from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
 import { engagementSearchText } from '@/lib/engagement'
@@ -140,7 +146,9 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title:
-            messages[locale].HomeNews.posts[id as keyof typeof messages.fr.HomeNews.posts].title,
+            messages[locale].NewsEvents.newsTitles[
+              id as keyof typeof messages.fr.NewsEvents.newsTitles
+            ],
           description:
             messages[locale].NewsEvents.photos[
               image.altKey as keyof typeof messages.fr.NewsEvents.photos
@@ -149,6 +157,26 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   })),
+  ...Object.entries(eventImages)
+    .filter(
+      ([, image]) => !Object.values(newsImages).some((newsImage) => newsImage.src === image.src),
+    )
+    .map(([id, image]) => ({
+      id: `news-event-image-${id}`,
+      url: image.src,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => [
+          locale,
+          {
+            title:
+              messages[locale].NewsEvents.events[id as keyof typeof messages.fr.NewsEvents.events]
+                .name,
+            description: messages[locale].NewsEvents.photos[image.altKey],
+          },
+        ]),
+      ) as PublicAssetReference['text'],
+    })),
   ...newsSocialLinks
     .filter((social) => ['facebook', 'instagram', 'researchgate'].includes(social.id))
     .map((social) => ({
@@ -947,11 +975,11 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       type: 'page',
     })
     for (const post of selectedNews) {
-      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
+      const key = post.id.split(':').at(-1)! as keyof typeof catalog.NewsEvents.newsTitles
       documents.push({
         id: `section:news:linkedin:${post.id}:${locale}`,
         locale,
-        title: catalog.HomeNews.posts[key].title,
+        title: catalog.NewsEvents.newsTitles[key],
         body: `IRESEN LinkedIn ${catalog.NewsEvents.summaries[key]}`,
         url: pageHref('news', locale, `news-${key}`),
         type: 'news',

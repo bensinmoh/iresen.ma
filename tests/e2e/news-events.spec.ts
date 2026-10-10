@@ -12,8 +12,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(screen).toBeVisible()
     await expect(screen.locator('h1')).toHaveCount(1)
     await expect(screen.locator('#news article')).toHaveCount(6)
-    await expect(screen.locator('#news article img:not([aria-hidden])')).toHaveCount(5)
-    await expect(screen.locator('#events article')).toHaveCount(6)
+    await expect(screen.locator('#news article img:not([aria-hidden])')).toHaveCount(6)
+    await expect(screen.locator('#events article')).toHaveCount(newsEvents.length)
     const eventCards = screen.locator('#events article')
     const heights = await eventCards.evaluateAll((cards) =>
       cards.map((card) => card.getBoundingClientRect().height),
@@ -21,10 +21,10 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     expect(Math.max(...heights) - Math.min(...heights)).toBeLessThan(2)
     const track = screen.locator('#events [role="region"]')
     expect(await track.evaluate((el) => el.scrollWidth > el.clientWidth)).toBe(true)
-    await expect(screen.locator('[data-news-placeholder]')).toHaveCount(1)
-    await expect(screen.locator('[data-event-placeholder]')).toHaveCount(3)
+    await expect(screen.locator('[data-news-placeholder]')).toHaveCount(0)
+    await expect(screen.locator('[data-event-placeholder]')).toHaveCount(0)
     const highlight = await screen.locator('#news article').first().boundingBox()
-    const lastSecondary = await screen.locator('[data-news-placeholder]').boundingBox()
+    const lastSecondary = await screen.locator('#news article').last().boundingBox()
     expect(
       Math.abs(highlight!.y + highlight!.height - (lastSecondary!.y + lastSecondary!.height)),
     ).toBeLessThan(2)
@@ -37,12 +37,18 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(screen.locator('#event-cop31')).toContainText('MENALINKS')
     await expect(screen.locator('#event-cop31')).toContainText('LEAP-SE')
     await expect(screen.locator('#event-irsecx a')).toHaveAttribute('href', 'https://irsecx.ma/')
+    await expect(screen.locator('#news-7504120625519583232 a').first()).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/feed/update/urn:li:activity:7504120625519583232/',
+    )
+    await expect(screen.locator('#event-dii')).toContainText('2026')
+    await expect(screen.locator('#event-worldptx')).toContainText('2027')
     const heroText = await screen.locator('h1').innerText()
     await screen.locator(`a[href="${newsListingHref(locale)}"]`).click()
     await expect(page).toHaveURL(new RegExp(`${encodeURI(newsListingHref(locale))}$`))
     const listing = page.locator('[data-news-events-page="listing"]')
     await expect(listing.locator('h1')).toHaveText(heroText, { useInnerText: true })
-    await expect(listing.locator('#news article')).toHaveCount(5)
+    await expect(listing.locator('#news article')).toHaveCount(6)
     await expect(listing.locator('#events')).toHaveCount(0)
     await expect(listing.locator('#follow-iresen')).toHaveCount(0)
     for (const target of ['fr', 'en', 'ar'] as const) {
@@ -64,6 +70,21 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         }),
       ]),
     )
+    for (const [query, anchor] of [
+      ['Cap sur le Maroc', 'news-7504120625519583232'],
+      ['Dii Desert Energy Leadership Summit', 'event-dii'],
+      ['World Power-to-X Summit 2027', 'event-worldptx'],
+    ]) {
+      const discovery = await page.request.get(
+        `/api/search?locale=${locale}&q=${encodeURIComponent(query)}`,
+      )
+      expect(discovery.ok()).toBe(true)
+      expect((await discovery.json()).items).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ url: pageHref('news', locale, anchor), locale }),
+        ]),
+      )
+    }
   })
   test(`${locale}: responsive containment, accessible disclosures and social links`, async ({
     page,
@@ -94,6 +115,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       .analyze()
     expect(scan.violations).toEqual([])
     const rail = page.locator('#events [role="region"]')
+    await rail.evaluate((el) => el.scrollTo({ left: 0, behavior: 'instant' }))
+    await expect.poll(() => rail.evaluate((el) => Math.abs(el.scrollLeft))).toBe(0)
     await rail.focus()
     const before = await rail.evaluate((el) => el.scrollLeft)
     await page.keyboard.press(locale === 'ar' ? 'ArrowLeft' : 'ArrowRight')
@@ -139,7 +162,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         .evaluate((el) => getComputedStyle(el).display),
     ).toBe('none')
     const pills = navigation.getByRole('button')
-    await expect(pills).toHaveCount(6)
+    await expect(pills).toHaveCount(newsEvents.length)
     await expect(pills.first()).toHaveAttribute('aria-current', 'true')
     await pills.last().click()
     await expect(pills.last()).toHaveAttribute('aria-current', 'true')
@@ -215,7 +238,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       )
       .toBe('fits')
     await expect(navigation).toBeVisible()
-    await expect(pills).toHaveCount(6)
+    await expect(pills).toHaveCount(newsEvents.length)
     const scan = await new AxeBuilder({ page })
       .include('#events')
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
@@ -231,7 +254,7 @@ test('events retain native scrolling without JavaScript', async ({ browser }) =>
   })
   const page = await context.newPage()
   await page.goto(pageHref('news', 'fr'))
-  await expect(page.locator('#events article')).toHaveCount(6)
+  await expect(page.locator('#events article')).toHaveCount(newsEvents.length)
   await expect(page.locator('[data-event-navigation]')).toHaveCount(0)
   expect(
     await page.locator('[data-event-rail]').evaluate((el) => el.scrollWidth > el.clientWidth),
