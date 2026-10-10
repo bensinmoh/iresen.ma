@@ -1,4 +1,3 @@
-import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
 import {
@@ -89,20 +88,6 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
-  {
-    id: 'publications-hero',
-    url: '/images/publications/hero.webp',
-    type: 'media',
-    text: Object.fromEntries(
-      contentLocales.map((locale) => [
-        locale,
-        {
-          title: messages[locale].Publications.label,
-          description: messages[locale].Publications.description,
-        },
-      ]),
-    ) as PublicAssetReference['text'],
-  },
   {
     id: 'library-hero',
     url: '/images/media-library/media-library-hero.webp',
@@ -628,7 +613,6 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.summaries),
           ...engagementSearchText(catalog.NewsEvents.events),
         )
-      if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')
         body.push(
@@ -880,27 +864,6 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       url: pageHref('transfer', locale, 'ismart-example'),
       type: 'section',
     })
-    for (const publication of publications) {
-      documents.push({
-        id: `publication:${publication.id}:${locale}`,
-        locale,
-        title: publication.title,
-        body: [
-          catalog.Publications.articles,
-          publication.authors,
-          publication.year,
-          publication.doiUrl,
-          publication.theme,
-          publication.journal,
-          publication.type,
-          ...titleTopics(publication.title).map((id) => catalog.Publications.topics[id]),
-        ]
-          .filter(Boolean)
-          .join(' '),
-        url: `${pageHref('publications', locale)}?publication=${encodeURIComponent(publication.id)}#${publicationAnchor(publication.id)}`,
-        type: 'publication',
-      })
-    }
     for (const patent of patents) {
       documents.push({
         id: `section:transfer:patent-${patent.reference}:${locale}`,
@@ -925,7 +888,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
     }
     // Owner-requested localized editorial headings; no full-post translation fallback.
     for (const post of homeNewsPosts) {
-      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
+      const key = post.id.split(':').at(-1)! as keyof typeof catalog.NewsEvents.newsTitles
       const title = catalog.HomeNews.posts[key]?.title
       if (!title?.trim()) continue
       documents.push({
@@ -975,7 +938,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       type: 'page',
     })
     for (const post of selectedNews) {
-      const key = post.id.split(':').at(-1)! as keyof typeof catalog.HomeNews.posts
+      const key = post.id.split(':').at(-1)! as keyof typeof catalog.NewsEvents.newsTitles
       documents.push({
         id: `section:news:linkedin:${post.id}:${locale}`,
         locale,

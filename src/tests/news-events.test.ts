@@ -22,7 +22,7 @@ describe('combined news/events destinations', () => {
         'MENALINKS',
       )
       expect(docs.some((doc) => doc.id === `page:events:${locale}`)).toBe(false)
-      expect(docs.filter((doc) => doc.id.startsWith('section:news:linkedin:'))).toHaveLength(5)
+      expect(docs.filter((doc) => doc.id.startsWith('section:news:linkedin:'))).toHaveLength(6)
     })
   }
 })
