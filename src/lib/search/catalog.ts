@@ -27,7 +27,7 @@ const messages = { fr, en, ar }
 export type PublicAssetReference = {
   id: string
   url: string
-  type: 'document' | 'media'
+  type: 'document' | 'media' | 'publication' | 'report'
   /** All translations are explicit; no language fallback and no directory crawling. */
   text: Partial<Record<SearchLocale, { title: string; description: string }>>
 }
@@ -674,7 +674,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           .filter(Boolean)
           .join(' '),
         url: pageHref('transfer', locale, patentAnchor(patent.reference)),
-        type: 'section',
+        type: 'patent',
       })
     }
     // Owner-requested localized editorial headings; no full-post translation fallback.

@@ -33,7 +33,7 @@ export async function searchResultPreviews(items: SearchItem[], locale: SearchLo
   const mediaIds: number[] = []
   const newsIds: number[] = []
   for (const item of eligible) {
-    if (!['media', 'document', 'news'].includes(item.type)) continue
+    if (!['media', 'document', 'publication', 'report', 'news'].includes(item.type)) continue
     if (item.type === 'news') previews[item.id] = { kind: 'news' }
     const asset = publicAssetReferences.find(
       (asset) => asset.url === item.url && asset.text[locale],

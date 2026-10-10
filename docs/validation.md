@@ -2769,17 +2769,6 @@ backgrounds remain transparent over the softened, lower original gradient. Ignor
 are in `.cache/platforms-review/`. Formatting, whitespace and the mechanical
 design scan pass. Remote CI and merge status are recorded on the PR. No deployment.
 
-## Patent title localization — 2026-10-10
-
-All 59 titles now include FR/EN/AR; card language/direction, filtering, indexed
-search titles/body and prefilled contact drafts use the selected locale. Lint,
-typecheck, 121 unit tests, production build and all 8 patent Chromium journeys
-pass. Tests verify every localized title is searchable, names/acronyms remain,
-locale-specific card/contact text, canonical anchors, responsive containment,
-200% text, no JavaScript and scoped accessibility. English desktop and Arabic
-mobile patent renderings were inspected. The local public search catalog was
-rebuilt; no deployment or CMS publication. Final translations remain working copy.
-
 The owner's hover follow-ups remove the solid title backing, slow transforms to
 800ms and fades to 700ms, and request a lower-edge gradient from exactly 50%
 opacity to 0% at the title top. The gradient height follows the real localized
@@ -2795,3 +2784,34 @@ opacity, with a 45% stop at 55% of the fade and 0% at the title top. The title
 remains transparent and the gradient stays seamless and above the zoomed photo.
 Lint, production build and all seven browser journeys pass after this adjustment;
 the updated FR hover capture was inspected. No other scope change is included.
+
+## Patent title localization — 2026-10-10
+
+All 59 titles now include FR/EN/AR; card language/direction, filtering, indexed
+search titles/body and prefilled contact drafts use the selected locale. Lint,
+typecheck, 121 unit tests, production build and all 8 patent Chromium journeys
+pass. Tests verify every localized title is searchable, names/acronyms remain,
+locale-specific card/contact text, canonical anchors, responsive containment,
+200% text, no JavaScript and scoped accessibility. English desktop and Arabic
+mobile patent renderings were inspected. The local public search catalog was
+rebuilt; no deployment or CMS publication. Final translations remain working copy.
+
+## Semantic search resource types — 2026-10-10
+
+Added explicit publication, report, patent and project types throughout validation,
+filters, badges, suggestions, facets and the database constraint. All 59 patents
+retain their existing identities/anchors with type `patent`; overview pages remain
+pages. Staged publications and future projects/reports remain excluded. No new
+content, CMS collection, route or deployment is introduced.
+
+Local migration and search rebuild pass. Lint, typecheck, formatting, 122 unit
+tests, 24 PostgreSQL integration tests, production build and 24 search Chromium
+journeys pass. Tests cover real patent title discovery and disjoint page/section
+filters in FR/EN/AR; synthetic publication/report/project facets are removed after
+testing. Browser coverage includes localized filters/badges, destinations,
+withdrawal, header suggestions, URL history, no JavaScript, enlarged text and axe.
+An initial integration queue timing failure passed on rerun. The browser suite
+uses the installed Chrome executable and a separate production server on port
+3015: rebuilding while reusing the pre-existing server exposed stale JavaScript
+chunks, resolved by starting this distinct server. Remote CI/merge is recorded
+on the focused PR.

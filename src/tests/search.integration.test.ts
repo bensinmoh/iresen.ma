@@ -141,6 +141,65 @@ integration('public website search (PostgreSQL)', () => {
     return result
   }
 
+  it('returns patent title matches as patents in every locale, with disjoint page/section filters', async () => {
+    const documents = staticSearchDocuments()
+    for (const locale of ['fr', 'en', 'ar'] as const) {
+      const patent = documents.find((item) => item.type === 'patent' && item.locale === locale)!
+      const result = await query({ query: patent.title, locale, type: 'patent' })
+      expect(result.items).toContainEqual(
+        expect.objectContaining({ id: patent.id, type: 'patent', url: patent.url }),
+      )
+      expect(result.items.every((item) => item.type === 'patent')).toBe(true)
+      expect(result.facets.patent).toBeGreaterThan(0)
+      for (const type of ['page', 'section'] as const) {
+        const filtered = await query({ query: patent.title, locale, type })
+        expect(filtered.items.some((item) => item.id === patent.id)).toBe(false)
+      }
+      for (const type of ['publication', 'report', 'project'] as const) {
+        const filtered = await query({ query: patent.title, locale, type })
+        expect(filtered.total).toBe(0)
+      }
+    }
+  })
+
+  it('retrieves and filters explicitly typed publication, report and project projections without name inference', async () => {
+    const revision = await initializeSearchCatalog()
+    const marker = term()
+    const fixtureIds: string[] = []
+    try {
+      for (const locale of ['fr', 'en', 'ar'] as const) {
+        for (const type of ['publication', 'report', 'project'] as const) {
+          const id = `search-test:${marker}:${type}:${locale}`
+          fixtureIds.push(id)
+          await database!.query(
+            `INSERT INTO search_documents (id,origin,locale,source_revision,title,body,url,type,title_norm,body_norm)
+             VALUES ($1,'static',$2,$3,$4,$4,$5,$6,$4,$4)`,
+            [
+              id,
+              locale,
+              revision,
+              marker,
+              `${pageHref('publications', locale)}#test-${type}`,
+              type,
+            ],
+          )
+        }
+        const result = await query({ query: marker, locale })
+        expect(result.total).toBe(3)
+        for (const type of ['publication', 'report', 'project'] as const) {
+          expect(result.facets[type]).toBe(1)
+          const filtered = await query({ query: marker, locale, type })
+          expect(filtered.items).toHaveLength(1)
+          expect(filtered.items[0]!.type).toBe(type)
+        }
+        expect(result.facets.page).toBe(0)
+        expect(result.facets.section).toBe(0)
+      }
+    } finally {
+      await database!.query('DELETE FROM search_documents WHERE id=ANY($1::text[])', [fixtureIds])
+    }
+  })
+
   async function createNews(marker: string, options: PublicationOptions = {}): Promise<number> {
     const inserted = await database!.query<{ id: number }>(
       `INSERT INTO news (visibility,_status,published_at,internal_notes) VALUES ($1,$2,$3,$4) RETURNING id`,
@@ -484,7 +543,17 @@ integration('public website search (PostgreSQL)', () => {
     await processSearchJobs(50)
     const first = await query({ query: marker, locale: 'en' })
     const second = await query({ query: marker, locale: 'en', page: 2 })
-    expect(first.facets).toEqual({ page: 1, section: 1, news: 14, document: 1, media: 1 })
+    expect(first.facets).toEqual({
+      page: 1,
+      section: 1,
+      news: 14,
+      publication: 0,
+      report: 0,
+      patent: 0,
+      project: 0,
+      document: 1,
+      media: 1,
+    })
     expect(first.total).toBe(18)
     expect(first.totalPages).toBe(2)
     expect(first.items).toHaveLength(SEARCH_PAGE_SIZE)

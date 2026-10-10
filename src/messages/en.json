@@ -958,6 +958,10 @@
       "page": "Pages",
       "section": "Sections",
       "news": "News",
+      "publication": "Publications",
+      "report": "Reports",
+      "patent": "Patents",
+      "project": "Projects",
       "document": "Documents",
       "media": "Media"
     },
