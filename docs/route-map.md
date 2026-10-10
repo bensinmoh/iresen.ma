@@ -69,3 +69,7 @@ Homepage `mission-studies`, `mission-research`, `mission-skills` and
 `develop-test-transfer` remains the section-navigation URL. Former mission stage
 anchors resolve within the R&I card and remain supported in locale switching.
 See [scope](narrative-alignment.md).
+
+## Collaboration and valorisation development
+
+workWithUs and transfer now render dedicated six-section editorial pages; their canonical paths and all twelve section IDs remain unchanged. Contact actions use the existing partnerships topic. See [scope](collaboration-transfer-pages.md).

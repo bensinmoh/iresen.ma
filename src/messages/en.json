@@ -643,54 +643,54 @@
     },
     "transfer": {
       "results-to-transfer": {
-        "title": "Results with valorisation potential",
-        "description": "Content to add: results suitable for sharing, their applications, maturity and partnership possibilities."
+        "title": "Valorisation makes results useful",
+        "description": "A result’s value depends on what it enables people to understand, decide, practise or develop. It extends beyond commercialisation."
       },
       "research-to-use": {
-        "title": "From research to use",
-        "description": "To prepare: develop, test and valorise within Research & Innovation, with feedback between trials and uses; not every project follows every stage and commercialisation is not guaranteed."
+        "title": "Connect work with use, including feedback",
+        "description": "Develop, test and valorise are functions within Research & Innovation. Each result follows the stages useful to its need and maturity."
       },
       "transfer-pathways": {
-        "title": "Transfer pathways",
-        "description": "Content to add: licensing, joint development, business creation and adoption routes that are actually possible."
+        "title": "Choose according to the result and its use",
+        "description": "Dissemination, joint work, technology transfer or an entrepreneurial initiative: possibilities are examined case by case."
       },
       "intellectual-property": {
-        "title": "Intellectual property and confidentiality",
-        "description": "Content to add: principles for managing rights, sharing and confidential discussions."
+        "title": "Frame rights and exchanges",
+        "description": "Intellectual property (IP), contributions and confidentiality are part of defining the work with the relevant specialists."
       },
       "adoption-initiatives": {
-        "title": "Adopted results and initiatives",
-        "description": "Content to add: documented valorisation cases with contributions, stages and evidenced use."
+        "title": "Explore achievements, understand their stage",
+        "description": "Homepage achievements illustrate different results and applications. They are starting points for an evidence-based account."
       },
       "build-transfer": {
-        "title": "Develop a transfer",
-        "description": "Content to add: initial information on the result, need, intended use and maturity."
+        "title": "Build the next step",
+        "description": "Do you have a research result or a need for its use? Prepare an initial description to examine possible next steps."
       }
     },
     "workWithUs": {
       "choose-pathway": {
-        "title": "Choose a pathway",
-        "description": "To prepare: needs for studies and expertise, research and innovation, skills and capabilities, with cooperation as the shared enabler."
+        "title": "Start with a need, build a useful contribution",
+        "description": "A decision to inform, a solution to advance or capabilities to strengthen: begin with the need and its intended use."
       },
       "organisation-contributions": {
-        "title": "Contributions by organisation",
-        "description": "To prepare: value for institutions, businesses, research teams, territories and international partners, without promising services or funding."
+        "title": "Shared work, complementary contributions",
+        "description": "Collaboration brings together knowledge of the context, scientific capabilities and each partner’s resources."
       },
       "collaboration-arrangements": {
-        "title": "Collaboration arrangements",
-        "description": "Content to add: forms of collaboration, respective commitments and conditions to define."
+        "title": "Choose a suitable form of cooperation",
+        "description": "The format follows the work to be done. It is defined with the teams concerned, without assuming that a service or funding is available."
       },
       "need-to-project": {
-        "title": "From a need to a joint project",
-        "description": "Content to add: the stages of first contact, qualification, scoping and formalisation."
+        "title": "From a need to shared work",
+        "description": "Four pointers for preparing joint work. The pathway adapts to the nature and maturity of your request."
       },
       "collaboration-references": {
-        "title": "Collaborations and references",
-        "description": "Content to add: documented collaborations with needs, partners, contributions and achievements."
+        "title": "Discover different contributions",
+        "description": "The achievements presented on the homepage offer concrete entry points into IRESEN’s range of contributions."
       },
       "prepare-discussion": {
-        "title": "Prepare for the first discussion",
-        "description": "Content to add: information on the organisation, need, application, timetable and capability sought."
+        "title": "Describe the need and its context",
+        "description": "A clear initial description helps prepare the discussion and identify contributions to examine."
       }
     },
     "news": {
@@ -1337,5 +1337,247 @@
     },
     "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment. Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work. An adaptable pathway: each project follows the stages relevant to its needs.",
     "label": "Landmarks in the research and innovation pathway"
+  },
+  "Engagement": {
+    "navigation": "Explore this page",
+    "contactAction": "Prepare a discussion",
+    "referenceAction": "View the achievement",
+    "workWithUs": {
+      "sections": {
+        "choose-pathway": {
+          "label": "Your need",
+          "items": [
+            {
+              "title": "Inform a decision",
+              "description": "Explore a question through knowledge, data and technological options. Describe the context, the choices to prepare and the people or organisations concerned."
+            },
+            {
+              "title": "Advance a solution",
+              "description": "Connect a research question with scientific work, testing or experimentation. Explain what already exists and which uncertainties remain."
+            },
+            {
+              "title": "Strengthen capabilities",
+              "description": "Share methods and know-how, learning through research and practice. Identify the audiences, the skills needed and the intended applications."
+            },
+            {
+              "title": "Prepare a result for use",
+              "description": "Explore maturation, valorisation or transfer within Research & Innovation. Describe the result, its stage and the uses being considered."
+            }
+          ],
+          "note": "These entry points complement one another. The expertise, facilities and partners to involve depend on the need, available capabilities and the collaboration framework.",
+          "checklist": []
+        },
+        "organisation-contributions": {
+          "label": "Your contribution",
+          "items": [
+            {
+              "title": "Businesses and industry",
+              "description": "Bring a practical problem, process constraints, shareable data and an experimentation setting. Joint work helps clarify options and implementation conditions."
+            },
+            {
+              "title": "Research teams",
+              "description": "Bring a scientific question, methods and expertise. Define the work, experimental resources and ways to document results together."
+            },
+            {
+              "title": "Institutions and territories",
+              "description": "Share a decision-making need, local characteristics and the actors concerned. Connect analysis and research with local application conditions."
+            },
+            {
+              "title": "Partners and funders",
+              "description": "Connect teams and contribute resources, knowledge or cooperation. Clarify roles, shared objectives and each partner’s contribution."
+            }
+          ],
+          "checklist": []
+        },
+        "collaboration-arrangements": {
+          "label": "The framework",
+          "items": [
+            {
+              "title": "Collaborative research",
+              "description": "Connect scientific objectives, partner contributions, resources, expected results and monitoring arrangements within a project or programme."
+            },
+            {
+              "title": "Expertise and shared facilities",
+              "description": "Examine analysis, testing, experimentation or training needs and the conditions for mobilising skills and infrastructure."
+            },
+            {
+              "title": "Networks and exchanges",
+              "description": "Connect actors through partnerships, networks, institutional exchanges and events. The World Power-to-X Summit and IRSEC’X illustrate these approaches according to their objectives."
+            }
+          ],
+          "note": "Scope, responsibilities, resources, timing, access conditions and arrangements for sharing results need to be defined before work begins.",
+          "checklist": []
+        },
+        "need-to-project": {
+          "label": "Building together",
+          "items": [
+            {
+              "title": "Clarify the need",
+              "description": "Identify the problem, users or beneficiaries, application context and the decision or result sought."
+            },
+            {
+              "title": "Examine contributions",
+              "description": "Consider useful expertise, data, facilities and partners. Identify uncertainties, constraints and availability to confirm."
+            },
+            {
+              "title": "Define the work",
+              "description": "Set objectives, tasks, deliverables, resources and monitoring criteria, distinguishing expected results from effects to measure."
+            },
+            {
+              "title": "Formalise and learn",
+              "description": "Clarify the collaboration framework, then document the work, use of results and lessons to share."
+            }
+          ],
+          "note": "These pointers are not an admission procedure. A call for projects or a specific scheme retains its own conditions.",
+          "checklist": []
+        },
+        "collaboration-references": {
+          "label": "Examples",
+          "items": [
+            {
+              "title": "Mapping",
+              "description": "An example of decision support: mapping the country’s renewable resources and zoning to inform energy choices."
+            },
+            {
+              "title": "WorldPtX Summit",
+              "description": "An example of connection and exchange around Power-to-X. An event is a means of cooperation; its results should be documented against its objectives."
+            }
+          ],
+          "note": "Read a reference alongside its need, partner roles and stage. It does not establish that an equivalent arrangement is available for every new request.",
+          "checklist": []
+        },
+        "prepare-discussion": {
+          "label": "First discussion",
+          "items": [],
+          "note": "Start with a non-confidential summary. Arrangements for sharing sensitive documents and carrying out the work are clarified later with the relevant teams.",
+          "checklist": [
+            "Your organisation, your role and partners already involved.",
+            "The problem, the people concerned and the intended application.",
+            "Work completed, available results and remaining uncertainties.",
+            "The expertise, facilities or forms of cooperation you are seeking.",
+            "Timing, field conditions, data and resource constraints to discuss."
+          ]
+        }
+      }
+    },
+    "transfer": {
+      "sections": {
+        "results-to-transfer": {
+          "label": "The results",
+          "items": [
+            {
+              "title": "Knowledge and methods",
+              "description": "Scientific results, protocols and methods can be shared, reused or adapted to advance other work."
+            },
+            {
+              "title": "Technologies and prototypes",
+              "description": "Equipment, a process or a prototype opens up possible uses. Its performance, limitations and actual stage need to be explained."
+            },
+            {
+              "title": "Skills and know-how",
+              "description": "Lessons from research and experimentation can strengthen practice, training and team capabilities."
+            },
+            {
+              "title": "Data and decision tools",
+              "description": "Analysis, datasets and tools can inform choices. Their scope, use conditions and limitations matter as much as their dissemination."
+            }
+          ],
+          "note": "Begin by identifying what was produced, by whom, for which need and with what evidence.",
+          "checklist": []
+        },
+        "research-to-use": {
+          "label": "Maturation",
+          "items": [
+            {
+              "title": "Establish the result’s stage",
+              "description": "Describe its origin, the need addressed, contributions and available evidence. Distinguish what is demonstrated from what still needs checking."
+            },
+            {
+              "title": "Test the conditions",
+              "description": "Examine performance, constraints and limitations in relevant conditions. Testing may lead back to further research."
+            },
+            {
+              "title": "Prepare for use",
+              "description": "Identify users, necessary adaptations, resources and partners. Clarify technical and organisational conditions for use."
+            },
+            {
+              "title": "Document and learn",
+              "description": "Follow use where it exists, qualify observed contributions and share lessons for future work."
+            }
+          ],
+          "note": "Maturation is not automatic progression. A result can contribute to research, a decision or training without leading to commercial transfer.",
+          "checklist": []
+        },
+        "transfer-pathways": {
+          "label": "Possible pathways",
+          "items": [
+            {
+              "title": "Share knowledge",
+              "description": "Publications, learning resources, methods and scientific exchanges make lessons accessible through suitable dissemination arrangements."
+            },
+            {
+              "title": "Co-develop with partners",
+              "description": "Continue work with actors involved in use to adapt, qualify or test a solution and clarify respective contributions."
+            },
+            {
+              "title": "Prepare technology transfer",
+              "description": "Examine access or licensing arrangements where the result, rights and partners allow. Conditions still need to be established."
+            },
+            {
+              "title": "Explore an entrepreneurial initiative",
+              "description": "Consider creating or developing an activity around a result where the team, need and maturation conditions are suitable."
+            }
+          ],
+          "note": "No pathway is guaranteed by a prototype, publication or patent filing. Choices depend on evidence, rights, capabilities and the partners involved.",
+          "checklist": []
+        },
+        "intellectual-property": {
+          "label": "The conditions",
+          "items": [
+            {
+              "title": "Which result and contributions?",
+              "description": "Describe the origins of knowledge, data and work, the partners involved and material already shared. Contributions should be clearly attributable."
+            },
+            {
+              "title": "Which rights and uses should be examined?",
+              "description": "Clarify existing rights, intended uses, sharing conditions and responsibilities to discuss. The applicable framework is defined with the relevant teams; this page does not provide a standard contract."
+            },
+            {
+              "title": "How should a first discussion be prepared?",
+              "description": "Begin with a non-confidential description of the result and need. Before sharing sensitive material, clarify confidentiality arrangements and useful documents with the relevant contact."
+            }
+          ],
+          "note": "A patent application, a granted right and an active right are distinct situations. None alone establishes transfer or adoption.",
+          "checklist": []
+        },
+        "adoption-initiatives": {
+          "label": "Concrete examples",
+          "items": [
+            {
+              "title": "iSmart",
+              "description": "An electric-vehicle charging station presented among IRESEN’s achievements. To examine its valorisation, distinguish the product, contributions and uses actually documented."
+            },
+            {
+              "title": "AquaSolar",
+              "description": "A mobile, modular desalination unit powered by solar energy. The demonstrator illustrates an application; its presentation alone does not establish commercial transfer."
+            }
+          ],
+          "note": "Evidence of use or impact should specify the actors, context, stage, period and observed results. Intentions remain distinct from measured effects.",
+          "checklist": []
+        },
+        "build-transfer": {
+          "label": "Your result",
+          "items": [],
+          "note": "The first discussion addresses the result, the need and conditions to examine. It is neither a funding commitment nor a transfer agreement.",
+          "checklist": [
+            "The result or technology, its origin and contributing actors.",
+            "The need, potential users and application context.",
+            "Existing work, testing and evidence, including known limitations.",
+            "The maturity stage and adaptations or checks still needed.",
+            "Partners, rights and constraints to discuss, without sharing confidential material."
+          ]
+        }
+      }
+    }
   }
 }

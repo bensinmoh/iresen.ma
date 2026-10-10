@@ -862,3 +862,7 @@ See [scope](docs/home-achievements.md).
 ## Homepage innovation pathway — 2026-10-10
 
 A light transition uses the shared surface/navy/action-blue roles, compact 32–48px vertical padding and an open numbered five-stage sequence. Thin rules/arrows connect desktop stages; below 64rem the sequence keeps native horizontal scrolling with automatic six-second progression, mirrored in Arabic. No fixed height, photos or card surfaces. The hero figures and main section navigation remain. See [scope](docs/home-innovation.md).
+
+## Collaboration and valorisation composition
+
+These two pages retain the shared photo hero and use editorial split sections with compact anchor navigation, open item grids, ink contribution/checklist panels, existing achievement photographs and native disclosures. Tablet/mobile stack naturally; Arabic keeps logical alignment and natural tracking. See [scope](docs/collaboration-transfer-pages.md).

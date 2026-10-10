@@ -1305,3 +1305,7 @@ reduced motion disables it. No new tokens. Natural content heights remain essent
 ## Compact homepage pathway — 2026-10-10
 
 The innovation transition reuses `--color-surface`, navy, primary blue, shared gutters and type roles. Its 32–48px vertical padding is deliberately tighter than neighboring feature modules. Five open stages keep horizontal scrolling below 64rem, with automatic six-second progression; logical spacing and mirrored arrows support Arabic. Content/enlarged text determines height. Scope: [innovation pathway](home-innovation.md).
+
+## Engagement page composition
+
+The collaboration/valorisation server template uses existing blue/ink tokens, open item grids, split headings, signature corners on selected ink panels/images and native disclosures. Its six-link navigation wraps; tablet/mobile stack and Arabic follows logical properties. These are page composition conventions, not new global tokens. See [scope](collaboration-transfer-pages.md).

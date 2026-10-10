@@ -192,3 +192,7 @@ modest quotation size, regular weight and locale-appropriate quotation punctuati
 The initial start alignment was subsequently centered at the owner's request.
 Fonts, colors, content width and
 geometry remain IRESEN’s; no foreign component or attribution is imported.
+
+## Subsequent commissioned development
+
+The owner subsequently commissioned the workWithUs and transfer pages. Their six sections now contain working explanatory FR/EN/AR content and existing references, superseding their prior scaffold status without changing the routing boundary. See [delivered scope](collaboration-transfer-pages.md). Final institutional evidence and translation review remain due.
