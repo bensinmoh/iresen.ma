@@ -83,3 +83,11 @@ and the public search catalog. The final-content glossary/index sanity check
 remains pending until all website content is supplied.
 
 See [validation](validation.md#homepage-research-domains--2026-10-09).
+
+## Raised panorama — 2026-10-10
+
+The owner's later spacing correction raises the desktop panorama into the lower
+content, reducing the reserved bottom area from 27rem to a fluid 8–12rem.
+The 30–38rem photo uses a stronger continuous navy fade behind text; the
+mobile/tablet full-section 90% overlay stays in place. This is presentation
+only: themes, working copy, routes, imagery and search references are retained.

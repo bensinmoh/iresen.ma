@@ -2,7 +2,7 @@
   /* Existing hero ink, scoped to the owner's requested dark collaboration ground. */
   --collaboration-ink: #05111d;
   margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(3rem, 5vw, 6rem) var(--gutter);
+  padding: var(--home-section-padding) var(--gutter);
   color: var(--color-white);
   overflow-wrap: anywhere;
   background: var(--collaboration-ink);

@@ -1,5 +1,5 @@
 .section {
-  padding-block: clamp(3rem, 5vw, 6rem);
+  padding-block: var(--home-section-padding);
   scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
 }
 

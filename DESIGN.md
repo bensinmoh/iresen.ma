@@ -999,6 +999,18 @@ platform sections/routes have not been implemented. Existing homepage card
 anchors, localized search descriptions and media references remain unchanged;
 no content, file or public destination is added. FR/EN/AR remain working copy.
 
+## Compact homepage rhythm — 2026-10-10
+
+The owner's spacing screenshots commission a tighter homepage only. Main modules
+share 32–48px responsive outer padding through `--home-section-padding`; the
+light innovation transition keeps its existing compact rhythm. Achievements and
+news header-to-card gaps now span 24–40px. The mission/achievement boundary no
+longer adds two 96px insets. Desktop research reserves 128–192px below the action,
+replacing 432px, and raises the 480–608px panorama behind the lower content.
+A navy fade stays at 95% at 25% and 88% at 55% before opening onto the landscape.
+Mobile/tablet retain the full-section image and 90% veil. Content, imagery,
+anchors and existing localized search references remain unchanged.
+
 ## Collaboration page redevelopment — 2026-10-10
 
 The owner's later request renames and redevelops the existing `workWithUs` page as
