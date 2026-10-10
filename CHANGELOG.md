@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-10-10 — Collaborer avec nous
+
+- Redeveloped the existing collaboration page from the live Figma cooperation
+  reference with varied light/ink composition and six preserved anchors.
+- Renamed FR/EN titles and URLs through the central route map; old URLs redirect
+  permanently while retaining query parameters and section fragments.
+- Updated shared destinations and localized search references; retained existing
+  content, image provenance, CMS gates and the contact email-draft journey.
+
+See [scope](docs/collaborate-page.md) and
+[verification](docs/validation.md#collaboration-page-redevelopment--2026-10-10).
+
 ## 2026-10-10 — Selected publications ingestion
 
 - Imported 1,181 owner-selected bibliographic records into the staged structured

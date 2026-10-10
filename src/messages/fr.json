@@ -788,7 +788,7 @@
     "platforms": "Plateformes de recherche",
     "network": "Réseau de laboratoires & d’experts",
     "transfer": "Valorisation & Transfert",
-    "workWithUs": "Travailler avec nous",
+    "workWithUs": "Collaborer avec nous",
     "news": "Actualités",
     "events": "Événements",
     "publications": "Publications & rapports",
@@ -1497,7 +1497,8 @@
           "checklist": []
         }
       }
-    }
+    },
+    "pathwayAction": "Choisir votre parcours"
   },
   "Transfer": {
     "navigation": "Sur cette page",

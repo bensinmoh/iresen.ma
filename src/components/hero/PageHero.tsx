@@ -11,6 +11,7 @@ import { HomeHeroVideo } from './HomeHeroVideo'
 
 export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Hero' })
+  const engagement = await getTranslations({ locale, namespace: 'Engagement' })
   const transfer = await getTranslations({ locale, namespace: 'Transfer' })
   const titles = await getTranslations({ locale, namespace: 'Pages' })
   const definition = heroes[pageId]
@@ -54,9 +55,19 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
             <div className="hero-actions">
               <a
                 className="button button-primary hero-primary"
-                href={pageId === 'transfer' ? '#build-transfer' : '#page-sections'}
+                href={
+                  pageId === 'transfer'
+                    ? '#build-transfer'
+                    : pageId === 'workWithUs'
+                      ? '#prepare-discussion'
+                      : '#page-sections'
+                }
               >
-                {pageId === 'transfer' ? transfer('innovationAction') : t('discover')}
+                {pageId === 'transfer'
+                  ? transfer('innovationAction')
+                  : pageId === 'workWithUs'
+                    ? engagement('contactAction')
+                    : t('discover')}
                 <NavigationIcon name="arrow" />
               </a>
               <a
@@ -64,10 +75,16 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
                 href={
                   pageId === 'transfer'
                     ? '#adoption-initiatives'
-                    : pageHref(definition.related, locale)
+                    : pageId === 'workWithUs'
+                      ? '#choose-pathway'
+                      : pageHref(definition.related, locale)
                 }
               >
-                {pageId === 'transfer' ? transfer('exploreAction') : titles(definition.related)}
+                {pageId === 'transfer'
+                  ? transfer('exploreAction')
+                  : pageId === 'workWithUs'
+                    ? engagement('pathwayAction')
+                    : titles(definition.related)}
                 <NavigationIcon name="arrow" />
               </a>
             </div>

@@ -76,8 +76,8 @@ export const pages = {
     },
   },
   workWithUs: {
-    path: '/work-with-us',
-    pathnames: { fr: '/travailler-avec-nous', en: '/work-with-us', ar: '/التعاون-معنا' },
+    path: '/collaborate-with-us',
+    pathnames: { fr: '/collaborer-avec-nous', en: '/collaborate-with-us', ar: '/التعاون-معنا' },
   },
   news: {
     path: '/resources/news',
