@@ -1376,3 +1376,47 @@ The owner's next correction joins the final innovation entry-point section
 directly to the footer by removing only the transfer page's outer trailing
 padding (page, content wrapper and shell). Section-internal breathing space
 remains. The override is scoped through the transfer module, not shared pages.
+
+## iSmart valorisation example — 2026-10-10
+
+The owner commissions an iSmart product feature within the existing intellectual
+property section. Its heading, introductory copy and five native disclosures
+form a left column; the supplied transparent product visual occupies the right
+column under “Exemple de valorisation réussie”, iSmart, electric-vehicle charging
+and the owner's existing 100% Moroccan claim. Below 64rem the example follows
+the disclosures. Arabic mirrors the columns through logical layout, never the
+product or original Apex Leaf artwork. No reference diagram arrows, product
+callouts, invented patent attribution, license or commercialization figures
+are added. The pale original Apex Leaf sits behind the product at low opacity.
+
+The supplied PNG already contains an alpha channel; it is not regenerated or
+retouched. A 1200×1312 WebP derivative preserves transparency (128,506 bytes).
+Source `iSmart Product.png` SHA-256:
+`d9dc2d11823cef1712d4c6b184b34509cf64178ede03d15fcd8f1b105d3700bf`.
+Derivative SHA-256:
+`931a1ff250c7bc6a284bae4ae964083c9b6c6ce8b2d29e778162fbd080bf75dd`.
+The original and reference screenshots remain outside the repository.
+FR/EN/AR working copy, informative alt text, the `ismart-example` anchor and
+its localized section/media search references ship together. Six canonical
+sections, catalogue behavior and existing routes remain. No deployment.
+
+The owner's next refinement replaces the typed iSmart name with the supplied
+vector wordmark. `src/assets/brand/ismart-original.svg` preserves its bytes
+(SHA-256 `49da4a8df99b159ff240e5d886b87ebe59532b329db8929a91af5531c47c8ed0`).
+The authorized color variant uses institutional navy for the letters and primary
+blue for the i dot; all paths/viewBox remain unchanged. The original remains a non-served source; the displayed variant
+has one localized media search reference. The example heading is now a tiny
+0.75rem uppercase label with natural Arabic tracking; the description is light
+300-weight italic in the existing muted text color, on one line where it fits.
+Very narrow/enlarged-text screens permit wrapping instead of overflowing.
+
+The product photograph links directly to the owner-specified
+`https://www.i-smart.ma/`, with a localized accessible name and visible keyboard
+focus. The native link adds no annotation arrows or automatic navigation.
+
+The transfer introduction now meets the hero directly: its breadcrumb, shell
+padding and content divider are removed only on this page. The lab photograph
+precedes the introduction text (left in FR/EN, mirrored in AR), with the existing
+internal section spacing retained. Mobile stacks the photograph before the copy.
+Other pages keep their breadcrumbs and shell defaults; existing anchors and
+search projections remain unchanged.

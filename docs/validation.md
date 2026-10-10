@@ -2709,3 +2709,41 @@ padding layers. Lint and production build pass after this adjustment; all
 eight catalogue journeys pass again, now asserting that the final section's
 bottom equals the footer's top in FR/EN/AR at 320, 390, 768, 1024 and 1440px.
 The updated desktop section/footer rendering was inspected.
+
+## iSmart product example in intellectual property — 2026-10-10
+
+The owner-supplied transparent product is converted to a 1200×1312 WebP with
+alpha preserved (128,506 bytes), without generative editing or new product
+geometry. The IP copy and disclosures move into the first column, with a
+localized product feature in the second; mobile stacks the feature below.
+Lint, typecheck, 120 unit tests, production build and 15 Chromium journeys
+pass. The initial build reported existing next-intl dynamic-import cache warnings.
+Checks cover the loaded product, FR/EN/AR, 320–1440px, 200% text, disclosures,
+no JavaScript, scoped axe, catalogue motion/search/contact and footer attachment.
+French desktop/mobile and Arabic desktop renderings were inspected: full
+transparent product, original unmirrored artwork and no annotation arrows.
+The localized example anchor and media/section search projections are verified
+in unit checks, and the local public search catalogue was synchronized.
+Formatting/whitespace and the mechanical design scan pass. No deployment.
+Remote full-suite CI and merge outcomes are recorded on the pull request.
+
+The owner’s follow-ups replace the typed name with the supplied vector logo,
+using the authorized navy letters/blue dot while preserving a byte-identical
+original in non-served source assets. The caption is tiny uppercase; the
+description is light italic and one line at desktop/390px, wrapping only when
+needed for narrow/enlarged text. The product links to the exact supplied
+`https://www.i-smart.ma/` URL with a localized name and visible focus.
+Lint, typecheck, 120 unit tests, production build and all 15 browser journeys
+pass after these refinements. French desktop/mobile crops were inspected;
+the browser journeys also verify the external href in all three languages.
+The served logo variant is registered in localized media search, the original
+is excluded from public files, and the local search catalogue was rebuilt.
+
+The final introduction refinement removes the transfer breadcrumb and outer
+spacing/divider, and places its laboratory image before the text. Lint,
+typecheck, 120 unit tests, production build and 30 Chromium journeys pass.
+The first parallel typecheck raced the build's generated route files; the
+sequential rerun passes. Browser assertions verify hero/intro attachment,
+FR/EN image-left and AR image-right layout, no breadcrumb, footer attachment,
+320–1440px, enlarged text and shared hero behavior. French desktop/mobile and
+Arabic desktop screenshots were inspected. Whitespace and design scan pass.

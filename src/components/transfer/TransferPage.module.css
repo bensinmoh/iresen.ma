@@ -3,12 +3,15 @@
 }
 :global(.page-shell):has(.page),
 :global(.page-content):has(> .page) {
-  padding-block-end: 0;
+  padding-block: 0;
+}
+:global(.page-content):has(> .page) {
+  border-block-start: 0;
 }
 .intro {
   padding-block: var(--space-12) var(--space-16);
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
 }
@@ -134,10 +137,108 @@
   display: block;
   margin-block-start: var(--space-2);
 }
-.disclosures {
-  margin-inline-start: auto;
-  max-inline-size: 70rem;
+.ipLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
 }
+.ipCopy .header {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+  margin-block-end: var(--space-8);
+}
+.ipCopy .header > p {
+  max-inline-size: 65ch;
+}
+.disclosures {
+  inline-size: 100%;
+}
+.ipExample {
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  scroll-margin-block-start: var(--space-8);
+  padding-block-start: var(--space-4);
+}
+.ipExample::before {
+  content: '';
+  position: absolute;
+  inset: 20% 0 0;
+  z-index: -1;
+  background: url('/brand/apex-leaf.svg') center / contain no-repeat;
+  opacity: 0.035;
+  pointer-events: none;
+}
+.ipExample h3 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+.ipExample:dir(rtl) h3 {
+  letter-spacing: normal;
+}
+.productLogo {
+  display: block;
+  inline-size: min(65%, 16rem);
+  block-size: auto;
+  margin-inline: auto;
+  margin-block: var(--space-6) var(--space-4);
+}
+.productDescription {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin-inline: auto;
+  margin-block: 0;
+  white-space: nowrap;
+}
+@media (max-width: 79.999rem) {
+  .productDescription {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 23.999rem) {
+  .productDescription {
+    font-size: 0.75rem;
+    white-space: normal;
+  }
+}
+.productOrigin {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-blue);
+  margin-block: var(--space-3) var(--space-6);
+}
+.productLink {
+  display: block;
+  inline-size: min(100%, 24rem);
+  margin-inline: auto;
+  border-top-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+.productLink:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 6px;
+}
+.productImage {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+@media (max-width: 63.999rem) {
+  .ipLayout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-12);
+  }
+}
+
 .disclosures details {
   border-block-start: 1px solid var(--color-border);
 }

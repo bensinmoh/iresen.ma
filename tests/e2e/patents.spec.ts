@@ -12,7 +12,18 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     page,
   }) => {
     await page.goto(pageHref('transfer', locale))
+    await expect(page.locator('.breadcrumb')).toHaveCount(0)
     const section = page.locator('#adoption-initiatives')
+    const product = page.locator('#ismart-example img[src*="ismart-product"]')
+    await product.scrollIntoViewIfNeeded()
+    await expect(product).toHaveJSProperty('complete', true)
+    expect(await product.evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(
+      0,
+    )
+    await expect(page.locator('#ismart-example')).toContainText(copy.example.origin)
+    await expect(
+      page.locator('#ismart-example').getByRole('link', { name: copy.example.visit }),
+    ).toHaveAttribute('href', 'https://www.i-smart.ma/')
     await expect(section.locator('article:visible')).toHaveCount(6)
     await section.getByRole('button', { name: copy.catalog.showMore, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(12)
@@ -55,6 +66,15 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
         true,
       )
+      const hero = await page.locator('.page-hero').boundingBox()
+      const intro = await page.locator('#results-to-transfer').boundingBox()
+      expect(Math.abs(intro!.y - hero!.y - hero!.height)).toBeLessThan(1)
+      if (width >= 1024) {
+        const photo = await page.locator('#results-to-transfer img').boundingBox()
+        const heading = await page.locator('#results-to-transfer-heading').boundingBox()
+        if (locale === 'ar') expect(photo!.x).toBeGreaterThan(heading!.x)
+        else expect(photo!.x + photo!.width).toBeLessThan(heading!.x)
+      }
       const lastSection = await page.locator('#build-transfer').boundingBox()
       const footer = await page.locator('.site-footer').boundingBox()
       expect(Math.abs(footer!.y - lastSection!.y - lastSection!.height)).toBeLessThan(1)
@@ -72,7 +92,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     ).toEqual([])
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 })
-      for (const id of ['results-to-transfer', 'transfer-pathways', 'build-transfer']) {
+      for (const id of [
+        'results-to-transfer',
+        'intellectual-property',
+        'transfer-pathways',
+        'build-transfer',
+      ]) {
         await page.locator(`#${id}`).scrollIntoViewIfNeeded()
         await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-${id}.png` })
       }

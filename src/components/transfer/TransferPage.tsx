@@ -41,7 +41,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
     </header>
   )
   return (
-    <PageShell title={pages('transfer')} locale={locale} pageId="transfer">
+    <PageShell title={pages('transfer')} locale={locale} pageId="transfer" showBreadcrumb={false}>
       <PublishedPageContent pageId="transfer" locale={locale} />
       <div className={styles.page} data-engagement-page="transfer">
         <section
@@ -49,6 +49,14 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           aria-labelledby="results-to-transfer-heading"
           className={styles.intro}
         >
+          <div className={styles.introPhoto}>
+            <Image
+              src="/images/missions/develop-cf05d9355bc5.webp"
+              alt={t('photos.intro')}
+              fill
+              sizes="(max-width: 1023px) 100vw, 45vw"
+            />
+          </div>
           <div className={styles.introCopy}>
             <p className={styles.eyebrow}>{t('eyebrow')}</p>
             <h2 id="results-to-transfer-heading">{t('title')}</h2>
@@ -63,14 +71,6 @@ export async function TransferPage({ locale }: { locale: Locale }) {
                 <NavigationIcon name="arrow" />
               </a>
             </div>
-          </div>
-          <div className={styles.introPhoto}>
-            <Image
-              src="/images/missions/develop-cf05d9355bc5.webp"
-              alt={t('photos.intro')}
-              fill
-              sizes="(max-width: 1023px) 100vw, 45vw"
-            />
           </div>
         </section>
         <section
@@ -97,17 +97,53 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           aria-labelledby="intellectual-property-heading"
           className={styles.section}
         >
-          {header('ip', 'intellectual-property')}
-          <div className={styles.disclosures}>
-            {(t.raw('ip.items') as Item[]).map((item) => (
-              <details key={item.title}>
-                <summary>
-                  <span>{item.title}</span>
-                  <span aria-hidden="true">+</span>
-                </summary>
-                <p>{item.description}</p>
-              </details>
-            ))}
+          <div className={styles.ipLayout}>
+            <div className={styles.ipCopy}>
+              {header('ip', 'intellectual-property')}
+              <div className={styles.disclosures}>
+                {(t.raw('ip.items') as Item[]).map((item) => (
+                  <details key={item.title}>
+                    <summary>
+                      <span>{item.title}</span>
+                      <span aria-hidden="true">+</span>
+                    </summary>
+                    <p>{item.description}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+            <aside
+              id="ismart-example"
+              className={styles.ipExample}
+              aria-labelledby="ismart-example-heading"
+            >
+              <h3 id="ismart-example-heading">{t('example.title')}</h3>
+              <Image
+                className={styles.productLogo}
+                src="/brand/transfer/ismart-iresen.svg"
+                alt={t('example.logoAlt')}
+                width={1656.57}
+                height={362.63}
+                unoptimized
+              />
+              <p className={styles.productDescription}>{t('example.description')}</p>
+              <p className={styles.productOrigin}>{t('example.origin')}</p>
+              <a
+                className={styles.productLink}
+                href="https://www.i-smart.ma/"
+                aria-label={t('example.visit')}
+              >
+                <Image
+                  className={styles.productImage}
+                  src="/images/transfer/ismart-product.webp"
+                  alt={t('example.imageAlt')}
+                  width={1200}
+                  height={1312}
+                  sizes="(max-width: 639px) 90vw, (max-width: 1023px) 384px, 30vw"
+                  quality={90}
+                />
+              </a>
+            </aside>
           </div>
         </section>
         <section

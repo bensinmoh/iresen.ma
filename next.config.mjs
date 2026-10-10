@@ -18,6 +18,7 @@ const nextConfig = {
       { pathname: '/images/domains/**', search: '' },
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/achievements/**', search: '' },
+      { pathname: '/images/transfer/ismart-product.webp', search: '' },
       { pathname: '/images/contact/contact-background-venue.jpg', search: '' },
     ],
   },
