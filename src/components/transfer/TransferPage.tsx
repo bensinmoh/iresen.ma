@@ -27,7 +27,6 @@ const pathwayIcons: ValorisationIconName[] = [
 type Item = { title: string; description: string; action?: string }
 export async function TransferPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Transfer' })
-  const photos = await getTranslations({ locale, namespace: 'HomePlatforms' })
   const pages = await getTranslations({ locale, namespace: 'Pages' })
   const header = (key: 'process' | 'ip' | 'pathways' | 'catalog' | 'doors', id: string) => (
     <header className={styles.header}>
@@ -67,8 +66,8 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           </div>
           <div className={styles.introPhoto}>
             <Image
-              src="/images/platforms/outdoor.webp"
-              alt={photos('outdoorDescription')}
+              src="/images/missions/develop-cf05d9355bc5.webp"
+              alt={t('photos.intro')}
               fill
               sizes="(max-width: 1023px) 100vw, 45vw"
             />
@@ -117,7 +116,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           className={`${styles.section} ${styles.ink}`}
         >
           <div className={styles.pathwayPhoto} aria-hidden="true">
-            <Image src="/images/platforms/gep-mci.webp" alt="" fill sizes="100vw" />
+            <Image src="/images/missions/test-f25f80001b78.webp" alt="" fill sizes="100vw" />
           </div>
           {header('pathways', 'transfer-pathways')}
           <div className={styles.pathways}>
@@ -176,19 +175,31 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           <div className={styles.doors}>
             {(t.raw('doors.items') as Item[]).map((item, index) => (
               <article key={item.title}>
-                <ValorisationIcon
-                  name={index === 0 ? 'bulb' : 'search'}
-                  className={styles.doorIcon}
-                />
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <a
-                  className={index === 0 ? 'button button-primary' : styles.link}
-                  href={index === 0 ? engagementContactHref(locale) : '#adoption-initiatives'}
+                <div
+                  className={`${styles.doorPhoto} ${index === 0 ? styles.innovationPhoto : styles.technologyPhoto}`}
                 >
-                  {item.action}
-                  <NavigationIcon name="arrow" />
-                </a>
+                  <Image
+                    src={
+                      index === 0
+                        ? '/images/heroes/research-1dc2b1d2ea42.webp'
+                        : '/images/missions/transfer-6934b2efdfe4.webp'
+                    }
+                    alt={t(index === 0 ? 'photos.innovation' : 'photos.technology')}
+                    fill
+                    sizes="(max-width: 639px) 150vw, 50vw"
+                  />
+                </div>
+                <div className={styles.doorCopy}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <a
+                    className={index === 0 ? 'button button-primary' : styles.link}
+                    href={index === 0 ? engagementContactHref(locale) : '#adoption-initiatives'}
+                  >
+                    {item.action}
+                    <NavigationIcon name="arrow" />
+                  </a>
+                </div>
               </article>
             ))}
           </div>

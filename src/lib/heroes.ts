@@ -25,7 +25,7 @@ export const heroes = {
   projects: { photo: 'team', layout: 'start', stage: 'research', related: 'workWithUs' },
   platforms: { photo: 'solar-field', layout: 'start', stage: 'research', related: 'network' },
   network: { photo: 'workshop', layout: 'end', stage: 'expertiseSkills', related: 'platforms' },
-  transfer: { photo: 'solar-expertise', layout: 'start', stage: 'research', related: 'workWithUs' },
+  transfer: { photo: 'research', layout: 'start', stage: 'research', related: 'workWithUs' },
   workWithUs: {
     photo: 'partnership-handshake',
     layout: 'start',

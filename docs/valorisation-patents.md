@@ -172,3 +172,21 @@ inferred from numbers, source projects or other dates.
 
 Raw register pages remain temporary local inspection material, outside the
 repository and public search. No annuity, project or relationship field is imported.
+
+## Valorisation photographic refinement — 2026-10-10
+
+The owner's later photo request replaces the generic solar/platform imagery
+with the existing generated laboratory, prototype-testing and energy-network
+illustrations. The hero uses the research photograph, the introduction uses
+the mission laboratory scene and the navy pathways background uses the test
+installation at the existing restrained opacity. Existing provenance and media
+search references remain authoritative; these are illustrative scenes, not
+documentary IRESEN facilities, patent evidence or commercialization claims.
+
+The two entry-point blocks replace bulb/search icons with narrow portrait photo
+strips, occupying 22% of each block and stretching to its content height.
+The researcher and energy-network presenter have separately tuned crops; text
+and CTA arrows remain readable alongside them in FR/EN/AR and on mobile.
+No new bitmap, dependency, shared token, route or publication is added.
+Localized informative alt text is included in the existing section search
+projections; the decorative hero/background remain silent to screen readers.

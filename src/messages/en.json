@@ -1622,6 +1622,11 @@
       "measurement": "Measurement & instrumentation",
       "thermal": "Thermal systems"
     },
-    "contactMessage": "I would like to discuss patent {reference} with IRESEN: {title}."
+    "contactMessage": "I would like to discuss patent {reference} with IRESEN: {title}.",
+    "photos": {
+      "intro": "Generated illustration of researchers examining a prototype and measurement instruments in a laboratory.",
+      "innovation": "Generated illustration of a researcher studying a solar sample on a measurement bench.",
+      "technology": "Generated illustration of a specialist presenting an energy network diagram on a screen."
+    }
   }
 }

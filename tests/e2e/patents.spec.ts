@@ -63,9 +63,21 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     ).toEqual([])
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 })
-      for (const id of ['results-to-transfer', 'transfer-pathways']) {
+      for (const id of ['results-to-transfer', 'transfer-pathways', 'build-transfer']) {
         await page.locator(`#${id}`).scrollIntoViewIfNeeded()
         await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-${id}.png` })
+      }
+      const doorPhotos = page.locator('#build-transfer article img')
+      await expect(doorPhotos).toHaveCount(2)
+      for (const photo of await doorPhotos.all()) {
+        await expect(photo).toHaveJSProperty('complete', true)
+        expect(
+          await photo.evaluate((image: HTMLImageElement) => image.naturalWidth),
+        ).toBeGreaterThan(0)
+        const bounds = await photo.boundingBox()
+        const article = await photo.locator('xpath=../..').boundingBox()
+        expect(bounds!.width).toBeLessThan(bounds!.height)
+        expect(bounds!.height).toBeGreaterThan(article!.height - 30)
       }
       await page.locator('#research-to-use').scrollIntoViewIfNeeded()
       await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-process.png` })

@@ -175,7 +175,8 @@ The owner commissioned development of the existing workWithUs and transfer pages
 
 The owner commissioned the Valorisation redesign and a minimal database of
 59 filed patent records from the supplied workbook. See [scope and provenance](docs/valorisation-patents.md). Six legacy anchors remain; the body section
-navigation is removed. Existing approved platform photographs and licensed
-outline icons supply restrained visual context. Patent summaries and EN/AR
+navigation is removed. The later photo follow-up uses existing generated laboratory/testing illustrations
+and narrow full-height portrait strips in the two entry-point blocks. Licensed
+outline icons remain in the process/pathways; the entry-point icons are removed. Patent summaries and EN/AR
 copy remain editorial working texts. The workbook and excluded administrative
 fields are neither public assets nor repository imports. No deployment is authorized.
