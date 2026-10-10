@@ -2703,3 +2703,9 @@ cards in exactly two rows; the formerly uppercase 41528 rendering was inspected.
 The local search catalogue was rebuilt; formatting, whitespace and the design
 detector pass. No publication/deployment change. Remote full-suite CI and merge
 outcomes are recorded on the pull request.
+
+The same task's footer follow-up removes the three transfer-only trailing
+padding layers. Lint and production build pass after this adjustment; all
+eight catalogue journeys pass again, now asserting that the final section's
+bottom equals the footer's top in FR/EN/AR at 320, 390, 768, 1024 and 1440px.
+The updated desktop section/footer rendering was inspected.

@@ -1,5 +1,9 @@
 .page {
-  padding-block-end: var(--space-8);
+  padding-block-end: 0;
+}
+:global(.page-shell):has(.page),
+:global(.page-content):has(> .page) {
+  padding-block-end: 0;
 }
 .intro {
   padding-block: var(--space-12) var(--space-16);

@@ -929,3 +929,8 @@ data. Cards, contact drafts and public search use the same reviewed titles.
 The catalogue initially displays six cards, two desktop rows of three; show
 more adds six, criteria changes/reset return to six, and show-all, direct
 anchors and all 59 no-JavaScript records remain available.
+
+The owner's next correction joins the final innovation entry-point section
+directly to the footer by removing only the transfer page's outer trailing
+padding (page, content wrapper and shell). Section-internal breathing space
+remains. The override is scoped through the transfer module, not shared pages.

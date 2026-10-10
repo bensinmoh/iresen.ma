@@ -55,6 +55,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
         true,
       )
+      const lastSection = await page.locator('#build-transfer').boundingBox()
+      const footer = await page.locator('.site-footer').boundingBox()
+      expect(Math.abs(footer!.y - lastSection!.y - lastSection!.height)).toBeLessThan(1)
     }
     await page.evaluate(() => {
       document.documentElement.style.fontSize = '200%'
