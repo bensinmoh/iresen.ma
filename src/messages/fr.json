@@ -600,28 +600,28 @@
     },
     "opportunities": {
       "open-opportunities": {
-        "title": "Opportunités ouvertes",
-        "description": "À prévoir : les offres ouvertes avec leur catégorie, leur public, leur lieu et leur échéance."
+        "title": "Offres d’emploi",
+        "description": "Revenez consulter nos prochaines offres. Vous pouvez préparer une candidature spontanée pour présenter votre parcours et vos intérêts."
       },
       "find-opportunity": {
-        "title": "Rechercher une opportunité",
-        "description": "À prévoir : les critères de recherche utiles par domaine, catégorie, localisation et statut."
+        "title": "Offres d’emploi",
+        "description": "Carrières, recrutement, emploi, stage, doctorat, candidature spontanée, recherche appliquée, recherche et développement et innovation (R&D&I), transition énergétique."
       },
       "working-at-iresen": {
-        "title": "Travailler à IRESEN",
-        "description": "À prévoir : les missions, les métiers et l’environnement scientifique, avec des éléments factuels."
+        "title": "Pourquoi nous rejoindre",
+        "description": "Rejoindre IRESEN, c’est contribuer à la recherche appliquée au service de la transition énergétique du Maroc et de l’Afrique."
       },
       "apply-respond": {
-        "title": "Candidater ou répondre",
-        "description": "À prévoir : les critères, les pièces et les canaux officiels propres à chaque offre ou appel."
+        "title": "Vos premiers pas dans la recherche.",
+        "description": "La recherche appliquée réunit chercheurs, ingénieurs, doctorants et stagiaires autour des enjeux énergétiques. Présentez votre formation, vos domaines d’intérêt et les compétences que vous souhaitez développer : solaire, hydrogène vert, stockage ou technologies durables. Consultez les offres disponibles ou préparez une candidature spontanée. Les modalités et la durée dépendent de chaque opportunité."
       },
       "archives-results": {
-        "title": "Archives et résultats publiables",
-        "description": "À prévoir : les offres closes, leurs documents publics et leurs suites autorisées à la diffusion."
+        "title": "Offres d’emploi",
+        "description": "Les offres clôturées ne sont plus ouvertes aux candidatures."
       },
       "questions-unsolicited-applications": {
-        "title": "Questions et candidature spontanée",
-        "description": "À prévoir : les réponses pratiques et les possibilités de candidature selon les procédures réellement disponibles."
+        "title": "Candidature spontanée",
+        "description": "Ce formulaire prépare un email dans votre messagerie. Aucune donnée ni aucun fichier ne sont envoyés ou enregistrés sur ce site. Ajoutez votre CV à l’email avant de l’envoyer."
       }
     },
     "contact": {
@@ -1641,5 +1641,101 @@
       "logoAlt": "Logo iSmart aux couleurs IRESEN.",
       "visit": "Visiter le site iSmart"
     }
+  },
+  "Careers": {
+    "eyebrow": "Carrières",
+    "titleStart": "Rejoignez la",
+    "titleAccent": "recherche",
+    "titleEnd": "qui compte.",
+    "description": "Chercheurs, ingénieurs, doctorants, stagiaires — construisez votre carrière au cœur de la transition énergétique du Maroc et de l’Afrique.",
+    "offersAction": "Nos offres d’emploi",
+    "environment": {
+      "eyebrow": "Notre environnement",
+      "title": "Pourquoi nous rejoindre",
+      "description": "Rejoindre IRESEN, c’est contribuer à la recherche appliquée au service de la transition énergétique du Maroc et de l’Afrique.",
+      "features": [
+        {
+          "title": "Une recherche à impact",
+          "description": "Contribuer à des projets scientifiques et technologiques répondant aux enjeux de la transition énergétique nationale et continentale."
+        },
+        {
+          "title": "Des équipements de pointe",
+          "description": "Explorer le solaire, l’hydrogène vert, le stockage et les technologies énergétiques durables au sein de plateformes de recherche."
+        },
+        {
+          "title": "Un écosystème ouvert",
+          "description": "Collaborer avec des équipes pluridisciplinaires, des universités, des industriels et des partenaires internationaux."
+        }
+      ],
+      "certified": "Environnement certifié",
+      "collaborators": "Collaborateurs",
+      "projects": "Projets collaboratifs"
+    },
+    "offers": {
+      "eyebrow": "Postes ouverts",
+      "title": "Offres d’emploi",
+      "emptyTitle": "Pas d’opportunité ouverte en ce moment",
+      "emptyDescription": "Revenez consulter nos prochaines offres. Vous pouvez préparer une candidature spontanée pour présenter votre parcours et vos intérêts.",
+      "emptyAction": "Préparer une candidature",
+      "unavailable": "Les offres sont momentanément indisponibles. Réessayez plus tard.",
+      "contract": "Contrat",
+      "location": "Lieu",
+      "experience": "Expérience",
+      "availability": "Disponibilité",
+      "missions": "Missions principales",
+      "profile": "Profil recherché",
+      "apply": "Postuler à cette offre",
+      "download": "Télécharger l’offre",
+      "archive": "Les offres clôturées ne sont plus ouvertes aux candidatures.",
+      "reference": "Référence {reference}"
+    },
+    "internship": {
+      "eyebrow": "Stage",
+      "title": "Vos premiers pas dans la recherche.",
+      "paragraphs": [
+        "La recherche appliquée réunit chercheurs, ingénieurs, doctorants et stagiaires autour des enjeux énergétiques.",
+        "Présentez votre formation, vos domaines d’intérêt et les compétences que vous souhaitez développer : solaire, hydrogène vert, stockage ou technologies durables.",
+        "Consultez les offres disponibles ou préparez une candidature spontanée. Les modalités et la durée dépendent de chaque opportunité."
+      ],
+      "action": "Postuler pour un stage",
+      "duration": "Stages & apprentissage",
+      "durationDescription": "Présentez votre projet et vos disponibilités."
+    },
+    "form": {
+      "eyebrow": "Votre profil nous intéresse",
+      "title": "Candidature spontanée",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone (facultatif)",
+      "firstNamePlaceholder": "Votre prénom",
+      "lastNamePlaceholder": "Votre nom",
+      "emailPlaceholder": "vous@email.com",
+      "phonePlaceholder": "+212…",
+      "employment": "Demande d’emploi",
+      "internship": "Demande de stage",
+      "kind": "Type de candidature",
+      "offer": "L’offre",
+      "spontaneous": "Candidature spontanée",
+      "message": "Message",
+      "messagePlaceholder": "Votre parcours, vos motivations et vos disponibilités",
+      "cv": "CV (PDF, Word)",
+      "upload": "Choisir votre CV",
+      "maxSize": "5 Mo maximum · sélection locale",
+      "fileError": "Choisissez un fichier PDF, DOC ou DOCX de 5 Mo maximum.",
+      "action": "Envoyer ma candidature",
+      "required": "Complétez les champs obligatoires.",
+      "notice": "Les données transmises avec votre candidature sont destinées à son examen. Leur traitement relève de notre <privacy>politique de confidentialité</privacy> et du cadre prévu par la loi n° 09-08 relative à la protection des personnes physiques à l’égard du traitement des données à caractère personnel, sous le contrôle de la CNDP.",
+      "prepared": "Votre brouillon est prêt. Ouvrez votre messagerie, joignez votre CV et vérifiez le destinataire avant l’envoi.",
+      "openEmail": "Ouvrir le brouillon email",
+      "privacy": "Confidentialité",
+      "subject": "Candidature — {offer}"
+    },
+    "photos": {
+      "hero": "Photographie de référence : une personne travaillant sur un ordinateur dans un espace de travail.",
+      "environment": "Photographie de référence : une équipe échange autour d’une table de travail.",
+      "internship": "Photographie de référence : un groupe échange dans un espace de travail partagé."
+    },
+    "searchText": "Carrières, recrutement, emploi, stage, doctorat, candidature spontanée, recherche appliquée, recherche et développement et innovation (R&D&I), transition énergétique."
   }
 }

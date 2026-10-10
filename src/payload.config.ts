@@ -8,6 +8,7 @@ import sharp from 'sharp'
 
 import { Media } from './cms/collections/Media'
 import { News } from './cms/collections/News'
+import { Opportunities } from './cms/collections/Opportunities'
 import { Pages } from './cms/collections/Pages'
 import { Users } from './cms/collections/Users'
 import { startSearchWorker } from './lib/search/indexer'
@@ -28,7 +29,7 @@ export default buildConfig({
     startSearchWorker()
   },
   admin: { user: 'users', importMap: { baseDir: path.resolve(sourceDirectory, '..') } },
-  collections: [Users, Pages, News, Media],
+  collections: [Users, Pages, News, Media, Opportunities],
   db: postgresAdapter({
     pool: { connectionString: requiredEnvironmentVariable('DATABASE_URL') },
     migrationDir: path.resolve(sourceDirectory, 'cms/migrations'),

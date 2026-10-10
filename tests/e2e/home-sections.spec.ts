@@ -155,16 +155,22 @@ async function expectTargetBelowNavigation(page: Page, id: string, nativeFallbac
               getComputedStyle(document.documentElement).scrollPaddingBlockStart,
             )
             const clearance = top - bar.bottom - padding
-            return (
-              Math.abs(bar.top) <= 1 &&
-              (nativeFallback ? clearance >= -2 : Math.abs(clearance) <= 2)
-            )
+            return JSON.stringify({
+              top,
+              barTop: bar.top,
+              barBottom: bar.bottom,
+              padding,
+              clearance,
+              aligned:
+                Math.abs(bar.top) <= 1 &&
+                (nativeFallback ? clearance >= -2 : Math.abs(clearance) <= 2),
+            })
           },
           { targetId: id, nativeFallback },
         ),
       { message: `#${id} must align below the pinned bar and the page's scroll padding` },
     )
-    .toBe(true)
+    .toContain('"aligned":true')
 }
 
 for (const locale of locales) {
@@ -410,6 +416,8 @@ test('mobile missions remain readable and keyboard navigable at 200% text in eve
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
       document.documentElement.style.fontSize = '200%'
+      // Force the enlarged layout to request its fonts before awaiting readiness.
+      void document.body.offsetHeight
       await document.fonts.ready
     })
     const clippedText = await page
@@ -446,10 +454,26 @@ test('wrapped home navigation uses its measured height when text is enlarged', a
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
       document.documentElement.style.fontSize = '200%'
+      // Force the enlarged layout to request its fonts before awaiting readiness.
+      void document.body.offsetHeight
       await document.fonts.ready
     })
     const nav = page.locator('.home-section-navigation')
     await expect(nav).toBeVisible()
+    // Text enlargement/font readiness can precede ResizeObserver's layout frame.
+    // Test native navigation only after the measured bar reflects that layout.
+    await expect
+      .poll(() =>
+        nav.evaluate((element) => {
+          const main = element.closest('main')!
+          return (
+            parseFloat(getComputedStyle(main).getPropertyValue('--home-section-nav-height')) ===
+            element.getBoundingClientRect().height
+          )
+        }),
+      )
+      .toBe(true)
+
     const link = nav.locator('a[href="#research-priorities"]')
     await link.click()
     await expectTargetBelowNavigation(page, 'research-priorities')

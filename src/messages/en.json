@@ -783,28 +783,28 @@
     },
     "opportunities": {
       "open-opportunities": {
-        "title": "Open opportunities",
-        "description": "Content to add: open offers with their category, intended applicants, location and deadline."
+        "title": "Job opportunities",
+        "description": "Check back for upcoming opportunities. You can prepare an unsolicited application to introduce your background and interests."
       },
       "find-opportunity": {
-        "title": "Find an opportunity",
-        "description": "Content to add: useful search criteria by domain, category, location and status."
+        "title": "Job opportunities",
+        "description": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition."
       },
       "working-at-iresen": {
-        "title": "Working at IRESEN",
-        "description": "Content to add: missions, professions and the scientific environment, supported by facts."
+        "title": "Why join us",
+        "description": "Joining IRESEN means contributing to applied research supporting the energy transition in Morocco and Africa."
       },
       "apply-respond": {
-        "title": "Apply or respond",
-        "description": "Content to add: criteria, required documents and official channels for each offer or call."
+        "title": "Your first steps in research.",
+        "description": "Applied research brings researchers, engineers, doctoral students and interns together around energy challenges. Introduce your studies, interests and the skills you want to develop: solar energy, green hydrogen, storage or sustainable technologies. Browse available positions or prepare an unsolicited application. Arrangements and duration depend on each opportunity."
       },
       "archives-results": {
-        "title": "Archives and public results",
-        "description": "Content to add: closed offers, their public documents and follow-up outcomes authorised for release."
+        "title": "Job opportunities",
+        "description": "Closed positions no longer accept applications."
       },
       "questions-unsolicited-applications": {
-        "title": "Questions and unsolicited applications",
-        "description": "Content to add: practical answers and application possibilities under procedures actually available."
+        "title": "Unsolicited application",
+        "description": "This form prepares an email in your email application. No data or files are sent or stored on this website. Attach your CV to the email before sending it."
       }
     },
     "contact": {
@@ -1641,5 +1641,101 @@
       "logoAlt": "iSmart logo in IRESEN colours.",
       "visit": "Visit the iSmart website"
     }
+  },
+  "Careers": {
+    "eyebrow": "Careers",
+    "titleStart": "Join the",
+    "titleAccent": "research",
+    "titleEnd": "that matters.",
+    "description": "Researchers, engineers, doctoral students and interns — build your career at the heart of the energy transition in Morocco and Africa.",
+    "offersAction": "Our job opportunities",
+    "environment": {
+      "eyebrow": "Our environment",
+      "title": "Why join us",
+      "description": "Joining IRESEN means contributing to applied research supporting the energy transition in Morocco and Africa.",
+      "features": [
+        {
+          "title": "Research with impact",
+          "description": "Contribute to scientific and technological projects addressing national and continental energy transition challenges."
+        },
+        {
+          "title": "Advanced equipment",
+          "description": "Explore solar energy, green hydrogen, storage and sustainable energy technologies within research platforms."
+        },
+        {
+          "title": "An open ecosystem",
+          "description": "Collaborate with multidisciplinary teams, universities, industry and international partners."
+        }
+      ],
+      "certified": "Certified environment",
+      "collaborators": "Collaborators",
+      "projects": "Collaborative projects"
+    },
+    "offers": {
+      "eyebrow": "Open positions",
+      "title": "Job opportunities",
+      "emptyTitle": "No opportunities are open at the moment",
+      "emptyDescription": "Check back for upcoming opportunities. You can prepare an unsolicited application to introduce your background and interests.",
+      "emptyAction": "Prepare an application",
+      "unavailable": "Opportunities are temporarily unavailable. Please try again later.",
+      "contract": "Contract",
+      "location": "Location",
+      "experience": "Experience",
+      "availability": "Availability",
+      "missions": "Main responsibilities",
+      "profile": "Candidate profile",
+      "apply": "Apply for this position",
+      "download": "Download the offer",
+      "archive": "Closed positions no longer accept applications.",
+      "reference": "Reference {reference}"
+    },
+    "internship": {
+      "eyebrow": "Internships",
+      "title": "Your first steps in research.",
+      "paragraphs": [
+        "Applied research brings researchers, engineers, doctoral students and interns together around energy challenges.",
+        "Introduce your studies, interests and the skills you want to develop: solar energy, green hydrogen, storage or sustainable technologies.",
+        "Browse available positions or prepare an unsolicited application. Arrangements and duration depend on each opportunity."
+      ],
+      "action": "Apply for an internship",
+      "duration": "Internships & apprenticeships",
+      "durationDescription": "Introduce your project and availability."
+    },
+    "form": {
+      "eyebrow": "We are interested in your profile",
+      "title": "Unsolicited application",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "firstNamePlaceholder": "Your first name",
+      "lastNamePlaceholder": "Your last name",
+      "emailPlaceholder": "you@email.com",
+      "phonePlaceholder": "+212…",
+      "employment": "Job application",
+      "internship": "Internship application",
+      "kind": "Application type",
+      "offer": "Position",
+      "spontaneous": "Unsolicited application",
+      "message": "Message",
+      "messagePlaceholder": "Your background, motivation and availability",
+      "cv": "CV (PDF, Word)",
+      "upload": "Choose your CV",
+      "maxSize": "5 MB maximum · local selection",
+      "fileError": "Choose a PDF, DOC or DOCX file no larger than 5 MB.",
+      "action": "Send my application",
+      "required": "Complete the required fields.",
+      "notice": "Information sent with your application is intended for its assessment. Its processing is governed by our <privacy>privacy policy</privacy> and the framework of Moroccan Law No. 09-08 on the protection of individuals with regard to the processing of personal data, under CNDP oversight.",
+      "prepared": "Your draft is ready. Open your email application, attach your CV and check the recipient before sending.",
+      "openEmail": "Open email draft",
+      "privacy": "Privacy",
+      "subject": "Application — {offer}"
+    },
+    "photos": {
+      "hero": "Reference photograph: a person working on a laptop in a workspace.",
+      "environment": "Reference photograph: a team talking around a work table.",
+      "internship": "Reference photograph: a group talking in a shared workspace."
+    },
+    "searchText": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition."
   }
 }

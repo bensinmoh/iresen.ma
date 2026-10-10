@@ -2887,3 +2887,35 @@ pass before merge. No deployment or website publication is authorized.
 
 No deployment, DNS or visibility change was performed. Remote CI and merge
 results are recorded by the task pull request and Git history.
+
+## Careers implementation — 2026-10-10
+
+- Implemented the Figma careers page, CMS collection/migration, native accordion
+  details, generated TXT downloads and the existing local email-draft workflow.
+- Retained the shared header gradient and harmonized SVG arrows/spacing. JOIN
+  uses uppercase italic bold Latin typography and the original logo silhouette,
+  fused with the following surface, left in Arabic and centered on mobile.
+- The owner validated the mockup and requested deletion of its four offers.
+  Local verification confirmed zero offers, zero versions and zero opportunity
+  search documents. Fixtures, seed commands, preview flag/banner/controls and
+  raster icon files were removed. The section retains its designed empty state and uses only
+  approved public/open records in the selected locale.
+- Icons are inline SVG with owner-requested white decorative strokes on approved
+  green/cyan tokens. Text labels carry their meaning. Section rhythm is reduced
+  to 40–64px; mobile hero/internship spacing is tightened.
+- Lint, type checking, formatting and 122 unit tests passed. Fresh disposable
+  database migration and three integration files passed (26 tests).
+- The complete final production Chrome suite passed (209 tests). Careers verification
+  covers FR/EN/AR at 320/390/768/1440px, 200% text, motion preferences, local CV
+  validation and temporary database-driven offers disappearing after closure.
+- Real FR desktop/Arabic mobile captures were inspected. Review artifacts remain
+  ignored in `.local/careers-review/`. No applicant data or CV is sent or stored.
+- Final corrections center the light italic privacy mention, apply the shared
+  two-rounded/two-sharp photograph corners, mirror the internship image in Arabic
+  and enlarge JOIN/logo on tablets. Rendered 768px FR and desktop AR captures
+  confirm the composition; the privacy paragraph's center matches its form.
+
+- CI exposed a timing failure in enlarged-text homepage anchor alignment (208 browser checks passed). The browser check now forces enlarged layout before awaiting its requested fonts and navigation measurement. The existing anchor/Carrières checks passed locally (25 browser tests). Failure diagnostics retain the original alignment tolerance and now include geometry.
+
+No deployment, DNS or visibility change was performed. Remote CI and merge
+status are recorded by the task PR and Git history.

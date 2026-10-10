@@ -6,6 +6,7 @@ import { pageIdFromPathname } from '@/lib/site'
 import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
 import { ContactPage } from '@/components/contact/ContactPage'
+import { CareersPage } from '@/components/careers/CareersPage'
 import { TransferPage } from '@/components/transfer/TransferPage'
 import { findPatent } from '@/lib/patents'
 import { EngagementPage } from '@/components/engagement/EngagementPage'
@@ -88,6 +89,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
     const topic = typeof subject === 'string' && isContactTopic(subject) ? subject : undefined
     return <ContactPage locale={locale} initialTopic={topic} initialPatent={findPatent(patent)} />
   }
+  if (pageId === 'opportunities') return <CareersPage locale={locale} />
   if (pageId === 'transfer') return <TransferPage locale={locale} />
   if (pageId === 'workWithUs') return <EngagementPage pageId={pageId} locale={locale} />
   return <EmptyPage pageId={pageId} locale={locale} />

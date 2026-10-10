@@ -1,5 +1,13 @@
 # IRESEN product context
 
+## Careers and opportunities — 2026-10-10
+
+The commissioned careers page and opportunity database are described in
+[scope](docs/careers.md). The owner has now requested and completed deletion of
+all four fictional offers. The list appears only for eligible published/open
+records and otherwise shows the designed empty state. No applicant-data storage or online submission
+receipt is asserted. Other deferred sections remain deferred.
+
 ## Current narrative — 2026-10-10
 
 The owner's new Phase I narrative supersedes the former institute-wide
