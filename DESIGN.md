@@ -13,6 +13,9 @@ physical signature corners remain; the quote/band reflow naturally in Arabic and
 at enlarged text sizes. See [scope and narrative](docs/narrative-alignment.md).
 Earlier centred-mission and design-deferral descriptions are historical.
 
+Opening and closing quotation marks use the same inherited size, weight and
+line height, after the owner identified the former enlarged opening glyph.
+
 The owner's later photographic-card reference places the three purposes above
 the domain headings, as light uppercase overlines (label size, weight 400,
 0.08em Latin tracking). Arabic retains natural case and tracking. This is the

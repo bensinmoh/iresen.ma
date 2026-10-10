@@ -2550,6 +2550,11 @@ lets the preference-change event settle before measuring sustained inactivity.
   axe scans passed; six desktop/mobile captures were produced and FR desktop
   was visually inspected. The visual H4 role remains introductory text so the
   domain headings preserve their coherent semantic outline.
+- After the owner identified unequal quotation marks, both inherited glyphs
+  were harmonized. FR/EN/AR browser measurements confirm identical font, size,
+  weight, line height and color for each opening/closing pair. FR was visually
+  inspected, and the owner's existing local preview was reloaded. Lint, build,
+  typecheck and all 19 mission/navigation browser tests passed again.
 - The three previously indexed repository DOCX originals retain their pinned
   hashes. The new DOCX was read locally; only derived editorial guidance was
   added. No original, private download, CMS schema or new route was imported.

@@ -55,11 +55,10 @@
 .quoteMark,
 .closeQuote {
   color: var(--color-blue);
-}
-
-.quoteMark {
-  font-size: 1.5em;
-  line-height: 1;
+  font-size: 1em;
+  font-weight: inherit;
+  letter-spacing: normal;
+  line-height: inherit;
 }
 
 .closeQuote {

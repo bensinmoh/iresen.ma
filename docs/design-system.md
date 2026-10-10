@@ -14,6 +14,9 @@ This is a local mission composition, with no new shared tokens or universal quot
 requirement. The former mission-design deferral is superseded. See
 [the narrative alignment](narrative-alignment.md).
 
+Both quotation marks inherit the statement's size, weight and line height;
+the opening mark is no longer enlarged independently of the closing mark.
+
 The three card purposes now precede their domain h3 as light uppercase overlines,
 matching the owner's later card screenshot: shared label size, regular 400 weight,
 0.08em Latin tracking and 1.5 line height. Keep Arabic natural. H4 here describes
