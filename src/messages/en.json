@@ -1580,7 +1580,7 @@
       "showAll": "Show all",
       "original": "Titles and applicant names are kept in their original language.",
       "note": "Not all recorded filings correspond to patents currently in force. Consult each record through PatentRegister.",
-      "updated": "Dataset as of 7 October 2026",
+      "updated": "Dataset as of the fourth quarter of 2026",
       "noJavaScript": "Without JavaScript, all 59 references are displayed. Filters require JavaScript."
     },
     "figures": {
@@ -1589,6 +1589,7 @@
       "filed": "filed patent references",
       "themes": "browsing themes",
       "date": "Dataset date",
+      "period": "Fourth quarter 2026",
       "note": "These indicators describe this catalogue; they do not measure licences, transfers or industrial adoption."
     },
     "doors": {

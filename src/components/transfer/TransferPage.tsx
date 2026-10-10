@@ -158,14 +158,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
               <div>
                 <dt>{t('figures.date')}</dt>
                 <dd>
-                  <time dateTime="2026-10-07">
-                    {new Intl.DateTimeFormat(locale, {
-                      day: 'numeric',
-                      month: 'short',
-                      year: 'numeric',
-                      timeZone: 'Africa/Casablanca',
-                    }).format(new Date('2026-10-07T12:00:00Z'))}
-                  </time>
+                  <span className={styles.period}>{t('figures.period')}</span>
                 </dd>
               </div>
             </dl>

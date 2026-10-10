@@ -2603,3 +2603,14 @@ See [delivered scope](collaboration-transfer-pages.md). The final-content search
 - The local search index was rebuilt with 177 localized patent destinations. Source workbook and omitted administrative fields remain outside the public index. CMS access/publication gates and the contact email-draft workflow remain.
 
 See [scope and provenance](valorisation-patents.md). No deployment, visibility change, final translation approval or patent legal-status verification is claimed. Scoped accessibility checks do not certify the whole site. The final-content search sanity check remains pending; remote CI and merge outcomes are recorded on the pull request.
+
+## Valorisation reference quarter — 2026-10-10
+
+The public reference date and catalogue footer now use the fourth quarter of
+2026 in FR/EN/AR. Formatting, lint, typecheck, 116 unit tests and production
+build passed. The seven existing patent browser journeys passed, including
+mobile/RTL, 200% text, axe and canonical search destinations. French desktop
+and Arabic mobile captures were inspected. The local search catalogue was
+synchronized after the wording change. Exact source provenance stays internal;
+no database/schema, route, deployment or visibility change is introduced.
+Remote CI and automatic merge are recorded on the corresponding pull request.

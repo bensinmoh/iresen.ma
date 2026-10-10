@@ -101,3 +101,8 @@ navy pathways section. Photographs illustrate the research environment; they
 do not identify an individual patent, project relationship or adoption outcome.
 The existing media search references are reused. No asset, dependency, brand
 token or institutional claim is added.
+
+The owner's date-display follow-up presents the reference period as the fourth
+quarter of 2026 in FR/EN/AR, both in the figures and the catalogue footer. The
+exact source date remains internal provenance; public search inherits the
+localized quarter from the same content catalogue. No 2024 source is asserted.
