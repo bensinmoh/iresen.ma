@@ -46,10 +46,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(listing.locator('#events')).toHaveCount(0)
     await expect(listing.locator('#follow-iresen')).toHaveCount(0)
     for (const target of ['fr', 'en', 'ar'] as const) {
-      await expect(page.locator(`.site-header .locale-selector a[hreflang="${target}"]`)).toHaveAttribute(
-        'href',
-        newsListingHref(target),
-      )
+      await expect(
+        page.locator(`.site-header .locale-selector a[hreflang="${target}"]`),
+      ).toHaveAttribute('href', newsListingHref(target))
     }
     const legacy = await page.goto(`/${locale}${pages.events.pathnames[locale]}`)
     expect(legacy?.status()).toBe(200)
