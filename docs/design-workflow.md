@@ -16,6 +16,12 @@ and implemented routes.
 
 ## Start with the task
 
+When developing content and layout for a new page, bring the retained
+[research institute benchmark](references/benchmark/README.md) into the initial
+discussion. Use the relevant editorial, evidence and composition lessons alongside
+the current narrative and approved identity. Its examples and imperatives remain
+recommendations; the anatomy is not a mandatory template or feature list.
+
 Read [AGENTS.md](../AGENTS.md), [PRODUCT.md](../PRODUCT.md) and [DESIGN.md](../DESIGN.md).
 Inspect current code, available references, content status and the visitor's task.
 Do not load every skill. Select the relevant guidance from the table below.

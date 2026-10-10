@@ -17,3 +17,6 @@ next-env.d.ts
 
 # Preserve owner-supplied strategy bytes and provenance.
 docs/references/strategy/proposition-consolidee-rd-dprdire.md
+
+# Preserve owner-supplied benchmark bytes and provenance.
+docs/references/benchmark/research-institute-website-benchmark-lessons.md

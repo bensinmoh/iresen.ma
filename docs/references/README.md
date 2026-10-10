@@ -57,3 +57,14 @@ for observed properties, inconsistencies and remaining limits, and
 This scoped review does not verify full-page rendering, prototype execution or
 dedicated RTL/tablet designs. Current owner-approved colors and supplied SVGs
 retain precedence over the source's historical palette.
+
+## Research institute benchmark — 2026-10-10
+
+The owner requested retention and future consultation of
+`research_institute_website_benchmark_lessons.md` for new page content and layout.
+The [benchmark index and IRESEN analysis](benchmark/README.md) preserve its original
+bytes and fingerprint, explain useful lessons and record the limits of its
+supplied evidence. It is a repository reference, not a website download, public
+search resource, approved specification or instruction to imitate the listed
+institutions. New-page work brings it into the initial discussion through
+AGENTS.md and the design workflow; current project authorities retain precedence.

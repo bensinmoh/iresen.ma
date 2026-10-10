@@ -2799,3 +2799,19 @@ uses the installed Chrome executable and a separate production server on port
 3015: rebuilding while reusing the pre-existing server exposed stale JavaScript
 chunks, resolved by starting this distinct server. Remote CI/merge is recorded
 on the focused PR.
+
+## Research institute benchmark reference — 2026-10-10
+
+Documentation-only retention and analysis of the owner's supplied benchmark.
+The original is preserved byte-for-byte under `docs/references/benchmark/`, with
+its size and SHA-256 recorded in the accompanying analysis. AGENTS.md, the design
+workflow and README route future new-page content/layout work to this reference.
+Its embedded instructions remain recommendations; no runtime, routes, locale
+catalogs, public media, CMS, search projection or design tokens change.
+
+Verification: source byte equality and fingerprint, changed-document local links
+and anchors, future-task routing, scoped Markdown formatting and Git whitespace.
+The source is excluded from formatting to preserve its bytes. Application/database
+and rendered checks are unnecessary for this documentation-only change; the
+linked benchmark websites were not independently audited. Current PR CI must
+pass before merge. No deployment or website publication is authorized.
