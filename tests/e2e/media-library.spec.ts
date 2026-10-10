@@ -42,6 +42,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     expect(centered!.height).toBeLessThanOrEqual(viewport.height * 0.8 + 2)
     expect(Math.abs(centered!.x + centered!.width / 2 - viewport.width / 2)).toBeLessThan(2)
     expect(Math.abs(centered!.y + centered!.height / 2 - viewport.height / 2)).toBeLessThan(2)
+    expect(await dialog.evaluate((el) => el.scrollHeight <= el.clientHeight)).toBe(true)
     await expect(dialog.locator('img')).toHaveJSProperty('complete', true)
     await expect
       .poll(() => dialog.locator('img').evaluate((img) => (img as HTMLImageElement).naturalWidth))
@@ -84,6 +85,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     })
     await page.setViewportSize({ width: 390, height: 844 })
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+    await library.locator('figure > a').first().click()
+    expect(
+      await dialog.evaluate(
+        (el) => el.scrollHeight <= el.clientHeight && el.scrollWidth <= el.clientWidth,
+      ),
+    ).toBe(true)
+    await page.keyboard.press('Escape')
     for (const video of await library.locator('video').all()) {
       await expect(video).toHaveAttribute('preload', 'none')
       await expect(video).not.toHaveAttribute('autoplay')
