@@ -2769,6 +2769,22 @@ backgrounds remain transparent over the softened, lower original gradient. Ignor
 are in `.cache/platforms-review/`. Formatting, whitespace and the mechanical
 design scan pass. Remote CI and merge status are recorded on the PR. No deployment.
 
+The owner's hover follow-ups remove the solid title backing, slow transforms to
+800ms and fades to 700ms, and request a lower-edge gradient from exactly 50%
+opacity to 0% at the title top. The gradient height follows the real localized
+title and card padding, with an explicit foreground stacking order during photo
+zoom; no translated gradient edge creates a seam. Lint, typecheck, production
+build and all seven scoped browser journeys pass again. FR/AR hover captures
+were inspected; the lower fade is visible, title backgrounds remain transparent
+and card geometry stays fixed. Other active patent/localization edits in the
+shared checkout are excluded from this focused commit and preserved.
+
+The owner's final readability adjustment strengthens the lower stop to 65%
+opacity, with a 45% stop at 55% of the fade and 0% at the title top. The title
+remains transparent and the gradient stays seamless and above the zoomed photo.
+Lint, production build and all seven browser journeys pass after this adjustment;
+the updated FR hover capture was inspected. No other scope change is included.
+
 ## Patent title localization — 2026-10-10
 
 All 59 titles now include FR/EN/AR; card language/direction, filtering, indexed
