@@ -136,3 +136,9 @@ the actual next step and manual CV attachment. This wording change does not
 create an applicant-processing backend or authorize deployment.
 The mention uses light italic type, centered text and automatic inline margins
 to center its constrained reading width beneath the full-width submit button.
+
+## Navigation and careers wording — 2026-10-11
+
+The owner replaces the hero JOIN wordmark with REJOINDRE in French and انضموا إلى in Arabic; English retains JOIN. French is enlarged and Arabic stays on one line, with responsive logo space.
+
+The Arabic follow-up reverses the physical order of the logo and join label.

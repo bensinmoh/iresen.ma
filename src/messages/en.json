@@ -150,6 +150,7 @@
     "description": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners."
   },
   "Navigation": {
+    "patents": "Patents",
     "label": "Main navigation",
     "menu": "Menu",
     "closeMenu": "Close",
@@ -452,6 +453,7 @@
     "backHome": "Return to home"
   },
   "Header": {
+    "patentsDescription": "Explore the technology portfolio and filed patents.",
     "contact": "Contact us",
     "searchPlaceholder": "Search the website…",
     "discover": "Discover more",
@@ -1948,6 +1950,7 @@
     }
   },
   "Careers": {
+    "joinLabel": "JOIN",
     "eyebrow": "Careers",
     "titleStart": "Join the",
     "titleAccent": "research",

@@ -3426,3 +3426,17 @@ council/team and Director General dialog captures were inspected at 1440px and
 390px. No new imagery, roles, biographies or routes are introduced. Original
 Latin source identities are retained; Arabic transcriptions remain editorial
 working text. Unrelated local tsconfig changes are preserved and excluded.
+
+## Resources patents shortcut and careers wordmark — 2026-10-11
+
+Lint, typecheck, 137 unit tests, final production build, focused formatting and
+whitespace checks pass. Three existing careers browser cases pass in local Chrome
+against a separately restarted production server: FR/EN/AR at 320, 390, 768 and
+1440px, 200% text reflow and axe. FR/AR desktop/mobile Resources shortcuts reach
+the existing localized transfer route at #adoption-initiatives. Inspected hero
+captures at 390/1440px confirm enlarged REJOINDRE, the single-line Arabic label
+and reversed Arabic logo/label order. Existing portfolio/patent and careers search
+references remain; no new resource or route is introduced. An initial browser run
+used a stale server and another hit Chrome network suspension; the final isolated
+run passed. Database integration and the full browser suite were not rerun locally
+for this navigation/text change. Unrelated tsconfig changes are excluded.

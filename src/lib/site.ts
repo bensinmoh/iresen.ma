@@ -168,6 +168,11 @@ export function pageHref(pageId: PageId, locale: Locale, anchor?: string): strin
   return anchor && isSupportedAnchor(pageId, anchor) ? `${href}#${anchor.replace(/^#/, '')}` : href
 }
 
+// Resources shortcut reuses the canonical transfer route and portfolio anchor.
+export function resourcePatentLink(locale: Locale): string {
+  return pageHref('transfer', locale, 'adoption-initiatives')
+}
+
 export function pageIdFromPathname(pathname: string): PageId | undefined {
   const normalized = pathname === '/' ? '/' : pathname.replace(/\/$/, '')
   return pageIds.find((id) => pages[id].path === normalized)

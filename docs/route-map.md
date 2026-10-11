@@ -99,3 +99,7 @@ or publication-gate change is authorized. See [scope](news-events.md).
 additional `theme-{id}` anchors. Its label is now Feuille de route R&D (and
 localized equivalents); the manuscript-driven page is developed. See
 [scope](roadmap.md).
+
+## Navigation and careers wording — 2026-10-11
+
+Resources now includes Brevets / Patents / براءات الاختراع, a desktop/mobile shortcut to the existing canonical transfer page at #adoption-initiatives. No new route is introduced; the portfolio and patent search references already exist.
