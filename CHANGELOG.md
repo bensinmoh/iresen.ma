@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-11 — Institute page editorial draft
+
+Draft the French institute page from the current narrative: mission statement,
+three detailed contribution domains and their cooperation enabler, proposed
+values, positioning, 2035 ambition and a fifteen-year report feature. Exclude
+governance and organisation from the body. Preserve canonical routes/legacy
+anchors in the implementation handoff; no runtime or public download changes.
+See [content and structure](docs/institute-content.md) and
+[verification](docs/institute-content-validation.md).
+
 ## 2026-10-11 — Homepage themes and sentence case
 
 - Rename the homepage section label and navigation to “Thématiques”, with matching EN/AR wording and discovery actions.
