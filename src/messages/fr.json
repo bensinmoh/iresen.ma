@@ -387,23 +387,23 @@
     "projects": {
       "featured-results": {
         "title": "Réalisations à découvrir",
-        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
+        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
       },
       "find-project": {
         "title": "Recherche libre",
-        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
+        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
       },
       "project-catalogue": {
         "title": "Catalogue de projets R&D&I",
-        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
+        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
       },
       "understanding-results": {
         "title": "Repères pour lire les résultats",
-        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
+        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
       },
       "related-capabilities": {
         "title": "Projets et capacités associées",
-        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
+        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
       }
     },
     "platforms": {
@@ -1970,9 +1970,8 @@
     "titleStart": "Le portefeuille vivant de l’innovation",
     "titleAccent": "marocaine.",
     "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
-    "demo": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle.",
     "query": "Recherche libre",
-    "placeholder": "Mot-clé, acronyme, technologie, coordinateur…",
+    "placeholder": "Mot-clé, acronyme, technologie…",
     "domain": "Domaine",
     "year": "Année",
     "status": "Statut",
@@ -1987,7 +1986,6 @@
     "budget": "Budget global",
     "launch": "Année de lancement",
     "months": "{count} mois",
-    "fictional": "Projet fictif",
     "pagination": "Pages du catalogue",
     "page": "Page {number}",
     "previous": "Page précédente",
@@ -2015,6 +2013,18 @@
       "buildings": "Petit habitat expérimental avec panneaux solaires.",
       "photovoltaic": "Composants de cellules photovoltaïques.",
       "wind": "Petite éolienne sous un ciel bleu."
-    }
+    },
+    "details": "Voir le projet {name}",
+    "viewDetails": "Découvrir le projet",
+    "close": "Fermer le détail du projet",
+    "overview": "Présentation du projet",
+    "hostingPlatform": "Plateforme d’accueil",
+    "coordinator": "Contact",
+    "consortium": "Consortium",
+    "objectives": "Objectifs scientifiques",
+    "contactCoordinator": "Contacter le coordinateur",
+    "downloadNote": "Télécharger la note du projet (PDF)",
+    "contactSubject": "Projet {name} — demande de contact",
+    "noteTitle": "Note du projet"
   }
 }

@@ -1,3 +1,4 @@
+import { projectNoteReferences } from '@/lib/project-notes'
 import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
@@ -89,6 +90,16 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  // Register note metadata while enforcing the source's current-public eligibility.
+  // Owner-requested demonstration notes are downloadable previews, never institutional results.
+  ...projectNoteReferences
+    .filter((reference) => reference.searchEligible)
+    .map((reference) => ({
+      id: reference.id,
+      url: reference.url,
+      type: reference.type,
+      text: { [reference.locale]: { title: reference.title, description: reference.description } },
+    })),
   ...(['hero', 'thermal', 'grids', 'cooling', 'buildings', 'photovoltaic', 'wind'] as const).map(
     (id) => ({
       id: `projects-${id}`,
@@ -99,7 +110,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
           locale,
           {
             title: `${messages[locale].Pages.projects} — ${messages[locale].Projects.photos[id]}`,
-            description: `${messages[locale].Projects.photos[id]} ${messages[locale].Projects.demo}`,
+            description: messages[locale].Projects.photos[id],
           },
         ]),
       ) as PublicAssetReference['text'],
@@ -717,8 +728,13 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'projects')
         body.push(
           catalog.Projects.description,
-          catalog.Projects.demo,
           ...Object.values(catalog.Projects.domains),
+          catalog.Projects.hostingPlatform,
+          catalog.Projects.coordinator,
+          catalog.Projects.consortium,
+          catalog.Projects.objectives,
+          catalog.Projects.contactCoordinator,
+          catalog.Projects.downloadNote,
         )
       if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({

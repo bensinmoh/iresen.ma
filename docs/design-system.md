@@ -1580,3 +1580,20 @@ existing filter and menu transitions retain ownership. Reveals run once, never
 hide server content, settle on focus and cancel for reduced motion. Native anchors
 keep their destinations/history and work without JavaScript. See
 [scope and behavior](site-motion.md).
+
+## Project interaction refinement — 2026-10-11
+
+Project keyword composites and native selects use `--radius-action` with physical
+top-left/bottom-right rounded corners. Fixed thumbnail frames contain a 6% image
+zoom; card elevation and arrow feedback retain shared tokens. Filter replacements
+use bounded 300ms arrivals, and the native detail dialog enters from the physical
+right with the shared 420ms arrival / 220ms exit. Reduced motion removes travel;
+scroll position, keyboard focus and Arabic shaping stay stable. This is scoped to
+the commissioned projects catalogue, with no new animation dependency.
+
+Project detail follow-up: a sticky compact title/status row precedes the image,
+presentation, two-column definition grid, coordinator contact, wrapped consortium
+chips and SVG-check objectives. Contact/PDF actions wrap at the bottom, keeping
+shared action corners, stable modal scrolling and mobile reading order. Source
+portrait/telephone values are optional; the current central-contact entry uses
+a vector coordination icon. See [project scope](projects.md).

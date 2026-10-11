@@ -570,23 +570,23 @@
     "projects": {
       "featured-results": {
         "title": "Featured achievements",
-        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
+        "description": "Explore research, development and innovation projects by domain, programme and stage."
       },
       "find-project": {
         "title": "Free search",
-        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
+        "description": "Explore research, development and innovation projects by domain, programme and stage."
       },
       "project-catalogue": {
         "title": "R&D&I project catalogue",
-        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
+        "description": "Explore research, development and innovation projects by domain, programme and stage."
       },
       "understanding-results": {
         "title": "Understanding results",
-        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
+        "description": "Explore research, development and innovation projects by domain, programme and stage."
       },
       "related-capabilities": {
         "title": "Projects and related capabilities",
-        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
+        "description": "Explore research, development and innovation projects by domain, programme and stage."
       }
     },
     "platforms": {
@@ -1967,9 +1967,8 @@
     "titleStart": "The living portfolio of",
     "titleAccent": "Moroccan innovation.",
     "description": "Explore research, development and innovation projects by domain, programme and stage.",
-    "demo": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references.",
     "query": "Free search",
-    "placeholder": "Keyword, acronym, technology, coordinator…",
+    "placeholder": "Keyword, acronym, technology…",
     "domain": "Domain",
     "year": "Year",
     "status": "Status",
@@ -1984,7 +1983,6 @@
     "budget": "Total budget",
     "launch": "Launch year",
     "months": "{count} months",
-    "fictional": "Fictional project",
     "pagination": "Catalogue pages",
     "page": "Page {number}",
     "previous": "Previous page",
@@ -2012,6 +2010,18 @@
       "buildings": "Small experimental dwelling with solar panels.",
       "photovoltaic": "Photovoltaic cell components.",
       "wind": "Small wind turbine under a blue sky."
-    }
+    },
+    "details": "View project {name}",
+    "viewDetails": "Explore project",
+    "close": "Close project details",
+    "overview": "Project overview",
+    "hostingPlatform": "Hosting platform",
+    "coordinator": "Contact",
+    "consortium": "Consortium",
+    "objectives": "Scientific objectives",
+    "contactCoordinator": "Contact the coordinator",
+    "downloadNote": "Download the project note (PDF)",
+    "contactSubject": "Project {name} — contact request",
+    "noteTitle": "Project note"
   }
 }
