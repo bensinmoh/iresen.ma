@@ -1,0 +1,36 @@
+/* Native anchors keep their history, focus and interrupted-scroll behavior. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus must reach the new control immediately, even during responsive reflow. */
+  html:has(#main-content :focus-visible, .site-footer :focus-visible) {
+    scroll-behavior: auto;
+  }
+
+  .button {
+    transition:
+      background-color var(--duration-feedback),
+      border-color var(--duration-feedback),
+      color var(--duration-feedback),
+      translate var(--duration-fast) var(--ease-arrival);
+  }
+
+  .button:active {
+    translate: 0 1px;
+  }
+
+  .section-navigation a,
+  .footer-links a {
+    transition:
+      color var(--duration-feedback),
+      text-decoration-color var(--duration-feedback);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

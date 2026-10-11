@@ -301,3 +301,5 @@ The official portrait now has a dedicated light biography viewer with selectable
 Publications & Reports now uses the 1,199-record retained database, a corpus-only
 GET search, title-derived topic filters, source years, all authors and DOI links.
 Reports share the media library renderer. See [scope](docs/publications-page.md).
+
+Shared public navigation/reveal behavior: [site motion](docs/site-motion.md).

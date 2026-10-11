@@ -52,6 +52,9 @@
   --glass-reflection: rgb(255 255 255 / 6.5%);
   --glass-reflection-duration: 1000ms;
   --duration-fast: 150ms;
+  --duration-feedback: 180ms;
+  --duration-reveal: 420ms;
+  --ease-arrival: cubic-bezier(0.16, 1, 0.3, 1);
   --hero-title-size: clamp(2rem, 4.2vw, 4.75rem);
   --color-hero-shade: rgb(5 17 29 / 78%);
   --z-header: 10;

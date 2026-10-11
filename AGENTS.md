@@ -263,3 +263,11 @@ Owner responsive follow-up: mobile/tablet search field and button are separate;
 frequent searches keep the most common themes fitting two compact lines. Key
 figures use the existing native horizontal figure-rail pattern at these widths,
 with all four figures, keyboard access and Arabic direction preserved.
+
+## Public-site motion — 2026-10-11
+
+The owner commissioned site-wide first-scroll reveals and native smooth section
+anchors. See [shared behavior](docs/site-motion.md). Preserve visible server
+content, once-per-visit motion, reduced-motion/focus cancellation and stable
+section/sticky/rail geometry. Component-owned publication/patent/filter motion
+retains ownership; do not add duplicate reveals or animation dependencies.

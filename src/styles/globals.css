@@ -4,6 +4,7 @@
 @import './search.css';
 @import './published-content.css';
 @import './home-navigation.css';
+@import './motion.css';
 
 @theme inline {
   --font-sans: var(--font-body);
