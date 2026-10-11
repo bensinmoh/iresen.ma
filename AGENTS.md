@@ -433,3 +433,14 @@ names in Arabic script in the Arabic page, including councils, team/DG, portrait
 labels and biography dialogs. Preserve French/English identities and profile
 links; Arabic transcriptions remain working editorial text. Search descriptions
 use localized names while retaining original Latin discovery aliases.
+
+## Laboratory and expert network — 2026-10-11
+
+The owner commissioned the canonical network page after PR #96 completion,
+excluding section 6. Five existing anchors and 14 owner-supplied laboratory
+records are implemented, with local query/topic filtering and localized search
+references. Only the supplied Settat scientific contact is named; no sample
+Alumni figures, people, stories or testimonials are adopted. GEP’s city remains
+unspecified. FR/EN/AR are working copy; existing generated workshop imagery is
+illustrative. The original Morocco vector remains decorative. See
+[scope](docs/laboratories-experts-network.md). No deployment.

@@ -1,3 +1,4 @@
+import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import {
   governanceBoard,
   governanceScientists,
@@ -777,6 +778,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.events),
         )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
+      if (pageId === 'network') body.push(...engagementSearchText(catalog.Network))
       if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
       if (pageId === 'governance')
         body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
@@ -873,6 +875,26 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         url: pageHref(pageId, locale),
         type: 'page',
       })
+      if (pageId === 'network') {
+        for (const { id, topic } of networkLaboratories) {
+          const lab = catalog.Network.labs[id]
+          documents.push({
+            id: `section:network:laboratory-${id}:${locale}`,
+            locale,
+            title: `${lab.title} — ${lab.institution}`,
+            body: [
+              lab.title,
+              lab.institution,
+              'city' in lab ? lab.city : '',
+              catalog.Network.directory.topics[topic],
+              ...engagementSearchText(messages.fr.Network.labs[id]),
+              id === 'power-electronics' ? catalog.Network.directory.name : '',
+            ].join(' '),
+            url: pageHref('network', locale, laboratoryAnchor(id)),
+            type: 'section',
+          })
+        }
+      }
       const sectionCopy = catalog.PageSections[pageId] as Record<
         string,
         { title: string; description: string }
@@ -891,6 +913,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               entry.id === 'leadership-organisation'
             )
               body.push(...governanceTeam.map((id) => messages.fr.Governance.team[id].name))
+          }
+          if (pageId === 'network') {
+            const networkCopy = {
+              'competence-domains': catalog.Network.domains,
+              'intervention-modes': catalog.Network.modes,
+              'scientific-network': { ...catalog.Network.directory, labs: catalog.Network.labs },
+              'skills-training': catalog.Network.skills,
+              'expertise-in-action': catalog.Network.examples,
+            }
+            body.push(...engagementSearchText(networkCopy[entry.id as keyof typeof networkCopy]))
           }
           if (pageId === 'institute') {
             const instituteCopy = {

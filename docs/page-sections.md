@@ -61,7 +61,7 @@ layout within their page.
 | `programmes`      | P05, current positioning               | Programmes et collaborations → Appels à projets → Participer à un appel → Du dépôt aux suites du projet → Résultats de la recherche soutenue → Questions pratiques                                        |
 | `projects`        | P06                                    | Réalisations à découvrir → Rechercher un projet → Catalogue des projets → Repères pour lire les résultats → Projets et capacités associées                                                                |
 | `platforms`       | P07                                    | Choisir selon son besoin → Le réseau de plateformes → Capacités et disponibilité → De l’essai à la démonstration → Accéder aux plateformes → Projets et ressources                                        |
-| `network`         | P08                                    | Domaines de compétence → Modes d’intervention → Le réseau scientifique → Compétences et formation → Expertises en action → Mobiliser une expertise                                                        |
+| `network`         | P08                                    | Domaines de compétence → Modes d’intervention → Le réseau scientifique → Compétences et formation → Expertises en action                                                                                  |
 | `transfer`        | P09                                    | Les résultats à valoriser → De la recherche à l’utilisation → Les voies de transfert → Propriété intellectuelle et confidentialité → Résultats repris et initiatives → Construire un transfert            |
 | `workWithUs`      | P10                                    | Choisir un parcours → Les apports selon votre organisation → Modalités de collaboration → Du besoin au projet commun → Collaborations et références → Préparer le premier échange                         |
 | `news`            | P11                                    | À la une → Rechercher une actualité → Toutes les actualités → Rendez-vous et ressources associés → Suivre IRESEN                                                                                          |
@@ -192,3 +192,7 @@ anchor. Additional registered children cover positioning, three detailed mission
 cooperation, values and history. Shared locale-anchor switching and localized public
 search projection cover them. Both report actions use owner-requested `#` pending
 its PDF; no separate governance body or example figures are adopted.
+
+The 2026-10-11 network request commissions its first five sections and withdraws
+`request-expertise` from page and search. Fourteen supplied laboratory records
+have stable child destinations. See [scope](laboratories-experts-network.md).

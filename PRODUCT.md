@@ -1,5 +1,9 @@
 # IRESEN product context
 
+## Laboratory and expert network — 2026-10-11
+
+The owner commissioned the canonical network page after the other chat’s merge, excluding section 6. Five modules explain competence areas, contribution modes, the supplied 14-laboratory network, research-based skills and technical specialities. The directory filters by query and topic; it adopts only the supplied Settat scientific contact. No Alumni sample people, figures or testimonials are used. See [scope](docs/laboratories-experts-network.md). FR/EN/AR remain working copy; no deployment.
+
 ## Institute — 2026-10-11
 
 The [Institute page](docs/institute-page.md) is implemented from the supplied manuscript after Governance completion: three detailed missions and their shared cooperation enabler, positioning, five working values, ambition, eight historical milestones with two supporting entries, and the report feature. The report’s reading/download actions use the owner-requested `#` pending the PDF. EN/AR remain working adaptations. No governance sample content or new figures are introduced.

@@ -1,3 +1,4 @@
+import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import patentRecords from '@/data/patents.json' with { type: 'json' }
 import mediaPhotoRecords from '@/data/media-photos.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
@@ -184,6 +185,8 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   return (
     normalized === 'main-content' ||
     normalized === 'page-sections' ||
+    (pageId === 'network' &&
+      networkLaboratories.some(({ id }) => normalized === laboratoryAnchor(id))) ||
     (pageId === 'media' && mediaPhotoRecords.some((photo) => normalized === `photo-${photo.id}`)) ||
     (pageId === 'news' &&
       [

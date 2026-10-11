@@ -102,7 +102,6 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'scientific-network' },
     { id: 'skills-training' },
     { id: 'expertise-in-action' },
-    { id: 'request-expertise' },
   ],
   transfer: [
     { id: 'results-to-transfer' },

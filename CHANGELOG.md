@@ -1,5 +1,9 @@
 # Change log
 
+## Laboratory and expert network — 2026-10-11
+
+Developed the canonical network page in FR/EN/AR, with five sections and a searchable directory of 14 supplied laboratories. Added stable localized laboratory search references and withdrew section 6. Preserved source affiliations, missing GEP locality, the single supplied scientific contact and existing imagery provenance. No deployment.
+
 ## 2026-10-11 — Institute page
 
 Owner follow-up: the timeline scrolls horizontally at every width; add the supplied book mockup’s first-page cover and localized media search reference. The source PDF stays excluded.

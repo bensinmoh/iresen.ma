@@ -1,5 +1,9 @@
 # IRESEN website
 
+## Laboratory and expert network — 2026-10-11
+
+The canonical network page now contains five developed sections and a searchable 14-laboratory directory from the owner’s supplied list. Section 6 is withdrawn. FR/EN/AR working copy, responsive reading, stable laboratory anchors and localized search references are included. See [scope](docs/laboratories-experts-network.md). No deployment.
+
 ## Institut — 2026-10-11
 
 The canonical Institute page now implements the owner’s manuscript with detailed missions, native disclosures, values, 2035 ambition and the full historical timeline. FR/EN/AR search references and legacy anchors are retained. Both fifteen-year report actions use owner-requested `#` placeholders pending the public PDF. See [scope](docs/institute-page.md). No deployment.
