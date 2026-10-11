@@ -162,7 +162,7 @@
   color: var(--color-energy-cyan);
 }
 .science .reading p,
-.scientists article > div > p {
+.scientistLink > div > p {
   color: var(--color-footer-muted);
 }
 .scientists {
@@ -306,13 +306,13 @@
   background: var(--color-navy);
   color: var(--color-white);
 }
-.person h4 {
+.person strong {
   font-size: 1.3rem;
   margin: 0 0 var(--space-2);
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
-.person p {
+.person > span {
   margin: 0;
   font-size: var(--font-size-label);
   line-height: 1.7;
@@ -411,11 +411,14 @@
     gap: var(--space-4);
   }
 }
+.scientistLink {
+  display: block;
+}
 @media (max-width: 40rem) {
   .scientists {
     grid-template-columns: 1fr;
   }
-  .scientists article {
+  .scientistLink {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -425,7 +428,7 @@
   .scientists .chair {
     padding: var(--space-4);
   }
-  .scientists article > div {
+  .scientistLink > div {
     flex: 1 1 10rem;
   }
   .scientists img {
@@ -468,7 +471,7 @@
   flex-wrap: wrap;
 }
 .management > div,
-.scientists article > div {
+.scientistLink > div {
   min-inline-size: 0;
   overflow-wrap: anywhere;
 }
@@ -484,4 +487,154 @@
 .memberLink:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
+}
+
+.scientistLink {
+  color: inherit;
+  text-decoration: none;
+}
+.scientistLink:focus-visible,
+.personTrigger:focus-visible,
+.managementTrigger:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
+}
+.scientistLink:hover h4 {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.profileHint {
+  display: inline-block;
+  margin-block-start: var(--space-4);
+  color: var(--color-white);
+  font-size: var(--font-size-label);
+}
+.personTrigger,
+.managementTrigger {
+  display: block;
+  inline-size: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+.personTrigger > span,
+.person strong,
+.person > span,
+.managementPerson > span,
+.managementPerson strong {
+  display: block;
+}
+.personTrigger:hover strong,
+.managementTrigger:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.managementTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.managementPhoto {
+  position: relative;
+  inline-size: 220px;
+  block-size: 280px;
+  max-inline-size: 100%;
+}
+.managementPhoto img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.managementPerson {
+  flex: 1 1 12rem;
+  overflow-wrap: anywhere;
+}
+.managementPerson strong {
+  font-size: 1.75rem;
+  margin-block-end: var(--space-3);
+}
+.biographyDialog {
+  margin: auto;
+  inline-size: min(58rem, calc(100% - 2rem));
+  max-block-size: calc(100dvh - 2rem);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-signature);
+  background: var(--color-white);
+  color: var(--color-text);
+  overflow: auto;
+  overflow-wrap: anywhere;
+  overscroll-behavior: contain;
+}
+.biographyDialog::backdrop {
+  background: rgb(10 32 55 / 65%);
+}
+.biographyClose {
+  position: sticky;
+  inset-block-start: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
+  margin-block: var(--space-3);
+  margin-inline-start: auto;
+  margin-inline-end: var(--space-3);
+  background: var(--color-white);
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.biographyLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+.biographyPhoto {
+  position: relative;
+  min-block-size: 28rem;
+  background: var(--color-action-surface);
+}
+.biographyPhoto img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.biographyCopy {
+  min-inline-size: 0;
+  padding: var(--space-8);
+}
+.biographyCopy h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.35;
+  margin-block: 0 var(--space-3);
+}
+.biographyCopy p {
+  line-height: 1.75;
+}
+.biographyRole {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+.biographyLinkedin {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+@media (max-width: 48rem) {
+  .biographyLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .biographyPhoto {
+    min-block-size: 19rem;
+  }
+  .biographyCopy {
+    padding: var(--space-6);
+  }
 }

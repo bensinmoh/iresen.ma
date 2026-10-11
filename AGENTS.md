@@ -346,3 +346,9 @@ Six portraits are retouched transparent cutouts; Imane is AI-assisted upscaling
 from 200px. Reuse the DG portrait and original marks, preserve media provenance
 and localized search references. EN/AR remain working copy; no deployment.
 See [scope](docs/governance.md).
+
+Owner governance follow-up: scientific cards link to matched LinkedIn profiles;
+colleague/DG portraits open native biography dialogs. Use the existing Samir
+biography. Other short summaries derive from public professional profile content
+and owner-confirmed roles; preserve profile provenance and exclude personal posts.
+Laila has no confidently matched public profile yet; do not invent a URL or career.

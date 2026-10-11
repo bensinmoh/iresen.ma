@@ -8,11 +8,14 @@ import {
   governanceDepartments,
   governanceBoardLogo,
   governanceBoardSites,
+  governanceScientistLinkedin,
+  governanceTeamLinkedin,
 } from '@/lib/governance'
-import { samirCutout } from '@/lib/samir-biography'
+import { samirCutout, samirBiographies } from '@/lib/samir-biography'
 import { PageHero } from '@/components/hero/PageHero'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
+import { TeamBiography } from './TeamBiography'
 import styles from './GovernancePage.module.css'
 
 export async function GovernancePage({ locale }: { locale: Locale }) {
@@ -96,20 +99,23 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                   id={`scientific-member-${id}`}
                   className={i === 0 ? styles.chair : undefined}
                 >
-                  <Image
-                    src={`/images/governance/${id}.webp`}
-                    alt={t('portrait', { name: t(`scientists.${id}.name`) })}
-                    width={220}
-                    height={220}
-                    sizes="(max-width: 40rem) 112px, 160px"
-                  />
-                  <div>
-                    {i === 0 && <p className={styles.badge}>{t('president')}</p>}
-                    <h4>
-                      <bdi>{t(`scientists.${id}.name`)}</bdi>
-                    </h4>
-                    <p>{t(`scientists.${id}.role`)}</p>
-                  </div>
+                  <a href={governanceScientistLinkedin[id]} className={styles.scientistLink}>
+                    <Image
+                      src={`/images/governance/${id}.webp`}
+                      alt={t('portrait', { name: t(`scientists.${id}.name`) })}
+                      width={220}
+                      height={220}
+                      sizes="(max-width: 40rem) 112px, 160px"
+                    />
+                    <div>
+                      {i === 0 && <p className={styles.badge}>{t('president')}</p>}
+                      <h4>
+                        <bdi>{t(`scientists.${id}.name`)}</bdi>
+                      </h4>
+                      <p>{t(`scientists.${id}.role`)}</p>
+                      <span className={styles.profileHint}>LinkedIn ↗</span>
+                    </div>
+                  </a>
                 </article>
               ))}
             </div>
@@ -148,19 +154,19 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
               <p className={styles.reading}>{t('organisation.description')}</p>
             </header>
             <div className={styles.management}>
-              <Image
-                src={samirCutout}
-                alt={t('portrait', { name: 'Samir RACHIDI' })}
-                width={220}
-                height={280}
-                sizes="220px"
+              <TeamBiography
+                id="team-member-samir"
+                management
+                name="Samir RACHIDI"
+                role={t('directorGeneral')}
+                photo={samirCutout}
+                portraitAlt={t('portrait', { name: 'Samir RACHIDI' })}
+                paragraphs={samirBiographies[locale].paragraphs}
+                linkedin={governanceTeamLinkedin.samir}
+                biographyLabel={t('biography.label')}
+                linkedinLabel={t('biography.linkedin')}
+                closeLabel={t('biography.close')}
               />
-              <div>
-                <p className={styles.eyebrow}>{t('directorGeneral')}</p>
-                <h3>
-                  <bdi>Samir RACHIDI</bdi>
-                </h3>
-              </div>
             </div>
             <div className={styles.poles}>
               {[0, 1, 2].map((i) => (
@@ -186,22 +192,18 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                 {departments.map((person, i) => (
                   <article key={i} className={styles.department}>
                     {person && (
-                      <>
-                        <div className={styles.teamPhoto}>
-                          <Image
-                            src={`/images/governance/${person}-portrait.webp`}
-                            alt={t('portrait', { name: t(`team.${person}.name`) })}
-                            fill
-                            sizes="(max-width: 48rem) 90vw, 30vw"
-                          />
-                        </div>
-                        <div className={styles.person}>
-                          <h4>
-                            <bdi>{t(`team.${person}.name`)}</bdi>
-                          </h4>
-                          <p>{t(`team.${person}.role`)}</p>
-                        </div>
-                      </>
+                      <TeamBiography
+                        id={`team-member-${person}`}
+                        name={t(`team.${person}.name`)}
+                        role={t(`team.${person}.role`)}
+                        photo={`/images/governance/${person}-portrait.webp`}
+                        portraitAlt={t('portrait', { name: t(`team.${person}.name`) })}
+                        paragraphs={[t(`team.${person}.biography`)]}
+                        linkedin={governanceTeamLinkedin[person] ?? undefined}
+                        biographyLabel={t('biography.label')}
+                        linkedinLabel={t('biography.linkedin')}
+                        closeLabel={t('biography.close')}
+                      />
                     )}
                     <div className={styles.departmentCopy}>
                       <h4>{t(`organisation.poles.${pole}.directions.${i}.title`)}</h4>

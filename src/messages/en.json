@@ -504,7 +504,7 @@
       },
       "department-responsibilities": {
         "title": "Department responsibilities",
-        "description": "Development division Developing capabilities, cooperation and institutional steering. Platform Development and Structuring Projects Department Leading the creation and development of infrastructure and capabilities needed for research and experimentation. Partnerships and Innovation Marketing Department Managing communication, developing partnerships and cooperation, and supporting intellectual property, valorisation and innovation marketing. Strategy and Organisation Department Supporting the definition and implementation of strategy, structuring management tools and improving the Institute’s operations. Scientific division Structuring programmes and mobilising scientific expertise. R&D&I Programmes and Expert Network Department Organising programmes, scientific domains and the expert network’s contributions to delivery. Scientific Department Providing a cross-cutting view of the scientific direction, coherence and quality of activities. Support division Providing the resources and services teams need to act. Administrative and Financial Department Managing finance, administration and human resources, as well as training, social activities, procurement, general services and legal support. IT and Information Systems Department Supporting the operation and development of the Institute’s information systems and digital tools. Soukaina BOUDOUDOU DPRDIRE Director Ayoub HIRT DPPS Director Mouhcine BENMEZIANE DPARMI Director Laila TYDRINI DAF Director Imane MOUBACHIR Strategy & Organisation Jamaleddine FOUHAM IT & Information Systems"
+        "description": "Development division Developing capabilities, cooperation and institutional steering. Platform Development and Structuring Projects Department Leading the creation and development of infrastructure and capabilities needed for research and experimentation. Partnerships and Innovation Marketing Department Managing communication, developing partnerships and cooperation, and supporting intellectual property, valorisation and innovation marketing. Strategy and Organisation Department Supporting the definition and implementation of strategy, structuring management tools and improving the Institute’s operations. Scientific division Structuring programmes and mobilising scientific expertise. R&D&I Programmes and Expert Network Department Organising programmes, scientific domains and the expert network’s contributions to delivery. Scientific Department Providing a cross-cutting view of the scientific direction, coherence and quality of activities. Support division Providing the resources and services teams need to act. Administrative and Financial Department Managing finance, administration and human resources, as well as training, social activities, procurement, general services and legal support. IT and Information Systems Department Supporting the operation and development of the Institute’s information systems and digital tools. Soukaina BOUDOUDOU DPRDIRE Director Ayoub HIRT DPPS Director Mouhcine BENMEZIANE DPARMI Director Laila TYDRINI DAF Director Imane MOUBACHIR Strategy & Organisation Jamaleddine FOUHAM IT & Information Systems Soukaina BOUDOUDOU is a doctor and engineer in electrical energy. Her work addresses energy management, hybrid electrical systems and microgrids, with a focus on storage, energy efficiency and renewable integration. She serves at IRESEN as DPRDIRE Director. Ayoub HIRT is DPPS Director at IRESEN. His work at the institute includes green chemistry, bioenergy and agritech. His professional contributions address green hydrogen, Power-to-X, and the role of research and skills in developing these sectors. Mouhcine BENMEZIANE is DPARMI Director at IRESEN. His professional work centres on cooperation, partnerships and innovation ecosystems for the energy transition. His contributions address international exchanges, green technologies, hydrogen and Power-to-X. Laila TYDRINI is DAF Director at IRESEN. Her role covers the institute’s administrative and financial activities. Imane MOUBACHIR works at IRESEN in Strat & Orga. Her work concerns the institute’s strategy and organisation. Jamaleddine FOUHAM works at IRESEN in IT and IS, covering information technology and information systems."
       },
       "science-platforms": {
         "title": "An organisation mobilised around IRESEN’s contributions",
@@ -2455,28 +2455,39 @@
     "team": {
       "soukaina": {
         "name": "Soukaina BOUDOUDOU",
-        "role": "DPRDIRE Director"
+        "role": "DPRDIRE Director",
+        "biography": "Soukaina BOUDOUDOU is a doctor and engineer in electrical energy. Her work addresses energy management, hybrid electrical systems and microgrids, with a focus on storage, energy efficiency and renewable integration. She serves at IRESEN as DPRDIRE Director."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "DPPS Director"
+        "role": "DPPS Director",
+        "biography": "Ayoub HIRT is DPPS Director at IRESEN. His work at the institute includes green chemistry, bioenergy and agritech. His professional contributions address green hydrogen, Power-to-X, and the role of research and skills in developing these sectors."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
-        "role": "DPARMI Director"
+        "role": "DPARMI Director",
+        "biography": "Mouhcine BENMEZIANE is DPARMI Director at IRESEN. His professional work centres on cooperation, partnerships and innovation ecosystems for the energy transition. His contributions address international exchanges, green technologies, hydrogen and Power-to-X."
       },
       "laila": {
         "name": "Laila TYDRINI",
-        "role": "DAF Director"
+        "role": "DAF Director",
+        "biography": "Laila TYDRINI is DAF Director at IRESEN. Her role covers the institute’s administrative and financial activities."
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Strategy & Organisation"
+        "role": "Strategy & Organisation",
+        "biography": "Imane MOUBACHIR works at IRESEN in Strat & Orga. Her work concerns the institute’s strategy and organisation."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "IT & Information Systems"
+        "role": "IT & Information Systems",
+        "biography": "Jamaleddine FOUHAM works at IRESEN in IT and IS, covering information technology and information systems."
       }
+    },
+    "biography": {
+      "label": "Biography",
+      "linkedin": "View LinkedIn profile",
+      "close": "Close biography"
     }
   }
 }

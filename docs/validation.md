@@ -3307,3 +3307,13 @@ French desktop, English tablet and Arabic mobile with all images loaded.
 
 Working EN/AR copy and scientific affiliations supplied in the owner’s reference
 remain subject to editorial review. This change does not deploy the site.
+
+Governance interaction follow-up extends browser checks to scientific LinkedIn
+destinations and all seven biography dialogs, including Escape/backdrop closing,
+focus restoration, body scrolling restoration, mobile/200% text and scoped axe.
+
+The completed follow-up passes lint, typecheck, all 136 unit checks, production
+build and all 16 scoped browser checks. Rendered biography review covers French
+desktop and Arabic mobile with no horizontal overflow. Explicit dialog centering
+preserves backdrop dismissal after text resizing in all three languages. Search
+rebuild synchronizes seven currently eligible CMS records and the static catalog.

@@ -80,3 +80,28 @@ Owner follow-up: member cards use a uniform white surface, with no white inset
 on blue. The complete card is a native accessible link to the corresponding
 official institutional website; destinations are centralized in `governance.ts`
 and recorded in the asset manifest. Original vector geometry is unchanged.
+
+## LinkedIn and team biographies — owner follow-up
+
+All eight scientific cards link to matching professional LinkedIn profiles.
+The six colleague portraits and DG open native modal dialogs with their photo,
+current owner-confirmed title, professional biography and a LinkedIn action
+when a confidently matched profile exists. Escape, the close control and the
+backdrop dismiss the dialog, restoring focus; content scrolls within the modal.
+Samir’s existing reviewed localized biography is reused in full.
+
+The owner expressly authorized finding profiles and deriving biographies from
+professional public profile content. Soukaina, Ayoub and Mouhcine have short
+source-based professional summaries; Imane and Jamaleddine retain restrained
+role summaries because public profile career details are limited. Laila has no
+confidently matched publicly discoverable LinkedIn profile: her biography only
+states the owner-confirmed DAF function and no profile URL is invented.
+Public profile posts about personal matters are excluded. Source spellings do
+not override the owner-selected display names or current roles.
+
+Profile sources are recorded in the asset manifest. Soukaina’s profile is linked
+from her [MENALINKS professional entry](https://www.menalinks.org/resources/mena-wise-database/clmisjw9d8df8q7q).
+Ayoub and Mouhcine profile identity is corroborated by the original IRESEN team
+links; Mouhcine’s current public slug supersedes the legacy numeric slug.
+Each dialog trigger exposes a stable `team-member-*` anchor. Localized biographies
+extend governance page/department and portrait search descriptions.

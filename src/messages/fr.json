@@ -321,7 +321,7 @@
       },
       "department-responsibilities": {
         "title": "Les responsabilités des directions",
-        "description": "Pôle Développement Développer les capacités, les coopérations et le pilotage de l’Institut. Direction Développement des Plateformes et Projets Structurants Conduire la création et le développement des infrastructures et des capacités nécessaires à la recherche et à l’expérimentation. Direction Partenariats et Marketing de l’Innovation Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation. Direction Stratégie et Organisation Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut. Pôle Scientifique Structurer les programmes et mobiliser l’expertise scientifique. Direction des Programmes R&D&I et du Réseau d’Experts Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre. Direction scientifique Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités. Pôle Support Apporter les ressources et les services nécessaires à l’action des équipes. Direction Administrative et Financière Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique. Direction IT et SI Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut. Soukaina BOUDOUDOU Directrice DPRDIRE Ayoub HIRT Directeur DPPS Mouhcine BENMEZIANE Directeur DPARMI Laila TYDRINI Directrice DAF Imane MOUBACHIR Strat & Orga Jamaleddine FOUHAM IT et SI"
+        "description": "Pôle Développement Développer les capacités, les coopérations et le pilotage de l’Institut. Direction Développement des Plateformes et Projets Structurants Conduire la création et le développement des infrastructures et des capacités nécessaires à la recherche et à l’expérimentation. Direction Partenariats et Marketing de l’Innovation Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation. Direction Stratégie et Organisation Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut. Pôle Scientifique Structurer les programmes et mobiliser l’expertise scientifique. Direction des Programmes R&D&I et du Réseau d’Experts Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre. Direction scientifique Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités. Pôle Support Apporter les ressources et les services nécessaires à l’action des équipes. Direction Administrative et Financière Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique. Direction IT et SI Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut. Soukaina BOUDOUDOU Directrice DPRDIRE Ayoub HIRT Directeur DPPS Mouhcine BENMEZIANE Directeur DPARMI Laila TYDRINI Directrice DAF Imane MOUBACHIR Strat & Orga Jamaleddine FOUHAM IT et SI Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU travaille sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux. Ses travaux s’inscrivent dans les enjeux de stockage, d’efficacité énergétique et d’intégration des énergies renouvelables. Elle exerce à l’IRESEN comme directrice DPRDIRE. Ayoub HIRT est directeur DPPS à l’IRESEN. Son parcours au sein de l’institut comprend des activités en chimie verte, bioénergie et agritech. Ses interventions professionnelles portent notamment sur l’hydrogène vert, le Power-to-X et le rôle de la recherche et des compétences dans le développement de ces filières. Mouhcine BENMEZIANE est directeur DPARMI à l’IRESEN. Son parcours professionnel s’inscrit dans la coopération, les partenariats et les écosystèmes d’innovation pour la transition énergétique. Ses prises de parole abordent notamment les échanges internationaux, les technologies vertes, l’hydrogène et le Power-to-X. Laila TYDRINI est directrice DAF à l’IRESEN. Elle intervient dans le périmètre administratif et financier de l’institut. Imane MOUBACHIR exerce à l’IRESEN dans le périmètre Strat & Orga. Son activité porte sur la stratégie et l’organisation de l’institut. Jamaleddine FOUHAM intervient à l’IRESEN dans le périmètre IT et SI, consacré à l’informatique et aux systèmes d’information."
       },
       "science-platforms": {
         "title": "Une organisation mobilisée autour des contributions d’IRESEN",
@@ -2458,28 +2458,39 @@
     "team": {
       "soukaina": {
         "name": "Soukaina BOUDOUDOU",
-        "role": "Directrice DPRDIRE"
+        "role": "Directrice DPRDIRE",
+        "biography": "Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU travaille sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux. Ses travaux s’inscrivent dans les enjeux de stockage, d’efficacité énergétique et d’intégration des énergies renouvelables. Elle exerce à l’IRESEN comme directrice DPRDIRE."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "Directeur DPPS"
+        "role": "Directeur DPPS",
+        "biography": "Ayoub HIRT est directeur DPPS à l’IRESEN. Son parcours au sein de l’institut comprend des activités en chimie verte, bioénergie et agritech. Ses interventions professionnelles portent notamment sur l’hydrogène vert, le Power-to-X et le rôle de la recherche et des compétences dans le développement de ces filières."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
-        "role": "Directeur DPARMI"
+        "role": "Directeur DPARMI",
+        "biography": "Mouhcine BENMEZIANE est directeur DPARMI à l’IRESEN. Son parcours professionnel s’inscrit dans la coopération, les partenariats et les écosystèmes d’innovation pour la transition énergétique. Ses prises de parole abordent notamment les échanges internationaux, les technologies vertes, l’hydrogène et le Power-to-X."
       },
       "laila": {
         "name": "Laila TYDRINI",
-        "role": "Directrice DAF"
+        "role": "Directrice DAF",
+        "biography": "Laila TYDRINI est directrice DAF à l’IRESEN. Elle intervient dans le périmètre administratif et financier de l’institut."
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Strat & Orga"
+        "role": "Strat & Orga",
+        "biography": "Imane MOUBACHIR exerce à l’IRESEN dans le périmètre Strat & Orga. Son activité porte sur la stratégie et l’organisation de l’institut."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "IT et SI"
+        "role": "IT et SI",
+        "biography": "Jamaleddine FOUHAM intervient à l’IRESEN dans le périmètre IT et SI, consacré à l’informatique et aux systèmes d’information."
       }
+    },
+    "biography": {
+      "label": "Biographie",
+      "linkedin": "Voir le profil LinkedIn",
+      "close": "Fermer la biographie"
     }
   }
 }

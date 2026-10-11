@@ -155,7 +155,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Governance.team[id].name,
-          description: `${messages[locale].Governance.teamTitle}. ${messages[locale].Governance.team[id].role}`,
+          description: `${messages[locale].Governance.teamTitle}. ${messages[locale].Governance.team[id].role}. ${messages[locale].Governance.team[id].biography}`,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -763,7 +763,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.events),
         )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
-      if (pageId === 'governance') body.push(...engagementSearchText(catalog.Governance))
+      if (pageId === 'governance')
+        body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
       if (pageId === 'priorities') body.push(...engagementSearchText(catalog.Roadmap))
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')

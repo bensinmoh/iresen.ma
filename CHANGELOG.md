@@ -980,3 +980,8 @@ are displayed.
   function labels without director titles for strategy/organisation and IT/SI.
 - Preserve legacy anchors and register localized page, section and original-media
   search references; retain no-JavaScript reading and shared motion behavior.
+
+Governance follow-up: scientific cards link to matching LinkedIn profiles;
+team/DG portraits open accessible native biography dialogs with verified profile
+links. Samir’s reviewed biography is reused; other summaries use public professional
+information and owner-confirmed roles. Laila’s unavailable profile is not invented.
