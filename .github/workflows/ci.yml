@@ -48,3 +48,7 @@ jobs:
       - run: pnpm build
       - run: node scripts/run.mjs playwright install --with-deps chromium
       - run: pnpm test:e2e
+      - name: Verify isolated CMS interface review
+        run: pnpm test:e2e tests/e2e/cms-preview.spec.ts
+        env:
+          CMS_INTERFACE_PREVIEW_ENABLED: 'true'

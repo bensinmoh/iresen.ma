@@ -1,5 +1,9 @@
 # IRESEN product context
 
+## CMS interface review — 2026-10-11
+
+The current owner request commissions the administration frontend only, across all modules with locally testable journeys. The French interface edits FR/EN/AR review text in browser storage, without CMS/database connections or public projection changes. Review examples remain local and careers starts empty. See [scope](docs/cms-interface-preview.md). Real authentication, integrations and database connection await the subsequent phase.
+
 ## Research platforms — 2026-10-11
 
 The owner commissions the canonical platforms page: complementary network introduction, GEP, GSBP, GEPMCI and GreenH2A, 13 infrastructure summaries and one network referral. Manuscript copy overrides screenshot samples. Explicit EN/AR drafts await editorial review; missing official destinations are omitted. GreenH2A retains development/3D wording. Routes, six legacy anchors and publication gates remain. See [scope](docs/research-platforms.md).

@@ -1,5 +1,9 @@
 # IRESEN website
 
+## CMS interface review — 2026-10-11
+
+The owner commissioned a frontend-only CMS review tool at `/cms-preview` on the development server. All modules expose local review journeys; browser storage and examples are isolated from Payload and public content. Production requires an explicit local-review opt-in and otherwise returns 404. See [scope and limits](docs/cms-interface-preview.md). No deployment.
+
 ## Research platforms — 2026-10-11
 
 The canonical platforms page now develops the supplied manuscript into four photographic chapters, 13 infrastructure summaries and a laboratory-network referral. FR/EN/AR working copy, preserved legacy anchors, chapter links and search references are included. GreenH2A remains in development; three official external destinations await selection. See [scope](docs/research-platforms.md). No deployment.
@@ -364,3 +368,5 @@ synchronized list with unchanged laboratory anchors and localized search results
 ## Programmes R&D&I — 2026-10-11
 
 The canonical programmes page now follows the supplied manuscript with the approach, expected benefits, six usual project stages, three historical schemes and the no-current-call working state. Human research/product photography adapts Figma; AquaSolar is owner-selected. FR/EN/AR, stable anchors and public search references are included. The owner’s follow-up adds the Calls CMS collection and full detail pages, with approved PDF terms, actual form URLs, calendars, budgets and archives. No actual call records are seeded or deployed. See [page scope](docs/programmes-rdi.md) and [CMS workflow](docs/calls-for-projects.md).
+
+Site-wide image provenance (2026-10-11): all served raster assets are categorized in `src/data/image-provenance.json`; documented AI-generated illustrations and their copies/crops are excluded from public search in FR/EN/AR. See [scope](docs/media-library.md#site-wide-image-provenance-and-ai-search-exclusion--2026-10-11).

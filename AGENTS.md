@@ -1,5 +1,15 @@
 # IRESEN coding entrypoint
 
+## CMS interface review — 2026-10-11
+
+The owner commissions the administration frontend only and selects all modules
+with locally testable journeys. `/cms-preview` uses isolated browser review state,
+without connecting its actions to Payload, databases, public pages or integrations.
+Keep careers examples absent and real corpora/personal records outside this state.
+Production defaults to 404; explicit opt-in is for local review only. No deployment
+or authenticated administration is delivered. See [scope](docs/cms-interface-preview.md).
+Database connection, real publication and integrations await the next phase.
+
 ## Publications ingestion — 2026-10-10
 
 The owner initially selected 1,181 records from `IRESEN_2026.xlsx`, then approved
@@ -472,3 +482,15 @@ reference. The current 24 demonstration records remain unlinked and excluded
 from institutional search. A future verified project CMS import should map this
 reference to the Calls relationship and derive the reverse list, without
 inventing attributions. See [the relationship](docs/calls-for-projects.md#relationship-with-selected-rdi-projects).
+
+## Site-wide AI image provenance — 2026-10-11
+
+The owner commissions categorization of all site photos/illustrations, beyond
+only the twenty gallery images. `src/data/image-provenance.json` records served
+raster paths, fingerprints, categories and evidence. Keep documented AI-generated
+scenes, crops and reused copies out of public search and previews in all locales;
+retain their asset registrations for provenance and their existing page uses.
+AI-assisted retouches of supplied subjects are distinct and retain existing
+search eligibility. Supplied/Figma source records do not certify non-AI origin.
+Update the inventory with future public raster additions; do not infer generation
+from appearance. See [scope](docs/media-library.md#site-wide-image-provenance-and-ai-search-exclusion--2026-10-11).
