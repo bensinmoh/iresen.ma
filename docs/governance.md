@@ -49,8 +49,8 @@ the repository. The existing DG portrait is reused without replacement.
 retouch method and prompts. The owner’s eleven original organisation SVGs and
 original Moroccan coat of arms replace the earlier retrieved marks without
 geometry or color changes. Each ministry pairs the shared coat of arms with its
-localized text title. The Nareva homepage checked on 2026-10-11 serves WebP
-marks, not a discoverable vector; its original IRESEN-sourced SVG is retained.
+localized text title. The owner subsequently supplied the new Nareva vector mark,
+which replaces the earlier IRESEN-sourced SVG byte-for-byte from that supplied original.
 All UI action icons remain shared vectors.
 Scientific source PNGs are preserved with WebP display derivatives.
 
@@ -105,3 +105,9 @@ Ayoub and Mouhcine profile identity is corroborated by the original IRESEN team
 links; Mouhcine’s current public slug supersedes the legacy numeric slug.
 Each dialog trigger exposes a stable `team-member-*` anchor. Localized biographies
 extend governance page/department and portrait search descriptions.
+
+The owner subsequently supplied Mouhcine’s full three-paragraph English biography.
+It supersedes the profile-derived summary, with spacing restored and working FR/AR
+translations. The previously commissioned DPARMI card title remains; the biography
+retains the department wording supplied by its author. Search descriptions use
+this updated text.

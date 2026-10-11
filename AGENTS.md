@@ -352,3 +352,6 @@ colleague/DG portraits open native biography dialogs. Use the existing Samir
 biography. Other short summaries derive from public professional profile content
 and owner-confirmed roles; preserve profile provenance and exclude personal posts.
 Laila has no confidently matched public profile yet; do not invent a URL or career.
+
+The owner later supplied Mouhcine’s full biography, superseding his profile-derived
+summary, and the new original Nareva SVG. Preserve both supplied sources.

@@ -198,7 +198,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                         role={t(`team.${person}.role`)}
                         photo={`/images/governance/${person}-portrait.webp`}
                         portraitAlt={t('portrait', { name: t(`team.${person}.name`) })}
-                        paragraphs={[t(`team.${person}.biography`)]}
+                        paragraphs={t(`team.${person}.biography`).split('\n\n')}
                         linkedin={governanceTeamLinkedin[person] ?? undefined}
                         biographyLabel={t('biography.label')}
                         linkedinLabel={t('biography.linkedin')}

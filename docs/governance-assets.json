@@ -5,11 +5,11 @@
   "assets": [
     {
       "id": "nareva",
-      "source": "https://iresen.org/wp-content/themes/labostica/images/institut/nareva.svg",
+      "source": "Owner-supplied original: Nareva Nouveau.svg",
       "file": "nareva.svg",
       "kind": "member-logo",
-      "sha256": "3b67d9572419ee641294d24a9336cc9bf117be77819a7192b103a60216de5323",
-      "bytes": 1833,
+      "sha256": "dfc575329f0bf3686021d91c5fcc1ca1ffd79f91189882933a034e6068e27edd",
+      "bytes": 7747,
       "path": "/images/governance/nareva.svg"
     },
     {
@@ -274,6 +274,6 @@
       "samir": "https://www.linkedin.com/in/samir-rachidi-05129028/"
     },
     "checked": "2026-10-11",
-    "method": "Public LinkedIn profile search; IRESEN member links; Soukaina profile linked by MENALINKS. Biographies are conservative summaries of professional profile content and owner-confirmed current roles. No personal posts, contact details or unrelated interests used. Laila: no confidently matched public profile found; title-only biography, no invented link."
+    "method": "Public LinkedIn profile search; IRESEN member links; Soukaina profile linked by MENALINKS. Biographies are conservative summaries of professional profile content and owner-confirmed current roles. No personal posts, contact details or unrelated interests used. Laila: no confidently matched public profile found; title-only biography, no invented link. Mouhcine: owner-supplied three-paragraph English biography replaces the profile summary; FR/AR are working editorial translations."
   }
 }

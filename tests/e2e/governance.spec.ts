@@ -139,7 +139,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       await expect(dialog).toBeVisible()
       await expect(dialog.locator('h2')).not.toBeEmpty()
       await expect(dialog.locator('img')).toHaveCount(1)
-      await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 7 : 3)
+      await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 7 : id === 'mouhcine' ? 5 : 3)
       if (url) await expect(dialog.locator('a')).toHaveAttribute('href', url)
       else await expect(dialog.locator('a')).toHaveCount(0)
       if (id === 'samir') await dialog.getByRole('button').click()
