@@ -23,6 +23,9 @@ describe('isolated CMS interface workflows', () => {
     workspace = saveEntry(workspace, entry, 'fr', 'publisher', '2026-10-11T10:03:00Z', 'validated')
     entry = workspace.entries.find((e) => e.id === 'test')!
     workspace = saveEntry(workspace, entry, 'fr', 'publisher', '2026-10-11T10:04:00Z', 'published')
+    entry = workspace.entries.find((e) => e.id === 'test')!
+    const unchangedSave = saveEntry(workspace, entry, 'fr', 'editor', '2026-10-11T10:04:30Z')
+    expect(unchangedSave.entries.find((e) => e.id === 'test')?.variants.fr.status).toBe('draft')
     entry = structuredClone(workspace.entries.find((e) => e.id === 'test')!)
     entry.variants.fr.title = 'Titre modifié'
     workspace = saveEntry(workspace, entry, 'fr', 'editor', '2026-10-11T10:05:00Z')

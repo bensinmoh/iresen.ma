@@ -479,7 +479,7 @@ export function saveEntry(
   const effectiveFrom = changed || sharedChanged ? 'draft' : from
   if (nextStatus && !canTransition(role, effectiveFrom, nextStatus))
     throw new Error('Enregistrer les modifications puis soumettre à nouveau cette révision.')
-  saved.variants[language].status = nextStatus ?? (changed || sharedChanged ? 'draft' : from)
+  saved.variants[language].status = nextStatus ?? 'draft'
   saved.updatedAt = at
   saved.history = [
     {

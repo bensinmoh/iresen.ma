@@ -247,6 +247,12 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
   }
   function open(entry: Entry) {
     protect(() => {
+      if (entry.module !== view) {
+        setQuery('')
+        setStatus('all')
+        setPage(1)
+        setSelection([])
+      }
       setFilePreview(null)
       setDraft(structuredClone(entry))
       setBaseline(JSON.stringify(entry))
