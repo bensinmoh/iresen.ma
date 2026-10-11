@@ -402,3 +402,11 @@ The owner selected `contact@iresen.ma` until per-project emails are provided.
 72 localized PDF notes are generated from the demonstration database and served
 as validated attachments, outside public assets and institutional search. See
 [detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
+
+## Feuille de route R&D — 2026-10-11
+
+The owner commissions the canonical priorities page from the supplied manuscript,
+which overrides Figma sample copy. Seven themes and 28 complete axes describe
+research directions and intended benefits. EN/AR remain working editorial copy.
+Conceptual generated illustrations do not establish installed facilities or
+achieved results. See [scope](docs/roadmap.md).

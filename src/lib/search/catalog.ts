@@ -12,6 +12,7 @@ import {
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
 import { engagementSearchText } from '@/lib/engagement'
+import { roadmapMedia, roadmapMediaPath, roadmapDrawingPath, roadmapHeroPath } from '@/lib/roadmap'
 
 import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
@@ -90,6 +91,43 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'roadmap-hero-board',
+    url: roadmapHeroPath,
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const copy = messages[locale].Roadmap
+        return [
+          locale,
+          {
+            title: copy.title,
+            description: `${copy.heroAlt} ${copy.imageNote} ${roadmapMedia.map((id) => copy.chapters[id].title).join('. ')}`,
+          },
+        ]
+      }),
+    ) as PublicAssetReference['text'],
+  },
+  ...roadmapMedia.flatMap((id) =>
+    ['original', 'drawing'].map((layer) => ({
+      id: `roadmap-visual-${id}${layer === 'drawing' ? '-drawing' : ''}`,
+      url: layer === 'drawing' ? roadmapDrawingPath(id) : roadmapMediaPath(id),
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => {
+          const copy = messages[locale].Roadmap
+          const chapter = copy.chapters[id as keyof typeof copy.chapters]
+          return [
+            locale,
+            {
+              title: chapter ? chapter.title : copy.title,
+              description: `${chapter?.imageAlt ?? copy.heroAlt} ${copy.imageNote} ${chapter?.description ?? copy.description}`,
+            },
+          ]
+        }),
+      ) as PublicAssetReference['text'],
+    })),
+  ),
   // Register note metadata while enforcing the source's current-public eligibility.
   // Owner-requested demonstration notes are downloadable previews, never institutional results.
   ...[...projectNoteReferences, ...projectConsortiumLogoReferences]
@@ -656,6 +694,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.events),
         )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
+      if (pageId === 'priorities') body.push(...engagementSearchText(catalog.Roadmap))
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')
         body.push(

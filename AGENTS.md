@@ -311,3 +311,26 @@ Details show names/affiliations; “Contacter le prof” contains the provisiona
 contact@iresen.ma mailto, while the localized PDF includes the email and affiliation.
 The owner replaces Domaine with Thématique and requests the exact Apex Leaf shape
 in the glass hero. Preserve its original SVG; see [scope](docs/projects.md).
+
+## Feuille de route R&D — 2026-10-11
+
+The owner commissioned the existing priorities page, then supplied a manuscript
+that overrides Figma sample content and images. Seven consolidated themes, 28
+complete axes and intended benefits are implemented with native disclosures and
+layered technical illustrations: blue-grey on light, white on dark, faint color
+underpainting. Preserve the six legacy anchors, FR/EN/AR working editorial copy,
+component-owned first-arrival motion, reduced-motion/no-JavaScript reading and
+all section/media search references. Private recording/manuscript are not public
+assets or repository imports. See [scope](docs/roadmap.md). No deployment.
+
+Owner follow-ups remove the common-requirements paragraph and theme navigation
+rail in every locale, tighten the introduction/first-theme spacing, bottom-align
+hero text and replace its artwork with a perspective drafting board combining
+all seven themes. Preserve withdrawal from search and the legacy anchor targets.
+
+The owner also requests discreet framed intended-benefits blocks, using shared
+signature corners and light/dark surface roles.
+
+Axis icons are subject-specific vector SVGs on the trailing side of each title
+row, filling its available height. They remain fixed when native details open
+and replace the axis chevrons; preserve mirrored Arabic reading order.

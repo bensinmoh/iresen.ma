@@ -1,0 +1,252 @@
+[
+  {
+    "id": "renewables",
+    "layer": "original",
+    "path": "/images/roadmap/renewables.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "8fd6b3858f3134a5d7d6a920e9bdd995938df41f27809c8acd3fb9358a51aa6d",
+    "bytes": 182882,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "renewable electricity systems: a photovoltaic solar panel, small white wind turbine, a silver utility battery cabinet and a tidy blue converter, connected as one coherent energy cluster",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "renewables",
+    "layer": "drawing",
+    "path": "/images/roadmap/renewables-drawing.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "5b4601734e03e356e2edadf50f4e00d3bd1284c293bf23992679820977e91b1b",
+    "bytes": 218956,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "renewable electricity systems: a photovoltaic solar panel, small white wind turbine, a silver utility battery cabinet and a tidy blue converter, connected as one coherent energy cluster",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "hydrogen",
+    "layer": "original",
+    "path": "/images/roadmap/hydrogen.webp",
+    "width": 1280,
+    "height": 720,
+    "sha256": "50e6f387d22e25d53347dd9744ae8d9e1b6605795af2a39bf51f5c7731501292",
+    "bytes": 190620,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1672,
+      "height": 941
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "renewable hydrogen value chain: blue and stainless electrolyser stacks, a compact white cylindrical hydrogen vessel and blue water pipe connections, neatly arranged",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "hydrogen",
+    "layer": "drawing",
+    "path": "/images/roadmap/hydrogen-drawing.webp",
+    "width": 1280,
+    "height": 720,
+    "sha256": "dbabff4395eec2b855ce7992d5dff36f736d97ab9e78fcd3a873b3177a206ecc",
+    "bytes": 296572,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1672,
+      "height": 941
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "renewable hydrogen value chain: blue and stainless electrolyser stacks, a compact white cylindrical hydrogen vessel and blue water pipe connections, neatly arranged",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "industry",
+    "layer": "original",
+    "path": "/images/roadmap/industry.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "5b4fa05f941d7c007afe006fc7307cb9b6832ca149d85f236c4e4836bc6262d4",
+    "bytes": 218382,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "low-carbon industrial heat processes: silver heat exchanger, thick insulated curved piping, a compact industrial electric heat pump and metallic material sample blocks",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "industry",
+    "layer": "drawing",
+    "path": "/images/roadmap/industry-drawing.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "e5577186ba05260c0b9711818ff128bd5f6a6b4f8bb0fe543f02b971e5d0ccff",
+    "bytes": 272120,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "low-carbon industrial heat processes: silver heat exchanger, thick insulated curved piping, a compact industrial electric heat pump and metallic material sample blocks",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "water",
+    "layer": "original",
+    "path": "/images/roadmap/water.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "a0bb708b78642c30be0c8de5d4905a3d1140ebb739e45b406fe4c017d72d0ad6",
+    "bytes": 328828,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "water-energy-agriculture: solar panels elevated over small realistic crops, a compact blue irrigation pump, precise drip lines and clean water reservoir, coherent integrated system",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "water",
+    "layer": "drawing",
+    "path": "/images/roadmap/water-drawing.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "74be78c79678bc7a18dde9e218eb3b6f9f954c47358a307e0300cef8690d70b5",
+    "bytes": 394750,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "water-energy-agriculture: solar panels elevated over small realistic crops, a compact blue irrigation pump, precise drip lines and clean water reservoir, coherent integrated system",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "circular",
+    "layer": "original",
+    "path": "/images/roadmap/circular.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "8a6da26c77e692994925b655226d2cddc017c02b7e5dc7f65c4d1eeb58831960",
+    "bytes": 263672,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "bioenergy and circular resources: a green rounded anaerobic digestion vessel, a neat pile of agricultural residue, reusable battery modules and recoverable metallic material samples",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "circular",
+    "layer": "drawing",
+    "path": "/images/roadmap/circular-drawing.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "786a203c07642c3b3b10a0b8c45e3b9cbe6c9a1e1c7a899024d71c680b581bc4",
+    "bytes": 333760,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "bioenergy and circular resources: a green rounded anaerobic digestion vessel, a neat pile of agricultural residue, reusable battery modules and recoverable metallic material samples",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "buildings",
+    "layer": "original",
+    "path": "/images/roadmap/buildings.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "70c8f5a0688cc07796bbfb77b0d9e782109fe7919f5ff2d2d3831baee1584ac6",
+    "bytes": 250310,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "bioclimatic building and resilient territories: contemporary low-rise Moroccan climate courtyard building, white thermal envelope, wood sun shades, photovoltaic roof and small planted courtyard",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "buildings",
+    "layer": "drawing",
+    "path": "/images/roadmap/buildings-drawing.webp",
+    "width": 1280,
+    "height": 853,
+    "sha256": "8c8a873a39889de595fbb34a9a2b57da6a7578c668f1c6f024dc60915e55a22f",
+    "bytes": 305906,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1536,
+      "height": 1024
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "bioclimatic building and resilient territories: contemporary low-rise Moroccan climate courtyard building, white thermal envelope, wood sun shades, photovoltaic roof and small planted courtyard",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "mobility",
+    "layer": "original",
+    "path": "/images/roadmap/mobility.webp",
+    "width": 1280,
+    "height": 640,
+    "sha256": "84ac42c714b7c01eb9beed61d3190e6d14c9dda0ce915a8d6c77af1c40133b95",
+    "bytes": 203002,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1774,
+      "height": 887
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "low-carbon mobility infrastructure: an elegant white electric city bus, two blue smart charging pedestals, solar canopy and silver battery module, coherent transport cluster",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "mobility",
+    "layer": "drawing",
+    "path": "/images/roadmap/mobility-drawing.webp",
+    "width": 1280,
+    "height": 640,
+    "sha256": "ae35d9ec388f89e5cb72c3daf939fa4032940286d026218319f7e72e73942fd9",
+    "bytes": 264886,
+    "provenance": "AI-generated conceptual illustration and technical-drawing variant; no claim of an installed IRESEN facility.",
+    "generatedCanvas": {
+      "width": 1774,
+      "height": 887
+    },
+    "generatedUsing": "built-in image_gen",
+    "subjectPrompt": "low-carbon mobility infrastructure: an elegant white electric city bus, two blue smart charging pedestals, solar canopy and silver battery module, coherent transport cluster",
+    "drawingPrompt": "Preserve exact composition, canvas and geometry. Overlay fine blue-grey engineering contours and internal mechanical edges, minimal construction lines, mostly transparent interiors and a very small watercolor tint. No text, labels, dimensions, arrows, backdrop or invented equipment."
+  },
+  {
+    "id": "hero-board",
+    "layer": "hero",
+    "path": "/images/roadmap/hero-board.webp",
+    "width": 1672,
+    "height": 941,
+    "sha256": "d0859385452db53661234e258e08a5bdd30f79f74c91468bed2f3c1bda049631",
+    "bytes": 323784,
+    "generatedUsing": "built-in image_gen",
+    "prompt": "Create a cinematic wide website hero photograph, 16:9 composition. A professional engineering drafting board / planche de travail seen from an elevated three-quarter perspective, tilted diagonally away from the viewer. The board occupies the right 70% and recedes toward the upper right, set on a very dark institutional navy (#12345A) workbench. On the deep navy-blue board, one coherent detailed technical engineering diagram combines SEVEN research themes in elegant thin WHITE and pale grey technical strokes, with only the faintest translucent blue-grey watercolor wash within some illustrated equipment. Photographic board and drafting tools, precise vector-like diagram printed on the board: photovoltaic panels with wind turbine and battery cabinet; electrolyser and hydrogen tank; industrial heat exchanger and curved piping; agrivoltaic greenhouse with irrigation reservoir and crops; anaerobic digestion tank with agricultural residue recovery; Moroccan bioclimatic courtyard building and solar roof; electric bus, charging station and solar canopy. These seven small technical vignettes are connected by subtle schematic lines as a complete interdisciplinary research ecosystem, not floating icons or seven boxed cards. Accurate convincing engineering line drawing with internal structural edges. Restrained technical sophistication, realistic matte material, slight perspective depth, soft directional daylight. Keep lower-left 45% of image dark, quiet, uncluttered for overlaid website text. Put most diagram detail upper-right. A clean drafting ruler and pencil at the board edge, very subtle. No text, no labels, no letters, no numbers, no words, no logos, no humans. Full opaque photographic background, no transparency. No neon, no glow, no sci-fi holograms. High-end institutional editorial photographic rendering.",
+    "provenance": "AI-generated conceptual drafting-board scene showing all seven research themes; no installed-facility or real-workshop attribution."
+  }
+]

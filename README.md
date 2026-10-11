@@ -330,3 +330,10 @@ The owner selected `contact@iresen.ma` until per-project emails are provided.
 72 localized PDF notes are generated from the demonstration database and served
 as validated attachments, outside public assets and institutional search. See
 [detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
+
+## Feuille de route R&D — 2026-10-11
+
+The existing priorities page now contains the owner-supplied manuscript, seven
+research themes, full axis disclosures and layered technical illustrations.
+Native first-arrival motion, mobile reading and FR/EN/AR search references are
+implemented. See [scope](docs/roadmap.md). No deployment is authorized.

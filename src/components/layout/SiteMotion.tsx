@@ -67,6 +67,7 @@ export function SiteMotion() {
           if (
             preference.matches ||
             target.contains(document.activeElement) ||
+            target.closest('[data-motion-owned]') ||
             target.closest('[id^="publication-"], [id^="patent-"], [id^="project-"]') ||
             target.getAnimations().length
           )

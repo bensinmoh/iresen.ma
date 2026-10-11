@@ -957,3 +957,15 @@ are displayed.
 - Align the compact name/italic affiliation with the 56px portrait/icon on desktop and mobile.
 - Replace the raster hero leaf with a rendering based on the untouched original Apex Leaf silhouette. Preserve fixture provenance and institutional search exclusion.
 - Lint, typecheck, 134 unit tests, 28 integration tests, production build and all 259 local browser tests passed. No deployment.
+
+## 2026-10-11 — Feuille de route R&D
+
+- Implement the canonical priorities page using the owner manuscript: seven
+  research themes, 28 complete axes and intended benefits in FR/EN/AR.
+- Add conceptual technical-drawing layers over faint originals, alternating
+  light/dark chapters and native first-arrival transitions.
+- Preserve six legacy anchors, native disclosures and static accessible reading;
+  register localized chapter and media search references.
+- Align the drafting-board hero copy at the bottom, adjust introduction spacing,
+  frame intended benefits and add fixed SVG axis icons on the title row's trailing side.
+- See [scope](docs/roadmap.md); no deployment or private-source download.

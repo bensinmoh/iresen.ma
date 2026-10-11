@@ -3261,3 +3261,24 @@ retains its separate coverage; no timeout increase or assertion removal is used.
 Lint, typecheck, formatting, 134 unit tests, 28 integration tests on a disposable local database, final production build and all 259 browser tests passed. The full suite includes 13 project cases covering filtering/pagination, fixed-frame hover zoom, right-edge drawer, no-JavaScript fallback, FR/EN/AR containment, reduced motion, focus restoration, email hiding, mailto actions and localized PDF download. Two browser tests now use the configured base URL; preview assertions inspect every returned video instead of assuming a single result.
 
 Rendered FR/AR contact groups were inspected at 390px and 1440px; both text and portrait/icon measure 56px high, with a larger semibold name and thin italic affiliation. Latest catalogue, detail and contact review assets are stored under docs/review/projects. All 72 PDFs have one page and include contact@iresen.ma; FR/AR note rendering and affiliation text were checked. Localized project interface search destinations were verified while fixture projects, notes and filler wordmarks remain excluded. The original Apex Leaf SVG is unchanged. Current PR CI remains required before merge; no deployment or Safari/Firefox/screen-reader audit. See [scope](projects.md).
+
+## Feuille de route R&D — 2026-10-11
+
+Lint, typecheck, formatting, 136 unit tests, 28 integration tests on a migrated
+disposable local database, production build and all 265 browser tests passed.
+After the final search-description withdrawal, the production build, unit tests
+and six scoped roadmap browser cases passed again. The local search rebuild
+synchronized the catalog; withdrawn text is excluded from all FR/EN/AR page
+and section references. All 15 served asset hashes and sizes match the manifest.
+
+Production Chrome inspection covered all seven chapters in FR/EN/AR at 390px
+and 1440px. Automated reflow also covers 320, 768 and 1024px, 200% mobile text,
+reduced motion, native anchor navigation, no-JavaScript reading, disclosures,
+localized media/section search and a scoped axe scan with zero violations.
+Hero copy meets the actual bottom padding (72px desktop, 48px mobile). Subject
+SVG icons fill their title row's available height and remain fixed on opening;
+benefits frames, blue-grey/white technical layers and RTL were visually inspected.
+Public review captures are stored in docs/review/roadmap. The final scoped design
+detector reported no findings. No Safari/Firefox or screen-reader audit, private
+source import/download or deployment. Current PR CI is required before merge.
+See [scope](roadmap.md) and [asset provenance](roadmap-assets.json).

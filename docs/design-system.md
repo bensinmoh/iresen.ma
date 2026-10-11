@@ -1597,3 +1597,19 @@ chips and SVG-check objectives. Contact/PDF actions wrap at the bottom, keeping
 shared action corners, stable modal scrolling and mobile reading order. Source
 portrait/telephone values are optional; the current central-contact entry uses
 a vector coordination icon. See [project scope](projects.md).
+
+## Roadmap chapter composition — 2026-10-11
+
+The priorities page reuses current brand surfaces, Plus Jakarta Sans/Alexandria,
+shared hero typography, action corners and vector navigation marks. Conceptual
+technical drawings overlay faint originals; native disclosure rows expose full
+axes. Component motion ownership avoids duplicate global reveals while keeping
+server content visible. No new shared tokens or universal page template. See
+[scope](roadmap.md).
+
+Roadmap intended benefits use a quiet tinted frame with a thin rule and the
+shared signature corners, adapting white/navy roles to each thematic surface.
+
+Roadmap axis icons replace disclosure chevrons: subject-specific vector strokes
+follow blue/white surface roles, stretch within the title row and remain fixed.
+Native details behavior and mirrored Arabic reading order remain.

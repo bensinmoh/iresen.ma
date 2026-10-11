@@ -168,3 +168,11 @@ valorisation pathways; `adoption-initiatives` contains the patent catalogue and
 
 The owner’s follow-up removes the six-link body section navigation from
 Valorisation. Its section anchors, hero actions and search destinations remain.
+
+## Feuille de route R&D — 2026-10-11
+
+The `priorities` scaffold is replaced by the manuscript-driven roadmap page.
+Its six original anchors remain supported, with seven `theme-{id}` children of
+`domains-directions` sharing the homepage theme IDs. The strategy introduction,
+full thematic chapters and collaboration conclusion provide the corresponding
+public projections. See [scope](roadmap.md).
