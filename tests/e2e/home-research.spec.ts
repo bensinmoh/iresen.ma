@@ -154,7 +154,7 @@ for (const [locale, query] of [
       `/api/search?${new URLSearchParams({ locale, q: await page.locator('#research-hydrogen summary span').innerText(), type: 'media' })}`,
     )
     expect(response.ok()).toBe(true)
-    expect(JSON.stringify(await response.json())).toContain('/images/domains/hydrogen.webp')
+    expect(JSON.stringify(await response.json())).not.toContain('/images/domains/hydrogen.webp')
     const image = await request.get('/images/domains/hydrogen.webp')
     expect(image.ok()).toBe(true)
     expect(image.headers()['content-type']).toContain('image/webp')

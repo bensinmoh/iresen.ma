@@ -3642,3 +3642,8 @@ separate deployment authorization remain pending.
   resolved by testing the fresh production build on its own port.
 - No visual layout, image bytes, route, public CMS gate or deployment change.
   Existing unrelated CMS-preview work is excluded from this commit.
+
+Follow-up verification updates the earlier research/roadmap browser assertions:
+sections stay discoverable, but generated hydrogen and technical drawing assets
+must be absent from media results; direct in-page image delivery remains valid.
+Eight additional scoped browser cases pass, bringing local coverage to 33 cases.

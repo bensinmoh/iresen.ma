@@ -72,7 +72,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   })
 }
 
-test('localized search discovers thematic sections and technical images', async ({ page }) => {
+test('localized search discovers thematic sections and excludes generated technical images', async ({
+  page,
+}) => {
   for (const locale of ['fr', 'en', 'ar'] as const) {
     const title = JSON.parse(readFileSync(`src/messages/${locale}.json`, 'utf8')).Roadmap.chapters
       .mobility.title
@@ -87,7 +89,7 @@ test('localized search discovers thematic sections and technical images', async 
       page.locator(
         '.search-results a[href="/images/roadmap/mobility-drawing.webp"]:not([aria-hidden])',
       ),
-    ).toBeVisible()
+    ).toHaveCount(0)
   }
 })
 
