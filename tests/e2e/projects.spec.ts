@@ -188,6 +188,12 @@ for (const locale of ['fr', 'ar'] as const) {
     page,
   }) => {
     await page.goto(pageHref('projects', locale))
+    await page.mouse.move(1000, 20)
+    await page.screenshot({
+      path: `.local/projects-pagination/${locale}-cards.png`,
+      fullPage: true,
+      animations: 'disabled',
+    })
     const pagination = page.locator('#project-catalogue nav')
     await pagination.scrollIntoViewIfNeeded()
     const top = (await pagination.boundingBox())!.y

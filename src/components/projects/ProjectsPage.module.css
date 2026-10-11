@@ -436,10 +436,10 @@
 }
 .drawer {
   position: fixed;
-  inset: 0 0 0 auto;
+  inset: 0 auto 0 calc(100vw - min(52rem, 50vw));
   margin: 0;
   inline-size: min(52rem, 50vw);
-  max-inline-size: 100%;
+  max-inline-size: 100vw;
   block-size: 100dvh;
   max-block-size: 100dvh;
   padding: 0;
@@ -587,12 +587,14 @@
 }
 @media (max-width: 70rem) {
   .drawer {
+    left: calc(100vw - min(42rem, 80vw));
     inline-size: min(42rem, 80vw);
   }
 }
 @media (max-width: 40rem) {
   .drawer {
-    inline-size: 100%;
+    left: 0;
+    inline-size: 100vw;
   }
 }
 
