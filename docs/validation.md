@@ -3622,3 +3622,23 @@ Review captures remain ignored under `.local/calls-browser-results`. No call
 content, terms PDF or form URL is invented for the owner's site. Real inputs,
 final editorial/translation review, the whole-site search sanity check and
 separate deployment authorization remain pending.
+
+## Site-wide image provenance and AI search exclusion — 2026-10-11
+
+- Audited every served raster under `public/images`: 161 current fingerprints,
+  64 AI-generated files/crops/copies, 13 AI-assisted derivatives and 84 entries
+  with source references. Recorded-source status does not certify external/Figma
+  images as non-AI; generation classification requires explicit evidence.
+- Withdrew 47 generated media identities (141 FR/EN/AR search documents).
+  Rebuilt the local index; a database query confirmed zero results referencing
+  the 64 generated paths. Current CMS media consists of eight MP4 uploads and
+  no uploaded raster photographs. Results and spelling share catalogue revisions.
+- Lint, typecheck, formatting, production build and 149 unit tests pass.
+  All 30 integration tests pass in a freshly migrated disposable database,
+  which was removed afterward. The existing database/users/uploads are preserved.
+- All 25 scoped search, preview and destination browser tests pass against a
+  separate production server using installed Chrome. The initial default browser
+  was unavailable; reusing the existing server produced stale-client failures,
+  resolved by testing the fresh production build on its own port.
+- No visual layout, image bytes, route, public CMS gate or deployment change.
+  Existing unrelated CMS-preview work is excluded from this commit.

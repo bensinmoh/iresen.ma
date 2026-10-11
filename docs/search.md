@@ -319,3 +319,28 @@ The programmes page and six legacy sections include their complete localized man
 ## CMS calls — 2026-10-11
 
 The owner adds the Calls collection and reachable detail pages. Its public source view and insert/update/delete triggers project complete approved localized metadata as `calls:{id}:{locale}` page results. Closed/cancelled records retain archive discovery; withdrawal/deletion immediately removes eligibility and spelling contributions. PDFs retain their independent guarded Media document identity. Programme section metadata describes discovery without unconditional empty-state claims. See [schema and workflow](calls-for-projects.md).
+
+## Site-wide image provenance and AI search exclusion — 2026-10-11
+
+The owner commissions classification of **all site photographs/illustrations**,
+not only the twenty gallery entries. `src/data/image-provenance.json` inventories
+all 161 served raster originals and derivatives under `public/images`: 64
+AI-generated, 13 AI-assisted derivatives, and 84 source-reference images.
+Each entry records its served path, current SHA-256 and evidence documents.
+Source-reference means a recorded supplied/exported source, **not certification
+that an external/Figma original was never AI-generated**. Classification uses
+explicit provenance and matching fingerprints, never appearance alone.
+
+Generated scenes, including mobile crops and byte-identical reused copies,
+remain available where already used but are excluded from static search results
+in FR/EN/AR and from result preview enrichment. Their registration metadata stays
+retained for provenance. Page/section discovery remains available. Source-backed
+photos and AI-assisted retouches of actual supplied subjects (leadership portraits
+and the report-cover mockup) keep their existing search eligibility.
+
+The changed catalogue revision applies to both results and spelling vocabulary;
+synchronization deletes withdrawn static entries. Future public raster additions
+must update this inventory and record generation/retouch provenance. Private
+originals are not imported; no image bytes, routes, gallery layout, publication
+gates or deployment are changed. The final whole-site glossary sanity check
+remains pending final content.

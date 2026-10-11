@@ -1,0 +1,968 @@
+[
+  {
+    "path": "/images/achievements/aquasolar.webp",
+    "sha256": "2b816cd64907ecfbc083bac381274b1d0be3468dae8e2f699b51f13e3b5ad369",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/cartography.webp",
+    "sha256": "b48908a8de8a903b1677fb7960caa014a11add9fdec42419f516289ce14c2d43",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/hydrogen-roadmap.webp",
+    "sha256": "b71eb13e0b0f18f15353debb15486f9b9b77e4b9c87aabd54f03f1ee7559d65d",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/ismart.webp",
+    "sha256": "dd65ae0e1f48c3d3a1f8ef3a454033b076214b2cb1bd948d3803c6d9c1edbe74",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/propre-ma.webp",
+    "sha256": "f4dd59246ab39635a1698c5f72a5b996c8a8b35f2108766cb4b881273c60a3cf",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/upilot-h2.webp",
+    "sha256": "ae26791d124da187046ee4ef7cca5b62cbf788471712c10306818500e8295fc7",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/village-solaire.webp",
+    "sha256": "7ebc71f2383b51675b14a4b7c7ed816cbc053c06fb3d008b281b2e0498abcbe0",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/achievements/worldptx.webp",
+    "sha256": "74f602951edea70cbbe15e956b95a4f61c59d4aef68d8758054fafdfe1edbd47",
+    "category": "source-reference",
+    "references": ["docs/achievement-assets.json"]
+  },
+  {
+    "path": "/images/careers/environment.webp",
+    "sha256": "405f81febde0334003f1a16576c6ef839bace977e12d8dbe5f1f510ce5ed1905",
+    "category": "source-reference",
+    "references": ["docs/careers-assets.json"]
+  },
+  {
+    "path": "/images/careers/hero.webp",
+    "sha256": "b2a6e0e46ac91ded72c578c927e88116cdfc5f35323d474a2841b15bd5c1c767",
+    "category": "source-reference",
+    "references": ["docs/careers-assets.json"]
+  },
+  {
+    "path": "/images/careers/internship.webp",
+    "sha256": "ef5e53abcedde7b79416621c291fa13436ebbaff498d51cbc28491b38d0aae79",
+    "category": "source-reference",
+    "references": ["docs/careers-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/industry.webp",
+    "sha256": "d80ae04cc6c7a51986f7cafd1a10cd826c4126a722b3ce604e39df7a23cb49e5",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/institutions.webp",
+    "sha256": "832232ce6f68dd25d51223640aad6a1a069e27e9056a669dc6428d3debbd2e2f",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/partners.webp",
+    "sha256": "87851044cb20dfda9ff3a052ff49eab12034750e6b2ab90bc27b0c2844455c1d",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/research.webp",
+    "sha256": "e90e938c9305676c121f8d955a3da721f720af0116e27f4e2523d74d3ffb5d41",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/contact/contact-background-venue.jpg",
+    "sha256": "b269347f3bc64d10eb6cca8c342e9dbe7aa3c140ce3d192a8eb532f9a27c956f",
+    "category": "source-reference",
+    "references": ["docs/contact.md"]
+  },
+  {
+    "path": "/images/domains/buildings.webp",
+    "sha256": "1a1e64fa44a8ac2ac8c274f1a51068fb0a4fa2efaf969c4dcd04ee2a49074fdc",
+    "category": "ai-generated",
+    "references": ["docs/research-assets.json"]
+  },
+  {
+    "path": "/images/domains/circular.webp",
+    "sha256": "69722d2e23b2a101cf2fee76b61554d3f32f7056a4f08718c36b327de4983160",
+    "category": "ai-generated",
+    "references": ["docs/research-assets.json"]
+  },
+  {
+    "path": "/images/domains/hydrogen.webp",
+    "sha256": "c8dee90d40f3b25e7ef83c85277cde7bd640bb5c7477c33ae5efd07d4c9ef7a8",
+    "category": "ai-generated",
+    "references": ["docs/research-assets.json"]
+  },
+  {
+    "path": "/images/domains/industry.webp",
+    "sha256": "a2b2ecd6d6c3b24efaac7e1c20d1226411c12f4c4254e0de6b8c5f422cb5b02d",
+    "category": "ai-generated",
+    "references": ["docs/research-assets.json"]
+  },
+  {
+    "path": "/images/domains/mobility.webp",
+    "sha256": "5ff7a68e1f0f34f93b7f0b02cb2d587c132e943e2fb210a4edde34652aa88091",
+    "category": "ai-generated",
+    "references": ["docs/research-assets.json"]
+  },
+  {
+    "path": "/images/domains/water.webp",
+    "sha256": "52e5270e553254f83d7746555cbf3a0afc730afe592fcb3d562042ed3b273d02",
+    "category": "ai-generated",
+    "references": ["docs/research-assets.json"]
+  },
+  {
+    "path": "/images/governance/artiba.png",
+    "sha256": "0cfec4a8ebc485c2fee465f173f650be01d514f2adfad391adc0102a08aeb6d9",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/artiba.webp",
+    "sha256": "73df77291d41155434679e67057fb76336bfca50679514f26c9a7d1e6f1edf92",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/ayoub-portrait.png",
+    "sha256": "2696fd78395fb1a21e31d209c1b169513b8022952bcf02d5e2e7c5c3b19d5746",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/ayoub-portrait.webp",
+    "sha256": "227d219163bcf3aa6697b8ab9c75ae492a2dc521a67f173839c906937790b537",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/bounahmidi.png",
+    "sha256": "39f9d2d9abaa2dc66f6bfe338c61af3b9e1422b0061b3a94f249f9375063aab1",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/bounahmidi.webp",
+    "sha256": "c54b0b5bcd4514d97d364b70edfd8c041ba45bd9b80ada18fcc574d901c3b3ab",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/ennaoui.png",
+    "sha256": "3277716947acfc16ad370e8a7d8b1dbf30a81cb30e77f13515a29a2c612a0847",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/ennaoui.webp",
+    "sha256": "9d037af17c2858b1ef5acb1d57f97f7f7611a1641e824472ca273128f3a26edc",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/imane-portrait.png",
+    "sha256": "7b2f09f93ea733de172ae55ca0ae6dbde7157b3f974d784f17dcfa86d45b6549",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/imane-portrait.webp",
+    "sha256": "2a2d631387eaf03e21d66c95db57134a6f0164563c38d85ed647727690dcf1e2",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/jamaleddine-portrait.png",
+    "sha256": "9304db38bf13f4a0026faed43528b853701536800ca0ab5aeadea25dc0130a2c",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/jamaleddine-portrait.webp",
+    "sha256": "f6082dd5558bffbb21f54eaba4b31c06a6d70b37f4da12cd8296590a35bf67fc",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/laila-portrait.png",
+    "sha256": "25227bde273a153d6ade138ba847774b57a93c98381cb98a34510c4ad794e534",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/laila-portrait.webp",
+    "sha256": "db8cd6127e67900e4973bad1aa388b4f7964f07035f77636bc20df5977df0010",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/lambert.png",
+    "sha256": "8770c5f49d855a93b723095ab3f2736a936d2e44d747e69bd25980a33899285b",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/lambert.webp",
+    "sha256": "597a03a4285f2784d47cd0e2eea7cd2df461fa198b219ad70eb1d93d73786b72",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/miranda.png",
+    "sha256": "a992a963261a7115deeb5ab300b36fe484c24d9d89c88d5a5b543d668a6fd4be",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/miranda.webp",
+    "sha256": "d9b9ec92313b800761eb7157b37ed100276d28d7e7cfaf9283f677b4c866e51d",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/mouhcine-portrait.png",
+    "sha256": "491fff67f1dcfca9b459bea7d05106e94a53c05412aa4a507d75538e52f29a0b",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/mouhcine-portrait.webp",
+    "sha256": "c4cb3946dbc252e4d6d3f42fcdb4a4a12497973e1c60ade8f2f36097b0ad7953",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/pavia.png",
+    "sha256": "71bf9089615a6e23387b6065416728d232202814ee23b9ca0f9c2aa21337e6a6",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/pavia.webp",
+    "sha256": "bef06c5ff1774441a52274c72438eaebbd89fa0cb653bd515ff37328efbef330",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/pitz-paal.png",
+    "sha256": "c1bad78d74217653af0ea933413a440de7a303c7fdfb78a7431efde85802240e",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/pitz-paal.webp",
+    "sha256": "6eaab1395c5375de8d874b93af416db68360af185d28c16e1658b694fd9f0007",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/soukaina-portrait.png",
+    "sha256": "08367721f5d77f37d5d5f97310d7d5c30bcdfdf9671daf4e442066cbaa239491",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/soukaina-portrait.webp",
+    "sha256": "1ea569ccb35422636ec2851b9e7cf7adde5e4d9d8a9848f7715ae0977ccc8af1",
+    "category": "ai-assisted",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/wehrspohn.png",
+    "sha256": "07ea2f82c29ee9e97da339e98d2c67b8eb010dab023ed56f11d6ea274be0dd2e",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/governance/wehrspohn.webp",
+    "sha256": "9889585ef2c4206a5248042f4e8b90c0b771216078bca72e364faabad0060ed9",
+    "category": "source-reference",
+    "references": ["docs/governance-assets.json"]
+  },
+  {
+    "path": "/images/heroes/careers-onboarding-a0935b018aa6.webp",
+    "sha256": "a0935b018aa6a210b119a9d9cb3b2958f82547c60561be53bcbbc9169c2f8558",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/careers-onboarding-mobile-3c9467d279e8.webp",
+    "sha256": "3c9467d279e8ee405b0830e88fd3f34d401c50bb0b57eda1883ef340736c94a3",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/conference-d533b6ed6fb6.webp",
+    "sha256": "d533b6ed6fb6f7380ad84ea7bb0f784538383d8d2b65f380b6d61b6cfb7849ad",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/conference-mobile-d75f64dd6787.webp",
+    "sha256": "d75f64dd6787fdd8a55b43624ec469696b44adad7d2ba011223b3b9fcb93d88a",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/governance-598e07ec7988.webp",
+    "sha256": "598e07ec7988628e83c6eca92aa1eb6ef70a66679d49c2ee285292f722ba73bb",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/governance-mobile-b489f3c97bd6.webp",
+    "sha256": "b489f3c97bd6410cf2e5ce605ef823f1e4a76a3a1de4f922b53af5bc49a49039",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/partnership-handshake-c6da03657725.webp",
+    "sha256": "c6da03657725a6c013f50d384dc9b823d50fcf5e047def111f7dc7bdd7bef49c",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/partnership-handshake-mobile-cd8622b10825.webp",
+    "sha256": "cd8622b108251074391c6c018dce8c8436fc5ed97ae6777902e3166f1bf23bfb",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/reading-9d347e0a2ed8.webp",
+    "sha256": "9d347e0a2ed8a30dbd4bf1b114599c3d2a53c37ea3fad724c101e4f205f6d868",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/reading-mobile-d8b8e9112c6e.webp",
+    "sha256": "d8b8e9112c6e39ccd6e77029c106b820abe1b9e205a3ca9fed6630586b5c808a",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/research-1dc2b1d2ea42.webp",
+    "sha256": "1dc2b1d2ea4276aae22da7ebe4ad576448aa6154b33116e151a221038cfa25cb",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/research-mobile-5c0d5e7161f2.webp",
+    "sha256": "5c0d5e7161f2a05c78ec222e782606d4dab8c9f4950d2edcfa368abb7cfab056",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-aerial-47f3d26a392b.webp",
+    "sha256": "47f3d26a392bee39de5dd2f61d1d9c57d1a406b1d53035143b00800112b3abc8",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-aerial-mobile-836f21a73f2a.webp",
+    "sha256": "836f21a73f2acb946eba8448592dbd6071868c2f0100ecc3ce421e763fde76ca",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-city-79262d84a1ba.webp",
+    "sha256": "79262d84a1ba657d141ad62c33b3a462cc8cd87458620b3d6aea7d3a690013d9",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-city-mobile-7b4d48ba6244.webp",
+    "sha256": "7b4d48ba6244e4a8b204ccdae0d73bb6ae229330c099f696bdad578bb28b98e1",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-detail-898dc69d3900.webp",
+    "sha256": "898dc69d3900f1c3491c4811a9583d58cc8081a3f0635204a4c05b0ea45dc2a8",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-detail-mobile-85512902dfa3.webp",
+    "sha256": "85512902dfa370edc528f70c771461c1f3378a7eb352a85945448a13a0e6bf8e",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-expertise-d1a731bdb7ad.webp",
+    "sha256": "d1a731bdb7ad5d12097557319b3389b904d9a003deafe30487f7cd2d85131edf",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-expertise-mobile-ad3376396a3e.webp",
+    "sha256": "ad3376396a3e9dd6d62eaa8ffbc9c42aac3cdd8912584f1feb99ca6ae9563625",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-field-c7bf4e8c9199.webp",
+    "sha256": "c7bf4e8c91995ecb4e33b0147091c8cde0059b788b070bcc425954127f054c03",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-field-mobile-4b16d7844f5a.webp",
+    "sha256": "4b16d7844f5a1793a3a180682a3d8ba9dc0a8c1a41e3bf760f2b68bd6d2839ff",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-horizon-76a1a663a424.webp",
+    "sha256": "76a1a663a4245017b24094f25585f4284f96653234cb1f89f7536738bbb25a8e",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-horizon-mobile-e1d07bde00d8.webp",
+    "sha256": "e1d07bde00d81441bfb43e73e8d8ded92a6dbcaabc9ff9319cf46df6bdf09072",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-sunset-a27f2d68ea29.webp",
+    "sha256": "a27f2d68ea29ea53fe3aec8070a48e4adf269d539f075c39de81cdedfbc82a1b",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/solar-sunset-mobile-889101e3c5b4.webp",
+    "sha256": "889101e3c5b4455da9a518e777513c953796be16f977f7616f656786e7ef857f",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/team-024481368fd7.webp",
+    "sha256": "024481368fd7dfe6fcbffdc4938f2624445df4fc6ab79d5082b610fc765f0f7a",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/team-mobile-657ccde90f41.webp",
+    "sha256": "657ccde90f4172c56a9b975fc61a9b41aea04319d9439c918f6494c937d53420",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/wind-detail-7e64333aa06f.webp",
+    "sha256": "7e64333aa06fee4ad69f9c0529dd42c1b437d2db29c33015284acb24c0f8916f",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/wind-detail-mobile-13d915f73e61.webp",
+    "sha256": "13d915f73e6126446c4c3eb4a60af77bac8f33cd8b077e8042e83e8a26218541",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/wind-landscape-f05d7711d8d0.webp",
+    "sha256": "f05d7711d8d059fac6a4af9489a91f5dcb9d0890cdac4f9caeee3b680422a686",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/wind-landscape-mobile-545006a7b08a.webp",
+    "sha256": "545006a7b08a0c3e6e195b505ce874e7a12652fe64d268627875cc2c3b5ce869",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/workshop-f9504d1337a2.webp",
+    "sha256": "f9504d1337a2cbc059a486f01f2f48280061d3895658571255cc56fa6c5d2bdf",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/workshop-mobile-8e8c5c2cc11a.webp",
+    "sha256": "8e8c5c2cc11aed2e478485c8b873cc19f2b2f59be7ebc971e86ebda83920bd9d",
+    "category": "ai-generated",
+    "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/institute/fifteen-year-report-cover-cutout.webp",
+    "sha256": "e7052abced91f2f73fb6709dc852712bce652646bdcfbc1311f86765f1c56107",
+    "category": "ai-assisted",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/media-library/aquasolar-installation.webp",
+    "sha256": "92fc33ab7770acc517cffe2c88acc7977ad72752d3f3e71c7a5999fc94151ac8",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/caracterisation-materiaux.webp",
+    "sha256": "280e713ec89c4f41616284e202e4332b9c451386b9816870ff004cbc27c3f78f",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/cellules-pv-echantillons.webp",
+    "sha256": "dec952afeb1f53df966036e77f102cc01da66b1e763daf6409fc96d43cd0973d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/chimie-verte.webp",
+    "sha256": "23985c6b5421ac93deaa532cad72c159c4e0af96b9959f7f5fa86415e9a4634a",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/electronique-assemblage.webp",
+    "sha256": "4fbd0e619668bca0d05cc13c632cce37adb38c238d65a817ca6f1016a92cf7c3",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/equipe-iresen-15-ans.webp",
+    "sha256": "86dc3631e6bacb21644ee570ee02ab802479c93a7e37b55e9accb389f8d74818",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/essai-charge-pv-operateur.webp",
+    "sha256": "15c09109f5e6996d8c0fd789f906608df11b150a4341a7df6bab8c4740fc243c",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/essai-pv-exterieur-operateur.webp",
+    "sha256": "6622ef6eec39d8d1cf6a0a6a20b073a88eb2ea1b5f489ecd89df848fda62c065",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/essai-pv-simulateur-solaire.webp",
+    "sha256": "2c9c5fcf7793fc556aef3b7be614ba6f4f94d59c111f1b36b79c9e3b17f24292",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/gep-centrale-solaire-thermique.webp",
+    "sha256": "edcfe161e96b4626cfd043edadaaf8a20354a66fefa28e47c58a09aa2fd30caf",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/gep-facade-batiment.webp",
+    "sha256": "df604748bd402bf6dd67eb8428bef09760cb5fd177ef3540f550dc8ced07ab74",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/gep-laboratoire-indoor-vue-ensemble.webp",
+    "sha256": "45369a5aa026eed6d864c195e6e6552cc57dc65c5cac02b03b0da58dd840c676",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/gep-vue-aerienne.webp",
+    "sha256": "8547d9867b988747f1a45892b960ce5a54fe7d50b89330ec49ed30f7e140d59d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/green-smart-building-park-vue-aerienne.webp",
+    "sha256": "a440f5e230c08509890a1b0a915acc837e65582fdafb8f051c896ef2cd8d5388",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/media-library-hero.webp",
+    "sha256": "9d0506d86be5c18375757498ae49293e024aaad66218f2a4aee9c039675d6a77",
+    "category": "ai-generated",
+    "references": ["docs/media-library-hero.json"]
+  },
+  {
+    "path": "/images/media-library/moroccan-solar-race-challenge-2016.webp",
+    "sha256": "d1742c131ad42314a25a5dcaa997a770ce93a6345dbdeee91e95e92867253c32",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/pilote-experimentation.webp",
+    "sha256": "25d98118faf724fda3b4bc82e9a499300b9ab7deaa79d33ad08fec2042279629",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/portrait-dg-iresen-samir-rachidi-official.jpg",
+    "sha256": "c2633ebb43bccfe77be587b65bec260d06312cc78469ad017930fbbf052d55f8",
+    "category": "source-reference",
+    "references": ["docs/samir-biography.md"]
+  },
+  {
+    "path": "/images/media-library/portrait-dg-iresen-samir-rachidi-official.webp",
+    "sha256": "6dfaf652b97f850911d253c7a7e4a30c87df513f9d713f588ef0664dcd55b994",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/propre-ma-pv-toitures.webp",
+    "sha256": "3ff8a472c60b6d6d60b52f8a44a432fa54b8406beb064dcc0fadf81310af4eda",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/samir-rachidi-cutout-v2.webp",
+    "sha256": "36baac103d00d556967948499dccf76f707fc01cb00556c08c82b08c719398a2",
+    "category": "source-reference",
+    "references": ["docs/samir-portrait-cutout.json"]
+  },
+  {
+    "path": "/images/media-library/solar-decathlon-africa-village-solaire.webp",
+    "sha256": "2f74724c8339720f98970a755d8ff906dd983ae9fdb48f4c24c787e727aea806",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/video-posters/4b0c4a2c56e2.webp",
+    "sha256": "aa518642f00105ec4c49d43225a68dd96b3f1ed82e48d97304b4c20bf66cc758",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/5049e545e24a.webp",
+    "sha256": "60a8a307b2e0f880ac8fd7265603a817390633685af74efbe16c30d81cfc07b6",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/80fbcc4ff4df.webp",
+    "sha256": "0a59382855a9b3112f00f017cef17001592269a2de28156eaac60a2fd1e6a04a",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/8540c068a011.webp",
+    "sha256": "e2edb68c132f1903837cec0c5aab23b6730b0488d7d2d6062ae906adb69d9994",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/b6442d776035.webp",
+    "sha256": "d496eec685d46803ef23629edd1b1fdb35b84a0342be97cd17ea386ebf62dff1",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/b951bcd0961a.webp",
+    "sha256": "0f652f0bfbf3634d23b574258dd2e43894787d403c30f7f143af15be87226e20",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/dfdcb50a5ccf.webp",
+    "sha256": "6999fb7a6e37a3d093f8d4296fe3bc8f1f0adfdf7ac47b2c9fa82e86cea71f19",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/video-posters/e9da61730dbb.webp",
+    "sha256": "7d127229af51c551f685b1485476d10642b19216c06c564ef69524c8e57d8f45",
+    "category": "source-reference",
+    "references": ["docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/world-ptx-summit-pleniere.webp",
+    "sha256": "1080f2c67793eeb22715790da7858b5006fafa83da06c13d8d5ab157d6ece03e",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/missions/develop-cf05d9355bc5.webp",
+    "sha256": "cf05d9355bc5d47df9e0cbf691fe2a651a5170854bc28f91ed2bd173970531b8",
+    "category": "ai-generated",
+    "references": ["docs/mission-assets.json"]
+  },
+  {
+    "path": "/images/missions/test-f25f80001b78.webp",
+    "sha256": "f25f80001b78208094eb7c89acddbd8e3a323274c79c0116d018c9795736b81d",
+    "category": "ai-generated",
+    "references": ["docs/mission-assets.json"]
+  },
+  {
+    "path": "/images/missions/transfer-6934b2efdfe4.webp",
+    "sha256": "6934b2efdfe40b28dda8381bdd505a2b06a4e6ff5dffd53c6a44f83f4c5d2474",
+    "category": "ai-generated",
+    "references": ["docs/mission-assets.json"]
+  },
+  {
+    "path": "/images/news/cop31.webp",
+    "sha256": "e95ab462ac28458bfad3dbdbaf2a38127fc01e31aa01c1c5e2df622b74a43199",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/exchange.webp",
+    "sha256": "a6fe8409cac2df6141db94bc1374c254cc42684819c9b2a5a9fdc4ecbd035f4c",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/hero.webp",
+    "sha256": "b1551f58de7277c0cf835f5a93581a5d7b94b960fdf1780cb2808de25a106cf5",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/irsecx.webp",
+    "sha256": "941311a51fc3bba92508c8c5668f47a969c4262c1c452255b8e89717a5188bcd",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/istanbul.webp",
+    "sha256": "a056aa01a981f277b50e1d1c01c5c828f425f1640a6636141b5fda21ffaca359",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/learning.webp",
+    "sha256": "ef3b7173dc4379ec61af7edbc01bcdbd6c5547a4151e2eba5284e0e6fc83872b",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/majan.webp",
+    "sha256": "dc741e5b9fbef52fb763b7f4abdb036cf3786dc64de83d123e048c3386b90940",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/montpellier.webp",
+    "sha256": "aadee3e6f45f31fc399f60f73d19052974af741a7a70180f84134fe0bd2ef997",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/oman.webp",
+    "sha256": "4f0be632c7cb73f1e1c5ad1ffe9ddb3475c4c6eaa1f32cd17daadac7644215f9",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/podcast.webp",
+    "sha256": "01592e9473d2d9c72884fd977aa28ba27173fad25252cdad821503ddfed5d61d",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/sweden.webp",
+    "sha256": "b05fd6c14efd92624f4a5d9f011208267953c11f739e7f87d19105a0b54215aa",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/news/worldptx.webp",
+    "sha256": "f8e8e2dc3e58cdf8c520dea75c7ff003aa1fed65e0eeff5a5e6f15d3845e054d",
+    "category": "source-reference",
+    "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/platforms/gep-mci.webp",
+    "sha256": "44dac513caba3fc00006c287f1e30b50c324b93b5d75579af1502c21aa3d385a",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"]
+  },
+  {
+    "path": "/images/platforms/gep.webp",
+    "sha256": "187f70a5c7ed579f9782db517a2a199f8580c0754cde212568bbd15cd662db6b",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"]
+  },
+  {
+    "path": "/images/platforms/greenh2a.webp",
+    "sha256": "2b0beba041d9645972fa8ee1dab1a9514d7c37693c3f7232252bc7ec3f5e69c5",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"]
+  },
+  {
+    "path": "/images/platforms/gsbp.webp",
+    "sha256": "48ea7b647464f4d1fe69efd97a574096494eeb6c34ee10c273a6ad9e4eb767e8",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"]
+  },
+  {
+    "path": "/images/platforms/outdoor.webp",
+    "sha256": "12fbe0cef404ffa236988f6f28e6f5465a8772e38e8d54b300d3995e09248b6a",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"]
+  },
+  {
+    "path": "/images/programmes/collaborative-prototyping.webp",
+    "sha256": "bd1041165a6d09abfa18bd1dbd6a631c6edd872fd51f921b4e6366f74666bd4e",
+    "category": "ai-generated",
+    "references": ["docs/programmes-assets.json"]
+  },
+  {
+    "path": "/images/projects/buildings.webp",
+    "sha256": "dee8dc3faab28f5cbf76915de7094c5b771bf326cd78ca6dcfc12419aabf75d1",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/projects/cooling.webp",
+    "sha256": "8e7dc8ca8877d6af0d9b2889bcc23708621f695d345bc50526c4897ecec7325d",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/projects/grids.webp",
+    "sha256": "00646e136b3010c801d14aeff4f34fe732ed40b9cac8baa514ae02908237df6d",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/projects/hero.webp",
+    "sha256": "8b59ae9b7c8866ae9f4f2a90486506183c27beacfd4d461059e2ba2432409edd",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/projects/photovoltaic.webp",
+    "sha256": "ce79032add10c4ee551da9cfd6520a18b2740a1dc6dbe9b5e8ad955f4679e9d7",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/projects/thermal.webp",
+    "sha256": "256b74885390dba9bf511e2af72069ab969f88d12e5fd1fffac7a6482d05ea85",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/projects/wind.webp",
+    "sha256": "e0295036a28bb6699ccb20b3bba0d3933a582b05da532a55907600689b6b1345",
+    "category": "source-reference",
+    "references": ["docs/projects-assets.json"]
+  },
+  {
+    "path": "/images/publications/hero.webp",
+    "sha256": "9c19824c21009ee237f49fc31a696b378c8cfb3d9910a52918d29b8a03f0d47e",
+    "category": "source-reference",
+    "references": ["docs/publications-page-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/buildings-drawing.webp",
+    "sha256": "8c8a873a39889de595fbb34a9a2b57da6a7578c668f1c6f024dc60915e55a22f",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/buildings.webp",
+    "sha256": "70c8f5a0688cc07796bbfb77b0d9e782109fe7919f5ff2d2d3831baee1584ac6",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/circular-drawing.webp",
+    "sha256": "786a203c07642c3b3b10a0b8c45e3b9cbe6c9a1e1c7a899024d71c680b581bc4",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/circular.webp",
+    "sha256": "8a6da26c77e692994925b655226d2cddc017c02b7e5dc7f65c4d1eeb58831960",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/hero-board.webp",
+    "sha256": "d0859385452db53661234e258e08a5bdd30f79f74c91468bed2f3c1bda049631",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/hydrogen-drawing.webp",
+    "sha256": "dbabff4395eec2b855ce7992d5dff36f736d97ab9e78fcd3a873b3177a206ecc",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/hydrogen.webp",
+    "sha256": "50e6f387d22e25d53347dd9744ae8d9e1b6605795af2a39bf51f5c7731501292",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/industry-drawing.webp",
+    "sha256": "e5577186ba05260c0b9711818ff128bd5f6a6b4f8bb0fe543f02b971e5d0ccff",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/industry.webp",
+    "sha256": "5b4fa05f941d7c007afe006fc7307cb9b6832ca149d85f236c4e4836bc6262d4",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/mobility-drawing.webp",
+    "sha256": "ae35d9ec388f89e5cb72c3daf939fa4032940286d026218319f7e72e73942fd9",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/mobility.webp",
+    "sha256": "84ac42c714b7c01eb9beed61d3190e6d14c9dda0ce915a8d6c77af1c40133b95",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/renewables-drawing.webp",
+    "sha256": "5b4601734e03e356e2edadf50f4e00d3bd1284c293bf23992679820977e91b1b",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/renewables.webp",
+    "sha256": "8fd6b3858f3134a5d7d6a920e9bdd995938df41f27809c8acd3fb9358a51aa6d",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/water-drawing.webp",
+    "sha256": "74be78c79678bc7a18dde9e218eb3b6f9f954c47358a307e0300cef8690d70b5",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/roadmap/water.webp",
+    "sha256": "a0bb708b78642c30be0c8de5d4905a3d1140ebb739e45b406fe4c017d72d0ad6",
+    "category": "ai-generated",
+    "references": ["docs/roadmap-assets.json"]
+  },
+  {
+    "path": "/images/transfer/ismart-product.webp",
+    "sha256": "931a1ff250c7bc6a284bae4ae964083c9b6c6ce8b2d29e778162fbd080bf75dd",
+    "category": "source-reference",
+    "references": ["docs/valorisation-patents.md"]
+  }
+]
