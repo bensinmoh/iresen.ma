@@ -1041,9 +1041,9 @@
     "domainsLabel": "The three domains of contribution"
   },
   "HomeResearch": {
-    "eyebrow": "Research domains",
+    "eyebrow": "Themes",
     "title": "Research themes serving the energy transition",
-    "action": "Explore our research domains",
+    "action": "Explore our research themes",
     "axis": "Axis",
     "themes": {
       "renewables": {
