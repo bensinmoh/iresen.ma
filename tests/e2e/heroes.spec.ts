@@ -314,7 +314,7 @@ test('without JavaScript the hero, section navigation and Arabic content remain 
     viewport: { width: 390, height: 844 },
   })
   const page = await context.newPage()
-  await page.goto(`http://127.0.0.1:3000${pageHref('institute', 'ar')}`)
+  await page.goto(pageHref('institute', 'ar'))
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.locator('.page-hero h1')).toBeVisible()
   await page.locator('.hero-scroll').click()

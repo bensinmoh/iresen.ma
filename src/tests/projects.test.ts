@@ -4,6 +4,7 @@ import {
   projectNoteManifest,
   projectNotesMatchSource,
   projectNoteReferences,
+  projectConsortiumLogoReferences,
 } from '@/lib/project-notes'
 import { GET as downloadNote } from '@/app/(frontend)/api/projects/[id]/note/route'
 import { describe, expect, it } from 'vitest'
@@ -27,6 +28,8 @@ describe('isolated fictional project database', () => {
         expect(p.details.objectives[l].length).toBeGreaterThanOrEqual(3)
         expect(p.details.consortium[l].length).toBeGreaterThanOrEqual(3)
         expect(p.details.coordinator.email).toBe('contact@iresen.ma')
+        expect(p.details.coordinator.affiliation[l]).toBeTruthy()
+        expect(p.details.consortiumLogos).toHaveLength(3)
       }
     }
   })
@@ -96,6 +99,10 @@ describe('isolated fictional project database', () => {
   it('keeps localized notes current, complete and excluded from institutional search', () => {
     expect(projectNotesMatchSource).toBe(true)
     expect(projectNoteReferences).toHaveLength(72)
+    expect(projectConsortiumLogoReferences).toHaveLength(9)
+    expect(projectConsortiumLogoReferences.every((reference) => !reference.searchEligible)).toBe(
+      true,
+    )
     for (const reference of projectNoteReferences) {
       expect(reference.searchEligible).toBe(false)
       expect(reference.url).toContain(`locale=${reference.locale}`)

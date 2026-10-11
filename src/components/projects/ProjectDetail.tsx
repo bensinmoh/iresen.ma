@@ -46,7 +46,7 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
               </dd>
             </div>
           ))}
-          <div>
+          <div className={styles.contactMetadata}>
             <dt>{t('coordinator')}</dt>
             <dd className={styles.projectContact}>
               {contact.portrait ? (
@@ -65,10 +65,10 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
                 </svg>
               )}
               <div>
-                <p>{contact.name[locale]}</p>
-                <a href={mail}>
-                  <bdi>{contact.email}</bdi>
-                </a>
+                <p className={styles.contactName}>{contact.name[locale]}</p>
+                {contact.affiliation && (
+                  <p className={styles.contactAffiliation}>{contact.affiliation[locale]}</p>
+                )}
                 {contact.phone && (
                   <a href={`tel:${contact.phone.replace(/[^+\d]/g, '')}`}>
                     <bdi>{contact.phone}</bdi>
@@ -81,8 +81,10 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
         <section className={styles.detailSection} aria-labelledby={`consortium-${project.id}`}>
           <h3 id={`consortium-${project.id}`}>{t('consortium')}</h3>
           <ul className={styles.consortium}>
-            {details.consortium[locale].map((partner) => (
-              <li key={partner}>{partner}</li>
+            {details.consortiumLogos.map((partner) => (
+              <li key={partner.id}>
+                <Image src={partner.src} alt={partner.name} width={220} height={48} unoptimized />
+              </li>
             ))}
           </ul>
         </section>

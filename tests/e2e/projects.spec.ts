@@ -111,6 +111,14 @@ for (const locale of ['fr', 'ar'] as const) {
     await expect(drawer).toContainText(demoProjects[0].details.presentation[locale][1])
     await expect(drawer.locator('ul').first().locator('li')).toHaveCount(3)
     await expect(drawer.locator('ul').last().locator('li')).toHaveCount(3)
+    await expect(drawer.locator('dl')).toContainText(
+      demoProjects[0].details.coordinator.name[locale],
+    )
+    await expect(drawer.locator('dl')).toContainText(
+      demoProjects[0].details.coordinator.affiliation[locale],
+    )
+    await expect(drawer.locator('dl')).not.toContainText('contact@iresen.ma')
+    await expect(drawer.locator('ul').first().locator('img')).toHaveCount(3)
     const contact = drawer.locator('.button[href^="mailto:"]')
     await expect(contact).toHaveAttribute('href', /mailto:contact@iresen\.ma\?subject=/)
     const note = drawer.locator('a[download]')

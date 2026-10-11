@@ -3255,3 +3255,9 @@ one case per locale with reduced motion for geometry/image measurements. All
 original assertions remain, and 200% text is checked in every locale. The three
 cases passed against the existing local production projects build. Motion behavior
 retains its separate coverage; no timeout increase or assertion removal is used.
+
+## Project contact, consortium and Apex Leaf — 2026-10-11
+
+Lint, typecheck, formatting, 134 unit tests, 28 integration tests on a disposable local database, final production build and all 259 browser tests passed. The full suite includes 13 project cases covering filtering/pagination, fixed-frame hover zoom, right-edge drawer, no-JavaScript fallback, FR/EN/AR containment, reduced motion, focus restoration, email hiding, mailto actions and localized PDF download. Two browser tests now use the configured base URL; preview assertions inspect every returned video instead of assuming a single result.
+
+Rendered FR/AR contact groups were inspected at 390px and 1440px; both text and portrait/icon measure 56px high, with a larger semibold name and thin italic affiliation. Latest catalogue, detail and contact review assets are stored under docs/review/projects. All 72 PDFs have one page and include contact@iresen.ma; FR/AR note rendering and affiliation text were checked. Localized project interface search destinations were verified while fixture projects, notes and filler wordmarks remain excluded. The original Apex Leaf SVG is unchanged. Current PR CI remains required before merge; no deployment or Safari/Firefox/screen-reader audit. See [scope](projects.md).

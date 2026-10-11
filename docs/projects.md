@@ -148,3 +148,30 @@ and [Arabic mobile actions](review/projects/detail-ar-mobile-bottom.webp).
 Owner follow-up: project cards use the shared two-rounded/two-square corner geometry. Numbered pagination preserves the grid height and controls’ viewport position across pages, skips an already-active page, and keeps back/forward state current. FR/AR browser regressions cover successive page changes and card corners.
 
 Pagination follow-up validation: all 13 project browser checks passed on the latest production build (responsive geometry checks are split by locale with reduced motion), including successive FR/AR page changes and alternating card corners. Classic-scrollbar CI exposed a 15px drawer gap; its physical positioning and mobile width now use the viewport edge rather than the reserved root scrollbar gutter.
+
+## Contact and consortium follow-up
+
+The owner replaces “Domaine” with “Thématique” and explicitly authorizes filler
+professor names, affiliations and consortium visuals until the complete database
+is supplied. Three placeholder profiles rotate across the records, with Atlas Lab,
+Solis R&D and Nova Tech affiliations. The three original vector wordmarks are
+placeholder graphics, not real institution logos or evidence of partnerships.
+Source records retain their fictional flag; names/affiliations have no verified
+institutional attribution. No real-person portraits or external organisation marks
+are imported. Their localized media references remain ineligible for institutional
+search, like the project records and generated notes.
+
+Project details display the name and affiliation and hide the email. “Contacter le
+prof” opens a local mailto draft to the provisional contact@iresen.ma address.
+Localized PDF notes include the name, affiliation and email together. The future
+database replaces all placeholder names, affiliations, logos and individual emails.
+
+Hero follow-up: the owner requested the official Apex Leaf silhouette within the
+blue glass tile. The raster hero was edited from the existing scene using the
+unchanged `public/brand/apex-leaf.svg` silhouette as the shape reference. Two sharp
+tips, straight sides and curved shoulders replace the earlier generic leaf. The
+original SVG remains untouched; the stable hero media/search reference is retained.
+
+Contact hierarchy follow-up: the professor name is larger and semibold; the affiliation is smaller, thin and italic. The compact text group aligns vertically within the 56px portrait/icon height, retaining a side-by-side layout on mobile.
+
+Contact review: [French mobile](review/projects/contact-fr-mobile.webp) and [Arabic desktop](review/projects/contact-ar-desktop.webp). The text and portrait/icon groups both measure 56px at 390px and 1440px widths in FR/AR; mobile contact spans the metadata row to avoid wrapping the name.

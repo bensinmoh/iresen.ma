@@ -52,7 +52,12 @@ try {
         [t.duration, t.months.replace('{count}', String(project.durationMonths))],
         [t.budget, `${number.format(project.budgetMAD / 1000000)} MMAD`],
         [t.hostingPlatform, details.hostingPlatform[locale]],
-        [t.coordinator, `${contact.name[locale]} — ${contact.email}`],
+        [
+          t.coordinator,
+          [contact.name[locale], contact.affiliation?.[locale], contact.email]
+            .filter(Boolean)
+            .join(' — '),
+        ],
       ]
       await page.setContent(`<!doctype html><html lang="${locale}" dir="${locale === 'ar' ? 'rtl' : 'ltr'}"><head><meta charset="utf-8"><title>${escape(t.noteTitle)} - ${escape(project.acronym)}</title><style>
       @font-face{font-family:Jakarta;src:url(data:font/woff2;base64,${latin});font-weight:100 900}

@@ -949,3 +949,11 @@ are displayed.
   attachment API. Keep source flags, draft eligibility and private references separate.
 
 - Projects follow-up: stabilize numbered pagination across changing card heights and apply two rounded/two square corners to project cards.
+
+## Project details and Apex Leaf follow-up — 2026-10-11
+
+- Rename the project filter to Thématique; add owner-authorized filler professor names, affiliations and vector consortium wordmarks.
+- Hide the email in details, retain contact@iresen.ma in the mailto action, and include coordinator affiliation/email in all 72 localized PDF notes.
+- Align the compact name/italic affiliation with the 56px portrait/icon on desktop and mobile.
+- Replace the raster hero leaf with a rendering based on the untouched original Apex Leaf silhouette. Preserve fixture provenance and institutional search exclusion.
+- Lint, typecheck, 134 unit tests, 28 integration tests, production build and all 259 local browser tests passed. No deployment.

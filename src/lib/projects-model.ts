@@ -28,10 +28,12 @@ export type ProjectRecord = {
     coordinator: {
       name: Record<Locale, string>
       email: string
+      affiliation: Record<Locale, string>
       phone: string | null
       portrait: string | null
     }
     consortium: Record<Locale, string[]>
+    consortiumLogos: { id: string; name: string; src: string }[]
     objectives: Record<Locale, string[]>
   }
 }

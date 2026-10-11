@@ -112,7 +112,7 @@ test('all achievements remain available without JavaScript', async ({ browser })
     viewport: { width: 390, height: 900 },
   })
   const page = await context.newPage()
-  await page.goto('http://127.0.0.1:3000/ar#achievement-hydrogen-roadmap')
+  await page.goto('/ar#achievement-hydrogen-roadmap')
   await expect(page.locator('#results article')).toHaveCount(8)
   await expect(page.locator('#achievement-hydrogen-roadmap')).toBeInViewport()
   await expect(page.locator('#results button').first()).toBeHidden()

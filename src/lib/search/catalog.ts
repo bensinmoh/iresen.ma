@@ -1,4 +1,4 @@
-import { projectNoteReferences } from '@/lib/project-notes'
+import { projectNoteReferences, projectConsortiumLogoReferences } from '@/lib/project-notes'
 import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
@@ -92,7 +92,7 @@ const assetLabels = {
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   // Register note metadata while enforcing the source's current-public eligibility.
   // Owner-requested demonstration notes are downloadable previews, never institutional results.
-  ...projectNoteReferences
+  ...[...projectNoteReferences, ...projectConsortiumLogoReferences]
     .filter((reference) => reference.searchEligible)
     .map((reference) => ({
       id: reference.id,
@@ -730,6 +730,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'projects')
         body.push(
           catalog.Projects.description,
+          catalog.Projects.domain,
           ...Object.values(catalog.Projects.domains),
           catalog.Projects.hostingPlatform,
           catalog.Projects.coordinator,

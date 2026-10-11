@@ -23,3 +23,21 @@ export const projectNoteReferences = demoProjects.flatMap((project) =>
 export const projectNoteManifest = manifest
 export const projectNotesMatchSource =
   manifest.sourceSHA256 === createHash('sha256').update(JSON.stringify(demoProjects)).digest('hex')
+
+/** Owner-requested filler wordmarks, never references to real consortium memberships. */
+export const projectConsortiumLogoReferences = demoProjects[0].details.consortiumLogos.flatMap(
+  (partner) =>
+    locales.map((locale) => ({
+      id: `project-consortium-logo:${partner.id}:${locale}`,
+      locale,
+      url: partner.src,
+      type: 'media' as const,
+      title: partner.name,
+      description: {
+        fr: 'Visuel de remplissage pour le consortium des fiches projets.',
+        en: 'Filler graphic for the consortium in project details.',
+        ar: 'رسم مؤقت لعرض اتحاد الشركاء في تفاصيل المشاريع.',
+      }[locale],
+      searchEligible: false as const,
+    })),
+)

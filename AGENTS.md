@@ -301,3 +301,13 @@ The owner selected `contact@iresen.ma` until per-project emails are provided.
 72 localized PDF notes are generated from the demonstration database and served
 as validated attachments, outside public assets and institutional search. See
 [detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
+
+## Projects contact, consortium and hero follow-up — 2026-10-11
+
+The owner now explicitly authorizes filler professor names, affiliations and SVG
+consortium wordmarks until a complete project database is supplied. Keep their
+source provenance, search exclusion and no verified institutional attribution.
+Details show names/affiliations; “Contacter le prof” contains the provisional
+contact@iresen.ma mailto, while the localized PDF includes the email and affiliation.
+The owner replaces Domaine with Thématique and requests the exact Apex Leaf shape
+in the glass hero. Preserve its original SVG; see [scope](docs/projects.md).
