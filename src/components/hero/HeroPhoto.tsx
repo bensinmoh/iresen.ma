@@ -10,13 +10,15 @@ export function HeroPhoto({ photo }: { photo: HeroPhotoId }) {
   return (
     <picture>
       {/* Keep every available pixel when narrow heroes grow for content. */}
-      {photo !== 'headquarters' && <source media="(max-width: 40rem)" srcSet={image.mobile.src} />}
+      {image.mobile.src !== image.src && (
+        <source media="(max-width: 40rem)" srcSet={image.mobile.src} />
+      )}
       <Image
         src={image.src}
         alt=""
         fill
         sizes={desktopSizes}
-        quality={90}
+        quality={photo === 'platform-gep' ? 75 : 90}
         loading="eager"
         fetchPriority="high"
         className="hero-photo"

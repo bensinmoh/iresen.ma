@@ -3491,3 +3491,53 @@ AR desktop/320px and EN tablet views were inspected with an open map panel.
 An initial sticky-column offset was corrected to keep the list and map top-aligned.
 The geography remains unchanged in Arabic; public text uses RTL. These checks do
 not constitute a complete manual accessibility audit or editorial approval.
+
+## Research platforms — 2026-10-11
+
+The owner’s manuscript and eight screenshot references develop the canonical
+platforms page. See [scope and source fingerprint](research-platforms.md).
+French public source text is retained; EN/AR are working editorial adaptations.
+Private originals, screenshot metrics and unresolved official destinations are
+excluded from public assets/actions. GreenH2A retains development and 3D wording.
+
+- Node 24.19.0 / pnpm 11.19.0.
+- `pnpm lint`, strict typecheck and production build passed. An isolated
+  `.local/platforms-build` output preserves the owner’s development server.
+- Unit suite: 141 tests passed, including locale completeness, chapter discovery,
+  legacy targets and exclusion of private source downloads/duplicate media.
+- Integration suite: 28 tests passed on a freshly migrated disposable database;
+  it was removed afterward. Existing local CMS data/users remain unchanged.
+- 58 focused Chromium browser scenarios passed across the platforms, homepage
+  platforms, search relevance, shared heroes, responsive image delivery, section
+  motion and navigation suites. Four final page checks also passed after hero
+  optimization. Homepage assertions now target the matching chapters, and search
+  assertions distinguish exact FR/EN infrastructure terms from related Arabic
+  wording and explicit typo correction. Generic hero
+  checks now verify all description paragraphs and the commissioned GEP target.
+- Page tests cover FR/EN/AR, all four chapters, actual GEP/network actions, absence
+  of inert actions, the 3D caption, localized GEPMCI discovery, no-JavaScript Arabic,
+  reduced motion, keyboard focus, 320/390/768/1024/1440px and 200% text at 768px.
+- Scoped axe scans report no violations in all three page locales. This is not
+  a screen-reader or full WCAG conformance claim.
+- Actual desktop/mobile viewport captures were reviewed for chapter hierarchy,
+  photos, wrapping, physical brand corners and RTL. GreenH2A’s original colored
+  SVG uses a white backing to keep its lettering legible on navy. Full-document
+  captures were replaced with viewport captures after compositor duplication
+  and unloaded lazy images made the earlier captures unsuitable for review.
+- Existing static references are reused; `pnpm search:rebuild` synchronized the
+  local catalog and rebuilt seven eligible CMS records. No visibility settings
+  changed. Source/benchmark hashes, local documentation links and whitespace pass.
+
+Performance sample: a fresh Chromium context at 390 × 844, DPR 1, local production
+server and no network throttling requests one responsive GEP hero. The 1200px
+quality-75 WebP derivative is 163,465 bytes (about 160 KiB); Chromium’s negotiated
+format was 150,512 bytes. Both are below the 250 KB mobile hero target. The initial
+measured resource transfer was 482,693 bytes; observed LCP was 672ms and CLS 0.
+These unthrottled localhost values are supporting lab observations, not field
+performance or a deployment guarantee. The original public file remains unchanged. Review artifacts remain ignored under `.local/platforms-test-results`
+and `.cache/platforms-review`.
+
+Remaining publication inputs are the official GSBP/GEPMCI/GreenH2A destinations,
+final editorial/EN/AR validation and confirmation of operational GreenH2A
+infrastructure. No deployment, DNS, publication gate or general-search ranking
+change is made; the final-content glossary sanity check remains pending.

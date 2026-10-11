@@ -133,3 +133,7 @@ copy. The existing platforms overview remains its destination: individual
 platform sections/routes have not been implemented. Existing homepage card
 anchors, localized search descriptions and media references remain unchanged;
 no content, file or public destination is added. FR/EN/AR remain working copy.
+
+## Research platforms page — 2026-10-11
+
+The four homepage card actions now open their specific canonical platform chapters. This supersedes the earlier generic-overview action; existing homepage content, card motion, media and search references remain. See [platform page](research-platforms.md).

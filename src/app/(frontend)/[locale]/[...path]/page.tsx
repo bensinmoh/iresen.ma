@@ -1,4 +1,5 @@
 import { NetworkPage } from '@/components/network/NetworkPage'
+import { PlatformsPage } from '@/components/platforms/PlatformsPage'
 import { GovernancePage } from '@/components/governance/GovernancePage'
 import { InstitutePage } from '@/components/institute/InstitutePage'
 import { PublicationsPage } from '@/components/publications/PublicationsPage'
@@ -128,6 +129,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   if (pageId === 'projects') return <ProjectsPage locale={locale} parameters={await searchParams} />
   if (pageId === 'governance') return <GovernancePage locale={locale} />
   if (pageId === 'network') return <NetworkPage locale={locale} />
+  if (pageId === 'platforms') return <PlatformsPage locale={locale} />
   if (pageId === 'institute') return <InstitutePage locale={locale} />
   if (pageId === 'priorities') return <RoadmapPage locale={locale} />
   if (pageId === 'media') return <MediaLibraryPage locale={locale} />

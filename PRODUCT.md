@@ -1,5 +1,9 @@
 # IRESEN product context
 
+## Research platforms — 2026-10-11
+
+The owner commissions the canonical platforms page: complementary network introduction, GEP, GSBP, GEPMCI and GreenH2A, 13 infrastructure summaries and one network referral. Manuscript copy overrides screenshot samples. Explicit EN/AR drafts await editorial review; missing official destinations are omitted. GreenH2A retains development/3D wording. Routes, six legacy anchors and publication gates remain. See [scope](docs/research-platforms.md).
+
 ## Laboratory and expert network — 2026-10-11
 
 The owner commissioned the canonical network page after the other chat’s merge, excluding section 6. Five modules explain competence areas, contribution modes, the supplied 14-laboratory network, research-based skills and technical specialities. The directory filters by query and topic; it adopts only the supplied Settat scientific contact. No Alumni sample people, figures or testimonials are used. See [scope](docs/laboratories-experts-network.md). FR/EN/AR remain working copy; no deployment.

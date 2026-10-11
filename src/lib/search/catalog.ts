@@ -1,4 +1,5 @@
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
+import { researchPlatforms } from '@/lib/platforms'
 import {
   governanceBoard,
   governanceScientists,
@@ -573,7 +574,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   })),
   ...Object.entries(heroImages)
-    .filter(([id]) => id !== 'media-library' && id !== 'headquarters')
+    .filter(([id]) => !['media-library', 'headquarters', 'platform-gep'].includes(id))
     .map(([id, image]) => {
       // Contact has a dedicated headquarters photograph; its former illustration is
       // still served, but must not be described as the current contact page image.
@@ -793,6 +794,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
       if (pageId === 'network') body.push(...engagementSearchText(catalog.Network))
+      if (pageId === 'platforms') body.push(...engagementSearchText(catalog.Platforms))
       if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
       if (pageId === 'governance')
         body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
@@ -918,6 +920,33 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'platforms') {
+            const platform = researchPlatforms.find(({ anchor }) => anchor === entry.id)
+            if (platform) {
+              const platformCopy = catalog.Platforms.platforms[platform.id]
+              body.push(
+                ...engagementSearchText(platformCopy),
+                catalog.Platforms.imageAlt[platform.id],
+              )
+              if (platform.id === 'greenh2a')
+                body.push(catalog.Platforms.development, catalog.Platforms.visualization)
+              // Names and established acronyms remain discovery aliases in Arabic.
+              body.push(
+                messages.fr.Platforms.platforms[platform.id].name,
+                platform.id === 'gep-mci' ? 'GEPMCI GEP-MCI' : platform.id.toUpperCase(),
+              )
+            } else {
+              const copy = {
+                'choose-by-need': catalog.Platforms.intro,
+                'platform-network': catalog.Platforms.platforms,
+                'capabilities-availability': catalog.Platforms.platforms.gep.infrastructure,
+                'testing-demonstration': catalog.Platforms.platforms.gsbp,
+                'access-platforms': catalog.Platforms.network,
+                'projects-resources': catalog.Platforms.network,
+              }
+              body.push(...engagementSearchText(copy[entry.id as keyof typeof copy]))
+            }
+          }
           if (pageId === 'governance' && locale === 'ar') {
             if (entry.id === 'scientific-council')
               body.push(

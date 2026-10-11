@@ -4,6 +4,7 @@ import { researchThemes } from '@/lib/home-research'
 import { homeMissions, homeCooperationAnchor } from '@/lib/home-missions'
 import type { PageId } from '@/lib/site'
 import { roadmapDomains } from '@/lib/roadmap'
+import { researchPlatforms } from '@/lib/platforms'
 
 export type SectionDefinition = {
   id: string
@@ -90,7 +91,7 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   ],
   platforms: [
     { id: 'choose-by-need' },
-    { id: 'platform-network' },
+    { id: 'platform-network', children: researchPlatforms.map(({ anchor }) => ({ id: anchor })) },
     { id: 'capabilities-availability' },
     { id: 'testing-demonstration' },
     { id: 'access-platforms' },

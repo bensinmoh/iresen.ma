@@ -103,3 +103,7 @@ localized equivalents); the manuscript-driven page is developed. See
 ## Navigation and careers wording — 2026-10-11
 
 Resources now includes Brevets / Patents / براءات الاختراع, a desktop/mobile shortcut to the existing canonical transfer page at #adoption-initiatives. No new route is introduced; the portfolio and patent search references already exist.
+
+## Research platforms page — 2026-10-11
+
+The canonical `platforms` route is developed with four chapter anchors registered as children of `platform-network`. All six legacy targets and localized routes remain; homepage cards use their equivalent chapter destinations. See [scope](research-platforms.md).

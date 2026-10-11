@@ -78,7 +78,8 @@ for (const locale of locales) {
       const hero = page.locator('.page-hero')
       await expect(hero.getByRole('heading', { level: 1 })).toBeVisible()
       await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
-      await expect(hero.locator('.hero-description')).toBeVisible()
+      for (const description of await hero.locator('.hero-description').all())
+        await expect(description).toBeVisible()
       if (id === 'home') {
         await expect(hero.locator('.hero-certification')).toBeVisible()
         await expect(hero.locator('.hero-certification')).toContainText('9001:2015')
@@ -114,14 +115,19 @@ for (const locale of locales) {
           ? 'build-transfer'
           : id === 'workWithUs'
             ? 'prepare-discussion'
-            : 'page-sections'
+            : id === 'platforms'
+              ? 'green-energy-park'
+              : 'page-sections'
       await expect(page).toHaveURL(new RegExp(`#${target}$`))
       await expect
         .poll(async () => {
           const section = (await page.locator(`#${target}`).boundingBox())!
           const nav = page.locator('.home-section-navigation')
           const clearance = (await nav.isVisible()) ? (await nav.boundingBox())!.height : 0
-          return Math.abs(section.y - (id === 'transfer' || id === 'workWithUs' ? 32 : clearance))
+          return Math.abs(
+            section.y -
+              (id === 'transfer' || id === 'workWithUs' || id === 'platforms' ? 32 : clearance),
+          )
         })
         .toBeLessThanOrEqual(25)
     }
