@@ -3541,3 +3541,44 @@ Remaining publication inputs are the official GSBP/GEPMCI/GreenH2A destinations,
 final editorial/EN/AR validation and confirmation of operational GreenH2A
 infrastructure. No deployment, DNS, publication gate or general-search ranking
 change is made; the final-content glossary sanity check remains pending.
+
+## R&D&I programmes — 2026-10-11
+
+The canonical page follows the owner's manuscript and Figma visual reference,
+with the owner's photo and centering corrections. See [scope](programmes-rdi.md)
+and [generated illustration provenance](programmes-assets.json). EN/AR are working
+editorial adaptations. The four fictional calls are excluded; historical schemes
+are labelled, and current calls show the source's empty-state variant.
+
+- Node 24.19.0 / pnpm 11.19.0. Lint, strict typecheck, 144 unit tests and production
+  build pass. An isolated `.local/programmes-build` preserves the development
+  server. The pre-existing `tsconfig.json` diff is excluded from this change.
+- All 28 integration tests pass on a freshly migrated disposable database,
+  removed afterward. The initial attempt against the existing CMS database was
+  safely refused by its user-data guard; no existing users or content were erased.
+- 31 focused browser scenarios pass across the page, shared heroes and navigation.
+  The no-JavaScript assertion initially selected the header disclosure; scoping
+  it to programme archives corrected the test, then the scenario passed.
+  Four final page scenarios pass again after centering the surtitre, including
+  a measured horizontal-center check at all five responsive widths.
+- Page checks cover FR/EN/AR, six anchors, six stages, three historical schemes,
+  real source links, keyboard disclosure, the existing funding contact topic,
+  localized GREEN INNOBOOST search discovery, 320/390/768/1024/1440px reflow,
+  reduced motion, 200% text at 768px and native Arabic reading without JavaScript.
+- Scoped axe scans report no violations in the three page locales. This is not
+  a complete manual accessibility audit or publication/translation approval.
+- Actual desktop/mobile section captures were inspected for typography,
+  research/prototyping photo distinction, selected AquaSolar crop, the 69-project
+  band, pathway steps, archive disclosures and Arabic reading order. The hero
+  photo fills its frame with centered coverage; the content occupies the vertical
+  middle. The final surtitre correction also centers its limited-width block.
+- The local public search catalog was synchronized and eight eligible CMS records
+  rebuilt. Existing research/AquaSolar media references are reused; only the new
+  explicitly illustrative prototyping photo adds a media reference. Private
+  originals, screenshots and fictional calls stay excluded.
+
+Focused formatting, local documentation links, source/output hashes and Git
+whitespace are checked. Review captures remain ignored in
+`.local/programmes-test-results`. No deployment, DNS, visibility gate or new
+CMS collection is introduced. Final editorial/translation review, real current
+call records and the whole-site final content search sanity check remain pending.

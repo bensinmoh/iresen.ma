@@ -21,7 +21,7 @@ export const heroes = {
     stage: 'research',
     related: 'programmes',
   },
-  programmes: { photo: 'research', layout: 'end', stage: 'research', related: 'projects' },
+  programmes: { photo: 'research', layout: 'center', stage: 'research', related: 'projects' },
   projects: { photo: 'team', layout: 'start', stage: 'research', related: 'workWithUs' },
   platforms: { photo: 'platform-gep', layout: 'start', stage: 'research', related: 'network' },
   network: { photo: 'workshop', layout: 'end', stage: 'expertiseSkills', related: 'platforms' },

@@ -456,3 +456,7 @@ and [vector provenance](docs/network-assets.json). No deployment.
 ## Research platforms page — 2026-10-11
 
 The owner commissioned the canonical platforms page from the supplied manuscript and screenshot references. Preserve four chapters, 13 infrastructure summaries, six legacy anchors and localized search references. GreenH2A stays in development with its 3D caption. Missing official external destinations are omitted pending selection; EN/AR remain working editorial copy. Original sources remain private. See [scope](docs/research-platforms.md). No deployment.
+
+## Programmes R&D&I — 2026-10-11
+
+The owner commissioned the canonical programmes page from the supplied manuscript and Figma, with six legacy anchors, three historical schemes and the no-current-call working state. Do not turn the four manuscript demonstration calls into active records. Preserve the 69-project/2025 reference, working FR/EN/AR copy, native disclosures and search projections. Imagery focuses on research/products/people: full-height centered lab hero, distinct warm generated prototyping scene and the explicitly owner-selected AquaSolar photograph. See [scope](docs/programmes-rdi.md). No deployment.

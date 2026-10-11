@@ -437,3 +437,7 @@ represented by ten approximate city groups, synchronized with the list and
 filters. GEP's newly supplied city is Ben Guerir; its scientific contact is
 Abdelatif GHENNIOUI (ghennioui@iresen.org). Positions express discovery, not
 surveying precision or additional service availability. No deployment.
+
+## Programmes R&D&I — 2026-10-11
+
+The owner commissions the existing programmes route from the manuscript. Funding and support remain instruments of Recherche & Innovation. Three functions, expected benefits, six stages, historical examples and an honest empty current-call state are delivered. Preserve the 69-project reference for 2025, working EN/AR translations, local contact email drafts and the absence of active verified calls. See [scope](docs/programmes-rdi.md).

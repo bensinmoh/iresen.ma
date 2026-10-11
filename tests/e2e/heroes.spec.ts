@@ -117,7 +117,9 @@ for (const locale of locales) {
             ? 'prepare-discussion'
             : id === 'platforms'
               ? 'green-energy-park'
-              : 'page-sections'
+              : id === 'programmes'
+                ? 'participate'
+                : 'page-sections'
       await expect(page).toHaveURL(new RegExp(`#${target}$`))
       await expect
         .poll(async () => {
@@ -126,7 +128,9 @@ for (const locale of locales) {
           const clearance = (await nav.isVisible()) ? (await nav.boundingBox())!.height : 0
           return Math.abs(
             section.y -
-              (id === 'transfer' || id === 'workWithUs' || id === 'platforms' ? 32 : clearance),
+              (id === 'transfer' || id === 'workWithUs' || id === 'platforms' || id === 'programmes'
+                ? 32
+                : clearance),
           )
         })
         .toBeLessThanOrEqual(25)

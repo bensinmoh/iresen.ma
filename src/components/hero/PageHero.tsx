@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import type { ReactNode } from 'react'
 import type { Locale } from '@/i18n/locales'
 import { heroes } from '@/lib/heroes'
 import { homeFigures } from '@/lib/figures'
@@ -16,13 +17,17 @@ export async function PageHero({
   description,
   lead,
   primaryAction,
+  secondaryAction,
+  eyebrow,
 }: {
   pageId: PageId
   locale: Locale
-  title?: string
+  title?: ReactNode
   description?: string
   lead?: string
   primaryAction?: { label: string; href: string }
+  secondaryAction?: { label: string; href: string }
+  eyebrow?: string
 }) {
   const t = await getTranslations({ locale, namespace: 'Hero' })
   const engagement = await getTranslations({ locale, namespace: 'Engagement' })
@@ -45,7 +50,7 @@ export async function PageHero({
             <div className="hero-introduction">
               <p className={`hero-eyebrow${pageId === 'home' ? ' hero-eyebrow--brand' : ''}`}>
                 <span aria-hidden="true" />
-                {t(`stages.${definition.stage}`)}
+                {eyebrow ?? t(`stages.${definition.stage}`)}
               </p>
               <h1 id="hero-title">
                 {title ?? (pageId === 'home' ? t('homeTitle') : titles(pageId))}
@@ -92,18 +97,20 @@ export async function PageHero({
               <a
                 className="hero-related"
                 href={
-                  pageId === 'transfer'
+                  secondaryAction?.href ??
+                  (pageId === 'transfer'
                     ? '#adoption-initiatives'
                     : pageId === 'workWithUs'
                       ? '#choose-pathway'
-                      : pageLinkHref(definition.related, locale)
+                      : pageLinkHref(definition.related, locale))
                 }
               >
-                {pageId === 'transfer'
-                  ? transfer('exploreAction')
-                  : pageId === 'workWithUs'
-                    ? engagement('pathwayAction')
-                    : titles(definition.related)}
+                {secondaryAction?.label ??
+                  (pageId === 'transfer'
+                    ? transfer('exploreAction')
+                    : pageId === 'workWithUs'
+                      ? engagement('pathwayAction')
+                      : titles(definition.related))}
                 <NavigationIcon name="arrow" />
               </a>
             </div>

@@ -311,3 +311,7 @@ Owner follow-up: the first-page mockup cover image is served and registered as
 `institute-fifteen-year-report-cover` in each locale, with descriptive text and
 original “15 ANS D’IMPACT” wording. The nine-page source PDF and remaining pages
 are excluded; the actual report actions stay on `#`.
+
+## Programmes R&D&I projection — 2026-10-11
+
+The programmes page and six legacy sections include their complete localized manuscript bodies, functions, expected benefits, usual stages, historical schemes and dated 2025/69-project reference. The new prototyping illustration is registered once in FR/EN/AR; existing hero/AquaSolar originals keep their media identities. Private source files, fictional calls and their dates are excluded. See [scope](programmes-rdi.md).

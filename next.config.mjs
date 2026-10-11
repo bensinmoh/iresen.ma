@@ -26,6 +26,7 @@ const nextConfig = {
       { pathname: '/images/governance/**', search: '' },
       { pathname: '/images/institute/fifteen-year-report-cover-cutout.webp', search: '' },
       { pathname: '/images/platforms/**', search: '' },
+      { pathname: '/images/programmes/**', search: '' },
       { pathname: '/images/achievements/**', search: '' },
       { pathname: '/images/collaborate/**', search: '' },
       { pathname: '/images/transfer/ismart-product.webp', search: '' },

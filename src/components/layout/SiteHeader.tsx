@@ -350,11 +350,12 @@ export function SiteHeader() {
     currentPageId !== undefined &&
     currentPageId !== 'search' &&
     currentPageId !== 'contact' &&
-    currentPageId !== 'projects'
+    currentPageId !== 'projects' &&
+    currentPageId !== 'programmes'
 
   return (
     <header
-      className={`site-header${inverse ? ' site-header-inverse site-header-overlay' : currentPageId === 'projects' ? ' site-header-projects' : ''}`}
+      className={`site-header${inverse ? ' site-header-inverse site-header-overlay' : currentPageId === 'projects' ? ' site-header-projects' : currentPageId === 'programmes' ? ' site-header-programmes' : ''}`}
       ref={headerRef}
       onKeyDown={closeOnEscape}
       onClick={(event) => {
