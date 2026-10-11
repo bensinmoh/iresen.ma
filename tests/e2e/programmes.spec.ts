@@ -24,9 +24,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     )
     await expect(region.locator('#research-results img')).toHaveAttribute('src', /aquasolar/)
     await expect(region.locator('#project-lifecycle li')).toHaveCount(6)
-    await expect(region.locator('#calls-for-projects article')).toHaveCount(3)
-    await expect(region.locator('#participate h2')).toHaveText(copy.current.title)
-    await expect(region.locator('#participate article')).toHaveCount(0)
+    await expect(region.locator('#calls-for-projects article[id^="historical-call-"]')).toHaveCount(
+      3,
+    )
+    const activeCount = await region.locator('#participate article').count()
+    await expect(region.locator('#participate h2')).toHaveText(
+      activeCount ? { fr, en, ar }[locale].Calls.active : copy.current.title,
+    )
     await region.locator('.hero-primary').click()
     await expect(page).toHaveURL(/#participate$/)
     await expect(region.locator('#participate h2')).toBeInViewport()
@@ -35,7 +39,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.keyboard.press('Enter')
     await expect(disclosure).toHaveAttribute('open', '')
     await expect(disclosure.locator('a')).toHaveAttribute('href', /uit.ac.ma/)
-    await region.locator('#participate a').last().click()
+    await region.locator('#practical-questions a').first().click()
     await expect(page).toHaveURL(`${pageHref('contact', locale)}?subject=agency`)
     await expect(page.locator('select[name="subject"]')).toHaveValue('agency')
     await page.goto(pageHref('programmes', locale))

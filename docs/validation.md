@@ -3579,6 +3579,46 @@ are labelled, and current calls show the source's empty-state variant.
 
 Focused formatting, local documentation links, source/output hashes and Git
 whitespace are checked. Review captures remain ignored in
-`.local/programmes-test-results`. No deployment, DNS, visibility gate or new
-CMS collection is introduced. Final editorial/translation review, real current
+`.local/programmes-test-results`. No deployment, DNS or visibility-gate change is introduced. The later CMS
+collection increment is verified below. Final editorial/translation review, real current
 call records and the whole-site final content search sanity check remain pending.
+
+## CMS calls and detail pages — 2026-10-11
+
+The owner expanded Programmes to a CMS collection, full localized detail pages,
+terms downloads and supplied submission-form destinations. The later clarification
+identifies the 69 projects as R&D&I projects selected through calls. The project
+model reserves the originating stable call reference; the current 24 demonstration
+records remain unlinked. See [scope and workflow](calls-for-projects.md).
+
+- Lint, strict typecheck, 147 unit tests and production build pass. Generated CMS
+  types and import map were regenerated; no new admin widget is needed.
+- All 30 CMS/search integration checks pass sequentially on a freshly migrated
+  disposable database, including incomplete-publication rejection, private-note
+  exclusion, FR/EN/AR approval without fallback, localized search URLs, archive
+  discovery and immediate withdrawal followed by queued index removal.
+- Five final focused browser scenarios pass (four programme scenarios plus the
+  complete call lifecycle). Earlier 31 shared hero/navigation/page scenarios
+  also passed. Call coverage includes links from the overview, four calendar
+  stages, PDF response/mime/cache guards, HTTPS submission action, all three
+  locales, language switching, native Arabic reading without JavaScript,
+  320/390/768/1440px reflow, 200% text, deadline closure, archive movement, PDF
+  withdrawal and a real HTTP 404 for a private call or unapproved translation.
+- Scoped axe scans have no violations in the three detail-page locales. Actual
+  French desktop and Arabic mobile captures were inspected for hierarchy,
+  calendar stacking, signature action corners and RTL reading.
+- Browser QA exposed two concrete issues: terms URLs inherited the owner's
+  development origin, and encoded Arabic detail paths were not recognized.
+  Downloads now use the guarded relative Media route; route recognition safely
+  decodes Unicode paths. The proxy checks current public eligibility before
+  streaming to return an actual 404 instead of a 200 not-found screen.
+- The new migration's down/up round trip passes in the disposable database.
+  Its schema-only up migration was also applied to the owner's local database;
+  no call records were inserted there. Existing eight eligible CMS resources
+  were rebuilt in search. All test calls/PDFs live only in disposable databases,
+  removed after tests.
+
+Review captures remain ignored under `.local/calls-browser-results`. No call
+content, terms PDF or form URL is invented for the owner's site. Real inputs,
+final editorial/translation review, the whole-site search sanity check and
+separate deployment authorization remain pending.

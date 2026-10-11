@@ -7,6 +7,8 @@ import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
 import styles from './ProgrammesPage.module.css'
+import { findPublishedCalls, type PublicCall } from '@/lib/content/call-queries'
+import { callHref, callState } from '@/lib/calls'
 
 type Item = { title: string; description: string; category?: string }
 const historicalSources = [
@@ -17,6 +19,38 @@ const historicalSources = [
 
 export async function ProgrammesPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Programmes' })
+  const callsCopy = await getTranslations({ locale, namespace: 'Calls' })
+  const calls = await findPublishedCalls(locale)
+  const activeCalls = calls.filter((call) => ['open', 'upcoming'].includes(callState(call)))
+  const archivedCalls = calls.filter((call) => ['closed', 'cancelled'].includes(callState(call)))
+  const callCard = (call: PublicCall) => (
+    <article key={call.id} id={`call-${call.reference}`}>
+      <p className={styles.archiveLabel}>{callsCopy(`states.${callState(call)}`)}</p>
+      <p className={styles.category}>
+        <bdi>{call.acronym}</bdi> · <bdi>{call.launchYear}</bdi>
+      </p>
+      <h3>
+        <a href={callHref(call.reference, locale)}>{call.title}</a>
+      </h3>
+      <p>
+        {call.description.slice(0, 240)}
+        {call.description.length > 240 ? '…' : ''}
+      </p>
+      <p className={styles.note}>
+        {callsCopy('deadline')} :{' '}
+        <time dateTime={call.deadlineAt}>
+          {new Intl.DateTimeFormat(locale, {
+            dateStyle: 'long',
+            timeZone: 'Africa/Casablanca',
+          }).format(new Date(call.deadlineAt))}
+        </time>
+      </p>
+      <a className={styles.textLink} href={callHref(call.reference, locale)}>
+        {callsCopy('view')}
+        <NavigationIcon name="arrow" />
+      </a>
+    </article>
+  )
   const titleParts = t('title').split('. ')
   const contactHref = `${pageHref('contact', locale)}?subject=agency`
   const intro = t.raw('intro.items') as Item[]
@@ -206,6 +240,12 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
                 </article>
               ))}
             </div>
+            {archivedCalls.length > 0 && (
+              <div>
+                <h3>{callsCopy('archives')}</h3>
+                <div className={styles.archives}>{archivedCalls.map(callCard)}</div>
+              </div>
+            )}
           </div>
         </section>
         <section
@@ -213,27 +253,38 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
           className={styles.current}
           aria-labelledby="programme-current-title"
         >
-          <div className={`container ${styles.empty}`}>
-            <ValorisationIcon name="file-certificate" />
-            <div>
+          {activeCalls.length ? (
+            <div className="container">
               <p className={styles.eyebrow}>
                 <span aria-hidden="true" />
                 {t('current.eyebrow')}
               </p>
-              <h2 id="programme-current-title">{t('current.title')}</h2>
-              <p>{t('current.description')}</p>
-              <div className={styles.actions}>
-                <a className="button button-primary" href="#calls-for-projects">
-                  {t('archivesAction')}
-                  <NavigationIcon name="arrow" />
-                </a>
-                <a className={styles.textLink} href={contactHref}>
-                  {t('programmeContact')}
-                  <NavigationIcon name="arrow" />
-                </a>
+              <h2 id="programme-current-title">{callsCopy('active')}</h2>
+              <div className={styles.archives}>{activeCalls.map(callCard)}</div>
+            </div>
+          ) : (
+            <div className={`container ${styles.empty}`}>
+              <ValorisationIcon name="file-certificate" />
+              <div>
+                <p className={styles.eyebrow}>
+                  <span aria-hidden="true" />
+                  {t('current.eyebrow')}
+                </p>
+                <h2 id="programme-current-title">{t('current.title')}</h2>
+                <p>{t('current.description')}</p>
+                <div className={styles.actions}>
+                  <a className="button button-primary" href="#calls-for-projects">
+                    {t('archivesAction')}
+                    <NavigationIcon name="arrow" />
+                  </a>
+                  <a className={styles.textLink} href={contactHref}>
+                    {t('programmeContact')}
+                    <NavigationIcon name="arrow" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </section>
         <section
           id="practical-questions"

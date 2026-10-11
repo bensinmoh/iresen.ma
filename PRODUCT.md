@@ -441,3 +441,5 @@ surveying precision or additional service availability. No deployment.
 ## Programmes R&D&I — 2026-10-11
 
 The owner commissions the existing programmes route from the manuscript. Funding and support remain instruments of Recherche & Innovation. Three functions, expected benefits, six stages, historical examples and an honest empty current-call state are delivered. Preserve the 69-project reference for 2025, working EN/AR translations, local contact email drafts and the absence of active verified calls. See [scope](docs/programmes-rdi.md).
+
+CMS follow-up: the owner commissions every call’s metadata, calendar, budget, recipients, themes, funding partners, actual terms PDF and submission form URL. Date-derived states control the form action and archive listing. Only published, locale-approved complete records are public; no actual calls were supplied. See [workflow](docs/calls-for-projects.md).

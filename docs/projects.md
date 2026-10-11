@@ -1,5 +1,11 @@
 # R&D&I projects — 2026-10-11
 
+Owner call relationship clarification: the 69 institutional projects are R&D&I
+projects selected through calls. The model reserves `selectionCallReference`
+for the stable originating `Calls.reference` (one call → several selected projects).
+The 24 demonstration records remain unlinked. See [the call model and future
+CMS relationship](calls-for-projects.md#relationship-with-selected-rdi-projects).
+
 The owner commissioned the canonical projects page using Figma frame `804:9285`
 and `projets.png`, and explicitly requested a fictional project database.
 Existing FR/EN/AR routes and the shared header/footer remain authoritative.

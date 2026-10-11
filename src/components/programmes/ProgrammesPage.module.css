@@ -375,9 +375,9 @@
   background: linear-gradient(
     180deg,
     rgb(244 247 248 / 88%) 0%,
-    rgb(234 241 248 / 90%) 35%,
-    rgb(234 241 248 / 68%) 52%,
-    transparent 78%
+    rgb(244 247 248 / 88%) 30%,
+    rgb(244 247 248 / 88%) 80%,
+    rgb(244 247 248 / 20%) 100%
   );
 }
 .page :global(.hero-body) {
@@ -399,7 +399,7 @@
 }
 .page :global(.hero-eyebrow),
 .page :global(.hero-related) {
-  color: var(--color-blue);
+  color: var(--color-navy);
 }
 .page :global(.hero-eyebrow) {
   justify-content: center;
@@ -483,9 +483,9 @@
     background: linear-gradient(
       180deg,
       rgb(244 247 248 / 88%) 0%,
-      rgb(234 241 248 / 94%) 48%,
-      rgb(234 241 248 / 70%) 70%,
-      transparent 95%
+      rgb(244 247 248 / 88%) 25%,
+      rgb(244 247 248 / 88%) 82%,
+      rgb(244 247 248 / 35%) 100%
     );
   }
   .page :global(.hero-body) {

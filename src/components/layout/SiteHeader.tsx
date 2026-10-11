@@ -19,6 +19,7 @@ import { LocaleSelector } from './LocaleSelector'
 import { HeaderSearch } from './HeaderSearch'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 import { NavigationIcon } from './NavigationIcon'
+import { callReferenceFromPath } from '@/lib/calls'
 
 export function SiteHeader() {
   const currentLocale = useLocale()
@@ -28,7 +29,11 @@ export function SiteHeader() {
   const copy = useTranslations('Header')
   const figureCopy = useTranslations('Hero')
   const pathname = usePathname()
-  const currentPageId = isNewsListingPath(pathname, locale) ? 'news' : pageIdFromPathname(pathname)
+  const currentPageId = callReferenceFromPath(pathname, locale)
+    ? 'programmes'
+    : isNewsListingPath(pathname, locale)
+      ? 'news'
+      : pageIdFromPathname(pathname)
   const headerRef = useRef<HTMLElement>(null)
   const menuRef = useRef<HTMLDetailsElement>(null)
   const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null)

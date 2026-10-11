@@ -839,8 +839,8 @@
         "description": "Calls can support different stages of innovation and bring together national or international partners."
       },
       "participate": {
-        "title": "No calls for projects currently open.",
-        "description": "There are currently no calls open for applications. Browse previous calls to discover the themes supported and participation arrangements."
+        "title": "Calls for projects",
+        "description": "Explore published calls for projects, their terms, schedules, applicants and submission procedures."
       },
       "project-lifecycle": {
         "title": "Support at every stage of the project.",
@@ -3126,7 +3126,7 @@
     "programmeContact": "Contact the R&D&I Programmes team",
     "historicalNote": "These schemes are presented as historical examples. Their terms and editions are separate from currently open calls.",
     "reference": "Agency of means report — 2025.",
-    "figureLabel": "collaborative projects supported",
+    "figureLabel": "R&D&I projects selected through calls for projects",
     "sourceLink": "Read the institutional reference",
     "processNote": "The precise terms are set out in the specifications for each call.",
     "intro": {
@@ -3236,5 +3236,43 @@
     "researchAlt": "Generated illustration of three engineers working together on an electronics prototype at a wooden workbench. Fictional research, development and innovation scene, not an actual IRESEN team, product or site.",
     "illustrationNote": "Illustration of collaborative research.",
     "productAlt": "Supplied photograph of the AquaSolar demonstrator, a mobile modular desalination unit."
+  },
+  "Calls": {
+    "back": "All calls for projects",
+    "launchYear": "Launch year",
+    "budget": "Budget allocation",
+    "deadline": "Submission deadline",
+    "download": "Download the call terms",
+    "submit": "Open the submission form",
+    "termsUnavailable": "The terms for this call are currently unavailable.",
+    "description": "About the call",
+    "calendar": "Call schedule",
+    "timezone": "Dates and times: Africa/Casablanca time zone.",
+    "until": "Until",
+    "eligibility": "Applicants and themes",
+    "recipients": "Who can apply?",
+    "themes": "Call themes",
+    "fundingPartners": "Funding partners",
+    "view": "View the call",
+    "active": "Calls for projects",
+    "archives": "Closed calls and archives",
+    "states": {
+      "upcoming": "Upcoming",
+      "open": "Open",
+      "closed": "Closed",
+      "cancelled": "Cancelled"
+    },
+    "submission": {
+      "upcoming": "Submission will be available when the call opens.",
+      "closed": "The submission period has ended.",
+      "cancelled": "This call has been cancelled. Submission is disabled."
+    },
+    "stages": {
+      "opening": "Opening",
+      "submission": "Submission",
+      "evaluation": "Evaluation",
+      "results": "Selected projects announced"
+    },
+    "discoveryDescription": "Explore published calls for projects, their terms, schedules, applicants and submission procedures."
   }
 }

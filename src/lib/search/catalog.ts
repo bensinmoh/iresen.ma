@@ -809,7 +809,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
       if (pageId === 'network') body.push(...engagementSearchText(catalog.Network))
       if (pageId === 'platforms') body.push(...engagementSearchText(catalog.Platforms))
-      if (pageId === 'programmes') body.push(...engagementSearchText(catalog.Programmes))
+      if (pageId === 'programmes') {
+        const programmeCopy = Object.fromEntries(
+          Object.entries(catalog.Programmes).filter(([key]) => key !== 'current'),
+        )
+        body.push(
+          ...engagementSearchText(programmeCopy),
+          catalog.Calls.active,
+          catalog.Calls.discoveryDescription,
+        )
+      }
       if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
       if (pageId === 'governance')
         body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
@@ -952,7 +961,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 ...catalog.Programmes.history,
                 note: catalog.Programmes.historicalNote,
               },
-              participate: catalog.Programmes.current,
+              participate: {
+                title: catalog.Calls.active,
+                description: catalog.Calls.discoveryDescription,
+              },
               'practical-questions': catalog.Programmes.final,
             }
             body.push(

@@ -44,12 +44,13 @@ routes. Their source references were checked on 2026-10-11:
 - [Cadi Ayyad University: GREEN INNOBOOST 2.0 announcement](https://www.uca.ma/fr/news/iresen-lancement-de-lappel-a-projet-green-innoboost-20-dernier-delai-de-soumission-31-janvier-2021).
 - [CDTI: Morocco–Spain bilateral scheme](https://www.cdti.es/programas-bilaterales-marruecos).
 
-No verified current calls were supplied and no calls collection exists. The
-manuscript's no-open-call variant is implemented as working copy. A dynamic
-collection, real active calls and a comprehensive archive require their own
-verified records, publication/localization access gates, reachable destinations
-and guarded search indexing. The four fictional calls and deadlines are excluded
-from runtime, database and public search.
+No verified current calls were supplied. The owner’s later request commissions
+[the Calls CMS collection and individual detail pages](calls-for-projects.md),
+with every requested field, approved PDF terms, actual form URLs, localized
+publication gates and guarded indexing. The overview reads eligible upcoming/open
+calls and archives closed/cancelled records. The source empty-state variant remains
+when no current record is eligible. No fictional call or deadline is seeded;
+the three historical examples remain distinct from CMS call records.
 
 The hero points to current calls and the approach. Existing priorities, projects
 and cooperation routes provide further reading. Contact uses the existing
@@ -80,6 +81,12 @@ is retained alongside the general infrastructure-image exclusion. Reuse its
 existing provenance in [achievement-assets.json](achievement-assets.json) and
 static media result; do not infer that the photo substantiates every expected
 benefit or the dated project count. Originals remain unchanged.
+
+The final owner contrast correction strengthens the light scrim across the title,
+description and actions. Its central 88% light layer protects the large blue
+title and navy text against darker photographic details. The small surtitre and
+secondary action use navy for readable contrast; the gradient retains more of
+the photo at the edges. Image coverage and centered content remain unchanged.
 
 All text remains server rendered. Native disclosures and section links work
 without JavaScript. The existing site motion owns first-scroll reveals and smooth

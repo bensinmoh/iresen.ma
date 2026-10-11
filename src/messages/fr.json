@@ -432,8 +432,8 @@
         "description": "Les appels à projets peuvent soutenir différentes étapes de l’innovation et mobiliser des partenariats nationaux ou internationaux."
       },
       "participate": {
-        "title": "Aucun appel à projets en cours.",
-        "description": "Il n’y a actuellement aucun appel à projets ouvert à la candidature. Retrouvez les appels précédents pour découvrir les thématiques soutenues et les modalités de participation."
+        "title": "Appels à projets",
+        "description": "Consultez les appels à projets publiés, leurs conditions, calendriers, destinataires et modalités de soumission."
       },
       "project-lifecycle": {
         "title": "Un accompagnement à chaque étape du projet.",
@@ -3129,7 +3129,7 @@
     "programmeContact": "Contacter l’équipe Programmes R&D&I",
     "historicalNote": "Ces dispositifs sont présentés à titre historique. Leurs modalités et leurs éditions sont distinctes des appels actuellement ouverts.",
     "reference": "Bilan de l’agence de moyens — 2025.",
-    "figureLabel": "projets collaboratifs soutenus",
+    "figureLabel": "projets R&D&I sélectionnés à l’issue d’appels à projets",
     "sourceLink": "Consulter la référence institutionnelle",
     "processNote": "Les modalités précises sont définies dans le cahier des charges de chaque appel.",
     "intro": {
@@ -3239,5 +3239,43 @@
     "researchAlt": "Illustration générée de trois ingénieurs travaillant ensemble sur un prototype électronique à un établi en bois. Scène fictive de recherche, développement et innovation, sans représenter une équipe, un produit ou un site réel d’IRESEN.",
     "illustrationNote": "Illustration de la recherche collaborative.",
     "productAlt": "Photographie fournie du démonstrateur AquaSolar, unité mobile et modulaire de dessalement."
+  },
+  "Calls": {
+    "back": "Tous les appels à projets",
+    "launchYear": "Année de lancement",
+    "budget": "Enveloppe budgétaire",
+    "deadline": "Date limite de soumission",
+    "download": "Télécharger les conditions de l’appel",
+    "submit": "Accéder au formulaire de soumission",
+    "termsUnavailable": "Les conditions de cet appel sont actuellement indisponibles.",
+    "description": "Présentation de l’appel",
+    "calendar": "Calendrier de l’appel",
+    "timezone": "Dates et heures : fuseau Africa/Casablanca.",
+    "until": "Jusqu’au",
+    "eligibility": "Destinataires et thématiques",
+    "recipients": "Qui peut candidater ?",
+    "themes": "Thématiques de l’appel",
+    "fundingPartners": "Partenaires de financement",
+    "view": "Consulter l’appel",
+    "active": "Appels à projets",
+    "archives": "Appels clôturés et archives",
+    "states": {
+      "upcoming": "À venir",
+      "open": "Ouvert",
+      "closed": "Clôturé",
+      "cancelled": "Annulé"
+    },
+    "submission": {
+      "upcoming": "La soumission sera accessible à l’ouverture de l’appel.",
+      "closed": "La période de soumission est terminée.",
+      "cancelled": "Cet appel est annulé. La soumission est désactivée."
+    },
+    "stages": {
+      "opening": "Ouverture",
+      "submission": "Soumission",
+      "evaluation": "Évaluation",
+      "results": "Annonce des projets retenus"
+    },
+    "discoveryDescription": "Consultez les appels à projets publiés, leurs conditions, calendriers, destinataires et modalités de soumission."
   }
 }

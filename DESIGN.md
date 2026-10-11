@@ -1260,3 +1260,5 @@ markers so all cities remain selectable. Smaller screens stack map then list.
 ## Programmes R&D&I composition — 2026-10-11
 
 The owner requires a closer Figma look and feel with restrained research, product and people photography. Preserve a bright full-height centered laboratory hero, blue title emphasis, white header, pale three-card presentation, a distinct warm prototyping image and the owner-selected AquaSolar feature. No PV plant imagery. Navy native project steps and clear historical/empty-call states use shared geometry and arrows. See [scope](docs/programmes-rdi.md).
+
+Programmes contrast/detail follow-up: sustain the light hero scrim behind all foreground copy and use navy for small text/actions. Call detail pages use a pale factual header, restrained date/budget figures, a four-stage calendar, readable eligibility/theme lists and real document/form actions. Preserve shared corners, vector arrows, mobile stacking and Arabic order.
