@@ -1,5 +1,9 @@
 # IRESEN website
 
+## CMS interface review — 2026-10-11
+
+The owner commissioned a frontend-only CMS review tool at `/cms-preview` on the development server. All modules expose local review journeys; browser storage and examples are isolated from Payload and public content. Production requires an explicit local-review opt-in and otherwise returns 404. See [scope and limits](docs/cms-interface-preview.md). No deployment.
+
 ## Research platforms — 2026-10-11
 
 The canonical platforms page now develops the supplied manuscript into four photographic chapters, 13 infrastructure summaries and a laboratory-network referral. FR/EN/AR working copy, preserved legacy anchors, chapter links and search references are included. GreenH2A remains in development; three official external destinations await selection. See [scope](docs/research-platforms.md). No deployment.

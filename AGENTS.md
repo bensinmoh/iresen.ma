@@ -1,5 +1,15 @@
 # IRESEN coding entrypoint
 
+## CMS interface review — 2026-10-11
+
+The owner commissions the administration frontend only and selects all modules
+with locally testable journeys. `/cms-preview` uses isolated browser review state,
+without connecting its actions to Payload, databases, public pages or integrations.
+Keep careers examples absent and real corpora/personal records outside this state.
+Production defaults to 404; explicit opt-in is for local review only. No deployment
+or authenticated administration is delivered. See [scope](docs/cms-interface-preview.md).
+Database connection, real publication and integrations await the next phase.
+
 ## Publications ingestion — 2026-10-10
 
 The owner initially selected 1,181 records from `IRESEN_2026.xlsx`, then approved

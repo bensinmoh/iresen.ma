@@ -3659,3 +3659,41 @@ all 97 non-generated raster files receive valid optimized images, and the shared
 image/document/news preview regression remains green. Four cases are new,
 bringing cumulative scoped browser coverage to 37 unique tests. Current checkout
 unit tests pass 153 cases, including unrelated ongoing CMS-preview tests.
+
+## CMS interface preview — 2026-10-11
+
+Owner scope: all modules, frontend only, plus the institutional navy sidebar
+follow-up. No CMS/database action or deployment. See [scope](cms-interface-preview.md).
+
+- Lint passed with `.next-image-audit/**` excluded from the local invocation: that
+  concurrent task's generated webpack output is not application source. The earlier
+  normal lint passed before those unrelated files appeared; CI checks normal lint.
+- Typecheck passed; 153 unit tests across 20 files passed. Four focused workflow tests
+  cover rights, language review, published snapshots, shared-field edits and CSV safety.
+- Production build passed (existing next-intl webpack dependency-parser warnings).
+- Enabled local production review at port 3001: four Chromium journeys passed; the
+  disabled-production test is intentionally skipped there. Draft/review/local publication,
+  blank AR variant, preview dismissal, reload retention, no content-API requests, mobile
+  unsaved confirmation/reader navigation and repeat CSV import/audit were exercised.
+- A separate production instance without opt-in returned 404 with noindex; its boundary
+  test passed, with the four enabled-only journeys intentionally skipped.
+- Scoped axe WCAG A/AA checks passed on dashboard and editor, including the navy sidebar.
+  This is not a screen-reader conformance claim; no dedicated screen-reader audit was run.
+- Rendered inspection: dashboard/editor at 1440px, mobile 390px, Arabic desktop/mobile
+  reading preview and 768px with 200% root text size. No document horizontal overflow
+  at the enlarged width; wide tables retain native horizontal scrolling. Correction
+  pass fixed profile selection across confirmation, Arabic title font/language semantics,
+  responsive search wrapping and sidebar resize transitions.
+- The Impeccable mechanical detector returned no findings. Changed-file formatting
+  and Git whitespace checks passed. Installed Next route-group/layout documentation
+  was read; canonical route/search registries remain unchanged.
+
+Review images are local, ignored artifacts under `.local/cms-review/`; they contain
+only labelled interface examples. No private source or original spec was imported.
+The supplied specification matches its existing repository copy (SHA-256
+`839b94cfe8a430fd4fa6f13b18791361fa20b30b0cdd8a7791bd9bb0dfb5955e`).
+
+Local CMS/database integration tests were not run for this disconnected interface;
+PR CI uses a disposable PostgreSQL instance for the existing full suite and separately
+opts into the four frontend review journeys. Real integrations and authorization
+remain deferred.

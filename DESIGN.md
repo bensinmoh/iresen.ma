@@ -1,5 +1,9 @@
 # IRESEN visual direction
 
+## CMS interface review — 2026-10-11
+
+The private review surface uses Operate mode: a compact institutional navy sidebar with the original white logo, quiet blue selection, fixed rem typography, readable tables, a two-column editor and native dialogs only for previews or consequential local actions. Reuse current blue/navy, licensed Jakarta/Alexandria, original SVG logo and signature action/surface corners. The mobile drawer traps focus; forms reflow and Arabic fields retain RTL. No public layout or new shared token is introduced. See [scope](docs/cms-interface-preview.md).
+
 ## Research platforms composition — 2026-10-11
 
 The page uses a real GEP aerial hero, an editorial introduction and alternating documentary photo/text chapters with quiet ruled infrastructure summaries. White/pale surfaces lead to a navy GreenH2A chapter and a compact network referral. Reuse current typography, signature corners, SVG marks and logical spacing; tablet/mobile reflow and Arabic retain natural reading. No new shared token. See [scope](docs/research-platforms.md).
