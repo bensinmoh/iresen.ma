@@ -41,10 +41,49 @@ test('project form and pagination work without JavaScript', async ({ browser }) 
   await context.close()
 })
 
-test('project layout contains FR/EN/AR at representative widths and enlarged text', async ({
-  page,
-}) => {
-  for (const locale of ['fr', 'en', 'ar'] as const) {
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: project catalogue filters and pagination`, async ({ page }) => {
+    await page.goto(pageHref('projects', locale))
+    await expect(page.locator('[data-projects-page] article')).toHaveCount(6)
+    await expect(page.locator('#understanding-results')).toContainText('24')
+    await page.locator('#project-catalogue nav a[aria-current="page"] + a').click()
+    await expect(page.locator('#project-demo-007')).toBeVisible()
+    await page.locator('select[name="domain"]').selectOption('hydrogen')
+    await expect(page.locator('[data-projects-page] article')).toHaveCount(3)
+    await expect(page.locator('#project-catalogue nav a[aria-current="page"]')).toHaveCount(0)
+    await page.goto(pageHref('projects', locale))
+    await page.locator('#find-project input[name="q"]').fill('CELL-PV')
+    await page.locator('#find-project button[type="submit"]').click()
+    await expect(page.locator('[data-projects-page] article')).toHaveCount(1)
+    await expect(page.locator('#project-demo-005')).toContainText(demoProjects[4].title[locale])
+    await page.locator('#find-project input[name="q"]').fill('no-such-project-xyz')
+    await page.locator('#find-project button[type="submit"]').click()
+    await expect(page.locator('[data-projects-page] article')).toHaveCount(0)
+    await page.locator('#find-project .container > div a').click()
+    await expect(page.locator('[data-projects-page] article')).toHaveCount(6)
+    const axe = await new AxeBuilder({ page }).include('[data-projects-page]').analyze()
+    expect(axe.violations).toEqual([])
+  })
+}
+
+test('project form and pagination work without JavaScript', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false })
+  const page = await context.newPage()
+  await page.goto(pageHref('projects', 'fr'))
+  await page.locator('select[name="status"]').selectOption('completed')
+  await page.locator('#find-project button[type="submit"]').click()
+  await expect(page.locator('[data-projects-page] article')).toHaveCount(6)
+  await expect(page.locator('select[name="status"]')).toHaveValue('completed')
+  await page.locator('nav a[aria-current="page"] + a').click()
+  await expect(page.locator('[data-projects-page] article')).toHaveCount(2)
+  await context.close()
+})
+
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: project layout contains representative widths and enlarged text`, async ({
+    page,
+  }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' })
     for (const width of [320, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       await page.goto(pageHref('projects', locale))
@@ -65,11 +104,11 @@ test('project layout contains FR/EN/AR at representative widths and enlarged tex
         })
       }
     }
-  }
-  await page.setViewportSize({ width: 390, height: 900 })
-  await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
-})
+    await page.setViewportSize({ width: 390, height: 900 })
+    await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  })
+}
 
 for (const locale of ['fr', 'ar'] as const) {
   test(`${locale}: filters preserve scroll, focus and history; cards open a right drawer`, async ({
