@@ -147,4 +147,4 @@ and [Arabic mobile actions](review/projects/detail-ar-mobile-bottom.webp).
 
 Owner follow-up: project cards use the shared two-rounded/two-square corner geometry. Numbered pagination preserves the grid height and controls’ viewport position across pages, skips an already-active page, and keeps back/forward state current. FR/AR browser regressions cover successive page changes and card corners.
 
-Pagination follow-up validation: all 11 project browser checks passed on the latest production build, including successive FR/AR page changes and alternating card corners. Classic-scrollbar CI exposed a 15px drawer gap; its physical positioning and mobile width now use the viewport edge rather than the reserved root scrollbar gutter.
+Pagination follow-up validation: all 13 project browser checks passed on the latest production build (responsive geometry checks are split by locale with reduced motion), including successive FR/AR page changes and alternating card corners. Classic-scrollbar CI exposed a 15px drawer gap; its physical positioning and mobile width now use the viewport edge rather than the reserved root scrollbar gutter.
