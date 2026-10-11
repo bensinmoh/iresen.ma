@@ -111,3 +111,15 @@ It supersedes the profile-derived summary, with spacing restored and working FR/
 translations. The previously commissioned DPARMI card title remains; the biography
 retains the department wording supplied by its author. Search descriptions use
 this updated text.
+
+## Arabic personal names — owner follow-up
+
+The Arabic view now displays all eight scientific members, the Director General
+and six colleagues in Arabic script, including portrait alternatives, dialog
+headings/accessibility labels and biography mentions. Samir's existing Arabic
+biography supplies «سمير رشيدي». Other names are working Arabic transcriptions
+of the retained owner-selected Latin names, not verified civil-register spellings;
+foreign honorifics are adapted to Arabic. French/English names, stable member IDs,
+portraits, roles and profile links remain unchanged. Arabic page/section/media
+search descriptions use the localized names; original Latin scientific/team names
+remain searchable aliases in the affected section/media metadata.

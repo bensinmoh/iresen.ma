@@ -155,7 +155,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Governance.scientists[id].name,
-          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}`,
+          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -169,7 +169,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Governance.team[id].name,
-          description: `${messages[locale].Governance.teamTitle}. ${messages[locale].Governance.team[id].role}. ${messages[locale].Governance.team[id].biography}`,
+          description: `${messages[locale].Governance.teamTitle}. ${messages[locale].Governance.team[id].role}. ${messages[locale].Governance.team[id].biography}${locale === 'ar' ? ` ${messages.fr.Governance.team[id].name}` : ''}`,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -881,6 +881,17 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'governance' && locale === 'ar') {
+            if (entry.id === 'scientific-council')
+              body.push(
+                ...governanceScientists.map((id) => messages.fr.Governance.scientists[id].name),
+              )
+            if (
+              entry.id === 'department-responsibilities' ||
+              entry.id === 'leadership-organisation'
+            )
+              body.push(...governanceTeam.map((id) => messages.fr.Governance.team[id].name))
+          }
           if (pageId === 'institute') {
             const instituteCopy = {
               about: catalog.Institute.introduction,

@@ -427,3 +427,9 @@ orientation handling remain shared, with natural growth for large text.
 Latest owner Arabic correction mirrors the timeline: ascending 2011–2026 reads
 from right to left in Arabic, with matching native scroll direction, connected
 markers, trailing spacing and arrows. FR/EN retain left-to-right chronology.
+
+Governance Arabic names follow-up — 2026-10-11: the owner requires personal
+names in Arabic script in the Arabic page, including councils, team/DG, portrait
+labels and biography dialogs. Preserve French/English identities and profile
+links; Arabic transcriptions remain working editorial text. Search descriptions
+use localized names while retaining original Latin discovery aliases.

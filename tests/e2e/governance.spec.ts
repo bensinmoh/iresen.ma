@@ -6,7 +6,12 @@ import {
   governanceScientistLinkedin,
   governanceTeamLinkedin,
 } from '../../src/lib/governance'
+import fr from '../../src/messages/fr.json' with { type: 'json' }
+import en from '../../src/messages/en.json' with { type: 'json' }
+import ar from '../../src/messages/ar.json' with { type: 'json' }
 import { pageSections } from '../../src/lib/page-sections'
+
+const catalogs = { fr, en, ar }
 
 for (const locale of ['fr', 'en', 'ar'] as const) {
   test(`${locale}: governance councils, owner roles and responsive organisation`, async ({
@@ -29,14 +34,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       for (const { id } of [entry, ...(entry.children ?? [])])
         await expect(governance.locator(`#${id}`)).toHaveCount(1)
     }
-    for (const name of [
-      'Soukaina BOUDOUDOU',
-      'Ayoub HIRT',
-      'Mouhcine BENMEZIANE',
-      'Laila TYDRINI',
-      'Imane MOUBACHIR',
-      'Jamaleddine FOUHAM',
-    ]) {
+    for (const { name } of Object.values(catalogs[locale].Governance.team)) {
       await expect(governance.locator('#department-responsibilities')).toContainText(name)
     }
     await page.emulateMedia({ reducedMotion: 'reduce' })
@@ -115,6 +113,15 @@ test('scientific council and portraits are discoverable in all three locales', a
         `.search-results a[href="${pageHref('governance', locale, 'scientific-council')}"]`,
       ),
     ).toBeVisible()
+    if (locale === 'ar') {
+      query.set('q', catalogs.ar.Governance.scientists.ennaoui.name)
+      await page.goto(`${pageHref('search', locale)}?${query}`)
+      await expect(
+        page.locator(
+          `.search-results a[href="${pageHref('governance', locale, 'scientific-council')}"]`,
+        ),
+      ).toBeVisible()
+    }
     query.set('q', 'Soukaina BOUDOUDOU')
     query.set('type', 'media')
     await page.goto(`${pageHref('search', locale)}?${query}`)
@@ -130,14 +137,23 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   test(`${locale}: scientist LinkedIn links and colleague biography dialogs`, async ({ page }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await page.goto(pageHref('governance', locale))
-    for (const [id, url] of Object.entries(governanceScientistLinkedin))
+    for (const [id, url] of Object.entries(governanceScientistLinkedin)) {
       await expect(page.locator(`#scientific-member-${id} a`)).toHaveAttribute('href', url)
+      await expect(page.locator(`#scientific-member-${id} h4`)).toHaveText(
+        catalogs[locale].Governance.scientists[id as keyof typeof catalogs.fr.Governance.scientists]
+          .name,
+      )
+    }
     for (const [id, url] of Object.entries(governanceTeamLinkedin)) {
       const trigger = page.locator(`#team-member-${id}`)
       await trigger.click()
       const dialog = page.getByRole('dialog')
       await expect(dialog).toBeVisible()
-      await expect(dialog.locator('h2')).not.toBeEmpty()
+      await expect(dialog.locator('h2')).toHaveText(
+        id === 'samir'
+          ? catalogs[locale].Governance.directorGeneralName
+          : catalogs[locale].Governance.team[id as keyof typeof catalogs.fr.Governance.team].name,
+      )
       await expect(dialog.locator('img')).toHaveCount(1)
       await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 7 : id === 'mouhcine' ? 5 : 3)
       if (url) await expect(dialog.locator('a')).toHaveAttribute('href', url)
