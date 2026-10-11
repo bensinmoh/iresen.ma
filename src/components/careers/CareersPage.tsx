@@ -47,7 +47,7 @@ export async function CareersPage({ locale }: { locale: Locale }) {
           <p className={styles.heroDescription}>{t('description')}</p>
         </div>
         <div className={styles.wordmark} aria-hidden="true" dir="ltr">
-          <span className={styles.join}>JOIN</span>
+          <span className={styles.join}>{t('joinLabel')}</span>
           <span className={styles.heroLogo} />
         </div>
       </section>

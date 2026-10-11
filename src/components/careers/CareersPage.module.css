@@ -111,6 +111,30 @@
   font-weight: 700;
   line-height: 1;
 }
+.page:lang(fr) .wordmark,
+.page:lang(ar) .wordmark {
+  inline-size: min(66vw, 60rem);
+  inset-block-end: 0;
+}
+.page:lang(ar) .wordmark {
+  flex-direction: row-reverse;
+}
+.page:lang(fr) .heroLogo,
+.page:lang(ar) .heroLogo {
+  flex: 1;
+  min-inline-size: 0;
+}
+.page:lang(fr) .join {
+  font-size: clamp(1.5rem, 4.2vw, 5rem);
+}
+.page:lang(ar) .join {
+  font-family: var(--font-arabic);
+  font-style: normal;
+  font-size: clamp(1.5rem, 4.2vw, 5rem);
+  white-space: nowrap;
+  line-height: 1.4;
+  direction: rtl;
+}
 .environment {
   background: var(--careers-section-surface);
   padding-block: var(--careers-section-space);
@@ -790,5 +814,23 @@
   }
   .offerActions > * {
     inline-size: 100%;
+  }
+}
+
+@media (max-width: 75rem) {
+  .page:lang(fr) .wordmark,
+  .page:lang(ar) .wordmark {
+    inline-size: min(90vw, 60rem);
+  }
+}
+@media (max-width: 40rem) {
+  .page:lang(fr) .wordmark,
+  .page:lang(ar) .wordmark {
+    inline-size: min(90vw, 30rem);
+    inset-block-end: 0;
+  }
+  .page:lang(fr) .join,
+  .page:lang(ar) .join {
+    font-size: clamp(1.3rem, 5vw, 2rem);
   }
 }

@@ -844,6 +844,7 @@
     "description": "Éclairer les choix, faire avancer les solutions et renforcer les capacités pour la transition énergétique et le développement durable du Maroc, avec nos partenaires."
   },
   "Navigation": {
+    "patents": "Brevets",
     "label": "Navigation principale",
     "menu": "Menu",
     "closeMenu": "Fermer",
@@ -1146,6 +1147,7 @@
     "backHome": "Retour à l’accueil"
   },
   "Header": {
+    "patentsDescription": "Explorer le portefeuille technologique et les brevets déposés.",
     "contact": "Contactez-nous",
     "searchPlaceholder": "Rechercher sur le site…",
     "discover": "À découvrir",
@@ -1948,6 +1950,7 @@
     }
   },
   "Careers": {
+    "joinLabel": "REJOINDRE",
     "eyebrow": "Carrières",
     "titleStart": "Rejoignez la",
     "titleAccent": "recherche",

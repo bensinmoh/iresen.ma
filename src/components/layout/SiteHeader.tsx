@@ -7,6 +7,7 @@ import { usePathname } from '@/i18n/navigation'
 import {
   navigationGroups,
   pageHref,
+  resourcePatentLink,
   pageLinkHref,
   pageIdFromPathname,
   isNewsListingPath,
@@ -210,6 +211,11 @@ export function SiteHeader() {
           {group.pages.map((pageId) => (
             <li key={pageId}>{pageLink(pageId)}</li>
           ))}
+          {group.id === 'resources' && (
+            <li>
+              <a href={resourcePatentLink(locale)}>{t('patents')}</a>
+            </li>
+          )}
         </ul>
       </details>
     )
@@ -306,6 +312,19 @@ export function SiteHeader() {
                     </a>
                   </li>
                 ))}
+                {group.id === 'resources' && (
+                  <li>
+                    <a href={resourcePatentLink(locale)}>
+                      <span className="mega-menu-link-title">
+                        {t('patents')}
+                        <NavigationIcon name="arrow" />
+                      </span>
+                      <span className="mega-menu-link-description">
+                        {copy('patentsDescription')}
+                      </span>
+                    </a>
+                  </li>
+                )}
               </ul>
               {featureId && (
                 <a className="mega-menu-feature" href={pageHref(featureId, locale)}>
