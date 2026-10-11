@@ -1072,3 +1072,7 @@ orientation handling remain shared, with natural growth for large text.
 Latest owner Arabic correction mirrors the timeline: ascending 2011–2026 reads
 from right to left in Arabic, with matching native scroll direction, connected
 markers, trailing spacing and arrows. FR/EN retain left-to-right chronology.
+
+Arabic governance follow-up: personal names now use Arabic script throughout
+council/team cards, Director General, native biographies and accessible portrait
+labels; localized search references retain Latin-name discovery.

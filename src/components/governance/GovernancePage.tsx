@@ -157,10 +157,10 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
               <TeamBiography
                 id="team-member-samir"
                 management
-                name="Samir RACHIDI"
+                name={t('directorGeneralName')}
                 role={t('directorGeneral')}
                 photo={samirCutout}
-                portraitAlt={t('portrait', { name: 'Samir RACHIDI' })}
+                portraitAlt={t('portrait', { name: t('directorGeneralName') })}
                 paragraphs={samirBiographies[locale].paragraphs}
                 linkedin={governanceTeamLinkedin.samir}
                 biographyLabel={t('biography.label')}

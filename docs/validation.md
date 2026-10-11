@@ -3413,3 +3413,16 @@ The first final-head CI run passed format/lint/types/unit/integration/build and
 278 browser cases. Its sole failing footer no-JavaScript navigation assertion
 still expected the old scaffold heading; it now checks the manuscript's localized
 Institut title while retaining the menu link and destination checks.
+
+## Governance Arabic personal names — 2026-10-11
+
+Lint, 137 unit tests, production compilation/TypeScript and all nine scoped
+Governance browser cases pass. Checks verify localized names on eight scientist
+cards and seven biography headings, retained profile links and focus restoration,
+320–1440px containment, 200% text, native no-JavaScript content and axe on dialogs.
+Arabic and original Latin name searches both reach the scientific section; Latin
+portrait discovery remains available. The public search index was rebuilt. Arabic
+council/team and Director General dialog captures were inspected at 1440px and
+390px. No new imagery, roles, biographies or routes are introduced. Original
+Latin source identities are retained; Arabic transcriptions remain editorial
+working text. Unrelated local tsconfig changes are preserved and excluded.
