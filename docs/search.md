@@ -306,3 +306,8 @@ Existing solar-sunset/workshop asset references are reused. Owner-requested `#`
 report actions create no PDF asset or document result; register the actual PDF
 with verified metadata when it is supplied. The final-content glossary/search
 sanity check remains pending.
+
+Owner follow-up: the first-page mockup cover image is served and registered as
+`institute-fifteen-year-report-cover` in each locale, with descriptive text and
+original “15 ANS D’IMPACT” wording. The nine-page source PDF and remaining pages
+are excluded; the actual report actions stay on `#`.

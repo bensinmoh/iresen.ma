@@ -97,6 +97,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'institute-fifteen-year-report-cover',
+    url: '/images/institute/fifteen-year-report-cover.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Institute.coverAlt,
+          description: messages[locale].Institute.coverSearchText,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
   ...governanceBoard
     .filter((id) => !['min-finance', 'min-energie', 'minensup', 'micep'].includes(id))
     .map((id) => ({

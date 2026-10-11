@@ -1,0 +1,19 @@
+{
+  "received": "2026-10-11",
+  "assets": [
+    {
+      "id": "institute-fifteen-year-report-cover",
+      "sourceFilename": "Mockup Book IRESEN CONCEPT 1 (1).pdf",
+      "sourceSha256": "9284fc96697a21727142e275128b79d4b8404c47395f36f8c4a20505fb78e42f",
+      "sourcePages": 9,
+      "selectedPage": 1,
+      "sourceStatus": "Owner-supplied cover mockup; only the page-one image is commissioned for the website. Original PDF and other pages are excluded.",
+      "url": "/images/institute/fifteen-year-report-cover.webp",
+      "width": 1800,
+      "height": 1633,
+      "sha256": "3485d638a5fc7b99ec2fb5961e5a436f96b6a2cca3de0c35af7f38a95143ae5b",
+      "bytes": 257364,
+      "method": "Poppler rasterization of the complete first PDF page at 1800px, then WebP quality 92. Cover geometry, typography, marks and full mockup composition preserved."
+    }
+  ]
+}

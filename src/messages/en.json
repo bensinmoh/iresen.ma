@@ -436,7 +436,11 @@
     "cooperationLabel": "A cross-cutting mission",
     "reportRead": "Read the activity report",
     "reportDownload": "Download the fifteen-year report — PDF",
-    "searchText": "IRESEN — Institute for Research in Solar Energy and New Energies. R&D: research and development. R&D&I: research, development and innovation. Energy transition, expertise, skills, cooperation, history and ambition for 2035."
+    "searchText": "IRESEN — Institute for Research in Solar Energy and New Energies. R&D: research and development. R&D&I: research, development and innovation. Energy transition, expertise, skills, cooperation, history and ambition for 2035.",
+    "previous": "Previous milestone",
+    "next": "Next milestone",
+    "coverAlt": "Cover mockup for the fifteen-year report: “15 ans d’impact”, 2026.",
+    "coverSearchText": "Owner-supplied cover mockup for IRESEN’s fifteen-year activity report, 2011–2026. Cover text: 15 ANS D’IMPACT, 2026. This cover image is not the report PDF."
   },
   "States": {
     "empty": "No published content yet.",

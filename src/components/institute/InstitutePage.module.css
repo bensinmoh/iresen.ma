@@ -260,14 +260,19 @@
 .timeline {
   list-style: none;
   margin: 0;
-  padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  row-gap: var(--space-12);
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(18rem, 24vw, 25rem);
+  gap: var(--space-8);
+  overflow-x: auto;
+  padding: var(--space-2);
+  scroll-padding-inline: var(--space-2);
+  scroll-snap-type: x proximity;
+  overscroll-behavior-inline: contain;
 }
 .timeline > li {
   position: relative;
-  padding-inline-end: var(--space-8);
+  scroll-snap-align: start;
 }
 .timeline .year {
   color: var(--color-energy-cyan);
@@ -330,15 +335,11 @@
   background: var(--color-surface);
   padding-block: clamp(3rem, 5vw, 6rem);
 }
-.period {
-  font-size: clamp(2.25rem, 4.5vw, 5rem);
-  font-weight: 500;
-  color: var(--color-blue);
-  margin: var(--space-12) 0 0;
-  line-height: 1.1;
-}
-.period span {
+.reportCover {
   display: block;
+  inline-size: 100%;
+  block-size: auto;
+  margin-block-start: var(--space-8);
 }
 .reportActions {
   display: flex;
@@ -406,17 +407,6 @@
   .ambitionImage {
     min-block-size: 24rem;
   }
-  .timeline {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .period bdi {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-  }
-  .period {
-    margin-block-start: var(--space-8);
-  }
   .position h2 {
     max-inline-size: 32ch;
   }
@@ -427,34 +417,10 @@
     gap: var(--space-3);
   }
   .timeline {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .timeline > li {
-    padding-inline: var(--space-8) 0;
-    padding-block-end: var(--space-12);
-    border-inline-start: 1px solid var(--color-footer-divider);
-  }
-  .marker {
-    position: absolute;
-    inset-inline-start: -0.625rem;
-    inset-block-start: 0.25rem;
-    inline-size: 1.25rem;
-  }
-  .marker::before {
-    display: none;
-  }
-  .timeline .year {
-    margin-block-end: var(--space-4);
-  }
-  .timeline > li:last-child {
-    padding-block-end: 0;
+    grid-auto-columns: min(25rem, 85vw);
   }
   .ambitionImage {
     min-block-size: 18rem;
-  }
-  .period {
-    font-size: 2.5rem;
   }
   .reportActions a {
     max-inline-size: 100%;
@@ -464,4 +430,51 @@
   .details summary svg {
     transition: none;
   }
+}
+
+.timeline:focus-visible {
+  outline: 2px solid var(--color-energy-cyan);
+  outline-offset: 5px;
+}
+.timelineControls {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-block-start: var(--space-8);
+}
+.timelineControls[hidden] {
+  display: none;
+}
+.timelineControls button {
+  inline-size: 48px;
+  block-size: 48px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-action);
+  background: var(--color-science-blue);
+  color: var(--color-navy);
+  cursor: pointer;
+}
+.timelineControls button:disabled {
+  background: var(--color-footer-control);
+  color: var(--color-footer-muted);
+  cursor: default;
+}
+.timelineControls button:focus-visible {
+  outline: 3px solid var(--color-energy-cyan);
+  outline-offset: 4px;
+}
+.previous svg {
+  transform: rotate(180deg);
+}
+:global(html[dir='rtl']) .timelineControls button svg {
+  transform: rotate(180deg);
+}
+:global(html[dir='rtl']) .timelineControls .previous svg {
+  transform: none;
+}
+
+.report .reading {
+  align-self: center;
 }

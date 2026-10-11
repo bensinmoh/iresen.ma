@@ -46,7 +46,15 @@ describe('multilingual search text', () => {
       expect(history.body).toContain(catalog.Institute.timeline[7].description)
       expect(documents.some((item) => item.type === 'document' && item.url === '#')).toBe(false)
     }
-    expect(publicAssetReferences.some((asset) => /institute.*report/.test(asset.id))).toBe(false)
+    expect(
+      publicAssetReferences.find((asset) => asset.id === 'institute-fifteen-year-report-cover')
+        ?.type,
+    ).toBe('media')
+    expect(
+      publicAssetReferences.some(
+        (asset) => /institute.*report/.test(asset.id) && asset.type === 'document',
+      ),
+    ).toBe(false)
   })
   it('registers the supplied biography and requested English and Arabic translations', () => {
     const biographies = staticSearchDocuments().filter((item) =>

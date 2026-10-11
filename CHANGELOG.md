@@ -2,6 +2,8 @@
 
 ## 2026-10-11 — Institute page
 
+Owner follow-up: the timeline scrolls horizontally at every width; add the supplied book mockup’s first-page cover and localized media search reference. The source PDF stays excluded.
+
 Implement the canonical Institute page from the supplied manuscript after Governance completion. Add detailed trilingual missions, native disclosures, values, 2035 ambition, eight principal historical milestones and two italic supporting entries. Preserve legacy anchors, existing illustrative media and localized section search references. The owner selects `#` for both report actions until its PDF arrives. See [scope](docs/institute-page.md). No deployment.
 
 ## 2026-10-11 — Institute page editorial draft

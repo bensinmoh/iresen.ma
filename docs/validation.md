@@ -3353,3 +3353,15 @@ The current PR’s CI and repository review requirements must pass before merge.
 Final editorial/translation approval, the public fifteen-year PDF and full-content
 search sanity check remain pending. No Safari/Firefox or screen-reader audit,
 full accessibility certification, deployment or visibility change is claimed.
+
+Institute horizontal-timeline/cover follow-up: lint, 137 unit tests, the production
+build and all 14 Institut/Governance browser regressions pass. Browser coverage
+now includes next/previous and native keyboard scrolling in FR/EN/AR, horizontal
+reading without JavaScript, all viewport sizes and a successfully decoded cover.
+An initial image-optimizer rejection was fixed with an exact local image pattern;
+a snap-offset regression was fixed with matching logical scroll padding. Cover
+search resolves in all three languages as media, with no report document entry.
+Rendered FR desktop, EN tablet and AR mobile cover/timeline compositions were
+inspected. Only page one of the supplied mockup is served as a WebP image; its
+source PDF remains excluded. The two report actions retain the owner-requested
+`#` placeholders.

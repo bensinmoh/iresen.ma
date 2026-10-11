@@ -365,3 +365,9 @@ historical milestones with two italic supporting entries. Six legacy anchors and
 localized section search references remain. Both fifteen-year report actions use
 the owner-requested `#` until the public PDF is supplied; no substitute download.
 EN/AR remain working adaptations. See [scope](docs/institute-page.md). No deployment.
+
+Owner follow-up: the historical timeline now scrolls horizontally at every width,
+with native keyboard/touch reading and SVG previous/next controls. The supplied
+book mockup’s first-page cover is displayed in the report feature and registered
+as localized media; its original PDF and other pages remain excluded. Preserve
+the cover composition and `#` report actions until the public PDF is supplied.

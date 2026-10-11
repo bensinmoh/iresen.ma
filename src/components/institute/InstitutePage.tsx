@@ -6,6 +6,7 @@ import { heroImages } from '@/lib/hero-images'
 import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
+import { TimelineRail } from './TimelineRail'
 import styles from './InstitutePage.module.css'
 
 export async function InstitutePage({ locale }: { locale: Locale }) {
@@ -164,7 +165,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
               <h2 id="history-title">{t('historyTitle')}</h2>
               <div className={styles.reading}>{paragraphs('historyIntro', 1)}</div>
             </div>
-            <ol className={styles.timeline} reversed>
+            <TimelineRail label={t('historyLabel')} previous={t('previous')} next={t('next')}>
               {Array.from({ length: 8 }, (_, i) => (
                 <li key={i}>
                   <p className={styles.year}>
@@ -185,7 +186,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
                   )}
                 </li>
               ))}
-            </ol>
+            </TimelineRail>
           </div>
         </section>
         <section id="more-resources" className={styles.report} aria-labelledby="report-title">
@@ -193,11 +194,14 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             <header>
               {label(t('reportLabel'))}
               <h2 id="report-title">{t('reportTitle')}</h2>
-              <p className={styles.period} aria-hidden="true">
-                <bdi>
-                  2011<span>—</span>2026
-                </bdi>
-              </p>
+              <Image
+                className={styles.reportCover}
+                src="/images/institute/fifteen-year-report-cover.webp"
+                alt={t('coverAlt')}
+                width={1800}
+                height={1633}
+                sizes="(max-width: 64rem) 100vw, 45vw"
+              />
             </header>
             <div className={styles.reading}>
               {paragraphs('report', 3)}

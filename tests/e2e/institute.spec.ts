@@ -24,6 +24,21 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(institute.locator('#institute-research details')).not.toHaveAttribute('open')
     await expect(institute.locator('#more-resources a[href="#"]')).toHaveCount(2)
     await expect(institute.locator('#more-resources a[download]')).toHaveCount(0)
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    const rail = institute.locator('#institute-history-rail')
+    await expect.poll(() => rail.evaluate((el) => el.scrollWidth > el.clientWidth)).toBe(true)
+    await institute.locator('button[aria-controls="institute-history-rail"]').last().click()
+    await expect.poll(() => rail.evaluate((el) => Math.abs(el.scrollLeft))).toBeGreaterThan(10)
+    await institute.locator('button[aria-controls="institute-history-rail"]').first().click()
+    await expect.poll(() => rail.evaluate((el) => Math.abs(el.scrollLeft))).toBeLessThan(2)
+    await rail.focus()
+    await page.keyboard.press(locale === 'ar' ? 'ArrowLeft' : 'ArrowRight')
+    await expect.poll(() => rail.evaluate((el) => Math.abs(el.scrollLeft))).toBeGreaterThan(10)
+    const cover = institute.locator('img[src*="fifteen-year-report-cover"]')
+    await cover.scrollIntoViewIfNeeded()
+    await expect
+      .poll(() => cover.evaluate((el) => (el as HTMLImageElement).naturalWidth))
+      .toBeGreaterThan(0)
     for (const width of [1440, 1024, 768, 390, 320]) {
       await page.setViewportSize({ width, height: 900 })
       await expect
@@ -51,6 +66,12 @@ test('institute works without JavaScript and has accessible expanded reading', a
   const native = await context.newPage()
   await native.goto(pageHref('institute', 'fr'))
   await expect(native.locator('#institute-history')).toContainText('2011')
+  await expect(native.locator('#institute-history button').first()).toBeHidden()
+  await expect
+    .poll(() =>
+      native.locator('#institute-history-rail').evaluate((el) => el.scrollWidth > el.clientWidth),
+    )
+    .toBe(true)
   await native.locator('#institute-studies summary').click()
   await expect(native.locator('#institute-studies dl')).toBeVisible()
   await context.close()
@@ -72,6 +93,14 @@ test('the institute history is discoverable in every public language', async ({ 
     await expect(
       page.locator(
         `.search-results a[href="${pageHref('institute', locale, 'institute-history')}"]`,
+      ),
+    ).toBeVisible()
+    await page.goto(
+      `${pageHref('search', locale)}?${new URLSearchParams({ q: '15 ANS D’IMPACT', type: 'media' })}`,
+    )
+    await expect(
+      page.locator(
+        '.search-results a[href="/images/institute/fifteen-year-report-cover.webp"]:not([aria-hidden])',
       ),
     ).toBeVisible()
   }

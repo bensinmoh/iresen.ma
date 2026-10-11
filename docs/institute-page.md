@@ -21,9 +21,10 @@ The page adapts the current shared photo hero, founding-year/pathways band,
 full-width mission quotation, a positioning introduction, three substantial
 mission rows with native disclosures, and a common cooperation band. Five values
 use quiet definition rows. The 2035 ambition remains separate from the historical
-journey. All eight major milestones are readable without a carousel; their two
-supporting achievements retain explicit labels and smaller italic text. Mobile
-uses a vertical timeline; tablet uses two columns and desktop four.
+journey. Eight major milestones form a native horizontal timeline at every
+width, with keyboard/touch scrolling and previous/next SVG controls. All eight
+items remain available without JavaScript; no auto-scroll or navigation pills.
+Their two supporting achievements retain explicit labels and smaller italic text.
 
 The manuscript includes no governance section. Councils and organisation stay on
 the separate page and the shared navigation. The hero's existing related destination
@@ -32,7 +33,9 @@ remains canonical. The body adds no governance tabs or four-pole sample cards.
 Reused solar-sunset and workshop photographs are generated conceptual illustrations,
 not documentary evidence of IRESEN personnel/facilities; their original metadata,
 provenance and localized public search references remain in
-[hero-assets.json](hero-assets.json) and the existing asset catalog. No new photo,
+[hero-assets.json](hero-assets.json) and the existing asset catalog. The owner’s later attachment supplies a nine-page
+book mockup; only its full first page is rasterized as the requested cover image. The PDF and its eight other pages
+are not imported or served. See [asset provenance](institute-assets.json). No new
 icon raster, external font, dependency, logo or CMS schema is introduced.
 
 ## Routes, reading and search
@@ -61,9 +64,12 @@ rotation, removed for reduced motion. No section wrapper is animated.
 
 The owner explicitly requested `#` for both report actions while the PDF is
 provided later. The page presents the supplied teaser, original period and two
-placeholder links, without a download attribute, fake PDF, fabricated cover,
+placeholder links, without a download attribute, fake PDF,
 file size, publication date or substitute Ministry document. These links require
 the actual public resource before a real reading/download workflow is delivered.
+The supplied first-page cover mockup now illustrates the report feature and has
+a separate localized media search reference with its original cover wording. Its
+image does not supply a public report PDF or adopt its embedded strategic claims.
 Publications/reports and media resources link to their existing canonical sections.
 
 No deployment, visibility change or new publication approval is authorized.

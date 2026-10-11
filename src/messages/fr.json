@@ -1130,7 +1130,11 @@
     "cooperationLabel": "Une mission transversale",
     "reportRead": "Consulter le rapport d’activités",
     "reportDownload": "Télécharger le rapport des quinze ans — PDF",
-    "searchText": "IRESEN — Institut de Recherche en Énergie Solaire et Énergies Nouvelles. R&D : recherche et développement. R&D&I : recherche, développement et innovation. Transition énergétique, expertise, compétences, coopération, histoire et ambition 2035."
+    "searchText": "IRESEN — Institut de Recherche en Énergie Solaire et Énergies Nouvelles. R&D : recherche et développement. R&D&I : recherche, développement et innovation. Transition énergétique, expertise, compétences, coopération, histoire et ambition 2035.",
+    "previous": "Date précédente",
+    "next": "Date suivante",
+    "coverAlt": "Mockup de la couverture du rapport des quinze ans : « 15 ans d’impact », 2026.",
+    "coverSearchText": "Maquette de couverture fournie par le propriétaire pour le rapport d’activités des quinze ans d’IRESEN, 2011–2026. Texte de couverture : 15 ANS D’IMPACT, 2026. Cette image de couverture ne constitue pas le PDF du rapport."
   },
   "States": {
     "empty": "Aucun contenu publié pour le moment.",

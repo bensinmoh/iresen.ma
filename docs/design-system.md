@@ -2,7 +2,7 @@
 
 ## Institute adaptation — 2026-10-11
 
-The [Institute page](institute-page.md) reuses shared editorial roles, SVG section/action marks, navy/white surfaces and logical spacing. Native mission disclosures show activity and contribution detail without compressing it into equal cards. The timeline retains every major milestone and explicitly labels italic supporting entries; it changes from four to two to one column. Arabic and text enlargement preserve reading. This is scoped composition, with no new shared token.
+The [Institute page](institute-page.md) reuses shared editorial roles, SVG section/action marks, navy/white surfaces and logical spacing. Native mission disclosures show activity and contribution detail without compressing it into equal cards. The timeline retains every major milestone and explicitly labels italic supporting entries; it scrolls horizontally with native keyboard/touch access and SVG arrows at every width. Arabic and text enlargement preserve reading. This is scoped composition, with no new shared token.
 
 ## Médiathèque — 2026-10-10
 
