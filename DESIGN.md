@@ -1161,3 +1161,10 @@ existing filter and menu transitions retain ownership. Reveals run once, never
 hide server content, settle on focus and cancel for reduced motion. Native anchors
 keep their destinations/history and work without JavaScript. See
 [scope and behavior](docs/site-motion.md).
+
+## Projects catalogue — 2026-10-11
+
+The commissioned Figma page uses a light glass hero, institutional navy filter
+band and six-card grid; tablet/mobile reflow to two/one columns. Current shared
+fonts/colors, full-width readable Arabic shading and native SVG controls retain
+site coherence. Fictional records are visibly identified. See [scope](docs/projects.md).

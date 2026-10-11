@@ -1,0 +1,650 @@
+[
+  {
+    "id": "demo-001",
+    "fictional": true,
+    "acronym": "SOL-THERM",
+    "title": {
+      "fr": "Boucle solaire et stockage thermique",
+      "en": "Solar loop and thermal storage",
+      "ar": "حلقة شمسية وتخزين حراري"
+    },
+    "description": {
+      "fr": "Étudier une boucle de chaleur solaire avec stockage pour une alimentation régulière.",
+      "en": "Study a solar heat loop with storage for a steady supply.",
+      "ar": "دراسة حلقة للحرارة الشمسية مع التخزين لتوفير إمداد منتظم."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 1",
+      "en": "Fictional laboratory 1",
+      "ar": "مختبر خيالي 1"
+    },
+    "domain": "thermal",
+    "status": "active",
+    "programme": "DEMO-SOLAR",
+    "year": 2022,
+    "durationMonths": 24,
+    "budgetMAD": 1000000,
+    "image": "thermal"
+  },
+  {
+    "id": "demo-002",
+    "fictional": true,
+    "acronym": "PV-LOCAL",
+    "title": {
+      "fr": "Autoconsommation photovoltaïque",
+      "en": "Photovoltaic self-consumption",
+      "ar": "الاستهلاك الذاتي للطاقة الكهروضوئية"
+    },
+    "description": {
+      "fr": "Simuler la gestion de la production photovoltaïque et des usages électriques d’un bâtiment.",
+      "en": "Simulate photovoltaic generation and electricity demand in a building.",
+      "ar": "محاكاة إدارة الإنتاج الكهروضوئي والطلب على الكهرباء في مبنى."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 2",
+      "en": "Fictional laboratory 2",
+      "ar": "مختبر خيالي 2"
+    },
+    "domain": "grids",
+    "status": "completed",
+    "programme": "DEMO-SOLAR",
+    "year": 2023,
+    "durationMonths": 36,
+    "budgetMAD": 1500000,
+    "image": "grids"
+  },
+  {
+    "id": "demo-003",
+    "fictional": true,
+    "acronym": "FROID-SOL",
+    "title": {
+      "fr": "Rafraîchissement par chaleur solaire",
+      "en": "Cooling with solar heat",
+      "ar": "التبريد بالحرارة الشمسية"
+    },
+    "description": {
+      "fr": "Explorer un système de refroidissement alimenté par un champ solaire thermique.",
+      "en": "Explore a cooling system powered by a solar thermal field.",
+      "ar": "استكشاف نظام تبريد يعمل بحقل شمسي حراري."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 3",
+      "en": "Fictional laboratory 3",
+      "ar": "مختبر خيالي 3"
+    },
+    "domain": "efficiency",
+    "status": "planned",
+    "programme": "DEMO-GRID",
+    "year": 2024,
+    "durationMonths": 18,
+    "budgetMAD": 2000000,
+    "image": "cooling"
+  },
+  {
+    "id": "demo-004",
+    "fictional": true,
+    "acronym": "HABITAT-SOL",
+    "title": {
+      "fr": "Confort thermique d’un habitat pilote",
+      "en": "Thermal comfort in a pilot dwelling",
+      "ar": "الراحة الحرارية في مسكن تجريبي"
+    },
+    "description": {
+      "fr": "Comparer isolation et climatisation solaire dans un habitat expérimental.",
+      "en": "Compare insulation and solar cooling in an experimental dwelling.",
+      "ar": "مقارنة العزل والتبريد الشمسي في مسكن تجريبي."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 4",
+      "en": "Fictional laboratory 4",
+      "ar": "مختبر خيالي 4"
+    },
+    "domain": "efficiency",
+    "status": "active",
+    "programme": "DEMO-GRID",
+    "year": 2025,
+    "durationMonths": 30,
+    "budgetMAD": 2500000,
+    "image": "buildings"
+  },
+  {
+    "id": "demo-005",
+    "fictional": true,
+    "acronym": "CELL-PV",
+    "title": {
+      "fr": "Caractérisation de cellules solaires",
+      "en": "Solar cell characterisation",
+      "ar": "توصيف الخلايا الشمسية"
+    },
+    "description": {
+      "fr": "Comparer des cellules photovoltaïques sous différentes conditions de laboratoire.",
+      "en": "Compare photovoltaic cells under different laboratory conditions.",
+      "ar": "مقارنة الخلايا الكهروضوئية في ظروف مختبرية مختلفة."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 5",
+      "en": "Fictional laboratory 5",
+      "ar": "مختبر خيالي 5"
+    },
+    "domain": "photovoltaic",
+    "status": "completed",
+    "programme": "DEMO-TRANSITION",
+    "year": 2026,
+    "durationMonths": 24,
+    "budgetMAD": 3000000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-006",
+    "fictional": true,
+    "acronym": "VENT-LOCAL",
+    "title": {
+      "fr": "Petite éolienne pour usages locaux",
+      "en": "Small wind turbine for local uses",
+      "ar": "توربين رياح صغير للاستخدامات المحلية"
+    },
+    "description": {
+      "fr": "Étudier la conception et les essais d’une petite éolienne pour des usages décentralisés.",
+      "en": "Study small turbine design and testing for decentralised uses.",
+      "ar": "دراسة تصميم واختبار توربين صغير للاستخدامات اللامركزية."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 6",
+      "en": "Fictional laboratory 6",
+      "ar": "مختبر خيالي 6"
+    },
+    "domain": "wind",
+    "status": "planned",
+    "programme": "DEMO-TRANSITION",
+    "year": 2022,
+    "durationMonths": 36,
+    "budgetMAD": 3500000,
+    "image": "wind"
+  },
+  {
+    "id": "demo-007",
+    "fictional": true,
+    "acronym": "H2-FLEX",
+    "title": {
+      "fr": "Électrolyse couplée au photovoltaïque",
+      "en": "Photovoltaic-coupled electrolysis",
+      "ar": "التحليل الكهربائي المقترن بالطاقة الكهروضوئية"
+    },
+    "description": {
+      "fr": "Modéliser un électrolyseur alimenté par une production solaire variable.",
+      "en": "Model an electrolyser powered by variable solar generation.",
+      "ar": "نمذجة محلل كهربائي يعمل بإنتاج شمسي متغير."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 1",
+      "en": "Fictional laboratory 1",
+      "ar": "مختبر خيالي 1"
+    },
+    "domain": "hydrogen",
+    "status": "active",
+    "programme": "DEMO-SOLAR",
+    "year": 2023,
+    "durationMonths": 18,
+    "budgetMAD": 4000000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-008",
+    "fictional": true,
+    "acronym": "BAT-CYCLE",
+    "title": {
+      "fr": "Vieillissement de batteries stationnaires",
+      "en": "Stationary battery ageing",
+      "ar": "تقادم البطاريات الثابتة"
+    },
+    "description": {
+      "fr": "Analyser des cycles de charge et décharge pour comparer des stratégies de stockage.",
+      "en": "Analyse charging cycles to compare storage strategies.",
+      "ar": "تحليل دورات الشحن لمقارنة استراتيجيات التخزين."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 2",
+      "en": "Fictional laboratory 2",
+      "ar": "مختبر خيالي 2"
+    },
+    "domain": "storage",
+    "status": "completed",
+    "programme": "DEMO-SOLAR",
+    "year": 2024,
+    "durationMonths": 30,
+    "budgetMAD": 1000000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-009",
+    "fictional": true,
+    "acronym": "GRID-FLEX",
+    "title": {
+      "fr": "Flexibilité d’un micro-réseau",
+      "en": "Microgrid flexibility",
+      "ar": "مرونة شبكة مصغرة"
+    },
+    "description": {
+      "fr": "Simuler l’équilibre entre production renouvelable, stockage et demande.",
+      "en": "Simulate the balance of renewable generation, storage and demand.",
+      "ar": "محاكاة التوازن بين الإنتاج المتجدد والتخزين والطلب."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 3",
+      "en": "Fictional laboratory 3",
+      "ar": "مختبر خيالي 3"
+    },
+    "domain": "grids",
+    "status": "planned",
+    "programme": "DEMO-GRID",
+    "year": 2025,
+    "durationMonths": 24,
+    "budgetMAD": 1500000,
+    "image": "grids"
+  },
+  {
+    "id": "demo-010",
+    "fictional": true,
+    "acronym": "PV-CLEAN",
+    "title": {
+      "fr": "Entretien sobre en eau des panneaux",
+      "en": "Water-efficient panel maintenance",
+      "ar": "صيانة الألواح باستهلاك محدود للمياه"
+    },
+    "description": {
+      "fr": "Comparer des méthodes de nettoyage photovoltaïque et leur consommation d’eau.",
+      "en": "Compare photovoltaic cleaning methods and water consumption.",
+      "ar": "مقارنة طرق تنظيف الألواح واستهلاك المياه."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 4",
+      "en": "Fictional laboratory 4",
+      "ar": "مختبر خيالي 4"
+    },
+    "domain": "photovoltaic",
+    "status": "active",
+    "programme": "DEMO-GRID",
+    "year": 2026,
+    "durationMonths": 36,
+    "budgetMAD": 2000000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-011",
+    "fictional": true,
+    "acronym": "THERM-IND",
+    "title": {
+      "fr": "Chaleur solaire pour un procédé pilote",
+      "en": "Solar heat for a pilot process",
+      "ar": "حرارة شمسية لعملية تجريبية"
+    },
+    "description": {
+      "fr": "Étudier la chaleur solaire dans un procédé industriel simulé.",
+      "en": "Study solar heat in a simulated industrial process.",
+      "ar": "دراسة الحرارة الشمسية في عملية صناعية محاكاة."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 5",
+      "en": "Fictional laboratory 5",
+      "ar": "مختبر خيالي 5"
+    },
+    "domain": "thermal",
+    "status": "completed",
+    "programme": "DEMO-TRANSITION",
+    "year": 2022,
+    "durationMonths": 18,
+    "budgetMAD": 2500000,
+    "image": "thermal"
+  },
+  {
+    "id": "demo-012",
+    "fictional": true,
+    "acronym": "VENT-DATA",
+    "title": {
+      "fr": "Observation de la ressource éolienne",
+      "en": "Wind resource observation",
+      "ar": "رصد موارد الرياح"
+    },
+    "description": {
+      "fr": "Tester une méthode d’analyse de séries de vent pour un dimensionnement expérimental.",
+      "en": "Test wind time-series analysis for experimental sizing.",
+      "ar": "اختبار تحليل بيانات الرياح لتحديد الأبعاد التجريبية."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 6",
+      "en": "Fictional laboratory 6",
+      "ar": "مختبر خيالي 6"
+    },
+    "domain": "wind",
+    "status": "planned",
+    "programme": "DEMO-TRANSITION",
+    "year": 2023,
+    "durationMonths": 30,
+    "budgetMAD": 3000000,
+    "image": "wind"
+  },
+  {
+    "id": "demo-013",
+    "fictional": true,
+    "acronym": "H2-WATER",
+    "title": {
+      "fr": "Gestion de l’eau pour l’hydrogène",
+      "en": "Hydrogen water management",
+      "ar": "إدارة المياه للهيدروجين"
+    },
+    "description": {
+      "fr": "Comparer des scénarios d’approvisionnement et de réutilisation de l’eau pour l’électrolyse.",
+      "en": "Compare water supply and reuse scenarios for electrolysis.",
+      "ar": "مقارنة توفير المياه وإعادة استخدامها للتحليل الكهربائي."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 1",
+      "en": "Fictional laboratory 1",
+      "ar": "مختبر خيالي 1"
+    },
+    "domain": "hydrogen",
+    "status": "active",
+    "programme": "DEMO-SOLAR",
+    "year": 2024,
+    "durationMonths": 24,
+    "budgetMAD": 3500000,
+    "image": "cooling"
+  },
+  {
+    "id": "demo-014",
+    "fictional": true,
+    "acronym": "FACADE-PV",
+    "title": {
+      "fr": "Photovoltaïque intégré au bâtiment",
+      "en": "Building-integrated photovoltaics",
+      "ar": "الطاقة الكهروضوئية المدمجة في المباني"
+    },
+    "description": {
+      "fr": "Simuler des configurations de modules intégrés à une façade.",
+      "en": "Simulate facade-integrated module configurations.",
+      "ar": "محاكاة تكوينات وحدات مدمجة في واجهة مبنى."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 2",
+      "en": "Fictional laboratory 2",
+      "ar": "مختبر خيالي 2"
+    },
+    "domain": "photovoltaic",
+    "status": "completed",
+    "programme": "DEMO-SOLAR",
+    "year": 2025,
+    "durationMonths": 36,
+    "budgetMAD": 4000000,
+    "image": "grids"
+  },
+  {
+    "id": "demo-015",
+    "fictional": true,
+    "acronym": "FROID-PILOT",
+    "title": {
+      "fr": "Pilotage d’une chambre froide",
+      "en": "Cold-room energy control",
+      "ar": "التحكم في طاقة غرفة تبريد"
+    },
+    "description": {
+      "fr": "Explorer des commandes économes pour un démonstrateur de chambre froide.",
+      "en": "Explore energy-saving controls for a cold-room demonstrator.",
+      "ar": "استكشاف التحكم الموفر للطاقة لنموذج غرفة تبريد."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 3",
+      "en": "Fictional laboratory 3",
+      "ar": "مختبر خيالي 3"
+    },
+    "domain": "efficiency",
+    "status": "planned",
+    "programme": "DEMO-GRID",
+    "year": 2026,
+    "durationMonths": 18,
+    "budgetMAD": 1000000,
+    "image": "buildings"
+  },
+  {
+    "id": "demo-016",
+    "fictional": true,
+    "acronym": "STORE-HEAT",
+    "title": {
+      "fr": "Matériaux pour stockage de chaleur",
+      "en": "Heat storage materials",
+      "ar": "مواد لتخزين الحرارة"
+    },
+    "description": {
+      "fr": "Comparer des matériaux de stockage thermique sur un banc conceptuel.",
+      "en": "Compare thermal storage materials on a conceptual test bench.",
+      "ar": "مقارنة مواد التخزين الحراري على منصة تصورية."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 4",
+      "en": "Fictional laboratory 4",
+      "ar": "مختبر خيالي 4"
+    },
+    "domain": "storage",
+    "status": "active",
+    "programme": "DEMO-GRID",
+    "year": 2022,
+    "durationMonths": 30,
+    "budgetMAD": 1500000,
+    "image": "thermal"
+  },
+  {
+    "id": "demo-017",
+    "fictional": true,
+    "acronym": "VENT-CONTROL",
+    "title": {
+      "fr": "Commande d’une petite turbine",
+      "en": "Small turbine control",
+      "ar": "التحكم في توربين صغير"
+    },
+    "description": {
+      "fr": "Simuler des stratégies de commande pour stabiliser la production éolienne.",
+      "en": "Simulate control strategies to stabilise wind generation.",
+      "ar": "محاكاة التحكم لاستقرار إنتاج طاقة الرياح."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 5",
+      "en": "Fictional laboratory 5",
+      "ar": "مختبر خيالي 5"
+    },
+    "domain": "wind",
+    "status": "completed",
+    "programme": "DEMO-TRANSITION",
+    "year": 2023,
+    "durationMonths": 24,
+    "budgetMAD": 2000000,
+    "image": "wind"
+  },
+  {
+    "id": "demo-018",
+    "fictional": true,
+    "acronym": "SMART-DEMAND",
+    "title": {
+      "fr": "Pilotage de la demande électrique",
+      "en": "Electricity demand control",
+      "ar": "التحكم في الطلب على الكهرباء"
+    },
+    "description": {
+      "fr": "Comparer des scénarios de décalage des usages selon la disponibilité solaire.",
+      "en": "Compare load-shifting scenarios against solar availability.",
+      "ar": "مقارنة تغيير توقيت الاستخدام وفق توفر الطاقة الشمسية."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 6",
+      "en": "Fictional laboratory 6",
+      "ar": "مختبر خيالي 6"
+    },
+    "domain": "grids",
+    "status": "planned",
+    "programme": "DEMO-TRANSITION",
+    "year": 2024,
+    "durationMonths": 36,
+    "budgetMAD": 2500000,
+    "image": "grids"
+  },
+  {
+    "id": "demo-019",
+    "fictional": true,
+    "acronym": "H2-SENSE",
+    "title": {
+      "fr": "Surveillance d’un système hydrogène",
+      "en": "Hydrogen system monitoring",
+      "ar": "مراقبة نظام هيدروجين"
+    },
+    "description": {
+      "fr": "Étudier une architecture de capteurs pour un système hydrogène simulé.",
+      "en": "Study a sensor architecture for a simulated hydrogen system.",
+      "ar": "دراسة بنية أجهزة استشعار لنظام هيدروجين محاكى."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 1",
+      "en": "Fictional laboratory 1",
+      "ar": "مختبر خيالي 1"
+    },
+    "domain": "hydrogen",
+    "status": "active",
+    "programme": "DEMO-SOLAR",
+    "year": 2025,
+    "durationMonths": 18,
+    "budgetMAD": 3000000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-020",
+    "fictional": true,
+    "acronym": "PV-FORECAST",
+    "title": {
+      "fr": "Prévision de production solaire",
+      "en": "Solar generation forecasting",
+      "ar": "توقع إنتاج الطاقة الشمسية"
+    },
+    "description": {
+      "fr": "Tester des modèles de prévision sur des séries synthétiques photovoltaïques.",
+      "en": "Test forecasting models on synthetic photovoltaic series.",
+      "ar": "اختبار نماذج توقع على بيانات كهروضوئية اصطناعية."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 2",
+      "en": "Fictional laboratory 2",
+      "ar": "مختبر خيالي 2"
+    },
+    "domain": "photovoltaic",
+    "status": "completed",
+    "programme": "DEMO-SOLAR",
+    "year": 2026,
+    "durationMonths": 30,
+    "budgetMAD": 3500000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-021",
+    "fictional": true,
+    "acronym": "SOL-WATER",
+    "title": {
+      "fr": "Chaleur solaire et traitement de l’eau",
+      "en": "Solar heat and water treatment",
+      "ar": "الحرارة الشمسية ومعالجة المياه"
+    },
+    "description": {
+      "fr": "Modéliser la chaleur solaire dans un procédé de traitement de l’eau.",
+      "en": "Model solar heat in a water treatment process.",
+      "ar": "نمذجة الحرارة الشمسية في معالجة المياه."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 3",
+      "en": "Fictional laboratory 3",
+      "ar": "مختبر خيالي 3"
+    },
+    "domain": "thermal",
+    "status": "planned",
+    "programme": "DEMO-GRID",
+    "year": 2022,
+    "durationMonths": 24,
+    "budgetMAD": 4000000,
+    "image": "cooling"
+  },
+  {
+    "id": "demo-022",
+    "fictional": true,
+    "acronym": "BUILD-LOW",
+    "title": {
+      "fr": "Bâtiment à faible demande énergétique",
+      "en": "Low-energy-demand building",
+      "ar": "مبنى منخفض الطلب على الطاقة"
+    },
+    "description": {
+      "fr": "Comparer conception passive et gestion énergétique d’un bâtiment.",
+      "en": "Compare passive design and building energy management.",
+      "ar": "مقارنة التصميم السلبي وإدارة طاقة المبنى."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 4",
+      "en": "Fictional laboratory 4",
+      "ar": "مختبر خيالي 4"
+    },
+    "domain": "efficiency",
+    "status": "active",
+    "programme": "DEMO-GRID",
+    "year": 2023,
+    "durationMonths": 36,
+    "budgetMAD": 1000000,
+    "image": "buildings"
+  },
+  {
+    "id": "demo-023",
+    "fictional": true,
+    "acronym": "BAT-REUSE",
+    "title": {
+      "fr": "Réemploi expérimental de batteries",
+      "en": "Experimental battery reuse",
+      "ar": "إعادة استخدام تجريبية للبطاريات"
+    },
+    "description": {
+      "fr": "Explorer des critères de tri et de seconde vie pour des batteries simulées.",
+      "en": "Explore sorting and second-life criteria for simulated batteries.",
+      "ar": "استكشاف الفرز والاستخدام الثاني لبطاريات محاكاة."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 5",
+      "en": "Fictional laboratory 5",
+      "ar": "مختبر خيالي 5"
+    },
+    "domain": "storage",
+    "status": "completed",
+    "programme": "DEMO-TRANSITION",
+    "year": 2024,
+    "durationMonths": 18,
+    "budgetMAD": 1500000,
+    "image": "photovoltaic"
+  },
+  {
+    "id": "demo-024",
+    "fictional": true,
+    "acronym": "GRID-SENSE",
+    "title": {
+      "fr": "Mesure et diagnostic de réseau",
+      "en": "Grid measurement and diagnostics",
+      "ar": "قياس الشبكة وتشخيصها"
+    },
+    "description": {
+      "fr": "Tester une chaîne de mesure de qualité électrique dans un réseau simulé.",
+      "en": "Test a power quality measurement chain in a simulated grid.",
+      "ar": "اختبار قياس جودة الكهرباء في شبكة محاكاة."
+    },
+    "coordinator": {
+      "fr": "Laboratoire fictif 6",
+      "en": "Fictional laboratory 6",
+      "ar": "مختبر خيالي 6"
+    },
+    "domain": "grids",
+    "status": "planned",
+    "programme": "DEMO-TRANSITION",
+    "year": 2025,
+    "durationMonths": 30,
+    "budgetMAD": 2000000,
+    "image": "grids"
+  }
+]

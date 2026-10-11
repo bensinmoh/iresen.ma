@@ -89,6 +89,22 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...(['hero', 'thermal', 'grids', 'cooling', 'buildings', 'photovoltaic', 'wind'] as const).map(
+    (id) => ({
+      id: `projects-${id}`,
+      url: `/images/projects/${id}.webp`,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => [
+          locale,
+          {
+            title: `${messages[locale].Pages.projects} — ${messages[locale].Projects.photos[id]}`,
+            description: `${messages[locale].Projects.photos[id]} ${messages[locale].Projects.demo}`,
+          },
+        ]),
+      ) as PublicAssetReference['text'],
+    }),
+  ),
   {
     id: 'publications-hero',
     url: '/images/publications/hero.webp',
@@ -698,6 +714,12 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           }),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
+      if (pageId === 'projects')
+        body.push(
+          catalog.Projects.description,
+          catalog.Projects.demo,
+          ...Object.values(catalog.Projects.domains),
+        )
       if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
       documents.push({
         id: `page:${pageId}:${locale}`,

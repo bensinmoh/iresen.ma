@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-11",
+  "fileKey": "0go8QANZAH73ed9AoCdHkf",
+  "frame": "804:9285",
+  "assets": [
+    {
+      "id": "hero",
+      "node": "804:9288",
+      "source": "Figma original fill (header-3)",
+      "file": "public/images/projects/hero.webp",
+      "width": 1920,
+      "height": 1081,
+      "bytes": 59076,
+      "sha256": "112faf9aa76237531e6facfe9a38580d46cba94347f92319dc62c012879acb6a",
+      "role": "decorative introduction"
+    },
+    {
+      "id": "thermal",
+      "node": "804:9336",
+      "source": "Figma original fill (card-1)",
+      "file": "public/images/projects/thermal.webp",
+      "width": 900,
+      "height": 430,
+      "bytes": 75872,
+      "sha256": "256b74885390dba9bf511e2af72069ab969f88d12e5fd1fffac7a6482d05ea85",
+      "role": "illustrative demonstration project thumbnail"
+    },
+    {
+      "id": "grids",
+      "node": "804:9336",
+      "source": "Figma original fill (card-4)",
+      "file": "public/images/projects/grids.webp",
+      "width": 900,
+      "height": 430,
+      "bytes": 85326,
+      "sha256": "00646e136b3010c801d14aeff4f34fe732ed40b9cac8baa514ae02908237df6d",
+      "role": "illustrative demonstration project thumbnail"
+    },
+    {
+      "id": "cooling",
+      "node": "804:9336",
+      "source": "Figma original fill (card-6)",
+      "file": "public/images/projects/cooling.webp",
+      "width": 900,
+      "height": 430,
+      "bytes": 35276,
+      "sha256": "8e7dc8ca8877d6af0d9b2889bcc23708621f695d345bc50526c4897ecec7325d",
+      "role": "illustrative demonstration project thumbnail"
+    },
+    {
+      "id": "buildings",
+      "node": "804:9344",
+      "source": "Figma original fill (card-5)",
+      "file": "public/images/projects/buildings.webp",
+      "width": 900,
+      "height": 430,
+      "bytes": 44354,
+      "sha256": "dee8dc3faab28f5cbf76915de7094c5b771bf326cd78ca6dcfc12419aabf75d1",
+      "role": "illustrative demonstration project thumbnail"
+    },
+    {
+      "id": "photovoltaic",
+      "node": "804:9369",
+      "source": "Figma original fill (card-3)",
+      "file": "public/images/projects/photovoltaic.webp",
+      "width": 900,
+      "height": 430,
+      "bytes": 48480,
+      "sha256": "ce79032add10c4ee551da9cfd6520a18b2740a1dc6dbe9b5e8ad955f4679e9d7",
+      "role": "illustrative demonstration project thumbnail"
+    },
+    {
+      "id": "wind",
+      "node": "804:9394",
+      "source": "Figma original fill (card-2)",
+      "file": "public/images/projects/wind.webp",
+      "width": 900,
+      "height": 430,
+      "bytes": 18198,
+      "sha256": "e0295036a28bb6699ccb20b3bba0d3933a582b05da532a55907600689b6b1345",
+      "role": "illustrative demonstration project thumbnail"
+    }
+  ]
+}

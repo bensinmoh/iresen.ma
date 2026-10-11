@@ -296,7 +296,7 @@
       "governance": "The bodies, teams and support functions that sustain scientific rigour and the continuity of the Institute’s contributions.",
       "priorities": "Connect scientific, industrial and territorial needs with research priorities for the energy transition and sustainable development.",
       "programmes": "Programme, fund and support collaborative research by linking needs to scientific objectives and usable results.",
-      "projects": "From the need addressed to the results achieved: understand the work, IRESEN’s and its partners’ contributions, and their actual stage.",
+      "projects": "Explore research, development and innovation projects by domain, programme and stage.",
       "platforms": "Research, testing, experimentation and training resources to understand technology performance and conditions of use.",
       "network": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities.",
       "transfer": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
@@ -570,23 +570,23 @@
     "projects": {
       "featured-results": {
         "title": "Featured achievements",
-        "description": "Content to add: a selection of cases with verified public results and their maturity stage."
+        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
       },
       "find-project": {
-        "title": "Find a project",
-        "description": "Content to add: search criteria by priority, programme, status, period and result type."
+        "title": "Free search",
+        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
       },
       "project-catalogue": {
-        "title": "Project catalogue",
-        "description": "To prepare: the need, intended users, IRESEN’s and partners’ contributions, work, results, actual stage and publishable evidence."
+        "title": "R&D&I project catalogue",
+        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
       },
       "understanding-results": {
         "title": "Understanding results",
-        "description": "Content to add: the distinction between expected results, achievements, maturity and measured effects."
+        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
       },
       "related-capabilities": {
         "title": "Projects and related capabilities",
-        "description": "Content to add: links to platforms, programmes, results with valorisation potential and collaboration pathways."
+        "description": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references."
       }
     },
     "platforms": {
@@ -1961,5 +1961,57 @@
     "filters": "Publication filters",
     "noScript": "Without JavaScript, use the topic and year links below.",
     "figures": "Key figures"
+  },
+  "Projects": {
+    "eyebrow": "Research & Innovation",
+    "titleStart": "The living portfolio of",
+    "titleAccent": "Moroccan innovation.",
+    "description": "Explore research, development and innovation projects by domain, programme and stage.",
+    "demo": "Demonstration catalogue — 24 fictional projects. Names, budgets, coordinators and statuses are examples, not institutional references.",
+    "query": "Free search",
+    "placeholder": "Keyword, acronym, technology, coordinator…",
+    "domain": "Domain",
+    "year": "Year",
+    "status": "Status",
+    "programme": "Programme",
+    "all": "All",
+    "reset": "Reset filters",
+    "count": "{count, plural, =0 {No projects match} one {# project matches} other {# projects match}} your search",
+    "empty": "No projects match these criteria.",
+    "emptyHelp": "Try another keyword or reset the filters.",
+    "acronym": "Acronym",
+    "duration": "Duration",
+    "budget": "Total budget",
+    "launch": "Launch year",
+    "months": "{count} months",
+    "fictional": "Fictional project",
+    "pagination": "Catalogue pages",
+    "page": "Page {number}",
+    "previous": "Previous page",
+    "next": "Next page",
+    "catalogue": "R&D&I project catalogue",
+    "domains": {
+      "thermal": "Solar thermal",
+      "grids": "Smart grids",
+      "efficiency": "Energy efficiency",
+      "photovoltaic": "Solar photovoltaics",
+      "wind": "Wind energy",
+      "hydrogen": "Green hydrogen",
+      "storage": "Energy storage"
+    },
+    "statuses": {
+      "active": "Ongoing",
+      "completed": "Completed",
+      "planned": "Upcoming"
+    },
+    "photos": {
+      "hero": "Glass composition with the blue IRESEN symbol.",
+      "thermal": "Solar thermal collector field.",
+      "grids": "House with photovoltaic panels.",
+      "cooling": "Experimental solar thermal installation.",
+      "buildings": "Small experimental dwelling with solar panels.",
+      "photovoltaic": "Photovoltaic cell components.",
+      "wind": "Small wind turbine under a blue sky."
+    }
   }
 }

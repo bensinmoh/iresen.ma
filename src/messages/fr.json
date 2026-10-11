@@ -387,23 +387,23 @@
     "projects": {
       "featured-results": {
         "title": "Réalisations à découvrir",
-        "description": "À prévoir : une sélection de cas avec des résultats publics vérifiés et leur stade de maturité."
+        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
       },
       "find-project": {
-        "title": "Rechercher un projet",
-        "description": "À prévoir : les critères de recherche par priorité, programme, statut, période et type de résultat."
+        "title": "Recherche libre",
+        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
       },
       "project-catalogue": {
-        "title": "Catalogue des projets",
-        "description": "À prévoir : le besoin, les acteurs concernés, la contribution d’IRESEN et des partenaires, les travaux, les résultats, leur stade et les preuves publiables."
+        "title": "Catalogue de projets R&D&I",
+        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
       },
       "understanding-results": {
         "title": "Repères pour lire les résultats",
-        "description": "À prévoir : la distinction entre résultats attendus, acquis, maturité et effets mesurés."
+        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
       },
       "related-capabilities": {
         "title": "Projets et capacités associées",
-        "description": "À prévoir : les relations vers les plateformes, programmes, résultats valorisables et parcours de collaboration."
+        "description": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle."
       }
     },
     "platforms": {
@@ -926,7 +926,7 @@
       "governance": "Les instances, les équipes et les fonctions de support qui soutiennent la rigueur scientifique et la continuité des contributions de l’Institut.",
       "priorities": "Relier les besoins scientifiques, industriels et territoriaux aux priorités de recherche pour la transition énergétique et le développement durable.",
       "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
-      "projects": "Du besoin traité aux résultats obtenus : comprendre les travaux, les apports d’IRESEN et de ses partenaires, et leur stade réel.",
+      "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
       "platforms": "Des moyens de recherche, d’essais, d’expérimentation et de formation pour connaître les performances et les conditions d’utilisation des technologies.",
       "network": "Mobiliser les études et l’expertise, partager les savoir-faire et renforcer les capacités scientifiques et techniques des équipes.",
       "transfer": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
@@ -1964,5 +1964,57 @@
     "filters": "Filtres des publications",
     "noScript": "Sans JavaScript, utilisez les liens de thématique et d’année ci-dessous.",
     "figures": "Chiffres clés"
+  },
+  "Projects": {
+    "eyebrow": "Recherche & Innovation",
+    "titleStart": "Le portefeuille vivant de l’innovation",
+    "titleAccent": "marocaine.",
+    "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
+    "demo": "Catalogue de démonstration — 24 projets fictifs. Noms, budgets, coordinateurs et statuts sont des exemples, sans valeur de référence institutionnelle.",
+    "query": "Recherche libre",
+    "placeholder": "Mot-clé, acronyme, technologie, coordinateur…",
+    "domain": "Domaine",
+    "year": "Année",
+    "status": "Statut",
+    "programme": "Programme",
+    "all": "Tous",
+    "reset": "Réinitialiser les filtres",
+    "count": "{count, plural, =0 {Aucun projet ne correspond} one {# projet correspond} other {# projets correspondent}} à votre recherche",
+    "empty": "Aucun projet ne correspond à ces critères.",
+    "emptyHelp": "Essayez un autre mot-clé ou réinitialisez les filtres.",
+    "acronym": "Acronyme",
+    "duration": "Durée",
+    "budget": "Budget global",
+    "launch": "Année de lancement",
+    "months": "{count} mois",
+    "fictional": "Projet fictif",
+    "pagination": "Pages du catalogue",
+    "page": "Page {number}",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "catalogue": "Catalogue de projets R&D&I",
+    "domains": {
+      "thermal": "Solaire thermique",
+      "grids": "Réseaux intelligents",
+      "efficiency": "Efficacité énergétique",
+      "photovoltaic": "Solaire photovoltaïque",
+      "wind": "Énergie éolienne",
+      "hydrogen": "Hydrogène vert",
+      "storage": "Stockage d’énergie"
+    },
+    "statuses": {
+      "active": "En cours",
+      "completed": "Clôturé",
+      "planned": "À venir"
+    },
+    "photos": {
+      "hero": "Composition de verre avec le symbole IRESEN bleu.",
+      "thermal": "Champ de capteurs solaires thermiques.",
+      "grids": "Maison équipée de panneaux photovoltaïques.",
+      "cooling": "Installation solaire thermique expérimentale.",
+      "buildings": "Petit habitat expérimental avec panneaux solaires.",
+      "photovoltaic": "Composants de cellules photovoltaïques.",
+      "wind": "Petite éolienne sous un ciel bleu."
+    }
   }
 }

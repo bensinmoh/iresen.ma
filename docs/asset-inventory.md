@@ -457,3 +457,11 @@ page's individual assets; no broader license, real employee identity or IRESEN
 workspace provenance is inferred. Full-page screenshots are not served. All three
 photographs have descriptive localized search references. Deleted demo content
 and obsolete raster-icon URLs are excluded.
+
+## Projects page visuals — 2026-10-11
+
+Seven individual Figma fills from frame `804:9285` are served as WebP for the
+commissioned projects page. The hero is decorative; the six photos illustrate
+fictional records and do not evidence an actual portfolio. Metadata, hashes,
+source slots and transformations: [manifest](projects-assets.json) and
+[scope](projects.md). Full screenshots and downloaded originals remain ignored.
