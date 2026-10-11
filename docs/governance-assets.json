@@ -1,0 +1,256 @@
+{
+  "retrieved": "2026-10-11",
+  "sourcePage": "https://iresen.org/institut/",
+  "scope": "Owner-supplied council composition; original logos and portraits, no independent tenure verification.",
+  "assets": [
+    {
+      "id": "nareva",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/institut/nareva.svg",
+      "file": "nareva.svg",
+      "kind": "member-logo",
+      "sha256": "3b67d9572419ee641294d24a9336cc9bf117be77819a7192b103a60216de5323",
+      "bytes": 1833,
+      "path": "/images/governance/nareva.svg"
+    },
+    {
+      "id": "ennaoui",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-1.png",
+      "file": "ennaoui.png",
+      "kind": "scientific-portrait",
+      "sha256": "3277716947acfc16ad370e8a7d8b1dbf30a81cb30e77f13515a29a2c612a0847",
+      "bytes": 46807,
+      "path": "/images/governance/ennaoui.png"
+    },
+    {
+      "id": "artiba",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-5.png",
+      "file": "artiba.png",
+      "kind": "scientific-portrait",
+      "sha256": "0cfec4a8ebc485c2fee465f173f650be01d514f2adfad391adc0102a08aeb6d9",
+      "bytes": 51980,
+      "path": "/images/governance/artiba.png"
+    },
+    {
+      "id": "pavia",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-7.png",
+      "file": "pavia.png",
+      "kind": "scientific-portrait",
+      "sha256": "71bf9089615a6e23387b6065416728d232202814ee23b9ca0f9c2aa21337e6a6",
+      "bytes": 48422,
+      "path": "/images/governance/pavia.png"
+    },
+    {
+      "id": "lambert",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-6.png",
+      "file": "lambert.png",
+      "kind": "scientific-portrait",
+      "sha256": "8770c5f49d855a93b723095ab3f2736a936d2e44d747e69bd25980a33899285b",
+      "bytes": 68921,
+      "path": "/images/governance/lambert.png"
+    },
+    {
+      "id": "wehrspohn",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-3.png",
+      "file": "wehrspohn.png",
+      "kind": "scientific-portrait",
+      "sha256": "07ea2f82c29ee9e97da339e98d2c67b8eb010dab023ed56f11d6ea274be0dd2e",
+      "bytes": 53988,
+      "path": "/images/governance/wehrspohn.png"
+    },
+    {
+      "id": "pitz-paal",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-2.png",
+      "file": "pitz-paal.png",
+      "kind": "scientific-portrait",
+      "sha256": "c1bad78d74217653af0ea933413a440de7a303c7fdfb78a7431efde85802240e",
+      "bytes": 43910,
+      "path": "/images/governance/pitz-paal.png"
+    },
+    {
+      "id": "bounahmidi",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-4.png",
+      "file": "bounahmidi.png",
+      "kind": "scientific-portrait",
+      "sha256": "39f9d2d9abaa2dc66f6bfe338c61af3b9e1422b0061b3a94f249f9375063aab1",
+      "bytes": 48365,
+      "path": "/images/governance/bounahmidi.png"
+    },
+    {
+      "id": "miranda",
+      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Dr. Vlademiro MIRANDA.png",
+      "file": "miranda.png",
+      "kind": "scientific-portrait",
+      "sha256": "a992a963261a7115deeb5ab300b36fe484c24d9d89c88d5a5b543d668a6fd4be",
+      "bytes": 44168,
+      "path": "/images/governance/miranda.png"
+    },
+    {
+      "id": "soukaina",
+      "kind": "owner-portrait-retouch",
+      "path": "/images/governance/soukaina-portrait.png",
+      "derivative": "/images/governance/soukaina-portrait.webp",
+      "sha256": "08367721f5d77f37d5d5f97310d7d5c30bcdfdf9671daf4e442066cbaa239491",
+      "prompt": "Use case: background-extraction, identity-preserve. Edit target: the attached portrait of soukaina. Produce one ultra-professional business portrait cutout for a coherent institutional leadership series. Remove the entire background to real alpha transparency, keeping fine hair and fabric edges clean. Preserve this exact person's face, facial features, expression, age, skin texture, hairstyle or headscarf, body proportions, clothing, accessories, pose and hands. Do not invent a new face, clothes or pose. Harmonize lighting: neutral white balance, soft studio key from upper camera-left, gentle fill, natural skin color, balanced exposure, rich but restrained navy clothing, realistic detail and no plastic skin. Match the source's medium three-quarter business framing, preserve all visible subject, clean transparent margin above head and sides. Refine clarity and color grading conservatively without changing identity. No text, watermark, background, checkerboard pixels or extra objects.",
+      "method": "Built-in ImageGen; transparent business retouch, Imane upscaled from 200px; other portraits received background edge correction."
+    },
+    {
+      "id": "ayoub",
+      "kind": "owner-portrait-retouch",
+      "path": "/images/governance/ayoub-portrait.png",
+      "derivative": "/images/governance/ayoub-portrait.webp",
+      "sha256": "2696fd78395fb1a21e31d209c1b169513b8022952bcf02d5e2e7c5c3b19d5746",
+      "prompt": "Use case: background-extraction, identity-preserve. Edit target: the attached portrait of ayoub. Produce one ultra-professional business portrait cutout for a coherent institutional leadership series. Remove the entire background to real alpha transparency, keeping fine hair and fabric edges clean. Preserve this exact person's face, facial features, expression, age, skin texture, hairstyle or headscarf, body proportions, clothing, accessories, pose and hands. Do not invent a new face, clothes or pose. Harmonize lighting: neutral white balance, soft studio key from upper camera-left, gentle fill, natural skin color, balanced exposure, rich but restrained navy clothing, realistic detail and no plastic skin. Match the source's medium three-quarter business framing, preserve all visible subject, clean transparent margin above head and sides. Refine clarity and color grading conservatively without changing identity. No text, watermark, background, checkerboard pixels or extra objects.",
+      "method": "Built-in ImageGen; transparent business retouch, Imane upscaled from 200px; other portraits received background edge correction."
+    },
+    {
+      "id": "mouhcine",
+      "kind": "owner-portrait-retouch",
+      "path": "/images/governance/mouhcine-portrait.png",
+      "derivative": "/images/governance/mouhcine-portrait.webp",
+      "sha256": "491fff67f1dcfca9b459bea7d05106e94a53c05412aa4a507d75538e52f29a0b",
+      "prompt": "Use case: background-extraction, identity-preserve. Edit target: the attached portrait of mouhcine. Produce one ultra-professional business portrait cutout for a coherent institutional leadership series. Remove the entire background to real alpha transparency, keeping fine hair and fabric edges clean. Preserve this exact person's face, facial features, expression, age, skin texture, hairstyle or headscarf, body proportions, clothing, accessories, pose and hands. Do not invent a new face, clothes or pose. Harmonize lighting: neutral white balance, soft studio key from upper camera-left, gentle fill, natural skin color, balanced exposure, rich but restrained navy clothing, realistic detail and no plastic skin. Match the source's medium three-quarter business framing, preserve all visible subject, clean transparent margin above head and sides. Refine clarity and color grading conservatively without changing identity. No text, watermark, background, checkerboard pixels or extra objects.",
+      "method": "Built-in ImageGen; transparent business retouch, Imane upscaled from 200px; other portraits received background edge correction."
+    },
+    {
+      "id": "laila",
+      "kind": "owner-portrait-retouch",
+      "path": "/images/governance/laila-portrait.png",
+      "derivative": "/images/governance/laila-portrait.webp",
+      "sha256": "25227bde273a153d6ade138ba847774b57a93c98381cb98a34510c4ad794e534",
+      "prompt": "Use case: background-extraction, identity-preserve. Edit target: the attached portrait of laila. Produce one ultra-professional business portrait cutout for a coherent institutional leadership series. Remove the entire background to real alpha transparency, keeping fine hair and fabric edges clean. Preserve this exact person's face, facial features, expression, age, skin texture, hairstyle or headscarf, body proportions, clothing, accessories, pose and hands. Do not invent a new face, clothes or pose. Harmonize lighting: neutral white balance, soft studio key from upper camera-left, gentle fill, natural skin color, balanced exposure, rich but restrained navy clothing, realistic detail and no plastic skin. Match the source's medium three-quarter business framing, preserve all visible subject, clean transparent margin above head and sides. Refine clarity and color grading conservatively without changing identity. No text, watermark, background, checkerboard pixels or extra objects.",
+      "method": "Built-in ImageGen; transparent business retouch, Imane upscaled from 200px; other portraits received background edge correction."
+    },
+    {
+      "id": "imane",
+      "kind": "owner-portrait-retouch",
+      "path": "/images/governance/imane-portrait.png",
+      "derivative": "/images/governance/imane-portrait.webp",
+      "sha256": "7b2f09f93ea733de172ae55ca0ae6dbde7157b3f974d784f17dcfa86d45b6549",
+      "prompt": "Use case: background-extraction, identity-preserve. Edit target: the attached portrait of imane. Produce one ultra-professional business portrait cutout for a coherent institutional leadership series. Remove the entire background to real alpha transparency, keeping fine hair and fabric edges clean. Preserve this exact person's face, facial features, expression, age, skin texture, hairstyle or headscarf, body proportions, clothing, accessories, pose and hands. Do not invent a new face, clothes or pose. Harmonize lighting: neutral white balance, soft studio key from upper camera-left, gentle fill, natural skin color, balanced exposure, rich but restrained navy clothing, realistic detail and no plastic skin. Match the source's medium three-quarter business framing, preserve all visible subject, clean transparent margin above head and sides. Upscale and carefully restore this low-resolution 200px photograph to a crisp high-resolution portrait, matching the professional clarity of the other photographs without changing identity. No text, watermark, background, checkerboard pixels or extra objects.",
+      "method": "Built-in ImageGen; transparent business retouch, Imane upscaled from 200px; other portraits received background edge correction."
+    },
+    {
+      "id": "jamaleddine",
+      "kind": "owner-portrait-retouch",
+      "path": "/images/governance/jamaleddine-portrait.png",
+      "derivative": "/images/governance/jamaleddine-portrait.webp",
+      "sha256": "9304db38bf13f4a0026faed43528b853701536800ca0ab5aeadea25dc0130a2c",
+      "prompt": "Use case: background-extraction, identity-preserve. Edit target: the attached portrait of jamaleddine. Produce one ultra-professional business portrait cutout for a coherent institutional leadership series. Remove the entire background to real alpha transparency, keeping fine hair and fabric edges clean. Preserve this exact person's face, facial features, expression, age, skin texture, hairstyle or headscarf, body proportions, clothing, accessories, pose and hands. Do not invent a new face, clothes or pose. Harmonize lighting: neutral white balance, soft studio key from upper camera-left, gentle fill, natural skin color, balanced exposure, rich but restrained navy clothing, realistic detail and no plastic skin. Match the source's medium three-quarter business framing, preserve all visible subject, clean transparent margin above head and sides. Refine clarity and color grading conservatively without changing identity. No text, watermark, background, checkerboard pixels or extra objects.",
+      "method": "Built-in ImageGen; transparent business retouch, Imane upscaled from 200px; other portraits received background edge correction."
+    },
+    {
+      "id": "masen",
+      "kind": "owner-supplied-original-vector",
+      "source": "MASEN.svg",
+      "path": "/images/governance/masen.svg",
+      "sha256": "3abc276fc99ba8140c4d9b212fcbf5024676cc86d82181b48f43d38aae171469",
+      "bytes": 6679
+    },
+    {
+      "id": "um6p",
+      "kind": "owner-supplied-original-vector",
+      "source": "UM6P Long.svg",
+      "path": "/images/governance/um6p.svg",
+      "sha256": "fb1622a20573c4c656a575ed662b7d56efd5388f39674cd7fc0f23d5f9a466e8",
+      "bytes": 10485
+    },
+    {
+      "id": "ocp",
+      "kind": "owner-supplied-original-vector",
+      "source": "OCP - Nouveau.svg",
+      "path": "/images/governance/ocp.svg",
+      "sha256": "6fb13e1c95a8a1ef5147b13a4706a4c9c6e3825f4b0464e88be82a5093f9d843",
+      "bytes": 6845
+    },
+    {
+      "id": "amee",
+      "kind": "owner-supplied-original-vector",
+      "source": "AMEE.svg",
+      "path": "/images/governance/amee.svg",
+      "sha256": "06b55980d4440e6793c05b6e552ca53ce31180d475e483318b66c1871f3a7504",
+      "bytes": 22789
+    },
+    {
+      "id": "federation-de-lener",
+      "kind": "owner-supplied-original-vector",
+      "source": "FEN.svg",
+      "path": "/images/governance/federation-de-lener.svg",
+      "sha256": "925eb7672b119529bf6a20db6969ee7e0c2657113792378f6df49d54895a4bb3",
+      "bytes": 8968
+    },
+    {
+      "id": "cnesten",
+      "kind": "owner-supplied-original-vector",
+      "source": "CNESTEN.svg",
+      "path": "/images/governance/cnesten.svg",
+      "sha256": "cba7fb29d86db393728fd3f8390180cb502f151e80bff364b07c7031401951e6",
+      "bytes": 25138
+    },
+    {
+      "id": "onee",
+      "kind": "owner-supplied-original-vector",
+      "source": "ONEE.svg",
+      "path": "/images/governance/onee.svg",
+      "sha256": "de8ad0c0c93cf7396deb53a2010b50e83be5c90a5022cac41ce10ad0e063d4e5",
+      "bytes": 22493
+    },
+    {
+      "id": "rd-maroc",
+      "kind": "owner-supplied-original-vector",
+      "source": "R&D Maroc.svg",
+      "path": "/images/governance/rd-maroc.svg",
+      "sha256": "863895bb669b80cbc7b486318787d462e3e8d73abd5eb6f5de268903bb93003f",
+      "bytes": 37651
+    },
+    {
+      "id": "managem",
+      "kind": "owner-supplied-original-vector",
+      "source": "Managem.svg",
+      "path": "/images/governance/managem.svg",
+      "sha256": "a7c3f2abb093b38e91161e5e9ac8074ba909487d835d71490d2f54a1c1b4c218",
+      "bytes": 11096
+    },
+    {
+      "id": "fenelec",
+      "kind": "owner-supplied-original-vector",
+      "source": "Fenelec.svg",
+      "path": "/images/governance/fenelec.svg",
+      "sha256": "d27f537fbc91778662b450267f6a3bf50fcb136b90451e7872627ec192033de7",
+      "bytes": 20968
+    },
+    {
+      "id": "onhym",
+      "kind": "owner-supplied-original-vector",
+      "source": "ONHYM copy.svg",
+      "path": "/images/governance/onhym.svg",
+      "sha256": "c525964f6ffcab1cdb805babbaba3d62cb8207055f4ea68ed8986da176859a08",
+      "bytes": 37550
+    },
+    {
+      "id": "armoiries-maroc",
+      "kind": "owner-supplied-original-vector",
+      "source": "Armoiries Maroc.svg",
+      "path": "/images/governance/armoiries-maroc.svg",
+      "sha256": "c80c33919f7088f4340575b528ad9eac3e60b9b6f8f8918a308ebd413b44e4d8",
+      "bytes": 352354
+    }
+  ],
+  "officialMemberSites": {
+    "min-finance": "https://www.finances.gov.ma/",
+    "min-energie": "https://www.mtedd.gov.ma/",
+    "minensup": "https://www.enssup.gov.ma/",
+    "micep": "https://www.mcinet.gov.ma/",
+    "ocp": "https://www.ocpgroup.ma/",
+    "amee": "https://www.amee.ma/",
+    "nareva": "https://www.nareva.ma/",
+    "um6p": "https://www.um6p.ma/",
+    "onhym": "https://www.onhym.com/",
+    "federation-de-lener": "https://www.fedenerg.ma/",
+    "cnesten": "https://www.cnesten.org.ma/",
+    "masen": "https://www.masen.ma/",
+    "onee": "https://www.one.org.ma/",
+    "rd-maroc": "https://www.rdmaroc.com/",
+    "managem": "https://www.managemgroup.com/",
+    "fenelec": "https://fenelec.com/"
+  }
+}

@@ -48,7 +48,10 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   ],
   governance: [
     { id: 'bodies-responsibilities' },
-    { id: 'council-representatives' },
+    {
+      id: 'council-representatives',
+      children: [{ id: 'scientific-council' }, { id: 'governance-oversight' }],
+    },
     { id: 'leadership-organisation' },
     { id: 'department-responsibilities' },
     { id: 'science-platforms' },

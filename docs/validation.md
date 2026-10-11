@@ -3282,3 +3282,28 @@ Public review captures are stored in docs/review/roadmap. The final scoped desig
 detector reported no findings. No Safari/Firefox or screen-reader audit, private
 source import/download or deployment. Current PR CI is required before merge.
 See [scope](roadmap.md) and [asset provenance](roadmap-assets.json).
+
+## Governance and organisation — 2026-10-11
+
+The commissioned governance page retains all six canonical section anchors,
+adds scientific council/oversight anchors, and implements sixteen board members,
+eight scientists, three poles and seven departments. The owner supplied eleven
+organisation SVG originals and the Moroccan coat of arms; ministry names are
+localized real text. Six leadership portraits are alpha cutouts with consistent
+business grading; Imane’s 200px source receives AI-assisted restoration.
+
+Lint, typecheck, 136 unit checks, and the production build pass. Integration
+checks pass all 28 tests against an isolated migrated disposable database; an
+initial run correctly refused the existing database because it contains users.
+The original database, accounts and uploads are preserved. Search rebuild
+synchronizes the static catalog and eight eligible existing CMS records.
+
+All 13 scoped browser checks pass, covering governance, search destinations
+and shared motion in FR/EN/AR, widths 320/390/768/1024/1440, 200% text, native anchor navigation,
+no-JavaScript reading, exact strategy/IT role wording, accessible names and
+scoped axe serious/critical checks. Logo geometry regression checks ensure every
+mark fits its reserved area without overlapping the label. Visual review covers
+French desktop, English tablet and Arabic mobile with all images loaded.
+
+Working EN/AR copy and scientific affiliations supplied in the owner’s reference
+remain subject to editorial review. This change does not deploy the site.

@@ -410,3 +410,12 @@ which overrides Figma sample copy. Seven themes and 28 complete axes describe
 research directions and intended benefits. EN/AR remain working editorial copy.
 Conceptual generated illustrations do not establish installed facilities or
 achieved results. See [scope](docs/roadmap.md).
+
+## Governance and organisation — 2026-10-11
+
+The owner commissioned the governance page, corrected the board composition
+(SIE removed, UM6P and Ministry of Industry and Trade added), supplied eight
+scientific council members and six team portraits/assignments. Three poles and
+seven departmental remits accompany the DG, with no invented officeholders.
+Imane and Jamaleddine have function labels without director titles. EN/AR remain
+working editorial copy. See [scope](docs/governance.md).

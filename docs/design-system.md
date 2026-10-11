@@ -1613,3 +1613,13 @@ shared signature corners, adapting white/navy roles to each thematic surface.
 Roadmap axis icons replace disclosure chevrons: subject-specific vector strokes
 follow blue/white surface roles, stretch within the title row and remain fixed.
 Native details behavior and mirrored Arabic reading order remain.
+
+## Governance adaptation — 2026-10-11
+
+The governance page reuses editorial heading roles, navy/pale surfaces, vector
+action arrows and physical signature corners. Original institutional marks are
+contained without recoloring or redrawing. Transparent leadership portraits sit
+on the shared action surface and stay separate from name/function captions.
+The organisation and responsibilities remain readable when columns collapse,
+including RTL and enlarged text. This is a scoped composition using existing
+rules, with no new shared tokens. See [scope](governance.md).

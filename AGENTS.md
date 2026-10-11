@@ -334,3 +334,15 @@ signature corners and light/dark surface roles.
 Axis icons are subject-specific vector SVGs on the trailing side of each title
 row, filling its available height. They remain fixed when native details open
 and replace the axis chevrons; preserve mirrored Arabic reading order.
+
+## Governance and organisation — 2026-10-11
+
+The owner commissioned the canonical governance page with the supplied manuscript,
+16 board organisations (SIE removed, UM6P and Ministry of Industry and Trade added),
+eight scientific council members and six supplied leadership portraits. Preserve
+three poles, seven departments and six legacy anchors. Imane MOUBACHIR uses
+“Strat & Orga” and Jamaleddine FOUHAM “IT et SI”, without director titles.
+Six portraits are retouched transparent cutouts; Imane is AI-assisted upscaling
+from 200px. Reuse the DG portrait and original marks, preserve media provenance
+and localized search references. EN/AR remain working copy; no deployment.
+See [scope](docs/governance.md).

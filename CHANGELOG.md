@@ -969,3 +969,14 @@ are displayed.
 - Align the drafting-board hero copy at the bottom, adjust introduction spacing,
   frame intended benefits and add fixed SVG axis icons on the title row's trailing side.
 - See [scope](docs/roadmap.md); no deployment or private-source download.
+
+## Governance and organisation — 2026-10-11
+
+- Develop the canonical FR/EN/AR governance page from the owner’s manuscript,
+  supplied council compositions and the institutional/Figma references.
+- Present 16 board organisations, eight scientific members, the DG and three
+  poles/seven departments with six owner-supplied retouched portraits. Remove
+  SIE; add UM6P and the Ministry of Industry and Trade. Preserve the requested
+  function labels without director titles for strategy/organisation and IT/SI.
+- Preserve legacy anchors and register localized page, section and original-media
+  search references; retain no-JavaScript reading and shared motion behavior.
