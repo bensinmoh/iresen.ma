@@ -10,11 +10,15 @@ Date: 2026-10-11. Scope: documentation and French page copy only.
   [current narrative guidance](narrative-alignment.md).
 - Distinguished the proposed values from an official named institutional list,
   and the report feature from an available public download.
-- Added the owner's follow-up timeline with six milestones. Read the private
-  fifteen-year dossier's relevant chronology and date entries without importing
-  the original; corroborated selected events with primary public sources.
-  The initial-capacity milestone preserves the source's 2012–2015 interval and
-  editorial-review status. Timeline composition is specified, not rendered.
+- Added the owner's historical timeline, then applied the screenshot and direct
+  2012/2014 clarifications: eight main milestones (2026, 2023, 2021, 2019,
+  2017, 2014, 2012, 2011) and two smaller italic supporting entries (2025,
+  2012–2015). The label is “Autres réalisations importantes”. Source dates,
+  supplied claims and the earlier capacity interval remain explicit in the notes.
+- Read the private fifteen-year dossier's relevant date entries and visually
+  checked its chronology without importing the original. Corroborated selected
+  events with primary public sources; supplied screenshot/direct claims have
+  their own provenance. Timeline composition is specified, not rendered.
 - Checked the canonical `institute` route and six existing section targets
   against `src/lib/site.ts` and `src/lib/page-sections.ts`. The handoff preserves
   compatibility and excludes governance/organisation from the body.
