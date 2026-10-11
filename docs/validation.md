@@ -3217,3 +3217,11 @@ temporary naming/case review cases passed in production Chromium: FR/EN/AR,
 localized search destinations and scoped axe checks. Computed axis text-transform
 is `none`; desktop/mobile French and Arabic mobile captures were visually inspected.
 No new resource, route, shared token or deployment. Temporary review test removed.
+
+The first PR CI run passed 250 browser cases but the existing combined project
+layout case exceeded its 30-second budget while traversing fifteen locale/width
+combinations and waiting for animated elements to settle. It is now split into
+one case per locale with reduced motion for geometry/image measurements. All
+original assertions remain, and 200% text is checked in every locale. The three
+cases passed against the existing local production projects build. Motion behavior
+retains its separate coverage; no timeout increase or assertion removal is used.
