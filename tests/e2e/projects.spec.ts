@@ -182,3 +182,34 @@ for (const locale of ['fr', 'ar'] as const) {
     await context.close()
   })
 }
+
+for (const locale of ['fr', 'ar'] as const) {
+  test(`${locale}: pagination stays still across pages and cards have alternating corners`, async ({
+    page,
+  }) => {
+    await page.goto(pageHref('projects', locale))
+    const pagination = page.locator('#project-catalogue nav')
+    await pagination.scrollIntoViewIfNeeded()
+    const top = (await pagination.boundingBox())!.y
+    for (const number of [2, 3, 4, 1, 2]) {
+      const link = pagination.locator('a').filter({ hasText: new RegExp(`^${number}$`) })
+      await link.click()
+      await expect(link).toHaveAttribute('aria-current', 'page')
+      await expect.poll(async () => (await pagination.boundingBox())!.y).toBeCloseTo(top, 0)
+      await page.waitForTimeout(450)
+      expect((await pagination.boundingBox())!.y).toBeCloseTo(top, 0)
+    }
+    const card = page.locator('[data-projects-page] article').first()
+    expect(
+      await card.evaluate((el) => {
+        const style = getComputedStyle(el)
+        return [
+          style.borderTopLeftRadius,
+          style.borderTopRightRadius,
+          style.borderBottomRightRadius,
+          style.borderBottomLeftRadius,
+        ]
+      }),
+    ).toEqual(['10px', '0px', '10px', '0px'])
+  })
+}

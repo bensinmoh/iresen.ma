@@ -144,3 +144,5 @@ requires the real editorial/publication workflow. No deployment is authorized.
 
 Detail follow-up review: [French actions](review/projects/detail-fr-bottom.webp)
 and [Arabic mobile actions](review/projects/detail-ar-mobile-bottom.webp).
+
+Owner follow-up: project cards use the shared two-rounded/two-square corner geometry. Numbered pagination preserves the grid height and controls’ viewport position across pages, skips an already-active page, and keeps back/forward state current. FR/AR browser regressions cover successive page changes and card corners.

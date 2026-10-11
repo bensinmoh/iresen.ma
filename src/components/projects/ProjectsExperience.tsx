@@ -31,6 +31,7 @@ export function ProjectsExperience({
 }) {
   const t = useTranslations('Projects')
   const [current, setCurrent] = useState(parameters)
+  const currentRef = useRef(parameters)
   const ready = useSyncExternalStore(
     subscribeToHydration,
     () => true,
@@ -78,10 +79,21 @@ export function ProjectsExperience({
   }
   // Updates are local: native history preserves the query without scrolling to an anchor.
   const update = (next: Record<string, string | string[] | undefined>, history = true) => {
+    const grid = gridRef.current
     const catalogue = catalogueRef.current
+    const pagination = catalogue?.querySelector('nav')
+    const paginationTop = pagination?.getBoundingClientRect().top
+    const active = currentRef.current
+    const pageOnly = ['q', 'domain', 'year', 'status', 'programme'].every(
+      (key) => (next[key] ?? '') === (active[key] ?? ''),
+    )
+    if (pageOnly && (next.page ?? '1') === (active.page ?? '1')) return
+    // Preserve the numbered controls' geometry as cards on successive pages vary in height.
+    if (grid) grid.style.minHeight = pageOnly ? `${grid.getBoundingClientRect().height}px` : ''
     const previousHeight = catalogue?.getBoundingClientRect().height ?? 0
     if (catalogue) catalogue.style.minHeight = `${previousHeight}px`
     animations.current.forEach((animation) => animation.cancel())
+    currentRef.current = next
     flushSync(() => setCurrent(next))
     if (history) {
       const params = new URLSearchParams()
@@ -103,7 +115,7 @@ export function ProjectsExperience({
       // Keep the current viewport inside the catalogue, while releasing unused rows above the fold.
       const targetHeight = Math.max(natural, window.innerHeight - box.top)
       catalogue.style.minHeight = `${targetHeight}px`
-      if (!reduced() && typeof catalogue.animate === 'function') {
+      if (!pageOnly && !reduced() && typeof catalogue.animate === 'function') {
         animations.current = [
           catalogue.animate(
             [{ minHeight: `${previousHeight}px` }, { minHeight: `${targetHeight}px` }],
@@ -111,6 +123,10 @@ export function ProjectsExperience({
           ),
         ]
       }
+    }
+    if (pageOnly && pagination && paginationTop !== undefined) {
+      const shift = pagination.getBoundingClientRect().top - paginationTop
+      if (Math.abs(shift) > 0.5) window.scrollBy({ top: shift, behavior: 'instant' })
     }
     if (!reduced() && typeof Element.prototype.animate === 'function') {
       animations.current.push(

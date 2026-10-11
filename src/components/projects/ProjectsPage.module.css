@@ -154,11 +154,13 @@
   padding-block: clamp(2.5rem, 4.167vw, 5rem);
 }
 .grid {
+  overflow-anchor: none;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
 .card {
+  border-radius: var(--radius-action);
   background: white;
   padding: clamp(1.25rem, 1.56vw, 1.875rem);
   display: flex;

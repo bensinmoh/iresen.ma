@@ -941,3 +941,5 @@ are displayed.
   presentation/platform/contact/consortium/objectives fields, central contact email
   chosen by the owner, and 72 real localized PDF note downloads through a validated
   attachment API. Keep source flags, draft eligibility and private references separate.
+
+- Projects follow-up: stabilize numbered pagination across changing card heights and apply two rounded/two square corners to project cards.
