@@ -425,7 +425,7 @@ test('newsletter attempts, footer language switching and mobile navigation work 
         (url) => decodeURI(url.pathname) === pageHref('institute', targetLocale),
       )
       await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-        catalogs[targetLocale].Pages.institute,
+        catalogs[targetLocale].Institute.title,
       )
     }
   } finally {

@@ -1,5 +1,9 @@
 # IRESEN visual direction
 
+## Institute composition — 2026-10-11
+
+The [Institute page](docs/institute-page.md) adapts Figma’s white/navy editorial language to the longer manuscript. Three substantial mission rows pair purpose/title with readable introductions and native details; their common cooperation band remains distinct. Fine value rows, paired ambition imagery, a native horizontal chronological rail and a quiet report feature vary density by visitor task. Reuse existing hero photos, identity, typography and shared tokens. No new universal template or token is introduced.
+
 ## Médiathèque — 2026-10-10
 
 The resource directory alternates an authentic supplied-photo gallery on white, native video players on institutional ink, a light PDF directory and official text links. Shared blue, typography, physical corner geometry, SVG controls and logical spacing remain authoritative. No new shared token is introduced. See [scope](docs/media-library.md).
@@ -1218,3 +1222,22 @@ actual remits, while the unassigned scientific department stays textual. Native
 section links and existing reveal behavior preserve no-JavaScript/RTL reading.
 No new shared token or universal page layout is introduced. See
 [scope](docs/governance.md).
+
+Institut mission follow-up — 2026-10-11: the owner removes the redundant second
+introduction sentence in all locales. The compact full-width mission quotation
+uses institutional navy, a shaded existing solar-aerial illustration and shared
+quotation typography. Canonical anchors and image provenance remain unchanged;
+the withdrawn sentence is removed from the localized search projection.
+
+Owner timeline design correction follows the supplied close-up: a connected
+hairline, blue date/title labels and halo markers, with a centered progress bar,
+responsive page counter and circular SVG arrow controls. Arrow navigation moves
+a visible group; touch/native keyboard scrolling keeps the indicator synchronized.
+The owner specifically commissions this navigation, distinct from mobile rail pills.
+
+Owner report-cover refinement moves the eyebrow/title above the text in the
+trailing column, enlarges the supplied book and allows a modest overlap into the
+preceding navy section. The report surface is white. AI-assisted background
+removal/ground-shadow reconstruction produces an alpha WebP derivative; its
+provenance and hash are recorded in institute-assets.json. The source PDF remains
+private; no extra document contents or publication claims are adopted.

@@ -294,3 +294,20 @@ triggers and rebuild queue. Only open, non-demo, published and locale-approved
 complete notices enter section/document results and spelling vocabulary.
 Local mockup records and controls are excluded; closure, withdrawal and deletion
 revoke current eligibility before asynchronous reindexing.
+
+## Institute projection — 2026-10-11
+
+The [Institute page](institute-page.md) includes complete localized mission,
+positioning, values, ambition, history and report-teaser text in its static page
+and section projections. The history includes eight major dates and the explicit
+2025 / 2012–2015 supporting entries. Canonical section anchors are registered in
+FR/EN/AR; source attachments and editorial repository drafts remain private/excluded.
+Existing solar-sunset/workshop asset references are reused. Owner-requested `#`
+report actions create no PDF asset or document result; register the actual PDF
+with verified metadata when it is supplied. The final-content glossary/search
+sanity check remains pending.
+
+Owner follow-up: the first-page mockup cover image is served and registered as
+`institute-fifteen-year-report-cover` in each locale, with descriptive text and
+original “15 ANS D’IMPACT” wording. The nine-page source PDF and remaining pages
+are excluded; the actual report actions stay on `#`.

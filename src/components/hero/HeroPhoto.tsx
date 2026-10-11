@@ -10,7 +10,7 @@ export function HeroPhoto({ photo }: { photo: HeroPhotoId }) {
   return (
     <picture>
       {/* Keep every available pixel when narrow heroes grow for content. */}
-      <source media="(max-width: 40rem)" srcSet={image.mobile.src} />
+      {photo !== 'headquarters' && <source media="(max-width: 40rem)" srcSet={image.mobile.src} />}
       <Image
         src={image.src}
         alt=""

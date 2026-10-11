@@ -212,9 +212,231 @@
     "newsletterUnavailable": "Newsletter signup is not available yet."
   },
   "Institute": {
-    "about": "Who are we?",
-    "mission": "Mission & positioning",
-    "keyFigures": "Key figures"
+    "eyebrow": "About the Institute",
+    "title": "Connecting research with the needs of the energy transition.",
+    "introduction": [
+      "Since 2011, IRESEN has brought research, expertise and skills together to support Morocco’s energy transition and sustainable development. With its partners, the Institute connects scientific knowledge with the needs of public stakeholders, businesses and territories."
+    ],
+    "missionLabel": "Our mission",
+    "statement": "IRESEN connects research with the needs of Morocco’s energy transition and sustainable development. With its partners, it helps inform choices, advance solutions and strengthen capacities, bringing stakeholders together and mobilising the expertise and resources required.",
+    "positionLabel": "Our positioning",
+    "position": {
+      "title": "Research rooted in Morocco’s needs, open to the world",
+      "paragraphs": [
+        "IRESEN connects scientific and technological advances with national and regional realities. Its work links energy priorities with industrial decarbonisation, competitiveness and resource preservation.",
+        "The Institute works at the interface between research and use. It helps understand the options, develop and test technologies in their application settings, and transfer the know-how required to master them.",
+        "Support programmes, research platforms, laboratories and expert networks provide the means for this contribution. They bring skills together around specific needs, produce knowledge and prepare for its use."
+      ]
+    },
+    "missionsLabel": "Our missions",
+    "missionsIntro": [
+      "Three complementary missions structure IRESEN’s contribution: Studies & Expertise, Research & Innovation and Skills & Capacities.",
+      "They meet distinct needs and reinforce one another: a study can guide research, an experiment can enrich an analysis, and training can pass on what the work has taught.",
+      "Cooperation & Outreach supports these three missions by connecting stakeholders and mobilising resources."
+    ],
+    "missions": [
+      {
+        "title": "Studies & Expertise",
+        "purpose": "Inform choices.",
+        "introduction": "IRESEN provides the knowledge, data and analysis needed to prepare public, scientific and industrial decisions. This mission helps build a better understanding of technological options and their application conditions in Morocco and the region.",
+        "activities": [
+          {
+            "title": "Observe and anticipate",
+            "description": "Monitor scientific and technological developments, analyse trends and identify emerging technologies. Explore possible developments to help stakeholders anticipate needs, opportunities and constraints."
+          },
+          {
+            "title": "Study and assess",
+            "description": "Conduct strategic, technical and economic studies. Analyse resources and local conditions, compare technologies and scenarios, and assess their risks, opportunities and socioeconomic impacts."
+          },
+          {
+            "title": "Support decisions",
+            "description": "Conduct opportunity studies, contribute to sector strategies and roadmaps, and mobilise expertise and technical assistance suited to the questions raised."
+          },
+          {
+            "title": "Our contribution",
+            "description": "Better-understood options and reliable evidence to prepare decisions, making assumptions, application conditions and analytical limits explicit."
+          }
+        ]
+      },
+      {
+        "title": "Research & Innovation",
+        "purpose": "Advance solutions.",
+        "introduction": "IRESEN conducts and supports work that advances knowledge and technological solutions. Scientific and socioeconomic needs guide research objectives and the resources mobilised with partners.\n\nThis mission brings together three activities: develop, test and transfer value.",
+        "activities": [
+          {
+            "title": "Develop",
+            "description": "Conduct and support applied research and collaborative R&D. Design technologies and prototypes, and advance their scientific and technical maturity."
+          },
+          {
+            "title": "Test",
+            "description": "Carry out tests, measurements and characterisation. Verify performance, experiment in representative or real conditions, and identify limitations and the adaptations needed for the intended uses."
+          },
+          {
+            "title": "Transfer value",
+            "description": "Protect results and prepare their maturation towards use. Explore suitable transfer pathways: licensing, startup creation or support towards industrial and commercial adoption, according to the nature of the results and their development stage."
+          },
+          {
+            "title": "Our means of action",
+            "description": "Research programming, funding and support, alongside the mobilisation of platforms, laboratories and scientific and technical resources."
+          },
+          {
+            "title": "Our contribution",
+            "description": "Knowledge and technologies progressing towards use. Exchanges between research, experimentation and use help adapt the work and prepare the next steps."
+          }
+        ]
+      },
+      {
+        "title": "Skills & Capacities",
+        "purpose": "Strengthen capacities.",
+        "introduction": "IRESEN helps individuals, teams and stakeholders develop the skills needed to understand, practise, assess and further develop technologies with greater autonomy.",
+        "activities": [
+          {
+            "title": "Train and pass on knowledge",
+            "description": "Develop specialised training, training for trainers and learning through research, through doctoral pathways, scientific stays and exchanges of expertise."
+          },
+          {
+            "title": "Support capacity development",
+            "description": "Encourage the appropriation of technologies, transfer methods and know-how, and strengthen scientific and technical capacities through support and practice."
+          },
+          {
+            "title": "Share knowledge",
+            "description": "Share good practices, educational resources and results. Make emerging technologies easier to understand through science communication and awareness-raising."
+          },
+          {
+            "title": "Our means of action",
+            "description": "Training, research pathways, technical support and knowledge-sharing activities, mobilising researchers, experts and platforms as learning environments."
+          },
+          {
+            "title": "Our contribution",
+            "description": "Know-how built and shared, and stakeholders better prepared to master technologies and use knowledge in their own activities."
+          }
+        ]
+      },
+      {
+        "title": "Cooperation & Outreach",
+        "purpose": "Connect stakeholders and mobilise resources.",
+        "introduction": "Cooperation and outreach support IRESEN’s three missions. They bring together the expertise, partners and resources needed for work in Morocco and internationally.",
+        "activities": [
+          {
+            "title": "Bring together and connect",
+            "description": "Animate networks, connect stakeholders and help common needs and projects emerge through scientific exchanges and meetings."
+          },
+          {
+            "title": "Build cooperation",
+            "description": "Develop scientific, industrial and institutional partnerships. Define common objectives and work, support international exchanges and contribute to scientific diplomacy."
+          },
+          {
+            "title": "Mobilise resources",
+            "description": "Identify and bring together funding, expertise and complementary resources with partners and funders."
+          },
+          {
+            "title": "Promote contributions",
+            "description": "Share work and results, represent contributions in networks and meetings, and strengthen their recognition in Morocco and internationally."
+          },
+          {
+            "title": "Our contribution",
+            "description": "Better-connected stakeholders, mobilised resources and concrete cooperation supporting studies, research and skills development."
+          }
+        ]
+      }
+    ],
+    "valuesLabel": "Our values",
+    "values": [
+      {
+        "title": "Scientific rigour",
+        "description": "Base our work on explicit methods, reliable data and documented results. Explain their conditions of validity and limitations."
+      },
+      {
+        "title": "Usefulness",
+        "description": "Start from concrete needs and explore what our analyses, work and know-how help people understand, decide and achieve."
+      },
+      {
+        "title": "Cooperation",
+        "description": "Build with partners, bring complementary expertise together and recognise each contribution to shared results."
+      },
+      {
+        "title": "Transmission",
+        "description": "Share knowledge and lessons from practice to strengthen skills, autonomy and the capacity to act over time."
+      },
+      {
+        "title": "Responsibility",
+        "description": "Distinguish achievements, ongoing work and ambitions. Document how results are used and present economic and environmental effects when established."
+      }
+    ],
+    "ambitionLabel": "Our ambition for 2035",
+    "ambition": {
+      "statement": "Make IRESEN a reference for excellence in Africa through the quality of its studies and expertise, research and innovation, and contribution to skills and capacities.",
+      "paragraphs": [
+        "This ambition is built with our partners through teams, methods, experimental capacities and the use of results.",
+        "It aims to serve a safe, competitive and sustainable energy transition, creating value for Morocco and suited to its region’s needs."
+      ]
+    },
+    "historyLabel": "Our journey since 2011",
+    "historyTitle": "Fifteen years of research, experimentation and cooperation.",
+    "historyIntro": [
+      "Since its creation, IRESEN has developed programmes, experimental resources and skills with its partners that strengthen its contribution to the energy transition."
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "title": "Continental expansion and fifteenth anniversary",
+        "description": "The inauguration of Green Energy Park Morocco–Côte d’Ivoire in Yamoussoukro extends the cooperation between IRESEN, UM6P and INP-HB. The Institute also celebrates fifteen years of contributions to research, innovation and skills development."
+      },
+      {
+        "year": "2023",
+        "title": "Inauguration of Green & Smart Building Park",
+        "description": "Opening of the first African platform dedicated to green buildings and smart grids. It connects research, experimentation and use to support sustainable building development."
+      },
+      {
+        "year": "2021",
+        "title": "Contribution to the green hydrogen roadmap",
+        "description": "IRESEN contributes to the development of the national green hydrogen roadmap, mobilising scientific and technological expertise to support the sector’s directions."
+      },
+      {
+        "year": "2019",
+        "title": "Solar Decathlon Africa",
+        "description": "IRESEN and UM6P organise the first African edition of Solar Decathlon in Benguerir. The competition brings university teams together to design and build sustainable buildings, combining innovation, demonstration and learning."
+      },
+      {
+        "year": "2017",
+        "title": "Inauguration of Green Energy Park",
+        "description": "Official opening of the Benguerir platform, strengthening shared research, testing, experimentation and training capacities in renewable energies."
+      },
+      {
+        "year": "2014",
+        "title": "ISO 9001 certification",
+        "description": "IRESEN becomes the first agency of means in Africa to achieve ISO 9001 certification. This milestone recognises its quality approach and continuous improvement of its activities."
+      },
+      {
+        "year": "2012",
+        "title": "Launch of the first programmes and calls for projects",
+        "description": "IRESEN launches its first programmes and calls to fund applied research and development, supporting collaborative work by scientific teams and their partners."
+      },
+      {
+        "year": "2011",
+        "title": "Creation of IRESEN",
+        "description": "Creation of the Institute to connect research and innovation with the needs of Morocco’s energy transition."
+      }
+    ],
+    "reportLabel": "Fifteen years of contributions",
+    "reportTitle": "Fifteen-year activity report · 2011–2026",
+    "report": [
+      "Since its creation, IRESEN has supported collaborative research, helped equip teams and developed research and experimentation platforms with its partners. Studies, expertise, training and technology transfer enrich this work.",
+      "The fifteen-year activity report puts this journey into perspective: programmes undertaken, key achievements, capacities developed and cooperation built.",
+      "It offers a view of the Institute’s contributions and the lessons that inform its next steps."
+    ],
+    "resourcesLabel": "Explore our resources",
+    "detailsLabel": "Activities and contribution",
+    "meansLabel": "Our means of action",
+    "contributionLabel": "Our contribution",
+    "cooperationLabel": "A cross-cutting mission",
+    "reportRead": "Read the activity report",
+    "searchText": "IRESEN — Institute for Research in Solar Energy and New Energies. R&D: research and development. R&D&I: research, development and innovation. Energy transition, expertise, skills, cooperation, history and ambition for 2035.",
+    "previous": "Previous milestone",
+    "next": "Next milestone",
+    "coverAlt": "Cover mockup for the fifteen-year report: “15 ans d’impact”, 2026.",
+    "coverSearchText": "Owner-supplied cover mockup for IRESEN’s fifteen-year activity report, 2011–2026. Cover text: 15 ANS D’IMPACT, 2026. This cover image is not the report PDF.",
+    "historyProgressLabel": "Timeline progress"
   },
   "States": {
     "empty": "No published content yet.",
@@ -280,7 +502,7 @@
       "label": "Certified",
       "description": "Africa’s first research institute certified to ISO 9001."
     },
-    "founded": "IRESEN established",
+    "founded": "Since",
     "pathways": "The three domains of contribution",
     "stages": {
       "institute": "IRESEN · Energy transition & sustainable development",
@@ -292,7 +514,7 @@
     },
     "descriptions": {
       "home": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners.",
-      "institute": "Three domains of contribution — studies and expertise, research and innovation, skills and capabilities — supported by cooperation and outreach.",
+      "institute": "Connecting research with the needs of the energy transition.",
       "governance": "Connecting national priorities, scientific rigour and delivery.",
       "priorities": "Develop, test and transfer innovative energy solutions that are robust and resource-efficient. Our roadmap connects Morocco’s needs with research questions, with the ambition to produce solutions adaptable to other contexts.",
       "programmes": "Programme, fund and support collaborative research by linking needs to scientific objectives and usable results.",
@@ -465,28 +687,56 @@
     },
     "institute": {
       "about": {
-        "title": "Who are we?",
-        "description": "Content to add: the Institute’s identity, history, scope and partners."
+        "title": "About the Institute",
+        "description": "Since 2011, IRESEN has brought research, expertise and skills together to support Morocco’s energy transition and sustainable development. With its partners, the Institute connects scientific knowledge with the needs of public stakeholders, businesses and territories."
       },
       "mission": {
-        "title": "Mission and positioning",
-        "description": "To prepare: the three domains of contribution and their shared enabler, connected to Morocco’s and the region’s needs."
+        "title": "Our mission",
+        "description": "IRESEN connects research with the needs of Morocco’s energy transition and sustainable development. With its partners, it helps inform choices, advance solutions and strengthen capacities, bringing stakeholders together and mobilising the expertise and resources required."
       },
       "capabilities": {
-        "title": "Complementary capabilities",
-        "description": "To prepare: studies and expertise, research and innovation, skills and capabilities; cooperation and outreach as a shared enabler. Develop, test and valorise belong within Research & Innovation."
+        "title": "Our missions",
+        "description": "Three complementary missions structure IRESEN’s contribution: Studies & Expertise, Research & Innovation and Skills & Capacities. They meet distinct needs and reinforce one another: a study can guide research, an experiment can enrich an analysis, and training can pass on what the work has taught. Cooperation & Outreach supports these three missions by connecting stakeholders and mobilising resources."
       },
       "ambition-2035": {
-        "title": "Ambition for 2035",
-        "description": "To prepare: the ambition to become a reference for excellence in Africa across the three domains, separate from achievements and the status of the proposed 2026–2035 agreement."
+        "title": "Our ambition for 2035",
+        "description": "Make IRESEN a reference for excellence in Africa through the quality of its studies and expertise, research and innovation, and contribution to skills and capacities."
       },
       "key-figures": {
-        "title": "Key figures",
-        "description": "Content to add: validated data series with definitions, dates, scopes and public references."
+        "title": "Our journey since 2011",
+        "description": "Fifteen years of research, experimentation and cooperation."
       },
       "more-resources": {
-        "title": "Explore further",
-        "description": "Content to add: links to governance, reports, priorities and collaboration."
+        "title": "Fifteen years of contributions",
+        "description": "Since its creation, IRESEN has supported collaborative research, helped equip teams and developed research and experimentation platforms with its partners. Studies, expertise, training and technology transfer enrich this work. The fifteen-year activity report puts this journey into perspective: programmes undertaken, key achievements, capacities developed and cooperation built. It offers a view of the Institute’s contributions and the lessons that inform its next steps."
+      },
+      "institute-positioning": {
+        "title": "Our positioning",
+        "description": "Research rooted in Morocco’s needs, open to the world"
+      },
+      "institute-values": {
+        "title": "Our values",
+        "description": "Scientific rigour Usefulness Cooperation Transmission Responsibility"
+      },
+      "institute-history": {
+        "title": "Our journey since 2011",
+        "description": "Fifteen years of research, experimentation and cooperation."
+      },
+      "institute-studies": {
+        "title": "Studies & Expertise",
+        "description": "IRESEN provides the knowledge, data and analysis needed to prepare public, scientific and industrial decisions. This mission helps build a better understanding of technological options and their application conditions in Morocco and the region."
+      },
+      "institute-research": {
+        "title": "Research & Innovation",
+        "description": "IRESEN conducts and supports work that advances knowledge and technological solutions. Scientific and socioeconomic needs guide research objectives and the resources mobilised with partners.\n\nThis mission brings together three activities: develop, test and transfer value."
+      },
+      "institute-skills": {
+        "title": "Skills & Capacities",
+        "description": "IRESEN helps individuals, teams and stakeholders develop the skills needed to understand, practise, assess and further develop technologies with greater autonomy."
+      },
+      "institute-cooperation": {
+        "title": "Cooperation & Outreach",
+        "description": "Cooperation and outreach support IRESEN’s three missions. They bring together the expertise, partners and resources needed for work in Morocco and internationally."
       }
     },
     "governance": {

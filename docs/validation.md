@@ -3073,12 +3073,6 @@ documentation-only task. See [the specification](horizontal-scroll-indicators.md
 
 Lint, typecheck, 126 unit checks and the isolated production build passed. Eight scoped production Chrome cases passed: FR/EN/AR media filters and modal access, no-JavaScript photo links, reduced motion, supplied biography, real clipboard copy, image-only download, 320/390/768/1440px containment, 200% mobile text, Escape/focus restoration, scoped axe scan and portrait frame meeting the desktop popup bottom edge. Desktop rendering and headroom were manually inspected. The local search rebuild synchronized the static catalog; French-only biography eligibility is covered by a regression test. No database schema changes or deployment. See [scope](samir-biography.md).
 
-## Samir JPG download and quiet copy — 2026-10-10
-
-The downloadable portrait is converted from the official original to JPG (1024 × 1536). The viewer links to this format; successful clipboard copying clears visible status. Unit/search coverage treats the JPG as a derivative of the original photo. Scoped browser checks verify clipboard content, empty success status and JPG-only download.
-
-The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
-
 ## Video-library scroll pills — 2026-10-10
 
 Lint, TypeScript/production compilation, formatting and 126 unit tests passed.
@@ -3101,6 +3095,12 @@ keyboard focus is separate. Existing stable media/video anchors, public search
 references and withdrawal gates remain. No new public resource or index rebuild
 is needed for this interaction change. No Safari/Firefox or screen-reader pass
 was performed. See [scope](media-library.md#video-navigation-pills--2026-10-10).
+
+## Samir JPG download and quiet copy — 2026-10-10
+
+The downloadable portrait is converted from the official original to JPG (1024 × 1536). The viewer links to this format; successful clipboard copying clears visible status. Unit/search coverage treats the JPG as a derivative of the original photo. Scoped browser checks verify clipboard content, empty success status and JPG-only download.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
 
 ## Publications & reports page — 2026-10-10
 
@@ -3317,3 +3317,99 @@ build and all 16 scoped browser checks. Rendered biography review covers French
 desktop and Arabic mobile with no horizontal overflow. Explicit dialog centering
 preserves backdrop dismissal after text resizing in all three languages. Search
 rebuild synchronizes seven currently eligible CMS records and the static catalog.
+
+## Institute page — 2026-10-11
+
+Scope: [the canonical Institut page](institute-page.md), with the owner’s pasted
+manuscript and native Figma frame `804:8896`. Governance prerequisite satisfied
+by PR #93. The source benchmark hash matches its unchanged recorded original;
+local links in the new page scope and inherited editorial handoff resolve.
+
+- Lint, TypeScript generation/check, 137 unit tests and the isolated production
+  build pass. Existing Next-intl cache warnings appeared on the initial build;
+  subsequent compilation completed successfully.
+- All 28 CMS/search/careers integration cases pass in a disposable local database,
+  migrated and removed after use. The normal working database was unsuitable for
+  the empty-user integration contract; it was preserved. No schema change.
+- Fourteen production Chrome browser cases pass across Institut and Governance.
+  Institut covers FR/EN/AR, all registered targets, eight major milestones/two
+  supporting entries, native keyboard disclosures, `#` report actions, no fake
+  download, 1440/1024/768/390/320px containment, 200% mobile text, reduced motion,
+  no-JavaScript reading and an expanded scoped axe check without serious/critical
+  findings. Search retrieves its MENALINKS history in each public locale.
+- A pre-existing French Governance dialog cleanup assertion failed once during
+  seven-worker execution, passed three isolated repeats and passed the final
+  three-worker regression run. No Governance runtime/test code was changed.
+- Inspected rendered FR desktop, EN tablet and AR mobile compositions, including
+  mission reading, paired ambition imagery and timeline markers/italic supporting
+  text. Arabic viewport bounds and text reading were checked directly. Existing
+  generated photographs remain illustrative rather than institutional evidence.
+- Local public search catalog/index was rebuilt; static section metadata covers
+  the complete supplied activities/contributions and historical timeline. A unit
+  regression checks localization, both supporting dates and exclusion of any
+  invented report document asset.
+
+The current PR’s CI and repository review requirements must pass before merge.
+Final editorial/translation approval, the public fifteen-year PDF and full-content
+search sanity check remain pending. No Safari/Firefox or screen-reader audit,
+full accessibility certification, deployment or visibility change is claimed.
+
+Institute horizontal-timeline/cover follow-up: lint, 137 unit tests, the production
+build and all 14 Institut/Governance browser regressions pass. Browser coverage
+now includes next/previous and native keyboard scrolling in FR/EN/AR, horizontal
+reading without JavaScript, all viewport sizes and a successfully decoded cover.
+An initial image-optimizer rejection was fixed with an exact local image pattern;
+a snap-offset regression was fixed with matching logical scroll padding. Cover
+search resolves in all three languages as media, with no report document entry.
+Rendered FR desktop, EN tablet and AR mobile cover/timeline compositions were
+inspected. Only page one of the supplied mockup is served as a WebP image; its
+source PDF remains excluded. The two report actions retain the owner-requested
+`#` placeholders.
+
+Institut mission refinement removes the redundant introductory sentence in all
+three locale catalogs and rebuilds the current public search index. The quotation
+uses the existing solar-aerial illustration with a navy gradient; visible opening
+and closing guillemets frame the statement. The section and following positioning
+spacing are tightened while keeping every legacy anchor.
+The refinement passes lint, 137 unit tests, production compilation/TypeScript
+and all five Institut browser cases, including navy background, both guillemets,
+withdrawn French copy and the expanded axe check. The rendered quotation was
+reviewed in FR desktop, EN tablet and AR mobile.
+
+Owner chronology correction: the timeline runs physically left to right from
+2011 to 2026, with Arabic text retaining its own RTL reading direction. The
+“Other important achievements” heading is removed in every locale; the two
+source-derived supporting entries remain.
+
+Final owner timeline withdrawal removes both supporting achievements (2012–2015
+solar laboratories and 2025 MENALINKS) from every public locale and search body.
+Only the eight main milestones remain, in ascending 2011–2026 order. Private and
+historical reference documents remain source records, not public page content.
+
+Final owner report simplification removes the separate download link in all
+locales. Only “Consult the activity report” remains, currently `#`; it will point
+to the actual PDF download when supplied. No report file is invented.
+
+Final Institut owner refinements — 2026-10-11: lint, explicit typecheck, all
+137 unit tests, 28 integration tests in a disposable isolated database and the
+production build pass. The 43 scoped Institut, Governance, hero/image and
+navigation browser cases are covered: the broad run passed 42 cases; its Arabic
+tablet overflow was corrected and all five Institut cases then passed again.
+Coverage includes 320–1440px layouts, enlarged text, native/no-JavaScript reading,
+axe, both quotation marks, mobile report ordering, clickable placeholder cover,
+headquarters hero and dynamic viewport height, and RTL one-milestone navigation
+through 1/8–8/8. Existing hero/navigation assertions now use the actual Institut
+heading and native content rather than the former scaffold.
+
+Rendered FR desktop, EN tablet and AR mobile mission/history/report layouts were
+inspected. The alpha cover retains a reconstructed ground shadow on white; the
+desktop base aligns with the consultation action, and mobile keeps the book
+centered between text and button. The public search index was rebuilt; withdrawn
+copy and supporting milestones are excluded. Original database and unrelated
+local configuration are preserved. Safari, Firefox and screen-reader testing
+were not performed locally; EN/AR editorial approval remains pending.
+
+The first final-head CI run passed format/lint/types/unit/integration/build and
+278 browser cases. Its sole failing footer no-JavaScript navigation assertion
+still expected the old scaffold heading; it now checks the manuscript's localized
+Institut title while retaining the menu link and destination checks.

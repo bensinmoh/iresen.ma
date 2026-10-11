@@ -24,6 +24,7 @@ const nextConfig = {
       { pathname: '/images/domains/**', search: '' },
       { pathname: '/images/roadmap/**', search: '' },
       { pathname: '/images/governance/**', search: '' },
+      { pathname: '/images/institute/fifteen-year-report-cover-cutout.webp', search: '' },
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/achievements/**', search: '' },
       { pathname: '/images/collaborate/**', search: '' },

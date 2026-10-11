@@ -97,6 +97,20 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'institute-fifteen-year-report-cover',
+    url: '/images/institute/fifteen-year-report-cover-cutout.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Institute.coverAlt,
+          description: messages[locale].Institute.coverSearchText,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
   ...governanceBoard
     .filter((id) => !['min-finance', 'min-energie', 'minensup', 'micep'].includes(id))
     .map((id) => ({
@@ -544,7 +558,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   })),
   ...Object.entries(heroImages)
-    .filter(([id]) => id !== 'media-library')
+    .filter(([id]) => id !== 'media-library' && id !== 'headquarters')
     .map(([id, image]) => {
       // Contact has a dedicated headquarters photograph; its former illustration is
       // still served, but must not be described as the current contact page image.
@@ -763,6 +777,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.events),
         )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
+      if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
       if (pageId === 'governance')
         body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
       if (pageId === 'priorities') body.push(...engagementSearchText(catalog.Roadmap))
@@ -866,6 +881,26 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'institute') {
+            const instituteCopy = {
+              about: catalog.Institute.introduction,
+              'institute-positioning': catalog.Institute.position,
+              mission: catalog.Institute.statement,
+              capabilities: catalog.Institute.missionsIntro,
+              'institute-studies': catalog.Institute.missions[0],
+              'institute-research': catalog.Institute.missions[1],
+              'institute-skills': catalog.Institute.missions[2],
+              'institute-cooperation': catalog.Institute.missions[3],
+              'institute-values': catalog.Institute.values,
+              'ambition-2035': catalog.Institute.ambition,
+              'key-figures': catalog.Institute.historyIntro,
+              'institute-history': catalog.Institute.timeline,
+              'more-resources': catalog.Institute.report,
+            }
+            body.push(
+              ...engagementSearchText(instituteCopy[entry.id as keyof typeof instituteCopy]),
+            )
+          }
           if (pageId === 'news') {
             if (entry.id === 'news')
               body.push(...engagementSearchText(catalog.NewsEvents.summaries))

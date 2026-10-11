@@ -183,3 +183,12 @@ The governance page replaces its six placeholder modules with the owner-supplied
 institutional copy, council compositions and team responsibilities. Six legacy
 anchors remain; `scientific-council` and `governance-oversight` are additional
 localized search destinations. See [scope](governance.md).
+
+## Institute implementation — 2026-10-11
+
+The [Institute manuscript implementation](institute-page.md) replaces its scaffolds.
+Six legacy targets remain, including `key-figures` as a retrospective compatibility
+anchor. Additional registered children cover positioning, three detailed missions,
+cooperation, values and history. Shared locale-anchor switching and localized public
+search projection cover them. Both report actions use owner-requested `#` pending
+its PDF; no separate governance body or example figures are adopted.

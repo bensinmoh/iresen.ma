@@ -307,7 +307,7 @@ test('without JavaScript the Arabic mobile homepage figures remain keyboard acce
   }
 })
 
-test('without JavaScript the hero, section navigation and Arabic content remain usable', async ({
+test('without JavaScript the institute hero, mission and Arabic disclosures remain usable', async ({
   browser,
 }) => {
   const context = await browser.newContext({
@@ -320,6 +320,8 @@ test('without JavaScript the hero, section navigation and Arabic content remain 
   await expect(page.locator('.page-hero h1')).toBeVisible()
   await page.locator('.hero-scroll').click()
   await expect(page).toHaveURL(/#page-sections$/)
-  await expect(page.locator('.section-navigation')).toBeVisible()
+  await expect(page.locator('#mission blockquote')).toBeVisible()
+  await page.locator('#institute-studies summary').click()
+  await expect(page.locator('#institute-studies details')).toHaveAttribute('open', '')
   await context.close()
 })

@@ -1,5 +1,9 @@
 # IRESEN website
 
+## Institut — 2026-10-11
+
+The canonical Institute page now implements the owner’s manuscript with detailed missions, native disclosures, values, 2035 ambition and the full historical timeline. FR/EN/AR search references and legacy anchors are retained. Both fifteen-year report actions use owner-requested `#` placeholders pending the public PDF. See [scope](docs/institute-page.md). No deployment.
+
 ## Médiathèque — 2026-10-10
 
 The existing media page now presents twenty selected supplied photos, eight owner-authorized public CMS videos, ten Ministry PDF source links and five official institutional destinations. See [scope and provenance](docs/media-library.md). No deployment is authorized.

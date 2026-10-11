@@ -180,7 +180,7 @@ for (const locale of locales) {
     expect(results.violations).toEqual([])
     await institute.locator(`.mega-menu-links a[href="${pageHref('institute', locale)}"]`).click()
     await expect(page).toHaveURL((url) => decodeURI(url.pathname) === pageHref('institute', locale))
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText(messages.Pages.institute)
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(messages.Institute.title)
   })
 }
 

@@ -1,5 +1,23 @@
 # Change log
 
+## 2026-10-11 — Institute page
+
+Owner follow-up: the timeline scrolls horizontally at every width; add the supplied book mockup’s first-page cover and localized media search reference. The source PDF stays excluded.
+
+Implement the canonical Institute page from the supplied manuscript after Governance completion. Add detailed trilingual missions, native disclosures, values, 2035 ambition, eight principal historical milestones and two italic supporting entries. Preserve legacy anchors, existing illustrative media and localized section search references. The owner selects `#` for both report actions until its PDF arrives. See [scope](docs/institute-page.md). No deployment.
+
+## 2026-10-11 — Institute page editorial draft
+
+Draft the French institute page from the current narrative: mission statement,
+three detailed contribution domains and their cooperation enabler, proposed
+values, positioning, 2035 ambition, a historical timeline and a fifteen-year
+report feature. The timeline combines eight owner-selected major milestones
+with two smaller italic supporting entries. Exclude
+governance and organisation from the body. Preserve canonical routes/legacy
+anchors in the implementation handoff; no runtime or public download changes.
+See [content and structure](docs/institute-content.md) and
+[verification](docs/institute-content-validation.md).
+
 ## 2026-10-11 — Homepage themes and sentence case
 
 - Rename the homepage section label and navigation to “Thématiques”, with matching EN/AR wording and discovery actions.
@@ -19,16 +37,16 @@
 See [scope](docs/publications.md#consolidated-update--10-october-2026) and
 [verification](docs/publications-update-validation.md).
 
+## 2026-10-10 — Arabic video download placement
+
+- Mirror video-popup actions in Arabic: download sits to the right of close.
+- Preserve French/English ordering and the guarded original-file download.
+
 ## 2026-10-10 — Event pills and mobile social icons
 
 - Hide enhanced event scrollbars; add six synchronized mobile navigation pills.
 - Show the five social SVG icons in one fixed mobile row, retaining accessible names.
 - Preserve native scrolling, equal card heights, desktop labels and existing search references.
-
-## 2026-10-10 — Arabic video download placement
-
-- Mirror video-popup actions in Arabic: download sits to the right of close.
-- Preserve French/English ordering and the guarded original-file download.
 
 ## 2026-10-10 — Actualités & événements
 
@@ -879,12 +897,6 @@ See [the specification](docs/horizontal-scroll-indicators.md).
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
 
-## Samir portrait download — 2026-10-10
-
-The portrait download now serves a high-quality JPG generated from the supplied official original. Biography copying no longer displays success text; failure feedback remains.
-
-The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
-
 ## 2026-10-10 — Video-library scroll pills
 
 - Applied the recorded horizontal-navigation effect to the video library with one
@@ -897,6 +909,12 @@ The owner also requested complete English and Arabic biography translations. Eac
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## Samir portrait download — 2026-10-10
+
+The portrait download now serves a high-quality JPG generated from the supplied official original. Biography copying no longer displays success text; failure feedback remains.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
 
 ## 2026-10-10 — Publications & reports page
 
@@ -990,3 +1008,67 @@ information and owner-confirmed roles. Laila’s unavailable profile is not inve
   three-paragraph biography and working FR/AR adaptations.
 - Replace the Nareva mark with the owner-supplied new vector original, preserving
   its geometry/colors and canonical searchable asset URL.
+
+Institut mission follow-up — 2026-10-11: the owner removes the redundant second
+introduction sentence in all locales. The compact full-width mission quotation
+uses institutional navy, a shaded existing solar-aerial illustration and shared
+quotation typography. Canonical anchors and image provenance remain unchanged;
+the withdrawn sentence is removed from the localized search projection.
+
+Owner chronology correction: the timeline runs physically left to right from
+2011 to 2026, with Arabic text retaining its own RTL reading direction. The
+“Other important achievements” heading is removed in every locale; the two
+source-derived supporting entries remain.
+
+Final owner timeline withdrawal removes both supporting achievements (2012–2015
+solar laboratories and 2025 MENALINKS) from every public locale and search body.
+Only the eight main milestones remain, in ascending 2011–2026 order. Private and
+historical reference documents remain source records, not public page content.
+
+Final owner report simplification removes the separate download link in all
+locales. Only “Consult the activity report” remains, currently `#`; it will point
+to the actual PDF download when supplied. No report file is invented.
+
+Owner timeline design correction follows the supplied close-up: a connected
+hairline, blue date/title labels and halo markers, with a centered progress bar,
+responsive page counter and circular SVG arrow controls. Arrow navigation moves
+a visible group; touch/native keyboard scrolling keeps the indicator synchronized.
+The owner specifically commissions this navigation, distinct from mobile rail pills.
+
+The owner’s final navigation correction advances exactly one milestone per arrow
+click, with a fixed eight-item counter (1/8–8/8). Trailing rail spacing allows the
+2026 entry to reach the leading position; native scrolling remains available.
+
+Owner report-cover refinement moves the eyebrow/title above the text in the
+trailing column, enlarges the supplied book and allows a modest overlap into the
+preceding navy section. The report surface is white. AI-assisted background
+removal/ground-shadow reconstruction produces an alpha WebP derivative; its
+provenance and hash are recorded in institute-assets.json. The source PDF remains
+private; no extra document contents or publication claims are adopted.
+
+Report spacing follow-up uses a 24px title/body separation, readable 1.65 body
+leading, 24px paragraph gaps and 32px before the single action. The alpha cutout
+has its own URL to avoid retaining the earlier optimized rectangular mockup.
+
+Final cover alignment centers the book in its column and aligns its visible base
+with the single report action on desktop. The shadow extends freely below the
+base; tablet/mobile retains stacked reading and avoids horizontal overflow.
+
+Mobile/tablet report ordering follows the owner’s correction: heading/body,
+clickable cover, then the Consult action. The cover and button both use `#` until
+the actual PDF is provided. Desktop keeps the centered overlapping book beside
+the text, with its base aligned to the action.
+
+Institut hero owner correction reuses the real supplied headquarters photograph
+from contact, preserving its original JPEG and existing localized media result.
+Next Image serves responsive optimized hero derivatives; no duplicate media
+reference, generated facility image or new source claim is introduced.
+
+Owner founding/viewport correction places “Since” above 2011 in the Institute
+hero band and restores the existing HeroViewport calculation for the whole hero,
+from header top through the band bottom. VisualViewport/header resize and
+orientation handling remain shared, with natural growth for large text.
+
+Latest owner Arabic correction mirrors the timeline: ascending 2011–2026 reads
+from right to left in Arabic, with matching native scroll direction, connected
+markers, trailing spacing and arrows. FR/EN retain left-to-right chronology.

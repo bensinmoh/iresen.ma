@@ -282,28 +282,56 @@
     },
     "institute": {
       "about": {
-        "title": "Qui sommes-nous ?",
-        "description": "À prévoir : l’identité de l’Institut, son histoire, son périmètre et ses partenaires."
+        "title": "À propos de l’Institut",
+        "description": "Depuis 2011, IRESEN mobilise la recherche, l’expertise et les compétences au service de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, l’Institut rapproche les connaissances scientifiques des besoins des acteurs publics, des entreprises et des territoires."
       },
       "mission": {
-        "title": "Mission et positionnement",
-        "description": "À prévoir : les trois domaines de contribution et leur levier commun, reliés aux besoins du Maroc et de la région."
+        "title": "Notre mission",
+        "description": "IRESEN relie la recherche aux besoins de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, il contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités, en fédérant les acteurs et en mobilisant les expertises et les ressources nécessaires."
       },
       "capabilities": {
-        "title": "Les capacités mobilisées",
-        "description": "À prévoir : études et expertise, recherche et innovation, compétences et capacités ; coopération et rayonnement comme levier transversal. Développer, éprouver et valoriser relèvent de Recherche & Innovation."
+        "title": "Nos missions",
+        "description": "Trois missions complémentaires structurent la contribution d’IRESEN : Études & Expertise, Recherche & Innovation et Compétences & Capacités. Elles répondent à des besoins distincts et se renforcent mutuellement : une étude peut orienter une recherche, une expérimentation enrichir une analyse, et une formation transmettre les acquis des travaux. Coopération & Rayonnement accompagne ces trois missions en reliant les acteurs et en mobilisant les ressources."
       },
       "ambition-2035": {
-        "title": "L’ambition à l’horizon 2035",
-        "description": "À prévoir : l’ambition de référence d’excellence en Afrique dans les trois domaines, distincte des acquis et du statut du projet de convention 2026–2035."
+        "title": "Notre ambition à l’horizon 2035",
+        "description": "Faire d’IRESEN une référence d’excellence en Afrique par la qualité de ses études et de son expertise, de sa recherche et de son innovation, ainsi que de sa contribution aux compétences et aux capacités."
       },
       "key-figures": {
-        "title": "Chiffres clés",
-        "description": "À prévoir : les séries validées avec définitions, dates, périmètres et références publiques."
+        "title": "Notre parcours depuis 2011",
+        "description": "Quinze ans de recherche, d’expérimentation et de coopération."
       },
       "more-resources": {
-        "title": "Pour approfondir",
-        "description": "À prévoir : les liens vers la gouvernance, les rapports, les priorités et la collaboration."
+        "title": "Quinze ans de contributions",
+        "description": "Depuis sa création, IRESEN soutient la recherche collaborative, contribue à équiper les équipes et développe avec ses partenaires des plateformes de recherche et d’expérimentation. Les études, l’expertise, la formation et la valorisation enrichissent cette action. Le rapport d’activités des quinze ans met en perspective ce parcours : les programmes engagés, les réalisations marquantes, les capacités développées et les coopérations construites. Il propose une lecture des contributions de l’Institut et des enseignements qui nourrissent ses prochaines étapes."
+      },
+      "institute-positioning": {
+        "title": "Notre positionnement",
+        "description": "Une recherche ancrée dans les besoins du Maroc, ouverte sur le monde"
+      },
+      "institute-values": {
+        "title": "Nos valeurs",
+        "description": "Rigueur scientifique Utilité Coopération Transmission Responsabilité"
+      },
+      "institute-history": {
+        "title": "Notre parcours depuis 2011",
+        "description": "Quinze ans de recherche, d’expérimentation et de coopération."
+      },
+      "institute-studies": {
+        "title": "Études & Expertise",
+        "description": "IRESEN apporte les connaissances, les données et les analyses nécessaires pour préparer les décisions publiques, scientifiques et industrielles. Cette mission permet de mieux comprendre les options technologiques et leurs conditions d’application au Maroc et dans la région."
+      },
+      "institute-research": {
+        "title": "Recherche & Innovation",
+        "description": "IRESEN conduit et soutient des travaux qui font progresser les connaissances et les solutions technologiques. Les besoins scientifiques et socioéconomiques orientent les objectifs de recherche et les moyens mobilisés avec les partenaires.\n\nCette mission articule trois activités : développer, éprouver et valoriser."
+      },
+      "institute-skills": {
+        "title": "Compétences & Capacités",
+        "description": "IRESEN contribue à donner aux personnes, aux équipes et aux acteurs concernés les compétences nécessaires pour comprendre les technologies, les pratiquer, les évaluer et les faire évoluer avec davantage d’autonomie."
+      },
+      "institute-cooperation": {
+        "title": "Coopération & Rayonnement",
+        "description": "La coopération et le rayonnement accompagnent les trois missions d’IRESEN. Ils permettent de réunir les expertises, les partenaires et les moyens nécessaires aux travaux menés au Maroc et à l’international."
       }
     },
     "governance": {
@@ -878,9 +906,231 @@
     "newsletterUnavailable": "Les inscriptions à la newsletter ne sont pas encore disponibles."
   },
   "Institute": {
-    "about": "Qui sommes-nous ?",
-    "mission": "Mission & positionnement",
-    "keyFigures": "Chiffres clés"
+    "eyebrow": "À propos de l’Institut",
+    "title": "Relier la recherche aux besoins de la transition énergétique.",
+    "introduction": [
+      "Depuis 2011, IRESEN mobilise la recherche, l’expertise et les compétences au service de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, l’Institut rapproche les connaissances scientifiques des besoins des acteurs publics, des entreprises et des territoires."
+    ],
+    "missionLabel": "Notre mission",
+    "statement": "IRESEN relie la recherche aux besoins de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, il contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités, en fédérant les acteurs et en mobilisant les expertises et les ressources nécessaires.",
+    "positionLabel": "Notre positionnement",
+    "position": {
+      "title": "Une recherche ancrée dans les besoins du Maroc, ouverte sur le monde",
+      "paragraphs": [
+        "IRESEN rapproche les avancées scientifiques et technologiques des réalités nationales et régionales. Son action relie les priorités énergétiques aux enjeux de décarbonation industrielle, de compétitivité et de préservation des ressources.",
+        "L’Institut intervient à l’interface de la recherche et des usages. Il contribue à comprendre les options, à développer et éprouver les technologies dans leurs conditions d’application, et à transmettre les savoir-faire nécessaires à leur maîtrise.",
+        "Les programmes de soutien, les plateformes de recherche, les laboratoires et les réseaux d’experts apportent les moyens de cette contribution. Ils permettent de réunir les compétences autour de besoins précis, de produire des connaissances et de préparer leur utilisation."
+      ]
+    },
+    "missionsLabel": "Nos missions",
+    "missionsIntro": [
+      "Trois missions complémentaires structurent la contribution d’IRESEN : Études & Expertise, Recherche & Innovation et Compétences & Capacités.",
+      "Elles répondent à des besoins distincts et se renforcent mutuellement : une étude peut orienter une recherche, une expérimentation enrichir une analyse, et une formation transmettre les acquis des travaux.",
+      "Coopération & Rayonnement accompagne ces trois missions en reliant les acteurs et en mobilisant les ressources."
+    ],
+    "missions": [
+      {
+        "title": "Études & Expertise",
+        "purpose": "Éclairer les choix.",
+        "introduction": "IRESEN apporte les connaissances, les données et les analyses nécessaires pour préparer les décisions publiques, scientifiques et industrielles. Cette mission permet de mieux comprendre les options technologiques et leurs conditions d’application au Maroc et dans la région.",
+        "activities": [
+          {
+            "title": "Observer et anticiper",
+            "description": "Assurer une veille scientifique et technologique, analyser les tendances et identifier les technologies émergentes. Explorer les évolutions possibles pour aider les acteurs à anticiper les besoins, les opportunités et les contraintes."
+          },
+          {
+            "title": "Étudier et évaluer",
+            "description": "Conduire des études stratégiques, techniques et économiques. Analyser les ressources et les conditions locales, comparer les technologies et les scénarios, et apprécier leurs risques, leurs opportunités et leurs impacts socioéconomiques."
+          },
+          {
+            "title": "Accompagner les décisions",
+            "description": "Réaliser des études d’opportunité, contribuer aux stratégies sectorielles et aux feuilles de route, et mobiliser l’expertise et l’assistance technique adaptées aux questions posées."
+          },
+          {
+            "title": "Notre contribution",
+            "description": "Des options mieux comprises et des éléments fiables pour préparer les décisions, en explicitant les hypothèses, les conditions d’application et les limites des analyses."
+          }
+        ]
+      },
+      {
+        "title": "Recherche & Innovation",
+        "purpose": "Faire avancer les solutions.",
+        "introduction": "IRESEN conduit et soutient des travaux qui font progresser les connaissances et les solutions technologiques. Les besoins scientifiques et socioéconomiques orientent les objectifs de recherche et les moyens mobilisés avec les partenaires.\n\nCette mission articule trois activités : développer, éprouver et valoriser.",
+        "activities": [
+          {
+            "title": "Développer",
+            "description": "Conduire et soutenir la recherche appliquée et la R&D collaborative. Concevoir des technologies et des prototypes, et faire progresser leur maturité scientifique et technique."
+          },
+          {
+            "title": "Éprouver",
+            "description": "Réaliser des essais, des mesures et des caractérisations. Vérifier les performances, expérimenter en conditions représentatives ou réelles, et identifier les limites ainsi que les adaptations nécessaires aux usages envisagés."
+          },
+          {
+            "title": "Valoriser",
+            "description": "Protéger les résultats et préparer leur maturation vers l’usage. Explorer les voies de transfert adaptées : licences, création de startups ou accompagnement vers l’adoption industrielle et commerciale, selon la nature des résultats et leur stade de développement."
+          },
+          {
+            "title": "Nos moyens d’action",
+            "description": "La programmation, le financement et l’accompagnement des travaux de recherche, ainsi que la mobilisation de plateformes, de laboratoires et de moyens scientifiques et techniques."
+          },
+          {
+            "title": "Notre contribution",
+            "description": "Des connaissances et des technologies qui progressent vers leur utilisation. Les échanges entre recherche, expérimentation et usages permettent d’adapter les travaux et de préparer les étapes suivantes."
+          }
+        ]
+      },
+      {
+        "title": "Compétences & Capacités",
+        "purpose": "Renforcer les capacités.",
+        "introduction": "IRESEN contribue à donner aux personnes, aux équipes et aux acteurs concernés les compétences nécessaires pour comprendre les technologies, les pratiquer, les évaluer et les faire évoluer avec davantage d’autonomie.",
+        "activities": [
+          {
+            "title": "Former et transmettre",
+            "description": "Développer la formation spécialisée, la formation de formateurs et la formation par la recherche, à travers les parcours doctoraux, les séjours scientifiques et les échanges d’expertise."
+          },
+          {
+            "title": "Accompagner la montée en capacité",
+            "description": "Favoriser l’appropriation des technologies, transmettre les méthodes et les savoir-faire, et renforcer les capacités scientifiques et techniques par l’accompagnement et la pratique."
+          },
+          {
+            "title": "Diffuser les connaissances",
+            "description": "Partager les bonnes pratiques, les ressources pédagogiques et les résultats. Rendre les technologies émergentes plus compréhensibles par la vulgarisation et la sensibilisation."
+          },
+          {
+            "title": "Nos moyens d’action",
+            "description": "Des formations, des parcours de recherche, des accompagnements techniques et des actions de diffusion, mobilisant les chercheurs, les experts et les plateformes comme espaces d’apprentissage."
+          },
+          {
+            "title": "Notre contribution",
+            "description": "Des savoir-faire construits et transmis, et des acteurs mieux préparés à maîtriser les technologies et à utiliser les connaissances dans leurs propres activités."
+          }
+        ]
+      },
+      {
+        "title": "Coopération & Rayonnement",
+        "purpose": "Relier les acteurs et mobiliser les ressources.",
+        "introduction": "La coopération et le rayonnement accompagnent les trois missions d’IRESEN. Ils permettent de réunir les expertises, les partenaires et les moyens nécessaires aux travaux menés au Maroc et à l’international.",
+        "activities": [
+          {
+            "title": "Fédérer et connecter",
+            "description": "Animer les réseaux, rapprocher les acteurs et faire émerger des besoins et des projets communs à travers les échanges et les rencontres scientifiques."
+          },
+          {
+            "title": "Construire les coopérations",
+            "description": "Développer les partenariats scientifiques, industriels et institutionnels. Définir des objectifs et des travaux communs, soutenir les échanges internationaux et contribuer à la diplomatie scientifique."
+          },
+          {
+            "title": "Mobiliser les ressources",
+            "description": "Identifier et réunir les financements, les expertises et les moyens complémentaires avec les partenaires et les bailleurs."
+          },
+          {
+            "title": "Faire rayonner les contributions",
+            "description": "Partager les travaux et les résultats, représenter les contributions dans les réseaux et les rencontres, et renforcer leur reconnaissance au Maroc et à l’international."
+          },
+          {
+            "title": "Notre contribution",
+            "description": "Des acteurs mieux connectés, des ressources mobilisées et des coopérations concrètes au service des études, de la recherche et du développement des compétences."
+          }
+        ]
+      }
+    ],
+    "valuesLabel": "Nos valeurs",
+    "values": [
+      {
+        "title": "Rigueur scientifique",
+        "description": "Fonder nos travaux sur des méthodes explicites, des données fiables et des résultats documentés. Présenter leurs conditions de validité et leurs limites."
+      },
+      {
+        "title": "Utilité",
+        "description": "Partir des besoins concrets et rechercher ce que nos analyses, nos travaux et nos savoir-faire permettent de comprendre, de décider et de réaliser."
+      },
+      {
+        "title": "Coopération",
+        "description": "Construire avec les partenaires, réunir les expertises complémentaires et reconnaître la contribution de chacun aux résultats communs."
+      },
+      {
+        "title": "Transmission",
+        "description": "Partager les connaissances et les enseignements de la pratique pour renforcer les compétences, l’autonomie et la capacité à agir dans la durée."
+      },
+      {
+        "title": "Responsabilité",
+        "description": "Distinguer les réalisations, les travaux en cours et les ambitions. Documenter l’utilisation des résultats et présenter les effets économiques et environnementaux lorsqu’ils sont établis."
+      }
+    ],
+    "ambitionLabel": "Notre ambition à l’horizon 2035",
+    "historyLabel": "Notre parcours depuis 2011",
+    "historyTitle": "Quinze ans de recherche, d’expérimentation et de coopération.",
+    "historyIntro": [
+      "Depuis sa création, IRESEN développe avec ses partenaires les programmes, les moyens expérimentaux et les compétences qui renforcent sa contribution à la transition énergétique."
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "title": "Extension continentale et quinzième anniversaire",
+        "description": "L’inauguration de Green Energy Park Maroc–Côte d’Ivoire à Yamoussoukro prolonge la coopération entre IRESEN, l’UM6P et l’INP-HB. L’Institut célèbre également quinze ans de contributions à la recherche, à l’innovation et au développement des compétences."
+      },
+      {
+        "year": "2023",
+        "title": "Inauguration de Green & Smart Building Park",
+        "description": "Ouverture de la première plateforme africaine dédiée aux bâtiments verts et aux réseaux intelligents. Elle rapproche recherche, expérimentation et usages pour accompagner le développement du bâtiment durable."
+      },
+      {
+        "year": "2021",
+        "title": "Contribution à la feuille de route de l’hydrogène vert",
+        "description": "IRESEN contribue à l’élaboration de la feuille de route nationale de l’hydrogène vert, en mobilisant l’expertise scientifique et technologique au service des orientations de la filière."
+      },
+      {
+        "year": "2019",
+        "title": "Solar Decathlon Africa",
+        "description": "IRESEN et l’UM6P organisent à Benguerir la première édition africaine de Solar Decathlon. La compétition réunit des équipes universitaires autour de la conception et de la réalisation de bâtiments durables, associant innovation, démonstration et apprentissage."
+      },
+      {
+        "year": "2017",
+        "title": "Inauguration de Green Energy Park",
+        "description": "Ouverture officielle de la plateforme de Benguerir, qui renforce les capacités mutualisées de recherche, d’essais, d’expérimentation et de formation dans les énergies renouvelables."
+      },
+      {
+        "year": "2014",
+        "title": "Certification ISO 9001",
+        "description": "IRESEN devient la première agence de moyens en Afrique certifiée ISO 9001. Cette étape consacre sa démarche qualité et l’amélioration continue de ses activités."
+      },
+      {
+        "year": "2012",
+        "title": "Lancement des premiers programmes et appels à projets",
+        "description": "IRESEN lance ses premiers programmes et appels à projets pour le financement de la recherche et développement appliquée, en soutenant les travaux collaboratifs des équipes scientifiques et de leurs partenaires."
+      },
+      {
+        "year": "2011",
+        "title": "Création d’IRESEN",
+        "description": "Création de l’Institut pour relier la recherche et l’innovation aux besoins de la transition énergétique du Maroc."
+      }
+    ],
+    "reportLabel": "Quinze ans de contributions",
+    "reportTitle": "Rapport d’activités des quinze ans · 2011–2026",
+    "report": [
+      "Depuis sa création, IRESEN soutient la recherche collaborative, contribue à équiper les équipes et développe avec ses partenaires des plateformes de recherche et d’expérimentation. Les études, l’expertise, la formation et la valorisation enrichissent cette action.",
+      "Le rapport d’activités des quinze ans met en perspective ce parcours : les programmes engagés, les réalisations marquantes, les capacités développées et les coopérations construites.",
+      "Il propose une lecture des contributions de l’Institut et des enseignements qui nourrissent ses prochaines étapes."
+    ],
+    "resourcesLabel": "Explorer nos ressources",
+    "detailsLabel": "Activités et contribution",
+    "meansLabel": "Nos moyens d’action",
+    "contributionLabel": "Notre contribution",
+    "ambition": {
+      "statement": "Faire d’IRESEN une référence d’excellence en Afrique par la qualité de ses études et de son expertise, de sa recherche et de son innovation, ainsi que de sa contribution aux compétences et aux capacités.",
+      "paragraphs": [
+        "Cette ambition se construit avec nos partenaires, par les équipes, les méthodes, les capacités expérimentales et l’utilisation des résultats.",
+        "Elle vise à servir une transition énergétique sûre, compétitive et durable, créatrice de valeur pour le Maroc et adaptée aux besoins de sa région."
+      ]
+    },
+    "cooperationLabel": "Une mission transversale",
+    "reportRead": "Consulter le rapport d’activités",
+    "searchText": "IRESEN — Institut de Recherche en Énergie Solaire et Énergies Nouvelles. R&D : recherche et développement. R&D&I : recherche, développement et innovation. Transition énergétique, expertise, compétences, coopération, histoire et ambition 2035.",
+    "previous": "Date précédente",
+    "next": "Date suivante",
+    "coverAlt": "Mockup de la couverture du rapport des quinze ans : « 15 ans d’impact », 2026.",
+    "coverSearchText": "Maquette de couverture fournie par le propriétaire pour le rapport d’activités des quinze ans d’IRESEN, 2011–2026. Texte de couverture : 15 ANS D’IMPACT, 2026. Cette image de couverture ne constitue pas le PDF du rapport.",
+    "historyProgressLabel": "Progression dans la chronologie"
   },
   "States": {
     "empty": "Aucun contenu publié pour le moment.",
@@ -946,7 +1196,7 @@
       "label": "Certifié",
       "description": "Premier institut de recherche certifié ISO 9001 en Afrique."
     },
-    "founded": "Création d’IRESEN",
+    "founded": "Depuis",
     "pathways": "Les trois domaines de contribution",
     "stages": {
       "institute": "IRESEN · Transition énergétique & développement durable",
@@ -958,7 +1208,7 @@
     },
     "descriptions": {
       "home": "Éclairer les choix, faire avancer les solutions et renforcer les capacités pour la transition énergétique et le développement durable du Maroc, avec nos partenaires.",
-      "institute": "Trois domaines de contribution — études et expertise, recherche et innovation, compétences et capacités — soutenus par la coopération et le rayonnement.",
+      "institute": "Relier la recherche aux besoins de la transition énergétique.",
       "governance": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
       "priorities": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
       "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
