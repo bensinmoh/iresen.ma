@@ -472,28 +472,44 @@
     },
     "platforms": {
       "choose-by-need": {
-        "title": "Choisir selon son besoin",
-        "description": "À prévoir : les capacités adaptées à la recherche, aux essais, à la qualification, aux pilotes et à la formation."
+        "title": "Un réseau, des expertises complémentaires",
+        "description": "Le réseau de plateformes d’IRESEN est né d’une ambition : construire, avec ses partenaires, les capacités scientifiques et technologiques nécessaires à la transition énergétique. Développé notamment avec l’Université Mohammed VI Polytechnique et le soutien de partenaires nationaux et internationaux, il rapproche la recherche, la formation et l’innovation des besoins du monde socio-économique."
       },
       "platform-network": {
-        "title": "Le réseau de plateformes",
-        "description": "À prévoir : les plateformes, leurs sites, leurs opérateurs, leurs domaines et leurs usages vérifiés."
+        "title": "Nos plateformes de recherche",
+        "description": "Chaque plateforme apporte une spécialisation et un environnement d’expérimentation complémentaires. Leur organisation en réseau permet de mutualiser les équipements et les équipes, de croiser les expertises et d’étudier les solutions dans différentes conditions climatiques et territoriales, au Maroc et à l’échelle africaine."
       },
       "capabilities-availability": {
-        "title": "Capacités et disponibilité",
-        "description": "À prévoir : les capacités disponibles, accessibles sous conditions et en développement."
+        "title": "Quelques infrastructures clés",
+        "description": "Sa particularité est de relier l’expérimentation en laboratoire à l’évaluation sur le terrain. Les technologies peuvent ainsi être développées, comparées et éprouvées dans les conditions climatiques locales, afin d’améliorer leurs performances et leur fiabilité."
       },
       "testing-demonstration": {
-        "title": "De l’essai à la démonstration",
-        "description": "À prévoir : les échelles, les protocoles, les mesures et les suites possibles des travaux expérimentaux."
+        "title": "Expérimenter le bâtiment durable et les systèmes énergétiques intelligents",
+        "description": "Conçu comme un laboratoire à échelle réelle, il permet d’étudier ensemble les matériaux, l’architecture, les équipements et les usages. Cette approche aide à concevoir des bâtiments plus sobres et confortables, tout en explorant leur interaction avec la production renouvelable, le stockage et la mobilité électrique."
       },
       "access-platforms": {
-        "title": "Accéder aux plateformes",
-        "description": "À prévoir : les publics concernés, le cadrage technique et les conditions d’accès et de confidentialité."
+        "title": "Des capacités de recherche au plus près des territoires",
+        "description": "Les plateformes s’articulent avec un réseau de laboratoires universitaires et d’experts aux compétences complémentaires. Ensemble, ils élargissent les possibilités de recherche, de formation et de collaboration autour des technologies de la transition énergétique."
       },
       "projects-resources": {
-        "title": "Projets et ressources",
-        "description": "À prévoir : les travaux publics associés, les fiches de capacité et les contacts thématiques."
+        "title": "Des capacités de recherche au plus près des territoires",
+        "description": "Les plateformes s’articulent avec un réseau de laboratoires universitaires et d’experts aux compétences complémentaires. Ensemble, ils élargissent les possibilités de recherche, de formation et de collaboration autour des technologies de la transition énergétique."
+      },
+      "green-energy-park": {
+        "title": "Green Energy Park",
+        "description": "Développer et qualifier les technologies solaires"
+      },
+      "green-smart-building-park": {
+        "title": "Green & Smart Building Park",
+        "description": "Expérimenter le bâtiment durable et les systèmes énergétiques intelligents"
+      },
+      "green-energy-park-maroc-cote-ivoire": {
+        "title": "Green Energy Park Maroc–Côte d’Ivoire",
+        "description": "Adapter les technologies solaires aux réalités ouest-africaines"
+      },
+      "greenh2a": {
+        "title": "GreenH2A",
+        "description": "Préparer les applications industrielles de l’hydrogène vert"
       }
     },
     "network": {
@@ -1211,7 +1227,7 @@
       "priorities": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
       "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
       "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
-      "platforms": "Des moyens de recherche, d’essais, d’expérimentation et de formation pour connaître les performances et les conditions d’utilisation des technologies.",
+      "platforms": "Du laboratoire aux démonstrateurs en conditions réelles, IRESEN développe avec ses partenaires un réseau de plateformes pour expérimenter, qualifier et faire progresser les technologies de la transition énergétique.",
       "network": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
       "transfer": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
       "workWithUs": "Réunir les acteurs, les expertises et les ressources autour de besoins d’analyse, de recherche, d’expérimentation ou de montée en compétences.",
@@ -2920,6 +2936,181 @@
         "institution": "Université Cadi Ayyad",
         "city": "Marrakech"
       }
+    }
+  },
+  "Platforms": {
+    "title": "Infrastructures & plateformes",
+    "lead": "Des infrastructures pour éprouver les solutions énergétiques de demain",
+    "description": "Du laboratoire aux démonstrateurs en conditions réelles, IRESEN développe avec ses partenaires un réseau de plateformes pour expérimenter, qualifier et faire progresser les technologies de la transition énergétique.",
+    "discover": "Découvrir nos plateformes",
+    "eyebrow": "Nos plateformes de recherche",
+    "themesLabel": "Thématiques",
+    "infrastructureLabel": "Quelques infrastructures clés",
+    "developmentLabel": "Infrastructures au cœur de son développement",
+    "development": "En développement",
+    "visualization": "Visualisation 3D — projet de plateforme",
+    "imageAlt": {
+      "gep": "Vue aérienne du Green Energy Park à Benguerir, avec ses installations solaires.",
+      "gsbp": "Prototypes de maisons du Village solaire au Green & Smart Building Park.",
+      "gep-mci": "Installations photovoltaïques du Green Energy Park Maroc–Côte d’Ivoire à Yamoussoukro.",
+      "greenh2a": "Visualisation 3D des équipements du projet GreenH2A ; ce rendu ne documente pas une installation opérationnelle."
+    },
+    "platforms": {
+      "gep": {
+        "name": "Green Energy Park",
+        "lead": "Développer et qualifier les technologies solaires",
+        "location": "Benguerir · Maroc",
+        "paragraphs": [
+          "Développé conjointement par IRESEN et l’Université Mohammed VI Polytechnique, le Green Energy Park associe recherche appliquée, essais et formation dans les technologies solaires. Il réunit des laboratoires spécialisés et des installations extérieures pour étudier les matériaux, les composants et les systèmes énergétiques.",
+          "Sa particularité est de relier l’expérimentation en laboratoire à l’évaluation sur le terrain. Les technologies peuvent ainsi être développées, comparées et éprouvées dans les conditions climatiques locales, afin d’améliorer leurs performances et leur fiabilité."
+        ],
+        "themes": [
+          "Solaire photovoltaïque",
+          "Solaire thermique",
+          "Modélisation des ressources solaires",
+          "Gestion de l’énergie"
+        ],
+        "infrastructure": {
+          "0": {
+            "title": "Laboratoire de couches minces",
+            "description": "Développement et caractérisation de matériaux et de cellules photovoltaïques de nouvelle génération."
+          },
+          "1": {
+            "title": "Installations d’essais en laboratoire",
+            "description": "Caractérisation des composants et étude de leur comportement face aux contraintes environnementales."
+          },
+          "2": {
+            "title": "Plateformes de test en extérieur",
+            "description": "Suivi et comparaison des performances des technologies solaires en conditions réelles."
+          }
+        },
+        "action": "En savoir plus sur le Green Energy Park"
+      },
+      "gsbp": {
+        "name": "Green & Smart Building Park",
+        "lead": "Expérimenter le bâtiment durable et les systèmes énergétiques intelligents",
+        "location": "Benguerir · Maroc",
+        "paragraphs": [
+          "Le Green & Smart Building Park est une plateforme de recherche, de test et de formation consacrée aux bâtiments durables, à l’efficacité énergétique, aux réseaux intelligents et à la mobilité durable. Développé par IRESEN et l’UM6P avec le soutien de la coopération coréenne, il rapproche les métiers de la construction, de l’énergie et du numérique.",
+          "Conçu comme un laboratoire à échelle réelle, il permet d’étudier ensemble les matériaux, l’architecture, les équipements et les usages. Cette approche aide à concevoir des bâtiments plus sobres et confortables, tout en explorant leur interaction avec la production renouvelable, le stockage et la mobilité électrique."
+        ],
+        "themes": [
+          "Construction durable",
+          "Efficacité énergétique",
+          "Réseaux intelligents",
+          "Mobilité durable"
+        ],
+        "infrastructure": {
+          "0": {
+            "title": "Village solaire",
+            "description": "Issu du Solar Decathlon Africa, il rassemble des prototypes de maisons durables pour expérimenter l’architecture bioclimatique, les matériaux et l’intégration des énergies renouvelables."
+          },
+          "1": {
+            "title": "Laboratoire de réseaux intelligents",
+            "description": "Simulation et pilotage des échanges entre production solaire, stockage, recharge de véhicules et consommation des bâtiments."
+          },
+          "2": {
+            "title": "Unité de production de bornes iSmart",
+            "description": "Un exemple concret du passage de la recherche à la fabrication locale de solutions de recharge pour véhicules électriques."
+          }
+        },
+        "action": "En savoir plus sur le Green & Smart Building Park"
+      },
+      "gep-mci": {
+        "name": "Green Energy Park Maroc–Côte d’Ivoire",
+        "lead": "Adapter les technologies solaires aux réalités ouest-africaines",
+        "location": "Yamoussoukro · Côte d’Ivoire",
+        "paragraphs": [
+          "Implanté au sein de l’Institut National Polytechnique Félix Houphouët-Boigny, le Green Energy Park Maroc–Côte d’Ivoire prolonge le modèle développé à Benguerir. Fruit d’une coopération entre IRESEN, l’UM6P, le Green Energy Park et l’INP-HB, il associe recherche appliquée, expérimentation et développement des compétences.",
+          "Sa particularité est d’étudier les technologies solaires dans un environnement climatique différent et au plus près des besoins locaux. Il enrichit les capacités du réseau pour comparer les performances des solutions, adapter leurs applications et former les chercheurs, les étudiants et les professionnels de la région."
+        ],
+        "themes": [
+          "Solaire photovoltaïque",
+          "Solaire thermique",
+          "Agrivoltaïsme",
+          "Applications de l’énergie à l’agriculture et au traitement de l’eau"
+        ],
+        "infrastructure": {
+          "0": {
+            "title": "Plateforme photovoltaïque extérieure",
+            "description": "Comparaison de plusieurs technologies de modules et suivi de leurs performances dans les conditions locales."
+          },
+          "1": {
+            "title": "Serre agrivoltaïque expérimentale",
+            "description": "Étude de l’association entre production agricole et production d’électricité solaire, avec un système de stockage."
+          },
+          "2": {
+            "title": "Station météorologique et dispositifs de mesure",
+            "description": "Observation du rayonnement, des conditions climatiques et de l’encrassement pour mieux comprendre leurs effets sur les installations."
+          },
+          "3": {
+            "title": "Système de supervision et d’acquisition de données",
+            "description": "Collecte, suivi et exploitation des données expérimentales, avec accès à distance."
+          }
+        },
+        "action": "En savoir plus sur le Green Energy Park Maroc–Côte d’Ivoire"
+      },
+      "greenh2a": {
+        "name": "GreenH2A",
+        "lead": "Préparer les applications industrielles de l’hydrogène vert",
+        "location": "Jorf Lasfar · Maroc",
+        "paragraphs": [
+          "Développée par IRESEN, l’Université Mohammed VI Polytechnique et le Groupe OCP, GreenH2A est une plateforme dédiée à la recherche et à l’innovation dans l’hydrogène vert et ses applications Power-to-X : la transformation d’électricité renouvelable en hydrogène et en molécules à valeur ajoutée.",
+          "Sa particularité est d’aborder la chaîne de valeur dans son ensemble, de la production d’hydrogène à sa transformation et à ses usages industriels. Elle vise à comparer les technologies, développer des pilotes et produire les connaissances nécessaires à la montée en compétences et au déploiement de la filière."
+        ],
+        "themes": [
+          "Production d’hydrogène vert",
+          "Power-to-X et molécules vertes",
+          "Stockage et logistique",
+          "Applications industrielles"
+        ],
+        "infrastructure": {
+          "0": {
+            "title": "Laboratoires spécialisés",
+            "description": "Caractérisation et étude des technologies et des procédés liés à l’hydrogène et à ses applications."
+          },
+          "1": {
+            "title": "Pilotes d’électrolyse à l’échelle du mégawatt",
+            "description": "Évaluation des technologies de production d’hydrogène et de leur intégration avec les énergies renouvelables."
+          },
+          "2": {
+            "title": "Pilotes de transformation en molécules vertes",
+            "description": "Démonstration de procédés de synthèse, notamment pour l’ammoniac et le méthanol, afin de préparer leur changement d’échelle."
+          }
+        },
+        "action": "En savoir plus sur GreenH2A"
+      }
+    },
+    "intro": {
+      "title": "Un réseau, des expertises complémentaires",
+      "paragraphs": [
+        "Le réseau de plateformes d’IRESEN est né d’une ambition : construire, avec ses partenaires, les capacités scientifiques et technologiques nécessaires à la transition énergétique. Développé notamment avec l’Université Mohammed VI Polytechnique et le soutien de partenaires nationaux et internationaux, il rapproche la recherche, la formation et l’innovation des besoins du monde socio-économique.",
+        "Chaque plateforme apporte une spécialisation et un environnement d’expérimentation complémentaires. Leur organisation en réseau permet de mutualiser les équipements et les équipes, de croiser les expertises et d’étudier les solutions dans différentes conditions climatiques et territoriales, au Maroc et à l’échelle africaine.",
+        "Ensemble, elles donnent aux chercheurs et aux entreprises les moyens de développer, d’éprouver et de valoriser des technologies adaptées aux besoins énergétiques, industriels et environnementaux des territoires."
+      ],
+      "values": {
+        "0": {
+          "title": "Mutualiser les moyens",
+          "description": "Réunir des équipements et des compétences au service de projets collaboratifs."
+        },
+        "1": {
+          "title": "Expérimenter en conditions réelles",
+          "description": "Évaluer les performances, la fiabilité et l’intégration des technologies."
+        },
+        "2": {
+          "title": "Préparer leur déploiement",
+          "description": "Produire les connaissances et les preuves nécessaires au transfert et à l’adoption industrielle."
+        }
+      }
+    },
+    "network": {
+      "title": "Des capacités de recherche au plus près des territoires",
+      "description": "Les plateformes s’articulent avec un réseau de laboratoires universitaires et d’experts aux compétences complémentaires. Ensemble, ils élargissent les possibilités de recherche, de formation et de collaboration autour des technologies de la transition énergétique.",
+      "action": "Découvrir le réseau de laboratoires & d’experts"
+    },
+    "seo": {
+      "title": "Infrastructures & plateformes de recherche | IRESEN",
+      "description": "Découvrez le réseau de plateformes d’IRESEN : technologies solaires, bâtiments durables, réseaux intelligents et hydrogène vert, au Maroc et en Afrique."
     }
   }
 }

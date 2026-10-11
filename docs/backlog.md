@@ -144,3 +144,7 @@ three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
 social links, shared physical two-rounded/two-sharp corners and localized search
 references are included. FR/EN/AR copy remains working editorial text. No deployment
 or publication-gate change is authorized. See [scope](news-events.md).
+
+## Research platforms page — 2026-10-11
+
+The canonical platforms page is developed. Remaining inputs: official GSBP, GEPMCI and GreenH2A destinations, final editorial/EN/AR review and confirmation of operational GreenH2A infrastructure before publication. No deployment. See [scope](research-platforms.md).

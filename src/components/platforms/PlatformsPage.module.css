@@ -1,0 +1,301 @@
+.page {
+  overflow-wrap: anywhere;
+}
+.page h2 {
+  font-size: clamp(1.75rem, 2.8vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-block: 0 1.5rem;
+  text-wrap: balance;
+}
+.page h3 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.page p {
+  line-height: 1.8;
+}
+.intro,
+.chapter {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+.introHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 6vw, 7rem);
+}
+.introHeading p {
+  margin-block: 0 1rem;
+  max-inline-size: 72ch;
+}
+.eyebrow {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  color: var(--color-blue);
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+}
+.eyebrow span {
+  inline-size: 1.2rem;
+  block-size: 0.75rem;
+  flex: none;
+  background: currentColor;
+  mask: url('/brand/apex-leaf.svg') center / contain no-repeat;
+}
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-block-start: 2rem;
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: 2rem;
+}
+.values svg,
+.infrastructureGrid svg {
+  color: var(--color-blue);
+  inline-size: 2rem;
+  block-size: 2rem;
+}
+.values h3,
+.infrastructureGrid h3 {
+  margin-block: 0.75rem;
+}
+.values p,
+.infrastructureGrid p {
+  margin-block: 0;
+  color: var(--color-text-muted);
+}
+.tinted {
+  background: var(--color-surface);
+}
+.chapterHeading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block-end: 2rem;
+}
+.chapterHeading h2 {
+  margin: 0;
+}
+.number {
+  font-size: var(--font-size-figure);
+  color: var(--color-blue);
+  margin: 0;
+  font-weight: 400;
+}
+.location {
+  font-size: var(--font-size-label);
+  color: var(--color-text-muted);
+  margin-block: 0 0.5rem;
+}
+.logo {
+  inline-size: clamp(7rem, 12vw, 12rem);
+  block-size: 5rem;
+  object-fit: contain;
+}
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 5rem);
+}
+.reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+.reverse .photograph {
+  grid-column: 2;
+  grid-row: 1;
+}
+.reverse .copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+.photograph {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-signature);
+  background: var(--color-navy);
+}
+.photograph img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.photograph figcaption {
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: var(--font-size-meta);
+  line-height: 1.6;
+}
+.copy {
+  min-inline-size: 0;
+}
+.copy .lead {
+  font-size: clamp(1.375rem, 1.65vw, 1.875rem);
+  line-height: 1.4;
+  margin-block: 0 1.5rem;
+  text-wrap: balance;
+}
+.copy p {
+  max-inline-size: 70ch;
+  margin-block: 0 1rem;
+}
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-block: 1.5rem 2rem;
+  padding: 0;
+}
+.themes li {
+  background: var(--color-action-surface);
+  color: var(--color-navy);
+  padding: 0.5rem 0.75rem;
+  font-size: var(--font-size-meta);
+  line-height: 1.6;
+  border-radius: var(--radius-action);
+}
+.copy a,
+.network a {
+  white-space: normal;
+  text-align: start;
+  max-inline-size: 100%;
+}
+.page :global(.navigation-icon-arrow) {
+  flex: none;
+}
+.infrastructure {
+  margin-block-start: 2.5rem;
+}
+.infrastructureLabel {
+  font-size: var(--font-size-label);
+  color: var(--color-blue);
+  margin-block: 0 1.25rem;
+  text-transform: uppercase;
+}
+.infrastructureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.infrastructureGrid article {
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: 1.5rem;
+}
+.development {
+  background: var(--color-navy);
+  color: white;
+}
+.development .logo {
+  background: white;
+  padding: 0.5rem;
+  border-radius: var(--radius-action);
+}
+.development .location,
+.development .number,
+.development .infrastructureLabel,
+.development svg {
+  color: var(--color-energy-cyan);
+}
+.development .infrastructureGrid p {
+  color: var(--color-footer-muted);
+}
+.development .infrastructureGrid article {
+  border-color: var(--color-footer-divider);
+}
+.status {
+  color: var(--color-energy-cyan);
+  font-size: var(--font-size-label);
+}
+.network {
+  padding-block: clamp(3rem, 5vw, 5rem);
+  background: var(--color-action-surface);
+}
+.networkInner {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+.networkInner > div {
+  flex: 1;
+}
+.networkInner h2 {
+  font-size: clamp(1.5rem, 2.1vw, 2.25rem);
+}
+.networkInner p {
+  margin: 0;
+  max-inline-size: 75ch;
+}
+.networkInner > a {
+  flex: 0 1 25rem;
+}
+.anchor {
+  display: block;
+}
+.page:dir(rtl) h2 {
+  letter-spacing: normal;
+}
+@media (max-width: 63.999rem) {
+  .introHeading,
+  .feature,
+  .reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .reverse .photograph,
+  .reverse .copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .photograph img {
+    aspect-ratio: 16 / 9;
+  }
+  .chapterHeading {
+    gap: 1rem;
+  }
+  .four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .networkInner {
+    flex-direction: column;
+    align-items: start;
+  }
+  .networkInner > a {
+    flex: none;
+  }
+}
+@media (max-width: 39.999rem) {
+  .values,
+  .infrastructureGrid,
+  .four {
+    grid-template-columns: 1fr;
+  }
+  .chapterHeading {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .logo {
+    grid-column: 2;
+    inline-size: 7rem;
+    block-size: 3rem;
+    object-position: left center;
+  }
+  .page:dir(rtl) .logo {
+    object-position: right center;
+  }
+  .photograph img {
+    aspect-ratio: 4 / 3;
+  }
+  .copy a,
+  .network a {
+    inline-size: 100%;
+  }
+}

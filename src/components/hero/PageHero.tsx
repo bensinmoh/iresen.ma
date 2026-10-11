@@ -14,11 +14,15 @@ export async function PageHero({
   locale,
   title,
   description,
+  lead,
+  primaryAction,
 }: {
   pageId: PageId
   locale: Locale
   title?: string
   description?: string
+  lead?: string
+  primaryAction?: { label: string; href: string }
 }) {
   const t = await getTranslations({ locale, namespace: 'Hero' })
   const engagement = await getTranslations({ locale, namespace: 'Engagement' })
@@ -46,6 +50,7 @@ export async function PageHero({
               <h1 id="hero-title">
                 {title ?? (pageId === 'home' ? t('homeTitle') : titles(pageId))}
               </h1>
+              {lead && <p className="hero-description">{lead}</p>}
               <p className="hero-description">{description ?? t(`descriptions.${pageId}`)}</p>
             </div>
             {pageId === 'home' && (
@@ -68,18 +73,20 @@ export async function PageHero({
               <a
                 className="button button-primary hero-primary"
                 href={
-                  pageId === 'transfer'
+                  primaryAction?.href ??
+                  (pageId === 'transfer'
                     ? '#build-transfer'
                     : pageId === 'workWithUs'
                       ? '#prepare-discussion'
-                      : '#page-sections'
+                      : '#page-sections')
                 }
               >
-                {pageId === 'transfer'
-                  ? transfer('innovationAction')
-                  : pageId === 'workWithUs'
-                    ? engagement('contactAction')
-                    : t('discover')}
+                {primaryAction?.label ??
+                  (pageId === 'transfer'
+                    ? transfer('innovationAction')
+                    : pageId === 'workWithUs'
+                      ? engagement('contactAction')
+                      : t('discover'))}
                 <NavigationIcon name="arrow" />
               </a>
               <a

@@ -7,12 +7,23 @@ export async function createPageMetadata(pageId: PageId, locale: Locale): Promis
   const title = await getTranslations({ locale, namespace: 'Pages' })
   const metadata = await getTranslations({ locale, namespace: 'Metadata' })
   const news = await getTranslations({ locale, namespace: 'NewsEvents' })
+  const platforms = await getTranslations({ locale, namespace: 'Platforms' })
   const baseUrl = getSiteUrl()
   const canonical = new URL(pageHref(pageId, locale), baseUrl).toString()
 
   return {
-    title: pageId === 'news' ? news('eyebrow') : title(pageId),
-    description: pageId === 'news' ? news('description') : metadata('description'),
+    title:
+      pageId === 'platforms'
+        ? { absolute: platforms('seo.title') }
+        : pageId === 'news'
+          ? news('eyebrow')
+          : title(pageId),
+    description:
+      pageId === 'platforms'
+        ? platforms('seo.description')
+        : pageId === 'news'
+          ? news('description')
+          : metadata('description'),
     alternates: {
       canonical,
       languages: {

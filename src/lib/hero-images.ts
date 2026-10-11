@@ -1,6 +1,13 @@
 // Native photographic assets and their full-height mobile crops.
 // Provenance, prompts, pixel sizes and hashes: docs/hero-assets.json.
 export const heroImages = {
+  // Reuses the supplied documentary GEP image and its existing media result.
+  'platform-gep': {
+    src: '/images/platforms/gep.webp',
+    width: 1400,
+    height: 1050,
+    mobile: { src: '/images/platforms/gep.webp', width: 1400, height: 1050 },
+  },
   // Owner-supplied real headquarters photograph; provenance: docs/contact.md.
   headquarters: {
     src: '/images/contact/contact-background-venue.jpg',

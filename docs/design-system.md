@@ -1,5 +1,9 @@
 # Design system and Figma reference
 
+## Research platforms composition — 2026-10-11
+
+The [platforms page](research-platforms.md) reuses existing hero, type roles, signature/action corners, original SVG logos and responsive documentary images. Alternating chapters and ruled infrastructure summaries adapt to content; navy GreenH2A uses readable cyan/white roles with explicit development/3D wording. Identical hero photo sources share optimized delivery at all widths. No new shared token or universal template.
+
 ## Institute adaptation — 2026-10-11
 
 The [Institute page](institute-page.md) reuses shared editorial roles, SVG section/action marks, navy/white surfaces and logical spacing. Native mission disclosures show activity and contribution detail without compressing it into equal cards. The timeline retains every major milestone and explicitly labels italic supporting entries; it scrolls horizontally with native keyboard/touch access and SVG arrows at every width. Arabic and text enlargement preserve reading. This is scoped composition, with no new shared token.

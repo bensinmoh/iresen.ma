@@ -1,5 +1,9 @@
 # IRESEN website
 
+## Research platforms — 2026-10-11
+
+The canonical platforms page now develops the supplied manuscript into four photographic chapters, 13 infrastructure summaries and a laboratory-network referral. FR/EN/AR working copy, preserved legacy anchors, chapter links and search references are included. GreenH2A remains in development; three official external destinations await selection. See [scope](docs/research-platforms.md). No deployment.
+
 ## Laboratory and expert network — 2026-10-11
 
 The canonical network page now contains five developed sections and a searchable 14-laboratory directory from the owner’s supplied list. Section 6 is withdrawn. FR/EN/AR working copy, responsive reading, stable laboratory anchors and localized search references are included. See [scope](docs/laboratories-experts-network.md). No deployment.

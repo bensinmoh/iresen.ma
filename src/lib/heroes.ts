@@ -23,7 +23,7 @@ export const heroes = {
   },
   programmes: { photo: 'research', layout: 'end', stage: 'research', related: 'projects' },
   projects: { photo: 'team', layout: 'start', stage: 'research', related: 'workWithUs' },
-  platforms: { photo: 'solar-field', layout: 'start', stage: 'research', related: 'network' },
+  platforms: { photo: 'platform-gep', layout: 'start', stage: 'research', related: 'network' },
   network: { photo: 'workshop', layout: 'end', stage: 'expertiseSkills', related: 'platforms' },
   transfer: { photo: 'research', layout: 'start', stage: 'research', related: 'workWithUs' },
   workWithUs: {

@@ -1,5 +1,9 @@
 # IRESEN visual direction
 
+## Research platforms composition — 2026-10-11
+
+The page uses a real GEP aerial hero, an editorial introduction and alternating documentary photo/text chapters with quiet ruled infrastructure summaries. White/pale surfaces lead to a navy GreenH2A chapter and a compact network referral. Reuse current typography, signature corners, SVG marks and logical spacing; tablet/mobile reflow and Arabic retain natural reading. No new shared token. See [scope](docs/research-platforms.md).
+
 ## Laboratory network adaptation — 2026-10-11
 
 The network page adapts the Figma Alumni directory’s pale surfaces and compact four-column cards to laboratory metadata. It reuses the shared hero, navy practice band, vector icons, signature corners and current type/spacing tokens. Tablet/mobile collapse by content fit; Arabic retains logical layout and original physical brand corners. Section navigation contains five entries. No shared design token is added. See [scope](docs/laboratories-experts-network.md).

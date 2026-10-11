@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
+import { researchPlatforms } from '@/lib/platforms'
 import { pageHref } from '@/lib/site'
 import { PlatformCard } from './PlatformCard'
 import { PlatformNetworkIcon } from './PlatformNetworkIcon'
@@ -43,7 +44,11 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
             <PlatformCard key={platform.id} id={`platform-${platform.id}`} className={styles.card}>
               <a
                 className={styles.cardDestination}
-                href={pageHref('platforms', locale)}
+                href={pageHref(
+                  'platforms',
+                  locale,
+                  researchPlatforms.find(({ id }) => id === platform.id)?.anchor,
+                )}
                 aria-label={`${t('cardLink')} — ${t(`platforms.${platform.id}.name`)}`}
               >
                 <div className={styles.visual}>

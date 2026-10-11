@@ -452,3 +452,7 @@ new supplied original Morocco SVG, approximate city positions, ten city groups,
 screenshot supplies Ben Guerir and Abdelatif GHENNIOUI's GEP contact. Geography
 never mirrors in Arabic; text remains RTL. See [scope](docs/laboratories-experts-network.md#interactive-map--owner-follow-up-2026-10-11)
 and [vector provenance](docs/network-assets.json). No deployment.
+
+## Research platforms page — 2026-10-11
+
+The owner commissioned the canonical platforms page from the supplied manuscript and screenshot references. Preserve four chapters, 13 infrastructure summaries, six legacy anchors and localized search references. GreenH2A stays in development with its 3D caption. Missing official external destinations are omitted pending selection; EN/AR remain working editorial copy. Original sources remain private. See [scope](docs/research-platforms.md). No deployment.
