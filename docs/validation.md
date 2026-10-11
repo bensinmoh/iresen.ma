@@ -3440,3 +3440,36 @@ references remain; no new resource or route is introduced. An initial browser ru
 used a stale server and another hit Chrome network suspension; the final isolated
 run passed. Database integration and the full browser suite were not rerun locally
 for this navigation/text change. Unrelated tsconfig changes are excluded.
+
+## Laboratory and expert network — 2026-10-11
+
+Scope: [the five-section page](laboratories-experts-network.md), after PR #96 was
+merged and synchronized. Live Figma design context/native screenshot and both
+owner attachments were inspected. Alumni sample claims were excluded.
+
+- Node 24.19.0 / pnpm 11.19.0. Lint, typecheck, unit tests (139), disposable
+  migrated CMS/search/career integration tests (28) and production build pass.
+- Full local Chromium browser suite: 283 tests pass, including the four new
+  network tests. A subsequent exact-destination check caught missing laboratory
+  registration in `isSupportedAnchor`; the routing rule and explicit unit/API
+  assertions were corrected, then 39 network/navigation/search browser checks
+  passed on the final production build.
+- Network browser checks cover FR/EN/AR, all 14 records, five retained anchors,
+  section-six absence, combined query/topic criteria, accent/Arabic discovery,
+  empty/reset states, supplied contact, widths 320/390/768/1024/1440 and 200%
+  root text at 768px. No-JavaScript reading includes a direct lab destination.
+  Automated axe checks report no violations in the new page after the navy
+  eyebrow's small-text contrast was corrected to the shared Energy Cyan role.
+- Rendered screenshots inspected: FR and AR desktop 1440/mobile 390; EN tablet 768. The images were loaded before final capture. Natural reading, card
+  wrapping, physical signature corners, mirrored Arabic and workshop crop were
+  inspected. These are scoped checks, not a claim of full WCAG conformance.
+- Local search rebuilt successfully. FR `Nanoparticules`, EN `Thermal storage`
+  and AR `الجسيمات النانوية` discover the relevant laboratory identity. Individual
+  results retain canonical `laboratory-*` anchors; section six is absent from
+  each locale's static projection. Existing CMS approval/access gates remain.
+- Focused formatting and Git whitespace checks pass. The local pre-existing
+  `tsconfig.json` diff is excluded; task-generated review-build includes are
+  removed at cleanup. No deployment, publication-gate change or DNS action.
+
+A typecheck initially raced with production build regeneration of generated
+files; rerunning it sequentially passed. This did not require source changes.

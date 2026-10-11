@@ -1,5 +1,9 @@
 # IRESEN visual direction
 
+## Laboratory network adaptation — 2026-10-11
+
+The network page adapts the Figma Alumni directory’s pale surfaces and compact four-column cards to laboratory metadata. It reuses the shared hero, navy practice band, vector icons, signature corners and current type/spacing tokens. Tablet/mobile collapse by content fit; Arabic retains logical layout and original physical brand corners. Section navigation contains five entries. No shared design token is added. See [scope](docs/laboratories-experts-network.md).
+
 ## Institute composition — 2026-10-11
 
 The [Institute page](docs/institute-page.md) adapts Figma’s white/navy editorial language to the longer manuscript. Three substantial mission rows pair purpose/title with readable introductions and native details; their common cooperation band remains distinct. Fine value rows, paired ambition imagery, a native horizontal chronological rail and a quiet report feature vary density by visitor task. Reuse existing hero photos, identity, typography and shared tokens. No new universal template or token is introduced.

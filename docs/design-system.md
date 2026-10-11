@@ -1646,3 +1646,13 @@ preceding navy section. The report surface is white. AI-assisted background
 removal/ground-shadow reconstruction produces an alpha WebP derivative; its
 provenance and hash are recorded in institute-assets.json. The source PDF remains
 private; no extra document contents or publication claims are adopted.
+
+## Laboratory network composition — 2026-10-11
+
+The network directory reuses action/signature corners, current pale surfaces,
+shared SVG controls and native query/topic controls. Four/two/one columns follow
+content fit; controls wrap and the search input/button stack on mobile. The navy
+practice eyebrow uses Energy Cyan for readable small text. Existing hero, media
+provenance, logical Arabic layout and first-scroll motion remain authoritative.
+No shared token or universal layout is introduced. See
+[scope](laboratories-experts-network.md).

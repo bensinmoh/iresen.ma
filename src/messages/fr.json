@@ -499,27 +499,23 @@
     "network": {
       "competence-domains": {
         "title": "Domaines de compétence",
-        "description": "À prévoir : les études, la veille, la prospective, les analyses et l’expertise, avec leurs besoins, publics et contributions à la préparation des décisions."
+        "description": "Études & Expertise et Compétences & Capacités s’appuient sur la recherche, les plateformes et les partenaires. Le réseau met en relation ces contributions autour des besoins énergétiques et industriels."
       },
       "intervention-modes": {
         "title": "Modes d’intervention",
-        "description": "À prévoir : les études, les essais, l’appui scientifique et la formation, avec leurs conditions."
+        "description": "Quatre modes complémentaires, à cadrer selon le sujet, les compétences et les capacités disponibles."
       },
       "scientific-network": {
         "title": "Le réseau scientifique",
-        "description": "À prévoir : les laboratoires, les équipes et les organismes dont la relation et les contributions sont confirmées."
+        "description": "Des spécialités complémentaires, au sein des universités et des plateformes. Explorez ce répertoire de 14 laboratoires par domaine, établissement ou ville."
       },
       "skills-training": {
         "title": "Compétences et formation",
-        "description": "À prévoir : formations spécialisées et par la recherche, transmission de méthodes et savoir-faire, accompagnement des équipes et ressources pédagogiques réellement disponibles."
+        "description": "Les compétences se construisent au contact des questions scientifiques, des méthodes et des moyens expérimentaux. Formation par la recherche, accompagnement des équipes et partage des savoir-faire relient les personnes aux capacités du réseau."
       },
       "expertise-in-action": {
         "title": "Expertises en action",
-        "description": "À prévoir : des cas précisant le besoin, les compétences mobilisées et l’apport vérifié."
-      },
-      "request-expertise": {
-        "title": "Mobiliser une expertise",
-        "description": "À prévoir : les informations utiles pour qualifier un besoin et les modalités de cadrage."
+        "description": "Stockage de l’énergie, systèmes électriques et matériaux : trois entrées pour comprendre la complémentarité des spécialités du réseau."
       }
     },
     "transfer": {
@@ -1216,7 +1212,7 @@
       "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
       "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
       "platforms": "Des moyens de recherche, d’essais, d’expérimentation et de formation pour connaître les performances et les conditions d’utilisation des technologies.",
-      "network": "Mobiliser les études et l’expertise, partager les savoir-faire et renforcer les capacités scientifiques et techniques des équipes.",
+      "network": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
       "transfer": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
       "workWithUs": "Réunir les acteurs, les expertises et les ressources autour de besoins d’analyse, de recherche, d’expérimentation ou de montée en compétences.",
       "news": "Recherche, échanges scientifiques et coopération : retrouvez les actualités de l’IRESEN et les rencontres que nous organisons ou auxquelles nous participons.",
@@ -2745,6 +2741,180 @@
       "label": "Biographie",
       "linkedin": "Voir le profil LinkedIn",
       "close": "Fermer la biographie"
+    }
+  },
+  "Network": {
+    "eyebrow": "Expertise & compétences",
+    "description": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
+    "domains": {
+      "title": "Des compétences pour éclairer les choix.",
+      "description": "Études & Expertise et Compétences & Capacités s’appuient sur la recherche, les plateformes et les partenaires. Le réseau met en relation ces contributions autour des besoins énergétiques et industriels.",
+      "items": [
+        {
+          "title": "Observer et anticiper",
+          "description": "Veille scientifique et technologique, prospective et analyse des évolutions pour situer un besoin."
+        },
+        {
+          "title": "Étudier et évaluer",
+          "description": "Études, analyses et évaluation des options pour préparer des décisions informées."
+        },
+        {
+          "title": "Partager les méthodes",
+          "description": "Expertise technique, pratiques expérimentales et transmission des savoir-faire aux équipes."
+        }
+      ]
+    },
+    "modes": {
+      "title": "Du besoin à la contribution scientifique.",
+      "description": "Quatre modes complémentaires, à cadrer selon le sujet, les compétences et les capacités disponibles.",
+      "items": [
+        {
+          "title": "Études & analyse",
+          "description": "Institutions, entreprises et équipes de recherche : préciser une question, comparer des options et construire une lecture documentée."
+        },
+        {
+          "title": "Mesure & essais",
+          "description": "Équipes et porteurs de technologies : définir les paramètres à observer et le cadre expérimental avec les plateformes concernées."
+        },
+        {
+          "title": "Appui scientifique & technique",
+          "description": "Partenaires de projets : confronter les approches, interpréter les observations et identifier les questions à approfondir."
+        },
+        {
+          "title": "Formation & transmission",
+          "description": "Chercheurs, doctorants et équipes techniques : partager des méthodes et développer des compétences au fil de la pratique."
+        }
+      ],
+      "notice": "Les modalités et l’accès se définissent au cas par cas ; cette présentation ne constitue pas un catalogue de prestations ouvertes."
+    },
+    "directory": {
+      "eyebrow": "Laboratoires mis en place",
+      "title": "Le réseau national de l’innovation verte.",
+      "description": "Des spécialités complémentaires, au sein des universités et des plateformes. Explorez ce répertoire de 14 laboratoires par domaine, établissement ou ville.",
+      "label": "Rechercher un laboratoire",
+      "placeholder": "Une spécialité, une université, une ville…",
+      "search": "Rechercher",
+      "all": "Tous",
+      "reset": "Effacer les filtres",
+      "results": "{count} laboratoires",
+      "empty": "Aucun laboratoire ne correspond à votre recherche.",
+      "city": "Ville",
+      "theme": "Thématique",
+      "contact": "Contact scientifique",
+      "name": "M. Hamid EL OMARI",
+      "topics": {
+        "solar": "Solaire",
+        "storage": "Stockage",
+        "grid": "Réseaux & puissance",
+        "materials": "Matériaux",
+        "mobility": "Mobilité",
+        "bioenergy": "Bioénergie"
+      }
+    },
+    "skills": {
+      "title": "La recherche se transmet par la pratique.",
+      "description": "Les compétences se construisent au contact des questions scientifiques, des méthodes et des moyens expérimentaux. Formation par la recherche, accompagnement des équipes et partage des savoir-faire relient les personnes aux capacités du réseau.",
+      "items": [
+        "Approfondir une question de recherche.",
+        "Apprendre à mesurer, expérimenter et interpréter.",
+        "Partager les méthodes et les connaissances acquises."
+      ],
+      "action": "Découvrir les opportunités",
+      "secondary": "Consulter les événements",
+      "imageAlt": "Illustration générée d’une équipe en atelier technique, sans attribution à un laboratoire réel."
+    },
+    "examples": {
+      "title": "Des spécialités, des questions concrètes.",
+      "description": "Stockage de l’énergie, systèmes électriques et matériaux : trois entrées pour comprendre la complémentarité des spécialités du réseau.",
+      "items": [
+        {
+          "title": "Comprendre le comportement des batteries",
+          "description": "Le test de batteries à Marrakech et le stockage thermique à Agadir illustrent deux spécialités distinctes liées au stockage de l’énergie.",
+          "labs": ["battery-testing", "thermal-storage"]
+        },
+        {
+          "title": "Relier conversion et réseaux électriques",
+          "description": "L’électronique de puissance à Settat et les réseaux intelligents à Kénitra abordent la conversion et les systèmes électriques.",
+          "labs": ["power-electronics", "smart-grids"]
+        },
+        {
+          "title": "Explorer les matériaux pour l’énergie",
+          "description": "Les nanoparticules à Ifrane et les matériaux à changement de phase à Casablanca offrent deux entrées vers les matériaux et leurs propriétés.",
+          "labs": ["nanoparticles", "phase-change"]
+        }
+      ],
+      "action": "Voir les laboratoires concernés"
+    },
+    "labs": {
+      "power-electronics": {
+        "title": "Électronique de puissance",
+        "institution": "Université Hassan 1er",
+        "city": "Settat"
+      },
+      "battery-testing": {
+        "title": "Test de batteries",
+        "institution": "Université Cadi Ayyad",
+        "city": "Marrakech"
+      },
+      "nanoparticles": {
+        "title": "Nanoparticules",
+        "institution": "Université Al Akhawayn",
+        "city": "Ifrane"
+      },
+      "phase-change": {
+        "title": "Matériaux à changement de phase",
+        "institution": "Université Hassan II",
+        "city": "Casablanca"
+      },
+      "concentrated-pv": {
+        "title": "Photovoltaïque à concentration",
+        "institution": "Université Sidi Mohammed Ben Abdellah",
+        "city": "Fès"
+      },
+      "smart-grids": {
+        "title": "Réseaux intelligents",
+        "institution": "Université Ibn Tofail",
+        "city": "Kénitra"
+      },
+      "methanisation": {
+        "title": "Méthanisation",
+        "institution": "Université Ibn Tofail",
+        "city": "Kénitra"
+      },
+      "low-temperature-solar": {
+        "title": "Solaire thermique à basse température",
+        "institution": "Université Sidi Mohammed Ben Abdellah (USMBA)",
+        "city": "Fès"
+      },
+      "thermal-storage": {
+        "title": "Stockage thermique",
+        "institution": "Université Ibn Zohr",
+        "city": "Agadir"
+      },
+      "solar-thermal": {
+        "title": "Solaire thermique",
+        "institution": "Université Internationale de Rabat",
+        "city": "Rabat"
+      },
+      "nanolubricants": {
+        "title": "Nanolubrifiants",
+        "institution": "Université Abdelmalek Essaâdi",
+        "city": "Tanger"
+      },
+      "electric-mobility": {
+        "title": "Mobilité électrique",
+        "institution": "Université Cadi Ayyad",
+        "city": "Marrakech"
+      },
+      "solar-energy": {
+        "title": "Énergie solaire",
+        "institution": "Green Energy Park (GEP)"
+      },
+      "thermal-production": {
+        "title": "Production de l’énergie thermique",
+        "institution": "Université Cadi Ayyad",
+        "city": "Marrakech"
+      }
     }
   }
 }

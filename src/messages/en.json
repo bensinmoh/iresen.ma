@@ -522,7 +522,7 @@
       "programmes": "Programme, fund and support collaborative research by linking needs to scientific objectives and usable results.",
       "projects": "Explore research, development and innovation projects by domain, programme and stage.",
       "platforms": "Research, testing, experimentation and training resources to understand technology performance and conditions of use.",
-      "network": "Mobilise studies and expertise, share know-how and strengthen teams’ scientific and technical capabilities.",
+      "network": "Connect scientific knowledge, experimental capabilities and teams to inform technology choices and advance research.",
       "transfer": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
       "workWithUs": "Bring together people, expertise and resources around needs for analysis, research, experimentation or skills development.",
       "news": "Research, scientific exchange and cooperation: explore IRESEN news and the meetings we organise or participate in.",
@@ -905,28 +905,24 @@
     },
     "network": {
       "competence-domains": {
-        "title": "Areas of expertise",
-        "description": "To prepare: studies, monitoring, foresight, analysis and expertise, with their needs, audiences and contributions to preparing decisions."
+        "title": "Competence areas",
+        "description": "Studies & Expertise and Skills & Capabilities draw on research, platforms and partners. The network connects these contributions around energy and industrial needs."
       },
       "intervention-modes": {
         "title": "Ways of contributing",
-        "description": "Content to add: studies, testing, scientific support and training, with their conditions."
+        "description": "Four complementary approaches, scoped according to the subject and available skills and capabilities."
       },
       "scientific-network": {
-        "title": "The scientific network",
-        "description": "Content to add: laboratories, teams and organisations with confirmed relationships and contributions."
+        "title": "Scientific network",
+        "description": "Complementary specialities across universities and platforms. Explore this directory of 14 laboratories by field, institution or city."
       },
       "skills-training": {
         "title": "Skills and training",
-        "description": "To prepare: specialised and research-based training, methods and know-how transmission, team support and learning resources actually available."
+        "description": "Skills develop through scientific questions, methods and experimental resources. Research training, team support and knowledge sharing connect people to the network’s capabilities."
       },
       "expertise-in-action": {
-        "title": "Expertise in action",
-        "description": "Content to add: cases explaining the need, expertise involved and verified contribution."
-      },
-      "request-expertise": {
-        "title": "Draw on expertise",
-        "description": "Content to add: information to qualify a need and the arrangements for scoping it."
+        "title": "Expertise in practice",
+        "description": "Energy storage, electricity systems and materials: three perspectives on the network’s complementary specialities."
       }
     },
     "transfer": {
@@ -2742,6 +2738,180 @@
       "label": "Biography",
       "linkedin": "View LinkedIn profile",
       "close": "Close biography"
+    }
+  },
+  "Network": {
+    "eyebrow": "Expertise & skills",
+    "description": "Connect scientific knowledge, experimental capabilities and teams to inform technology choices and advance research.",
+    "domains": {
+      "title": "Skills that inform choices.",
+      "description": "Studies & Expertise and Skills & Capabilities draw on research, platforms and partners. The network connects these contributions around energy and industrial needs.",
+      "items": [
+        {
+          "title": "Observe and anticipate",
+          "description": "Scientific and technology monitoring, foresight and analysis of developments to frame a need."
+        },
+        {
+          "title": "Study and evaluate",
+          "description": "Studies, analysis and evaluation of options to prepare informed decisions."
+        },
+        {
+          "title": "Share methods",
+          "description": "Technical expertise, experimental practices and transfer of know-how to teams."
+        }
+      ]
+    },
+    "modes": {
+      "title": "From a need to a scientific contribution.",
+      "description": "Four complementary approaches, scoped according to the subject and available skills and capabilities.",
+      "items": [
+        {
+          "title": "Studies & analysis",
+          "description": "Institutions, businesses and research teams: clarify a question, compare options and build an evidence-based understanding."
+        },
+        {
+          "title": "Measurement & testing",
+          "description": "Teams and technology developers: define the parameters to observe and the experimental framework with the relevant platforms."
+        },
+        {
+          "title": "Scientific & technical support",
+          "description": "Project partners: discuss approaches, interpret observations and identify questions for further investigation."
+        },
+        {
+          "title": "Training & knowledge sharing",
+          "description": "Researchers, doctoral students and technical teams: share methods and develop skills through practice."
+        }
+      ],
+      "notice": "Arrangements and access are defined individually; this overview is not a catalogue of services available for booking."
+    },
+    "directory": {
+      "eyebrow": "Established laboratories",
+      "title": "A national network for green innovation.",
+      "description": "Complementary specialities across universities and platforms. Explore this directory of 14 laboratories by field, institution or city.",
+      "label": "Find a laboratory",
+      "placeholder": "A speciality, university or city…",
+      "search": "Search",
+      "all": "All",
+      "reset": "Clear filters",
+      "results": "{count} laboratories",
+      "empty": "No laboratory matches your search.",
+      "city": "City",
+      "theme": "Theme",
+      "contact": "Scientific contact",
+      "name": "Mr Hamid EL OMARI",
+      "topics": {
+        "solar": "Solar",
+        "storage": "Storage",
+        "grid": "Grids & power",
+        "materials": "Materials",
+        "mobility": "Mobility",
+        "bioenergy": "Bioenergy"
+      }
+    },
+    "skills": {
+      "title": "Research skills grow through practice.",
+      "description": "Skills develop through scientific questions, methods and experimental resources. Research training, team support and knowledge sharing connect people to the network’s capabilities.",
+      "items": [
+        "Investigate a research question.",
+        "Learn to measure, experiment and interpret.",
+        "Share methods and acquired knowledge."
+      ],
+      "action": "Explore opportunities",
+      "secondary": "Browse events",
+      "imageAlt": "Generated illustration of a team in a technical workshop, without attribution to a real laboratory."
+    },
+    "examples": {
+      "title": "Specialities and tangible questions.",
+      "description": "Energy storage, electricity systems and materials: three perspectives on the network’s complementary specialities.",
+      "items": [
+        {
+          "title": "Understand battery behaviour",
+          "description": "Battery testing in Marrakech and thermal storage in Agadir illustrate two distinct energy-storage specialities.",
+          "labs": ["battery-testing", "thermal-storage"]
+        },
+        {
+          "title": "Connect conversion and electricity grids",
+          "description": "Power electronics in Settat and smart grids in Kenitra address conversion and electricity systems.",
+          "labs": ["power-electronics", "smart-grids"]
+        },
+        {
+          "title": "Explore materials for energy",
+          "description": "Nanoparticles in Ifrane and phase-change materials in Casablanca offer two perspectives on materials and their properties.",
+          "labs": ["nanoparticles", "phase-change"]
+        }
+      ],
+      "action": "Explore these laboratories"
+    },
+    "labs": {
+      "power-electronics": {
+        "title": "Power electronics",
+        "institution": "Hassan First University",
+        "city": "Settat"
+      },
+      "battery-testing": {
+        "title": "Battery testing",
+        "institution": "Cadi Ayyad University",
+        "city": "Marrakech"
+      },
+      "nanoparticles": {
+        "title": "Nanoparticles",
+        "institution": "Al Akhawayn University",
+        "city": "Ifrane"
+      },
+      "phase-change": {
+        "title": "Phase-change materials",
+        "institution": "Hassan II University",
+        "city": "Casablanca"
+      },
+      "concentrated-pv": {
+        "title": "Concentrated photovoltaics",
+        "institution": "Sidi Mohammed Ben Abdellah University",
+        "city": "Fez"
+      },
+      "smart-grids": {
+        "title": "Smart grids",
+        "institution": "Ibn Tofail University",
+        "city": "Kenitra"
+      },
+      "methanisation": {
+        "title": "Anaerobic digestion",
+        "institution": "Ibn Tofail University",
+        "city": "Kenitra"
+      },
+      "low-temperature-solar": {
+        "title": "Low-temperature solar thermal energy",
+        "institution": "Sidi Mohammed Ben Abdellah University (USMBA)",
+        "city": "Fez"
+      },
+      "thermal-storage": {
+        "title": "Thermal storage",
+        "institution": "Ibn Zohr University",
+        "city": "Agadir"
+      },
+      "solar-thermal": {
+        "title": "Solar thermal energy",
+        "institution": "International University of Rabat",
+        "city": "Rabat"
+      },
+      "nanolubricants": {
+        "title": "Nanolubricants",
+        "institution": "Abdelmalek Essaâdi University",
+        "city": "Tangier"
+      },
+      "electric-mobility": {
+        "title": "Electric mobility",
+        "institution": "Cadi Ayyad University",
+        "city": "Marrakech"
+      },
+      "solar-energy": {
+        "title": "Solar energy",
+        "institution": "Green Energy Park (GEP)"
+      },
+      "thermal-production": {
+        "title": "Thermal energy production",
+        "institution": "Cadi Ayyad University",
+        "city": "Marrakech"
+      }
     }
   }
 }
