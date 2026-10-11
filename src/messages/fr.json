@@ -2809,7 +2809,11 @@
         "materials": "Matériaux",
         "mobility": "Mobilité",
         "bioenergy": "Bioénergie"
-      }
+      },
+      "map": "Carte des laboratoires",
+      "approximate": "Localisations approximatives par ville. Sélectionnez un point ou un laboratoire pour afficher sa fiche.",
+      "close": "Fermer la fiche",
+      "gepName": "Abdelatif GHENNIOUI"
     },
     "skills": {
       "title": "La recherche se transmet par la pratique.",
@@ -2908,7 +2912,8 @@
       },
       "solar-energy": {
         "title": "Énergie solaire",
-        "institution": "Green Energy Park (GEP)"
+        "institution": "Green Energy Park (GEP)",
+        "city": "Ben Guerir"
       },
       "thermal-production": {
         "title": "Production de l’énergie thermique",

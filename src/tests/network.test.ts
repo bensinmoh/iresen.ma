@@ -31,6 +31,7 @@ describe('owner-supplied laboratory network', () => {
         expect(result.body).toContain(lab.title)
         expect(result.body).toContain(lab.institution)
         expect(result.body).toContain(fr.Network.labs[id].title)
+        expect(result.body).toContain(lab.city)
       }
     }
   })

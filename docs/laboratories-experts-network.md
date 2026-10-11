@@ -66,3 +66,30 @@ working adaptations, pending final review. No deployment is authorized.
 See [the validation log](validation.md#laboratory-and-expert-network--2026-10-11)
 for actual checks and rendered coverage. Existing local `tsconfig.json` changes
 are excluded from this task's commit. The separate development server is retained.
+
+## Interactive map — owner follow-up, 2026-10-11
+
+The owner replaces the card grid with a laboratory list on the physical left and
+an interactive Morocco map on the right, retaining query and theme filters above.
+This supersedes the decorative-map decision above. The supplied original
+`Carte Maroc copy.svg` is copied byte-for-byte to `/images/network/morocco.svg`;
+[its manifest](network-assets.json) records the source and SHA-256. A CSS mask
+colors the original geometry without altering the SVG. No map provider, geocoding
+service or new dependency is added.
+
+City positions are deliberately approximate, as explicitly requested, with modest
+spacing for pointer/touch access. Ten city points group the 14 supplied laboratories;
+selecting a point, a list entry or another laboratory in the same city updates a
+shared detail panel. Filters update both surfaces and suppress a selected record
+when excluded. Escape closes the panel and returns focus to its originating control.
+The geographic silhouette and point positions never mirror in Arabic. Text keeps
+its native RTL reading order. Tablet/mobile stacks the map above the list; native
+list disclosures preserve every institution, city and supplied contact without
+JavaScript. Individual laboratory anchors remain unchanged.
+
+The later screenshot supplies Ben Guerir for GEP and Abdelatif GHENNIOUI's contact,
+`ghennioui@iresen.org`. These supersede the earlier missing-city/single-contact
+statements. No other contact or laboratory photography is invented. City names,
+contact names and map UI are localized working copy in FR/EN/AR. Laboratory search
+projections include the supplied city and GEP name; the newly supplied vector has
+its own localized media reference, distinct from the older homepage icon.

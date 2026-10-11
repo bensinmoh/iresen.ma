@@ -444,3 +444,11 @@ Alumni figures, people, stories or testimonials are adopted. GEP’s city remain
 unspecified. FR/EN/AR are working copy; existing generated workshop imagery is
 illustrative. The original Morocco vector remains decorative. See
 [scope](docs/laboratories-experts-network.md). No deployment.
+
+Network map follow-up — 2026-10-11: the owner replaces the laboratory grid with
+an interactive city map and synchronized list, retaining filters. Preserve the
+new supplied original Morocco SVG, approximate city positions, ten city groups,
+14 stable laboratory anchors and native no-JavaScript disclosures. The later
+screenshot supplies Ben Guerir and Abdelatif GHENNIOUI's GEP contact. Geography
+never mirrors in Arabic; text remains RTL. See [scope](docs/laboratories-experts-network.md#interactive-map--owner-follow-up-2026-10-11)
+and [vector provenance](docs/network-assets.json). No deployment.

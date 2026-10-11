@@ -470,6 +470,20 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   },
   {
+    id: 'laboratory-network-map',
+    url: '/images/network/morocco.svg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Network.directory.map,
+          description: messages[locale].Network.directory.approximate,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  {
     id: 'platform-network-morocco',
     url: '/brand/platforms/morocco.svg',
     type: 'media',
@@ -889,6 +903,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               catalog.Network.directory.topics[topic],
               ...engagementSearchText(messages.fr.Network.labs[id]),
               id === 'power-electronics' ? catalog.Network.directory.name : '',
+              id === 'solar-energy' ? catalog.Network.directory.gepName : '',
             ].join(' '),
             url: pageHref('network', locale, laboratoryAnchor(id)),
             type: 'section',

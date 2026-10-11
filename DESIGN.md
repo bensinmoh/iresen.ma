@@ -1245,3 +1245,10 @@ preceding navy section. The report surface is white. AI-assisted background
 removal/ground-shadow reconstruction produces an alpha WebP derivative; its
 provenance and hash are recorded in institute-assets.json. The source PDF remains
 private; no extra document contents or publication claims are adopted.
+
+Network directory follow-up (2026-10-11): the supplied original Morocco SVG
+replaces the decorative icon with a real, approximately positioned city map.
+Desktop retains the requested physical list-left/map-right arrangement; Arabic
+text reads RTL while geographic geometry remains fixed. City clusters avoid
+stacking coincident laboratory targets; the detail panel sits below the northern
+markers so all cities remain selectable. Smaller screens stack map then list.
