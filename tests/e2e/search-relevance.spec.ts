@@ -58,7 +58,7 @@ for (const { locale, query } of [
   { locale: 'en', query: 'infrastructure' },
   { locale: 'ar', query: 'البنية التحتية' },
 ] as const) {
-  test(`${locale}: related infrastructure results explain their match and open the public platform page`, async ({
+  test(`${locale}: infrastructure results reflect the current public text and open the platform page`, async ({
     page,
   }) => {
     await page.goto(searchUrl(locale, { q: query, type: 'page' }))
@@ -69,7 +69,16 @@ for (const { locale, query } of [
     const result = page
       .locator('.search-results article')
       .filter({ has: page.locator(`h2 a[href="${destination}"]`) })
-    await expect(result.locator('[data-search-match-kind="related"]')).toBeVisible()
+    const response = await page.request.get(
+      `/api/search?${new URLSearchParams({ locale, q: query, type: 'page' })}`,
+    )
+    const items = (await response.json()).items as { url: string; matchKind: string }[]
+    expect(items.find((item) => item.url === destination)?.matchKind).toBe(
+      locale === 'ar' ? 'related' : 'exact',
+    )
+    if (locale === 'ar')
+      await expect(result.locator('[data-search-match-kind="related"]')).toBeVisible()
+    else await expect(result.locator('[data-search-match-kind]')).toHaveCount(0)
     await expect(result.locator('mark').first()).toBeVisible()
     await link.click()
     await expect(page).toHaveURL((url) => decodeURI(url.pathname) === destination)
@@ -98,7 +107,7 @@ test('the user example Insrastructure suggests the public infrastructure spellin
   const platform = page.locator('.search-results article').filter({
     has: page.locator(`h2 a[href="${pageHref('platforms', 'fr')}"]`),
   })
-  await expect(platform.locator('[data-search-match-kind="related"]')).toBeVisible()
+  await expect(platform.locator('[data-search-match-kind="typo"]')).toBeVisible()
 })
 
 for (const width of [1440, 390]) {

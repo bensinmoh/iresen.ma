@@ -1,6 +1,7 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 import { homePlatforms } from '../../src/lib/home-platforms'
+import { researchPlatforms } from '../../src/lib/platforms'
 import { pageHref } from '../../src/lib/site'
 import fr from '../../src/messages/fr.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
@@ -37,7 +38,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
             .evaluate((img: HTMLImageElement) => img.naturalWidth),
         )
         .toBeGreaterThan(0)
-      await expect(card.locator('a')).toHaveAttribute('href', pageHref('platforms', locale))
+      await expect(card.locator('a')).toHaveAttribute(
+        'href',
+        pageHref(
+          'platforms',
+          locale,
+          researchPlatforms.find((platform) => platform.id === id)!.anchor,
+        ),
+      )
     }
     await expect(section.locator('#platform-greenh2a')).toContainText(
       catalogs[locale].HomePlatforms.visualization,
@@ -187,6 +195,6 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     ).toBeLessThanOrEqual(0.00001)
     await page.emulateMedia({ reducedMotion: 'no-preference' })
     await link.click({ position: { x: 20, y: 20 } })
-    await expect(page).toHaveURL(pageHref('platforms', locale))
+    await expect(page).toHaveURL(pageHref('platforms', locale, 'green-energy-park'))
   })
 }

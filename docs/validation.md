@@ -3507,8 +3507,12 @@ excluded from public assets/actions. GreenH2A retains development and 3D wording
   legacy targets and exclusion of private source downloads/duplicate media.
 - Integration suite: 28 tests passed on a freshly migrated disposable database;
   it was removed afterward. Existing local CMS data/users remain unchanged.
-- 39 focused Chromium browser checks passed across the platforms, shared heroes,
-  responsive image delivery, section motion and navigation suites. Generic hero
+- 58 focused Chromium browser scenarios passed across the platforms, homepage
+  platforms, search relevance, shared heroes, responsive image delivery, section
+  motion and navigation suites. Four final page checks also passed after hero
+  optimization. Homepage assertions now target the matching chapters, and search
+  assertions distinguish exact FR/EN infrastructure terms from related Arabic
+  wording and explicit typo correction. Generic hero
   checks now verify all description paragraphs and the commissioned GEP target.
 - Page tests cover FR/EN/AR, all four chapters, actual GEP/network actions, absence
   of inert actions, the 3D caption, localized GEPMCI discovery, no-JavaScript Arabic,
@@ -3526,10 +3530,11 @@ excluded from public assets/actions. GreenH2A retains development and 3D wording
 
 Performance sample: a fresh Chromium context at 390 × 844, DPR 1, local production
 server and no network throttling requests one responsive GEP hero. The 1200px
-quality-75 derivative is 163,465 bytes (about 160 KiB), below the 250 KB mobile
-hero target. The original public file remains unchanged. LCP observation was
-unavailable in this local instrumented capture; no timing or field-performance
-claim is made. Review artifacts remain ignored under `.local/platforms-test-results`
+quality-75 WebP derivative is 163,465 bytes (about 160 KiB); Chromium’s negotiated
+format was 150,512 bytes. Both are below the 250 KB mobile hero target. The initial
+measured resource transfer was 482,693 bytes; observed LCP was 672ms and CLS 0.
+These unthrottled localhost values are supporting lab observations, not field
+performance or a deployment guarantee. The original public file remains unchanged. Review artifacts remain ignored under `.local/platforms-test-results`
 and `.cache/platforms-review`.
 
 Remaining publication inputs are the official GSBP/GEPMCI/GreenH2A destinations,
