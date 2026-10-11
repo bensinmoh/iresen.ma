@@ -62,9 +62,10 @@ export function SiteMotion() {
             target.getAnimations().length
           )
             continue
+          const offset = target.matches('.hero-actions') ? 0 : 14
           const animation = target.animate(
             [
-              { opacity: 0.35, translate: '0 14px' },
+              { opacity: 0.35, translate: `0 ${offset}px` },
               { opacity: 1, translate: '0 0' },
             ],
             { duration, easing, delay: Math.min(order++ * 35, 105), fill: 'backwards' },

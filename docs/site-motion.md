@@ -10,7 +10,8 @@ It observes headings, quotations, static article cards, direct section lists,
 hero descriptions/actions and footer headings. Reading units enter with a
 420ms opacity/14px vertical translation, using the shared arrival easing.
 Simultaneous units stagger by 35ms, capped at 105ms. Each element runs once per
-page visit. New server/client content is registered through an additions-only
+page visit. Hero actions fade without displacement to retain clearance from
+the scroll cue and stable click targets. New server/client content is registered through an additions-only
 MutationObserver; there is no scroll listener or animation library.
 
 Section wrappers, sticky navigation, dialogs and horizontal rail containers are
