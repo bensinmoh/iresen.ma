@@ -1,0 +1,31 @@
+/* Native anchors keep their history, focus and interrupted-scroll behavior. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .button {
+    transition:
+      background-color var(--duration-feedback),
+      border-color var(--duration-feedback),
+      color var(--duration-feedback),
+      translate var(--duration-fast) var(--ease-arrival);
+  }
+
+  .button:active {
+    translate: 0 1px;
+  }
+
+  .section-navigation a,
+  .footer-links a {
+    transition:
+      color var(--duration-feedback),
+      text-decoration-color var(--duration-feedback);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

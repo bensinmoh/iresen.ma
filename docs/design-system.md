@@ -1567,3 +1567,14 @@ Owner responsive follow-up: mobile/tablet search field and button are separate;
 frequent searches keep the most common themes fitting two compact lines. Key
 figures use the existing native horizontal figure-rail pattern at these widths,
 with all four figures, keyboard access and Arabic direction preserved.
+
+## Public-site motion — 2026-10-11
+
+The owner commissioned shared first-scroll reveals and smooth navigation between
+sections throughout the public site. Titles, quotations and static cards use a
+420ms arrival with a 14px vertical movement; related items stagger at most 105ms.
+Controls use 180ms feedback. Section wrappers and sticky/rail geometry stay stable;
+existing filter and menu transitions retain ownership. Reveals run once, never
+hide server content, settle on focus and cancel for reduced motion. Native anchors
+keep their destinations/history and work without JavaScript. See
+[scope and behavior](site-motion.md).

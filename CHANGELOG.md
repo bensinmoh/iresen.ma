@@ -904,3 +904,13 @@ are displayed.
 - Apply checkbox filters immediately with crossed topic/year counts and notice
   transitions; separate mobile/tablet search surfaces, keep two compact frequent
   search lines and allow native horizontal navigation of the four figures.
+
+
+## Public-site motion — 2026-10-11
+
+- Added first-entry reveals for public headings, quotations and static cards in
+  all locales, preserving component-owned publication/patent transitions.
+- Extended native smooth anchor navigation to all public pages and viewports.
+- Added bounded shared motion tokens, keyboard cancellation, live reduced-motion
+  handling and visible no-JavaScript/API fallbacks without new dependencies.
+- Added six browser behavior tests and documented shared motion conventions.

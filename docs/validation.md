@@ -3152,3 +3152,22 @@ search ranking/access rules. Planner statistics still refresh after the full wri
 
 The 28 integration tests pass again in a newly migrated disposable database
 with the bounded vocabulary write; the existing local database is preserved.
+
+
+## Public-site motion — 2026-10-11
+
+- Local lint, typecheck, production build, 128 unit tests and 28 integration tests
+  passed. Integration used a disposable PostgreSQL database, removed afterward.
+- Six focused Chromium tests passed: FR/EN/AR first-entry/no-replay behavior,
+  native hero anchors preserving subsequent reveals, resource/institutional
+  mobile/tablet pages, reduced-motion cancellation, missing observer, native
+  no-JavaScript content and dynamic-card keyboard focus cancellation.
+- Rendered FR desktop (1440px), AR mobile (390px), EN tablet (768px) and FR
+  publications (320px) were inspected; no horizontal page overflow or JavaScript
+  errors. Screenshot review is retained in ignored `.local/motion-review/`.
+- Production CSS serializes the shared duration as `.42s`; the controller reads
+  both seconds and milliseconds and tests confirm 420ms execution.
+- A rebuild interrupted the initial regression server. That run was discarded;
+  the final build was restarted before the final focused/browser verification.
+- Scope and fallbacks: [public-site motion](site-motion.md). CI supplies the full
+  site regression check before merge; no deployment is performed.

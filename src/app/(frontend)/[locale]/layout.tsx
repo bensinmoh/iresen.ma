@@ -5,6 +5,7 @@ import { getTranslations } from 'next-intl/server'
 import { isLocale } from '@/i18n/locales'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
+import { SiteMotion } from '@/components/layout/SiteMotion'
 
 export default async function LocaleLayout({
   children,
@@ -30,6 +31,7 @@ export default async function LocaleLayout({
         {children}
       </main>
       <SiteFooter locale={locale} />
+      <SiteMotion />
     </>
   )
 }
