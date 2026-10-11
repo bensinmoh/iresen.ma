@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-11",
+  "role": "Owner follow-up: distinguish the first section photograph from the laboratory hero; preserve research, product and people focus.",
+  "assets": [
+    {
+      "id": "programmes-collaborative-prototyping",
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: photorealistic-natural. Asset type: one landscape 3:2 editorial photographic illustration for the first body section of an institutional R&D&I programmes website. Primary request: a distinctive candid collaborative product-prototyping scene that is visibly different from a bright white microscopy laboratory hero. Scene: a warm wood-and-metal engineering prototyping studio, simple warm neutral wall and timber shelves softly blurred behind, no huge laboratory windows. Subject: three fictional adult North African engineering collaborators, two women and a man, around a compact unbranded battery-monitoring electronics prototype with a neat circuit board and metal casing on a wooden workbench. Dress in navy, muted terracotta and light neutral ordinary engineering work shirts; NO white coats. One woman in foreground uses a small probe on the board while a second woman and a man discuss a plain paper engineering drawing. Natural engaged expressions and believable correct hands. Composition: medium close, oblique side view at table height; equipment and collaborating hands prominent in foreground, complete faces in upper middle, people clearly visible, no wide empty architecture, no posed smiles. Real daylight from the side, warm-neutral documentary photographic color, accurate textures, subtle depth of field, premium restrained realistic photography. Important: this is an illustrative fictional scene, not an actual IRESEN team or product. Avoid solar panels, PV plants, wind turbines, infrastructure, large industrial facilities, microscopes, logos, readable text, words, letters, watermarks, CGI styling, overlays or graphic gradients. Generate exactly one photograph.",
+      "sourceFilename": "exec-c44df465-2aba-4037-b700-fe6cbe69b689.png",
+      "sourceSha256": "b0e1b362da7f4aefba4bef1b1e34e0b576055a544e1a992367c28b7c4c3cd4c3",
+      "sourceDimensions": [1536, 1024],
+      "servedPath": "/images/programmes/collaborative-prototyping.webp",
+      "servedSha256": "bd1041165a6d09abfa18bd1dbd6a631c6edd872fd51f921b4e6366f74666bd4e",
+      "width": 1200,
+      "height": 800,
+      "bytes": 114052,
+      "transform": "Full frame proportional downsampling to 1200px width; WebP quality 86, effort 6. No composition edit.",
+      "status": "AI-generated illustrative fictional product-prototyping team, not actual IRESEN people, products or premises."
+    }
+  ]
+}

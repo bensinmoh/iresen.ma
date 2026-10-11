@@ -3,6 +3,7 @@ import * as migration_20261009_190000_search from './20261009_190000_search';
 import * as migration_20261009_220000_search_relevance from './20261009_220000_search_relevance';
 import * as migration_20261010_230000_search_resource_types from './20261010_230000_search_resource_types';
 import * as migration_20261011_000000_careers from './20261011_000000_careers';
+import * as migration_20261011_213811_calls from './20261011_213811_calls';
 
 export const migrations = [
   {
@@ -29,5 +30,10 @@ export const migrations = [
     up: migration_20261011_000000_careers.up,
     down: migration_20261011_000000_careers.down,
     name: '20261011_000000_careers',
+  },
+  {
+    up: migration_20261011_213811_calls.up,
+    down: migration_20261011_213811_calls.down,
+    name: '20261011_213811_calls'
   },
 ];

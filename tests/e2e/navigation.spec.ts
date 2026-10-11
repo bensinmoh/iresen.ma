@@ -365,7 +365,7 @@ test('desktop disclosures remain exclusive and navigable without JavaScript', as
       .locator(`.mega-menu-links a[href="${pageHref('programmes', 'fr')}"]`)
       .click()
     await expect(page).toHaveURL((url) => url.pathname === pageHref('programmes', 'fr'))
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText(fr.Pages.programmes)
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(fr.Programmes.title)
   } finally {
     await context.close()
   }

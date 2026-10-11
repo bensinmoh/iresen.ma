@@ -100,6 +100,20 @@ const assetLabels = {
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   {
+    id: 'programmes-collaborative-prototyping',
+    url: '/images/programmes/collaborative-prototyping.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Programmes.illustrationNote,
+          description: messages[locale].Programmes.researchAlt,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  {
     id: 'institute-fifteen-year-report-cover',
     url: '/images/institute/fifteen-year-report-cover-cutout.webp',
     type: 'media',
@@ -795,6 +809,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
       if (pageId === 'network') body.push(...engagementSearchText(catalog.Network))
       if (pageId === 'platforms') body.push(...engagementSearchText(catalog.Platforms))
+      if (pageId === 'programmes') {
+        const programmeCopy = Object.fromEntries(
+          Object.entries(catalog.Programmes).filter(([key]) => key !== 'current'),
+        )
+        body.push(
+          ...engagementSearchText(programmeCopy),
+          catalog.Calls.active,
+          catalog.Calls.discoveryDescription,
+        )
+      }
       if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
       if (pageId === 'governance')
         body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
@@ -920,6 +944,36 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (pageId === 'programmes') {
+            const programmeCopy = {
+              'programmes-collaborations': catalog.Programmes.intro,
+              'research-results': {
+                ...catalog.Programmes.impact,
+                value: '69',
+                label: catalog.Programmes.figureLabel,
+                reference: catalog.Programmes.reference,
+              },
+              'project-lifecycle': {
+                ...catalog.Programmes.process,
+                note: catalog.Programmes.processNote,
+              },
+              'calls-for-projects': {
+                ...catalog.Programmes.history,
+                note: catalog.Programmes.historicalNote,
+              },
+              participate: {
+                title: catalog.Calls.active,
+                description: catalog.Calls.discoveryDescription,
+              },
+              'practical-questions': catalog.Programmes.final,
+            }
+            body.push(
+              ...engagementSearchText(programmeCopy[entry.id as keyof typeof programmeCopy]),
+            )
+            body.push(
+              'R&D&I RDI research development innovation recherche développement innovation البحث والتطوير والابتكار',
+            )
+          }
           if (pageId === 'platforms') {
             const platform = researchPlatforms.find(({ anchor }) => anchor === entry.id)
             if (platform) {

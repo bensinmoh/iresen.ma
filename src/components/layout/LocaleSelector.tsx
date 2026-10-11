@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
 import { defaultLocale, isLocale, locales } from '@/i18n/locales'
+import { callHref, callReferenceFromPath } from '@/lib/calls'
 import { usePathname } from '@/i18n/navigation'
 import {
   isSupportedAnchor,
@@ -36,6 +37,7 @@ export function LocaleSelector({ fullNames = false, variant = 'inline' }: Locale
   const t = useTranslations('Navigation')
   const pathname = usePathname()
   const pageId = pageIdFromPathname(pathname)
+  const callReference = callReferenceFromPath(pathname, currentLocale)
   const hash = useSyncExternalStore(
     subscribeToHash,
     () => window.location.hash,
@@ -67,11 +69,13 @@ export function LocaleSelector({ fullNames = false, variant = 'inline' }: Locale
     <a
       key={targetLocale}
       href={
-        isNewsListingPath(pathname, currentLocale)
-          ? newsListingHref(targetLocale)
-          : pageId
-            ? `${pageHref(pageId, targetLocale)}${pageId === 'search' && searchQuery ? `?${searchQuery}` : ''}${anchor ? (anchor.startsWith('#') ? anchor : `#${anchor}`) : ''}`
-            : `/${targetLocale}`
+        callReference
+          ? callHref(callReference, targetLocale)
+          : isNewsListingPath(pathname, currentLocale)
+            ? newsListingHref(targetLocale)
+            : pageId
+              ? `${pageHref(pageId, targetLocale)}${pageId === 'search' && searchQuery ? `?${searchQuery}` : ''}${anchor ? (anchor.startsWith('#') ? anchor : `#${anchor}`) : ''}`
+              : `/${targetLocale}`
       }
       hrefLang={targetLocale}
       lang={targetLocale}

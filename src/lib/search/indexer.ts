@@ -5,6 +5,7 @@ import { promisify } from 'node:util'
 import type { PoolClient } from 'pg'
 
 import { careerHref, careerDownloadHref } from '@/lib/careers'
+import { callHref, isCallReference } from '@/lib/calls'
 import { contentLocales } from '@/lib/content/publication'
 import { mediaDirectory } from '@/cms/media-directory'
 import { isPublicSlug, isNewsSlug, newsHref } from '@/lib/content/routes'
@@ -21,7 +22,7 @@ import type { PublicSearchDocument, SearchLocale } from './types'
 import { VOCABULARY_VERSION, writePublicVocabulary } from './vocabulary'
 
 const executeFile = promisify(execFile)
-type Origin = 'pages' | 'news' | 'media' | 'opportunities'
+type Origin = 'pages' | 'news' | 'media' | 'opportunities' | 'calls'
 type Source = {
   origin: Origin
   source_id: string
@@ -172,6 +173,8 @@ export async function extractPublicFileText(filename: string, mimeType: string):
 }
 
 function sourceUrl(source: Source): string | undefined {
+  if (source.origin === 'calls' && isCallReference(source.slug))
+    return callHref(source.slug, source.locale)
   if (
     source.origin === 'pages' &&
     pageIds.includes(source.page_id as PageId) &&
@@ -238,7 +241,7 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
           title: source.title,
           url,
           type:
-            source.origin === 'pages'
+            source.origin === 'pages' || source.origin === 'calls'
               ? 'page'
               : source.origin === 'opportunities'
                 ? 'section'
@@ -354,7 +357,7 @@ export function stopSearchWorker(): void {
 export async function rebuildSearchIndex(): Promise<number> {
   await initializeSearchCatalog()
   await searchDatabase().query(`INSERT INTO search_index_jobs (origin, source_id)
-    SELECT 'pages', id::text FROM pages UNION ALL SELECT 'news', id::text FROM news UNION ALL SELECT 'media', id::text FROM media UNION ALL SELECT 'opportunities', id::text FROM opportunities
+    SELECT 'pages', id::text FROM pages UNION ALL SELECT 'news', id::text FROM news UNION ALL SELECT 'media', id::text FROM media UNION ALL SELECT 'opportunities', id::text FROM opportunities UNION ALL SELECT 'calls', id::text FROM calls
     ON CONFLICT (origin, source_id) DO UPDATE SET next_try=now(), attempts=0`)
   // Removed/private/stale rows cannot survive even an interrupted rebuild.
   await searchDatabase()

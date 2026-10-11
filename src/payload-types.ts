@@ -72,6 +72,7 @@ export interface Config {
     news: News;
     media: Media;
     opportunities: Opportunity;
+    calls: Call;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -84,6 +85,7 @@ export interface Config {
     news: NewsSelect<false> | NewsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     opportunities: OpportunitiesSelect<false> | OpportunitiesSelect<true>;
+    calls: CallsSelect<false> | CallsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -339,6 +341,76 @@ export interface Opportunity {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "calls".
+ */
+export interface Call {
+  id: number;
+  reference: string;
+  title?: string | null;
+  acronym?: string | null;
+  description?: string | null;
+  launchYear: number;
+  /**
+   * Date et heure avec fuseau ; le site affiche Africa/Casablanca.
+   */
+  openingAt?: string | null;
+  /**
+   * Date et heure avec fuseau ; le site affiche Africa/Casablanca.
+   */
+  deadlineAt?: string | null;
+  /**
+   * Date et heure avec fuseau ; le site affiche Africa/Casablanca.
+   */
+  evaluationStartsAt?: string | null;
+  /**
+   * Date et heure avec fuseau ; le site affiche Africa/Casablanca.
+   */
+  evaluationEndsAt?: string | null;
+  /**
+   * Date et heure avec fuseau ; le site affiche Africa/Casablanca.
+   */
+  resultsAt?: string | null;
+  calendarNote?: string | null;
+  budgetAmount?: number | null;
+  budgetCurrency: 'MAD' | 'EUR' | 'USD';
+  budgetNote?: string | null;
+  /**
+   * Un élément par ligne.
+   */
+  recipients?: string | null;
+  /**
+   * Un élément par ligne.
+   */
+  themes?: string | null;
+  /**
+   * Un élément par ligne.
+   */
+  fundingPartners?: string | null;
+  /**
+   * Publier le PDF et approuver ses métadonnées dans la langue sélectionnée avant de publier l’appel.
+   */
+  conditionsDocument?: (number | null) | Media;
+  submissionUrl?: string | null;
+  /**
+   * Désactive la soumission. Ouvert/à venir/clôturé sont calculés depuis les dates.
+   */
+  cancelled?: boolean | null;
+  /**
+   * Approval applies only to the selected language. A publisher then publishes the revision.
+   */
+  publicationStatus: 'draft' | 'review' | 'published';
+  visibility: 'private' | 'public';
+  editorialOwner?: (number | null) | User;
+  /**
+   * Private editorial notes; excluded from public API responses.
+   */
+  internalNotes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -380,6 +452,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'opportunities';
         value: number | Opportunity;
+      } | null)
+    | ({
+        relationTo: 'calls';
+        value: number | Call;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -544,6 +620,39 @@ export interface OpportunitiesSelect<T extends boolean = true> {
   summary?: T;
   missions?: T;
   profile?: T;
+  publicationStatus?: T;
+  visibility?: T;
+  editorialOwner?: T;
+  internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "calls_select".
+ */
+export interface CallsSelect<T extends boolean = true> {
+  reference?: T;
+  title?: T;
+  acronym?: T;
+  description?: T;
+  launchYear?: T;
+  openingAt?: T;
+  deadlineAt?: T;
+  evaluationStartsAt?: T;
+  evaluationEndsAt?: T;
+  resultsAt?: T;
+  calendarNote?: T;
+  budgetAmount?: T;
+  budgetCurrency?: T;
+  budgetNote?: T;
+  recipients?: T;
+  themes?: T;
+  fundingPartners?: T;
+  conditionsDocument?: T;
+  submissionUrl?: T;
+  cancelled?: T;
   publicationStatus?: T;
   visibility?: T;
   editorialOwner?: T;

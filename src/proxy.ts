@@ -4,10 +4,12 @@ import { routing } from '@/i18n/routing'
 import { defaultLocale, isLocale } from '@/i18n/locales'
 import { pageIds, pages, isNewsListingPath, pageHref } from '@/lib/site'
 import { newsSlugFromPath } from '@/lib/content/routes'
+import { callReferenceFromPath } from '@/lib/calls'
+import { searchDatabase } from '@/lib/search/database'
 
 const handleLocaleRouting = createMiddleware(routing)
 
-export default function proxy(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   let pathname: string
   try {
     pathname = decodeURI(request.nextUrl.pathname).replace(/\/$/, '') || '/'
@@ -28,7 +30,23 @@ export default function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL(pageHref('events', locale), request.url), 308)
   }
 
-  if (isKnownPage || isNewsListingPath(pagePath, locale) || newsSlugFromPath(pagePath, locale))
+  const callReference = callReferenceFromPath(pagePath, locale)
+  // Decide before streaming so a private/missing translation is a real HTTP 404.
+  // This is the live guarded source view, not a potentially stale search index.
+  const publicCall = callReference
+    ? (
+        await searchDatabase().query(
+          "SELECT 1 FROM search_public_sources WHERE origin='calls' AND slug=$1 AND locale=$2 LIMIT 1",
+          [callReference, locale],
+        )
+      ).rowCount === 1
+    : false
+  if (
+    isKnownPage ||
+    isNewsListingPath(pagePath, locale) ||
+    newsSlugFromPath(pagePath, locale) ||
+    publicCall
+  )
     return handleLocaleRouting(request)
 
   // Set the HTTP status before rendering the localized unknown-page response.

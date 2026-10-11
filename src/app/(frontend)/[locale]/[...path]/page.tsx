@@ -1,5 +1,9 @@
 import { NetworkPage } from '@/components/network/NetworkPage'
 import { PlatformsPage } from '@/components/platforms/PlatformsPage'
+import { ProgrammesPage } from '@/components/programmes/ProgrammesPage'
+import { CallPage } from '@/components/programmes/CallPage'
+import { callHref, callReferenceFromPath } from '@/lib/calls'
+import { findPublishedCall } from '@/lib/content/call-queries'
 import { GovernancePage } from '@/components/governance/GovernancePage'
 import { InstitutePage } from '@/components/institute/InstitutePage'
 import { PublicationsPage } from '@/components/publications/PublicationsPage'
@@ -37,6 +41,17 @@ export async function generateMetadata({ params }: ContentPageProps): Promise<Me
   const { locale, path } = await params
   const pageId = pageIdFromPathname(`/${path.join('/')}`)
   if (!isLocale(locale)) notFound()
+  const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
+  if (callReference) {
+    const call = await findPublishedCall(callReference, locale)
+    if (!call) return { robots: { index: false, follow: false } }
+    return {
+      title: call.title,
+      description: call.description.slice(0, 250),
+      alternates: { canonical: new URL(callHref(callReference, locale), getSiteUrl()).toString() },
+      robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
+    }
+  }
   if (isNewsListingPath(`/${path.join('/')}`, locale)) {
     const t = await getTranslations({ locale, namespace: 'NewsEvents' })
     return {
@@ -73,6 +88,12 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   const { locale, path } = await params
   const pageId = pageIdFromPathname(`/${path.join('/')}`)
   if (!isLocale(locale)) notFound()
+  const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
+  if (callReference) {
+    const call = await findPublishedCall(callReference, locale)
+    if (!call) notFound()
+    return <CallPage call={call} locale={locale} />
+  }
   if (isNewsListingPath(`/${path.join('/')}`, locale)) {
     const parameters = await searchParams
     const currentPage =
@@ -130,6 +151,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   if (pageId === 'governance') return <GovernancePage locale={locale} />
   if (pageId === 'network') return <NetworkPage locale={locale} />
   if (pageId === 'platforms') return <PlatformsPage locale={locale} />
+  if (pageId === 'programmes') return <ProgrammesPage locale={locale} />
   if (pageId === 'institute') return <InstitutePage locale={locale} />
   if (pageId === 'priorities') return <RoadmapPage locale={locale} />
   if (pageId === 'media') return <MediaLibraryPage locale={locale} />

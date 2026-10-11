@@ -18,6 +18,8 @@ export type ProjectRecord = {
   domain: (typeof projectDomains)[number]
   status: (typeof projectStatuses)[number]
   programme: string
+  /** Calls.reference of the selection call; absent until the attribution is verified. */
+  selectionCallReference?: string | null
   year: number
   durationMonths: number
   budgetMAD: number

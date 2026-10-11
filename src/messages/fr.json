@@ -424,28 +424,28 @@
     },
     "programmes": {
       "programmes-collaborations": {
-        "title": "Programmes et collaborations",
-        "description": "À prévoir : les besoins et objectifs scientifiques, les programmes, le soutien aux équipes, les partenaires, la période et le statut ; le financement est un instrument de Recherche & Innovation."
+        "title": "Des moyens pour transformer la recherche en solutions utiles.",
+        "description": "Depuis sa création, IRESEN exerce une mission d’agence de moyens : mobiliser des financements et accompagner des projets de recherche appliquée portés par les universités, les centres de recherche et les entreprises. Cette mission s’inscrit aujourd’hui dans les programmes de recherche, développement et innovation — R&D&I. En lien avec les priorités énergétiques du Maroc, ils donnent un cadre commun aux partenaires pour développer, éprouver et valoriser des solutions innovantes. Le principe est simple : réunir les compétences scientifiques et les besoins du monde économique au sein de projets collaboratifs. Les appels à projets précisent les défis à relever, les conditions de participation et les modalités de soutien. Les projets sélectionnés bénéficient d’un financement et d’un accompagnement adaptés au dispositif concerné."
       },
       "calls-for-projects": {
-        "title": "Appels à projets",
-        "description": "À prévoir : les appels ouverts et archivés avec leur public, leurs échéances et leurs documents."
+        "title": "Des appels pour développer, accélérer et coopérer.",
+        "description": "Les appels à projets peuvent soutenir différentes étapes de l’innovation et mobiliser des partenariats nationaux ou internationaux."
       },
       "participate": {
-        "title": "Participer à un appel",
-        "description": "À prévoir : les conditions de participation et les liens vers les règlements et canaux officiels."
+        "title": "Appels à projets",
+        "description": "Consultez les appels à projets publiés, leurs conditions, calendriers, destinataires et modalités de soumission."
       },
       "project-lifecycle": {
-        "title": "Du dépôt aux suites du projet",
-        "description": "À prévoir : les étapes de dépôt, d’évaluation, de contractualisation, de réalisation et de valorisation."
+        "title": "Un accompagnement à chaque étape du projet.",
+        "description": "Chaque appel définit ses conditions de participation, ses critères de sélection et son calendrier. Le parcours ci-dessous présente les grandes étapes de l’accompagnement."
       },
       "research-results": {
-        "title": "Résultats de la recherche soutenue",
-        "description": "À prévoir : les bilans documentés par programme, période et périmètre, reliés aux projets."
+        "title": "Une recherche qui crée de la valeur pour le Maroc.",
+        "description": "Les programmes R&D&I visent à produire des avancées scientifiques et technologiques, tout en préparant leurs applications industrielles et leurs retombées économiques, environnementales et sociales."
       },
       "practical-questions": {
-        "title": "Questions pratiques",
-        "description": "À prévoir : les réponses procédurales, les documents de référence et les contacts fonctionnels."
+        "title": "Construisons les prochaines solutions énergétiques.",
+        "description": "Vous représentez une équipe de recherche, une entreprise ou un organisme souhaitant contribuer à un projet collaboratif ? Échangeons sur vos besoins, vos compétences et les possibilités de coopération."
       }
     },
     "projects": {
@@ -1225,7 +1225,7 @@
       "institute": "Relier la recherche aux besoins de la transition énergétique.",
       "governance": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
       "priorities": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
-      "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
+      "programmes": "IRESEN soutient la recherche appliquée et l’innovation pour répondre aux besoins de la transition énergétique. Ses programmes mobilisent chercheurs et entreprises autour de projets collaboratifs, du développement technologique à la démonstration et à la valorisation des résultats.",
       "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
       "platforms": "Du laboratoire aux démonstrateurs en conditions réelles, IRESEN développe avec ses partenaires un réseau de plateformes pour expérimenter, qualifier et faire progresser les technologies de la transition énergétique.",
       "network": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
@@ -3112,5 +3112,170 @@
       "title": "Infrastructures & plateformes de recherche | IRESEN",
       "description": "Découvrez le réseau de plateformes d’IRESEN : technologies solaires, bâtiments durables, réseaux intelligents et hydrogène vert, au Maroc et en Afrique."
     }
+  },
+  "Programmes": {
+    "eyebrow": "Programmes R&D&I",
+    "title": "Financer la recherche. Faire émerger les solutions de demain.",
+    "description": "IRESEN soutient la recherche appliquée et l’innovation pour répondre aux besoins de la transition énergétique. Ses programmes mobilisent chercheurs et entreprises autour de projets collaboratifs, du développement technologique à la démonstration et à la valorisation des résultats.",
+    "discover": "Découvrir les appels en cours",
+    "understand": "Comprendre notre démarche",
+    "priorities": "Explorer nos priorités et feuilles de route",
+    "projects": "Découvrir les projets collaboratifs",
+    "contact": "Contacter notre équipe",
+    "cooperate": "Travailler avec nous",
+    "archiveLabel": "Appel historique",
+    "details": "Découvrir le dispositif",
+    "archivesAction": "Consulter les appels précédents",
+    "programmeContact": "Contacter l’équipe Programmes R&D&I",
+    "historicalNote": "Ces dispositifs sont présentés à titre historique. Leurs modalités et leurs éditions sont distinctes des appels actuellement ouverts.",
+    "reference": "Bilan de l’agence de moyens — 2025.",
+    "figureLabel": "projets R&D&I sélectionnés à l’issue d’appels à projets",
+    "sourceLink": "Consulter la référence institutionnelle",
+    "processNote": "Les modalités précises sont définies dans le cahier des charges de chaque appel.",
+    "intro": {
+      "eyebrow": "Notre démarche",
+      "title": "Des moyens pour transformer la recherche en solutions utiles.",
+      "paragraphs": [
+        "Depuis sa création, IRESEN exerce une mission d’agence de moyens : mobiliser des financements et accompagner des projets de recherche appliquée portés par les universités, les centres de recherche et les entreprises.",
+        "Cette mission s’inscrit aujourd’hui dans les programmes de recherche, développement et innovation — R&D&I. En lien avec les priorités énergétiques du Maroc, ils donnent un cadre commun aux partenaires pour développer, éprouver et valoriser des solutions innovantes.",
+        "Le principe est simple : réunir les compétences scientifiques et les besoins du monde économique au sein de projets collaboratifs. Les appels à projets précisent les défis à relever, les conditions de participation et les modalités de soutien. Les projets sélectionnés bénéficient d’un financement et d’un accompagnement adaptés au dispositif concerné."
+      ],
+      "items": [
+        {
+          "title": "Développer et démontrer",
+          "description": "Soutenir la recherche appliquée, la réalisation de prototypes et les projets pilotes pour vérifier les performances des technologies et réduire les incertitudes avant leur déploiement."
+        },
+        {
+          "title": "Préparer la valorisation",
+          "description": "Accompagner la maturation des résultats, leur protection et leur transfert vers les entreprises, afin de favoriser l’émergence de produits, de procédés et de services utiles au marché."
+        },
+        {
+          "title": "Renforcer les compétences",
+          "description": "Associer chercheurs, doctorants et jeunes talents aux projets pour développer les savoir-faire nécessaires à la transition énergétique et renforcer les capacités de recherche et d’innovation."
+        }
+      ]
+    },
+    "impact": {
+      "eyebrow": "La finalité",
+      "title": "Une recherche qui crée de la valeur pour le Maroc.",
+      "description": "Les programmes R&D&I visent à produire des avancées scientifiques et technologiques, tout en préparant leurs applications industrielles et leurs retombées économiques, environnementales et sociales.",
+      "items": [
+        {
+          "title": "Des technologies éprouvées",
+          "description": "Des prototypes et des démonstrateurs pour tester les solutions, mesurer leurs performances et préparer leur utilisation dans les conditions locales."
+        },
+        {
+          "title": "Une industrie plus compétitive",
+          "description": "Des innovations pour améliorer l’efficacité énergétique, accompagner la décarbonation et renforcer les compétences et les chaînes de valeur nationales."
+        },
+        {
+          "title": "Des capacités durables",
+          "description": "Des équipes formées, des partenariats consolidés et des connaissances qui nourrissent de nouveaux projets, le transfert technologique et la création d’activités."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Du dépôt à la valorisation",
+      "title": "Un accompagnement à chaque étape du projet.",
+      "description": "Chaque appel définit ses conditions de participation, ses critères de sélection et son calendrier. Le parcours ci-dessous présente les grandes étapes de l’accompagnement.",
+      "items": [
+        {
+          "title": "01 — Appel à projets et candidature",
+          "description": "Les partenaires prennent connaissance du cahier des charges, constituent leur consortium et déposent une proposition présentant les objectifs, les travaux prévus, les moyens nécessaires et les résultats attendus."
+        },
+        {
+          "title": "02 — Évaluation et sélection",
+          "description": "Les candidatures sont examinées au regard de leur éligibilité, de leur pertinence scientifique et technologique, de la qualité du partenariat et de leur potentiel d’impact."
+        },
+        {
+          "title": "03 — Conventionnement",
+          "description": "Pour les projets retenus, une convention précise les engagements des partenaires, le financement, le calendrier, les livrables et les modalités de suivi."
+        },
+        {
+          "title": "04 — Réalisation et suivi",
+          "description": "Les équipes conduisent les travaux de recherche et de développement. Le suivi porte sur l’avancement scientifique et technique, l’utilisation des moyens et l’atteinte des jalons convenus."
+        },
+        {
+          "title": "05 — Démonstration et protection",
+          "description": "Les résultats sont testés et documentés. Selon leur nature, les partenaires préparent la protection des connaissances et évaluent les possibilités d’application."
+        },
+        {
+          "title": "06 — Valorisation et transfert",
+          "description": "Les résultats peuvent ouvrir la voie à un transfert technologique, une licence, une collaboration industrielle ou la création d’une activité. Les publications et la formation contribuent également à leur diffusion."
+        }
+      ]
+    },
+    "history": {
+      "eyebrow": "Nos dispositifs",
+      "title": "Des appels pour développer, accélérer et coopérer.",
+      "description": "Les appels à projets peuvent soutenir différentes étapes de l’innovation et mobiliser des partenariats nationaux ou internationaux.",
+      "items": [
+        {
+          "title": "GREEN INNO-PROJECT — Édition 2018",
+          "category": "Recherche appliquée",
+          "description": "Un dispositif ayant soutenu des projets de développement technologique, notamment dans la mobilité électrique, avec des solutions orientées vers les besoins du marché."
+        },
+        {
+          "title": "GREEN INNOBOOST 2.0",
+          "category": "Maturation et mise sur le marché",
+          "description": "Un programme d’accélération des innovations vertes, associant accompagnement technologique, prototypage et préparation à l’industrialisation."
+        },
+        {
+          "title": "INNO-ESPAMAROC ENERGY",
+          "category": "Coopération Maroc–Espagne",
+          "description": "Un dispositif conjoint avec le CDTI pour développer des produits, procédés et services innovants dans les technologies vertes, à travers des partenariats entre acteurs marocains et espagnols."
+        }
+      ]
+    },
+    "current": {
+      "eyebrow": "Participer",
+      "title": "Aucun appel à projets en cours.",
+      "description": "Il n’y a actuellement aucun appel à projets ouvert à la candidature. Retrouvez les appels précédents pour découvrir les thématiques soutenues et les modalités de participation."
+    },
+    "final": {
+      "title": "Construisons les prochaines solutions énergétiques.",
+      "description": "Vous représentez une équipe de recherche, une entreprise ou un organisme souhaitant contribuer à un projet collaboratif ? Échangeons sur vos besoins, vos compétences et les possibilités de coopération."
+    },
+    "researchAlt": "Illustration générée de trois ingénieurs travaillant ensemble sur un prototype électronique à un établi en bois. Scène fictive de recherche, développement et innovation, sans représenter une équipe, un produit ou un site réel d’IRESEN.",
+    "illustrationNote": "Illustration de la recherche collaborative.",
+    "productAlt": "Photographie fournie du démonstrateur AquaSolar, unité mobile et modulaire de dessalement."
+  },
+  "Calls": {
+    "back": "Tous les appels à projets",
+    "launchYear": "Année de lancement",
+    "budget": "Enveloppe budgétaire",
+    "deadline": "Date limite de soumission",
+    "download": "Télécharger les conditions de l’appel",
+    "submit": "Accéder au formulaire de soumission",
+    "termsUnavailable": "Les conditions de cet appel sont actuellement indisponibles.",
+    "description": "Présentation de l’appel",
+    "calendar": "Calendrier de l’appel",
+    "timezone": "Dates et heures : fuseau Africa/Casablanca.",
+    "until": "Jusqu’au",
+    "eligibility": "Destinataires et thématiques",
+    "recipients": "Qui peut candidater ?",
+    "themes": "Thématiques de l’appel",
+    "fundingPartners": "Partenaires de financement",
+    "view": "Consulter l’appel",
+    "active": "Appels à projets",
+    "archives": "Appels clôturés et archives",
+    "states": {
+      "upcoming": "À venir",
+      "open": "Ouvert",
+      "closed": "Clôturé",
+      "cancelled": "Annulé"
+    },
+    "submission": {
+      "upcoming": "La soumission sera accessible à l’ouverture de l’appel.",
+      "closed": "La période de soumission est terminée.",
+      "cancelled": "Cet appel est annulé. La soumission est désactivée."
+    },
+    "stages": {
+      "opening": "Ouverture",
+      "submission": "Soumission",
+      "evaluation": "Évaluation",
+      "results": "Annonce des projets retenus"
+    },
+    "discoveryDescription": "Consultez les appels à projets publiés, leurs conditions, calendriers, destinataires et modalités de soumission."
   }
 }

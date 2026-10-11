@@ -360,3 +360,7 @@ remain working adaptations. See [scope and sources](docs/governance.md).
 Network map follow-up: [interactive scope](docs/laboratories-experts-network.md#interactive-map--owner-follow-up-2026-10-11)
 uses the newly supplied original Morocco SVG, approximate city groups and a
 synchronized list with unchanged laboratory anchors and localized search results.
+
+## Programmes R&D&I — 2026-10-11
+
+The canonical programmes page now follows the supplied manuscript with the approach, expected benefits, six usual project stages, three historical schemes and the no-current-call working state. Human research/product photography adapts Figma; AquaSolar is owner-selected. FR/EN/AR, stable anchors and public search references are included. The owner’s follow-up adds the Calls CMS collection and full detail pages, with approved PDF terms, actual form URLs, calendars, budgets and archives. No actual call records are seeded or deployed. See [page scope](docs/programmes-rdi.md) and [CMS workflow](docs/calls-for-projects.md).

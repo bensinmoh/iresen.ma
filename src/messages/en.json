@@ -519,7 +519,7 @@
       "institute": "Connecting research with the needs of the energy transition.",
       "governance": "Connecting national priorities, scientific rigour and delivery.",
       "priorities": "Develop, test and transfer innovative energy solutions that are robust and resource-efficient. Our roadmap connects Morocco’s needs with research questions, with the ambition to produce solutions adaptable to other contexts.",
-      "programmes": "Programme, fund and support collaborative research by linking needs to scientific objectives and usable results.",
+      "programmes": "IRESEN supports applied research and innovation to address the needs of the energy transition. Its programmes bring researchers and businesses together around collaborative projects, from technology development to demonstration and the use of results.",
       "projects": "Explore research, development and innovation projects by domain, programme and stage.",
       "platforms": "From laboratories to demonstrators in real conditions, IRESEN develops a network of platforms with its partners to experiment, qualify and advance energy transition technologies.",
       "network": "Connect scientific knowledge, experimental capabilities and teams to inform technology choices and advance research.",
@@ -831,28 +831,28 @@
     },
     "programmes": {
       "programmes-collaborations": {
-        "title": "Programmes and collaborations",
-        "description": "To prepare: needs and scientific objectives, programmes, support for teams, partners, period and status; funding is an instrument within Research & Innovation."
+        "title": "Resources to turn research into useful solutions.",
+        "description": "Since its creation, IRESEN has acted as an agency of means: mobilising funding and supporting applied research projects led by universities, research centres and businesses. This mission is now organised through research, development and innovation programmes — R&D&I. Aligned with Morocco’s energy priorities, they give partners a shared framework to develop, test and put innovative solutions to use. The principle is simple: bring scientific expertise and economic needs together in collaborative projects. Calls define the challenges, participation requirements and forms of support. Selected projects receive funding and guidance tailored to the scheme."
       },
       "calls-for-projects": {
-        "title": "Calls for projects",
-        "description": "Content to add: open and archived calls with their intended participants, deadlines and documents."
+        "title": "Calls to develop, accelerate and cooperate.",
+        "description": "Calls can support different stages of innovation and bring together national or international partners."
       },
       "participate": {
-        "title": "Participate in a call",
-        "description": "Content to add: participation conditions and links to regulations and official channels."
+        "title": "Calls for projects",
+        "description": "Explore published calls for projects, their terms, schedules, applicants and submission procedures."
       },
       "project-lifecycle": {
-        "title": "From application to project follow-up",
-        "description": "Content to add: the stages of application, evaluation, contracting, delivery and valorisation."
+        "title": "Support at every stage of the project.",
+        "description": "Each call defines its participation requirements, selection criteria and schedule. This pathway presents the main stages of support."
       },
       "research-results": {
-        "title": "Results of supported research",
-        "description": "Content to add: documented reviews by programme, period and scope, linked to projects."
+        "title": "Research that creates value for Morocco.",
+        "description": "R&D&I programmes aim to deliver scientific and technological advances while preparing industrial applications and economic, environmental and social benefits."
       },
       "practical-questions": {
-        "title": "Practical questions",
-        "description": "Content to add: procedural answers, reference documents and relevant contacts."
+        "title": "Let’s build the next energy solutions.",
+        "description": "Are you a research team, business or organisation wishing to contribute to a collaborative project? Let’s discuss your needs, skills and opportunities for cooperation."
       }
     },
     "projects": {
@@ -3109,5 +3109,170 @@
         "action": "Learn more about GreenH2A"
       }
     }
+  },
+  "Programmes": {
+    "eyebrow": "R&D&I programmes",
+    "title": "Fund research. Bring tomorrow’s solutions to life.",
+    "description": "IRESEN supports applied research and innovation to address the needs of the energy transition. Its programmes bring researchers and businesses together around collaborative projects, from technology development to demonstration and the use of results.",
+    "discover": "Discover current calls",
+    "understand": "Understand our approach",
+    "priorities": "Explore our priorities and roadmaps",
+    "projects": "Discover collaborative projects",
+    "contact": "Contact our team",
+    "cooperate": "Work with us",
+    "archiveLabel": "Historical call",
+    "details": "Discover the scheme",
+    "archivesAction": "Browse previous calls",
+    "programmeContact": "Contact the R&D&I Programmes team",
+    "historicalNote": "These schemes are presented as historical examples. Their terms and editions are separate from currently open calls.",
+    "reference": "Agency of means report — 2025.",
+    "figureLabel": "R&D&I projects selected through calls for projects",
+    "sourceLink": "Read the institutional reference",
+    "processNote": "The precise terms are set out in the specifications for each call.",
+    "intro": {
+      "eyebrow": "Our approach",
+      "title": "Resources to turn research into useful solutions.",
+      "paragraphs": [
+        "Since its creation, IRESEN has acted as an agency of means: mobilising funding and supporting applied research projects led by universities, research centres and businesses.",
+        "This mission is now organised through research, development and innovation programmes — R&D&I. Aligned with Morocco’s energy priorities, they give partners a shared framework to develop, test and put innovative solutions to use.",
+        "The principle is simple: bring scientific expertise and economic needs together in collaborative projects. Calls define the challenges, participation requirements and forms of support. Selected projects receive funding and guidance tailored to the scheme."
+      ],
+      "items": [
+        {
+          "title": "Develop and demonstrate",
+          "description": "Support applied research, prototypes and pilot projects to verify technology performance and reduce uncertainty before deployment."
+        },
+        {
+          "title": "Prepare the use of results",
+          "description": "Support the maturation, protection and transfer of results to businesses, helping useful products, processes and services reach the market."
+        },
+        {
+          "title": "Strengthen skills",
+          "description": "Involve researchers, doctoral students and young talent in projects to develop the skills required for the energy transition and strengthen research and innovation capabilities."
+        }
+      ]
+    },
+    "impact": {
+      "eyebrow": "Our purpose",
+      "title": "Research that creates value for Morocco.",
+      "description": "R&D&I programmes aim to deliver scientific and technological advances while preparing industrial applications and economic, environmental and social benefits.",
+      "items": [
+        {
+          "title": "Tested technologies",
+          "description": "Prototypes and demonstrators to test solutions, measure performance and prepare their use in local conditions."
+        },
+        {
+          "title": "A more competitive industry",
+          "description": "Innovations to improve energy efficiency, support decarbonisation and strengthen national skills and value chains."
+        },
+        {
+          "title": "Lasting capabilities",
+          "description": "Trained teams, stronger partnerships and knowledge that supports new projects, technology transfer and new activities."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "From application to transfer",
+      "title": "Support at every stage of the project.",
+      "description": "Each call defines its participation requirements, selection criteria and schedule. This pathway presents the main stages of support.",
+      "items": [
+        {
+          "title": "01 — Call and application",
+          "description": "Partners read the specifications, form a consortium and submit a proposal outlining objectives, planned work, resources and expected results."
+        },
+        {
+          "title": "02 — Evaluation and selection",
+          "description": "Applications are assessed for eligibility, scientific and technological relevance, partnership quality and potential impact."
+        },
+        {
+          "title": "03 — Agreement",
+          "description": "For selected projects, an agreement sets out partner commitments, funding, the schedule, deliverables and monitoring arrangements."
+        },
+        {
+          "title": "04 — Implementation and monitoring",
+          "description": "Teams carry out research and development. Monitoring covers scientific and technical progress, resource use and the achievement of agreed milestones."
+        },
+        {
+          "title": "05 — Demonstration and protection",
+          "description": "Results are tested and documented. Depending on their nature, partners prepare knowledge protection and assess possible applications."
+        },
+        {
+          "title": "06 — Use and transfer",
+          "description": "Results may lead to technology transfer, a licence, industrial collaboration or a new activity. Publications and training also help disseminate them."
+        }
+      ]
+    },
+    "history": {
+      "eyebrow": "Our schemes",
+      "title": "Calls to develop, accelerate and cooperate.",
+      "description": "Calls can support different stages of innovation and bring together national or international partners.",
+      "items": [
+        {
+          "title": "GREEN INNO-PROJECT — 2018 edition",
+          "category": "Applied research",
+          "description": "A scheme that supported technology development projects, including electric mobility, with solutions geared towards market needs."
+        },
+        {
+          "title": "GREEN INNOBOOST 2.0",
+          "category": "Maturation and market preparation",
+          "description": "An acceleration programme for green innovations, combining technological support, prototyping and preparation for industrialisation."
+        },
+        {
+          "title": "INNO-ESPAMAROC ENERGY",
+          "category": "Morocco–Spain cooperation",
+          "description": "A joint scheme with CDTI to develop innovative products, processes and services in green technologies through partnerships between Moroccan and Spanish organisations."
+        }
+      ]
+    },
+    "current": {
+      "eyebrow": "Participate",
+      "title": "No calls for projects currently open.",
+      "description": "There are currently no calls open for applications. Browse previous calls to discover the themes supported and participation arrangements."
+    },
+    "final": {
+      "title": "Let’s build the next energy solutions.",
+      "description": "Are you a research team, business or organisation wishing to contribute to a collaborative project? Let’s discuss your needs, skills and opportunities for cooperation."
+    },
+    "researchAlt": "Generated illustration of three engineers working together on an electronics prototype at a wooden workbench. Fictional research, development and innovation scene, not an actual IRESEN team, product or site.",
+    "illustrationNote": "Illustration of collaborative research.",
+    "productAlt": "Supplied photograph of the AquaSolar demonstrator, a mobile modular desalination unit."
+  },
+  "Calls": {
+    "back": "All calls for projects",
+    "launchYear": "Launch year",
+    "budget": "Budget allocation",
+    "deadline": "Submission deadline",
+    "download": "Download the call terms",
+    "submit": "Open the submission form",
+    "termsUnavailable": "The terms for this call are currently unavailable.",
+    "description": "About the call",
+    "calendar": "Call schedule",
+    "timezone": "Dates and times: Africa/Casablanca time zone.",
+    "until": "Until",
+    "eligibility": "Applicants and themes",
+    "recipients": "Who can apply?",
+    "themes": "Call themes",
+    "fundingPartners": "Funding partners",
+    "view": "View the call",
+    "active": "Calls for projects",
+    "archives": "Closed calls and archives",
+    "states": {
+      "upcoming": "Upcoming",
+      "open": "Open",
+      "closed": "Closed",
+      "cancelled": "Cancelled"
+    },
+    "submission": {
+      "upcoming": "Submission will be available when the call opens.",
+      "closed": "The submission period has ended.",
+      "cancelled": "This call has been cancelled. Submission is disabled."
+    },
+    "stages": {
+      "opening": "Opening",
+      "submission": "Submission",
+      "evaluation": "Evaluation",
+      "results": "Selected projects announced"
+    },
+    "discoveryDescription": "Explore published calls for projects, their terms, schedules, applicants and submission procedures."
   }
 }

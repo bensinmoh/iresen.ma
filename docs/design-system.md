@@ -1664,3 +1664,9 @@ No shared token or universal layout is introduced. See
 Network map (2026-10-11): retain original geographic SVG bytes, use a CSS mask
 for the pale map surface, existing blue/navy circular SVG controls and signature
 corners on detail surfaces. Geography is not directional UI and never mirrors.
+
+## Programmes R&D&I adaptation — 2026-10-11
+
+The shared PageHero now accepts an optional explicit eyebrow, rich title and secondary action while retaining defaults on other pages. The programmes route uses these for the manuscript and local anchors. White navigation, a light photographic hero, existing tokens and signature corners adapt the Figma reference; centered image coverage prevents an artificial top gap. The warm prototyping scene and AquaSolar provide distinct human/product contexts. See [scope](programmes-rdi.md).
+
+Programmes hero contrast uses a sustained 88% light scrim across the foreground copy, large blue title emphasis and navy small text/actions. CMS call details reuse shared pale/navy surfaces, signature action corners, SVG arrows and logical grids; this introduces no new shared color token.

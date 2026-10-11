@@ -107,3 +107,7 @@ Resources now includes Brevets / Patents / براءات الاختراع, a desk
 ## Research platforms page — 2026-10-11
 
 The canonical `platforms` route is developed with four chapter anchors registered as children of `platform-network`. All six legacy targets and localized routes remain; homepage cards use their equivalent chapter destinations. See [scope](research-platforms.md).
+
+## CMS call detail family — 2026-10-11
+
+The owner commissions one page per CMS call beneath the localized canonical Programmes route: `/{locale}/{programmes-path}/{reference}`. The stable reference is shared across translations; main page IDs remain the chosen 22. `callHref` / `callReferenceFromPath`, proxy, renderer, header/locale links, metadata, sitemap and guarded search projection handle this family together. Unpublished/private/unapproved translations have no public destination. See [workflow](calls-for-projects.md).
