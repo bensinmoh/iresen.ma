@@ -41,10 +41,11 @@ test('project form and pagination work without JavaScript', async ({ browser }) 
   await context.close()
 })
 
-test('project layout contains FR/EN/AR at representative widths and enlarged text', async ({
-  page,
-}) => {
-  for (const locale of ['fr', 'en', 'ar'] as const) {
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: project layout contains representative widths and enlarged text`, async ({
+    page,
+  }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' })
     for (const width of [320, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       await page.goto(pageHref('projects', locale))
@@ -62,8 +63,8 @@ test('project layout contains FR/EN/AR at representative widths and enlarged tex
           fullPage: true,
         })
     }
-  }
-  await page.setViewportSize({ width: 390, height: 900 })
-  await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
-})
+    await page.setViewportSize({ width: 390, height: 900 })
+    await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  })
+}

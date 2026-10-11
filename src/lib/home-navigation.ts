@@ -15,7 +15,7 @@ const copy: Record<Locale, { label: string; sections: readonly string[] }> = {
     sections: [
       'Notre mission',
       'Réalisations',
-      'Recherche',
+      'Thématiques',
       'Plateformes',
       'Collaborer',
       'Actualités',
@@ -23,11 +23,11 @@ const copy: Record<Locale, { label: string; sections: readonly string[] }> = {
   },
   en: {
     label: 'Homepage sections',
-    sections: ['Our mission', 'Results', 'Research', 'Platforms', 'Collaborate', 'News'],
+    sections: ['Our mission', 'Results', 'Themes', 'Platforms', 'Collaborate', 'News'],
   },
   ar: {
     label: 'أقسام الصفحة الرئيسية',
-    sections: ['مهمتنا', 'الإنجازات', 'البحث', 'المنصات', 'التعاون', 'المستجدات'],
+    sections: ['مهمتنا', 'الإنجازات', 'الموضوعات', 'المنصات', 'التعاون', 'المستجدات'],
   },
 }
 
