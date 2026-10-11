@@ -1,5 +1,11 @@
 # Change log
 
+## 2026-10-11 — Homepage themes and sentence case
+
+- Rename the homepage section label and navigation to “Thématiques”, with matching EN/AR wording and discovery actions.
+- Remove uppercase styling from the 28 research axes; preserve catalog wording and stable anchors.
+- Include the localized label/action in existing page and section search projections.
+
 ## 2026-10-10 — Consolidated publications cross-check
 
 - Adopted the owner's new 1,199-record selection: 22 additions and removal of

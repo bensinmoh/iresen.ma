@@ -708,6 +708,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'home')
         body.push(
           catalog.HomeResearch.title,
+          catalog.HomeResearch.eyebrow,
+          catalog.HomeResearch.action,
           ...researchThemes.flatMap((id) => {
             const theme = catalog.HomeResearch.themes[id]
             return [theme.title, theme.description, ...theme.axes, theme.searchText]
@@ -812,6 +814,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             )
           if (pageId === 'home' && entry.id === homeResearchSectionId)
             body.push(
+              catalog.HomeResearch.eyebrow,
+              catalog.HomeResearch.action,
               ...researchThemes.flatMap((id) => {
                 const theme = catalog.HomeResearch.themes[id]
                 return [theme.title, theme.description, ...theme.axes, theme.searchText]

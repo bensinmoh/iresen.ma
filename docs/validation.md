@@ -3200,3 +3200,20 @@ ignored `.local/projects-review/`; the final contrast/select-icon and full-width
 Arabic shade corrections were rechecked. Broader publication/media behavior is
 covered by current PR CI, not claimed as locally rerun here. No deployment.
 See [scope](projects.md) and [asset manifest](projects-assets.json).
+
+## Homepage themes and sentence case — 2026-10-11
+
+Renamed the localized homepage label/navigation and discovery action; removed
+uppercase transformation from all 28 axes. Stable section/theme anchors remain.
+The existing homepage and section search bodies include the new localized
+label/action; the local search rebuild synchronized the static catalog.
+
+Lint, typecheck, production compilation, formatting/whitespace, 131 unit tests
+and 28 integration tests passed. Integration used a migrated disposable database,
+removed afterward; the initial run against the populated local database correctly
+refused the administrator suite. Seven existing research browser cases and three
+temporary naming/case review cases passed in production Chromium: FR/EN/AR,
+320–1440px reflow, native disclosures, keyboard rails, 200% text, no-JavaScript,
+localized search destinations and scoped axe checks. Computed axis text-transform
+is `none`; desktop/mobile French and Arabic mobile captures were visually inspected.
+No new resource, route, shared token or deployment. Temporary review test removed.

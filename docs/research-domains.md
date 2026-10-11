@@ -40,7 +40,7 @@ still requires editorial review of all locales and the proposal's positioning.
 - At 64rem and above, seven native disclosure controls form lateral navigation,
   each with a thematic line icon. One panel stays selected with JavaScript.
 - Each panel has a descriptive paragraph and four transparent columns placed side by side:
-  a quiet axis number and a larger uppercase title, separated by thin dividers.
+  a quiet axis number and a larger sentence-case title, separated by thin dividers.
 - A panoramic thematic illustration sits below the content and changes with the
   open theme. Below 64rem it covers the section beneath a 90% navy veil on both
   tablet and mobile.
@@ -83,6 +83,16 @@ and the public search catalog. The final-content glossary/index sanity check
 remains pending until all website content is supplied.
 
 See [validation](validation.md#homepage-research-domains--2026-10-09).
+
+## Theme naming and sentence case — 2026-10-11
+
+The owner renamed the homepage section label to “Thématiques” and requested
+sentence case for the research axes. The shared axis style now preserves the
+catalog wording without uppercase transformation. French/English already use
+sentence case; Arabic retains its natural script. The localized section label
+and discovery action use themes consistently. The existing `research-priorities`
+and theme anchors remain stable; search projects the updated label/action and
+the same 28 axes from the localized catalogs.
 
 ## Raised panorama — 2026-10-10
 
