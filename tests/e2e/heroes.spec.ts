@@ -69,6 +69,7 @@ for (const locale of locales) {
         pageId !== 'search' &&
         pageId !== 'opportunities' &&
         pageId !== 'publications' &&
+        pageId !== 'projects' &&
         pageId !== 'news' &&
         pageId !== 'events',
     )) {

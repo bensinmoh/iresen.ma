@@ -271,3 +271,13 @@ anchors. See [shared behavior](docs/site-motion.md). Preserve visible server
 content, once-per-visit motion, reduced-motion/focus cancellation and stable
 section/sticky/rail geometry. Component-owned publication/patent/filter motion
 retains ownership; do not add duplicate reveals or animation dependencies.
+
+## R&D&I projects page — 2026-10-11
+
+The owner commissioned the Figma projects page and a fictional project database.
+See [scope](docs/projects.md). The 24 structured demonstration records are isolated
+from CMS, institutional figures and general project search. Keep the visible
+fictional notice, per-card labels, canonical routes and five legacy anchors.
+FR/EN/AR are working copy; real projects require verified evidence and their
+publication workflow. This request does not restore career fixtures or authorize
+deployment.

@@ -303,3 +303,12 @@ GET search, title-derived topic filters, source years, all authors and DOI links
 Reports share the media library renderer. See [scope](docs/publications-page.md).
 
 Shared public navigation/reveal behavior: [site motion](docs/site-motion.md).
+
+## R&D&I projects — 2026-10-11
+
+The owner commissioned the Figma projects page and an isolated structured database
+of 24 explicitly fictional projects. Native GET search/facets, six-item pagination,
+FR/EN/AR and responsive/RTL layouts are included. Fictional records remain outside
+CMS and institutional search; the page and its seven visuals have localized search
+references. No real portfolio claims or deployment are introduced. See
+[scope](docs/projects.md).

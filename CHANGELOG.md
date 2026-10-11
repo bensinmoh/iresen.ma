@@ -913,3 +913,13 @@ are displayed.
 - Added bounded shared motion tokens, keyboard cancellation, live reduced-motion
   handling and visible no-JavaScript/API fallbacks without new dependencies.
 - Added six browser behavior tests and documented shared motion conventions.
+
+## 2026-10-11 — R&D&I projects
+
+- Implement the commissioned Figma page with native GET search, four facets,
+  six-item pagination and FR/EN/AR responsive layouts.
+- Add 24 explicitly fictional structured records isolated from CMS and public
+  institutional project search.
+- Register the page/sections and seven supplied individual Figma visuals; preserve
+  original identity, canonical routes and legacy anchors.
+- No deployment or real portfolio publication. See [scope](docs/projects.md).

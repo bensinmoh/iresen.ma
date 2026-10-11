@@ -178,6 +178,13 @@ ul {
   border-color: var(--color-footer-divider);
 }
 
+body:has([data-projects-page]) .site-header-projects {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  background: rgb(255 255 255 / 88%);
+}
+
 body:is(
     :has(.page-hero),
     :has([data-careers-page]),

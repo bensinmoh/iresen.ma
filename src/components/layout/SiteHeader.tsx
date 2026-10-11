@@ -328,11 +328,14 @@ export function SiteHeader() {
   }
 
   const inverse =
-    currentPageId !== undefined && currentPageId !== 'search' && currentPageId !== 'contact'
+    currentPageId !== undefined &&
+    currentPageId !== 'search' &&
+    currentPageId !== 'contact' &&
+    currentPageId !== 'projects'
 
   return (
     <header
-      className={`site-header${inverse ? ' site-header-inverse site-header-overlay' : ''}`}
+      className={`site-header${inverse ? ' site-header-inverse site-header-overlay' : currentPageId === 'projects' ? ' site-header-projects' : ''}`}
       ref={headerRef}
       onKeyDown={closeOnEscape}
       onClick={(event) => {

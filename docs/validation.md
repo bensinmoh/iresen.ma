@@ -3175,3 +3175,28 @@ with the bounded vocabulary write; the existing local database is preserved.
   reveals. Shared text now keeps full contrast at every frame; only raster card
   thumbnails fade. Keyboard focus scrolls immediately to preserve orientation
   during responsive reflow. The original axe assertions remain enabled.
+
+## R&D&I projects — 2026-10-11
+
+Live Figma context/screenshots for frame `804:9285`, its header and cards were
+inspected alongside the supplied `projets.png`. Seven original individual fills
+were converted to WebP; source slots, local bytes and rendered image geometry
+were checked. Final FR desktop and Arabic mobile renderings were manually inspected.
+The shared shell/brand replaces historical Figma navigation and colors.
+
+Lint, typecheck, 131 unit tests, an isolated production build and focused
+Prettier/whitespace checks passed. The disposable local PostgreSQL database passed
+all 28 existing integration cases and was removed afterward. No existing CMS
+users or records were removed. The local search rebuild synchronized static
+page/media references and eight eligible existing CMS records. Fictional project
+records are excluded from institutional search by a regression test.
+
+22 production Chromium cases passed: the five new project cases and relevant
+shared navigation/hero cases. Coverage includes FR/EN/AR search/reset/empty states,
+domain changes, six-item pagination, no-JavaScript GET filters/pagination,
+320/390/768/1024/1440px containment, image loading, 200% mobile text and scoped
+axe scans in each language. Six full-page locale/viewport screenshots remain in
+ignored `.local/projects-review/`; the final contrast/select-icon and full-width
+Arabic shade corrections were rechecked. Broader publication/media behavior is
+covered by current PR CI, not claimed as locally rerun here. No deployment.
+See [scope](projects.md) and [asset manifest](projects-assets.json).
