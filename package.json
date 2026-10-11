@@ -28,7 +28,8 @@
     "cms:migrate": "node scripts/run.mjs payload migrate",
     "cms:bootstrap": "node scripts/run.mjs tsx scripts/bootstrap-admin.ts",
     "search:rebuild": "node scripts/run.mjs tsx scripts/search-index.ts rebuild",
-    "search:work": "node scripts/run.mjs tsx scripts/search-index.ts work"
+    "search:work": "node scripts/run.mjs tsx scripts/search-index.ts work",
+    "projects:notes": "node scripts/generate-project-notes.mjs"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.90.2",

@@ -24,7 +24,60 @@
     "year": 2022,
     "durationMonths": 24,
     "budgetMAD": 1000000,
-    "image": "thermal"
+    "image": "thermal",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Étudier une boucle de chaleur solaire avec stockage pour une alimentation régulière.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Study a solar heat loop with storage for a steady supply.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "دراسة حلقة للحرارة الشمسية مع التخزين لتوفير إمداد منتظم.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais solaires thermiques",
+        "en": "Solar thermal testing platform",
+        "ar": "منصة اختبارات الطاقة الشمسية الحرارية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser le captage solaire et le stockage de chaleur.",
+          "Comparer les performances selon les profils de charge et les conditions climatiques.",
+          "Évaluer la stabilité de la fourniture énergétique et les pistes d’optimisation."
+        ],
+        "en": [
+          "Characterise solar capture and heat storage.",
+          "Compare performance across load profiles and climatic conditions.",
+          "Assess the stability of energy supply and opportunities for optimisation."
+        ],
+        "ar": [
+          "توصيف التقاط الطاقة الشمسية وتخزين الحرارة.",
+          "مقارنة الأداء بحسب منحنيات الحمل والظروف المناخية.",
+          "تقييم استقرار إمدادات الطاقة وفرص تحسين الأداء."
+        ]
+      }
+    }
   },
   {
     "id": "demo-002",
@@ -51,7 +104,60 @@
     "year": 2023,
     "durationMonths": 36,
     "budgetMAD": 1500000,
-    "image": "grids"
+    "image": "grids",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Simuler la gestion de la production photovoltaïque et des usages électriques d’un bâtiment.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Simulate photovoltaic generation and electricity demand in a building.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "محاكاة إدارة الإنتاج الكهروضوئي والطلب على الكهرباء في مبنى.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation des réseaux",
+        "en": "Grid experimentation platform",
+        "ar": "منصة تجريب الشبكات"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Analyser les profils de production, de consommation et d’autoconsommation.",
+          "Tester des stratégies de pilotage adaptées aux contraintes du réseau.",
+          "Comparer les indicateurs de flexibilité et de qualité de l’énergie."
+        ],
+        "en": [
+          "Analyse generation, consumption and self-consumption profiles.",
+          "Test control strategies suited to grid constraints.",
+          "Compare flexibility and power-quality indicators."
+        ],
+        "ar": [
+          "تحليل منحنيات الإنتاج والاستهلاك والاستهلاك الذاتي.",
+          "اختبار استراتيجيات تحكم ملائمة لقيود الشبكة.",
+          "مقارنة مؤشرات المرونة وجودة الطاقة."
+        ]
+      }
+    }
   },
   {
     "id": "demo-003",
@@ -78,7 +184,60 @@
     "year": 2024,
     "durationMonths": 18,
     "budgetMAD": 2000000,
-    "image": "cooling"
+    "image": "cooling",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Explorer un système de refroidissement alimenté par un champ solaire thermique.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Explore a cooling system powered by a solar thermal field.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "استكشاف نظام تبريد يعمل بحقل شمسي حراري.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais énergétiques",
+        "en": "Energy testing platform",
+        "ar": "منصة الاختبارات الطاقية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Mesurer les besoins énergétiques et les conditions de fonctionnement.",
+          "Comparer des solutions de réduction de la demande et de confort thermique.",
+          "Évaluer les performances au moyen d’essais reproductibles."
+        ],
+        "en": [
+          "Measure energy demand and operating conditions.",
+          "Compare solutions for demand reduction and thermal comfort.",
+          "Assess performance through reproducible tests."
+        ],
+        "ar": [
+          "قياس الاحتياجات الطاقية وظروف التشغيل.",
+          "مقارنة حلول خفض الطلب وتحسين الراحة الحرارية.",
+          "تقييم الأداء عبر اختبارات قابلة للتكرار."
+        ]
+      }
+    }
   },
   {
     "id": "demo-004",
@@ -105,7 +264,60 @@
     "year": 2025,
     "durationMonths": 30,
     "budgetMAD": 2500000,
-    "image": "buildings"
+    "image": "buildings",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer isolation et climatisation solaire dans un habitat expérimental.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare insulation and solar cooling in an experimental dwelling.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة العزل والتبريد الشمسي في مسكن تجريبي.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais énergétiques",
+        "en": "Energy testing platform",
+        "ar": "منصة الاختبارات الطاقية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Mesurer les besoins énergétiques et les conditions de fonctionnement.",
+          "Comparer des solutions de réduction de la demande et de confort thermique.",
+          "Évaluer les performances au moyen d’essais reproductibles."
+        ],
+        "en": [
+          "Measure energy demand and operating conditions.",
+          "Compare solutions for demand reduction and thermal comfort.",
+          "Assess performance through reproducible tests."
+        ],
+        "ar": [
+          "قياس الاحتياجات الطاقية وظروف التشغيل.",
+          "مقارنة حلول خفض الطلب وتحسين الراحة الحرارية.",
+          "تقييم الأداء عبر اختبارات قابلة للتكرار."
+        ]
+      }
+    }
   },
   {
     "id": "demo-005",
@@ -132,7 +344,60 @@
     "year": 2026,
     "durationMonths": 24,
     "budgetMAD": 3000000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer des cellules photovoltaïques sous différentes conditions de laboratoire.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare photovoltaic cells under different laboratory conditions.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة الخلايا الكهروضوئية في ظروف مختبرية مختلفة.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais photovoltaïques",
+        "en": "Photovoltaic testing platform",
+        "ar": "منصة الاختبارات الكهروضوئية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les matériaux et les composants photovoltaïques.",
+          "Mesurer les performances électriques dans différentes conditions d’essai.",
+          "Identifier les facteurs de dégradation et les pistes d’amélioration."
+        ],
+        "en": [
+          "Characterise photovoltaic materials and components.",
+          "Measure electrical performance under different test conditions.",
+          "Identify degradation factors and opportunities for improvement."
+        ],
+        "ar": [
+          "توصيف المواد والمكونات الكهروضوئية.",
+          "قياس الأداء الكهربائي في ظروف اختبار مختلفة.",
+          "تحديد عوامل التدهور وفرص التحسين."
+        ]
+      }
+    }
   },
   {
     "id": "demo-006",
@@ -159,7 +424,60 @@
     "year": 2022,
     "durationMonths": 36,
     "budgetMAD": 3500000,
-    "image": "wind"
+    "image": "wind",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Étudier la conception et les essais d’une petite éolienne pour des usages décentralisés.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Study small turbine design and testing for decentralised uses.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "دراسة تصميم واختبار توربين صغير للاستخدامات اللامركزية.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais éoliens",
+        "en": "Wind testing platform",
+        "ar": "منصة اختبارات طاقة الرياح"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser la ressource et les conditions de vent.",
+          "Comparer les configurations de turbine et leurs performances.",
+          "Évaluer les contraintes de maintenance et les possibilités d’adaptation locale."
+        ],
+        "en": [
+          "Characterise wind resources and operating conditions.",
+          "Compare turbine configurations and their performance.",
+          "Assess maintenance constraints and opportunities for local adaptation."
+        ],
+        "ar": [
+          "توصيف موارد الرياح وظروف التشغيل.",
+          "مقارنة تكوينات التوربينات وأدائها.",
+          "تقييم متطلبات الصيانة وإمكانات التكييف المحلي."
+        ]
+      }
+    }
   },
   {
     "id": "demo-007",
@@ -186,7 +504,60 @@
     "year": 2023,
     "durationMonths": 18,
     "budgetMAD": 4000000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Modéliser un électrolyseur alimenté par une production solaire variable.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Model an electrolyser powered by variable solar generation.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "نمذجة محلل كهربائي يعمل بإنتاج شمسي متغير.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation hydrogène",
+        "en": "Hydrogen experimentation platform",
+        "ar": "منصة تجريب الهيدروجين"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les paramètres de production d’hydrogène renouvelable.",
+          "Comparer les conditions d’intégration de l’électricité, de l’eau et du stockage.",
+          "Évaluer les performances et les contraintes d’utilisation du système."
+        ],
+        "en": [
+          "Characterise renewable hydrogen production parameters.",
+          "Compare electricity, water and storage integration conditions.",
+          "Assess system performance and operating constraints."
+        ],
+        "ar": [
+          "توصيف معاملات إنتاج الهيدروجين المتجدد.",
+          "مقارنة شروط تكامل الكهرباء والمياه والتخزين.",
+          "تقييم أداء النظام وقيود استخدامه."
+        ]
+      }
+    }
   },
   {
     "id": "demo-008",
@@ -213,7 +584,60 @@
     "year": 2024,
     "durationMonths": 30,
     "budgetMAD": 1000000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Analyser des cycles de charge et décharge pour comparer des stratégies de stockage.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Analyse charging cycles to compare storage strategies.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "تحليل دورات الشحن لمقارنة استراتيجيات التخزين.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais du stockage",
+        "en": "Storage testing platform",
+        "ar": "منصة اختبارات التخزين"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les performances et le vieillissement du système de stockage.",
+          "Tester différents cycles de charge et de décharge.",
+          "Comparer les stratégies de pilotage selon les usages énergétiques."
+        ],
+        "en": [
+          "Characterise storage-system performance and ageing.",
+          "Test different charge and discharge cycles.",
+          "Compare control strategies across energy uses."
+        ],
+        "ar": [
+          "توصيف أداء منظومة التخزين وتقادمها.",
+          "اختبار دورات شحن وتفريغ مختلفة.",
+          "مقارنة استراتيجيات التحكم بحسب الاستخدامات الطاقية."
+        ]
+      }
+    }
   },
   {
     "id": "demo-009",
@@ -240,7 +664,60 @@
     "year": 2025,
     "durationMonths": 24,
     "budgetMAD": 1500000,
-    "image": "grids"
+    "image": "grids",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Simuler l’équilibre entre production renouvelable, stockage et demande.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Simulate the balance of renewable generation, storage and demand.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "محاكاة التوازن بين الإنتاج المتجدد والتخزين والطلب.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation des réseaux",
+        "en": "Grid experimentation platform",
+        "ar": "منصة تجريب الشبكات"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Analyser les profils de production, de consommation et d’autoconsommation.",
+          "Tester des stratégies de pilotage adaptées aux contraintes du réseau.",
+          "Comparer les indicateurs de flexibilité et de qualité de l’énergie."
+        ],
+        "en": [
+          "Analyse generation, consumption and self-consumption profiles.",
+          "Test control strategies suited to grid constraints.",
+          "Compare flexibility and power-quality indicators."
+        ],
+        "ar": [
+          "تحليل منحنيات الإنتاج والاستهلاك والاستهلاك الذاتي.",
+          "اختبار استراتيجيات تحكم ملائمة لقيود الشبكة.",
+          "مقارنة مؤشرات المرونة وجودة الطاقة."
+        ]
+      }
+    }
   },
   {
     "id": "demo-010",
@@ -267,7 +744,60 @@
     "year": 2026,
     "durationMonths": 36,
     "budgetMAD": 2000000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer des méthodes de nettoyage photovoltaïque et leur consommation d’eau.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare photovoltaic cleaning methods and water consumption.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة طرق تنظيف الألواح واستهلاك المياه.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais photovoltaïques",
+        "en": "Photovoltaic testing platform",
+        "ar": "منصة الاختبارات الكهروضوئية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les matériaux et les composants photovoltaïques.",
+          "Mesurer les performances électriques dans différentes conditions d’essai.",
+          "Identifier les facteurs de dégradation et les pistes d’amélioration."
+        ],
+        "en": [
+          "Characterise photovoltaic materials and components.",
+          "Measure electrical performance under different test conditions.",
+          "Identify degradation factors and opportunities for improvement."
+        ],
+        "ar": [
+          "توصيف المواد والمكونات الكهروضوئية.",
+          "قياس الأداء الكهربائي في ظروف اختبار مختلفة.",
+          "تحديد عوامل التدهور وفرص التحسين."
+        ]
+      }
+    }
   },
   {
     "id": "demo-011",
@@ -294,7 +824,60 @@
     "year": 2022,
     "durationMonths": 18,
     "budgetMAD": 2500000,
-    "image": "thermal"
+    "image": "thermal",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Étudier la chaleur solaire dans un procédé industriel simulé.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Study solar heat in a simulated industrial process.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "دراسة الحرارة الشمسية في عملية صناعية محاكاة.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais solaires thermiques",
+        "en": "Solar thermal testing platform",
+        "ar": "منصة اختبارات الطاقة الشمسية الحرارية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser le captage solaire et le stockage de chaleur.",
+          "Comparer les performances selon les profils de charge et les conditions climatiques.",
+          "Évaluer la stabilité de la fourniture énergétique et les pistes d’optimisation."
+        ],
+        "en": [
+          "Characterise solar capture and heat storage.",
+          "Compare performance across load profiles and climatic conditions.",
+          "Assess the stability of energy supply and opportunities for optimisation."
+        ],
+        "ar": [
+          "توصيف التقاط الطاقة الشمسية وتخزين الحرارة.",
+          "مقارنة الأداء بحسب منحنيات الحمل والظروف المناخية.",
+          "تقييم استقرار إمدادات الطاقة وفرص تحسين الأداء."
+        ]
+      }
+    }
   },
   {
     "id": "demo-012",
@@ -321,7 +904,60 @@
     "year": 2023,
     "durationMonths": 30,
     "budgetMAD": 3000000,
-    "image": "wind"
+    "image": "wind",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Tester une méthode d’analyse de séries de vent pour un dimensionnement expérimental.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Test wind time-series analysis for experimental sizing.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "اختبار تحليل بيانات الرياح لتحديد الأبعاد التجريبية.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais éoliens",
+        "en": "Wind testing platform",
+        "ar": "منصة اختبارات طاقة الرياح"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser la ressource et les conditions de vent.",
+          "Comparer les configurations de turbine et leurs performances.",
+          "Évaluer les contraintes de maintenance et les possibilités d’adaptation locale."
+        ],
+        "en": [
+          "Characterise wind resources and operating conditions.",
+          "Compare turbine configurations and their performance.",
+          "Assess maintenance constraints and opportunities for local adaptation."
+        ],
+        "ar": [
+          "توصيف موارد الرياح وظروف التشغيل.",
+          "مقارنة تكوينات التوربينات وأدائها.",
+          "تقييم متطلبات الصيانة وإمكانات التكييف المحلي."
+        ]
+      }
+    }
   },
   {
     "id": "demo-013",
@@ -348,7 +984,60 @@
     "year": 2024,
     "durationMonths": 24,
     "budgetMAD": 3500000,
-    "image": "cooling"
+    "image": "cooling",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer des scénarios d’approvisionnement et de réutilisation de l’eau pour l’électrolyse.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare water supply and reuse scenarios for electrolysis.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة توفير المياه وإعادة استخدامها للتحليل الكهربائي.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation hydrogène",
+        "en": "Hydrogen experimentation platform",
+        "ar": "منصة تجريب الهيدروجين"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les paramètres de production d’hydrogène renouvelable.",
+          "Comparer les conditions d’intégration de l’électricité, de l’eau et du stockage.",
+          "Évaluer les performances et les contraintes d’utilisation du système."
+        ],
+        "en": [
+          "Characterise renewable hydrogen production parameters.",
+          "Compare electricity, water and storage integration conditions.",
+          "Assess system performance and operating constraints."
+        ],
+        "ar": [
+          "توصيف معاملات إنتاج الهيدروجين المتجدد.",
+          "مقارنة شروط تكامل الكهرباء والمياه والتخزين.",
+          "تقييم أداء النظام وقيود استخدامه."
+        ]
+      }
+    }
   },
   {
     "id": "demo-014",
@@ -375,7 +1064,60 @@
     "year": 2025,
     "durationMonths": 36,
     "budgetMAD": 4000000,
-    "image": "grids"
+    "image": "grids",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Simuler des configurations de modules intégrés à une façade.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Simulate facade-integrated module configurations.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "محاكاة تكوينات وحدات مدمجة في واجهة مبنى.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais photovoltaïques",
+        "en": "Photovoltaic testing platform",
+        "ar": "منصة الاختبارات الكهروضوئية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les matériaux et les composants photovoltaïques.",
+          "Mesurer les performances électriques dans différentes conditions d’essai.",
+          "Identifier les facteurs de dégradation et les pistes d’amélioration."
+        ],
+        "en": [
+          "Characterise photovoltaic materials and components.",
+          "Measure electrical performance under different test conditions.",
+          "Identify degradation factors and opportunities for improvement."
+        ],
+        "ar": [
+          "توصيف المواد والمكونات الكهروضوئية.",
+          "قياس الأداء الكهربائي في ظروف اختبار مختلفة.",
+          "تحديد عوامل التدهور وفرص التحسين."
+        ]
+      }
+    }
   },
   {
     "id": "demo-015",
@@ -402,7 +1144,60 @@
     "year": 2026,
     "durationMonths": 18,
     "budgetMAD": 1000000,
-    "image": "buildings"
+    "image": "buildings",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Explorer des commandes économes pour un démonstrateur de chambre froide.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Explore energy-saving controls for a cold-room demonstrator.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "استكشاف التحكم الموفر للطاقة لنموذج غرفة تبريد.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais énergétiques",
+        "en": "Energy testing platform",
+        "ar": "منصة الاختبارات الطاقية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Mesurer les besoins énergétiques et les conditions de fonctionnement.",
+          "Comparer des solutions de réduction de la demande et de confort thermique.",
+          "Évaluer les performances au moyen d’essais reproductibles."
+        ],
+        "en": [
+          "Measure energy demand and operating conditions.",
+          "Compare solutions for demand reduction and thermal comfort.",
+          "Assess performance through reproducible tests."
+        ],
+        "ar": [
+          "قياس الاحتياجات الطاقية وظروف التشغيل.",
+          "مقارنة حلول خفض الطلب وتحسين الراحة الحرارية.",
+          "تقييم الأداء عبر اختبارات قابلة للتكرار."
+        ]
+      }
+    }
   },
   {
     "id": "demo-016",
@@ -429,7 +1224,60 @@
     "year": 2022,
     "durationMonths": 30,
     "budgetMAD": 1500000,
-    "image": "thermal"
+    "image": "thermal",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer des matériaux de stockage thermique sur un banc conceptuel.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare thermal storage materials on a conceptual test bench.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة مواد التخزين الحراري على منصة تصورية.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais du stockage",
+        "en": "Storage testing platform",
+        "ar": "منصة اختبارات التخزين"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les performances et le vieillissement du système de stockage.",
+          "Tester différents cycles de charge et de décharge.",
+          "Comparer les stratégies de pilotage selon les usages énergétiques."
+        ],
+        "en": [
+          "Characterise storage-system performance and ageing.",
+          "Test different charge and discharge cycles.",
+          "Compare control strategies across energy uses."
+        ],
+        "ar": [
+          "توصيف أداء منظومة التخزين وتقادمها.",
+          "اختبار دورات شحن وتفريغ مختلفة.",
+          "مقارنة استراتيجيات التحكم بحسب الاستخدامات الطاقية."
+        ]
+      }
+    }
   },
   {
     "id": "demo-017",
@@ -456,7 +1304,60 @@
     "year": 2023,
     "durationMonths": 24,
     "budgetMAD": 2000000,
-    "image": "wind"
+    "image": "wind",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Simuler des stratégies de commande pour stabiliser la production éolienne.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Simulate control strategies to stabilise wind generation.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "محاكاة التحكم لاستقرار إنتاج طاقة الرياح.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais éoliens",
+        "en": "Wind testing platform",
+        "ar": "منصة اختبارات طاقة الرياح"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser la ressource et les conditions de vent.",
+          "Comparer les configurations de turbine et leurs performances.",
+          "Évaluer les contraintes de maintenance et les possibilités d’adaptation locale."
+        ],
+        "en": [
+          "Characterise wind resources and operating conditions.",
+          "Compare turbine configurations and their performance.",
+          "Assess maintenance constraints and opportunities for local adaptation."
+        ],
+        "ar": [
+          "توصيف موارد الرياح وظروف التشغيل.",
+          "مقارنة تكوينات التوربينات وأدائها.",
+          "تقييم متطلبات الصيانة وإمكانات التكييف المحلي."
+        ]
+      }
+    }
   },
   {
     "id": "demo-018",
@@ -483,7 +1384,60 @@
     "year": 2024,
     "durationMonths": 36,
     "budgetMAD": 2500000,
-    "image": "grids"
+    "image": "grids",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer des scénarios de décalage des usages selon la disponibilité solaire.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare load-shifting scenarios against solar availability.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة تغيير توقيت الاستخدام وفق توفر الطاقة الشمسية.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation des réseaux",
+        "en": "Grid experimentation platform",
+        "ar": "منصة تجريب الشبكات"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Analyser les profils de production, de consommation et d’autoconsommation.",
+          "Tester des stratégies de pilotage adaptées aux contraintes du réseau.",
+          "Comparer les indicateurs de flexibilité et de qualité de l’énergie."
+        ],
+        "en": [
+          "Analyse generation, consumption and self-consumption profiles.",
+          "Test control strategies suited to grid constraints.",
+          "Compare flexibility and power-quality indicators."
+        ],
+        "ar": [
+          "تحليل منحنيات الإنتاج والاستهلاك والاستهلاك الذاتي.",
+          "اختبار استراتيجيات تحكم ملائمة لقيود الشبكة.",
+          "مقارنة مؤشرات المرونة وجودة الطاقة."
+        ]
+      }
+    }
   },
   {
     "id": "demo-019",
@@ -510,7 +1464,60 @@
     "year": 2025,
     "durationMonths": 18,
     "budgetMAD": 3000000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Étudier une architecture de capteurs pour un système hydrogène simulé.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Study a sensor architecture for a simulated hydrogen system.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "دراسة بنية أجهزة استشعار لنظام هيدروجين محاكى.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation hydrogène",
+        "en": "Hydrogen experimentation platform",
+        "ar": "منصة تجريب الهيدروجين"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les paramètres de production d’hydrogène renouvelable.",
+          "Comparer les conditions d’intégration de l’électricité, de l’eau et du stockage.",
+          "Évaluer les performances et les contraintes d’utilisation du système."
+        ],
+        "en": [
+          "Characterise renewable hydrogen production parameters.",
+          "Compare electricity, water and storage integration conditions.",
+          "Assess system performance and operating constraints."
+        ],
+        "ar": [
+          "توصيف معاملات إنتاج الهيدروجين المتجدد.",
+          "مقارنة شروط تكامل الكهرباء والمياه والتخزين.",
+          "تقييم أداء النظام وقيود استخدامه."
+        ]
+      }
+    }
   },
   {
     "id": "demo-020",
@@ -537,7 +1544,60 @@
     "year": 2026,
     "durationMonths": 30,
     "budgetMAD": 3500000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Tester des modèles de prévision sur des séries synthétiques photovoltaïques.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Test forecasting models on synthetic photovoltaic series.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "اختبار نماذج توقع على بيانات كهروضوئية اصطناعية.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais photovoltaïques",
+        "en": "Photovoltaic testing platform",
+        "ar": "منصة الاختبارات الكهروضوئية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les matériaux et les composants photovoltaïques.",
+          "Mesurer les performances électriques dans différentes conditions d’essai.",
+          "Identifier les facteurs de dégradation et les pistes d’amélioration."
+        ],
+        "en": [
+          "Characterise photovoltaic materials and components.",
+          "Measure electrical performance under different test conditions.",
+          "Identify degradation factors and opportunities for improvement."
+        ],
+        "ar": [
+          "توصيف المواد والمكونات الكهروضوئية.",
+          "قياس الأداء الكهربائي في ظروف اختبار مختلفة.",
+          "تحديد عوامل التدهور وفرص التحسين."
+        ]
+      }
+    }
   },
   {
     "id": "demo-021",
@@ -564,7 +1624,60 @@
     "year": 2022,
     "durationMonths": 24,
     "budgetMAD": 4000000,
-    "image": "cooling"
+    "image": "cooling",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Modéliser la chaleur solaire dans un procédé de traitement de l’eau.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Model solar heat in a water treatment process.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "نمذجة الحرارة الشمسية في معالجة المياه.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais solaires thermiques",
+        "en": "Solar thermal testing platform",
+        "ar": "منصة اختبارات الطاقة الشمسية الحرارية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser le captage solaire et le stockage de chaleur.",
+          "Comparer les performances selon les profils de charge et les conditions climatiques.",
+          "Évaluer la stabilité de la fourniture énergétique et les pistes d’optimisation."
+        ],
+        "en": [
+          "Characterise solar capture and heat storage.",
+          "Compare performance across load profiles and climatic conditions.",
+          "Assess the stability of energy supply and opportunities for optimisation."
+        ],
+        "ar": [
+          "توصيف التقاط الطاقة الشمسية وتخزين الحرارة.",
+          "مقارنة الأداء بحسب منحنيات الحمل والظروف المناخية.",
+          "تقييم استقرار إمدادات الطاقة وفرص تحسين الأداء."
+        ]
+      }
+    }
   },
   {
     "id": "demo-022",
@@ -591,7 +1704,60 @@
     "year": 2023,
     "durationMonths": 36,
     "budgetMAD": 1000000,
-    "image": "buildings"
+    "image": "buildings",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Comparer conception passive et gestion énergétique d’un bâtiment.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Compare passive design and building energy management.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "مقارنة التصميم السلبي وإدارة طاقة المبنى.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais énergétiques",
+        "en": "Energy testing platform",
+        "ar": "منصة الاختبارات الطاقية"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Mesurer les besoins énergétiques et les conditions de fonctionnement.",
+          "Comparer des solutions de réduction de la demande et de confort thermique.",
+          "Évaluer les performances au moyen d’essais reproductibles."
+        ],
+        "en": [
+          "Measure energy demand and operating conditions.",
+          "Compare solutions for demand reduction and thermal comfort.",
+          "Assess performance through reproducible tests."
+        ],
+        "ar": [
+          "قياس الاحتياجات الطاقية وظروف التشغيل.",
+          "مقارنة حلول خفض الطلب وتحسين الراحة الحرارية.",
+          "تقييم الأداء عبر اختبارات قابلة للتكرار."
+        ]
+      }
+    }
   },
   {
     "id": "demo-023",
@@ -618,7 +1784,60 @@
     "year": 2024,
     "durationMonths": 18,
     "budgetMAD": 1500000,
-    "image": "photovoltaic"
+    "image": "photovoltaic",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Explorer des critères de tri et de seconde vie pour des batteries simulées.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Explore sorting and second-life criteria for simulated batteries.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "استكشاف الفرز والاستخدام الثاني لبطاريات محاكاة.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’essais du stockage",
+        "en": "Storage testing platform",
+        "ar": "منصة اختبارات التخزين"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Caractériser les performances et le vieillissement du système de stockage.",
+          "Tester différents cycles de charge et de décharge.",
+          "Comparer les stratégies de pilotage selon les usages énergétiques."
+        ],
+        "en": [
+          "Characterise storage-system performance and ageing.",
+          "Test different charge and discharge cycles.",
+          "Compare control strategies across energy uses."
+        ],
+        "ar": [
+          "توصيف أداء منظومة التخزين وتقادمها.",
+          "اختبار دورات شحن وتفريغ مختلفة.",
+          "مقارنة استراتيجيات التحكم بحسب الاستخدامات الطاقية."
+        ]
+      }
+    }
   },
   {
     "id": "demo-024",
@@ -645,6 +1864,59 @@
     "year": 2025,
     "durationMonths": 30,
     "budgetMAD": 2000000,
-    "image": "grids"
+    "image": "grids",
+    "details": {
+      "presentation": {
+        "fr": [
+          "Tester une chaîne de mesure de qualité électrique dans un réseau simulé.",
+          "La démarche associe modélisation, préparation des essais et analyse des mesures. Les résultats des différentes configurations seront comparés à partir d’indicateurs définis pour le projet, afin de documenter les limites de fonctionnement et les voies d’amélioration."
+        ],
+        "en": [
+          "Test a power quality measurement chain in a simulated grid.",
+          "The approach combines modelling, test preparation and measurement analysis. Results from the different configurations will be compared using project-specific indicators to document operating limits and opportunities for improvement."
+        ],
+        "ar": [
+          "اختبار قياس جودة الكهرباء في شبكة محاكاة.",
+          "يجمع النهج بين النمذجة وإعداد الاختبارات وتحليل القياسات. وستتم مقارنة نتائج التكوينات المختلفة باستخدام مؤشرات خاصة بالمشروع لتوثيق حدود التشغيل وفرص التحسين."
+        ]
+      },
+      "hostingPlatform": {
+        "fr": "Plateforme d’expérimentation des réseaux",
+        "en": "Grid experimentation platform",
+        "ar": "منصة تجريب الشبكات"
+      },
+      "coordinator": {
+        "name": {
+          "fr": "Coordination du projet",
+          "en": "Project coordination",
+          "ar": "تنسيق المشروع"
+        },
+        "email": "contact@iresen.ma",
+        "phone": null,
+        "portrait": null
+      },
+      "consortium": {
+        "fr": ["Recherche académique", "Ingénierie et essais", "Partenaire technologique"],
+        "en": ["Academic research", "Engineering and testing", "Technology partner"],
+        "ar": ["البحث الأكاديمي", "الهندسة والاختبارات", "الشريك التكنولوجي"]
+      },
+      "objectives": {
+        "fr": [
+          "Analyser les profils de production, de consommation et d’autoconsommation.",
+          "Tester des stratégies de pilotage adaptées aux contraintes du réseau.",
+          "Comparer les indicateurs de flexibilité et de qualité de l’énergie."
+        ],
+        "en": [
+          "Analyse generation, consumption and self-consumption profiles.",
+          "Test control strategies suited to grid constraints.",
+          "Compare flexibility and power-quality indicators."
+        ],
+        "ar": [
+          "تحليل منحنيات الإنتاج والاستهلاك والاستهلاك الذاتي.",
+          "اختبار استراتيجيات تحكم ملائمة لقيود الشبكة.",
+          "مقارنة مؤشرات المرونة وجودة الطاقة."
+        ]
+      }
+    }
   }
 ]

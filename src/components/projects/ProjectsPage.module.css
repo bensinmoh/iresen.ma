@@ -153,14 +153,6 @@
   background: var(--color-surface);
   padding-block: clamp(2.5rem, 4.167vw, 5rem);
 }
-.notice {
-  padding: 1rem 1.25rem;
-  margin-block-end: 2rem;
-  border-inline-start: 3px solid var(--color-blue);
-  background: white;
-  font-size: var(--font-size-label);
-  line-height: 1.7;
-}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -250,11 +242,6 @@
 .metadata dd {
   margin: 0;
   text-align: end;
-}
-.fictional {
-  margin: 1rem 0 0;
-  font-size: var(--font-size-meta);
-  color: var(--color-text-muted);
 }
 .pagination {
   display: flex;
@@ -370,5 +357,403 @@
   }
   .filters {
     padding-block: 2rem;
+  }
+}
+
+/* Physical top-left / bottom-right corners follow the shared action signature. */
+.searchField,
+.select select {
+  border-radius: var(--radius-action);
+}
+.searchField {
+  overflow: clip;
+}
+.searchField:focus-within {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+}
+.searchField input {
+  border-radius: 0;
+}
+.catalogue {
+  overflow-anchor: none;
+}
+.card {
+  position: relative;
+  transition:
+    background-color var(--duration-feedback),
+    box-shadow var(--duration-feedback),
+    transform var(--duration-reveal) var(--ease-arrival);
+}
+.cardLink {
+  color: inherit;
+  text-decoration: none;
+}
+.cardLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.card:focus-within {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
+}
+.cardAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-start: 1.25rem;
+  color: var(--color-blue);
+  font-size: var(--font-size-label);
+  font-weight: 600;
+}
+.cardAction svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  transition: translate var(--duration-feedback) var(--ease-arrival);
+}
+.cardPhoto {
+  transition: transform var(--duration-reveal) var(--ease-arrival);
+}
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    background: color-mix(in srgb, var(--color-blue) 3%, white);
+    box-shadow: 0 8px 24px rgb(15 37 62 / 10%);
+  }
+  .card:hover .cardPhoto {
+    transform: scale(1.06);
+  }
+  .card:hover .cardAction svg {
+    translate: 4px 0;
+  }
+  :global([dir='rtl']) .card:hover .cardAction svg {
+    translate: -4px 0;
+  }
+}
+.drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  inline-size: min(52rem, 50vw);
+  max-inline-size: 100%;
+  block-size: 100dvh;
+  max-block-size: 100dvh;
+  padding: 0;
+  border: 0;
+  background: white;
+  color: var(--color-text);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--color-blue) var(--color-surface);
+}
+.drawer[open] {
+  animation: drawer-arrive var(--duration-reveal) var(--ease-arrival) both;
+}
+.drawer::backdrop {
+  background: rgb(15 37 62 / 48%);
+  animation: backdrop-arrive 220ms ease-out both;
+}
+.drawer[data-closing] {
+  animation: drawer-leave 220ms ease-in both;
+}
+.drawer[data-closing]::backdrop {
+  animation: backdrop-leave 220ms ease-in both;
+}
+.drawerContent {
+  overflow-wrap: anywhere;
+}
+.drawerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 1;
+  padding: 1rem clamp(1.25rem, 2vw, 2rem);
+  background: white;
+  border-block-end: 1px solid var(--color-border);
+}
+.drawerTop p {
+  font-size: var(--font-size-label);
+  color: var(--color-blue);
+  font-weight: 600;
+  margin: 0;
+}
+.close {
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  flex: none;
+  background: var(--color-surface);
+  border: 0;
+  border-radius: var(--radius-action);
+  color: var(--color-navy);
+  cursor: pointer;
+}
+.close svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+.drawer h2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 0;
+  margin-inline-end: auto;
+}
+.drawerTitle {
+  font-size: var(--font-size-action);
+  line-height: 1.6;
+  margin-block: 0 1rem;
+}
+.detailStatus {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  font-size: var(--font-size-label);
+}
+.detailPhoto {
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 2.1;
+  object-fit: cover;
+  margin-block: 0;
+}
+.drawer h3 {
+  font-size: 1.25rem;
+  margin-block: 0 1rem;
+}
+.detailSummary {
+  line-height: 1.7;
+  margin-block: 0 2rem;
+}
+.fallbackDetails {
+  padding-block: 3rem;
+}
+@keyframes drawer-arrive {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes drawer-leave {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes backdrop-arrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes backdrop-leave {
+  to {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cardPhoto,
+  .cardAction svg {
+    transition: none;
+  }
+  .drawer[open],
+  .drawer[data-closing],
+  .drawer::backdrop {
+    animation: none;
+  }
+}
+
+.drawerBody {
+  padding: 1.5rem clamp(1.25rem, 2vw, 2rem) 3rem;
+}
+.detailDomain {
+  color: var(--color-blue);
+  font-size: var(--font-size-meta);
+  font-weight: 600;
+  margin-block: 0 1rem;
+}
+.drawerTop .close {
+  margin-inline-start: 0.5rem;
+}
+@media (max-width: 70rem) {
+  .drawer {
+    inline-size: min(42rem, 80vw);
+  }
+}
+@media (max-width: 40rem) {
+  .drawer {
+    inline-size: 100%;
+  }
+}
+
+.cardVisual {
+  overflow: hidden;
+  aspect-ratio: 2.1;
+}
+.cardVisual .cardPhoto {
+  display: block;
+}
+:global(html):has(.page) {
+  scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .card:hover .cardPhoto {
+    transform: none;
+  }
+  .card:hover .cardAction svg {
+    translate: none;
+  }
+}
+
+.detailSummary p {
+  margin-block: 0 1.25rem;
+}
+.detailMetadata {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+  padding-block: 2rem;
+  margin: 0;
+  border-block-start: 1px solid var(--color-border);
+}
+.detailMetadata dt {
+  font-size: var(--font-size-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  margin-block-end: 0.75rem;
+}
+.detailMetadata dd {
+  margin: 0;
+  font-size: var(--font-size-action);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.projectContact {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  min-inline-size: 0;
+}
+.projectContact > div {
+  min-inline-size: 0;
+}
+.projectContact p {
+  margin: 0 0 0.5rem;
+  font-size: var(--font-size-label);
+}
+.projectContact a {
+  display: block;
+  font-size: var(--font-size-label);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-weight: 500;
+}
+.projectContact img,
+.contactIcon {
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  flex: none;
+}
+.projectContact img {
+  object-fit: cover;
+}
+.contactIcon {
+  padding: 0.75rem;
+  background: var(--color-surface);
+  color: var(--color-blue);
+  border-radius: var(--radius-action);
+}
+.detailSection {
+  padding-block: 2rem;
+  border-block-start: 1px solid var(--color-border);
+}
+.drawer .detailSection h3 {
+  margin-block: 0 1.5rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+.consortium {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.consortium li {
+  background: var(--color-surface);
+  padding: 0.625rem 0.875rem;
+  border-radius: var(--radius-action);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-label);
+}
+.objectives {
+  display: grid;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.objectives li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: start;
+  line-height: 1.7;
+}
+.objectives svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  flex: none;
+  margin-block-start: 0.2rem;
+  color: var(--color-blue);
+}
+.detailActions {
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.detailActions a {
+  flex: 1 1 14rem;
+  gap: 0.75rem;
+  font-size: var(--font-size-label);
+  min-block-size: 3.5rem;
+  justify-content: center;
+  text-align: center;
+}
+.detailActions svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  flex: none;
+}
+:global([dir='rtl']) .detailMetadata dt {
+  letter-spacing: normal;
+}
+@media (max-width: 40rem) {
+  .detailMetadata {
+    gap: 1.5rem 1rem;
+  }
+  .projectContact {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .detailActions {
+    flex-direction: column;
+  }
+  .detailActions a {
+    flex: none;
+    inline-size: 100%;
   }
 }

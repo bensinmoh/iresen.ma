@@ -276,8 +276,28 @@ retains ownership; do not add duplicate reveals or animation dependencies.
 
 The owner commissioned the Figma projects page and a fictional project database.
 See [scope](docs/projects.md). The 24 structured demonstration records are isolated
-from CMS, institutional figures and general project search. Keep the visible
-fictional notice, per-card labels, canonical routes and five legacy anchors.
+from CMS, institutional figures and general project search. Keep the
+source provenance, canonical routes and five legacy anchors. The owner’s later
+interaction request removes fictional notices from the frontend; preserve the
+source database flags and institutional-search exclusion.
 FR/EN/AR are working copy; real projects require verified evidence and their
 publication workflow. This request does not restore career fixtures or authorize
 deployment.
+
+## Project interactions — owner follow-up, 2026-10-11
+
+The owner commissioned local filter updates without anchor jumps, soft card
+transitions, image zoom inside a fixed frame on hover, and a project-detail
+panel entering from the physical right, using the supplied local video as a
+visual reference. Project filter fields use the shared two-rounded/two-square
+action corners. Fictional notices are removed from the frontend as explicitly
+requested; record provenance remains in the isolated database/documentation,
+with no project-level institutional-search entries or deployment. See
+[updated scope](docs/projects.md).
+
+Owner detail follow-up: include presentation, metadata, hosting platform, contact,
+consortium and scientific objectives, with contact and note-download actions.
+The owner selected `contact@iresen.ma` until per-project emails are provided.
+72 localized PDF notes are generated from the demonstration database and served
+as validated attachments, outside public assets and institutional search. See
+[detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
