@@ -308,28 +308,36 @@
     },
     "governance": {
       "bodies-responsibilities": {
-        "title": "Instances et responsabilités",
-        "description": "À prévoir : les missions, la composition et les documents publics des instances confirmées."
+        "title": "Une gouvernance au service des missions de l’Institut",
+        "description": "Une gouvernance au service des missions de l’Institut Association à but non lucratif créée à l’initiative de l’État, IRESEN rassemble des institutions publiques, des entreprises et des acteurs académiques autour des enjeux de recherche et d’innovation pour la transition énergétique. Ses instances articulent les orientations stratégiques, l’évaluation scientifique, le suivi des engagements et le contrôle de la gestion. La convention État–IRESEN encadre les missions confiées à l’Institut, les moyens associés et les objectifs à suivre. Cette articulation relie les besoins nationaux aux travaux de recherche, aux capacités expérimentales et aux possibilités d’utilisation des résultats."
       },
       "council-representatives": {
         "title": "Conseil et représentants",
-        "description": "À prévoir : les organismes représentés, les mandats et les titulaires confirmés."
+        "description": "Le conseil d’administration Définir les orientations et suivre leur réalisation. Présidé de droit par le ministre chargé de l’énergie ou son représentant, le conseil d’administration définit la politique et les orientations générales d’IRESEN. Il suit les programmes et les projets, arrête les budgets et les comptes, approuve les conventions et les partenariats et contrôle la gestion de l’Institut. Il s’appuie sur l’expertise scientifique et les travaux des comités pour prendre ses décisions. Il nomme le Directeur général et évalue la performance de la Direction générale. Les membres du conseil d’administration Le conseil scientifique Éclairer les priorités de recherche et apprécier la pertinence des projets. Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques. Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement. Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale. Les membres du conseil scientifique Ministère de l’Économie et des Finances Ministère de la Transition Énergétique et du Développement Durable Ministère de l’Enseignement Supérieur, de la Recherche Scientifique et de l’Innovation Ministère de l’Industrie et du Commerce OCP Agence Marocaine pour l’Efficacité Énergétique — AMEE Nareva Université Mohammed VI Polytechnique — UM6P Office National des Hydrocarbures et des Mines — ONHYM Fédération de l’Énergie Centre National de l’Énergie, des Sciences et des Techniques Nucléaires — CNESTEN Masen Office National de l’Électricité et de l’Eau Potable — ONEE R&D Maroc Managem Fédération Nationale de l’Électricité, de l’Électronique et des Énergies Renouvelables — FENELEC"
       },
       "leadership-organisation": {
-        "title": "Direction et organisation",
-        "description": "À prévoir : l’organigramme approuvé et un équivalent textuel lisible."
+        "title": "Une Direction générale et trois pôles complémentaires",
+        "description": "Une Direction générale et trois pôles complémentaires La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements."
       },
       "department-responsibilities": {
         "title": "Les responsabilités des directions",
-        "description": "À prévoir : le périmètre public de chaque direction et sa contribution au travail commun."
+        "description": "Pôle Développement Développer les capacités, les coopérations et le pilotage de l’Institut. Direction Développement des Plateformes et Projets Structurants Conduire la création et le développement des infrastructures et des capacités nécessaires à la recherche et à l’expérimentation. Direction Partenariats et Marketing de l’Innovation Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation. Direction Stratégie et Organisation Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut. Pôle Scientifique Structurer les programmes et mobiliser l’expertise scientifique. Direction des Programmes R&D&I et du Réseau d’Experts Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre. Direction scientifique Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités. Pôle Support Apporter les ressources et les services nécessaires à l’action des équipes. Direction Administrative et Financière Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique. Direction IT et SI Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut. Soukaina BOUDOUDOU Directrice DPRDIRE Ayoub HIRT Directeur DPPS Mouhcine BENMEZIANE Directeur DPARMI Laila TYDRINI Directrice DAF Imane MOUBACHIR Strat & Orga Jamaleddine FOUHAM IT et SI Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU travaille sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux. Ses travaux s’inscrivent dans les enjeux de stockage, d’efficacité énergétique et d’intégration des énergies renouvelables. Elle exerce à l’IRESEN comme directrice DPRDIRE. Ayoub HIRT est directeur DPPS à l’IRESEN. Son parcours au sein de l’institut comprend des activités en chimie verte, bioénergie et agritech. Ses interventions professionnelles portent notamment sur l’hydrogène vert, le Power-to-X et le rôle de la recherche et des compétences dans le développement de ces filières. Mouhcine BENMEZIANE est directeur DPARMI à l’IRESEN. Son parcours professionnel s’inscrit dans la coopération, les partenariats et les écosystèmes d’innovation pour la transition énergétique. Ses prises de parole abordent notamment les échanges internationaux, les technologies vertes, l’hydrogène et le Power-to-X. Laila TYDRINI est directrice DAF à l’IRESEN. Elle intervient dans le périmètre administratif et financier de l’institut. Imane MOUBACHIR exerce à l’IRESEN dans le périmètre Strat & Orga. Son activité porte sur la stratégie et l’organisation de l’institut. Jamaleddine FOUHAM intervient à l’IRESEN dans le périmètre IT et SI, consacré à l’informatique et aux systèmes d’information."
       },
       "science-platforms": {
-        "title": "Articulation scientifique et plateformes",
-        "description": "À prévoir : les relations entre dispositifs scientifiques, capacités expérimentales et partenaires."
+        "title": "Une organisation mobilisée autour des contributions d’IRESEN",
+        "description": "Une organisation mobilisée autour des contributions d’IRESEN Les trois pôles contribuent ensemble aux missions de l’Institut. Les études et l’expertise éclairent les choix ; la recherche et l’innovation font avancer les solutions ; les compétences et les capacités renforcent les savoir-faire. Les programmes, les plateformes et le réseau d’experts mobilisent des moyens complémentaires selon les besoins. Les partenariats et la coopération relient ces travaux aux acteurs publics, scientifiques et industriels. Dans le domaine Recherche & Innovation, cette complémentarité permet de développer les connaissances et les solutions, d’en éprouver les performances et de préparer la valorisation des résultats."
       },
       "documents-contact": {
-        "title": "Documents et contact institutionnel",
-        "description": "À prévoir : les documents de gouvernance publics et l’orientation vers le contact institutionnel."
+        "title": "Pour approfondir",
+        "description": "Pour approfondir Les programmes, les plateformes et le réseau d’experts mobilisent des moyens complémentaires selon les besoins. Les partenariats et la coopération relient ces travaux aux acteurs publics, scientifiques et industriels."
+      },
+      "scientific-council": {
+        "title": "Le conseil scientifique",
+        "description": "Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques. Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement. Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale. Dr. Ahmed ENNAOUI Ancien Directeur de Recherche à l’Institut des systèmes des matériaux hétérogènes Helmholtz Berlin Dr. Abdelhakim ARTIBA Président de l'Université Polytechnique Hauts-de-France M. Diego PAVIA Président de InnoEnergy de l’Institut Européen de Technologie Dr. Florence LAMBERT Directeur CEA-LITEN / Présidente de la Commission Industrie, Emplois et Innovation Dr. Ralf B. WEHRSPOHN Président Exécutif de l'Institut Fraunhofer / Prof. à l’Université Martin Luther Halle Dr. Robert PITZ-PAAL Directeur de l’Institut de Recherche Solaire au Centre Aérospatial (DLR), Vice président de l’Agence Internationale de l’Energie (AIE) Dr. Tijani BOUNAHMIDI Directeur du Centre d’Innovation Technologique, Vice-président de l’Université Mohammed V-Agdal Rabat Dr. Vlademiro MIRANDA Membre du directoire de l’INESC TEC-INESC Technologies, Président de l’INESC R&D du Brésil"
+      },
+      "governance-oversight": {
+        "title": "Le suivi des engagements et le contrôle de la gestion",
+        "description": "Le Comité de stratégie et de suivi Il veille à la cohérence des activités d’IRESEN avec la stratégie énergétique nationale et les engagements de la convention État–IRESEN. Il examine les plans d’action, l’avancement des projets et les rapports d’exécution, et propose les ajustements nécessaires aux instances compétentes. Le Comité d’audit Il assiste le conseil d’administration dans l’examen de l’information financière, du contrôle interne et de la gestion des risques. Il analyse les conclusions des audits, formule des recommandations et suit les mesures correctrices. La certification des comptes relève du commissaire aux comptes. L’Assemblée générale Elle réunit les membres de l’association, approuve les comptes annuels et les rapports d’activité et financier, et vote le budget prévisionnel. Elle exerce les attributions qui lui sont réservées par les statuts."
       }
     },
     "priorities": {
@@ -825,7 +833,7 @@
   "Pages": {
     "home": "Accueil",
     "institute": "L’Institut",
-    "governance": "Gouvernance & organisation",
+    "governance": "Gouvernance et organisation",
     "priorities": "Feuille de route R&D",
     "programmes": "Programmes R&D&I",
     "projects": "Projets collaboratifs",
@@ -951,7 +959,7 @@
     "descriptions": {
       "home": "Éclairer les choix, faire avancer les solutions et renforcer les capacités pour la transition énergétique et le développement durable du Maroc, avec nos partenaires.",
       "institute": "Trois domaines de contribution — études et expertise, recherche et innovation, compétences et capacités — soutenus par la coopération et le rayonnement.",
-      "governance": "Les instances, les équipes et les fonctions de support qui soutiennent la rigueur scientifique et la continuité des contributions de l’Institut.",
+      "governance": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
       "priorities": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
       "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
       "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
@@ -2271,5 +2279,218 @@
     "next": "Thématique suivante",
     "imageNote": "Illustration conceptuelle générée ; elle ne représente pas une installation attestée.",
     "heroAlt": "Planche de travail vue en perspective, avec un diagramme technique réunissant les sept thématiques de recherche : électricité renouvelable, hydrogène, industrie, eau et agriculture, bioénergies, bâtiments et mobilité."
+  },
+  "Governance": {
+    "title": "Gouvernance et organisation",
+    "tagline": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
+    "introduction": "La gouvernance d’IRESEN réunit les acteurs publics, les partenaires du secteur énergétique et l’expertise scientifique pour orienter les activités de l’Institut et en suivre les résultats. Son organisation mobilise les compétences, les programmes et les moyens nécessaires à ses trois domaines de contribution : Études & Expertise, Recherche & Innovation, Compétences & Capacités. La Coopération & Rayonnement soutient leur action commune.",
+    "mission": {
+      "title": "Une gouvernance au service des missions de l’Institut",
+      "paragraphs": [
+        "Association à but non lucratif créée à l’initiative de l’État, IRESEN rassemble des institutions publiques, des entreprises et des acteurs académiques autour des enjeux de recherche et d’innovation pour la transition énergétique.",
+        "Ses instances articulent les orientations stratégiques, l’évaluation scientifique, le suivi des engagements et le contrôle de la gestion. La convention État–IRESEN encadre les missions confiées à l’Institut, les moyens associés et les objectifs à suivre.",
+        "Cette articulation relie les besoins nationaux aux travaux de recherche, aux capacités expérimentales et aux possibilités d’utilisation des résultats."
+      ]
+    },
+    "councils": {
+      "administration": {
+        "title": "Le conseil d’administration",
+        "tagline": "Définir les orientations et suivre leur réalisation.",
+        "paragraphs": [
+          "Présidé de droit par le ministre chargé de l’énergie ou son représentant, le conseil d’administration définit la politique et les orientations générales d’IRESEN. Il suit les programmes et les projets, arrête les budgets et les comptes, approuve les conventions et les partenariats et contrôle la gestion de l’Institut.",
+          "Il s’appuie sur l’expertise scientifique et les travaux des comités pour prendre ses décisions. Il nomme le Directeur général et évalue la performance de la Direction générale."
+        ],
+        "membersTitle": "Les membres du conseil d’administration"
+      },
+      "science": {
+        "title": "Le conseil scientifique",
+        "tagline": "Éclairer les priorités de recherche et apprécier la pertinence des projets.",
+        "paragraphs": [
+          "Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques.",
+          "Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement.",
+          "Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale."
+        ],
+        "membersTitle": "Les membres du conseil scientifique"
+      }
+    },
+    "oversight": {
+      "title": "Le suivi des engagements et le contrôle de la gestion",
+      "items": [
+        {
+          "title": "Le Comité de stratégie et de suivi",
+          "description": "Il veille à la cohérence des activités d’IRESEN avec la stratégie énergétique nationale et les engagements de la convention État–IRESEN. Il examine les plans d’action, l’avancement des projets et les rapports d’exécution, et propose les ajustements nécessaires aux instances compétentes."
+        },
+        {
+          "title": "Le Comité d’audit",
+          "description": "Il assiste le conseil d’administration dans l’examen de l’information financière, du contrôle interne et de la gestion des risques. Il analyse les conclusions des audits, formule des recommandations et suit les mesures correctrices. La certification des comptes relève du commissaire aux comptes."
+        },
+        {
+          "title": "L’Assemblée générale",
+          "description": "Elle réunit les membres de l’association, approuve les comptes annuels et les rapports d’activité et financier, et vote le budget prévisionnel. Elle exerce les attributions qui lui sont réservées par les statuts."
+        }
+      ]
+    },
+    "organisation": {
+      "title": "Une Direction générale et trois pôles complémentaires",
+      "description": "La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements.",
+      "summary": "L’organisation fonctionnelle comprend trois pôles et sept directions.",
+      "poles": [
+        {
+          "title": "Pôle Développement",
+          "tagline": "Développer les capacités, les coopérations et le pilotage de l’Institut.",
+          "directions": [
+            {
+              "title": "Direction Développement des Plateformes et Projets Structurants",
+              "description": "Conduire la création et le développement des infrastructures et des capacités nécessaires à la recherche et à l’expérimentation."
+            },
+            {
+              "title": "Direction Partenariats et Marketing de l’Innovation",
+              "description": "Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation."
+            },
+            {
+              "title": "Direction Stratégie et Organisation",
+              "description": "Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut."
+            }
+          ]
+        },
+        {
+          "title": "Pôle Scientifique",
+          "tagline": "Structurer les programmes et mobiliser l’expertise scientifique.",
+          "directions": [
+            {
+              "title": "Direction des Programmes R&D&I et du Réseau d’Experts",
+              "description": "Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre."
+            },
+            {
+              "title": "Direction scientifique",
+              "description": "Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités."
+            }
+          ]
+        },
+        {
+          "title": "Pôle Support",
+          "tagline": "Apporter les ressources et les services nécessaires à l’action des équipes.",
+          "directions": [
+            {
+              "title": "Direction Administrative et Financière",
+              "description": "Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique."
+            },
+            {
+              "title": "Direction IT et SI",
+              "description": "Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut."
+            }
+          ]
+        }
+      ]
+    },
+    "contributions": {
+      "title": "Une organisation mobilisée autour des contributions d’IRESEN",
+      "paragraphs": [
+        "Les trois pôles contribuent ensemble aux missions de l’Institut. Les études et l’expertise éclairent les choix ; la recherche et l’innovation font avancer les solutions ; les compétences et les capacités renforcent les savoir-faire.",
+        "Les programmes, les plateformes et le réseau d’experts mobilisent des moyens complémentaires selon les besoins. Les partenariats et la coopération relient ces travaux aux acteurs publics, scientifiques et industriels.",
+        "Dans le domaine Recherche & Innovation, cette complémentarité permet de développer les connaissances et les solutions, d’en éprouver les performances et de préparer la valorisation des résultats."
+      ]
+    },
+    "resourcesTitle": "Pour approfondir",
+    "navigation": "Explorer la gouvernance",
+    "tabs": {
+      "councils": "Les conseils",
+      "organisation": "Notre organisation",
+      "responsibilities": "Les directions"
+    },
+    "president": "Président",
+    "directorGeneral": "Directeur général",
+    "teamTitle": "Une équipe au service des missions",
+    "memberLogo": "Logo de {name}",
+    "portrait": "Portrait de {name}",
+    "board": {
+      "min-finance": "Ministère de l’Économie et des Finances",
+      "min-energie": "Ministère de la Transition Énergétique et du Développement Durable",
+      "minensup": "Ministère de l’Enseignement Supérieur, de la Recherche Scientifique et de l’Innovation",
+      "micep": "Ministère de l’Industrie et du Commerce",
+      "ocp": "OCP",
+      "amee": "Agence Marocaine pour l’Efficacité Énergétique — AMEE",
+      "nareva": "Nareva",
+      "um6p": "Université Mohammed VI Polytechnique — UM6P",
+      "onhym": "Office National des Hydrocarbures et des Mines — ONHYM",
+      "federation-de-lener": "Fédération de l’Énergie",
+      "cnesten": "Centre National de l’Énergie, des Sciences et des Techniques Nucléaires — CNESTEN",
+      "masen": "Masen",
+      "onee": "Office National de l’Électricité et de l’Eau Potable — ONEE",
+      "rd-maroc": "R&D Maroc",
+      "managem": "Managem",
+      "fenelec": "Fédération Nationale de l’Électricité, de l’Électronique et des Énergies Renouvelables — FENELEC"
+    },
+    "scientists": {
+      "ennaoui": {
+        "name": "Dr. Ahmed ENNAOUI",
+        "role": "Ancien Directeur de Recherche à l’Institut des systèmes des matériaux hétérogènes Helmholtz Berlin"
+      },
+      "artiba": {
+        "name": "Dr. Abdelhakim ARTIBA",
+        "role": "Président de l'Université Polytechnique Hauts-de-France"
+      },
+      "pavia": {
+        "name": "M. Diego PAVIA",
+        "role": "Président de InnoEnergy de l’Institut Européen de Technologie"
+      },
+      "lambert": {
+        "name": "Dr. Florence LAMBERT",
+        "role": "Directeur CEA-LITEN / Présidente de la Commission Industrie, Emplois et Innovation"
+      },
+      "wehrspohn": {
+        "name": "Dr. Ralf B. WEHRSPOHN",
+        "role": "Président Exécutif de l'Institut Fraunhofer / Prof. à l’Université Martin Luther Halle"
+      },
+      "pitz-paal": {
+        "name": "Dr. Robert PITZ-PAAL",
+        "role": "Directeur de l’Institut de Recherche Solaire au Centre Aérospatial (DLR), Vice président de l’Agence Internationale de l’Energie (AIE)"
+      },
+      "bounahmidi": {
+        "name": "Dr. Tijani BOUNAHMIDI",
+        "role": "Directeur du Centre d’Innovation Technologique, Vice-président de l’Université Mohammed V-Agdal Rabat"
+      },
+      "miranda": {
+        "name": "Dr. Vlademiro MIRANDA",
+        "role": "Membre du directoire de l’INESC TEC-INESC Technologies, Président de l’INESC R&D du Brésil"
+      }
+    },
+    "team": {
+      "soukaina": {
+        "name": "Soukaina BOUDOUDOU",
+        "role": "Directrice DPRDIRE",
+        "biography": "Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU travaille sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux. Ses travaux s’inscrivent dans les enjeux de stockage, d’efficacité énergétique et d’intégration des énergies renouvelables. Elle exerce à l’IRESEN comme directrice DPRDIRE."
+      },
+      "ayoub": {
+        "name": "Ayoub HIRT",
+        "role": "Directeur DPPS",
+        "biography": "Ayoub HIRT est directeur DPPS à l’IRESEN. Son parcours au sein de l’institut comprend des activités en chimie verte, bioénergie et agritech. Ses interventions professionnelles portent notamment sur l’hydrogène vert, le Power-to-X et le rôle de la recherche et des compétences dans le développement de ces filières."
+      },
+      "mouhcine": {
+        "name": "Mouhcine BENMEZIANE",
+        "role": "Directeur DPARMI",
+        "biography": "Mouhcine BENMEZIANE est un dirigeant passionné par la communication scientifique et technologique. Il est responsable du département Coopération, Communication et Veille technologique à l’Institut de Recherche en Énergie Solaire et Énergies Nouvelles (IRESEN).\n\nDepuis plus d’une décennie, Mouhcine développe la collaboration internationale et l’innovation dans le domaine des technologies vertes. Homme de terrain, il possède une expertise dans le développement de partenariats, la gestion de projets de recherche et la diffusion des connaissances scientifiques et technologiques.\n\nSon parcours académique reflète la diversité de ses intérêts. Il est titulaire d’un master en sciences et technologies, spécialité ingénierie du management industriel, et d’une licence en génie mécanique. Son attachement à la formation continue se traduit par de nombreuses certifications, notamment dans les énergies renouvelables et la communication scientifique."
+      },
+      "laila": {
+        "name": "Laila TYDRINI",
+        "role": "Directrice DAF",
+        "biography": "Laila TYDRINI est directrice DAF à l’IRESEN. Elle intervient dans le périmètre administratif et financier de l’institut."
+      },
+      "imane": {
+        "name": "Imane MOUBACHIR",
+        "role": "Strat & Orga",
+        "biography": "Imane MOUBACHIR exerce à l’IRESEN dans le périmètre Strat & Orga. Son activité porte sur la stratégie et l’organisation de l’institut."
+      },
+      "jamaleddine": {
+        "name": "Jamaleddine FOUHAM",
+        "role": "IT et SI",
+        "biography": "Jamaleddine FOUHAM intervient à l’IRESEN dans le périmètre IT et SI, consacré à l’informatique et aux systèmes d’information."
+      }
+    },
+    "biography": {
+      "label": "Biographie",
+      "linkedin": "Voir le profil LinkedIn",
+      "close": "Fermer la biographie"
+    }
   }
 }

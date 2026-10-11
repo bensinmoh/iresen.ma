@@ -1,3 +1,4 @@
+import { governanceScientists, governanceTeam } from '@/lib/governance'
 import { existsSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 
@@ -321,6 +322,8 @@ describe('explicit public search catalog', () => {
         .filter(({ src, mobile }) => src !== mobile.src)
         .map(({ mobile }) => mobile.src),
       ...libraryVideos.map(({ poster }) => poster),
+      ...governanceScientists.map((id) => `/images/governance/${id}.webp`),
+      ...governanceTeam.map((id) => `/images/governance/${id}-portrait.webp`),
       samirCutout,
       samirPortraitDownload,
     ])

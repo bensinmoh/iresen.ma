@@ -176,3 +176,10 @@ Its six original anchors remain supported, with seven `theme-{id}` children of
 `domains-directions` sharing the homepage theme IDs. The strategy introduction,
 full thematic chapters and collaboration conclusion provide the corresponding
 public projections. See [scope](roadmap.md).
+
+## Governance developed — 2026-10-11
+
+The governance page replaces its six placeholder modules with the owner-supplied
+institutional copy, council compositions and team responsibilities. Six legacy
+anchors remain; `scientific-council` and `governance-oversight` are additional
+localized search destinations. See [scope](governance.md).

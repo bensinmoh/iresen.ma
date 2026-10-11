@@ -1,3 +1,9 @@
+import {
+  governanceBoard,
+  governanceScientists,
+  governanceTeam,
+  governanceBoardLogo,
+} from '@/lib/governance'
 import { projectNoteReferences, projectConsortiumLogoReferences } from '@/lib/project-notes'
 import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
@@ -91,6 +97,69 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...governanceBoard
+    .filter((id) => !['min-finance', 'min-energie', 'minensup', 'micep'].includes(id))
+    .map((id) => ({
+      id: `governance-logo-${id}`,
+      url: governanceBoardLogo(id),
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => [
+          locale,
+          {
+            title: messages[locale].Governance.board[id],
+            description: `${messages[locale].Governance.councils.administration.membersTitle}. ${messages[locale].Governance.board[id]}`,
+          },
+        ]),
+      ) as PublicAssetReference['text'],
+    })),
+  {
+    id: 'governance-armoiries-maroc',
+    url: '/images/governance/armoiries-maroc.svg',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Armoiries du Royaume du Maroc',
+        description: 'Emblème des quatre ministères membres du conseil d’administration IRESEN.',
+      },
+      en: {
+        title: 'Coat of arms of the Kingdom of Morocco',
+        description: 'Emblem of the four ministries represented on the IRESEN board.',
+      },
+      ar: {
+        title: 'شعار المملكة المغربية',
+        description: 'شعار الوزارات الأربع الممثلة في مجلس إدارة IRESEN.',
+      },
+    },
+  },
+  ...governanceScientists.map((id) => ({
+    id: `governance-scientist-${id}`,
+    url: `/images/governance/${id}.png`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Governance.scientists[id].name,
+          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}`,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
+  ...governanceTeam.map((id) => ({
+    id: `governance-portrait-${id}`,
+    url: `/images/governance/${id}-portrait.png`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: messages[locale].Governance.team[id].name,
+          description: `${messages[locale].Governance.teamTitle}. ${messages[locale].Governance.team[id].role}. ${messages[locale].Governance.team[id].biography}`,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
   {
     id: 'roadmap-hero-board',
     url: roadmapHeroPath,
@@ -694,6 +763,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.events),
         )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
+      if (pageId === 'governance')
+        body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
       if (pageId === 'priorities') body.push(...engagementSearchText(catalog.Roadmap))
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')
