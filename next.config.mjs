@@ -23,6 +23,7 @@ const nextConfig = {
       { pathname: '/images/missions/**', search: '' },
       { pathname: '/images/domains/**', search: '' },
       { pathname: '/images/roadmap/**', search: '' },
+      { pathname: '/images/governance/**', search: '' },
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/achievements/**', search: '' },
       { pathname: '/images/collaborate/**', search: '' },

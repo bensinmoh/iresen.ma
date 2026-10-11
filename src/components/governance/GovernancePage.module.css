@@ -1,0 +1,640 @@
+.page {
+  overflow-wrap: anywhere;
+}
+.intro,
+.councils,
+.oversight,
+.departments,
+.resources {
+  padding-block: clamp(3rem, 5vw, 5rem);
+}
+.section {
+  padding-block: clamp(3.5rem, 6vw, 6rem);
+}
+.intro h2,
+.heading h2,
+.oversight h2,
+.departments > h2,
+.resources h2 {
+  font-size: clamp(1.8rem, 3.1vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  margin: 0;
+  max-inline-size: 28ch;
+}
+.eyebrow {
+  font-size: var(--font-size-label);
+  color: var(--color-blue);
+  margin: 0 0 var(--space-4);
+}
+.lead {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.7;
+  max-inline-size: 85ch;
+  margin-block: var(--space-8);
+}
+.missionCopy {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8);
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: var(--space-8);
+}
+.missionCopy p,
+.reading p,
+.reading,
+.committees p,
+.departmentCopy p,
+.poles p {
+  line-height: 1.75;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+.missionCopy p:last-child {
+  color: var(--color-text);
+}
+.navigation {
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  border-block-end: 1px solid var(--color-border);
+}
+.navigation a {
+  padding-block: var(--space-4);
+  min-block-size: 44px;
+  text-decoration: none;
+  font-weight: 600;
+  border-block-end: 2px solid transparent;
+}
+.navigation a:hover,
+.navigation a:focus-visible {
+  color: var(--color-blue);
+  border-block-end-color: currentColor;
+}
+.heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  align-items: start;
+  margin-block-end: var(--space-12);
+}
+.reading {
+  max-inline-size: 75ch;
+}
+.reading p + p {
+  margin-block-start: var(--space-4);
+}
+.tagline {
+  font-size: clamp(1.125rem, 1.5vw, 1.4rem);
+  line-height: 1.6;
+  margin: var(--space-6) 0 0;
+  max-inline-size: 40ch;
+}
+.membersHeading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0 var(--space-8);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-6);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.board li {
+  background: var(--color-white);
+  border-radius: var(--radius-signature);
+  min-inline-size: 0;
+}
+.memberLink {
+  padding: var(--space-6);
+  block-size: 100%;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+  min-inline-size: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+}
+.board p {
+  font-size: var(--font-size-label);
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.logoSlot {
+  block-size: 9rem;
+  inline-size: 100%;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border-radius: var(--radius-small);
+  padding: var(--space-3);
+  overflow: hidden;
+  min-inline-size: 0;
+}
+.logoSlot img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 0;
+  object-fit: contain;
+}
+.memberAcronym {
+  color: var(--color-navy);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 700;
+}
+.science {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.science .eyebrow {
+  color: var(--color-energy-cyan);
+}
+.science .reading p,
+.scientistLink > div > p {
+  color: var(--color-footer-muted);
+}
+.scientists {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+.scientists article {
+  padding: var(--space-6);
+  border-block-start: 1px solid var(--color-footer-divider);
+  min-inline-size: 0;
+}
+.scientists img {
+  inline-size: 10rem;
+  block-size: 10rem;
+  object-fit: contain;
+  margin-block-end: var(--space-6);
+  border-radius: 50%;
+}
+.scientists h4 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0 0 var(--space-3);
+  overflow-wrap: anywhere;
+}
+.scientists p {
+  font-size: var(--font-size-label);
+  line-height: 1.7;
+  margin: 0;
+}
+.scientists .chair {
+  background: var(--color-footer-control);
+  border-radius: var(--radius-signature);
+}
+.scientists .badge {
+  color: var(--color-white);
+  margin-block-end: var(--space-2);
+  font-weight: 600;
+}
+.committees {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8);
+  margin-block-start: var(--space-12);
+}
+.committees article {
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid var(--color-border);
+}
+.number {
+  font-size: var(--font-size-label);
+  color: var(--color-blue);
+}
+.committees h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: var(--space-4) 0;
+}
+.organisation {
+  background: var(--color-action-surface);
+}
+.management {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  inline-size: fit-content;
+  margin-inline: auto;
+  padding: var(--space-6) var(--space-8);
+  background: var(--color-white);
+  border-radius: var(--radius-signature);
+}
+.management img {
+  inline-size: 10rem;
+  block-size: 13rem;
+  object-fit: contain;
+  align-self: end;
+}
+.management h3 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.poles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8);
+  margin-block-start: var(--space-12);
+}
+.poles > div {
+  position: relative;
+  padding-block-start: var(--space-8);
+  border-block-start: 1px solid var(--color-control-outline);
+}
+.connector {
+  position: absolute;
+  inset-block-start: calc(-1 * var(--space-12));
+  inset-inline-start: 50%;
+  block-size: var(--space-12);
+  border-inline-start: 1px solid var(--color-control-outline);
+}
+.poles h3,
+.departmentColumn > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 var(--space-4);
+}
+.departmentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8);
+  margin-block-start: var(--space-12);
+}
+.departmentColumn {
+  min-inline-size: 0;
+}
+.departmentColumn > h3 {
+  padding-block-end: var(--space-6);
+  border-block-end: 1px solid var(--color-border);
+}
+.department {
+  margin-block-start: var(--space-8);
+  background: var(--color-surface);
+  border-radius: var(--radius-signature);
+  overflow: hidden;
+}
+.teamPhoto {
+  position: relative;
+  block-size: clamp(17rem, 26vw, 28rem);
+  background: var(--color-action-surface);
+  isolation: isolate;
+}
+.teamPhoto img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.person {
+  padding: var(--space-6);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.person strong {
+  font-size: 1.3rem;
+  margin: 0 0 var(--space-2);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.person > span {
+  margin: 0;
+  font-size: var(--font-size-label);
+  line-height: 1.7;
+  color: var(--color-footer-muted);
+}
+.departmentCopy {
+  padding: var(--space-6);
+}
+.departmentCopy h4 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0 0 var(--space-4);
+}
+.contributions {
+  background: var(--color-surface);
+}
+.contributions .heading {
+  margin-block-end: 0;
+}
+.resources > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--space-8);
+  margin-block-start: var(--space-8);
+}
+.resources a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  border-block-start: 1px solid var(--color-border);
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.resources a:hover {
+  color: var(--color-blue);
+}
+.resources svg {
+  flex-shrink: 0;
+}
+:global([dir='rtl']) .intro h2,
+:global([dir='rtl']) .heading h2,
+:global([dir='rtl']) .oversight h2,
+:global([dir='rtl']) .departments > h2,
+:global([dir='rtl']) .resources h2 {
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+@media (max-width: 70rem) {
+  .board,
+  .scientists {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .departmentGrid {
+    gap: var(--space-4);
+  }
+  .heading {
+    gap: var(--space-8);
+  }
+}
+@media (max-width: 48rem) {
+  .heading,
+  .missionCopy,
+  .committees,
+  .poles,
+  .departmentGrid {
+    grid-template-columns: 1fr;
+  }
+  .board,
+  .scientists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .poles > div {
+    padding-block: var(--space-6);
+  }
+  .connector {
+    display: none;
+  }
+  .departmentColumn + .departmentColumn {
+    margin-block-start: var(--space-8);
+  }
+  .teamPhoto {
+    block-size: 25rem;
+  }
+  .navigation {
+    gap: var(--space-6);
+  }
+  .resources > div {
+    grid-template-columns: 1fr;
+  }
+  .management {
+    padding-inline: var(--space-4);
+    gap: var(--space-4);
+  }
+}
+.scientistLink {
+  display: block;
+}
+@media (max-width: 40rem) {
+  .scientists {
+    grid-template-columns: 1fr;
+  }
+  .scientistLink {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: var(--space-4);
+    padding-inline: 0;
+  }
+  .scientists .chair {
+    padding: var(--space-4);
+  }
+  .scientistLink > div {
+    flex: 1 1 10rem;
+  }
+  .scientists img {
+    max-inline-size: 100%;
+    inline-size: 7rem;
+    block-size: 7rem;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .board {
+    gap: var(--space-3);
+  }
+  .memberLink {
+    padding: var(--space-3);
+  }
+  .logoSlot {
+    block-size: 7rem;
+  }
+  .management img {
+    inline-size: 7rem;
+    block-size: 10rem;
+  }
+  .management h3 {
+    font-size: 1.25rem;
+  }
+  .management .eyebrow {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 23rem) {
+  .scientists article {
+    display: block;
+  }
+  .scientists img {
+    margin-block-end: var(--space-4);
+  }
+}
+.management {
+  max-inline-size: 100%;
+  flex-wrap: wrap;
+}
+.management > div,
+.scientistLink > div {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+.poles > div {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+.memberLink:hover p {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.memberLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.scientistLink {
+  color: inherit;
+  text-decoration: none;
+}
+.scientistLink:focus-visible,
+.personTrigger:focus-visible,
+.managementTrigger:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
+}
+.scientistLink:hover h4 {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.profileHint {
+  display: inline-block;
+  margin-block-start: var(--space-4);
+  color: var(--color-white);
+  font-size: var(--font-size-label);
+}
+.personTrigger,
+.managementTrigger {
+  display: block;
+  inline-size: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+.personTrigger > span,
+.person strong,
+.person > span,
+.managementPerson > span,
+.managementPerson strong {
+  display: block;
+}
+.personTrigger:hover strong,
+.managementTrigger:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.managementTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.managementPhoto {
+  position: relative;
+  inline-size: 220px;
+  block-size: 280px;
+  max-inline-size: 100%;
+}
+.managementPhoto img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.managementPerson {
+  flex: 1 1 12rem;
+  overflow-wrap: anywhere;
+}
+.managementPerson strong {
+  font-size: 1.75rem;
+  margin-block-end: var(--space-3);
+}
+.biographyDialog {
+  margin: auto;
+  inline-size: min(58rem, calc(100% - 2rem));
+  max-block-size: calc(100dvh - 2rem);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-signature);
+  background: var(--color-white);
+  color: var(--color-text);
+  overflow: auto;
+  overflow-wrap: anywhere;
+  overscroll-behavior: contain;
+}
+.biographyDialog::backdrop {
+  background: rgb(10 32 55 / 65%);
+}
+.biographyClose {
+  position: sticky;
+  inset-block-start: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
+  margin-block: var(--space-3);
+  margin-inline-start: auto;
+  margin-inline-end: var(--space-3);
+  background: var(--color-white);
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.biographyLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+.biographyPhoto {
+  position: relative;
+  min-block-size: 28rem;
+  background: var(--color-action-surface);
+}
+.biographyPhoto img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.biographyCopy {
+  min-inline-size: 0;
+  padding: var(--space-8);
+}
+.biographyCopy h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.35;
+  margin-block: 0 var(--space-3);
+}
+.biographyCopy p {
+  line-height: 1.75;
+}
+.biographyRole {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+.biographyLinkedin {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+@media (max-width: 48rem) {
+  .biographyLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .biographyPhoto {
+    min-block-size: 19rem;
+  }
+  .biographyCopy {
+    padding: var(--space-6);
+  }
+}

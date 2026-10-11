@@ -1207,3 +1207,14 @@ shared signature corners on both light and dark chapters.
 
 Roadmap axis rows use subject-specific outline SVGs at their trailing edge,
 stretched to the title row height and fixed during disclosure opening.
+
+## Governance composition — 2026-10-11
+
+The commissioned governance page translates the institutional Figma reference
+into readable council responsibilities, original member marks, a navy scientific
+council and pale three-pole organisation. Six owner portraits share background-free
+business retouching; the DG cutout is reused. Department cards pair people with
+actual remits, while the unassigned scientific department stays textual. Native
+section links and existing reveal behavior preserve no-JavaScript/RTL reading.
+No new shared token or universal page layout is introduced. See
+[scope](docs/governance.md).

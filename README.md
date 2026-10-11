@@ -337,3 +337,10 @@ The existing priorities page now contains the owner-supplied manuscript, seven
 research themes, full axis disclosures and layered technical illustrations.
 Native first-arrival motion, mobile reading and FR/EN/AR search references are
 implemented. See [scope](docs/roadmap.md). No deployment is authorized.
+
+## Governance and organisation — 2026-10-11
+
+The canonical governance page now presents the supplied institutional text,
+16 board organisations, eight scientific council members and the three-pole/
+seven-department organisation with the owner-supplied team portraits. EN/AR
+remain working adaptations. See [scope and sources](docs/governance.md).
