@@ -20,6 +20,8 @@ const nextConfig = {
       { pathname: '/images/media-library/**', search: '' },
       { pathname: '/images/news/**', search: '' },
       { pathname: '/images/publications/**', search: '' },
+      { pathname: '/images/projects/**', search: '' },
+      { pathname: '/images/careers/**', search: '' },
       { pathname: '/images/missions/**', search: '' },
       { pathname: '/images/domains/**', search: '' },
       { pathname: '/images/roadmap/**', search: '' },

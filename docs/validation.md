@@ -3623,6 +3623,43 @@ content, terms PDF or form URL is invented for the owner's site. Real inputs,
 final editorial/translation review, the whole-site search sanity check and
 separate deployment authorization remain pending.
 
+## Site-wide image provenance and AI search exclusion — 2026-10-11
+
+- Audited every served raster under `public/images`: 161 current fingerprints,
+  64 AI-generated files/crops/copies, 13 AI-assisted derivatives and 84 entries
+  with source references. Recorded-source status does not certify external/Figma
+  images as non-AI; generation classification requires explicit evidence.
+- Withdrew 47 generated media identities (141 FR/EN/AR search documents).
+  Rebuilt the local index; a database query confirmed zero results referencing
+  the 64 generated paths. Current CMS media consists of eight MP4 uploads and
+  no uploaded raster photographs. Results and spelling share catalogue revisions.
+- Lint, typecheck, formatting, production build and 149 unit tests pass.
+  All 30 integration tests pass in a freshly migrated disposable database,
+  which was removed afterward. The existing database/users/uploads are preserved.
+- All 25 scoped search, preview and destination browser tests pass against a
+  separate production server using installed Chrome. The initial default browser
+  was unavailable; reusing the existing server produced stale-client failures,
+  resolved by testing the fresh production build on its own port.
+- No visual layout, image bytes, route, public CMS gate or deployment change.
+  Existing unrelated CMS-preview work is excluded from this commit.
+
+Follow-up verification updates the earlier research/roadmap browser assertions:
+sections stay discoverable, but generated hydrogen and technical drawing assets
+must be absent from media results; direct in-page image delivery remains valid.
+Eight additional scoped browser cases pass, bringing local coverage to 33 cases.
+
+## PV media filter runtime correction — 2026-10-11
+
+The owner reported a `next/image` localPatterns rejection for the project
+buildings thumbnail. The static optimizer allowlist now includes projects and
+careers, retaining empty query strings and the guarded-CMS cache exclusion.
+The corrected isolated production build passes. All five scoped browser tests
+pass: PV media searches in FR/EN/AR load their thumbnails without page errors,
+all 97 non-generated raster files receive valid optimized images, and the shared
+image/document/news preview regression remains green. Four cases are new,
+bringing cumulative scoped browser coverage to 37 unique tests. Current checkout
+unit tests pass 153 cases, including unrelated ongoing CMS-preview tests.
+
 ## CMS interface preview — 2026-10-11
 
 Owner scope: all modules, frontend only, plus the institutional navy sidebar

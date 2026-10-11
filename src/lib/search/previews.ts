@@ -1,3 +1,4 @@
+import { isAiGeneratedImage } from '@/lib/image-provenance'
 import 'server-only'
 
 import { getPayload } from 'payload'
@@ -36,7 +37,7 @@ export async function searchResultPreviews(items: SearchItem[], locale: SearchLo
     if (!['media', 'document', 'publication', 'report', 'news'].includes(item.type)) continue
     if (item.type === 'news') previews[item.id] = { kind: 'news' }
     const asset = publicAssetReferences.find(
-      (asset) => asset.url === item.url && asset.text[locale],
+      (asset) => asset.url === item.url && asset.text[locale] && !isAiGeneratedImage(asset.url),
     )
     if (asset) {
       const extension = asset.url.split('.').at(-1)?.toLowerCase()
