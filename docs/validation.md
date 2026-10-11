@@ -3170,3 +3170,8 @@ with the bounded vocabulary write; the existing local database is preserved.
   the final build was restarted before the final focused/browser verification.
 - Scope and fallbacks: [public-site motion](site-motion.md). CI supplies the full
   site regression check before merge; no deployment is performed.
+
+- The first full CI browser run exposed transient text contrast during opacity
+  reveals. Shared text now keeps full contrast at every frame; only raster card
+  thumbnails fade. Keyboard focus scrolls immediately to preserve orientation
+  during responsive reflow. The original axe assertions remain enabled.

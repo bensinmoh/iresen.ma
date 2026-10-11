@@ -7,12 +7,14 @@ sections of the same page and reveals on the first scroll through content.
 
 The public locale layout mounts `SiteMotion`, a small progressive enhancement.
 It observes headings, quotations, static article cards, direct section lists,
-hero descriptions/actions and footer headings. Reading units enter with a
-420ms opacity/14px vertical translation, using the shared arrival easing.
+hero descriptions and footer headings. Reading units enter with a 420ms/14px
+vertical translation, using the shared arrival easing. Text retains its full
+contrast throughout; raster thumbnails in static article cards receive the
+opacity entrance separately. SVG marks retain their original treatment.
 Simultaneous units stagger by 35ms, capped at 105ms. Each element runs once per
-page visit. Hero actions fade without displacement to retain clearance from
-the scroll cue and stable click targets. New server/client content is registered through an additions-only
-MutationObserver; there is no scroll listener or animation library.
+page visit. Hero actions stay in place to retain clearance from the scroll cue
+and stable click targets. New server/client content is registered through an
+additions-only MutationObserver; there is no scroll listener or animation library.
 
 Section wrappers, sticky navigation, dialogs and horizontal rail containers are
 never transformed. Published long-form articles reveal their headings rather
@@ -22,8 +24,10 @@ keep their existing interaction transitions. Native buttons receive short color
 feedback and a 1px press displacement; footer and section links transition color.
 
 Native smooth scrolling now applies to internal anchors across every public
-page and viewport. Link history, canonical anchors, interruption, focus and
-existing sticky navigation clearance remain native. An anchor destination's
+page and viewport. Keyboard focus uses immediate scrolling so responsive reflow
+never leaves a focused control waiting outside the viewport. Pointer/touch anchor
+activation keeps smooth scrolling. Link history, canonical anchors, interruption,
+focus and existing sticky navigation clearance remain native. An anchor destination's
 heading settles immediately; following a hero link does not consume reveals
 for later, offscreen sections. Direct initial hashes also settle their targets.
 

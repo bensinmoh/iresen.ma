@@ -12,7 +12,6 @@ const targets = [
   'main blockquote',
   'main article:not([id^="publication-"]):not([id^="patent-"]):not(.published-content)',
   'main .hero-description',
-  'main .hero-actions',
   'main section > p',
   'main section > header > p',
   'main section > ol > li',
@@ -46,6 +45,16 @@ export function SiteMotion() {
       animations.clear()
     }
 
+    const play = (element: Element, frames: Keyframe[], delay: number) => {
+      const animation = element.animate(frames, { duration, easing, delay, fill: 'backwards' })
+      animations.set(element, animation)
+      animation.finished
+        .then(() => {
+          if (animations.get(element) === animation) animations.delete(element)
+        })
+        .catch(() => {})
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         let order = 0
@@ -62,20 +71,19 @@ export function SiteMotion() {
             target.getAnimations().length
           )
             continue
-          const offset = target.matches('.hero-actions') ? 0 : 14
-          const animation = target.animate(
-            [
-              { opacity: 0.35, translate: `0 ${offset}px` },
-              { opacity: 1, translate: '0 0' },
-            ],
-            { duration, easing, delay: Math.min(order++ * 35, 105), fill: 'backwards' },
-          )
-          animations.set(target, animation)
-          animation.finished
-            .then(() => {
-              if (animations.get(target) === animation) animations.delete(target)
-            })
-            .catch(() => {})
+          const delay = Math.min(order++ * 35, 105)
+          // Text retains its approved contrast throughout the entrance.
+          play(target, [{ translate: '0 14px' }, { translate: '0 0' }], delay)
+          if (target.matches('article')) {
+            const photo = target.querySelector('img')
+            if (
+              photo &&
+              !/\.svg(?:$|\?)/i.test(photo.getAttribute('src') ?? '') &&
+              !photo.getAnimations().length
+            ) {
+              play(photo, [{ opacity: 0.35 }, { opacity: 1 }], delay)
+            }
+          }
         }
       },
       { threshold: 0, rootMargin: '0px 0px -24px 0px' },
@@ -144,7 +152,10 @@ export function SiteMotion() {
     const settleFocus = (event: FocusEvent) => {
       if (!(event.target instanceof Element)) return
       animations.forEach((animation, target) => {
-        if (target.contains(event.target as Element)) {
+        if (
+          target.contains(event.target as Element) ||
+          target.closest('article')?.contains(event.target as Element)
+        ) {
           animation.cancel()
           animations.delete(target)
         }

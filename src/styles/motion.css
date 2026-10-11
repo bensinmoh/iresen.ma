@@ -4,6 +4,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Focus must reach the new control immediately, even during responsive reflow. */
+  html:has(#main-content :focus-visible, .site-footer :focus-visible) {
+    scroll-behavior: auto;
+  }
+
   .button {
     transition:
       background-color var(--duration-feedback),

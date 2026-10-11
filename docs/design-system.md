@@ -1573,7 +1573,9 @@ with all four figures, keyboard access and Arabic direction preserved.
 The owner commissioned shared first-scroll reveals and smooth navigation between
 sections throughout the public site. Titles, quotations and static cards use a
 420ms arrival with a 14px vertical movement; related items stagger at most 105ms.
-Controls use 180ms feedback. Section wrappers and sticky/rail geometry stay stable;
+Text retains full contrast; raster card thumbnails can fade separately. Controls
+use 180ms feedback and keyboard focus scrolls immediately. Section wrappers and
+sticky/rail geometry stay stable;
 existing filter and menu transitions retain ownership. Reveals run once, never
 hide server content, settle on focus and cancel for reduced motion. Native anchors
 keep their destinations/history and work without JavaScript. See

@@ -129,8 +129,12 @@ test('new content reveals once and keyboard focus immediately settles its card',
   })
   const card = page.locator('#motion-test-card')
   await expect.poll(() => card.evaluate((element) => element.getAnimations().length)).toBe(1)
+  await expect(card).toHaveCSS('opacity', '1')
   await card.locator('a').focus()
   await expect(card.locator('a')).toBeFocused()
+  await expect
+    .poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior))
+    .toBe('auto')
   await expect.poll(() => card.evaluate((element) => element.getAnimations().length)).toBe(0)
   await expect(card).toHaveCSS('opacity', '1')
   await card.evaluate((element) => element.remove())
