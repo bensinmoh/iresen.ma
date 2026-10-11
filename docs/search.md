@@ -344,3 +344,12 @@ must update this inventory and record generation/retouch provenance. Private
 originals are not imported; no image bytes, routes, gallery layout, publication
 gates or deployment are changed. The final whole-site glossary sanity check
 remains pending final content.
+
+## PV media previews — owner bug report, 2026-10-11
+
+The PV → media filter exposed a missing Next Image allowlist entry for project
+thumbnails. `/images/projects/**` and the likewise omitted `/images/careers/**`
+are now eligible for static image optimization, with empty query strings only.
+Guarded CMS uploads remain outside the optimizer cache. Browser regression checks
+cover the PV media result page in FR/EN/AR and every eligible registered static
+raster preview. AI-generated image exclusion remains independent and unchanged.

@@ -3647,3 +3647,15 @@ Follow-up verification updates the earlier research/roadmap browser assertions:
 sections stay discoverable, but generated hydrogen and technical drawing assets
 must be absent from media results; direct in-page image delivery remains valid.
 Eight additional scoped browser cases pass, bringing local coverage to 33 cases.
+
+## PV media filter runtime correction — 2026-10-11
+
+The owner reported a `next/image` localPatterns rejection for the project
+buildings thumbnail. The static optimizer allowlist now includes projects and
+careers, retaining empty query strings and the guarded-CMS cache exclusion.
+The corrected isolated production build passes. All five scoped browser tests
+pass: PV media searches in FR/EN/AR load their thumbnails without page errors,
+all 97 non-generated raster files receive valid optimized images, and the shared
+image/document/news preview regression remains green. Four cases are new,
+bringing cumulative scoped browser coverage to 37 unique tests. Current checkout
+unit tests pass 153 cases, including unrelated ongoing CMS-preview tests.
