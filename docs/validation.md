@@ -3153,7 +3153,6 @@ search ranking/access rules. Planner statistics still refresh after the full wri
 The 28 integration tests pass again in a newly migrated disposable database
 with the bounded vocabulary write; the existing local database is preserved.
 
-
 ## Public-site motion — 2026-10-11
 
 - Local lint, typecheck, production build, 128 unit tests and 28 integration tests

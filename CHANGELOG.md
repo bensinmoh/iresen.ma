@@ -905,7 +905,6 @@ are displayed.
   transitions; separate mobile/tablet search surfaces, keep two compact frequent
   search lines and allow native horizontal navigation of the four figures.
 
-
 ## Public-site motion — 2026-10-11
 
 - Added first-entry reveals for public headings, quotations and static cards in
