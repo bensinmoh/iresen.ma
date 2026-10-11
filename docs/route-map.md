@@ -92,3 +92,10 @@ five role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027, Dii Summi
 social links, shared physical two-rounded/two-sharp corners and localized search
 references are included. FR/EN/AR copy remains working editorial text. No deployment
 or publication-gate change is authorized. See [scope](news-events.md).
+
+## Feuille de route R&D — 2026-10-11
+
+`priorities` retains all canonical paths and six legacy anchors, with seven
+additional `theme-{id}` anchors. Its label is now Feuille de route R&D (and
+localized equivalents); the manuscript-driven page is developed. See
+[scope](roadmap.md).

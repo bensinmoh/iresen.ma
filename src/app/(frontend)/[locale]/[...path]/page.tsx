@@ -1,5 +1,6 @@
 import { PublicationsPage } from '@/components/publications/PublicationsPage'
 import { ProjectsPage } from '@/components/projects/ProjectsPage'
+import { RoadmapPage } from '@/components/roadmap/RoadmapPage'
 import { MediaLibraryPage } from '@/components/media/MediaLibraryPage'
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
@@ -122,6 +123,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   if (pageId === 'publications')
     return <PublicationsPage locale={locale} parameters={await searchParams} />
   if (pageId === 'projects') return <ProjectsPage locale={locale} parameters={await searchParams} />
+  if (pageId === 'priorities') return <RoadmapPage locale={locale} />
   if (pageId === 'media') return <MediaLibraryPage locale={locale} />
   if (pageId === 'opportunities') return <CareersPage locale={locale} />
   if (pageId === 'transfer') return <TransferPage locale={locale} />

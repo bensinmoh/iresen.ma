@@ -101,3 +101,9 @@ content, reducing the reserved bottom area from 27rem to a fluid 8–12rem.
 The 30–38rem photo uses a stronger continuous navy fade behind text; the
 mobile/tablet full-section 90% overlay stays in place. This is presentation
 only: themes, working copy, routes, imagery and search references are retained.
+
+## Full roadmap page — 2026-10-11
+
+The canonical priorities destination is now developed using the later
+owner-supplied manuscript and the same seven-theme IDs. Full research-axis
+descriptions and intended benefits live on that page. See [scope](roadmap.md).

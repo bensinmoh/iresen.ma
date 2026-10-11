@@ -70,6 +70,7 @@ for (const locale of locales) {
         pageId !== 'opportunities' &&
         pageId !== 'publications' &&
         pageId !== 'projects' &&
+        pageId !== 'priorities' &&
         pageId !== 'news' &&
         pageId !== 'events',
     )) {

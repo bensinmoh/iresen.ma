@@ -3,6 +3,7 @@ import { homePlatforms } from '@/lib/home-platforms'
 import { researchThemes } from '@/lib/home-research'
 import { homeMissions, homeCooperationAnchor } from '@/lib/home-missions'
 import type { PageId } from '@/lib/site'
+import { roadmapDomains } from '@/lib/roadmap'
 
 export type SectionDefinition = {
   id: string
@@ -55,7 +56,7 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   ],
   priorities: [
     { id: 'needs-challenges' },
-    { id: 'domains-directions' },
+    { id: 'domains-directions', children: roadmapDomains.map((id) => ({ id: `theme-${id}` })) },
     { id: 'technology-roadmaps' },
     { id: 'priorities-projects' },
     { id: 'decision-resources' },

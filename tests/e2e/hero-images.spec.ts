@@ -6,8 +6,6 @@ import { heroes } from '../../src/lib/heroes'
 
 const cases = [
   { pageId: 'home', locale: 'fr' },
-  { pageId: 'priorities', locale: 'fr' },
-  { pageId: 'priorities', locale: 'ar' },
   { pageId: 'governance', locale: 'fr' },
   { pageId: 'workWithUs', locale: 'ar' },
 ] as const
@@ -101,16 +99,6 @@ test('mobile heroes download one native-height portrait crop instead of an under
       expect(url.search).toBe('')
       expect(image.pixels.width / image.pixels.height).toBeCloseTo(2 / 3, 2)
       expect(image.pixels.height).toBeGreaterThanOrEqual(900)
-      if (item.pageId === 'priorities') {
-        const coverScale = Math.max(
-          image.width / image.pixels.width,
-          image.height / image.pixels.height,
-        )
-        expect(
-          coverScale,
-          'a tall priority hero must not upscale a short source',
-        ).toBeLessThanOrEqual(1.01)
-      }
     })
   }
 })

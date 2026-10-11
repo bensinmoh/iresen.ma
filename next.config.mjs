@@ -22,6 +22,7 @@ const nextConfig = {
       { pathname: '/images/publications/**', search: '' },
       { pathname: '/images/missions/**', search: '' },
       { pathname: '/images/domains/**', search: '' },
+      { pathname: '/images/roadmap/**', search: '' },
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/achievements/**', search: '' },
       { pathname: '/images/collaborate/**', search: '' },

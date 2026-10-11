@@ -334,28 +334,56 @@
     },
     "priorities": {
       "needs-challenges": {
-        "title": "Besoins et défis à traiter",
-        "description": "À prévoir : les besoins scientifiques et socioéconomiques, la décarbonation industrielle, la performance énergétique et les conditions marocaines et régionales."
+        "title": "Partir des besoins. Faire progresser les solutions.",
+        "description": "La feuille de route R&D d’IRESEN vise à répondre aux défis concrets des acteurs de l’énergie, de l’industrie et des territoires. Elle oriente la recherche vers des solutions dont les performances peuvent être vérifiées dans les conditions d’usage marocaines, en tenant compte de leur coût, de leur impact environnemental et de leur potentiel d’adoption. Sept thématiques structurent cette ambition. Chacune se décline en quatre axes de recherche, avec des objectifs et des bénéfices recherchés. Les thématiques définissent les défis à relever ; les axes précisent les questions à traiter ; les programmes organisent les interventions ; les projets les concrétisent. Développer Lever les verrous scientifiques et techniques pour produire de nouvelles connaissances, concevoir des méthodes et mettre au point des solutions. Éprouver Tester les solutions dans des conditions représentatives pour établir leurs performances, leur fiabilité et leurs limites. Valoriser Préparer l’utilisation des résultats avec des bénéficiaires identifiés, en travaillant sur le transfert, l’adoption et les conditions d’industrialisation."
       },
       "domains-directions": {
-        "title": "Domaines et orientations",
-        "description": "À prévoir : les domaines validés, leurs verrous, les axes de travaux et les applications visées."
+        "title": "Les thématiques de recherche",
+        "description": "Énergies renouvelables et systèmes électriques flexibles Hydrogène renouvelable et molécules dérivées Industrie sobre et procédés bas carbone Nexus eau–énergie–agriculture et résilience Bioénergies et valorisation circulaire des ressources Bâtiments et territoires sobres et résilients Mobilité et infrastructures de transport bas carbone"
       },
       "technology-roadmaps": {
-        "title": "Feuilles de route technologiques",
-        "description": "À prévoir : les horizons, les étapes et les jalons publics, avec leur statut."
+        "title": "Feuille de route R&D",
+        "description": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes."
       },
       "priorities-projects": {
-        "title": "Des priorités aux projets",
-        "description": "À prévoir : les liens vers les programmes, projets, plateformes et expertises associés."
+        "title": "Découvrir les projets collaboratifs",
+        "description": "Un besoin industriel, un défi territorial, une expertise scientifique ou un terrain d’expérimentation à partager ? Construisons des collaborations autour de questions concrètes : développer une solution, en vérifier les performances ou préparer son transfert. Les besoins des utilisateurs et les compétences des partenaires donnent à la recherche sa pertinence et ses perspectives d’application."
       },
       "decision-resources": {
-        "title": "Connaissances pour éclairer les choix",
-        "description": "À prévoir : les études, les données et les expertises publiques d’appui scientifique."
+        "title": "Partir des besoins. Faire progresser les solutions.",
+        "description": "Lever les verrous scientifiques et techniques pour produire de nouvelles connaissances, concevoir des méthodes et mettre au point des solutions. Tester les solutions dans des conditions représentatives pour établir leurs performances, leur fiabilité et leurs limites. Préparer l’utilisation des résultats avec des bénéficiaires identifiés, en travaillant sur le transfert, l’adoption et les conditions d’industrialisation."
       },
       "resources-collaboration": {
-        "title": "Ressources et collaboration",
-        "description": "À prévoir : les feuilles de route publiables, les ressources associées et l’orientation des besoins."
+        "title": "Faire de ces priorités des projets utiles.",
+        "description": "Un besoin industriel, un défi territorial, une expertise scientifique ou un terrain d’expérimentation à partager ? Construisons des collaborations autour de questions concrètes : développer une solution, en vérifier les performances ou préparer son transfert. Les besoins des utilisateurs et les compétences des partenaires donnent à la recherche sa pertinence et ses perspectives d’application."
+      },
+      "theme-renewables": {
+        "title": "Énergies renouvelables et systèmes électriques flexibles",
+        "description": "Mieux produire, intégrer et utiliser l’électricité renouvelable. Améliorer la performance des énergies renouvelables et leur intégration au système électrique, en tenant compte des conditions climatiques, des contraintes du réseau et des besoins des utilisateurs. Performance et durabilité en conditions sévères Comprendre et réduire les effets de la chaleur, de la poussière, de la corrosion et du vieillissement. Tester des solutions de maintenance et de nettoyage sobres en eau. Stockage et hybridation multi-échelles Comparer et optimiser les batteries, le stockage thermique et d’autres solutions selon les services attendus, les durées de stockage et les conditions climatiques. Réseaux actifs et intégration des renouvelables Améliorer la prévision, le pilotage et la protection des systèmes électriques et des micro-réseaux. Évaluer leur comportement face aux variations de production et aux perturbations. Flexibilité des consommations Adapter les consommations de l’industrie, de l’eau, des bâtiments et de la recharge aux contraintes du réseau, sans dégrader les services rendus. Une production plus fiable, une meilleure intégration des renouvelables, des pointes de consommation maîtrisées et des coûts de service réduits."
+      },
+      "theme-hydrogen": {
+        "title": "Hydrogène renouvelable et molécules dérivées",
+        "description": "Relier les technologies de l’hydrogène à des usages pertinents. Étudier les conditions techniques, économiques et environnementales de production et d’utilisation de l’hydrogène renouvelable et de ses dérivés. Comparer les solutions pour identifier les usages où ils apportent une réponse justifiée. Électrolyse dynamique et durabilité Optimiser le fonctionnement des électrolyseurs sous alimentation renouvelable variable, en étudiant leur consommation énergétique, leur dégradation et leur disponibilité. Intégration eau–énergie–hydrogène Articuler traitement de l’eau, dessalement éventuel et récupération de chaleur pour réduire les consommations de ressources et maîtriser les impacts des rejets. Conversion, stockage et logistique Étudier des chaînes de conversion, notamment vers l’ammoniac renouvelable, ainsi que leur stockage et leur transport, en évaluant les pertes, la sécurité et le coût livré. Substitution dans les usages prioritaires Tester les applications industrielles pertinentes en les comparant aux solutions fossiles et à l’électrification directe. Préciser leurs conditions d’adoption. Des chaînes de production et d’approvisionnement mieux maîtrisées, une utilisation raisonnée de l’eau et de l’énergie, et des usages justifiés par leur intérêt industriel et environnemental."
+      },
+      "theme-industry": {
+        "title": "Industrie sobre et procédés bas carbone",
+        "description": "Réduire les consommations et les émissions, renforcer la compétitivité. Développer des solutions adaptées aux procédés industriels pour améliorer leur performance énergétique et réduire leurs émissions. L’objectif est de démontrer les gains et de préciser les conditions de leur reproduction sur d’autres sites. Efficacité et récupération de chaleur Optimiser les procédés et les équipements auxiliaires. Développer des solutions de récupération et de réutilisation de la chaleur pour réduire l’énergie nécessaire à la production. Électrification et chaleur renouvelable Tester les pompes à chaleur, le chauffage électrique et le solaire thermique selon les températures et les contraintes des procédés. Matériaux, procédés et carbone résiduel Réduire les émissions par les formulations et les substitutions de matériaux. Étudier le captage, l’utilisation ou le stockage du CO₂ sur des cas justifiés, en vérifiant le bilan complet et le devenir du carbone. Mesure et optimisation de la performance industrielle Développer des méthodes de mesure, des modèles et des outils vérifiables pour comparer les solutions, confirmer les économies et étayer les décisions. Une consommation énergétique par produit réduite, des baisses d’émissions vérifiables et des solutions techniquement et économiquement adaptées aux industriels."
+      },
+      "theme-water": {
+        "title": "Nexus eau–énergie–agriculture et résilience",
+        "description": "Mieux gérer ensemble l’eau, l’énergie et les besoins agricoles. Améliorer les services d’eau et la résilience agricole en maîtrisant leurs besoins énergétiques. Développer des solutions adaptées aux régions arides, en évaluant conjointement les usages de l’eau, la performance énergétique et les effets sur la production agricole. Dessalement et traitement sobres Optimiser les procédés, les membranes, la récupération d’énergie et l’alimentation renouvelable, tout en intégrant la qualité de l’eau et la gestion des rejets. Irrigation et pompage pilotés Coupler les besoins des cultures, le suivi de l’eau et la gestion énergétique pour améliorer l’irrigation sans encourager une augmentation des prélèvements. Réutilisation et boucles locales d’eau Valider des solutions de traitement et de réutilisation adaptées aux usages, en tenant compte des exigences sanitaires, agronomiques et énergétiques. Agrivoltaïsme et systèmes agricoles intégrés Comparer les configurations associant production agricole et photovoltaïque pour vérifier leurs effets sur les cultures, l’eau, l’énergie produite et l’usage des sols. Des services d’eau moins énergivores, une meilleure productivité de l’eau et des systèmes agricoles plus résilients, sans déplacer les pressions sur les ressources."
+      },
+      "theme-circular": {
+        "title": "Bioénergies et valorisation circulaire des ressources",
+        "description": "Valoriser les résidus et prolonger la vie des équipements. Produire de l’énergie et récupérer des matières à partir de ressources résiduelles réellement mobilisables. Étudier également les solutions de réparation, de réemploi et de récupération des matières des équipements de la transition énergétique. Gisements et chaînes d’approvisionnement durables Identifier les résidus accessibles en tenant compte de leur saisonnalité, des usages existants, de la logistique et des contraintes liées aux sols et à l’eau. Biogaz, biométhane et valorisation des coproduits Adapter la digestion, l’épuration et l’utilisation des digestats aux ressources disponibles, en mesurant les rendements et les fuites de méthane. Conversion thermochimique et produits biosourcés Comparer des procédés ciblés de pyrolyse, de gazéification ou de transformation en produits, selon les débouchés, les coûts et les performances environnementales. Circularité des équipements de la transition Développer la réparation, le réemploi, la seconde vie et la récupération de matières, en vérifiant la performance et la sécurité des équipements concernés. Une valorisation adaptée aux ressources disponibles, une durée de service prolongée et des bénéfices environnementaux établis sur l’ensemble du cycle de vie, sans présumer de la neutralité carbone de la biomasse."
+      },
+      "theme-buildings": {
+        "title": "Bâtiments et territoires sobres et résilients",
+        "description": "Préserver le confort et les services avec moins d’énergie. Développer des solutions adaptées au bâti, aux usages et aux conditions climatiques pour réduire les besoins énergétiques. Associer performance réelle, accessibilité économique et résilience face à la chaleur. Enveloppes et rénovation bioclimatiques Tester les matériaux, l’ombrage, la ventilation et les assemblages pour améliorer le confort et réduire les besoins thermiques selon les bâtiments et les zones climatiques. Rafraîchissement et équipements efficaces Comparer les solutions passives et actives, leurs équipements et leur pilotage pour préserver le confort tout en maîtrisant les consommations et les pointes électriques. Services territoriaux et systèmes énergétiques locaux Optimiser l’éclairage, les bâtiments publics et les systèmes énergétiques locaux, en étudiant la mutualisation, l’exploitation et les besoins de maintenance. Résilience à la chaleur et adoption Tester des solutions pour les sites vulnérables et comprendre les conditions d’adoption des rénovations, en intégrant les besoins et les pratiques des usagers. Un meilleur confort, des consommations et des coûts d’exploitation maîtrisés, ainsi qu’une meilleure continuité des services en période de forte chaleur."
+      },
+      "theme-mobility": {
+        "title": "Mobilité et infrastructures de transport bas carbone",
+        "description": "Adapter les solutions de mobilité aux usages réels. Étudier l’électrification et les autres solutions bas carbone en fonction des besoins de transport, des conditions climatiques et des contraintes d’exploitation. Évaluer ensemble les véhicules, les batteries, la recharge et l’organisation des déplacements. Électrification des flottes à usage intensif Comparer les véhicules, leur dimensionnement et leur exploitation pour les bus, la logistique et les flottes professionnelles, selon les profils d’usage. Recharge pilotée et intégration réseau Optimiser l’implantation, la puissance et les horaires de recharge pour assurer le service tout en maîtrisant les pointes et les contraintes du réseau. Batteries, diagnostic et durabilité en usage Valider la gestion thermique, l’estimation de l’état de santé, la réparation et les critères de réemploi pour prolonger la durée de service en sécurité. Logistique et choix de modes ou vecteurs Comparer l’organisation des flux, les modes de transport et les motorisations. Examiner le recours à l’hydrogène et à ses dérivés pour les usages où il est justifié. Des services de transport moins émetteurs, des flottes disponibles, une recharge fiable et des coûts adaptés aux usages."
       }
     },
     "programmes": {
@@ -798,7 +826,7 @@
     "home": "Accueil",
     "institute": "L’Institut",
     "governance": "Gouvernance & organisation",
-    "priorities": "Priorités & feuilles de route",
+    "priorities": "Feuille de route R&D",
     "programmes": "Programmes R&D&I",
     "projects": "Projets collaboratifs",
     "platforms": "Plateformes de recherche",
@@ -885,7 +913,7 @@
     "pages": {
       "institute": "Identité, mission et positionnement de l’Institut.",
       "governance": "Gouvernance et organisation de l’Institut.",
-      "priorities": "Orientations et feuilles de route de la recherche.",
+      "priorities": "Une recherche ancrée dans les besoins du Maroc, ouverte sur le monde.",
       "programmes": "Découvrir les programmes de recherche et d’innovation.",
       "projects": "Explorer les projets de recherche collaborative.",
       "platforms": "Découvrir les plateformes de recherche et d’expérimentation.",
@@ -924,7 +952,7 @@
       "home": "Éclairer les choix, faire avancer les solutions et renforcer les capacités pour la transition énergétique et le développement durable du Maroc, avec nos partenaires.",
       "institute": "Trois domaines de contribution — études et expertise, recherche et innovation, compétences et capacités — soutenus par la coopération et le rayonnement.",
       "governance": "Les instances, les équipes et les fonctions de support qui soutiennent la rigueur scientifique et la continuité des contributions de l’Institut.",
-      "priorities": "Relier les besoins scientifiques, industriels et territoriaux aux priorités de recherche pour la transition énergétique et le développement durable.",
+      "priorities": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
       "programmes": "Programmer, financer et accompagner la recherche collaborative en reliant les besoins aux objectifs scientifiques et aux résultats utilisables.",
       "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
       "platforms": "Des moyens de recherche, d’essais, d’expérimentation et de formation pour connaître les performances et les conditions d’utilisation des technologies.",
@@ -2026,5 +2054,222 @@
     "downloadNote": "Télécharger la note du projet (PDF)",
     "contactSubject": "Projet {name} — demande de contact",
     "noteTitle": "Note du projet"
+  },
+  "Roadmap": {
+    "title": "Feuille de route R&D",
+    "eyebrow": "Recherche & Innovation",
+    "tagline": "Une recherche ancrée dans les besoins du Maroc, ouverte sur le monde.",
+    "description": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
+    "explore": "Explorer les thématiques",
+    "programmes": "Découvrir nos programmes R&D&I",
+    "introductionTitle": "Partir des besoins. Faire progresser les solutions.",
+    "introductionParagraphs": [
+      "La feuille de route R&D d’IRESEN vise à répondre aux défis concrets des acteurs de l’énergie, de l’industrie et des territoires. Elle oriente la recherche vers des solutions dont les performances peuvent être vérifiées dans les conditions d’usage marocaines, en tenant compte de leur coût, de leur impact environnemental et de leur potentiel d’adoption.",
+      "Sept thématiques structurent cette ambition. Chacune se décline en quatre axes de recherche, avec des objectifs et des bénéfices recherchés. Les thématiques définissent les défis à relever ; les axes précisent les questions à traiter ; les programmes organisent les interventions ; les projets les concrétisent."
+    ],
+    "steps": [
+      {
+        "title": "Développer",
+        "description": "Lever les verrous scientifiques et techniques pour produire de nouvelles connaissances, concevoir des méthodes et mettre au point des solutions."
+      },
+      {
+        "title": "Éprouver",
+        "description": "Tester les solutions dans des conditions représentatives pour établir leurs performances, leur fiabilité et leurs limites."
+      },
+      {
+        "title": "Valoriser",
+        "description": "Préparer l’utilisation des résultats avec des bénéficiaires identifiés, en travaillant sur le transfert, l’adoption et les conditions d’industrialisation."
+      }
+    ],
+    "chapters": {
+      "renewables": {
+        "title": "Énergies renouvelables et systèmes électriques flexibles",
+        "headline": "Mieux produire, intégrer et utiliser l’électricité renouvelable.",
+        "description": "Améliorer la performance des énergies renouvelables et leur intégration au système électrique, en tenant compte des conditions climatiques, des contraintes du réseau et des besoins des utilisateurs.",
+        "axes": [
+          {
+            "title": "Performance et durabilité en conditions sévères",
+            "description": "Comprendre et réduire les effets de la chaleur, de la poussière, de la corrosion et du vieillissement. Tester des solutions de maintenance et de nettoyage sobres en eau."
+          },
+          {
+            "title": "Stockage et hybridation multi-échelles",
+            "description": "Comparer et optimiser les batteries, le stockage thermique et d’autres solutions selon les services attendus, les durées de stockage et les conditions climatiques."
+          },
+          {
+            "title": "Réseaux actifs et intégration des renouvelables",
+            "description": "Améliorer la prévision, le pilotage et la protection des systèmes électriques et des micro-réseaux. Évaluer leur comportement face aux variations de production et aux perturbations."
+          },
+          {
+            "title": "Flexibilité des consommations",
+            "description": "Adapter les consommations de l’industrie, de l’eau, des bâtiments et de la recharge aux contraintes du réseau, sans dégrader les services rendus."
+          }
+        ],
+        "benefits": "Une production plus fiable, une meilleure intégration des renouvelables, des pointes de consommation maîtrisées et des coûts de service réduits.",
+        "imageAlt": "Système électrique renouvelable : panneau solaire, éolienne et stockage."
+      },
+      "hydrogen": {
+        "title": "Hydrogène renouvelable et molécules dérivées",
+        "headline": "Relier les technologies de l’hydrogène à des usages pertinents.",
+        "description": "Étudier les conditions techniques, économiques et environnementales de production et d’utilisation de l’hydrogène renouvelable et de ses dérivés. Comparer les solutions pour identifier les usages où ils apportent une réponse justifiée.",
+        "axes": [
+          {
+            "title": "Électrolyse dynamique et durabilité",
+            "description": "Optimiser le fonctionnement des électrolyseurs sous alimentation renouvelable variable, en étudiant leur consommation énergétique, leur dégradation et leur disponibilité."
+          },
+          {
+            "title": "Intégration eau–énergie–hydrogène",
+            "description": "Articuler traitement de l’eau, dessalement éventuel et récupération de chaleur pour réduire les consommations de ressources et maîtriser les impacts des rejets."
+          },
+          {
+            "title": "Conversion, stockage et logistique",
+            "description": "Étudier des chaînes de conversion, notamment vers l’ammoniac renouvelable, ainsi que leur stockage et leur transport, en évaluant les pertes, la sécurité et le coût livré."
+          },
+          {
+            "title": "Substitution dans les usages prioritaires",
+            "description": "Tester les applications industrielles pertinentes en les comparant aux solutions fossiles et à l’électrification directe. Préciser leurs conditions d’adoption."
+          }
+        ],
+        "benefits": "Des chaînes de production et d’approvisionnement mieux maîtrisées, une utilisation raisonnée de l’eau et de l’énergie, et des usages justifiés par leur intérêt industriel et environnemental.",
+        "imageAlt": "Chaîne hydrogène : électrolyseur et réservoir."
+      },
+      "industry": {
+        "title": "Industrie sobre et procédés bas carbone",
+        "headline": "Réduire les consommations et les émissions, renforcer la compétitivité.",
+        "description": "Développer des solutions adaptées aux procédés industriels pour améliorer leur performance énergétique et réduire leurs émissions. L’objectif est de démontrer les gains et de préciser les conditions de leur reproduction sur d’autres sites.",
+        "axes": [
+          {
+            "title": "Efficacité et récupération de chaleur",
+            "description": "Optimiser les procédés et les équipements auxiliaires. Développer des solutions de récupération et de réutilisation de la chaleur pour réduire l’énergie nécessaire à la production."
+          },
+          {
+            "title": "Électrification et chaleur renouvelable",
+            "description": "Tester les pompes à chaleur, le chauffage électrique et le solaire thermique selon les températures et les contraintes des procédés."
+          },
+          {
+            "title": "Matériaux, procédés et carbone résiduel",
+            "description": "Réduire les émissions par les formulations et les substitutions de matériaux. Étudier le captage, l’utilisation ou le stockage du CO₂ sur des cas justifiés, en vérifiant le bilan complet et le devenir du carbone."
+          },
+          {
+            "title": "Mesure et optimisation de la performance industrielle",
+            "description": "Développer des méthodes de mesure, des modèles et des outils vérifiables pour comparer les solutions, confirmer les économies et étayer les décisions."
+          }
+        ],
+        "benefits": "Une consommation énergétique par produit réduite, des baisses d’émissions vérifiables et des solutions techniquement et économiquement adaptées aux industriels.",
+        "imageAlt": "Procédés industriels : échangeur, pompe à chaleur et circuits thermiques."
+      },
+      "water": {
+        "title": "Nexus eau–énergie–agriculture et résilience",
+        "headline": "Mieux gérer ensemble l’eau, l’énergie et les besoins agricoles.",
+        "description": "Améliorer les services d’eau et la résilience agricole en maîtrisant leurs besoins énergétiques. Développer des solutions adaptées aux régions arides, en évaluant conjointement les usages de l’eau, la performance énergétique et les effets sur la production agricole.",
+        "axes": [
+          {
+            "title": "Dessalement et traitement sobres",
+            "description": "Optimiser les procédés, les membranes, la récupération d’énergie et l’alimentation renouvelable, tout en intégrant la qualité de l’eau et la gestion des rejets."
+          },
+          {
+            "title": "Irrigation et pompage pilotés",
+            "description": "Coupler les besoins des cultures, le suivi de l’eau et la gestion énergétique pour améliorer l’irrigation sans encourager une augmentation des prélèvements."
+          },
+          {
+            "title": "Réutilisation et boucles locales d’eau",
+            "description": "Valider des solutions de traitement et de réutilisation adaptées aux usages, en tenant compte des exigences sanitaires, agronomiques et énergétiques."
+          },
+          {
+            "title": "Agrivoltaïsme et systèmes agricoles intégrés",
+            "description": "Comparer les configurations associant production agricole et photovoltaïque pour vérifier leurs effets sur les cultures, l’eau, l’énergie produite et l’usage des sols."
+          }
+        ],
+        "benefits": "Des services d’eau moins énergivores, une meilleure productivité de l’eau et des systèmes agricoles plus résilients, sans déplacer les pressions sur les ressources.",
+        "imageAlt": "Système agrivoltaïque, irrigation et gestion de l’eau."
+      },
+      "circular": {
+        "title": "Bioénergies et valorisation circulaire des ressources",
+        "headline": "Valoriser les résidus et prolonger la vie des équipements.",
+        "description": "Produire de l’énergie et récupérer des matières à partir de ressources résiduelles réellement mobilisables. Étudier également les solutions de réparation, de réemploi et de récupération des matières des équipements de la transition énergétique.",
+        "axes": [
+          {
+            "title": "Gisements et chaînes d’approvisionnement durables",
+            "description": "Identifier les résidus accessibles en tenant compte de leur saisonnalité, des usages existants, de la logistique et des contraintes liées aux sols et à l’eau."
+          },
+          {
+            "title": "Biogaz, biométhane et valorisation des coproduits",
+            "description": "Adapter la digestion, l’épuration et l’utilisation des digestats aux ressources disponibles, en mesurant les rendements et les fuites de méthane."
+          },
+          {
+            "title": "Conversion thermochimique et produits biosourcés",
+            "description": "Comparer des procédés ciblés de pyrolyse, de gazéification ou de transformation en produits, selon les débouchés, les coûts et les performances environnementales."
+          },
+          {
+            "title": "Circularité des équipements de la transition",
+            "description": "Développer la réparation, le réemploi, la seconde vie et la récupération de matières, en vérifiant la performance et la sécurité des équipements concernés."
+          }
+        ],
+        "benefits": "Une valorisation adaptée aux ressources disponibles, une durée de service prolongée et des bénéfices environnementaux établis sur l’ensemble du cycle de vie, sans présumer de la neutralité carbone de la biomasse.",
+        "imageAlt": "Bioénergies, ressources résiduelles et seconde vie des équipements."
+      },
+      "buildings": {
+        "title": "Bâtiments et territoires sobres et résilients",
+        "headline": "Préserver le confort et les services avec moins d’énergie.",
+        "description": "Développer des solutions adaptées au bâti, aux usages et aux conditions climatiques pour réduire les besoins énergétiques. Associer performance réelle, accessibilité économique et résilience face à la chaleur.",
+        "axes": [
+          {
+            "title": "Enveloppes et rénovation bioclimatiques",
+            "description": "Tester les matériaux, l’ombrage, la ventilation et les assemblages pour améliorer le confort et réduire les besoins thermiques selon les bâtiments et les zones climatiques."
+          },
+          {
+            "title": "Rafraîchissement et équipements efficaces",
+            "description": "Comparer les solutions passives et actives, leurs équipements et leur pilotage pour préserver le confort tout en maîtrisant les consommations et les pointes électriques."
+          },
+          {
+            "title": "Services territoriaux et systèmes énergétiques locaux",
+            "description": "Optimiser l’éclairage, les bâtiments publics et les systèmes énergétiques locaux, en étudiant la mutualisation, l’exploitation et les besoins de maintenance."
+          },
+          {
+            "title": "Résilience à la chaleur et adoption",
+            "description": "Tester des solutions pour les sites vulnérables et comprendre les conditions d’adoption des rénovations, en intégrant les besoins et les pratiques des usagers."
+          }
+        ],
+        "benefits": "Un meilleur confort, des consommations et des coûts d’exploitation maîtrisés, ainsi qu’une meilleure continuité des services en période de forte chaleur.",
+        "imageAlt": "Bâtiment bioclimatique avec ombrage, toiture solaire et cour plantée."
+      },
+      "mobility": {
+        "title": "Mobilité et infrastructures de transport bas carbone",
+        "headline": "Adapter les solutions de mobilité aux usages réels.",
+        "description": "Étudier l’électrification et les autres solutions bas carbone en fonction des besoins de transport, des conditions climatiques et des contraintes d’exploitation. Évaluer ensemble les véhicules, les batteries, la recharge et l’organisation des déplacements.",
+        "axes": [
+          {
+            "title": "Électrification des flottes à usage intensif",
+            "description": "Comparer les véhicules, leur dimensionnement et leur exploitation pour les bus, la logistique et les flottes professionnelles, selon les profils d’usage."
+          },
+          {
+            "title": "Recharge pilotée et intégration réseau",
+            "description": "Optimiser l’implantation, la puissance et les horaires de recharge pour assurer le service tout en maîtrisant les pointes et les contraintes du réseau."
+          },
+          {
+            "title": "Batteries, diagnostic et durabilité en usage",
+            "description": "Valider la gestion thermique, l’estimation de l’état de santé, la réparation et les critères de réemploi pour prolonger la durée de service en sécurité."
+          },
+          {
+            "title": "Logistique et choix de modes ou vecteurs",
+            "description": "Comparer l’organisation des flux, les modes de transport et les motorisations. Examiner le recours à l’hydrogène et à ses dérivés pour les usages où il est justifié."
+          }
+        ],
+        "benefits": "Des services de transport moins émetteurs, des flottes disponibles, une recharge fiable et des coûts adaptés aux usages.",
+        "imageAlt": "Bus électrique, recharge pilotée et ombrière photovoltaïque."
+      }
+    },
+    "collaborationTitle": "Faire de ces priorités des projets utiles.",
+    "collaborationParagraphs": [
+      "Un besoin industriel, un défi territorial, une expertise scientifique ou un terrain d’expérimentation à partager ?",
+      "Construisons des collaborations autour de questions concrètes : développer une solution, en vérifier les performances ou préparer son transfert. Les besoins des utilisateurs et les compétences des partenaires donnent à la recherche sa pertinence et ses perspectives d’application."
+    ],
+    "collaboration": "Travailler avec nous",
+    "projects": "Découvrir les projets collaboratifs",
+    "theme": "Thématique",
+    "axes": "Axes de recherche",
+    "benefitsLabel": "Bénéfices recherchés",
+    "next": "Thématique suivante",
+    "imageNote": "Illustration conceptuelle générée ; elle ne représente pas une installation attestée.",
+    "heroAlt": "Planche de travail vue en perspective, avec un diagramme technique réunissant les sept thématiques de recherche : électricité renouvelable, hydrogène, industrie, eau et agriculture, bioénergies, bâtiments et mobilité."
   }
 }

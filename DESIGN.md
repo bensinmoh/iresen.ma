@@ -1187,3 +1187,23 @@ The owner selected `contact@iresen.ma` until per-project emails are provided.
 72 localized PDF notes are generated from the demonstration database and served
 as validated attachments, outside public assets and institutional search. See
 [detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
+
+## Feuille de route R&D — 2026-10-11
+
+This page uses large editorial chapters with varied native-scroll entrances and
+a technical drawing above a faint color underpainting. Lines are blue-grey on
+light thematic surfaces and white on dark surfaces. Native axis disclosures
+keep full research descriptions available. Mobile, reduced motion and keyboard
+focus retain plain reading. This is a scoped visual direction using current
+brand/type tokens, with no shared token replacement. See [scope](docs/roadmap.md).
+
+Roadmap follow-ups remove the theme rail/common-requirements paragraph, compact
+the first chapter junction, bottom-align hero text and add a perspective drafting
+board with a single seven-theme technical diagram. Thematic body artwork retains
+its layered treatment. See [scope](docs/roadmap.md).
+
+Intended benefits now have a restrained tinted frame with a thin border and
+shared signature corners on both light and dark chapters.
+
+Roadmap axis rows use subject-specific outline SVGs at their trailing edge,
+stretched to the title row height and fixed during disclosure opening.

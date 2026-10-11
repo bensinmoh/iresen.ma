@@ -168,7 +168,7 @@
     "home": "Home",
     "institute": "The Institute",
     "governance": "Governance & organisation",
-    "priorities": "Priorities & roadmaps",
+    "priorities": "R&D roadmap",
     "programmes": "R&D&I programmes",
     "projects": "Collaborative projects",
     "platforms": "Research platforms",
@@ -255,7 +255,7 @@
     "pages": {
       "institute": "The Institute’s identity, mission and positioning.",
       "governance": "The Institute’s governance and organisation.",
-      "priorities": "Research directions and roadmaps.",
+      "priorities": "Research rooted in Morocco’s needs, open to the world.",
       "programmes": "Discover research and innovation programmes.",
       "projects": "Explore collaborative research projects.",
       "platforms": "Discover research and experimentation platforms.",
@@ -294,7 +294,7 @@
       "home": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners.",
       "institute": "Three domains of contribution — studies and expertise, research and innovation, skills and capabilities — supported by cooperation and outreach.",
       "governance": "The bodies, teams and support functions that sustain scientific rigour and the continuity of the Institute’s contributions.",
-      "priorities": "Connect scientific, industrial and territorial needs with research priorities for the energy transition and sustainable development.",
+      "priorities": "Develop, test and transfer innovative energy solutions that are robust and resource-efficient. Our roadmap connects Morocco’s needs with research questions, with the ambition to produce solutions adaptable to other contexts.",
       "programmes": "Programme, fund and support collaborative research by linking needs to scientific objectives and usable results.",
       "projects": "Explore research, development and innovation projects by domain, programme and stage.",
       "platforms": "Research, testing, experimentation and training resources to understand technology performance and conditions of use.",
@@ -517,28 +517,56 @@
     },
     "priorities": {
       "needs-challenges": {
-        "title": "Needs and challenges",
-        "description": "To prepare: scientific and socioeconomic needs, industrial decarbonisation, energy performance and Moroccan and regional conditions."
+        "title": "Start with needs. Advance solutions.",
+        "description": "IRESEN’s R&D roadmap aims to address concrete challenges faced by energy, industry and territorial stakeholders. It directs research towards solutions whose performance can be verified in Moroccan operating conditions, taking account of cost, environmental impact and adoption potential. Seven themes structure this ambition. Each comprises four research axes with objectives and intended benefits. Themes define the challenges; axes specify the questions; programmes organise interventions; projects put them into practice. Develop Overcome scientific and technical barriers to generate knowledge, design methods and develop solutions. Test Test solutions under representative conditions to establish their performance, reliability and limits. Transfer Prepare the use of results with identified beneficiaries by addressing transfer, adoption and industrialisation conditions."
       },
       "domains-directions": {
-        "title": "Domains and directions",
-        "description": "Content to add: validated domains, their barriers, research areas and intended applications."
+        "title": "Research themes",
+        "description": "Renewable energy and flexible electricity systems Renewable hydrogen and derived molecules Resource-efficient industry and low-carbon processes Water–energy–agriculture nexus and resilience Bioenergy and circular resource recovery Resource-efficient and resilient buildings and territories Low-carbon mobility and transport infrastructure"
       },
       "technology-roadmaps": {
-        "title": "Technology roadmaps",
-        "description": "Content to add: public time horizons, stages and milestones, with their status."
+        "title": "R&D roadmap",
+        "description": "Develop, test and transfer innovative energy solutions that are robust and resource-efficient. Our roadmap connects Morocco’s needs with research questions, with the ambition to produce solutions adaptable to other contexts."
       },
       "priorities-projects": {
-        "title": "From priorities to projects",
-        "description": "Content to add: links to related programmes, projects, platforms and expertise."
+        "title": "Discover collaborative projects",
+        "description": "An industrial need, a territorial challenge, scientific expertise or an experimental setting to share? Let us build collaborations around concrete questions: develop a solution, verify its performance or prepare its transfer. Users’ needs and partners’ skills give research its relevance and prospects for application."
       },
       "decision-resources": {
-        "title": "Knowledge to inform choices",
-        "description": "Content to add: public studies, data and expertise providing scientific input."
+        "title": "Start with needs. Advance solutions.",
+        "description": "Overcome scientific and technical barriers to generate knowledge, design methods and develop solutions. Test solutions under representative conditions to establish their performance, reliability and limits. Prepare the use of results with identified beneficiaries by addressing transfer, adoption and industrialisation conditions."
       },
       "resources-collaboration": {
-        "title": "Resources and collaboration",
-        "description": "Content to add: roadmaps suitable for publication, related resources and guidance on needs."
+        "title": "Turn these priorities into useful projects.",
+        "description": "An industrial need, a territorial challenge, scientific expertise or an experimental setting to share? Let us build collaborations around concrete questions: develop a solution, verify its performance or prepare its transfer. Users’ needs and partners’ skills give research its relevance and prospects for application."
+      },
+      "theme-renewables": {
+        "title": "Renewable energy and flexible electricity systems",
+        "description": "Produce, integrate and use renewable electricity better. Improve renewable energy performance and integration into the electricity system, accounting for climate, grid constraints and users’ needs. Performance and durability in harsh conditions Understand and reduce the effects of heat, dust, corrosion and ageing. Test water-efficient maintenance and cleaning solutions. Storage and hybridisation across scales Compare and optimise batteries, thermal storage and other solutions according to expected services, storage duration and climate conditions. Active grids and renewable integration Improve forecasting, control and protection of electricity systems and microgrids. Assess their behaviour under production variations and disturbances. Demand flexibility Adapt consumption in industry, water services, buildings and charging to grid constraints without reducing the services provided. More reliable production, better renewable integration, controlled consumption peaks and lower service costs."
+      },
+      "theme-hydrogen": {
+        "title": "Renewable hydrogen and derived molecules",
+        "description": "Connect hydrogen technologies with relevant uses. Study the technical, economic and environmental conditions for producing and using renewable hydrogen and its derivatives. Compare solutions to identify uses where they offer a justified response. Dynamic electrolysis and durability Optimise electrolyser operation under variable renewable supply by studying energy consumption, degradation and availability. Water–energy–hydrogen integration Combine water treatment, desalination where relevant and heat recovery to reduce resource consumption and control discharge impacts. Conversion, storage and logistics Study conversion chains, particularly renewable ammonia, alongside storage and transport, assessing losses, safety and delivered cost. Substitution in priority uses Test relevant industrial applications against fossil solutions and direct electrification. Clarify adoption conditions. Better-controlled production and supply chains, careful use of water and energy, and uses justified by their industrial and environmental value."
+      },
+      "theme-industry": {
+        "title": "Resource-efficient industry and low-carbon processes",
+        "description": "Reduce consumption and emissions, strengthen competitiveness. Develop solutions suited to industrial processes to improve energy performance and reduce emissions. The objective is to demonstrate gains and clarify the conditions for replicating them at other sites. Efficiency and heat recovery Optimise processes and auxiliary equipment. Develop heat recovery and reuse solutions to reduce the energy required for production. Electrification and renewable heat Test heat pumps, electric heating and solar thermal technologies according to process temperatures and constraints. Materials, processes and residual carbon Reduce emissions through formulations and material substitutions. Study carbon dioxide capture, use or storage in justified cases, verifying the complete balance and the fate of the carbon. Industrial performance measurement and optimisation Develop measurement methods, models and verifiable tools to compare solutions, confirm savings and support decisions. Lower energy consumption per product, verifiable emissions reductions and solutions technically and economically suited to industry."
+      },
+      "theme-water": {
+        "title": "Water–energy–agriculture nexus and resilience",
+        "description": "Manage water, energy and agricultural needs together. Improve water services and agricultural resilience while controlling energy requirements. Develop solutions suited to arid regions, jointly assessing water use, energy performance and effects on agricultural production. Efficient desalination and treatment Optimise processes, membranes, energy recovery and renewable supply while incorporating water quality and discharge management. Controlled irrigation and pumping Combine crop needs, water monitoring and energy management to improve irrigation without encouraging increased withdrawals. Water reuse and local loops Validate treatment and reuse solutions suited to their uses, accounting for health, agronomic and energy requirements. Agrivoltaics and integrated farming systems Compare arrangements combining farming and photovoltaics to verify effects on crops, water, energy production and land use. Less energy-intensive water services, better water productivity and more resilient farming systems, without shifting pressures onto other resources."
+      },
+      "theme-circular": {
+        "title": "Bioenergy and circular resource recovery",
+        "description": "Recover value from residues and extend equipment life. Produce energy and recover materials from residual resources that can actually be mobilised. Also study repair, reuse and material recovery solutions for energy-transition equipment. Sustainable resource availability and supply chains Identify accessible residues, accounting for seasonality, existing uses, logistics and soil and water constraints. Biogas, biomethane and coproduct recovery Adapt digestion, upgrading and digestate use to available resources, measuring yields and methane leakage. Thermochemical conversion and bio-based products Compare targeted pyrolysis, gasification or product-conversion processes according to markets, costs and environmental performance. Circularity of transition equipment Develop repair, reuse, second-life and material recovery approaches while verifying the performance and safety of the equipment concerned. Recovery suited to available resources, longer service life and environmental benefits established across the lifecycle, without assuming biomass is carbon-neutral."
+      },
+      "theme-buildings": {
+        "title": "Resource-efficient and resilient buildings and territories",
+        "description": "Maintain comfort and services with less energy. Develop solutions suited to buildings, uses and climate conditions to reduce energy needs. Combine actual performance, affordability and resilience to heat. Bioclimatic envelopes and renovation Test materials, shading, ventilation and assemblies to improve comfort and reduce thermal needs according to building types and climate zones. Cooling and efficient equipment Compare passive and active solutions, their equipment and controls to maintain comfort while managing consumption and electricity peaks. Territorial services and local energy systems Optimise lighting, public buildings and local energy systems by studying shared use, operation and maintenance requirements. Heat resilience and adoption Test solutions for vulnerable sites and understand renovation adoption conditions, accounting for users’ needs and practices. Better comfort, controlled consumption and operating costs, and improved service continuity during severe heat."
+      },
+      "theme-mobility": {
+        "title": "Low-carbon mobility and transport infrastructure",
+        "description": "Adapt mobility solutions to actual uses. Study electrification and other low-carbon solutions according to transport needs, climate conditions and operating constraints. Assess vehicles, batteries, charging and journey organisation together. Electrification of intensive-use fleets Compare vehicles, sizing and operation for buses, logistics and professional fleets according to use profiles. Managed charging and grid integration Optimise charging locations, power and schedules to provide the service while controlling peaks and grid constraints. Batteries, diagnosis and durability in use Validate thermal management, state-of-health estimation, repair and reuse criteria to extend safe service life. Logistics and choice of modes or energy carriers Compare flow organisation, transport modes and propulsion. Examine hydrogen and derivatives for uses where they are justified. Lower-emission transport services, available fleets, reliable charging and costs suited to users’ needs."
       }
     },
     "programmes": {
@@ -2023,5 +2051,222 @@
     "downloadNote": "Download the project note (PDF)",
     "contactSubject": "Project {name} — contact request",
     "noteTitle": "Project note"
+  },
+  "Roadmap": {
+    "title": "R&D roadmap",
+    "eyebrow": "Research & Innovation",
+    "tagline": "Research rooted in Morocco’s needs, open to the world.",
+    "description": "Develop, test and transfer innovative energy solutions that are robust and resource-efficient. Our roadmap connects Morocco’s needs with research questions, with the ambition to produce solutions adaptable to other contexts.",
+    "explore": "Explore the themes",
+    "programmes": "Discover our R&D&I programmes",
+    "introductionTitle": "Start with needs. Advance solutions.",
+    "introductionParagraphs": [
+      "IRESEN’s R&D roadmap aims to address concrete challenges faced by energy, industry and territorial stakeholders. It directs research towards solutions whose performance can be verified in Moroccan operating conditions, taking account of cost, environmental impact and adoption potential.",
+      "Seven themes structure this ambition. Each comprises four research axes with objectives and intended benefits. Themes define the challenges; axes specify the questions; programmes organise interventions; projects put them into practice."
+    ],
+    "steps": [
+      {
+        "title": "Develop",
+        "description": "Overcome scientific and technical barriers to generate knowledge, design methods and develop solutions."
+      },
+      {
+        "title": "Test",
+        "description": "Test solutions under representative conditions to establish their performance, reliability and limits."
+      },
+      {
+        "title": "Transfer",
+        "description": "Prepare the use of results with identified beneficiaries by addressing transfer, adoption and industrialisation conditions."
+      }
+    ],
+    "collaborationTitle": "Turn these priorities into useful projects.",
+    "collaborationParagraphs": [
+      "An industrial need, a territorial challenge, scientific expertise or an experimental setting to share?",
+      "Let us build collaborations around concrete questions: develop a solution, verify its performance or prepare its transfer. Users’ needs and partners’ skills give research its relevance and prospects for application."
+    ],
+    "collaboration": "Work with us",
+    "projects": "Discover collaborative projects",
+    "chapters": {
+      "renewables": {
+        "title": "Renewable energy and flexible electricity systems",
+        "headline": "Produce, integrate and use renewable electricity better.",
+        "description": "Improve renewable energy performance and integration into the electricity system, accounting for climate, grid constraints and users’ needs.",
+        "axes": [
+          {
+            "title": "Performance and durability in harsh conditions",
+            "description": "Understand and reduce the effects of heat, dust, corrosion and ageing. Test water-efficient maintenance and cleaning solutions."
+          },
+          {
+            "title": "Storage and hybridisation across scales",
+            "description": "Compare and optimise batteries, thermal storage and other solutions according to expected services, storage duration and climate conditions."
+          },
+          {
+            "title": "Active grids and renewable integration",
+            "description": "Improve forecasting, control and protection of electricity systems and microgrids. Assess their behaviour under production variations and disturbances."
+          },
+          {
+            "title": "Demand flexibility",
+            "description": "Adapt consumption in industry, water services, buildings and charging to grid constraints without reducing the services provided."
+          }
+        ],
+        "benefits": "More reliable production, better renewable integration, controlled consumption peaks and lower service costs.",
+        "imageAlt": "Renewable electricity system: solar panel, wind turbine and storage."
+      },
+      "hydrogen": {
+        "title": "Renewable hydrogen and derived molecules",
+        "headline": "Connect hydrogen technologies with relevant uses.",
+        "description": "Study the technical, economic and environmental conditions for producing and using renewable hydrogen and its derivatives. Compare solutions to identify uses where they offer a justified response.",
+        "axes": [
+          {
+            "title": "Dynamic electrolysis and durability",
+            "description": "Optimise electrolyser operation under variable renewable supply by studying energy consumption, degradation and availability."
+          },
+          {
+            "title": "Water–energy–hydrogen integration",
+            "description": "Combine water treatment, desalination where relevant and heat recovery to reduce resource consumption and control discharge impacts."
+          },
+          {
+            "title": "Conversion, storage and logistics",
+            "description": "Study conversion chains, particularly renewable ammonia, alongside storage and transport, assessing losses, safety and delivered cost."
+          },
+          {
+            "title": "Substitution in priority uses",
+            "description": "Test relevant industrial applications against fossil solutions and direct electrification. Clarify adoption conditions."
+          }
+        ],
+        "benefits": "Better-controlled production and supply chains, careful use of water and energy, and uses justified by their industrial and environmental value.",
+        "imageAlt": "Hydrogen chain: electrolyser and vessel."
+      },
+      "industry": {
+        "title": "Resource-efficient industry and low-carbon processes",
+        "headline": "Reduce consumption and emissions, strengthen competitiveness.",
+        "description": "Develop solutions suited to industrial processes to improve energy performance and reduce emissions. The objective is to demonstrate gains and clarify the conditions for replicating them at other sites.",
+        "axes": [
+          {
+            "title": "Efficiency and heat recovery",
+            "description": "Optimise processes and auxiliary equipment. Develop heat recovery and reuse solutions to reduce the energy required for production."
+          },
+          {
+            "title": "Electrification and renewable heat",
+            "description": "Test heat pumps, electric heating and solar thermal technologies according to process temperatures and constraints."
+          },
+          {
+            "title": "Materials, processes and residual carbon",
+            "description": "Reduce emissions through formulations and material substitutions. Study carbon dioxide capture, use or storage in justified cases, verifying the complete balance and the fate of the carbon."
+          },
+          {
+            "title": "Industrial performance measurement and optimisation",
+            "description": "Develop measurement methods, models and verifiable tools to compare solutions, confirm savings and support decisions."
+          }
+        ],
+        "benefits": "Lower energy consumption per product, verifiable emissions reductions and solutions technically and economically suited to industry.",
+        "imageAlt": "Industrial processes: heat exchanger, heat pump and thermal circuits."
+      },
+      "water": {
+        "title": "Water–energy–agriculture nexus and resilience",
+        "headline": "Manage water, energy and agricultural needs together.",
+        "description": "Improve water services and agricultural resilience while controlling energy requirements. Develop solutions suited to arid regions, jointly assessing water use, energy performance and effects on agricultural production.",
+        "axes": [
+          {
+            "title": "Efficient desalination and treatment",
+            "description": "Optimise processes, membranes, energy recovery and renewable supply while incorporating water quality and discharge management."
+          },
+          {
+            "title": "Controlled irrigation and pumping",
+            "description": "Combine crop needs, water monitoring and energy management to improve irrigation without encouraging increased withdrawals."
+          },
+          {
+            "title": "Water reuse and local loops",
+            "description": "Validate treatment and reuse solutions suited to their uses, accounting for health, agronomic and energy requirements."
+          },
+          {
+            "title": "Agrivoltaics and integrated farming systems",
+            "description": "Compare arrangements combining farming and photovoltaics to verify effects on crops, water, energy production and land use."
+          }
+        ],
+        "benefits": "Less energy-intensive water services, better water productivity and more resilient farming systems, without shifting pressures onto other resources.",
+        "imageAlt": "Agrivoltaic system, irrigation and water management."
+      },
+      "circular": {
+        "title": "Bioenergy and circular resource recovery",
+        "headline": "Recover value from residues and extend equipment life.",
+        "description": "Produce energy and recover materials from residual resources that can actually be mobilised. Also study repair, reuse and material recovery solutions for energy-transition equipment.",
+        "axes": [
+          {
+            "title": "Sustainable resource availability and supply chains",
+            "description": "Identify accessible residues, accounting for seasonality, existing uses, logistics and soil and water constraints."
+          },
+          {
+            "title": "Biogas, biomethane and coproduct recovery",
+            "description": "Adapt digestion, upgrading and digestate use to available resources, measuring yields and methane leakage."
+          },
+          {
+            "title": "Thermochemical conversion and bio-based products",
+            "description": "Compare targeted pyrolysis, gasification or product-conversion processes according to markets, costs and environmental performance."
+          },
+          {
+            "title": "Circularity of transition equipment",
+            "description": "Develop repair, reuse, second-life and material recovery approaches while verifying the performance and safety of the equipment concerned."
+          }
+        ],
+        "benefits": "Recovery suited to available resources, longer service life and environmental benefits established across the lifecycle, without assuming biomass is carbon-neutral.",
+        "imageAlt": "Bioenergy, residual resources and second-life equipment."
+      },
+      "buildings": {
+        "title": "Resource-efficient and resilient buildings and territories",
+        "headline": "Maintain comfort and services with less energy.",
+        "description": "Develop solutions suited to buildings, uses and climate conditions to reduce energy needs. Combine actual performance, affordability and resilience to heat.",
+        "axes": [
+          {
+            "title": "Bioclimatic envelopes and renovation",
+            "description": "Test materials, shading, ventilation and assemblies to improve comfort and reduce thermal needs according to building types and climate zones."
+          },
+          {
+            "title": "Cooling and efficient equipment",
+            "description": "Compare passive and active solutions, their equipment and controls to maintain comfort while managing consumption and electricity peaks."
+          },
+          {
+            "title": "Territorial services and local energy systems",
+            "description": "Optimise lighting, public buildings and local energy systems by studying shared use, operation and maintenance requirements."
+          },
+          {
+            "title": "Heat resilience and adoption",
+            "description": "Test solutions for vulnerable sites and understand renovation adoption conditions, accounting for users’ needs and practices."
+          }
+        ],
+        "benefits": "Better comfort, controlled consumption and operating costs, and improved service continuity during severe heat.",
+        "imageAlt": "Bioclimatic building with shading, solar roof and planted courtyard."
+      },
+      "mobility": {
+        "title": "Low-carbon mobility and transport infrastructure",
+        "headline": "Adapt mobility solutions to actual uses.",
+        "description": "Study electrification and other low-carbon solutions according to transport needs, climate conditions and operating constraints. Assess vehicles, batteries, charging and journey organisation together.",
+        "axes": [
+          {
+            "title": "Electrification of intensive-use fleets",
+            "description": "Compare vehicles, sizing and operation for buses, logistics and professional fleets according to use profiles."
+          },
+          {
+            "title": "Managed charging and grid integration",
+            "description": "Optimise charging locations, power and schedules to provide the service while controlling peaks and grid constraints."
+          },
+          {
+            "title": "Batteries, diagnosis and durability in use",
+            "description": "Validate thermal management, state-of-health estimation, repair and reuse criteria to extend safe service life."
+          },
+          {
+            "title": "Logistics and choice of modes or energy carriers",
+            "description": "Compare flow organisation, transport modes and propulsion. Examine hydrogen and derivatives for uses where they are justified."
+          }
+        ],
+        "benefits": "Lower-emission transport services, available fleets, reliable charging and costs suited to users’ needs.",
+        "imageAlt": "Electric bus, managed charging and photovoltaic canopy."
+      }
+    },
+    "theme": "Theme",
+    "axes": "Research axes",
+    "benefitsLabel": "Intended benefits",
+    "next": "Next theme",
+    "imageNote": "Generated conceptual illustration; it does not depict a verified facility.",
+    "heroAlt": "Drafting board seen in perspective, with a technical diagram combining the seven research themes: renewable electricity, hydrogen, industry, water and agriculture, bioenergy, buildings and mobility."
   }
 }

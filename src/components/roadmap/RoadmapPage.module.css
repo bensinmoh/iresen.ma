@@ -1,0 +1,538 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  min-block-size: max(44rem, var(--hero-viewport-height, 100svh));
+  padding-block: calc(var(--hero-header-height, 8rem) + 3rem) calc(var(--space-12) + var(--space-6));
+  color: var(--color-white);
+  background: var(--color-navy);
+  overflow: clip;
+}
+.heroArtwork {
+  position: absolute;
+  inset: 0;
+}
+.heroArtwork img {
+  object-fit: cover;
+  object-position: 65% 40%;
+}
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(18 52 90 / 96%) 0%,
+    rgb(18 52 90 / 85%) 30%,
+    rgb(18 52 90 / 15%) 85%
+  );
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+.hero .secondary {
+  color: var(--color-white);
+}
+.heroContent h1 {
+  max-inline-size: 14ch;
+  font-size: var(--hero-title-size);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.tagline {
+  max-inline-size: 34ch;
+  margin-block-start: 1.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.4;
+}
+.introduction {
+  max-inline-size: 56ch;
+  margin-block: 1.5rem 2rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-block-size: 2.75rem;
+  font-weight: 600;
+  text-underline-offset: 0.3rem;
+}
+.secondary svg {
+  flex-shrink: 0;
+}
+.anchor {
+  display: block;
+  scroll-margin-block-start: 2rem;
+}
+.strategy {
+  padding-block: 4rem 2rem;
+}
+.strategyIntro {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 5vw;
+}
+.strategy h2 {
+  max-inline-size: 18ch;
+  font-size: clamp(2rem, 3.5vw, 3.75rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.strategy p {
+  line-height: 1.7;
+  max-inline-size: 75ch;
+}
+.strategyIntro p + p {
+  margin-block-start: 1.25rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  margin-block: 2.5rem 0;
+  border-block-start: 1px solid var(--color-border);
+}
+.steps li {
+  padding-block-start: 2rem;
+}
+.steps h3 {
+  font-size: 1.75rem;
+  color: var(--color-blue);
+  margin-block-end: 1rem;
+}
+.panel {
+  --arrival: 1;
+  --art-x: 0rem;
+  --art-y: 5rem;
+  position: relative;
+  scroll-margin-block-start: 2rem;
+  color: var(--color-navy);
+  background: var(--color-surface);
+}
+.stage {
+  position: relative;
+  min-block-size: 100svh;
+  padding-block: 4.5rem 3rem;
+  display: flex;
+  align-items: center;
+  overflow: clip;
+}
+.panel:first-child .stage {
+  min-block-size: 0;
+  padding-block-start: 3rem;
+}
+.scene {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem 5vw;
+}
+.copy {
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
+}
+.label {
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-block-end: 1rem;
+}
+.titleFrame {
+  overflow: clip;
+  padding-block-end: 0.4rem;
+}
+.titleFrame h2 {
+  max-inline-size: 32ch;
+  font-size: clamp(2.25rem, 4vw, 4.75rem);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  transform: translateY(calc((1 - var(--arrival)) * 2rem));
+}
+.headline {
+  max-inline-size: 65ch;
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  line-height: 1.5;
+  margin-block-start: 1rem;
+}
+.artwork {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-inline-size: 0;
+  mix-blend-mode: multiply;
+  transform: translate(
+      calc((1 - var(--arrival)) * var(--art-x)),
+      calc((1 - var(--arrival)) * var(--art-y))
+    )
+    scale(calc(0.94 + var(--arrival) * 0.06));
+}
+.imageLayers {
+  position: relative;
+  inline-size: 100%;
+}
+.imageLayers img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+}
+.imageLayers .original {
+  opacity: 0.12;
+}
+.imageLayers .drawing {
+  position: absolute;
+  inset: 0;
+  block-size: 100%;
+  opacity: 0.95;
+  filter: contrast(3) brightness(1.15) saturate(0.65);
+  mix-blend-mode: multiply;
+  clip-path: inset(0 calc((1 - var(--arrival)) * 100%) 0 0);
+}
+.questions {
+  align-self: center;
+  min-inline-size: 0;
+}
+.description {
+  max-inline-size: 66ch;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.axes {
+  margin-block-start: 1.5rem;
+}
+.axes h3,
+.benefits h3 {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  margin-block-end: 0.75rem;
+}
+.axis {
+  border-block-end: 1px solid rgb(18 52 90 / 22%);
+}
+.axis summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3rem;
+  align-items: center;
+  min-block-size: 4.5rem;
+  gap: 1rem;
+  list-style: none;
+  padding-block: 0.875rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.axis summary::-webkit-details-marker {
+  display: none;
+}
+.axisIcon {
+  inline-size: 100%;
+  block-size: 100%;
+  align-self: stretch;
+  color: var(--color-blue);
+}
+.axis p {
+  padding-block: 0.25rem 1rem;
+  max-inline-size: 65ch;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+.benefits {
+  margin-block-start: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgb(18 52 90 / 14%);
+  border-radius: var(--radius-signature);
+  background: rgb(255 255 255 / 65%);
+}
+.benefits p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  max-inline-size: 65ch;
+}
+.chapterFooter {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: var(--font-size-meta);
+  padding-block-start: 1rem;
+}
+.chapterFooter a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-block-size: 2.75rem;
+  text-decoration: none;
+}
+.hydrogen {
+  --art-x: 5rem;
+  --art-y: 2rem;
+  background: color-mix(in srgb, var(--color-energy-cyan) 22%, white);
+}
+.industry {
+  --art-x: -2rem;
+  background: var(--color-white);
+}
+.industry .artwork,
+.buildings .artwork,
+.mobility .artwork {
+  grid-column: 2;
+  grid-row: 2;
+}
+.industry .questions,
+.buildings .questions,
+.mobility .questions {
+  grid-column: 1;
+  grid-row: 2;
+}
+.water,
+.mobility {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.circular {
+  --art-y: 3rem;
+  background: color-mix(in srgb, var(--color-innovation-lime) 13%, white);
+}
+.buildings {
+  --art-y: -4rem;
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.mobility {
+  --art-x: -5rem;
+  --art-y: 0rem;
+}
+.water .drawing,
+.buildings .drawing,
+.mobility .drawing {
+  filter: grayscale(1) invert(1) contrast(3);
+  mix-blend-mode: screen;
+  opacity: 0.95;
+}
+.water .artwork,
+.buildings .artwork,
+.mobility .artwork {
+  mix-blend-mode: screen;
+}
+.water .chapterFooter a,
+.buildings .chapterFooter a,
+.mobility .chapterFooter a {
+  color: inherit;
+}
+.water .original,
+.buildings .original,
+.mobility .original {
+  opacity: 0.14;
+}
+.water .axis,
+.buildings .axis,
+.mobility .axis {
+  border-color: rgb(255 255 255 / 25%);
+}
+.water .axis svg,
+.buildings .axis svg,
+.mobility .axis svg {
+  color: var(--color-white);
+}
+.water .benefits,
+.buildings .benefits,
+.mobility .benefits {
+  border-color: rgb(255 255 255 / 22%);
+  background: rgb(255 255 255 / 6%);
+}
+.collaboration {
+  position: relative;
+  padding-block: 5rem;
+  text-align: center;
+}
+.collaboration h2 {
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  line-height: 1.2;
+  text-wrap: balance;
+  margin-block-end: 1.5rem;
+}
+.collaboration p {
+  max-inline-size: 75ch;
+  margin-inline: auto;
+  margin-block-end: 1rem;
+  line-height: 1.7;
+}
+.collaboration .actions {
+  justify-content: center;
+  margin-block-start: 2rem;
+}
+.hero:lang(ar) h1,
+.panel:lang(ar) h2,
+.label:lang(ar) {
+  letter-spacing: normal;
+  line-height: 1.3;
+}
+.panel:lang(ar) p {
+  line-height: 1.8;
+}
+.hero:lang(ar) .shade {
+  background: linear-gradient(
+    270deg,
+    rgb(18 52 90 / 96%) 0%,
+    rgb(18 52 90 / 85%) 30%,
+    rgb(18 52 90 / 15%) 85%
+  );
+}
+.hero:lang(ar) .heroArtwork img {
+  transform: scaleX(-1);
+}
+@media (min-width: 64rem) {
+  /* Stage takeover follows native scroll. Only illustrations transform; opening
+     axes never changes sticky wrappers or the heights of earlier chapters. */
+  .artwork {
+    position: sticky;
+    inset-block-start: 2rem;
+    align-self: start;
+  }
+}
+@media (max-width: 63.99rem) {
+  .hero {
+    min-block-size: 42rem;
+  }
+  .heroArtwork {
+    opacity: 0.8;
+  }
+  .shade {
+    background: linear-gradient(0deg, var(--color-navy) 20%, rgb(18 52 90 / 55%));
+  }
+  .strategyIntro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .strategy h2 {
+    max-inline-size: 28ch;
+  }
+  .steps {
+    gap: 2rem;
+  }
+  .scene {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .copy,
+  .artwork,
+  .questions,
+  .industry .artwork,
+  .buildings .artwork,
+  .mobility .artwork,
+  .industry .questions,
+  .buildings .questions,
+  .mobility .questions {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .artwork {
+    max-inline-size: 42rem;
+    justify-self: center;
+    inline-size: 100%;
+  }
+  .stage {
+    min-block-size: 0;
+    padding-block: 3.5rem 2rem;
+  }
+  .titleFrame h2 {
+    max-inline-size: none;
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+  .description {
+    max-inline-size: 75ch;
+  }
+  .hero:lang(ar) .shade {
+    background: linear-gradient(0deg, var(--color-navy) 20%, rgb(18 52 90 / 55%));
+  }
+}
+@media (max-width: 40rem) {
+  .hero {
+    min-block-size: 100svh;
+    padding-block-end: 3rem;
+  }
+  .heroContent h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+  .tagline {
+    font-size: 1.25rem;
+  }
+  .introduction {
+    font-size: 1rem;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  .hero :global(.button) {
+    inline-size: 100%;
+  }
+  .strategy,
+  .collaboration {
+    padding-block: 3rem;
+  }
+  .strategy {
+    padding-block: 2.5rem 1.5rem;
+  }
+  .panel:first-child .stage {
+    padding-block-start: 2.5rem;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-block: 2rem 0;
+  }
+  .steps li {
+    padding-block-start: 1.25rem;
+  }
+  .steps h3 {
+    font-size: 1.5rem;
+    margin-block-end: 0.5rem;
+  }
+  .titleFrame h2 {
+    font-size: 2rem;
+  }
+  .headline {
+    font-size: 1.125rem;
+  }
+  .stage {
+    padding-block-start: 3rem;
+  }
+  .collaboration .actions {
+    align-items: stretch;
+  }
+  .collaboration .secondary {
+    justify-content: center;
+  }
+  .hero .secondary {
+    font-size: 0.9375rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .titleFrame h2,
+  .artwork {
+    transform: none;
+  }
+  .imageLayers .drawing {
+    clip-path: none;
+  }
+}
