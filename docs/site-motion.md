@@ -54,3 +54,6 @@ and no-replay behavior in FR/EN/AR, hero anchor continuity, mobile/tablet public
 pages, reduced-motion preference changes, missing-observer and no-JavaScript
 readability. Actual command results and rendered review are recorded in
 [validation](validation.md).
+
+Project catalogue articles also own their filter/hover transitions and are excluded
+from shared first-scroll reveals. See [project interactions](projects.md).

@@ -10,7 +10,7 @@ const targets = [
   'main h2',
   'main h3',
   'main blockquote',
-  'main article:not([id^="publication-"]):not([id^="patent-"]):not(.published-content)',
+  'main article:not([id^="publication-"]):not([id^="patent-"]):not([id^="project-"]):not(.published-content)',
   'main .hero-description',
   'main section > p',
   'main section > header > p',
@@ -67,7 +67,7 @@ export function SiteMotion() {
           if (
             preference.matches ||
             target.contains(document.activeElement) ||
-            target.closest('[id^="publication-"], [id^="patent-"]') ||
+            target.closest('[id^="publication-"], [id^="patent-"], [id^="project-"]') ||
             target.getAnimations().length
           )
             continue
@@ -96,7 +96,7 @@ export function SiteMotion() {
       for (const target of candidates) {
         if (visited.has(target)) continue
         // Avoid nested animations and preserve component-owned list transitions.
-        if (target.closest('[id^="publication-"], [id^="patent-"]')) continue
+        if (target.closest('[id^="publication-"], [id^="patent-"], [id^="project-"]')) continue
         const ancestor = target.parentElement?.closest(targets)
         if (ancestor && (root?.contains(ancestor) || footer?.contains(ancestor))) continue
         if (preference.matches) visited.add(target)

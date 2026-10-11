@@ -126,9 +126,13 @@ test('public image, document and news previews retain native access and responsi
     await page.goto(`${pageHref('search', 'en')}?q=${marker}`)
     await expect(page.locator('.search-document-preview')).toHaveCount(0)
     await page.goto(`${pageHref('search', 'en')}?q=video&type=media`)
-    await expect(page.locator('.search-result-preview video')).toHaveAttribute('preload', 'none')
-    await expect(page.locator('.search-result-preview video')).toHaveAttribute('controls', '')
-    await expect(page.locator('.search-result-preview video')).not.toHaveAttribute('autoplay', '')
+    const videos = page.locator('.search-result-preview video')
+    await expect(videos.first()).toBeVisible()
+    for (const video of await videos.all()) {
+      await expect(video).toHaveAttribute('preload', 'none')
+      await expect(video).toHaveAttribute('controls', '')
+      await expect(video).not.toHaveAttribute('autoplay', '')
+    }
   } finally {
     if (newsId) await database.query('DELETE FROM news WHERE id=$1', [newsId])
     if (mediaId) await database.query('DELETE FROM media WHERE id=$1', [mediaId])

@@ -3201,6 +3201,36 @@ Arabic shade corrections were rechecked. Broader publication/media behavior is
 covered by current PR CI, not claimed as locally rerun here. No deployment.
 See [scope](projects.md) and [asset manifest](projects-assets.json).
 
+## Project filter and detail interactions — 2026-10-11
+
+- Node 24.19.0 / pnpm 11.19.0; lint, isolated production build, typecheck and
+  134 unit checks passed. All 28 integration checks passed in a dedicated disposable
+  local database, removed afterwards; existing CMS records were preserved.
+- 31 scoped production browser checks passed; verification covers FR/EN/AR keyword/facet/pagination/reset,
+  unchanged scroll and focused select, native back/forward, no-JavaScript GET and
+  detail links, fixed-frame image zoom, physical-right drawer, Escape/backdrop
+  dismissal/focus restoration, reduced motion and mobile drawer in FR/AR.
+- Responsive checks cover 320/390/768/1024/1440px and 200% text enlargement;
+  shared heroes/motion and guarded search destinations remain covered. Scoped axe
+  checks include the catalogue and open dialogs; this is not a full accessibility audit.
+- The initial card-wide opacity reveal produced a transient contrast finding in
+  a confirmation run. Corrected it by retaining text opacity and fading only the
+  photos; current checks use the corrected implementation.
+- The local search rebuild synchronized static metadata and eight eligible CMS
+  records; project rows remain excluded. Review captures live in
+  `docs/review/projects/`; the owner's MOV remains a private local reference.
+- Production checks use `.local/projects-motion-build` / port 3011, preserving the
+  existing dev server. Build-generated tsconfig additions are removed after checks,
+  preserving the owner's original local formatting/runtime paths. No deployment.
+- Later owner screenshots extend the detail scope. The central contact is explicitly
+  owner-selected (`contact@iresen.ma`); no mail is sent. Tagged PDFs are generated
+  from each record with current Latin/Arabic fonts, source/file hashes and 72 explicit
+  ineligible search references. Unknown record/locale requests return 404.
+- All 72 current PDFs fit one A4 page and have selectable text/tags; final FR/EN/AR
+  renderings were inspected with Poppler after increasing print text size. File
+  hashes and source freshness are covered by unit checks; attachment downloads
+  are exercised from the open drawer in FR/AR on the standalone production build.
+
 ## Homepage themes and sentence case — 2026-10-11
 
 Renamed the localized homepage label/navigation and discovery action; removed
@@ -3225,3 +3255,9 @@ one case per locale with reduced motion for geometry/image measurements. All
 original assertions remain, and 200% text is checked in every locale. The three
 cases passed against the existing local production projects build. Motion behavior
 retains its separate coverage; no timeout increase or assertion removal is used.
+
+## Project contact, consortium and Apex Leaf — 2026-10-11
+
+Lint, typecheck, formatting, 134 unit tests, 28 integration tests on a disposable local database, final production build and all 259 browser tests passed. The full suite includes 13 project cases covering filtering/pagination, fixed-frame hover zoom, right-edge drawer, no-JavaScript fallback, FR/EN/AR containment, reduced motion, focus restoration, email hiding, mailto actions and localized PDF download. Two browser tests now use the configured base URL; preview assertions inspect every returned video instead of assuming a single result.
+
+Rendered FR/AR contact groups were inspected at 390px and 1440px; both text and portrait/icon measure 56px high, with a larger semibold name and thin italic affiliation. Latest catalogue, detail and contact review assets are stored under docs/review/projects. All 72 PDFs have one page and include contact@iresen.ma; FR/AR note rendering and affiliation text were checked. Localized project interface search destinations were verified while fixture projects, notes and filler wordmarks remain excluded. The original Apex Leaf SVG is unchanged. Current PR CI remains required before merge; no deployment or Safari/Firefox/screen-reader audit. See [scope](projects.md).

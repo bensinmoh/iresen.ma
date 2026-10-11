@@ -1,4 +1,5 @@
 import records from '@/data/projects-demo.json' with { type: 'json' }
+import type { ProjectRecord } from './projects-model'
 import type { Locale } from '@/i18n/locales'
 
 export const projectDomains = [
@@ -11,7 +12,7 @@ export const projectDomains = [
   'storage',
 ] as const
 export const projectStatuses = ['active', 'completed', 'planned'] as const
-export type DemoProject = {
+export type DemoProject = ProjectRecord & {
   id: string
   fictional: true
   acronym: string

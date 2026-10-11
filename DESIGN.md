@@ -1167,4 +1167,23 @@ keep their destinations/history and work without JavaScript. See
 The commissioned Figma page uses a light glass hero, institutional navy filter
 band and six-card grid; tablet/mobile reflow to two/one columns. Current shared
 fonts/colors, full-width readable Arabic shading and native SVG controls retain
-site coherence. Fictional records are visibly identified. See [scope](docs/projects.md).
+site coherence. The later owner follow-up removes fictional notices from the frontend; source
+provenance and institutional-search exclusion remain. See [scope](docs/projects.md).
+
+## Project interactions — owner follow-up, 2026-10-11
+
+The owner commissioned local filter updates without anchor jumps, soft card
+transitions, image zoom inside a fixed frame on hover, and a project-detail
+panel entering from the physical right, using the supplied local video as a
+visual reference. Project filter fields use the shared two-rounded/two-square
+action corners. Fictional notices are removed from the frontend as explicitly
+requested; record provenance remains in the isolated database/documentation,
+with no project-level institutional-search entries or deployment. See
+[updated scope](docs/projects.md).
+
+Owner detail follow-up: include presentation, metadata, hosting platform, contact,
+consortium and scientific objectives, with contact and note-download actions.
+The owner selected `contact@iresen.ma` until per-project emails are provided.
+72 localized PDF notes are generated from the demonstration database and served
+as validated attachments, outside public assets and institutional search. See
+[detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).

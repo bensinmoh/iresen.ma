@@ -929,3 +929,31 @@ are displayed.
 - Register the page/sections and seven supplied individual Figma visuals; preserve
   original identity, canonical routes and legacy anchors.
 - No deployment or real portfolio publication. See [scope](docs/projects.md).
+
+## Project filter and detail interactions — 2026-10-11
+
+- Apply shared physical two-rounded/two-square corners to the project search
+  composite and selects; update filters/pagination/history locally without
+  reloads or anchor jumps, retaining native GET fallbacks.
+- Animate card replacement and catalogue height with readable text, bounded photo
+  fades and reduced-motion cancellation. Hover zooms images inside fixed frames.
+- Add an accessible native right-side project detail panel with independent
+  scrolling, compact sticky header, Escape/backdrop dismissal and focus return;
+  retain a same-page detail fallback without JavaScript.
+- Remove fictional notices from frontend copy/search as explicitly requested,
+  keeping database provenance and excluding placeholder coordinators from the
+  browser projection. No project-level institutional-search publication or deployment.
+- Complete the screenshot-referenced detail blocks with per-record FR/EN/AR
+  presentation/platform/contact/consortium/objectives fields, central contact email
+  chosen by the owner, and 72 real localized PDF note downloads through a validated
+  attachment API. Keep source flags, draft eligibility and private references separate.
+
+- Projects follow-up: stabilize numbered pagination across changing card heights and apply two rounded/two square corners to project cards.
+
+## Project details and Apex Leaf follow-up — 2026-10-11
+
+- Rename the project filter to Thématique; add owner-authorized filler professor names, affiliations and vector consortium wordmarks.
+- Hide the email in details, retain contact@iresen.ma in the mailto action, and include coordinator affiliation/email in all 72 localized PDF notes.
+- Align the compact name/italic affiliation with the 56px portrait/icon on desktop and mobile.
+- Replace the raster hero leaf with a rendering based on the untouched original Apex Leaf silhouette. Preserve fixture provenance and institutional search exclusion.
+- Lint, typecheck, 134 unit tests, 28 integration tests, production build and all 259 local browser tests passed. No deployment.
