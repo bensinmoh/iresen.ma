@@ -8,12 +8,14 @@
       "sourcePages": 9,
       "selectedPage": 1,
       "sourceStatus": "Owner-supplied cover mockup; only the page-one image is commissioned for the website. Original PDF and other pages are excluded.",
-      "url": "/images/institute/fifteen-year-report-cover.webp",
-      "width": 1800,
-      "height": 1633,
-      "sha256": "3485d638a5fc7b99ec2fb5961e5a436f96b6a2cca3de0c35af7f38a95143ae5b",
-      "bytes": 257364,
-      "method": "Poppler rasterization of the complete first PDF page at 1800px, then WebP quality 92. Cover geometry, typography, marks and full mockup composition preserved."
+      "url": "/images/institute/fifteen-year-report-cover-cutout.webp",
+      "width": 1317,
+      "height": 1194,
+      "sha256": "e7052abced91f2f73fb6709dc852712bce652646bdcfbc1311f86765f1c56107",
+      "bytes": 244178,
+      "method": "Owner-requested AI-assisted background removal and soft ground-shadow reconstruction from the page-one mockup, preserving the supplied book design. Transparent WebP conversion at quality 95 and alpha quality 100. Original PDF stays excluded.",
+      "derivedSourceSha256": "a6d641a2d39b878640fe9103ac2b67425b14a5ae710c226511cd96f75ff6d9b8",
+      "hasAlpha": true
     }
   ]
 }

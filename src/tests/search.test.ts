@@ -41,8 +41,10 @@ describe('multilingual search text', () => {
       const history = documents.find(
         (item) => item.url === pageHref('institute', locale, 'institute-history'),
       )!
-      expect(history.body).toContain('MENALINKS')
-      expect(history.body).toContain('2012–2015')
+      expect(history.body).not.toContain('MENALINKS')
+      expect(history.body).not.toContain('2012–2015')
+      expect(history.body).toContain('2011')
+      expect(history.body).toContain('2026')
       expect(history.body).toContain(catalog.Institute.timeline[7].description)
       expect(documents.some((item) => item.type === 'document' && item.url === '#')).toBe(false)
     }

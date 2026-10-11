@@ -1222,3 +1222,22 @@ actual remits, while the unassigned scientific department stays textual. Native
 section links and existing reveal behavior preserve no-JavaScript/RTL reading.
 No new shared token or universal page layout is introduced. See
 [scope](docs/governance.md).
+
+Institut mission follow-up — 2026-10-11: the owner removes the redundant second
+introduction sentence in all locales. The compact full-width mission quotation
+uses institutional navy, a shaded existing solar-aerial illustration and shared
+quotation typography. Canonical anchors and image provenance remain unchanged;
+the withdrawn sentence is removed from the localized search projection.
+
+Owner timeline design correction follows the supplied close-up: a connected
+hairline, blue date/title labels and halo markers, with a centered progress bar,
+responsive page counter and circular SVG arrow controls. Arrow navigation moves
+a visible group; touch/native keyboard scrolling keeps the indicator synchronized.
+The owner specifically commissions this navigation, distinct from mobile rail pills.
+
+Owner report-cover refinement moves the eyebrow/title above the text in the
+trailing column, enlarges the supplied book and allows a modest overlap into the
+preceding navy section. The report surface is white. AI-assisted background
+removal/ground-shadow reconstruction produces an alpha WebP derivative; its
+provenance and hash are recorded in institute-assets.json. The source PDF remains
+private; no extra document contents or publication claims are adopted.

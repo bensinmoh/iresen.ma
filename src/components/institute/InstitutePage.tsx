@@ -39,20 +39,33 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         description={t('introduction.0')}
       />
       <div id="page-sections">
-        <section
-          id="about"
-          className={`container ${styles.introduction}`}
-          aria-labelledby="institute-mission-title"
-        >
-          <p className={styles.lead}>{t('introduction.1')}</p>
+        <section id="about" aria-labelledby="institute-mission-title">
           <div id="mission" className={styles.statement}>
-            <h2 id="institute-mission-title" className={styles.eyebrow}>
-              <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
-              {t('missionLabel')}
-            </h2>
-            <blockquote>
-              <p>{t('statement')}</p>
-            </blockquote>
+            <Image
+              src={heroImages['solar-aerial'].src}
+              alt=""
+              fill
+              sizes="100vw"
+              className={styles.statementImage}
+            />
+            <div className={`container ${styles.statementContent}`}>
+              <h2 id="institute-mission-title" className={styles.eyebrow}>
+                <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
+                {t('missionLabel')}
+              </h2>
+              <blockquote>
+                <p>
+                  <span className={styles.quoteMark} aria-hidden="true">
+                    «{' '}
+                  </span>
+                  {t('statement')}
+                  <span className={styles.quoteMark} aria-hidden="true">
+                    {' '}
+                    »
+                  </span>
+                </p>
+              </blockquote>
+            </div>
           </div>
         </section>
         <section
@@ -165,8 +178,14 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
               <h2 id="history-title">{t('historyTitle')}</h2>
               <div className={styles.reading}>{paragraphs('historyIntro', 1)}</div>
             </div>
-            <TimelineRail label={t('historyLabel')} previous={t('previous')} next={t('next')}>
-              {Array.from({ length: 8 }, (_, i) => (
+            <TimelineRail
+              label={t('historyLabel')}
+              previous={t('previous')}
+              next={t('next')}
+              progressLabel={t('historyProgressLabel')}
+              direction={locale === 'ar' ? 'rtl' : 'ltr'}
+            >
+              {Array.from({ length: 8 }, (_, index) => 7 - index).map((i) => (
                 <li key={i}>
                   <p className={styles.year}>
                     <bdi>{t(`timeline.${i}.year`)}</bdi>
@@ -174,16 +193,6 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
                   <span className={styles.marker} aria-hidden="true" />
                   <h3>{t(`timeline.${i}.title`)}</h3>
                   <p>{t(`timeline.${i}.description`)}</p>
-                  {(i === 0 || i === 5) && (
-                    <aside className={styles.supporting}>
-                      <p>
-                        <em>{t('supportingLabel')}</em>
-                      </p>
-                      <p>
-                        <em>{t(`timeline.${i}.supporting`)}</em>
-                      </p>
-                    </aside>
-                  )}
                 </li>
               ))}
             </TimelineRail>
@@ -191,31 +200,29 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         </section>
         <section id="more-resources" className={styles.report} aria-labelledby="report-title">
           <div className={`container ${styles.split}`}>
-            <header>
-              {label(t('reportLabel'))}
-              <h2 id="report-title">{t('reportTitle')}</h2>
+            <div className={styles.reading}>
+              <header className={styles.reportHeading}>
+                {label(t('reportLabel'))}
+                <h2 id="report-title">{t('reportTitle')}</h2>
+              </header>
+              {paragraphs('report', 3)}
+            </div>
+            <a href="#" className={styles.reportCoverFrame} aria-label={t('reportRead')}>
               <Image
                 className={styles.reportCover}
-                src="/images/institute/fifteen-year-report-cover.webp"
+                src="/images/institute/fifteen-year-report-cover-cutout.webp"
                 alt={t('coverAlt')}
-                width={1800}
-                height={1633}
+                width={1317}
+                height={1194}
                 sizes="(max-width: 64rem) 100vw, 45vw"
               />
-            </header>
-            <div className={styles.reading}>
-              {paragraphs('report', 3)}
-              {/* Owner-selected placeholders until the public PDF is supplied. */}
-              <div className={styles.reportActions}>
-                <a href="#" className="button button-primary">
-                  {t('reportRead')}
-                  <NavigationIcon name="arrow" />
-                </a>
-                <a href="#">
-                  {t('reportDownload')}
-                  <NavigationIcon name="arrow" />
-                </a>
-              </div>
+            </a>
+            {/* Owner-selected placeholder until the public PDF is supplied. */}
+            <div className={styles.reportActions}>
+              <a href="#" className="button button-primary">
+                {t('reportRead')}
+                <NavigationIcon name="arrow" />
+              </a>
             </div>
           </div>
           <nav className={`container ${styles.resources}`} aria-label={t('resourcesLabel')}>

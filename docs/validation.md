@@ -3365,3 +3365,46 @@ Rendered FR desktop, EN tablet and AR mobile cover/timeline compositions were
 inspected. Only page one of the supplied mockup is served as a WebP image; its
 source PDF remains excluded. The two report actions retain the owner-requested
 `#` placeholders.
+
+Institut mission refinement removes the redundant introductory sentence in all
+three locale catalogs and rebuilds the current public search index. The quotation
+uses the existing solar-aerial illustration with a navy gradient; visible opening
+and closing guillemets frame the statement. The section and following positioning
+spacing are tightened while keeping every legacy anchor.
+The refinement passes lint, 137 unit tests, production compilation/TypeScript
+and all five Institut browser cases, including navy background, both guillemets,
+withdrawn French copy and the expanded axe check. The rendered quotation was
+reviewed in FR desktop, EN tablet and AR mobile.
+
+Owner chronology correction: the timeline runs physically left to right from
+2011 to 2026, with Arabic text retaining its own RTL reading direction. The
+“Other important achievements” heading is removed in every locale; the two
+source-derived supporting entries remain.
+
+Final owner timeline withdrawal removes both supporting achievements (2012–2015
+solar laboratories and 2025 MENALINKS) from every public locale and search body.
+Only the eight main milestones remain, in ascending 2011–2026 order. Private and
+historical reference documents remain source records, not public page content.
+
+Final owner report simplification removes the separate download link in all
+locales. Only “Consult the activity report” remains, currently `#`; it will point
+to the actual PDF download when supplied. No report file is invented.
+
+Final Institut owner refinements — 2026-10-11: lint, explicit typecheck, all
+137 unit tests, 28 integration tests in a disposable isolated database and the
+production build pass. The 43 scoped Institut, Governance, hero/image and
+navigation browser cases are covered: the broad run passed 42 cases; its Arabic
+tablet overflow was corrected and all five Institut cases then passed again.
+Coverage includes 320–1440px layouts, enlarged text, native/no-JavaScript reading,
+axe, both quotation marks, mobile report ordering, clickable placeholder cover,
+headquarters hero and dynamic viewport height, and RTL one-milestone navigation
+through 1/8–8/8. Existing hero/navigation assertions now use the actual Institut
+heading and native content rather than the former scaffold.
+
+Rendered FR desktop, EN tablet and AR mobile mission/history/report layouts were
+inspected. The alpha cover retains a reconstructed ground shadow on white; the
+desktop base aligns with the consultation action, and mobile keeps the book
+centered between text and button. The public search index was rebuilt; withdrawn
+copy and supporting milestones are excluded. Original database and unrelated
+local configuration are preserved. Safari, Firefox and screen-reader testing
+were not performed locally; EN/AR editorial approval remains pending.

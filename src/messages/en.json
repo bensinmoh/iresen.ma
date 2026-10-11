@@ -215,8 +215,7 @@
     "eyebrow": "About the Institute",
     "title": "Connecting research with the needs of the energy transition.",
     "introduction": [
-      "Since 2011, IRESEN has brought research, expertise and skills together to support Morocco’s energy transition and sustainable development. With its partners, the Institute connects scientific knowledge with the needs of public stakeholders, businesses and territories.",
-      "Its work helps inform decisions, advance solutions and build the capacities needed to put them into use."
+      "Since 2011, IRESEN has brought research, expertise and skills together to support Morocco’s energy transition and sustainable development. With its partners, the Institute connects scientific knowledge with the needs of public stakeholders, businesses and territories."
     ],
     "missionLabel": "Our mission",
     "statement": "IRESEN connects research with the needs of Morocco’s energy transition and sustainable development. With its partners, it helps inform choices, advance solutions and strengthen capacities, bringing stakeholders together and mobilising the expertise and resources required.",
@@ -381,8 +380,7 @@
       {
         "year": "2026",
         "title": "Continental expansion and fifteenth anniversary",
-        "description": "The inauguration of Green Energy Park Morocco–Côte d’Ivoire in Yamoussoukro extends the cooperation between IRESEN, UM6P and INP-HB. The Institute also celebrates fifteen years of contributions to research, innovation and skills development.",
-        "supporting": "2025 — Sharing smart-grid know-how: as part of MENALINKS, IRESEN and Green Energy Park host a capacity-building workshop, connecting power-system stakeholders with regional expertise."
+        "description": "The inauguration of Green Energy Park Morocco–Côte d’Ivoire in Yamoussoukro extends the cooperation between IRESEN, UM6P and INP-HB. The Institute also celebrates fifteen years of contributions to research, innovation and skills development."
       },
       {
         "year": "2023",
@@ -407,8 +405,7 @@
       {
         "year": "2014",
         "title": "ISO 9001 certification",
-        "description": "IRESEN becomes the first agency of means in Africa to achieve ISO 9001 certification. This milestone recognises its quality approach and continuous improvement of its activities.",
-        "supporting": "2012–2015 — Developing the first solar capacities: establishing laboratories strengthens measurement, testing and qualification resources for solar technologies."
+        "description": "IRESEN becomes the first agency of means in Africa to achieve ISO 9001 certification. This milestone recognises its quality approach and continuous improvement of its activities."
       },
       {
         "year": "2012",
@@ -432,15 +429,14 @@
     "detailsLabel": "Activities and contribution",
     "meansLabel": "Our means of action",
     "contributionLabel": "Our contribution",
-    "supportingLabel": "Other significant achievements",
     "cooperationLabel": "A cross-cutting mission",
     "reportRead": "Read the activity report",
-    "reportDownload": "Download the fifteen-year report — PDF",
     "searchText": "IRESEN — Institute for Research in Solar Energy and New Energies. R&D: research and development. R&D&I: research, development and innovation. Energy transition, expertise, skills, cooperation, history and ambition for 2035.",
     "previous": "Previous milestone",
     "next": "Next milestone",
     "coverAlt": "Cover mockup for the fifteen-year report: “15 ans d’impact”, 2026.",
-    "coverSearchText": "Owner-supplied cover mockup for IRESEN’s fifteen-year activity report, 2011–2026. Cover text: 15 ANS D’IMPACT, 2026. This cover image is not the report PDF."
+    "coverSearchText": "Owner-supplied cover mockup for IRESEN’s fifteen-year activity report, 2011–2026. Cover text: 15 ANS D’IMPACT, 2026. This cover image is not the report PDF.",
+    "historyProgressLabel": "Timeline progress"
   },
   "States": {
     "empty": "No published content yet.",
@@ -506,7 +502,7 @@
       "label": "Certified",
       "description": "Africa’s first research institute certified to ISO 9001."
     },
-    "founded": "IRESEN established",
+    "founded": "Since",
     "pathways": "The three domains of contribution",
     "stages": {
       "institute": "IRESEN · Energy transition & sustainable development",

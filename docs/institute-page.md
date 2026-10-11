@@ -1,77 +1,91 @@
 # Institute page — 2026-10-11
 
-The owner commissioned the canonical Institute page after completion of Governance.
-That prerequisite was satisfied by PR #93. The French pasted manuscript supplied
-with `about.png` is the content source for this implementation; it supersedes
-small wording differences in the earlier [editorial draft](institute-content.md).
-The private attachment is not imported into the repository or served as a download.
-EN/AR are complete working adaptations requiring final editorial review.
+The owner commissioned the canonical Institute page after Governance completion
+(PR #93). The supplied French manuscript defines its content over Figma sample
+claims. The private manuscript and source PDF are not imported into the repository
+or served. EN/AR are complete working adaptations awaiting final editorial review.
 
 ## Composition and sources
 
-Read the native Figma frame `804:8896` in file `0go8QANZAH73ed9AoCdHkf` through
-its design context and screenshot, and inspected the supplied `about.png` reference.
-The reference establishes editorial hierarchy, white/navy sections, fine rules,
-paired ambition imagery and timeline markers. Its sample figures, four-pole
-organisation, outdated copy and example report files are not adopted.
+Native Figma frame `804:8896`, the supplied `about.png` and subsequent owner
+screenshots inform typography, surfaces, dividers, quotation, timeline markers
+and navigation. Sample figures, four-pole organisation and invented report files
+are excluded. The [retained benchmark](references/benchmark/README.md) informs
+purpose before institutional detail, distinct contributions and useful resources.
 
-The [retained benchmark](references/benchmark/README.md) informs purpose before
-institutional detail, distinct contributions and honest supporting resources.
-The page adapts the current shared photo hero, founding-year/pathways band,
-full-width mission quotation, a positioning introduction, three substantial
-mission rows with native disclosures, and a common cooperation band. Five values
-use quiet definition rows. The 2035 ambition remains separate from the historical
-journey. Eight major milestones form a native horizontal timeline at every
-width, with keyboard/touch scrolling and previous/next SVG controls. All eight
-items remain available without JavaScript; no auto-scroll or navigation pills.
-Their two supporting achievements retain explicit labels and smaller italic text.
+The hero reuses the owner's real headquarters photograph from contact, with
+responsive Next Image optimization and its existing media/search reference. See
+[original provenance](asset-inventory.md#contact-headquarters-photo--2026-10-09).
+The founding band places “Since” above 2011. The existing HeroViewport calculation
+sizes the whole hero, from header top through the band bottom, on resize and
+orientation changes, with natural growth for enlarged text.
 
-The manuscript includes no governance section. Councils and organisation stay on
-the separate page and the shared navigation. The hero's existing related destination
-remains canonical. The body adds no governance tabs or four-pole sample cards.
+The full-width mission quotation uses institutional navy, a shaded existing
+solar-aerial illustration and visible opening/closing guillemets. Equal responsive
+spacing centers its label between the section start and quotation. The redundant
+second introductory sentence is withdrawn from all locales and search bodies.
+Positioning leads into three substantial missions with complete activity
+listings in native disclosures, their common cooperation band, five values and
+a distinct 2035 ambition. Governance stays on its separate canonical page.
 
-Reused solar-sunset and workshop photographs are generated conceptual illustrations,
-not documentary evidence of IRESEN personnel/facilities; their original metadata,
-provenance and localized public search references remain in
-[hero-assets.json](hero-assets.json) and the existing asset catalog. The owner’s later attachment supplies a nine-page
-book mockup; only its full first page is rasterized as the requested cover image. The PDF and its eight other pages
-are not imported or served. See [asset provenance](institute-assets.json). No new
-icon raster, external font, dependency, logo or CMS schema is introduced.
+Solar-aerial/workshop imagery remains conceptual illustration, with unchanged
+provenance in [hero-assets.json](hero-assets.json). It does not document actual
+IRESEN personnel/facilities. No new dependency, font, icon raster or CMS schema.
 
-## Routes, reading and search
+## Historical timeline
 
-`src/lib/site.ts` remains the sole route authority: `/fr/institut`, `/en/institute`,
-`/ar/المعهد`. Preserve the six legacy targets `about`, `mission`, `capabilities`,
-`ambition-2035`, `key-figures`, `more-resources`. `key-figures` is a compatibility
-anchor in the retrospective; it does not assert a new figures dataset.
+Eight principal milestones run in ascending 2011–2026 order. FR/EN read left to
+right; Arabic reads right to left, following the owner's latest correction.
+The connected hairline, blue dates/titles, halo markers and circular SVG arrows
+follow the supplied close-up. A centered progress bar and fixed eight-item counter
+(1/8–8/8) track one milestone per arrow click, touch scrolling and keyboard access.
+Trailing spacing lets the final entry reach the leading edge. No auto-scroll.
 
-The [section map](../src/lib/page-sections.ts) registers positioning, the three
-missions, cooperation, values and history as children alongside those targets.
-Locale switching preserves these anchors through the existing shared helper.
-The static public search projection includes the page and every registered
-section in FR/EN/AR, with complete mission activities/contributions, eight
-milestones, both supporting entries, real topic terms and acronym expansions.
-The existing current-public gates remain unchanged. The report presentation is
-searchable as a section, with no invented PDF document result. Private references,
-editorial drafts and source attachments remain excluded.
-
-Native details retain keyboard/pointer and no-JavaScript reading. Logical CSS
-mirrors Arabic layouts; physical signature corners remain shared. Shared first
-arrival motion owns headings/quotations. Disclosure chevrons use only a small
-rotation, removed for reduced motion. No section wrapper is animated.
+Both supporting achievements (2012–2015 solar laboratories and 2025 MENALINKS),
+and their heading, are withdrawn from the page and its public search projection.
+The eight major items remain readable without JavaScript; scripted controls are
+hidden until enhancement is available. Reduced motion removes smooth scrolling
+and progress transitions.
 
 ## Fifteen-year report
 
-The owner explicitly requested `#` for both report actions while the PDF is
-provided later. The page presents the supplied teaser, original period and two
-placeholder links, without a download attribute, fake PDF,
-file size, publication date or substitute Ministry document. These links require
-the actual public resource before a real reading/download workflow is delivered.
-The supplied first-page cover mockup now illustrates the report feature and has
-a separate localized media search reference with its original cover wording. Its
-image does not supply a public report PDF or adopt its embedded strategic claims.
-Publications/reports and media resources link to their existing canonical sections.
+The book uses only the supplied mockup's first-page cover. Owner-requested
+AI-assisted background removal and ground-shadow reconstruction produce the
+alpha WebP recorded in [institute-assets.json](institute-assets.json). The new
+cutout URL prevents reuse of the earlier rectangular optimized image. Its original
+PDF and eight other pages remain excluded; embedded strategic claims are source
+data, not adopted page facts or a public report download.
 
-No deployment, visibility change or new publication approval is authorized.
-Final values/translation review and the full-content search sanity check remain
-pending. See [verification](validation.md#institute-page--2026-10-11).
+On desktop the enlarged book is centered beside the text, extends modestly into
+the preceding navy section and aligns its visible base to the Consult action.
+The surface is white; the heading and eyebrow appear above the prose. Spacing
+uses readable leading, distinct paragraph gaps and breathing room before the
+button. Tablet aligns the book's leading edge with the action, mirrored in Arabic.
+On mobile the order is heading/prose, centered book, then action with extra space.
+The shadow is allowed to fade freely beyond the book base.
+
+The owner removed the separate download action. The clickable cover and single
+“Consult the activity report” button both use `#` until the actual PDF is supplied.
+No fake file, download attribute, size, publication date or substitute document.
+The actual PDF must replace these placeholders before a real download workflow.
+Publications/reports and media link to their existing canonical sections.
+
+## Routes, reading and search
+
+`src/lib/site.ts` remains the routing authority: `/fr/institut`, `/en/institute`,
+`/ar/المعهد`. Six legacy targets remain: `about`, `mission`, `capabilities`,
+`ambition-2035`, `key-figures`, `more-resources`. `key-figures` is a compatibility
+anchor in history, not a new figures dataset. The section map adds positioning,
+the three missions, cooperation, values and history as children; locale switching
+preserves their anchors.
+
+The static search projection includes complete page/section text in FR/EN/AR,
+real topic terms and acronym expansions. The cover is localized media, with no
+invented report document result. Private sources, editorial references and
+withdrawn copy remain excluded. Current public/CMS gates are preserved.
+Native details support keyboard and no-JavaScript reading. Shared first-arrival
+motion owns headings/quotations; reduced motion preserves immediate reading.
+
+See [verification](validation.md#institute-page--2026-10-11). Final translation/
+editorial approval and the full-content search sanity check remain pending.
+No deployment or visibility change is authorized.

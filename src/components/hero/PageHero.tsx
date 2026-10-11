@@ -129,10 +129,10 @@ export async function PageHero({
             <div className="container hero-highlights-inner">
               {pageId === 'institute' && (
                 <p className="key-figure hero-founding">
+                  <span className="key-figure-label">{t('founded')}</span>
                   <strong className="key-figure-value">
                     <bdi>2011</bdi>
                   </strong>
-                  <span className="key-figure-label">{t('founded')}</span>
                 </p>
               )}
               <nav aria-label={t('pathways')} className="hero-pathways">

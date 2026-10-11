@@ -13,7 +13,7 @@ type HeroDefinition = {
 // The asset manifest distinguishes fictional illustrations from sourced photographs.
 export const heroes = {
   home: { photo: 'solar-aerial', layout: 'start', stage: 'institute', related: 'platforms' },
-  institute: { photo: 'solar-sunset', layout: 'start', stage: 'institute', related: 'governance' },
+  institute: { photo: 'headquarters', layout: 'start', stage: 'institute', related: 'governance' },
   governance: { photo: 'governance', layout: 'start', stage: 'institute', related: 'institute' },
   priorities: {
     photo: 'wind-landscape',

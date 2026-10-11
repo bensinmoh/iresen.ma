@@ -1008,3 +1008,67 @@ information and owner-confirmed roles. Laila’s unavailable profile is not inve
   three-paragraph biography and working FR/AR adaptations.
 - Replace the Nareva mark with the owner-supplied new vector original, preserving
   its geometry/colors and canonical searchable asset URL.
+
+Institut mission follow-up — 2026-10-11: the owner removes the redundant second
+introduction sentence in all locales. The compact full-width mission quotation
+uses institutional navy, a shaded existing solar-aerial illustration and shared
+quotation typography. Canonical anchors and image provenance remain unchanged;
+the withdrawn sentence is removed from the localized search projection.
+
+Owner chronology correction: the timeline runs physically left to right from
+2011 to 2026, with Arabic text retaining its own RTL reading direction. The
+“Other important achievements” heading is removed in every locale; the two
+source-derived supporting entries remain.
+
+Final owner timeline withdrawal removes both supporting achievements (2012–2015
+solar laboratories and 2025 MENALINKS) from every public locale and search body.
+Only the eight main milestones remain, in ascending 2011–2026 order. Private and
+historical reference documents remain source records, not public page content.
+
+Final owner report simplification removes the separate download link in all
+locales. Only “Consult the activity report” remains, currently `#`; it will point
+to the actual PDF download when supplied. No report file is invented.
+
+Owner timeline design correction follows the supplied close-up: a connected
+hairline, blue date/title labels and halo markers, with a centered progress bar,
+responsive page counter and circular SVG arrow controls. Arrow navigation moves
+a visible group; touch/native keyboard scrolling keeps the indicator synchronized.
+The owner specifically commissions this navigation, distinct from mobile rail pills.
+
+The owner’s final navigation correction advances exactly one milestone per arrow
+click, with a fixed eight-item counter (1/8–8/8). Trailing rail spacing allows the
+2026 entry to reach the leading position; native scrolling remains available.
+
+Owner report-cover refinement moves the eyebrow/title above the text in the
+trailing column, enlarges the supplied book and allows a modest overlap into the
+preceding navy section. The report surface is white. AI-assisted background
+removal/ground-shadow reconstruction produces an alpha WebP derivative; its
+provenance and hash are recorded in institute-assets.json. The source PDF remains
+private; no extra document contents or publication claims are adopted.
+
+Report spacing follow-up uses a 24px title/body separation, readable 1.65 body
+leading, 24px paragraph gaps and 32px before the single action. The alpha cutout
+has its own URL to avoid retaining the earlier optimized rectangular mockup.
+
+Final cover alignment centers the book in its column and aligns its visible base
+with the single report action on desktop. The shadow extends freely below the
+base; tablet/mobile retains stacked reading and avoids horizontal overflow.
+
+Mobile/tablet report ordering follows the owner’s correction: heading/body,
+clickable cover, then the Consult action. The cover and button both use `#` until
+the actual PDF is provided. Desktop keeps the centered overlapping book beside
+the text, with its base aligned to the action.
+
+Institut hero owner correction reuses the real supplied headquarters photograph
+from contact, preserving its original JPEG and existing localized media result.
+Next Image serves responsive optimized hero derivatives; no duplicate media
+reference, generated facility image or new source claim is introduced.
+
+Owner founding/viewport correction places “Since” above 2011 in the Institute
+hero band and restores the existing HeroViewport calculation for the whole hero,
+from header top through the band bottom. VisualViewport/header resize and
+orientation handling remain shared, with natural growth for large text.
+
+Latest owner Arabic correction mirrors the timeline: ascending 2011–2026 reads
+from right to left in Arabic, with matching native scroll direction, connected
+markers, trailing spacing and arrows. FR/EN retain left-to-right chronology.

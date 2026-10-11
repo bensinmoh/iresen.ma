@@ -1,6 +1,13 @@
 // Native photographic assets and their full-height mobile crops.
 // Provenance, prompts, pixel sizes and hashes: docs/hero-assets.json.
 export const heroImages = {
+  // Owner-supplied real headquarters photograph; provenance: docs/contact.md.
+  headquarters: {
+    src: '/images/contact/contact-background-venue.jpg',
+    width: 5797,
+    height: 3865,
+    mobile: { src: '/images/contact/contact-background-venue.jpg', width: 5797, height: 3865 },
+  },
   'media-library': {
     src: '/images/media-library/media-library-hero.webp',
     width: 1536,

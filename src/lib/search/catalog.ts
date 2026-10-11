@@ -99,7 +99,7 @@ const assetLabels = {
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   {
     id: 'institute-fifteen-year-report-cover',
-    url: '/images/institute/fifteen-year-report-cover.webp',
+    url: '/images/institute/fifteen-year-report-cover-cutout.webp',
     type: 'media',
     text: Object.fromEntries(
       contentLocales.map((locale) => [
@@ -558,7 +558,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     ) as PublicAssetReference['text'],
   })),
   ...Object.entries(heroImages)
-    .filter(([id]) => id !== 'media-library')
+    .filter(([id]) => id !== 'media-library' && id !== 'headquarters')
     .map(([id, image]) => {
       // Contact has a dedicated headquarters photograph; its former illustration is
       // still served, but must not be described as the current contact page image.

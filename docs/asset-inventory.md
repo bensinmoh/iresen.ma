@@ -465,3 +465,8 @@ commissioned projects page. The hero is decorative; the six photos illustrate
 fictional records and do not evidence an actual portfolio. Metadata, hashes,
 source slots and transformations: [manifest](projects-assets.json) and
 [scope](projects.md). Full screenshots and downloaded originals remain ignored.
+
+Institut hero owner correction reuses the real supplied headquarters photograph
+from contact, preserving its original JPEG and existing localized media result.
+Next Image serves responsive optimized hero derivatives; no duplicate media
+reference, generated facility image or new source claim is introduced.

@@ -909,8 +909,7 @@
     "eyebrow": "À propos de l’Institut",
     "title": "Relier la recherche aux besoins de la transition énergétique.",
     "introduction": [
-      "Depuis 2011, IRESEN mobilise la recherche, l’expertise et les compétences au service de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, l’Institut rapproche les connaissances scientifiques des besoins des acteurs publics, des entreprises et des territoires.",
-      "Son action contribue à éclairer les décisions, à faire progresser les solutions et à construire les capacités nécessaires à leur utilisation."
+      "Depuis 2011, IRESEN mobilise la recherche, l’expertise et les compétences au service de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, l’Institut rapproche les connaissances scientifiques des besoins des acteurs publics, des entreprises et des territoires."
     ],
     "missionLabel": "Notre mission",
     "statement": "IRESEN relie la recherche aux besoins de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, il contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités, en fédérant les acteurs et en mobilisant les expertises et les ressources nécessaires.",
@@ -1068,8 +1067,7 @@
       {
         "year": "2026",
         "title": "Extension continentale et quinzième anniversaire",
-        "description": "L’inauguration de Green Energy Park Maroc–Côte d’Ivoire à Yamoussoukro prolonge la coopération entre IRESEN, l’UM6P et l’INP-HB. L’Institut célèbre également quinze ans de contributions à la recherche, à l’innovation et au développement des compétences.",
-        "supporting": "2025 — Partage des savoir-faire sur les réseaux intelligents : dans le cadre de MENALINKS, IRESEN et Green Energy Park accueillent un atelier de renforcement des capacités, rapprochant les acteurs des systèmes électriques et les expertises régionales."
+        "description": "L’inauguration de Green Energy Park Maroc–Côte d’Ivoire à Yamoussoukro prolonge la coopération entre IRESEN, l’UM6P et l’INP-HB. L’Institut célèbre également quinze ans de contributions à la recherche, à l’innovation et au développement des compétences."
       },
       {
         "year": "2023",
@@ -1094,8 +1092,7 @@
       {
         "year": "2014",
         "title": "Certification ISO 9001",
-        "description": "IRESEN devient la première agence de moyens en Afrique certifiée ISO 9001. Cette étape consacre sa démarche qualité et l’amélioration continue de ses activités.",
-        "supporting": "2012–2015 — Développement des premières capacités solaires : la mise en place de laboratoires renforce les moyens de mesure, d’essais et de qualification des technologies solaires."
+        "description": "IRESEN devient la première agence de moyens en Afrique certifiée ISO 9001. Cette étape consacre sa démarche qualité et l’amélioration continue de ses activités."
       },
       {
         "year": "2012",
@@ -1119,7 +1116,6 @@
     "detailsLabel": "Activités et contribution",
     "meansLabel": "Nos moyens d’action",
     "contributionLabel": "Notre contribution",
-    "supportingLabel": "Autres réalisations importantes",
     "ambition": {
       "statement": "Faire d’IRESEN une référence d’excellence en Afrique par la qualité de ses études et de son expertise, de sa recherche et de son innovation, ainsi que de sa contribution aux compétences et aux capacités.",
       "paragraphs": [
@@ -1129,12 +1125,12 @@
     },
     "cooperationLabel": "Une mission transversale",
     "reportRead": "Consulter le rapport d’activités",
-    "reportDownload": "Télécharger le rapport des quinze ans — PDF",
     "searchText": "IRESEN — Institut de Recherche en Énergie Solaire et Énergies Nouvelles. R&D : recherche et développement. R&D&I : recherche, développement et innovation. Transition énergétique, expertise, compétences, coopération, histoire et ambition 2035.",
     "previous": "Date précédente",
     "next": "Date suivante",
     "coverAlt": "Mockup de la couverture du rapport des quinze ans : « 15 ans d’impact », 2026.",
-    "coverSearchText": "Maquette de couverture fournie par le propriétaire pour le rapport d’activités des quinze ans d’IRESEN, 2011–2026. Texte de couverture : 15 ANS D’IMPACT, 2026. Cette image de couverture ne constitue pas le PDF du rapport."
+    "coverSearchText": "Maquette de couverture fournie par le propriétaire pour le rapport d’activités des quinze ans d’IRESEN, 2011–2026. Texte de couverture : 15 ANS D’IMPACT, 2026. Cette image de couverture ne constitue pas le PDF du rapport.",
+    "historyProgressLabel": "Progression dans la chronologie"
   },
   "States": {
     "empty": "Aucun contenu publié pour le moment.",
@@ -1200,7 +1196,7 @@
       "label": "Certifié",
       "description": "Premier institut de recherche certifié ISO 9001 en Afrique."
     },
-    "founded": "Création d’IRESEN",
+    "founded": "Depuis",
     "pathways": "Les trois domaines de contribution",
     "stages": {
       "institute": "IRESEN · Transition énergétique & développement durable",
