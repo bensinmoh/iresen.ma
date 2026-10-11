@@ -482,15 +482,3 @@ reference. The current 24 demonstration records remain unlinked and excluded
 from institutional search. A future verified project CMS import should map this
 reference to the Calls relationship and derive the reverse list, without
 inventing attributions. See [the relationship](docs/calls-for-projects.md#relationship-with-selected-rdi-projects).
-
-## Site-wide AI image provenance — 2026-10-11
-
-The owner commissions categorization of all site photos/illustrations, beyond
-only the twenty gallery images. `src/data/image-provenance.json` records served
-raster paths, fingerprints, categories and evidence. Keep documented AI-generated
-scenes, crops and reused copies out of public search and previews in all locales;
-retain their asset registrations for provenance and their existing page uses.
-AI-assisted retouches of supplied subjects are distinct and retain existing
-search eligibility. Supplied/Figma source records do not certify non-AI origin.
-Update the inventory with future public raster additions; do not infer generation
-from appearance. See [scope](docs/media-library.md#site-wide-image-provenance-and-ai-search-exclusion--2026-10-11).

@@ -368,5 +368,3 @@ synchronized list with unchanged laboratory anchors and localized search results
 ## Programmes R&D&I — 2026-10-11
 
 The canonical programmes page now follows the supplied manuscript with the approach, expected benefits, six usual project stages, three historical schemes and the no-current-call working state. Human research/product photography adapts Figma; AquaSolar is owner-selected. FR/EN/AR, stable anchors and public search references are included. The owner’s follow-up adds the Calls CMS collection and full detail pages, with approved PDF terms, actual form URLs, calendars, budgets and archives. No actual call records are seeded or deployed. See [page scope](docs/programmes-rdi.md) and [CMS workflow](docs/calls-for-projects.md).
-
-Site-wide image provenance (2026-10-11): all served raster assets are categorized in `src/data/image-provenance.json`; documented AI-generated illustrations and their copies/crops are excluded from public search in FR/EN/AR. See [scope](docs/media-library.md#site-wide-image-provenance-and-ai-search-exclusion--2026-10-11).
