@@ -4,8 +4,9 @@
 
 Draft the French institute page from the current narrative: mission statement,
 three detailed contribution domains and their cooperation enabler, proposed
-values, positioning, 2035 ambition, a six-milestone historical timeline and a
-fifteen-year report feature. Exclude
+values, positioning, 2035 ambition, a historical timeline and a fifteen-year
+report feature. The timeline combines eight owner-selected major milestones
+with two smaller italic supporting entries. Exclude
 governance and organisation from the body. Preserve canonical routes/legacy
 anchors in the implementation handoff; no runtime or public download changes.
 See [content and structure](docs/institute-content.md) and
