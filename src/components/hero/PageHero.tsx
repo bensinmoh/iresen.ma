@@ -9,7 +9,17 @@ import { HeroViewport } from './HeroViewport'
 import { HeroPhoto } from './HeroPhoto'
 import { HomeHeroVideo } from './HomeHeroVideo'
 
-export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Locale }) {
+export async function PageHero({
+  pageId,
+  locale,
+  title,
+  description,
+}: {
+  pageId: PageId
+  locale: Locale
+  title?: string
+  description?: string
+}) {
   const t = await getTranslations({ locale, namespace: 'Hero' })
   const engagement = await getTranslations({ locale, namespace: 'Engagement' })
   const transfer = await getTranslations({ locale, namespace: 'Transfer' })
@@ -33,8 +43,10 @@ export async function PageHero({ pageId, locale }: { pageId: PageId; locale: Loc
                 <span aria-hidden="true" />
                 {t(`stages.${definition.stage}`)}
               </p>
-              <h1 id="hero-title">{pageId === 'home' ? t('homeTitle') : titles(pageId)}</h1>
-              <p className="hero-description">{t(`descriptions.${pageId}`)}</p>
+              <h1 id="hero-title">
+                {title ?? (pageId === 'home' ? t('homeTitle') : titles(pageId))}
+              </h1>
+              <p className="hero-description">{description ?? t(`descriptions.${pageId}`)}</p>
             </div>
             {pageId === 'home' && (
               <aside

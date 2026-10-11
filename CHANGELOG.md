@@ -1,5 +1,9 @@
 # Change log
 
+## 2026-10-11 — Institute page
+
+Implement the canonical Institute page from the supplied manuscript after Governance completion. Add detailed trilingual missions, native disclosures, values, 2035 ambition, eight principal historical milestones and two italic supporting entries. Preserve legacy anchors, existing illustrative media and localized section search references. The owner selects `#` for both report actions until its PDF arrives. See [scope](docs/institute-page.md). No deployment.
+
 ## 2026-10-11 — Institute page editorial draft
 
 Draft the French institute page from the current narrative: mission statement,
@@ -31,16 +35,16 @@ See [content and structure](docs/institute-content.md) and
 See [scope](docs/publications.md#consolidated-update--10-october-2026) and
 [verification](docs/publications-update-validation.md).
 
+## 2026-10-10 — Arabic video download placement
+
+- Mirror video-popup actions in Arabic: download sits to the right of close.
+- Preserve French/English ordering and the guarded original-file download.
+
 ## 2026-10-10 — Event pills and mobile social icons
 
 - Hide enhanced event scrollbars; add six synchronized mobile navigation pills.
 - Show the five social SVG icons in one fixed mobile row, retaining accessible names.
 - Preserve native scrolling, equal card heights, desktop labels and existing search references.
-
-## 2026-10-10 — Arabic video download placement
-
-- Mirror video-popup actions in Arabic: download sits to the right of close.
-- Preserve French/English ordering and the guarded original-file download.
 
 ## 2026-10-10 — Actualités & événements
 
@@ -891,12 +895,6 @@ See [the specification](docs/horizontal-scroll-indicators.md).
 
 The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
 
-## Samir portrait download — 2026-10-10
-
-The portrait download now serves a high-quality JPG generated from the supplied official original. Biography copying no longer displays success text; failure feedback remains.
-
-The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
-
 ## 2026-10-10 — Video-library scroll pills
 
 - Applied the recorded horizontal-navigation effect to the video library with one
@@ -909,6 +907,12 @@ The owner also requested complete English and Arabic biography translations. Eac
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## Samir portrait download — 2026-10-10
+
+The portrait download now serves a high-quality JPG generated from the supplied official original. Biography copying no longer displays success text; failure feedback remains.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
 
 ## 2026-10-10 — Publications & reports page
 

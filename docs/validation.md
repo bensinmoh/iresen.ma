@@ -3073,12 +3073,6 @@ documentation-only task. See [the specification](horizontal-scroll-indicators.md
 
 Lint, typecheck, 126 unit checks and the isolated production build passed. Eight scoped production Chrome cases passed: FR/EN/AR media filters and modal access, no-JavaScript photo links, reduced motion, supplied biography, real clipboard copy, image-only download, 320/390/768/1440px containment, 200% mobile text, Escape/focus restoration, scoped axe scan and portrait frame meeting the desktop popup bottom edge. Desktop rendering and headroom were manually inspected. The local search rebuild synchronized the static catalog; French-only biography eligibility is covered by a regression test. No database schema changes or deployment. See [scope](samir-biography.md).
 
-## Samir JPG download and quiet copy — 2026-10-10
-
-The downloadable portrait is converted from the official original to JPG (1024 × 1536). The viewer links to this format; successful clipboard copying clears visible status. Unit/search coverage treats the JPG as a derivative of the original photo. Scoped browser checks verify clipboard content, empty success status and JPG-only download.
-
-The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
-
 ## Video-library scroll pills — 2026-10-10
 
 Lint, TypeScript/production compilation, formatting and 126 unit tests passed.
@@ -3101,6 +3095,12 @@ keyboard focus is separate. Existing stable media/video anchors, public search
 references and withdrawal gates remain. No new public resource or index rebuild
 is needed for this interaction change. No Safari/Firefox or screen-reader pass
 was performed. See [scope](media-library.md#video-navigation-pills--2026-10-10).
+
+## Samir JPG download and quiet copy — 2026-10-10
+
+The downloadable portrait is converted from the official original to JPG (1024 × 1536). The viewer links to this format; successful clipboard copying clears visible status. Unit/search coverage treats the JPG as a derivative of the original photo. Scoped browser checks verify clipboard content, empty success status and JPG-only download.
+
+The owner also requested complete English and Arabic biography translations. Each locale displays, copies and indexes its own text; Arabic uses RTL, and the supplied French original remains unchanged.
 
 ## Publications & reports page — 2026-10-10
 
@@ -3317,3 +3317,39 @@ build and all 16 scoped browser checks. Rendered biography review covers French
 desktop and Arabic mobile with no horizontal overflow. Explicit dialog centering
 preserves backdrop dismissal after text resizing in all three languages. Search
 rebuild synchronizes seven currently eligible CMS records and the static catalog.
+
+## Institute page — 2026-10-11
+
+Scope: [the canonical Institut page](institute-page.md), with the owner’s pasted
+manuscript and native Figma frame `804:8896`. Governance prerequisite satisfied
+by PR #93. The source benchmark hash matches its unchanged recorded original;
+local links in the new page scope and inherited editorial handoff resolve.
+
+- Lint, TypeScript generation/check, 137 unit tests and the isolated production
+  build pass. Existing Next-intl cache warnings appeared on the initial build;
+  subsequent compilation completed successfully.
+- All 28 CMS/search/careers integration cases pass in a disposable local database,
+  migrated and removed after use. The normal working database was unsuitable for
+  the empty-user integration contract; it was preserved. No schema change.
+- Fourteen production Chrome browser cases pass across Institut and Governance.
+  Institut covers FR/EN/AR, all registered targets, eight major milestones/two
+  supporting entries, native keyboard disclosures, `#` report actions, no fake
+  download, 1440/1024/768/390/320px containment, 200% mobile text, reduced motion,
+  no-JavaScript reading and an expanded scoped axe check without serious/critical
+  findings. Search retrieves its MENALINKS history in each public locale.
+- A pre-existing French Governance dialog cleanup assertion failed once during
+  seven-worker execution, passed three isolated repeats and passed the final
+  three-worker regression run. No Governance runtime/test code was changed.
+- Inspected rendered FR desktop, EN tablet and AR mobile compositions, including
+  mission reading, paired ambition imagery and timeline markers/italic supporting
+  text. Arabic viewport bounds and text reading were checked directly. Existing
+  generated photographs remain illustrative rather than institutional evidence.
+- Local public search catalog/index was rebuilt; static section metadata covers
+  the complete supplied activities/contributions and historical timeline. A unit
+  regression checks localization, both supporting dates and exclusion of any
+  invented report document asset.
+
+The current PR’s CI and repository review requirements must pass before merge.
+Final editorial/translation approval, the public fifteen-year PDF and full-content
+search sanity check remain pending. No Safari/Firefox or screen-reader audit,
+full accessibility certification, deployment or visibility change is claimed.

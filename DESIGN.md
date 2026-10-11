@@ -1,5 +1,9 @@
 # IRESEN visual direction
 
+## Institute composition — 2026-10-11
+
+The [Institute page](docs/institute-page.md) adapts Figma’s white/navy editorial language to the longer manuscript. Three substantial mission rows pair purpose/title with readable introductions and native details; their common cooperation band remains distinct. Fine value rows, paired ambition imagery, a four/two/one-column chronological composition and a quiet report feature vary density by visitor task. Reuse existing hero photos, identity, typography and shared tokens. No new universal template or token is introduced.
+
 ## Médiathèque — 2026-10-10
 
 The resource directory alternates an authentic supplied-photo gallery on white, native video players on institutional ink, a light PDF directory and official text links. Shared blue, typography, physical corner geometry, SVG controls and logical spacing remain authoritative. No new shared token is introduced. See [scope](docs/media-library.md).

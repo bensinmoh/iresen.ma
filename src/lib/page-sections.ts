@@ -38,12 +38,20 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'news-events' },
   ],
   institute: [
-    { id: 'about' },
+    { id: 'about', children: [{ id: 'institute-positioning' }] },
     {
       id: 'mission',
-      children: [{ id: 'capabilities' }, { id: 'ambition-2035' }],
+      children: [
+        { id: 'capabilities' },
+        { id: 'institute-studies' },
+        { id: 'institute-research' },
+        { id: 'institute-skills' },
+        { id: 'institute-cooperation' },
+        { id: 'institute-values' },
+        { id: 'ambition-2035' },
+      ],
     },
-    { id: 'key-figures' },
+    { id: 'key-figures', children: [{ id: 'institute-history' }] },
     { id: 'more-resources' },
   ],
   governance: [

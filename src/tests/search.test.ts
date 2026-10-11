@@ -29,6 +29,25 @@ import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
 
 describe('multilingual search text', () => {
+  it('indexes the complete institute missions and historical milestones without inventing a report asset', () => {
+    const documents = staticSearchDocuments()
+    for (const locale of contentLocales) {
+      const catalog = { fr, en, ar }[locale]
+      const research = documents.find(
+        (item) => item.url === pageHref('institute', locale, 'institute-research'),
+      )!
+      expect(research.type).toBe('section')
+      expect(research.body).toContain(catalog.Institute.missions[1].activities[2].description)
+      const history = documents.find(
+        (item) => item.url === pageHref('institute', locale, 'institute-history'),
+      )!
+      expect(history.body).toContain('MENALINKS')
+      expect(history.body).toContain('2012–2015')
+      expect(history.body).toContain(catalog.Institute.timeline[7].description)
+      expect(documents.some((item) => item.type === 'document' && item.url === '#')).toBe(false)
+    }
+    expect(publicAssetReferences.some((asset) => /institute.*report/.test(asset.id))).toBe(false)
+  })
   it('registers the supplied biography and requested English and Arabic translations', () => {
     const biographies = staticSearchDocuments().filter((item) =>
       item.id.includes('samir-biography'),

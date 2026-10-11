@@ -355,3 +355,13 @@ Laila has no confidently matched public profile yet; do not invent a URL or care
 
 The owner later supplied Mouhcine’s full biography, superseding his profile-derived
 summary, and the new original Nareva SVG. Preserve both supplied sources.
+
+## Institute page — 2026-10-11
+
+The owner commissioned the canonical Institute page after Governance completion.
+Use the supplied manuscript over Figma sample content; preserve three detailed
+missions, their cooperation enabler, values, 2035 ambition and eight principal
+historical milestones with two italic supporting entries. Six legacy anchors and
+localized section search references remain. Both fifteen-year report actions use
+the owner-requested `#` until the public PDF is supplied; no substitute download.
+EN/AR remain working adaptations. See [scope](docs/institute-page.md). No deployment.

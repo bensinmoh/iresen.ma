@@ -1,5 +1,9 @@
 # IRESEN product context
 
+## Institute — 2026-10-11
+
+The [Institute page](docs/institute-page.md) is implemented from the supplied manuscript after Governance completion: three detailed missions and their shared cooperation enabler, positioning, five working values, ambition, eight historical milestones with two supporting entries, and the report feature. The report’s reading/download actions use the owner-requested `#` pending the PDF. EN/AR remain working adaptations. No governance sample content or new figures are introduced.
+
 ## Médiathèque — 2026-10-10
 
 The media route is a resource directory for photos, videos, Ministry reports/strategies and useful institutional links. It includes the owner-supplied CEO portrait and only approved public CMS videos. Original document/video titles remain; localized descriptions are working copy. See [scope](docs/media-library.md).

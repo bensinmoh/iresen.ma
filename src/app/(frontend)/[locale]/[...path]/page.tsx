@@ -1,4 +1,5 @@
 import { GovernancePage } from '@/components/governance/GovernancePage'
+import { InstitutePage } from '@/components/institute/InstitutePage'
 import { PublicationsPage } from '@/components/publications/PublicationsPage'
 import { ProjectsPage } from '@/components/projects/ProjectsPage'
 import { RoadmapPage } from '@/components/roadmap/RoadmapPage'
@@ -125,6 +126,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
     return <PublicationsPage locale={locale} parameters={await searchParams} />
   if (pageId === 'projects') return <ProjectsPage locale={locale} parameters={await searchParams} />
   if (pageId === 'governance') return <GovernancePage locale={locale} />
+  if (pageId === 'institute') return <InstitutePage locale={locale} />
   if (pageId === 'priorities') return <RoadmapPage locale={locale} />
   if (pageId === 'media') return <MediaLibraryPage locale={locale} />
   if (pageId === 'opportunities') return <CareersPage locale={locale} />

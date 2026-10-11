@@ -5,6 +5,13 @@ page. French working copy for review. This increment drafts the page; it does
 not implement or publish it. Governance and organisation are outside its content,
 including related body links. The separate canonical page remains unchanged.
 
+## Later implementation
+
+The owner commissioned implementation after Governance, supplied the revised
+French manuscript and selected `#` report actions pending the PDF. See
+[the delivered page](institute-page.md). The drafting scope and earlier copy below
+remain historical editorial evidence.
+
 ## Editorial basis
 
 Use the current [narrative](narrative-alignment.md), including the owner's §4.4
