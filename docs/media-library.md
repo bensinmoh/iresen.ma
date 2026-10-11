@@ -108,3 +108,28 @@ CMS/media gates and search references remain. See [requirements](horizontal-scro
 Owner follow-up: pills are mobile-only (at or below 40rem). Tablet/desktop
 retains native horizontal scrolling; its default scrollbar is hidden and no pills
 are displayed.
+
+## Site-wide image provenance and AI search exclusion — 2026-10-11
+
+The owner commissions classification of **all site photographs/illustrations**,
+not only the twenty gallery entries. `src/data/image-provenance.json` inventories
+all 161 served raster originals and derivatives under `public/images`: 64
+AI-generated, 13 AI-assisted derivatives, and 84 source-reference images.
+Each entry records its served path, current SHA-256 and evidence documents.
+Source-reference means a recorded supplied/exported source, **not certification
+that an external/Figma original was never AI-generated**. Classification uses
+explicit provenance and matching fingerprints, never appearance alone.
+
+Generated scenes, including mobile crops and byte-identical reused copies,
+remain available where already used but are excluded from static search results
+in FR/EN/AR and from result preview enrichment. Their registration metadata stays
+retained for provenance. Page/section discovery remains available. Source-backed
+photos and AI-assisted retouches of actual supplied subjects (leadership portraits
+and the report-cover mockup) keep their existing search eligibility.
+
+The changed catalogue revision applies to both results and spelling vocabulary;
+synchronization deletes withdrawn static entries. Future public raster additions
+must update this inventory and record generation/retouch provenance. Private
+originals are not imported; no image bytes, routes, gallery layout, publication
+gates or deployment are changed. The final whole-site glossary sanity check
+remains pending final content.

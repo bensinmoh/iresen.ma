@@ -1,3 +1,4 @@
+import { isAiGeneratedImage } from '@/lib/image-provenance'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import { researchPlatforms } from '@/lib/platforms'
 import {
@@ -1326,6 +1327,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       })
     }
     for (const asset of publicAssetReferences) {
+      if (isAiGeneratedImage(asset.url)) continue
       const copy = asset.text[locale]
       if (copy?.title.trim() && copy.description.trim())
         documents.push({
