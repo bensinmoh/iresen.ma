@@ -3408,3 +3408,8 @@ centered between text and button. The public search index was rebuilt; withdrawn
 copy and supporting milestones are excluded. Original database and unrelated
 local configuration are preserved. Safari, Firefox and screen-reader testing
 were not performed locally; EN/AR editorial approval remains pending.
+
+The first final-head CI run passed format/lint/types/unit/integration/build and
+278 browser cases. Its sole failing footer no-JavaScript navigation assertion
+still expected the old scaffold heading; it now checks the manuscript's localized
+Institut title while retaining the menu link and destination checks.
