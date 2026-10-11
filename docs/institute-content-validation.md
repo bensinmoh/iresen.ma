@@ -10,6 +10,11 @@ Date: 2026-10-11. Scope: documentation and French page copy only.
   [current narrative guidance](narrative-alignment.md).
 - Distinguished the proposed values from an official named institutional list,
   and the report feature from an available public download.
+- Added the owner's follow-up timeline with six milestones. Read the private
+  fifteen-year dossier's relevant chronology and date entries without importing
+  the original; corroborated selected events with primary public sources.
+  The initial-capacity milestone preserves the source's 2012–2015 interval and
+  editorial-review status. Timeline composition is specified, not rendered.
 - Checked the canonical `institute` route and six existing section targets
   against `src/lib/site.ts` and `src/lib/page-sections.ts`. The handoff preserves
   compatibility and excludes governance/organisation from the body.

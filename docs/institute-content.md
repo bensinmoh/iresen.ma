@@ -33,7 +33,8 @@ and connect the visitor to evidence. They supply no additional institutional fac
 | 3     | Nos missions                                                    | Three substantial, individually titled sections; each explains role, activities, intervention and contribution. R&I alone contains Développer · Éprouver · Valoriser. Follow with a distinct, equally detailed cooperation band spanning the three. |
 | 4     | Nos valeurs                                                     | Five short principle-and-practice entries, using text and fine dividers.                                                                                                                                                                            |
 | 5     | Notre ambition à l’horizon 2035                                 | Clear ambition statement and short explanation, distinguished from achievements.                                                                                                                                                                    |
-| 6     | Quinze ans de contributions                                     | Report feature with verified cover, period and reading/download actions once the public report is supplied.                                                                                                                                         |
+| 6     | Notre parcours depuis 2011                                      | Six chronological milestones connecting a dated event or period with its contribution. Keep 2035 in the separate ambition section.                                                                                                                  |
+| 7     | Quinze ans de contributions                                     | Report feature with verified cover, period and reading/download actions once the public report is supplied.                                                                                                                                         |
 
 The following text is the proposed visitor-facing copy. Production notes follow
 it so they do not appear inside the page's narrative.
@@ -251,6 +252,48 @@ les capacités expérimentales et l’utilisation des résultats. Elle vise à s
 une transition énergétique sûre, compétitive et durable, créatrice de valeur
 pour le Maroc et adaptée aux besoins de sa région.
 
+### Notre parcours depuis 2011
+
+La recherche collaborative, les capacités expérimentales et les échanges
+scientifiques se construisent dans la durée. Quelques jalons retracent ce parcours
+et les contributions développées avec nos partenaires.
+
+#### 2011 · Création d’IRESEN
+
+IRESEN est créé pour relier la recherche et l’innovation aux besoins de la
+transition énergétique du Maroc.
+
+#### 2012–2015 · Construire les premières capacités
+
+Les premiers programmes de recherche et le développement de laboratoires
+renforcent les moyens de mesure, d’essais et de qualification des technologies
+solaires.
+
+#### 2017 · Inauguration de Green Energy Park
+
+À Benguerir, Green Energy Park développe avec les partenaires des capacités
+mutualisées de recherche, d’expérimentation et de formation dans les énergies
+renouvelables.
+
+#### 2019 · Solar Decathlon Africa
+
+IRESEN et l’UM6P accueillent à Benguerir la première édition africaine de
+Solar Decathlon. Les maisons du Village solaire relient conception, démonstration
+et apprentissage autour du bâtiment durable.
+
+#### 2025 · Partager les savoir-faire sur les réseaux intelligents
+
+Dans le cadre de MENALINKS, IRESEN et Green Energy Park accueillent un atelier
+de renforcement des capacités consacré aux réseaux intelligents. Les échanges
+rapprochent les acteurs des systèmes électriques et les expertises régionales.
+
+#### 2026 · Une nouvelle étape de coopération en Afrique
+
+L’inauguration de Green Energy Park Maroc–Côte d’Ivoire à Yamoussoukro prolonge
+la coopération entre IRESEN, l’UM6P et l’INP-HB. Cette plateforme associe recherche
+appliquée, innovation et développement des compétences dans les énergies
+renouvelables.
+
 ### Quinze ans de contributions
 
 #### Rapport d’activités des quinze ans · 2011–2026
@@ -268,6 +311,14 @@ développées et les enseignements qui nourrissent les prochaines étapes de l�
 
 ## Implementation and editorial handoff
 
+- The timeline is added by the owner's follow-up on 2026-10-11. Use an ordered
+  list with dates, titles and short paragraphs: an editorial line at wide widths
+  and a vertical sequence on mobile, with every milestone readable without
+  interaction. Additional photographs are optional and require verified provenance.
+  A future stable `institute-history` child anchor belongs under `about`, while
+  the visible timeline remains immediately before the report. Register its
+  localized search projection during implementation. Do not place the 2035
+  ambition or unfinished projects on the historical line as completed achievements.
 - Preserve the `institute` page ID and `/fr/institut`, `/en/institute`,
   `/ar/المعهد` canonical paths. This proposal does not change the route map.
 - Preserve the six current section targets: `about`, `mission`, `capabilities`,
@@ -300,3 +351,27 @@ développées et les enseignements qui nourrissent les prochaines étapes de l�
   the separate page are unaffected by this drafting request.
 
 See [verification](institute-content-validation.md).
+
+## Timeline evidence
+
+The private `IRESEN_15ans_Partie_IV_Dossier_Matiere_Exhaustif_2011-2026.pdf`
+is a working evidence dossier, not the final activity report. Read its chronology
+on printed pages 15–16 and relevant dated entries on pages 4–7 locally on
+2026-10-11. Size: 614,259 bytes; SHA-256:
+`f2724b5881cef73305daef66b3b0ee6ec89ccbabf4ebe4309fa6edb1e19082f3`.
+Neither its original nor its extracted text is imported or made public.
+Its status flags are source qualifications, not publication approval.
+
+| Milestone | Evidence and editorial boundary                                                                                                                                                                                                                                                                                                                                                           |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2011      | The current narrative establishes contributions since creation in 2011; the dossier repeats the date. No new legal name, founders or organisational details.                                                                                                                                                                                                                              |
+| 2012–2015 | The dossier's chronology gives this period for initial solar capabilities, laboratories and R&D programmes. Preserve the interval; the draft does not invent an exact opening date or name individual programmes. Final editorial confirmation remains required.                                                                                                                          |
+| 2017      | Dossier entry for inauguration; [Green Energy Park](https://www.greenenergypark.ma/) describes activity since 2017. The [IEA PVPS annual report for 2018](https://iea-pvps.org/wp-content/uploads/2020/01/FINAL_Annual_Report_2018-web_2019-05-24.pdf) explicitly dates inauguration to January 2017.                                                                                     |
+| 2019      | Dossier chronology and the co-organiser's [UM6P Solar Decathlon account](https://sd.um6p.ma/um6p_a_sustainable_campus/For-an-efficient-management-of-resources/5f3e224e355ee06f29eb65d8). [The US Department of Energy's retrospective](https://www.energy.gov/cmei/buildings/articles/solar-decathlon-africa-cool-oasis-creativity-desert) confirms the Village's research/learning use. |
+| 2025      | [Green Energy Park's November 2025 MENALINKS account](https://greenenergypark.ma/news) confirms the hosted smart-grid capacity workshop. This wording does not claim sole coordination of the wider programme.                                                                                                                                                                            |
+| 2026      | [Green Energy Park's inauguration account](https://greenenergypark.ma/news) dates GEP-MCI to 13 February 2026 and identifies UM6P, IRESEN and INP-HB. The draft uses the year and does not assert measured impact.                                                                                                                                                                        |
+
+Public corroboration was reviewed on 2026-10-11. It supports historical facts,
+not final publication approval of the proposed copy. Some references have
+inconsistent legacy dates; retain the explicit January 2017 inauguration evidence
+instead of conflating development/construction with inauguration.
