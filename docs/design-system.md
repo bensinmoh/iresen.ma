@@ -1656,3 +1656,7 @@ practice eyebrow uses Energy Cyan for readable small text. Existing hero, media
 provenance, logical Arabic layout and first-scroll motion remain authoritative.
 No shared token or universal layout is introduced. See
 [scope](laboratories-experts-network.md).
+
+Network map (2026-10-11): retain original geographic SVG bytes, use a CSS mask
+for the pale map surface, existing blue/navy circular SVG controls and signature
+corners on detail surfaces. Geography is not directional UI and never mirrors.

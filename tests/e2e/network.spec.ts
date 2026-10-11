@@ -31,9 +31,29 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     const directory = page.locator('#scientific-network')
     await directory.scrollIntoViewIfNeeded()
     const input = page.locator('#laboratory-query')
+    const pins = directory.locator('[data-map-pin]')
+    await expect(pins).toHaveCount(10)
+    await directory.locator('[data-map-pin="marrakech"]').click()
+    const detail = directory.locator('[data-map-details]')
+    await expect(detail).toBeVisible()
+    await expect(detail.locator('h3')).toHaveText(await cards.nth(1).locator('strong').innerText())
+    await detail.locator('button[aria-pressed]').last().click()
+    await expect(cards.nth(13).locator('button')).toHaveAttribute('aria-pressed', 'true')
+    await expect(
+      new AxeBuilder({ page }).include('[data-network-page]').analyze(),
+    ).resolves.toMatchObject({ violations: [] })
+    await detail.locator('button').first().focus()
+    await page.keyboard.press('Escape')
+    await expect(detail).toHaveCount(0)
+    await expect(directory.locator('[data-map-pin="marrakech"]')).toBeFocused()
+    await cards.nth(12).locator('button').click()
+    await expect(detail.locator('a[href="mailto:ghennioui@iresen.org"]')).toBeVisible()
+    await input.fill('')
     await input.fill('marrakech')
     await input.press('Enter')
     await expect(cards).toHaveCount(3)
+    await expect(pins).toHaveCount(1)
+    await expect(detail).toHaveCount(0)
     await expect(directory.getByRole('status')).toContainText('3')
     await directory.getByRole('group').getByRole('button').nth(2).click()
     await expect(cards).toHaveCount(1)
@@ -65,6 +85,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     ).resolves.toMatchObject({ violations: [] })
     for (const width of [320, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 900 })
+      await directory.locator('[data-map-pin="marrakech"]').click()
+      await expect(detail).toBeVisible()
       await expect
         .poll(() =>
           page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1),

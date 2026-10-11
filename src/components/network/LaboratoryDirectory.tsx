@@ -1,7 +1,13 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
-import { laboratoryTopics, normalizeLaboratoryQuery, type LaboratoryTopic } from '@/lib/network'
+import { useState, useRef, type FormEvent } from 'react'
+import {
+  laboratoryTopics,
+  normalizeLaboratoryQuery,
+  type LaboratoryTopic,
+  laboratoryLocations,
+  type LaboratoryLocation,
+} from '@/lib/network'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
 import styles from './NetworkPage.module.css'
@@ -10,6 +16,7 @@ export type LaboratoryCard = {
   id: string
   anchor: string
   topic: LaboratoryTopic
+  location: LaboratoryLocation
   title: string
   institution: string
   city: string
@@ -17,6 +24,9 @@ export type LaboratoryCard = {
   contact?: { name: string; email: string }
 }
 type DirectoryLabels = {
+  map: string
+  approximate: string
+  close: string
   label: string
   placeholder: string
   search: string
@@ -37,6 +47,8 @@ export function LaboratoryDirectory({
   records: LaboratoryCard[]
   labels: DirectoryLabels
 }) {
+  const [selected, setSelected] = useState<string | null>(null)
+  const trigger = useRef<HTMLButtonElement | null>(null)
   const [draft, setDraft] = useState('')
   const [query, setQuery] = useState('')
   const [topic, setTopic] = useState<LaboratoryTopic | ''>('')
@@ -57,11 +69,29 @@ export function LaboratoryDirectory({
         ).includes(term),
       ),
   )
+  const active = visible.find((record) => record.id === selected)
+  const locations = Object.entries(laboratoryLocations)
+    .map(([id, point]) => ({
+      id,
+      point,
+      labs: visible.filter((record) => record.location === id),
+    }))
+    .filter(({ labs }) => labs.length)
+  function select(record: LaboratoryCard, button: HTMLButtonElement) {
+    trigger.current = button
+    setSelected(record.id)
+  }
+  function close() {
+    setSelected(null)
+    trigger.current?.focus({ preventScroll: true })
+  }
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    setSelected(null)
     setQuery(draft)
   }
   function reset() {
+    setSelected(null)
     setDraft('')
     setQuery('')
     setTopic('')
@@ -88,11 +118,26 @@ export function LaboratoryDirectory({
         </div>
       </form>
       <div className={styles.filters} role="group" aria-label={labels.theme}>
-        <button type="button" aria-pressed={!topic} onClick={() => setTopic('')}>
+        <button
+          type="button"
+          aria-pressed={!topic}
+          onClick={() => {
+            setSelected(null)
+            setTopic('')
+          }}
+        >
           {labels.all}
         </button>
         {laboratoryTopics.map((id) => (
-          <button key={id} type="button" aria-pressed={topic === id} onClick={() => setTopic(id)}>
+          <button
+            key={id}
+            type="button"
+            aria-pressed={topic === id}
+            onClick={() => {
+              setSelected(null)
+              setTopic(id)
+            }}
+          >
             {labels.topics[id]}
           </button>
         ))}
@@ -107,49 +152,117 @@ export function LaboratoryDirectory({
           </button>
         )}
       </div>
-      <div className={styles.laboratories}>
-        {records.map((record) => (
-          <article
-            key={record.id}
-            id={record.anchor}
-            hidden={!visible.includes(record)}
-            data-laboratory-card
+      <div className={styles.explorer}>
+        <div className={styles.laboratories}>
+          {records.map((record) => (
+            <article
+              key={record.id}
+              id={record.anchor}
+              hidden={!visible.includes(record)}
+              data-laboratory-card
+            >
+              <button
+                className={styles.labSelect}
+                type="button"
+                aria-pressed={active?.id === record.id}
+                onClick={(event) => select(record, event.currentTarget)}
+              >
+                <ValorisationIcon name="flask" />
+                <span>
+                  <strong>{record.title}</strong>
+                  <span>
+                    {record.institution} · {record.city}
+                  </span>
+                </span>
+              </button>
+              <details className={styles.listDetails}>
+                <summary>
+                  {labels.theme} · {labels.topics[record.topic]}
+                </summary>
+                <LaboratoryDetails record={record} labels={labels} />
+              </details>
+            </article>
+          ))}
+        </div>
+        <div className={styles.mapColumn}>
+          <p id="laboratory-map-help" className={styles.mapHelp}>
+            {labels.approximate}
+          </p>
+          <div
+            className={styles.map}
+            role="group"
+            aria-label={labels.map}
+            aria-describedby="laboratory-map-help"
+            onKeyDown={(event) => {
+              if (event.key === 'Escape' && active) {
+                event.preventDefault()
+                close()
+              }
+            }}
           >
-            <span className={styles.labIcon}>
-              <ValorisationIcon name="flask" />
-            </span>
-            <p className={styles.labTopic}>{labels.topics[record.topic]}</p>
-            <h3>{record.title}</h3>
-            <p className={styles.affiliation}>{record.institution}</p>
-            {record.city && (
-              <p className={styles.city}>
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  aria-hidden="true"
+            <div className={styles.mapCanvas}>
+              <div className={styles.mapShape} aria-hidden="true" />
+              {locations.map(({ id, point, labs }) => (
+                <button
+                  key={id}
+                  type="button"
+                  className={styles.mapPin}
+                  data-map-pin={id}
+                  style={{ left: `${point.x}%`, top: `${point.y}%` }}
+                  aria-label={`${labs[0].city} · ${labels.results.replace('{count}', String(labs.length))}`}
+                  aria-pressed={active?.location === id}
+                  onClick={(event) => select(labs[0], event.currentTarget)}
                 >
-                  <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
-                  <circle cx="12" cy="10" r="2" />
-                </svg>
-                <span className="sr-only">{labels.city}: </span>
-                {record.city}
-              </p>
+                  <ValorisationIcon name="flask" />
+                  {labs.length > 1 && <span className={styles.pinCount}>{labs.length}</span>}
+                </button>
+              ))}
+            </div>
+            {active && (
+              <section
+                className={styles.mapDetails}
+                aria-labelledby="map-laboratory-title"
+                data-map-details
+              >
+                <button
+                  type="button"
+                  className={styles.closeDetails}
+                  aria-label={labels.close}
+                  onClick={close}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <path d="m6 6 12 12M18 6 6 18" />
+                  </svg>
+                </button>
+                <p className={styles.labTopic}>{labels.topics[active.topic]}</p>
+                <h3 id="map-laboratory-title">{active.title}</h3>
+                <LaboratoryDetails record={active} labels={labels} />
+                {visible.filter((record) => record.location === active.location).length > 1 && (
+                  <div className={styles.cityLabs}>
+                    {visible
+                      .filter((record) => record.location === active.location)
+                      .map((record) => (
+                        <button
+                          key={record.id}
+                          type="button"
+                          aria-pressed={record.id === active.id}
+                          onClick={() => setSelected(record.id)}
+                        >
+                          {record.title}
+                        </button>
+                      ))}
+                  </div>
+                )}
+              </section>
             )}
-            {record.contact && (
-              <address className={styles.contact}>
-                <span>{labels.contact}</span>
-                <bdi>{record.contact.name}</bdi>
-                <a href={`mailto:${record.contact.email}`}>
-                  <bdi dir="ltr">{record.contact.email}</bdi>
-                </a>
-              </address>
-            )}
-          </article>
-        ))}
+          </div>
+        </div>
       </div>
       {visible.length === 0 && (
         <div className={styles.empty}>
@@ -160,5 +273,29 @@ export function LaboratoryDirectory({
         </div>
       )}
     </div>
+  )
+}
+
+function LaboratoryDetails({
+  record,
+  labels,
+}: {
+  record: LaboratoryCard
+  labels: DirectoryLabels
+}) {
+  return (
+    <>
+      <p className={styles.affiliation}>{record.institution}</p>
+      <p className={styles.city}>{record.city}</p>
+      {record.contact && (
+        <address className={styles.contact}>
+          <span>{labels.contact}</span>
+          <bdi>{record.contact.name}</bdi>
+          <a href={`mailto:${record.contact.email}`}>
+            <bdi dir="ltr">{record.contact.email}</bdi>
+          </a>
+        </address>
+      )}
+    </>
   )
 }

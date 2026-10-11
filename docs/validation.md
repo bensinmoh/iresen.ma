@@ -3473,3 +3473,21 @@ owner attachments were inspected. Alumni sample claims were excluded.
 
 A typecheck initially raced with production build regeneration of generated
 files; rerunning it sequentially passed. This did not require source changes.
+
+## Network interactive map — 2026-10-11
+
+Follow-up replaces the laboratory grid with synchronized list/city-map discovery.
+The original supplied vector is preserved byte-for-byte (SHA-256 in
+`network-assets.json`). Local lint and typecheck pass; 139 unit tests and 28
+integration tests pass. Integration ran in an isolated temporary database,
+removed afterward. Production build passes. The local public search index was
+rebuilt, including GEP's newly supplied city/contact name and the map asset.
+
+Four focused browser tests cover FR/EN/AR filters, ten city groups, same-city
+laboratory switching, GEP contact, Escape/focus return, stable anchors, public
+search destinations, native no-JavaScript disclosures, automated accessibility,
+320/390/768/1024/1440px reflow and 200% text enlargement. Rendered FR desktop/mobile,
+AR desktop/320px and EN tablet views were inspected with an open map panel.
+An initial sticky-column offset was corrected to keep the list and map top-aligned.
+The geography remains unchanged in Arabic; public text uses RTL. These checks do
+not constitute a complete manual accessibility audit or editorial approval.

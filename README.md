@@ -352,3 +352,7 @@ The canonical governance page now presents the supplied institutional text,
 16 board organisations, eight scientific council members and the three-pole/
 seven-department organisation with the owner-supplied team portraits. EN/AR
 remain working adaptations. See [scope and sources](docs/governance.md).
+
+Network map follow-up: [interactive scope](docs/laboratories-experts-network.md#interactive-map--owner-follow-up-2026-10-11)
+uses the newly supplied original Morocco SVG, approximate city groups and a
+synchronized list with unchanged laboratory anchors and localized search results.

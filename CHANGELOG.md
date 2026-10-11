@@ -1080,3 +1080,11 @@ markers, trailing spacing and arrows. FR/EN retain left-to-right chronology.
 Arabic governance follow-up: personal names now use Arabic script throughout
 council/team cards, Director General, native biographies and accessible portrait
 labels; localized search references retain Latin-name discovery.
+
+### Network interactive map — 2026-10-11
+
+- Replace laboratory cards with a synchronized list and the owner-supplied
+  original Morocco vector; retain combined search/theme filters.
+- Group the 14 laboratories by ten approximate city positions, with accessible
+  selection, detail dismissal and native list disclosures.
+- Add supplied GEP city/contact, FR/EN/AR map copy and localized search references.

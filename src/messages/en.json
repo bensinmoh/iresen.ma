@@ -2806,7 +2806,11 @@
         "materials": "Materials",
         "mobility": "Mobility",
         "bioenergy": "Bioenergy"
-      }
+      },
+      "map": "Laboratory map",
+      "approximate": "Approximate city locations. Select a point or a laboratory to view its details.",
+      "close": "Close details",
+      "gepName": "Abdelatif GHENNIOUI"
     },
     "skills": {
       "title": "Research skills grow through practice.",
@@ -2905,7 +2909,8 @@
       },
       "solar-energy": {
         "title": "Solar energy",
-        "institution": "Green Energy Park (GEP)"
+        "institution": "Green Energy Park (GEP)",
+        "city": "Ben Guerir"
       },
       "thermal-production": {
         "title": "Thermal energy production",

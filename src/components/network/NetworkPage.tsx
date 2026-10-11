@@ -23,17 +23,20 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
   const sections = await getTranslations({ locale, namespace: 'PageSections.network' })
   const navigation = await getTranslations({ locale, namespace: 'Navigation' })
   const photo = heroImages.workshop
-  const records = networkLaboratories.map(({ id, topic }) => ({
+  const records = networkLaboratories.map(({ id, topic, location }) => ({
     id,
     topic,
+    location,
     anchor: laboratoryAnchor(id),
     title: t(`labs.${id}.title`),
     institution: t(`labs.${id}.institution`),
-    city: id === 'solar-energy' ? '' : t(`labs.${id}.city`),
-    discovery: `${original(`labs.${id}.title`)} ${original(`labs.${id}.institution`)} ${id === 'solar-energy' ? '' : original(`labs.${id}.city`)} ${id === 'power-electronics' ? original('directory.name') : ''}`,
+    city: t(`labs.${id}.city`),
+    discovery: `${original(`labs.${id}.title`)} ${original(`labs.${id}.institution`)} ${original(`labs.${id}.city`)} ${id === 'power-electronics' ? original('directory.name') : ''}`,
     ...(id === suppliedLaboratoryContact.id
       ? { contact: { name: t('directory.name'), email: suppliedLaboratoryContact.email } }
-      : {}),
+      : id === 'solar-energy'
+        ? { contact: { name: t('directory.gepName'), email: 'ghennioui@iresen.org' } }
+        : {}),
   }))
   const icons = ['search', 'flask', 'chart-line', 'arrows-exchange'] as const
   return (
@@ -104,18 +107,13 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
               <h2 id="network-directory-title">{t('directory.title')}</h2>
               <p>{t('directory.description')}</p>
             </div>
-            <Image
-              src="/brand/platforms/morocco.svg"
-              width={65}
-              height={65}
-              alt=""
-              aria-hidden="true"
-              unoptimized
-            />
           </header>
           <LaboratoryDirectory
             records={records}
             labels={{
+              map: t('directory.map'),
+              approximate: t('directory.approximate'),
+              close: t('directory.close'),
               label: t('directory.label'),
               placeholder: t('directory.placeholder'),
               search: t('directory.search'),

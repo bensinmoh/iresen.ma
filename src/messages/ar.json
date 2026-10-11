@@ -2806,7 +2806,11 @@
         "materials": "المواد",
         "mobility": "التنقل",
         "bioenergy": "الطاقة الحيوية"
-      }
+      },
+      "map": "خريطة المختبرات",
+      "approximate": "مواقع تقريبية حسب المدينة. اختر نقطة أو مختبراً لعرض تفاصيله.",
+      "close": "إغلاق التفاصيل",
+      "gepName": "عبد اللطيف غنيوي"
     },
     "skills": {
       "title": "تُكتسب مهارات البحث بالممارسة.",
@@ -2905,7 +2909,8 @@
       },
       "solar-energy": {
         "title": "الطاقة الشمسية",
-        "institution": "منصة Green Energy Park (GEP)"
+        "institution": "منصة Green Energy Park (GEP)",
+        "city": "بن جرير"
       },
       "thermal-production": {
         "title": "إنتاج الطاقة الحرارية",

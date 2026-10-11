@@ -427,3 +427,9 @@ scientific council members and six team portraits/assignments. Three poles and
 seven departmental remits accompany the DG, with no invented officeholders.
 Imane and Jamaleddine have function labels without director titles. EN/AR remain
 working editorial copy. See [scope](docs/governance.md).
+
+Network directory map follow-up (2026-10-11): 14 supplied laboratories are
+represented by ten approximate city groups, synchronized with the list and
+filters. GEP's newly supplied city is Ben Guerir; its scientific contact is
+Abdelatif GHENNIOUI (ghennioui@iresen.org). Positions express discovery, not
+surveying precision or additional service availability. No deployment.
