@@ -68,3 +68,7 @@ The final site-wide content/glossary search sanity check remains pending.
 
 See the dated entry in [validation](validation.md). No external API, applicant
 submission, deployment or public publication-gate change was made.
+
+Review captures (repository documentation only, outside public assets/search):
+[French desktop](review/projects/fr-desktop.webp) and
+[Arabic mobile](review/projects/ar-mobile.webp).
