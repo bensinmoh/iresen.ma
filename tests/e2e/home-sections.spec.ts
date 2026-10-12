@@ -460,19 +460,29 @@ test('wrapped home navigation uses its measured height when text is enlarged', a
     })
     const nav = page.locator('.home-section-navigation')
     await expect(nav).toBeVisible()
-    // Text enlargement/font readiness can precede ResizeObserver's layout frame.
-    // Test native navigation only after the measured bar reflects that layout.
+    // Font readiness precedes the observers' layout frames. Both the pinned bar
+    // and hero header must reflect the enlarged layout before native navigation.
     await expect
       .poll(() =>
         nav.evaluate((element) => {
           const main = element.closest('main')!
+          const hero = document.querySelector('.page-hero')!
+          const header = document.querySelector('.site-header')!
           return (
             parseFloat(getComputedStyle(main).getPropertyValue('--home-section-nav-height')) ===
-            element.getBoundingClientRect().height
+              element.getBoundingClientRect().height &&
+            parseFloat(getComputedStyle(hero).getPropertyValue('--hero-header-height')) ===
+              header.getBoundingClientRect().height
           )
         }),
       )
       .toBe(true)
+    await page.evaluate(
+      () =>
+        new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        ),
+    )
 
     const link = nav.locator('a[href="#research-priorities"]')
     await link.click()

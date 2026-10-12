@@ -37,7 +37,13 @@ from URL/method/headers avoids the runtime private-state mismatch. Downloads and
 previews remain mandatory browser checks on the corrected head. The corrected
 Linux runtime build passes: existing approved video bytes return 206/16-byte
 ranges in FR/EN/AR with no-store, and invalid locale/admin/account boundaries
-remain refused. This read-only check changes no owner record.
+remain refused. This read-only check changes no owner record. The enlarged-text native-anchor
+journey now waits for both hero-header and navigation resize measurements, then
+layout frames, before clicking; its exact post-click alignment assertion is
+unchanged. The final full CI had already confirmed all PDF/media cases, with this
+layout-readiness case the only remaining failure. With both observer
+measurements settled, the strict 200% native-anchor journey passes three
+consecutive production-browser repetitions, each covering FR/EN/AR.
 
 Final Lighthouse results are stored in [measured performance](performance-results.json).
 The first optimized trial exposed a video first-frame/LCP regression from delaying
