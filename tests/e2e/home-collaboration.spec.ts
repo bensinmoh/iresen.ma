@@ -16,6 +16,11 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     const section = page.locator('#collaboration')
     await expect(section.locator('h2')).toHaveText(catalogs[locale].HomeCollaboration.title)
     await expect(section.locator('article')).toHaveCount(4)
+    await expect(section.locator('header a')).toHaveAttribute(
+      'href',
+      pageHref('workWithUs', locale, 'choose-pathway'),
+    )
+    await expect(section.locator('header a')).toHaveText(catalogs[locale].HomeCollaboration.action)
     await expect(section).toContainText('+120')
     await expect(section).toContainText('ISO 9001:2015')
     await expect(section.locator('aside')).toContainText(

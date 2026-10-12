@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, type FormEvent } from 'react'
+import { useState, useRef, useEffect, type FormEvent } from 'react'
 import {
   laboratoryTopics,
   normalizeLaboratoryQuery,
@@ -77,6 +77,21 @@ export function LaboratoryDirectory({
       labs: visible.filter((record) => record.location === id),
     }))
     .filter(({ labs }) => labs.length)
+  useEffect(() => {
+    function revealLinkedLaboratory() {
+      const record = records.find(({ anchor }) => `#${anchor}` === window.location.hash)
+      if (!record) return
+      setDraft('')
+      setQuery('')
+      setTopic('')
+      setSelected(record.id)
+      requestAnimationFrame(() => document.getElementById(record.anchor)?.scrollIntoView())
+    }
+    revealLinkedLaboratory()
+    window.addEventListener('hashchange', revealLinkedLaboratory)
+    return () => window.removeEventListener('hashchange', revealLinkedLaboratory)
+  }, [records])
+
   function select(record: LaboratoryCard, button: HTMLButtonElement) {
     trigger.current = button
     setSelected(record.id)

@@ -13,10 +13,7 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
         <header className={styles.introduction}>
           <h2 id="collaboration-heading">{t('title')}</h2>
           <p>{t('description')}</p>
-          <a
-            className={styles.primary}
-            href={`${pageHref('contact', locale)}?subject=partnerships#send-request`}
-          >
+          <a className={styles.primary} href={pageHref('workWithUs', locale, 'choose-pathway')}>
             {t('action')} <NavigationIcon name="arrow" />
           </a>
         </header>
