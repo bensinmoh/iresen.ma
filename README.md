@@ -104,6 +104,10 @@ Public app: <http://localhost:3000> (redirects to French). Other locale shells: 
 
 ## Commands
 
+Use the [verification workflow](docs/verification-workflow.md) to avoid repeated
+local builds and suites while retaining full current-head CI and FR/EN/AR
+responsive review.
+
 | Command                 | Purpose                                                              |
 | ----------------------- | -------------------------------------------------------------------- |
 | `pnpm dev`              | Development app and CMS                                              |

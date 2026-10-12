@@ -80,6 +80,11 @@ checks; a new homepage needs composition and responsive/locale review; a motion
 interaction needs default/reduced-motion and keyboard checks. These are starting
 points, not permission to invent sections, facts or services.
 
+Use the [verification workflow](verification-workflow.md) for the check ledger,
+development iteration and one final production review. Reuse screenshots from
+behavior tests for visual inspection instead of launching a second identical
+capture pass. Keep FR/EN/AR, responsive, keyboard and reduced-motion evidence.
+
 ## Using the optional playbooks
 
 Impeccable has critique, audit, polish, typeset, layout, adapt, animate, harden,

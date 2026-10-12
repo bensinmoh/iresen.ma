@@ -137,6 +137,15 @@ Use Node 24.19.0 and pnpm 11.19.0. Setup: `pnpm install --frozen-lockfile`, `pnp
 
 Checks: `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:integration`, `pnpm build`, `pnpm test:e2e`. Integration/browser checks require the local database; browser checks use a production build. Review generated CMS types/import maps/migrations when schemas change.
 
+Follow [verification workflow](docs/verification-workflow.md): maintain a small
+check ledger, reuse valid evidence and rerun only checks invalidated by changes.
+Iterate visually in development, then use one final isolated production build for
+targeted FR/EN/AR responsive and interaction checks. A successful production build
+already checks TypeScript; do not repeat a separate local typecheck unless it
+provides earlier feedback or generated inputs changed. Full current-head CI remains
+mandatory before merge; broad integration/browser suites need not also run locally
+for every UI correction. Never substitute old-head CI for the final commit.
+
 For skill/documentation-only changes, check frontmatter, routing, local links, pinned source hashes and whitespace instead of running the application/database suite. For runtime changes, use the relevant checks above and inspect rendered visual changes; report actual coverage and limitations.
 
 Keep FR/EN/AR catalogs complete, map routes centrally, use logical CSS and verify Arabic RTL. Keep content separate from presentation. Never invent institutional facts, translations approved for publication, logos or imagery. Do not commit secrets, private references, uploads or personal data. CMS Local API queries for public content must explicitly enforce access and disable translation fallback.
