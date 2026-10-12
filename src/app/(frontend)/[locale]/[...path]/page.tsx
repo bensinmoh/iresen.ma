@@ -16,6 +16,7 @@ import { getTranslations } from 'next-intl/server'
 import { isLocale } from '@/i18n/locales'
 import { pageIdFromPathname, isNewsListingPath, newsListingHref, pageHref } from '@/lib/site'
 import { NewsEventsPage } from '@/components/news/NewsEventsPage'
+import { UtilityPage } from '@/components/content/UtilityPage'
 import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
 import { ContactPage } from '@/components/contact/ContactPage'
@@ -158,5 +159,13 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   if (pageId === 'opportunities') return <CareersPage locale={locale} />
   if (pageId === 'transfer') return <TransferPage locale={locale} />
   if (pageId === 'workWithUs') return <EngagementPage pageId={pageId} locale={locale} />
+  if (
+    pageId === 'legal' ||
+    pageId === 'privacy' ||
+    pageId === 'cookies' ||
+    pageId === 'accessibility' ||
+    pageId === 'sitemap'
+  )
+    return <UtilityPage pageId={pageId} locale={locale} />
   return <EmptyPage pageId={pageId} locale={locale} />
 }

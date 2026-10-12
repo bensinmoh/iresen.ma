@@ -184,9 +184,5 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'limitations-alternatives' },
     { id: 'help-feedback' },
   ],
-  sitemap: [
-    { id: 'site-pages' },
-    { id: 'catalogues-resources' },
-    { id: 'search-useful-information' },
-  ],
+  sitemap: [{ id: 'site-pages' }],
 }

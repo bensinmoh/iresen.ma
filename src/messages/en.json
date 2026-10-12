@@ -94,7 +94,7 @@
       "optional": "optional",
       "action": "Prepare my email",
       "openEmail": "Open in my email application",
-      "disclosure": "This form prepares an email. The website does not send or store your message. You send it from your email application.",
+      "disclosure": "This form prepares an email. The website does not send or store your message. You send it from your email application. For correspondence sent to IRESEN, Law No. 09-08 provides rights of access, rectification and objection on legitimate grounds.",
       "privacyLink": "Privacy information",
       "fallback": "If your email application does not open, write directly to",
       "prepared": "Your email is ready. Open it in your email application, review it, then send it.",
@@ -532,11 +532,11 @@
       "opportunities": "Explore offers and calls contributing to research, skills and collaborations, subject to their actual conditions.",
       "search": "Find your way through the Institute’s pages and resources.",
       "contact": "Connect with IRESEN and find the right point of contact.",
-      "legal": "Legal information about the IRESEN website.",
-      "privacy": "Information about privacy and personal data.",
-      "cookies": "Understand cookies and browsing preferences.",
-      "accessibility": "Information about the accessibility of this website.",
-      "sitemap": "Direct access to the Institute’s pages and resources."
+      "legal": "This website is published by IRESEN, the Institute for Research in Solar Energy and New Energies, an association established in Morocco. It presents its activities, resources and cooperation opportunities.",
+      "privacy": "IRESEN, an association established in Morocco, is your contact for data associated with its institutional correspondence. This notice describes browsing, email drafts and external services available on this website.",
+      "cookies": "Cookies are small files stored by your browser. The website distinguishes items necessary for its operation and remembering your choice from optional external services. No advertising or audience analytics tool is integrated.",
+      "accessibility": "IRESEN aims to provide an experience usable by as many people as possible in French, English and Arabic. Design takes WCAG 2.2 Level AA as a reference for readability, keyboard navigation, structured content and small-screen behaviour.",
+      "sitemap": "Direct links to IRESEN website pages, grouped by topic in the selected language."
     },
     "figuresLabel": "Key figures",
     "figures": {
@@ -1169,92 +1169,119 @@
     },
     "legal": {
       "site-publisher": {
-        "title": "Site publisher",
-        "description": "Content to add: the confirmed official identity, status, address and institutional contact details."
+        "title": "Website publisher",
+        "description": "This website is published by IRESEN, the Institute for Research in Solar Energy and New Energies, an association established in Morocco. It presents its activities, resources and cooperation opportunities."
       },
       "publication-hosting": {
-        "title": "Publication and hosting",
-        "description": "Content to add: designated responsible parties and the hosting providers actually selected."
+        "title": "Publication and use of the website",
+        "description": "The information is provided for institutional purposes. It is neither a contractual offer nor a guarantee of availability, funding or results. The terms of the relevant call, document or cooperation arrangement govern each specific process.",
+        "details": [
+          "Please contact IRESEN about inaccurate information, broken links or technical problems. External links lead to websites whose content and rules are the responsibility of their publishers."
+        ]
       },
       "rights-data-protection": {
-        "title": "Rights and data protection",
-        "description": "Content to add: intellectual property principles and links to privacy and cookie notices."
+        "title": "Content rights and personal data",
+        "description": "Texts, photographs, illustrations, marks and documents are protected by their respective owners’ rights. Viewing them does not grant permission for reproduction or commercial use. Respect each resource’s credits and licences; request permission from IRESEN for uses not expressly authorised.",
+        "details": [
+          "Personal data protection falls within Moroccan Law No. 09-08. The Privacy and Cookie preferences pages explain website uses and how to exercise your rights."
+        ]
       },
       "contact-version": {
-        "title": "Contact and version",
-        "description": "Content to add: the site contact, revision date and notice version."
+        "title": "Contact and applicable law",
+        "description": "For questions about the website or its content, use the institutional contact details below. Moroccan law applies to use of the website; mandatory legal provisions remain applicable."
       }
     },
     "privacy": {
       "controller-scope": {
-        "title": "Controller and scope",
-        "description": "Content to add: the controller’s identity and the scope of processing actually enabled."
+        "title": "Responsible organisation and scope",
+        "description": "IRESEN, an association established in Morocco, is your contact for data associated with its institutional correspondence. This notice describes browsing, email drafts and external services available on this website.",
+        "details": [
+          "Personal data processing falls within Law No. 09-08. For questions or to exercise your rights, contact IRESEN using the following details."
+        ]
       },
       "data-uses": {
-        "title": "Data and uses",
-        "description": "Content to add: the data, purposes, recipients and retention periods for each actual processing activity."
+        "title": "Data, purposes and retention",
+        "description": "The Contact form prepares an email in your browser: name, email, subject and message are needed to compose the request; organisation and telephone are optional. The website neither sends nor stores the entered data. You review and send the draft from your own email application. Unless you send it, no message is transmitted to IRESEN.",
+        "details": [
+          "If you send an email, IRESEN receives the information and attachments you choose to provide, to understand and respond to your request. Application processes and contact links also use your email application; the website offers no online submission of applications or personal files. Include only useful information; do not send identity documents or sensitive data without a specific need and appropriate instructions.",
+          "Received email is intended for authorised people handling your request. Retention depends on the follow-up needed and applicable obligations; you can request details relevant to your correspondence. The form draft stays in memory until the page is closed or reloaded. The cookie choice is kept for 180 days.",
+          "To display pages, the infrastructure receives your IP address and technical connection information. Technical logs may be used for security and troubleshooting. No advertising or audience analytics tool is integrated. The footer newsletter does not register subscriptions. Search terms are sent to the search service to provide results and appear in the URL; avoid entering personal data."
+        ]
       },
       "providers-transfers": {
-        "title": "Providers and transfers",
-        "description": "Content to add: providers, countries involved and data flows actually selected."
+        "title": "External services and transfers",
+        "description": "The Google Maps embed loads only after you allow external services. Google then receives information including your IP address and browser details, and may use its own cookies. The service may process data outside Morocco under Google’s rules. You may refuse or withdraw permission without losing access to the website.",
+        "details": [
+          "Links to Google Maps, social networks or other external resources take you outside this website. Your email application and its provider are involved when you send an email, under their own rules. International transfers of personal data are subject to the conditions of Law No. 09-08; a cookie choice does not replace the obligations applicable to such transfers."
+        ]
       },
       "rights-contact": {
-        "title": "Rights and contact",
-        "description": "Content to add: applicable rights and the dedicated channel to exercise them, once validated."
+        "title": "Your rights and how to exercise them",
+        "description": "Under the conditions of Law No. 09-08, you have rights of access and rectification of your personal data, and a right to object on legitimate grounds. You may request correction, updating or deletion of data whose processing does not meet the legal conditions.",
+        "details": [
+          "Write to contact@iresen.ma with the subject “Personal data”, describing your request and enough information to locate the relevant correspondence. Do not send an identity document unsolicited; proportionate verification may be requested if necessary. You may also contact Morocco’s National Commission for the Control of Personal Data Protection (CNDP)."
+        ]
       },
       "security-updates": {
         "title": "Security and updates",
-        "description": "Content to add: general protection measures, a link to cookies and the revision date."
+        "description": "Access to managed content is restricted according to roles and publication status. Private documents do not belong in the public media library. No channel provides absolute security: do not send passwords or confidential files through a general contact message.",
+        "details": [
+          "This notice evolves when services and their uses change. Cookie preferences remain available at any time from the footer."
+        ]
       }
     },
     "cookies": {
       "cookie-use": {
-        "title": "Use of cookies",
-        "description": "This site only uses what is necessary to operate and remember your choice. With your permission, Google Maps can load: Google then receives browsing data. No advertising or audience analytics tool is integrated."
+        "title": "What are cookies used for?",
+        "description": "Cookies are small files stored by your browser. The website distinguishes items necessary for its operation and remembering your choice from optional external services. No advertising or audience analytics tool is integrated."
       },
       "cookies-services": {
-        "title": "Cookies and services used",
-        "description": "Allow Google Maps on the Contact page. Google may receive your IP address and browser information and use its own cookies. Google is responsible for this service; its privacy policy is available at policies.google.com/privacy."
+        "title": "Necessary cookies and optional service",
+        "description": "Necessary: the iresen_consent cookie remembers acceptance or refusal for 180 days in this browser, without a tracking identifier. CMS authentication cookies are used only for administration.",
+        "details": [
+          "Optional: Google Maps on the Contact page. No embedded map loads before permission. Once allowed, Google may receive your IP address and browser details, use its own cookies and process data outside Morocco. Its cookie names and lifetimes depend on the service and your Google settings; consult its privacy rules."
+        ]
       },
       "manage-preferences": {
-        "title": "Manage my preferences",
-        "description": "Your acceptance or refusal is stored for 180 days in this browser. You can withdraw permission at any time from the footer; the map is then removed. Withdrawal does not delete data already sent to Google."
+        "title": "Choose or withdraw permission",
+        "description": "You can accept all, reject all, accept only necessary items or customise your choice. Optional services are not preselected. You can change your decision here or through “Cookie preferences” in the footer at any time.",
+        "details": [
+          "Withdrawal immediately removes the embedded map; it does not delete data already sent to Google. The website asks again when your choice expires or its cookie is deleted. If your browser prevents saving the choice, the website explains the problem and disables the optional service for the session."
+        ]
       },
       "effects-contact": {
-        "title": "Effects and contact",
-        "description": "Google Maps is disabled until you allow external services. The directions link remains available."
+        "title": "Browse without optional cookies",
+        "description": "Refusing external services allows you to read pages, search resources and prepare an email. The embedded map remains disabled; a directions link is available if you choose to open Google Maps yourself. You can also delete cookies in your browser settings. Contact IRESEN with questions about your data."
       }
     },
     "accessibility": {
       "commitment-objective": {
-        "title": "Commitment and objective",
-        "description": "Content to add: the accessible design objective, distinguished from demonstrated compliance."
+        "title": "Accessible reading",
+        "description": "IRESEN aims to provide an experience usable by as many people as possible in French, English and Arabic. Design takes WCAG 2.2 Level AA as a reference for readability, keyboard navigation, structured content and small-screen behaviour."
       },
       "evaluation-scope": {
-        "title": "Evaluation and scope",
-        "description": "Content to add: the date, method, pages, languages and conclusions of completed evaluations."
+        "title": "Features and checks",
+        "description": "The website provides a skip link, structured headings, named links and controls, visible focus and text alternatives for informative images. Panels and dialogs support keyboard use; animations respect the reduced-motion setting. Arabic presentation preserves its reading direction.",
+        "details": [
+          "Layout, keyboard and contrast checks and automated tests are performed on developed journeys. These are not an exhaustive audit with all assistive technologies and do not establish certified conformance."
+        ]
       },
       "limitations-alternatives": {
         "title": "Limitations and alternatives",
-        "description": "Content to add: established difficulties, available alternatives and planned corrections."
+        "description": "PDF documents and third-party content may present reading or interaction difficulties with assistive technologies. Google Maps is optional: the address and directions link remain available. Contact details allow you to reach IRESEN without using a form.",
+        "details": [
+          "If a resource or document is difficult to access, identify it and the format that would help you. The sitemap provides direct access to the main pages."
+        ]
       },
       "help-feedback": {
-        "title": "Help and feedback",
-        "description": "Content to add: an accessible channel and useful information for reporting a difficulty."
+        "title": "Report a difficulty",
+        "description": "Write to contact@iresen.ma with the subject “Website accessibility”. Include the page, the action you were attempting and the difficulty; if possible, mention your browser and assistive technology. Share only information useful for diagnosis. You can also contact IRESEN by telephone."
       }
     },
     "sitemap": {
       "site-pages": {
-        "title": "Site pages",
-        "description": "Content to add: links to the main pages within the existing navigation hierarchy."
-      },
-      "catalogues-resources": {
-        "title": "Catalogues and resources",
-        "description": "Content to add: grouped links to catalogues and public collections."
-      },
-      "search-useful-information": {
-        "title": "Search and useful information",
-        "description": "Content to add: search and the five utility pages in the current language."
+        "title": "Sitemap",
+        "description": "Direct links to IRESEN website pages, grouped by topic in the selected language."
       }
     }
   },
@@ -3298,5 +3325,16 @@
     "necessaryOnlyShort": "Necessary only",
     "saveShort": "Save",
     "necessaryOnlyTiny": "Necessary"
+  },
+  "UtilityPages": {
+    "updated": "Updated on 12 October 2026",
+    "contact": "Contact IRESEN",
+    "exerciseRights": "Exercise my rights",
+    "reportBarrier": "Report a difficulty",
+    "rightsSubject": "Personal data",
+    "accessibilitySubject": "Website accessibility",
+    "siteSubject": "Website enquiry",
+    "cndp": "My rights with the CNDP",
+    "googlePrivacy": "Google privacy"
   }
 }

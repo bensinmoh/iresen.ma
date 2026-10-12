@@ -267,12 +267,21 @@ for (const width of [1440, 390]) {
 test('result filters, sorting, pagination and browser history preserve the URL query', async ({
   page,
 }) => {
-  await page.goto(searchUrl('en', { q: 'content' }))
+  // Use substantive current public content, rather than retired scaffold wording.
+  const query = 'research'
+  const response = await page.request.get(
+    `/api/search?${new URLSearchParams({ locale: 'en', q: query, type: 'section' })}`,
+  )
+  expect(response.status()).toBe(200)
+  const result = await response.json()
+  expect(result.total).toBeGreaterThan(result.pageSize)
+  expect(result.totalPages).toBeGreaterThan(1)
+  await page.goto(searchUrl('en', { q: query }))
   const sectionFilter = page.locator('.search-facets a').filter({ hasText: /sections/i })
   await expect(sectionFilter).toHaveCount(1)
   await sectionFilter.click()
   await expect(page).toHaveURL(
-    (url) => url.searchParams.get('type') === 'section' && url.searchParams.get('q') === 'content',
+    (url) => url.searchParams.get('type') === 'section' && url.searchParams.get('q') === query,
   )
   const filteredUrl = page.url()
   const sortForm = page.locator('.search-sort-form')
@@ -282,7 +291,7 @@ test('result filters, sorting, pagination and browser history preserve the URL q
     (url) =>
       url.searchParams.get('sort') === 'newest' &&
       url.searchParams.get('type') === 'section' &&
-      url.searchParams.get('q') === 'content',
+      url.searchParams.get('q') === query,
   )
   const sortedUrl = page.url()
   const nextPage = page.locator('.search-pagination a').filter({ hasText: /next/i })
@@ -293,7 +302,7 @@ test('result filters, sorting, pagination and browser history preserve the URL q
       url.searchParams.get('page') === '2' &&
       url.searchParams.get('sort') === 'newest' &&
       url.searchParams.get('type') === 'section' &&
-      url.searchParams.get('q') === 'content',
+      url.searchParams.get('q') === query,
   )
   await page.goBack()
   await expect(page).toHaveURL(sortedUrl)

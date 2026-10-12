@@ -1,0 +1,118 @@
+.utility-hero {
+  padding-block: 1.5rem;
+  color: var(--color-navy);
+  background: var(--color-surface);
+  border-block-end: 1px solid var(--color-blue);
+}
+.utility-hero h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.utility-body {
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+}
+.utility-notice {
+  max-inline-size: 72ch;
+  margin-inline: auto;
+}
+.utility-updated {
+  margin: 0 0 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+.utility-notice section {
+  padding-block: 1.5rem;
+  border-block-end: 1px solid var(--color-border);
+  scroll-margin-block-start: 1.5rem;
+}
+.utility-notice section:first-of-type {
+  padding-block-start: 0;
+}
+.utility-notice h2,
+.utility-sitemap h2 {
+  margin: 0 0 0.75rem;
+  color: var(--color-navy);
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+.utility-notice p {
+  margin: 0.75rem 0;
+  overflow-wrap: anywhere;
+}
+.utility-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  margin-block: 1rem;
+  font-style: normal;
+  overflow-wrap: anywhere;
+}
+.utility-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-block-start: 1rem;
+}
+.utility-links a,
+.utility-action,
+.utility-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-block-size: 44px;
+  padding-block: 0.5rem;
+}
+.utility-action {
+  font-weight: 600;
+}
+.utility-sitemap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem 3rem;
+}
+.utility-sitemap section {
+  min-inline-size: 0;
+  border-block-start: 2px solid var(--color-blue);
+  padding-block-start: 1rem;
+}
+.utility-sitemap ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.utility-sitemap li + li {
+  border-block-start: 1px solid var(--color-border);
+}
+.utility-sitemap a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-block-size: 44px;
+  padding-block: 0.65rem;
+  color: var(--color-navy);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.utility-sitemap a:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.utility-sitemap .navigation-icon {
+  flex-shrink: 0;
+}
+@media (max-width: 64rem) {
+  .utility-sitemap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+@media (max-width: 40rem) {
+  .utility-sitemap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

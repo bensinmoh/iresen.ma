@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './tokens.css';
 @import './cookies.css';
+@import './utility-pages.css';
 @import './contact.css';
 @import './search.css';
 @import './published-content.css';

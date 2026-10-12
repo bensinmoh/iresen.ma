@@ -1710,3 +1710,12 @@ group at the trailing side. The necessary-only label uses measured button/font
 width, retaining its full wording wherever it fits and shortening only when
 required. Caption measurements are invisible and clipped; visible text stays
 at full contrast during control feedback.
+
+## Useful-information title band — 2026-10-12
+
+Legal/privacy/cookie/accessibility/sitemap pages use a compact title-only hero:
+1.5rem block padding, natural height, existing pale surface and navy type. No
+photograph, HeroViewport or domain-pathway strip is used. Enlarged/long titles
+can grow naturally. Notices retain reading measure and unobtrusive separators;
+sitemap columns follow available width with native links and shared SVG arrows.
+This scoped variant leaves the photographic public-page heroes unchanged.

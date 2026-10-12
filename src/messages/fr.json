@@ -94,7 +94,7 @@
       "optional": "facultatif",
       "action": "Préparer mon email",
       "openEmail": "Ouvrir dans mon application email",
-      "disclosure": "Ce formulaire prépare un email. Le site n’envoie ni n’enregistre votre message. L’envoi s’effectue depuis votre logiciel de messagerie.",
+      "disclosure": "Ce formulaire prépare un email. Le site n’envoie ni n’enregistre votre message. L’envoi s’effectue depuis votre logiciel de messagerie. Pour les échanges adressés à IRESEN, la loi n° 09-08 prévoit des droits d’accès, de rectification et d’opposition pour des motifs légitimes.",
       "privacyLink": "Informations sur la confidentialité",
       "fallback": "Si votre messagerie ne s’ouvre pas, écrivez directement à",
       "prepared": "Votre email est prêt. Ouvrez-le dans votre messagerie, vérifiez-le, puis envoyez-le.",
@@ -763,91 +763,118 @@
     "legal": {
       "site-publisher": {
         "title": "Éditeur du site",
-        "description": "À prévoir : l’identité officielle, le statut, l’adresse et les coordonnées institutionnelles confirmées."
+        "description": "Ce site est édité par IRESEN, Institut de Recherche en Énergie Solaire et Énergies Nouvelles, association établie au Maroc. Il présente ses activités, ses ressources et ses possibilités de coopération."
       },
       "publication-hosting": {
-        "title": "Publication et hébergement",
-        "description": "À prévoir : les responsables désignés et les prestataires d’hébergement effectivement retenus."
+        "title": "Publication et utilisation du site",
+        "description": "Les informations sont proposées à titre institutionnel. Elles ne constituent ni une offre contractuelle ni une garantie de disponibilité, de financement ou de résultat. Les conditions propres à un appel, un document ou une collaboration font référence pour la démarche concernée.",
+        "details": [
+          "Si vous constatez une information inexacte, un lien défectueux ou un problème technique, vous pouvez contacter IRESEN. Les liens externes conduisent à des sites dont les contenus et les règles relèvent de leurs éditeurs."
+        ]
       },
       "rights-data-protection": {
-        "title": "Droits et protection des données",
-        "description": "À prévoir : les principes de propriété intellectuelle et les liens vers les notices de confidentialité et de cookies."
+        "title": "Droits sur les contenus et données personnelles",
+        "description": "Les textes, photographies, illustrations, marques et documents sont protégés par les droits de leurs titulaires. Leur consultation ne vaut pas autorisation de reproduction ou d’utilisation commerciale. Respectez les crédits et les licences propres à chaque ressource ; pour une réutilisation non expressément autorisée, adressez une demande à IRESEN.",
+        "details": [
+          "La protection des données personnelles relève de la loi marocaine n° 09-08. Les usages du site et les moyens d’exercer vos droits sont détaillés dans les pages Confidentialité et Préférences de cookies."
+        ]
       },
       "contact-version": {
-        "title": "Contact et version",
-        "description": "À prévoir : le contact relatif au site, la date de révision et la version de la notice."
+        "title": "Contact et droit applicable",
+        "description": "Pour toute question relative au site ou à ses contenus, utilisez les coordonnées institutionnelles ci-dessous. Le droit marocain s’applique à l’utilisation du site ; les dispositions légales impératives demeurent applicables."
       }
     },
     "privacy": {
       "controller-scope": {
         "title": "Responsable et périmètre",
-        "description": "À prévoir : l’identité du responsable et le périmètre des traitements effectivement activés."
+        "description": "IRESEN, association établie au Maroc, est votre interlocuteur pour les données liées à ses échanges institutionnels. Cette notice décrit la navigation, les brouillons de courriel et les services externes disponibles sur ce site.",
+        "details": [
+          "Les traitements de données personnelles s’inscrivent dans le cadre de la loi n° 09-08. Pour une question ou l’exercice de vos droits, vous pouvez joindre IRESEN aux coordonnées suivantes."
+        ]
       },
       "data-uses": {
-        "title": "Données et usages",
-        "description": "À prévoir : les données, les finalités, les destinataires et les durées propres à chaque traitement réel."
+        "title": "Données, finalités et conservation",
+        "description": "Le formulaire Contact prépare un courriel dans votre navigateur : nom, email, objet et message servent à composer la demande ; organisation et téléphone sont facultatifs. Les données saisies ne sont ni envoyées ni enregistrées par le site. Vous relisez et envoyez le brouillon depuis votre propre messagerie. Sans envoi, aucun message n’est transmis à IRESEN.",
+        "details": [
+          "Si vous envoyez un courriel, IRESEN reçoit les informations et pièces que vous choisissez de transmettre, pour comprendre votre demande et y répondre. Les démarches de candidature et les liens de contact utilisent également votre messagerie ; le site ne propose pas de dépôt de candidature ou de fichier personnel en ligne. Limitez votre message aux informations utiles ; n’envoyez pas de document d’identité ni de données sensibles sans nécessité et consigne adaptée.",
+          "Le courriel reçu est destiné aux personnes habilitées concernées par votre demande. Sa durée de conservation dépend du suivi nécessaire et des obligations applicables ; vous pouvez demander les précisions relatives à votre échange. Le brouillon du formulaire reste en mémoire jusqu’à la fermeture ou au rechargement de la page. Le choix relatif aux cookies est conservé 180 jours.",
+          "Pour afficher les pages, l’infrastructure reçoit notamment votre adresse IP et des informations techniques de connexion. Des journaux techniques peuvent être utilisés pour la sécurité et le diagnostic. Aucun outil de publicité ou de mesure d’audience n’est intégré. La newsletter du pied de page n’enregistre aucune inscription. Les termes de recherche sont envoyés au service de recherche pour fournir les résultats et figurent dans l’URL ; évitez d’y saisir des données personnelles."
+        ]
       },
       "providers-transfers": {
-        "title": "Prestataires et transferts",
-        "description": "À prévoir : les prestataires, les pays concernés et les flux de données effectivement retenus."
+        "title": "Services externes et transferts",
+        "description": "La carte Google Maps ne se charge qu’après votre accord aux services externes. Google reçoit alors notamment votre adresse IP et des informations sur votre navigateur, et peut utiliser ses propres cookies. Le service peut traiter des données hors du Maroc, selon les règles de Google. Vous pouvez refuser ou retirer cet accord sans perdre l’accès au site.",
+        "details": [
+          "Un lien vers Google Maps, un réseau social ou une autre ressource externe vous fait quitter le site. Votre logiciel de messagerie et son prestataire interviennent lorsque vous envoyez un courriel. Leurs traitements relèvent de leurs propres règles. Les transferts de données personnelles vers l’étranger sont soumis aux conditions prévues par la loi n° 09-08 ; un choix de cookies ne remplace pas les obligations applicables à ces transferts."
+        ]
       },
       "rights-contact": {
-        "title": "Droits et contact",
-        "description": "À prévoir : les droits applicables et le canal dédié à leur exercice, après validation."
+        "title": "Vos droits et comment les exercer",
+        "description": "Vous disposez d’un droit d’accès et de rectification des données vous concernant, ainsi que d’un droit d’opposition pour des motifs légitimes, dans les conditions de la loi n° 09-08. Vous pouvez notamment demander la correction, l’actualisation ou l’effacement de données dont le traitement ne respecte pas les conditions légales.",
+        "details": [
+          "Écrivez à contact@iresen.ma avec l’objet « Données personnelles », en précisant votre demande et les informations permettant de retrouver l’échange concerné. Ne joignez pas spontanément de copie d’identité ; une vérification proportionnée pourra être demandée si elle est nécessaire. Vous pouvez également saisir la Commission Nationale de contrôle de la protection des Données à caractère Personnel (CNDP)."
+        ]
       },
       "security-updates": {
-        "title": "Sécurité et mise à jour",
-        "description": "À prévoir : les mesures générales de protection, le lien vers les cookies et la date de révision."
+        "title": "Sécurité et évolution de cette notice",
+        "description": "Les accès aux contenus administrés sont restreints selon les rôles et la publication. Les documents privés ne sont pas destinés à la médiathèque publique. Aucun canal n’assure une sécurité absolue : ne transmettez pas de mot de passe ou de pièce confidentielle par un simple message de contact.",
+        "details": [
+          "Cette notice évolue lorsque les services et leurs usages changent. Les préférences de cookies restent accessibles à tout moment depuis le pied de page."
+        ]
       }
     },
     "cookies": {
       "cookie-use": {
-        "title": "Utilisation des cookies",
-        "description": "Le site utilise uniquement les éléments nécessaires à son fonctionnement et à la mémorisation de votre choix. Avec votre accord, la carte Google Maps peut être chargée : Google reçoit alors des données de navigation. Aucun outil de publicité ou de mesure d’audience n’est intégré."
+        "title": "À quoi servent les cookies ?",
+        "description": "Les cookies sont de petits fichiers conservés par votre navigateur. Le site distingue les éléments nécessaires à son fonctionnement et à la mémorisation de votre choix, des services externes optionnels. Aucun outil de publicité ou de mesure d’audience n’est intégré."
       },
       "cookies-services": {
-        "title": "Cookies et services utilisés",
-        "description": "Autoriser la carte Google Maps sur la page Contact. Google peut recevoir votre adresse IP et des informations sur votre navigateur et utiliser ses propres cookies. Le responsable de ce service est Google ; ses règles de confidentialité sont disponibles sur policies.google.com/privacy."
+        "title": "Cookies nécessaires et service optionnel",
+        "description": "Nécessaire : le cookie iresen_consent mémorise votre acceptation ou votre refus pendant 180 jours, sur ce navigateur, sans identifiant de suivi. Les cookies d’authentification du CMS concernent uniquement l’administration.",
+        "details": [
+          "Optionnel : la carte Google Maps de la page Contact. Avant votre accord, aucune carte intégrée n’est chargée. Après votre accord, Google peut recevoir votre adresse IP et des informations sur votre navigateur, utiliser ses propres cookies et traiter des données hors du Maroc. Les noms et durées de ses cookies dépendent du service et de vos paramètres Google ; consultez ses règles de confidentialité."
+        ]
       },
       "manage-preferences": {
-        "title": "Gérer mes préférences",
-        "description": "Votre acceptation ou votre refus est conservé pendant 180 jours sur ce navigateur. Vous pouvez retirer votre accord à tout moment depuis le pied de page ; la carte est alors retirée. Le retrait ne supprime pas les données déjà transmises à Google."
+        "title": "Choisir ou retirer mon accord",
+        "description": "Vous pouvez tout accepter, tout refuser, accepter uniquement le nécessaire ou personnaliser votre choix. Les services optionnels ne sont pas sélectionnés à l’avance. Votre décision peut être modifiée à tout moment ici ou depuis « Préférences de cookies » dans le pied de page.",
+        "details": [
+          "Le retrait retire immédiatement la carte intégrée ; il ne supprime pas les données déjà transmises à Google. À l’expiration du choix ou après suppression du cookie, le site vous le redemande. Si votre navigateur empêche l’enregistrement, le site vous en informe et désactive le service optionnel pour la session."
+        ]
       },
       "effects-contact": {
-        "title": "Conséquences et contact",
-        "description": "La carte Google Maps est désactivée tant que vous n’autorisez pas les services externes. Le lien d’itinéraire reste disponible."
+        "title": "Naviguer sans cookies optionnels",
+        "description": "Refuser les services externes permet de consulter les pages, rechercher des ressources et préparer un courriel. La carte intégrée reste désactivée ; un lien d’itinéraire est disponible si vous souhaitez ouvrir Google Maps vous-même. Vous pouvez aussi supprimer les cookies depuis les réglages de votre navigateur. Pour une question sur vos données, contactez IRESEN."
       }
     },
     "accessibility": {
       "commitment-objective": {
-        "title": "Engagement et objectif",
-        "description": "À prévoir : l’objectif de conception accessible, distinct d’une conformité démontrée."
+        "title": "Une lecture accessible",
+        "description": "IRESEN vise une expérience utilisable par le plus grand nombre, en français, en anglais et en arabe. La conception prend pour référence les WCAG 2.2, niveau AA : lisibilité, navigation au clavier, contenus structurés et comportement adapté aux petits écrans."
       },
       "evaluation-scope": {
-        "title": "Évaluation et périmètre",
-        "description": "À prévoir : la date, la méthode, les pages, les langues et les conclusions des évaluations réalisées."
+        "title": "Fonctionnalités et vérifications",
+        "description": "Le site propose un lien d’évitement vers le contenu, des titres structurés, des liens et contrôles nommés, un focus visible et des alternatives textuelles pour les images informatives. Les panneaux et fenêtres peuvent être utilisés au clavier ; les animations tiennent compte du réglage « réduire les mouvements ». La présentation arabe conserve son sens de lecture.",
+        "details": [
+          "Des vérifications de mise en page, de clavier et de contraste ainsi que des tests automatisés sont réalisés sur les parcours développés. Ils ne constituent pas un audit exhaustif avec l’ensemble des technologies d’assistance et ne permettent pas d’annoncer une conformité certifiée."
+        ]
       },
       "limitations-alternatives": {
         "title": "Limites et alternatives",
-        "description": "À prévoir : les difficultés établies, les alternatives disponibles et les corrections prévues."
+        "description": "Les documents PDF et les contenus de sites tiers peuvent présenter des difficultés de lecture ou d’utilisation avec une technologie d’assistance. La carte Google Maps est optionnelle : l’adresse et le lien d’itinéraire restent disponibles. Les coordonnées de contact permettent une démarche sans passer par un formulaire.",
+        "details": [
+          "Si un contenu ou un document vous est difficilement accessible, indiquez la ressource concernée et le format qui vous serait utile. Le plan du site propose un accès direct aux pages principales."
+        ]
       },
       "help-feedback": {
-        "title": "Aide et signalement",
-        "description": "À prévoir : un canal accessible et les informations utiles pour signaler une difficulté."
+        "title": "Signaler une difficulté",
+        "description": "Écrivez à contact@iresen.ma avec l’objet « Accessibilité du site ». Indiquez la page, l’action que vous tentiez de réaliser et la difficulté rencontrée ; si cela vous est possible, précisez votre navigateur et la technologie d’assistance utilisée. Ne communiquez que les informations utiles au diagnostic. Vous pouvez aussi contacter IRESEN par téléphone."
       }
     },
     "sitemap": {
       "site-pages": {
-        "title": "Les pages du site",
-        "description": "À prévoir : les accès aux pages principales dans la hiérarchie de navigation existante."
-      },
-      "catalogues-resources": {
-        "title": "Catalogues et ressources",
-        "description": "À prévoir : les accès regroupés aux catalogues et aux collections publiques."
-      },
-      "search-useful-information": {
-        "title": "Recherche et informations utiles",
-        "description": "À prévoir : la recherche et les cinq pages utiles dans la langue active."
+        "title": "Plan du site",
+        "description": "Accès direct aux pages du site IRESEN, regroupées par thème et dans la langue sélectionnée."
       }
     }
   },
@@ -1238,11 +1265,11 @@
       "opportunities": "Explorer les offres et les appels qui contribuent à la recherche, aux compétences et aux collaborations, selon leurs conditions réelles.",
       "search": "Trouver votre chemin dans les pages et les ressources de l’Institut.",
       "contact": "Entrer en relation avec IRESEN et identifier le bon interlocuteur.",
-      "legal": "Les informations légales relatives au site IRESEN.",
-      "privacy": "Les informations relatives à la confidentialité et aux données personnelles.",
-      "cookies": "Comprendre les cookies et les préférences de navigation.",
-      "accessibility": "Les informations relatives à l’accessibilité du site.",
-      "sitemap": "Un accès direct aux pages et aux ressources de l’Institut."
+      "legal": "Ce site est édité par IRESEN, Institut de Recherche en Énergie Solaire et Énergies Nouvelles, association établie au Maroc. Il présente ses activités, ses ressources et ses possibilités de coopération.",
+      "privacy": "IRESEN, association établie au Maroc, est votre interlocuteur pour les données liées à ses échanges institutionnels. Cette notice décrit la navigation, les brouillons de courriel et les services externes disponibles sur ce site.",
+      "cookies": "Les cookies sont de petits fichiers conservés par votre navigateur. Le site distingue les éléments nécessaires à son fonctionnement et à la mémorisation de votre choix, des services externes optionnels. Aucun outil de publicité ou de mesure d’audience n’est intégré.",
+      "accessibility": "IRESEN vise une expérience utilisable par le plus grand nombre, en français, en anglais et en arabe. La conception prend pour référence les WCAG 2.2, niveau AA : lisibilité, navigation au clavier, contenus structurés et comportement adapté aux petits écrans.",
+      "sitemap": "Accès direct aux pages du site IRESEN, regroupées par thème et dans la langue sélectionnée."
     },
     "figuresLabel": "Chiffres clés",
     "figures": {
@@ -3301,5 +3328,16 @@
     "necessaryOnlyShort": "Uniquement le nécessaire",
     "saveShort": "Enregistrer",
     "necessaryOnlyTiny": "Le nécessaire"
+  },
+  "UtilityPages": {
+    "updated": "Mis à jour le 12 octobre 2026",
+    "contact": "Contacter IRESEN",
+    "exerciseRights": "Exercer mes droits",
+    "reportBarrier": "Signaler une difficulté",
+    "rightsSubject": "Données personnelles",
+    "accessibilitySubject": "Accessibilité du site",
+    "siteSubject": "Question sur le site",
+    "cndp": "Mes droits auprès de la CNDP",
+    "googlePrivacy": "Confidentialité de Google"
   }
 }

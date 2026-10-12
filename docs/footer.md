@@ -274,3 +274,10 @@ These public review captures show the reworked footer:
 ![French desktop footer](screenshots/footer-reference-fr-desktop.png)
 
 ![Arabic mobile footer](screenshots/footer-reference-ar-mobile.png)
+
+## Cookie preferences link — 2026-10-12
+
+The owner removes the duplicate Manage my cookies footer button. Keep the
+existing Cookie preferences utility link in FR/EN/AR; it leads to the page with
+the preferences control. Initial-visit choices, withdrawal and blocked-map
+preferences remain available. See [useful-information pages](utility-pages.md).

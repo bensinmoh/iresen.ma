@@ -18,7 +18,8 @@ for (const { locale, original, expected } of [
     page,
     request,
   }) => {
-    await page.goto(searchUrl(locale, { q: original, type: 'page', sort: 'newest', page: '2' }))
+    const initialUrl = searchUrl(locale, { q: original, type: 'page', sort: 'newest', page: '2' })
+    await page.goto(initialUrl)
     const queryField = page.locator('.search-query-form input[name="q"]')
     await expect(queryField).toHaveValue(original)
     await expect(page).toHaveURL((url) => url.searchParams.get('q') === original)
@@ -30,6 +31,9 @@ for (const { locale, original, expected } of [
     expect(parameters.get('type')).toBe('page')
     expect(parameters.get('sort')).toBe('newest')
     expect(parameters.has('page')).toBe(false)
+    // Corrected matches precede related results; page two may now contain only related items.
+    // Verify the badge/highlight on page one, then accept the correction from the original page two.
+    await page.goto(searchUrl(locale, { q: original, type: 'page', sort: 'newest', page: '1' }))
     await expect(page.locator('[data-search-match-kind="typo"]').first()).toBeVisible()
     await expect(page.locator('.search-results mark').first()).toBeVisible()
 
@@ -44,6 +48,8 @@ for (const { locale, original, expected } of [
       true,
     )
 
+    await page.goto(initialUrl)
+    await expect(correction).toHaveAttribute('href', href)
     await correction.focus()
     await page.keyboard.press('Enter')
     await expect(page).toHaveURL(new URL(href, page.url()).href)

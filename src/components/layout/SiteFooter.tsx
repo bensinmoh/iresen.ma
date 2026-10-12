@@ -1,4 +1,3 @@
-import { CookiePreferencesButton } from '@/components/privacy/CookieConsent'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { footerNavigationGroups, footerPageIds, pageHref, pageLinkHref } from '@/lib/site'
@@ -169,9 +168,6 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 <a href={pageLinkHref(id, locale)}>{pageTitle(id)}</a>
               </li>
             ))}
-            <li>
-              <CookiePreferencesButton />
-            </li>
           </ul>
         </nav>
         <div className="footer-bottom">

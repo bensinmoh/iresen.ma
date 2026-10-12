@@ -478,3 +478,12 @@ group at the trailing side. The necessary-only label uses measured button/font
 width, retaining its full wording wherever it fits and shortening only when
 required. Caption measurements are invisible and clipped; visible text stays
 at full contrast during control feedback.
+
+## Useful-information pages — 2026-10-12
+
+The owner commissions the five existing legal/privacy/cookie/accessibility/sitemap
+pages with short introductions. IRESEN's association status is owner-confirmed;
+texts describe actual browser/email/Maps behavior and Moroccan Law 09-08 rights,
+without fabricated operational facts or conformity claims. Sitemap body contains
+only shared canonical page links. FR/EN/AR are working adaptations. See
+[scope and release inputs](docs/utility-pages.md). No deployment.
