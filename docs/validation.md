@@ -26,7 +26,10 @@ local rebuild. No failed check is treated as a pass. The mechanical Impeccable
 check returned an empty finding list for changed page composition. The broad
 standard-hero test now selects utility exclusions from the central footer IDs,
 so Useful links receives its existing compact-utility checks rather than a
-photographic hero expectation.
+photographic hero expectation. The first full CI also caught low-contrast green
+innovation numbers: green is now limited to the decorative SVGs and numbers retain
+the accessible blue. The legacy raw-CMS test now asserts the commissioned 404
+boundary for accounts, registration and draft queries.
 
 Final Lighthouse results are stored in [measured performance](performance-results.json).
 The first optimized trial exposed a video first-frame/LCP regression from delaying

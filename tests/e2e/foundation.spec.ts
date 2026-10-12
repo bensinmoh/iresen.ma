@@ -63,11 +63,11 @@ test('menu opens by keyboard, Escape restores focus, and mobile Arabic fits the 
   )
 })
 
-test('CMS rejects anonymous account access and public first-administrator registration', async ({
+test('public CMS account, registration and raw draft collection routes stay closed', async ({
   request,
 }) => {
   const accounts = await request.get('/api/users')
-  expect([401, 403]).toContain(accounts.status())
+  expect(accounts.status()).toBe(404)
   const register = await request.post('/api/users/first-register', {
     data: {
       email: `blocked-${randomUUID()}@example.invalid`,
@@ -75,10 +75,9 @@ test('CMS rejects anonymous account access and public first-administrator regist
       role: 'admin',
     },
   })
-  expect([400, 401, 403]).toContain(register.status())
+  expect(register.status()).toBe(404)
   const draftQuery = await request.get('/api/pages?locale=ar&fallback-locale=fr&draft=true')
-  expect(draftQuery.ok()).toBe(true)
-  expect((await draftQuery.json()).docs).toEqual([])
+  expect(draftQuery.status()).toBe(404)
 })
 
 test('unknown locale/page paths return 404 and development robots disallow crawling', async ({

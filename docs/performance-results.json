@@ -461,7 +461,8 @@
     "Lighthouse 13.5.0, three default mobile runs/route; cold browser cache",
     "Before native standalone, after Linux container on same local machine; shared workload varies",
     "Scores/LCP are local lab results, not field CWV or INP",
-    "Final image includes same-origin PDF framing, responsive video poster and request-bound server-rendered consent prompt; all six routes remeasured after these changes."
+    "Final image includes same-origin PDF framing, responsive video poster and request-bound server-rendered consent prompt; all six routes remeasured after these changes.",
+    "A later contrast-only correction limits below-fold innovation green to decorative SVGs; measured geometry/assets/initial journeys remain unchanged, so the 18 final runs are reused."
   ],
   "budgets": {
     "lcpMs": 2500,

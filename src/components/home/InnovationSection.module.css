@@ -156,10 +156,10 @@
   }
 }
 
-.steps li:nth-child(4) .marker {
+.steps li:nth-child(4) .marker svg {
   color: var(--color-transition-green);
 }
-.steps li:nth-child(5) .marker {
+.steps li:nth-child(5) .marker svg {
   color: var(--color-transition-green);
 }
 .steps li:nth-child(5) .marker::after {
