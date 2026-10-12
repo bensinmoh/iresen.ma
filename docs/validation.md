@@ -3752,3 +3752,20 @@ overly strict reduced-motion assertion; both were corrected before this passing
 final run. Changed files pass Prettier and whitespace checks. The latest commit's
 full CI must pass before merging; its exact result is retained in PR #105. This technical verification is scoped to consent behavior,
 not a certification of whole-site legal compliance. No deployment is authorized.
+
+## Verification workflow optimization — 2026-10-12
+
+The owner requires full CI and responsive FR/EN/AR coverage without repeated
+unchanged-input checks. The new [workflow](verification-workflow.md), AGENTS entry
+and README/design-workflow links establish a check ledger, development iteration,
+one final isolated production artifact and targeted visual/interaction review.
+A production build supplies local TypeScript evidence; explicit typecheck remains
+in CI. Runtime-changing corrections invalidate their build and affected checks;
+documentation-only follow-ups do not.
+
+CI adds PR-scoped cancellation of superseded runs, with unique groups for main
+pushes. All existing events, permissions, jobs, services and check steps are
+preserved. Local verification covers YAML parsing, unchanged job structure,
+concurrency grouping/cancellation cases, local links, formatting and whitespace.
+No application runtime, test matrix or assertion changes; full current-head PR CI
+and its final result remain required and recorded in the pull request.
