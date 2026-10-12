@@ -1,28 +1,51 @@
+import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
-import { demoProjects } from '@/lib/projects'
-import { ProjectsExperience } from './ProjectsExperience'
+import { pageHref } from '@/lib/site'
+import { NavigationIcon } from '@/components/layout/NavigationIcon'
+import styles from './ProjectsPage.module.css'
 
-export function ProjectsPage({
-  locale,
-  parameters,
-}: {
-  locale: Locale
-  parameters: Record<string, string | string[] | undefined>
-}) {
-  // Provenance and placeholder coordinators remain in the source database only.
-  const records = demoProjects.map((project) => ({
-    id: project.id,
-    acronym: project.acronym,
-    title: project.title,
-    description: project.description,
-    domain: project.domain,
-    status: project.status,
-    programme: project.programme,
-    year: project.year,
-    durationMonths: project.durationMonths,
-    budgetMAD: project.budgetMAD,
-    image: project.image,
-    details: project.details,
-  }))
-  return <ProjectsExperience locale={locale} parameters={parameters} records={records} />
+/** No placeholder records: real projects require a separately commissioned source. */
+export async function ProjectsPage({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'Projects' })
+  return (
+    <div className={styles.page} data-projects-page>
+      <section className={styles.hero} aria-labelledby="hero-title">
+        <Image
+          src="/images/projects/hero.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          className={styles.heroPhoto}
+        />
+        <div className={`container ${styles.heroContent}`}>
+          <p className={styles.eyebrow}>{t('eyebrow')}</p>
+          <h1 id="hero-title">
+            {t('titleStart')} <span>{t('titleAccent')}</span>
+          </h1>
+          <p className={styles.description}>{t('description')}</p>
+        </div>
+      </section>
+      <div id="page-sections">
+        <span id="featured-results" />
+        <span id="find-project" />
+        <section
+          id="project-catalogue"
+          className={`container ${styles.emptyCatalogue}`}
+          aria-labelledby="projects-empty-title"
+        >
+          <h2 id="projects-empty-title">{t('updatingTitle')}</h2>
+          <p>{t('updatingDescription')}</p>
+          <a className="button button-primary" href={pageHref('programmes', locale)}>
+            {t('programmesLink')}
+            <NavigationIcon name="arrow" />
+          </a>
+        </section>
+        <span id="understanding-results" />
+        <span id="related-capabilities" />
+      </div>
+    </div>
+  )
 }

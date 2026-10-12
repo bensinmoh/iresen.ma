@@ -1,41 +1,35 @@
 # Architecture
 
-This is one modular, trilingual application. Next.js App Router serves the public website and Payload's administrative/API routes. Payload owns persistence through PostgreSQL; there is no second ORM or independent CMS service.
+## Current application
 
-The initial foundation contains empty collections and translated navigation. Institutional copy, homepage composition and integrations are subsequent work. It must never manufacture records to make a template look complete.
+One modular Node.js application: Next.js 16.4.0 / React 19.3.0 / Payload 3.90.2,
+with PostgreSQL, next-intl and native CSS/Web Animations. Public locale routes use
+server rendering, request-time publication checks and no translation fallback.
+The central site map holds 23 stable page IDs, plus canonical detail/list aliases.
 
-## Boundaries
+CMS collections are Users, Pages, News, Media, Opportunities and Calls. The retained
+publication/patent corpora are independent files. There is no project collection
+or demonstration database after the owner's 2026-10-12 withdrawal. Search uses
+PostgreSQL full-text/trigram projections, explicit static references, current-source
+eligibility, vocabulary and durable jobs. Public searches share an atomic database
+quota; no Redis/service is added.
 
-| Area                                 | Responsibility                                                  |
-| ------------------------------------ | --------------------------------------------------------------- |
-| `src/app/`                           | Public locale routes, CMS routes and server endpoints           |
-| `src/components/`                    | Accessible shared UI and public shell                           |
-| `src/styles/`                        | Semantic brand tokens, global typography and RTL rules          |
-| `src/i18n/`, `src/messages/`         | Stable page identifiers, localized routes and UI catalogs       |
-| `src/cms/`                           | Collections, authorization, publication workflow and migrations |
-| `src/lib/content/`                   | Explicit public projections and published-locale queries        |
-| `src/lib/search/`, `src/lib/email/`  | Replaceable service contracts                                   |
-| `src/lib/integrations/`, `src/jobs/` | Optional integrations and future durable work                   |
-| `docs/`                              | Architecture, decisions, operations and tracked work            |
+Public release defaults close admin, auth, raw CMS collections/mutations and server
+functions. Media byte access retains server-side publication/locale rules. Per-request
+script nonce CSP requires private/no-store HTML; static fingerprinted assets remain
+cacheable. CMS media never uses an independent public image cache. The standalone
+package excludes internal references/secrets; the non-root container separates
+operations from web serving.
 
-Public queries must apply access rules and locale eligibility, including when using Payload's Local API. Local API operations bypass authorization by default unless explicitly configured otherwise. Never return entire CMS documents directly to public clients.
+Contact/careers compose local email drafts. Google Maps is optional and consent-gated.
+CMS mail delivery and LinkedIn OAuth are not configured. Local CMS interface review
+uses isolated browser storage and synthetic review examples, with no career fixtures
+or real personal data. Future authenticated administration remains separate.
 
-## Rendering and discovery
+## Provider boundaries
 
-Use server components for content and client components for actual interaction. Locale URLs are explicit (`/fr`, `/en`, `/ar`); `/` redirects to French. Stable page IDs connect translated routes. Arabic sets `lang="ar"` and `dir="rtl"`.
-
-Drafts, admin, previews and personal records must stay outside public caches, sitemaps and search. Development and unapproved previews stay non-indexable. Robots directives are an indexing policy; remote preview access still needs authentication.
-
-Search relevance combines strict exact-first tiers, language normalization,
-public-derived indexed spelling vocabulary and a curated multilingual concept
-catalog. Both results and correction words recheck live source eligibility and
-revision. Vocabulary refreshes with indexed documents; it is not an independent
-cache of withdrawn text. No external model/provider or vector service is
-required. General embedding-based semantic retrieval remains a separate future
-adapter option, with relevance evidence and deployment requirements to assess.
-
-## Portable infrastructure
-
-PostgreSQL is the only required development service. Media uses local development storage until an approved S3-compatible production provider is configured. Search now uses a PostgreSQL full-text/trigram index and durable job queue behind its replaceable adapter, with current public/locale source checks before returning results. Email and LinkedIn retain their isolated adapter boundaries and honest unavailable states. Public PDF extraction optionally uses Poppler on the worker host; file metadata/transcripts remain searchable without it. See [search](search.md).
-
-A portable Node.js server/container is the deployment target. Hosting region, storage, mail, identity/MFA, job scheduling, distributed rate limiting and production observability need separate decisions before launch. See [deployment](deployment.md), [security and privacy](security-and-privacy.md), and [ADR 0001](adr/0001-modular-trilingual-application.md).
+Hosting and domain providers operate the origin/domain; Cloudflare fronts public
+traffic. Regions/capacity, private storage adapter, mail, private identity/MFA,
+backup/restore, monitoring and edge rules require provider/IT decisions. See
+[deployment](deployment.md), [security](security-and-privacy.md), [handover](it-handover.fr.md).
+Historical ADRs retain their dated context; ADR0004 records the authorized route addition.

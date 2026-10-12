@@ -1,3 +1,4 @@
+import { usefulLinks } from '@/lib/useful-links'
 import { isAiGeneratedImage } from '@/lib/image-provenance'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import { researchPlatforms } from '@/lib/platforms'
@@ -7,7 +8,6 @@ import {
   governanceTeam,
   governanceBoardLogo,
 } from '@/lib/governance'
-import { projectNoteReferences, projectConsortiumLogoReferences } from '@/lib/project-notes'
 import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
 import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
@@ -44,6 +44,13 @@ import { contentLocales } from '@/lib/content/publication'
 import type { PublicSearchDocument, SearchLocale } from './types'
 
 const messages = { fr, en, ar }
+// Original resource names/domain acronyms remain discoverable in translated interfaces.
+const usefulToolAliases = [
+  'Cadastre Solaire Maroc cartographie.ma',
+  'Green H2 Atlas GreenH2Atlas greenh2atlas.ma',
+  'Carte des Gîtes Minéraux du Maroc cartesgeoscientifiques.mem.gov.ma',
+  'MASEN Solar Atlas solaratlas.masen.ma',
+]
 
 export type PublicAssetReference = {
   id: string
@@ -228,32 +235,20 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ) as PublicAssetReference['text'],
     })),
   ),
-  // Register note metadata while enforcing the source's current-public eligibility.
-  // Owner-requested demonstration notes are downloadable previews, never institutional results.
-  ...[...projectNoteReferences, ...projectConsortiumLogoReferences]
-    .filter((reference) => reference.searchEligible)
-    .map((reference) => ({
-      id: reference.id,
-      url: reference.url,
-      type: reference.type,
-      text: { [reference.locale]: { title: reference.title, description: reference.description } },
-    })),
-  ...(['hero', 'thermal', 'grids', 'cooling', 'buildings', 'photovoltaic', 'wind'] as const).map(
-    (id) => ({
-      id: `projects-${id}`,
-      url: `/images/projects/${id}.webp`,
-      type: 'media' as const,
-      text: Object.fromEntries(
-        contentLocales.map((locale) => [
-          locale,
-          {
-            title: `${messages[locale].Pages.projects} — ${messages[locale].Projects.photos[id]}`,
-            description: messages[locale].Projects.photos[id],
-          },
-        ]),
-      ) as PublicAssetReference['text'],
-    }),
-  ),
+  ...(['hero'] as const).map((id) => ({
+    id: `projects-${id}`,
+    url: `/images/projects/${id}.webp`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: `${messages[locale].Pages.projects} — ${messages[locale].Projects.photos[id]}`,
+          description: messages[locale].Projects.photos[id],
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
   {
     id: 'publications-hero',
     url: '/images/publications/hero.webp',
@@ -901,15 +896,23 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'projects')
         body.push(
           catalog.Projects.description,
-          catalog.Projects.domain,
-          ...Object.values(catalog.Projects.domains),
-          catalog.Projects.hostingPlatform,
-          catalog.Projects.coordinator,
-          catalog.Projects.consortium,
-          catalog.Projects.objectives,
-          catalog.Projects.contactCoordinator,
-          catalog.Projects.downloadNote,
+          catalog.Projects.updatingTitle,
+          catalog.Projects.updatingDescription,
         )
+      if (pageId === 'usefulLinks') {
+        body.push(...engagementSearchText(catalog.UsefulLinks))
+        usefulLinks.forEach((link, index) => {
+          const copy = catalog.UsefulLinks.items[index]
+          documents.push({
+            id: `section:usefulLinks:${link.id}:${locale}`,
+            locale,
+            title: copy.title,
+            body: `${copy.description} ${usefulToolAliases[index]}`,
+            url: pageHref('usefulLinks', locale, link.id),
+            type: 'section',
+          })
+        })
+      }
       if (['legal', 'privacy', 'cookies', 'accessibility'].includes(pageId))
         body.push(...engagementSearchText(catalog.PageSections[pageId]))
       if (pageId === 'sitemap')
@@ -964,6 +967,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               catalog.NewsEvents.allNews,
               catalog.Navigation.patents,
             )
+          if (pageId === 'usefulLinks') body.push(...engagementSearchText(catalog.UsefulLinks))
           if (pageId === 'programmes') {
             const programmeCopy = {
               'programmes-collaborations': catalog.Programmes.intro,

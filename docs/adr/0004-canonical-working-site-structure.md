@@ -77,3 +77,11 @@ three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
 social links, shared physical two-rounded/two-sharp corners and localized search
 references are included. FR/EN/AR copy remains working editorial text. No deployment
 or publication-gate change is authorized. See [scope](../news-events.md).
+
+## Owner-authorized amendment — 2026-10-12
+
+The dedicated Useful links page adds stable ID `usefulLinks` and explicit FR/EN/AR
+paths, bringing the current authority to 23 pages. Footer, sitemap, locale copy,
+metadata and localized search change together; existing IDs remain. See
+[delivered scope](../useful-links.md). The original 22-page decision above is
+historical evidence, not the current count.

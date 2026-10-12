@@ -822,44 +822,8 @@
     "references": ["docs/programmes-assets.json"]
   },
   {
-    "path": "/images/projects/buildings.webp",
-    "sha256": "dee8dc3faab28f5cbf76915de7094c5b771bf326cd78ca6dcfc12419aabf75d1",
-    "category": "source-reference",
-    "references": ["docs/projects-assets.json"]
-  },
-  {
-    "path": "/images/projects/cooling.webp",
-    "sha256": "8e7dc8ca8877d6af0d9b2889bcc23708621f695d345bc50526c4897ecec7325d",
-    "category": "source-reference",
-    "references": ["docs/projects-assets.json"]
-  },
-  {
-    "path": "/images/projects/grids.webp",
-    "sha256": "00646e136b3010c801d14aeff4f34fe732ed40b9cac8baa514ae02908237df6d",
-    "category": "source-reference",
-    "references": ["docs/projects-assets.json"]
-  },
-  {
     "path": "/images/projects/hero.webp",
     "sha256": "8b59ae9b7c8866ae9f4f2a90486506183c27beacfd4d461059e2ba2432409edd",
-    "category": "source-reference",
-    "references": ["docs/projects-assets.json"]
-  },
-  {
-    "path": "/images/projects/photovoltaic.webp",
-    "sha256": "ce79032add10c4ee551da9cfd6520a18b2740a1dc6dbe9b5e8ad955f4679e9d7",
-    "category": "source-reference",
-    "references": ["docs/projects-assets.json"]
-  },
-  {
-    "path": "/images/projects/thermal.webp",
-    "sha256": "256b74885390dba9bf511e2af72069ab969f88d12e5fd1fffac7a6482d05ea85",
-    "category": "source-reference",
-    "references": ["docs/projects-assets.json"]
-  },
-  {
-    "path": "/images/projects/wind.webp",
-    "sha256": "e0295036a28bb6699ccb20b3bba0d3933a582b05da532a55907600689b6b1345",
     "category": "source-reference",
     "references": ["docs/projects-assets.json"]
   },

@@ -607,7 +607,7 @@
   outline-offset: 0;
 }
 .error {
-  color: #a11b1b;
+  color: var(--color-error);
 }
 .submit {
   inline-size: 100%;

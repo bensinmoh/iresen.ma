@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test, type Locator, type Page } from '@playwright/test'
+import { expect, test, type Locator, type Page } from './fixtures'
 import { locales, type Locale } from '../../src/i18n/locales'
 import { pageHref } from '../../src/lib/site'
 import ar from '../../src/messages/ar.json' with { type: 'json' }

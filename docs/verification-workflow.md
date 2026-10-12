@@ -71,7 +71,7 @@ verified; do not retry repeatedly without inspecting its cause.
 
 CI remains the clean, disposable-environment gate for formatting, lint, explicit
 TypeScript, all unit/integration tests, generated CMS artifacts, production build,
-full browser suite and opt-in CMS review. No path filter, locale removal, reduced
+full browser suite and opt-in local CMS review (`CMS_LOCAL_REVIEW=true`, never `PUBLIC_RELEASE=true`). No path filter, locale removal, reduced
 viewport matrix or weakened assertion is introduced by this workflow.
 
 Local production review adds actual visual inspection of the affected routes and

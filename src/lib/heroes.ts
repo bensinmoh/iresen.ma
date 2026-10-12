@@ -58,5 +58,11 @@ export const heroes = {
     stage: 'information',
     related: 'contact',
   },
+  usefulLinks: {
+    photo: 'solar-city',
+    layout: 'editorial',
+    stage: 'information',
+    related: 'search',
+  },
   sitemap: { photo: 'solar-city', layout: 'editorial', stage: 'information', related: 'search' },
 } as const satisfies Record<PageId, HeroDefinition>

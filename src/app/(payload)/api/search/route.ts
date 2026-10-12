@@ -1,3 +1,4 @@
+import { consumeSearchRequest } from '@/lib/security/search-limit'
 import { searchAdapter, validateSearchInput } from '@/lib/search/adapter'
 import type { SearchInput } from '@/lib/search/types'
 
@@ -16,6 +17,19 @@ export async function GET(request: Request): Promise<Response> {
   }
   if (!validateSearchInput(input))
     return Response.json({ error: 'Invalid search parameters.' }, { status: 400, headers })
+  try {
+    const limit = await consumeSearchRequest(request.headers)
+    if (!limit.allowed)
+      return Response.json(
+        { error: 'Too many searches. Try again shortly.' },
+        {
+          status: 429,
+          headers: { ...headers, 'Retry-After': String(limit.retryAfter) },
+        },
+      )
+  } catch {
+    return Response.json({ error: 'Search is temporarily unavailable.' }, { status: 503, headers })
+  }
   const result = await searchAdapter.search(input)
   return Response.json(result, { status: result.status === 'available' ? 200 : 503, headers })
 }

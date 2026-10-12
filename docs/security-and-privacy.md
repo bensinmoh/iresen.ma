@@ -14,9 +14,9 @@ The foundation is a development environment, not a production compliance assessm
   returning indexed text. Media bytes use canonical published metadata and
   `private, no-store`; CMS file URLs are excluded from Next's independently
   cached image optimizer so withdrawal cannot be bypassed by cached derivatives.
-- Use baseline security headers now; verify production CSP, cookies, HTTPS and HSTS against the final domain/runtime.
+- Public HTML now carries per-request nonce CSP, frame/object restrictions and private/no-store. Secure CMS cookies and origin-only CORS/CSRF remain. Verify actual HTTPS/HSTS and the final proxy contract with IT.
 
-Production requires supported MFA/SSO, shared rate limits, scoped service accounts, redacted audit/error logs, private upload validation, encrypted backups, recovery tests and patching ownership. OWASP ASVS Level 2 and DGSSI web-application guidance are engineering references; conformance needs evidence.
+The public release closes administration and non-public CMS REST/server-function operations. Search now has a PostgreSQL-backed 60/minute shared quota with HMAC client keys, bounded expiry and 429/Retry-After on the API. A future private administration needs supported MFA/SSO. Production still requires edge limits, scoped service accounts, redacted audit/error logs, upload validation, encrypted backups, recovery tests and patching ownership. OWASP ASVS Level 2 and DGSSI web-application guidance are engineering references; conformance needs evidence.
 
 ## Privacy and institutional review
 
@@ -54,3 +54,33 @@ copy does not assert regulatory approval or whole-site conformity.
 Owner follow-up — 2026-10-12: the footer retains its Cookie preferences link
 without a duplicate Manage my cookies button. The linked page opens preferences;
 first-visit and blocked-map controls remain.
+
+## Public release hardening — 2026-10-12
+
+`PUBLIC_RELEASE=true` overrides administrative opt-ins. Public CMS bytes remain
+accessible only through their existing publication/locale access checks. The
+REST collection/auth endpoints and server functions are unavailable by default
+in production; local administrative development remains separate. CSP retains
+inline styles for existing React/native responsive UI, but scripts require a
+per-request nonce. No production unsafe-eval or external framing of HTML is permitted. Same-origin
+PDF child previews remain allowed; baseline SAMEORIGIN file framing and existing
+publication/locale byte checks are preserved.
+Nonce HTML must not be shared-cached by Cloudflare.
+
+Both API and server-rendered searches consume the same atomic 60/minute database
+quota. Configure the trusted IP header only behind an origin that cannot be
+bypassed and a proxy that strips/replaces it. Otherwise clients share an
+unattributed quota. Invalid inputs are rejected before search; a limiter failure
+fails closed with an unavailable state. Expired HMAC keys are removed in bounded
+batches on subsequent searches; database backups/retention remain IT responsibilities.
+
+Dependency audit initially reported 14 advisories; compatible undici/DOMPurify/
+esbuild corrections and a maintained Sass remove those reported paths. The final
+production dependency audit reports zero known advisories at the audit date. This
+is registry evidence, not proof of a vulnerability-free application. See
+[preparation report](public-release-preparation.md) for test coverage and limits.
+
+Public REST media reads on the closed server strip authentication cookies and
+Authorization before Payload resolves access. An old staff/API token cannot
+turn a public byte request into a private-media read. Range/locale headers are
+retained. Explicit local administrative mode keeps its authenticated behavior.

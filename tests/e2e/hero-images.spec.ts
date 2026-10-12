@@ -1,4 +1,4 @@
-import { expect, test, type Browser, type Request } from '@playwright/test'
+import { expect, test, type Browser, type Request } from './fixtures'
 import sharp from 'sharp'
 import { pageHref } from '../../src/lib/site'
 import { heroImages } from '../../src/lib/hero-images'

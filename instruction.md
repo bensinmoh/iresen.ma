@@ -1,5 +1,16 @@
 # IRESEN website — project and development instructions
 
+## Current commissioned increment — 2026-10-12
+
+The owner selected the implementation plan recorded in
+[public release preparation](docs/public-release-preparation.md): programme layout,
+full demo-project withdrawal, Useful links (23rd stable route), global color/motion,
+security, measured performance and documentation/IT handover. Administration is
+closed by default; production uses `PUBLIC_RELEASE=true`. Provider configuration,
+final institutional review and actual deployment remain separate. Historical
+milestone recommendations below do not enlarge the currently authorized work.
+
+
 ## Current narrative — 2026-10-10
 
 The owner's new Phase I narrative supersedes the former institute-wide
@@ -12,10 +23,10 @@ cooperation and recognition as contributions. See [analysis and whole-site dispo
 
 The current request authorizes content alignment and homepage mission design.
 The mission-design deferral below is historical. New FR/EN mission statements are
-source copy; other summaries and AR are working adaptations. The 22 routes,
+source copy; other summaries and AR are working adaptations. The 23 routes,
 existing facts/media, honest service boundaries and final editorial review remain.
 
-Version: 1.6 · 9 October 2026 — deferred homepage restructuring brief; exact-first search retained  
+Version: 1.7 · 12 October 2026 — public release preparation; exact-first search retained  
 Repository: https://github.com/bensinmoh/iresen.ma  
 Project owner: Mouhcine BENMEZIANE, Direction Partenariats & Marketing de l’Innovation, IRESEN  
 Working language for code and technical documentation: English  
@@ -194,7 +205,7 @@ docs/                    Architecture, operating guides and decisions
 
 ## 5. Approved information architecture
 
-This section remains the existing route baseline. Following the owner's request for one consistent structure, the 22 stable page IDs in `src/lib/site.ts` are the canonical working structure; see [ADR 0004](docs/adr/0004-canonical-working-site-structure.md). The new detailed structure is an unvalidated proposal; its Agence de Moyens positioning, changed labels/paths, utility scope and section sequences require decisions recorded in [the reference comparison](docs/references/strategy/README.md#differences-from-the-chosen-baseline) and [backlog](docs/backlog.md). Its self-described approval status does not override the owner's clarification. Apply any later structure change centrally and update all affected locale paths, navigation/footer, content links and documentation in the same increment.
+This section remains the existing route baseline. Following the owner's request for one consistent structure, the 23 stable page IDs in `src/lib/site.ts` are the canonical working structure; see [ADR 0004](docs/adr/0004-canonical-working-site-structure.md). The new detailed structure is an unvalidated proposal; its Agence de Moyens positioning, changed labels/paths, utility scope and section sequences require decisions recorded in [the reference comparison](docs/references/strategy/README.md#differences-from-the-chosen-baseline) and [backlog](docs/backlog.md). Its self-described approval status does not override the owner's clarification. Apply any later structure change centrally and update all affected locale paths, navigation/footer, content links and documentation in the same increment.
 
 Preserve the agreed hierarchy and page boundaries. Major navigation groups are not permission to create extra landing pages. Additional detail pages support their collections without adding primary menu items.
 

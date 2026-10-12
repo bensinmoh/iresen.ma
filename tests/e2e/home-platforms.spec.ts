@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { homePlatforms } from '../../src/lib/home-platforms'
 import { researchPlatforms } from '../../src/lib/platforms'
 import { pageHref } from '../../src/lib/site'

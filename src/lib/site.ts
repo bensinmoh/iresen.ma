@@ -1,3 +1,4 @@
+import { usefulLinks } from '@/lib/useful-links'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import patentRecords from '@/data/patents.json' with { type: 'json' }
 import mediaPhotoRecords from '@/data/media-photos.json' with { type: 'json' }
@@ -133,6 +134,11 @@ export const pages = {
     path: '/accessibility',
     pathnames: { fr: '/accessibilite', en: '/accessibility', ar: '/إمكانية-الوصول' },
   },
+  usefulLinks: {
+    anchors: usefulLinks.map(({ id }) => id),
+    path: '/useful-links',
+    pathnames: { fr: '/liens-utiles', en: '/useful-links', ar: '/روابط-مفيدة' },
+  },
   sitemap: {
     // Retain previous deep links after withdrawing the two visible scaffold sections.
     anchors: ['catalogues-resources', 'search-useful-information'],
@@ -155,7 +161,14 @@ export const navigationGroups = [
   { id: 'resources', pages: ['news', 'events', 'publications', 'media', 'opportunities'] },
 ] as const satisfies ReadonlyArray<{ id: string; pages: readonly PageId[] }>
 
-export const footerPageIds = ['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'] as const
+export const footerPageIds = [
+  'legal',
+  'privacy',
+  'cookies',
+  'accessibility',
+  'usefulLinks',
+  'sitemap',
+] as const
 
 export const footerNavigationGroups = [
   { id: 'institute', pages: ['home', 'institute', 'governance', 'opportunities'] },

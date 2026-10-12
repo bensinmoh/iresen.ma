@@ -604,7 +604,7 @@
   inline-size: 2rem;
   block-size: 2rem;
   flex-shrink: 0;
-  color: var(--color-blue);
+  color: var(--color-transition-green);
 }
 .ink {
   position: relative;

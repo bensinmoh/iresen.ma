@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
 
 const enabled = process.env.CMS_INTERFACE_PREVIEW_ENABLED === 'true'

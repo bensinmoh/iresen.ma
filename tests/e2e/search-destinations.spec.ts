@@ -4,7 +4,7 @@ import path from 'node:path'
 import { Pool } from 'pg'
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 
 // Disposable local/CI database only, as with the CMS integration suite. Every
 // temporary record/file is removed; no administrator or real content is used.

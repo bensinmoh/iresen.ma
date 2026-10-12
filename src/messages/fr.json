@@ -451,23 +451,23 @@
     "projects": {
       "featured-results": {
         "title": "Réalisations à découvrir",
-        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
+        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
       },
       "find-project": {
         "title": "Recherche libre",
-        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
+        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
       },
       "project-catalogue": {
-        "title": "Catalogue de projets R&D&I",
-        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
+        "title": "Les projets seront bientôt mis à jour",
+        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
       },
       "understanding-results": {
         "title": "Repères pour lire les résultats",
-        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
+        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
       },
       "related-capabilities": {
         "title": "Projets et capacités associées",
-        "description": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation."
+        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
       }
     },
     "platforms": {
@@ -798,7 +798,8 @@
         "details": [
           "Si vous envoyez un courriel, IRESEN reçoit les informations et pièces que vous choisissez de transmettre, pour comprendre votre demande et y répondre. Les démarches de candidature et les liens de contact utilisent également votre messagerie ; le site ne propose pas de dépôt de candidature ou de fichier personnel en ligne. Limitez votre message aux informations utiles ; n’envoyez pas de document d’identité ni de données sensibles sans nécessité et consigne adaptée.",
           "Le courriel reçu est destiné aux personnes habilitées concernées par votre demande. Sa durée de conservation dépend du suivi nécessaire et des obligations applicables ; vous pouvez demander les précisions relatives à votre échange. Le brouillon du formulaire reste en mémoire jusqu’à la fermeture ou au rechargement de la page. Le choix relatif aux cookies est conservé 180 jours.",
-          "Pour afficher les pages, l’infrastructure reçoit notamment votre adresse IP et des informations techniques de connexion. Des journaux techniques peuvent être utilisés pour la sécurité et le diagnostic. Aucun outil de publicité ou de mesure d’audience n’est intégré. La newsletter du pied de page n’enregistre aucune inscription. Les termes de recherche sont envoyés au service de recherche pour fournir les résultats et figurent dans l’URL ; évitez d’y saisir des données personnelles."
+          "Pour afficher les pages, l’infrastructure reçoit notamment votre adresse IP et des informations techniques de connexion. Des journaux techniques peuvent être utilisés pour la sécurité et le diagnostic. Aucun outil de publicité ou de mesure d’audience n’est intégré. La newsletter du pied de page n’enregistre aucune inscription. Les termes de recherche sont envoyés au service de recherche pour fournir les résultats et figurent dans l’URL ; évitez d’y saisir des données personnelles.",
+          "Pour limiter les abus de recherche, une empreinte protégée de l’adresse de connexion et un compteur sont conservés dans une fenêtre d’une minute. Les termes saisis et l’adresse brute ne sont pas enregistrés dans ce compteur. Les fenêtres expirées sont supprimées lors des recherches suivantes ; les journaux et sauvegardes de l’hébergeur suivent leurs règles propres, à confirmer auprès de l’équipe IT."
         ]
       },
       "providers-transfers": {
@@ -876,6 +877,12 @@
         "title": "Plan du site",
         "description": "Accès direct aux pages du site IRESEN, regroupées par thème et dans la langue sélectionnée."
       }
+    },
+    "usefulLinks": {
+      "mapping-tools": {
+        "title": "Outils cartographiques",
+        "description": "Explorez ces ressources externes pour consulter les cartes énergétiques et géoscientifiques du Maroc."
+      }
     }
   },
   "Metadata": {
@@ -920,7 +927,8 @@
     "privacy": "Confidentialité",
     "cookies": "Préférences de cookies",
     "accessibility": "Accessibilité",
-    "sitemap": "Plan du site"
+    "sitemap": "Plan du site",
+    "usefulLinks": "Liens utiles"
   },
   "Footer": {
     "tagline": "La recherche qui fait avancer l’énergie.",
@@ -1269,7 +1277,8 @@
       "privacy": "IRESEN, association établie au Maroc, est votre interlocuteur pour les données liées à ses échanges institutionnels. Cette notice décrit la navigation, les brouillons de courriel et les services externes disponibles sur ce site.",
       "cookies": "Les cookies sont de petits fichiers conservés par votre navigateur. Le site distingue les éléments nécessaires à son fonctionnement et à la mémorisation de votre choix, des services externes optionnels. Aucun outil de publicité ou de mesure d’audience n’est intégré.",
       "accessibility": "IRESEN vise une expérience utilisable par le plus grand nombre, en français, en anglais et en arabe. La conception prend pour référence les WCAG 2.2, niveau AA : lisibilité, navigation au clavier, contenus structurés et comportement adapté aux petits écrans.",
-      "sitemap": "Accès direct aux pages du site IRESEN, regroupées par thème et dans la langue sélectionnée."
+      "sitemap": "Accès direct aux pages du site IRESEN, regroupées par thème et dans la langue sélectionnée.",
+      "usefulLinks": "Explorez ces ressources externes pour consulter les cartes énergétiques et géoscientifiques du Maroc."
     },
     "figuresLabel": "Chiffres clés",
     "figures": {
@@ -1334,7 +1343,9 @@
     "invalidDescription": "Saisissez jusqu’à 200 caractères et choisissez les filtres proposés.",
     "preview": "Aperçu",
     "previewTitle": "Aperçu : {title}",
-    "openResource": "Ouvrir la ressource"
+    "openResource": "Ouvrir la ressource",
+    "rateLimitedTitle": "Veuillez patienter avant de relancer la recherche",
+    "rateLimitedDescription": "Trop de recherches ont été effectuées. Réessayez dans une minute."
   },
   "HomeMissions": {
     "eyebrow": "Notre mission",
@@ -2298,62 +2309,12 @@
     "titleStart": "Le portefeuille vivant de l’innovation",
     "titleAccent": "marocaine.",
     "description": "Explorer les projets de recherche, développement et innovation par thématique, programme et étape de réalisation.",
-    "query": "Recherche libre",
-    "placeholder": "Mot-clé, acronyme, technologie…",
-    "domain": "Thématique",
-    "year": "Année",
-    "status": "Statut",
-    "programme": "Programme",
-    "all": "Tous",
-    "reset": "Réinitialiser les filtres",
-    "count": "{count, plural, =0 {Aucun projet ne correspond} one {# projet correspond} other {# projets correspondent}} à votre recherche",
-    "empty": "Aucun projet ne correspond à ces critères.",
-    "emptyHelp": "Essayez un autre mot-clé ou réinitialisez les filtres.",
-    "acronym": "Acronyme",
-    "duration": "Durée",
-    "budget": "Budget global",
-    "launch": "Année de lancement",
-    "months": "{count} mois",
-    "pagination": "Pages du catalogue",
-    "page": "Page {number}",
-    "previous": "Page précédente",
-    "next": "Page suivante",
-    "catalogue": "Catalogue de projets R&D&I",
-    "domains": {
-      "thermal": "Solaire thermique",
-      "grids": "Réseaux intelligents",
-      "efficiency": "Efficacité énergétique",
-      "photovoltaic": "Solaire photovoltaïque",
-      "wind": "Énergie éolienne",
-      "hydrogen": "Hydrogène vert",
-      "storage": "Stockage d’énergie"
-    },
-    "statuses": {
-      "active": "En cours",
-      "completed": "Clôturé",
-      "planned": "À venir"
-    },
     "photos": {
-      "hero": "Composition de verre avec le symbole IRESEN bleu.",
-      "thermal": "Champ de capteurs solaires thermiques.",
-      "grids": "Maison équipée de panneaux photovoltaïques.",
-      "cooling": "Installation solaire thermique expérimentale.",
-      "buildings": "Petit habitat expérimental avec panneaux solaires.",
-      "photovoltaic": "Composants de cellules photovoltaïques.",
-      "wind": "Petite éolienne sous un ciel bleu."
+      "hero": "Composition de verre avec le symbole IRESEN bleu."
     },
-    "details": "Voir le projet {name}",
-    "viewDetails": "Découvrir le projet",
-    "close": "Fermer le détail du projet",
-    "overview": "Présentation du projet",
-    "hostingPlatform": "Plateforme d’accueil",
-    "coordinator": "Contact",
-    "consortium": "Consortium",
-    "objectives": "Objectifs scientifiques",
-    "contactCoordinator": "Contacter le prof",
-    "downloadNote": "Télécharger la note du projet (PDF)",
-    "contactSubject": "Projet {name} — demande de contact",
-    "noteTitle": "Note du projet"
+    "updatingTitle": "Les projets seront bientôt mis à jour",
+    "updatingDescription": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche.",
+    "programmesLink": "Découvrir les programmes R&D&I"
   },
   "Roadmap": {
     "title": "Feuille de route R&D",
@@ -3339,5 +3300,30 @@
     "siteSubject": "Question sur le site",
     "cndp": "Mes droits auprès de la CNDP",
     "googlePrivacy": "Confidentialité de Google"
+  },
+  "UsefulLinks": {
+    "description": "Explorez ces ressources externes pour consulter les cartes énergétiques et géoscientifiques du Maroc.",
+    "items": [
+      {
+        "id": "solar-cadastre",
+        "title": "Cadastre solaire du Maroc",
+        "description": "Cartographie du potentiel solaire et éolien au Maroc."
+      },
+      {
+        "id": "green-hydrogen-atlas",
+        "title": "Green H2 Atlas",
+        "description": "Carte interactive de l’atlas de l’hydrogène vert."
+      },
+      {
+        "id": "mineral-deposits",
+        "title": "Carte des gîtes minéraux du Maroc",
+        "description": "Localisation des gîtes minéraux : recherche par région et coordonnées géographiques."
+      },
+      {
+        "id": "masen-solar-atlas",
+        "title": "Atlas solaire MASEN",
+        "description": "Carte interactive de l’atlas solaire, ouverte sur les coordonnées fournies."
+      }
+    ]
   }
 }

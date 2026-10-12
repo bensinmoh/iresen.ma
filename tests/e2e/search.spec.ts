@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test, type Page } from '@playwright/test'
+import { expect, test, type Page } from './fixtures'
 import { locales } from '../../src/i18n/locales'
 import { pageHref } from '../../src/lib/site'
 import { patents } from '../../src/lib/patents'

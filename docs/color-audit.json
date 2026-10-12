@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-12",
+  "targetBrandUsagePercent": {
+    "navy": 40,
+    "blue": 25,
+    "scienceBlue": 15,
+    "transitionGreen": 10,
+    "energyCyan": 6,
+    "innovationLime": 4
+  },
+  "whiteAndNeutralsExcluded": true,
+  "contrastPairs": [
+    {
+      "foreground": "navy",
+      "background": "white",
+      "ratio": 12.62,
+      "normalTextAA": true
+    },
+    {
+      "foreground": "blue",
+      "background": "white",
+      "ratio": 5.45,
+      "normalTextAA": true
+    },
+    {
+      "foreground": "white",
+      "background": "scienceBlue",
+      "ratio": 3.18,
+      "normalTextAA": false
+    },
+    {
+      "foreground": "navy",
+      "background": "energyCyan",
+      "ratio": 6.45,
+      "normalTextAA": true
+    },
+    {
+      "foreground": "navy",
+      "background": "transitionGreen",
+      "ratio": 4.28,
+      "normalTextAA": false
+    },
+    {
+      "foreground": "navy",
+      "background": "innovationLime",
+      "ratio": 6.54,
+      "normalTextAA": true
+    }
+  ],
+  "method": "WCAG sRGB contrast; CSS literal/token inventory and responsive visual review. Source declaration counts are not rendered proportions. Global recommended ratios guide semantic placement, not exact pixel quotas.",
+  "changes": [
+    "scientific programme/platform outline icons use Science Blue",
+    "maturation/transfer and hydrogen tool accents use Transition Green",
+    "final innovation-stage punctuation uses Lime",
+    "network/search/control literals reuse shared surfaces and roles",
+    "original SVG/logo/raster bytes preserved except new video derivative"
+  ]
+}

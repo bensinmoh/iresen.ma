@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { locales } from '../../src/i18n/locales'
 import { navigationGroups, pageHref } from '../../src/lib/site'
 

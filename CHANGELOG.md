@@ -1,5 +1,20 @@
 # Change log
 
+## 2026-10-12 — Public release preparation
+
+- Balance Programme approach photo/prose and center lifecycle copy outside the steps.
+- Withdraw the complete fictional project catalogue, exclusive visuals and 72 PDF notes;
+  preserve canonical page/anchors with localized update-coming copy and old URLs in 404.
+- Add Useful links as the 23rd stable page, footer/sitemap links and localized discovery.
+- Extend native reveal coverage, harmonize technical/transition accents and isolated colors.
+- Close public administrative REST/server functions; add nonce CSP and shared PostgreSQL
+  search quota with protected keys, expiry and 429 responses.
+- Patch reported production dependency advisories, retain original hero video and add
+  its responsive low-bandwidth derivative, without changing motion preference behavior.
+- Prepare separated non-root container/operations targets and provider/Cloudflare guide;
+  consolidate current docs, README and French IT handover. Actual checks are recorded
+  in validation/preparation; this change does not deploy or modify DNS/visibility.
+
 ## Contextual cross-links — 2026-10-11
 
 Review the implemented site navigation and retain existing relevant destinations.

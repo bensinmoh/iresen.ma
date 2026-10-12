@@ -21,8 +21,13 @@ export function HomeHeroVideo() {
       }
 
       // Assign only after checking motion preferences; the photo is the fallback.
+      const photo = document.querySelector<HTMLImageElement>('.page-hero .hero-photo')
+      // Reuse the already requested responsive fallback as the native video poster.
+      if (photo?.currentSrc) video.poster = photo.currentSrc
       video.muted = true
-      video.src = '/videos/hero.mp4'
+      video.src = window.matchMedia('(max-width: 64rem)').matches
+        ? '/videos/hero-mobile.mp4'
+        : '/videos/hero.mp4'
       void video.play().catch(() => {
         // A browser may block autoplay; leave the static background available.
       })

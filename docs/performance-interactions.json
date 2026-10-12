@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-12T18:17:04.087Z",
+  "method": "Chrome Event Timing on an unthrottled local mobile viewport; observed interactions, not field INP",
+  "scenarios": {
+    "programmes": {
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 40,
+          "interactionId": 4099
+        },
+        {
+          "name": "pointerup",
+          "duration": 40,
+          "interactionId": 4099
+        },
+        {
+          "name": "click",
+          "duration": 40,
+          "interactionId": 4099
+        },
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "interactionId": 4106
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "interactionId": 4106
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "interactionId": 4106
+        }
+      ],
+      "maxObservedMs": 40
+    },
+    "publications": {
+      "events": [],
+      "maxObservedMs": 0
+    }
+  }
+}

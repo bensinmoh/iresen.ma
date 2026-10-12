@@ -1,3 +1,5 @@
+import { headers } from 'next/headers'
+import { consumeSearchRequest } from '@/lib/security/search-limit'
 import { NetworkPage } from '@/components/network/NetworkPage'
 import { PlatformsPage } from '@/components/platforms/PlatformsPage'
 import { ProgrammesPage } from '@/components/programmes/ProgrammesPage'
@@ -119,6 +121,16 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
       !['q', 'type', 'sort', 'page'].some((key) => Array.isArray(parameters[key])) &&
       validateSearchInput(input)
     if (!valid) return <SearchPage locale={locale} query={query.slice(0, 200)} error="invalid" />
+    let limitError: 'rateLimited' | 'unavailable' | undefined
+    if (query.trim()) {
+      try {
+        const limit = await consumeSearchRequest(await headers())
+        if (!limit.allowed) limitError = 'rateLimited'
+      } catch {
+        limitError = 'unavailable'
+      }
+    }
+    if (limitError) return <SearchPage locale={locale} query={query} error={limitError} />
     const result = query.trim() ? await searchAdapter.search(input) : undefined
     return (
       <SearchPage
@@ -148,7 +160,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   }
   if (pageId === 'publications')
     return <PublicationsPage locale={locale} parameters={await searchParams} />
-  if (pageId === 'projects') return <ProjectsPage locale={locale} parameters={await searchParams} />
+  if (pageId === 'projects') return <ProjectsPage locale={locale} />
   if (pageId === 'governance') return <GovernancePage locale={locale} />
   if (pageId === 'network') return <NetworkPage locale={locale} />
   if (pageId === 'platforms') return <PlatformsPage locale={locale} />
@@ -164,6 +176,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
     pageId === 'privacy' ||
     pageId === 'cookies' ||
     pageId === 'accessibility' ||
+    pageId === 'usefulLinks' ||
     pageId === 'sitemap'
   )
     return <UtilityPage pageId={pageId} locale={locale} />

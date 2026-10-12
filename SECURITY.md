@@ -4,4 +4,4 @@ Do not publish vulnerability details, credentials or personal data in public iss
 
 Include the affected version/route, reproduction steps, impact and a minimal redacted example. Do not collect real personal data, attack third-party infrastructure or change production records to demonstrate a report.
 
-This repository is currently a development foundation. A production security contact, response owner and incident/recovery procedure must be established before release. See [security and privacy](docs/security-and-privacy.md).
+This repository is prepared for IT handover, with public administration closed by default. A production security contact, response owner and incident/recovery procedure must be established before release. See [security and privacy](docs/security-and-privacy.md).

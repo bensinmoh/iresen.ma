@@ -353,3 +353,16 @@ are now eligible for static image optimization, with empty query strings only.
 Guarded CMS uploads remain outside the optimizer cache. Browser regression checks
 cover the PV media result page in FR/EN/AR and every eligible registered static
 raster preview. AI-generated image exclusion remains independent and unchanged.
+
+## Release preparation — 2026-10-12
+
+The new `usefulLinks` page, `mapping-tools` section and four per-tool anchor
+references describe all owner resources in each locale. Withdrawn project records/PDFs and six card illustrations
+are absent; only the retained hero and truthful empty catalogue remain. Static
+catalog revisions withdraw obsolete entries/vocabulary when synchronized.
+
+API and server-rendered search now share the 60/minute PostgreSQL quota. API
+rejections return 429/Retry-After; the page shows localized waiting copy. See
+[security](security-and-privacy.md) for trusted-proxy and expiry requirements.
+The final multilingual content sanity check remains open until editorial content
+and terminology are approved.

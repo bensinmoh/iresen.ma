@@ -187,7 +187,8 @@
     "privacy": "Privacy",
     "cookies": "Cookie preferences",
     "accessibility": "Accessibility",
-    "sitemap": "Sitemap"
+    "sitemap": "Sitemap",
+    "usefulLinks": "Useful links"
   },
   "Footer": {
     "tagline": "Research that moves energy forward.",
@@ -536,7 +537,8 @@
       "privacy": "IRESEN, an association established in Morocco, is your contact for data associated with its institutional correspondence. This notice describes browsing, email drafts and external services available on this website.",
       "cookies": "Cookies are small files stored by your browser. The website distinguishes items necessary for its operation and remembering your choice from optional external services. No advertising or audience analytics tool is integrated.",
       "accessibility": "IRESEN aims to provide an experience usable by as many people as possible in French, English and Arabic. Design takes WCAG 2.2 Level AA as a reference for readability, keyboard navigation, structured content and small-screen behaviour.",
-      "sitemap": "Direct links to IRESEN website pages, grouped by topic in the selected language."
+      "sitemap": "Direct links to IRESEN website pages, grouped by topic in the selected language.",
+      "usefulLinks": "Explore these external resources for energy and geoscientific maps of Morocco."
     },
     "figuresLabel": "Key figures",
     "figures": {
@@ -858,23 +860,23 @@
     "projects": {
       "featured-results": {
         "title": "Featured achievements",
-        "description": "Explore research, development and innovation projects by domain, programme and stage."
+        "description": "The collaborative project catalogue is being updated. Explore our programmes to learn about our approach."
       },
       "find-project": {
         "title": "Free search",
-        "description": "Explore research, development and innovation projects by domain, programme and stage."
+        "description": "The collaborative project catalogue is being updated. Explore our programmes to learn about our approach."
       },
       "project-catalogue": {
-        "title": "R&D&I project catalogue",
-        "description": "Explore research, development and innovation projects by domain, programme and stage."
+        "title": "Projects will be updated soon",
+        "description": "The collaborative project catalogue is being updated. Explore our programmes to learn about our approach."
       },
       "understanding-results": {
         "title": "Understanding results",
-        "description": "Explore research, development and innovation projects by domain, programme and stage."
+        "description": "The collaborative project catalogue is being updated. Explore our programmes to learn about our approach."
       },
       "related-capabilities": {
         "title": "Projects and related capabilities",
-        "description": "Explore research, development and innovation projects by domain, programme and stage."
+        "description": "The collaborative project catalogue is being updated. Explore our programmes to learn about our approach."
       }
     },
     "platforms": {
@@ -1205,7 +1207,8 @@
         "details": [
           "If you send an email, IRESEN receives the information and attachments you choose to provide, to understand and respond to your request. Application processes and contact links also use your email application; the website offers no online submission of applications or personal files. Include only useful information; do not send identity documents or sensitive data without a specific need and appropriate instructions.",
           "Received email is intended for authorised people handling your request. Retention depends on the follow-up needed and applicable obligations; you can request details relevant to your correspondence. The form draft stays in memory until the page is closed or reloaded. The cookie choice is kept for 180 days.",
-          "To display pages, the infrastructure receives your IP address and technical connection information. Technical logs may be used for security and troubleshooting. No advertising or audience analytics tool is integrated. The footer newsletter does not register subscriptions. Search terms are sent to the search service to provide results and appear in the URL; avoid entering personal data."
+          "To display pages, the infrastructure receives your IP address and technical connection information. Technical logs may be used for security and troubleshooting. No advertising or audience analytics tool is integrated. The footer newsletter does not register subscriptions. Search terms are sent to the search service to provide results and appear in the URL; avoid entering personal data.",
+          "To limit search abuse, a protected fingerprint of the connection address and a counter are kept in a one-minute window. Typed queries and the raw address are not stored in this counter. Expired windows are deleted during subsequent searches; hosting logs and backups follow separate rules to be confirmed with IT."
         ]
       },
       "providers-transfers": {
@@ -1283,6 +1286,12 @@
         "title": "Sitemap",
         "description": "Direct links to IRESEN website pages, grouped by topic in the selected language."
       }
+    },
+    "usefulLinks": {
+      "mapping-tools": {
+        "title": "Mapping tools",
+        "description": "Explore these external resources for energy and geoscientific maps of Morocco."
+      }
     }
   },
   "Search": {
@@ -1334,7 +1343,9 @@
     "invalidDescription": "Use up to 200 characters and choose the available filters.",
     "preview": "Preview",
     "previewTitle": "Preview: {title}",
-    "openResource": "Open resource"
+    "openResource": "Open resource",
+    "rateLimitedTitle": "Please wait before searching again",
+    "rateLimitedDescription": "Too many searches have been made. Try again in one minute."
   },
   "HomeMissions": {
     "eyebrow": "Our mission",
@@ -2295,62 +2306,12 @@
     "titleStart": "The living portfolio of",
     "titleAccent": "Moroccan innovation.",
     "description": "Explore research, development and innovation projects by theme, programme and stage.",
-    "query": "Free search",
-    "placeholder": "Keyword, acronym, technology…",
-    "domain": "Theme",
-    "year": "Year",
-    "status": "Status",
-    "programme": "Programme",
-    "all": "All",
-    "reset": "Reset filters",
-    "count": "{count, plural, =0 {No projects match} one {# project matches} other {# projects match}} your search",
-    "empty": "No projects match these criteria.",
-    "emptyHelp": "Try another keyword or reset the filters.",
-    "acronym": "Acronym",
-    "duration": "Duration",
-    "budget": "Total budget",
-    "launch": "Launch year",
-    "months": "{count} months",
-    "pagination": "Catalogue pages",
-    "page": "Page {number}",
-    "previous": "Previous page",
-    "next": "Next page",
-    "catalogue": "R&D&I project catalogue",
-    "domains": {
-      "thermal": "Solar thermal",
-      "grids": "Smart grids",
-      "efficiency": "Energy efficiency",
-      "photovoltaic": "Solar photovoltaics",
-      "wind": "Wind energy",
-      "hydrogen": "Green hydrogen",
-      "storage": "Energy storage"
-    },
-    "statuses": {
-      "active": "Ongoing",
-      "completed": "Completed",
-      "planned": "Upcoming"
-    },
     "photos": {
-      "hero": "Glass composition with the blue IRESEN symbol.",
-      "thermal": "Solar thermal collector field.",
-      "grids": "House with photovoltaic panels.",
-      "cooling": "Experimental solar thermal installation.",
-      "buildings": "Small experimental dwelling with solar panels.",
-      "photovoltaic": "Photovoltaic cell components.",
-      "wind": "Small wind turbine under a blue sky."
+      "hero": "Glass composition with the blue IRESEN symbol."
     },
-    "details": "View project {name}",
-    "viewDetails": "Explore project",
-    "close": "Close project details",
-    "overview": "Project overview",
-    "hostingPlatform": "Hosting platform",
-    "coordinator": "Contact",
-    "consortium": "Consortium",
-    "objectives": "Scientific objectives",
-    "contactCoordinator": "Contact the professor",
-    "downloadNote": "Download the project note (PDF)",
-    "contactSubject": "Project {name} — contact request",
-    "noteTitle": "Project note"
+    "updatingTitle": "Projects will be updated soon",
+    "updatingDescription": "The collaborative project catalogue is being updated. Explore our programmes to learn about our approach.",
+    "programmesLink": "Explore R&D&I programmes"
   },
   "Roadmap": {
     "title": "R&D roadmap",
@@ -3336,5 +3297,30 @@
     "siteSubject": "Website enquiry",
     "cndp": "My rights with the CNDP",
     "googlePrivacy": "Google privacy"
+  },
+  "UsefulLinks": {
+    "description": "Explore these external resources for energy and geoscientific maps of Morocco.",
+    "items": [
+      {
+        "id": "solar-cadastre",
+        "title": "Morocco Solar Cadastre",
+        "description": "Maps of solar and wind potential in Morocco."
+      },
+      {
+        "id": "green-hydrogen-atlas",
+        "title": "Green H2 Atlas",
+        "description": "Interactive map of the green hydrogen atlas."
+      },
+      {
+        "id": "mineral-deposits",
+        "title": "Morocco Mineral Deposits Map",
+        "description": "Locate mineral deposits by region and geographic coordinates."
+      },
+      {
+        "id": "masen-solar-atlas",
+        "title": "MASEN Solar Atlas",
+        "description": "Interactive solar atlas map, opened at the supplied coordinates."
+      }
+    ]
   }
 }

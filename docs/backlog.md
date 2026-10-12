@@ -1,150 +1,28 @@
-# Foundation and follow-up backlog
+# Current follow-up backlog — 2026-10-12
 
-This file separates commissioned repository/boilerplate work from later homepage and launch work. A checked item records delivered work; unchecked items remain explicit dependencies.
+Completed public modules and scope boundaries are indexed in README/PRODUCT and
+individual scope guides. Git history/changelog retain earlier milestone lists;
+they are not outstanding work orders.
 
-## Milestone 0: repository and decisions
+## Before production
 
-- [x] Inspect the existing repository and preserve its files.
-- [x] Record modular trilingual architecture and stable route boundaries.
-- [x] Import and analyse the three supplied strategy/structure DOCX references, preserving their originals and documenting provenance, evidence limits and the structure's unvalidated status; see the [source index and analysis](references/strategy/README.md).
-- [x] Inventory seven current SVGs/private guidelines and hashes; use final website blue `#296BB4`, matching all latest blue-bearing assets including the corrected favicon.
-- [x] Add contribution/security guidance and issue/PR templates.
-- [x] Record exact compatible tool/framework versions and repeatable commands in README.
-- [ ] Complete remote governance review: repository is public on `main` and ruleset listing is empty; branch-protection inspection returned HTTP 403 for the integration. Apply settings only within separately authorized scope.
-- [ ] Confirm code/content licensing; no open-source license is assumed.
+- Confirm host Node/container/PostgreSQL support, provider regions and storage.
+- Configure private media storage, worker ownership, HTTPS origin/Cloudflare cache,
+  WAF/limits, trustworthy IP forwarding, backups, restore and redacted monitoring.
+- Complete institutional legal/IT review: controller/hosting/publication contacts,
+  cookies including provider additions, privacy/terms, retention, CNDP/transfer obligations.
+- Complete final content/FR/EN/AR terminology and translation review. Resolve deferred
+  public files/actions such as the Institute report PDF; never invent a download.
+- Run the final multilingual search/glossary sanity check after content approval.
+- Confirm checked artifact, staging recipe and explicit production/DNS/indexing approval.
 
-## Milestone 1: working clean foundation
+## Separately commissioned future capabilities
 
-- [x] Pinned Next.js/Payload/PostgreSQL setup, migrations and controlled administrator bootstrap.
-- [x] French/English/Arabic UI shell, equivalent locale switching and all approved main routes.
-- [x] Responsive keyboard navigation, Arabic RTL, honest loading/empty/error states.
-- [x] Empty pages/news/media collections, roles and published-locale public queries.
-- [x] SEO/header framework and non-indexable development output.
-- [x] Search/contact contracts with truthful unavailable states in the foundation; contact's later local email-draft workflow is recorded below.
-- [x] Reproducible install, lint, typecheck, focused tests, production build and browser validation.
-- [x] Import seven current approved SVGs/favicons unchanged; inspect source metadata and private PDF guidelines.
-- [x] Verify supplied-logo browser rendering during foundation validation; Latin font installation is recorded separately below.
+- Real collaborative-project data/model/workflow; no demo records or placeholder professors.
+- Authenticated private CMS administration, identity/MFA and integrations beyond local preview.
+- Institution-approved email delivery or online intake/applicant processing.
+- Live LinkedIn synchronization, newsletter, analytics or other optional external providers.
+- Alliances and remaining institution/editorial material supported by verified sources.
 
-Local validation passed on 2026-10-07. See [validation evidence and limits](validation.md). The structure is ready for homepage implementation; the remaining items below are subsequent work.
-
-## Structure proposal: decisions before page/CMS changes
-
-The 2026-10-08 structure reference supplies recommendations. The owner's 2026-10-09 request uses its suggested sections for empty placeholders on the existing 22-page working baseline; see [the section guide](page-sections.md), [ADR 0004](adr/0004-canonical-working-site-structure.md) and [the canonical route map](route-map.md). Its 23 fixed-page count and nine detail-template count remain proposed scope, not delivered work or final approval. The decisions below apply before changing routes, creating detail templates or populating institutional content.
-
-- [ ] Validate the Agence de Moyens page role, the proposed navigation labels and four main French path changes, plus footer utility scope and paths, before changing routes; document approved correspondences and any required redirects.
-- [ ] Confirm official identity, mission, 2035 ambition/convention status, current governance/organisation and scientific taxonomy before preparing public institutional sections.
-- [ ] Reconcile figures by definition, period, portfolio scope and funding category; validate project contributions/results/maturity, platform sites/operators/available capabilities and publishable transfer/IP evidence.
-- [ ] Refine populated sections and select detail templates according to available public material; define shared records, per-object ownership/review dates and versioned call rules with one reference URL across programme and opportunities pages. Programme detail remains conditional.
-- [ ] Approve each FR/EN/AR version, media rights and actual contact/application/registration channels; validate processing, retention and cookie arrangements before activating the corresponding sections or services.
-
-## Next task: homepage/design-system implementation
-
-- [x] Integrate repository-local design skills, product/visual context, flexible task routing and pinned optional upstream references; see [design workflow](design-workflow.md).
-- [x] Obtain the supplied logos, apex and favicon; record owner-authorized website use and preserve originals.
-- [ ] Obtain optional website/Illustrator exports and approved imagery for visual implementation; the unreadable ZIP no longer blocks the foundation.
-- [x] Install licensed, self-hosted Plus Jakarta Sans Latin for public French/English typography and controls; record provenance and OFL in [the font guide](fonts.md).
-- [x] Install the owner's selected, licensed, self-hosted Alexandria for Arabic; shared script selection retains Jakarta for Latin text and natural Arabic tracking. See [font provenance](fonts.md) and revision-specific [validation](validation.md).
-- [x] Resolve website primary blue as `#296BB4` following the owner's latest correction.
-- [ ] Inspect accessible website/Illustrator exports before finalizing visual composition.
-- [x] Analyze and document the owner's 2026-10-09 six-section homepage restructuring, retained Figma compositions, source copy, canonical destinations and content dependencies; see [the brief](homepage-restructure.md). Documentation only; current scaffolds remain.
-- [ ] Resume restructuring only when the owner starts development of “Nos réalisations emblématiques”, the section after missions. At that point inspect the then-current mission/body implementation and apply the commissioned increment.
-- [ ] Review supplied homepage French copy, achievement references (Green Energy Park, AquaSolar, iSmart and roadmap contribution), four platform records, domain taxonomy, photographs/partner logos and EN/AR translations for each module.
-- [ ] Implement the revised order when commissioned: move achievements after the existing missions, align section navigation, retain appropriate anchors and coordinate public search references. The hero already owns `figures`, with its duplicate body scaffold omitted by the separate mission increment.
-- [ ] Build the four collaboration paths and integrated Alliances band with reachable canonical destinations; the proposed Agence de Moyens/collaboration page names do not change current routes.
-- [ ] Populate “À la une” from eligible selected news and the next relevant event without duplicate homepage text; provide the fourth-news fallback and honest sparse/empty states. Event records, public projection and detail destinations remain future work.
-- [x] Build lightweight introducing heroes for every approved page, with responsive viewport sizing and an overlaid header; see [page heroes](heroes.md).
-- [x] Replace the homepage hero band with the owner's five explicitly supplied figures, corrected French labels and drafted EN/AR equivalents; use shared figure typography and retain other pages' pathways. See [the source and label record](heroes.md#homepage-key-figures--2026-10-08).
-- [x] Put section placeholders below the heroes on all 22 canonical pages in FR/EN/AR, with headings, short draft content notes, shared anchor IDs/order and nested Institute Mission topics; preserve the working sitemap and existing service notices. See [the section guide](page-sections.md) and revision-specific [validation](validation.md).
-- [x] Replace contact's scaffold with the owner's selected Figma composition, original decorative background, reused headquarters contacts, subject/platform links, local email-draft form, requested full-width map and subsequent native FAQ. The owner's explicit 2026-10-09 refinement supersedes the earlier on-demand presentation: render the server iframe directly with native lazy loading, remove reveal/remove controls and the lower explanatory strip, and retain the separate directions link. Preserve the route baseline and all contact anchors; FR/EN/AR copy remains draft. See [contact scope and sources](contact.md).
-- [x] Replace the contact introduction's cyan curves with the owner's headquarters photo, preserving the original JPEG and serving responsive optimized derivatives with a CSS crop/readability overlay. Prior curve screenshots retain their earlier scope; photo-specific checks belong separately in [validation](validation.md).
-- [ ] Resolve the supplied Google Maps shortlink and verify the exact headquarters pin against the current address-query embed; review the third-party map flow for release.
-- [ ] Approve contact copy/translations and any future platform addresses, department mailboxes, opening hours or response commitments before adding those claims.
-- [ ] Populate the narrative/content modules below the heroes; obtain reviewed evidence for additional key figures and approve remaining copy/translations.
-- [ ] Compare desktop/tablet/mobile composition and Arabic adaptations; test long content and keyboard/screen-reader use.
-- [ ] Measure a representative production page's transfer, bundle size and LCP; the empty shell is not a performance baseline.
-
-## Later functional work
-
-- [ ] Investigate the existing intermittent French `mission-transfer` hash landing
-      after desktop-to-mobile resizing: the title can land above the viewport,
-      despite horizontal card containment. Reproduced on unchanged main during
-      [glass-header verification](validation.md#glass-header-controls-and-joined-menu--2026-10-09);
-      preserve the viewport assertions and verify direct-entry, same-document,
-      resizing, FR/EN/AR and no-JavaScript paths when correcting it.
-
-- [ ] Expand collections and detail/list/filter templates; translations, redirects, preview and publication invalidation.
-- [ ] Add verified public media rights and private-file boundaries.
-- [x] Implement public locale-aware search, expandable header field, suggestions,
-      guarded results and document/media references; see [search](search.md).
-- [ ] Implement server-side contact acceptance/delivery with durable retries and retention. The existing local email-draft form has no submission endpoint, provider or storage.
-- [ ] Add scheduled jobs, archive/withdrawal behavior and narrow locale permissions/audit.
-- [ ] Introduce optional LinkedIn official API access or an honest manual editorial queue.
-
-## Release prerequisites
-
-- [ ] Confirm canonical domain and old-URL migration inventory.
-- [ ] Approve hosting/data flows, applicable CNDP/DGSSI obligations, privacy notices and retention.
-- [ ] Configure approved service credentials, CMS MFA/SSO and shared production rate limiting.
-- [ ] Approve public copy, translations, key figures, institutional contacts and legal identity.
-- [ ] Once the full website content is supplied, remind the owner at the final
-      sanity check to review/reconstruct the FR/EN/AR glossary, terminology/
-      translations, acronyms and related-term dictionary, rebuild the public
-      search index/vocabulary and verify representative queries; follow the
-      [final content search checklist](search.md#final-content-search-sanity-check).
-- [ ] Restrict staging, verify security/SEO/accessibility and measure real representative pages.
-- [ ] Test backups/restoration, jobs/mail/monitoring and accountable operations.
-- [ ] Obtain owner release authorization before deployment.
-
-## Homepage collaboration delivery — 2026-10-09
-
-Delivered [four audience pathways](home-collaboration.md), owner-supplied +120
-collaborators, certification reminder and localized search at the existing
-anchor. Review final FR/EN/AR wording and clarify the count perimeter/date before
-publication. Future work includes actual opportunity listings and collaboration
-services; achievements, capabilities, Alliances and full reordering stay deferred.
-
-## Homepage platforms update — 2026-10-09
-
-The later owner request commissions the existing `platforms-expertise` section
-with the five supplied outdoor/platform visuals and four original SVG logos.
-See [implemented scope](home-platforms.md). This bounded increment
-supersedes only the capabilities deferral. Achievements remain the one body
-placeholder; full reordering and Alliances remain deferred. Preserve GreenH2A
-in-development wording, its 3D label, canonical destinations and search references.
-
-## Homepage achievements delivered — 2026-10-10
-
-The eight owner-selected achievements and six-section homepage order are
-implemented; no body placeholder remains. See [scope](home-achievements.md).
-Final copy/translation review, Alliances and future CMS case-management remain
-open. The final-content search sanity check in [search](search.md#final-content-search-sanity-check)
-is still due once all website content is in place.
-
-## New narrative editorial follow-up — 2026-10-10
-
-Whole-site introductory/scaffold alignment and mission design follow the
-[new narrative](narrative-alignment.md). Complete Phase III page writing remains
-pending supported cases, actual capacity/access conditions, figure periods and
-per-locale editorial review. Confirm the proposed convention status separately.
-The owner's §4.4 correction resolves the duplicated cooperation text. Retain the
-final multilingual glossary/index sanity check after complete content delivery.
-
-## Collaboration and valorisation pages
-
-- [x] Develop the existing two pages with six canonical sections each, working FR/EN/AR copy, responsive/RTL layout, native IP disclosures, existing references, contact preparation and complete search projection. See [scope](collaboration-transfer-pages.md).
-- [ ] Complete institutional review, supported outcome/case evidence and final translations before final launch approval.
-
-## News & events — 2026-10-10
-
-The owner commissioned the combined news/events page and its thumbnail listing
-with a shared hero. Existing news paths host the overview; former events paths
-redirect to its events anchor. Navigation news links reach its news anchor;
-“All news” reaches the localized child listing. Five selected LinkedIn notices,
-three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
-social links, shared physical two-rounded/two-sharp corners and localized search
-references are included. FR/EN/AR copy remains working editorial text. No deployment
-or publication-gate change is authorized. See [scope](news-events.md).
-
-## Research platforms page — 2026-10-11
-
-The canonical platforms page is developed. Remaining inputs: official GSBP, GEPMCI and GreenH2A destinations, final editorial/EN/AR review and confirmation of operational GreenH2A infrastructure before publication. No deployment. See [scope](research-platforms.md).
+The release-preparation increment does not authorize any of these or changes to
+hosting/domain/visibility. [IT handover](it-handover.fr.md) records responsibilities.

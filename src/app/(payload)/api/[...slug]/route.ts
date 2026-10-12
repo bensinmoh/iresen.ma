@@ -1,3 +1,8 @@
+import {
+  administrationEnabled,
+  anonymousCmsRequest,
+  publicCmsRequestAllowed,
+} from '@/lib/security/policy'
 import config from '@payload-config'
 import {
   REST_DELETE,
@@ -8,9 +13,23 @@ import {
   REST_PUT,
 } from '@payloadcms/next/routes'
 
-export const GET = REST_GET(config)
-export const POST = REST_POST(config)
-export const DELETE = REST_DELETE(config)
-export const PATCH = REST_PATCH(config)
-export const PUT = REST_PUT(config)
-export const OPTIONS = REST_OPTIONS(config)
+function guard(handler: ReturnType<typeof REST_GET>) {
+  return async (...args: Parameters<typeof handler>) => {
+    const [request, context] = args
+    if (!administrationEnabled()) {
+      if (!publicCmsRequestAllowed(request.method, new URL(request.url).pathname))
+        return new Response(null, {
+          status: 404,
+          headers: { 'Cache-Control': 'private, no-store' },
+        })
+      return handler(anonymousCmsRequest(request), context)
+    }
+    return handler(...args)
+  }
+}
+export const GET = guard(REST_GET(config))
+export const POST = guard(REST_POST(config))
+export const DELETE = guard(REST_DELETE(config))
+export const PATCH = guard(REST_PATCH(config))
+export const PUT = guard(REST_PUT(config))
+export const OPTIONS = guard(REST_OPTIONS(config))

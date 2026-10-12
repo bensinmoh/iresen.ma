@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from './fixtures'
 import { pageHref } from '../../src/lib/site'
 
 for (const locale of ['fr', 'en', 'ar'] as const) {

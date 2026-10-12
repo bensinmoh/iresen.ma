@@ -105,3 +105,13 @@ screenshots, fictional calls and fabricated schedules are excluded.
 Verification is recorded in [the validation log](validation.md#rdi-programmes--2026-10-11).
 Final editorial/translation review, real call records and deployment remain
 separate work. Keep the site-wide final content search sanity-check reminder.
+
+## Owner layout refinement — 2026-10-12
+
+Notre démarche places the title before a balanced two-column photo/prose grid.
+The image frame grows with text on desktop, keeping its natural caption; below
+64rem the units stack with a 16:9 photo and no fixed text height. All copy outside
+the lifecycle steps is centered; timeline content keeps its reading alignment.
+Scientific outline icons use Science Blue. Anchors, claims and supplied images
+remain, including the sourced 69-project institutional figure: withdrawing the
+fictional catalogue does not withdraw that separately sourced historical count.

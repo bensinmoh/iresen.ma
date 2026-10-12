@@ -57,3 +57,10 @@ readability. Actual command results and rendered review are recorded in
 
 Project catalogue articles also own their filter/hover transitions and are excluded
 from shared first-scroll reveals. See [project interactions](projects.md).
+
+## Coverage refinement — 2026-10-12
+
+Programmes image/prose units, useful-link rows/descriptions and notice paragraphs
+join the existing observer. Transform ownership and visible server HTML are
+preserved. No GSAP/Motion dependency, second observer or duplicate component
+reveal is introduced. Reduced motion and keyboard/hash cancellation remain.

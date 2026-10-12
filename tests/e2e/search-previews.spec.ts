@@ -3,7 +3,7 @@ import { mkdir, writeFile, rm } from 'node:fs/promises'
 import path from 'node:path'
 import { Pool } from 'pg'
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { mediaDirectory } from '../../src/cms/media-directory'
 import { pageHref } from '../../src/lib/site'
 import { newsHref } from '../../src/lib/content/routes'
@@ -50,6 +50,11 @@ test('public image, document and news previews retain native access and responsi
       "INSERT INTO news (visibility,_status,published_at) VALUES ('public','published',now()) RETURNING id",
     )
     newsId = news.rows[0]!.id
+    const blockedFrames: string[] = []
+    page.on('console', (message) => {
+      if (/Refused to frame|violates.*frame-src|X-Frame-Options.*deny/i.test(message.text()))
+        blockedFrames.push(message.text())
+    })
     for (const locale of ['fr', 'en', 'ar'] as const) {
       await database.query(
         "INSERT INTO media_locales (_parent_id,_locale,title,alt,publication_status) VALUES ($1,$2,$3,$3,'published')",
@@ -97,6 +102,10 @@ test('public image, document and news previews retain native access and responsi
           `/api/media/file/${filename}?locale=${locale}`,
         )
         await expect(resultRow.locator('iframe')).toHaveAccessibleName(new RegExp(marker))
+        const bytes = await page.request.get(`/api/media/file/${filename}?locale=${locale}`)
+        expect(bytes.status()).toBe(200)
+        expect(bytes.headers()['x-frame-options']).toBe('SAMEORIGIN')
+        expect(blockedFrames).toEqual([])
         if (locale === 'en' && width === 1440) {
           await page.waitForLoadState('networkidle')
           await resultRow.screenshot({ path: testInfo.outputPath('expanded-document.png') })

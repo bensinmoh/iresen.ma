@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { pageHref } from '../../src/lib/site'
 import ar from '../../src/messages/ar.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }

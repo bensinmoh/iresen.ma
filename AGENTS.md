@@ -1,5 +1,23 @@
 # IRESEN coding entrypoint
 
+## Public release preparation — 2026-10-12
+
+The owner commissions programme layout balance, full fictional-project withdrawal,
+a dedicated Useful links page, global color/motion refinement, public security,
+measured performance and documentation/IT handover. See [current delivery](docs/public-release-preparation.md).
+The routing authority now has 23 stable IDs. Production closes administration by
+default; `PUBLIC_RELEASE=true` also forbids admin/review opt-ins. Preserve local
+review isolation and existing publication/media gates. Search API/page requests
+share a PostgreSQL 60/minute quota; proxy IP headers are trusted only with the
+explicit origin/proxy contract. No deployment, DNS, visibility or provider changes.
+The original hero video is preserved; the mobile derivative shares its search result.
+
+The owner authorizes documentation consolidation and routine PR completion under
+the standing rule below. Historical dated scope entries are evidence; current
+withdrawals and final corrections take precedence. Keep supplied source documents
+and vendor skills byte-identical. Do not delete other corpora or the owner's local
+modifications when cleaning the deliverable.
+
 ## CMS interface review — 2026-10-11
 
 The owner commissions the administration frontend only and selects all modules
@@ -76,7 +94,7 @@ FR/EN/AR headings, month-level dates and animated arrow navigation. See
 synchronization are future work. Three preceding body placeholders and the full
 homepage reordering remain deferred.
 
-Use the chosen 22-page working structure in `src/lib/site.ts` as the single routing authority; `docs/route-map.md` records it. Build internal links from stable IDs/shared helpers. Follow `docs/adr/0004-canonical-working-site-structure.md` when a structure change is requested so locale paths, navigation/footer, content links and affected documentation change together.
+Use the current 23-page working structure in `src/lib/site.ts` as the single routing authority; `docs/route-map.md` records it. Build internal links from stable IDs/shared helpers. Follow `docs/adr/0004-canonical-working-site-structure.md` when a structure change is requested so locale paths, navigation/footer, content links and affected documentation change together.
 
 ## Search references for every public addition
 
@@ -291,45 +309,14 @@ content, once-per-visit motion, reduced-motion/focus cancellation and stable
 section/sticky/rail geometry. Component-owned publication/patent/filter motion
 retains ownership; do not add duplicate reveals or animation dependencies.
 
-## R&D&I projects page — 2026-10-11
+## Collaborative projects — current withdrawal, 2026-10-12
 
-The owner commissioned the Figma projects page and a fictional project database.
-See [scope](docs/projects.md). The 24 structured demonstration records are isolated
-from CMS, institutional figures and general project search. Keep the
-source provenance, canonical routes and five legacy anchors. The owner’s later
-interaction request removes fictional notices from the frontend; preserve the
-source database flags and institutional-search exclusion.
-FR/EN/AR are working copy; real projects require verified evidence and their
-publication workflow. This request does not restore career fixtures or authorize
-deployment.
-
-## Project interactions — owner follow-up, 2026-10-11
-
-The owner commissioned local filter updates without anchor jumps, soft card
-transitions, image zoom inside a fixed frame on hover, and a project-detail
-panel entering from the physical right, using the supplied local video as a
-visual reference. Project filter fields use the shared two-rounded/two-square
-action corners. Fictional notices are removed from the frontend as explicitly
-requested; record provenance remains in the isolated database/documentation,
-with no project-level institutional-search entries or deployment. See
-[updated scope](docs/projects.md).
-
-Owner detail follow-up: include presentation, metadata, hosting platform, contact,
-consortium and scientific objectives, with contact and note-download actions.
-The owner selected `contact@iresen.ma` until per-project emails are provided.
-72 localized PDF notes are generated from the demonstration database and served
-as validated attachments, outside public assets and institutional search. See
-[detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
-
-## Projects contact, consortium and hero follow-up — 2026-10-11
-
-The owner now explicitly authorizes filler professor names, affiliations and SVG
-consortium wordmarks until a complete project database is supplied. Keep their
-source provenance, search exclusion and no verified institutional attribution.
-Details show names/affiliations; “Contacter le prof” contains the provisional
-contact@iresen.ma mailto, while the localized PDF includes the email and affiliation.
-The owner replaces Domaine with Thématique and requests the exact Apex Leaf shape
-in the glass hero. Preserve its original SVG; see [scope](docs/projects.md).
+The owner withdrew all 24 fictional project records, 72 PDF notes and exclusive
+card images/wordmarks. The canonical page keeps its hero/five legacy anchors and
+localized forthcoming-update message. There are no filters, detail panels,
+professor placeholders, contact actions or note generation. Old note URLs return 404. Do not reintroduce the former demonstrations or assume a real project database
+is commissioned. Other corpora and sourced programme figures remain. See
+[scope](docs/projects.md). Historical requests survive in Git history only.
 
 ## Feuille de route R&D — 2026-10-11
 
@@ -486,10 +473,9 @@ The owner commissioned the canonical programmes page from the supplied manuscrip
 
 Owner call/project clarification — 2026-10-11: the 69 institutional projects are
 R&D&I projects selected through calls. One call may select several projects;
-`ProjectRecord.selectionCallReference` reserves the originating stable call
-reference. The current 24 demonstration records remain unlinked and excluded
-from institutional search. A future verified project CMS import should map this
-reference to the Calls relationship and derive the reverse list, without
+The former demonstration model and records were withdrawn on 2026-10-12.
+A future verified project CMS import should reserve the originating stable call
+reference, map it to the Calls relationship and derive the reverse list, without
 inventing attributions. See [the relationship](docs/calls-for-projects.md#relationship-with-selected-rdi-projects).
 
 ## Site-wide AI image provenance — 2026-10-11

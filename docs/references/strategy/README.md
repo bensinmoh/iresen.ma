@@ -122,7 +122,7 @@ call for projects and programme. Programme detail is conditional on sufficient
 public material. Calls surfaced from programmes and opportunities share one
 record, regulation and reference URL.
 
-These counts describe the proposal. The current code has 22 stable page IDs,
+These counts describe the proposal. The current code has 23 stable page IDs,
 including search and five utilities. S adds conditions of use and proposes
 different utility paths; see the [route comparison](../../route-map.md#structure-recommendations-received-on-2026-10-08).
 Neither the 23-page count nor the nine-template list is delivered scope.

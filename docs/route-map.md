@@ -2,7 +2,7 @@
 
 These boundaries come from the development brief and describe the current approved route baseline implemented in `src/lib/site.ts`. Keep one stable page ID per conceptual page, with localized paths in code. Listing/detail templates may be added without creating new primary navigation branches. Implemented routes do not establish that their institutional content or services are ready for publication.
 
-Chosen on 2026-10-08 following the owner's request for one consistent structure: use these **22 stable page IDs** as the working baseline. The central definition in [src/lib/site.ts](../src/lib/site.ts) supplies localized routing and internal links. Suggested alternative paths are not supported routes. See [ADR 0004](adr/0004-canonical-working-site-structure.md) for the decision and the procedure for updating all affected consumers together.
+Chosen on 2026-10-08 following the owner's request for one consistent structure: the 2026-10-12 owner-authorized Useful links addition expands this to **23 stable page IDs** as the working baseline. The central definition in [src/lib/site.ts](../src/lib/site.ts) supplies localized routing and internal links. Suggested alternative paths are not supported routes. See [ADR 0004](adr/0004-canonical-working-site-structure.md) for the decision and the procedure for updating all affected consumers together.
 
 | Page          | French path                                 | Boundary                                             |
 | ------------- | ------------------------------------------- | ---------------------------------------------------- |
@@ -27,6 +27,7 @@ Chosen on 2026-10-08 following the owner's request for one consistent structure:
 | Privacy       | `/fr/confidentialite`                       | Footer utility                                       |
 | Cookies       | `/fr/preferences-cookies`                   | Footer utility; service depends on actual processing |
 | Accessibility | `/fr/accessibilite`                         | Footer utility; records actual assessed status       |
+| Useful links  | `/fr/liens-utiles`                          | Four owner-selected external mapping resources       |
 | Sitemap       | `/fr/plan-du-site`                          | Human-readable footer utility                        |
 
 Cookie preferences become required if the chosen processing needs them. Legal placeholder text must not claim compliance or invent registration numbers.

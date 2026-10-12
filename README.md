@@ -1,76 +1,50 @@
 # IRESEN website
 
-## CMS interface review — 2026-10-11
+Trilingual institutional website (French, English, Arabic/RTL), built with Next.js,
+React and Payload CMS. This repository prepares a public release; it does not deploy
+it. Hosting, domain/DNS, Cloudflare and release approval remain with IRESEN and its
+providers. [French IT handover](docs/it-handover.fr.md) · [Deployment](docs/deployment.md).
 
-The owner commissioned a frontend-only CMS review tool at `/cms-preview` on the development server. All modules expose local review journeys; browser storage and examples are isolated from Payload and public content. Production requires an explicit local-review opt-in and otherwise returns 404. See [scope and limits](docs/cms-interface-preview.md). No deployment.
+## Current scope
 
-## Research platforms — 2026-10-11
+The route authority is `src/lib/site.ts`: 23 stable pages, including search and
+six footer utilities. News/event aliases and published call/news detail routes
+reuse this authority. Public modules include the institute, governance, research
+priorities/programmes, platforms, laboratory network, collaboration, valorisation,
+news/events, publications/reports, media, careers, contact and useful links.
 
-The canonical platforms page now develops the supplied manuscript into four photographic chapters, 13 infrastructure summaries and a laboratory-network referral. FR/EN/AR working copy, preserved legacy anchors, chapter links and search references are included. GreenH2A remains in development; three official external destinations await selection. See [scope](docs/research-platforms.md). No deployment.
+The collaborative-project catalogue is empty at the owner's request. All 24
+fictional records and 72 PDF notes have been withdrawn; old note URLs return 404.
+Careers also has no fictional offers. Keep both empty until verified sources are
+commissioned. The publications corpus retains 1,199 records (T4 2026); the patent
+catalogue retains 59 records. Neither corpus is deleted by project withdrawal.
 
-## Laboratory and expert network — 2026-10-11
+Public CMS reads enforce publication and locale approval with no translation
+fallback. Interface translations and editorial drafts still require final review.
+Contact/applications compose local email drafts; no server intake or delivery is
+implemented. Google Maps loads only after optional-service consent. LinkedIn
+content is curated, without OAuth/synchronization. CMS email is unconfigured.
 
-The canonical network page now contains five developed sections and a searchable 14-laboratory directory from the owner’s supplied list. Section 6 is withdrawn. FR/EN/AR working copy, responsive reading, stable laboratory anchors and localized search references are included. See [scope](docs/laboratories-experts-network.md). No deployment.
+Production administration is closed by default. `/cms-preview` is an isolated
+local design tool, with no real data or Payload writes. It requires explicit local
+review configuration and is forbidden in a public release.
 
-## Institut — 2026-10-11
+## Pinned environment
 
-The canonical Institute page now implements the owner’s manuscript with detailed missions, native disclosures, values, 2035 ambition and the full historical timeline. FR/EN/AR search references and legacy anchors are retained. Both fifteen-year report actions use owner-requested `#` placeholders pending the public PDF. See [scope](docs/institute-page.md). No deployment.
+| Component                   | Version |
+| --------------------------- | ------- |
+| Node.js                     | 24.19.0 |
+| pnpm                        | 11.19.0 |
+| Next.js                     | 16.4.0  |
+| React / React DOM           | 19.3.0  |
+| Payload / official adapters | 3.90.2  |
+| PostgreSQL local/CI         | 17.9    |
 
-## Médiathèque — 2026-10-10
-
-The existing media page now presents twenty selected supplied photos, eight owner-authorized public CMS videos, ten Ministry PDF source links and five official institutional destinations. See [scope and provenance](docs/media-library.md). No deployment is authorized.
-
-The owner’s refinement adds an alternating photo mosaic with Samir first, a compact
-horizontal rail of full-height video thumbnails opening a native player dialog, animated section links, a centered icon-operated viewer
-and a shorter generated-photo hero without the missions band. Reduced motion is
-respected; the generated still-life is identified as illustrative in search and
-its provenance manifest.
-
-## Careers page and opportunity database — 2026-10-10
-
-The [careers page](docs/careers.md) now follows the supplied Figma composition.
-The CMS collection drives detailed accordions and TXT notices through existing
-publication/locale gates. The owner validated and removed the four examples;
-no mockup data or seed command remains. Without eligible offers the section retains its designed empty state. Applications retain the local email-draft workflow.
-
-The [new narrative alignment](docs/narrative-alignment.md) introduces three
-contribution domains and a shared cooperation enabler. The homepage now presents
-a full-width mission quotation, three domain cards and a shorter cooperation
-band. Interior introductions, header/footer orientation and affected FR/EN/AR
-scaffolds/search references follow this framework. Earlier deferrals below are
-historical; complete Phase III copy and final editorial review remain pending.
-
-The homepage now includes a compact light [innovation pathway](docs/home-innovation.md) between research domains and platforms, linking to valorisation and transfer. The existing hero figures remain.
-
-Development foundation for IRESEN's French, English and Arabic institutional website. It provides a public locale shell, Payload CMS and PostgreSQL with introductory page heroes, honest empty content sections and a composed contact page. Read [instruction.md](instruction.md) for the development brief and [backlog](docs/backlog.md) for current scope and follow-up work.
-
-The approved [shared glass refinement](docs/design-system.md#compact-menu-control--2026-10-09)
-unifies existing header controls and the homepage certification surface, with a
-fine outline and finite reflection. See [current verification](docs/validation.md#refined-glass-surfaces--2026-10-09).
-
-Search results controls now share the requested diagonal action corners and a
-deliberately inset dropdown chevron. See [the control rules](docs/design-system.md#search-results-control-corners--2026-10-09)
-and [verification](docs/validation.md#search-results-control-corners--2026-10-09).
-
-## Selected stack
-
-| Tool                                                      | Pinned version                                                         |
-| --------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Node.js LTS                                               | 24.19.0                                                                |
-| pnpm                                                      | 11.19.0                                                                |
-| Next.js                                                   | 16.4.0                                                                 |
-| React                                                     | 19.3.0                                                                 |
-| TypeScript                                                | 6.0.3, strict mode                                                     |
-| Payload / Next integration / PostgreSQL adapter / Lexical | 3.90.2                                                                 |
-| next-intl                                                 | 4.14.9                                                                 |
-| Tailwind CSS                                              | 4.3.3                                                                  |
-| Development PostgreSQL                                    | 17.9 (`postgres:17.9-bookworm`, image digest pinned in `compose.yaml`) |
-
-Next.js and Payload are selected as a compatible pair. `package.json`, runtime pins and the committed pnpm lockfile are authoritative. See [architecture](docs/architecture.md) and [ADR 0001](docs/adr/0001-modular-trilingual-application.md).
+Use the committed lockfile and `pnpm-workspace.yaml`, including security overrides.
+Do not independently upgrade Next and Payload. Read the installed Next guides
+before implementing framework changes.
 
 ## Local setup
-
-Use Node.js and pnpm versions above, plus Docker with Compose for the database. Alternatively provide a compatible PostgreSQL instance through `DATABASE_URL`.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -82,302 +56,78 @@ pnpm search:rebuild
 pnpm dev
 ```
 
-`setup:local` creates ignored `.env.local` with random development secrets and preserves an existing file. Inspect `.env.example` for the variable contract. Never copy live credentials into committed files.
+Open `http://localhost:3000/fr`. Docker runs the local PostgreSQL service only.
+`.env.example` documents placeholders; `.env.local` stays private. Bootstrap an
+administrator only with explicitly supplied temporary credentials using
+`pnpm cms:bootstrap`. Existing databases, uploads and credentials must be preserved.
 
-If another PostgreSQL service uses port 5432, choose a free local port before starting the database:
+## Configuration boundaries
+
+- `DATABASE_URL`, `PAYLOAD_SECRET`: required server secrets; never public variables.
+- `NEXT_PUBLIC_SITE_URL`: canonical public origin; set the approved HTTPS domain
+  before the release build because public variables are embedded at build time.
+- `SITE_INDEXING_ENABLED=false`: retain until editorial/legal and release approval.
+- `PUBLIC_RELEASE=true`: mandatory on the public instance; administrative opt-ins
+  cannot override it. Keep `CMS_ADMIN_ENABLED=false`, `CMS_LOCAL_REVIEW=false` and
+  `CMS_INTERFACE_PREVIEW_ENABLED=false` there.
+- `TRUSTED_PROXY_CLIENT_IP_HEADER`: `cf-connecting-ip` or `x-real-ip`, only behind a
+  proxy that strips untrusted values and overwrites this header. Unconfigured
+  clients share a conservative 60-search/minute quota.
+- `CMS_UPLOAD_DIRECTORY`: absolute persistent path shared by web and search worker.
+  Local filesystem storage is a development default; production storage requires
+  an approved persistent provider and withdrawal-safe access.
+- `SEARCH_WORKER_DISABLED`: false for the bounded in-process worker; true only when
+  an operational separate worker/scheduler owns index processing.
+
+## Commands and checks
 
 ```sh
-pnpm setup:local --db-port 5433
+pnpm lint
+pnpm test
+pnpm test:integration
+pnpm build
+pnpm test:e2e
+pnpm format:check
+pnpm audit --prod
+pnpm audit:assets
+pnpm audit:docs
+pnpm audit:performance -- before 3101
 ```
 
-This updates `POSTGRES_PORT` and the port in `DATABASE_URL`, preserving existing credentials and other settings. Then continue with `pnpm db:up`, `pnpm db:wait`, `pnpm cms:migrate` and `pnpm dev`. Compose reads its host-port setting from `.env.local`; its container still uses port 5432. The port option requires a local PostgreSQL URL.
-
-For the first CMS administrator, supply `CMS_BOOTSTRAP_EMAIL` and `CMS_BOOTSTRAP_PASSWORD` through your secure local environment, then run:
-
-```sh
-pnpm cms:bootstrap
-```
-
-There is no shared/default administrator credential. Bootstrap is a controlled server operation, not public self-registration. Keep bootstrap credentials out of shell history and remove them from the environment afterward.
-
-Public app: <http://localhost:3000> (redirects to French). Other locale shells: `/en` and `/ar`; Arabic uses RTL. CMS: <http://localhost:3000/admin>. Collections start empty. A local test account or generated local secret is never a production credential.
-
-## Commands
-
-Use the [verification workflow](docs/verification-workflow.md) to avoid repeated
-local builds and suites while retaining full current-head CI and FR/EN/AR
-responsive review.
-
-| Command                 | Purpose                                                              |
-| ----------------------- | -------------------------------------------------------------------- |
-| `pnpm dev`              | Development app and CMS                                              |
-| `pnpm build`            | Production standalone build                                          |
-| `pnpm start`            | Run the production application                                       |
-| `pnpm lint`             | ESLint                                                               |
-| `pnpm typecheck`        | Strict TypeScript                                                    |
-| `pnpm test`             | Focused unit checks                                                  |
-| `pnpm test:integration` | CMS/database authorization checks                                    |
-| `pnpm test:e2e`         | Browser locale/navigation checks                                     |
-| `pnpm setup:local`      | Create private local configuration                                   |
-| `pnpm db:up`            | Start the configured Compose database                                |
-| `pnpm db:wait`          | Wait for the configured PostgreSQL service                           |
-| `pnpm cms:migrate`      | Apply reviewed CMS migrations                                        |
-| `pnpm cms:bootstrap`    | Controlled first-administrator creation                              |
-| `pnpm search:rebuild`   | Rebuild eligible public search content and register static resources |
-| `pnpm search:work`      | Process one bounded durable indexing batch                           |
-
-Search uses PostgreSQL with `pg_trgm`; the reviewed search migration installs the
-extension. Install `poppler-utils` on the application/worker host for automatic
-public PDF text extraction. Other files and scanned PDFs remain searchable by
-approved metadata and localized `searchText`. The app starts a bounded background
-index worker on CMS initialization or first search; production can also schedule
-`pnpm search:work`. Set `SEARCH_WORKER_DISABLED=true` when a separate worker
-owns processing. Use `pnpm search:rebuild` after migration, new static resources
-or a full recovery. See [search behavior, operations and required content references](docs/search.md).
-
-Run integration checks against a disposable migrated database with the development
-or production server stopped. `pnpm test:integration` disables automatic search
-polling across both test suites so their explicit indexing checks own job processing.
-
-When updating an existing local checkout after a search schema change, stop the
-development server and run `pnpm db:wait`, `pnpm cms:migrate`,
-`pnpm search:rebuild`, then `pnpm dev`. Starting Docker and Next alone does not
-apply migrations. A rebuild reporting zero public CMS records is normal when
-the CMS is empty: “static catalog synchronized” includes the public pages,
-sections and registered files. Spelling and related-topic search use the same
-public index and need no external search account or model download.
-
-Browser checks require Playwright's browser dependencies; CI installs them. This cloud machine already provides Chromium: use `PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium pnpm test:e2e` after `pnpm build`. Elsewhere install the bundled browser with `node scripts/run.mjs playwright install chromium`, using the same cache as the tests. Integration checks require a disposable migrated database with no existing users; they create and remove their own accounts and content. Never point tests or development schema synchronization at production.
-
-Local foundation checks passed: 8 unit, 4 integration and 11 browser tests, plus install, lint, types, formatting and the standalone build. See [validation evidence and limits](docs/validation.md).
-
-## Environment
-
-| Name                                                | Purpose                                                                          |
-| --------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `DATABASE_URL`                                      | Server-side PostgreSQL connection                                                |
-| `CMS_UPLOAD_DIRECTORY`                              | Optional shared upload path; launcher defaults to absolute root `.local/uploads` |
-| `POSTGRES_PORT`                                     | Local Compose host port; defaults to 5432 and must match `DATABASE_URL`          |
-| `POSTGRES_USER`, `POSTGRES_DB`, `POSTGRES_PASSWORD` | Local Compose database initialization; password must match `DATABASE_URL`        |
-| `PAYLOAD_SECRET`                                    | Strong server-side CMS secret; local helper generates one                        |
-| `NEXT_PUBLIC_SITE_URL`                              | Development origin; initially `http://localhost:3000`                            |
-| `SITE_INDEXING_ENABLED`                             | `false` for development/restricted previews                                      |
-| `SEARCH_WORKER_DISABLED`                            | `true` when a separate index worker or integration suite owns processing         |
-| `CMS_BOOTSTRAP_EMAIL`                               | First administrator identity; bootstrap only                                     |
-| `CMS_BOOTSTRAP_PASSWORD`                            | Secret first-administrator password; bootstrap only                              |
-
-Development services need no production email, storage, LinkedIn or DNS credentials. Public search is implemented; server-side contact acceptance/delivery and CMS email delivery remain unavailable until providers are implemented. The contact page prepares a local email draft for the visitor's own email application; it does not submit or store the message. Seven supplied SVGs are installed unchanged in `public/brand/`; PDF guidelines and other private originals were archived in ignored `private-references/` during prior work and are absent from this checkout. The owner selected **#296BB4** for the primary blue. The native Figma source can be retrieved through Git LFS; [reference handling](docs/references/README.md) explains payload verification and current availability. Its recorded design language and implementation rules live in [the design system](docs/design-system.md), with the current devlink analysis in [the live review](docs/figma-design-system-review.md). Public text and controls use licensed, self-hosted Plus Jakarta Sans for Latin and the owner's selected Alexandria for Arabic, with script-based selection across all three locales. CMS/admin typography has a separate layout. See [fonts and provenance](docs/fonts.md), [asset inventory](docs/asset-inventory.md) and [brand decision](docs/adr/0003-owner-selected-primary-blue.md). Approved page copy and standalone design exports remain follow-up inputs.
-
-Project scripts load `.env.local` and keep caches within ignored paths. For a new install in a restricted cloud shell, set `XDG_CACHE_HOME="$PWD/.cache/native"` and `npm_config_cache="$PWD/.cache/npm"` before `pnpm install --frozen-lockfile`. The SWC compatibility pin and current lint configuration are explained in [ADR 0002](docs/adr/0002-verified-cloud-tooling.md).
-
-## Repository map and next work
-
-The owner-retained [research institute benchmark](docs/references/benchmark/README.md)
-contains an unchanged source and an IRESEN-specific analysis for future new-page
-content and layout work. Consult it when that work is commissioned; its lessons
-are guidance, without changing current routes, content or feature scope.
-
-The [staged publications database](docs/publications.md) ingests the owner's
-1,199 selected bibliographic records after the owner-approved consolidated
-cross-check, reference **T4 2026**. The update adds 22 records and withdraws
-the four 2027 references, retaining dated Scopus counts and distinct historical/
-2025 SJR rankings with their source evidence.
-Only minimal bibliographic fields and dated metrics are retained; the workbook,
-184 excluded rows and administrative evidence stay outside the repository.
-The commissioned [Publications & Reports page](docs/publications-page.md) now
-projects the retained bibliographic records and their localized search references.
-
-`src/app` contains public locale/CMS routes; `src/components` the UI shell; `src/i18n` and `src/messages` locale routing/catalogs; `src/cms` collections/access/migrations; `src/lib` content and integration boundaries. Technical guides are in [docs](docs/architecture.md). Read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before contributing/reporting.
-
-The three owner-supplied strategy DOCX originals and their [source index and analysis](docs/references/strategy/README.md) are in `docs/references/strategy/`. They cover the institutional narrative, communications supports and suggested website sections. The detailed structure is **recommendations, not a final validated structure**. The owner's 2026-10-09 request uses its section recommendations for empty placeholders within the existing 22-page structure, the single working route baseline in `src/lib/site.ts`; see [the canonical route map](docs/route-map.md) and [ADR 0004](docs/adr/0004-canonical-working-site-structure.md) for consistent links and coordinated future changes. Repository reference inclusion does not approve website copy, translations or new services.
-
-The later [homepage restructuring brief](docs/homepage-restructure.md) records six
-future body sections, placing achievements immediately after missions, retaining
-figures in the hero and integrating Alliances into collaboration. Only Markdown
-analysis is commissioned now; preserve the separately delivered missions and
-section navigation, with five later modules still represented by placeholders.
-Wait to apply the restructuring until the owner starts development of “Nos
-réalisations emblématiques”, the section after missions. The brief records layout,
-source copy, existing destinations and the remaining content/CMS dependencies.
-
-The 22 approved routes remain. Nineteen pages use generated photo heroes; the homepage runs the owner's original `/videos/hero.mp4` after hydration when reduced motion is not requested. Contact now uses its own split introduction with the owner-supplied headquarters photo; search uses a compact functional results view. Homepage playback is muted, looping and inline, with no playback button as explicitly requested; its generated photo remains the loading/failure, no-JavaScript and reduced-motion fallback. Photographic heroes fill the scene, with four text-placement modes and readable overlays. The generated photo inventory includes executive-meeting, onboarding and handshake scenes; these do not document actual IRESEN facilities, people or events. The headquarters photo is installed on contact; real Green Energy Park and other page photography remain tracked separately. See [current contextual media and readiness](docs/contextual-hero-media.md), [the photo manifest](docs/hero-assets.json) and [contact provenance](docs/contact.md).
-
-The homepage video decision is dated 2026-10-09. The unchanged 9.32 MiB original is an owner-requested performance-budget exception; end-of-file MP4 metadata needs byte-range delivery, and web-sized derivatives remain follow-up work. Continuous playback without a pause control does not establish WCAG 2.2.2 conformance. See [current media behavior and limits](docs/heroes.md#homepage-hero-video--2026-10-09) and [the validation log](docs/validation.md); the earlier [photo-replacement checks](docs/validation.md#generated-hero-placeholders--2026-10-09) describe that revision.
-
-The 20 canonical pages other than contact/search retain introductory heroes followed by section placeholders in FR/EN/AR: headings and short draft notes describing the intended content. Contact replaces its scaffold with headquarters details, subject selection, platform links, a local email-draft form, a full-width location/map section, then native FAQ disclosures before the footer. The owner's 2026-10-12 request adds a localized first-visit consent banner, accept/refuse/necessary-only controls, 180-day choice storage and permanent preferences. Google Maps loads only after explicit external-service permission and is removed on withdrawal. See [cookie consent](docs/cookie-consent.md). The separate directions link remains available. The supplied directions shortlink remains exact; the embed uses an address query, whose exact pin has not been verified. All contact section anchors remain available. See [contact behavior, sources and limits](docs/contact.md) and [the section guide](docs/page-sections.md). The sitemap retains its working 22-page directory. Full CMS workflows, server-side contact delivery, production media/email/identity and release assessment remain tracked work. Check evidence belongs in [validation](docs/validation.md). No production deployment, repository visibility change or open-source licensing decision is implied by this foundation. See [deployment](docs/deployment.md) and [security/privacy](docs/security-and-privacy.md).
-
-Header, hero, following sections and footer share a 120rem container with fluid aligned gutters. Latin hero H1s use −3% letter spacing; selected languages use bold weight alone, and header menu labels/arrows center within their controls. Resting Menu/Search controls now use the owner's glass treatment over heroes; selected Menu becomes a white tab joined to a rounded dropdown with a 220ms downward reveal and direct reduced-motion display. See [header control rules](docs/design-system.md#compact-menu-control--2026-10-09), [current design rules](docs/design-system.md#hero-layout-and-typography-refinements--2026-10-08) and [the validation log](docs/validation.md) for each revision's check record.
-
-The [mobile information hierarchy](docs/mobile-information-hierarchy.md) prioritizes essential orientation/action, supporting facts and optional proof through role/count ceilings and natural text growth. At `40rem` and below, the homepage omits its redundant scroll cue and stacks its two current links at full width. Its ISO badge is hidden below `70rem`, preserving desktop placement. All five figures stay in one row at every width, scrolling horizontally when needed with the scrollbar hidden. This follows the owner's general preference for hidden horizontal navigation scrollbars; native scrolling and visible focus remain. Other page heroes retain their behavior. The [homepage section navigation and three mission cards](docs/home-sections.md) are now implemented: the submenu follows the figures and sticks from `64rem`; full photographic mission cards use three desktop columns, stacked tablet rows and a native horizontal collection below `48rem`. The Figma/video treatment places white text and inline underlined destinations over shaded images, with a blue hover/focus tint and slight image zoom. Reduced motion keeps images still and applies the tint immediately. The mobile collection hides its scrollbar and shows a neighboring-card glimpse where space permits; keyboard/touch and no-JavaScript access retain all destinations, while enlarged text can use full-width cards. Current generated imagery covers storage, bioenergy, CSP, hydrogen, wind and smart grids; localized search references accompany the new sections and media. Earlier captures retain their original scope.
-
-The owner's four 2026-10-09 mobile screenshots now guide the narrow header, homepage and footer composition: logo/hamburger row, white full-screen menu with canonical routes and bottom search/contact/legal/language access, a viewport-minimum image scene before the facts, and a single-column footer with separate newsletter rows. Original identity, content, RTL and the integrated search backend remain. See [the component adaptation](docs/design-system.md#mobile-reference-adaptation--2026-10-09) and [revision-specific validation](docs/validation.md#mobile-reference-adaptation--2026-10-09); screenshot examples do not approve new content.
-
-Design work now uses [PRODUCT.md](PRODUCT.md) for product context, [DESIGN.md](DESIGN.md) for visual direction and [the repository design workflow](docs/design-workflow.md) for task-specific skills. The workflow is flexible guidance with constructive critique, shared tokens, FR/EN/AR responsiveness and rendered verification. Eight IRESEN skills and optional pinned Taste/Impeccable references live in `.agents/skills/`; they do not install personal/global skills or activate an engine or hook. See [source and license records](docs/design-skills-sources.json).
-
-Completed requested increments are logged in [CHANGELOG.md](CHANGELOG.md). The owner has authorized automatic merge after passing local and current PR CI checks, followed by checkout synchronization and cleanup of completed task branches; see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-### Homepage research domains — 2026-10-09
-
-The commissioned section below missions now provides seven thematic selectors,
-four research axes per theme, changing generated illustrations and a native mobile
-accordion in FR/EN/AR working copy. The supplied strategy is preserved as a
-repository reference, not a public download or adopted roadmap. Themes and imagery
-are registered in local search. See [the module guide](docs/research-domains.md).
-
-## Homepage news — 2026-10-09
-
-The [homepage news module](docs/home-news.md) displays five owner-selected
-LinkedIn sources, month-level dates, responsive scrolling and animated arrows.
-It prepares a Posts API field projection; live OAuth/API synchronization is still
-future work. Cards use owner-requested short explanatory titles in FR/EN/AR; source
-commentary stays separate. Three other body
-placeholders and the full homepage reordering remain deferred.
-
-## Homepage collaboration — 2026-10-09
-
-The [collaboration section](docs/home-collaboration.md) now guides research/thesis,
-solution development, industrial decarbonisation and technology decisions in
-FR/EN/AR on a dark institutional ink ground. It recalls the owner-supplied +120
-collaborators and existing ISO 9001:2015 claim, with canonical opportunities and
-subject-prepared contact links. Two body placeholders and full reordering remain
-deferred. See [verification](docs/validation.md#homepage-collaboration--2026-10-09).
-
-## Homepage platforms and expertise — 2026-10-09
-
-The owner commissioned the existing `platforms-expertise` module: outdoor GEP
-photography behind a left introduction and four compact photographic platform
-cards, with white text over dark gradients. A lower two-block band introduces
-the laboratory network and complementary expertise. Original logos remain unchanged and display in light gray through CSS.
-The section reuses the aligned grid, section-label/type roles and physical
-signature corners; below 70rem the introduction stacks, below 40rem cards stack.
-FR/EN/AR are working summaries; GreenH2A is explicitly in development and its
-image is labelled as a 3D view. Existing platforms/network destinations remain.
-Search covers the section, four card anchors and nine supplied media assets.
-Achievements are the sole remaining body placeholder; full reordering remains
-deferred. See [scope and sources](docs/home-platforms.md).
-
-## Homepage achievements — 2026-10-10
-
-The [eight achievements](docs/home-achievements.md) now replace the last body
-placeholder on white, using supplied photographs, a stacked-report cover mockup
-and native responsive rail navigation without outgoing card links. This request
-activates the agreed six-section order, reflected in section navigation.
-FR/EN/AR working copy and searchable anchors/media accompany the implementation.
-Alliances and final editorial review remain future work.
-
-The existing [collaboration and valorisation pages](docs/collaboration-transfer-pages.md) now contain their six sections in FR/EN/AR, with preparation checklists and existing contact pathways.
-
-The [revised Valorisation page and patent catalogue](docs/valorisation-patents.md)
-now present the owner-selected 59 filed references, source-derived short
-summaries, theme/year/applicant filters, PatentRegister links and a contact draft
-prefilled with the selected patent. The minimal structured database excludes
-project relationships and annuities; the original workbook is not imported.
-
-## Collaboration page redevelopment — 2026-10-10
-
-The owner's later request renames and redevelops the existing `workWithUs` page as
-“Collaborer avec nous”. The six anchors and working FR/EN/AR content remain.
-Need-based light entry panels, open contribution/format rows, a four-stage
-sequence, existing reference photographs and an ink contact checklist adapt the
-live Figma cooperation frame within the current shared rules. FR/EN canonical
-paths change together; permanent redirects retain the former URLs. Shared
-navigation, footer, SEO and search consume the updated central definition.
-See [scope and reference decisions](docs/collaborate-page.md).
-
-Collaborer refinement (2026-10-10): navy text/photo needs, a pale cooperation
-transition, audience-specific benefits with decorative SVG icons and a compact
-contact CTA replace the former panels/reference checklist. Breadcrumb/submenu
-are removed; six legacy anchors and localized search destinations remain.
-See [scope](docs/collaborate-page.md).
-
-The cooperation transition now explains IRESEN's actions directly and includes
-owner-requested programme examples, with a subtle coast-only SVG world backdrop.
-
-For an isolated production check alongside the local development server, set
-`NEXT_BUILD_DIRECTORY=.local/careers-build` for both `pnpm build` and
-`scripts/start-production.mjs`, and use a separate `PORT`. The default remains `.next`.
-
-## News & events — 2026-10-10
-
-The owner commissioned the combined news/events page and its thumbnail listing
-with a shared hero. Existing news paths host the overview; former events paths
-redirect to its events anchor. Navigation news links reach its news anchor;
-“All news” reaches the localized child listing. Five selected LinkedIn notices,
-three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
-social links, shared physical two-rounded/two-sharp corners and localized search
-references are included. FR/EN/AR copy remains working editorial text. No deployment
-or publication-gate change is authorized. See [scope](docs/news-events.md).
-
-## Horizontal scroll reference — 2026-10-10
-
-The [recorded indicator design](docs/horizontal-scroll-indicators.md) distinguishes
-short expanding pills from numbered fill-bar navigation and specifies the owner’s
-vertical centering correction. Analysis only; site-wide adaptation is deferred.
-
-## Samir portrait biography — 2026-10-10
-
-The official portrait now has a dedicated light biography viewer with selectable French source text, a clipboard action and an image-only download. Its thumbnail preserves headroom on hover. The name retains institutional ink with weight 900; role lines are italic with tight leading. The enlarged cutout meets the popup bottom edge, with the original bottom actions layered above it. Mobile reading scrolls independently. See [scope](docs/samir-biography.md).
-
-Publications & Reports now uses the 1,199-record retained database, a corpus-only
-GET search, title-derived topic filters, source years, all authors and DOI links.
-Reports share the media library renderer. See [scope](docs/publications-page.md).
-
-Shared public navigation/reveal behavior: [site motion](docs/site-motion.md).
-
-## R&D&I projects — 2026-10-11
-
-The owner commissioned the Figma projects page and an isolated structured database
-of 24 explicitly fictional projects. Native GET search/facets, six-item pagination,
-FR/EN/AR and responsive/RTL layouts are included. Fictional records remain outside
-CMS and institutional search; the page and its seven visuals have localized search
-references. No real portfolio claims or deployment are introduced. See
-[scope](docs/projects.md).
-
-## Project interactions — owner follow-up, 2026-10-11
-
-The owner commissioned local filter updates without anchor jumps, soft card
-transitions, image zoom inside a fixed frame on hover, and a project-detail
-panel entering from the physical right, using the supplied local video as a
-visual reference. Project filter fields use the shared two-rounded/two-square
-action corners. Fictional notices are removed from the frontend as explicitly
-requested; record provenance remains in the isolated database/documentation,
-with no project-level institutional-search entries or deployment. See
-[updated scope](docs/projects.md).
-
-Owner detail follow-up: include presentation, metadata, hosting platform, contact,
-consortium and scientific objectives, with contact and note-download actions.
-The owner selected `contact@iresen.ma` until per-project emails are provided.
-72 localized PDF notes are generated from the demonstration database and served
-as validated attachments, outside public assets and institutional search. See
-[detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
-
-## Feuille de route R&D — 2026-10-11
-
-The existing priorities page now contains the owner-supplied manuscript, seven
-research themes, full axis disclosures and layered technical illustrations.
-Native first-arrival motion, mobile reading and FR/EN/AR search references are
-implemented. See [scope](docs/roadmap.md). No deployment is authorized.
-
-## Governance and organisation — 2026-10-11
-
-The canonical governance page now presents the supplied institutional text,
-16 board organisations, eight scientific council members and the three-pole/
-seven-department organisation with the owner-supplied team portraits. EN/AR
-remain working adaptations. See [scope and sources](docs/governance.md).
-
-Network map follow-up: [interactive scope](docs/laboratories-experts-network.md#interactive-map--owner-follow-up-2026-10-11)
-uses the newly supplied original Morocco SVG, approximate city groups and a
-synchronized list with unchanged laboratory anchors and localized search results.
-
-## Programmes R&D&I — 2026-10-11
-
-The canonical programmes page now follows the supplied manuscript with the approach, expected benefits, six usual project stages, three historical schemes and the no-current-call working state. Human research/product photography adapts Figma; AquaSolar is owner-selected. FR/EN/AR, stable anchors and public search references are included. The owner’s follow-up adds the Calls CMS collection and full detail pages, with approved PDF terms, actual form URLs, calendars, budgets and archives. No actual call records are seeded or deployed. See [page scope](docs/programmes-rdi.md) and [CMS workflow](docs/calls-for-projects.md).
-
-Site-wide image provenance (2026-10-11): all served raster assets are categorized in `src/data/image-provenance.json`; documented AI-generated illustrations and their copies/crops are excluded from public search in FR/EN/AR. See [scope](docs/media-library.md#site-wide-image-provenance-and-ai-search-exclusion--2026-10-11).
-
-## Useful-information pages — 2026-10-12
-
-The five footer pages now use ultra-short title bands and complete FR/EN/AR working
-notices. The sitemap body contains only shared canonical links; privacy describes
-actual browser/email/Maps behavior and Moroccan Law 09-08 rights. See
-[scope and operational inputs](docs/utility-pages.md). No deployment.
+`pnpm typecheck` provides early feedback; a successful production build also checks
+TypeScript. Integration tests must use a disposable test database, never the owner's
+populated database. Playwright uses a production build and local PostgreSQL.
+Performance audits use pinned Lighthouse 13.5.0/installed Chrome, with three mobile
+runs per representative route; raw output goes to ignored `.local/handoff-review`.
+See [verification](docs/verification-workflow.md) for evidence reuse and final-head CI.
+
+Local CMS preview uses `CMS_INTERFACE_PREVIEW_ENABLED=true`; production-build
+local review additionally requires `CMS_LOCAL_REVIEW=true` and **no public release**.
+This is a design review mode, not authenticated administration.
+
+## Repository and delivery
+
+- `src/app`: localized routes, public endpoints and separately guarded CMS routes.
+- `src/components`, `src/styles`: shared identity, progressive native motion and RTL.
+- `src/lib`, `src/data`: routing, domain logic, approved corpora and search projections.
+- `src/cms`: collections, publication/access controls and explicit migrations.
+- `scripts`, `tests`, `.github`: local tooling, verification and current-head CI.
+- `docs`: specifications, provenance, dated evidence and IT guides; not public assets.
+- `public`: approved served files only. Private sources, uploads and backups stay out.
+
+`pnpm build` creates a portable standalone server. The Dockerfile separates build,
+operations (migrations/reindexing) and non-root web runtime. Never publish the checkout
+as a web directory. See [deployment](docs/deployment.md) for build secrets, persistent
+storage, Cloudflare cache/security rules, backups and rollback.
+
+## Sources of truth
+
+Latest owner decisions and verified content take precedence. Read `AGENTS.md`,
+`instruction.md`, `PRODUCT.md`, `DESIGN.md` and the current design-system coherence
+rules. Supplied sources and historical ADRs are evidence, not independent approval.
+Original SVG geometry and approved brand values remain authoritative. All public
+additions need localized search references. The final multilingual search sanity
+check remains required once final website content is approved.
+
+[Architecture](docs/architecture.md) · [Design system](docs/design-system.md) ·
+[Security/privacy](docs/security-and-privacy.md) · [Current preparation report](docs/public-release-preparation.md)

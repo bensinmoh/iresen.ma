@@ -9,6 +9,10 @@ engineStrict: true
 verifyDepsBeforeRun: error
 enableGlobalVirtualStore: false
 overrides:
+  'sass@1.77.4': 1.105.1
+  'undici@7.29.0': 7.29.1
+  'dompurify@3.4.15': 3.4.16
+  '@esbuild-kit/core-utils>esbuild': 0.25.12
   'next-intl>@swc/core': 1.16.2
 allowBuilds:
   '@parcel/watcher': true

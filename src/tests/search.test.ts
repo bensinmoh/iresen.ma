@@ -17,7 +17,6 @@ import {
 } from '@/lib/search/text'
 import { searchTypes, type SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
-import { projectConsortiumLogoReferences } from '@/lib/project-notes'
 import { heroImages } from '@/lib/hero-images'
 import libraryVideos from '@/data/media-videos.json'
 import { samirCutout, samirPortraitDownload } from '@/lib/samir-biography'
@@ -338,15 +337,9 @@ describe('explicit public search catalog', () => {
   })
 
   it('references all served meaningful public files and keeps responsive crops under their original result', () => {
-    const references = new Set([
-      ...publicAssetReferences.map(({ url }) => url),
-      // Registered preview wordmarks are served for project details, but remain outside search.
-      ...projectConsortiumLogoReferences.map(({ url }) => url),
-    ])
-    expect(projectConsortiumLogoReferences.every(({ searchEligible }) => !searchEligible)).toBe(
-      true,
-    )
+    const references = new Set([...publicAssetReferences.map(({ url }) => url)])
     const derivatives = new Set<string>([
+      '/videos/hero-mobile.mp4',
       ...Object.values(heroImages)
         .filter(({ src, mobile }) => src !== mobile.src)
         .map(({ mobile }) => mobile.src),
