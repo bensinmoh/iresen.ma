@@ -7,6 +7,23 @@ import fr from '../../src/messages/fr.json' with { type: 'json' }
 
 const catalogs = { ar, en, fr }
 
+async function heroHeightDifference(hero: Locator, viewportHeight: number) {
+  return hero.evaluate((element, height) => {
+    const body = element.querySelector('.hero-body')!
+    const copy = element.querySelector('.hero-copy')!
+    const band = element.querySelector('.hero-highlights')!
+    const styles = getComputedStyle(body)
+    const required =
+      copy.getBoundingClientRect().height +
+      parseFloat(styles.paddingBlockStart) +
+      parseFloat(styles.paddingBlockEnd) +
+      band.getBoundingClientRect().height
+    // Keep a full first viewport, with natural growth for the owner's larger
+    // titles and long translated introductions rather than clipping their copy.
+    return Math.abs(element.getBoundingClientRect().height - Math.max(height, required))
+  }, viewportHeight)
+}
+
 async function figureIsContained(figure: Locator) {
   return figure.evaluate((element) => {
     const strip = element.closest('.hero-figures')!
@@ -109,7 +126,10 @@ for (const locale of locales) {
         expect(bounds!.height).toBeLessThan(900)
         expect(bounds!.height).toBeGreaterThan(600)
         await expect(hero.locator('.hero-pathways')).toHaveCount(0)
-      } else expect(Math.abs(bounds!.height - 900), id).toBeLessThanOrEqual(2)
+      } else
+        await expect
+          .poll(() => heroHeightDifference(hero, 900), { message: id })
+          .toBeLessThanOrEqual(2)
       await hero.locator('.hero-primary').click()
       const target =
         id === 'transfer'
@@ -147,9 +167,14 @@ for (const locale of locales) {
     // Narrow landings may grow for the copy and stacked actions.
     await expect.poll(async () => (await hero.boundingBox())!.height).toBeGreaterThanOrEqual(844)
     await page.setViewportSize({ width: 768, height: 1024 })
-    await expect.poll(async () => (await hero.boundingBox())!.height).toBe(1024)
+    // Fractional glyph/padding metrics can round the natural content by <2px.
+    await expect
+      .poll(async () => Math.abs((await hero.boundingBox())!.height - 1024))
+      .toBeLessThanOrEqual(2)
     await page.setViewportSize({ width: 1440, height: 900 })
-    await expect.poll(async () => (await hero.boundingBox())!.height).toBe(900)
+    await expect
+      .poll(async () => Math.abs((await hero.boundingBox())!.height - 900))
+      .toBeLessThanOrEqual(2)
 
     await page.setViewportSize({ width: 320, height: 568 })
     await page.evaluate(() => {

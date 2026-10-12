@@ -37,10 +37,10 @@
   max-inline-size: 30ch;
   margin: 0;
   color: inherit;
-  font-size: clamp(2rem, 3.125vw, 3.75rem);
+  font-size: var(--font-size-research-heading);
   font-weight: 500;
   letter-spacing: -0.03em;
-  line-height: 1.2;
+  line-height: calc(7 / 6);
   text-wrap: pretty;
 }
 

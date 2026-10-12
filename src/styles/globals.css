@@ -1262,7 +1262,7 @@ html[dir='rtl'] .navigation-icon-arrow {
 
 .hero-copy {
   min-inline-size: 0;
-  max-inline-size: 52rem;
+  max-inline-size: 64rem;
 }
 
 .hero-certification {
@@ -1327,9 +1327,11 @@ html[dir='rtl'] .navigation-icon-arrow {
   align-items: center;
   gap: var(--space-3);
   margin-block-end: var(--space-6);
-  font-size: var(--font-size-label);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: var(--font-size-overline);
+  font-weight: 400;
+  line-height: 1;
+  padding-block: 0.125em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -1350,16 +1352,17 @@ html[dir='rtl'] .navigation-icon-arrow {
 .hero-copy h1 {
   max-inline-size: 22ch;
   font-size: var(--hero-title-size);
-  line-height: 1.08;
+  font-weight: 700;
+  line-height: 1.125;
   letter-spacing: -0.03em;
 }
 
 .hero-description {
   max-inline-size: 53ch;
   margin-block: var(--space-6) 0;
-  font-size: clamp(1rem, 1.2vw, 1.1875rem);
+  font-size: var(--hero-description-size);
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.5;
   text-wrap: pretty;
 }
 
@@ -1442,10 +1445,9 @@ html[dir='rtl'] .navigation-icon-arrow {
 }
 
 .hero-highlights {
-  --color-figure-label: rgb(255 255 255 / 87%);
   flex-shrink: 0;
   padding-block: var(--space-6);
-  background: var(--color-blue);
+  background: color-mix(in srgb, var(--color-navy) 40%, var(--color-blue));
 }
 
 .hero-highlights-inner {
@@ -1471,7 +1473,8 @@ html[dir='rtl'] .navigation-icon-arrow {
 .hero-figures .key-figure-label {
   order: 1;
   max-inline-size: 100%;
-  line-height: 1.35;
+  line-height: 1;
+  padding-block: 0.125rem;
   white-space: pre-line;
 }
 
@@ -1608,6 +1611,10 @@ html[lang='ar'] .hero-certification-label {
   text-transform: none;
 }
 
+html[lang='ar'] .hero-eyebrow {
+  line-height: 1.45;
+}
+
 @media (min-width: 70rem) {
   .hero-body--certified .hero-copy {
     display: grid;
@@ -1619,7 +1626,7 @@ html[lang='ar'] .hero-certification-label {
 
   .hero-body--certified .hero-introduction {
     grid-column: 1;
-    max-inline-size: 52rem;
+    max-inline-size: none;
   }
 
   .hero-body--certified .hero-actions {
@@ -1742,8 +1749,8 @@ html[lang='ar'] .hero-certification-label {
 
   .hero-body--certified .hero-eyebrow {
     gap: var(--space-2);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
+    font-size: var(--font-size-label);
+    letter-spacing: 0.1em;
   }
 
   .hero-body--certified .hero-eyebrow--brand > span {
@@ -1763,8 +1770,8 @@ html[lang='ar'] .hero-certification-label {
   .hero-body--certified .hero-description {
     margin-block-start: var(--space-4);
     color: rgb(255 255 255 / 87%);
-    font-size: var(--font-size-label);
-    line-height: 1.6;
+    font-size: var(--hero-description-size);
+    line-height: 1.5;
   }
 
   .hero-body--certified .hero-certification,

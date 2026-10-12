@@ -1,5 +1,42 @@
 # Design system and Figma reference
 
+## Owner typography references — 2026-10-12
+
+The nine owner-attached property captures supersede earlier sizes/weights for
+the named roles. Keep existing content, semantics, fonts and assets. At a 16px
+root and desktop widths from 1440px, the implemented Latin roles are:
+
+| Role                           | Size / line height | Weight | Tracking | Treatment                              |
+| ------------------------------ | ------------------ | ------ | -------- | -------------------------------------- |
+| Shared hero title              | 80 / 90px          | 700    | −3%      | Existing hero color                    |
+| Shared hero description        | 21px / 150%        | 500    | 0        | Existing hero color                    |
+| Hero overline, mission purpose | 16px / 100%        | 400    | +10%     | Uppercase; mission purpose stays white |
+| Homepage research heading      | 60 / 70px          | 500    | −3%      | White                                  |
+| Mission domain headings        | 50px / 100%        | 600    | −3%      | White                                  |
+| Mission functions / prose      | 18px / 150%        | 500    | 0        | 70% white text color                   |
+| Hero key-figure value          | 60px / 100%        | 600    | 0        | White                                  |
+| Hero key-figure label          | 18px / 100%        | 500    | 0        | 70% white text color                   |
+
+Use semantic tokens in `tokens.css`; display sizes are fluid rather than fixed
+at narrow widths. Figure values remain 36–60px and Latin numerals keep Jakarta
+in Arabic. Hero descriptions range from 18–21px, including the compact homepage.
+Arabic keeps Alexandria, no letter spacing or uppercase conversion and the
+existing readable line-height adaptations (hero overlines 1.45). White opacity
+is expressed as text color, never opacity on the entire card or its links.
+Small em/rem padding protects glyph bearings around 100% Latin line boxes without
+changing their specified line heights; this also scales with enlarged text.
+Hero copy has a 64rem maximum and the certified homepage introduction uses its
+full available grid track. Paragraph measures remain bounded independently.
+The figure band mixes 40% navy with 60% signature blue; 70% white labels achieve
+4.64:1 contrast there, versus 3.54:1 on unmodified signature blue. Compact bands
+retain the existing dark photograph overlays. No palette source value changes.
+The same mission heading role applies to all three contribution cards. Custom
+page hero compositions retain their own text measures and line-height adaptations
+while sharing the updated title-size token. Menu figures retain compact navy roles.
+
+Earlier dated typography sections below are historical evidence where they differ
+from these later owner-selected settings. See [current visual direction](../DESIGN.md).
+
 ## Current color and layout refinement — 2026-10-12
 
 Preserve the six approved digital values and the global 40/25/15/10/6/4 target,

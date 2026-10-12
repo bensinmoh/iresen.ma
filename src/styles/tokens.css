@@ -27,6 +27,10 @@
   --font-size-label: 0.875rem;
   --font-size-meta: 0.8125rem;
   --font-size-action: 1.125rem;
+  --font-size-editorial-body: 1.125rem;
+  --font-size-overline: 1rem;
+  --font-size-research-heading: clamp(2rem, 4.167vw, 3.75rem);
+  --font-size-mission-heading: clamp(1.75rem, 3.4723vw, 3.125rem);
   --font-size-figure: clamp(2.25rem, 4.167vw, 3.75rem);
   --font-size-figure-label: 1.125rem;
   --color-figure-label: rgb(255 255 255 / 70%);
@@ -56,7 +60,8 @@
   --duration-feedback: 180ms;
   --duration-reveal: 420ms;
   --ease-arrival: cubic-bezier(0.16, 1, 0.3, 1);
-  --hero-title-size: clamp(2rem, 4.2vw, 4.75rem);
+  --hero-title-size: clamp(2rem, 5.556vw, 5rem);
+  --hero-description-size: clamp(1.125rem, 1.4584vw, 1.3125rem);
   --color-hero-shade: rgb(5 17 29 / 78%);
   --z-header: 10;
   --z-skip: 30;

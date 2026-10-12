@@ -1,5 +1,33 @@
 # Foundation validation
 
+## Owner typography and branch cleanup — 2026-10-12
+
+See [adopted roles](design-system.md#owner-typography-references--2026-10-12)
+and [visual direction](../DESIGN.md). No copy, routes, search corpus, assets,
+CMS models or publication gates change; supplied screenshot text remains reference data.
+
+| Check                   | Result and scope                                                                                                                                                                                    |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Production build        | Final isolated standalone build and its TypeScript check passed; temporary Next type globs removed from canonical tsconfig afterwards                                                               |
+| Source checks           | Full local lint passed; adjusted hero test lint and changed-file formatting/whitespace passed                                                                                                       |
+| Typography / responsive | 15 production home views: FR/EN/AR at 320, 390, 768, 1024 and 1440px; default Latin desktop roles match supplied sizes, weights and line heights                                                    |
+| Visual inspection       | FR desktop/mobile hero, missions and research; EN tablet missions; AR mobile missions/research; separate FR/EN/AR mission captures at 200% text                                                     |
+| Browser behavior        | 34 scenarios passed with two local workers and zero retries: shared heroes, figure reading, section links, keyboard, RTL, 200% text, reduced motion, no JavaScript and mission hover/touch geometry |
+| Contrast                | 70% white on the 40% navy / 60% blue figure band: 4.64:1; mission prose on the minimum copy overlay: conservative 7.22:1 with a white source photograph                                             |
+| Documentation           | 83 maintained Markdown files checked; no broken local file references. Historical word-pattern candidates remain advisory                                                                           |
+| Branch preservation     | Old branches removed; the two local tips outside main are preserved by `archive/website-foundation-2026-10-12` and `archive/local-initial-backup-2026-10-12`, without publishing those backups      |
+
+The first production review found cramped hero copy and glyph-bearing overflow
+at enlarged text. Wider copy and small scalable padding corrected them while
+keeping the requested typography. The hero test now verifies the exact larger
+of viewport and required copy height; viewport comparisons allow 2px of fractional
+rounding, matching existing hero checks. No assertion, language or journey is removed.
+Local review initially used a loopback bind that caused localized rewrite loops;
+the final run uses the project's standard `0.0.0.0` listening configuration.
+Final screenshots/logs remain ignored local review evidence. Full current-head CI
+is recorded in the delivery PR before merging; this is local browser evidence,
+not field performance or a full accessibility conformance claim.
+
 ## Public release preparation — 2026-10-12
 
 See [delivered scope](public-release-preparation.md) and [French IT handover](it-handover.fr.md).

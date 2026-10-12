@@ -30,6 +30,22 @@ panels and do not encode meaning solely by color. [Measured pairs](docs/color-au
 
 ## Typography, geometry and responsive composition
 
+The owner's 2026-10-12 typography captures set the shared hero to 80/90px,
+700 weight and −3% Latin tracking; its description reaches 21px/150%, weight 500.
+Hero overlines and mission purposes use 16px/100%, weight 400, +10% Latin tracking
+and uppercase. Research heading reaches 60/70px at weight 500; mission domain
+headings reach 50px/100% at weight 600, both with −3% Latin tracking. Mission
+functions/prose use 18px/150%, weight 500 and 70% white; purposes remain white.
+Figures retain 60px/600 and 18px/500 labels in 70% white, with 100% Latin line height.
+Display sizes grow fluidly to their reference values by 1440px; mobile hero copy
+remains at least 18px. Arabic retains Alexandria, natural tracking and sufficient
+line height for shaping. These screenshots change styling, never sample content.
+Shared hero copy has a 64rem maximum; the certified homepage title uses the full
+available leading track so its larger type still fits the first desktop viewport.
+The figure band mixes 40% navy with 60% signature blue, allowing the requested
+70% white labels to retain 4.64:1 contrast. Compact photo-backed bands keep their
+existing dark overlays. Small glyph-bearing padding protects 100% Latin line boxes.
+
 FR/EN use the installed licensed Plus Jakarta Sans; Arabic uses Alexandria with
 Jakarta for Latin characters. Use shared display/body/label/figure roles, natural
 Arabic tracking/shaping and readable measures. Long text grows naturally; headings
