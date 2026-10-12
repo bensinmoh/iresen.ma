@@ -594,7 +594,10 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       // Contact has a dedicated headquarters photograph; its former illustration is
       // still served, but must not be described as the current contact page image.
       const relatedPages = pageIds.filter(
-        (pageId) => pageId !== 'contact' && heroes[pageId].photo === id,
+        (pageId) =>
+          pageId !== 'contact' &&
+          !['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'].includes(pageId) &&
+          heroes[pageId].photo === id,
       )
       return {
         id: `hero-${id}`,
@@ -607,7 +610,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
               title:
                 id === 'wind-detail'
                   ? assetLabels[locale].wind
-                  : `${assetLabels[locale].image} — ${relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ')}`,
+                  : `${assetLabels[locale].image} — ${relatedPages.length ? relatedPages.map((pageId) => messages[locale].Pages[pageId]).join(' · ') : assetLabels[locale].solar}`,
               description: [
                 ...(id.startsWith('solar-') ? [assetLabels[locale].solar] : []),
                 ...(id === 'solar-field' ? [assetLabels[locale].infrastructure] : []),
@@ -907,6 +910,14 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Projects.contactCoordinator,
           catalog.Projects.downloadNote,
         )
+      if (['legal', 'privacy', 'cookies', 'accessibility'].includes(pageId))
+        body.push(...engagementSearchText(catalog.PageSections[pageId]))
+      if (pageId === 'sitemap')
+        body.push(
+          ...Object.values(catalog.Pages),
+          catalog.NewsEvents.allNews,
+          catalog.Navigation.patents,
+        )
       if (pageId === 'cookies') body.push(...Object.values(catalog.CookieConsent))
       documents.push({
         id: `page:${pageId}:${locale}`,
@@ -945,6 +956,14 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         for (const entry of [section, ...(section.children ?? [])]) {
           const copy = sectionCopy[entry.id]
           const body = [copy.description]
+          if (['legal', 'privacy', 'cookies', 'accessibility'].includes(pageId))
+            body.push(...engagementSearchText(copy))
+          if (pageId === 'sitemap')
+            body.push(
+              ...Object.values(catalog.Pages),
+              catalog.NewsEvents.allNews,
+              catalog.Navigation.patents,
+            )
           if (pageId === 'programmes') {
             const programmeCopy = {
               'programmes-collaborations': catalog.Programmes.intro,

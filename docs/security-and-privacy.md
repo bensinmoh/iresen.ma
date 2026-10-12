@@ -44,3 +44,13 @@ a complete compliance assessment.
 Public CMS media is unsuitable for CVs or other private submissions.
 
 See [backlog](backlog.md) for release prerequisites and [SECURITY.md](../SECURITY.md) for reporting guidance.
+
+The 2026-10-12 owner-requested [public notices](utility-pages.md) now describe actual
+browser/email/Maps behavior and Law 09-08 rights in FR/EN/AR. Association status is
+owner-confirmed; unavailable hosting, publication-officer and operational-retention
+facts are not invented. Complete these operational inputs before live use. Public
+copy does not assert regulatory approval or whole-site conformity.
+
+Owner follow-up — 2026-10-12: the footer retains its Cookie preferences link
+without a duplicate Manage my cookies button. The linked page opens preferences;
+first-visit and blocked-map controls remain.

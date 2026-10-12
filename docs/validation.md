@@ -3769,3 +3769,39 @@ preserved. Local verification covers YAML parsing, unchanged job structure,
 concurrency grouping/cancellation cases, local links, formatting and whitespace.
 No application runtime, test matrix or assertion changes; full current-head PR CI
 and its final result remain required and recorded in the pull request.
+
+## Utility pages — 2026-10-12
+
+Owner-requested legal/privacy/cookie/accessibility notices and sitemap-only link
+body use compact heroes in FR/EN/AR. Association status is owner-confirmed;
+unknown operational facts remain private release inputs, not invented public
+claims. Primary CNDP references and scope are recorded in [utility-pages.md](utility-pages.md).
+
+Local evidence: changed-file formatting, links and whitespace pass. ESLint passes
+for the implementation and scoped footer follow-up. Focused unit checks cover
+complete nonempty locale catalogs, canonical search destinations, current rights
+paragraphs, withdrawn sitemap scaffolds, consent and former-hero references.
+Initial checks exposed the two obsolete sitemap section declarations and a test
+looking for an AI-excluded image in search documents; both were corrected and
+the affected checks pass.
+
+The final isolated production build passes, including TypeScript; its prior build
+had the existing next-intl cache warnings. The build was refreshed using its cache
+when the media-reference projection changed. The pre-existing unrelated tsconfig
+bytes are restored and remain outside this PR. Local search was synchronized after
+the owner’s patent-link follow-up and the final projection correction, without
+adding CMS content.
+
+Fifty distinct targeted production-browser scenarios are covered successfully:
+Contact, cookies, footer, standard heroes and the five utility pages in FR/EN/AR.
+The first pass passed 47 cases; three new utility cases exposed an incorrect test
+selector searching inside the group heading. Correcting it and rerunning only the
+four utility scenarios passed, including the actual patent-anchor destination.
+Coverage includes 320/390/768/1024/1440px, 200% text, scoped axe, keyboard/focus,
+no-JavaScript Arabic, withdrawal across tabs and failed cookie writes. Actual
+French sitemap, English legal, Arabic mobile and enlarged-text captures were
+inspected. No comprehensive screen-reader/Safari/Firefox audit is claimed.
+
+No CMS schema or database behavior changes; full integration and full-site browser
+coverage run in exact-head PR CI before merge. Final CI and merge outcomes remain
+recorded on the pull request. No deployment or visibility change.

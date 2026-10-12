@@ -41,6 +41,8 @@ it('registers current cookie information and preference anchors in every public 
       (item) => item.id === `section:cookies:manage-preferences:${locale}`,
     )!
     expect(section.url).toBe(pageHref('cookies', locale, 'manage-preferences'))
-    expect(section.body).toContain(copy.retention)
+    expect(section.body).toContain(
+      { fr, en, ar }[locale].PageSections.cookies['manage-preferences'].description,
+    )
   }
 })

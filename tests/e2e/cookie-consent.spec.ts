@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
+import { expect, test, type Page } from '@playwright/test'
 import { pageHref } from '../../src/lib/site'
 import fr from '../../src/messages/fr.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
@@ -7,6 +7,18 @@ import ar from '../../src/messages/ar.json' with { type: 'json' }
 
 const catalogs = { fr, en, ar }
 test.use({ storageState: { cookies: [], origins: [] } })
+
+async function openFooterPreferences(page: Page, locale: 'fr' | 'en' | 'ar') {
+  const copy = catalogs[locale]
+  await page
+    .locator('.footer-utilities')
+    .getByRole('link', { name: copy.Pages.cookies, exact: true })
+    .click()
+  await page
+    .locator('#manage-preferences')
+    .getByRole('button', { name: copy.CookieConsent.manage })
+    .click()
+}
 
 for (const locale of ['fr', 'en', 'ar'] as const) {
   test(`${locale}: first visit, refusal, granular consent, persistence and withdrawal`, async ({
@@ -31,13 +43,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.reload()
     await expect(banner).toHaveCount(0)
     await expect(page.locator('.contact-map iframe')).toHaveCount(0)
-    await page.locator('.footer-utilities').getByRole('button', { name: t.manage }).click()
+    await openFooterPreferences(page, locale)
     const dialog = page.getByRole('dialog')
     await expect(dialog.getByRole('checkbox')).not.toBeChecked()
     await page.keyboard.press('Escape')
     await expect(
-      page.locator('.footer-utilities').getByRole('button', { name: t.manage }),
+      page.locator('#manage-preferences').getByRole('button', { name: t.manage }),
     ).toBeFocused()
+    await page.goto(pageHref('contact', locale))
     await page.locator('.contact-map').getByRole('button').click()
     await dialog.getByRole('checkbox').check()
     await dialog.getByRole('button', { name: t.save }).click()
@@ -47,9 +60,10 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.reload()
     await expect(banner).toHaveCount(0)
     await expect(page.locator('.contact-map iframe')).toHaveCount(1)
-    await page.locator('.footer-utilities').getByRole('button', { name: t.manage }).click()
+    await openFooterPreferences(page, locale)
     await expect(dialog.getByRole('checkbox')).toBeChecked()
     await dialog.getByRole('button', { name: t.reject }).click()
+    await page.goto(pageHref('contact', locale))
     await expect(page.locator('.contact-map iframe')).toHaveCount(0)
     const cookies = await context.cookies()
     const stored = cookies.find((cookie) => cookie.name === 'iresen_consent')!
@@ -117,10 +131,7 @@ test('accept all persists between locales and withdrawal propagates to an open t
   await second.goto(pageHref('contact', 'ar'))
   await expect(second.locator('[data-cookie-banner]')).toHaveCount(0)
   await expect(second.locator('.contact-map iframe')).toHaveCount(1)
-  await page
-    .locator('.footer-utilities')
-    .getByRole('button', { name: fr.CookieConsent.manage })
-    .click()
+  await openFooterPreferences(page, 'fr')
   await page.getByRole('dialog').getByRole('button', { name: fr.CookieConsent.reject }).click()
   await expect(second.locator('.contact-map iframe')).toHaveCount(0)
 })
@@ -182,7 +193,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     expect(JSON.parse(decodeURIComponent(saved.value)).external).toBe(false)
     await page.reload()
     await expect(banner).toHaveCount(0)
-    await page.locator('.footer-utilities').getByRole('button', { name: t.manage }).click()
+    await openFooterPreferences(page, locale)
     const dialog = page.getByRole('dialog')
     await expect(dialog.getByRole('checkbox')).not.toBeChecked()
     await dialog.getByRole('button', { name: t.necessaryOnly }).click()
@@ -207,15 +218,14 @@ test('withdrawing permission disables an existing map even when cookie writes fa
     const getter = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie')!.get!
     Object.defineProperty(document, 'cookie', { get: () => getter.call(document), set: () => {} })
   })
-  await page.route('https://www.google.com/**', (route) =>
+  await context.route('https://www.google.com/**', (route) =>
     route.fulfill({ contentType: 'text/html', body: '<p>Local map</p>' }),
   )
+  const mapPage = await context.newPage()
+  await mapPage.goto(pageHref('contact', 'fr'))
+  await expect(mapPage.locator('.contact-map iframe')).toHaveCount(1)
   await page.goto(pageHref('contact', 'fr'))
-  await expect(page.locator('.contact-map iframe')).toHaveCount(1)
-  await page
-    .locator('.footer-utilities')
-    .getByRole('button', { name: fr.CookieConsent.manage })
-    .click()
+  await openFooterPreferences(page, 'fr')
   await page
     .getByRole('dialog')
     .getByRole('button', { name: fr.CookieConsent.necessaryOnly })
@@ -223,7 +233,7 @@ test('withdrawing permission disables an existing map even when cookie writes fa
   await expect(page.getByRole('dialog').getByRole('alert')).toHaveText(
     fr.CookieConsent.storageError,
   )
-  await expect(page.locator('.contact-map iframe')).toHaveCount(0)
+  await expect(mapPage.locator('.contact-map iframe')).toHaveCount(0)
 })
 
 test('settings gear reveals its label on hover and keyboard focus, with an accessible close cross', async ({

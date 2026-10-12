@@ -1297,3 +1297,12 @@ group at the trailing side. The necessary-only label uses measured button/font
 width, retaining its full wording wherever it fits and shortening only when
 required. Caption measurements are invisible and clipped; visible text stays
 at full contrast during control feedback.
+
+## Compact useful-information pages — 2026-10-12
+
+The five useful-information pages use a naturally sized pale title band without
+photo, viewport-height sizing or promotional actions. Notices use a readable
+72ch measure, quiet rules and direct contact links. Sitemap groups use thin blue
+leading rules, simple link rows and existing vector arrows; three/two/one columns
+follow available space. Shared blue/navy, fonts, logical CSS and Arabic direction
+remain. See [scope](docs/utility-pages.md).

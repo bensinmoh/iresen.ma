@@ -72,7 +72,8 @@ for (const locale of locales) {
         pageId !== 'projects' &&
         pageId !== 'priorities' &&
         pageId !== 'news' &&
-        pageId !== 'events',
+        pageId !== 'events' &&
+        !['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'].includes(pageId),
     )) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')

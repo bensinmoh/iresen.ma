@@ -134,6 +134,8 @@ export const pages = {
     pathnames: { fr: '/accessibilite', en: '/accessibility', ar: '/إمكانية-الوصول' },
   },
   sitemap: {
+    // Retain previous deep links after withdrawing the two visible scaffold sections.
+    anchors: ['catalogues-resources', 'search-useful-information'],
     path: '/sitemap',
     pathnames: { fr: '/plan-du-site', en: '/sitemap', ar: '/خريطة-الموقع' },
   },

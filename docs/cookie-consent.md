@@ -95,3 +95,7 @@ Next.js `allowedDevOrigins`, as required by the installed Next guide. This fixes
 blocked dev assets/hot updates for the existing review URL; no production origin
 or public visibility setting changes. Production browser checks use a separate
 build directory and port so they cannot corrupt the owner's dev cache.
+
+Owner follow-up — 2026-10-12: the footer retains its Cookie preferences link
+without a duplicate Manage my cookies button. The linked page opens preferences;
+first-visit and blocked-map controls remain.
