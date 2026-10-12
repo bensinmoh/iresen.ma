@@ -21,6 +21,11 @@ No embedded providers or remote asset requests are added. Search was rebuilt loc
 
 The public release closes administrative UI, CMS auth/raw collection/mutation
 endpoints and server functions. Public media retains publication/locale checks.
+Public REST media reads on the closed server strip authentication cookies and
+Authorization before Payload resolves access. An old staff/API token cannot
+turn a public byte request into a private-media read. Range/locale headers are
+retained. Explicit local administrative mode keeps its authenticated behavior.
+
 Script nonce CSP, frame/object restrictions and private/no-store HTML complement
 existing headers/cookies/CORS/CSRF. Inline styles remain allowed for existing React
 and navigation CSS; this policy is not described as a fully strict style CSP.
@@ -87,7 +92,7 @@ next optimization using field evidence.
 ## Verification ledger
 
 - Production baseline build: passed before runtime changes.
-- Unit/publication/media/search-policy tests: 24 files / 163 tests passed.
+- Unit/publication/media/search-policy tests: 24 files / 164 tests passed.
 - Shared quota: 61 concurrent calls tested; exactly 60 allowed, one rejected.
 - Integration: five suites /31 tests passed on an isolated disposable PostgreSQL.
 - Migration: additive quota table applied locally; generated CMS types/import map unchanged.

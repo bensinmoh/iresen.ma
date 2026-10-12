@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   administrationEnabled,
+  anonymousCmsHeaders,
   contentSecurityPolicy,
   publicCmsRequestAllowed,
 } from '@/lib/security/policy'
@@ -23,6 +24,20 @@ describe('public production boundaries', () => {
     ])
       expect(publicCmsRequestAllowed('GET', path)).toBe(false)
     expect(publicCmsRequestAllowed('POST', '/api/media/file/photo.webp')).toBe(false)
+  })
+  it('forces public CMS bytes to anonymous access while preserving range and locale headers', () => {
+    const original = new Headers({
+      Cookie: 'payload-token=staff-token; iresen_consent=choice',
+      Authorization: 'Bearer staff-token',
+      Range: 'bytes=0-1023',
+      'Accept-Language': 'ar',
+    })
+    const headers = anonymousCmsHeaders(original)
+    expect(headers.has('cookie')).toBe(false)
+    expect(headers.has('authorization')).toBe(false)
+    expect(headers.get('range')).toBe('bytes=0-1023')
+    expect(headers.get('accept-language')).toBe('ar')
+    expect(original.has('cookie')).toBe(true)
   })
   it('uses nonce scripts without unsafe-eval in production', () => {
     const csp = contentSecurityPolicy('random-nonce', false)

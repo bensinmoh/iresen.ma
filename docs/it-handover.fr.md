@@ -20,7 +20,7 @@ et les contenus éditoriaux nécessitent leur revue finale.
 
 ## Résultats et limites
 
-163 tests unitaires, 31 tests d’intégration et les parcours navigateur ciblés
+164 tests unitaires, 31 tests d’intégration et les parcours navigateur ciblés
 passent ; build Linux standalone et images non-root vérifiés. L’audit des
 dépendances de production passe de 14 alertes à zéro vulnérabilité connue.
 L’administration publique est fermée ; CSP et quota de recherche sont en place.

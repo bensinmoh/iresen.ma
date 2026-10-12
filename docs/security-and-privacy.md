@@ -79,3 +79,8 @@ esbuild corrections and a maintained Sass remove those reported paths. The final
 production dependency audit reports zero known advisories at the audit date. This
 is registry evidence, not proof of a vulnerability-free application. See
 [preparation report](public-release-preparation.md) for test coverage and limits.
+
+Public REST media reads on the closed server strip authentication cookies and
+Authorization before Payload resolves access. An old staff/API token cannot
+turn a public byte request into a private-media read. Range/locale headers are
+retained. Explicit local administrative mode keeps its authenticated behavior.

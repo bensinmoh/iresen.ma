@@ -9,7 +9,7 @@ See [delivered scope](public-release-preparation.md) and [French IT handover](it
 | Production baseline  | Fresh standalone build before runtime changes; 18 Lighthouse mobile runs, no failed resource requests                                                                                                                                                  |
 | Runtime build        | Final Linux `runtime` image built with ephemeral fictitious build settings; `pnpm build`/TypeScript passed                                                                                                                                             |
 | Operations           | Separate non-root image built; packaged migration command succeeds against already migrated local DB                                                                                                                                                   |
-| Unit                 | 24 files / 163 tests pass, including withdrawal, localized catalogue uniqueness and security policies                                                                                                                                                  |
+| Unit                 | 24 files / 164 tests pass, including withdrawal, localized catalogue uniqueness and security policies                                                                                                                                                  |
 | Search quota         | 61 concurrent calls: 60 allowed, one rejected; private synthetic key cleaned up                                                                                                                                                                        |
 | Browser              | 77 scenarios pass on production Linux image in local Chrome; 25 affected scenarios rechecked after video/catalogue correction, 21 video/CSP/PDF/image-eligibility scenarios and 42 final consent/motion/security/PDF scenarios pass on the isolated DB |
 | Visual               | FR/EN/AR Programme at 390/768/1440; FR/AR Contact, Institute, empty Projects and Useful links at 390/1440. 200% text, RTL, keyboard, reduced motion, no-JS and consent/access behavior covered                                                         |
@@ -29,7 +29,9 @@ so Useful links receives its existing compact-utility checks rather than a
 photographic hero expectation. The first full CI also caught low-contrast green
 innovation numbers: green is now limited to the decorative SVGs and numbers retain
 the accessible blue. The legacy raw-CMS test now asserts the commissioned 404
-boundary for accounts, registration and draft queries.
+boundary for accounts, registration and draft queries. A final header-policy
+regression check ensures public media reads cannot inherit staff privileges from
+cookies/API tokens, while range and locale headers remain intact.
 
 Final Lighthouse results are stored in [measured performance](performance-results.json).
 The first optimized trial exposed a video first-frame/LCP regression from delaying

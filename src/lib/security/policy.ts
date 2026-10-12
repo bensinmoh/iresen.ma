@@ -6,6 +6,13 @@ export function administrationEnabled() {
 export function publicCmsRequestAllowed(method: string, pathname: string) {
   return ['GET', 'HEAD'].includes(method) && /^\/api\/media\/file\/[^/]+$/.test(pathname)
 }
+/** Public media reads must not inherit staff privileges from an old cookie/API token. */
+export function anonymousCmsHeaders(source: Headers) {
+  const headers = new Headers(source)
+  headers.delete('cookie')
+  headers.delete('authorization')
+  return headers
+}
 export function contentSecurityPolicy(nonce: string, development: boolean) {
   return [
     "default-src 'self'",
