@@ -3721,3 +3721,18 @@ changes two visitor pathways and does not authorize deployment.
 Cross-link visual follow-up: inspected French/Arabic mobile renderings and the
 homepage collaboration action. The two laboratory destinations now occupy
 separate lines, preserving clear touch targets and the existing SVG arrows.
+
+## Cookie consent — 2026-10-12
+
+Owner-requested initial consent and permanent preferences are implemented in
+FR/EN/AR. Google Maps is gated before iframe creation; refusal, withdrawal and
+invalid/expired decisions leave the original directions link available. See
+[cookie scope and inventory](cookie-consent.md).
+
+Initial verification: `pnpm lint` and `pnpm typecheck` passed; the unit suite
+passed 155 tests, followed by all three focused consent/search-registration tests
+including the newly added localized catalog check. `pnpm search:rebuild` refreshed
+the local catalog. Changed files pass Prettier and `git diff --check`.
+Production build, disposable-database integration and rendered browser verification
+are in progress; their final evidence will be recorded before completion. The
+pre-existing unrelated `tsconfig.json` edit is preserved outside this change.

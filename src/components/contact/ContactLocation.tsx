@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
+import { ConsentMap } from '@/components/privacy/ConsentMap'
 import { contactLocation } from '@/lib/contact'
 
 export async function ContactLocation({ locale }: { locale: Locale }) {
@@ -26,13 +27,7 @@ export async function ContactLocation({ locale }: { locale: Locale }) {
         </a>
       </div>
       <div className="contact-map">
-        <iframe
-          src={contactLocation.embedHref}
-          title={t('mapTitle')}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          allowFullScreen
-        />
+        <ConsentMap src={contactLocation.embedHref} title={t('mapTitle')} />
       </div>
     </section>
   )

@@ -199,7 +199,7 @@ marketing page.
   unavailable. The newsletter
   keeps local editable email/consent controls; Subscribe opens a native disclosure
   with the localized unavailable message, hidden initially. The address links to
-  Google Maps; privacy remains in utility/legal links, with the duplicate below
+  consent-gated Google Maps; privacy remains in utility/legal links, with the duplicate below
   newsletter consent removed. No subscription is submitted or stored, and no
   success is reported; signup still has no provider or endpoint. See
   [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09).
@@ -447,3 +447,13 @@ surveying precision or additional service availability. No deployment.
 The owner commissions the existing programmes route from the manuscript. Funding and support remain instruments of Recherche & Innovation. Three functions, expected benefits, six stages, historical examples and an honest empty current-call state are delivered. Preserve the 69-project reference for 2025, working EN/AR translations, local contact email drafts and the absence of active verified calls. See [scope](docs/programmes-rdi.md).
 
 CMS follow-up: the owner commissions every call’s metadata, calendar, budget, recipients, themes, funding partners, actual terms PDF and submission form URL. Date-derived states control the form action and archive listing. Only published, locale-approved complete records are public; no actual calls were supplied. See [workflow](docs/calls-for-projects.md).
+
+## Cookie management — 2026-10-12
+
+The owner commissions public first-visit consent and permanent preferences in
+FR/EN/AR. Equal acceptance/refusal buttons, a native preference dialog and a
+180-day necessary decision cookie gate Google Maps before loading and remove it
+on withdrawal. This supersedes the earlier automatic-map behavior. Shared
+blue/navy, fonts, physical signature corners and logical responsive layout are
+reused; no new design token or tracker is introduced. See
+[consent scope](docs/cookie-consent.md). No deployment or complete legal-conformance claim.

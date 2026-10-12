@@ -277,7 +277,7 @@ for (const locale of locales) {
     expect(amended.searchParams.get('body')).toContain(`${body}\nMerci`)
   })
 
-  test(`${locale}: Google Maps displays directly and retains keyboard access to directions`, async ({
+  test(`${locale}: Google Maps loads after consent and retains keyboard access to directions`, async ({
     page,
   }) => {
     const requests: string[] = []
@@ -291,6 +291,12 @@ for (const locale of locales) {
     await page.goto(pageHref('contact', locale))
     await expect(page.getByLabel(messages.form.fullName.label, { exact: true })).toBeEnabled()
     const location = page.locator('.contact-location')
+    await expect(location.locator('iframe')).toHaveCount(0)
+    await location.getByRole('button', { name: catalogs[locale].CookieConsent.manage }).click()
+    await page
+      .getByRole('dialog')
+      .getByRole('button', { name: catalogs[locale].CookieConsent.accept })
+      .click()
     const map = location.locator('iframe')
     await map.scrollIntoViewIfNeeded()
     await settleLayout(page)
@@ -317,7 +323,7 @@ for (const locale of locales) {
   })
 }
 
-test('without JavaScript, the map, contact links and native FAQ disclosures remain available in every language', async ({
+test('without JavaScript, the map remains blocked while contact links and native FAQ disclosures remain available in every language', async ({
   browser,
   baseURL,
 }) => {
@@ -357,13 +363,11 @@ test('without JavaScript, the map, contact links and native FAQ disclosures rema
         messages.faq.questions.calls.answer,
       )
       const map = page.locator('.contact-location iframe')
-      await expect(map).toHaveAttribute('title', messages.location.mapTitle)
-      await expect(map).toHaveAttribute('src', contactLocation.embedHref)
-      await map.scrollIntoViewIfNeeded()
-      await expect.poll(() => googleRequests.length).toBe(locales.indexOf(locale) + 1)
+      await expect(map).toHaveCount(0)
+      await expect(page.locator('.cookie-map-placeholder')).toBeVisible()
       await expectContained(page, `${locale}, no JavaScript`)
     }
-    expect(googleRequests).toEqual(locales.map(() => contactLocation.embedHref))
+    expect(googleRequests).toEqual([])
   } finally {
     await context.close()
   }

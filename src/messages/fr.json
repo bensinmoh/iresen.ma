@@ -803,19 +803,19 @@
     "cookies": {
       "cookie-use": {
         "title": "Utilisation des cookies",
-        "description": "À prévoir : l’explication des usages de cookies réellement présents sur le site."
+        "description": "Le site utilise uniquement les éléments nécessaires à son fonctionnement et à la mémorisation de votre choix. Avec votre accord, la carte Google Maps peut être chargée : Google reçoit alors des données de navigation. Aucun outil de publicité ou de mesure d’audience n’est intégré."
       },
       "cookies-services": {
         "title": "Cookies et services utilisés",
-        "description": "À prévoir : l’inventaire vérifié avec fournisseurs, finalités, durées et catégories."
+        "description": "Autoriser la carte Google Maps sur la page Contact. Google peut recevoir votre adresse IP et des informations sur votre navigateur et utiliser ses propres cookies. Le responsable de ce service est Google ; ses règles de confidentialité sont disponibles sur policies.google.com/privacy."
       },
       "manage-preferences": {
         "title": "Gérer mes préférences",
-        "description": "À prévoir : les choix accessibles adaptés aux services facultatifs effectivement installés."
+        "description": "Votre acceptation ou votre refus est conservé pendant 180 jours sur ce navigateur. Vous pouvez retirer votre accord à tout moment depuis le pied de page ; la carte est alors retirée. Le retrait ne supprime pas les données déjà transmises à Google."
       },
       "effects-contact": {
         "title": "Conséquences et contact",
-        "description": "À prévoir : les effets des choix, les alternatives, le contact et la date de révision."
+        "description": "La carte Google Maps est désactivée tant que vous n’autorisez pas les services externes. Le lien d’itinéraire reste disponible."
       }
     },
     "accessibility": {
@@ -1149,7 +1149,7 @@
     "empty": "Aucun contenu publié pour le moment.",
     "searchUnavailable": "La recherche est actuellement indisponible.",
     "contactUnavailable": "Le formulaire de contact n’est pas encore disponible.",
-    "thirdPartyMap": "La page Contact intègre une carte Google Maps qui se charge automatiquement, sans clic préalable, et transmet des données de navigation à Google.",
+    "thirdPartyMap": "La carte Google Maps est désactivée tant que vous n’autorisez pas les services externes. Le lien d’itinéraire reste disponible.",
     "loading": "Chargement de la page…",
     "notFoundTitle": "Page introuvable",
     "notFoundDescription": "Cette page n’existe pas ou n’est plus disponible.",
@@ -3277,5 +3277,24 @@
       "results": "Annonce des projets retenus"
     },
     "discoveryDescription": "Consultez les appels à projets publiés, leurs conditions, calendriers, destinataires et modalités de soumission."
+  },
+  "CookieConsent": {
+    "title": "Votre choix pour les cookies",
+    "description": "Le site utilise uniquement les éléments nécessaires à son fonctionnement et à la mémorisation de votre choix. Avec votre accord, la carte Google Maps peut être chargée : Google reçoit alors des données de navigation. Aucun outil de publicité ou de mesure d’audience n’est intégré.",
+    "details": "En savoir plus",
+    "reject": "Tout refuser",
+    "accept": "Tout accepter",
+    "customize": "Personnaliser",
+    "manage": "Gérer mes cookies",
+    "close": "Fermer",
+    "necessary": "Fonctionnement nécessaire",
+    "necessaryDescription": "Le cookie iresen_consent conserve votre décision pendant 180 jours, sans identifiant de suivi. Les cookies d’authentification du CMS sont réservés à l’administration.",
+    "alwaysActive": "Toujours actif",
+    "external": "Services externes — Google Maps",
+    "externalDescription": "Autoriser la carte Google Maps sur la page Contact. Google peut recevoir votre adresse IP et des informations sur votre navigateur et utiliser ses propres cookies. Le responsable de ce service est Google ; ses règles de confidentialité sont disponibles sur policies.google.com/privacy.",
+    "retention": "Votre acceptation ou votre refus est conservé pendant 180 jours sur ce navigateur. Vous pouvez retirer votre accord à tout moment depuis le pied de page ; la carte est alors retirée. Le retrait ne supprime pas les données déjà transmises à Google.",
+    "save": "Enregistrer mes choix",
+    "mapBlocked": "La carte Google Maps est désactivée tant que vous n’autorisez pas les services externes. Le lien d’itinéraire reste disponible.",
+    "storageError": "Votre navigateur empêche la mémorisation du choix. Les services externes restent désactivés."
   }
 }

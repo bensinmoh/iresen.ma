@@ -1,3 +1,4 @@
+import { CookiePreferencesButton } from '@/components/privacy/CookieConsent'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { footerPageIds, navigationGroups, pageLinkHref, type PageId } from '@/lib/site'
@@ -10,9 +11,10 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
   const pageTitle = await getTranslations({ locale, namespace: 'Pages' })
   const states = await getTranslations({ locale, namespace: 'States' })
   const navigation = await getTranslations({ locale, namespace: 'Navigation' })
+  const cookieText =
+    pageId === 'cookies' ? await getTranslations({ locale, namespace: 'CookieConsent' }) : null
   let emptyMessage: string | undefined
   if (pageId === 'contact') emptyMessage = states('contactUnavailable')
-  if (pageId === 'cookies') emptyMessage = states('thirdPartyMap')
 
   const directory =
     pageId === 'sitemap' ? (
@@ -66,9 +68,25 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
         contentBySection={
           directory
             ? { 'site-pages': directory }
-            : pageId === 'news'
-              ? { 'all-news': <PublishedNewsList locale={locale} /> }
-              : undefined
+            : pageId === 'cookies'
+              ? {
+                  'manage-preferences': <CookiePreferencesButton />,
+                  'cookies-services': (
+                    <>
+                      <p>{cookieText?.('necessaryDescription')}</p>
+                      <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Google — {pageTitle('privacy')}
+                      </a>
+                    </>
+                  ),
+                }
+              : pageId === 'news'
+                ? { 'all-news': <PublishedNewsList locale={locale} /> }
+                : undefined
         }
       />
     </PageShell>

@@ -443,7 +443,7 @@
     "empty": "No published content yet.",
     "searchUnavailable": "Search is currently unavailable.",
     "contactUnavailable": "The contact form is not available yet.",
-    "thirdPartyMap": "The Contact page includes a Google Maps map that loads automatically, without a prior click, and shares browsing data with Google.",
+    "thirdPartyMap": "Google Maps is disabled until you allow external services. The directions link remains available.",
     "loading": "Loading the page…",
     "notFoundTitle": "Page not found",
     "notFoundDescription": "This page does not exist or is no longer available.",
@@ -1210,19 +1210,19 @@
     "cookies": {
       "cookie-use": {
         "title": "Use of cookies",
-        "description": "Content to add: an explanation of cookie uses actually present on the site."
+        "description": "This site only uses what is necessary to operate and remember your choice. With your permission, Google Maps can load: Google then receives browsing data. No advertising or audience analytics tool is integrated."
       },
       "cookies-services": {
         "title": "Cookies and services used",
-        "description": "Content to add: a verified inventory with providers, purposes, durations and categories."
+        "description": "Allow Google Maps on the Contact page. Google may receive your IP address and browser information and use its own cookies. Google is responsible for this service; its privacy policy is available at policies.google.com/privacy."
       },
       "manage-preferences": {
         "title": "Manage my preferences",
-        "description": "Content to add: accessible choices suited to the optional services actually installed."
+        "description": "Your acceptance or refusal is stored for 180 days in this browser. You can withdraw permission at any time from the footer; the map is then removed. Withdrawal does not delete data already sent to Google."
       },
       "effects-contact": {
         "title": "Effects and contact",
-        "description": "Content to add: the effects of choices, alternatives, contact details and the revision date."
+        "description": "Google Maps is disabled until you allow external services. The directions link remains available."
       }
     },
     "accessibility": {
@@ -3274,5 +3274,24 @@
       "results": "Selected projects announced"
     },
     "discoveryDescription": "Explore published calls for projects, their terms, schedules, applicants and submission procedures."
+  },
+  "CookieConsent": {
+    "title": "Your cookie choice",
+    "description": "This site only uses what is necessary to operate and remember your choice. With your permission, Google Maps can load: Google then receives browsing data. No advertising or audience analytics tool is integrated.",
+    "details": "Learn more",
+    "reject": "Reject all",
+    "accept": "Accept all",
+    "customize": "Customize",
+    "manage": "Manage my cookies",
+    "close": "Close",
+    "necessary": "Necessary operation",
+    "necessaryDescription": "The iresen_consent cookie stores your decision for 180 days without a tracking identifier. CMS authentication cookies are restricted to administration.",
+    "alwaysActive": "Always active",
+    "external": "External services — Google Maps",
+    "externalDescription": "Allow Google Maps on the Contact page. Google may receive your IP address and browser information and use its own cookies. Google is responsible for this service; its privacy policy is available at policies.google.com/privacy.",
+    "retention": "Your acceptance or refusal is stored for 180 days in this browser. You can withdraw permission at any time from the footer; the map is then removed. Withdrawal does not delete data already sent to Google.",
+    "save": "Save my choices",
+    "mapBlocked": "Google Maps is disabled until you allow external services. The directions link remains available.",
+    "storageError": "Your browser prevents saving your choice. External services remain disabled."
   }
 }

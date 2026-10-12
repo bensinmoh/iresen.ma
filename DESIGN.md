@@ -1266,3 +1266,13 @@ markers so all cities remain selectable. Smaller screens stack map then list.
 The owner requires a closer Figma look and feel with restrained research, product and people photography. Preserve a bright full-height centered laboratory hero, blue title emphasis, white header, pale three-card presentation, a distinct warm prototyping image and the owner-selected AquaSolar feature. No PV plant imagery. Navy native project steps and clear historical/empty-call states use shared geometry and arrows. See [scope](docs/programmes-rdi.md).
 
 Programmes contrast/detail follow-up: sustain the light hero scrim behind all foreground copy and use navy for small text/actions. Call detail pages use a pale factual header, restrained date/budget figures, a four-stage calendar, readable eligibility/theme lists and real document/form actions. Preserve shared corners, vector arrows, mobile stacking and Arabic order.
+
+## Cookie management — 2026-10-12
+
+The owner commissions public first-visit consent and permanent preferences in
+FR/EN/AR. Equal acceptance/refusal buttons, a native preference dialog and a
+180-day necessary decision cookie gate Google Maps before loading and remove it
+on withdrawal. This supersedes the earlier automatic-map behavior. Shared
+blue/navy, fonts, physical signature corners and logical responsive layout are
+reused; no new design token or tracker is introduced. See
+[consent scope](docs/cookie-consent.md). No deployment or complete legal-conformance claim.

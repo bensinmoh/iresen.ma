@@ -1679,3 +1679,13 @@ fixed rem typography, a navy sidebar with its inverse SVG logo, restrained white
 tables; no public token or page template changes. Desktop sidebar collapse and
 mobile focus-managed navigation are specific to the review tool. Interface is French;
 Arabic content fields and reading preview use RTL. See [scope](cms-interface-preview.md).
+
+## Cookie management — 2026-10-12
+
+The owner commissions public first-visit consent and permanent preferences in
+FR/EN/AR. Equal acceptance/refusal buttons, a native preference dialog and a
+180-day necessary decision cookie gate Google Maps before loading and remove it
+on withdrawal. This supersedes the earlier automatic-map behavior. Shared
+blue/navy, fonts, physical signature corners and logical responsive layout are
+reused; no new design token or tracker is introduced. See
+[consent scope](cookie-consent.md). No deployment or complete legal-conformance claim.
