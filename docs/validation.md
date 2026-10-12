@@ -3721,3 +3721,34 @@ changes two visitor pathways and does not authorize deployment.
 Cross-link visual follow-up: inspected French/Arabic mobile renderings and the
 homepage collaboration action. The two laboratory destinations now occupy
 separate lines, preserving clear touch targets and the existing SVG arrows.
+
+## Cookie consent — 2026-10-12
+
+Owner-requested initial consent and permanent preferences are implemented in
+FR/EN/AR. Google Maps is gated before iframe creation; refusal, withdrawal and
+invalid/expired decisions leave the original directions link available. See
+[cookie scope and inventory](cookie-consent.md).
+
+Final local verification: ESLint, strict TypeScript and all 156 unit tests pass.
+`pnpm search:rebuild` refreshed the local catalog without adding CMS content.
+The unrelated pre-existing `tsconfig.json` changes remain outside this PR.
+
+The first PR CI run passed the full suite: 30 integration tests, 307 browser
+scenarios (four existing skips), plus four opt-in CMS interface journeys (one
+existing skip). Local disposable-database integration attempts did not finish
+the bootstrap hook; their temporary databases were dropped. CI uses its own
+fresh PostgreSQL database; no existing local database was replaced.
+
+The final isolated production build passes, with the existing next-intl webpack
+cache warnings. All 43 targeted production-browser scenarios pass: consent,
+Contact and footer in FR/EN/AR, including no-JavaScript reading, failed cookie
+storage, withdrawal across tabs, keyboard/focus, reduced motion, 200% Arabic text,
+scoped axe scans and button geometry at 320/390/768/1024/1180/1440/1920px.
+Inspected actual French mobile/intermediate/desktop and Arabic mobile renderings:
+equal button heights, trailing two-row group and centered preferences dialog.
+
+The first browser pass identified a transient hover-label contrast problem and an
+overly strict reduced-motion assertion; both were corrected before this passing
+final run. Changed files pass Prettier and whitespace checks. The latest commit's
+full CI must pass before merging; its exact result is retained in PR #105. This technical verification is scoped to consent behavior,
+not a certification of whole-site legal compliance. No deployment is authorized.

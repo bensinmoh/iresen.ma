@@ -87,21 +87,17 @@ schema are required for this local workflow.
 ## Location and third-party behavior
 
 The full-width location band shows the established headquarters address and
-the owner's exact directions shortlink. The owner's explicit 2026-10-09
-refinement supersedes the earlier on-demand presentation: Google Maps is
-rendered directly in the server HTML with `loading="lazy"`. No reveal click,
-remove control or client state is required. The lower explanatory strip and its
-extra spacing are removed. The location/map follows the form and precedes the
-FAQ; the separate
-directions link remains useful for navigation and when the embed is unavailable.
+the owner's exact directions shortlink. The owner's 2026-10-12 cookie-management
+request supersedes the 2026-10-09 automatic map behavior: Google Maps is absent
+from server HTML and loads only after explicit permission for external services.
+Refusal leaves a localized placeholder and the original directions link;
+withdrawal immediately removes the iframe. The map remains blocked without
+JavaScript. The location/map follows the form and precedes the FAQ.
 
-Native lazy loading lets the browser defer the request until the map approaches
-the viewport; it does not wait for consent or a visitor click. The map remains
-present without JavaScript, when browser lazy-loading behavior may differ. Once
-the iframe loads, browsing data is sent to Google. The iframe retains
-`referrerPolicy="no-referrer"`; this limits the referrer without preventing the
-third-party request. The cookies-page service notice identifies this external
-service rather than claiming that no optional tracking can occur.
+Once permitted, the iframe retains `loading="lazy"` and
+`referrerPolicy="no-referrer"`. Lazy loading and referrer policy are not consent
+mechanisms; permission is checked before the iframe exists. Google receives
+browsing data after permission. See [consent behavior and inventory](cookie-consent.md).
 
 The shortlink could not be resolved in the available environment. The embed
 therefore uses a query for the shared Rabat headquarters address, not inferred
@@ -135,3 +131,34 @@ describe their earlier revisions. Contact screenshots from the curve-background
 revision describe that composition; photo-specific rendered and delivery checks
 belong in a separate validation entry. This implementation does not authorize
 production deployment, publication, DNS or repository visibility changes.
+
+## Cookie management — 2026-10-12
+
+The owner commissions public first-visit consent and permanent preferences in
+FR/EN/AR. A blue acceptance button, necessary-only/refusal controls, a centered native preference dialog and a
+180-day necessary decision cookie gate Google Maps before loading and remove it
+on withdrawal. This supersedes the earlier automatic-map behavior. Shared
+blue/navy, fonts, physical signature corners and logical responsive layout are
+reused; no new design token or tracker is introduced. See
+[consent scope](cookie-consent.md). No deployment or complete legal-conformance claim.
+
+Cookie-control follow-up: the owner selects primary IRESEN-blue acceptance, an
+explicit necessary-only action, necessary/optional categories, a readable grey
+refusal and a vector settings button whose label appears on hover or keyboard
+focus. Preferences are centered vertically/horizontally and use an accessible
+SVG close cross. Control feedback uses the existing 180ms token and respects
+reduced motion; refusal remains enabled and available in one click.
+
+Final responsive correction: the preferences use a 56rem maximum width with one
+desktop action row. At 64rem and below, acceptance/refusal occupy row one;
+necessary-only and a compact gear occupy row two. The necessary label expands
+to “Uniquement le nécessaire” when it fits, with a short narrow-screen fallback.
+Rows keep equal heights from a 48px minimum. Mobile hover/focus labels sit outside
+the grid flow so hidden text cannot create oversized buttons; enlarged text may
+grow the shared rows naturally.
+
+Available-space follow-up: intermediate-width banners keep a two-row action
+group at the trailing side. The necessary-only label uses measured button/font
+width, retaining its full wording wherever it fits and shortening only when
+required. Caption measurements are invisible and clipped; visible text stays
+at full contrast during control feedback.

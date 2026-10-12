@@ -9,6 +9,8 @@ const nextConfig = {
   outputFileTracingIncludes: { '/api/projects/*/note': ['src/data/project-notes/*.pdf'] },
   // Allow a production review build while the owner's development server keeps running.
   distDir: process.env.NEXT_BUILD_DIRECTORY || '.next',
+  // The existing loopback review URL must receive dev assets and hot updates too.
+  allowedDevOrigins: ['127.0.0.1'],
   poweredByHeader: false,
   reactStrictMode: true,
   images: {

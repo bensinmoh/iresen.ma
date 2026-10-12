@@ -5,6 +5,7 @@ import { getTranslations } from 'next-intl/server'
 import { isLocale } from '@/i18n/locales'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
+import { CookieConsent } from '@/components/privacy/CookieConsent'
 import { SiteMotion } from '@/components/layout/SiteMotion'
 
 export default async function LocaleLayout({
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
       </main>
       <SiteFooter locale={locale} />
       <SiteMotion />
+      <CookieConsent locale={locale} />
     </>
   )
 }

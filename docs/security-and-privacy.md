@@ -32,23 +32,15 @@ the draft; organisation and phone are optional. Direct email and telephone links
 remain available without JavaScript. This local composing workflow does not
 implement a server-side intake or establish delivery, retention or a response time.
 
-The contact location section includes Google Maps as a third-party embed. The
-owner's explicit 2026-10-09 refinement supersedes the earlier on-demand
-presentation: its iframe is rendered directly in the server HTML with native
-`loading="lazy"`. There is no reveal/remove control, persisted preference or
-lower explanatory strip. Browser lazy loading may defer the request until the
-map approaches the viewport; it is not a consent mechanism. Loading the map
-sends browsing data to Google. `referrerPolicy="no-referrer"` limits the referrer
-without preventing the third-party request. The cookies-page service notice
-identifies the map's automatic loading and external data flow. The separate
-directions link opens the exact owner-supplied Google Maps shortlink. Its
-destination and the address-query embed's exact pin remain unverified.
-See [map behavior and limits](contact.md).
-
-No separate analytics trackers, CAPTCHA or newsletter processing are added by
-this contact change.
-Review the map's third-party terms, consent, data flows and applicable institutional
-requirements before release; this implementation is not a compliance assessment.
+The contact location section includes Google Maps as an optional third-party
+embed. The owner's 2026-10-12 cookie-management request supersedes automatic
+loading: no iframe is rendered before explicit external-service permission.
+Refusal and withdrawal retain the original directions link and remove the map.
+`referrerPolicy="no-referrer"` limits the referrer after permission but does not
+prevent Google data flows. See [consent inventory and behavior](cookie-consent.md)
+and [map source](contact.md). No analytics, CAPTCHA or newsletter processing is
+introduced. Production legal/IT review remains required; a consent banner is not
+a complete compliance assessment.
 Public CMS media is unsuitable for CVs or other private submissions.
 
 See [backlog](backlog.md) for release prerequisites and [SECURITY.md](../SECURITY.md) for reporting guidance.

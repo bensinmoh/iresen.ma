@@ -907,7 +907,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Projects.contactCoordinator,
           catalog.Projects.downloadNote,
         )
-      if (pageId === 'cookies') body.push(catalog.States.thirdPartyMap)
+      if (pageId === 'cookies') body.push(...Object.values(catalog.CookieConsent))
       documents.push({
         id: `page:${pageId}:${locale}`,
         locale,
