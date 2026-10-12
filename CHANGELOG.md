@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-10-12 — Owner typography and branch cleanup
+
+- Apply the nine supplied typography references to shared hero roles, homepage
+  research/mission headings, mission prose/purposes and key-figure labels.
+  Keep fluid narrow-screen sizes, Arabic shaping and all existing content.
+- Widen hero copy for the larger titles, protect glyph bearings at 100% line height
+  and preserve natural growth for long introductions. Darken the figure band with
+  a navy/blue mix so the requested 70% white labels retain readable contrast.
+- Remove completed local/remote branches at the owner's request. Two old local
+  histories outside main remain recoverable through local archive tags.
+- Record rendered FR/EN/AR coverage and 34 passing production-browser scenarios
+  in [validation](docs/validation.md); current-head CI remains the merge gate.
+
 ## 2026-10-12 — Completed branch reconciliation
 
 - Integrate the histories of `feat/site-search` (closed PR #23) and
