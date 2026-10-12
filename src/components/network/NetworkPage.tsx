@@ -187,10 +187,14 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
                 </p>
                 <h3>{t(`examples.items.${i}.title`)}</h3>
                 <p>{t(`examples.items.${i}.description`)}</p>
-                <a href="#scientific-network">
-                  {t('examples.action')}
-                  <NavigationIcon name="arrow" />
-                </a>
+                {(
+                  t.raw(`examples.items.${i}.labs`) as (typeof networkLaboratories)[number]['id'][]
+                ).map((id) => (
+                  <a key={id} href={pageHref('network', locale, laboratoryAnchor(id))}>
+                    {t(`labs.${id}.title`)}
+                    <NavigationIcon name="arrow" />
+                  </a>
+                ))}
               </article>
             ))}
           </div>

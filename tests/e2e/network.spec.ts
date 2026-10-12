@@ -79,6 +79,22 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(cards).toHaveCount(2)
     await input.fill('')
     await expect(cards).toHaveCount(14)
+    await input.fill('unknown laboratory')
+    await input.press('Enter')
+    await expect(cards).toHaveCount(0)
+    const examples = page.locator('#expertise-in-action')
+    await expect(examples.locator('a')).toHaveCount(6)
+    await examples.locator('a[href$="#laboratory-nanoparticles"]').click()
+    await expect(page).toHaveURL(/#laboratory-nanoparticles$/)
+    await expect(input).toHaveValue('')
+    await expect(cards).toHaveCount(14)
+    await expect(page.locator('#laboratory-nanoparticles button')).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    )
+    await expect(detail.locator('h3')).toHaveText(
+      await page.locator('#laboratory-nanoparticles strong').innerText(),
+    )
     await expect(directory.locator('a[href="mailto:elomari.hamid@gmail.com"]')).toHaveCount(1)
     await expect(
       new AxeBuilder({ page }).include('[data-network-page]').analyze(),
@@ -93,6 +109,10 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         )
         .toBe(true)
     }
+    await page.setViewportSize({ width: 390, height: 900 })
+    await page.locator('#expertise-in-action').screenshot({
+      path: `.cache/crosslink-review/${locale}-network-mobile.png`,
+    })
     await page.setViewportSize({ width: 768, height: 900 })
     await page.addStyleTag({ content: 'html { font-size: 200% !important }' })
     await expect

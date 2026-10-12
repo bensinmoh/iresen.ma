@@ -3697,3 +3697,23 @@ Local CMS/database integration tests were not run for this disconnected interfac
 PR CI uses a disposable PostgreSQL instance for the existing full suite and separately
 opts into the four frontend review journeys. Real integrations and authorization
 remain deferred.
+
+## Contextual cross-link review — 2026-10-11
+
+See [scope and retained destinations](crosslink-review.md).
+
+- Formatting, ESLint, strict TypeScript and all 153 unit tests pass.
+- Production build passes with the existing next-intl webpack dependency-cache
+  warnings. The first sandboxed build could not read TypeScript subprocess
+  output; rerunning with supported execution permissions passes.
+- Eight focused production-browser scenarios pass: collaboration and laboratory
+  network in FR/EN/AR, plus both no-JavaScript journeys. Coverage includes
+  localized destinations, all six laboratory example links, recovering a target
+  from an empty filtered directory, selecting its map detail, search discovery,
+  320/390/768/1024/1440px reflow, 200% text and scoped axe scans with no violations.
+- The new private local database was migrated and its static search catalog
+  synchronized; zero public CMS records were seeded. Existing search projections
+  include the changed collaboration action. No public asset or anchor is added.
+
+Full-site final editorial/search sanity verification remains pending. This review
+changes two visitor pathways and does not authorize deployment.

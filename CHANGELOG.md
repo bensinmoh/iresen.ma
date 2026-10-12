@@ -1,5 +1,14 @@
 # Change log
 
+## Contextual cross-links — 2026-10-11
+
+Review the implemented site navigation and retain existing relevant destinations.
+The homepage collaboration action now opens the collaboration pathways before
+contact; network examples link individually to their six cited laboratories.
+Laboratory deep links clear incompatible filters and select the target on the map.
+Existing localized routes, search projections and owner-selected report placeholders
+remain. No deployment. See [review](docs/crosslink-review.md).
+
 ## Laboratory and expert network — 2026-10-11
 
 Developed the canonical network page in FR/EN/AR, with five sections and a searchable directory of 14 supplied laboratories. Added stable localized laboratory search references and withdrew section 6. Preserved source affiliations, missing GEP locality, the single supplied scientific contact and existing imagery provenance. No deployment.
