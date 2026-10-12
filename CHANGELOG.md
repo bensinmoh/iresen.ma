@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-12 — Completed branch reconciliation
+
+- Integrate the histories of `feat/site-search` (closed PR #23) and
+  `codex/institute-editorial-content` (closed PR #92), at the owner's request.
+- Preserve the current site: search was superseded by PR #25 and subsequent
+  improvements; the institute draft was incorporated by PR #94 and later corrected.
+  History-only merges retain the current tree, with no runtime or configuration change.
+- Use a merge commit for the delivery PR so both original branch tips remain ancestors
+  of `main`; full current-head CI remains required before completion.
+
 ## 2026-10-12 — Public release preparation
 
 - Balance Programme approach photo/prose and center lifecycle copy outside the steps.
