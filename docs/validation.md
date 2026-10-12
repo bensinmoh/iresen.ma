@@ -3717,3 +3717,7 @@ See [scope and retained destinations](crosslink-review.md).
 
 Full-site final editorial/search sanity verification remains pending. This review
 changes two visitor pathways and does not authorize deployment.
+
+Cross-link visual follow-up: inspected French/Arabic mobile renderings and the
+homepage collaboration action. The two laboratory destinations now occupy
+separate lines, preserving clear touch targets and the existing SVG arrows.

@@ -519,7 +519,8 @@
   padding-block-start: 1.5rem;
 }
 .examples a {
-  display: inline-flex;
+  display: flex;
+  inline-size: fit-content;
   align-items: center;
   gap: 0.5rem;
   color: var(--color-blue);
