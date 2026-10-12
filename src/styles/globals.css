@@ -3019,3 +3019,50 @@ html[dir='rtl'] .footer-arrow {
 html:has([data-publications-page])::view-transition {
   pointer-events: none;
 }
+
+.useful-tools {
+  max-inline-size: 72rem;
+  margin-inline: auto;
+}
+.useful-tools > p {
+  max-inline-size: 70ch;
+  line-height: 1.8;
+}
+.useful-tools ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 3rem;
+  margin-block: 2.5rem;
+}
+.useful-tools li {
+  padding-block: 1.5rem;
+  border-block-start: 1px solid var(--color-border);
+}
+.useful-tools a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.useful-tools h3 {
+  margin: 0;
+  font-size: var(--font-size-body);
+}
+.useful-tools li p {
+  line-height: 1.8;
+  margin-block: 1rem 0;
+}
+.useful-tools li:nth-child(2) .navigation-icon {
+  color: var(--color-transition-green);
+}
+.useful-tools li:nth-child(4) .navigation-icon {
+  color: var(--color-science-blue);
+}
+@media (max-width: 40rem) {
+  .useful-tools ul {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

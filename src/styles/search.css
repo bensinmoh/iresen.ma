@@ -367,7 +367,7 @@
 .header-search-suggestions mark {
   padding-inline: 0.05em;
   color: var(--color-navy);
-  background: #e2edf8;
+  background: var(--color-action-surface);
 }
 
 .search-result-url {

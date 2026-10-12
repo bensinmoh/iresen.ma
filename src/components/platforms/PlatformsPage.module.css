@@ -53,7 +53,7 @@
 }
 .values svg,
 .infrastructureGrid svg {
-  color: var(--color-blue);
+  color: var(--color-science-blue);
   inline-size: 2rem;
   block-size: 2rem;
 }

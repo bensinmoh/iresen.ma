@@ -17,7 +17,7 @@ type SearchPageProps = {
   result?: SearchResult
   type?: SearchType | 'all'
   sort?: 'relevance' | 'newest'
-  error?: 'invalid'
+  error?: 'invalid' | 'rateLimited' | 'unavailable'
 }
 
 const resultTypes = searchTypes
@@ -99,7 +99,12 @@ export async function SearchPage({
         <SearchSubmit />
       </Form>
 
-      {error === 'invalid' ? (
+      {error === 'rateLimited' ? (
+        <section className="search-state" aria-labelledby="search-limit-title" role="status">
+          <h2 id="search-limit-title">{t('rateLimitedTitle')}</h2>
+          <p>{t('rateLimitedDescription')}</p>
+        </section>
+      ) : error === 'invalid' ? (
         <section className="search-state" aria-labelledby="search-invalid-title" role="status">
           <h2 id="search-invalid-title">{t('invalidTitle')}</h2>
           <p>{t('invalidDescription')}</p>

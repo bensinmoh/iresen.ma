@@ -1,0 +1,474 @@
+{
+  "before": {
+    "phase": "before",
+    "date": "2026-10-12T17:25:10.518Z",
+    "profile": "Lighthouse default mobile, cold cache; 3 sequential runs per route",
+    "routes": {
+      "home": {
+        "route": "/fr",
+        "runs": [
+          {
+            "score": 70,
+            "lcp": 5264.281499999999,
+            "cls": 0.01211820523338625,
+            "tbt": 24,
+            "transfer": 10044556,
+            "js": 239204
+          },
+          {
+            "score": 73,
+            "lcp": 5103.686999999999,
+            "cls": 0,
+            "tbt": 269.9999999999991,
+            "transfer": 10893081,
+            "js": 239204
+          },
+          {
+            "score": 74,
+            "lcp": 6980.209500000001,
+            "cls": 0,
+            "tbt": 132,
+            "transfer": 10893081,
+            "js": 239204
+          }
+        ],
+        "median": {
+          "score": 73,
+          "lcp": 5264.281499999999,
+          "cls": 0,
+          "tbt": 132,
+          "transfer": 10893081,
+          "js": 239204
+        }
+      },
+      "programmes": {
+        "route": "/fr/recherche-innovation/programmes",
+        "runs": [
+          {
+            "score": 71,
+            "lcp": 4354.539000000001,
+            "cls": 0.01255873620923374,
+            "tbt": 412,
+            "transfer": 596331,
+            "js": 232323
+          },
+          {
+            "score": 83,
+            "lcp": 4429.985999999999,
+            "cls": 0.01255873620923374,
+            "tbt": 115.99999999999955,
+            "transfer": 596329,
+            "js": 232323
+          },
+          {
+            "score": 82,
+            "lcp": 4509.417,
+            "cls": 0,
+            "tbt": 115.5,
+            "transfer": 596329,
+            "js": 232323
+          }
+        ],
+        "median": {
+          "score": 82,
+          "lcp": 4429.985999999999,
+          "cls": 0.01255873620923374,
+          "tbt": 115.99999999999955,
+          "transfer": 596329,
+          "js": 232323
+        }
+      },
+      "projects": {
+        "route": "/fr/recherche-innovation/projets",
+        "runs": [
+          {
+            "score": 95,
+            "lcp": 2709.291,
+            "cls": 0,
+            "tbt": 12,
+            "transfer": 787372,
+            "js": 232323
+          },
+          {
+            "score": 76,
+            "lcp": 4792.266,
+            "cls": 0,
+            "tbt": 263.5,
+            "transfer": 787372,
+            "js": 232323
+          },
+          {
+            "score": 84,
+            "lcp": 3758.2199999999993,
+            "cls": 0,
+            "tbt": 216,
+            "transfer": 787372,
+            "js": 232323
+          }
+        ],
+        "median": {
+          "score": 84,
+          "lcp": 3758.2199999999993,
+          "cls": 0,
+          "tbt": 216,
+          "transfer": 787372,
+          "js": 232323
+        }
+      },
+      "publications": {
+        "route": "/fr/ressources/publications-rapports",
+        "runs": [
+          {
+            "score": 79,
+            "lcp": 4583.9619999999995,
+            "cls": 0.007774340693764759,
+            "tbt": 146.5,
+            "transfer": 565733,
+            "js": 232323
+          },
+          {
+            "score": 81,
+            "lcp": 4508.846,
+            "cls": 0.007774340693764759,
+            "tbt": 28,
+            "transfer": 565732,
+            "js": 232323
+          },
+          {
+            "score": 84,
+            "lcp": 4055.7180000000008,
+            "cls": 0.007774340693764759,
+            "tbt": 58,
+            "transfer": 565732,
+            "js": 232323
+          }
+        ],
+        "median": {
+          "score": 81,
+          "lcp": 4508.846,
+          "cls": 0.007774340693764759,
+          "tbt": 58,
+          "transfer": 565732,
+          "js": 232323
+        }
+      },
+      "search": {
+        "route": "/fr/recherche?q=hydrogene",
+        "runs": [
+          {
+            "score": 76,
+            "lcp": 4139.66,
+            "cls": 0,
+            "tbt": 77,
+            "transfer": 452612,
+            "js": 232323
+          },
+          {
+            "score": 86,
+            "lcp": 4063.5319999999992,
+            "cls": 0,
+            "tbt": 22,
+            "transfer": 453830,
+            "js": 232323
+          },
+          {
+            "score": 83,
+            "lcp": 4215.03,
+            "cls": 0,
+            "tbt": 158,
+            "transfer": 455477,
+            "js": 232323
+          }
+        ],
+        "median": {
+          "score": 83,
+          "lcp": 4139.66,
+          "cls": 0,
+          "tbt": 77,
+          "transfer": 453830,
+          "js": 232323
+        }
+      },
+      "contact": {
+        "route": "/fr/contact",
+        "runs": [
+          {
+            "score": 70,
+            "lcp": 6454.109999999999,
+            "cls": 0,
+            "tbt": 297.0000000000002,
+            "transfer": 928720,
+            "js": 232323
+          },
+          {
+            "score": 65,
+            "lcp": 6456.849,
+            "cls": 0,
+            "tbt": 425.0000000000002,
+            "transfer": 928719,
+            "js": 232323
+          },
+          {
+            "score": 69,
+            "lcp": 6377.115,
+            "cls": 0,
+            "tbt": 319.9999999999998,
+            "transfer": 928719,
+            "js": 232323
+          }
+        ],
+        "median": {
+          "score": 69,
+          "lcp": 6454.109999999999,
+          "cls": 0,
+          "tbt": 319.9999999999998,
+          "transfer": 928719,
+          "js": 232323
+        }
+      }
+    }
+  },
+  "after": {
+    "phase": "server-final",
+    "date": "2026-10-12T19:48:57.680Z",
+    "profile": "Lighthouse default mobile, cold cache; 3 sequential runs per route",
+    "routes": {
+      "home": {
+        "route": "/fr",
+        "runs": [
+          {
+            "score": 80,
+            "lcp": 5183.797499999999,
+            "cls": 0,
+            "tbt": 28,
+            "transfer": 2495979,
+            "js": 236195
+          },
+          {
+            "score": 76,
+            "lcp": 7130.906999999999,
+            "cls": 0,
+            "tbt": 40,
+            "transfer": 2495975,
+            "js": 236195
+          },
+          {
+            "score": 76,
+            "lcp": 6684.033,
+            "cls": 0,
+            "tbt": 19,
+            "transfer": 2495970,
+            "js": 236195
+          }
+        ],
+        "median": {
+          "score": 76,
+          "lcp": 6684.033,
+          "cls": 0,
+          "tbt": 28,
+          "transfer": 2495975,
+          "js": 236195
+        }
+      },
+      "programmes": {
+        "route": "/fr/recherche-innovation/programmes",
+        "runs": [
+          {
+            "score": 84,
+            "lcp": 4428.0945,
+            "cls": 0.01255873620923374,
+            "tbt": 79,
+            "transfer": 589325,
+            "js": 229220
+          },
+          {
+            "score": 83,
+            "lcp": 4579.0289999999995,
+            "cls": 0.01255873620923374,
+            "tbt": 77,
+            "transfer": 589309,
+            "js": 229220
+          },
+          {
+            "score": 82,
+            "lcp": 4654.044,
+            "cls": 0.01255873620923374,
+            "tbt": 74,
+            "transfer": 589319,
+            "js": 229220
+          }
+        ],
+        "median": {
+          "score": 83,
+          "lcp": 4579.0289999999995,
+          "cls": 0.01255873620923374,
+          "tbt": 77,
+          "transfer": 589319,
+          "js": 229220
+        }
+      },
+      "projects": {
+        "route": "/fr/recherche-innovation/projets",
+        "runs": [
+          {
+            "score": 87,
+            "lcp": 3976.6839999999993,
+            "cls": 0,
+            "tbt": 10.5,
+            "transfer": 428516,
+            "js": 229220
+          },
+          {
+            "score": 88,
+            "lcp": 3829.3719999999994,
+            "cls": 0,
+            "tbt": 74,
+            "transfer": 428523,
+            "js": 229220
+          },
+          {
+            "score": 87,
+            "lcp": 3995.9439999999995,
+            "cls": 0,
+            "tbt": 41,
+            "transfer": 428517,
+            "js": 229220
+          }
+        ],
+        "median": {
+          "score": 87,
+          "lcp": 3976.6839999999993,
+          "cls": 0,
+          "tbt": 41,
+          "transfer": 428517,
+          "js": 229220
+        }
+      },
+      "publications": {
+        "route": "/fr/ressources/publications-rapports",
+        "runs": [
+          {
+            "score": 82,
+            "lcp": 4509.08,
+            "cls": 0.007774340693764759,
+            "tbt": 26.5,
+            "transfer": 558459,
+            "js": 229220
+          },
+          {
+            "score": 82,
+            "lcp": 4431.4529999999995,
+            "cls": 0.007774340693764759,
+            "tbt": 58,
+            "transfer": 558462,
+            "js": 229220
+          },
+          {
+            "score": 85,
+            "lcp": 3979.608,
+            "cls": 0.007774340693764759,
+            "tbt": 90,
+            "transfer": 558454,
+            "js": 229220
+          }
+        ],
+        "median": {
+          "score": 82,
+          "lcp": 4431.4529999999995,
+          "cls": 0.007774340693764759,
+          "tbt": 58,
+          "transfer": 558459,
+          "js": 229220
+        }
+      },
+      "search": {
+        "route": "/fr/recherche?q=hydrogene",
+        "runs": [
+          {
+            "score": 87,
+            "lcp": 3904.055999999999,
+            "cls": 0,
+            "tbt": 73.5,
+            "transfer": 453406,
+            "js": 229220
+          },
+          {
+            "score": 87,
+            "lcp": 3911.357000000001,
+            "cls": 0,
+            "tbt": 10.5,
+            "transfer": 453400,
+            "js": 229220
+          },
+          {
+            "score": 87,
+            "lcp": 3913.1645000000008,
+            "cls": 0,
+            "tbt": 44.5,
+            "transfer": 454188,
+            "js": 229220
+          }
+        ],
+        "median": {
+          "score": 87,
+          "lcp": 3911.357000000001,
+          "cls": 0,
+          "tbt": 44.5,
+          "transfer": 453406,
+          "js": 229220
+        }
+      },
+      "contact": {
+        "route": "/fr/contact",
+        "runs": [
+          {
+            "score": 77,
+            "lcp": 6006.636,
+            "cls": 0,
+            "tbt": 122.00000000000045,
+            "transfer": 845710,
+            "js": 229220
+          },
+          {
+            "score": 85,
+            "lcp": 3979.42,
+            "cls": 0,
+            "tbt": 145.00000000000023,
+            "transfer": 845701,
+            "js": 229220
+          },
+          {
+            "score": 76,
+            "lcp": 6006.0885,
+            "cls": 0,
+            "tbt": 130.99999999999977,
+            "transfer": 845713,
+            "js": 229220
+          }
+        ],
+        "median": {
+          "score": 77,
+          "lcp": 6006.0885,
+          "cls": 0,
+          "tbt": 130.99999999999977,
+          "transfer": 845710,
+          "js": 229220
+        }
+      }
+    }
+  },
+  "methodNotes": [
+    "Lighthouse 13.5.0, three default mobile runs/route; cold browser cache",
+    "Before native standalone, after Linux container on same local machine; shared workload varies",
+    "Scores/LCP are local lab results, not field CWV or INP",
+    "Final image includes same-origin PDF framing, responsive video poster and request-bound server-rendered consent prompt; all six routes remeasured after these changes."
+  ],
+  "budgets": {
+    "lcpMs": 2500,
+    "cls": 0.1,
+    "performance": 90,
+    "initialJsBytes": 200000,
+    "initialTransferBytes": 1000000
+  },
+  "status": "Measured; budgets not all met. Provider staging and field measurements required."
+}

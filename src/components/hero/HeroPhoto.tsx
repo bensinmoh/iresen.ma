@@ -18,7 +18,7 @@ export function HeroPhoto({ photo }: { photo: HeroPhotoId }) {
         alt=""
         fill
         sizes={desktopSizes}
-        quality={photo === 'platform-gep' ? 75 : 90}
+        quality={photo === 'platform-gep' ? 75 : photo === 'headquarters' ? 60 : 90}
         loading="eager"
         fetchPriority="high"
         className="hero-photo"

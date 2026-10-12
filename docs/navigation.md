@@ -338,7 +338,7 @@ footer-muted `#B9C9DA` and Science Blue `#4698CA` respectively.
 
 This supersedes the earlier quiet hover/focus surfaces for these destination
 blocks. Resting current-route styling, padding, panel formats, localized copy,
-all 22 routes and RTL behavior remain. Screenshot sample labels are styling
+all 23 routes and RTL behavior remain. Screenshot sample labels are styling
 references, not replacement copy. See [shared state rules](design-system.md#desktop-submenu-destination-states--2026-10-09)
 and [this revision's checks](validation.md#desktop-submenu-destination-states--2026-10-09);
 earlier evidence retains its scope.

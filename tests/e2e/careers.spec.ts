@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from './fixtures'
 import { Pool } from 'pg'
 import { randomUUID } from 'node:crypto'
 test.describe.configure({ mode: 'serial' })

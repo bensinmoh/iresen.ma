@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation'
+import { administrationEnabled } from '@/lib/security/policy'
 import config from '@payload-config'
 import { generatePageMetadata, RootPage } from '@payloadcms/next/views'
 import { importMap } from '../importMap.js'
@@ -13,5 +15,6 @@ export const generateMetadata = async ({ params, searchParams }: Props) => ({
 })
 
 export default function CMSPage({ params, searchParams }: Props) {
+  if (!administrationEnabled()) notFound()
   return RootPage({ config, params, searchParams, importMap })
 }

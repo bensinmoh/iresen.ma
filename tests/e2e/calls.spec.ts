@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto'
-import { test, expect } from '@playwright/test'
+import { test, expect } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
 import { Pool } from 'pg'
 import { mkdir, writeFile, rm } from 'node:fs/promises'

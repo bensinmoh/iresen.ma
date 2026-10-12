@@ -2,7 +2,7 @@
 
 The owner's 2026-10-09 request commissions empty section scaffolds across the
 existing website pages. The ordered map in
-[src/lib/page-sections.ts](../src/lib/page-sections.ts) covers all 22 canonical
+[src/lib/page-sections.ts](../src/lib/page-sections.ts) covers all 23 canonical
 page IDs from [src/lib/site.ts](../src/lib/site.ts). It adds sections within those
 pages; it does not change their names, locale paths or navigation hierarchy.
 
@@ -113,7 +113,7 @@ introduction/subject links, `send-request` the local email-draft form,
 `practical-questions` the FAQ and `locations` the full-width location section.
 `page-sections` identifies the platform band. Visual reading order follows the
 owner-selected contact reference rather than the earlier placeholder sequence.
-Equivalent-page locale switching retains these supported anchors; the 22-page
+Equivalent-page locale switching retains these supported anchors; the 23-page
 route baseline remains. See [contact implementation and sources](contact.md).
 
 Apply [the mobile information hierarchy](mobile-information-hierarchy.md) when
@@ -196,3 +196,10 @@ its PDF; no separate governance body or example figures are adopted.
 The 2026-10-11 network request commissions its first five sections and withdraws
 `request-expertise` from page and search. Fourteen supplied laboratory records
 have stable child destinations. See [scope](laboratories-experts-network.md).
+
+## Current release preparation — 2026-10-12
+
+Useful links adds `mapping-tools`; projects keeps its five legacy anchor targets
+while showing only the localized empty catalogue. Historical scaffold and demo
+sequences above describe earlier revisions, not active project content. Current
+programme layout and motion changes preserve every commissioned anchor.

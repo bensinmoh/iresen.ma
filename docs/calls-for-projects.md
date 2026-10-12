@@ -74,15 +74,13 @@ The owner's clarification establishes a one-to-many relationship: a call selects
 several R&D&I projects; each selected project records its originating call.
 The 69-project figure represents those selected R&D&I projects, rather than a
 second project category. It remains a supplied institutional total, not a count
-of the current demonstration database.
+of a public catalogue or the withdrawn demonstration database.
 
-`ProjectRecord.selectionCallReference` reserves the originating call's stable
-`Calls.reference`. The existing 24 demonstration records leave it absent; no
-fictional project is attributed to an institutional call. The current project
-database is an isolated JSON source, not a CMS collection. When verified projects
-are imported into CMS, this reference maps to a relationship to `calls`, and the
-reverse selected-project list derives from that relationship. No duplicate list
-on the call or inferred attribution from a programme name is introduced.
+The fictional project catalogue and its model were withdrawn on 2026-10-12.
+No verified project CMS collection exists yet. A future verified import should
+reserve the originating stable `Calls.reference`, map it to a `calls` relationship
+and derive the reverse selected-project list. Never infer attribution from a
+programme name or duplicate a separately maintained list on the call.
 
 `callHref` builds `/{locale}/{localized-programmes-path}/{reference}` from the
 existing canonical programme ID. `callReferenceFromPath` registers this detail

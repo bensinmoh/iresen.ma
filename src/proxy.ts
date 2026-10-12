@@ -1,3 +1,8 @@
+import {
+  administrationEnabled,
+  publicCmsRequestAllowed,
+  contentSecurityPolicy,
+} from '@/lib/security/policy'
 import createMiddleware from 'next-intl/middleware'
 import { NextRequest, NextResponse } from 'next/server'
 import { routing } from '@/i18n/routing'
@@ -9,7 +14,7 @@ import { searchDatabase } from '@/lib/search/database'
 
 const handleLocaleRouting = createMiddleware(routing)
 
-export default async function proxy(request: NextRequest) {
+async function localeResponse(request: NextRequest) {
   let pathname: string
   try {
     pathname = decodeURI(request.nextUrl.pathname).replace(/\/$/, '') || '/'
@@ -64,8 +69,52 @@ export default async function proxy(request: NextRequest) {
   return NextResponse.rewrite(localizedUrl, { status: 404, headers })
 }
 
+export default async function proxy(request: NextRequest) {
+  const path = request.nextUrl.pathname
+  if (path === '/admin' || path.startsWith('/admin/')) {
+    if (!administrationEnabled())
+      return new NextResponse(null, {
+        status: 404,
+        headers: { 'Cache-Control': 'private, no-store' },
+      })
+    return NextResponse.next()
+  }
+  if (path === '/cms-preview' || path.startsWith('/cms-preview/')) {
+    if (
+      process.env.PUBLIC_RELEASE === 'true' ||
+      (process.env.NODE_ENV === 'production' && process.env.CMS_LOCAL_REVIEW !== 'true')
+    )
+      return new NextResponse(null, {
+        status: 404,
+        headers: { 'Cache-Control': 'private, no-store' },
+      })
+    return NextResponse.next()
+  }
+  if (path.startsWith('/api/')) {
+    if (path === '/api/search' || path.startsWith('/api/careers/')) return NextResponse.next()
+    if (!administrationEnabled() && !publicCmsRequestAllowed(request.method, path))
+      return new NextResponse(null, {
+        status: 404,
+        headers: { 'Cache-Control': 'private, no-store' },
+      })
+    return NextResponse.next()
+  }
+  const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
+  const policy = contentSecurityPolicy(nonce, process.env.NODE_ENV !== 'production')
+  const headers = new Headers(request.headers)
+  headers.set('x-nonce', nonce)
+  headers.set('content-security-policy', policy)
+  const response = await localeResponse(new NextRequest(request, { headers }))
+  response.headers.set('Content-Security-Policy', policy)
+  response.headers.set('Cache-Control', 'private, no-store')
+  return response
+}
+
 export const config = {
   matcher: [
+    '/admin/:path*',
+    '/api/:path*',
+    '/cms-preview/:path*',
     '/((?!api(?:/|$)|admin(?:/|$)|cms-preview(?:/|$)|_next(?:/|$)|_vercel(?:/|$)|.*\\..*).*)',
     '/fr/:path*',
     '/en/:path*',

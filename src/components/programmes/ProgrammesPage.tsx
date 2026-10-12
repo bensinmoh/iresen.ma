@@ -80,30 +80,31 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
           aria-labelledby="programme-intro-title"
         >
           <div className="container">
-            <header className={styles.splitHeading}>
-              <div>
-                <p className={styles.eyebrow}>
-                  <span aria-hidden="true" />
-                  {t('intro.eyebrow')}
-                </p>
-                <h2 id="programme-intro-title">{t('intro.title')}</h2>
-                <figure className={styles.people}>
+            <header className={styles.approachHeading}>
+              <p className={styles.eyebrow}>
+                <span aria-hidden="true" />
+                {t('intro.eyebrow')}
+              </p>
+              <h2 id="programme-intro-title">{t('intro.title')}</h2>
+            </header>
+            <div className={styles.approachGrid}>
+              <figure className={styles.people} data-motion-reveal>
+                <div className={styles.approachPhoto}>
                   <Image
                     src="/images/programmes/collaborative-prototyping.webp"
                     alt={t('researchAlt')}
-                    width={1200}
-                    height={800}
+                    fill
                     sizes="(max-width: 63.999rem) 94vw, 46vw"
                   />
-                  <figcaption>{t('illustrationNote')}</figcaption>
-                </figure>
-              </div>
-              <div className={styles.prose}>
+                </div>
+                <figcaption>{t('illustrationNote')}</figcaption>
+              </figure>
+              <div className={styles.prose} data-motion-reveal>
                 {(t.raw('intro.paragraphs') as string[]).map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
-            </header>
+            </div>
             <div className={styles.cards}>
               {intro.map((item, i) => (
                 <article key={item.title}>

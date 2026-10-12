@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto'
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { pageHref, pageIds } from '../../src/lib/site'
 import { locales } from '../../src/i18n/locales'
 

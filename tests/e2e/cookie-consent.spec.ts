@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test, type Page } from '@playwright/test'
+import { expect, test, type Page } from './fixtures'
 import { pageHref } from '../../src/lib/site'
 import fr from '../../src/messages/fr.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
@@ -344,3 +344,25 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     }
   })
 }
+
+test('first-visit consent copy is present in server HTML, without shared visitor state', async ({
+  playwright,
+  baseURL,
+}) => {
+  const request = await playwright.request.newContext({ baseURL })
+  try {
+    const first = await request.get('/fr')
+    expect(await first.text()).toContain('data-cookie-banner')
+    const decision = encodeURIComponent(
+      JSON.stringify({ version: 1, external: false, expires: Date.now() + 86400000 }),
+    )
+    const returning = await request.get('/fr', {
+      headers: { Cookie: `iresen_consent=${decision}` },
+    })
+    expect(await returning.text()).not.toContain('data-cookie-banner')
+    const nextVisitor = await request.get('/fr')
+    expect(await nextVisitor.text()).toContain('data-cookie-banner')
+  } finally {
+    await request.dispose()
+  }
+})

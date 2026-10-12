@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { locales, type Locale } from '../../src/i18n/locales'
 import { footerContact, footerSocialLinks } from '../../src/lib/footer'
 import { footerNavigationGroups, footerPageIds, pageHref, pageLinkHref } from '../../src/lib/site'

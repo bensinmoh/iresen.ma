@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-12",
+  "original": {
+    "file": "public/videos/hero.mp4",
+    "bytes": 9774051,
+    "sha256": "548d570107419bc56ba1622ee8ec4eae365ed52a2e3faee248330fc4fa6be2eb"
+  },
+  "derivative": {
+    "file": "public/videos/hero-mobile.mp4",
+    "bytes": 1086393,
+    "sha256": "42cfc257f356f931961db6d1ebf74164685037ff05ef560143da7699e42c68be",
+    "encoding": "H.264, width 960px, same full duration/frame rate, no unused audio, CRF30/maxrate450k/bufsize900k, faststart",
+    "use": "Hero autoplay at or below 64rem; original retained above this width",
+    "searchReference": "asset:hero-video:{locale}, shared with original"
+  }
+}

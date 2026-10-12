@@ -1,489 +1,115 @@
-# IRESEN product context
-
-## CMS interface review — 2026-10-11
-
-The current owner request commissions the administration frontend only, across all modules with locally testable journeys. The French interface edits FR/EN/AR review text in browser storage, without CMS/database connections or public projection changes. Review examples remain local and careers starts empty. See [scope](docs/cms-interface-preview.md). Real authentication, integrations and database connection await the subsequent phase.
-
-## Research platforms — 2026-10-11
-
-The owner commissions the canonical platforms page: complementary network introduction, GEP, GSBP, GEPMCI and GreenH2A, 13 infrastructure summaries and one network referral. Manuscript copy overrides screenshot samples. Explicit EN/AR drafts await editorial review; missing official destinations are omitted. GreenH2A retains development/3D wording. Routes, six legacy anchors and publication gates remain. See [scope](docs/research-platforms.md).
-
-## Laboratory and expert network — 2026-10-11
-
-The owner commissioned the canonical network page after the other chat’s merge, excluding section 6. Five modules explain competence areas, contribution modes, the supplied 14-laboratory network, research-based skills and technical specialities. The directory filters by query and topic; it adopts only the supplied Settat scientific contact. No Alumni sample people, figures or testimonials are used. See [scope](docs/laboratories-experts-network.md). FR/EN/AR remain working copy; no deployment.
-
-## Institute — 2026-10-11
-
-The [Institute page](docs/institute-page.md) is implemented from the supplied manuscript after Governance completion: three detailed missions and their shared cooperation enabler, positioning, five working values, ambition, eight historical milestones with two supporting entries, and the report feature. The report’s reading/download actions use the owner-requested `#` pending the PDF. EN/AR remain working adaptations. No governance sample content or new figures are introduced.
-
-## Médiathèque — 2026-10-10
-
-The media route is a resource directory for photos, videos, Ministry reports/strategies and useful institutional links. It includes the owner-supplied CEO portrait and only approved public CMS videos. Original document/video titles remain; localized descriptions are working copy. See [scope](docs/media-library.md).
-
-The owner’s refinement adds an alternating photo mosaic with Samir first, a compact
-horizontal rail of full-height video thumbnails opening a native player dialog, animated section links, a centered icon-operated viewer
-and a shorter generated-photo hero without the missions band. Reduced motion is
-respected; the generated still-life is identified as illustrative in search and
-its provenance manifest.
-
-## Careers and opportunities — 2026-10-10
-
-The commissioned careers page and opportunity database are described in
-[scope](docs/careers.md). The owner has now requested and completed deletion of
-all four fictional offers. The list appears only for eligible published/open
-records and otherwise shows the designed empty state. No applicant-data storage or online submission
-receipt is asserted. Other deferred sections remain deferred.
-
-## Current narrative — 2026-10-10
-
-The owner's new Phase I narrative supersedes the former institute-wide
-Développer · Éprouver · Valoriser framework. Use **Études & Expertise**, **Recherche
-& Innovation** and **Compétences & Capacités**, with **Coopération & Rayonnement**
-as their shared enabler. The three functions remain within R&I. The owner's later
-§4.4 correction supplies partnerships, networks, institutional exchanges and events
-as intervention modes, and connected actors, mobilised resources, concrete
-cooperation and recognition as contributions. See [analysis and whole-site disposition](docs/narrative-alignment.md).
-
-The current request authorizes content alignment and homepage mission design.
-The mission-design deferral below is historical. New FR/EN mission statements are
-source copy; other summaries and AR are working adaptations. The 22 routes,
-existing facts/media, honest service boundaries and final editorial review remain.
-
-This is a concise working map of [the development brief](instruction.md), not new
-institutional copy. The owner's current request defines the authorized increment;
-the brief describes the broader project. Update this map when implemented scope or
-approved product decisions change.
-
-## Homepage mission wording — 2026-10-09
-
-The owner supplied French, English and Arabic mission statements for the existing
-homepage introduction. All three are now rendered as paragraph copy above the
-mission cards. The owner explicitly deferred its design; the later homepage
-restructuring remains deferred. Existing homepage and mission-section search
-bodies include the updated wording through the localized catalog descriptions.
-
-## Homepage research domains — 2026-10-09
-
-The owner commissioned domains directly below missions: seven themes and four
-axes from the supplied consolidated R&D proposal, thematic icons, changing
-illustrations and a native mobile accordion. FR/EN/AR are explicitly requested
-working texts to review. This bounded request replaces the domains placeholder;
-it does not apply the earlier full homepage reordering or adopt the strategy.
-Four following modules remain placeholders. See [scope and sources](docs/research-domains.md).
-
-## Purpose and visitors
-
-Build IRESEN's official French, English and Arabic institutional website. Help
-visitors understand its role, discover research and experimental capabilities,
-find resources and identify appropriate ways to collaborate. Give communications
-staff a practical editorial interface.
-
-Public institutional pages explain and guide; resource listings help visitors
-find material; CMS/admin screens help editors complete tasks. Choose composition
-and density for the particular surface, rather than treating every screen as a
-marketing page.
-
-## Current implementation
-
-- Next.js, React, strict TypeScript, next-intl, Tailwind/CSS tokens, Payload CMS and
-  PostgreSQL; exact versions live in [package.json](package.json).
-- French is the default locale; `/fr`, `/en` and `/ar` have explicit URLs. Arabic
-  uses RTL. Stable page IDs and equivalent localized paths are centralized in
-  [src/lib/site.ts](src/lib/site.ts) and [src/i18n/routing.ts](src/i18n/routing.ts).
-- The responsive header follows the owner's reattached navigation screenshots
-  with desktop mega-menus, a compact grouped menu, search/contact controls and
-  equivalent-page language access. It preserves the approved hierarchy. New localized descriptions are wayfinding
-  drafts. Photo/video page introductions place this header over their imagery with a dark
-  transparent gradient; contact uses the normal white header. White panels retain the existing open-menu behavior.
-  [Navigation documentation](docs/navigation.md) records sources and verification.
-  The substantial trilingual navy footer follows the analyzed native Figma reference
-  and owner-reattached Footer.png, retaining the requested newsletter CTA.
-  Text beneath its logo uses owner-selected French copy for this footer block
-  only; English/Arabic equivalents remain drafts, without broader slogan or page-copy approval.
-  [Footer documentation](docs/footer.md) records content sources, owner corrections,
-  verification and outstanding editorial limits.
-- The owner's four 2026-10-09 mobile screenshots guide composition at `40rem`
-  and below: logo/hamburger header, white full-screen navigation with search,
-  contact, legal and all three locales; a homepage image scene with low copy and
-  two full-width 48px actions before its figure row; and a single-column footer
-  with stacked contacts and separate newsletter email/action rows. Canonical
-  routes, approved identity/content and the integrated search backend remain.
-  Sample screenshot wording and colors are not new approvals. See
-  [the adaptation](docs/design-system.md#mobile-reference-adaptation--2026-10-09)
-  and [its validation record](docs/validation.md#mobile-reference-adaptation--2026-10-09).
-- The 20 pages other than contact/search have introductory heroes with four
-  text-placement modes: 19 use generated photos, while the homepage uses the
-  owner's video with its generated photo as fallback. Contact now uses the separate
-  composition described below; search uses a compact functional results view.
-  Short FR/EN/AR wayfinding drafts and the
-  three contribution domains and common cooperation enabler now guide orientation.
-  The homepage hero band now presents five owner-supplied figures: 69 collaborative
-  projects supported, +60 patents filed, +1000 young researchers supported, +1100
-  scientific publications and +18 university laboratories established. These
-  replace its founding-year/pathway items; other pages retain their pathways,
-  and institute retains the established 2011 founding year. French labels come
-  from the owner's request with spelling corrected; EN/AR labels remain drafted
-  translations. Figma screenshots supply typography hints, rather than approval
-  of numeric claims. The header-to-band landing
-  measures the current viewport and grows for content when necessary. See
-  [hero documentation](docs/heroes.md).
-- The generated photos replace the former Figma-source backgrounds with generic
-  research, renewable-energy and collaboration scenes. They do not document real
-  IRESEN facilities, people or events. Landscape and portrait crops support wide
-  and mobile views; copy, claims, routes and fonts remain. Backgrounds now fill
-  the scene with readable overlays. Former split pages use
-  start-aligned copy; utility editorial pages retain their reading measure over a
-  lighter neutral dark overlay. Three generated contextual images now illustrate
-  governance, career onboarding and collaboration; all 17 active photo assets
-  remain fictional. External Green Energy Park and office-photo candidates remain
-  pending source-download access; the owner's separate headquarters photograph
-  now appears in the contact introduction. See
-  [current media and readiness](docs/contextual-hero-media.md) and
-  [the asset manifest](docs/hero-assets.json); earlier replacement checks retain
-  their revision-specific scope.
-- The 20 canonical pages other than contact/search retain section placeholders below their introducing
-  heroes, using shared IDs/order and localized headings with short draft content
-  notes in FR/EN/AR. Institute retains its three principal anchors and nests
-  capacities and 2035 ambition under Mission; the sitemap retains its working
-  directory of all 22 pages. See [the section guide](docs/page-sections.md).
-  These placeholders do not populate institutional content or CMS collections;
-  the full institutional homepage is still unfinished. Page/news/media collections start empty. Empty and error states exist. Public
-  pages render their content without a locale-wide streamed loading boundary,
-  so footer destinations remain readable when JavaScript is disabled.
-- On 2026-10-09 the owner explicitly requested the original `/videos/hero.mp4`
-  for the homepage, with no playback button. Normal-motion playback starts after
-  hydration, muted, looping and inline. No-JavaScript, reduced-motion and failure
-  states retain the generated photo; a live reduced-motion change unloads the
-  video. The unchanged 9.32 MiB file is a requested budget exception, with
-  byte-range delivery and future web derivatives still performance concerns.
-  Continuous motion without a pause control does not establish WCAG 2.2.2
-  conformance. See [current hero behavior](docs/heroes.md#homepage-hero-video--2026-10-09)
-  and [source metadata and rights limits](docs/asset-inventory.md#hero-video).
-- The 2026-10-09 mobile hierarchy at `40rem` and below hides the homepage's
-  redundant scroll cue, uses a 32px lower reserve at default text size, stacks
-  its two existing navigation links at full width and
-  retains all five facts. The later tablet refinement hides the secondary ISO
-  badge below `70rem` and keeps the facts in one labelled native horizontal
-  scroll row at every width. Horizontal navigation scrollbars are hidden by the
-  owner's general preference, with keyboard/touch scrolling and visible focus
-  retained. Other pages remain. [The reusable rule](docs/mobile-information-hierarchy.md)
-  preserves essential routes, forms, feedback and facts while limiting competing
-  roles. The requested three homepage mission cards now use drafted wayfinding
-  copy over full generated photographs: three columns on desktop, stacked
-  photographic cards on tablet and a native horizontal collection below 48rem.
-  White text sits near the bottom with inline underlined destinations. A blue
-  hover/focus tint and slight image zoom preserve card geometry; reduced motion
-  keeps images still and applies the tint immediately. The mobile scrollbar
-  stays hidden, with a neighboring-card glimpse where space permits; all three
-  destinations retain keyboard/touch and no-JavaScript access. Enlarged text can
-  use the full available card width.
-  A homepage-only section submenu follows the figures and sticks from 64rem;
-  the real figure band retains the `figures` anchor. See [the section guide](docs/home-sections.md).
-  The other content pages retain section placeholders; contact has
-  its own populated draft composition and search uses its functional results view.
-- Search now covers public pages/sections, published CMS pages/articles and
-  registered or uploaded public documents/media in the active locale. Ranked
-  results, normalized matching, live suggestions, URL filters/date sorting and
-  pagination follow the [search guide](docs/search.md).
-  Results now preview registered/public media, document formats with an expandable
-  PDF viewer, and locale-approved news lead images when available. Private,
-  withdrawn or untranslated images stay excluded; missing article imagery uses
-  a truthful text marker. Native file/open links remain. See
-  [preview behavior](docs/search.md#result-previews).
-  The header expands its field on hover/focus and submits to the lean results page. Exact matches precede spelling corrections
-  and related topics; explicit correction links preserve the visitor's query.
-  The multilingual concept vocabulary includes platforms/infrastructure and
-  PV/solar photovoltaics, without claiming general model-based semantic search.
-  New public resources must supply search references and real discovery vocabulary
-  in the same change. Server-side contact acceptance/delivery remains
-  unavailable. The newsletter
-  keeps local editable email/consent controls; Subscribe opens a native disclosure
-  with the localized unavailable message, hidden initially. The address links to
-  consent-gated Google Maps; privacy remains in utility/legal links, with the duplicate below
-  newsletter consent removed. No subscription is submitted or stored, and no
-  success is reported; signup still has no provider or endpoint. See
-  [footer behavior](docs/footer.md#address-and-privacy-links--2026-10-09).
-- The 2026-10-09 contact page follows the owner's selected Figma contact frame
-  and attached screenshot: white shared header, split introduction/headquarters,
-  four platform entries, pale form band, full-width location/map, native FAQ and
-  shared navy footer. The owner's headquarters photo
-  now replaces the original cyan curves; original bytes remain intact, with
-  responsive optimized delivery and a CSS crop/readability overlay.
-  Existing footer address, phone
-  and email are reused; no sample opening hours, response deadline or departmental
-  mailboxes are adopted. Subject links prepare the relevant form topic, and
-  platform/FAQ links use canonical pages. Complete FR/EN/AR copy is draft copy.
-  The form prepares an email locally and lets the visitor review/send it through
-  their own email application. It does not submit or store data, and direct
-  email/telephone/directions links remain available without JavaScript.
-  The owner's explicit 2026-10-09 refinement replaces the earlier on-demand map
-  with a directly rendered server iframe using native lazy loading. It requires
-  no reveal click or client state; the lower explanatory strip is removed and
-  the separate directions link remains. Its address-query pin is not verified
-  against the unresolved owner-supplied shortlink. Third-party
-  data flows and applicable consent remain a release review. See
-  [contact sources, anchors and service limits](docs/contact.md).
-
-The owner's earlier 2026-10-09 instruction authorized pushing the snapshot while
-documentary photos remained pending; a headquarters photo was subsequently supplied
-for contact. Remaining external-photo candidates do not hold delivery.
-
-See [backlog](docs/backlog.md) for remaining work and [validation](docs/validation.md)
-for previous checks; neither proves a later change was tested.
-
-## Content and structure
-
-Preserve the existing owner-approved page boundaries and central route map. Navigation covers
-the institute, research and innovation, expertise and experimentation, transfer,
-collaboration, resources/news, search and contact. Do not derive additional pages
-or services from a screenshot.
-
-The chosen working structure is the existing 22 stable page IDs in `src/lib/site.ts`;
-use this single route definition for internal links. [ADR 0004](docs/adr/0004-canonical-working-site-structure.md)
-records the decision and the coordinated update procedure for later changes.
-
-The three newly supplied strategy DOCX files are authorized for repository
-reference and analysis; see the [strategy reference index](docs/references/strategy/README.md).
-Their detailed website structure and section suggestions remain recommendations,
-with the owner's 2026-10-09 request authorizing their use for empty section
-placeholders on the current pages. They do not replace the implemented navigation.
-Final institutional copy, translations and the proposed slogan still require
-editorial approval.
-
-The contribution framework has three domains and one shared enabler, as described
-in [the current narrative](docs/narrative-alignment.md). Develop, test and valorise
-are functions within Research & Innovation. Studies/expertise and skills/capabilities
-can also address independent needs. Cross-domain cooperation mobilises actors,
-expertise, resources and networks. Existing platform/programme/transfer pages
-remain the canonical destinations; this is not a new organigram or route map.
-
-Remaining homepage modules, further factual claims and institutional translations
-remain editorial inputs. The five requested homepage figures are recorded in
-[the hero content guide](docs/heroes.md#homepage-key-figures--2026-10-08), sourced
-from the owner's explicit message. Internal narratives and sample export content
-are not publishable facts.
-Do not invent figures, facilities, commitments, people, testimonials or results
-to complete a composition. Draft translations must not be labelled approved.
-
-UI catalogs and CMS translations have distinct roles. Public CMS reads enforce
-access and disable translation fallback; an unfinished Arabic version must not
-silently expose French text as published Arabic content.
-
-## Planned homepage restructuring — 2026-10-09
-
-The owner's latest [homepage brief](docs/homepage-restructure.md) records six
-sections between the existing hero and footer: Notre mission → Nos réalisations
-emblématiques → Nos domaines de recherche → Nos capacités scientifiques et
-technologiques → Collaborer avec IRESEN → Actualités & événements. It supersedes
-the earlier P01 homepage sequence for future work. Figures stay in the hero;
-Financement becomes four collaboration paths with Alliances inside that section.
-News/events reuse eligible site records, with a fourth news item when no upcoming
-event is available.
-
-Only analysis and Markdown updates are authorized now. The restructuring waits
-until the owner starts development of the section after missions, “Nos
-réalisations emblématiques”. The separately delivered [mission cards and section
-navigation](docs/home-sections.md), five following placeholders, routes and CMS
-remain the implementation baseline. The `figures` anchor is already on the hero
-band, with its duplicate body block omitted.
-Named achievements/platforms, domain taxonomy, media and translations remain
-inputs to review for the corresponding future module. Source labels such as
-“Agence de Moyens” and “Collaborer avec nous” do not rename current pages.
-
-## Delivery boundaries
-
-Use the existing repository, shared components and pinned dependency versions.
-Keep institutional assets, rights, private references and public application
-assets distinct. Local reversible design work can proceed within the requested
-scope; deployment, DNS and repository visibility follow existing authorization
-rules. A design workflow does not authorize publication or a new product feature.
-
-Read [DESIGN.md](DESIGN.md) for visual direction and
-[the design workflow](docs/design-workflow.md) for task routing.
-
-## Homepage news — 2026-10-09
-
-The [homepage news module](docs/home-news.md) displays five owner-selected
-LinkedIn sources, month-level dates, responsive scrolling and animated arrows.
-It prepares a Posts API field projection; live OAuth/API synchronization is still
-future work. Cards use owner-requested short explanatory titles in FR/EN/AR; source
-commentary stays separate. Three other body
-placeholders and the full homepage reordering remain deferred.
-
-## Homepage collaboration — 2026-10-09
-
-The owner commissioned four audience pathways at the existing collaboration
-location and supplied +120 collaborators. The section recalls the existing
-certification and links to opportunities or contact with an appropriate subject.
-FR/EN/AR remain working wording; no available thesis positions, guaranteed
-services or funding commitments are implied. Achievements and capabilities
-remain placeholders. See [scope](docs/home-collaboration.md).
-
-## Certification wording correction — 2026-10-09
-
-The owner’s later wording, “Premier institut de recherche certifié ISO 9001 en
-Afrique”, supersedes the earlier agency-only description in both homepage
-hero and collaboration. FR/EN/AR catalogs and search projections carry the
-correction; the detailed ISO 9001:2015 standard remains. This is owner-supplied
-copy, not independent certification verification.
-
-## Homepage platforms and expertise — 2026-10-09
-
-The owner commissioned the existing `platforms-expertise` module: outdoor GEP
-photography behind a left introduction and four compact photographic platform
-cards, with white text over dark gradients. A lower two-block band introduces
-the laboratory network and complementary expertise. Original logos remain unchanged and display in light gray through CSS.
-The section reuses the aligned grid, section-label/type roles and physical
-signature corners; below 70rem the introduction stacks, below 40rem cards stack.
-FR/EN/AR are working summaries; GreenH2A is explicitly in development and its
-image is labelled as a 3D view. Existing platforms/network destinations remain.
-Search covers the section, four card anchors and nine supplied media assets.
-Achievements are the sole remaining body placeholder; full reordering remains
-deferred. See [scope and sources](docs/home-platforms.md).
-
-## Homepage achievements — 2026-10-10
-
-Eight owner-selected achievements replace the last homepage placeholder on
-white with no outgoing card links. The supplied report cover appears in stacked
-reports with one standing copy. This request activates the previously agreed
-missions → achievements → research → capabilities → collaboration → news order.
-FR/EN/AR are working copy for review; the user supplies claims and photos.
-See [scope](docs/home-achievements.md). Alliances remain deferred.
-
-## Homepage innovation pathway — 2026-10-10
-
-The owner commissioned a compact light transition between research and platforms, explaining five stages from national needs/ideation to adoption and evaluation. Support and maturation span the pathway. It links to the canonical transfer page and retains the hero figures and six principal navigation entries. FR/EN/AR are working copy for review. See [scope](docs/home-innovation.md).
-
-## Collaboration and valorisation — 10 October 2026
-
-The owner commissioned the existing workWithUs and transfer pages. Their six canonical sections are populated with working FR/EN/AR content, complementary contributions, adaptive maturation/use pathways, existing reference achievements and contact preparation. No funding, access, commercial outcome or service availability is promised. Published CMS gates and routes remain. See [scope](docs/collaboration-transfer-pages.md).
-
-## Valorisation and patent catalogue — 2026-10-10
-
-The revised transfer page presents the owner's research-to-impact pathway,
-intellectual-property support, four possible valorisation routes and two visitor
-entry points. A dedicated minimal JSON database stores 59 selected filed patent
-references, without project relationships or annuities. Original titles and
-applicants, localized short summaries, themes, filing year (and exact filing
-date where verified in the register) and PatentRegister links feed an interactive catalogue and public search. Patent-specific contact
-links prefill the existing local email draft. Missing years stay unknown;
-filings do not imply active rights or commercial adoption. See
-[scope, provenance and maintenance](docs/valorisation-patents.md).
-
-## Collaboration page redevelopment — 2026-10-10
-
-The owner's later request renames and redevelops the existing `workWithUs` page as
-“Collaborer avec nous”. The six anchors and working FR/EN/AR content remain.
-Need-based light entry panels, open contribution/format rows, a four-stage
-sequence, existing reference photographs and an ink contact checklist adapt the
-live Figma cooperation frame within the current shared rules. FR/EN canonical
-paths change together; permanent redirects retain the former URLs. Shared
-navigation, footer, SEO and search consume the updated central definition.
-See [scope and reference decisions](docs/collaborate-page.md).
-
-## News & events — 2026-10-10
-
-The owner commissioned the combined news/events page and its thumbnail listing
-with a shared hero. Existing news paths host the overview; former events paths
-redirect to its events anchor. Navigation news links reach its news anchor;
-“All news” reaches the localized child listing. Five selected LinkedIn notices,
-three role-labelled events (Oman, COP31 in preparation, IRSEC’X 2027), vector
-social links, shared physical two-rounded/two-sharp corners and localized search
-references are included. FR/EN/AR copy remains working editorial text. No deployment
-or publication-gate change is authorized. See [scope](docs/news-events.md).
-
-## R&D&I projects — 2026-10-11
-
-The owner commissioned the Figma projects page and an isolated structured database
-of 24 explicitly fictional projects. Native GET search/facets, six-item pagination,
-FR/EN/AR and responsive/RTL layouts are included. Fictional records remain outside
-CMS and institutional search; the page and its seven visuals have localized search
-references. No real portfolio claims or deployment are introduced. See
-[scope](docs/projects.md).
-
-## Project interactions — owner follow-up, 2026-10-11
-
-The owner commissioned local filter updates without anchor jumps, soft card
-transitions, image zoom inside a fixed frame on hover, and a project-detail
-panel entering from the physical right, using the supplied local video as a
-visual reference. Project filter fields use the shared two-rounded/two-square
-action corners. Fictional notices are removed from the frontend as explicitly
-requested; record provenance remains in the isolated database/documentation,
-with no project-level institutional-search entries or deployment. See
-[updated scope](docs/projects.md).
-
-Owner detail follow-up: include presentation, metadata, hosting platform, contact,
-consortium and scientific objectives, with contact and note-download actions.
-The owner selected `contact@iresen.ma` until per-project emails are provided.
-72 localized PDF notes are generated from the demonstration database and served
-as validated attachments, outside public assets and institutional search. See
-[detail and notes scope](docs/projects.md#complete-detail-and-project-notes--owner-follow-up-2026-10-11).
-
-## Feuille de route R&D — 2026-10-11
-
-The owner commissions the canonical priorities page from the supplied manuscript,
-which overrides Figma sample copy. Seven themes and 28 complete axes describe
-research directions and intended benefits. EN/AR remain working editorial copy.
-Conceptual generated illustrations do not establish installed facilities or
-achieved results. See [scope](docs/roadmap.md).
-
-## Governance and organisation — 2026-10-11
-
-The owner commissioned the governance page, corrected the board composition
-(SIE removed, UM6P and Ministry of Industry and Trade added), supplied eight
-scientific council members and six team portraits/assignments. Three poles and
-seven departmental remits accompany the DG, with no invented officeholders.
-Imane and Jamaleddine have function labels without director titles. EN/AR remain
-working editorial copy. See [scope](docs/governance.md).
-
-Network directory map follow-up (2026-10-11): 14 supplied laboratories are
-represented by ten approximate city groups, synchronized with the list and
-filters. GEP's newly supplied city is Ben Guerir; its scientific contact is
-Abdelatif GHENNIOUI (ghennioui@iresen.org). Positions express discovery, not
-surveying precision or additional service availability. No deployment.
-
-## Programmes R&D&I — 2026-10-11
-
-The owner commissions the existing programmes route from the manuscript. Funding and support remain instruments of Recherche & Innovation. Three functions, expected benefits, six stages, historical examples and an honest empty current-call state are delivered. Preserve the 69-project reference for 2025, working EN/AR translations, local contact email drafts and the absence of active verified calls. See [scope](docs/programmes-rdi.md).
-
-CMS follow-up: the owner commissions every call’s metadata, calendar, budget, recipients, themes, funding partners, actual terms PDF and submission form URL. Date-derived states control the form action and archive listing. Only published, locale-approved complete records are public; no actual calls were supplied. See [workflow](docs/calls-for-projects.md).
-
-## Cookie management — 2026-10-12
-
-The owner commissions public first-visit consent and permanent preferences in
-FR/EN/AR. A blue acceptance button, necessary-only/refusal controls, a centered native preference dialog and a
-180-day necessary decision cookie gate Google Maps before loading and remove it
-on withdrawal. This supersedes the earlier automatic-map behavior. Shared
-blue/navy, fonts, physical signature corners and logical responsive layout are
-reused; no new design token or tracker is introduced. See
-[consent scope](docs/cookie-consent.md). No deployment or complete legal-conformance claim.
-
-Cookie-control follow-up: the owner selects primary IRESEN-blue acceptance, an
-explicit necessary-only action, necessary/optional categories, a readable grey
-refusal and a vector settings button whose label appears on hover or keyboard
-focus. Preferences are centered vertically/horizontally and use an accessible
-SVG close cross. Control feedback uses the existing 180ms token and respects
-reduced motion; refusal remains enabled and available in one click.
-
-Final responsive correction: the preferences use a 56rem maximum width with one
-desktop action row. At 64rem and below, acceptance/refusal occupy row one;
-necessary-only and a compact gear occupy row two. The necessary label expands
-to “Uniquement le nécessaire” when it fits, with a short narrow-screen fallback.
-Rows keep equal heights from a 48px minimum. Mobile hover/focus labels sit outside
-the grid flow so hidden text cannot create oversized buttons; enlarged text may
-grow the shared rows naturally.
-
-Available-space follow-up: intermediate-width banners keep a two-row action
-group at the trailing side. The necessary-only label uses measured button/font
-width, retaining its full wording wherever it fits and shortening only when
-required. Caption measurements are invisible and clipped; visible text stays
-at full contrast during control feedback.
-
-## Useful-information pages — 2026-10-12
-
-The owner commissions the five existing legal/privacy/cookie/accessibility/sitemap
-pages with short introductions. IRESEN's association status is owner-confirmed;
-texts describe actual browser/email/Maps behavior and Moroccan Law 09-08 rights,
-without fabricated operational facts or conformity claims. Sitemap body contains
-only shared canonical page links. FR/EN/AR are working adaptations. See
-[scope and release inputs](docs/utility-pages.md). No deployment.
+# IRESEN product and content truth
+
+Current baseline: 2026-10-12. This describes the implemented site and outstanding
+boundaries. Dated scope guides/changelog retain evidence; Git history retains
+superseded decisions. Latest owner instructions prevail over reference documents.
+
+## Purpose, audience and narrative
+
+The institutional website explains IRESEN's contribution, research priorities,
+experimental capabilities and ways to collaborate, and makes institutional resources
+findable. Audiences include research teams, universities, businesses, public actors,
+partners and prospective colleagues. French, English and Arabic are complete working
+interfaces; final institutional/editorial and translation approval remains separate.
+
+The narrative has three contribution domains: **Études & Expertise**, **Recherche &
+Innovation**, **Compétences & Capacités**. **Coopération & Rayonnement** is their common
+enabler. **Développer · Éprouver · Valoriser** belongs within R&I. Funding and
+infrastructure are instruments; patent filings or project counts do not demonstrate
+commercial adoption. Preserve sourced claims, periods, original titles/authors and
+explicitly missing values. Do not invent institutional facts, outcomes or commitments.
+
+## Implemented public journeys
+
+The only routing authority is `src/lib/site.ts`: 23 stable IDs, localized paths,
+supported anchors and shared helpers. Six footer utilities include Useful links.
+News/event aliases, news listing and published call/news details reuse this map.
+Existing anchors remain compatible; route changes follow ADR0004 and update all
+locale paths, links, metadata, sitemap/search and documentation together.
+
+- **Homepage:** missions, achievements, research, compact innovation transition,
+  platforms/capabilities, collaboration and news; hero figures remain. Six main
+  section-navigation entries, original supplied assets and scoped working copy.
+- **Institute:** three missions/common cooperation, values, 2035 ambition, eight
+  2011–2026 milestones. Arabic timeline reads right-to-left; arrows advance exactly
+  one milestone with fixed eight-item count. The supplied activity-report cover
+  and Consult action retain `#` until the approved public PDF is supplied.
+- **Governance:** owner-supplied board/council/organisation and portraits; biography
+  dialogs, sourced professional profile links and Arabic personal-name transcriptions.
+  Do not invent a public profile or career for unmatched people.
+- **Priorities:** seven themes/28 complete axes and benefits, native disclosures and
+  illustrative technical artwork. Withdrawn common paragraph/navigation stay absent.
+- **Programmes:** approach, outcomes, lifecycle, sourced historical schemes and
+  eligible CMS calls/details. Balanced responsive approach and centered lifecycle
+  copy outside the steps. Keep the sourced 69-project agency figure independent
+  from the withdrawn fictional catalogue.
+- **Collaborative projects:** empty catalogue, retained original hero/five anchors,
+  “Les projets seront bientôt mis à jour” and EN/AR working adaptations. All 24
+  fictional records, 72 notes, professor/consortium fillers and exclusive visuals
+  are withdrawn. Old downloads return 404. A real model/source is future work.
+- **Platforms:** five supplied platform destinations/photos/logos, actual maturity,
+  capabilities and contacts. GreenH2A retains in-development/3D wording.
+- **Laboratory network:** 14 supplied records, local topic/query filtering and
+  approximate interactive Morocco map. GEP city stays unspecified; only the
+  supplied Settat scientific contact is named. No invented Alumni/people/testimonials.
+- **Collaboration and valorisation:** commissioned audience/transfer journeys, legacy
+  anchors and honest contact boundaries. Patent catalogue retains 59 filings;
+  summaries and EN/AR copy remain working editorial texts, without adoption claims.
+- **News/events:** sourced selected news, combined page and child listing, social links
+  and three featured events. COP31 is owner-confirmed; side events/pending slots keep
+  preparation wording and no fabricated dates or signup links. No live LinkedIn sync.
+- **Publications/reports:** 1,199 retained publications, T4 2026, six frequent themes,
+  immediate cross-counted facets, original titles/authors/years and DOI links.
+  SJR2025, provisional/editorial flags and dated citations remain distinct. Excluded
+  workbooks/184 records/four 2027 withdrawals stay excluded. Reports reuse approved media.
+- **Media/careers/contact:** approved galleries/video/report journeys; careers lists only
+  published/open/locale-approved complete offers and otherwise stays visibly empty.
+  No career fixtures. Contact/application actions compose local emails, with no online
+  intake, applicant uploads, stored form data, receipt or delivery guarantee.
+- **Utilities:** current legal/privacy/cookie/accessibility notices, human-readable
+  sitemap and four owner-selected external mapping tools. No tool embed/tracker;
+  each stable tool anchor has localized public discovery.
+
+Detailed current boundaries and provenance are linked from README and
+[the route map](docs/route-map.md). Documents/screenshots supply recommendations
+and visual references, not independent approvals or requests for new features.
+
+## Publication, privacy and security
+
+Public CMS reads enforce access, publication state and approved complete locale,
+with translation fallback disabled. Search rechecks current public eligibility;
+exact matches lead linguistic/typo/related results, and corrections stay explicit.
+Public additions require stable localized references. Private files, drafts,
+editorial notes and unapproved translations never become searchable by registration.
+AI illustrative images retain provenance/exclusion rules. Final multilingual
+terminology/glossary/search sanity review remains open until content is final.
+
+Google Maps is the only optional embedded service and requires prior external-service
+consent; refusal/withdrawal removes it. Consent lasts 180 days and supports preferences,
+keyboard, RTL and no-JS reading. Provider-added cookies/services require IT/legal review.
+The newsletter does not register subscribers; CMS email delivery is unconfigured.
+
+Public production administration is closed by default. `PUBLIC_RELEASE=true` forbids
+admin/local-review opt-ins. `/cms-preview` is a separate isolated browser-only design
+review with synthetic state, no Payload/database/integrations or careers examples.
+Private authenticated administration/MFA/SSO is a later phase.
+
+Per-request script nonce CSP, public-only API/file projections and a shared 60/minute
+search quota are implemented. The quota stores HMAC keys/counts/expiry, without raw
+addresses or typed queries; proxy trust requires a protected origin/overwrite contract.
+The notices describe this technical counter. Security, privacy or compliance are
+not guaranteed by these engineering controls or local tests.
+
+## Delivery and remaining decisions
+
+Portable Node standalone and non-root Linux runtime/operations images are prepared.
+Hosting/domain providers and Cloudflare remain externally managed. Deployment, DNS,
+visibility and indexing changes need explicit release authorization; none is delivered.
+IT must confirm capacity/regions/storage, secrets, private identity, edge rules,
+worker ownership, redacted monitoring, backup/restore and incident response.
+
+Final editorial/translation/legal review, the real report PDF, verified project data,
+Alliances, PhaseIII drafting and separately commissioned integrations remain open.
+Do not silently activate online intake, newsletter, analytics, OAuth or new CMS models.
+See [IT handover](docs/it-handover.fr.md), [deployment](docs/deployment.md),
+[current preparation](docs/public-release-preparation.md) and [backlog](docs/backlog.md).

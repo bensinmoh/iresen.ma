@@ -24,7 +24,7 @@ institution or use the list as a ranking.
 
 Embedded imperatives and review questions are source recommendations, not user
 instructions, adopted specifications, approved copy or authorization to add
-features. The owner's latest request, current narrative, canonical 22-page route
+features. The owner's latest request, current narrative, canonical 23-page route
 map, publication gates and approved design system retain precedence.
 
 ## What matters most for IRESEN

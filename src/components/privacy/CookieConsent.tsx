@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import type { Consent } from '@/lib/cookie-consent'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
 import { ViewerIcon } from '@/components/media/ViewerIcon'
@@ -24,7 +25,13 @@ export function CookiePreferencesButton() {
   )
 }
 
-export function CookieConsent({ locale }: { locale: Locale }) {
+export function CookieConsent({
+  locale,
+  initialConsent = null,
+}: {
+  locale: Locale
+  initialConsent?: Consent | null
+}) {
   const t = useTranslations('CookieConsent')
   const { ready, consent } = useConsent()
   const dialog = useRef<HTMLDialogElement>(null)
@@ -55,8 +62,13 @@ export function CookieConsent({ locale }: { locale: Locale }) {
 
   return (
     <>
-      {ready && !consent && (
-        <section className="cookie-banner" aria-labelledby="cookie-banner-title" data-cookie-banner>
+      {(ready ? !consent : !initialConsent) && (
+        <section
+          className="cookie-banner"
+          aria-labelledby="cookie-banner-title"
+          aria-busy={!ready}
+          data-cookie-banner
+        >
           <div className="cookie-copy">
             <h2 id="cookie-banner-title">{t('title')}</h2>
             <p>
@@ -64,16 +76,27 @@ export function CookieConsent({ locale }: { locale: Locale }) {
             </p>
           </div>
           <div className="cookie-actions">
-            <button type="button" className="cookie-accept" onClick={() => save(true)}>
+            <button
+              type="button"
+              className="cookie-accept"
+              disabled={!ready}
+              onClick={() => save(true)}
+            >
               {t('accept')}
             </button>
-            <button type="button" className="cookie-reject" onClick={() => save(false)}>
+            <button
+              type="button"
+              className="cookie-reject"
+              disabled={!ready}
+              onClick={() => save(false)}
+            >
               {t('reject')}
             </button>
             <div className="cookie-secondary-actions">
               <button
                 type="button"
                 className="cookie-necessary"
+                disabled={!ready}
                 aria-label={t('necessaryOnly')}
                 onClick={() => save(false)}
               >
@@ -82,6 +105,7 @@ export function CookieConsent({ locale }: { locale: Locale }) {
               <button
                 type="button"
                 className="cookie-customize"
+                disabled={!ready}
                 aria-label={t('customize')}
                 onClick={openPreferences}
               >
@@ -95,6 +119,9 @@ export function CookieConsent({ locale }: { locale: Locale }) {
           {storageError && <p role="alert">{t('storageError')}</p>}
         </section>
       )}
+      <noscript>
+        <style>{'.cookie-banner { display: none; }'}</style>
+      </noscript>
       <dialog
         className="cookie-dialog"
         ref={dialog}
@@ -135,16 +162,27 @@ export function CookieConsent({ locale }: { locale: Locale }) {
           {t('retention')} <a href={pageHref('cookies', locale)}>{t('details')}</a>
         </p>
         <div className="cookie-actions">
-          <button type="button" className="cookie-accept" onClick={() => save(true)}>
+          <button
+            type="button"
+            className="cookie-accept"
+            disabled={!ready}
+            onClick={() => save(true)}
+          >
             {t('accept')}
           </button>
-          <button type="button" className="cookie-reject" onClick={() => save(false)}>
+          <button
+            type="button"
+            className="cookie-reject"
+            disabled={!ready}
+            onClick={() => save(false)}
+          >
             {t('reject')}
           </button>
           <div className="cookie-secondary-actions">
             <button
               type="button"
               className="cookie-necessary"
+              disabled={!ready}
               aria-label={t('necessaryOnly')}
               onClick={() => save(false)}
             >

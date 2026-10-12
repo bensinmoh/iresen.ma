@@ -1,12 +1,26 @@
 # Design system and Figma reference
 
+## Current color and layout refinement — 2026-10-12
+
+Preserve the six approved digital values and the global 40/25/15/10/6/4 target,
+excluding whites/neutrals. Keep primary actions blue, institutional type/navy,
+scientific icons Science Blue and maturation/transfer accents Transition Green.
+Lime is sparse punctuation. Color audits distinguish source token counts from
+rendered proportions; no exact usage ratio or universal rainbow treatment is asserted.
+
+Programmes title precedes its balanced photo/prose grid; text never has a fixed
+height. Useful links uses the current compact utility band and vector action arrows.
+Shared native first-arrival/anchor motion covers both. SVG originals, approved
+geometry, readable contrast, responsive content and Arabic order prevail. See
+[current delivery](public-release-preparation.md).
+
 ## Research platforms composition — 2026-10-11
 
 The [platforms page](research-platforms.md) reuses existing hero, type roles, signature/action corners, original SVG logos and responsive documentary images. Alternating chapters and ruled infrastructure summaries adapt to content; navy GreenH2A uses readable cyan/white roles with explicit development/3D wording. Identical hero photo sources share optimized delivery at all widths. No new shared token or universal template.
 
 ## Institute adaptation — 2026-10-11
 
-The [Institute page](institute-page.md) reuses shared editorial roles, SVG section/action marks, navy/white surfaces and logical spacing. Native mission disclosures show activity and contribution detail without compressing it into equal cards. The timeline retains every major milestone and explicitly labels italic supporting entries; it scrolls horizontally with native keyboard/touch access and SVG arrows at every width. Arabic and text enlargement preserve reading. This is scoped composition, with no new shared token.
+The [Institute page](institute-page.md) reuses shared editorial roles, SVG section/action marks, navy/white surfaces and logical spacing. Native mission disclosures show activity and contribution detail without compressing it into equal cards. The timeline retains only the eight main milestones, with the later supporting entries withdrawn; it scrolls horizontally with native keyboard/touch access and SVG arrows at every width. Arabic and text enlargement preserve reading. This is scoped composition, with no new shared token.
 
 ## Médiathèque — 2026-10-10
 
@@ -496,7 +510,7 @@ Keep navigation operable by keyboard, touch and pointer. Use visible focus, corr
 
 Check actual rendered contrast; brand colors do not automatically make accessible status colors. Normal text needs 4.5:1 contrast. White text on cyan/lime is unsuitable; navy text on cyan/lime passes as shown above. Use 3:1 only for qualifying large text and applicable non-text requirements.
 
-Future homepage work uses the supplied brand identity and the current three contribution domains with their shared cooperation enabler, as recorded in [the new narrative alignment](narrative-alignment.md). Développer · Éprouver · Valoriser belongs within Research & Innovation. The earlier private sources stay private; the three authorized repository DOCX originals are historical references, indexed in [the strategy analysis](references/strategy/README.md). Their detailed composition remains recommendations within the 22-page route map. Final wording, translations and claims require editorial review. Distinguish verified current capabilities from ambitions and never invent key figures.
+Future homepage work uses the supplied brand identity and the current three contribution domains with their shared cooperation enabler, as recorded in [the new narrative alignment](narrative-alignment.md). Développer · Éprouver · Valoriser belongs within Research & Innovation. The earlier private sources stay private; the three authorized repository DOCX originals are historical references, indexed in [the strategy analysis](references/strategy/README.md). Their detailed composition remains recommendations within the current 23-page route map. Final wording, translations and claims require editorial review. Distinguish verified current capabilities from ambitions and never invent key figures.
 
 Review desktop/tablet/mobile composition, Arabic layout, long-label/header fit and manual accessibility. Obtain individual approved imagery or documented replacements; full-page screenshots are never production imagery. Missing optional exports do not block independent work.
 
@@ -1252,7 +1266,7 @@ destination hover surfaces. The existing focus outline, resting current-route
 state, padding, typography, panel layout and RTL arrow transforms remain.
 
 The screenshot supplies interaction styling; its sample copy and routes are
-reference data. Current catalogs and the 22-page route map remain authoritative.
+reference data. Current catalogs and the 23-page route map remain authoritative.
 See [navigation guidance](navigation.md#desktop-submenu-destination-states--2026-10-09)
 and [revision-specific validation](validation.md#desktop-submenu-destination-states--2026-10-09).
 

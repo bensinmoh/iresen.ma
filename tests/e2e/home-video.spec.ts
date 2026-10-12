@@ -1,9 +1,9 @@
-import { expect, test, type Page, type Request } from '@playwright/test'
+import { expect, test, type Page, type Request } from './fixtures'
 import { locales } from '../../src/i18n/locales'
 import { pageHref } from '../../src/lib/site'
 
 function isHomeVideo(request: Request) {
-  return new URL(request.url()).pathname === '/videos/hero.mp4'
+  return /^\/videos\/hero(?:-mobile)?\.mp4$/.test(new URL(request.url()).pathname)
 }
 
 async function expectStillPhoto(page: Page) {
@@ -42,7 +42,9 @@ async function expectPlayback(page: Page) {
       time: video.currentTime,
     }
   })
-  expect(media.source).toBe('/videos/hero.mp4')
+  expect(media.source).toBe(
+    (page.viewportSize()?.width ?? 1280) <= 1024 ? '/videos/hero-mobile.mp4' : '/videos/hero.mp4',
+  )
   expect(media.muted).toBe(true)
   expect(media.loop).toBe(true)
   expect(media.playsInline).toBe(true)
@@ -100,7 +102,7 @@ test('a live reduced-motion change stops the video and restores the photo', asyn
 
 test('an unavailable video leaves the homepage photo and actions usable', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' })
-  await page.route('**/videos/hero.mp4', (route) => route.abort())
+  await page.route('**/videos/hero*.mp4', (route) => route.abort())
   const failedVideo = page.waitForEvent('requestfailed', { predicate: isHomeVideo })
   await page.goto(pageHref('home', 'en'))
   await failedVideo

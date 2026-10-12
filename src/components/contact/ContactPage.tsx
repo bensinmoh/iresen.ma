@@ -43,7 +43,7 @@ export async function ContactPage({
             alt=""
             fill
             sizes="(min-width: 70rem) 75vw, (min-width: 40rem) 100vw, 225vw"
-            quality={75}
+            quality={60}
             preload
           />
           <div className="contact-intro-text">

@@ -24,7 +24,7 @@ Current navy `#12345A`, blue `#296BB4`, Jakarta/Alexandria fonts, aligned gutter
 action corners, navigation and footer take precedence over the historical sample.
 Layouts reduce columns and allow natural text growth on narrow screens, with
 logical CSS and isolated Latin identifiers for Arabic. No route is added to the
-canonical 22-page map.
+canonical 23-page map.
 
 The owner's later screenshot correction explicitly requests an Apex Leaf before
 the form's « Votre message » label and corrects its centering. The inherited

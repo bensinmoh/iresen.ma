@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import { researchThemes } from '../../src/lib/home-research'
 
 for (const locale of ['fr', 'en', 'ar']) {

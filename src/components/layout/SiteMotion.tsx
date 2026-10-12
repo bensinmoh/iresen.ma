@@ -16,6 +16,8 @@ const targets = [
   'main section > header > p',
   'main section > ol > li',
   'main section > ul > li',
+  'main .utility-notice section > p',
+  'main .useful-tools > p',
   'main [data-motion-reveal]',
   '.site-footer h2',
 ].join(',')

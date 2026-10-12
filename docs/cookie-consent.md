@@ -42,8 +42,8 @@ advertising service, integration, CMS schema or publication gate is added.
   the visitor to check browser settings. Changes propagate between
   open tabs through BroadcastChannel, and recheck on focus/pageshow and every
   30 seconds for expiry.
-- The footer's permanent **Manage my cookies** button and existing cookies-page
-  control reopen native dialog preferences, centered on both viewport axes with bounded
+- The footer's permanent **Cookie preferences** link opens the cookies page, whose
+  control reopens native dialog preferences, centered on both viewport axes with bounded
   internal scrolling. Its SVG close cross has a localized accessible name. Escape
   and Close abandon unsaved
   edits; focus returns to the originating control or main content if that control was
@@ -99,3 +99,20 @@ build directory and port so they cannot corrupt the owner's dev cache.
 Owner follow-up — 2026-10-12: the footer retains its Cookie preferences link
 without a duplicate Manage my cookies button. The linked page opens preferences;
 first-visit and blocked-map controls remain.
+
+## Production provider review — 2026-10-12
+
+Review any Cloudflare/hosting cookies, injected analytics or challenge scripts
+before release. The current application inventory does not prove that these
+providers add none. Do not silently expand Google Maps consent to other purposes.
+
+## Server-first consent prompt — performance refinement, 2026-10-12
+
+The locale layout validates the necessary decision cookie per request and passes
+only that decision to the banner component. Without a valid decision, its text
+is present in initial HTML; controls become enabled after the existing client
+store is ready. There is no shared server consent state and no optional service
+loaded from this server hint. Existing client validation, expiry, storage-failure
+and withdrawal remain authoritative for Maps. Without JavaScript the inert prompt
+is hidden, while information links and blocked-map reading remain available.
+This avoids a large first-visit banner arriving only after hydration.

@@ -10,12 +10,15 @@ Document imperatives remain reference recommendations. No deployment is commissi
 Open `/cms-preview` on the existing development server. A separate root layout
 uses the existing licensed Jakarta/Alexandria fonts, original IRESEN logo, approved
 blue/navy tokens and native CSS. It does not load the Payload admin or call content
-APIs. The production route returns 404 unless `CMS_INTERFACE_PREVIEW_ENABLED=true`
-is explicitly set for a local review. The route is dynamic so the gate is checked
+APIs. The public release always returns 404. A local production-build review needs
+both `CMS_INTERFACE_PREVIEW_ENABLED=true` and `CMS_LOCAL_REVIEW=true`, with
+`PUBLIC_RELEASE` disabled. The route is dynamic so the gate is checked
 at runtime. Headers prohibit indexing and caching; sitemap and public search have
 no entry for this private review surface. This opt-in gate is not authentication.
 
-The existing `/admin`, schemas, permissions, data and public pages remain unchanged.
+The 2026-10-12 preparation closes `/admin` and non-public REST operations by
+default in production. Local review still does not connect to those operations.
+Schemas and existing publication rules remain separate.
 No database migration, public media upload, LinkedIn request, analytics collection,
 email, CMS mutation or search-index processing is introduced.
 

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
 import { pageHref, pageLinkHref, newsListingHref, pages } from '../../src/lib/site'
 import { newsEvents } from '../../src/lib/news-events'

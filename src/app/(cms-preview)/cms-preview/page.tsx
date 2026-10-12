@@ -8,7 +8,12 @@ export const dynamic = 'force-dynamic'
 
 export default function Page() {
   // This unauthenticated local design tool is absent in production unless explicitly enabled.
-  if (process.env.NODE_ENV === 'production' && process.env.CMS_INTERFACE_PREVIEW_ENABLED !== 'true')
+  if (process.env.PUBLIC_RELEASE === 'true') notFound()
+  if (
+    process.env.NODE_ENV === 'production' &&
+    (process.env.CMS_LOCAL_REVIEW !== 'true' ||
+      process.env.CMS_INTERFACE_PREVIEW_ENABLED !== 'true')
+  )
     notFound()
   const sectionNames = messages.PageSections as Record<string, Record<string, { title?: string }>>
   const registry = pageIds.map((id) => ({

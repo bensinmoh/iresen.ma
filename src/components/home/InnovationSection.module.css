@@ -155,3 +155,13 @@
     grid-auto-columns: 85%;
   }
 }
+
+.steps li:nth-child(4) .marker {
+  color: var(--color-transition-green);
+}
+.steps li:nth-child(5) .marker {
+  color: var(--color-transition-green);
+}
+.steps li:nth-child(5) .marker::after {
+  border-color: var(--color-innovation-lime);
+}

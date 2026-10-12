@@ -25,6 +25,6 @@ spellings must come from currently eligible public content.
 
 For design work, read [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md) and [the design workflow](docs/design-workflow.md). Use relevant repository skills as adaptable guidance; record adopted shared rules and inspect actual responsive/Arabic renderings after visual edits.
 
-Before requesting review for application changes, run `pnpm lint`, `pnpm typecheck`, `pnpm test` and `pnpm build`; run the documented browser checks when changing navigation, locale routes or authorization. For skill/documentation-only changes, validate frontmatter, local links, routing, pinned source integrity and whitespace instead. Report exactly what was verified and any external dependency. Avoid broad tests that merely restate implementation.
+Follow [the verification ledger](docs/verification-workflow.md): run relevant lint/unit/build and browser/integration checks; a production build already verifies TypeScript. Full CI on the exact final PR head remains mandatory. For skill/documentation-only changes, validate frontmatter, local links, routing, pinned source integrity and whitespace instead. Report exactly what was verified and any external dependency. Avoid broad tests that merely restate implementation.
 
 Do not deploy production, alter repository visibility/DNS, introduce an automatic license or announce institutional claims without explicit authority. Remote repository governance and release tasks are separate from local feature work.

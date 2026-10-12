@@ -1,5 +1,48 @@
 # Foundation validation
 
+## Public release preparation — 2026-10-12
+
+See [delivered scope](public-release-preparation.md) and [French IT handover](it-handover.fr.md).
+
+| Check                | Evidence                                                                                                                                                                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Production baseline  | Fresh standalone build before runtime changes; 18 Lighthouse mobile runs, no failed resource requests                                                                                                                                                  |
+| Runtime build        | Final Linux `runtime` image built with ephemeral fictitious build settings; `pnpm build`/TypeScript passed                                                                                                                                             |
+| Operations           | Separate non-root image built; packaged migration command succeeds against already migrated local DB                                                                                                                                                   |
+| Unit                 | 24 files / 163 tests pass, including withdrawal, localized catalogue uniqueness and security policies                                                                                                                                                  |
+| Search quota         | 61 concurrent calls: 60 allowed, one rejected; private synthetic key cleaned up                                                                                                                                                                        |
+| Browser              | 77 scenarios pass on production Linux image in local Chrome; 25 affected scenarios rechecked after video/catalogue correction, 21 video/CSP/PDF/image-eligibility scenarios and 42 final consent/motion/security/PDF scenarios pass on the isolated DB |
+| Visual               | FR/EN/AR Programme at 390/768/1440; FR/AR Contact, Institute, empty Projects and Useful links at 390/1440. 200% text, RTL, keyboard, reduced motion, no-JS and consent/access behavior covered                                                         |
+| Dependencies         | Final `pnpm audit --prod`: no known vulnerabilities; 14 initial advisories corrected                                                                                                                                                                   |
+| Private boundaries   | Container UID1000, root-owned non-writable code, writable cache/uploads, release=true/admin=false; no docs, tests or .env build file. Home200; admin/review/users/private files/old project notes404                                                   |
+| Documentation/source | 83 repository Markdown outside vendored skills checked for local file links; none broken. 66 pinned vendor files and four original benchmark/strategy references match recorded SHA256                                                                 |
+| Asset inventory      | No byte-identical public duplicate; six retired card images/three fictional wordmarks/72 notes removed by source use                                                                                                                                   |
+
+Local Playwright used installed Google Chrome because its bundled Chromium was absent;
+CI installs Chromium explicitly. Initial import/launcher issues and two caught
+layout/test-selector failures were corrected before successful evidence. A duplicate
+new tool projection was caught by the catalogue uniqueness test and fixed before
+local rebuild. No failed check is treated as a pass. The mechanical Impeccable
+check returned an empty finding list for changed page composition.
+
+Final Lighthouse results are stored in [measured performance](performance-results.json).
+The first optimized trial exposed a video first-frame/LCP regression from delaying
+autoplay: the delay was removed. Final measurements include the responsive poster
+and request-bound server-rendered consent prompt. The prompt no longer waits for
+hydration to appear; valid existing consent suppresses it without sharing state
+between visitors. Services still require client-side consent.
+Before used native standalone and after used the final Linux container on the
+same local machine/Chrome mobile profile; scores are lab observations, not field
+CWV or a controlled hosting comparison. [Event Timing samples](performance-interactions.json)
+cover disclosure/filter feedback without claiming field INP. No observed events
+above the 16ms observer threshold is not a zero-millisecond interaction.
+
+The owner's pre-existing tsconfig bytes are restored and excluded from the commit.
+Final current-head CI remains required before merge. Provider staging, image
+vulnerability scanning, regions/capacity, recovery rehearsal, legal/editorial
+review, Safari/Firefox/real-device/screen-reader and production field performance
+are not established by this local review. No deployment/DNS/visibility change.
+
 ## Media-library development — 2026-10-10
 
 The existing media page presents twenty owner-approved supplied photos, the eight

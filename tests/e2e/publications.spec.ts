@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
 import reports from '../../src/data/media-reports.json' with { type: 'json' }
 import records from '../../src/data/publications.json' with { type: 'json' }

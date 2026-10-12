@@ -1,3 +1,5 @@
+import { cookies } from 'next/headers'
+import { consentCookie, parseConsent } from '@/lib/cookie-consent'
 import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import { connection } from 'next/server'
@@ -21,6 +23,13 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const t = await getTranslations({ locale, namespace: 'Navigation' })
+  let initialConsent = null
+  try {
+    const raw = (await cookies()).get(consentCookie)?.value
+    initialConsent = raw ? parseConsent(decodeURIComponent(raw)) : null
+  } catch {
+    /* Invalid or unavailable cookie storage never permits optional services. */
+  }
 
   return (
     <>
@@ -33,7 +42,7 @@ export default async function LocaleLayout({
       </main>
       <SiteFooter locale={locale} />
       <SiteMotion />
-      <CookieConsent locale={locale} />
+      <CookieConsent locale={locale} initialConsent={initialConsent} />
     </>
   )
 }

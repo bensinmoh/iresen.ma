@@ -49,3 +49,12 @@ contract and open/closed state to the existing publication workflow. Private
 fictional records cannot be published. Public/search/download access requires
 a complete approved current locale and an open non-demo record. No applicant
 collection exists. See [careers scope](careers.md) for fields and lifecycle.
+
+## Public release preparation — 2026-10-12
+
+Projects have no active data source after full demonstration withdrawal. Do not
+restore the former JSON/PDF model. Existing publication/patent files and CMS Calls
+remain independent. Useful links is localized static content, not a new collection.
+`public_search_limits` is a private operational table with HMAC keys, per-minute
+counts and expiry; it contains no user account, typed query or raw address. Its
+explicit migration is registered; no generated Payload collection/type is added.
