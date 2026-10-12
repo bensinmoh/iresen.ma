@@ -7,11 +7,13 @@ export function publicCmsRequestAllowed(method: string, pathname: string) {
   return ['GET', 'HEAD'].includes(method) && /^\/api\/media\/file\/[^/]+$/.test(pathname)
 }
 /** Public media reads must not inherit staff privileges from an old cookie/API token. */
-export function anonymousCmsHeaders(source: Headers) {
-  const headers = new Headers(source)
+export function anonymousCmsRequest(source: Pick<Request, 'url' | 'method' | 'headers'>) {
+  const headers = new Headers(source.headers)
   headers.delete('cookie')
   headers.delete('authorization')
-  return headers
+  // Rebuild from primitives: Next's wrapped request can have a different private
+  // state brand from the runtime Request constructor. Only GET/HEAD reaches here.
+  return new Request(source.url, { method: source.method, headers })
 }
 export function contentSecurityPolicy(nonce: string, development: boolean) {
   return [

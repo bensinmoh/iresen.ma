@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   administrationEnabled,
-  anonymousCmsHeaders,
+  anonymousCmsRequest,
   contentSecurityPolicy,
   publicCmsRequestAllowed,
 } from '@/lib/security/policy'
@@ -32,7 +32,14 @@ describe('public production boundaries', () => {
       Range: 'bytes=0-1023',
       'Accept-Language': 'ar',
     })
-    const headers = anonymousCmsHeaders(original)
+    const anonymous = anonymousCmsRequest({
+      url: 'https://example.test/api/media/file/approved.pdf?locale=ar',
+      method: 'GET',
+      headers: original,
+    })
+    expect(anonymous.url).toBe('https://example.test/api/media/file/approved.pdf?locale=ar')
+    expect(anonymous.method).toBe('GET')
+    const headers = anonymous.headers
     expect(headers.has('cookie')).toBe(false)
     expect(headers.has('authorization')).toBe(false)
     expect(headers.get('range')).toBe('bytes=0-1023')

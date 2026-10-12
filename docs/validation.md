@@ -31,7 +31,13 @@ innovation numbers: green is now limited to the decorative SVGs and numbers reta
 the accessible blue. The legacy raw-CMS test now asserts the commissioned 404
 boundary for accounts, registration and draft queries. A final header-policy
 regression check ensures public media reads cannot inherit staff privileges from
-cookies/API tokens, while range and locale headers remain intact.
+cookies/API tokens, while range and locale headers remain intact. The full CI
+caught an incompatible wrapped-request clone; reconstructing a standard request
+from URL/method/headers avoids the runtime private-state mismatch. Downloads and
+previews remain mandatory browser checks on the corrected head. The corrected
+Linux runtime build passes: existing approved video bytes return 206/16-byte
+ranges in FR/EN/AR with no-store, and invalid locale/admin/account boundaries
+remain refused. This read-only check changes no owner record.
 
 Final Lighthouse results are stored in [measured performance](performance-results.json).
 The first optimized trial exposed a video first-frame/LCP regression from delaying

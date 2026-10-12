@@ -1,9 +1,8 @@
 import {
   administrationEnabled,
-  anonymousCmsHeaders,
+  anonymousCmsRequest,
   publicCmsRequestAllowed,
 } from '@/lib/security/policy'
-import { NextRequest } from 'next/server'
 import config from '@payload-config'
 import {
   REST_DELETE,
@@ -23,10 +22,7 @@ function guard(handler: ReturnType<typeof REST_GET>) {
           status: 404,
           headers: { 'Cache-Control': 'private, no-store' },
         })
-      return handler(
-        new NextRequest(request, { headers: anonymousCmsHeaders(request.headers) }),
-        context,
-      )
+      return handler(anonymousCmsRequest(request), context)
     }
     return handler(...args)
   }
