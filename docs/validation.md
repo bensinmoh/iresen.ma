@@ -3805,3 +3805,15 @@ inspected. No comprehensive screen-reader/Safari/Firefox audit is claimed.
 No CMS schema or database behavior changes; full integration and full-site browser
 coverage run in exact-head PR CI before merge. Final CI and merge outcomes remain
 recorded on the pull request. No deployment or visibility change.
+
+Utility-page CI follow-up: the first full run passed 316 browser scenarios but
+failed three search fixture assumptions. The current corpus returns only six
+English “content” sections, while “research” returns enough genuine sections to
+paginate. French/English misspellings return typo matches on page one before
+related matches on page two, as required by the relevance policy. The tests now
+assert a populated real-query pagination precondition and check the typo badge
+on page one before accepting the correction from the original page-two URL.
+Filter/sort preservation, page reset, keyboard activation, highlight and API
+correction checks remain. Runtime/ranking is unchanged; the same production build
+was reused for the four affected FR/EN/AR scenarios, all of which passed.
+Final CI remains required.
