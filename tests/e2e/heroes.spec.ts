@@ -1,5 +1,5 @@
 import { expect, test, type Locator, type Page } from './fixtures'
-import { pageHref, pageIds } from '../../src/lib/site'
+import { footerPageIds, pageHref, pageIds } from '../../src/lib/site'
 import { locales } from '../../src/i18n/locales'
 import ar from '../../src/messages/ar.json' with { type: 'json' }
 import en from '../../src/messages/en.json' with { type: 'json' }
@@ -73,7 +73,7 @@ for (const locale of locales) {
         pageId !== 'priorities' &&
         pageId !== 'news' &&
         pageId !== 'events' &&
-        !['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'].includes(pageId),
+        !footerPageIds.some((utilityPageId) => utilityPageId === pageId),
     )) {
       await page.goto(pageHref(id, locale))
       const hero = page.locator('.page-hero')

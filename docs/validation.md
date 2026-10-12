@@ -23,7 +23,10 @@ CI installs Chromium explicitly. Initial import/launcher issues and two caught
 layout/test-selector failures were corrected before successful evidence. A duplicate
 new tool projection was caught by the catalogue uniqueness test and fixed before
 local rebuild. No failed check is treated as a pass. The mechanical Impeccable
-check returned an empty finding list for changed page composition.
+check returned an empty finding list for changed page composition. The broad
+standard-hero test now selects utility exclusions from the central footer IDs,
+so Useful links receives its existing compact-utility checks rather than a
+photographic hero expectation.
 
 Final Lighthouse results are stored in [measured performance](performance-results.json).
 The first optimized trial exposed a video first-frame/LCP regression from delaying
