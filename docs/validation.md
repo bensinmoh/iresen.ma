@@ -3729,10 +3729,26 @@ FR/EN/AR. Google Maps is gated before iframe creation; refusal, withdrawal and
 invalid/expired decisions leave the original directions link available. See
 [cookie scope and inventory](cookie-consent.md).
 
-Initial verification: `pnpm lint` and `pnpm typecheck` passed; the unit suite
-passed 155 tests, followed by all three focused consent/search-registration tests
-including the newly added localized catalog check. `pnpm search:rebuild` refreshed
-the local catalog. Changed files pass Prettier and `git diff --check`.
-Production build, disposable-database integration and rendered browser verification
-are in progress; their final evidence will be recorded before completion. The
-pre-existing unrelated `tsconfig.json` edit is preserved outside this change.
+Final local verification: ESLint, strict TypeScript and all 156 unit tests pass.
+`pnpm search:rebuild` refreshed the local catalog without adding CMS content.
+The unrelated pre-existing `tsconfig.json` changes remain outside this PR.
+
+The first PR CI run passed the full suite: 30 integration tests, 307 browser
+scenarios (four existing skips), plus four opt-in CMS interface journeys (one
+existing skip). Local disposable-database integration attempts did not finish
+the bootstrap hook; their temporary databases were dropped. CI uses its own
+fresh PostgreSQL database; no existing local database was replaced.
+
+The final isolated production build passes, with the existing next-intl webpack
+cache warnings. All 43 targeted production-browser scenarios pass: consent,
+Contact and footer in FR/EN/AR, including no-JavaScript reading, failed cookie
+storage, withdrawal across tabs, keyboard/focus, reduced motion, 200% Arabic text,
+scoped axe scans and button geometry at 320/390/768/1024/1180/1440/1920px.
+Inspected actual French mobile/intermediate/desktop and Arabic mobile renderings:
+equal button heights, trailing two-row group and centered preferences dialog.
+
+The first browser pass identified a transient hover-label contrast problem and an
+overly strict reduced-motion assertion; both were corrected before this passing
+final run. Changed files pass Prettier and whitespace checks. The latest commit's
+full CI must pass before merging; its exact result is retained in PR #105. This technical verification is scoped to consent behavior,
+not a certification of whole-site legal compliance. No deployment is authorized.

@@ -3284,7 +3284,7 @@
     "customize": "Customize",
     "manage": "Manage my cookies",
     "close": "Close",
-    "necessary": "Necessary operation",
+    "necessary": "Cookies necessary for operation",
     "necessaryDescription": "The iresen_consent cookie stores your decision for 180 days without a tracking identifier. CMS authentication cookies are restricted to administration.",
     "alwaysActive": "Always active",
     "external": "External services — Google Maps",
@@ -3292,6 +3292,11 @@
     "retention": "Your acceptance or refusal is stored for 180 days in this browser. You can withdraw permission at any time from the footer; the map is then removed. Withdrawal does not delete data already sent to Google.",
     "save": "Save my choices",
     "mapBlocked": "Google Maps is disabled until you allow external services. The directions link remains available.",
-    "storageError": "Your browser prevents saving your choice. External services remain disabled."
+    "storageError": "Your choice could not be saved. External services are disabled in open tabs; a previous choice may return on the next page load. Check your browser settings.",
+    "necessaryOnly": "Accept necessary cookies only",
+    "optional": "Optional cookies",
+    "necessaryOnlyShort": "Necessary only",
+    "saveShort": "Save",
+    "necessaryOnlyTiny": "Necessary"
   }
 }

@@ -1270,9 +1270,30 @@ Programmes contrast/detail follow-up: sustain the light hero scrim behind all fo
 ## Cookie management — 2026-10-12
 
 The owner commissions public first-visit consent and permanent preferences in
-FR/EN/AR. Equal acceptance/refusal buttons, a native preference dialog and a
+FR/EN/AR. A blue acceptance button, necessary-only/refusal controls, a centered native preference dialog and a
 180-day necessary decision cookie gate Google Maps before loading and remove it
 on withdrawal. This supersedes the earlier automatic-map behavior. Shared
 blue/navy, fonts, physical signature corners and logical responsive layout are
 reused; no new design token or tracker is introduced. See
 [consent scope](docs/cookie-consent.md). No deployment or complete legal-conformance claim.
+
+Cookie-control follow-up: the owner selects primary IRESEN-blue acceptance, an
+explicit necessary-only action, necessary/optional categories, a readable grey
+refusal and a vector settings button whose label appears on hover or keyboard
+focus. Preferences are centered vertically/horizontally and use an accessible
+SVG close cross. Control feedback uses the existing 180ms token and respects
+reduced motion; refusal remains enabled and available in one click.
+
+Final responsive correction: the preferences use a 56rem maximum width with one
+desktop action row. At 64rem and below, acceptance/refusal occupy row one;
+necessary-only and a compact gear occupy row two. The necessary label expands
+to “Uniquement le nécessaire” when it fits, with a short narrow-screen fallback.
+Rows keep equal heights from a 48px minimum. Mobile hover/focus labels sit outside
+the grid flow so hidden text cannot create oversized buttons; enlarged text may
+grow the shared rows naturally.
+
+Available-space follow-up: intermediate-width banners keep a two-row action
+group at the trailing side. The necessary-only label uses measured button/font
+width, retaining its full wording wherever it fits and shortening only when
+required. Caption measurements are invisible and clipped; visible text stays
+at full contrast during control feedback.

@@ -3287,7 +3287,7 @@
     "customize": "Personnaliser",
     "manage": "Gérer mes cookies",
     "close": "Fermer",
-    "necessary": "Fonctionnement nécessaire",
+    "necessary": "Cookies nécessaires au fonctionnement",
     "necessaryDescription": "Le cookie iresen_consent conserve votre décision pendant 180 jours, sans identifiant de suivi. Les cookies d’authentification du CMS sont réservés à l’administration.",
     "alwaysActive": "Toujours actif",
     "external": "Services externes — Google Maps",
@@ -3295,6 +3295,11 @@
     "retention": "Votre acceptation ou votre refus est conservé pendant 180 jours sur ce navigateur. Vous pouvez retirer votre accord à tout moment depuis le pied de page ; la carte est alors retirée. Le retrait ne supprime pas les données déjà transmises à Google.",
     "save": "Enregistrer mes choix",
     "mapBlocked": "La carte Google Maps est désactivée tant que vous n’autorisez pas les services externes. Le lien d’itinéraire reste disponible.",
-    "storageError": "Votre navigateur empêche la mémorisation du choix. Les services externes restent désactivés."
+    "storageError": "Votre choix n’a pas pu être enregistré. Les services externes sont désactivés dans les onglets ouverts ; un ancien choix peut réapparaître au prochain chargement. Vérifiez les réglages de votre navigateur.",
+    "necessaryOnly": "Accepter uniquement le nécessaire",
+    "optional": "Cookies optionnels",
+    "necessaryOnlyShort": "Uniquement le nécessaire",
+    "saveShort": "Enregistrer",
+    "necessaryOnlyTiny": "Le nécessaire"
   }
 }
