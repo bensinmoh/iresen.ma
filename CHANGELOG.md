@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-13 — Siteweb backlog
+
+- Consolidate the owner's content, design, functional integration and backend
+  requests in [the backlog](docs/backlog.md), with proposed priorities,
+  acceptance criteria, dependencies and complete call/project field lists.
+- Distinguish existing call pages and CMS foundations from future connected
+  administration; retain release tasks, project withdrawal and publication gates.
+- Record the supplied AI design video as a future review task. This increment
+  changes documentation only and does not implement the listed work.
+
 ## 2026-10-12 — Owner typography and branch cleanup
 
 - Apply the nine supplied typography references to shared hero roles, homepage
