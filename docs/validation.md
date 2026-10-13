@@ -1,5 +1,19 @@
 # Foundation validation
 
+## Siteweb backlog — 2026-10-13
+
+Documentation-only consolidation of the owner's next-phase list in
+[Siteweb backlog](backlog.md). All 38 content/design/features/backend/video items
+and six release tasks remain open; priorities are proposed, not approved schedules.
+
+| Check                     | Result and scope                                                                                                                                                                        |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Formatting and whitespace | Changed Markdown formatting and `git diff --check` pass.                                                                                                                                |
+| Links and structure       | Repository audit checks 83 maintained Markdown files with no missing local files; backlog local anchors and all 44 unique task IDs pass. Historical wording candidates remain advisory. |
+| Source preservation       | Tracked reference documents, brand vectors and vendored skill files match their Git blob hashes. No original or runtime inputs change.                                                  |
+| Runtime                   | No local application/database/browser rerun for documentation-only inputs, under the verification workflow; full current-head PR CI remains mandatory.                                  |
+| Video                     | Recorded as a future review item; no video-specific recommendations adopted or claimed verified.                                                                                        |
+
 ## Owner typography and branch cleanup — 2026-10-12
 
 See [adopted roles](design-system.md#owner-typography-references--2026-10-12)

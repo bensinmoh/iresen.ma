@@ -130,4 +130,5 @@ additions need localized search references. The final multilingual search sanity
 check remains required once final website content is approved.
 
 [Architecture](docs/architecture.md) · [Design system](docs/design-system.md) ·
-[Security/privacy](docs/security-and-privacy.md) · [Current preparation report](docs/public-release-preparation.md)
+[Security/privacy](docs/security-and-privacy.md) · [Current preparation report](docs/public-release-preparation.md) ·
+[Siteweb backlog](docs/backlog.md)
