@@ -37,3 +37,10 @@ for that command so new engine downloads stay in the ignored repository cache.
 Source/license records and file hashes live in
 [design-skills-sources.json](../../docs/design-skills-sources.json). Updating a
 vendor payload is a deliberate maintenance task, not part of routine UI work.
+
+## On-demand companion tools
+
+See [design tool access](../../docs/design-tool-access.md) for the existing
+Playwright CLI command, targeted Awesome Design Skills references and isolated
+img2threejs planning. These are optional capabilities for the requested task;
+they add no automatic hook, audit, CI gate or replacement design system.
