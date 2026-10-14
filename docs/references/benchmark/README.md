@@ -1,5 +1,13 @@
 # Research institute website benchmark — 2026-10-10
 
+## Narrative supersession — 2026-10-14
+
+The [October PDF implementation](../../institutional-narrative-2026.md) now governs the R&I core, three
+missions, three complementary dimensions and six audience pathways. The earlier
+equal-domain/common-enabler composition and five-step homepage rail described
+below are historical. Existing canonical routes, content provenance and service
+boundaries remain. The owner reserves the explicit merge GO for the review branch.
+
 The owner requested analysis, retention and consultation of this benchmark when
 working on content and layout for new pages. The request authorizes a repository
 reference and future use as guidance; it does not commission website changes.

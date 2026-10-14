@@ -52,6 +52,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
               </article>
             ))}
           </div>
+          <p className={styles.accessNote}>{t('accessNote')}</p>
         </section>
         <div id="platform-network">
           {researchPlatforms.map((platform, index) => {

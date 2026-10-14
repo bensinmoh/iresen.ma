@@ -3,7 +3,6 @@ import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { homeInnovationSectionId, innovationSteps } from '@/lib/home-innovation'
 import { pageHref } from '@/lib/site'
-import { InnovationRail } from './InnovationRail'
 import styles from './InnovationSection.module.css'
 
 export async function InnovationSection({ locale }: { locale: Locale }) {
@@ -21,18 +20,14 @@ export async function InnovationSection({ locale }: { locale: Locale }) {
         </div>
         <p className={styles.introduction}>{t('description')}</p>
       </header>
-      <InnovationRail label={t('label')}>
-        {innovationSteps.map((id, index) => (
+      <ul className={styles.steps} aria-label={t('label')}>
+        {innovationSteps.map((id) => (
           <li key={id}>
-            <div className={styles.marker}>
-              <bdi dir="ltr">{String(index + 1).padStart(2, '0')}</bdi>
-              {index < innovationSteps.length - 1 && <NavigationIcon name="arrow" />}
-            </div>
             <h3>{t(`steps.${id}.title`)}</h3>
             <p>{t(`steps.${id}.description`)}</p>
           </li>
         ))}
-      </InnovationRail>
+      </ul>
       <div className={styles.footer}>
         <p className={styles.continuity}>
           <span>{t('support')}</span>

@@ -1,5 +1,13 @@
 # Institute page — 2026-10-11
 
+## Narrative supersession — 2026-10-14
+
+The [October PDF implementation](institutional-narrative-2026.md) now governs the R&I core, three
+missions, three complementary dimensions and six audience pathways. The earlier
+equal-domain/common-enabler composition and five-step homepage rail described
+below are historical. Existing canonical routes, content provenance and service
+boundaries remain. The owner reserves the explicit merge GO for the review branch.
+
 The owner commissioned the canonical Institute page after Governance completion
 (PR #93). The supplied French manuscript defines its content over Figma sample
 claims. The private manuscript and source PDF are not imported into the repository

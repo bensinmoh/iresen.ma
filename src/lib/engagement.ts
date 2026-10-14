@@ -32,7 +32,18 @@ export const engagementSections: Record<EngagementPageId, readonly EngagementSec
       ],
     },
     { id: 'collaboration-references', kind: 'partnerships' },
-    { id: 'organisation-contributions', kind: 'audiences' },
+    {
+      id: 'organisation-contributions',
+      kind: 'audiences',
+      destinations: [
+        { pageId: 'network', anchor: 'intervention-modes' },
+        { pageId: 'programmes' },
+        { pageId: 'platforms' },
+        { pageId: 'contact', anchor: 'send-request' },
+        { pageId: 'workWithUs', anchor: 'collaboration-references' },
+        { pageId: 'opportunities' },
+      ],
+    },
     { id: 'collaboration-arrangements', kind: 'arrangements' },
     { id: 'need-to-project', kind: 'process' },
     { id: 'prepare-discussion', kind: 'contact' },
@@ -49,7 +60,7 @@ export const engagementSections: Record<EngagementPageId, readonly EngagementSec
 
 export type EngagementSectionCopy = {
   label: string
-  items: { title: string; description: string }[]
+  items: { title: string; description: string; question?: string }[]
   note?: string
   checklist: string[]
 }

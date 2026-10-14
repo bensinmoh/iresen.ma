@@ -379,3 +379,8 @@
 .page:dir(rtl) .contact :global(.button) svg {
   transform: scaleX(-1);
 }
+.items .question {
+  margin-block: var(--space-3);
+  font-weight: 600;
+  color: inherit;
+}

@@ -9,7 +9,7 @@ for (const locale of locales) {
   }) => {
     await page.goto(`/${locale}#innovation-value-chain`)
     const section = page.locator('#innovation-value-chain')
-    await expect(section.locator('ol > li')).toHaveCount(5)
+    await expect(section.locator('ul > li')).toHaveCount(3)
     await expect(section.locator('a')).toHaveAttribute('href', pageHref('transfer', locale))
     const order = await page
       .locator('main section[id]')
@@ -52,41 +52,26 @@ for (const locale of locales) {
   })
 }
 
-for (const locale of ['fr', 'ar']) {
-  test(`${locale}: mobile pathway scrolls automatically and respects focus and reduced motion`, async ({
-    page,
+for (const locale of ['fr', 'ar'] as const) {
+  test(`${locale}: all alternative pathways remain readable without JavaScript`, async ({
+    browser,
+    baseURL,
   }) => {
-    await page.setViewportSize({ width: 390, height: 900 })
-    await page.clock.install()
-    await page.goto(`/${locale}#innovation-value-chain`)
-    const rail = page.locator('#innovation-value-chain ol')
-    await expect(rail).toHaveAttribute('tabindex', '0')
-    await page.mouse.move(0, 0)
-    const position = () => rail.evaluate((el) => Math.abs(el.scrollLeft))
-    const step = await rail.evaluate(
-      (el) =>
-        el.firstElementChild!.getBoundingClientRect().width +
-        parseFloat(getComputedStyle(el).columnGap),
-    )
-    await page.clock.runFor(6500)
-    await expect.poll(position).toBeGreaterThan(step - 2)
-    expect(await position()).toBeLessThan(step + 2)
-    await rail.focus()
-    const focused = await position()
-    await page.clock.fastForward(12000)
-    expect(await position()).toBeCloseTo(focused, 0)
-    await rail.evaluate((el) => {
-      el.blur()
-      el.scrollLeft = getComputedStyle(el).direction === 'rtl' ? -el.scrollWidth : el.scrollWidth
+    const context = await browser.newContext({
+      baseURL,
+      javaScriptEnabled: false,
+      reducedMotion: 'reduce',
+      viewport: { width: 320, height: 900 },
     })
-    const end = await position()
-    await page.clock.runFor(6500)
-    await expect.poll(position).toBeLessThan(end - 2)
-    await page.emulateMedia({ reducedMotion: 'reduce' })
-    // Let the preference-change event cancel any in-flight native smooth scroll.
-    await page.clock.runFor(1000)
-    const reduced = await position()
-    await page.clock.fastForward(12000)
-    expect(await position()).toBeCloseTo(reduced, 0)
+    const page = await context.newPage()
+    await page.goto(pageHref('home', locale, 'innovation-value-chain'))
+    const section = page.locator('#innovation-value-chain')
+    await expect(section.locator('ul > li')).toHaveCount(3)
+    for (const item of await section.locator('li').all()) {
+      await item.scrollIntoViewIfNeeded()
+      await expect(item).toBeInViewport()
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+    await context.close()
   })
 }

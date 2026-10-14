@@ -80,7 +80,7 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                   <div
                     className={`${styles.items} ${needs ? styles.needItems : ''} ${kind === 'audiences' ? styles.audiences : ''} ${kind === 'partnerships' || kind === 'arrangements' ? styles.rows : ''} ${kind === 'process' ? styles.process : ''}`}
                   >
-                    {copy.items.map(({ title, description }, index) => {
+                    {copy.items.map(({ title, description, question }, index) => {
                       const destination = destinations?.[index]
                       return (
                         <article key={title}>
@@ -88,15 +88,15 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                             <>
                               <Image
                                 className={styles.audiencePhoto}
-                                src={`/images/collaborate/${audiencePhotos[index].id}.webp`}
+                                src={`/images/collaborate/${audiencePhotos[index % audiencePhotos.length].id}.webp`}
                                 alt=""
                                 width={1200}
-                                height={audiencePhotos[index].height}
+                                height={audiencePhotos[index % audiencePhotos.length].height}
                                 sizes="(max-width: 39.999rem) 55vw, 28vw"
                               />
                               <ValorisationIcon
                                 className={styles.audienceIcon}
-                                name={audienceIcons[index]}
+                                name={audienceIcons[index % audienceIcons.length]}
                               />
                             </>
                           )}
@@ -108,6 +108,7 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                             </span>
                           )}
                           <h3>{title}</h3>
+                          {question && <p className={styles.question}>{question}</p>}
                           <p>
                             <ProgrammeText text={description} />
                           </p>

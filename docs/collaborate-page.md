@@ -1,5 +1,13 @@
 # Collaborate with us — 2026-10-10
 
+## Narrative supersession — 2026-10-14
+
+The [October PDF implementation](institutional-narrative-2026.md) now governs the R&I core, three
+missions, three complementary dimensions and six audience pathways. The earlier
+equal-domain/common-enabler composition and five-step homepage rail described
+below are historical. Existing canonical routes, content provenance and service
+boundaries remain. The owner reserves the explicit merge GO for the review branch.
+
 The owner commissioned redevelopment of “Travailler avec nous” as **“Collaborer
 avec nous”**, using the supplied Figma canvas. The stable page ID remains
 `workWithUs`; canonical paths are now `/fr/collaborer-avec-nous`,

@@ -1,5 +1,16 @@
 # Design system and Figma reference
 
+## Integrated narrative hierarchy — 2026-10-14
+
+The new PDF alignment replaces the equal photographic mission trio/common band
+with a dominant navy R&I panel, three mission functions and three complementary
+light surfaces. Reuse type, grid, physical signature corners, approved SVG icons
+and colors. Core actions are white for contrast. Ecosystem/capability/orientation
+content stays semantic native text; mobile stacks and Arabic uses logical reading.
+The homepage alternative trajectories have no numbering or automatic scrolling.
+Dated earlier mission composition below is historical. See
+[implementation](institutional-narrative-2026.md).
+
 ## Owner typography references — 2026-10-12
 
 The nine owner-attached property captures supersede earlier sizes/weights for

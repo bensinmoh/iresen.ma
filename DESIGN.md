@@ -1,5 +1,14 @@
 # IRESEN visual direction
 
+## Integrated narrative composition — 2026-10-14
+
+A dominant navy R&I panel contains three linked missions; three complementary
+light surfaces follow. Native text and existing SVG icons replace the equal photo
+trio/common band. Institute adds an accessible ecosystem diagram, eight shared
+capabilities and three 2035 orientations. Alternative pathways stack on mobile;
+the former automatically scrolling five-step pathway is withdrawn. Use the
+[scope](docs/institutional-narrative-2026.md) and existing tokens, not new palettes.
+
 Current guide: 2026-10-12. Preserve the delivered identity and content; scoped
 refinement improves reading and interaction. The complete shared rules live in
 [design-system coherence](docs/design-system.md#current-coherence-rules), with

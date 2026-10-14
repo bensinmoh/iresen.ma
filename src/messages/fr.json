@@ -149,7 +149,7 @@
     "home": {
       "develop-test-transfer": {
         "title": "Notre mission",
-        "description": "IRESEN relie la recherche aux besoins de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, il contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités, en fédérant les acteurs et en mobilisant les expertises et les ressources nécessaires."
+        "description": "Relier la recherche aux besoins de la transition énergétique et du développement durable et construire, avec nos partenaires, les capacités nécessaires pour développer, éprouver et valoriser des solutions innovantes au service de cette ambition."
       },
       "figures": {
         "title": "IRESEN en chiffres",
@@ -161,7 +161,7 @@
       },
       "results": {
         "title": "Nos réalisations emblématiques",
-        "description": "Des infrastructures aux startups, des démonstrateurs aux orientations stratégiques : huit réalisations qui illustrent la diversité des contributions d’IRESEN."
+        "description": "Ces exemples illustrent des capacités et des résultats. Les effets économiques, industriels ou environnementaux nécessitent des mesures propres à chaque réalisation."
       },
       "platforms-expertise": {
         "title": "Des capacités au service de l’innovation",
@@ -229,55 +229,55 @@
       },
       "achievement-village-solaire": {
         "title": "Village Solaire",
-        "description": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa."
+        "description": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa. Associer démonstration, recherche et apprentissage autour de maisons solaires."
       },
       "achievement-ismart": {
         "title": "iSmart",
-        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine."
+        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine. Rapprocher développement technologique, fabrication locale et valorisation."
       },
       "achievement-aquasolar": {
         "title": "AquaSolar",
-        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire."
+        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire. Développer et expérimenter une solution mobile et modulaire."
       },
       "achievement-worldptx": {
         "title": "WorldPtX Summit",
-        "description": "Un sommet mondial consacré au Power-to-X et à ses applications."
+        "description": "Un sommet mondial consacré au Power-to-X et à ses applications. Organiser les échanges et le partage d’expertise entre partenaires."
       },
       "achievement-upilot-h2": {
         "title": "uPilot H₂",
-        "description": "Le premier pilote de production d’hydrogène vert au Maroc."
+        "description": "Le premier pilote de production d’hydrogène vert au Maroc. Mobiliser une installation pilote pour l’apprentissage et l’expérimentation."
       },
       "achievement-propre-ma": {
         "title": "PROPRE.MA",
-        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire."
+        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire. Articuler installations universitaires, observation et recherche."
       },
       "achievement-cartography": {
         "title": "Cartographie",
-        "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques."
+        "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques. Mobiliser les données spatiales, la cartographie et le zoning."
       },
       "achievement-hydrogen-roadmap": {
         "title": "Feuille de route hydrogène vert",
-        "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert."
+        "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert. Apporter une contribution scientifique et technologique aux travaux stratégiques."
       },
       "innovation-value-chain": {
-        "title": "Un parcours pour faire progresser l’innovation",
-        "description": "Dans Recherche & Innovation, développer, éprouver et valoriser relient les besoins aux usages, avec des retours entre les travaux."
+        "title": "Trois missions, plusieurs points d’entrée",
+        "description": "Développer, éprouver et valoriser se combinent selon le projet. La recherche et l’expérimentation peuvent se nourrir mutuellement."
       },
       "mission-studies": {
         "title": "Études & Expertise",
-        "description": "Connaissances, données et analyses pour comprendre les options et préparer les décisions."
+        "description": "Données, études, veille et prospective pour éclairer les choix scientifiques, technologiques et stratégiques."
       },
       "mission-research": {
         "title": "Recherche & Innovation",
-        "description": "Programmes, travaux scientifiques et moyens expérimentaux pour développer, éprouver et valoriser."
+        "description": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc."
       },
       "mission-skills": {
         "title": "Compétences & Capacités",
-        "description": "Compétences et savoir-faire pour comprendre les technologies, les pratiquer et les transmettre."
+        "description": "Former les talents, transmettre les savoir-faire et accompagner les personnes et les organisations dans la maîtrise des technologies."
       },
       "mission-cooperation": {
         "title": "Coopération & Rayonnement",
-        "description": "Relier les acteurs, mobiliser les ressources et construire des coopérations concrètes pour faire reconnaître les contributions scientifiques et technologiques."
+        "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines."
       }
     },
     "institute": {
@@ -287,15 +287,15 @@
       },
       "mission": {
         "title": "Notre mission",
-        "description": "IRESEN relie la recherche aux besoins de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, il contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités, en fédérant les acteurs et en mobilisant les expertises et les ressources nécessaires."
+        "description": "Relier la recherche aux besoins de la transition énergétique et du développement durable et construire, avec nos partenaires, les capacités nécessaires pour développer, éprouver et valoriser des solutions innovantes au service de cette ambition."
       },
       "capabilities": {
-        "title": "Nos missions",
-        "description": "Trois missions complémentaires structurent la contribution d’IRESEN : Études & Expertise, Recherche & Innovation et Compétences & Capacités. Elles répondent à des besoins distincts et se renforcent mutuellement : une étude peut orienter une recherche, une expérimentation enrichir une analyse, et une formation transmettre les acquis des travaux. Coopération & Rayonnement accompagne ces trois missions en reliant les acteurs et en mobilisant les ressources."
+        "title": "Un modèle intégré de recherche et d’innovation",
+        "description": "La Recherche & Innovation constitue le cœur de métier d’IRESEN, autour de trois missions : Développer, Éprouver et Valoriser. Études & Expertise, Compétences & Capacités et Coopération & Rayonnement renforcent et élargissent cette contribution. Elles peuvent aussi répondre directement à des besoins spécifiques. Ces contributions mobilisent des capacités communes. Leur articulation dépend du besoin ; elle ne décrit ni un organigramme ni un parcours imposé."
       },
       "ambition-2035": {
         "title": "Notre ambition à l’horizon 2035",
-        "description": "Faire d’IRESEN une référence d’excellence en Afrique par la qualité de ses études et de son expertise, de sa recherche et de son innovation, ainsi que de sa contribution aux compétences et aux capacités."
+        "description": "Faire d’IRESEN une référence d’excellence scientifique et technologique en Afrique, contribuant à la maîtrise des technologies et à la transformation de la recherche et de l’innovation en valeur et en impact pour le Maroc."
       },
       "key-figures": {
         "title": "Notre parcours depuis 2011",
@@ -331,7 +331,35 @@
       },
       "institute-cooperation": {
         "title": "Coopération & Rayonnement",
-        "description": "La coopération et le rayonnement accompagnent les trois missions d’IRESEN. Ils permettent de réunir les expertises, les partenaires et les moyens nécessaires aux travaux menés au Maroc et à l’international."
+        "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines. Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération."
+      },
+      "institute-model-research": {
+        "title": "Recherche & Innovation",
+        "description": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc."
+      },
+      "institute-model-studies": {
+        "title": "Études & Expertise",
+        "description": "Données, études, veille et prospective pour éclairer les choix scientifiques, technologiques et stratégiques."
+      },
+      "institute-model-skills": {
+        "title": "Compétences & Capacités",
+        "description": "Former les talents, transmettre les savoir-faire et accompagner les personnes et les organisations dans la maîtrise des technologies."
+      },
+      "institute-model-cooperation": {
+        "title": "Coopération & Rayonnement",
+        "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines."
+      },
+      "institute-model-develop": {
+        "title": "Développer",
+        "description": "Produire des connaissances ; concevoir, adapter ou améliorer des solutions, par la recherche interne, collaborative ou le codéveloppement."
+      },
+      "institute-model-test": {
+        "title": "Éprouver",
+        "description": "Tester et comparer les technologies, comprendre leurs performances et leurs limites, et réduire les incertitudes sur leur utilisation."
+      },
+      "institute-model-transfer": {
+        "title": "Valoriser",
+        "description": "Préparer la maturation, le transfert et l’utilisation des résultats, des méthodes, des données et des savoir-faire."
       }
     },
     "governance": {
@@ -537,7 +565,7 @@
     "transfer": {
       "results-to-transfer": {
         "title": "Transformer la recherche en impact",
-        "description": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché."
+        "description": "IRESEN contribue à la maturation, à la protection et au transfert des résultats de recherche, selon leur nature et leur stade. Technologies, procédés, méthodes, logiciels, données et savoir-faire peuvent trouver des applications utiles avec les acteurs concernés."
       },
       "research-to-use": {
         "title": "Un parcours, plusieurs trajectoires",
@@ -563,11 +591,11 @@
     "workWithUs": {
       "choose-pathway": {
         "title": "Partir de votre besoin, construire une contribution utile",
-        "description": "Une question à éclairer, une solution à faire progresser ou des compétences à renforcer : le point de départ est le besoin et l’usage visé."
+        "description": "Réunir les acteurs, les expertises et les ressources autour de besoins d’analyse, de recherche, d’expérimentation ou de montée en compétences."
       },
       "organisation-contributions": {
         "title": "Des apports adaptés à votre activité",
-        "description": "Relier votre besoin aux compétences scientifiques, aux moyens expérimentaux et aux partenaires utiles."
+        "description": "Six interlocuteurs, six questions, une même identité : identifier la contribution scientifique et technologique adaptée à votre besoin."
       },
       "collaboration-arrangements": {
         "title": "Choisir une forme de coopération adaptée",
@@ -887,7 +915,7 @@
   },
   "Metadata": {
     "title": "IRESEN",
-    "description": "Éclairer les choix, faire avancer les solutions et renforcer les capacités pour la transition énergétique et le développement durable du Maroc, avec nos partenaires."
+    "description": "Recherche appliquée, expérimentation et expertise pour mieux maîtriser les technologies et préparer leur utilisation au service de la transition énergétique et du développement durable du Maroc."
   },
   "Navigation": {
     "patents": "Brevets",
@@ -932,7 +960,7 @@
   },
   "Footer": {
     "tagline": "La recherche qui fait avancer l’énergie.",
-    "description": "Avec ses partenaires, IRESEN contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités pour la transition énergétique et le développement durable du Maroc.",
+    "description": "Recherche appliquée, expérimentation et expertise pour mieux maîtriser les technologies et préparer leur utilisation au service de la transition énergétique et du développement durable du Maroc.",
     "addressLabel": "Adresse",
     "address": "16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Maroc",
     "phoneLabel": "Nous appeler",
@@ -960,21 +988,21 @@
       "Depuis 2011, IRESEN mobilise la recherche, l’expertise et les compétences au service de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, l’Institut rapproche les connaissances scientifiques des besoins des acteurs publics, des entreprises et des territoires."
     ],
     "missionLabel": "Notre mission",
-    "statement": "IRESEN relie la recherche aux besoins de la transition énergétique et du développement durable du Maroc. Avec ses partenaires, il contribue à éclairer les choix, à faire avancer les solutions et à renforcer les capacités, en fédérant les acteurs et en mobilisant les expertises et les ressources nécessaires.",
+    "statement": "Relier la recherche aux besoins de la transition énergétique et du développement durable et construire, avec nos partenaires, les capacités nécessaires pour développer, éprouver et valoriser des solutions innovantes au service de cette ambition.",
     "positionLabel": "Notre positionnement",
     "position": {
       "title": "Une recherche ancrée dans les besoins du Maroc, ouverte sur le monde",
       "paragraphs": [
         "IRESEN rapproche les avancées scientifiques et technologiques des réalités nationales et régionales. Son action relie les priorités énergétiques aux enjeux de décarbonation industrielle, de compétitivité et de préservation des ressources.",
-        "L’Institut intervient à l’interface de la recherche et des usages. Il contribue à comprendre les options, à développer et éprouver les technologies dans leurs conditions d’application, et à transmettre les savoir-faire nécessaires à leur maîtrise.",
+        "IRESEN éclaire les choix par la science et l’expertise. La définition et la mise en œuvre des politiques publiques relèvent des autorités compétentes.",
         "Les programmes de soutien, les plateformes de recherche, les laboratoires et les réseaux d’experts apportent les moyens de cette contribution. Ils permettent de réunir les compétences autour de besoins précis, de produire des connaissances et de préparer leur utilisation."
       ]
     },
-    "missionsLabel": "Nos missions",
+    "missionsLabel": "Un modèle intégré de recherche et d’innovation",
     "missionsIntro": [
-      "Trois missions complémentaires structurent la contribution d’IRESEN : Études & Expertise, Recherche & Innovation et Compétences & Capacités.",
-      "Elles répondent à des besoins distincts et se renforcent mutuellement : une étude peut orienter une recherche, une expérimentation enrichir une analyse, et une formation transmettre les acquis des travaux.",
-      "Coopération & Rayonnement accompagne ces trois missions en reliant les acteurs et en mobilisant les ressources."
+      "La Recherche & Innovation constitue le cœur de métier d’IRESEN, autour de trois missions : Développer, Éprouver et Valoriser.",
+      "Études & Expertise, Compétences & Capacités et Coopération & Rayonnement renforcent et élargissent cette contribution. Elles peuvent aussi répondre directement à des besoins spécifiques.",
+      "Ces contributions mobilisent des capacités communes. Leur articulation dépend du besoin ; elle ne décrit ni un organigramme ni un parcours imposé."
     ],
     "missions": [
       {
@@ -1003,7 +1031,7 @@
       {
         "title": "Recherche & Innovation",
         "purpose": "Faire avancer les solutions.",
-        "introduction": "IRESEN conduit et soutient des travaux qui font progresser les connaissances et les solutions technologiques. Les besoins scientifiques et socioéconomiques orientent les objectifs de recherche et les moyens mobilisés avec les partenaires.\n\nCette mission articule trois activités : développer, éprouver et valoriser.",
+        "introduction": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc.\n\nTrois missions complémentaires, sans étapes obligées. IRESEN peut intervenir à différents moments, selon les besoins et les capacités mobilisées.",
         "activities": [
           {
             "title": "Développer",
@@ -1057,7 +1085,7 @@
       {
         "title": "Coopération & Rayonnement",
         "purpose": "Relier les acteurs et mobiliser les ressources.",
-        "introduction": "La coopération et le rayonnement accompagnent les trois missions d’IRESEN. Ils permettent de réunir les expertises, les partenaires et les moyens nécessaires aux travaux menés au Maroc et à l’international.",
+        "introduction": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines. Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération.",
         "activities": [
           {
             "title": "Fédérer et connecter",
@@ -1165,13 +1193,13 @@
     "meansLabel": "Nos moyens d’action",
     "contributionLabel": "Notre contribution",
     "ambition": {
-      "statement": "Faire d’IRESEN une référence d’excellence en Afrique par la qualité de ses études et de son expertise, de sa recherche et de son innovation, ainsi que de sa contribution aux compétences et aux capacités.",
+      "statement": "Faire d’IRESEN une référence d’excellence scientifique et technologique en Afrique, contribuant à la maîtrise des technologies et à la transformation de la recherche et de l’innovation en valeur et en impact pour le Maroc.",
       "paragraphs": [
-        "Cette ambition se construit avec nos partenaires, par les équipes, les méthodes, les capacités expérimentales et l’utilisation des résultats.",
-        "Elle vise à servir une transition énergétique sûre, compétitive et durable, créatrice de valeur pour le Maroc et adaptée aux besoins de sa région."
+        "À l’horizon 2035, IRESEN ambitionne de renforcer l’excellence de ses capacités et leur utilité pour les besoins du Maroc.",
+        "L’impact recherché comprend les connaissances produites, les compétences développées, les technologies maîtrisées et la contribution aux choix et aux transformations du pays."
       ]
     },
-    "cooperationLabel": "Une mission transversale",
+    "cooperationLabel": "Trois dimensions qui renforcent et élargissent notre contribution",
     "reportRead": "Consulter le rapport d’activités",
     "searchText": "IRESEN — Institut de Recherche en Énergie Solaire et Énergies Nouvelles. R&D : recherche et développement. R&D&I : recherche, développement et innovation. Transition énergétique, expertise, compétences, coopération, histoire et ambition 2035.",
     "previous": "Date précédente",
@@ -1246,7 +1274,7 @@
       "description": "Premier institut de recherche certifié ISO 9001 en Afrique."
     },
     "founded": "Depuis",
-    "pathways": "Les trois domaines de contribution",
+    "pathways": "Le cœur de métier et les dimensions complémentaires",
     "stages": {
       "institute": "IRESEN · Transition énergétique & développement durable",
       "resources": "Partager les connaissances",
@@ -1256,7 +1284,7 @@
       "expertiseSkills": "Expertise & Compétences"
     },
     "descriptions": {
-      "home": "Éclairer les choix, faire avancer les solutions et renforcer les capacités pour la transition énergétique et le développement durable du Maroc, avec nos partenaires.",
+      "home": "Recherche appliquée, expérimentation et expertise pour mieux maîtriser les technologies et préparer leur utilisation au service de la transition énergétique et du développement durable du Maroc.",
       "institute": "Relier la recherche aux besoins de la transition énergétique.",
       "governance": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
       "priorities": "Développer, éprouver et valoriser des solutions énergétiques innovantes, robustes et sobres en ressources. Notre feuille de route relie les besoins du Maroc aux questions de recherche, avec l’ambition de produire des solutions adaptables à d’autres contextes.",
@@ -1264,7 +1292,7 @@
       "projects": "Explorer les projets de recherche, développement et innovation par domaine, programme et étape de réalisation.",
       "platforms": "Du laboratoire aux démonstrateurs en conditions réelles, IRESEN développe avec ses partenaires un réseau de plateformes pour expérimenter, qualifier et faire progresser les technologies de la transition énergétique.",
       "network": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
-      "transfer": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
+      "transfer": "IRESEN contribue à la maturation, à la protection et au transfert des résultats de recherche, selon leur nature et leur stade. Technologies, procédés, méthodes, logiciels, données et savoir-faire peuvent trouver des applications utiles avec les acteurs concernés.",
       "workWithUs": "Réunir les acteurs, les expertises et les ressources autour de besoins d’analyse, de recherche, d’expérimentation ou de montée en compétences.",
       "news": "Recherche, échanges scientifiques et coopération : retrouvez les actualités de l’IRESEN et les rencontres que nous organisons ou auxquelles nous participons.",
       "events": "Des rencontres pour relier les acteurs, partager les expertises et construire des coopérations au Maroc et à l’international.",
@@ -1291,7 +1319,8 @@
     "domains": {
       "studies": "Études & Expertise",
       "research": "Recherche & Innovation",
-      "skills": "Compétences & Capacités"
+      "skills": "Compétences & Capacités",
+      "cooperation": "Coopération & Rayonnement"
     }
   },
   "Search": {
@@ -1372,11 +1401,12 @@
       "purpose": "Renforcer les capacités"
     },
     "cooperation": {
-      "link": "Construire une coopération"
+      "link": "Construire une coopération",
+      "purpose": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines."
     },
     "openQuote": "«",
     "closeQuote": "»",
-    "domainsLabel": "Les trois domaines de contribution"
+    "domainsLabel": "Trois dimensions qui renforcent et élargissent notre contribution"
   },
   "HomeResearch": {
     "eyebrow": "Thématiques",
@@ -1516,32 +1546,44 @@
     "certified": "Certifié",
     "certification": "Premier institut de recherche certifié ISO 9001 en Afrique.",
     "paths": {
-      "research": {
-        "audience": "Étudiant · Doctorant · Chercheur",
-        "title": "Donner un terrain à votre recherche",
-        "description": "Vous cherchez une opportunité pour conduire votre thèse ou vos travaux de recherche ? Explorez les possibilités de contribuer à la transition énergétique.",
-        "action": "Explorer les opportunités"
+      "decision": {
+        "audience": "État, institutions et opérateurs publics",
+        "title": "Comment la recherche peut-elle servir les priorités nationales ?",
+        "description": "Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques.",
+        "action": "Échanger sur vos priorités"
       },
-      "solution": {
-        "audience": "Porteur de projet · Professeur",
-        "title": "Faire évoluer votre solution",
-        "description": "Structurez votre projet de recherche collaborative, précisez les essais nécessaires et envisagez la maturation et le transfert de vos résultats.",
-        "action": "Échanger sur votre solution"
+      "research": {
+        "audience": "Universités et équipes de recherche",
+        "title": "Comment faire progresser nos recherches et leurs applications ?",
+        "description": "Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats.",
+        "action": "Explorer les programmes"
       },
       "industry": {
-        "audience": "Industriel",
-        "title": "Avancer dans votre décarbonation",
-        "description": "Partagez vos enjeux énergétiques et les contraintes de vos procédés pour identifier les pistes de recherche, d’expérimentation et d’expertise pertinentes.",
+        "audience": "Industriels et entreprises",
+        "title": "Comment relever nos défis technologiques et de décarbonation ?",
+        "description": "Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes.",
         "action": "Discuter de vos besoins"
       },
-      "decision": {
-        "audience": "Décideur · Bailleur de fonds",
-        "title": "Éclairer vos choix technologiques",
-        "description": "Confrontez vos orientations et vos investissements aux connaissances scientifiques, aux options technologiques et à leurs conditions de mise en œuvre.",
-        "action": "Mobiliser une expertise"
+      "territories": {
+        "audience": "Territoires et acteurs du développement",
+        "title": "Quelles solutions répondent à nos besoins et contraintes locales ?",
+        "description": "Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales.",
+        "action": "Présenter un besoin territorial"
+      },
+      "international": {
+        "audience": "Partenaires internationaux et bailleurs",
+        "title": "Quelles capacités et quels projets pouvons-nous développer ensemble ?",
+        "description": "Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes.",
+        "action": "Construire une coopération"
+      },
+      "solution": {
+        "audience": "Talents et grand public",
+        "title": "À quoi sert cette recherche et comment y contribuer ?",
+        "description": "Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles.",
+        "action": "Explorer les opportunités"
       }
     },
-    "searchText": "Collaboration IRESEN, étudiants, doctorants, chercheurs, thèse, doctorat, opportunités de recherche, professeurs, porteurs de projet, recherche et développement (R&D), maturation, transfert technologique, industriels, décarbonation, décideurs, bailleurs de fonds, expertise scientifique, choix technologiques."
+    "searchText": "État, institutions et opérateurs publics Comment la recherche peut-elle servir les priorités nationales ? Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques. Échanger sur vos priorités Universités et équipes de recherche Comment faire progresser nos recherches et leurs applications ? Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats. Explorer les programmes Industriels et entreprises Comment relever nos défis technologiques et de décarbonation ? Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes. Discuter de vos besoins Territoires et acteurs du développement Quelles solutions répondent à nos besoins et contraintes locales ? Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales. Présenter un besoin territorial Partenaires internationaux et bailleurs Quelles capacités et quels projets pouvons-nous développer ensemble ? Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes. Construire une coopération Talents et grand public À quoi sert cette recherche et comment y contribuer ? Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles. Explorer les opportunités"
   },
   "HomePlatforms": {
     "eyebrow": "Plateformes & expertise",
@@ -1601,7 +1643,7 @@
   "HomeAchievements": {
     "eyebrow": "Réalisations",
     "title": "Nos réalisations emblématiques",
-    "description": "Des infrastructures aux startups, des démonstrateurs aux orientations stratégiques : huit réalisations qui illustrent la diversité des contributions d’IRESEN.",
+    "description": "Ces exemples illustrent des capacités et des résultats. Les effets économiques, industriels ou environnementaux nécessitent des mesures propres à chaque réalisation.",
     "label": "Les huit réalisations",
     "previous": "Réalisations précédentes",
     "next": "Réalisations suivantes",
@@ -1609,92 +1651,132 @@
       "village-solaire": {
         "name": "Village Solaire",
         "category": "Infrastructure",
-        "description": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa.",
+        "description": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa. Associer démonstration, recherche et apprentissage autour de maisons solaires.",
         "imageDescription": "Vue du Village Solaire et de ses maisons équipées de panneaux photovoltaïques.",
-        "searchText": "Solar Decathlon Africa SDA bâtiments durables habitat solaire"
+        "searchText": "Solar Decathlon Africa SDA bâtiments durables habitat solaire",
+        "proof": {
+          "need": "Expérimenter des bâtiments adaptés aux enjeux énergétiques.",
+          "contribution": "Associer démonstration, recherche et apprentissage autour de maisons solaires.",
+          "result": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa.",
+          "scope": "Une capacité expérimentale ; les économies d’énergie dépendent des mesures propres aux bâtiments."
+        }
       },
       "ismart": {
         "name": "iSmart",
         "category": "Startup",
-        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine.",
+        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine. Rapprocher développement technologique, fabrication locale et valorisation.",
         "imageDescription": "Borne de recharge iSmart et présentation du produit.",
-        "searchText": "mobilité électrique recharge véhicules électriques startup marocaine"
+        "searchText": "mobilité électrique recharge véhicules électriques startup marocaine",
+        "proof": {
+          "need": "Développer des solutions de recharge pour la mobilité électrique.",
+          "contribution": "Rapprocher développement technologique, fabrication locale et valorisation.",
+          "result": "Une borne de recharge pour véhicules électriques 100 % marocaine.",
+          "scope": "Le produit illustre la valorisation ; il ne suffit pas à établir un volume d’adoption ou des émissions évitées."
+        }
       },
       "aquasolar": {
         "name": "AquaSolar",
         "category": "Démonstrateur",
-        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire.",
+        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire. Développer et expérimenter une solution mobile et modulaire.",
         "imageDescription": "Unité AquaSolar avec des panneaux photovoltaïques sur sa toiture.",
-        "searchText": "dessalement eau solaire unité mobile modulaire"
+        "searchText": "dessalement eau solaire unité mobile modulaire",
+        "proof": {
+          "need": "Explorer le dessalement alimenté par l’énergie solaire.",
+          "contribution": "Développer et expérimenter une solution mobile et modulaire.",
+          "result": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire.",
+          "scope": "Un démonstrateur ; les performances et les usages effectifs doivent être appréciés dans leurs conditions d’essai."
+        }
       },
       "worldptx": {
         "name": "WorldPtX Summit",
         "category": "Événement",
-        "description": "Un sommet mondial consacré au Power-to-X et à ses applications.",
+        "description": "Un sommet mondial consacré au Power-to-X et à ses applications. Organiser les échanges et le partage d’expertise entre partenaires.",
         "imageDescription": "Table ronde du WorldPtX Summit.",
-        "searchText": "World Power-to-X Summit PtX hydrogène énergie sommet mondial"
+        "searchText": "World Power-to-X Summit PtX hydrogène énergie sommet mondial",
+        "proof": {
+          "need": "Réunir les acteurs autour des enjeux du Power-to-X.",
+          "contribution": "Organiser les échanges et le partage d’expertise entre partenaires.",
+          "result": "Un sommet mondial consacré au Power-to-X et à ses applications.",
+          "scope": "Une contribution à la coopération et au rayonnement ; la tenue d’un événement ne démontre pas à elle seule des transferts."
+        }
       },
       "upilot-h2": {
         "name": "uPilot H₂",
         "category": "Pilote",
-        "description": "Le premier pilote de production d’hydrogène vert au Maroc.",
+        "description": "Le premier pilote de production d’hydrogène vert au Maroc. Mobiliser une installation pilote pour l’apprentissage et l’expérimentation.",
         "imageDescription": "Unité uPilot H₂ de production d’hydrogène vert.",
-        "searchText": "uPilot H2 micro pilote hydrogène vert production Maroc"
+        "searchText": "uPilot H2 micro pilote hydrogène vert production Maroc",
+        "proof": {
+          "need": "Expérimenter la production d’hydrogène vert au Maroc.",
+          "contribution": "Mobiliser une installation pilote pour l’apprentissage et l’expérimentation.",
+          "result": "Le premier pilote de production d’hydrogène vert au Maroc.",
+          "scope": "Une capacité pilote ; elle ne préjuge pas d’un déploiement industriel à grande échelle."
+        }
       },
       "propre-ma": {
         "name": "PROPRE.MA",
         "category": "Projet R&D",
-        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire.",
+        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire. Articuler installations universitaires, observation et recherche.",
         "imageDescription": "Panneaux photovoltaïques sur une toiture, visuel fourni pour PROPRE.MA.",
-        "searchText": "recherche et développement R&D photovoltaïque productible solaire universités marocaines"
+        "searchText": "recherche et développement R&D photovoltaïque productible solaire universités marocaines",
+        "proof": {
+          "need": "Mieux connaître le productible photovoltaïque selon les conditions locales.",
+          "contribution": "Articuler installations universitaires, observation et recherche.",
+          "result": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire.",
+          "scope": "Des moyens pour produire des connaissances sur la ressource et les performances, sans bénéfice économique chiffré ici."
+        }
       },
       "cartography": {
         "name": "Cartographie",
         "category": "Aide à la décision",
-        "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques.",
+        "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques. Mobiliser les données spatiales, la cartographie et le zoning.",
         "imageDescription": "Carte du Maroc présentant plusieurs couches de données sur les ressources et le territoire.",
-        "searchText": "cartographie ressources renouvelables zoning solaire éolien GHI irradiation globale horizontale DNI irradiation directe normale"
+        "searchText": "cartographie ressources renouvelables zoning solaire éolien GHI irradiation globale horizontale DNI irradiation directe normale",
+        "proof": {
+          "need": "Éclairer les choix énergétiques à partir de la connaissance des ressources.",
+          "contribution": "Mobiliser les données spatiales, la cartographie et le zoning.",
+          "result": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques.",
+          "scope": "Une aide à l’analyse ; les décisions et les autorisations relèvent des autorités compétentes."
+        }
       },
       "hydrogen-roadmap": {
         "name": "Feuille de route hydrogène vert",
         "category": "Orientations stratégiques",
-        "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert.",
+        "description": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert. Apporter une contribution scientifique et technologique aux travaux stratégiques.",
         "imageDescription": "Couverture de la feuille de route hydrogène vert du Maroc, présentée en rapports empilés.",
-        "searchText": "feuille de route hydrogène vert Green H2 Maroc stratégie transition énergétique"
+        "searchText": "feuille de route hydrogène vert Green H2 Maroc stratégie transition énergétique",
+        "proof": {
+          "need": "Éclairer les perspectives de la filière hydrogène vert au Maroc.",
+          "contribution": "Apporter une contribution scientifique et technologique aux travaux stratégiques.",
+          "result": "Une contribution à l’élaboration de la feuille de route du Maroc pour l’hydrogène vert.",
+          "scope": "Un apport d’expertise ; l’élaboration et la mise en œuvre de la politique publique restent distinctes."
+        }
       }
     }
   },
   "HomeInnovation": {
-    "eyebrow": "De l’idée à l’impact",
-    "title": "Un parcours pour faire progresser l’innovation",
-    "description": "Dans Recherche & Innovation, développer, éprouver et valoriser relient les besoins aux usages, avec des retours entre les travaux.",
-    "support": "Un parcours adaptable : chaque projet suit les étapes utiles à son besoin.",
-    "feedback": "Documenter l’utilisation des résultats et partager les enseignements.",
-    "action": "Découvrir la valorisation et le transfert",
+    "eyebrow": "Des trajectoires selon les besoins",
+    "title": "Trois missions, plusieurs points d’entrée",
+    "description": "Développer, éprouver et valoriser se combinent selon le projet. La recherche et l’expérimentation peuvent se nourrir mutuellement.",
+    "support": "Chaque projet mobilise les contributions utiles à son besoin.",
+    "feedback": "Les connaissances, les compétences et les choix mieux éclairés sont aussi des résultats utiles.",
+    "action": "Explorer les voies de valorisation",
+    "label": "Exemples de trajectoires possibles",
     "steps": {
-      "anticipate": {
-        "title": "Anticiper les besoins",
-        "description": "Besoins nationaux, prospective et idéation."
+      "test": {
+        "title": "Éprouver une technologie existante",
+        "description": "Une solution développée ailleurs peut être testée et adaptée aux conditions locales."
       },
-      "support": {
-        "title": "Structurer et soutenir",
-        "description": "Programmation R&D&I, partenaires et soutien aux projets."
+      "learn": {
+        "title": "Relancer une recherche par les essais",
+        "description": "Une expérimentation peut révéler des limites et faire émerger de nouvelles questions scientifiques."
       },
-      "develop": {
-        "title": "Développer et éprouver",
-        "description": "Recherche, développement, expérimentation et démonstration."
-      },
-      "mature": {
-        "title": "Faire mûrir et valoriser",
-        "description": "Maturation et préparation du transfert."
-      },
-      "adopt": {
-        "title": "Accompagner l’adoption",
-        "description": "Utilisation des solutions et évaluation de leur contribution."
+      "use": {
+        "title": "Transmettre un savoir-faire",
+        "description": "Une méthode ou une connaissance peut être utilisée et partagée sans transfert industriel immédiat."
       }
     },
-    "searchText": "Chaîne de valeur de l’innovation : besoins nationaux, anticipation, idéation, programmation de la recherche, du développement et de l’innovation (R&D&I), soutien, montée en puissance, expérimentation, démonstration, maturation, valorisation, transfert, adoption et évaluation de l’impact. Dans Recherche & Innovation, développer, éprouver et valoriser relient les besoins aux usages, avec des retours entre les travaux. Un parcours adaptable : chaque projet suit les étapes utiles à son besoin.",
-    "label": "Repères du parcours de recherche et d’innovation"
+    "searchText": "Développer, éprouver et valoriser se combinent selon le projet. La recherche et l’expérimentation peuvent se nourrir mutuellement. Chaque projet mobilise les contributions utiles à son besoin. Les connaissances, les compétences et les choix mieux éclairés sont aussi des résultats utiles."
   },
   "Engagement": {
     "navigation": "Explorer cette page",
@@ -1729,23 +1811,38 @@
           "label": "Ce que l’on vous apporte",
           "items": [
             {
-              "title": "Entreprises et industriels",
-              "description": "Éclairer vos choix technologiques, explorer les voies de développement et préparer les essais utiles à votre solution. Nous rapprochons vos enjeux d’usage des compétences de recherche et d’expérimentation."
+              "title": "État, institutions et opérateurs publics",
+              "question": "Comment la recherche peut-elle servir les priorités nationales ?",
+              "description": "Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques."
             },
             {
-              "title": "Équipes de recherche",
-              "description": "Structurer des travaux communs, croiser les expertises et identifier les moyens expérimentaux pertinents. La coopération ouvre des échanges scientifiques et des liens avec les besoins de terrain."
+              "title": "Universités et équipes de recherche",
+              "question": "Comment faire progresser nos recherches et leurs applications ?",
+              "description": "Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats."
             },
             {
-              "title": "Institutions et territoires",
-              "description": "Apporter des analyses, des connaissances et des options technologiques pour éclairer vos décisions. Nous relions les enjeux de transition énergétique aux contextes d’application et aux acteurs concernés."
+              "title": "Industriels et entreprises",
+              "question": "Comment relever nos défis technologiques et de décarbonation ?",
+              "description": "Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes."
             },
             {
-              "title": "Partenaires et bailleurs",
-              "description": "Faire converger vos priorités avec des questions de recherche et des équipes complémentaires. Nous contribuons au cadrage de coopérations, au partage des connaissances et à la mise en relation des acteurs."
+              "title": "Territoires et acteurs du développement",
+              "question": "Quelles solutions répondent à nos besoins et contraintes locales ?",
+              "description": "Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales."
+            },
+            {
+              "title": "Partenaires internationaux et bailleurs",
+              "question": "Quelles capacités et quels projets pouvons-nous développer ensemble ?",
+              "description": "Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes."
+            },
+            {
+              "title": "Talents et grand public",
+              "question": "À quoi sert cette recherche et comment y contribuer ?",
+              "description": "Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles."
             }
           ],
-          "checklist": []
+          "checklist": [],
+          "note": "Le besoin détermine les contributions pertinentes. Les modalités, les ressources et les conditions de collaboration sont à préciser ensemble."
         },
         "collaboration-arrangements": {
           "label": "Le cadre",
@@ -1861,15 +1958,22 @@
     "navigation": "Sur cette page",
     "eyebrow": "Valorisation & transfert",
     "title": "Transformer la recherche en impact",
-    "intro": "IRESEN accompagne la transformation des résultats de recherche en technologies protégées, matures et valorisables, jusqu’à leur adoption par l’industrie et le marché.",
+    "intro": "IRESEN contribue à la maturation, à la protection et au transfert des résultats de recherche, selon leur nature et leur stade. Technologies, procédés, méthodes, logiciels, données et savoir-faire peuvent trouver des applications utiles avec les acteurs concernés.",
     "innovationAction": "Valoriser une innovation",
     "exploreAction": "Explorer nos technologies",
     "process": {
       "label": "De la recherche à l’impact",
       "title": "Un parcours, plusieurs trajectoires",
-      "description": "Détecter, évaluer, protéger, maturer, transférer, déployer : relier le potentiel scientifique aux besoins de l’industrie et du marché.",
-      "steps": ["Détecter", "Évaluer", "Protéger", "Maturer", "Transférer", "Déployer"],
-      "note": "Ce parcours ne constitue pas un processus rigide : chaque innovation suit une trajectoire adaptée à sa maturité, son potentiel et ses opportunités."
+      "description": "Des fonctions à combiner selon les résultats : identifier, évaluer, protéger lorsque c’est pertinent, maturer et préparer leur utilisation.",
+      "steps": [
+        "Détecter",
+        "Évaluer",
+        "Protéger",
+        "Maturer",
+        "Transférer",
+        "Préparer l’utilisation"
+      ],
+      "note": "Trois missions complémentaires, sans étapes obligées. IRESEN peut intervenir à différents moments, selon les besoins et les capacités mobilisées. Préparer la maturation, le transfert et l’utilisation des résultats, des méthodes, des données et des savoir-faire."
     },
     "ip": {
       "label": "Propriété intellectuelle",
@@ -1991,7 +2095,7 @@
       "technology": "Illustration générée d’une spécialiste présentant un schéma de réseau énergétique sur écran."
     },
     "example": {
-      "title": "Exemple de valorisation réussie",
+      "title": "Une réalisation qui illustre la valorisation",
       "description": "Borne de recharge pour véhicules électriques.",
       "origin": "100 % marocaine",
       "imageAlt": "Borne de recharge iSmart, avec ses prises protégées et son indicateur lumineux, sur fond transparent.",
@@ -2536,7 +2640,7 @@
   "Governance": {
     "title": "Gouvernance et organisation",
     "tagline": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
-    "introduction": "La gouvernance d’IRESEN réunit les acteurs publics, les partenaires du secteur énergétique et l’expertise scientifique pour orienter les activités de l’Institut et en suivre les résultats. Son organisation mobilise les compétences, les programmes et les moyens nécessaires à ses trois domaines de contribution : Études & Expertise, Recherche & Innovation, Compétences & Capacités. La Coopération & Rayonnement soutient leur action commune.",
+    "introduction": "La gouvernance d’IRESEN réunit acteurs publics, partenaires du secteur énergétique et expertise scientifique pour orienter les activités et suivre les résultats. Son organisation mobilise les capacités nécessaires à la Recherche & Innovation, cœur de métier de l’Institut, et aux dimensions Études & Expertise, Compétences & Capacités et Coopération & Rayonnement.",
     "mission": {
       "title": "Une gouvernance au service des missions de l’Institut",
       "paragraphs": [
@@ -2752,7 +2856,7 @@
     "description": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
     "domains": {
       "title": "Des compétences pour éclairer les choix.",
-      "description": "Études & Expertise et Compétences & Capacités s’appuient sur la recherche, les plateformes et les partenaires. Le réseau met en relation ces contributions autour des besoins énergétiques et industriels.",
+      "description": "Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération. Données, études, veille et prospective pour éclairer les choix scientifiques, technologiques et stratégiques.",
       "items": [
         {
           "title": "Observer et anticiper",
@@ -2774,7 +2878,7 @@
       "items": [
         {
           "title": "Études & analyse",
-          "description": "Institutions, entreprises et équipes de recherche : préciser une question, comparer des options et construire une lecture documentée."
+          "description": "Institutions, entreprises et équipes de recherche : préciser une question, comparer des options et construire une lecture documentée. IRESEN éclaire les choix par la science et l’expertise. La définition et la mise en œuvre des politiques publiques relèvent des autorités compétentes."
         },
         {
           "title": "Mesure & essais",
@@ -3074,7 +3178,7 @@
       "paragraphs": [
         "Le réseau de plateformes d’IRESEN est né d’une ambition : construire, avec ses partenaires, les capacités scientifiques et technologiques nécessaires à la transition énergétique. Développé notamment avec l’Université Mohammed VI Polytechnique et le soutien de partenaires nationaux et internationaux, il rapproche la recherche, la formation et l’innovation des besoins du monde socio-économique.",
         "Chaque plateforme apporte une spécialisation et un environnement d’expérimentation complémentaires. Leur organisation en réseau permet de mutualiser les équipements et les équipes, de croiser les expertises et d’étudier les solutions dans différentes conditions climatiques et territoriales, au Maroc et à l’échelle africaine.",
-        "Ensemble, elles donnent aux chercheurs et aux entreprises les moyens de développer, d’éprouver et de valoriser des technologies adaptées aux besoins énergétiques, industriels et environnementaux des territoires."
+        "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc. Une plateforme peut contribuer à une recherche, à des essais et à la formation. Un partenariat peut réunir les expertises et les ressources nécessaires à plusieurs contributions."
       ],
       "values": {
         "0": {
@@ -3099,7 +3203,8 @@
     "seo": {
       "title": "Infrastructures & plateformes de recherche | IRESEN",
       "description": "Découvrez le réseau de plateformes d’IRESEN : technologies solaires, bâtiments durables, réseaux intelligents et hydrogène vert, au Maroc et en Afrique."
-    }
+    },
+    "accessNote": "Les modalités d’accès, les essais et les formations se définissent avec les équipes selon les besoins et les capacités disponibles. Les infrastructures en développement sont distinguées des moyens opérationnels."
   },
   "Programmes": {
     "eyebrow": "Programmes R&D&I",
@@ -3126,7 +3231,8 @@
       "paragraphs": [
         "Depuis sa création, IRESEN exerce une mission d’agence de moyens : mobiliser des financements et accompagner des projets de recherche appliquée portés par les universités, les centres de recherche et les entreprises.",
         "Cette mission s’inscrit aujourd’hui dans les programmes de recherche, développement et innovation — R&D&I. En lien avec les priorités énergétiques du Maroc, ils donnent un cadre commun aux partenaires pour développer, éprouver et valoriser des solutions innovantes.",
-        "Le principe est simple : réunir les compétences scientifiques et les besoins du monde économique au sein de projets collaboratifs. Les appels à projets précisent les défis à relever, les conditions de participation et les modalités de soutien. Les projets sélectionnés bénéficient d’un financement et d’un accompagnement adaptés au dispositif concerné."
+        "Le principe est simple : réunir les compétences scientifiques et les besoins du monde économique au sein de projets collaboratifs. Les appels à projets précisent les défis à relever, les conditions de participation et les modalités de soutien. Les projets sélectionnés bénéficient d’un financement et d’un accompagnement adaptés au dispositif concerné.",
+        "Les programmes et les financements sont des leviers de la Recherche & Innovation. IRESEN mobilise aussi la recherche interne, le codéveloppement industriel, la coopération scientifique internationale et l’adaptation de technologies existantes."
       ],
       "items": [
         {
@@ -3164,8 +3270,8 @@
     },
     "process": {
       "eyebrow": "Du dépôt à la valorisation",
-      "title": "Un accompagnement à chaque étape du projet.",
-      "description": "Chaque appel définit ses conditions de participation, ses critères de sélection et son calendrier. Le parcours ci-dessous présente les grandes étapes de l’accompagnement.",
+      "title": "Le parcours des projets sélectionnés par appel",
+      "description": "Ces repères concernent les projets sélectionnés par appel. Le calendrier et les conditions sont propres à chaque dispositif ; les autres modes d’intervention peuvent suivre des trajectoires différentes.",
       "items": [
         {
           "title": "01 — Appel à projets et candidature",
@@ -3325,5 +3431,91 @@
         "description": "Carte interactive de l’atlas solaire, ouverte sur les coordonnées fournies."
       }
     ]
+  },
+  "Narrative": {
+    "coreLabel": "Notre cœur de métier",
+    "coreTitle": "Recherche & Innovation",
+    "coreDescription": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc.",
+    "noSequence": "Trois missions complémentaires, sans étapes obligées. IRESEN peut intervenir à différents moments, selon les besoins et les capacités mobilisées.",
+    "dimensionsLabel": "Trois dimensions qui renforcent et élargissent notre contribution",
+    "relationship": "Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération.",
+    "capabilitiesLabel": "Des capacités communes, mobilisées selon les besoins",
+    "capabilitiesNote": "Une plateforme peut contribuer à une recherche, à des essais et à la formation. Un partenariat peut réunir les expertises et les ressources nécessaires à plusieurs contributions.",
+    "missions": {
+      "develop": {
+        "title": "Développer",
+        "description": "Produire des connaissances ; concevoir, adapter ou améliorer des solutions, par la recherche interne, collaborative ou le codéveloppement.",
+        "action": "Recherche et programmes"
+      },
+      "test": {
+        "title": "Éprouver",
+        "description": "Tester et comparer les technologies, comprendre leurs performances et leurs limites, et réduire les incertitudes sur leur utilisation.",
+        "action": "Essais et plateformes"
+      },
+      "transfer": {
+        "title": "Valoriser",
+        "description": "Préparer la maturation, le transfert et l’utilisation des résultats, des méthodes, des données et des savoir-faire.",
+        "action": "Valorisation et transfert"
+      }
+    },
+    "dimensions": {
+      "studies": {
+        "title": "Études & Expertise",
+        "description": "Données, études, veille et prospective pour éclairer les choix scientifiques, technologiques et stratégiques.",
+        "action": "Éclairer les choix"
+      },
+      "skills": {
+        "title": "Compétences & Capacités",
+        "description": "Former les talents, transmettre les savoir-faire et accompagner les personnes et les organisations dans la maîtrise des technologies.",
+        "action": "Renforcer les capacités"
+      },
+      "cooperation": {
+        "title": "Coopération & Rayonnement",
+        "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines.",
+        "action": "Construire une coopération"
+      }
+    },
+    "capabilities": {
+      "expertise": "Expertise scientifique et technologique",
+      "programmes": "Programmes et projets de R&D&I",
+      "platforms": "Plateformes et laboratoires",
+      "data": "Données, veille et prospective",
+      "people": "Réseaux d’experts et compétences humaines",
+      "partnerships": "Partenariats et coopération internationale",
+      "resources": "Financements et mobilisation de ressources",
+      "ip": "Propriété intellectuelle et dispositifs de valorisation"
+    },
+    "ecosystem": {
+      "title": "À l’interface de l’écosystème national",
+      "priorities": "Priorités nationales : transition énergétique, décarbonation et développement durable",
+      "science": "Recherche scientifique : connaissances, méthodes et technologies",
+      "needs": "Besoins socio-économiques : industrie, opérateurs et territoires",
+      "role": "Relier les besoins aux contributions scientifiques et technologiques",
+      "partners": "Pouvoirs publics, universités, centres de recherche, opérateurs énergétiques, industriels, PME, startups et acteurs territoriaux contribuent selon leurs responsabilités.",
+      "note": "IRESEN éclaire les choix par la science et l’expertise. La définition et la mise en œuvre des politiques publiques relèvent des autorités compétentes."
+    },
+    "orientations": {
+      "excellence": {
+        "title": "Renforcer l’excellence scientifique et technologique",
+        "description": "Consolider les expertises, les programmes et les infrastructures pour produire des connaissances de qualité et développer des compétences durables."
+      },
+      "mastery": {
+        "title": "Contribuer à une plus grande maîtrise des technologies",
+        "description": "Comprendre, évaluer, adapter et intégrer les technologies dans les conditions d’utilisation et les besoins industriels du Maroc."
+      },
+      "value": {
+        "title": "Accroître la création de valeur et l’impact",
+        "description": "Renforcer les possibilités de maturation, de transfert et d’utilisation ; contribuer aussi aux connaissances, aux compétences et à des décisions mieux éclairées."
+      }
+    },
+    "figuresNote": "Les chiffres institutionnels décrivent les activités et capacités cumulées. Le catalogue présente 59 références de brevets et le répertoire 14 laboratoires ; ces périmètres sont distincts des totaux institutionnels et ne mesurent pas l’impact.",
+    "proofLabel": "Ce que cette réalisation apporte",
+    "proofNotice": "Ces exemples illustrent des capacités et des résultats. Les effets économiques, industriels ou environnementaux nécessitent des mesures propres à chaque réalisation.",
+    "proofFields": {
+      "need": "Besoin",
+      "contribution": "Contribution",
+      "result": "Résultat documenté",
+      "scope": "Portée"
+    }
   }
 }

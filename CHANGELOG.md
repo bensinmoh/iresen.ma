@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-14 — Institutional narrative review branch
+
+- Implement the PDF's R&I core, three missions and three complementary dimensions
+  on Home and Institute, with ecosystem, capabilities and 2035 orientations.
+- Align six audience journeys, research modes, transfer language, evidence details,
+  shared introductions and FR/EN/AR search projections; preserve 23 routes and facts.
+- Record glossary, source limits and figure/evidence reconciliation. Keep source
+  PDF private, real projects absent and translations under review.
+- Keep the dedicated branch/PR open pending the owner's explicit merge GO.
+
 ## 2026-10-13 — Siteweb backlog
 
 - Consolidate the owner's content, design, functional integration and backend

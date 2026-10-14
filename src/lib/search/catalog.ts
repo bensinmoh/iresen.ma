@@ -818,7 +818,11 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Calls.discoveryDescription,
         )
       }
-      if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
+      if (pageId === 'institute')
+        body.push(
+          ...engagementSearchText(catalog.Institute),
+          ...engagementSearchText(catalog.Narrative),
+        )
       if (pageId === 'governance')
         body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
       if (pageId === 'priorities') body.push(...engagementSearchText(catalog.Roadmap))
@@ -862,6 +866,13 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       }
       if (pageId === 'home')
         body.push(
+          ...engagementSearchText(catalog.Narrative.missions),
+          ...engagementSearchText(catalog.Narrative.dimensions),
+          catalog.Narrative.coreDescription,
+          catalog.Narrative.noSequence,
+          catalog.Narrative.relationship,
+          catalog.Narrative.figuresNote,
+          ...engagementSearchText(catalog.HomeAchievements.items),
           catalog.Hero.homeTitle,
           'ISO 9001:2015',
           catalog.Hero.certification.label,
@@ -1049,15 +1060,24 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           if (pageId === 'institute') {
             const instituteCopy = {
               about: catalog.Institute.introduction,
-              'institute-positioning': catalog.Institute.position,
+              'institute-positioning': {
+                position: catalog.Institute.position,
+                ecosystem: catalog.Narrative.ecosystem,
+              },
               mission: catalog.Institute.statement,
-              capabilities: catalog.Institute.missionsIntro,
+              capabilities: {
+                introduction: catalog.Institute.missionsIntro,
+                model: catalog.Narrative,
+              },
               'institute-studies': catalog.Institute.missions[0],
               'institute-research': catalog.Institute.missions[1],
               'institute-skills': catalog.Institute.missions[2],
               'institute-cooperation': catalog.Institute.missions[3],
               'institute-values': catalog.Institute.values,
-              'ambition-2035': catalog.Institute.ambition,
+              'ambition-2035': {
+                ambition: catalog.Institute.ambition,
+                orientations: catalog.Narrative.orientations,
+              },
               'key-figures': catalog.Institute.historyIntro,
               'institute-history': catalog.Institute.timeline,
               'more-resources': catalog.Institute.report,
@@ -1123,11 +1143,19 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             )?.id
             if (achievementId) {
               const item = catalog.HomeAchievements.items[achievementId]
-              body.push(item.category, item.searchText)
+              body.push(item.category, item.searchText, ...engagementSearchText(item.proof))
             }
           }
           if (pageId === 'home' && entry.id === homeMissionSectionId)
             body.push(
+              catalog.Narrative.coreLabel,
+              catalog.Narrative.coreTitle,
+              catalog.Narrative.coreDescription,
+              catalog.Narrative.noSequence,
+              catalog.Narrative.dimensionsLabel,
+              catalog.Narrative.relationship,
+              ...engagementSearchText(catalog.Narrative.missions),
+              ...engagementSearchText(catalog.Narrative.dimensions),
               catalog.HomeMissions.eyebrow,
               catalog.HomeMissions.functions,
               catalog.PageSections.home[homeCooperationAnchor].title,
@@ -1174,6 +1202,14 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             const platformId = homePlatforms.find(({ id }) => entry.id === `platform-${id}`)?.id
             if (platformId) body.push(catalog.HomePlatforms.platforms[platformId].searchText)
           }
+          if (pageId === 'institute' && entry.id.startsWith('institute-model-')) {
+            const id = entry.id.replace('institute-model-', '')
+            if (id === 'research')
+              body.push(
+                ...engagementSearchText(catalog.Narrative.missions),
+                catalog.Narrative.noSequence,
+              )
+          }
           if (pageId === 'home' && entry.id === 'collaboration') {
             const collaboration = catalog.HomeCollaboration
             body.push(
@@ -1203,7 +1239,12 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 catalog.HomeMissions[mission.id].link,
                 catalog.HomeMissions[mission.id].purpose,
               )
-            if (entry.id === 'mission-research') body.push(catalog.HomeMissions.functions)
+            if (entry.id === 'mission-research')
+              body.push(
+                catalog.HomeMissions.functions,
+                ...engagementSearchText(catalog.Narrative.missions),
+                catalog.Narrative.noSequence,
+              )
             if (entry.id === homeCooperationAnchor) body.push(catalog.HomeMissions.cooperation.link)
           }
           documents.push({

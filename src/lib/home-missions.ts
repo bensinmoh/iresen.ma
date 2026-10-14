@@ -1,24 +1,24 @@
 import type { PageId } from '@/lib/site'
 
-// The legacy section URL remains stable; domains replace the former stage cards.
+// Stable shortcuts distinguish the research core from its complementary dimensions.
 export const homeMissionSectionId = 'develop-test-transfer'
 export const homeCooperationAnchor = 'mission-cooperation'
 export const legacyMissionAnchors = ['mission-develop', 'mission-test', 'mission-transfer'] as const
 
 export const homeMissions = [
   {
+    id: 'research',
+    anchor: 'mission-research',
+    pageId: 'institute',
+    destinationAnchor: 'institute-research',
+    imageId: 'develop',
+  },
+  {
     id: 'studies',
     anchor: 'mission-studies',
     pageId: 'network',
     destinationAnchor: 'intervention-modes',
     imageId: 'transfer',
-  },
-  {
-    id: 'research',
-    anchor: 'mission-research',
-    pageId: 'programmes',
-    destinationAnchor: undefined,
-    imageId: 'develop',
   },
   {
     id: 'skills',

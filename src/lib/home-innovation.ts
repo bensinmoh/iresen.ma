@@ -1,3 +1,3 @@
 export const homeInnovationSectionId = 'innovation-value-chain'
 
-export const innovationSteps = ['anticipate', 'support', 'develop', 'mature', 'adopt'] as const
+export const innovationSteps = ['test', 'learn', 'use'] as const

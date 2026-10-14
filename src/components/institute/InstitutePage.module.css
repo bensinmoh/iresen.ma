@@ -645,3 +645,17 @@
     transform: translateX(23.1%);
   }
 }
+.orientations {
+  display: grid;
+  gap: var(--space-6);
+  margin-block: var(--space-8) 0;
+}
+.orientations dt {
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--color-energy-cyan);
+}
+.orientations dd {
+  margin: var(--space-2) 0 0;
+  line-height: 1.7;
+}

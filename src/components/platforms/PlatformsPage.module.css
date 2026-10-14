@@ -299,3 +299,9 @@
     inline-size: 100%;
   }
 }
+.accessNote {
+  margin-block: var(--space-6) 0;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-inline-size: 75ch;
+}
