@@ -1,5 +1,17 @@
 # IRESEN coding entrypoint
 
+## Current narrative implementation — 2026-10-14
+
+The owner now commissions the complete PDF narrative plan on the dedicated
+`feat/institutional-narrative-2026` branch and requires a review URL, followed by
+an explicit GO before merge. This overrides automatic completion/merge for this
+branch. Research & Innovation is the core activity with Develop, Test, Valorise;
+Studies & Expertise, Skills & Capacities and Cooperation & Outreach are three
+complementary dimensions. See [current implementation](docs/institutional-narrative-2026.md).
+The 2026-10-10 equal-domain/common-enabler composition below is historical.
+Keep French source mission exact, translations under review and measured outcomes
+distinct from ambitions. Do not invent missing evidence or publish the private PDF.
+
 ## Public release preparation — 2026-10-12
 
 The owner commissions programme layout balance, full fictional-project withdrawal,

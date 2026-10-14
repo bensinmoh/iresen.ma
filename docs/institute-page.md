@@ -1,5 +1,13 @@
 # Institute page — 2026-10-11
 
+## Narrative supersession — 2026-10-14
+
+The [October PDF implementation](institutional-narrative-2026.md) now governs the R&I core, three
+missions, three complementary dimensions and six audience pathways. The earlier
+equal-domain/common-enabler composition and five-step homepage rail described
+below are historical. Existing canonical routes, content provenance and service
+boundaries remain. The owner reserves the explicit merge GO for the review branch.
+
 The owner commissioned the canonical Institute page after Governance completion
 (PR #93). The supplied French manuscript defines its content over Figma sample
 claims. The private manuscript and source PDF are not imported into the repository
@@ -89,3 +97,40 @@ motion owns headings/quotations; reduced motion preserves immediate reading.
 See [verification](validation.md#institute-page--2026-10-11). Final translation/
 editorial approval and the full-content search sanity check remain pending.
 No deployment or visibility change is authorized.
+
+## Owner design review — 2026-10-14
+
+The owner requests inspiration from the [ClickUp narrative presentation](https://2661198.clickup.ai/a/h/2h6ue-3992/e7584a7b4057bd1).
+Its cover and impact-model board were inspected directly. The reference informs
+composition only: no external photos, slogans or additional claims are imported.
+A page-specific semantic model uses a decorative three-sector SVG arc around the
+R&I core, with readable mission descriptions, canonical links and three supporting
+contributions below. Arabic mirrors the diagram and keeps native text direction.
+Shared capability content, detailed native disclosures and all anchors remain.
+
+The light model surface, stronger editorial spacing, vector mission marks,
+numbered values and framed ambition photograph reuse existing identity tokens.
+The headquarters hero, eight-item timeline and report placeholder remain intact.
+No new public asset or content is added; existing section/media search references
+continue to describe the same content. Prior owner text withdrawals remain absent.
+
+Verification ledger: development render inspected in French at 1440px and Arabic
+at 390px; Arabic page width equals viewport width (390px). English native activity disclosure checked at 1440px. Targeted source lint
+and formatting pass; the design detector only flags the existing timeline width
+transition, outside this correction. No global tests, production build or merge: deferred by owner.
+
+## Positioning heading overlap — owner report, 2026-10-14
+
+The positioning title was sticky within a grid containing a later full-width
+ecosystem diagram. Scrolling into that diagram could keep the title above it,
+causing text overlap. Remove sticky positioning from this title; its initial
+two-column composition remains. Add FR/EN/AR production regression coverage at
+1920, 1280, 1024 and 390px, scrolling directly to the ecosystem caption and
+asserting the title ends before the diagram begins. This correction requires
+new current-head CI before merge.
+
+Owner compact-model follow-up places the existing mission introduction in the
+leading column and the semicircle/description in the trailing column on desktop.
+At 64rem and below they stack in reading order; Arabic mirrors the columns.
+Diagram labels scale with their own container width to remain inside the smaller
+semicircle. Content, canonical anchors and search copy are unchanged.

@@ -7,11 +7,16 @@ import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { TimelineRail } from './TimelineRail'
+import { InstituteModel } from './InstituteModel'
+import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
+import { EcosystemModel } from '@/components/narrative/EcosystemModel'
+import { strategicOrientations } from '@/lib/institutional-narrative'
 import styles from './InstitutePage.module.css'
 
 export async function InstitutePage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Institute' })
   const pages = await getTranslations({ locale, namespace: 'Pages' })
+  const narrative = await getTranslations({ locale, namespace: 'Narrative' })
   const paragraphs = (key: string, count: number) =>
     Array.from({ length: count }, (_, i) => <p key={i}>{t(`${key}.${i}`)}</p>)
   const label = (text: string) => (
@@ -78,43 +83,50 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             <h2 id="position-title">{t('position.title')}</h2>
           </header>
           <div className={styles.reading}>{paragraphs('position.paragraphs', 3)}</div>
+          <EcosystemModel locale={locale} />
         </section>
         <section
           id="capabilities"
           className={`container ${styles.missions}`}
           aria-labelledby="missions-title"
         >
-          <header className={styles.missionsHeading}>
-            <h2 id="missions-title">{t('missionsLabel')}</h2>
-            <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
-          </header>
-          {(['institute-studies', 'institute-research', 'institute-skills'] as const).map(
-            (id, i) => (
-              <section key={id} id={id} className={styles.mission} aria-labelledby={`${id}-title`}>
-                <header>
-                  <span className={styles.number} aria-hidden="true">
-                    0{i + 1}
-                  </span>
-                  <p className={styles.purpose}>{t(`missions.${i}.purpose`)}</p>
-                  <h3 id={`${id}-title`}>{t(`missions.${i}.title`)}</h3>
-                </header>
-                <div className={styles.reading}>
-                  {t(`missions.${i}.introduction`)
-                    .split('\n\n')
-                    .map((text, j) => (
-                      <p key={j}>{text}</p>
-                    ))}
-                  <details className={styles.details}>
-                    <summary>
-                      {t('detailsLabel')}
-                      <NavigationIcon name="chevron" />
-                    </summary>
-                    {activities(i, i === 0 ? 4 : 5)}
-                  </details>
-                </div>
-              </section>
-            ),
-          )}
+          <InstituteModel locale={locale}>
+            <header className={styles.missionsHeading}>
+              <h2 id="missions-title">{t('missionsLabel')}</h2>
+              <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
+            </header>
+          </InstituteModel>
+          {(
+            [
+              { id: 'institute-research', i: 1 },
+              { id: 'institute-studies', i: 0 },
+              { id: 'institute-skills', i: 2 },
+            ] as const
+          ).map(({ id, i }) => (
+            <section key={id} id={id} className={styles.mission} aria-labelledby={`${id}-title`}>
+              <header>
+                <span className={styles.number} aria-hidden="true">
+                  <ValorisationIcon name={i === 1 ? 'flask' : i === 0 ? 'chart-line' : 'bulb'} />
+                </span>
+                <p className={styles.purpose}>{t(`missions.${i}.purpose`)}</p>
+                <h3 id={`${id}-title`}>{t(`missions.${i}.title`)}</h3>
+              </header>
+              <div className={styles.reading}>
+                {t(`missions.${i}.introduction`)
+                  .split('\n\n')
+                  .map((text, j) => (
+                    <p key={j}>{text}</p>
+                  ))}
+                <details className={styles.details}>
+                  <summary>
+                    {t('detailsLabel')}
+                    <NavigationIcon name="chevron" />
+                  </summary>
+                  {activities(i, i === 0 ? 4 : 5)}
+                </details>
+              </div>
+            </section>
+          ))}
         </section>
         <section
           id="institute-cooperation"
@@ -161,6 +173,14 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             {label(t('ambitionLabel'))}
             <h2 id="ambition-title">{t('ambition.statement')}</h2>
             <div className={styles.reading}>{paragraphs('ambition.paragraphs', 2)}</div>
+            <dl className={styles.orientations}>
+              {strategicOrientations.map((id) => (
+                <div key={id}>
+                  <dt>{narrative(`orientations.${id}.title`)}</dt>
+                  <dd>{narrative(`orientations.${id}.description`)}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
           <div className={styles.ambitionImage} aria-hidden="true">
             <Image

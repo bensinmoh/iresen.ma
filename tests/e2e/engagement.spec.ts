@@ -18,7 +18,7 @@ for (const locale of locales) {
         await expect(page.locator('.breadcrumb')).toHaveCount(0)
         for (const programme of ['LEAP-RE', 'LEAP-SE', 'MED-GEM'])
           await expect(content.locator('#collaboration-references')).toContainText(programme)
-        await expect(content.locator('#organisation-contributions svg')).toHaveCount(4)
+        await expect(content.locator('#organisation-contributions article')).toHaveCount(6)
         await expect(content.locator('#prepare-discussion .button')).toHaveCount(1)
         await expect(content.locator('#prepare-discussion ul')).toHaveCount(0)
       }

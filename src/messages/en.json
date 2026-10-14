@@ -147,7 +147,7 @@
   },
   "Metadata": {
     "title": "IRESEN",
-    "description": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners."
+    "description": "Applied research, experimentation and expertise to better master technologies and prepare their use for Morocco’s energy transition and sustainable development."
   },
   "Navigation": {
     "patents": "Patents",
@@ -192,7 +192,7 @@
   },
   "Footer": {
     "tagline": "Research that moves energy forward.",
-    "description": "Together with its partners, IRESEN helps inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development.",
+    "description": "Applied research, experimentation and expertise to better master technologies and prepare their use for Morocco’s energy transition and sustainable development.",
     "addressLabel": "Address",
     "address": "16, rue Amir Sidi Mohamed, Souissi, Rabat 10090, Morocco",
     "phoneLabel": "Call us",
@@ -220,21 +220,21 @@
       "Since 2011, IRESEN has brought research, expertise and skills together to support Morocco’s energy transition and sustainable development. With its partners, the Institute connects scientific knowledge with the needs of public stakeholders, businesses and territories."
     ],
     "missionLabel": "Our mission",
-    "statement": "IRESEN connects research with the needs of Morocco’s energy transition and sustainable development. With its partners, it helps inform choices, advance solutions and strengthen capacities, bringing stakeholders together and mobilising the expertise and resources required.",
+    "statement": "Connect research with the needs of the energy transition and sustainable development and build, together with our partners, the capabilities needed to develop, test and valorise innovative solutions in pursuit of this ambition.",
     "positionLabel": "Our positioning",
     "position": {
       "title": "Research rooted in Morocco’s needs, open to the world",
       "paragraphs": [
         "IRESEN connects scientific and technological advances with national and regional realities. Its work links energy priorities with industrial decarbonisation, competitiveness and resource preservation.",
-        "The Institute works at the interface between research and use. It helps understand the options, develop and test technologies in their application settings, and transfer the know-how required to master them.",
+        "IRESEN informs choices through science and expertise. Defining and implementing public policy remains the responsibility of the competent authorities.",
         "Support programmes, research platforms, laboratories and expert networks provide the means for this contribution. They bring skills together around specific needs, produce knowledge and prepare for its use."
       ]
     },
-    "missionsLabel": "Our missions",
+    "missionsLabel": "An integrated research and innovation model",
     "missionsIntro": [
-      "Three complementary missions structure IRESEN’s contribution: Studies & Expertise, Research & Innovation and Skills & Capacities.",
-      "They meet distinct needs and reinforce one another: a study can guide research, an experiment can enrich an analysis, and training can pass on what the work has taught.",
-      "Cooperation & Outreach supports these three missions by connecting stakeholders and mobilising resources."
+      "Research & Innovation is IRESEN’s core activity, with three missions: Develop, Test and Valorise.",
+      "Studies & Expertise, Skills & Capacities and Cooperation & Outreach strengthen and broaden this contribution. They can also directly address specific needs.",
+      "These contributions draw on shared capabilities. Their combination depends on the need; it describes neither an organisational chart nor a compulsory pathway."
     ],
     "missions": [
       {
@@ -263,7 +263,7 @@
       {
         "title": "Research & Innovation",
         "purpose": "Advance solutions.",
-        "introduction": "IRESEN conducts and supports work that advances knowledge and technological solutions. Scientific and socioeconomic needs guide research objectives and the resources mobilised with partners.\n\nThis mission brings together three activities: develop, test and transfer value.",
+        "introduction": "Produce knowledge, develop and adapt technologies, evaluate their performance and prepare their use in response to Morocco’s needs.",
         "activities": [
           {
             "title": "Develop",
@@ -317,7 +317,7 @@
       {
         "title": "Cooperation & Outreach",
         "purpose": "Connect stakeholders and mobilise resources.",
-        "introduction": "Cooperation and outreach support IRESEN’s three missions. They bring together the expertise, partners and resources needed for work in Morocco and internationally.",
+        "introduction": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions.",
         "activities": [
           {
             "title": "Bring together and connect",
@@ -367,10 +367,10 @@
     ],
     "ambitionLabel": "Our ambition for 2035",
     "ambition": {
-      "statement": "Make IRESEN a reference for excellence in Africa through the quality of its studies and expertise, research and innovation, and contribution to skills and capacities.",
+      "statement": "Make IRESEN a reference for scientific and technological excellence in Africa, contributing to technological mastery and turning research and innovation into value and impact for Morocco.",
       "paragraphs": [
-        "This ambition is built with our partners through teams, methods, experimental capacities and the use of results.",
-        "It aims to serve a safe, competitive and sustainable energy transition, creating value for Morocco and suited to its region’s needs."
+        "By 2035, IRESEN aims to strengthen the excellence of its capabilities and their relevance to Morocco’s needs.",
+        "The intended impact includes knowledge produced, skills developed, technologies mastered and contributions to the country’s choices and transformations."
       ]
     },
     "historyLabel": "Our journey since 2011",
@@ -431,7 +431,7 @@
     "detailsLabel": "Activities and contribution",
     "meansLabel": "Our means of action",
     "contributionLabel": "Our contribution",
-    "cooperationLabel": "A cross-cutting mission",
+    "cooperationLabel": "Three dimensions that strengthen and broaden our contribution",
     "reportRead": "Read the activity report",
     "searchText": "IRESEN — Institute for Research in Solar Energy and New Energies. R&D: research and development. R&D&I: research, development and innovation. Energy transition, expertise, skills, cooperation, history and ambition for 2035.",
     "previous": "Previous milestone",
@@ -506,7 +506,7 @@
       "description": "Africa’s first research institute certified to ISO 9001."
     },
     "founded": "Since",
-    "pathways": "The three domains of contribution",
+    "pathways": "Core activity and complementary dimensions",
     "stages": {
       "institute": "IRESEN · Energy transition & sustainable development",
       "resources": "Sharing knowledge",
@@ -516,7 +516,7 @@
       "expertiseSkills": "Expertise & Skills"
     },
     "descriptions": {
-      "home": "Inform decisions, advance solutions and strengthen capabilities for Morocco’s energy transition and sustainable development, together with our partners.",
+      "home": "Applied research, experimentation and expertise to better master technologies and prepare their use for Morocco’s energy transition and sustainable development.",
       "institute": "Connecting research with the needs of the energy transition.",
       "governance": "Connecting national priorities, scientific rigour and delivery.",
       "priorities": "Develop, test and transfer innovative energy solutions that are robust and resource-efficient. Our roadmap connects Morocco’s needs with research questions, with the ambition to produce solutions adaptable to other contexts.",
@@ -524,7 +524,7 @@
       "projects": "Explore research, development and innovation projects by domain, programme and stage.",
       "platforms": "From laboratories to demonstrators in real conditions, IRESEN develops a network of platforms with its partners to experiment, qualify and advance energy transition technologies.",
       "network": "Connect scientific knowledge, experimental capabilities and teams to inform technology choices and advance research.",
-      "transfer": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
+      "transfer": "IRESEN contributes to the maturation, protection and transfer of research results according to their nature and stage. Technologies, processes, methods, software, data and know-how can find useful applications with the relevant actors.",
       "workWithUs": "Bring together people, expertise and resources around needs for analysis, research, experimentation or skills development.",
       "news": "Research, scientific exchange and cooperation: explore IRESEN news and the meetings we organise or participate in.",
       "events": "Meetings to connect people, share expertise and build cooperation in Morocco and internationally.",
@@ -551,18 +551,19 @@
     "domains": {
       "studies": "Studies & Expertise",
       "research": "Research & Innovation",
-      "skills": "Skills & Capabilities"
+      "skills": "Skills & Capabilities",
+      "cooperation": "Cooperation & Outreach"
     }
   },
   "PageSections": {
     "home": {
       "develop-test-transfer": {
         "title": "Our mission",
-        "description": "IRESEN connects research with Morocco’s energy transition and sustainable development needs. Together with its partners, it helps inform decisions, advance solutions and strengthen capabilities by bringing together people, expertise and resources."
+        "description": "Connect research with the needs of the energy transition and sustainable development and build, together with our partners, the capabilities needed to develop, test and valorise innovative solutions in pursuit of this ambition."
       },
       "figures": {
         "title": "IRESEN in figures",
-        "description": "69 collaborative projects supported, +60 patents filed, +1000 young researchers supported, +1100 scientific publications and +18 university laboratories established."
+        "description": "69 collaborative projects supported, 59 patents filed, +1000 young researchers supported, +1100 scientific publications and +18 university laboratories established."
       },
       "research-priorities": {
         "title": "Research themes serving the energy transition",
@@ -570,7 +571,7 @@
       },
       "results": {
         "title": "Our landmark achievements",
-        "description": "From infrastructure to startups, demonstrators and strategic directions: eight achievements illustrating the range of IRESEN’s contributions."
+        "description": "These examples illustrate capabilities and results. Economic, industrial or environmental effects require measurements specific to each achievement."
       },
       "platforms-expertise": {
         "title": "Capabilities that advance innovation",
@@ -638,55 +639,55 @@
       },
       "achievement-village-solaire": {
         "title": "Solar Village",
-        "description": "A village of solar buildings, born from the Solar Decathlon Africa competition."
+        "description": "A village of solar buildings, born from the Solar Decathlon Africa competition. Combine demonstration, research and learning around solar homes."
       },
       "achievement-ismart": {
         "title": "iSmart",
-        "description": "A 100% Moroccan charging station for electric vehicles."
+        "description": "A 100% Moroccan charging station for electric vehicles. Connect technological development, local manufacturing and valorisation."
       },
       "achievement-aquasolar": {
         "title": "AquaSolar",
-        "description": "A mobile, modular desalination unit powered by solar energy."
+        "description": "A mobile, modular desalination unit powered by solar energy. Develop and experiment with a mobile, modular solution."
       },
       "achievement-worldptx": {
         "title": "WorldPtX Summit",
-        "description": "A global summit dedicated to Power-to-X and its applications."
+        "description": "A global summit dedicated to Power-to-X and its applications. Organise exchanges and knowledge sharing between partners."
       },
       "achievement-upilot-h2": {
         "title": "uPilot H₂",
-        "description": "Morocco’s first pilot for green hydrogen production."
+        "description": "Morocco’s first pilot for green hydrogen production. Mobilise a pilot installation for learning and experimentation."
       },
       "achievement-propre-ma": {
         "title": "PROPRE.MA",
-        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield."
+        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield. Connect university installations, observation and research."
       },
       "achievement-cartography": {
         "title": "Resource mapping",
-        "description": "Mapping the country’s renewable resources and zoning to inform energy decisions."
+        "description": "Mapping the country’s renewable resources and zoning to inform energy decisions. Mobilise spatial data, mapping and zoning."
       },
       "achievement-hydrogen-roadmap": {
         "title": "Green hydrogen roadmap",
-        "description": "A contribution to the development of Morocco’s green hydrogen roadmap."
+        "description": "A contribution to the development of Morocco’s green hydrogen roadmap. Provide scientific and technological input to strategic work."
       },
       "innovation-value-chain": {
-        "title": "A pathway to advance innovation",
-        "description": "Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work."
+        "title": "Three missions, several entry points",
+        "description": "Develop, test and valorise combine according to the project. Research and experimentation can inform one another."
       },
       "mission-studies": {
         "title": "Studies & Expertise",
-        "description": "Knowledge, data and analysis to understand options and prepare decisions."
+        "description": "Data, studies, monitoring and foresight to inform scientific, technological and strategic choices."
       },
       "mission-research": {
         "title": "Research & Innovation",
-        "description": "Programmes, scientific work and experimental resources to develop, test and valorise."
+        "description": "Produce knowledge, develop and adapt technologies, evaluate their performance and prepare their use in response to Morocco’s needs."
       },
       "mission-skills": {
         "title": "Skills & Capabilities",
-        "description": "Skills and know-how to understand technologies, practise them and pass them on."
+        "description": "Develop talent, share know-how and support people and organisations in understanding and mastering technologies."
       },
       "mission-cooperation": {
         "title": "Cooperation & Outreach",
-        "description": "Connect people and organisations, mobilise resources and build concrete cooperation to raise recognition of scientific and technological contributions."
+        "description": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions."
       }
     },
     "institute": {
@@ -696,15 +697,15 @@
       },
       "mission": {
         "title": "Our mission",
-        "description": "IRESEN connects research with the needs of Morocco’s energy transition and sustainable development. With its partners, it helps inform choices, advance solutions and strengthen capacities, bringing stakeholders together and mobilising the expertise and resources required."
+        "description": "Connect research with the needs of the energy transition and sustainable development and build, together with our partners, the capabilities needed to develop, test and valorise innovative solutions in pursuit of this ambition."
       },
       "capabilities": {
-        "title": "Our missions",
-        "description": "Three complementary missions structure IRESEN’s contribution: Studies & Expertise, Research & Innovation and Skills & Capacities. They meet distinct needs and reinforce one another: a study can guide research, an experiment can enrich an analysis, and training can pass on what the work has taught. Cooperation & Outreach supports these three missions by connecting stakeholders and mobilising resources."
+        "title": "An integrated research and innovation model",
+        "description": "Research & Innovation is IRESEN’s core activity, with three missions: Develop, Test and Valorise. Studies & Expertise, Skills & Capacities and Cooperation & Outreach strengthen and broaden this contribution. They can also directly address specific needs. These contributions draw on shared capabilities. Their combination depends on the need; it describes neither an organisational chart nor a compulsory pathway."
       },
       "ambition-2035": {
         "title": "Our ambition for 2035",
-        "description": "Make IRESEN a reference for excellence in Africa through the quality of its studies and expertise, research and innovation, and contribution to skills and capacities."
+        "description": "Make IRESEN a reference for scientific and technological excellence in Africa, contributing to technological mastery and turning research and innovation into value and impact for Morocco."
       },
       "key-figures": {
         "title": "Our journey since 2011",
@@ -740,7 +741,35 @@
       },
       "institute-cooperation": {
         "title": "Cooperation & Outreach",
-        "description": "Cooperation and outreach support IRESEN’s three missions. They bring together the expertise, partners and resources needed for work in Morocco and internationally."
+        "description": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions."
+      },
+      "institute-model-research": {
+        "title": "Research & Innovation",
+        "description": "Produce knowledge, develop and adapt technologies, evaluate their performance and prepare their use in response to Morocco’s needs."
+      },
+      "institute-model-studies": {
+        "title": "Studies & Expertise",
+        "description": "Data, studies, monitoring and foresight to inform scientific, technological and strategic choices."
+      },
+      "institute-model-skills": {
+        "title": "Skills & Capacities",
+        "description": "Develop talent, share know-how and support people and organisations in understanding and mastering technologies."
+      },
+      "institute-model-cooperation": {
+        "title": "Cooperation & Outreach",
+        "description": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions."
+      },
+      "institute-model-develop": {
+        "title": "Develop",
+        "description": "Produce knowledge; design, adapt or improve solutions through internal research, collaborative research or co-development."
+      },
+      "institute-model-test": {
+        "title": "Test",
+        "description": "Test and compare technologies, understand their performance and limitations, and reduce uncertainty about their use."
+      },
+      "institute-model-transfer": {
+        "title": "Valorise",
+        "description": "Prepare the maturation, transfer and use of research results, methods, data and know-how."
       }
     },
     "governance": {
@@ -754,7 +783,7 @@
       },
       "leadership-organisation": {
         "title": "Executive management and three complementary divisions",
-        "description": "Executive management and three complementary divisions The executive management implements the decisions of the board of directors. It coordinates scientific, technical, administrative and financial activities, mobilises the necessary resources and reports on progress against programmes and commitments."
+        "description": "The Research, Development and Enablement poles, team members and their professional backgrounds."
       },
       "department-responsibilities": {
         "title": "Department responsibilities",
@@ -946,7 +975,7 @@
     "transfer": {
       "results-to-transfer": {
         "title": "Turning research into impact",
-        "description": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market."
+        "description": "IRESEN contributes to the maturation, protection and transfer of research results according to their nature and stage. Technologies, processes, methods, software, data and know-how can find useful applications with the relevant actors."
       },
       "research-to-use": {
         "title": "One journey, multiple pathways",
@@ -962,7 +991,7 @@
       },
       "adoption-initiatives": {
         "title": "Explore our technologies",
-        "description": "Browse 59 filed patent references and identify technologies relevant to your needs."
+        "description": "IRESEN supports the management of an intellectual property (IP) portfolio of 30 granted patents. Explore technologies relevant to your needs."
       },
       "build-transfer": {
         "title": "Move your innovation forward",
@@ -972,11 +1001,11 @@
     "workWithUs": {
       "choose-pathway": {
         "title": "Start with a need, build a useful contribution",
-        "description": "A decision to inform, a solution to advance or capabilities to strengthen: begin with the need and its intended use."
+        "description": "Bring together people, expertise and resources around needs for analysis, research, experimentation or skills development."
       },
       "organisation-contributions": {
         "title": "Support shaped around your work",
-        "description": "Connect your needs with scientific expertise, experimental capabilities and relevant partners."
+        "description": "Six audiences, six questions, one identity: identify the scientific and technological contribution relevant to your need."
       },
       "collaboration-arrangements": {
         "title": "Choose a suitable form of cooperation",
@@ -1372,11 +1401,12 @@
       "purpose": "Strengthen capabilities"
     },
     "cooperation": {
-      "link": "Build a cooperation"
+      "link": "Build a cooperation",
+      "purpose": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions."
     },
     "openQuote": "“",
     "closeQuote": "”",
-    "domainsLabel": "The three domains of contribution"
+    "domainsLabel": "Three dimensions that strengthen and broaden our contribution"
   },
   "HomeResearch": {
     "eyebrow": "Themes",
@@ -1516,32 +1546,44 @@
     "certified": "Certified",
     "certification": "Africa’s first research institute certified to ISO 9001.",
     "paths": {
-      "research": {
-        "audience": "Student · Doctoral candidate · Researcher",
-        "title": "Find a setting for your research",
-        "description": "Looking for an opportunity to conduct your thesis or research? Explore ways to contribute to the energy transition.",
-        "action": "Explore opportunities"
+      "decision": {
+        "audience": "State, institutions and public operators",
+        "title": "How can research serve national priorities?",
+        "description": "Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities.",
+        "action": "Discuss your priorities"
       },
-      "solution": {
-        "audience": "Project initiator · Professor",
-        "title": "Advance your solution",
-        "description": "Structure your collaborative research project, identify the testing required and consider how to mature and transfer your results.",
-        "action": "Discuss your solution"
+      "research": {
+        "audience": "Universities and research teams",
+        "title": "How can we advance research and its applications?",
+        "description": "Build joint work, share experimental facilities and skills, and prepare the maturation of results.",
+        "action": "Explore programmes"
       },
       "industry": {
-        "audience": "Industrial company",
-        "title": "Move forward with decarbonisation",
-        "description": "Share your energy challenges and process constraints to identify relevant research, experimentation and expertise pathways.",
+        "audience": "Industry and businesses",
+        "title": "How can we address technological and decarbonisation challenges?",
+        "description": "Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms.",
         "action": "Discuss your needs"
       },
-      "decision": {
-        "audience": "Decision-maker · Funding partner",
-        "title": "Inform your technology choices",
-        "description": "Assess your priorities and investments against scientific knowledge, technological options and the conditions needed to implement them.",
-        "action": "Draw on expertise"
+      "territories": {
+        "audience": "Territories and development actors",
+        "title": "Which solutions suit our local needs and constraints?",
+        "description": "Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills.",
+        "action": "Describe a territorial need"
+      },
+      "international": {
+        "audience": "International partners and funders",
+        "title": "Which capabilities and projects can we develop together?",
+        "description": "Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems.",
+        "action": "Build a cooperation"
+      },
+      "solution": {
+        "audience": "Talent and the public",
+        "title": "What is this research for and how can I contribute?",
+        "description": "Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities.",
+        "action": "Explore opportunities"
       }
     },
-    "searchText": "IRESEN collaboration, students, doctoral candidates, researchers, thesis, PhD, research opportunities, professors, project initiators, research and development (R&D), maturation, technology transfer, industry, decarbonisation, decision-makers, funding partners, scientific expertise, technology choices."
+    "searchText": "State, institutions and public operators How can research serve national priorities? Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities. Discuss your priorities Universities and research teams How can we advance research and its applications? Build joint work, share experimental facilities and skills, and prepare the maturation of results. Explore programmes Industry and businesses How can we address technological and decarbonisation challenges? Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms. Discuss your needs Territories and development actors Which solutions suit our local needs and constraints? Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills. Describe a territorial need International partners and funders Which capabilities and projects can we develop together? Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems. Build a cooperation Talent and the public What is this research for and how can I contribute? Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities. Explore opportunities"
   },
   "HomePlatforms": {
     "eyebrow": "Platforms & expertise",
@@ -1601,7 +1643,7 @@
   "HomeAchievements": {
     "eyebrow": "Achievements",
     "title": "Our landmark achievements",
-    "description": "From infrastructure to startups, demonstrators and strategic directions: eight achievements illustrating the range of IRESEN’s contributions.",
+    "description": "These examples illustrate capabilities and results. Economic, industrial or environmental effects require measurements specific to each achievement.",
     "label": "The eight achievements",
     "previous": "Previous achievements",
     "next": "Next achievements",
@@ -1609,67 +1651,115 @@
       "village-solaire": {
         "name": "Solar Village",
         "category": "Infrastructure",
-        "description": "A village of solar buildings, born from the Solar Decathlon Africa competition.",
+        "description": "A village of solar buildings, born from the Solar Decathlon Africa competition. Combine demonstration, research and learning around solar homes.",
         "imageDescription": "View of the Solar Village and its houses equipped with photovoltaic panels.",
-        "searchText": "Solar Decathlon Africa SDA sustainable buildings solar housing"
+        "searchText": "Solar Decathlon Africa SDA sustainable buildings solar housing",
+        "proof": {
+          "need": "Experiment with buildings addressing energy challenges.",
+          "contribution": "Combine demonstration, research and learning around solar homes.",
+          "result": "A village of solar buildings, born from the Solar Decathlon Africa competition.",
+          "scope": "An experimental capability; energy savings depend on building-specific measurements."
+        }
       },
       "ismart": {
         "name": "iSmart",
         "category": "Startup",
-        "description": "A 100% Moroccan charging station for electric vehicles.",
+        "description": "A 100% Moroccan charging station for electric vehicles. Connect technological development, local manufacturing and valorisation.",
         "imageDescription": "iSmart charging station and product presentation.",
-        "searchText": "electric mobility electric vehicle charging Moroccan startup"
+        "searchText": "electric mobility electric vehicle charging Moroccan startup",
+        "proof": {
+          "need": "Develop charging solutions for electric mobility.",
+          "contribution": "Connect technological development, local manufacturing and valorisation.",
+          "result": "A 100% Moroccan charging station for electric vehicles.",
+          "scope": "The product illustrates valorisation; it does not establish adoption volumes or avoided emissions."
+        }
       },
       "aquasolar": {
         "name": "AquaSolar",
         "category": "Demonstrator",
-        "description": "A mobile, modular desalination unit powered by solar energy.",
+        "description": "A mobile, modular desalination unit powered by solar energy. Develop and experiment with a mobile, modular solution.",
         "imageDescription": "AquaSolar unit with photovoltaic panels on its roof.",
-        "searchText": "solar desalination water mobile modular unit"
+        "searchText": "solar desalination water mobile modular unit",
+        "proof": {
+          "need": "Explore solar-powered desalination.",
+          "contribution": "Develop and experiment with a mobile, modular solution.",
+          "result": "A mobile, modular desalination unit powered by solar energy.",
+          "scope": "A demonstrator; performance and actual use must be assessed in their testing conditions."
+        }
       },
       "worldptx": {
         "name": "WorldPtX Summit",
         "category": "Event",
-        "description": "A global summit dedicated to Power-to-X and its applications.",
+        "description": "A global summit dedicated to Power-to-X and its applications. Organise exchanges and knowledge sharing between partners.",
         "imageDescription": "Panel discussion at the WorldPtX Summit.",
-        "searchText": "World Power-to-X Summit PtX hydrogen energy global summit"
+        "searchText": "World Power-to-X Summit PtX hydrogen energy global summit",
+        "proof": {
+          "need": "Bring actors together around Power-to-X challenges.",
+          "contribution": "Organise exchanges and knowledge sharing between partners.",
+          "result": "A global summit dedicated to Power-to-X and its applications.",
+          "scope": "A contribution to cooperation and outreach; holding an event alone does not demonstrate transfers."
+        }
       },
       "upilot-h2": {
         "name": "uPilot H₂",
         "category": "Pilot",
-        "description": "Morocco’s first pilot for green hydrogen production.",
+        "description": "Morocco’s first pilot for green hydrogen production. Mobilise a pilot installation for learning and experimentation.",
         "imageDescription": "uPilot H₂ green hydrogen production unit.",
-        "searchText": "uPilot H2 micro pilot green hydrogen production Morocco"
+        "searchText": "uPilot H2 micro pilot green hydrogen production Morocco",
+        "proof": {
+          "need": "Experiment with green hydrogen production in Morocco.",
+          "contribution": "Mobilise a pilot installation for learning and experimentation.",
+          "result": "Morocco’s first pilot for green hydrogen production.",
+          "scope": "A pilot capability; it does not establish large-scale industrial deployment."
+        }
       },
       "propre-ma": {
         "name": "PROPRE.MA",
         "category": "R&D project",
-        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield.",
+        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield. Connect university installations, observation and research.",
         "imageDescription": "Rooftop photovoltaic panels, image supplied for PROPRE.MA.",
-        "searchText": "research and development R&D photovoltaics solar energy yield Moroccan universities"
+        "searchText": "research and development R&D photovoltaics solar energy yield Moroccan universities",
+        "proof": {
+          "need": "Understand photovoltaic yield under local conditions.",
+          "contribution": "Connect university installations, observation and research.",
+          "result": "A network of photovoltaic plants at Moroccan universities to map solar energy yield.",
+          "scope": "Facilities for producing knowledge about resources and performance, without quantified economic benefit here."
+        }
       },
       "cartography": {
         "name": "Resource mapping",
         "category": "Decision support",
-        "description": "Mapping the country’s renewable resources and zoning to inform energy decisions.",
+        "description": "Mapping the country’s renewable resources and zoning to inform energy decisions. Mobilise spatial data, mapping and zoning.",
         "imageDescription": "Map of Morocco showing multiple layers of resource and territorial data.",
-        "searchText": "renewable resource mapping zoning solar wind GHI global horizontal irradiance DNI direct normal irradiance"
+        "searchText": "renewable resource mapping zoning solar wind GHI global horizontal irradiance DNI direct normal irradiance",
+        "proof": {
+          "need": "Inform energy choices through resource knowledge.",
+          "contribution": "Mobilise spatial data, mapping and zoning.",
+          "result": "Mapping the country’s renewable resources and zoning to inform energy decisions.",
+          "scope": "An analytical contribution; decisions and authorisations remain with the competent authorities."
+        }
       },
       "hydrogen-roadmap": {
         "name": "Green hydrogen roadmap",
         "category": "Strategic directions",
-        "description": "A contribution to the development of Morocco’s green hydrogen roadmap.",
+        "description": "A contribution to the development of Morocco’s green hydrogen roadmap. Provide scientific and technological input to strategic work.",
         "imageDescription": "Cover of Morocco’s green hydrogen roadmap, displayed as stacked reports.",
-        "searchText": "green hydrogen roadmap Green H2 Morocco strategy energy transition"
+        "searchText": "green hydrogen roadmap Green H2 Morocco strategy energy transition",
+        "proof": {
+          "need": "Inform Morocco’s green hydrogen sector perspectives.",
+          "contribution": "Provide scientific and technological input to strategic work.",
+          "result": "A contribution to the development of Morocco’s green hydrogen roadmap.",
+          "scope": "Expertise input; public policy development and implementation are separate responsibilities."
+        }
       }
     }
   },
   "HomeInnovation": {
-    "eyebrow": "From idea to impact",
+    "eyebrow": "From ideas to use",
     "title": "A pathway to advance innovation",
-    "description": "Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work.",
+    "description": "At the heart of research and innovation, developing, testing and valorising connect needs with use. Expertise, skills and cooperation support this pathway.",
     "support": "An adaptable pathway: each project follows the stages relevant to its needs.",
-    "feedback": "Document how results are used and share lessons.",
+    "feedback": "Share knowledge and know-how, document how results are used and what is learned.",
     "action": "Explore valorisation and transfer",
     "steps": {
       "anticipate": {
@@ -1686,14 +1776,14 @@
       },
       "mature": {
         "title": "Mature and valorise",
-        "description": "Maturation and preparation for transfer."
+        "description": "Maturation, sharing know-how and preparing transfer."
       },
       "adopt": {
         "title": "Support adoption",
         "description": "Use of solutions and assessment of their contribution."
       }
     },
-    "searchText": "Innovation value chain: national needs, anticipation, ideation, research, development and innovation (R&D&I) programming, support, scaling up, experimentation, demonstration, maturation, valorisation, technology transfer, adoption and impact assessment. Within Research & Innovation, develop, test and valorise connect needs with uses, with feedback between the work. An adaptable pathway: each project follows the stages relevant to its needs.",
+    "searchText": "At the heart of research and innovation, developing, testing and valorising connect needs with use. Expertise, skills and cooperation support this pathway. Anticipate needs : National needs, foresight and ideation. Structure and support : R&D&I programming, partners and project support. Develop and test : Research, development, experimentation and demonstration. Mature and valorise : Maturation, sharing know-how and preparing transfer. Support adoption : Use of solutions and assessment of their contribution. An adaptable pathway: each project follows the stages relevant to its needs. Share knowledge and know-how, document how results are used and what is learned.",
     "label": "Landmarks in the research and innovation pathway"
   },
   "Engagement": {
@@ -1729,23 +1819,38 @@
           "label": "What we bring to you",
           "items": [
             {
-              "title": "Businesses and industry",
-              "description": "Inform your technology choices, explore development pathways and prepare relevant testing for your solution. We connect your application challenges with research and experimentation expertise."
+              "title": "State, institutions and public operators",
+              "question": "How can research serve national priorities?",
+              "description": "Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities."
             },
             {
-              "title": "Research teams",
-              "description": "Structure joint work, combine expertise and identify suitable experimental capabilities. Cooperation creates scientific exchanges and connections with practical needs."
+              "title": "Universities and research teams",
+              "question": "How can we advance research and its applications?",
+              "description": "Build joint work, share experimental facilities and skills, and prepare the maturation of results."
             },
             {
-              "title": "Institutions and territories",
-              "description": "Bring analysis, knowledge and technology options to inform your decisions. We connect energy transition challenges with application contexts and the actors involved."
+              "title": "Industry and businesses",
+              "question": "How can we address technological and decarbonisation challenges?",
+              "description": "Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms."
             },
             {
-              "title": "Partners and funders",
-              "description": "Connect your priorities with research questions and complementary teams. We contribute to framing cooperation, sharing knowledge and connecting actors."
+              "title": "Territories and development actors",
+              "question": "Which solutions suit our local needs and constraints?",
+              "description": "Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills."
+            },
+            {
+              "title": "International partners and funders",
+              "question": "Which capabilities and projects can we develop together?",
+              "description": "Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems."
+            },
+            {
+              "title": "Talent and the public",
+              "question": "What is this research for and how can I contribute?",
+              "description": "Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities."
             }
           ],
-          "checklist": []
+          "checklist": [],
+          "note": "The need determines the relevant contributions. Arrangements, resources and collaboration conditions are defined together."
         },
         "collaboration-arrangements": {
           "label": "The framework",
@@ -1815,6 +1920,12 @@
       },
       "contactAction": "Contact us",
       "photos": {
+        "public-actors": "AI-generated photographic illustration: fictional energy-planning professionals reviewing maps and data. Does not depict an actual IRESEN meeting or staff.",
+        "research-teams": "AI-generated photographic illustration: fictional researchers examining a solar cell in a materials laboratory. Does not depict actual IRESEN people or facilities.",
+        "industrial-companies": "AI-generated photographic illustration: fictional engineers inspecting thermal equipment in an industrial workshop. Does not depict an actual company or IRESEN intervention.",
+        "territorial-actors": "AI-generated photographic illustration: fictional professionals assessing a solar irrigation installation in an agricultural landscape. Does not depict an actual IRESEN territorial project.",
+        "international-partners": "AI-generated photographic illustration: a fictional international team discussing an engineering model. Does not depict actual IRESEN partners, agreements or cooperation.",
+        "talents-public": "AI-generated photographic illustration: a fictional science facilitator and adult visitors exploring a renewable-energy demonstrator. Does not depict actual IRESEN training or participants.",
         "industry": "Generated illustration of engineers examining industrial energy equipment. Fictional scene, without real IRESEN staff or facilities.",
         "research": "Generated illustration of a scientist studying a battery prototype in a laboratory. Fictional scene, without a real IRESEN team or laboratory.",
         "institutions": "Generated illustration of energy planning professionals on a site visit. Fictional scene, without an identified real IRESEN institution, territory or project.",
@@ -1861,15 +1972,15 @@
     "navigation": "On this page",
     "eyebrow": "Valorisation & transfer",
     "title": "Turning research into impact",
-    "intro": "IRESEN supports the transformation of research results into protected, mature technologies with valorisation potential, through to adoption by industry and the market.",
+    "intro": "IRESEN contributes to the maturation, protection and transfer of research results according to their nature and stage. Technologies, processes, methods, software, data and know-how can find useful applications with the relevant actors.",
     "innovationAction": "Develop your innovation",
     "exploreAction": "Explore our technologies",
     "process": {
       "label": "From research to impact",
       "title": "One journey, multiple pathways",
-      "description": "Detect, evaluate, protect, mature, transfer, deploy: connect scientific potential with industry and market needs.",
-      "steps": ["Detect", "Evaluate", "Protect", "Mature", "Transfer", "Deploy"],
-      "note": "This is not a rigid process: each innovation follows a pathway tailored to its maturity, potential and opportunities."
+      "description": "Functions to combine according to the results: identify, evaluate, protect when relevant, mature and prepare their use.",
+      "steps": ["Detect", "Evaluate", "Protect", "Mature", "Transfer", "Prepare use"],
+      "note": "Prepare the maturation, transfer and use of research results, methods, data and know-how."
     },
     "ip": {
       "label": "Intellectual property",
@@ -1924,7 +2035,7 @@
     "catalog": {
       "label": "Technology portfolio",
       "title": "Explore our technologies",
-      "description": "Browse 59 filed patent references and identify technologies relevant to your needs.",
+      "description": "IRESEN supports the management of an intellectual property (IP) portfolio of 30 granted patents. Explore technologies relevant to your needs.",
       "search": "Search patents",
       "placeholder": "Reference, title, keyword or applicant…",
       "theme": "Theme",
@@ -1941,18 +2052,18 @@
       "showMore": "Show more",
       "showAll": "Show all",
       "original": "Titles follow the selected language; applicant names retain their original wording.",
-      "note": "Not all recorded filings correspond to patents currently in force. Consult each record through PatentRegister.",
+      "note": "This catalogue includes only granted patents from the IP portfolio. Consult each PatentRegister record for its current legal status.",
       "updated": "Dataset as of the fourth quarter of 2026",
-      "noJavaScript": "Without JavaScript, all 59 references are displayed. Filters require JavaScript."
+      "noJavaScript": "Without JavaScript, all 30 granted patents are displayed. Filters require JavaScript."
     },
     "figures": {
       "label": "Valorisation in figures",
       "title": "A portfolio to explore",
-      "filed": "filed patent references",
+      "filed": "granted patents in the IP portfolio",
       "themes": "browsing themes",
       "date": "Dataset date",
       "period": "Fourth quarter 2026",
-      "note": "These indicators describe this catalogue; they do not measure licences, transfers or industrial adoption."
+      "note": "The IP portfolio comprises 30 granted patents, distinct from the 59 patent filings recorded in total."
     },
     "doors": {
       "label": "Two ways to get started",
@@ -1991,7 +2102,7 @@
       "technology": "Generated illustration of a specialist presenting an energy network diagram on a screen."
     },
     "example": {
-      "title": "An example of successful research valorisation",
+      "title": "An achievement illustrating valorisation",
       "description": "Charging station for electric vehicles.",
       "origin": "100% Moroccan",
       "imageAlt": "iSmart charging station with protected sockets and an illuminated indicator, on a transparent background.",
@@ -2531,9 +2642,50 @@
     "heroAlt": "Drafting board seen in perspective, with a technical diagram combining the seven research themes: renewable electricity, hydrogen, industry, water and agriculture, bioenergy, buildings and mobility."
   },
   "Governance": {
+    "diagrams": {
+      "columns": ["Framework", "Decision", "Monitoring and oversight", "Execution"],
+      "framework": [
+        {
+          "title": "IRESEN statutes",
+          "description": "Establish the non-profit association and govern the Institute."
+        },
+        {
+          "title": "State–IRESEN agreement",
+          "description": "Frames the Institute’s commitments and the resources provided by the State."
+        },
+        {
+          "title": "General Assembly",
+          "description": "Brings members together, elects directors, approves accounts and amends the statutes."
+        }
+      ],
+      "board": "Board of Directors",
+      "chair": "Chaired ex officio by the minister responsible for energy or their representative.",
+      "decision": "Sets direction, approves budgets and accounts, and appoints the Director General.",
+      "oversight": [
+        {
+          "title": "Strategy and Monitoring Committee",
+          "description": "Monitors action plans and progress against commitments."
+        },
+        {
+          "title": "Audit Committee",
+          "description": "Reviews accounts, internal control and audits; advises the Board."
+        },
+        {
+          "title": "Scientific Council",
+          "description": "Advises on R&D priorities and evaluates projects before the Board decides."
+        },
+        {
+          "title": "Statutory auditor",
+          "description": "Certifies accounts, reports to the General Assembly and exchanges with the Audit Committee."
+        }
+      ],
+      "execution": "General Management",
+      "executionDescription": "Implements the Board’s decisions and reports to it.",
+      "coordination": "Vision, priorities and coordination of the three divisions."
+    },
     "title": "Governance and organisation",
     "tagline": "Connecting national priorities, scientific rigour and delivery.",
-    "introduction": "IRESEN’s governance brings together public stakeholders, energy-sector partners and scientific expertise to guide the Institute’s activities and monitor its results. Its organisation mobilises the skills, programmes and resources needed for its three contribution domains: Studies & Expertise, Research & Innovation, Skills & Capabilities. Cooperation & Outreach supports their shared action.",
+    "introduction": "IRESEN’s governance brings together public actors, energy-sector partners and scientific expertise to guide activities and monitor results. Its organisation mobilises the capabilities needed for Research & Innovation, the Institute’s core activity, and the complementary dimensions of Studies & Expertise, Skills & Capacities and Cooperation & Outreach.",
     "mission": {
       "title": "Governance serving the Institute’s missions",
       "paragraphs": [
@@ -2604,7 +2756,7 @@
           ]
         },
         {
-          "title": "Scientific division",
+          "title": "Research division",
           "tagline": "Structuring programmes and mobilising scientific expertise.",
           "directions": [
             {
@@ -2618,7 +2770,7 @@
           ]
         },
         {
-          "title": "Support division",
+          "title": "Enablement division",
           "tagline": "Providing the resources and services teams need to act.",
           "directions": [
             {
@@ -2709,33 +2861,37 @@
     "team": {
       "soukaina": {
         "name": "Soukaina BOUDOUDOU",
-        "role": "DPRDIRE Director",
-        "biography": "Soukaina BOUDOUDOU is a doctor and engineer in electrical energy. Her work addresses energy management, hybrid electrical systems and microgrids, with a focus on storage, energy efficiency and renewable integration. She serves at IRESEN as DPRDIRE Director."
+        "role": "Director of R&D&I Programmes and the Expert Network",
+        "biography": "An electrical engineer with a PhD in electrical engineering, Soukaina BOUDOUDOU is a graduate of the University of Technology of Belfort-Montbéliard and the Mohammadia School of Engineers. Her research focuses on energy management, hybrid electrical systems and microgrids.\n\nHer career includes postdoctoral research on storage combining batteries and supercapacitors. At IRESEN, she evaluated and monitored research projects before taking responsibility for R&D&I programmes and the expert network, connecting scientific expertise, project support and energy-transition challenges."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "DPPS Director",
-        "biography": "Ayoub HIRT is DPPS Director at IRESEN. His work at the institute includes green chemistry, bioenergy and agritech. His professional contributions address green hydrogen, Power-to-X, and the role of research and skills in developing these sectors."
+        "role": "Director of Platform Development and Structuring Projects",
+        "biography": "Ayoub HIRT is Director of Platforms Development and Strategic Projects at IRESEN. His career at the Institute includes heading the Green Chemistry, Bioenergy and Agritech Department and research and innovation activities in energy technologies.\n\nHis areas of work include green hydrogen, Power-to-X and bioenergy. He contributes to exchanges between scientific, institutional and industrial stakeholders on these sectors, their infrastructure and the skills needed for their development."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
-        "role": "DPARMI Director",
-        "biography": "Mouhcine BENMEZIANE is a passionate leader in science and technology communication, currently serving as the Head of Cooperation, Communication & Technology Intelligence Department at the Moroccan Research Institute for Solar Energy and New Energies (IRESEN).\n\nFor over a decade, Mouhcine has built a distinguished career fostering international collaboration and innovation in the field of green technologies. He is a skilled man of operation with expertise in developing partnerships, managing research projects, and disseminating scientific and technological knowledge.\n\nMouhcine’s educational background reflects his diverse interests. He holds a Science and Technology Master’s degree in Industrial Management Engineering and a Bachelor’s degree in Mechanical Engineering. His passion for lifelong learning is evident in his numerous certifications, including trainings in renewable energies and effective science communication."
+        "role": "Director of Partnerships and Innovation Marketing",
+        "biography": "Mouhcine BENMEZIANE is Director of Partnerships and Innovation Marketing at IRESEN. For more than a decade, he has developed cooperation and connections between research, public institutions and businesses in green technologies. His work at the Institute brings together international cooperation, science communication and technology intelligence.\n\nHe works to make research understandable, connect expertise and build partnerships that support innovation. His approach combines an understanding of technology, knowledge sharing and connections between stakeholders to support the energy transition and the international reach of Moroccan research.\n\nHe holds a master’s degree in science and technology specialising in industrial management engineering and a bachelor’s degree in mechanical engineering. He complements this background with continuing education in science communication, renewable energy and sustainable business strategy, including Harvard Business School Online’s Sustainable Business Strategy programme."
       },
       "laila": {
         "name": "Laila TYDRINI",
-        "role": "DAF Director",
-        "biography": "Laila TYDRINI is DAF Director at IRESEN. Her role covers the institute’s administrative and financial activities."
+        "role": "Administrative Manager",
+        "biography": "Laila TYDRINI joined IRESEN in 2012 as an accounting officer. Over the years, her responsibilities expanded to financial management, human resources and the Institute’s administration.\n\nAs Administrative Manager, she now oversees a substantial share of support activities: quality, human resources, finance, accounting, preparation of financial statements, administration and legal affairs follow-up. Her career has accompanied the Institute’s organisational development and the changing resources needed by its teams."
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Strategy & Organisation",
-        "biography": "Imane MOUBACHIR works at IRESEN in Strat & Orga. Her work concerns the institute’s strategy and organisation."
+        "role": "Strategy and Organisation",
+        "biography": "Imane MOUBACHIR works in strategy and organisation at IRESEN. Her activities concern translating the Institute’s priorities into action, management tools and improvements to internal operations.\n\nHer work connects institutional priorities, the coordination of activities and the organisation of resources used by the teams."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "IT & Information Systems",
-        "biography": "Jamaleddine FOUHAM works at IRESEN in IT and IS, covering information technology and information systems."
+        "role": "Information Technology and Information Systems",
+        "biography": "Jamaleddine FOUHAM works in information technology and information systems at IRESEN. His remit concerns the operation and development of the Institute’s IT and digital tools.\n\nHe supports teams’ uses and the needs of scientific and administrative activities, contributing to the organisation’s daily operations."
+      },
+      "samir": {
+        "name": "Samir RACHIDI",
+        "role": "Acting Scientific Director"
       }
     },
     "biography": {
@@ -2749,7 +2905,7 @@
     "description": "Connect scientific knowledge, experimental capabilities and teams to inform technology choices and advance research.",
     "domains": {
       "title": "Skills that inform choices.",
-      "description": "Studies & Expertise and Skills & Capabilities draw on research, platforms and partners. The network connects these contributions around energy and industrial needs.",
+      "description": "Data, studies, monitoring and foresight to inform scientific, technological and strategic choices.",
       "items": [
         {
           "title": "Observe and anticipate",
@@ -2771,7 +2927,7 @@
       "items": [
         {
           "title": "Studies & analysis",
-          "description": "Institutions, businesses and research teams: clarify a question, compare options and build an evidence-based understanding."
+          "description": "Institutions, businesses and research teams: clarify a question, compare options and build an evidence-based understanding. IRESEN informs choices through science and expertise. Defining and implementing public policy remains the responsibility of the competent authorities."
         },
         {
           "title": "Measurement & testing",
@@ -2945,7 +3101,7 @@
       "paragraphs": [
         "IRESEN’s platform network grew from an ambition to build, with its partners, the scientific and technological capabilities needed for the energy transition. Developed notably with Mohammed VI Polytechnic University and the support of national and international partners, it brings research, training and innovation closer to the needs of society and industry.",
         "Each platform offers a complementary specialization and experimental environment. Their network enables shared equipment and teams, combines expertise and studies solutions in different climatic and territorial conditions, in Morocco and across Africa.",
-        "Together, they give researchers and companies the means to develop, test and transfer technologies suited to the energy, industrial and environmental needs of territories."
+        "Produce knowledge, develop and adapt technologies, evaluate their performance and prepare their use in response to Morocco’s needs. A platform can support research, testing and training. A partnership can bring together expertise and resources for several contributions."
       ],
       "values": {
         "0": {
@@ -3000,7 +3156,9 @@
             "description": "Monitoring and comparison of solar technology performance in real conditions."
           }
         },
-        "action": "Learn more about Green Energy Park"
+        "action": "Learn more about Green Energy Park",
+        "mobile": "Solar research, testing and training, from laboratories to outdoor facilities in Benguerir.",
+        "compact": "In Benguerir, IRESEN and UM6P bring together solar research, testing and training. Laboratories and outdoor facilities support comparison of technologies in local climate conditions."
       },
       "gsbp": {
         "name": "Green & Smart Building Park",
@@ -3030,7 +3188,9 @@
             "description": "A concrete example of the transition from research to local manufacturing of electric vehicle charging solutions."
           }
         },
-        "action": "Learn more about Green & Smart Building Park"
+        "action": "Learn more about Green & Smart Building Park",
+        "mobile": "A full-scale laboratory for sustainable buildings, smart grids and mobility in Benguerir.",
+        "compact": "In Benguerir, the platform connects sustainable buildings, energy efficiency, smart grids and mobility. This full-scale laboratory combines research, experimentation and training."
       },
       "gep-mci": {
         "name": "Green Energy Park Morocco–Côte d’Ivoire",
@@ -3064,7 +3224,9 @@
             "description": "Collection, monitoring and analysis of experimental data, with remote access."
           }
         },
-        "action": "Learn more about Green Energy Park Morocco–Côte d’Ivoire"
+        "action": "Learn more about Green Energy Park Morocco–Côte d’Ivoire",
+        "mobile": "Solar research, testing in West African climate conditions and skills development in Yamoussoukro.",
+        "compact": "In Yamoussoukro, cooperation between IRESEN, UM6P, GEP and INP-HB connects solar research, testing in West African climate conditions and skills development."
       },
       "greenh2a": {
         "name": "GreenH2A",
@@ -3094,9 +3256,15 @@
             "description": "Demonstration of synthesis processes, notably for ammonia and methanol, to prepare their scale-up."
           }
         },
-        "action": "Learn more about GreenH2A"
+        "action": "Learn more about GreenH2A",
+        "mobile": "Under development in Jorf Lasfar: green hydrogen research and industrial Power-to-X applications.",
+        "compact": "Under development in Jorf Lasfar, GreenH2A prepares research and experimentation on green hydrogen and Power-to-X applications, from production to industrial use."
       }
-    }
+    },
+    "accessNote": "Access, testing and training arrangements are defined with the teams according to needs and available capabilities. Infrastructure under development is distinguished from operational facilities.",
+    "readDetails": "Read the full overview",
+    "photoPendingLabel": "Photograph coming soon",
+    "photoPending": "Photograph coming soon: {title}"
   },
   "Programmes": {
     "eyebrow": "R&D&I programmes",
@@ -3123,7 +3291,8 @@
       "paragraphs": [
         "Since its creation, IRESEN has acted as an agency of means: mobilising funding and supporting applied research projects led by universities, research centres and businesses.",
         "This mission is now organised through research, development and innovation programmes — R&D&I. Aligned with Morocco’s energy priorities, they give partners a shared framework to develop, test and put innovative solutions to use.",
-        "The principle is simple: bring scientific expertise and economic needs together in collaborative projects. Calls define the challenges, participation requirements and forms of support. Selected projects receive funding and guidance tailored to the scheme."
+        "The principle is simple: bring scientific expertise and economic needs together in collaborative projects. Calls define the challenges, participation requirements and forms of support. Selected projects receive funding and guidance tailored to the scheme.",
+        "Programmes and funding are instruments of Research & Innovation. IRESEN also draws on internal research, industrial co-development, international scientific cooperation and the adaptation of existing technologies."
       ],
       "items": [
         {
@@ -3161,8 +3330,8 @@
     },
     "process": {
       "eyebrow": "From application to transfer",
-      "title": "Support at every stage of the project.",
-      "description": "Each call defines its participation requirements, selection criteria and schedule. This pathway presents the main stages of support.",
+      "title": "The pathway for projects selected through calls",
+      "description": "These landmarks concern projects selected through calls. Timelines and conditions are specific to each scheme; other intervention modes may follow different pathways.",
       "items": [
         {
           "title": "01 — Call and application",
@@ -3322,5 +3491,88 @@
         "description": "Interactive solar atlas map, opened at the supplied coordinates."
       }
     ]
+  },
+  "Narrative": {
+    "coreLabel": "Our core activity",
+    "coreTitle": "Research & Innovation",
+    "coreDescription": "Produce knowledge, develop and adapt technologies, evaluate their performance and prepare their use in response to Morocco’s needs.",
+    "dimensionsLabel": "Three dimensions that strengthen and broaden our contribution",
+    "capabilitiesLabel": "Shared capabilities, mobilised according to needs",
+    "capabilitiesNote": "A platform can support research, testing and training. A partnership can bring together expertise and resources for several contributions.",
+    "missions": {
+      "develop": {
+        "title": "Develop",
+        "description": "Produce knowledge; design, adapt or improve solutions through internal research, collaborative research or co-development.",
+        "action": "Research and programmes"
+      },
+      "test": {
+        "title": "Test",
+        "description": "Test and compare technologies, understand their performance and limitations, and reduce uncertainty about their use.",
+        "action": "Testing and platforms"
+      },
+      "transfer": {
+        "title": "Valorise",
+        "description": "Prepare the maturation, transfer and use of research results, methods, data and know-how.",
+        "action": "Valorisation and transfer"
+      }
+    },
+    "dimensions": {
+      "studies": {
+        "title": "Studies & Expertise",
+        "description": "Data, studies, monitoring and foresight to inform scientific, technological and strategic choices.",
+        "action": "Inform decisions"
+      },
+      "skills": {
+        "title": "Skills & Capacities",
+        "description": "Develop talent, share know-how and support people and organisations in understanding and mastering technologies.",
+        "action": "Strengthen capabilities"
+      },
+      "cooperation": {
+        "title": "Cooperation & Outreach",
+        "description": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions.",
+        "action": "Build a cooperation"
+      }
+    },
+    "capabilities": {
+      "expertise": "Scientific and technological expertise",
+      "programmes": "R&D&I programmes and projects",
+      "platforms": "Platforms and laboratories",
+      "data": "Data, monitoring and foresight",
+      "people": "Expert networks and human skills",
+      "partnerships": "Partnerships and international cooperation",
+      "resources": "Funding and resource mobilisation",
+      "ip": "Intellectual property and valorisation mechanisms"
+    },
+    "ecosystem": {
+      "title": "At the interface of the national ecosystem",
+      "priorities": "National priorities: energy transition, decarbonisation and sustainable development",
+      "science": "Scientific research: knowledge, methods and technologies",
+      "needs": "Socioeconomic needs: industry, operators and territories",
+      "role": "Connect needs with scientific and technological contributions",
+      "partners": "Public authorities, universities, research centres, energy operators, industry, SMEs, startups and territorial actors contribute within their respective responsibilities.",
+      "note": "IRESEN informs choices through science and expertise. Defining and implementing public policy remains the responsibility of the competent authorities."
+    },
+    "orientations": {
+      "excellence": {
+        "title": "Strengthen scientific and technological excellence",
+        "description": "Consolidate expertise, programmes and infrastructure to produce quality knowledge and develop lasting skills."
+      },
+      "mastery": {
+        "title": "Contribute to greater technological mastery",
+        "description": "Understand, evaluate, adapt and integrate technologies in Morocco’s operating conditions and industrial contexts."
+      },
+      "value": {
+        "title": "Increase value creation and impact",
+        "description": "Strengthen opportunities for maturation, transfer and use; also contribute to knowledge, skills and better-informed decisions."
+      }
+    },
+    "proofLabel": "What this achievement contributes",
+    "proofNotice": "These examples illustrate capabilities and results. Economic, industrial or environmental effects require measurements specific to each achievement.",
+    "proofFields": {
+      "need": "Need",
+      "contribution": "Contribution",
+      "result": "Documented result",
+      "scope": "Scope"
+    }
   }
 }

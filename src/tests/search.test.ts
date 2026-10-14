@@ -87,7 +87,7 @@ describe('multilingual search text', () => {
       expect(documents.find((item) => item.id === `page:projects:${locale}`)?.type).toBe('page')
       expect(
         documents.filter((item) => item.type === 'patent' && item.locale === locale),
-      ).toHaveLength(59)
+      ).toHaveLength(30)
     }
   })
   it('normalizes French accents and ligatures, English case, and Arabic marks without losing letters', () => {

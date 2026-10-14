@@ -95,3 +95,34 @@ See [validation](validation.md#research-platforms--2026-10-11) for actual result
 Browser review uses a separate production build, preserving the owner’s running
 development server and unrelated `tsconfig.json` edits. Integration checks use a
 fresh disposable database and remove it after the run.
+
+## Owner responsive layout correction — 2026-10-14
+
+The owner aligns each platform title with the top of its photograph and the
+existing official More action with its bottom edge. The title/logo/location now
+belong to the photo-side editorial column; desktop photo and copy stretch together
+without fixed-height text clipping. Only the established GEP official action is
+shown: unconfirmed platform destinations remain absent.
+
+Four large subject-specific SVG icons form a horizontal thematic row, reusing the
+existing licensed roadmap icon set. It retains all themes through native horizontal
+scrolling when needed, including Arabic and keyboard focus. No pills or additional
+motion are commissioned. Source photos and original logos remain unchanged.
+
+Content adapts by viewport: full source prose from 80rem, a concise FR/EN/AR working
+summary with the complete presentation available in a native disclosure below
+80rem, and a shorter mobile summary below 40rem. Below 64rem the visual order is
+title/logo/location, photograph, lead, themes, prose and existing action. Content
+is summarized without changing facts or GreenH2A's in-development/3D wording.
+All summaries are working editorial copy and are included in existing section
+search projections. Canonical anchors and existing media references remain.
+
+Thirteen infrastructure cards reserve landscape photo spaces with explicit,
+localized forthcoming-photo labels. No image file, public media record, fictional
+facility photo or download is created. Future supplied photos will need provenance
+and localized media registration when integrated.
+
+Verification ledger: development FR at 1440px gives 0px title-top and action-bottom
+differences against GEP's photo frame; Arabic at 390px has no page overflow and
+retains all 13 photo slots. Focused source lint, formatting and whitespace checks
+only. Global tests, production build, merge and deployment remain deferred.

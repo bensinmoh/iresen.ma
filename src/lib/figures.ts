@@ -2,7 +2,7 @@
 // Labels are translated separately; the supplied values retain their + notation.
 export const homeFigures = [
   { id: 'collaborativeProjects', value: '69' },
-  { id: 'patents', value: '+60' },
+  { id: 'patents', value: '59' },
   { id: 'youngResearchers', value: '+1000' },
   { id: 'publications', value: '+1100' },
   { id: 'universityLaboratories', value: '+18' },

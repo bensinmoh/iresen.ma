@@ -12,12 +12,18 @@ findable. Audiences include research teams, universities, businesses, public act
 partners and prospective colleagues. French, English and Arabic are complete working
 interfaces; final institutional/editorial and translation approval remains separate.
 
-The narrative has three contribution domains: **Études & Expertise**, **Recherche &
-Innovation**, **Compétences & Capacités**. **Coopération & Rayonnement** is their common
-enabler. **Développer · Éprouver · Valoriser** belongs within R&I. Funding and
-infrastructure are instruments; patent filings or project counts do not demonstrate
-commercial adoption. Preserve sourced claims, periods, original titles/authors and
-explicitly missing values. Do not invent institutional facts, outcomes or commitments.
+The October 2026 PDF makes **Research & Innovation the core activity**, with
+**Develop, Test and Valorise** as three missions. **Studies & Expertise**, **Skills
+& Capacities** and **Cooperation & Outreach** are complementary dimensions, also
+able to address direct needs. Shared capabilities combine according to the need;
+there is no compulsory sequence. The French mission is exact source wording;
+EN/AR remain working adaptations. See [scope and evidence](docs/institutional-narrative-2026.md).
+Funding and infrastructure are instruments; filings and project counts do not
+establish adoption or measured impact. Preserve facts, dates and missing values.
+
+The owner commissions this alignment on `feat/institutional-narrative-2026` and
+requires a review URL and an explicit GO before merge. Automatic merge is paused
+for this branch. Final source verification/editorial approval stays separate.
 
 ## Implemented public journeys
 
@@ -30,7 +36,8 @@ locale paths, links, metadata, sitemap/search and documentation together.
 - **Homepage:** missions, achievements, research, compact innovation transition,
   platforms/capabilities, collaboration and news; hero figures remain. Six main
   section-navigation entries, original supplied assets and scoped working copy.
-- **Institute:** three missions/common cooperation, values, 2035 ambition, eight
+- **Institute:** integrated R&I core, complementary dimensions, ecosystem, shared
+  capabilities, values, three 2035 orientations and eight
   2011–2026 milestones. Arabic timeline reads right-to-left; arrows advance exactly
   one milestone with fixed eight-item count. The supplied activity-report cover
   and Consult action retain `#` until the approved public PDF is supplied.

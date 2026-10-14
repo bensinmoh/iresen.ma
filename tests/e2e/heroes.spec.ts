@@ -104,7 +104,7 @@ for (const locale of locales) {
         await expect(hero.locator('.hero-figures dt')).toHaveCount(5)
         await expect(hero.locator('.hero-figures dd')).toHaveText([
           '69',
-          '+60',
+          '59',
           '+1000',
           '+1100',
           '+18',
@@ -209,7 +209,7 @@ for (const locale of locales) {
       await expect(figures).toHaveAccessibleName(catalogs[locale].Hero.figuresLabel)
       await expect(figures.locator('.key-figure-value')).toHaveText([
         '69',
-        '+60',
+        '59',
         '+1000',
         '+1100',
         '+18',

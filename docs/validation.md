@@ -1,5 +1,36 @@
 # Foundation validation
 
+## Institutional narrative — 2026-10-14
+
+The [dedicated review branch](institutional-narrative-2026.md) implements the
+October PDF alignment. The owner requires a browsable review and an explicit
+merge GO. No main merge or production release is performed.
+
+| Check                        | Result and scope                                                                                                                                                                                                                                                   |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Unit tests                   | 25 files, 168 tests passed, including exact French mission, localized consistency, model anchors and evidence search projection                                                                                                                                    |
+| Lint and formatting          | ESLint passes; changed-file Prettier and Git whitespace checks pass                                                                                                                                                                                                |
+| Production build             | Isolated `.local/narrative-build` compiles and checks TypeScript; generated review-only tsconfig includes are removed from the tracked tree                                                                                                                        |
+| Development visual audit     | Home, Institute and Collaborate in FR/EN/AR at 320, 390, 768, 1024 and 1440px; 200% text; no page/text overflow or scoped axe violations in nine page/locale views                                                                                                 |
+| Production browser journeys  | 59 scenarios passed: missions/legacy anchors, sticky navigation, heroes, evidence rails/search, six collaboration paths, transfer, Institute, keyboard, native no-JS, RTL and reduced motion                                                                       |
+| Final achievement copy       | Original owner-supplied factual descriptions retained alongside contribution/scope detail; all five affected production achievement scenarios pass on the final artifact                                                                                           |
+| Search                       | Local static projection rebuilt; live query for technological mastery reaches the revised Institute/model sections; private PDF and editorial files remain excluded                                                                                                |
+| Documentation                | 86 maintained Markdown files audited with no missing local targets; supplied benchmark/DOCX fingerprints remain unchanged                                                                                                                                          |
+| Remote checks and review URL | Remote push was blocked by automatic approval review pending explicit approval of publication to the existing public GitHub repository. No PR/remote CI is claimed. A remote staging configuration is also needed; local cloud loopback is not a remote review URL |
+
+The initial browser pass found an over-tall hero caused by the figure note and an
+incorrect researcher destination. The note now follows the figure band in the
+mission section and describes it through `aria-describedby`; researchers reach
+Programmes and talents reach Opportunities. The 59-scenario production rerun passes.
+The obsolete photo-hover and automatic-pathway tests were replaced by checks of
+the commissioned model, alternative trajectories, stable anchors and keyboard
+reading; unrelated navigation/locale/no-JS assertions remain.
+
+Final production captures: [French desktop](screenshots/narrative-fr-1440.png) and
+[Arabic mobile](screenshots/narrative-ar-390.png). Scans are scoped engineering
+evidence, not whole-site accessibility certification. Missing dated outcomes,
+figure definitions and final translation approval remain in the evidence register.
+
 ## Siteweb backlog — 2026-10-13
 
 Documentation-only consolidation of the owner's next-phase list in

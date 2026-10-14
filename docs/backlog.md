@@ -1,5 +1,14 @@
 # Siteweb backlog
 
+## Narrative implementation — 2026-10-14
+
+The owner commissioned [the complete narrative alignment](institutional-narrative-2026.md)
+on a dedicated review branch. It includes the evidence presentation relevant to
+C02 and source/definition notes relevant to B03. Missing measured outcomes, figure
+cutoffs and counting rules remain explicit in the evidence register. Other backend,
+real-data, photography and integration items below are not silently commissioned.
+The owner reserves the merge GO; no automatic merge or production release.
+
 Updated 13 October 2026 from the owner's content, design, features and backend list.
 This planning backlog records future work; it does not commission implementation,
 publication, provider configuration or deployment. Existing deliveries remain

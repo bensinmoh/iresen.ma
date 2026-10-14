@@ -1,5 +1,12 @@
 # IRESEN website
 
+## Narrative review branch — 2026-10-14
+
+The [October institutional narrative](docs/institutional-narrative-2026.md) is
+implemented for review: R&I core, three missions, three complementary dimensions,
+six audiences, evidence disclosures and FR/EN/AR discovery. The owner requires
+an explicit GO before merge. [Working glossary](docs/narrative-glossary.md).
+
 Trilingual institutional website (French, English, Arabic/RTL), built with Next.js,
 React and Payload CMS. This repository prepares a public release; it does not deploy
 it. Hosting, domain/DNS, Cloudflare and release approval remain with IRESEN and its

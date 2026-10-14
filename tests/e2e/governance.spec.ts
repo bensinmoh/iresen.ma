@@ -25,7 +25,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     for (const url of Object.values(governanceBoardSites))
       await expect(governance.locator(`#council-representatives a[href="${url}"]`)).toHaveCount(1)
     await expect(governance.locator('[id^="scientific-member-"]')).toHaveCount(8)
-    await expect(governance.locator('#department-responsibilities article')).toHaveCount(7)
+    await expect(governance.locator('#department-responsibilities li')).toHaveCount(7)
     await expect(governance.locator('#council-representatives')).not.toContainText(
       'Société d’Ingénierie Énergétique',
     )
@@ -70,7 +70,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.evaluate(() => {
       document.documentElement.style.fontSize = ''
     })
-    await governance.locator('nav a[href="#leadership-organisation"]').click()
+    await expect(governance.locator('nav a[href="#leadership-organisation"]')).toHaveCount(0)
+    await page.goto(pageHref('governance', locale, 'leadership-organisation'))
     await expect(page).toHaveURL(/#leadership-organisation$/)
     await expect(governance.locator('#organisation-title')).toBeVisible()
   })
@@ -81,10 +82,10 @@ test('French roles omit director titles for strategy and IT; page has no serious
 }) => {
   await page.goto(pageHref('governance', 'fr'))
   for (const [name, role] of [
-    ['Imane MOUBACHIR', 'Strat & Orga'],
-    ['Jamaleddine FOUHAM', 'IT et SI'],
+    ['Imane MOUBACHIR', 'Stratégie et organisation'],
+    ['Jamaleddine FOUHAM', 'Technologies de l’information et systèmes d’information'],
   ]) {
-    const card = page.locator('#department-responsibilities article').filter({ hasText: name })
+    const card = page.locator('#department-responsibilities li').filter({ hasText: name })
     await expect(
       card.locator('button[aria-haspopup="dialog"]').getByText(role, { exact: true }),
     ).toBeVisible()
@@ -134,7 +135,9 @@ test('scientific council and portraits are discoverable in all three locales', a
 })
 
 for (const locale of ['fr', 'en', 'ar'] as const) {
-  test(`${locale}: scientist LinkedIn links and colleague biography dialogs`, async ({ page }) => {
+  test(`${locale}: scientist LinkedIn links and colleague biography dialogs`, async ({
+    page,
+  }, testInfo) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await page.goto(pageHref('governance', locale))
     for (const [id, url] of Object.entries(governanceScientistLinkedin)) {
@@ -155,7 +158,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
           : catalogs[locale].Governance.team[id as keyof typeof catalogs.fr.Governance.team].name,
       )
       await expect(dialog.locator('img')).toHaveCount(1)
-      await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 7 : id === 'mouhcine' ? 5 : 3)
+      if (id === 'samir' || id === 'mouhcine')
+        await page.screenshot({ path: testInfo.outputPath(`${locale}-${id}-biography.png`) })
+      await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 7 : id === 'mouhcine' ? 5 : 4)
       if (url) await expect(dialog.locator('a')).toHaveAttribute('href', url)
       else await expect(dialog.locator('a')).toHaveCount(0)
       if (id === 'samir') await dialog.getByRole('button').click()
@@ -177,6 +182,6 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.mouse.click(1, (box?.y ?? 0) + 10)
     await expect(dialog).not.toBeVisible()
     await expect(page.locator('#team-member-soukaina')).toBeFocused()
-    expect(await page.evaluate(() => document.body.style.overflow)).not.toBe('hidden')
+    await expect.poll(() => page.evaluate(() => document.body.style.overflow)).not.toBe('hidden')
   })
 }

@@ -1,5 +1,14 @@
 # Institutional narrative alignment — 2026-10-10
 
+## Current PDF alignment — 2026-10-14
+
+The [October PDF implementation](institutional-narrative-2026.md) supersedes the
+three-equal-domain/common-enabler hierarchy below. Research & Innovation is the
+core activity; three complementary dimensions reinforce and broaden it. The
+French mission is exact source copy; EN/AR remain working adaptations. The owner
+commissioned full implementation on a dedicated branch and explicitly retained
+merge approval. The following dated sections preserve the previous delivery.
+
 The owner supplied a substantially revised Phase I narrative and commissioned
 analysis, project guidance updates, a whole-site content review and a new homepage
 mission composition. This request supersedes the former mission-design deferral.

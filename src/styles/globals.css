@@ -1531,7 +1531,7 @@ html[lang='ar'] .key-figure-label {
 
 .hero-pathways {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   flex: 1;
 }
 
@@ -3071,5 +3071,12 @@ html:has([data-publications-page])::view-transition {
   .useful-tools ul {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 63.999rem) {
+  .hero-pathways {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-3);
   }
 }

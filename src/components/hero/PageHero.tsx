@@ -128,6 +128,7 @@ export async function PageHero({
             <dl
               className="container hero-figures horizontal-scroll"
               aria-label={t('figuresLabel')}
+              aria-describedby="home-figures-context"
               tabIndex={0}
             >
               {homeFigures.map(({ id, value }) => (
@@ -156,6 +157,10 @@ export async function PageHero({
                     <NavigationIcon name="arrow" />
                   </a>
                 ))}
+                <a href={pageHref('workWithUs', locale, 'collaboration-references')}>
+                  <span>{t('domains.cooperation')}</span>
+                  <NavigationIcon name="arrow" />
+                </a>
               </nav>
             </div>
           )}

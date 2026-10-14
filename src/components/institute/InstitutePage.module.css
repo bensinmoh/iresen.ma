@@ -645,3 +645,134 @@
     transform: translateX(23.1%);
   }
 }
+.orientations {
+  display: grid;
+  gap: var(--space-6);
+  margin-block: var(--space-8) 0;
+}
+.orientations dt {
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--color-energy-cyan);
+}
+.orientations dd {
+  margin: var(--space-2) 0 0;
+  line-height: 1.7;
+}
+
+/* Institute editorial composition, inspired by the owner's October narrative reference. */
+.position {
+  padding-block: clamp(3.5rem, 6vw, 6.5rem);
+  row-gap: var(--space-12);
+  align-items: start;
+}
+.missions {
+  background: var(--color-surface);
+  box-shadow: 0 0 0 100vmax var(--color-surface);
+  clip-path: inset(0 -100vmax);
+  padding-block: clamp(3rem, 5vw, 5rem);
+}
+.missionsHeading {
+  display: block;
+  max-inline-size: 76ch;
+  margin-block-end: var(--space-8);
+}
+.missionsHeading h2 {
+  max-inline-size: 24ch;
+  margin-block-end: var(--space-6);
+}
+.mission {
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+.mission header {
+  max-inline-size: 32rem;
+}
+.number {
+  margin-block-end: var(--space-4);
+}
+.number svg {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+}
+.mission .purpose {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: var(--font-size-action);
+}
+.mission h3 {
+  font-size: clamp(1.6rem, 2.6vw, 2.8rem);
+}
+.values {
+  grid-template-columns: 0.7fr 1.5fr;
+  align-items: start;
+}
+.values > header {
+  position: sticky;
+  inset-block-start: 7rem;
+}
+.values dl {
+  counter-reset: institute-value;
+}
+.values dl > div {
+  position: relative;
+  grid-template-columns: 0.8fr 1.4fr;
+  padding-inline-start: 3rem;
+  padding-block: var(--space-8);
+}
+.values dl > div::before {
+  counter-increment: institute-value;
+  content: counter(institute-value, decimal-leading-zero);
+  position: absolute;
+  inset-block-start: var(--space-8);
+  inset-inline-start: 0;
+  font-size: var(--font-size-label);
+  color: var(--color-blue);
+}
+.values dt {
+  font-size: var(--font-size-action);
+  color: var(--color-navy);
+}
+.ambitionCopy {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+.orientations {
+  gap: 0;
+}
+.orientations > div {
+  padding-block: var(--space-6);
+  border-block-start: 1px solid var(--color-footer-divider);
+}
+.orientations dt {
+  color: var(--color-white);
+  font-size: var(--font-size-action);
+}
+.orientations dd {
+  color: var(--color-footer-muted);
+}
+.ambitionImage {
+  margin: var(--space-12) var(--gutter) var(--space-12) 0;
+  border-radius: var(--radius-signature);
+}
+:global(html[dir='rtl']) .ambitionImage {
+  margin-inline: 0 var(--gutter);
+}
+@media (max-width: 64rem) {
+  .values > header {
+    position: static;
+  }
+  .values {
+    grid-template-columns: 1fr;
+  }
+  .ambitionImage {
+    margin: 0 var(--gutter) var(--space-12);
+  }
+  :global(html[dir='rtl']) .ambitionImage {
+    margin-inline: var(--gutter);
+  }
+}
+@media (max-width: 40rem) {
+  .values dl > div {
+    grid-template-columns: 1fr;
+    padding-inline-start: 2.5rem;
+  }
+}

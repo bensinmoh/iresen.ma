@@ -1,5 +1,74 @@
 # Change log
 
+## 2026-10-14 — Institutional narrative review branch
+
+- Update six colleague biographies from public professional sources and owner
+  career details; align Laila’s role and refresh localized search copy.
+- Widen biography dialogs, equalize text margins, bottom-align Samir and move
+  LinkedIn icons beside biography/scientific council names.
+
+- Restore HD colour chart portraits with quality-90 responsive rendering and
+  subtle reversible white-balance corrections; preserve source files/crops.
+- Align biography LinkedIn icons with text, use Samir’s transparent full-width
+  portrait and replace scientific-card LinkedIn text with a white SVG icon.
+
+- Shorten white organisation cards while retaining bust sizes and bottom
+  alignment; increase top overlap and slightly enlarge names/functions.
+
+- Restrict patent filter options to values represented in the 30 granted patents,
+  including themes and conditional unknown-year availability.
+
+- Tighten Governance section, heading, council and organisation vertical spacing
+  while preserving portrait overlap and biography dialog layout.
+
+- Biography dialogs show complete original portrait compositions, extend the
+  pale-blue photo background to the top and use the shared LinkedIn SVG icon.
+
+- Owner compact-card correction: shorten organisation frames by 15%, keeping
+  equal heights, portrait overlap and native biography buttons.
+- Generate six unique illustrative audience photos for Collaborer, replace the
+  four-photo rotation and update localized media search references/provenance.
+
+- Final owner profile correction: simplify cards to cropped portraits with a
+  small top overlap; remove shape wrapping, measurement and mission-fill prose.
+  Samir also appears as acting Scientific Director, reusing his real biography.
+- Owner biography interaction: make the complete colleague/DG card clickable
+  through its existing native button, with full-card keyboard focus.
+- Owner portrait treatment: grayscale at rest, source colour on hover/keyboard
+  focus, preserving the grey scientific silhouette and colour biographies.
+- Owner governance correction: remove the three-link body navigation in every
+  locale, preserving all section anchors and destinations.
+- Owner infrastructure review: align titles/actions with photo frames, introduce
+  horizontal subject icons and responsive summaries, and reserve 13 photo slots.
+- Owner correction: distinguish the 59 filed-patent KPI from the 30 source-confirmed
+  granted patents in the IP portfolio; gate catalogue, anchors, contact and search.
+- Owner portrait refinement: normalize source headroom and scale, preserve side
+  spill, align card bases and reuse Samir’s uniform-grey outline for science.
+- Owner follow-up: integrate large leading-side busts into organisation nodes,
+  align their base with the card, extend them above it, and use a neutral
+  Scientific Department silhouette; retain native biography dialogs.
+- Owner review: adapt governance and functional organisation diagrams from the
+  supplied ClickUp reference; harmonise the Research/Development/Enablement poles,
+  preserve team roles and biographies, and exclude the Resources board.
+- Owner review: refine Institute from the supplied ClickUp narrative reference,
+  with a scoped R&I diagram, clearer contributions, values and ambition layout.
+- Owner review: restore the five-stage innovation pathway and original connected
+  rail; adapt FR/EN/AR copy and search text to the current narrative.
+- Owner review: remove the mutual-contributions explanatory passage from all
+  public FR/EN/AR occurrences and search projections.
+- Owner review: remove the complementary-missions sequence note from all public
+  FR/EN/AR occurrences and search projections; update its targeted assertion.
+- Owner review: remove the homepage institutional-figures context note in FR/EN/AR
+  and from the public search projection. Global checks deferred at owner request.
+
+- Implement the PDF's R&I core, three missions and three complementary dimensions
+  on Home and Institute, with ecosystem, capabilities and 2035 orientations.
+- Align six audience journeys, research modes, transfer language, evidence details,
+  shared introductions and FR/EN/AR search projections; preserve 23 routes and facts.
+- Record glossary, source limits and figure/evidence reconciliation. Keep source
+  PDF private, real projects absent and translations under review.
+- Keep the dedicated branch/PR open pending the owner's explicit merge GO.
+
 ## 2026-10-13 — Siteweb backlog
 
 - Consolidate the owner's content, design, functional integration and backend

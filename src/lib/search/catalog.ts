@@ -20,7 +20,7 @@ import {
 } from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
-import { engagementSearchText } from '@/lib/engagement'
+import { collaborationAudiences, engagementSearchText } from '@/lib/engagement'
 import { roadmapMedia, roadmapMediaPath, roadmapDrawingPath, roadmapHeroPath } from '@/lib/roadmap'
 
 import fr from '@/messages/fr.json'
@@ -367,9 +367,28 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ),
   })),
+  // Preserve source registrations for the four previous, still-served illustrations.
+  // Their generated provenance keeps them outside public search results.
   ...(['industry', 'research', 'institutions', 'partners'] as const).map((id, index) => ({
     id: `collaborate-audience-${id}`,
     url: `/images/collaborate/${id}.webp`,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title:
+            messages[locale].Engagement.workWithUs.sections['organisation-contributions'].items[
+              [2, 1, 0, 4][index]
+            ].title,
+          description: messages[locale].Engagement.workWithUs.photos[id],
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  })),
+  ...collaborationAudiences.map((id, index) => ({
+    id: `collaborate-audience-${id}`,
+    url: `/images/collaborate/audience-${id}.webp`,
     type: 'media' as const,
     text: Object.fromEntries(
       contentLocales.map((locale) => [
@@ -818,9 +837,24 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Calls.discoveryDescription,
         )
       }
-      if (pageId === 'institute') body.push(...engagementSearchText(catalog.Institute))
-      if (pageId === 'governance')
-        body.push(...engagementSearchText(catalog.Governance), samirBiographyTexts[locale])
+      if (pageId === 'institute')
+        body.push(
+          ...engagementSearchText(catalog.Institute),
+          ...engagementSearchText(catalog.Narrative),
+        )
+      if (pageId === 'governance') {
+        const governanceCopy = {
+          ...catalog.Governance,
+          organisation: {
+            ...catalog.Governance.organisation,
+            poles: catalog.Governance.organisation.poles.map(({ title, tagline }) => ({
+              title,
+              tagline,
+            })),
+          },
+        }
+        body.push(...engagementSearchText(governanceCopy), samirBiographyTexts[locale])
+      }
       if (pageId === 'priorities') body.push(...engagementSearchText(catalog.Roadmap))
       if (pageId === 'transfer') body.push(...engagementSearchText(catalog.Transfer))
       if (pageId === 'opportunities')
@@ -862,6 +896,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       }
       if (pageId === 'home')
         body.push(
+          ...engagementSearchText(catalog.Narrative.missions),
+          ...engagementSearchText(catalog.Narrative.dimensions),
+          catalog.Narrative.coreDescription,
+          ...engagementSearchText(catalog.HomeAchievements.items),
           catalog.Hero.homeTitle,
           'ISO 9001:2015',
           catalog.Hero.certification.label,
@@ -1025,6 +1063,13 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               body.push(...engagementSearchText(copy[entry.id as keyof typeof copy]))
             }
           }
+          if (pageId === 'governance' && entry.id === 'bodies-responsibilities')
+            body.push(...engagementSearchText(catalog.Governance.diagrams))
+          if (pageId === 'governance' && entry.id === 'leadership-organisation')
+            body.push(
+              catalog.Governance.organisation.description,
+              ...engagementSearchText(catalog.Governance.team),
+            )
           if (pageId === 'governance' && locale === 'ar') {
             if (entry.id === 'scientific-council')
               body.push(
@@ -1034,7 +1079,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               entry.id === 'department-responsibilities' ||
               entry.id === 'leadership-organisation'
             )
-              body.push(...governanceTeam.map((id) => messages.fr.Governance.team[id].name))
+              body.push(
+                messages.fr.Governance.directorGeneralName,
+                ...governanceTeam.map((id) => messages.fr.Governance.team[id].name),
+              )
           }
           if (pageId === 'network') {
             const networkCopy = {
@@ -1049,15 +1097,24 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           if (pageId === 'institute') {
             const instituteCopy = {
               about: catalog.Institute.introduction,
-              'institute-positioning': catalog.Institute.position,
+              'institute-positioning': {
+                position: catalog.Institute.position,
+                ecosystem: catalog.Narrative.ecosystem,
+              },
               mission: catalog.Institute.statement,
-              capabilities: catalog.Institute.missionsIntro,
+              capabilities: {
+                introduction: catalog.Institute.missionsIntro,
+                model: catalog.Narrative,
+              },
               'institute-studies': catalog.Institute.missions[0],
               'institute-research': catalog.Institute.missions[1],
               'institute-skills': catalog.Institute.missions[2],
               'institute-cooperation': catalog.Institute.missions[3],
               'institute-values': catalog.Institute.values,
-              'ambition-2035': catalog.Institute.ambition,
+              'ambition-2035': {
+                ambition: catalog.Institute.ambition,
+                orientations: catalog.Narrative.orientations,
+              },
               'key-figures': catalog.Institute.historyIntro,
               'institute-history': catalog.Institute.timeline,
               'more-resources': catalog.Institute.report,
@@ -1123,11 +1180,17 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             )?.id
             if (achievementId) {
               const item = catalog.HomeAchievements.items[achievementId]
-              body.push(item.category, item.searchText)
+              body.push(item.category, item.searchText, ...engagementSearchText(item.proof))
             }
           }
           if (pageId === 'home' && entry.id === homeMissionSectionId)
             body.push(
+              catalog.Narrative.coreLabel,
+              catalog.Narrative.coreTitle,
+              catalog.Narrative.coreDescription,
+              catalog.Narrative.dimensionsLabel,
+              ...engagementSearchText(catalog.Narrative.missions),
+              ...engagementSearchText(catalog.Narrative.dimensions),
               catalog.HomeMissions.eyebrow,
               catalog.HomeMissions.functions,
               catalog.PageSections.home[homeCooperationAnchor].title,
@@ -1174,6 +1237,10 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             const platformId = homePlatforms.find(({ id }) => entry.id === `platform-${id}`)?.id
             if (platformId) body.push(catalog.HomePlatforms.platforms[platformId].searchText)
           }
+          if (pageId === 'institute' && entry.id.startsWith('institute-model-')) {
+            const id = entry.id.replace('institute-model-', '')
+            if (id === 'research') body.push(...engagementSearchText(catalog.Narrative.missions))
+          }
           if (pageId === 'home' && entry.id === 'collaboration') {
             const collaboration = catalog.HomeCollaboration
             body.push(
@@ -1203,7 +1270,11 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 catalog.HomeMissions[mission.id].link,
                 catalog.HomeMissions[mission.id].purpose,
               )
-            if (entry.id === 'mission-research') body.push(catalog.HomeMissions.functions)
+            if (entry.id === 'mission-research')
+              body.push(
+                catalog.HomeMissions.functions,
+                ...engagementSearchText(catalog.Narrative.missions),
+              )
             if (entry.id === homeCooperationAnchor) body.push(catalog.HomeMissions.cooperation.link)
           }
           documents.push({
@@ -1261,6 +1332,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         title: `${catalog.Transfer.catalog.reference} ${patent.reference} — ${patent.title[locale]}`,
         body: [
           patent.reference,
+          catalog.Transfer.figures.filed,
           patent.title[locale],
           patent.description[locale],
           patent.depositor,

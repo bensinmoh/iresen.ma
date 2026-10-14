@@ -15,7 +15,8 @@
     "depositor": "Université Hassan 1er Settat",
     "filingYear": 2014,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37172&count=0&lang=FR",
-    "filingDate": "2014-07-01"
+    "filingDate": "2014-07-01",
+    "granted": false
   },
   {
     "reference": "37225",
@@ -33,7 +34,8 @@
     "depositor": "Université Hassan II",
     "filingYear": 2014,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37225&count=0&lang=FR",
-    "filingDate": "2014-07-18"
+    "filingDate": "2014-07-18",
+    "granted": false
   },
   {
     "reference": "37414",
@@ -51,7 +53,8 @@
     "depositor": "Université Internationale de Rabat Privée (UIR)",
     "filingYear": 2014,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37414&count=0&lang=FR",
-    "filingDate": "2014-10-10"
+    "filingDate": "2014-10-10",
+    "granted": false
   },
   {
     "reference": "37655",
@@ -69,7 +72,8 @@
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2014,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37655&count=0&lang=FR",
-    "filingDate": "2014-12-12"
+    "filingDate": "2014-12-12",
+    "granted": false
   },
   {
     "reference": "37705",
@@ -87,7 +91,8 @@
     "depositor": "Université Moulay Ismaïl",
     "filingYear": 2014,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=37705&count=0&lang=FR",
-    "filingDate": "2014-12-25"
+    "filingDate": "2014-12-25",
+    "granted": true
   },
   {
     "reference": "38683",
@@ -105,7 +110,8 @@
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2015,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=38683&count=0&lang=FR",
-    "filingDate": "2015-12-16"
+    "filingDate": "2015-12-16",
+    "granted": false
   },
   {
     "reference": "39325",
@@ -123,7 +129,8 @@
     "depositor": "Université Internationale de Rabat (UIR) ; E-ENERGIE",
     "filingYear": 2016,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=39325&count=0&lang=FR",
-    "filingDate": "2016-09-05"
+    "filingDate": "2016-09-05",
+    "granted": false
   },
   {
     "reference": "39365",
@@ -140,7 +147,8 @@
     "themes": ["solar", "storage"],
     "depositor": "Université Internationale de Rabat (UIR) ; E-ENERGIE",
     "filingYear": 2016,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=39365&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=39365&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "40800",
@@ -157,7 +165,8 @@
     "themes": ["thermal"],
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2017,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=40800&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=40800&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "41069",
@@ -175,7 +184,8 @@
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2017,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41069&count=0&lang=FR",
-    "filingDate": "2017-09-12"
+    "filingDate": "2017-09-12",
+    "granted": false
   },
   {
     "reference": "41528",
@@ -192,7 +202,8 @@
     "themes": ["solar", "water"],
     "depositor": "IRESEN",
     "filingYear": 2017,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41528&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41528&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "41738",
@@ -209,7 +220,8 @@
     "themes": ["solar"],
     "depositor": "IRESEN",
     "filingYear": 2017,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41738&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41738&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "41925",
@@ -226,7 +238,8 @@
     "themes": ["solar", "grids"],
     "depositor": "IRESEN",
     "filingYear": 2018,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41925&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=41925&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "42862",
@@ -243,7 +256,8 @@
     "themes": ["solar"],
     "depositor": "IRESEN",
     "filingYear": 2018,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=42862&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=42862&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "43487",
@@ -261,7 +275,8 @@
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2018,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43487&count=0&lang=FR",
-    "filingDate": "2018-10-22"
+    "filingDate": "2018-10-22",
+    "granted": false
   },
   {
     "reference": "43502",
@@ -278,7 +293,8 @@
     "themes": ["solar"],
     "depositor": "IRESEN",
     "filingYear": 2018,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43502&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43502&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "43620",
@@ -296,7 +312,8 @@
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2018,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=43620&count=0&lang=FR",
-    "filingDate": "2018-11-14"
+    "filingDate": "2018-11-14",
+    "granted": false
   },
   {
     "reference": "44192",
@@ -313,7 +330,8 @@
     "themes": ["mobility"],
     "depositor": "IRESEN",
     "filingYear": 2018,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44192&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44192&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "44300",
@@ -331,7 +349,8 @@
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2018,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44300&count=0&lang=FR",
-    "filingDate": "2018-12-19"
+    "filingDate": "2018-12-19",
+    "granted": false
   },
   {
     "reference": "44798",
@@ -348,7 +367,8 @@
     "themes": ["mobility"],
     "depositor": "IRESEN",
     "filingYear": 2019,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44798&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=44798&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "51690",
@@ -365,7 +385,8 @@
     "themes": ["solar"],
     "depositor": "Université Hassan Premier",
     "filingYear": 2020,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=51690&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=51690&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "51802",
@@ -382,7 +403,8 @@
     "themes": ["mobility"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2020,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=51802&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=51802&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "52677",
@@ -399,7 +421,8 @@
     "themes": ["storage"],
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2021,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=52677&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=52677&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "52823",
@@ -416,7 +439,8 @@
     "themes": ["solar", "water"],
     "depositor": "Université Hassan Premier",
     "filingYear": 2021,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=52823&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=52823&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "53044",
@@ -433,7 +457,8 @@
     "themes": ["mobility", "storage"],
     "depositor": "Université Ibn Tofail ; IRESEN",
     "filingYear": 2021,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=53044&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=53044&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "54581",
@@ -451,7 +476,8 @@
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2021,
     "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54581&count=0&lang=FR",
-    "filingDate": "2021-10-04"
+    "filingDate": "2021-10-04",
+    "granted": true
   },
   {
     "reference": "54779",
@@ -468,7 +494,8 @@
     "themes": ["storage"],
     "depositor": "Université Internationale de Rabat (UIR)",
     "filingYear": 2021,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54779&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54779&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "54913",
@@ -485,7 +512,8 @@
     "themes": ["grids"],
     "depositor": "Université Hassan II de Casablanca ; IRESEN",
     "filingYear": 2021,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54913&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=54913&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "55243",
@@ -502,7 +530,8 @@
     "themes": ["solar"],
     "depositor": "Université Hassan 1er",
     "filingYear": 2021,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=55243&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=55243&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "55408",
@@ -519,7 +548,8 @@
     "themes": ["buildings", "storage"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=55408&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=55408&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "56302",
@@ -536,7 +566,8 @@
     "themes": ["buildings"],
     "depositor": "Université Internationale de Rabat ; IRESEN",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56302&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56302&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "56600",
@@ -553,7 +584,8 @@
     "themes": ["solar"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56600&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56600&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "56609",
@@ -570,7 +602,8 @@
     "themes": ["storage"],
     "depositor": "Université Internationale de Rabat ; IRESEN",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56609&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=56609&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "57941",
@@ -587,7 +620,8 @@
     "themes": ["storage"],
     "depositor": "Université Internationale de Rabat ; IRESEN",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=57941&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=57941&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "58719",
@@ -604,7 +638,8 @@
     "themes": ["buildings"],
     "depositor": "IRESEN ; Université Cadi Ayyad",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=58719&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=58719&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "58999",
@@ -621,7 +656,8 @@
     "themes": ["buildings"],
     "depositor": "Université Cadi Ayyad ; IRESEN ; Green Energy Park (GEP) ; CETEMCO ; STE Briqueterie Bati Chaouia",
     "filingYear": 2022,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=58999&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=58999&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "60000",
@@ -638,7 +674,8 @@
     "themes": ["mobility"],
     "depositor": "MAScIR ; IRESEN ; Tronico Atlas",
     "filingYear": 2023,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=60000&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=60000&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "62359",
@@ -655,7 +692,8 @@
     "themes": ["solar"],
     "depositor": "Institut Agronomique et Vétérinaire Hassan II ; IRESEN",
     "filingYear": 2023,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=62359&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=62359&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "62697",
@@ -672,7 +710,8 @@
     "themes": ["grids"],
     "depositor": "IRESEN ; MAScIR",
     "filingYear": 2023,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=62697&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=62697&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "63542",
@@ -689,7 +728,8 @@
     "themes": ["grids"],
     "depositor": "Université Internationale de Rabat ; IRESEN",
     "filingYear": 2023,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=63542&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=63542&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "64167",
@@ -706,7 +746,8 @@
     "themes": ["buildings"],
     "depositor": "IRESEN ; ESSTI ; ENSMR ; Green Energy Park (GEP)",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=64167&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=64167&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "65166",
@@ -723,7 +764,8 @@
     "themes": ["buildings"],
     "depositor": "Université Sidi Mohammed Ben Abdellah ; IRESEN",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=65166&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=65166&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "68026",
@@ -740,7 +782,8 @@
     "themes": ["solar", "water"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68026&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68026&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "68027",
@@ -757,7 +800,8 @@
     "themes": ["water"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68027&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68027&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "68028",
@@ -774,7 +818,8 @@
     "themes": ["mobility"],
     "depositor": "Green Energy Park (GEP) ; IRESEN ; Université Hassan II de Casablanca",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68028&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68028&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "68605",
@@ -791,7 +836,8 @@
     "themes": ["solar"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68605&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68605&count=0&lang=FR",
+    "granted": true
   },
   {
     "reference": "68606",
@@ -808,7 +854,8 @@
     "themes": ["hydrogen", "solar"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2024,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68606&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=68606&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "70688",
@@ -825,7 +872,8 @@
     "themes": ["solar"],
     "depositor": "IRESEN ; Université Cadi Ayyad",
     "filingYear": 2025,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=70688&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=70688&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "71194",
@@ -842,7 +890,8 @@
     "themes": ["solar"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71194&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71194&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "71200",
@@ -859,7 +908,8 @@
     "themes": ["solar"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": 2025,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71200&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71200&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "71297",
@@ -876,7 +926,8 @@
     "themes": ["measurement"],
     "depositor": "CNESTEN ; IRESEN ; FSTM",
     "filingYear": 2025,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71297&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71297&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "71521",
@@ -893,7 +944,8 @@
     "themes": ["water"],
     "depositor": "DIV GEP",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71521&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71521&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "71776",
@@ -910,7 +962,8 @@
     "themes": ["solar", "storage", "hydrogen"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71776&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71776&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "71777",
@@ -927,7 +980,8 @@
     "themes": ["thermal"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71777&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=71777&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "72762",
@@ -944,7 +998,8 @@
     "themes": ["solar", "storage", "hydrogen"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72762&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72762&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "72763",
@@ -961,7 +1016,8 @@
     "themes": ["solar", "water"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72763&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=72763&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "73157",
@@ -978,7 +1034,8 @@
     "themes": ["solar", "storage"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=73157&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=73157&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "74890",
@@ -995,7 +1052,8 @@
     "themes": ["solar"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74890&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74890&count=0&lang=FR",
+    "granted": false
   },
   {
     "reference": "74893",
@@ -1012,6 +1070,7 @@
     "themes": ["buildings", "storage"],
     "depositor": "Green Energy Park (GEP)",
     "filingYear": null,
-    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74893&count=0&lang=FR"
+    "registerUrl": "https://patentregister.ompic.ma/SearchPatent/searchByDepot?typeNum=AP&numDepot=74893&count=0&lang=FR",
+    "granted": false
   }
 ]

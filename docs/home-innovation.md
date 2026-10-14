@@ -1,5 +1,22 @@
 # Homepage innovation pathway — 2026-10-10
 
+## Owner review correction — 2026-10-14
+
+The owner restores the original five numbered stages and connected horizontal
+rail from the supplied screenshot, with light FR/EN/AR narrative adjustments.
+R&I remains the core; expertise, skills and cooperation support the pathway.
+Knowledge and know-how join transfer among useful results. Stable section anchor,
+transfer destination and localized search projection remain. Global tests and
+merge await the owner’s request and GO respectively.
+
+## Narrative supersession — 2026-10-14
+
+The [October PDF implementation](institutional-narrative-2026.md) now governs the R&I core, three
+missions, three complementary dimensions and six audience pathways. The earlier
+equal-domain/common-enabler composition is historical. The five-step homepage
+rail is restored by the later owner correction above. Existing canonical routes, content provenance and service
+boundaries remain. The owner reserves the explicit merge GO for the review branch.
+
 The owner commissioned a short, light section between research domains and
 platforms, following the discussed innovation value chain. The hero figure band
 stays in place. This transition supplements the six main homepage modules and

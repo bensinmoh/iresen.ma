@@ -1,5 +1,14 @@
 # IRESEN visual direction
 
+## Integrated narrative composition — 2026-10-14
+
+A dominant navy R&I panel contains three linked missions; three complementary
+light surfaces follow. Native text and existing SVG icons replace the equal photo
+trio/common band. Institute adds an accessible ecosystem diagram, eight shared
+capabilities and three 2035 orientations. Alternative pathways stack on mobile;
+the former automatically scrolling five-step pathway is withdrawn. Use the
+[scope](docs/institutional-narrative-2026.md) and existing tokens, not new palettes.
+
 Current guide: 2026-10-12. Preserve the delivered identity and content; scoped
 refinement improves reading and interaction. The complete shared rules live in
 [design-system coherence](docs/design-system.md#current-coherence-rules), with
@@ -127,3 +136,34 @@ instructions, product truth and shared rules prevail over Figma captions/histori
 palettes. Use repository IRESEN overrides when applying Taste/Impeccable; admin work
 prioritizes usable operations. Record adopted shared improvements in this guide
 and the design-system specification together.
+
+## Institute narrative diagram — 2026-10-14
+
+The Institute page adapts the owner's ClickUp impact-model reference with a
+three-sector geometric arc around the navy R&I core. Existing cyan, primary blue
+and transition green distinguish its missions; all text remains native HTML.
+Mission descriptions and canonical links follow, above three white supporting
+contributions on a pale surface. The new component is scoped to Institute;
+the homepage model retains its separate composition. Arabic mirrors diagram
+geometry and reading order; small screens stack detailed content. Existing
+headquarters hero, timeline and report-cover conventions remain authoritative.
+
+## Governance diagrams — 2026-10-14
+
+Governance uses native HTML diagrams adapted from the owner's ClickUp reference:
+four connected responsibility columns around the navy Board node, and a General
+Management root branching into three poles and seven departments. Pale/white
+surfaces, navy/blue nodes, vector icons and fine logical connectors reuse existing
+tokens. Small screens stack the nodes with readable text; Arabic mirrors the
+organisation tree. Portraits, biography dialogs and original marks stay separate.
+The Resources reference board is outside the commissioned scope.
+
+## Infrastructure chapter alignment — 2026-10-14
+
+Platform chapters pair a stretching photograph with an editorial column whose
+title starts at the photo top and existing action ends at its bottom. Four large
+subject SVGs form a horizontal theme row. Desktop full prose, tablet summaries and
+mobile short summaries retain complete source reading through native disclosures.
+Thirteen landscape placeholders reserve future owner-supplied infrastructure
+photos; existing photography and brand vectors remain unchanged. This is a scoped
+platform composition using current tokens, not a new universal page template.

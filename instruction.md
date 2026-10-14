@@ -1,5 +1,16 @@
 # IRESEN website — project and development instructions
 
+## Current narrative implementation — 2026-10-14
+
+The owner commissions the full supplied-PDF alignment in a dedicated branch,
+with a browsable review and explicit GO before merging. See
+[scope and evidence](docs/institutional-narrative-2026.md). Research & Innovation
+is the core activity with three missions, reinforced by Studies & Expertise,
+Skills & Capacities and Cooperation & Outreach. The earlier three-domain/common-
+enabler framework is historical. Preserve the 23 canonical IDs, source facts,
+publication boundaries and final translation review. The review request does not
+authorize production-domain/DNS changes or automatic merging.
+
 ## Current commissioned increment — 2026-10-12
 
 The owner selected the implementation plan recorded in

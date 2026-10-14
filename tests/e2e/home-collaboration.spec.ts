@@ -15,7 +15,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.goto(pageHref('home', locale, 'collaboration'))
     const section = page.locator('#collaboration')
     await expect(section.locator('h2')).toHaveText(catalogs[locale].HomeCollaboration.title)
-    await expect(section.locator('article')).toHaveCount(4)
+    await expect(section.locator('article')).toHaveCount(6)
     await expect(section.locator('header a')).toHaveAttribute(
       'href',
       pageHref('workWithUs', locale, 'choose-pathway'),
@@ -31,7 +31,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     )
     await expect(section.locator('article a').first()).toHaveAttribute(
       'href',
-      pageHref('opportunities', locale),
+      pageHref('programmes', locale),
     )
     await section.screenshot({ path: `.cache/collaboration-review/${locale}-desktop.png` })
     for (const width of [320, 390, 768, 1024]) {
@@ -90,7 +90,7 @@ test('collaboration remains available without JavaScript', async ({ browser }) =
   })
   const page = await context.newPage()
   await page.goto('/ar#collaboration')
-  await expect(page.locator('#collaboration article')).toHaveCount(4)
+  await expect(page.locator('#collaboration article')).toHaveCount(6)
   await page.locator('#collaboration article a').first().focus()
   await expect(page.locator('#collaboration article a').first()).toBeFocused()
   await context.close()

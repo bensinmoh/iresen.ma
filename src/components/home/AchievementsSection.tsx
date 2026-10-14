@@ -7,6 +7,7 @@ import styles from './AchievementsSection.module.css'
 
 export async function AchievementsSection({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'HomeAchievements' })
+  const narrative = await getTranslations({ locale, namespace: 'Narrative' })
   return (
     <section
       id={homeAchievementsSectionId}
@@ -50,6 +51,17 @@ export async function AchievementsSection({ locale }: { locale: Locale }) {
                 <bdi>{t(`items.${id}.name`)}</bdi>
               </h3>
               <p className={styles.description}>{t(`items.${id}.description`)}</p>
+              <details className={styles.proof}>
+                <summary>{narrative('proofLabel')}</summary>
+                <dl>
+                  {(['need', 'contribution', 'result', 'scope'] as const).map((field) => (
+                    <div key={field}>
+                      <dt>{narrative(`proofFields.${field}`)}</dt>
+                      <dd>{t(`items.${id}.proof.${field}`)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </details>
             </article>
           </li>
         ))}

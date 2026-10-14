@@ -33,6 +33,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       )
       const destination = pageHref('contact', locale, anchor)
       const link = page.locator(`.search-results a[href="${destination}"]`)
+      // Broad topics can span pages as the public catalog grows. Follow the
+      // visitor-facing pagination without changing the query or relevance order.
+      const next = page.locator('.search-pagination a[rel="next"]')
+      while ((await link.count()) === 0 && (await next.count()) > 0) {
+        const nextURL = new URL((await next.getAttribute('href'))!, page.url()).href
+        await next.click()
+        await expect(page).toHaveURL(nextURL)
+      }
       await expect(link).toBeVisible()
       await expect(link.locator('..')).not.toContainText(/À prévoir|Content to add|محتوى مرتقب/)
       await link.click()

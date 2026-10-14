@@ -42,6 +42,99 @@
       "bytes": 52028,
       "transform": "WebP quality 85, width 1200, proportional height",
       "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements"
+    },
+    {
+      "id": "public-actors",
+      "sourceFilename": "exec-d3b2f006-5fea-4b37-8818-b3a69c4fcc98.png",
+      "sourceSha256": "fb82a4ba2e565fddda420dee59bfe87dfbec81f93b6e31e58dcbf99221cd222f",
+      "servedPath": "/images/collaborate/audience-public-actors.webp",
+      "servedSha256": "b2ff01efc4393d22d3bf6c3c32bbd71613361efd497557450c7ab77eda6087df",
+      "bytes": 84886,
+      "width": 1200,
+      "height": 800,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "scene": "Energy planners reviewing maps in a planning office",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "research-teams",
+      "sourceFilename": "exec-cc2edb04-0d6f-4e32-b7a1-c2f106de9970.png",
+      "sourceSha256": "a2cdd2bcb26f7b7c919640d80b942abf95096237b0d854583bdcf2518fec8550",
+      "servedPath": "/images/collaborate/audience-research-teams.webp",
+      "servedSha256": "e62a69b544afaac01eb9247f1df56c67dbd5c95fa1a412b3b37a6d45b9e13f9b",
+      "bytes": 71724,
+      "width": 1200,
+      "height": 800,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "scene": "Researchers examining a solar cell in a materials laboratory",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "industrial-companies",
+      "sourceFilename": "exec-7bafc04c-4c28-4bdc-a286-87d0231272c6.png",
+      "sourceSha256": "235c116816b60666ab568941ee4cb5d66d74792c3c0a308a5f3df80b424d45fe",
+      "servedPath": "/images/collaborate/audience-industrial-companies.webp",
+      "servedSha256": "69b6599dc851c95cfc99201e798d9cceddb4f9f51ffca062ccc57cf16f090cdc",
+      "bytes": 102422,
+      "width": 1200,
+      "height": 800,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "scene": "Engineers inspecting heat exchanger pipes in a factory",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "territorial-actors",
+      "sourceFilename": "exec-6fee9a19-befb-4cbd-a7e4-9144b9225ae1.png",
+      "sourceSha256": "8b0073d6a8804368e800a2ff5b9045c95d292fd4e003fb52abb3b6041ad4220b",
+      "servedPath": "/images/collaborate/audience-territorial-actors.webp",
+      "servedSha256": "30312182b38f6779d1cb3f3f358819787c4d53158d1d435b86898f8ef5daa53b",
+      "bytes": 173002,
+      "width": 1200,
+      "height": 800,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "scene": "Field specialists discussing solar irrigation by an olive orchard",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "international-partners",
+      "sourceFilename": "exec-c5002653-4aa1-4872-afa4-9b70ab9e31c0.png",
+      "sourceSha256": "1b1afc4237274ae6a46f03688e23e4ddf0d77a8671fe96b8b60ffa9298d3932d",
+      "servedPath": "/images/collaborate/audience-international-partners.webp",
+      "servedSha256": "4e38f43f84721a05e52c10cf237f5e2df1e99df25b454bb353dcc819ca060137",
+      "bytes": 79304,
+      "width": 1200,
+      "height": 800,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "scene": "International scientists discussing an engineering model",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "talents-public",
+      "sourceFilename": "exec-39383caf-76ba-4cb4-bab9-b72e939994de.png",
+      "sourceSha256": "0d17109106bdea0132ce2632260a46b8902e745074712e22a4651dd8385f652c",
+      "servedPath": "/images/collaborate/audience-talents-public.webp",
+      "servedSha256": "a95027b088e6b4ae50f4eee36667b51a1ec7d0e7eaf0d40ffdc039206ee19dcd",
+      "bytes": 85736,
+      "width": 1200,
+      "height": 800,
+      "transform": "WebP quality 85, width 1200, proportional height",
+      "scene": "Science facilitator and adult visitors with a solar demonstrator",
+      "status": "Owner-requested generated fictional illustration; not actual IRESEN people, facilities, partners or agreements",
+      "date": "2026-10-14"
     }
-  ]
+  ],
+  "currentAudienceIds": [
+    "public-actors",
+    "research-teams",
+    "industrial-companies",
+    "territorial-actors",
+    "international-partners",
+    "talents-public"
+  ],
+  "previousAssets": "Original four illustrations preserved as historical assets; the six new audience illustrations replace them in public section and search references."
 }

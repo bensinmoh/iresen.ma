@@ -5,17 +5,15 @@ import { pageHref } from '@/lib/site'
 import {
   governanceBoard,
   governanceScientists,
-  governanceDepartments,
   governanceBoardLogo,
   governanceBoardSites,
   governanceScientistLinkedin,
-  governanceTeamLinkedin,
 } from '@/lib/governance'
-import { samirCutout, samirBiographies } from '@/lib/samir-biography'
 import { PageHero } from '@/components/hero/PageHero'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
-import { TeamBiography } from './TeamBiography'
+import { FooterIcon } from '@/components/layout/FooterIcon'
+import { GovernanceDiagram, OrganisationDiagram } from './GovernanceDiagrams'
 import styles from './GovernancePage.module.css'
 
 export async function GovernancePage({ locale }: { locale: Locale }) {
@@ -25,6 +23,33 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
     Array.from({ length: count }, (_, i) => <p key={i}>{t(`${key}.${i}`)}</p>)
   return (
     <div data-governance-page className={styles.page}>
+      {/* Small reversible channel corrections preserve source pixels and alpha. */}
+      <svg
+        width="0"
+        height="0"
+        className={styles.portraitTones}
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <filter id="governance-portrait-neutral" colorInterpolationFilters="sRGB">
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="0.99" />
+              <feFuncG type="linear" slope="1" />
+              <feFuncB type="linear" slope="1.015" />
+            </feComponentTransfer>
+            <feColorMatrix type="saturate" values="0.96" />
+          </filter>
+          <filter id="governance-portrait-warm-source" colorInterpolationFilters="sRGB">
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="0.975" />
+              <feFuncG type="linear" slope="1" />
+              <feFuncB type="linear" slope="1.025" />
+            </feComponentTransfer>
+            <feColorMatrix type="saturate" values="0.97" />
+          </filter>
+        </defs>
+      </svg>
       <PageHero pageId="governance" locale={locale} />
       <div id="page-sections">
         <section
@@ -36,12 +61,8 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
           <h2 id="governance-mission-title">{t('mission.title')}</h2>
           <p className={styles.lead}>{t('introduction')}</p>
           <div className={styles.missionCopy}>{paragraphs('mission.paragraphs', 3)}</div>
+          <GovernanceDiagram locale={locale} />
         </section>
-        <nav className={`container ${styles.navigation}`} aria-label={t('navigation')}>
-          <a href="#council-representatives">{t('tabs.councils')}</a>
-          <a href="#leadership-organisation">{t('tabs.organisation')}</a>
-          <a href="#department-responsibilities">{t('tabs.responsibilities')}</a>
-        </nav>
         <section
           id="council-representatives"
           className={`container ${styles.councils}`}
@@ -99,7 +120,11 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                   id={`scientific-member-${id}`}
                   className={i === 0 ? styles.chair : undefined}
                 >
-                  <a href={governanceScientistLinkedin[id]} className={styles.scientistLink}>
+                  <a
+                    href={governanceScientistLinkedin[id]}
+                    className={styles.scientistLink}
+                    aria-label={`${t('biography.linkedin')} — ${t(`scientists.${id}.name`)}`}
+                  >
                     <Image
                       src={`/images/governance/${id}.webp`}
                       alt={t('portrait', { name: t(`scientists.${id}.name`) })}
@@ -111,9 +136,11 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                       {i === 0 && <p className={styles.badge}>{t('president')}</p>}
                       <h4>
                         <bdi>{t(`scientists.${id}.name`)}</bdi>
+                        <span className={styles.profileHint} aria-hidden="true">
+                          <FooterIcon name="linkedin" />
+                        </span>
                       </h4>
                       <p>{t(`scientists.${id}.role`)}</p>
-                      <span className={styles.profileHint}>LinkedIn ↗</span>
                     </div>
                   </a>
                 </article>
@@ -153,66 +180,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
               </div>
               <p className={styles.reading}>{t('organisation.description')}</p>
             </header>
-            <div className={styles.management}>
-              <TeamBiography
-                id="team-member-samir"
-                management
-                name={t('directorGeneralName')}
-                role={t('directorGeneral')}
-                photo={samirCutout}
-                portraitAlt={t('portrait', { name: t('directorGeneralName') })}
-                paragraphs={samirBiographies[locale].paragraphs}
-                linkedin={governanceTeamLinkedin.samir}
-                biographyLabel={t('biography.label')}
-                linkedinLabel={t('biography.linkedin')}
-                closeLabel={t('biography.close')}
-              />
-            </div>
-            <div className={styles.poles}>
-              {[0, 1, 2].map((i) => (
-                <div key={i}>
-                  <span aria-hidden="true" className={styles.connector} />
-                  <h3>{t(`organisation.poles.${i}.title`)}</h3>
-                  <p>{t(`organisation.poles.${i}.tagline`)}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        <section
-          id="department-responsibilities"
-          className={`container ${styles.departments}`}
-          aria-labelledby="departments-title"
-        >
-          <h2 id="departments-title">{t('teamTitle')}</h2>
-          <div className={styles.departmentGrid}>
-            {governanceDepartments.map((departments, pole) => (
-              <div key={pole} className={styles.departmentColumn}>
-                <h3>{t(`organisation.poles.${pole}.title`)}</h3>
-                {departments.map((person, i) => (
-                  <article key={i} className={styles.department}>
-                    {person && (
-                      <TeamBiography
-                        id={`team-member-${person}`}
-                        name={t(`team.${person}.name`)}
-                        role={t(`team.${person}.role`)}
-                        photo={`/images/governance/${person}-portrait.webp`}
-                        portraitAlt={t('portrait', { name: t(`team.${person}.name`) })}
-                        paragraphs={t(`team.${person}.biography`).split('\n\n')}
-                        linkedin={governanceTeamLinkedin[person] ?? undefined}
-                        biographyLabel={t('biography.label')}
-                        linkedinLabel={t('biography.linkedin')}
-                        closeLabel={t('biography.close')}
-                      />
-                    )}
-                    <div className={styles.departmentCopy}>
-                      <h4>{t(`organisation.poles.${pole}.directions.${i}.title`)}</h4>
-                      <p>{t(`organisation.poles.${pole}.directions.${i}.description`)}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            ))}
+            <OrganisationDiagram locale={locale} />
           </div>
         </section>
         <section

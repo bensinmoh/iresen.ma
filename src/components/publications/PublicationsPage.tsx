@@ -4,7 +4,7 @@ import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { ReportList } from '@/components/media/ReportList'
 import { pageHref } from '@/lib/site'
-import { patents } from '@/lib/patents'
+import { filedPatentCount } from '@/lib/patents'
 import {
   publications,
   publicationTopics,
@@ -107,7 +107,7 @@ export async function PublicationsPage({
           >
             {[
               [publications.length, 'publications'],
-              [patents.length, 'patents'],
+              [filedPatentCount, 'patents'],
               [69, 'projects'],
               [18, 'calls'],
             ].map(([number, key]) => (

@@ -44,6 +44,9 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
       id: 'mission',
       children: [
         { id: 'capabilities' },
+        ...['research', 'studies', 'skills', 'cooperation', 'develop', 'test', 'transfer'].map(
+          (id) => ({ id: `institute-model-${id}` }),
+        ),
         { id: 'institute-studies' },
         { id: 'institute-research' },
         { id: 'institute-skills' },
