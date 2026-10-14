@@ -6,10 +6,10 @@
 .oversight,
 .departments,
 .resources {
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: clamp(2rem, 3.5vw, 3rem);
 }
 .section {
-  padding-block: clamp(3.5rem, 6vw, 6rem);
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
 }
 .intro h2,
 .heading h2,
@@ -33,7 +33,7 @@
   font-size: clamp(1.125rem, 1.4vw, 1.375rem);
   line-height: 1.7;
   max-inline-size: 85ch;
-  margin-block: var(--space-8);
+  margin-block: var(--space-6);
 }
 .missionCopy {
   display: grid;
@@ -55,30 +55,12 @@
 .missionCopy p:last-child {
   color: var(--color-text);
 }
-.navigation {
-  display: flex;
-  gap: var(--space-8);
-  flex-wrap: wrap;
-  border-block-end: 1px solid var(--color-border);
-}
-.navigation a {
-  padding-block: var(--space-4);
-  min-block-size: 44px;
-  text-decoration: none;
-  font-weight: 600;
-  border-block-end: 2px solid transparent;
-}
-.navigation a:hover,
-.navigation a:focus-visible {
-  color: var(--color-blue);
-  border-block-end-color: currentColor;
-}
 .heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(2rem, 6vw, 7rem);
   align-items: start;
-  margin-block-end: var(--space-12);
+  margin-block-end: var(--space-8);
 }
 .reading {
   max-inline-size: 75ch;
@@ -89,13 +71,13 @@
 .tagline {
   font-size: clamp(1.125rem, 1.5vw, 1.4rem);
   line-height: 1.6;
-  margin: var(--space-6) 0 0;
+  margin: var(--space-4) 0 0;
   max-inline-size: 40ch;
 }
 .membersHeading {
   font-size: 1.4rem;
   font-weight: 500;
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--space-6);
 }
 .board {
   display: grid;
@@ -130,7 +112,7 @@
   overflow-wrap: anywhere;
 }
 .logoSlot {
-  block-size: 9rem;
+  block-size: 7rem;
   inline-size: 100%;
   display: grid;
   place-items: center;
@@ -171,7 +153,7 @@
   gap: var(--space-6);
 }
 .scientists article {
-  padding: var(--space-6);
+  padding: var(--space-4);
   border-block-start: 1px solid var(--color-footer-divider);
   min-inline-size: 0;
 }
@@ -179,7 +161,7 @@
   inline-size: 10rem;
   block-size: 10rem;
   object-fit: contain;
-  margin-block-end: var(--space-6);
+  margin-block-end: var(--space-4);
   border-radius: 50%;
 }
 .scientists h4 {
@@ -206,7 +188,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-8);
-  margin-block-start: var(--space-12);
+  margin-block-start: var(--space-8);
 }
 .committees article {
   padding-block-start: var(--space-6);
@@ -337,7 +319,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 var(--space-8);
-  margin-block-start: var(--space-8);
+  margin-block-start: var(--space-6);
 }
 .resources a {
   display: flex;
@@ -399,9 +381,6 @@
   }
   .teamPhoto {
     block-size: 25rem;
-  }
-  .navigation {
-    gap: var(--space-6);
   }
   .resources > div {
     grid-template-columns: 1fr;
@@ -503,12 +482,26 @@
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-.profileHint {
-  display: inline-block;
-  margin-block-start: var(--space-4);
-  color: var(--color-white);
-  font-size: var(--font-size-label);
+.scientists h4 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
+.scientists h4 bdi {
+  min-inline-size: 0;
+}
+.profileHint {
+  display: inline-flex;
+  flex: none;
+  color: var(--color-white);
+}
+.profileHint svg {
+  display: block;
+  margin: 0;
+  inline-size: 22px;
+  block-size: 22px;
+}
+
 .personTrigger,
 .managementTrigger {
   display: block;
@@ -559,7 +552,7 @@
 }
 .biographyDialog {
   margin: auto;
-  inline-size: min(58rem, calc(100% - 2rem));
+  inline-size: min(96rem, calc(100% - 2rem));
   max-block-size: calc(100dvh - 2rem);
   padding: 0;
   border: 0;
@@ -581,7 +574,7 @@
   justify-content: center;
   inline-size: 44px;
   block-size: 44px;
-  margin-block: var(--space-3);
+  margin-block: var(--space-3) calc(-44px - var(--space-3));
   margin-inline-start: auto;
   margin-inline-end: var(--space-3);
   background: var(--color-white);
@@ -592,8 +585,9 @@
   z-index: 2;
 }
 .biographyLayout {
+  background: var(--color-action-surface);
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(12rem, 0.22fr) minmax(0, 0.78fr);
 }
 .biographyPhoto {
   position: relative;
@@ -604,28 +598,75 @@
   object-fit: contain;
   object-position: center bottom;
 }
+.biographyFullWidth {
+  display: flex;
+  align-items: end;
+  min-block-size: 0;
+}
+.biographyFullWidth img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
 .biographyCopy {
+  text-align: start;
   min-inline-size: 0;
+  background: var(--color-white);
   padding: var(--space-8);
+  padding-block-start: var(--space-12);
+}
+.biographyName {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-block-end: var(--space-2);
+}
+.biographyName h2 {
+  min-inline-size: 0;
 }
 .biographyCopy h2 {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
   line-height: 1.35;
-  margin-block: 0 var(--space-3);
+  margin: 0;
 }
 .biographyCopy p {
-  line-height: 1.75;
+  line-height: 1.6;
 }
-.biographyRole {
+.biographyDialog .biographyCopy p {
+  max-inline-size: none;
+}
+.biographyCopy > p:not([class]) {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-block: 0 var(--space-3);
+}
+.biographyCopy .biographyRole {
+  margin-block: 0 var(--space-4);
   color: var(--color-blue);
-  font-weight: 600;
+  font-size: clamp(1.125rem, 1.6vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.45;
 }
 .biographyLinkedin {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  inline-size: 44px;
   min-block-size: 44px;
   color: var(--color-blue);
-  font-weight: 600;
+  border-radius: var(--radius-small);
+}
+.biographyLinkedin svg {
+  display: block;
+  margin: 0;
+  inline-size: 28px;
+  block-size: 28px;
+}
+.biographyLinkedin:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 @media (max-width: 48rem) {
   .biographyLayout {
@@ -636,5 +677,31 @@
   }
   .biographyCopy {
     padding: var(--space-6);
+  }
+}
+
+/* Natural full-colour portraits: shared, non-destructive white-balance correction. */
+.portraitTones {
+  position: absolute;
+  pointer-events: none;
+}
+.page img[src*='-portrait.'],
+.page img[src*='samir-rachidi-cutout'] {
+  filter: url('#governance-portrait-neutral');
+}
+.page img[src*='laila-portrait'],
+.page img[src*='samir-rachidi-cutout'] {
+  filter: url('#governance-portrait-warm-source');
+}
+
+/* Keep long biographies readable within shorter desktop viewports. */
+@media (min-width: 48.001rem) and (max-height: 50rem) {
+  .biographyCopy {
+    padding: var(--space-6);
+    padding-block-start: var(--space-8);
+    padding-block-end: var(--space-4);
+  }
+  .biographyCopy > p:not([class]) {
+    margin-block-end: var(--space-2);
   }
 }

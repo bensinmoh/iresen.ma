@@ -6,7 +6,6 @@ import { homeMissionSectionId } from '@/lib/home-missions'
 import styles from './MissionSection.module.css'
 
 export async function MissionSection({ locale }: { locale: Locale }) {
-  const narrative = await getTranslations({ locale, namespace: 'Narrative' })
   const [sections, t] = await Promise.all([
     getTranslations({ locale, namespace: 'PageSections.home' }),
     getTranslations({ locale, namespace: 'HomeMissions' }),
@@ -18,9 +17,6 @@ export async function MissionSection({ locale }: { locale: Locale }) {
       aria-labelledby={`${homeMissionSectionId}-heading`}
       className={styles.section}
     >
-      <aside id="home-figures-context" className={styles.figureContext}>
-        {narrative('figuresNote')}
-      </aside>
       <div className={styles.introduction}>
         <h2 id={`${homeMissionSectionId}-heading`} className={styles.eyebrow}>
           <Image

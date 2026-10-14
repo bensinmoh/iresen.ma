@@ -39,7 +39,10 @@
 }
 .steps {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 4 * var(--space-6)) / 5);
+  overflow-x: auto;
+  scroll-snap-type: inline proximity;
   gap: var(--space-6);
   list-style: none;
   padding: 0;
@@ -47,8 +50,7 @@
 }
 .steps li {
   min-inline-size: 0;
-  padding-inline-start: var(--space-4);
-  border-inline-start: 2px solid var(--color-science-blue);
+  scroll-snap-align: start;
 }
 .marker {
   display: flex;
@@ -135,7 +137,7 @@
     gap: var(--space-4);
   }
   .steps {
-    grid-template-columns: minmax(0, 1fr);
+    grid-auto-columns: calc((100% - 1.5 * var(--space-6)) / 2.5);
   }
   .footer {
     align-items: flex-start;

@@ -76,3 +76,13 @@ export function engagementSearchText(value: unknown): string[] {
   if (value && typeof value === 'object') return Object.values(value).flatMap(engagementSearchText)
   return []
 }
+
+/** One generated illustrative photograph per commissioned audience, in editorial order. */
+export const collaborationAudiences = [
+  'public-actors',
+  'research-teams',
+  'industrial-companies',
+  'territorial-actors',
+  'international-partners',
+  'talents-public',
+] as const

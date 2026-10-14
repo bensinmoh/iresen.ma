@@ -46,7 +46,6 @@ export async function IntegratedModel({
             </article>
           ))}
         </div>
-        <p className={styles.note}>{t('noSequence')}</p>
       </article>
       <p className={styles.dimensionLabel}>{t('dimensionsLabel')}</p>
       <div className={styles.dimensions} data-mission-cards>
@@ -67,7 +66,6 @@ export async function IntegratedModel({
           </article>
         ))}
       </div>
-      <p className={styles.relationship}>{t('relationship')}</p>
       {detailed && (
         <div className={styles.capabilities}>
           <h3>{t('capabilitiesLabel')}</h3>

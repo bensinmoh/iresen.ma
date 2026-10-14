@@ -66,6 +66,42 @@
     "references": ["docs/careers-assets.json"]
   },
   {
+    "path": "/images/collaborate/audience-industrial-companies.webp",
+    "sha256": "69b6599dc851c95cfc99201e798d9cceddb4f9f51ffca062ccc57cf16f090cdc",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/audience-international-partners.webp",
+    "sha256": "4e38f43f84721a05e52c10cf237f5e2df1e99df25b454bb353dcc819ca060137",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/audience-public-actors.webp",
+    "sha256": "b2ff01efc4393d22d3bf6c3c32bbd71613361efd497557450c7ab77eda6087df",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/audience-research-teams.webp",
+    "sha256": "e62a69b544afaac01eb9247f1df56c67dbd5c95fa1a412b3b37a6d45b9e13f9b",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/audience-talents-public.webp",
+    "sha256": "a95027b088e6b4ae50f4eee36667b51a1ec7d0e7eaf0d40ffdc039206ee19dcd",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/audience-territorial-actors.webp",
+    "sha256": "30312182b38f6779d1cb3f3f358819787c4d53158d1d435b86898f8ef5daa53b",
+    "category": "ai-generated",
+    "references": ["docs/collaborate-assets.json"]
+  },
+  {
     "path": "/images/collaborate/industry.webp",
     "sha256": "d80ae04cc6c7a51986f7cafd1a10cd826c4126a722b3ce604e39df7a23cb49e5",
     "category": "ai-generated",

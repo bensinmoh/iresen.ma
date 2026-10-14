@@ -54,6 +54,9 @@ async function expectTargetBelowNavigation(page: Page, id: string, nativeFallbac
               barBottom: bar.bottom,
               padding,
               clearance,
+              margin: getComputedStyle(target).scrollMarginBlockStart,
+              scrollY,
+              navHeight: getComputedStyle(target).getPropertyValue('--home-section-nav-height'),
               aligned:
                 Math.abs(bar.top) <= 1 &&
                 (nativeFallback ? clearance >= -2 : Math.abs(clearance) <= 2),
@@ -163,7 +166,8 @@ for (const locale of locales) {
     const core = section.locator('#mission-research')
     await expect(core.locator('h3')).toHaveText(catalogs[locale].Narrative.coreTitle)
     await expect(core.locator('h4')).toHaveCount(3)
-    await expect(core).toContainText(catalogs[locale].Narrative.noSequence)
+    if (locale === 'fr')
+      await expect(core).not.toContainText('Trois missions complémentaires, sans étapes obligées.')
     for (const mission of researchMissions) {
       const item = page.locator(`#${mission.legacyAnchor}`)
       await expect(item.locator('h4')).toHaveText(
@@ -237,7 +241,9 @@ test('mobile missions remain readable and keyboard navigable at 200% text in eve
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
       document.documentElement.style.fontSize = '200%'
-      // Force the enlarged layout to request its fonts before awaiting readiness.
+      // Load each registered local face: font-display swap can otherwise finish
+      // after fonts.ready resolved while the new enlarged layout was pending.
+      await Promise.all([...document.fonts].map((face) => face.load()))
       void document.body.offsetHeight
       await document.fonts.ready
     })
@@ -277,7 +283,9 @@ test('wrapped home navigation uses its measured height when text is enlarged', a
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
       document.documentElement.style.fontSize = '200%'
-      // Force the enlarged layout to request its fonts before awaiting readiness.
+      // Load each registered local face: font-display swap can otherwise finish
+      // after fonts.ready resolved while the new enlarged layout was pending.
+      await Promise.all([...document.fonts].map((face) => face.load()))
       void document.body.offsetHeight
       await document.fonts.ready
     })
@@ -307,6 +315,24 @@ test('wrapped home navigation uses its measured height when text is enlarged', a
         ),
     )
 
+    // Wait for the enlarged document, not only its header, to settle before
+    // testing the native anchor. Font swaps can move preceding body sections.
+    let previousLayout = ''
+    let stableLayouts = 0
+    await expect
+      .poll(async () => {
+        const layout = await page.evaluate(() =>
+          JSON.stringify([
+            document.getElementById('research-priorities')!.getBoundingClientRect().top + scrollY,
+            document.querySelector('.home-section-navigation')!.getBoundingClientRect().height,
+            document.querySelector('main')!.getBoundingClientRect().height,
+          ]),
+        )
+        stableLayouts = layout === previousLayout ? stableLayouts + 1 : 0
+        previousLayout = layout
+        return stableLayouts >= 3
+      })
+      .toBe(true)
     const link = nav.locator('a[href="#research-priorities"]')
     await link.click()
     await expectTargetBelowNavigation(page, 'research-priorities')

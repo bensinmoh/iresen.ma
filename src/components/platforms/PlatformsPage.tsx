@@ -2,12 +2,40 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
+import { RoadmapAxisIcon } from '@/components/roadmap/RoadmapAxisIcon'
 import { researchPlatforms } from '@/lib/platforms'
 import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
 import styles from './PlatformsPage.module.css'
+
+const themeIcons = {
+  gep: [
+    ['renewables', 0],
+    ['buildings', 3],
+    ['industry', 3],
+    ['renewables', 1],
+  ],
+  gsbp: [
+    ['buildings', 0],
+    ['buildings', 1],
+    ['renewables', 2],
+    ['mobility', 1],
+  ],
+  'gep-mci': [
+    ['renewables', 0],
+    ['buildings', 3],
+    ['water', 1],
+    ['water', 0],
+  ],
+  greenh2a: [
+    ['hydrogen', 0],
+    ['hydrogen', 1],
+    ['hydrogen', 2],
+    ['hydrogen', 3],
+  ],
+} as const
 
 export async function PlatformsPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Platforms' })
@@ -70,24 +98,6 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
               >
                 {id === 'gsbp' && <span id="testing-demonstration" className={styles.anchor} />}
                 <div className="container">
-                  <header className={styles.chapterHeading}>
-                    <p className={styles.number} aria-hidden="true">
-                      0{index + 1}
-                    </p>
-                    <div>
-                      <p className={styles.location}>{t(`platforms.${id}.location`)}</p>
-                      <h2 id={`${anchor}-title`}>
-                        <bdi>{t(`platforms.${id}.name`)}</bdi>
-                      </h2>
-                    </div>
-                    <Image
-                      className={styles.logo}
-                      src={`/brand/platforms/${id}.svg`}
-                      alt=""
-                      width={platform.logoWidth}
-                      height={platform.logoHeight}
-                    />
-                  </header>
                   <div className={`${styles.feature} ${index % 2 ? styles.reverse : ''}`}>
                     <figure className={styles.photograph}>
                       <Image
@@ -102,16 +112,51 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                       </figcaption>
                     </figure>
                     <div className={styles.copy}>
+                      <header className={styles.chapterHeading}>
+                        <div>
+                          <h2 id={`${anchor}-title`}>
+                            <bdi>{t(`platforms.${id}.name`)}</bdi>
+                          </h2>
+                          <p className={styles.location}>{t(`platforms.${id}.location`)}</p>
+                        </div>
+                        <Image
+                          className={styles.logo}
+                          src={`/brand/platforms/${id}.svg`}
+                          alt=""
+                          width={platform.logoWidth}
+                          height={platform.logoHeight}
+                        />
+                      </header>
                       {development && <p className={styles.status}>{t('development')}</p>}
                       <h3 className={styles.lead}>{t(`platforms.${id}.lead`)}</h3>
-                      {paragraphs.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
-                      <ul className={styles.themes} aria-label={t('themesLabel')}>
-                        {themes.map((theme) => (
-                          <li key={theme}>{theme}</li>
+                      <ul className={styles.themes} aria-label={t('themesLabel')} tabIndex={0}>
+                        {themes.map((theme, i) => (
+                          <li key={theme}>
+                            <RoadmapAxisIcon
+                              theme={themeIcons[id][i]![0]}
+                              axis={themeIcons[id][i]![1]}
+                            />
+                            <span>{theme}</span>
+                          </li>
                         ))}
                       </ul>
+                      <div className={styles.prose}>
+                        <div className={styles.fullCopy}>
+                          {paragraphs.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
+                        <div className={styles.compactCopy}>
+                          <p className={styles.tabletSummary}>{t(`platforms.${id}.compact`)}</p>
+                          <p className={styles.mobileSummary}>{t(`platforms.${id}.mobile`)}</p>
+                          <details>
+                            <summary>{t('readDetails')}</summary>
+                            {paragraphs.map((paragraph) => (
+                              <p key={paragraph}>{paragraph}</p>
+                            ))}
+                          </details>
+                        </div>
+                      </div>
                       {url && (
                         <a className="button button-primary" href={url}>
                           {t(`platforms.${id}.action`)}
@@ -132,9 +177,18 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                     >
                       {Array.from({ length: infrastructureCount }, (_, i) => (
                         <article key={i}>
-                          <ValorisationIcon
-                            name={(['flask', 'bulb', 'chart-line', 'search'] as const)[i]!}
-                          />
+                          <div
+                            className={styles.infrastructurePhoto}
+                            aria-label={t('photoPending', {
+                              title: t(`platforms.${id}.infrastructure.${i}.title`),
+                            })}
+                            role="img"
+                          >
+                            <ValorisationIcon
+                              name={(['flask', 'bulb', 'chart-line', 'search'] as const)[i]!}
+                            />
+                            <span>{t('photoPendingLabel')}</span>
+                          </div>
                           <h3>{t(`platforms.${id}.infrastructure.${i}.title`)}</h3>
                           <p>{t(`platforms.${id}.infrastructure.${i}.description`)}</p>
                         </article>

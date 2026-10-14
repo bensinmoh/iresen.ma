@@ -1,16 +1,28 @@
 import { describe, it, expect } from 'vitest'
-import { patents, patentThemes, filterPatents, patentContactHref, findPatent } from '@/lib/patents'
+import {
+  filedPatents,
+  filedPatentCount,
+  patents,
+  patentThemes,
+  patentFilterOptions,
+  filterPatents,
+  patentContactHref,
+  findPatent,
+} from '@/lib/patents'
 import { staticSearchDocuments } from '@/lib/search/catalog'
 import { pageHref } from '@/lib/site'
 import { contentLocales } from '@/lib/content/publication'
 
+const findFiledPatent = (reference: string) =>
+  filedPatents.find((patent) => patent.reference === reference)
+
 describe('owner-selected patent catalogue', () => {
   it('retains exactly 59 unique filings with only permitted fields and no excluded references', () => {
-    expect(patents).toHaveLength(59)
-    expect(new Set(patents.map((p) => p.reference)).size).toBe(59)
+    expect(filedPatents).toHaveLength(59)
+    expect(new Set(filedPatents.map((p) => p.reference)).size).toBe(59)
     for (const id of ['34695', '35299', '20150313', '20150464'])
-      expect(findPatent(id)).toBeUndefined()
-    for (const p of patents) {
+      expect(findFiledPatent(id)).toBeUndefined()
+    for (const p of filedPatents) {
       expect(Object.keys(p).sort()).toEqual(
         [
           'reference',
@@ -21,6 +33,7 @@ describe('owner-selected patent catalogue', () => {
           'filingYear',
           ...(p.filingDate ? ['filingDate'] : []),
           'registerUrl',
+          'granted',
         ].sort(),
       )
       const url = new URL(p.registerUrl)
@@ -32,29 +45,57 @@ describe('owner-selected patent catalogue', () => {
       expect(p.themes.length).toBeGreaterThan(0)
       expect(p.themes.every((theme) => patentThemes.includes(theme))).toBe(true)
     }
-    expect(findPatent('37172')?.filingYear).toBe(2014)
-    expect(findPatent('37172')?.filingDate).toBe('2014-07-01')
-    expect(patents.filter((p) => p.filingDate)).toHaveLength(12)
-    for (const p of patents.filter((p) => p.filingDate)) {
+    expect(findFiledPatent('37172')?.filingYear).toBe(2014)
+    expect(findFiledPatent('37172')?.filingDate).toBe('2014-07-01')
+    expect(filedPatents.filter((p) => p.filingDate)).toHaveLength(12)
+    for (const p of filedPatents.filter((p) => p.filingDate)) {
       expect(p.filingDate).toMatch(/^\d{4}-\d{2}-\d{2}$/)
       expect(new Date(p.filingDate!).toISOString().slice(0, 10)).toBe(p.filingDate)
       expect(p.filingYear).toBe(Number(p.filingDate!.slice(0, 4)))
     }
-    expect(findPatent('71194')?.filingYear).toBeNull()
-    expect(findPatent('53044')?.filingYear).toBe(2021)
+    expect(findFiledPatent('71194')?.filingYear).toBeNull()
+    expect(findFiledPatent('53044')?.filingYear).toBe(2021)
   })
   it('uses sentence-case titles while preserving scientific names and acronyms', () => {
-    expect(findPatent('41528')?.title.fr).toBe(
+    expect(findFiledPatent('41528')?.title.fr).toBe(
       "Procédé et système pour le nettoyage des panneaux photovoltaïques avec un système de collecte, de traitement, de stockage et de recyclage de l'eau",
     )
-    expect(findPatent('41925')?.title.fr).toBe('Smart fiche prise (PV/hybrid/grid)')
-    expect(findPatent('53044')?.title.fr).toContain('V2X')
-    expect(findPatent('56600')?.title.fr).toMatch(/^GEP-PVSMS : système/)
-    expect(findPatent('71194')?.title.fr).toMatch(/^Intel.PV : système/)
-    expect(findPatent('58719')?.title.fr).toContain('(doum) BrickDOUM')
-    expect(findPatent('51690')?.title.fr).toContain('Fresnel')
-    expect(findPatent('40800')?.title.fr).toContain('Chamaerops humilis L.')
-    expect(findPatent('72762')?.title.fr).toContain('PV/BIPV')
+    expect(findFiledPatent('41925')?.title.fr).toBe('Smart fiche prise (PV/hybrid/grid)')
+    expect(findFiledPatent('53044')?.title.fr).toContain('V2X')
+    expect(findFiledPatent('56600')?.title.fr).toMatch(/^GEP-PVSMS : système/)
+    expect(findFiledPatent('71194')?.title.fr).toMatch(/^Intel.PV : système/)
+    expect(findFiledPatent('58719')?.title.fr).toContain('(doum) BrickDOUM')
+    expect(findFiledPatent('51690')?.title.fr).toContain('Fresnel')
+    expect(findFiledPatent('40800')?.title.fr).toContain('Chamaerops humilis L.')
+    expect(findFiledPatent('72762')?.title.fr).toContain('PV/BIPV')
+  })
+  it('distinguishes 59 filings from 30 granted portfolio patents and excludes other filings', () => {
+    expect(filedPatentCount).toBe(59)
+    expect(patents).toHaveLength(30)
+    for (const patent of patents) expect(patent.granted).toBe(true)
+    const documents = staticSearchDocuments()
+    for (const patent of filedPatents.filter((p) => !p.granted)) {
+      expect(findPatent(patent.reference)).toBeUndefined()
+      expect(
+        documents.some((d) => d.id.startsWith(`section:transfer:patent-${patent.reference}:`)),
+      ).toBe(false)
+    }
+  })
+  it('offers only filter values represented among granted patents', () => {
+    expect(patentFilterOptions.themes).not.toContain('hydrogen')
+    expect(patentFilterOptions.themes).not.toContain('measurement')
+    expect(patentFilterOptions.unknownYear).toBe(false)
+    for (const theme of patentFilterOptions.themes)
+      expect(patents.some((patent) => patent.themes.includes(theme))).toBe(true)
+    expect(new Set(patentFilterOptions.themes)).toEqual(
+      new Set(patents.flatMap((patent) => patent.themes)),
+    )
+    expect(new Set(patentFilterOptions.years)).toEqual(
+      new Set(patents.map((patent) => patent.filingYear)),
+    )
+    expect(new Set(patentFilterOptions.depositors)).toEqual(
+      new Set(patents.flatMap((patent) => patent.depositor?.split(' ; ') ?? [])),
+    )
   })
   it('combines accent-insensitive search, theme, year and individual co-applicant filters', () => {
     expect(
@@ -66,10 +107,12 @@ describe('owner-selected patent catalogue', () => {
     expect(filterPatents('', 'mobility', '2024', 'IRESEN', 'fr').map((p) => p.reference)).toEqual([
       '68028',
     ])
-    expect(filterPatents('', '', 'unknown', '', 'fr')).toHaveLength(9)
+    expect(filterPatents('', '', 'unknown', '', 'fr')).toHaveLength(
+      patents.filter((p) => p.filingYear === null).length,
+    )
     expect(filterPatents('not-a-patent', '', '', '', 'en')).toEqual([])
-    expect(filterPatents('الهيدروجين', '', '', '', 'ar').length).toBeGreaterThan(0)
-    expect(filterPatents('', '', '', '', 'fr')).toHaveLength(59)
+    expect(filterPatents('شمسي', '', '', '', 'ar').length).toBeGreaterThan(0)
+    expect(filterPatents('', '', '', '', 'fr')).toHaveLength(30)
     expect(findPatent(['53044'])).toBeUndefined()
     expect(patentContactHref('ar', '53044')).toContain(
       'subject=partnerships&patent=53044#send-request',
@@ -85,7 +128,7 @@ describe('owner-selected patent catalogue', () => {
     }
     for (const locale of contentLocales) {
       expect(findPatent('53044')?.title[locale]).toContain('V2X')
-      expect(findPatent('72762')?.title[locale]).toContain('PV/BIPV')
+      expect(findPatent('72762')).toBeUndefined()
     }
   })
   it('registers the supplied iSmart product and localized example destinations', () => {
@@ -110,7 +153,7 @@ describe('owner-selected patent catalogue', () => {
       const records = documents.filter(
         (p) => p.id.startsWith('section:transfer:patent-') && p.locale === locale,
       )
-      expect(records).toHaveLength(59)
+      expect(records).toHaveLength(30)
       for (const p of patents) {
         const record = records.find(
           (r) => r.id === `section:transfer:patent-${p.reference}:${locale}`,

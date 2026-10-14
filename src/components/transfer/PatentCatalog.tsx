@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import {
   patents,
-  patentThemes,
+  patentFilterOptions,
   filterPatents,
   patentAnchor,
   patentContactHref,
@@ -76,12 +76,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
       motion.removeEventListener('change', stop)
     }
   }, [visibleKey, hash])
-  const years = [
-    ...new Set(patents.flatMap((p) => (p.filingYear === null ? [] : [p.filingYear]))),
-  ].sort((a, b) => b - a)
-  const depositors = [...new Set(patents.flatMap((p) => p.depositor?.split(' ; ') ?? []))].sort(
-    (a, b) => a.localeCompare(b, 'fr'),
-  )
+  const { themes, years, depositors, unknownYear } = patentFilterOptions
   const rememberPositions = () => {
     positions.current = new Map(
       Array.from(
@@ -129,7 +124,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
               onChange={(e) => change(setTheme, e.target.value)}
             >
               <option value="">{t('catalog.all')}</option>
-              {patentThemes.map((id) => (
+              {themes.map((id) => (
                 <option key={id} value={id}>
                   {t(`themes.${id}`)}
                 </option>
@@ -153,7 +148,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
                   {value}
                 </option>
               ))}
-              <option value="unknown">{t('catalog.unknown')}</option>
+              {unknownYear && <option value="unknown">{t('catalog.unknown')}</option>}
             </select>
             <NavigationIcon name="chevron" />
           </span>

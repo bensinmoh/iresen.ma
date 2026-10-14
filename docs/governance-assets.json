@@ -275,5 +275,38 @@
     },
     "checked": "2026-10-11",
     "method": "Public LinkedIn profile search; IRESEN member links; Soukaina profile linked by MENALINKS. Biographies are conservative summaries of professional profile content and owner-confirmed current roles. No personal posts, contact details or unrelated interests used. Laila: no confidently matched public profile found; title-only biography, no invented link. Mouhcine: owner-supplied three-paragraph English biography replaces the profile summary; FR/AR are working editorial translations."
+  },
+  "biographyReview20261014": {
+    "reviewed": "2026-10-14",
+    "scope": "Professional information only; public LinkedIn excerpts and primary institutional sources. No personal posts, reactions, contact details or unrelated homonyms retained.",
+    "sources": {
+      "soukaina": [
+        "https://ma.linkedin.com/in/soukaina-boudoudouh-b58085152",
+        "https://www.menalinks.org/resources/mena-wise-database/clmisjw9d8df8q7q"
+      ],
+      "ayoub": [
+        "https://www.linkedin.com/in/ayoub-hirt-244287100/",
+        "https://www.linkedin.com/posts/iresen_energy-innovation-solaire-activity-6949336954173857792-W0SY",
+        "https://fr.linkedin.com/company/iresen"
+      ],
+      "mouhcine": [
+        "Owner-supplied previous biography; owner confirmed identity and requested reformulation in this chat",
+        "https://ma.linkedin.com/in/mouhcine-benmeziane"
+      ],
+      "laila": [
+        "Owner account supplied in this chat: joined in 2012 in accounting; responsibilities expanded; now Administrative Manager overseeing quality, HR, finance, accounting, financial statements, administration and legal follow-up"
+      ],
+      "imane": [
+        "https://ma.linkedin.com/in/imane-moubachir-a44a199a",
+        "Owner-confirmed Strategy and Organisation remit in the retained governance manuscript"
+      ],
+      "jamaleddine": [
+        "https://ma.linkedin.com/in/jamal-eddine-fouham-26563128a",
+        "Owner-confirmed IT and Information Systems remit in the retained governance manuscript"
+      ]
+    },
+    "limitations": "Direct LinkedIn fetching is restricted; indexed public professional profile sections and official IRESEN professional announcements were consulted. Imane and Jamaleddine expose insufficient career/education information: no dates, degrees or previous employers added. Their bios summarize the already supplied institutional remit. Laila has no verified LinkedIn URL; none invented. Samir owner biography remains unchanged.",
+    "translations": "EN/AR are complete working adaptations, not claimed to be approved by the individuals.",
+    "search": "Existing Governance page/leadership section projections consume current team copy. Legacy leadership metadata containing previous bios is replaced with a concise current description. Database reindexing remains pending for the ongoing batch."
   }
 }

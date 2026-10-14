@@ -29,21 +29,21 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await section.getByRole('button', { name: copy.catalog.showMore, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(12)
     await section.getByRole('button', { name: copy.catalog.showAll, exact: true }).click()
-    await expect(section.locator('article:visible')).toHaveCount(59)
-    await section.getByLabel(copy.catalog.year, { exact: true }).selectOption('unknown')
-    await expect(section.locator('article:visible')).toHaveCount(6)
-    await section.getByRole('button', { name: copy.catalog.showAll, exact: true }).click()
-    await expect(section.locator('article:visible')).toHaveCount(9)
+    await expect(section.locator('article:visible')).toHaveCount(30)
+    await expect(section.locator('option[value="unknown"]')).toHaveCount(0)
+    await expect(
+      section.locator('option[value="hydrogen"], option[value="measurement"]'),
+    ).toHaveCount(0)
     await section.getByLabel(copy.catalog.year, { exact: true }).selectOption('2014')
-    await section.getByRole('searchbox').fill('37172')
+    await section.getByRole('searchbox').fill('37705')
     await expect(section.locator('article:visible')).toHaveCount(1)
-    await expect(section.locator('#patent-37172').getByText('2014', { exact: true })).toBeVisible()
+    await expect(section.locator('#patent-37705').getByText('2014', { exact: true })).toBeVisible()
     await section.getByRole('button', { name: copy.catalog.reset, exact: true }).click()
     await section
       .getByRole('searchbox')
-      .fill(patents.find((p) => p.reference === '41528')!.title[locale])
-    await expect(section.locator('#patent-41528 h3')).toHaveText(
-      patents.find((patent) => patent.reference === '41528')!.title[locale],
+      .fill(patents.find((p) => p.reference === '41925')!.title[locale])
+    await expect(section.locator('#patent-41925 h3')).toHaveText(
+      patents.find((patent) => patent.reference === '41925')!.title[locale],
     )
     await section.getByRole('searchbox').fill('53044')
     await expect(section.locator('article:visible')).toHaveCount(1)
@@ -58,13 +58,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(section.getByText(copy.catalog.empty, { exact: true })).toBeVisible()
     await section.getByRole('button', { name: copy.catalog.reset, exact: true }).click()
     await expect(section.locator('article:visible')).toHaveCount(6)
-    await page.goto(pageHref('transfer', locale, 'patent-74893'))
-    await expect(page.locator('#patent-74893')).toBeVisible()
-    await page.locator('#patent-74893').getByRole('link', { name: copy.catalog.discuss }).click()
+    await page.goto(pageHref('transfer', locale, 'patent-68605'))
+    await expect(page.locator('#patent-68605')).toBeVisible()
+    await page.locator('#patent-68605').getByRole('link', { name: copy.catalog.discuss }).click()
     await expect(page.locator('select[name="subject"]')).toHaveValue('partnerships')
-    await expect(page.locator('textarea[name="message"]')).toHaveValue(/74893/)
+    await expect(page.locator('textarea[name="message"]')).toHaveValue(/68605/)
     await expect(page.locator('textarea[name="message"]')).toHaveValue(
-      new RegExp(patents.find((p) => p.reference === '74893')!.title[locale]),
+      new RegExp(patents.find((p) => p.reference === '68605')!.title[locale]),
     )
     await page.goto(pageHref('transfer', locale))
     for (const width of [1440, 1024, 768, 390, 320]) {
@@ -123,7 +123,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-process.png` })
       await page.locator('#adoption-initiatives-heading').scrollIntoViewIfNeeded()
       await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-catalog.png` })
-      await page.locator('#patent-37172').scrollIntoViewIfNeeded()
+      await page.locator('#patent-37705').scrollIntoViewIfNeeded()
       await page.screenshot({ path: `.cache/patents-review/${locale}-${width}-cards.png` })
     }
   })
@@ -144,10 +144,10 @@ test('all patents remain readable without JavaScript', async ({ browser, baseURL
   })
   try {
     const page = await context.newPage()
-    await page.goto(pageHref('transfer', 'ar', 'patent-74893'))
-    await expect(page.locator('#adoption-initiatives article:visible')).toHaveCount(59)
-    await expect(page.locator('#patent-74893')).toBeVisible()
-    await expect(page.locator('#patent-74893 a').first()).toHaveAttribute('href', /numDepot=74893/)
+    await page.goto(pageHref('transfer', 'ar', 'patent-68605'))
+    await expect(page.locator('#adoption-initiatives article:visible')).toHaveCount(30)
+    await expect(page.locator('#patent-68605')).toBeVisible()
+    await expect(page.locator('#patent-68605 a').first()).toHaveAttribute('href', /numDepot=68605/)
   } finally {
     await context.close()
   }

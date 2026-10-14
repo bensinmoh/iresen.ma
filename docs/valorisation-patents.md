@@ -263,3 +263,45 @@ translated register titles. Cards use the selected language/direction; catalogue
 filtering, public search title/body and contact drafts use the same title.
 Stable patent anchors and search identifiers remain unchanged. These working
 translations remain subject to the site's final editorial review.
+
+## Owner portfolio distinction — 2026-10-14
+
+The owner's latest instruction distinguishes **59 patent filings** (institutional
+KPI) from the **30 accepted/granted patents** managed in the IP portfolio. This
+supersedes the earlier display of all 59 filings in the technology catalogue.
+
+The unchanged private workbook matches the recorded SHA-256. In `Référentiel
+consolidé`, the 59 retained rows comprise 30 `Accepté / délivré`, 15 rejected,
+10 not yet published and four published applications. The 30 selected references
+all have `Oui` under `Brevet accepté / délivré` (column W). Only that minimal
+boolean is added to the existing JSON records as `granted`; other legal,
+financial, administrative and private tracking columns remain excluded.
+The original 59 bibliographic records remain preserved in `filedPatents`.
+
+`patents` is now the granted-only public projection. Catalogue filters,
+no-JavaScript rendering, supported patent anchors, contact prefill, individual
+search documents and spelling vocabulary consume that same projection.
+The homepage/header and publications KPI remain 59 filed patents; the portfolio
+figure and FR/EN/AR copy say 30 granted patents. The source includes four granted
+patents subsequently marked lapsed, so "granted" does not assert that every right
+is currently in force. The interface points to each official dossier for current
+legal status. No new current legal verification is claimed.
+
+Checks: the focused patent unit suite covers the 59/30 distinction and exclusion
+of all 29 other filings from discovery/contact lookup. Global checks, production
+build and merge remain deferred by the owner. Search database rebuild remains
+pending completion of this batch; source projections are updated now.
+
+## Granted-only filter values — 2026-10-14
+
+The owner restricts filter contents to the granted IP portfolio. All three option
+lists now share a projection from the 30 granted records. The eight represented
+themes exclude hydrogen and measurement; years without granted records are
+absent, and the unknown-year option is removed because all 30 have a filing year.
+Depositor options retain only parties represented in granted records. The full
+59-filing source and filed-patent KPI remain preserved. No search content is added
+or withdrawn by this interface-only option correction.
+
+Verification: the eight focused patent tests pass, scoped ESLint and whitespace
+checks pass, and development FR confirms all three granted-only option lists.
+No global suite, build or merge was run.

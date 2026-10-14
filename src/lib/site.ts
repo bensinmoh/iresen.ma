@@ -218,7 +218,7 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
     (pageId === 'transfer' &&
       (normalized === 'valorisation-figures' ||
         normalized === 'ismart-example' ||
-        patentRecords.some((p) => normalized === `patent-${p.reference}`))) ||
+        patentRecords.some((p) => p.granted === true && normalized === `patent-${p.reference}`))) ||
     definition.anchors?.includes(normalized) === true ||
     pageSections[pageId].some(
       (section) =>

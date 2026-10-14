@@ -37,7 +37,7 @@ describe('October institutional narrative', () => {
         expect(record?.url).toBe(pageHref('institute', locale, id))
       }
       const core = documents.find((d) => d.id === `section:home:mission-research:${locale}`)!
-      expect(core.body).toContain(catalog.Narrative.noSequence)
+      expect(core.body).toContain(catalog.Narrative.coreDescription)
       const position = documents.find(
         (d) => d.id === `section:institute:institute-positioning:${locale}`,
       )!

@@ -1,0 +1,241 @@
+.model {
+  margin-block-start: var(--space-12);
+  color: var(--color-navy);
+}
+.diagram {
+  position: relative;
+  max-inline-size: 50rem;
+  aspect-ratio: 800 / 410;
+  margin-inline: auto;
+  color: var(--color-science-blue);
+}
+.arc {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.arc .develop {
+  fill: var(--color-energy-cyan);
+}
+.arc .test {
+  fill: var(--color-blue);
+}
+.arc .transfer {
+  fill: var(--color-transition-green);
+}
+.arc .center {
+  fill: var(--color-navy);
+}
+.core {
+  position: absolute;
+  inset-block-end: 3%;
+  inset-inline-start: 27%;
+  inline-size: 46%;
+  text-align: center;
+  color: var(--color-white);
+}
+.core > svg {
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  color: var(--color-energy-cyan);
+}
+.core p {
+  font-size: var(--font-size-label);
+  margin: var(--space-2) 0;
+}
+.model .core h3 {
+  font-size: clamp(1.2rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 auto;
+  max-inline-size: 14ch;
+}
+.orbitLabel {
+  position: absolute;
+  display: grid;
+  gap: var(--space-2);
+  text-align: center;
+  inline-size: 25%;
+  color: var(--color-navy);
+}
+.orbitLabel bdi {
+  font-size: 0.8rem;
+}
+.orbitLabel strong {
+  font-size: clamp(1rem, 2.3vw, 1.8rem);
+  font-weight: 600;
+}
+.orbitLabel.develop {
+  inset-inline-start: 6%;
+  inset-block-start: 63%;
+}
+.orbitLabel.test {
+  inset-inline-start: 37.5%;
+  inset-block-start: 22%;
+  color: var(--color-white);
+}
+.orbitLabel.transfer {
+  inset-inline-end: 6%;
+  inset-block-start: 63%;
+  color: var(--color-navy);
+}
+.description {
+  text-align: center;
+  max-inline-size: 65ch;
+  margin: var(--space-6) auto var(--space-12);
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+.missions,
+.dimensions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+.missions article {
+  padding-block: var(--space-6);
+  border-block-start: 1px solid var(--color-border);
+}
+.missionHeading {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+.model h4 {
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 600;
+}
+.model article p {
+  line-height: 1.75;
+}
+.missions article p,
+.dimensions p {
+  color: var(--color-text-muted);
+}
+.missionHeading > svg,
+.dimensions article > svg {
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  flex: none;
+  color: var(--color-blue);
+}
+.model a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 44px;
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  color: var(--color-blue);
+  text-underline-offset: 0.3em;
+}
+.model a svg {
+  flex: none;
+}
+.model .dimensionsTitle {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--space-4) var(--space-6);
+  margin: var(--space-8) 0 0;
+  text-align: center;
+  font-size: var(--font-size-action);
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+.dimensions {
+  padding-block: var(--space-8);
+}
+.dimensions article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.25rem, 2.5vw, 2.5rem);
+  background: var(--color-white);
+  border-radius: var(--radius-signature);
+}
+.dimensions h4 {
+  margin-block-start: var(--space-4);
+}
+.dimensions a {
+  margin-block-start: auto;
+}
+.capabilities {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-6) var(--space-12);
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: var(--space-8);
+}
+.model .capabilities h3 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+.capabilities ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-6);
+  margin: 0;
+  padding-inline-start: 1.2rem;
+  line-height: 1.6;
+}
+.capabilities li::marker {
+  color: var(--color-blue);
+}
+.capabilities > p {
+  grid-column: 2;
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+.model:dir(rtl) a svg {
+  transform: scaleX(-1);
+}
+.model:dir(rtl) .arc {
+  transform: scaleX(-1);
+}
+@media (max-width: 64rem) {
+  .capabilities {
+    grid-template-columns: 1fr;
+  }
+  .capabilities > p {
+    grid-column: 1;
+  }
+  .core p {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 47.999rem) {
+  .missions,
+  .dimensions {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .diagram {
+    margin-inline: calc(-1 * var(--gutter) / 2);
+  }
+  .orbitLabel {
+    gap: 0.2rem;
+  }
+  .orbitLabel strong {
+    font-size: clamp(0.75rem, 3.5vw, 1.2rem);
+  }
+  .orbitLabel bdi {
+    font-size: 0.65rem;
+  }
+  .core > svg {
+    display: none;
+  }
+  .model .core h3 {
+    font-size: clamp(0.9rem, 4vw, 1.5rem);
+  }
+  .core p {
+    font-size: 0.65rem;
+    margin-block: 0 var(--space-2);
+  }
+  .dimensions article {
+    padding: var(--space-6);
+  }
+  .capabilities ul {
+    grid-template-columns: 1fr;
+  }
+}

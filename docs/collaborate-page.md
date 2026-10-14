@@ -123,3 +123,27 @@ copy and button. It uses the guide's Innovation Lime `#A9C47F` with navy text an
 a navy/white action, separating the compact CTA from the navy footer. French
 labels this section “Premier contact”. The four audience photos are horizontally
 reflected in Arabic at the owner's explicit request; the world map is unchanged.
+
+## Audience photographs — 2026-10-14
+
+The owner commissions six new unique generated photographs, one per audience in
+“Ce que l’on vous apporte”. Each fictional illustrative scene matches its audience:
+public planning, laboratory research, industrial inspection, solar irrigation,
+international scientific discussion and adult science education. They do not
+document actual IRESEN people, facilities, partners or agreements.
+
+Six optimized 1200×800 WebP files replace the former four-image rotation. Original
+assets remain preserved. The shared ordered audience IDs drive both rendering and
+the six localized media search references. FR/EN/AR descriptions state their
+illustrative AI provenance. See [asset manifest](collaborate-assets.json) for
+source/output hashes, dimensions, scenes and transformation.
+
+Targeted ESLint and whitespace checks pass. Development visual review covers FR
+desktop and Arabic mobile; global tests and merge remain deferred by the owner.
+Public search database rebuilding remains pending for the ongoing review batch.
+
+Validation follow-up: the six new generated photos are recorded in the site-wide
+AI provenance inventory. Their media registrations remain for provenance while
+public search excludes them, consistently with the existing AI-image rule. The
+four previous served illustrations retain registrations and the same exclusion.
+See [final validation ledger](institutional-narrative-validation.md).

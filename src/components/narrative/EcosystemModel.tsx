@@ -19,7 +19,7 @@ export async function EcosystemModel({ locale }: { locale: Locale }) {
         </p>
       </div>
       <p>{t('ecosystem.partners')}</p>
-      <p className={styles.relationship}>{t('ecosystem.note')}</p>
+      <p className={styles.ecosystemNote}>{t('ecosystem.note')}</p>
     </figure>
   )
 }

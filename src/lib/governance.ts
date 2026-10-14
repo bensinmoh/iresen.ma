@@ -36,7 +36,7 @@ export const governanceTeam = [
 ] as const
 export const governanceDepartments = [
   ['ayoub', 'mouhcine', 'imane'],
-  ['soukaina', null],
+  ['soukaina', 'samir'],
   ['laila', 'jamaleddine'],
 ] as const
 

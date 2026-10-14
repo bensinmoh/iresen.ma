@@ -7,7 +7,8 @@ import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { TimelineRail } from './TimelineRail'
-import { IntegratedModel } from '@/components/narrative/IntegratedModel'
+import { InstituteModel } from './InstituteModel'
+import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
 import { EcosystemModel } from '@/components/narrative/EcosystemModel'
 import { strategicOrientations } from '@/lib/institutional-narrative'
 import styles from './InstitutePage.module.css'
@@ -93,7 +94,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             <h2 id="missions-title">{t('missionsLabel')}</h2>
             <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
           </header>
-          <IntegratedModel locale={locale} prefix="institute-model" detailed />
+          <InstituteModel locale={locale} />
           {(
             [
               { id: 'institute-research', i: 1 },
@@ -104,7 +105,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             <section key={id} id={id} className={styles.mission} aria-labelledby={`${id}-title`}>
               <header>
                 <span className={styles.number} aria-hidden="true">
-                  {i === 1 ? 'R&I' : i === 0 ? '01' : '02'}
+                  <ValorisationIcon name={i === 1 ? 'flask' : i === 0 ? 'chart-line' : 'bulb'} />
                 </span>
                 <p className={styles.purpose}>{t(`missions.${i}.purpose`)}</p>
                 <h3 id={`${id}-title`}>{t(`missions.${i}.title`)}</h3>

@@ -97,3 +97,24 @@ motion owns headings/quotations; reduced motion preserves immediate reading.
 See [verification](validation.md#institute-page--2026-10-11). Final translation/
 editorial approval and the full-content search sanity check remain pending.
 No deployment or visibility change is authorized.
+
+## Owner design review — 2026-10-14
+
+The owner requests inspiration from the [ClickUp narrative presentation](https://2661198.clickup.ai/a/h/2h6ue-3992/e7584a7b4057bd1).
+Its cover and impact-model board were inspected directly. The reference informs
+composition only: no external photos, slogans or additional claims are imported.
+A page-specific semantic model uses a decorative three-sector SVG arc around the
+R&I core, with readable mission descriptions, canonical links and three supporting
+contributions below. Arabic mirrors the diagram and keeps native text direction.
+Shared capability content, detailed native disclosures and all anchors remain.
+
+The light model surface, stronger editorial spacing, vector mission marks,
+numbered values and framed ambition photograph reuse existing identity tokens.
+The headquarters hero, eight-item timeline and report placeholder remain intact.
+No new public asset or content is added; existing section/media search references
+continue to describe the same content. Prior owner text withdrawals remain absent.
+
+Verification ledger: development render inspected in French at 1440px and Arabic
+at 390px; Arabic page width equals viewport width (390px). English native activity disclosure checked at 1440px. Targeted source lint
+and formatting pass; the design detector only flags the existing timeline width
+transition, outside this correction. No global tests, production build or merge: deferred by owner.

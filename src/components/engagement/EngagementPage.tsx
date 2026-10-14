@@ -8,24 +8,20 @@ import { ValorisationIcon, type ValorisationIconName } from '@/components/transf
 import { heroImages } from '@/lib/hero-images'
 import { pageHref } from '@/lib/site'
 import {
+  collaborationAudiences,
   engagementSections,
   engagementContactHref,
   type EngagementSectionCopy,
 } from '@/lib/engagement'
 import styles from './EngagementPage.module.css'
 
-const audiencePhotos = [
-  { id: 'industry', height: 480 },
-  { id: 'research', height: 600 },
-  { id: 'institutions', height: 600 },
-  { id: 'partners', height: 600 },
-] as const
-
 const audienceIcons: ValorisationIconName[] = [
-  'building-factory-2',
+  'chart-line',
   'flask',
+  'building-factory-2',
   'chart-line',
   'arrows-exchange',
+  'flask',
 ]
 
 // Keep Latin programme names readable inside Arabic sentences.
@@ -88,10 +84,10 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                             <>
                               <Image
                                 className={styles.audiencePhoto}
-                                src={`/images/collaborate/${audiencePhotos[index % audiencePhotos.length].id}.webp`}
+                                src={`/images/collaborate/audience-${collaborationAudiences[index]}.webp`}
                                 alt=""
                                 width={1200}
-                                height={audiencePhotos[index % audiencePhotos.length].height}
+                                height={800}
                                 sizes="(max-width: 39.999rem) 55vw, 28vw"
                               />
                               <ValorisationIcon

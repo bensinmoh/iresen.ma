@@ -25,11 +25,29 @@ export type Patent = {
   filingYear: number | null
   /** Exact ISO filing date when verified in the official register. */
   filingDate?: string
+  /** Accepted / granted in the owner source dated 2026-10-07; not a current validity claim. */
+  granted: boolean
   registerUrl: string
 }
 
 /** Owner-selected, minimal public projection. The source workbook is never served. */
-export const patents = records as Patent[]
+export const filedPatents = records as Patent[]
+export const filedPatentCount = filedPatents.length
+/** Public IP portfolio: only source-confirmed accepted / granted patents. */
+export const patents = filedPatents.filter((patent) => patent.granted === true)
+/** Filter values must be represented in the granted IP portfolio. */
+export const patentFilterOptions = {
+  themes: patentThemes.filter((theme) => patents.some((patent) => patent.themes.includes(theme))),
+  years: [
+    ...new Set(
+      patents.flatMap((patent) => (patent.filingYear === null ? [] : [patent.filingYear])),
+    ),
+  ].sort((a, b) => b - a),
+  depositors: [...new Set(patents.flatMap((patent) => patent.depositor?.split(' ; ') ?? []))].sort(
+    (a, b) => a.localeCompare(b, 'fr'),
+  ),
+  unknownYear: patents.some((patent) => patent.filingYear === null),
+}
 export const patentSourceDate = '2026-10-07'
 export function patentAnchor(reference: string) {
   return `patent-${reference}`

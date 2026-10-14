@@ -153,7 +153,7 @@
       },
       "figures": {
         "title": "IRESEN en chiffres",
-        "description": "69 projets collaboratifs soutenus, +60 brevets déposés, +1000 jeunes chercheurs soutenus, +1100 publications scientifiques et +18 laboratoires universitaires mis en place."
+        "description": "69 projets collaboratifs soutenus, 59 brevets déposés, +1000 jeunes chercheurs soutenus, +1100 publications scientifiques et +18 laboratoires universitaires mis en place."
       },
       "research-priorities": {
         "title": "Nos thématiques de recherche au service de la transition énergétique",
@@ -331,7 +331,7 @@
       },
       "institute-cooperation": {
         "title": "Coopération & Rayonnement",
-        "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines. Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération."
+        "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines."
       },
       "institute-model-research": {
         "title": "Recherche & Innovation",
@@ -373,7 +373,7 @@
       },
       "leadership-organisation": {
         "title": "Une Direction générale et trois pôles complémentaires",
-        "description": "Une Direction générale et trois pôles complémentaires La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements."
+        "description": "Les pôles Recherche, Développement et Impulsion, les membres de l’équipe et leurs parcours professionnels."
       },
       "department-responsibilities": {
         "title": "Les responsabilités des directions",
@@ -581,7 +581,7 @@
       },
       "adoption-initiatives": {
         "title": "Explorez nos technologies",
-        "description": "Découvrez 59 références de brevets déposés et identifiez les technologies en lien avec vos besoins."
+        "description": "IRESEN accompagne la gestion d’un portefeuille de propriété intellectuelle (PI) de 30 brevets accordés. Explorez les technologies en lien avec vos besoins."
       },
       "build-transfer": {
         "title": "Faisons avancer votre innovation",
@@ -1031,7 +1031,7 @@
       {
         "title": "Recherche & Innovation",
         "purpose": "Faire avancer les solutions.",
-        "introduction": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc.\n\nTrois missions complémentaires, sans étapes obligées. IRESEN peut intervenir à différents moments, selon les besoins et les capacités mobilisées.",
+        "introduction": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc.",
         "activities": [
           {
             "title": "Développer",
@@ -1085,7 +1085,7 @@
       {
         "title": "Coopération & Rayonnement",
         "purpose": "Relier les acteurs et mobiliser les ressources.",
-        "introduction": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines. Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération.",
+        "introduction": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines.",
         "activities": [
           {
             "title": "Fédérer et connecter",
@@ -1755,28 +1755,36 @@
     }
   },
   "HomeInnovation": {
-    "eyebrow": "Des trajectoires selon les besoins",
-    "title": "Trois missions, plusieurs points d’entrée",
-    "description": "Développer, éprouver et valoriser se combinent selon le projet. La recherche et l’expérimentation peuvent se nourrir mutuellement.",
-    "support": "Chaque projet mobilise les contributions utiles à son besoin.",
-    "feedback": "Les connaissances, les compétences et les choix mieux éclairés sont aussi des résultats utiles.",
-    "action": "Explorer les voies de valorisation",
-    "label": "Exemples de trajectoires possibles",
+    "eyebrow": "De l’idée aux usages",
+    "title": "Un parcours pour faire progresser l’innovation",
+    "description": "Au cœur de la recherche et de l’innovation, développer, éprouver et valoriser relient les besoins aux usages. Expertise, compétences et coopération nourrissent ce parcours.",
+    "support": "Un parcours adaptable : chaque projet suit les étapes utiles à son besoin.",
+    "feedback": "Partager les connaissances et les savoir-faire, documenter l’utilisation des résultats et les enseignements.",
+    "action": "Découvrir la valorisation et le transfert",
     "steps": {
-      "test": {
-        "title": "Éprouver une technologie existante",
-        "description": "Une solution développée ailleurs peut être testée et adaptée aux conditions locales."
+      "anticipate": {
+        "title": "Anticiper les besoins",
+        "description": "Besoins nationaux, prospective et idéation."
       },
-      "learn": {
-        "title": "Relancer une recherche par les essais",
-        "description": "Une expérimentation peut révéler des limites et faire émerger de nouvelles questions scientifiques."
+      "support": {
+        "title": "Structurer et soutenir",
+        "description": "Programmation R&D&I, partenaires et soutien aux projets."
       },
-      "use": {
-        "title": "Transmettre un savoir-faire",
-        "description": "Une méthode ou une connaissance peut être utilisée et partagée sans transfert industriel immédiat."
+      "develop": {
+        "title": "Développer et éprouver",
+        "description": "Recherche, développement, expérimentation et démonstration."
+      },
+      "mature": {
+        "title": "Faire mûrir et valoriser",
+        "description": "Maturation, partage des savoir-faire et préparation du transfert."
+      },
+      "adopt": {
+        "title": "Accompagner l’adoption",
+        "description": "Utilisation des solutions et évaluation de leur contribution."
       }
     },
-    "searchText": "Développer, éprouver et valoriser se combinent selon le projet. La recherche et l’expérimentation peuvent se nourrir mutuellement. Chaque projet mobilise les contributions utiles à son besoin. Les connaissances, les compétences et les choix mieux éclairés sont aussi des résultats utiles."
+    "searchText": "Au cœur de la recherche et de l’innovation, développer, éprouver et valoriser relient les besoins aux usages. Expertise, compétences et coopération nourrissent ce parcours. Anticiper les besoins : Besoins nationaux, prospective et idéation. Structurer et soutenir : Programmation R&D&I, partenaires et soutien aux projets. Développer et éprouver : Recherche, développement, expérimentation et démonstration. Faire mûrir et valoriser : Maturation, partage des savoir-faire et préparation du transfert. Accompagner l’adoption : Utilisation des solutions et évaluation de leur contribution. Un parcours adaptable : chaque projet suit les étapes utiles à son besoin. Partager les connaissances et les savoir-faire, documenter l’utilisation des résultats et les enseignements.",
+    "label": "Repères du parcours de recherche et d’innovation"
   },
   "Engagement": {
     "navigation": "Explorer cette page",
@@ -1912,6 +1920,12 @@
       },
       "contactAction": "Contactez-nous",
       "photos": {
+        "public-actors": "Illustration photographique générée par IA : professionnels fictifs de la planification énergétique étudiant des cartes et des données. Ne représente pas une réunion ou des agents réels d’IRESEN.",
+        "research-teams": "Illustration photographique générée par IA : chercheurs fictifs examinant une cellule solaire dans un laboratoire de matériaux. Ne représente pas des personnes ou un laboratoire réels d’IRESEN.",
+        "industrial-companies": "Illustration photographique générée par IA : ingénieurs fictifs inspectant des équipements thermiques dans un atelier industriel. Ne représente pas une entreprise ou une intervention réelle d’IRESEN.",
+        "territorial-actors": "Illustration photographique générée par IA : professionnels fictifs évaluant une installation solaire d’irrigation dans un paysage agricole. Ne représente pas un projet territorial réel d’IRESEN.",
+        "international-partners": "Illustration photographique générée par IA : équipe internationale fictive échangeant autour d’un modèle technique. Ne représente pas des partenaires, un accord ou une coopération réels d’IRESEN.",
+        "talents-public": "Illustration photographique générée par IA : médiatrice scientifique et visiteurs adultes fictifs découvrant un démonstrateur d’énergie renouvelable. Ne représente pas une formation ou des participants réels d’IRESEN.",
         "industry": "Illustration générée d’ingénieurs examinant un équipement industriel énergétique. Scène fictive, sans installation ni personnel IRESEN réel.",
         "research": "Illustration générée d’une scientifique étudiant un prototype de batterie au laboratoire. Scène fictive, sans équipe ni laboratoire IRESEN réel.",
         "institutions": "Illustration générée de professionnels de la planification énergétique lors d’une visite de terrain. Scène fictive, sans institution, territoire ni projet IRESEN réel identifié.",
@@ -1973,7 +1987,7 @@
         "Transférer",
         "Préparer l’utilisation"
       ],
-      "note": "Trois missions complémentaires, sans étapes obligées. IRESEN peut intervenir à différents moments, selon les besoins et les capacités mobilisées. Préparer la maturation, le transfert et l’utilisation des résultats, des méthodes, des données et des savoir-faire."
+      "note": "Préparer la maturation, le transfert et l’utilisation des résultats, des méthodes, des données et des savoir-faire."
     },
     "ip": {
       "label": "Propriété intellectuelle",
@@ -2028,7 +2042,7 @@
     "catalog": {
       "label": "Portefeuille technologique",
       "title": "Explorez nos technologies",
-      "description": "Découvrez 59 références de brevets déposés et identifiez les technologies en lien avec vos besoins.",
+      "description": "IRESEN accompagne la gestion d’un portefeuille de propriété intellectuelle (PI) de 30 brevets accordés. Explorez les technologies en lien avec vos besoins.",
       "search": "Rechercher un brevet",
       "placeholder": "Référence, titre, mot-clé ou déposant…",
       "theme": "Thématique",
@@ -2045,18 +2059,18 @@
       "showMore": "Afficher les suivants",
       "showAll": "Tout afficher",
       "original": "Les titres sont présentés dans la langue sélectionnée ; les noms des déposants conservent leur forme originale.",
-      "note": "Les dépôts recensés ne correspondent pas tous à des brevets en vigueur. Les informations disponibles sur PatentRegister permettent de consulter chaque dossier.",
+      "note": "Ce catalogue présente uniquement les brevets accordés du portefeuille PI. Consultez chaque dossier PatentRegister pour connaître sa situation juridique actuelle.",
       "updated": "Base au T4 2026",
-      "noJavaScript": "Sans JavaScript, les 59 références sont affichées intégralement. Les filtres nécessitent JavaScript."
+      "noJavaScript": "Sans JavaScript, les 30 brevets accordés sont affichés intégralement. Les filtres nécessitent JavaScript."
     },
     "figures": {
       "label": "La valorisation en chiffres",
       "title": "Un portefeuille à explorer",
-      "filed": "références de brevets déposés",
+      "filed": "brevets accordés du portefeuille PI",
       "themes": "thématiques de consultation",
       "date": "Date du référentiel",
       "period": "T4 2026",
-      "note": "Ces indicateurs décrivent le catalogue présenté ici ; ils ne mesurent pas les licences, les transferts ou l’adoption industrielle."
+      "note": "Le portefeuille PI comprend 30 brevets accordés, distincts des 59 brevets déposés recensés au total."
     },
     "doors": {
       "label": "Deux portes d’entrée",
@@ -2638,6 +2652,47 @@
     "heroAlt": "Planche de travail vue en perspective, avec un diagramme technique réunissant les sept thématiques de recherche : électricité renouvelable, hydrogène, industrie, eau et agriculture, bioénergies, bâtiments et mobilité."
   },
   "Governance": {
+    "diagrams": {
+      "columns": ["Cadre", "Décision", "Suivi et contrôle", "Exécution"],
+      "framework": [
+        {
+          "title": "Statuts d’IRESEN",
+          "description": "Fondent l’association à but non lucratif et régissent l’Institut."
+        },
+        {
+          "title": "Convention État–IRESEN",
+          "description": "Encadre les engagements de l’Institut et les moyens apportés par l’État."
+        },
+        {
+          "title": "Assemblée générale",
+          "description": "Réunit les membres, élit les administrateurs, approuve les comptes et modifie les statuts."
+        }
+      ],
+      "board": "Conseil d’administration",
+      "chair": "Présidé de droit par le ministre chargé de l’énergie ou son représentant.",
+      "decision": "Oriente, arrête les budgets et les comptes, nomme le Directeur général.",
+      "oversight": [
+        {
+          "title": "Comité de stratégie et de suivi",
+          "description": "Suit les plans d’action et l’avancement des engagements."
+        },
+        {
+          "title": "Comité d’audit",
+          "description": "Examine les comptes, le contrôle interne et les audits ; recommande au Conseil."
+        },
+        {
+          "title": "Conseil scientifique",
+          "description": "Éclaire les axes de R&D et évalue les projets avant décision du Conseil."
+        },
+        {
+          "title": "Commissaire aux comptes",
+          "description": "Certifie les comptes, présente son rapport à l’Assemblée générale et échange avec le comité d’audit."
+        }
+      ],
+      "execution": "Direction générale",
+      "executionDescription": "Met en œuvre les décisions du Conseil et lui rend compte.",
+      "coordination": "Vision, priorités et coordination des trois pôles."
+    },
     "title": "Gouvernance et organisation",
     "tagline": "Relier les priorités nationales, l’exigence scientifique et la mise en œuvre.",
     "introduction": "La gouvernance d’IRESEN réunit acteurs publics, partenaires du secteur énergétique et expertise scientifique pour orienter les activités et suivre les résultats. Son organisation mobilise les capacités nécessaires à la Recherche & Innovation, cœur de métier de l’Institut, et aux dimensions Études & Expertise, Compétences & Capacités et Coopération & Rayonnement.",
@@ -2711,7 +2766,7 @@
           ]
         },
         {
-          "title": "Pôle Scientifique",
+          "title": "Pôle Recherche",
           "tagline": "Structurer les programmes et mobiliser l’expertise scientifique.",
           "directions": [
             {
@@ -2725,7 +2780,7 @@
           ]
         },
         {
-          "title": "Pôle Support",
+          "title": "Pôle Impulsion",
           "tagline": "Apporter les ressources et les services nécessaires à l’action des équipes.",
           "directions": [
             {
@@ -2816,33 +2871,37 @@
     "team": {
       "soukaina": {
         "name": "Soukaina BOUDOUDOU",
-        "role": "Directrice DPRDIRE",
-        "biography": "Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU travaille sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux. Ses travaux s’inscrivent dans les enjeux de stockage, d’efficacité énergétique et d’intégration des énergies renouvelables. Elle exerce à l’IRESEN comme directrice DPRDIRE."
+        "role": "Directrice des programmes R&D&I et du réseau d’experts",
+        "biography": "Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU est diplômée de l’Université de technologie de Belfort-Montbéliard et de l’École Mohammadia d’Ingénieurs. Ses travaux portent sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux.\n\nSon parcours comprend un postdoctorat consacré au stockage associant batteries et supercondensateurs. À l’IRESEN, elle a exercé des responsabilités d’évaluation et de suivi des projets de recherche avant de diriger les programmes R&D&I et le réseau d’experts. Elle contribue ainsi à relier l’expertise scientifique, le soutien aux projets et les enjeux de la transition énergétique."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "Directeur DPPS",
-        "biography": "Ayoub HIRT est directeur DPPS à l’IRESEN. Son parcours au sein de l’institut comprend des activités en chimie verte, bioénergie et agritech. Ses interventions professionnelles portent notamment sur l’hydrogène vert, le Power-to-X et le rôle de la recherche et des compétences dans le développement de ces filières."
+        "role": "Directeur du développement des plateformes et des projets structurants",
+        "biography": "Ayoub HIRT est directeur du développement des plateformes et des projets structurants à l’IRESEN. Son parcours au sein de l’Institut comprend la responsabilité du département Chimie verte, Bioénergie et Agritech, ainsi que des activités de recherche et d’innovation dans les technologies énergétiques.\n\nSes domaines d’intervention comprennent l’hydrogène vert, le Power-to-X et la bioénergie. Il participe aux échanges entre acteurs scientifiques, institutionnels et industriels sur le développement de ces filières, leurs infrastructures et les compétences nécessaires à leur déploiement."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
-        "role": "Directeur DPARMI",
-        "biography": "Mouhcine BENMEZIANE est un dirigeant passionné par la communication scientifique et technologique. Il est responsable du département Coopération, Communication et Veille technologique à l’Institut de Recherche en Énergie Solaire et Énergies Nouvelles (IRESEN).\n\nDepuis plus d’une décennie, Mouhcine développe la collaboration internationale et l’innovation dans le domaine des technologies vertes. Homme de terrain, il possède une expertise dans le développement de partenariats, la gestion de projets de recherche et la diffusion des connaissances scientifiques et technologiques.\n\nSon parcours académique reflète la diversité de ses intérêts. Il est titulaire d’un master en sciences et technologies, spécialité ingénierie du management industriel, et d’une licence en génie mécanique. Son attachement à la formation continue se traduit par de nombreuses certifications, notamment dans les énergies renouvelables et la communication scientifique."
+        "role": "Directeur des partenariats et du marketing de l’innovation",
+        "biography": "Mouhcine BENMEZIANE est directeur des partenariats et du marketing de l’innovation à l’IRESEN. Depuis plus d’une décennie, il développe des coopérations et des liens entre recherche, acteurs publics et entreprises dans le domaine des technologies vertes. Son parcours à l’Institut associe coopération internationale, communication scientifique et veille technologique.\n\nIl s’attache à rendre les travaux de recherche lisibles, à rapprocher les expertises et à construire des partenariats utiles à l’innovation. Son approche relie la compréhension des technologies, la diffusion des connaissances et la mise en relation des acteurs, au service de la transition énergétique et du rayonnement de la recherche marocaine.\n\nTitulaire d’un master en sciences et technologies, spécialité ingénierie du management industriel, et d’une licence en génie mécanique, il complète ce parcours par la formation continue. Il a notamment suivi des formations en communication scientifique, en énergies renouvelables et en stratégie d’entreprise durable, dont le programme Sustainable Business Strategy de Harvard Business School Online."
       },
       "laila": {
         "name": "Laila TYDRINI",
-        "role": "Directrice DAF",
-        "biography": "Laila TYDRINI est directrice DAF à l’IRESEN. Elle intervient dans le périmètre administratif et financier de l’institut."
+        "role": "Responsable administrative",
+        "biography": "Laila TYDRINI a rejoint l’IRESEN en 2012 comme chargée de la comptabilité. Au fil des années, elle a élargi ses responsabilités à la gestion financière, aux ressources humaines et à l’administration de l’Institut.\n\nAujourd’hui responsable administrative, elle supervise une large part des activités de support : qualité, ressources humaines, finances, comptabilité, préparation des bilans, administration et suivi des affaires juridiques. Son parcours accompagne la structuration de l’Institut et l’évolution des moyens nécessaires au travail de ses équipes."
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Strat & Orga",
-        "biography": "Imane MOUBACHIR exerce à l’IRESEN dans le périmètre Strat & Orga. Son activité porte sur la stratégie et l’organisation de l’institut."
+        "role": "Stratégie et organisation",
+        "biography": "Imane MOUBACHIR exerce à l’IRESEN dans le domaine de la stratégie et de l’organisation. Son activité porte sur la déclinaison des orientations de l’Institut, les outils de pilotage et l’amélioration de son fonctionnement interne.\n\nElle intervient ainsi à l’articulation entre les priorités institutionnelles, la coordination des activités et l’organisation des moyens mobilisés par les équipes."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "IT et SI",
-        "biography": "Jamaleddine FOUHAM intervient à l’IRESEN dans le périmètre IT et SI, consacré à l’informatique et aux systèmes d’information."
+        "role": "Technologies de l’information et systèmes d’information",
+        "biography": "Jamaleddine FOUHAM intervient à l’IRESEN dans le domaine des technologies de l’information et des systèmes d’information. Son périmètre concerne le fonctionnement et l’évolution des outils informatiques et numériques de l’Institut.\n\nIl accompagne les usages des équipes et les besoins liés aux activités scientifiques et administratives, en appui au fonctionnement quotidien de l’organisation."
+      },
+      "samir": {
+        "name": "Samir RACHIDI",
+        "role": "Directeur scientifique par intérim"
       }
     },
     "biography": {
@@ -2856,7 +2915,7 @@
     "description": "Relier les savoirs scientifiques, les capacités expérimentales et les équipes pour éclairer les choix technologiques et faire avancer la recherche.",
     "domains": {
       "title": "Des compétences pour éclairer les choix.",
-      "description": "Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération. Données, études, veille et prospective pour éclairer les choix scientifiques, technologiques et stratégiques.",
+      "description": "Données, études, veille et prospective pour éclairer les choix scientifiques, technologiques et stratégiques.",
       "items": [
         {
           "title": "Observer et anticiper",
@@ -3076,7 +3135,9 @@
             "description": "Suivi et comparaison des performances des technologies solaires en conditions réelles."
           }
         },
-        "action": "En savoir plus sur le Green Energy Park"
+        "action": "En savoir plus sur le Green Energy Park",
+        "mobile": "Recherche, essais et formation sur les technologies solaires, du laboratoire aux installations extérieures de Benguerir.",
+        "compact": "À Benguerir, IRESEN et l’UM6P réunissent recherche, essais et formation sur les technologies solaires. Laboratoires et installations extérieures permettent de comparer les solutions dans les conditions climatiques locales."
       },
       "gsbp": {
         "name": "Green & Smart Building Park",
@@ -3106,7 +3167,9 @@
             "description": "Un exemple concret du passage de la recherche à la fabrication locale de solutions de recharge pour véhicules électriques."
           }
         },
-        "action": "En savoir plus sur le Green & Smart Building Park"
+        "action": "En savoir plus sur le Green & Smart Building Park",
+        "mobile": "Un laboratoire à échelle réelle pour le bâtiment durable, les réseaux intelligents et la mobilité, à Benguerir.",
+        "compact": "À Benguerir, la plateforme relie bâtiment durable, efficacité énergétique, réseaux intelligents et mobilité. Ce laboratoire à échelle réelle associe recherche, expérimentation et formation."
       },
       "gep-mci": {
         "name": "Green Energy Park Maroc–Côte d’Ivoire",
@@ -3140,7 +3203,9 @@
             "description": "Collecte, suivi et exploitation des données expérimentales, avec accès à distance."
           }
         },
-        "action": "En savoir plus sur le Green Energy Park Maroc–Côte d’Ivoire"
+        "action": "En savoir plus sur le Green Energy Park Maroc–Côte d’Ivoire",
+        "mobile": "À Yamoussoukro, recherche solaire, expérimentation en climat ouest-africain et développement des compétences.",
+        "compact": "À Yamoussoukro, la coopération entre IRESEN, l’UM6P, le GEP et l’INP-HB rapproche recherche solaire, essais en climat ouest-africain et développement des compétences."
       },
       "greenh2a": {
         "name": "GreenH2A",
@@ -3170,7 +3235,9 @@
             "description": "Démonstration de procédés de synthèse, notamment pour l’ammoniac et le méthanol, afin de préparer leur changement d’échelle."
           }
         },
-        "action": "En savoir plus sur GreenH2A"
+        "action": "En savoir plus sur GreenH2A",
+        "mobile": "En développement à Jorf Lasfar : recherche sur l’hydrogène vert et ses applications industrielles Power-to-X.",
+        "compact": "En développement à Jorf Lasfar, GreenH2A prépare la recherche et l’expérimentation sur l’hydrogène vert et ses applications Power-to-X, de la production aux usages industriels."
       }
     },
     "intro": {
@@ -3204,7 +3271,10 @@
       "title": "Infrastructures & plateformes de recherche | IRESEN",
       "description": "Découvrez le réseau de plateformes d’IRESEN : technologies solaires, bâtiments durables, réseaux intelligents et hydrogène vert, au Maroc et en Afrique."
     },
-    "accessNote": "Les modalités d’accès, les essais et les formations se définissent avec les équipes selon les besoins et les capacités disponibles. Les infrastructures en développement sont distinguées des moyens opérationnels."
+    "accessNote": "Les modalités d’accès, les essais et les formations se définissent avec les équipes selon les besoins et les capacités disponibles. Les infrastructures en développement sont distinguées des moyens opérationnels.",
+    "readDetails": "Lire la présentation complète",
+    "photoPendingLabel": "Photographie à venir",
+    "photoPending": "Photographie à venir : {title}"
   },
   "Programmes": {
     "eyebrow": "Programmes R&D&I",
@@ -3436,9 +3506,7 @@
     "coreLabel": "Notre cœur de métier",
     "coreTitle": "Recherche & Innovation",
     "coreDescription": "Produire des connaissances, développer et adapter les technologies, évaluer leurs performances et préparer leur utilisation au service des besoins du Maroc.",
-    "noSequence": "Trois missions complémentaires, sans étapes obligées. IRESEN peut intervenir à différents moments, selon les besoins et les capacités mobilisées.",
     "dimensionsLabel": "Trois dimensions qui renforcent et élargissent notre contribution",
-    "relationship": "Ces contributions se nourrissent mutuellement. Elles peuvent être combinées dans un projet ou répondre directement à un besoin d’expertise, de compétences ou de coopération.",
     "capabilitiesLabel": "Des capacités communes, mobilisées selon les besoins",
     "capabilitiesNote": "Une plateforme peut contribuer à une recherche, à des essais et à la formation. Un partenariat peut réunir les expertises et les ressources nécessaires à plusieurs contributions.",
     "missions": {
@@ -3508,7 +3576,6 @@
         "description": "Renforcer les possibilités de maturation, de transfert et d’utilisation ; contribuer aussi aux connaissances, aux compétences et à des décisions mieux éclairées."
       }
     },
-    "figuresNote": "Les chiffres institutionnels décrivent les activités et capacités cumulées. Le catalogue présente 59 références de brevets et le répertoire 14 laboratoires ; ces périmètres sont distincts des totaux institutionnels et ne mesurent pas l’impact.",
     "proofLabel": "Ce que cette réalisation apporte",
     "proofNotice": "Ces exemples illustrent des capacités et des résultats. Les effets économiques, industriels ou environnementaux nécessitent des mesures propres à chaque réalisation.",
     "proofFields": {
