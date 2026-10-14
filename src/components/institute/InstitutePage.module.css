@@ -666,10 +666,6 @@
   row-gap: var(--space-12);
   align-items: start;
 }
-.position > header {
-  position: sticky;
-  inset-block-start: 7rem;
-}
 .missions {
   background: var(--color-surface);
   box-shadow: 0 0 0 100vmax var(--color-surface);
@@ -761,7 +757,6 @@
   margin-inline: 0 var(--gutter);
 }
 @media (max-width: 64rem) {
-  .position > header,
   .values > header {
     position: static;
   }

@@ -1,9 +1,25 @@
 .model {
-  margin-block-start: var(--space-12);
+  margin-block-start: 0;
   color: var(--color-navy);
+}
+.overview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-block-end: var(--space-8);
+}
+.introduction,
+.visual {
+  min-inline-size: 0;
+}
+.introduction > header {
+  margin-block-end: 0;
 }
 .diagram {
   position: relative;
+  container-type: inline-size;
+  inline-size: 100%;
   max-inline-size: 50rem;
   aspect-ratio: 800 / 410;
   margin-inline: auto;
@@ -35,16 +51,18 @@
   color: var(--color-white);
 }
 .core > svg {
-  inline-size: 1.75rem;
-  block-size: 1.75rem;
+  display: block;
+  margin-inline: auto;
+  inline-size: clamp(1rem, 3.5cqw, 1.75rem);
+  block-size: clamp(1rem, 3.5cqw, 1.75rem);
   color: var(--color-energy-cyan);
 }
 .core p {
-  font-size: var(--font-size-label);
+  font-size: clamp(0.65rem, 1.75cqw, 0.875rem);
   margin: var(--space-2) 0;
 }
 .model .core h3 {
-  font-size: clamp(1.2rem, 3vw, 2.6rem);
+  font-size: clamp(1rem, 5.2cqw, 2.6rem);
   line-height: 1.15;
   margin: 0 auto;
   max-inline-size: 14ch;
@@ -61,7 +79,7 @@
   font-size: 0.8rem;
 }
 .orbitLabel strong {
-  font-size: clamp(1rem, 2.3vw, 1.8rem);
+  font-size: clamp(0.85rem, 3.6cqw, 1.8rem);
   font-weight: 600;
 }
 .orbitLabel.develop {
@@ -81,7 +99,7 @@
 .description {
   text-align: center;
   max-inline-size: 65ch;
-  margin: var(--space-6) auto var(--space-12);
+  margin: var(--space-6) auto 0;
   line-height: 1.75;
   color: var(--color-text-muted);
 }
@@ -194,6 +212,9 @@
   transform: scaleX(-1);
 }
 @media (max-width: 64rem) {
+  .overview {
+    grid-template-columns: 1fr;
+  }
   .capabilities {
     grid-template-columns: 1fr;
   }

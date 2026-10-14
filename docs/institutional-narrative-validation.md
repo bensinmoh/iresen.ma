@@ -46,3 +46,37 @@ No failing assertion was skipped and no production/public gate was weakened.
 Temporary build/config/results remain local and outside the commit. Historical
 notes saying tests were deferred describe the prior iteration phase; this ledger
 records the later owner-authorized validation.
+
+## Owner-reported positioning overlap follow-up
+
+After the first PR push, the owner supplied a scrolling overlap on Institute.
+The title’s sticky containing block included the full-width ecosystem diagram.
+The scoped CSS correction removes that sticky behaviour and adds a regression
+for the three locales at four widths. Rebuild the isolated production artifact
+and rerun the affected Institute suite; the other six suites’ evidence remains
+valid. A new PR head must pass full CI; the earlier head cannot authorize merge.
+
+The compact model now places introduction and semicircle side by side on desktop,
+stacking at 64rem with mirrored Arabic columns. The new isolated production build
+and all eight Institute browser tests pass, including the four-width overlap
+regression in every locale. Production captures were inspected in French and Arabic.
+
+## Initial CI feedback and corrections
+
+CI run 38650714185 on `cdca114` passed formatting, lint, explicit TypeScript,
+170 unit tests, integration, generated artifacts, dependency audit and production
+build. Its browser suite reported 308 passes, 9 failures and 4 intentional skips;
+those failures are addressed in the next revision:
+
+- Six hero assertions still expected the old `+60` patent KPI. They now check the
+  owner-confirmed 59 filed patents, distinct from the 30 granted catalog records.
+- Two enlarged-text tests tried loading every FontFace, including metric fallback
+  faces backed by unavailable Linux local fonts. Use natural font readiness and
+  the retained measured-layout stability check instead.
+- The French broad topic “Partenariats” has 19 matching sections. The contact form
+  remains discoverable on page two. Its browser journey now follows real result
+  pagination, preserving the query, result eligibility and relevance ordering.
+
+Local production follow-up: all 31 hero/home-section tests pass; all three contact
+search journeys and all eight Institute tests pass. No runtime search change or
+fixture mutation was needed. Full exact-head CI remains the merge gate.

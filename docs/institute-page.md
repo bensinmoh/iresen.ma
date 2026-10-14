@@ -118,3 +118,19 @@ Verification ledger: development render inspected in French at 1440px and Arabic
 at 390px; Arabic page width equals viewport width (390px). English native activity disclosure checked at 1440px. Targeted source lint
 and formatting pass; the design detector only flags the existing timeline width
 transition, outside this correction. No global tests, production build or merge: deferred by owner.
+
+## Positioning heading overlap — owner report, 2026-10-14
+
+The positioning title was sticky within a grid containing a later full-width
+ecosystem diagram. Scrolling into that diagram could keep the title above it,
+causing text overlap. Remove sticky positioning from this title; its initial
+two-column composition remains. Add FR/EN/AR production regression coverage at
+1920, 1280, 1024 and 390px, scrolling directly to the ecosystem caption and
+asserting the title ends before the diagram begins. This correction requires
+new current-head CI before merge.
+
+Owner compact-model follow-up places the existing mission introduction in the
+leading column and the semicircle/description in the trailing column on desktop.
+At 64rem and below they stack in reading order; Arabic mirrors the columns.
+Diagram labels scale with their own container width to remain inside the smaller
+semicircle. Content, canonical anchors and search copy are unchanged.

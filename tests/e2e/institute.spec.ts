@@ -152,3 +152,41 @@ test('the institute history is discoverable in every public language', async ({ 
     ).toBeVisible()
   }
 })
+
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: positioning heading never overlaps the following ecosystem diagram`, async ({
+    page,
+  }, testInfo) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    for (const width of [1920, 1280, 1024, 390]) {
+      await page.setViewportSize({ width, height: 1000 })
+      await page.goto(`${pageHref('institute', locale)}#ecosystem-caption`)
+      await page.evaluate(() => document.fonts.ready)
+      const overview = page.locator('[data-institute-overview]')
+      if (width > 1024) {
+        const intro = await overview.locator('header').boundingBox()
+        const circle = await overview.locator('svg').first().boundingBox()
+        expect(
+          locale === 'ar'
+            ? circle!.x + circle!.width <= intro!.x
+            : intro!.x + intro!.width <= circle!.x,
+        ).toBe(true)
+      }
+      const positioning = page.locator('#institute-positioning')
+      await expect
+        .poll(() =>
+          positioning.evaluate((section) => {
+            const heading = section.querySelector('header')!.getBoundingClientRect()
+            const diagram = section.querySelector('figure')!.getBoundingClientRect()
+            return heading.bottom <= diagram.top
+          }),
+        )
+        .toBe(true)
+      if (width === 1920) {
+        await page.screenshot({ path: testInfo.outputPath(`${locale}-positioning-no-overlap.png`) })
+        await overview.scrollIntoViewIfNeeded()
+        await page.screenshot({ path: testInfo.outputPath(`${locale}-compact-model.png`) })
+      }
+    }
+  })
+}

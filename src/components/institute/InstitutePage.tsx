@@ -90,11 +90,12 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
           className={`container ${styles.missions}`}
           aria-labelledby="missions-title"
         >
-          <header className={styles.missionsHeading}>
-            <h2 id="missions-title">{t('missionsLabel')}</h2>
-            <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
-          </header>
-          <InstituteModel locale={locale} />
+          <InstituteModel locale={locale}>
+            <header className={styles.missionsHeading}>
+              <h2 id="missions-title">{t('missionsLabel')}</h2>
+              <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
+            </header>
+          </InstituteModel>
           {(
             [
               { id: 'institute-research', i: 1 },

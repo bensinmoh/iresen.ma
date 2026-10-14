@@ -241,9 +241,6 @@ test('mobile missions remain readable and keyboard navigable at 200% text in eve
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
       document.documentElement.style.fontSize = '200%'
-      // Load each registered local face: font-display swap can otherwise finish
-      // after fonts.ready resolved while the new enlarged layout was pending.
-      await Promise.all([...document.fonts].map((face) => face.load()))
       void document.body.offsetHeight
       await document.fonts.ready
     })
@@ -283,9 +280,6 @@ test('wrapped home navigation uses its measured height when text is enlarged', a
     await page.goto(pageHref('home', locale))
     await page.evaluate(async () => {
       document.documentElement.style.fontSize = '200%'
-      // Load each registered local face: font-display swap can otherwise finish
-      // after fonts.ready resolved while the new enlarged layout was pending.
-      await Promise.all([...document.fonts].map((face) => face.load()))
       void document.body.offsetHeight
       await document.fonts.ready
     })
