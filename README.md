@@ -138,4 +138,7 @@ check remains required once final website content is approved.
 
 [Architecture](docs/architecture.md) · [Design system](docs/design-system.md) ·
 [Security/privacy](docs/security-and-privacy.md) · [Current preparation report](docs/public-release-preparation.md) ·
+[Shared public elements and verification](docs/shared-elements.md) ·
 [Siteweb backlog](docs/backlog.md)
+
+Mobile Figma refinement (2026-10-15): [reviewed source nodes, responsive rules and verification](docs/mobile-figma-review.md).

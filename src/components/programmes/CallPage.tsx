@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import type { PublicCall } from '@/lib/content/call-queries'
@@ -82,7 +83,9 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
           aria-labelledby="call-description-title"
           className={styles.section}
         >
-          <h2 id="call-description-title">{t('description')}</h2>
+          <Heading as="h2" size="section" id="call-description-title">
+            {t('description')}
+          </Heading>
           <div className={styles.prose}>
             {call.description.split(/\n\s*\n/).map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
@@ -95,7 +98,9 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
           aria-labelledby="call-calendar-title"
           className={styles.section}
         >
-          <h2 id="call-calendar-title">{t('calendar')}</h2>
+          <Heading as="h2" size="section" id="call-calendar-title">
+            {t('calendar')}
+          </Heading>
           <p className={styles.muted}>{t('timezone')}</p>
           <ol className={styles.calendar}>
             {(
@@ -108,7 +113,9 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
             ).map(([stage, value], i) => (
               <li key={stage}>
                 <span aria-hidden="true">0{i + 1}</span>
-                <h3>{t(`stages.${stage}`)}</h3>
+                <Heading as="h3" size="card">
+                  {t(`stages.${stage}`)}
+                </Heading>
                 {date(value)}
                 {stage === 'evaluation' && call.evaluationEndsAt && (
                   <p>
@@ -125,7 +132,9 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
           aria-labelledby="call-eligibility-title"
           className={styles.section}
         >
-          <h2 id="call-eligibility-title">{t('eligibility')}</h2>
+          <Heading as="h2" size="section" id="call-eligibility-title">
+            {t('eligibility')}
+          </Heading>
           <div className={styles.columns}>
             {(
               [
@@ -134,7 +143,9 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
               ] as const
             ).map(([key, value]) => (
               <div key={key}>
-                <h3>{t(key)}</h3>
+                <Heading as="h3" size="card">
+                  {t(key)}
+                </Heading>
                 <ul>
                   {value
                     .split('\n')
@@ -148,7 +159,9 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
           </div>
         </section>
         <section id="call-funders" aria-labelledby="call-funders-title" className={styles.section}>
-          <h2 id="call-funders-title">{t('fundingPartners')}</h2>
+          <Heading as="h2" size="section" id="call-funders-title">
+            {t('fundingPartners')}
+          </Heading>
           <ul>
             {call.fundingPartners
               .split('\n')

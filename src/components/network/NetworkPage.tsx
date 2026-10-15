@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -59,7 +60,9 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
           <header className={styles.heading}>
             <div>
               <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-              <h2 id="network-domains-title">{t('domains.title')}</h2>
+              <Heading as="h2" size="section" id="network-domains-title">
+                {t('domains.title')}
+              </Heading>
             </div>
             <p>{t('domains.description')}</p>
           </header>
@@ -69,7 +72,9 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
                 <span className={styles.index} aria-hidden="true">
                   0{i + 1}
                 </span>
-                <h3>{t(`domains.items.${i}.title`)}</h3>
+                <Heading as="h3" size="card">
+                  {t(`domains.items.${i}.title`)}
+                </Heading>
                 <p>{t(`domains.items.${i}.description`)}</p>
               </article>
             ))}
@@ -82,14 +87,18 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
         >
           <div className="container">
             <header className={styles.heading}>
-              <h2 id="network-modes-title">{t('modes.title')}</h2>
+              <Heading as="h2" size="section" id="network-modes-title">
+                {t('modes.title')}
+              </Heading>
               <p>{t('modes.description')}</p>
             </header>
             <div className={styles.modeGrid}>
               {icons.map((icon, i) => (
                 <article key={icon}>
                   <ValorisationIcon name={icon} />
-                  <h3>{t(`modes.items.${i}.title`)}</h3>
+                  <Heading as="h3" size="card">
+                    {t(`modes.items.${i}.title`)}
+                  </Heading>
                   <p>{t(`modes.items.${i}.description`)}</p>
                 </article>
               ))}
@@ -106,7 +115,9 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
               <header className={styles.directoryHeading}>
                 <div>
                   <SectionEyebrow>{t('directory.eyebrow')}</SectionEyebrow>
-                  <h2 id="network-directory-title">{t('directory.title')}</h2>
+                  <Heading as="h2" size="section" id="network-directory-title">
+                    {t('directory.title')}
+                  </Heading>
                   <p>{t('directory.description')}</p>
                 </div>
               </header>
@@ -149,7 +160,9 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
             </div>
             <div>
               <SectionEyebrow tone="cyan">{sections('skills-training.title')}</SectionEyebrow>
-              <h2 id="network-skills-title">{t('skills.title')}</h2>
+              <Heading as="h2" size="section" id="network-skills-title">
+                {t('skills.title')}
+              </Heading>
               <p>{t('skills.description')}</p>
               <ul>
                 {[0, 1, 2].map((i) => (
@@ -177,7 +190,9 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
           <header className={styles.heading}>
             <div>
               <SectionEyebrow>{sections('expertise-in-action.title')}</SectionEyebrow>
-              <h2 id="network-examples-title">{t('examples.title')}</h2>
+              <Heading as="h2" size="section" id="network-examples-title">
+                {t('examples.title')}
+              </Heading>
             </div>
             <p>{t('examples.description')}</p>
           </header>
@@ -187,7 +202,9 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
                 <p className={styles.index} aria-hidden="true">
                   0{i + 1}
                 </p>
-                <h3>{t(`examples.items.${i}.title`)}</h3>
+                <Heading as="h3" size="card">
+                  {t(`examples.items.${i}.title`)}
+                </Heading>
                 <p>{t(`examples.items.${i}.description`)}</p>
                 {(
                   t.raw(`examples.items.${i}.labs`) as (typeof networkLaboratories)[number]['id'][]

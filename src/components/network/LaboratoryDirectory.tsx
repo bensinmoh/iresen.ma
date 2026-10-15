@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { Sun } from '@phosphor-icons/react/dist/ssr/Sun'
 import { BatteryCharging } from '@phosphor-icons/react/dist/ssr/BatteryCharging'
 import { Circuitry } from '@phosphor-icons/react/dist/ssr/Circuitry'
@@ -184,6 +186,7 @@ export function LaboratoryDirectory({
             <label htmlFor="laboratory-query">{labels.label}</label>
             <div>
               <input
+                data-ui-field
                 id="laboratory-query"
                 type="search"
                 value={draft}
@@ -336,7 +339,9 @@ export function LaboratoryDirectory({
                   >
                     <SiteIcon icon={topicIcons[active.topic]} />
                   </span>
-                  <h3 id="map-laboratory-title">{active.title}</h3>
+                  <Heading as="h3" size="card" id="map-laboratory-title">
+                    {active.title}
+                  </Heading>
                   <p className={styles.affiliation}>{active.institution}</p>
                   <p className={styles.city}>{active.city}</p>
                 </div>

@@ -2,15 +2,9 @@
   overflow-wrap: anywhere;
 }
 .page h2 {
-  font-size: clamp(1.75rem, 2.8vw, 3rem);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
   margin-block: 0 1.5rem;
-  text-wrap: balance;
 }
 .page h3 {
-  font-size: 1.25rem;
-  line-height: 1.4;
   margin-block: 0 1rem;
 }
 .page p {
@@ -63,9 +57,7 @@
 .textLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
   padding-block: 0.75rem;
-  font-weight: 600;
   color: var(--color-blue);
 }
 .page :global(.navigation-icon-arrow) {
@@ -282,9 +274,6 @@
   text-align: start;
   max-inline-size: 100%;
 }
-.page:dir(rtl) h2 {
-  letter-spacing: normal;
-}
 @media (min-width: 100rem) {
   .steps {
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -473,7 +462,7 @@
     padding-block-end: 4rem;
   }
   .page :global(.hero-copy h1) {
-    font-size: clamp(1.85rem, 8vw, 2.5rem);
+    font-size: var(--hero-title-size);
   }
   .page :global(.hero-description) {
     font-size: 1rem;

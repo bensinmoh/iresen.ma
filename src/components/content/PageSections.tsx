@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -42,7 +43,12 @@ export async function PageSections({
               className="empty-section"
             >
               {pageId === 'institute' && section.id === 'mission' ? (
-                <h2 id={`${section.id}-heading`} className="section-heading">
+                <Heading
+                  as="h2"
+                  size="section"
+                  id={`${section.id}-heading`}
+                  className="section-heading"
+                >
                   <Image
                     src="/brand/apex-leaf.svg"
                     alt=""
@@ -52,9 +58,11 @@ export async function PageSections({
                     unoptimized
                   />
                   <span>{t(`${section.id}.title`)}</span>
-                </h2>
+                </Heading>
               ) : (
-                <h2 id={`${section.id}-heading`}>{t(`${section.id}.title`)}</h2>
+                <Heading as="h2" size="section" id={`${section.id}-heading`}>
+                  {t(`${section.id}.title`)}
+                </Heading>
               )}
               <p>{t(`${section.id}.description`)}</p>
               {section.children?.map((child) => (
@@ -64,7 +72,9 @@ export async function PageSections({
                   aria-labelledby={`${child.id}-heading`}
                   className="placeholder-subsection"
                 >
-                  <h3 id={`${child.id}-heading`}>{t(`${child.id}.title`)}</h3>
+                  <Heading as="h3" size="card" id={`${child.id}-heading`}>
+                    {t(`${child.id}.title`)}
+                  </Heading>
                   <p>{t(`${child.id}.description`)}</p>
                 </section>
               ))}

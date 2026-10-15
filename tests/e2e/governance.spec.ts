@@ -50,7 +50,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
               return (
                 imageBox.width <= slot.width + 1 &&
                 imageBox.height <= slot.height + 1 &&
-                imageBox.bottom <= label.top + 1
+                (imageBox.right <= label.left + 1 || label.right <= imageBox.left + 1)
               )
             }),
           ),
@@ -77,13 +77,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   })
 }
 
-test('French roles omit director titles for strategy and IT; page has no serious axe violations', async ({
+test('French owner-confirmed leadership roles; page has no serious axe violations', async ({
   page,
 }) => {
   await page.goto(pageHref('governance', 'fr'))
   for (const [name, role] of [
-    ['Imane MOUBACHIR', 'Stratégie et organisation'],
-    ['Jamaleddine FOUHAM', 'Technologies de l’information et systèmes d’information'],
+    ['Imane MOUBACHIR', 'Directrice Stratégie, Gouvernance & Organisation'],
+    ['Jamaleddine FOUHAM', 'Chef du Département IT & Systèmes d’Information'],
+    ['Laila TYDRINI', 'Directrice Administrative & Financière'],
   ]) {
     const card = page.locator('#department-responsibilities li').filter({ hasText: name })
     await expect(
@@ -101,7 +102,7 @@ test('governance remains readable without JavaScript', async ({ browser }) => {
   const page = await context.newPage()
   await page.goto(pageHref('governance', 'fr'))
   await expect(page.locator('#scientific-council')).toContainText('Ahmed ENNAOUI')
-  await expect(page.locator('#department-responsibilities')).toContainText('Soukaina BOUDOUDOU')
+  await expect(page.locator('#department-responsibilities')).toContainText('Soukaina BOUDOUDOUH')
   await context.close()
 })
 
@@ -142,7 +143,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.goto(pageHref('governance', locale))
     for (const [id, url] of Object.entries(governanceScientistLinkedin)) {
       await expect(page.locator(`#scientific-member-${id} a`)).toHaveAttribute('href', url)
-      await expect(page.locator(`#scientific-member-${id} h4`)).toHaveText(
+      await expect(page.locator(`#scientific-member-${id} a`)).toHaveAttribute('target', '_blank')
+      await expect(page.locator(`#scientific-member-${id} h3`)).toHaveText(
         catalogs[locale].Governance.scientists[id as keyof typeof catalogs.fr.Governance.scientists]
           .name,
       )

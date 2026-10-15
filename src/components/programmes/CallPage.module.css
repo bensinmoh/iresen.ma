@@ -79,12 +79,7 @@
   border: 0;
 }
 .section h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
   margin-block: 0 1.5rem;
-}
-.section h3 {
-  font-size: 1.25rem;
-  line-height: 1.4;
 }
 .section p,
 .section li {

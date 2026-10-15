@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { ShieldCheck } from '@phosphor-icons/react/dist/ssr/ShieldCheck'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
@@ -14,7 +15,9 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
     <section id="collaboration" aria-labelledby="collaboration-heading" className={styles.section}>
       <div className={styles.layout}>
         <header className={styles.introduction}>
-          <h2 id="collaboration-heading">{t('title')}</h2>
+          <Heading as="h2" size="display" id="collaboration-heading">
+            {t('title')}
+          </Heading>
           <p>{t('description')}</p>
           <a className={styles.primary} href={pageHref('workWithUs', locale, 'choose-pathway')}>
             {t('action')} <NavigationIcon name="arrow" />
@@ -30,9 +33,12 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
           {collaborationPaths.map((path) => (
             <article key={path.id} className={styles.path} data-audience={path.id}>
               <p className={styles.audience}>{t(`paths.${path.id}.audience`)}</p>
-              <h3>{t(`paths.${path.id}.title`)}</h3>
+              <Heading as="h3" size="card">
+                {t(`paths.${path.id}.title`)}
+              </Heading>
               <p className={styles.description}>{t(`paths.${path.id}.description`)}</p>
               <a
+                data-ui-link
                 className={styles.link}
                 href={
                   'topic' in path

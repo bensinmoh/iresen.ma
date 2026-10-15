@@ -383,3 +383,244 @@ Existing localized Governance/leadership search references consume the revised
 biographies. The old leadership metadata that duplicated obsolete biographies is
 replaced with a concise description. Search database rebuilding remains pending
 for the ongoing review batch. No global tests or merge.
+
+## Iterative redesign — 2026-10-15
+
+The owner closes D01/D02 and starts D03 with an iterative correction batch. Do not
+push, run CI or merge until the owner finishes supplying changes. This supersedes
+automatic completion for this ongoing batch; scoped local feedback remains useful.
+
+- Remove the complete “Pour approfondir” resource block in all locales; preserve
+  `documents-contact` as a legacy anchor and exclude the withdrawn block from
+  the public section search projection.
+- Owner-confirmed roles now display Imane as “Directrice Stratégie, Gouvernance &
+  Organisation”, Jamaleddine as “Chef du Département IT & Systèmes d’Information”
+  and Laila as “Directrice Administrative & Financière”. These supersede the old
+  no-director-title instruction for Imane and Laila’s Administrative Manager label.
+  Correct Soukaina’s Latin surname to BOUDOUDOUH in captions, biographies and
+  search copy. EN/AR role adaptations remain working editorial translations.
+- Apply title case to committee names and colleague functions, retaining lowercase
+  conjunctions, articles and prepositions inside titles. Arabic retains natural
+  script. Keep the original personal identities and profile URLs.
+- Make the four responsibility columns distinct: uppercase stage bands, a shared
+  body typeface/size for bold titles and light attributions, and a navy Board
+  circle containing both chair information and the exact decision sentence.
+  The General Management execution block no longer has an icon.
+- Redesign the Board membership around the original IRESEN logo: two groups of
+  eight original logos and adjacent institutional names, with fine connections
+  to the centre. Preserve all 16 links and names; narrow layouts become a native
+  reading list with the IRESEN mark above it.
+- Reuse the existing borderless world-land SVG as an illustrative Scientific
+  Council backdrop, with a modest enlarged crop favouring Morocco/Europe.
+  Smaller native linked cards are dispersed across a connected composition.
+  Their editorial positions are not verified geographic locations. The vector
+  is unchanged and never mirrored; Arabic card text remains RTL. Tablet/mobile
+  switch to two/one readable columns without the connecting lines.
+- The network pulse is component-owned, starts on first viewport entry and ends
+  after 4.8 seconds. Reduced-motion changes cancel it; no JavaScript leaves a
+  static readable network. No continuous loop, animation dependency or glyph
+  animation is introduced.
+- Adapt the oversight section to the supplied three-panel composition, using
+  the existing pale-blue surface, shared card-heading role and full sourced text.
+  The reference screenshots supply layout inspiration, not programme facts or
+  governance actions. No sample screenshot content is adopted.
+
+Existing figure/section/portrait search destinations consume corrected locale
+copy. The reused world asset keeps one result (`collaborate-world-land`) with
+updated FR/EN/AR descriptions covering the scientific network. A database index
+rebuild and rendered discovery/withdrawal checks remain pending for the batch.
+Original logos, portraits, biographies, geographic vector, routes and CMS gates
+remain preserved. The organisation summary now describes the three functions
+without repeating the superseded blanket “seven directorates” count after the
+owner’s explicit IT department correction; no other structural reorganisation
+is inferred.
+
+Local feedback: changed-file formatting, scoped ESLint and TypeScript only.
+No CI, production build, broad browser suite, push or merge is run for this step.
+Rendered review remains pending because the current session cannot open Chrome
+or connect to the local server; screenshot-derived composition is not a claimed
+visual match. Earlier unrelated local changes remain intact.
+
+Owner refinement — 2026-10-15, 21:44–21:46: the four stage labels now reuse their
+thin-band colors (Science Blue, primary blue, Transition Green, Energy Cyan),
+occupy exactly 60% of their own column and sit centred above the colored top rule.
+The panels' contents are vertically centred, including General Management. The
+label track and panel track are shared with native subgrid so the bands stay
+aligned when a label wraps. Existing dark institutional ink on the lighter label
+colors retains 5.98:1/6.46:1/9.72:1 contrast; the primary-blue label uses white
+(5.45:1). Colors and titles are unchanged from the requested role mapping.
+
+The four columns remain on one line at every width. Tracks have a 20rem preferred
+minimum, bounded by the available narrow viewport, and switch naturally to native
+horizontal scrolling rather than wrapping into two columns. The region is keyboard
+focusable, has an accessible name and uses the existing hidden-scrollbar/native
+scroll family. A discreet SVG direction line sits behind the panels; gap chevrons
+indicate reading direction and mirror in Arabic. No CI or broad test/build run.
+
+Owner attachment correction — 2026-10-15, 21:47: stage labels now sit directly
+on their matching colored panel rule, with zero vertical gap and bottom alignment
+within the shared heading track. Labels, panel frames and the General Management
+box use square corners. The expressly requested Board circle remains circular.
+The 60% label widths, vertical content centering, direction arrow and one-line
+native horizontal scrolling remain unchanged. Scoped CSS formatting/whitespace
+only; no CI.
+
+Owner numbering withdrawal — 2026-10-15, 21:48: remove the decorative 01/02
+section labels above the Board and Scientific Council, and the 01/02/03 labels
+on oversight panels. Remove their unused CSS and spacing; all locales share
+the same markup. No institutional figures or other page content are withdrawn.
+No CI.
+
+Owner label refinement — 2026-10-15, 21:49: reduce stage-label minimum height
+from 44px to 36px, use the shared 14px label size with 4px vertical padding,
+and request white text at CSS weight 900. Preserve 60% widths, exact band colors,
+joined square edges, centering and native horizontal scrolling. This supersedes
+the earlier dark-ink label treatment. The installed Latin variable face tops out
+at 800; Arabic supports 900, so no new Latin Black font file is claimed.
+Changed CSS formatting/whitespace only; no CI.
+
+Owner Board refinements — 2026-10-15, 21:49–21:50: remove the redundant
+“Les membres du conseil d’administration” heading in every locale and reduce
+the introduction-to-member-layout gap to 16px. Keep member names in media metadata.
+Centre original member marks vertically, explicitly removing image intrinsic
+minimum sizing and bounding their contained rendering to the fixed logo frame;
+no SVG bytes, geometry or crop are changed. Place MTEDD first, followed by the
+Ministry of Economy and Finance, preserving all 16 records and links. No CI.
+
+Owner council-title correction — 2026-10-15, 21:52: use “Le Conseil
+d’Administration” and “Le Conseil Scientifique”, with matching member labels and
+localized section-search titles. English follows the same title-case convention;
+Arabic script and prose paragraphs remain unchanged. No CI.
+
+Owner scientific-heading withdrawal — 2026-10-15, 21:52: remove the redundant
+member-list heading in every locale and reduce the introduction-to-network gap
+to 16px, with no additional network top padding. Scientific member names now use
+h3 directly below the section h2, retaining their compact shared visual role.
+Remove the unused member-heading style; keep member metadata descriptive. No CI.
+
+Owner scientific-card refinement — 2026-10-15, 21:56: remove equal/minimum card
+heights, centre content-sized cards within their network rows, enlarge portraits
+from 72px to 96px (with a narrow/enlarged-text containment limit), centre LinkedIn
+glyphs vertically beside names, and tighten identity/country/function spacing.
+Keep original portrait bytes and native full-card profile links.
+
+Add compact decorative vector flags and localized country/region labels under
+each member’s name: Lambert France; Pavia Europe; Wehrspohn, Ennaoui and Pitz-Paal
+Germany; Bounahmidi Morocco; Miranda Brazil. The owner’s “Kara France” is explicitly
+interpreted as Artiba (the sole unmatched eighth member), pending correction.
+Labels reflect the owner’s editorial associations, not independently verified
+nationality or a change to the illustrative map coordinates. Europe uses the
+European flag as requested. Flags are small inline UI vectors, not public media
+files or logos; accompanying text supplies their accessible meaning.
+
+Country text is included in localized Scientific Council section/page and
+portrait search projections. No new public URL, duplicate media result, schema,
+provider, asset import or publication gate is introduced. Search rebuild remains
+pending until the ongoing correction batch ends. Scoped lint/TypeScript and
+formatting feedback only; no CI, push or merge.
+
+Owner organisation/network refinement — 2026-10-15, 21:59: tighten the
+organisation introduction and portrait clearances; reduce colleague gaps from
+80px to 48px while retaining 32px portrait overhangs. Enlarge the centred DG card
+to up to 48rem wide and at least 18rem high, using institutional ink (#05111d)
+and white identity/function text. Research, Development and Impulsion headings
+use blue, green and lime respectively, with contrasting text and icons.
+
+Move the illustrative world mask to a section-sized decorative pseudo-element
+with zero inset and cover sizing, including behind the introduction. Curve the
+network paths and replace the one-off 4.8-second arrival with a looping flow
+while the network intersects the viewport. System reduced-motion preferences
+still disable animation. Existing compact-layout card reflow is retained.
+Scoped formatting/lint only; no CI, push or merge.
+
+Owner organ-card refinement — 2026-10-15, 22:02: give each framework and
+monitoring organ inside the grey governance panels its own white card with
+12px separation. Replace divider-only rows. Apply the shared signature shape
+(two opposite curved corners and two sharp corners) to governance labels,
+panels and organ cards, including decision and execution shapes. Preserve the
+existing accent colours, centred content and horizontal overflow behaviour.
+No CI, push or merge.
+
+## Direction contract — governance functions, 2026-10-15, 22:12
+
+THESIS: explain four distinct governance functions in one compact horizontal
+reading, replacing the rejected floating-tab composition.
+
+OWN-WORLD: retain IRESEN navy, Jakarta/Alexandria and opposing signature corners.
+Use integrated navy headers with small semantic colour markers, neutral bodies
+and individual white organ cards; reserve stronger fills for decision/execution.
+
+STORY: distinguish framework, decision, oversight and execution immediately,
+then read each existing organ and attribution without invented copy.
+
+FIRST VIEWPORT: four full-width integrated headers share a baseline. White
+lists use consistent padding; natural-height decision/execution blocks remain
+vertically centred. A faint directional connection sits behind the four tracks.
+
+FORM: code-led local replacement within the established identity, retaining
+native horizontal overflow and keyboard access. No seed generated: Impeccable's
+launcher could not start under the current filesystem/network restrictions.
+
+FINISH: source review and scoped validation; runtime visual verification remains
+unavailable in this session. Existing product/system documents remain authoritative.
+No CI, push or merge. Taste and Impeccable guide the local redesign.
+
+Independent finish review: ship at source scope only; no material contrast,
+RTL, semantic or natural-height blocker found. Existing design tokens and
+identity remain appropriate, so DESIGN.md does not need a global rewrite.
+Formatting, shared-token references and diff whitespace checks pass. The
+current rendered fit and the owner's visual approval remain unverified.
+
+Owner spacing correction — 2026-10-15, 22:14: reduce the gap shown between
+the governance-function diagram and the Board of Directors introduction.
+Replace stacked 48px section paddings with 12px below the first section and
+24px above the next. Other page-section spacing remains scoped independently.
+MASEN labels now use the exact FR/EN names supplied by the owner, including
+their matching localized section-search descriptions. No CI, push or merge.
+
+Owner introduction fit correction — 2026-10-15, 22:10: replace width-only
+paragraph breakpoints with a local ResizeObserver measuring the neighbouring
+title/summary height and available text-column width. Show the largest number
+of whole editorial paragraphs that fits that height; preserve the concise
+paragraph when stacked or without JavaScript. Temporary invisible measurement
+nodes are removed synchronously, with no clipped or truncated visible prose.
+Re-evaluate when either column resizes, including font-size changes. No CI.
+
+Owner scientific card motion — 2026-10-15, 22:10: ease full-card hover/focus
+surface and border changes over 600ms, add a soft cyan outer glow over 800ms,
+and lift the card by 3px over 700ms. Transitions also ease out when leaving.
+Reduced-motion preferences keep the static glow without movement/transitions.
+No CI, push or merge.
+
+Owner LinkedIn navigation correction — 2026-10-15, 22:08: open LinkedIn links
+in a new tab with target=_blank and rel=noopener noreferrer. Audit and correct
+scientific cards, biography dialogs, home news links, LinkedIn news article
+image/title/read links, social links in the news page/footer, and direct
+LinkedIn search results and header suggestions. Internal news/search navigation
+stays in the same tab.
+Scoped formatting and lint only; no CI, push or merge.
+
+Owner scientific hover refinement — 2026-10-15, 22:07: uppercase the president
+label and reduce its name gap to 4px. Highlight the entire member card on hover
+or visible keyboard focus with the existing lighter navy surface and cyan edge;
+remove name/link hover underlining while retaining the focus outline. No CI.
+
+Owner responsive introduction — 2026-10-15, 22:05: the organisation introduction
+keeps its concise DG paragraph at narrow widths, adds research context when the
+header container reaches 60rem and complementary division context at 90rem.
+Use localized FR/EN/AR prose and CSS container queries rather than measurement
+scripts or fixed-height text clipping. This fills the broad right-hand column
+in the supplied screenshot while keeping compact screens concise. No CI.
+
+Owner DG framing refinement — 2026-10-15, 22:04: replace the DG ink fill with
+the existing IRESEN navy token. Shorten the card from 18rem to 15rem while
+retaining a 21rem portrait frame, widened from 40% to 46%. Reserve its overhang,
+lift the portrait slightly and reduce the former 1.45 zoom to 1.3 so the wider
+framing shows more torso. Set all three pole headings to white, weight 800.
+No CI, push or merge.
+
+Owner acceptance — 2026-10-15, 22:25: page approved; previous CI pause lifted.
+Run the complete CI and tests, then merge when green. Local format, ESLint,
+TypeScript and all 170 unit tests pass. Withdrawn resources now live only as a
+legacy supported anchor, not a registered content section or empty translation.
+Scientific profile assertions follow the h3 hierarchy and new-tab contract.

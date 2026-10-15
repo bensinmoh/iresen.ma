@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -69,7 +70,9 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                     >
                       {copy.label}
                     </SectionEyebrow>
-                    <h2 id={`${id}-heading`}>{sections(`${id}.title`)}</h2>
+                    <Heading as="h2" size={contact ? 'display' : 'section'} id={`${id}-heading`}>
+                      {sections(`${id}.title`)}
+                    </Heading>
                   </div>
                   <p>{sections(`${id}.description`)}</p>
                 </header>
@@ -109,13 +112,16 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                               )}
                             </span>
                           )}
-                          <h3>{title}</h3>
+                          <Heading as="h3" size="card">
+                            {title}
+                          </Heading>
                           {question && <p className={styles.question}>{question}</p>}
                           <p>
                             <ProgrammeText text={description} />
                           </p>
                           {destination && (
                             <a
+                              data-ui-link
                               className={styles.link}
                               href={pageHref(destination.pageId, locale, destination.anchor)}
                             >

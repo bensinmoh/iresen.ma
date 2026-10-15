@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -18,7 +19,9 @@ export async function AchievementsSection({ locale }: { locale: Locale }) {
       <header className={styles.header}>
         <div>
           <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-          <h2 id="achievements-heading">{t('title')}</h2>
+          <Heading as="h2" size="display" id="achievements-heading">
+            {t('title')}
+          </Heading>
         </div>
         <p className={styles.introduction}>{t('description')}</p>
       </header>
@@ -45,9 +48,9 @@ export async function AchievementsSection({ locale }: { locale: Locale }) {
                 />
               </div>
               <p className={styles.category}>{t(`items.${id}.category`)}</p>
-              <h3 id={`achievement-${id}-heading`}>
+              <Heading as="h3" size="card" id={`achievement-${id}-heading`}>
                 <bdi>{t(`items.${id}.name`)}</bdi>
-              </h3>
+              </Heading>
               <p className={styles.description}>{t(`items.${id}.description`)}</p>
               <details className={styles.proof}>
                 <summary>{narrative('proofLabel')}</summary>

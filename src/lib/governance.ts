@@ -1,6 +1,6 @@
 export const governanceBoard = [
-  'min-finance',
   'min-energie',
+  'min-finance',
   'minensup',
   'micep',
   'ocp',
@@ -26,6 +26,18 @@ export const governanceScientists = [
   'bounahmidi',
   'miranda',
 ] as const
+// Owner-supplied editorial country/region labels, not nationality or map coordinates.
+export const governanceScientistRegions = {
+  artiba: 'fr',
+  lambert: 'fr',
+  pavia: 'eu',
+  wehrspohn: 'de',
+  ennaoui: 'de',
+  'pitz-paal': 'de',
+  bounahmidi: 'ma',
+  miranda: 'br',
+} as const
+
 export const governanceTeam = [
   'soukaina',
   'ayoub',

@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -37,7 +38,9 @@ export async function ProjectsPage({ locale }: { locale: Locale }) {
           className={`container ${styles.emptyCatalogue}`}
           aria-labelledby="projects-empty-title"
         >
-          <h2 id="projects-empty-title">{t('updatingTitle')}</h2>
+          <Heading as="h2" size="section" id="projects-empty-title">
+            {t('updatingTitle')}
+          </Heading>
           <p>{t('updatingDescription')}</p>
           <a className="button button-primary" href={pageHref('programmes', locale)}>
             {t('programmesLink')}

@@ -4,10 +4,6 @@
   color: var(--color-text);
 }
 .page h2 {
-  font-size: clamp(1.75rem, 2.61vw, 3.125rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
   margin: 0 0 1rem;
 }
 .page h3,
@@ -179,11 +175,7 @@
   block-size: 1.75rem;
 }
 .features h3 {
-  font-size: clamp(1.125rem, 1.36vw, 1.625rem);
-  line-height: 1.3;
-  font-weight: 600;
   margin: 0 0 0.5rem;
-  letter-spacing: -0.02em;
 }
 .features p {
   font-size: 0.9375rem;
@@ -300,10 +292,6 @@
   padding-block: 0 2rem;
 }
 .offerDetail > h3 {
-  font-size: clamp(1.5rem, 2.3vw, 2.75rem);
-  letter-spacing: -0.03em;
-  line-height: 1.25;
-  font-weight: 500;
   margin: 0 0 1rem;
 }
 .summary {
@@ -338,8 +326,6 @@
   padding-block: 2rem;
 }
 .requirements h4 {
-  font-size: 1.375rem;
-  font-weight: 600;
   margin: 0 0 1.25rem;
 }
 .requirements ul {
@@ -379,10 +365,7 @@
   border-block: 1px solid var(--color-border);
 }
 .empty h3 {
-  font-size: clamp(1.375rem, 2vw, 2rem);
-  line-height: 1.3;
   margin: 1rem 0 0.75rem;
-  font-weight: 500;
 }
 .empty p {
   max-inline-size: 44rem;
@@ -501,13 +484,9 @@
 .field select,
 .field textarea {
   inline-size: 100%;
-  padding: 1rem 1.25rem;
   border: 1px solid var(--color-control-outline);
-  border-radius: 0;
   background: white;
   color: var(--color-text);
-  font-size: 1rem;
-  min-block-size: 3.5rem;
 }
 .field textarea {
   resize: vertical;
@@ -811,5 +790,17 @@
   .page:lang(fr) .join,
   .page:lang(ar) .join {
     font-size: clamp(1.3rem, 5vw, 2rem);
+  }
+}
+
+@media (max-width: 40rem) {
+  .hero h1 {
+    font-size: var(--hero-title-size);
+    line-height: 1.1875;
+    letter-spacing: -0.02em;
+  }
+  .hero h1:dir(rtl) {
+    line-height: 1.45;
+    letter-spacing: normal;
   }
 }

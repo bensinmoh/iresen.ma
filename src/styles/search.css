@@ -48,13 +48,10 @@
 
 .search-query-form input {
   inline-size: 100%;
-  min-block-size: 3.75rem;
-  padding: var(--space-4) var(--space-6);
   border: 1px solid var(--color-control-outline);
   border-radius: var(--radius-action);
   color: var(--color-navy);
   background: var(--color-white);
-  font-size: var(--font-size-action);
 }
 
 .search-query-form input::placeholder {
@@ -139,9 +136,7 @@
 
 .search-sort-select select {
   inline-size: 100%;
-  min-block-size: 2.75rem;
   max-inline-size: 100%;
-  padding-inline-start: 12px;
   border: 1px solid var(--color-control-outline);
   border-radius: var(--radius-action);
   color: var(--color-navy);

@@ -1,134 +1,205 @@
-.governance,
-.organisation {
-  margin: var(--space-6) 0 0;
+.governance {
+  margin: var(--space-8) 0 0;
   color: var(--color-navy);
 }
-.governance figcaption,
+.flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min(20rem, calc(100vw - 2 * var(--gutter))), 1fr));
+  position: relative;
+  isolation: isolate;
+  padding: var(--space-1) var(--space-1) var(--space-3);
+  scroll-snap-type: inline proximity;
+  column-gap: var(--space-6);
+  row-gap: 0;
+  align-items: stretch;
+  grid-template-rows: auto 1fr;
+}
+.flow > section {
+  min-inline-size: 0;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1 / span 2;
+  scroll-snap-align: start;
+  row-gap: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-signature);
+}
+.flow > section:nth-of-type(1) {
+  grid-column: 1;
+}
+.flow > section:nth-of-type(2) {
+  grid-column: 2;
+}
+.flow > section:nth-of-type(3) {
+  grid-column: 3;
+}
+.flow > section:nth-of-type(4) {
+  grid-column: 4;
+}
+.flowDirection {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+  align-self: center;
+  inline-size: 100%;
+  block-size: 1.5rem;
+  color: var(--color-science-blue);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+.flowDirection path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+.flowDirection:dir(rtl) {
+  transform: scaleX(-1);
+}
+.framework {
+  --stage-accent: var(--color-science-blue);
+}
+.flow .decision {
+  --stage-accent: var(--color-blue);
+}
+.oversight {
+  --stage-accent: var(--color-transition-green);
+}
+.execution {
+  --stage-accent: var(--color-energy-cyan);
+}
+.stageBody {
+  min-inline-size: 0;
+  display: grid;
+  align-content: center;
+  padding: var(--space-6);
+  border-radius: 0 0 1.25rem 0;
+}
+.stage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-inline-size: 0;
+  min-block-size: 3.5rem;
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: var(--font-size-label);
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 1.25rem 0 0 0;
+}
+.stage::before {
+  content: '';
+  flex: none;
+  inline-size: 0.5rem;
+  block-size: 1.25rem;
+  background: var(--stage-accent);
+  border-radius: 0.25rem 0 0.25rem 0;
+}
+
+.flow ul {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.flow li {
+  padding: var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--radius-signature);
+}
+.flow strong,
+.flow h4,
+.flow p {
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+.flow strong,
+.flow h4 {
+  display: block;
+  margin: 0;
+  font-weight: 700;
+}
+.flow p {
+  margin: var(--space-2) 0 0;
+  font-weight: 400;
+}
+.boardNode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
+  padding: var(--space-6);
+  border-radius: var(--radius-signature);
+  background: var(--color-navy);
+  color: var(--color-white);
+  text-align: start;
+}
+.boardNode p {
+  color: var(--color-footer-muted);
+}
+.boardNode h4,
+.execution .stageBody h4 {
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  line-height: 1.35;
+}
+.boardNode .decisionText {
+  color: var(--color-white);
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-footer-divider);
+}
+.execution .stageBody > div {
+  margin: 0;
+  padding: var(--space-6);
+  background: var(--color-blue);
+  color: var(--color-white);
+  border-radius: var(--radius-signature);
+}
+.stage:dir(rtl) {
+  letter-spacing: normal;
+}
+
+.organisation {
+  margin: 0;
+  color: var(--color-navy);
+}
 .organisation figcaption {
   text-align: center;
   margin-block-end: var(--space-6);
 }
-.governance figcaption h3,
 .organisation figcaption h3 {
   font-size: clamp(1.6rem, 2.5vw, 2.5rem);
   margin: 0;
   font-weight: 500;
   line-height: 1.35;
 }
-.governance figcaption p,
 .organisation figcaption p {
   margin: var(--space-3) 0 0;
   line-height: 1.7;
   color: var(--color-text-muted);
 }
-.flow {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr 1.2fr 0.9fr;
-  gap: var(--space-6);
-  align-items: stretch;
-}
-.flow > section {
-  min-inline-size: 0;
-  position: relative;
-}
-.stage {
-  font-size: var(--font-size-label);
-  font-weight: 600;
-  margin: 0 0 var(--space-8);
-  border-block-end: 1px solid var(--color-border);
-  padding-block-end: var(--space-4);
-  text-align: center;
-}
-.flow ul,
 .branch ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.flow li {
-  position: relative;
-  padding: var(--space-4);
-  background: var(--color-action-surface);
-  border-radius: var(--radius-action);
-}
-.flow li + li {
-  margin-block-start: var(--space-4);
-}
-.flow strong,
-.flow h5 {
-  font-size: var(--font-size-label);
-  line-height: 1.5;
-}
-.flow li p,
-.flow h5 + p,
-.decisionText {
-  font-size: var(--font-size-meta);
-  line-height: 1.7;
-  margin: var(--space-2) 0 0;
-}
-.boardNode {
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--color-navy);
-  color: var(--color-white);
-  border-radius: 50%;
-  padding: var(--space-6);
-  text-align: center;
-  margin-block-start: var(--space-12);
-}
-.boardNode > svg {
-  inline-size: 2rem;
-  block-size: 2rem;
-  color: var(--color-energy-cyan);
-}
-.boardNode h5 {
-  font-size: clamp(1.2rem, 1.5vw, 1.65rem);
-  margin: var(--space-3) 0 0;
-}
-.boardNode p {
-  color: var(--color-footer-muted);
-}
-.decisionText {
-  padding: var(--space-4);
-  text-align: center;
-}
-.execution > div {
-  background: var(--color-blue);
-  color: var(--color-white);
-  padding: var(--space-6);
-  border-radius: var(--radius-signature);
-  margin-block-start: 8rem;
-}
-.execution h5 {
-  margin: var(--space-4) 0 0;
-  font-size: var(--font-size-action);
-}
-.execution > div > svg {
-  inline-size: 2rem;
-  block-size: 2rem;
-}
-.framework::after,
-.decision::after,
-.oversight::after {
-  content: '';
-  position: absolute;
-  inset-inline-end: calc(-1 * var(--space-6));
-  inset-block-start: 50%;
-  inline-size: var(--space-6);
-  border-block-start: 1px solid var(--color-science-blue);
-}
 .organisation {
-  padding-block: var(--space-4);
+  padding-block: 0;
 }
 .general {
   position: relative;
   margin-inline: auto;
   max-inline-size: 28rem;
   text-align: center;
-  padding-block-end: var(--space-12);
+  padding-block-end: var(--space-8);
 }
 .general > svg {
   display: block;
@@ -199,14 +270,26 @@
   padding: var(--space-4) var(--space-6);
   margin: 0;
   font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  font-weight: 800;
   line-height: 1.4;
   min-block-size: 4.5rem;
+}
+.branch[data-pole='1'] > h4 {
+  background: var(--color-blue);
+}
+.branch[data-pole='0'] > h4 {
+  background: var(--color-transition-green);
+  color: var(--color-white);
+}
+.branch[data-pole='2'] > h4 {
+  background: var(--color-innovation-lime);
+  color: var(--color-white);
 }
 .branch > h4 svg {
   inline-size: 1.75rem;
   block-size: 1.75rem;
   flex: none;
-  color: var(--color-energy-cyan);
+  color: inherit;
 }
 .branch ul {
   margin-inline-start: var(--space-6);
@@ -254,20 +337,6 @@
   margin: var(--space-3) 0 0;
 }
 @media (max-width: 70rem) {
-  .flow {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
-  }
-  .boardNode {
-    max-inline-size: 22rem;
-    margin: 0 auto;
-  }
-  .execution > div {
-    margin-block-start: 0;
-  }
-  .flow > section::after {
-    display: none;
-  }
   .branches {
     gap: var(--space-4);
   }
@@ -287,19 +356,8 @@
   }
 }
 @media (max-width: 48rem) {
-  .flow,
   .branches {
     grid-template-columns: 1fr;
-  }
-  .flow {
-    gap: var(--space-8);
-  }
-  .flow .stage {
-    text-align: start;
-    margin-block-end: var(--space-4);
-  }
-  .boardNode {
-    max-inline-size: 22rem;
   }
   .branches {
     border-inline-start: 1px solid var(--color-science-blue);
@@ -327,8 +385,8 @@
 
 /* Simple cropped portraits: native full-card button, no shape wrapping or measurements. */
 .general {
-  padding-block-start: 5rem;
-  inline-size: calc((100% - 2 * var(--space-8)) / 3 - 3rem);
+  padding-block-start: 6rem;
+  inline-size: min(48rem, 100%);
   max-inline-size: none;
 }
 .generalCard,
@@ -339,10 +397,10 @@
   border-radius: var(--radius-signature);
 }
 .branch ul {
-  padding-block-start: 5rem;
+  padding-block-start: 3rem;
 }
 .branch li + li {
-  margin-block-start: 5rem;
+  margin-block-start: 3rem;
 }
 .portraitTrigger {
   display: flex;
@@ -363,8 +421,7 @@
   inset-inline-start: 0;
   inset-block-end: 0;
   inline-size: 45%;
-  /* Preserve the previous bust size while shortening its white card. */
-  block-size: 19.04rem;
+  block-size: 17rem;
   overflow: hidden;
   border-radius: var(--radius-signature);
 }
@@ -391,6 +448,27 @@
   line-height: 1.55;
   color: var(--color-text-muted);
 }
+.generalCard {
+  background: var(--color-navy);
+}
+.generalCard .portraitTrigger {
+  min-block-size: 15rem;
+  color: var(--color-white);
+}
+.generalCard .portrait {
+  block-size: 21rem;
+  inline-size: 46%;
+}
+.generalCard .portraitPerson {
+  padding-inline-start: 49%;
+}
+.generalCard .portraitPerson strong {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+.generalCard .portraitPerson > span {
+  color: var(--color-white);
+  font-size: 1.125rem;
+}
 .portraitTrigger:focus-visible {
   outline: 3px solid var(--color-blue);
   outline-offset: 5px;
@@ -398,7 +476,7 @@
 @media (max-width: 70rem) {
   .general {
     inline-size: calc(100% - var(--space-6) - var(--space-3));
-    max-inline-size: 32rem;
+    max-inline-size: 48rem;
   }
   .branches {
     grid-template-columns: 1fr;
@@ -429,7 +507,7 @@
     min-block-size: 14rem;
   }
   .portrait {
-    block-size: 17.92rem;
+    block-size: 16rem;
   }
   .portraitPerson {
     padding-inline-end: var(--space-4);
@@ -446,5 +524,11 @@
 }
 .portrait img[src*='mouhcine-portrait'] {
   transform: translateY(3%) scale(1.18);
+  transform-origin: center top;
+}
+
+/* DG: a wider bust framing, lifted above the shorter card. */
+.generalCard .portrait img {
+  transform: translateY(-1%) scale(1.3);
   transform-origin: center top;
 }

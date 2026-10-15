@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import Form from 'next/form'
 import Link from 'next/link'
 import { getFormatter, getTranslations } from 'next-intl/server'
@@ -85,6 +86,7 @@ export async function SearchPage({
             {t('inputLabel')}
           </label>
           <input
+            data-ui-field
             key={activeQuery}
             id="search-query"
             name="q"
@@ -101,17 +103,23 @@ export async function SearchPage({
 
       {error === 'rateLimited' ? (
         <section className="search-state" aria-labelledby="search-limit-title" role="status">
-          <h2 id="search-limit-title">{t('rateLimitedTitle')}</h2>
+          <Heading as="h2" size="compact" id="search-limit-title">
+            {t('rateLimitedTitle')}
+          </Heading>
           <p>{t('rateLimitedDescription')}</p>
         </section>
       ) : error === 'invalid' ? (
         <section className="search-state" aria-labelledby="search-invalid-title" role="status">
-          <h2 id="search-invalid-title">{t('invalidTitle')}</h2>
+          <Heading as="h2" size="compact" id="search-invalid-title">
+            {t('invalidTitle')}
+          </Heading>
           <p>{t('invalidDescription')}</p>
         </section>
       ) : !activeQuery ? (
         <section className="search-state" aria-labelledby="search-start-title">
-          <h2 id="search-start-title">{t('startTitle')}</h2>
+          <Heading as="h2" size="compact" id="search-start-title">
+            {t('startTitle')}
+          </Heading>
           <p>{t('startDescription')}</p>
           <div className="search-state-actions">
             {(['institute', 'programmes', 'publications', 'media'] as const).map((id) => (
@@ -123,7 +131,9 @@ export async function SearchPage({
         </section>
       ) : result?.status === 'unavailable' || !result ? (
         <section className="search-state" aria-labelledby="search-error-title" role="status">
-          <h2 id="search-error-title">{t('errorTitle')}</h2>
+          <Heading as="h2" size="compact" id="search-error-title">
+            {t('errorTitle')}
+          </Heading>
           <p>{t('errorDescription')}</p>
           <div className="search-state-actions">
             <a href={resultsHref()}>{t('retry')}</a>
@@ -158,7 +168,7 @@ export async function SearchPage({
               {type !== 'all' && <input type="hidden" name="type" value={type} />}
               <label htmlFor="search-sort">{t('sortLabel')}</label>
               <div className="search-sort-select">
-                <select key={sort} id="search-sort" name="sort" defaultValue={sort}>
+                <select data-ui-field key={sort} id="search-sort" name="sort" defaultValue={sort}>
                   <option value="relevance">{t('relevance')}</option>
                   <option value="newest">{t('newest')}</option>
                 </select>
@@ -187,7 +197,9 @@ export async function SearchPage({
           </p>
           {result.items.length === 0 ? (
             <section className="search-state" aria-labelledby="search-empty-title">
-              <h2 id="search-empty-title">{t('emptyTitle')}</h2>
+              <Heading as="h2" size="compact" id="search-empty-title">
+                {t('emptyTitle')}
+              </Heading>
               <p>{t('emptyDescription')}</p>
               {type !== 'all' && (
                 <div className="search-state-actions">
@@ -219,12 +231,24 @@ export async function SearchPage({
                           </time>
                         )}
                       </div>
-                      <h2>
-                        <a href={item.url}>
+                      <Heading as="h2" size="compact">
+                        <a
+                          href={item.url}
+                          target={
+                            /^https:\/\/(?:[a-z0-9-]+\.)?linkedin\.com(?:\/|$)/i.test(item.url)
+                              ? '_blank'
+                              : undefined
+                          }
+                          rel={
+                            /^https:\/\/(?:[a-z0-9-]+\.)?linkedin\.com(?:\/|$)/i.test(item.url)
+                              ? 'noopener noreferrer'
+                              : undefined
+                          }
+                        >
                           <span>{highlight(item.title, item.matchedQuery || activeQuery)}</span>
                           <NavigationIcon name="arrow" />
                         </a>
-                      </h2>
+                      </Heading>
                       {item.excerpt && (
                         <p>{highlight(item.excerpt, item.matchedQuery || activeQuery)}</p>
                       )}

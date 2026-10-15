@@ -183,7 +183,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Governance.scientists[id].name,
-          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
+          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}. ${messages[locale].Governance.scientists[id].country}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -413,19 +413,19 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     type: 'media',
     text: {
       fr: {
-        title: 'Carte du monde — coopération et rayonnement',
+        title: 'Carte du monde — coopération et expertise scientifique',
         description:
-          'Silhouette vectorielle décorative des terres émergées, sans frontières, pays partenaires ni données de couverture. Illustration de la section coopération IRESEN : partenariats, programmes LEAP-RE, LEAP-SE, MED-GEM, réseaux et échanges scientifiques.',
+          'Silhouette vectorielle décorative des terres émergées, sans frontières, pays partenaires ni données de couverture. Illustration de la section coopération IRESEN : partenariats, programmes LEAP-RE, LEAP-SE, MED-GEM, réseaux et échanges scientifiques. Également réutilisée pour le réseau illustratif du Conseil scientifique ; la disposition des membres ne représente pas leurs localisations.',
       },
       en: {
-        title: 'World map — cooperation and outreach',
+        title: 'World map — cooperation and scientific expertise',
         description:
-          'Decorative vector land silhouette without borders, partner countries or coverage data. Illustration for IRESEN cooperation: partnerships, LEAP-RE, LEAP-SE, MED-GEM programmes, networks and scientific exchanges.',
+          'Decorative vector land silhouette without borders, partner countries or coverage data. Illustration for IRESEN cooperation: partnerships, LEAP-RE, LEAP-SE, MED-GEM programmes, networks and scientific exchanges. Also reused for the illustrative Scientific Council network; member placement does not represent their locations.',
       },
       ar: {
-        title: 'خريطة العالم — التعاون والإشعاع',
+        title: 'خريطة العالم — التعاون والخبرة العلمية',
         description:
-          'صورة ظلية متجهية زخرفية لليابسة دون حدود أو بلدان شريكة أو بيانات تغطية. توضيح لقسم تعاون IRESEN: الشراكات وبرامج LEAP-RE، LEAP-SE، MED-GEM والشبكات والتبادلات العلمية.',
+          'صورة ظلية متجهية زخرفية لليابسة دون حدود أو بلدان شريكة أو بيانات تغطية. توضيح لقسم تعاون IRESEN: الشراكات وبرامج LEAP-RE، LEAP-SE، MED-GEM والشبكات والتبادلات العلمية. تُستخدم كذلك لتوضيح شبكة المجلس العلمي، ولا يعكس ترتيب الأعضاء مواقعهم الجغرافية.',
       },
     },
   },
@@ -1086,6 +1086,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               body.push(...engagementSearchText(copy[entry.id as keyof typeof copy]))
             }
           }
+          if (pageId === 'governance' && entry.id === 'scientific-council')
+            body.push(...engagementSearchText(catalog.Governance.scientists))
           if (pageId === 'governance' && entry.id === 'bodies-responsibilities')
             body.push(...engagementSearchText(catalog.Governance.diagrams))
           if (pageId === 'governance' && entry.id === 'leadership-organisation')

@@ -3,16 +3,9 @@
   overflow-wrap: anywhere;
 }
 .page h2 {
-  font-size: clamp(1.75rem, 2.61vw, 3.125rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
   margin: 0 0 1rem;
 }
 .page h3 {
-  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
-  line-height: 1.35;
   margin-block: 0 0.75rem;
   color: inherit;
 }
@@ -122,12 +115,9 @@
 .search input {
   min-inline-size: 0;
   flex: 1;
-  min-block-size: 3rem;
   border: 1px solid var(--color-border);
-  padding: 0.875rem 1rem;
   background: white;
   color: var(--color-text);
-  border-radius: var(--radius-action);
 }
 .filters {
   display: flex;
@@ -366,8 +356,6 @@
 .mapDetails h3 {
   text-align: center;
   margin: 0.5rem 0;
-  font-size: 1.125rem;
-  line-height: 1.4;
 }
 .mapDetails .affiliation {
   color: white;
@@ -580,9 +568,6 @@
 }
 .page :global(.navigation-icon-arrow) {
   flex: none;
-}
-.page:dir(rtl) h2 {
-  letter-spacing: normal;
 }
 @media (max-width: 74.999rem) {
   .modeGrid {

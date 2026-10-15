@@ -191,7 +191,21 @@ export function SearchSuggestions({
         <ul aria-labelledby="header-search-suggestions-label">
           {items.map((item) => (
             <li key={item.id}>
-              <Link href={item.url} data-search-suggestion onClick={onDismiss}>
+              <Link
+                href={item.url}
+                target={
+                  /^https:\/\/(?:[a-z0-9-]+\.)?linkedin\.com(?:\/|$)/i.test(item.url)
+                    ? '_blank'
+                    : undefined
+                }
+                rel={
+                  /^https:\/\/(?:[a-z0-9-]+\.)?linkedin\.com(?:\/|$)/i.test(item.url)
+                    ? 'noopener noreferrer'
+                    : undefined
+                }
+                data-search-suggestion
+                onClick={onDismiss}
+              >
                 <span className="header-search-suggestion-content">
                   <span className="header-search-suggestion-meta">
                     <span className="header-search-suggestion-type">{t(`types.${item.type}`)}</span>

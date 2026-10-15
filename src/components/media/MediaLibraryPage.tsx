@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -32,7 +33,9 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
         <SectionEyebrow tone={number === '02' ? 'white' : 'blue'}>
           {number} / {t('label')}
         </SectionEyebrow>
-        <h2>{label}</h2>
+        <Heading as="h2" size="section">
+          {label}
+        </Heading>
       </div>
       {description && <p>{description}</p>}
     </header>
@@ -48,7 +51,9 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
       <div className={styles.page} data-media-library>
         <section id="featured-media" className={styles.intro}>
           <SectionEyebrow>{t('label')}</SectionEyebrow>
-          <h2>{t('intro')}</h2>
+          <Heading as="h2" size="section">
+            {t('intro')}
+          </Heading>
           <p>{t('description')}</p>
         </section>
         <nav id="find-media" className={styles.navigation} aria-label={t('label')}>
@@ -137,7 +142,9 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
           </div>
         </section>
         <section id="credits-reuse" className={styles.credits}>
-          <h2>{t('credits')}</h2>
+          <Heading as="h2" size="compact">
+            {t('credits')}
+          </Heading>
           <p>{t('rights')}</p>
           <a href={pageHref('contact', locale)}>
             {t('contact')} <NavigationIcon name="arrow" />

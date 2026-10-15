@@ -1,5 +1,23 @@
 # Change log
 
+## 2026-10-15 — Governance D03, ongoing owner review
+
+- Close D01/D02 on owner confirmation; keep D03 open for iterative corrections.
+- Correct leadership roles and Soukaina BOUDOUDOUH; synchronize localized search
+  copy and withdraw the final governance resources block while retaining its anchor.
+- Redesign responsibility columns, Board membership hub, illustrative Scientific
+  Council network and pale-blue oversight panels. Keep original marks/portraits.
+- No CI, push, production build or merge until the owner finishes the batch.
+
+## 2026-10-15 — Shared public elements (D02)
+
+- Record owner-confirmed completion of the Platforms redesign (D05).
+- Centralize editorial heading roles, native text-action metrics and public form
+  field geometry; retire competing page rules while keeping contextual colors,
+  alignment, native semantics and page composition.
+- Add a multilingual responsive browser regression. Browser review and Git/PR
+  completion remain blocked by session permissions; see `docs/shared-elements.md`.
+
 ## 2026-10-14 — Institutional narrative review branch
 
 - Update six colleague biographies from public professional sources and owner
@@ -1214,3 +1232,12 @@ labels; localized search references retain Latin-name discovery.
 - Group the 14 laboratories by ten approximate city positions, with accessible
   selection, detail dismissal and native list disclosures.
 - Add supplied GEP city/contact, FR/EN/AR map copy and localized search references.
+
+## 2026-10-15 — Figma mobile design rules
+
+- Review live mobile frames and apply their shared typography, narrow gutters,
+  stacked hero actions, compact figure rails and footer geometry at ≤40rem.
+- Preserve current institutional content, original media, approved colors, native
+  menu/search/forms, desktop composition and Arabic reading behavior.
+- Record source nodes, intentional readability adaptations and actual validation
+  in [the mobile review](docs/mobile-figma-review.md).

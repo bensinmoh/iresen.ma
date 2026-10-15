@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { footerContact } from '@/lib/footer'
@@ -71,7 +72,9 @@ export async function UtilityPage({ pageId, locale }: { pageId: UtilityPageId; l
           <nav id="site-pages" className="utility-sitemap" aria-label={titles('sitemap')}>
             {groups.map((group) => (
               <section key={group.id} aria-labelledby={`sitemap-${group.id}`}>
-                <h2 id={`sitemap-${group.id}`}>{navigation(group.id)}</h2>
+                <Heading as="h2" size="compact" id={`sitemap-${group.id}`}>
+                  {navigation(group.id)}
+                </Heading>
                 <ul>
                   {group.pages.map((id) => (
                     <li key={id}>
@@ -110,7 +113,9 @@ export async function UtilityPage({ pageId, locale }: { pageId: UtilityPageId; l
               const section = text.raw(id) as NoticeSection
               return (
                 <section key={id} id={id} aria-labelledby={`${id}-heading`}>
-                  <h2 id={`${id}-heading`}>{section.title}</h2>
+                  <Heading as="h2" size="compact" id={`${id}-heading`}>
+                    {section.title}
+                  </Heading>
                   <p>{readableText(section.description, locale)}</p>
                   {section.details?.map((paragraph) => (
                     <p key={paragraph}>{readableText(paragraph, locale)}</p>

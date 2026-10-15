@@ -46,10 +46,6 @@
   padding-block: clamp(3rem, 6vw, 6rem);
   text-align: center;
 }
-.emptyCatalogue h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  text-wrap: balance;
-}
 .emptyCatalogue p {
   max-inline-size: 65ch;
   margin: 1.5rem auto 2rem;
@@ -77,5 +73,17 @@
   }
   .hero::before {
     background: rgb(244 247 248 / 85%);
+  }
+}
+
+@media (max-width: 40rem) {
+  .hero h1 {
+    font-size: var(--hero-title-size);
+    line-height: 1.1875;
+    letter-spacing: -0.02em;
+  }
+  .hero h1:dir(rtl) {
+    line-height: 1.45;
+    letter-spacing: normal;
   }
 }

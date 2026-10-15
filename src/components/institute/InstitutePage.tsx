@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -77,7 +78,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         >
           <header>
             {label(t('positionLabel'))}
-            <h2 id="position-title">{t('position.title')}</h2>
+            <Heading as="h2" size="section" id="position-title">
+              {t('position.title')}
+            </Heading>
           </header>
           <div className={styles.reading}>{paragraphs('position.paragraphs', 3)}</div>
           <EcosystemModel locale={locale} />
@@ -89,7 +92,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         >
           <InstituteModel locale={locale}>
             <header className={styles.missionsHeading}>
-              <h2 id="missions-title">{t('missionsLabel')}</h2>
+              <Heading as="h2" size="section" id="missions-title">
+                {t('missionsLabel')}
+              </Heading>
               <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
             </header>
           </InstituteModel>
@@ -106,7 +111,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
                   <ValorisationIcon name={i === 1 ? 'flask' : i === 0 ? 'chart-line' : 'bulb'} />
                 </span>
                 <p className={styles.purpose}>{t(`missions.${i}.purpose`)}</p>
-                <h3 id={`${id}-title`}>{t(`missions.${i}.title`)}</h3>
+                <Heading as="h3" size="mission" id={`${id}-title`}>
+                  {t(`missions.${i}.title`)}
+                </Heading>
               </header>
               <div className={styles.reading}>
                 {t(`missions.${i}.introduction`)
@@ -133,7 +140,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
           <div className={`container ${styles.split}`}>
             <header>
               {label(t('cooperationLabel'), 'white')}
-              <h2 id="cooperation-title">{t('missions.3.title')}</h2>
+              <Heading as="h2" size="section" id="cooperation-title">
+                {t('missions.3.title')}
+              </Heading>
               <p className={styles.purpose}>{t('missions.3.purpose')}</p>
             </header>
             <div className={styles.reading}>
@@ -154,7 +163,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
           aria-labelledby="values-title"
         >
           <header>
-            <h2 id="values-title">{t('valuesLabel')}</h2>
+            <Heading as="h2" size="section" id="values-title">
+              {t('valuesLabel')}
+            </Heading>
           </header>
           <dl>
             {Array.from({ length: 5 }, (_, i) => (
@@ -168,7 +179,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         <section id="ambition-2035" className={styles.ambition} aria-labelledby="ambition-title">
           <div className={styles.ambitionCopy}>
             {label(t('ambitionLabel'), 'white')}
-            <h2 id="ambition-title">{t('ambition.statement')}</h2>
+            <Heading as="h2" size="section" id="ambition-title">
+              {t('ambition.statement')}
+            </Heading>
             <div className={styles.reading}>{paragraphs('ambition.paragraphs', 2)}</div>
             <dl className={styles.orientations}>
               {strategicOrientations.map((id) => (
@@ -192,7 +205,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
           <div className="container">
             <div id="key-figures" className={styles.historyHeading}>
               {label(t('historyLabel'), 'white')}
-              <h2 id="history-title">{t('historyTitle')}</h2>
+              <Heading as="h2" size="section" id="history-title">
+                {t('historyTitle')}
+              </Heading>
               <div className={styles.reading}>{paragraphs('historyIntro', 1)}</div>
             </div>
             <TimelineRail
@@ -208,7 +223,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
                     <bdi>{t(`timeline.${i}.year`)}</bdi>
                   </p>
                   <span className={styles.marker} aria-hidden="true" />
-                  <h3>{t(`timeline.${i}.title`)}</h3>
+                  <Heading as="h3" size="card">
+                    {t(`timeline.${i}.title`)}
+                  </Heading>
                   <p>{t(`timeline.${i}.description`)}</p>
                 </li>
               ))}
@@ -220,7 +237,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             <div className={styles.reading}>
               <header className={styles.reportHeading}>
                 {label(t('reportLabel'))}
-                <h2 id="report-title">{t('reportTitle')}</h2>
+                <Heading as="h2" size="section" id="report-title">
+                  {t('reportTitle')}
+                </Heading>
               </header>
               {paragraphs('report', 3)}
             </div>

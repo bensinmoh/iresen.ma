@@ -12,6 +12,20 @@ for (const locale of ['fr', 'en', 'ar']) {
     await expect(labels).toHaveCount(7)
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 1000 })
+      await expect
+        .poll(() =>
+          page
+            .locator('[data-section-eyebrow]')
+            .first()
+            .evaluate((el) => getComputedStyle(el).fontSize),
+        )
+        .toBe(width <= 640 ? '14px' : '18px')
+      await page.evaluate(
+        () =>
+          new Promise<void>((resolve) =>
+            requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+          ),
+      )
       const values = await labels.evaluateAll((nodes) =>
         nodes.map((node) => {
           const style = getComputedStyle(node)
@@ -36,9 +50,12 @@ for (const locale of ['fr', 'en', 'ar']) {
           ),
         ).size,
       ).toBe(1)
-      expect(values.every(({ font, leaf, overflow }) => font === '18px' && leaf && !overflow)).toBe(
-        true,
-      )
+      expect(
+        values.every(
+          ({ font, leaf, overflow }) =>
+            font === (width <= 640 ? '14px' : '18px') && leaf && !overflow,
+        ),
+      ).toBe(true)
       const bridge = page.locator('#capabilities-cooperation')
       await expect(bridge).toHaveCSS('background-color', 'rgb(234, 241, 248)')
       expect(

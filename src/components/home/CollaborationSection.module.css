@@ -19,11 +19,6 @@
   margin: 0 0 var(--space-6);
   max-inline-size: 12ch;
   color: inherit;
-  font-size: clamp(2rem, 3.125vw, 3.75rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
 }
 .introduction > p {
   max-inline-size: 40ch;
@@ -82,11 +77,6 @@
   margin: 0 0 var(--space-4);
   max-inline-size: 28ch;
   color: inherit;
-  font-size: clamp(1.25rem, 1.45vw, 1.625rem);
-  font-weight: 500;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
 }
 .description {
   margin-block-end: var(--space-6);
@@ -158,11 +148,6 @@
 .certification p:last-child {
   color: var(--color-footer-muted);
   font-size: var(--font-size-label);
-}
-.section:dir(rtl) h2,
-.section:dir(rtl) h3 {
-  letter-spacing: normal;
-  line-height: 1.6;
 }
 .section:dir(rtl) a svg {
   transform: scaleX(-1);

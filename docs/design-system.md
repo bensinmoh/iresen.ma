@@ -29,7 +29,8 @@ root and desktop widths from 1440px, the implemented Latin roles are:
 | Hero key-figure label          | 18px / 100%        | 500    | 0        | 70% white text color                   |
 
 Use semantic tokens in `tokens.css`; display sizes are fluid rather than fixed
-at narrow widths. Figure values remain 36–60px and Latin numerals keep Jakarta
+at narrow widths. Above 40rem, figure values remain 36–60px; the later mobile
+rule uses 30px. Latin numerals keep Jakarta
 in Arabic. Hero descriptions range from 18–21px, including the compact homepage.
 Arabic keeps Alexandria, no letter spacing or uppercase conversion and the
 existing readable line-height adaptations (hero overlines 1.45). White opacity
@@ -140,8 +141,10 @@ These are the shared website rules. Source measurements later in this document
 explain intent and history; they do not supersede these decisions.
 
 Public section surtitles reuse the homepage `SectionEyebrow` component in every
-locale, with its 18px regular role and original Apex Leaf; local typography and
-decorative-leaf duplicates are retired. See the shared public surtitles rule below.
+locale, with its 18px regular role above 40rem and 14px mobile role, retaining the
+original Apex Leaf. Local typography and decorative-leaf duplicates are retired.
+See [the reviewed mobile rules](mobile-figma-review.md) and the shared public
+surtitles rule below.
 
 Functional search, added on 2026-10-09, uses a compact results composition rather
 than a full-screen hero. Reuse the aligned grid and navy/blue/white type and
@@ -168,7 +171,8 @@ terms. Avoid exposing numeric scores or implying a general semantic model.
   a separate footer width. Change layout when content needs room.
 - **Type:** use installed Plus Jakarta Sans for Latin and owner-selected Alexandria
   for Arabic across public locales. Reuse display, section, body, label, action and metadata roles rather than
-  defining a new scale per page. Keep Latin hero tracking at −3%; Arabic uses
+  defining a new scale per page. Keep Latin hero tracking at −3% above 40rem and
+  −2% on mobile; Arabic uses
   natural tracking. Figma's H4/H5 caption errors do not define new type tokens.
 - **Rhythm:** reuse the 4/8px base and existing semantic spacing tokens. The
   board's 6–80px examples guide proportions, not a mandatory replacement scale.
@@ -1937,3 +1941,48 @@ functional empty space (form controls, map frame, image slots and overlays).
 Roadmap body panels use natural content height; platform viewport-fit behavior
 was withdrawn. See [the complete scope](site-spacing-review.md) for exclusions,
 all-page coverage and actual validation.
+
+## Shared public element roles — 2026-10-15
+
+The owner commissions D02 with shared HTML roles, geometry and behavior, retaining
+page-specific colors, alignment and composition. Use `Heading` with an explicit
+native `as` rank and the section/display/mission/card/compact/label visual role;
+`[data-ui-heading]` is the stable targeting hook. Equivalent titles share fluid
+sizes, weight, leading and Arabic tracking rather than local font definitions.
+Default following space is 16px; chapter/card arrangement keeps intentional local
+spacing. Existing `.button` actions share 18px/600, 1.5 leading and 12px gap.
+
+Text actions use native `a[data-ui-link][href]` at 16px/600 with 12px gap, a 44px
+minimum and 20px nonshrinking SVG. Public text/search/select/textarea controls use
+`[data-ui-field]` at 16px/1.5, 56px minimum, 12px/16px padding, shared signature
+corners and 2px edge focus. Native selects preserve logical caret clearance;
+textareas grow from 10rem. Forms retain labels, validation and handlers. Choice,
+file and hidden inputs, shell navigation, cookie/CMS controls and structural
+figures/diagrams retain their own roles. No palette, content or dependency change.
+See [the inventory and check ledger](shared-elements.md); rendered verification
+remains pending because this session cannot open a browser.
+
+## Figma mobile rules — 2026-10-15
+
+At or below 40rem, apply the reviewed 402px mobile reference through shared roles:
+32px hero titles; 28px/34px bold section/display/mission titles; 20px card titles;
+14px surtitles with 8px original-leaf gaps; 16px editorial, 20px header/home-hero
+and 24px menu/footer insets. Shared hero actions stack at full width with a 50px
+minimum height and 12px gap. Figure rails use compact 150px items/30px values,
+with native scrolling and current sourced figures. Editorial insets use 48px.
+Retain readable body/field/action text, 18px shared hero descriptions, enlarged-text
+growth, native semantics and natural Arabic tracking/leading. Tablet/desktop
+roles and current content/media remain. See [source nodes, adaptations and checks](mobile-figma-review.md).
+
+## Governance iterative composition — 2026-10-15
+
+The owner commissions the D03 page-specific redesign. Four labelled responsibility
+columns distinguish framework, decision, monitoring/control and execution; titles
+and descriptions share 16px/1.5 type with bold/light weights. The Board’s decision
+sentence stays within its navy circle. Original marks form the Board membership
+hub; small scientific profile cards use an illustrative world network and existing
+signature corners. The existing world SVG is never mirrored. A component-owned
+4.8-second network pulse runs once on viewport entry and cancels for reduced
+motion; mobile/tablet use a readable grid. This does not replace shared section,
+card, icon, control or typography roles. Oversight reuses the pale-blue surface.
+See [scope and local-check limits](governance.md#iterative-redesign--2026-10-15).

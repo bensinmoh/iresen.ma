@@ -14,10 +14,7 @@
   max-inline-size: calc(70rem + 2 * (var(--page-bleed) - var(--gutter)));
 }
 .intro h2 {
-  font-size: clamp(1.8rem, 3vw, 3.1rem);
-  line-height: 1.22;
   max-inline-size: 24ch;
-  text-wrap: balance;
   margin-block: 1rem;
 }
 .intro > p:last-child {
@@ -57,9 +54,7 @@
   margin-block-end: 2rem;
 }
 .heading h2 {
-  font-size: clamp(1.75rem, 3vw, 2.75rem);
   margin-block: 0.7rem 0;
-  line-height: 1.2;
 }
 .heading p {
   max-inline-size: 47ch;
@@ -184,9 +179,6 @@
   font-size: var(--font-size-meta);
 }
 .photo h3 {
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 500;
   margin-block: 0.35rem 0;
 }
 .dialog {
@@ -223,8 +215,6 @@
   min-inline-size: 0;
 }
 .dialogBar h2 {
-  font-size: 1.1rem;
-  font-weight: 500;
   flex: 1;
   min-inline-size: 0;
   overflow: hidden;
@@ -487,10 +477,7 @@
   align-items: center;
 }
 .reports h3 {
-  font-size: 1.2rem;
-  line-height: 1.45;
   margin-block: 0.5rem;
-  font-weight: 500;
 }
 .reports article p:not(.meta) {
   color: var(--color-text-muted);
@@ -535,9 +522,6 @@
   padding-block: 2rem;
   border-block-start: 1px solid var(--color-border);
   background: var(--color-surface);
-}
-.credits h2 {
-  font-size: 1.2rem;
 }
 .credits p {
   color: var(--color-text-muted);
@@ -759,8 +743,6 @@
   color: white;
 }
 .biographyText h3 {
-  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
-  line-height: 1.2;
   margin-block: 0 1rem;
 }
 .biographyRoles {
@@ -872,7 +854,6 @@
 }
 .biographyText h3 {
   color: var(--color-navy);
-  font-weight: 900;
 }
 .biographyRoles {
   font-style: italic;

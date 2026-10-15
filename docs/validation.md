@@ -3953,3 +3953,17 @@ Filter/sort preservation, page reset, keyboard activation, highlight and API
 correction checks remain. Runtime/ranking is unchanged; the same production build
 was reused for the four affected FR/EN/AR scenarios, all of which passed.
 Final CI remains required.
+
+## Figma mobile design rules — 2026-10-15
+
+Local Chrome production review passes for 21 non-alias public routes in FR/EN/AR
+at 320/402/640/768/1440px, with no document overflow. All 48 distinct scoped
+browser tests pass on the final isolated build (44 in the full confirmation,
+then six affected tests after test-only corrections). Coverage includes shared
+roles, mobile hero actions, navigation, footer/newsletter state, native anchors,
+figure keyboard access, 200% text, no-JavaScript and reduced motion. Production
+FR/EN/AR mobile captures were inspected. Lint, build/TypeScript, changed-file
+formatting and whitespace pass; doc audit reports no missing documents. Physical
+iOS/Android/Safari and remote CI are not claimed. The pre-existing uncommitted
+shared-element refactor is preserved; see [source evidence and local delivery
+boundary](mobile-figma-review.md).

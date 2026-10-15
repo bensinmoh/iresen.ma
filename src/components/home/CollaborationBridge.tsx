@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import styles from './CollaborationBridge.module.css'
@@ -13,7 +14,9 @@ export async function CollaborationBridge({ locale }: { locale: Locale }) {
       aria-labelledby="capabilities-cooperation-heading"
       className={styles.section}
     >
-      <h2 id="capabilities-cooperation-heading">{t('title')}</h2>
+      <Heading as="h2" size="section" id="capabilities-cooperation-heading">
+        {t('title')}
+      </Heading>
       <p>{t('description')}</p>
     </section>
   )

@@ -782,27 +782,23 @@
         "description": "Governance serving the Institute’s missions A non-profit association established at the initiative of the State, IRESEN brings together public institutions, businesses and academic stakeholders around research and innovation for the energy transition. Its governing bodies connect strategic direction, scientific evaluation, monitoring of commitments and management oversight. The State–IRESEN agreement sets out the Institute’s assigned missions, associated resources and objectives to monitor. This structure connects national needs with research, experimental capabilities and opportunities to use the results."
       },
       "council-representatives": {
-        "title": "Council and representatives",
-        "description": "The board of directors Setting direction and monitoring delivery. Chaired by right by the minister responsible for energy or their representative, the board of directors defines IRESEN’s policy and general direction. It monitors programmes and projects, adopts budgets and accounts, approves agreements and partnerships, and oversees the Institute’s management. It draws on scientific expertise and committee work to inform its decisions. It appoints the Director General and evaluates the performance of the executive management. Members of the board of directors The scientific council Informing research priorities and assessing project relevance. Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Members of the scientific council Ministry of Economy and Finance Ministry of Energy Transition and Sustainable Development Ministry of Higher Education, Scientific Research and Innovation Ministry of Industry and Trade OCP Moroccan Agency for Energy Efficiency — AMEE Nareva Mohammed VI Polytechnic University — UM6P National Office of Hydrocarbons and Mines — ONHYM Energy Federation National Centre for Nuclear Energy, Sciences and Technology — CNESTEN Masen National Office of Electricity and Drinking Water — ONEE R&D Maroc Managem National Federation of Electricity, Electronics and Renewable Energy — FENELEC"
+        "title": "The Board of Directors",
+        "description": "The board of directors Setting direction and monitoring delivery. Chaired by right by the minister responsible for energy or their representative, the board of directors defines IRESEN’s policy and general direction. It monitors programmes and projects, adopts budgets and accounts, approves agreements and partnerships, and oversees the Institute’s management. It draws on scientific expertise and committee work to inform its decisions. It appoints the Director General and evaluates the performance of the executive management. Members of the board of directors The scientific council Informing research priorities and assessing project relevance. Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Members of the scientific council Ministry of Economy and Finance Ministry of Energy Transition and Sustainable Development Ministry of Higher Education, Scientific Research and Innovation Ministry of Industry and Trade OCP Moroccan Agency for Energy Efficiency — AMEE Nareva Mohammed VI Polytechnic University — UM6P National Office of Hydrocarbons and Mines — ONHYM Energy Federation National Centre for Nuclear Energy, Sciences and Technology — CNESTEN Moroccan Agency for Sustainable Energy - MASEN National Office of Electricity and Drinking Water — ONEE R&D Maroc Managem National Federation of Electricity, Electronics and Renewable Energy — FENELEC"
       },
       "leadership-organisation": {
         "title": "Executive management and three complementary divisions",
-        "description": "The Research, Development and Enablement poles, team members and their professional backgrounds."
+        "description": "The executive management implements the decisions of the board of directors. It coordinates scientific, technical, administrative and financial activities, mobilises the necessary resources and reports on progress against programmes and commitments. Three divisions structure the scientific, development and support functions. Soukaina BOUDOUDOUH Director of R&D&I Programmes and the Expert Network Ayoub HIRT Director of Platform Development and Structuring Projects Mouhcine BENMEZIANE Director of Partnerships and Innovation Marketing Laila TYDRINI Administrative & Financial Director Imane MOUBACHIR Director of Strategy, Governance & Organisation Jamaleddine FOUHAM Head of IT & Information Systems Department Samir RACHIDI Acting Scientific Director"
       },
       "department-responsibilities": {
         "title": "Department responsibilities",
-        "description": "Development division Developing capabilities, cooperation and institutional steering. Platform Development and Structuring Projects Department Leading the creation and development of infrastructure and capabilities needed for research and experimentation. Partnerships and Innovation Marketing Department Managing communication, developing partnerships and cooperation, and supporting intellectual property, valorisation and innovation marketing. Strategy and Organisation Department Supporting the definition and implementation of strategy, structuring management tools and improving the Institute’s operations. Scientific division Structuring programmes and mobilising scientific expertise. R&D&I Programmes and Expert Network Department Organising programmes, scientific domains and the expert network’s contributions to delivery. Scientific Department Providing a cross-cutting view of the scientific direction, coherence and quality of activities. Support division Providing the resources and services teams need to act. Administrative and Financial Department Managing finance, administration and human resources, as well as training, social activities, procurement, general services and legal support. IT and Information Systems Department Supporting the operation and development of the Institute’s information systems and digital tools. Soukaina BOUDOUDOU DPRDIRE Director Ayoub HIRT DPPS Director Mouhcine BENMEZIANE DPARMI Director Laila TYDRINI DAF Director Imane MOUBACHIR Strategy & Organisation Jamaleddine FOUHAM IT & Information Systems Soukaina BOUDOUDOU is a doctor and engineer in electrical energy. Her work addresses energy management, hybrid electrical systems and microgrids, with a focus on storage, energy efficiency and renewable integration. She serves at IRESEN as DPRDIRE Director. Ayoub HIRT is DPPS Director at IRESEN. His work at the institute includes green chemistry, bioenergy and agritech. His professional contributions address green hydrogen, Power-to-X, and the role of research and skills in developing these sectors. Mouhcine BENMEZIANE is DPARMI Director at IRESEN. His professional work centres on cooperation, partnerships and innovation ecosystems for the energy transition. His contributions address international exchanges, green technologies, hydrogen and Power-to-X. Laila TYDRINI is DAF Director at IRESEN. Her role covers the institute’s administrative and financial activities. Imane MOUBACHIR works at IRESEN in Strat & Orga. Her work concerns the institute’s strategy and organisation. Jamaleddine FOUHAM works at IRESEN in IT and IS, covering information technology and information systems."
+        "description": "Development Division Platform Development and Structuring Projects Department Leading the creation and development of infrastructure and capabilities needed for research and experimentation. Partnerships and Innovation Marketing Department Managing communication, developing partnerships and cooperation, and supporting intellectual property, valorisation and innovation marketing. Strategy, Governance & Organisation Directorate Supporting the definition and implementation of strategy, structuring management tools and improving the Institute’s operations. Research Division R&D&I Programmes and Expert Network Department Organising programmes, scientific domains and the expert network’s contributions to delivery. Scientific Department Providing a cross-cutting view of the scientific direction, coherence and quality of activities. Enablement Division Administrative and Financial Department Managing finance, administration and human resources, as well as training, social activities, procurement, general services and legal support. IT & Information Systems Department Supporting the operation and development of the Institute’s information systems and digital tools."
       },
       "science-platforms": {
         "title": "An organisation mobilised around IRESEN’s contributions",
         "description": "An organisation mobilised around IRESEN’s contributions The three divisions work together on the Institute’s missions. Studies and expertise inform decisions; research and innovation advance solutions; skills and capabilities strengthen know-how. Programmes, platforms and the expert network mobilise complementary resources according to needs. Partnerships and cooperation connect this work with public, scientific and industrial stakeholders. Within Research & Innovation, this complementarity makes it possible to develop knowledge and solutions, test their performance and prepare the valorisation of results."
       },
-      "documents-contact": {
-        "title": "Explore further",
-        "description": "Explore further Programmes, platforms and the expert network mobilise complementary resources according to needs. Partnerships and cooperation connect this work with public, scientific and industrial stakeholders."
-      },
       "scientific-council": {
-        "title": "The scientific council",
+        "title": "The Scientific Council",
         "description": "Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Dr. Ahmed ENNAOUI Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin Dr. Abdelhakim ARTIBA President of Université Polytechnique Hauts-de-France M. Diego PAVIA President of InnoEnergy at the European Institute of Technology Dr. Florence LAMBERT CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission Dr. Ralf B. WEHRSPOHN Executive President of the Fraunhofer Institute / Professor at Martin Luther University Halle Dr. Robert PITZ-PAAL Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA) Dr. Tijani BOUNAHMIDI Director of the Technological Innovation Centre, Vice President of Mohammed V-Agdal University, Rabat Dr. Vlademiro MIRANDA Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil"
       },
       "governance-oversight": {
@@ -2645,11 +2641,11 @@
       "columns": ["Framework", "Decision", "Monitoring and oversight", "Execution"],
       "framework": [
         {
-          "title": "IRESEN statutes",
+          "title": "IRESEN Statutes",
           "description": "Establish the non-profit association and govern the Institute."
         },
         {
-          "title": "State–IRESEN agreement",
+          "title": "State–IRESEN Agreement",
           "description": "Frames the Institute’s commitments and the resources provided by the State."
         },
         {
@@ -2674,7 +2670,7 @@
           "description": "Advises on R&D priorities and evaluates projects before the Board decides."
         },
         {
-          "title": "Statutory auditor",
+          "title": "Statutory Auditor",
           "description": "Certifies accounts, reports to the General Assembly and exchanges with the Audit Committee."
         }
       ],
@@ -2695,38 +2691,38 @@
     },
     "councils": {
       "administration": {
-        "title": "The board of directors",
+        "title": "The Board of Directors",
         "tagline": "Setting direction and monitoring delivery.",
         "paragraphs": [
           "Chaired by right by the minister responsible for energy or their representative, the board of directors defines IRESEN’s policy and general direction. It monitors programmes and projects, adopts budgets and accounts, approves agreements and partnerships, and oversees the Institute’s management.",
           "It draws on scientific expertise and committee work to inform its decisions. It appoints the Director General and evaluates the performance of the executive management."
         ],
-        "membersTitle": "Members of the board of directors"
+        "membersTitle": "Members of the Board of Directors"
       },
       "science": {
-        "title": "The scientific council",
+        "title": "The Scientific Council",
         "tagline": "Informing research priorities and assessing project relevance.",
         "paragraphs": [
           "Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories.",
           "It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing.",
           "Its expertise supports the quality of the work and its relevance to the national energy transition."
         ],
-        "membersTitle": "Members of the scientific council"
+        "membersTitle": "Members of the Scientific Council"
       }
     },
     "oversight": {
       "title": "Monitoring commitments and overseeing management",
       "items": [
         {
-          "title": "The strategy and monitoring committee",
+          "title": "The Strategy and Monitoring Committee",
           "description": "It ensures that IRESEN’s activities remain consistent with the national energy strategy and commitments under the State–IRESEN agreement. It examines action plans, project progress and implementation reports, and proposes adjustments to the competent bodies."
         },
         {
-          "title": "The audit committee",
+          "title": "The Audit Committee",
           "description": "It assists the board of directors in reviewing financial information, internal controls and risk management. It analyses audit findings, makes recommendations and monitors corrective measures. Certification of the accounts is the statutory auditor’s responsibility."
         },
         {
-          "title": "The general assembly",
+          "title": "The General Assembly",
           "description": "It brings together the association’s members, approves annual accounts and activity and financial reports, and votes on the provisional budget. It exercises the powers reserved to it by the statutes."
         }
       ]
@@ -2734,10 +2730,12 @@
     "organisation": {
       "title": "Executive management and three complementary divisions",
       "description": "The executive management implements the decisions of the board of directors. It coordinates scientific, technical, administrative and financial activities, mobilises the necessary resources and reports on progress against programmes and commitments.",
-      "summary": "The functional organisation comprises three divisions and seven departments.",
+      "descriptionResearch": "The Research division connects R&D&I programmes, scientific leadership and the expert network with collaborative projects and platforms.",
+      "descriptionDivisions": "The Development division brings together infrastructure, partnerships and strategy. The Impulsion division provides the administrative, financial and digital resources needed for delivery.",
+      "summary": "Three divisions structure the scientific, development and support functions.",
       "poles": [
         {
-          "title": "Development division",
+          "title": "Development Division",
           "tagline": "Developing capabilities, cooperation and institutional steering.",
           "directions": [
             {
@@ -2749,13 +2747,13 @@
               "description": "Managing communication, developing partnerships and cooperation, and supporting intellectual property, valorisation and innovation marketing."
             },
             {
-              "title": "Strategy and Organisation Department",
+              "title": "Strategy, Governance & Organisation Directorate",
               "description": "Supporting the definition and implementation of strategy, structuring management tools and improving the Institute’s operations."
             }
           ]
         },
         {
-          "title": "Research division",
+          "title": "Research Division",
           "tagline": "Structuring programmes and mobilising scientific expertise.",
           "directions": [
             {
@@ -2769,7 +2767,7 @@
           ]
         },
         {
-          "title": "Enablement division",
+          "title": "Enablement Division",
           "tagline": "Providing the resources and services teams need to act.",
           "directions": [
             {
@@ -2777,7 +2775,7 @@
               "description": "Managing finance, administration and human resources, as well as training, social activities, procurement, general services and legal support."
             },
             {
-              "title": "IT and Information Systems Department",
+              "title": "IT & Information Systems Department",
               "description": "Supporting the operation and development of the Institute’s information systems and digital tools."
             }
           ]
@@ -2792,7 +2790,6 @@
         "Within Research & Innovation, this complementarity makes it possible to develop knowledge and solutions, test their performance and prepare the valorisation of results."
       ]
     },
-    "resourcesTitle": "Explore further",
     "navigation": "Explore governance",
     "tabs": {
       "councils": "The councils",
@@ -2817,7 +2814,7 @@
       "onhym": "National Office of Hydrocarbons and Mines — ONHYM",
       "federation-de-lener": "Energy Federation",
       "cnesten": "National Centre for Nuclear Energy, Sciences and Technology — CNESTEN",
-      "masen": "Masen",
+      "masen": "Moroccan Agency for Sustainable Energy - MASEN",
       "onee": "National Office of Electricity and Drinking Water — ONEE",
       "rd-maroc": "R&D Maroc",
       "managem": "Managem",
@@ -2826,42 +2823,50 @@
     "scientists": {
       "ennaoui": {
         "name": "Dr. Ahmed ENNAOUI",
-        "role": "Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin"
+        "role": "Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin",
+        "country": "Germany"
       },
       "artiba": {
         "name": "Dr. Abdelhakim ARTIBA",
-        "role": "President of Université Polytechnique Hauts-de-France"
+        "role": "President of Université Polytechnique Hauts-de-France",
+        "country": "France"
       },
       "pavia": {
         "name": "M. Diego PAVIA",
-        "role": "President of InnoEnergy at the European Institute of Technology"
+        "role": "President of InnoEnergy at the European Institute of Technology",
+        "country": "Europe"
       },
       "lambert": {
         "name": "Dr. Florence LAMBERT",
-        "role": "CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission"
+        "role": "CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission",
+        "country": "France"
       },
       "wehrspohn": {
         "name": "Dr. Ralf B. WEHRSPOHN",
-        "role": "Executive President of the Fraunhofer Institute / Professor at Martin Luther University Halle"
+        "role": "Executive President of the Fraunhofer Institute / Professor at Martin Luther University Halle",
+        "country": "Germany"
       },
       "pitz-paal": {
         "name": "Dr. Robert PITZ-PAAL",
-        "role": "Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA)"
+        "role": "Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA)",
+        "country": "Germany"
       },
       "bounahmidi": {
         "name": "Dr. Tijani BOUNAHMIDI",
-        "role": "Director of the Technological Innovation Centre, Vice President of Mohammed V-Agdal University, Rabat"
+        "role": "Director of the Technological Innovation Centre, Vice President of Mohammed V-Agdal University, Rabat",
+        "country": "Morocco"
       },
       "miranda": {
         "name": "Dr. Vlademiro MIRANDA",
-        "role": "Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil"
+        "role": "Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil",
+        "country": "Brazil"
       }
     },
     "team": {
       "soukaina": {
-        "name": "Soukaina BOUDOUDOU",
+        "name": "Soukaina BOUDOUDOUH",
         "role": "Director of R&D&I Programmes and the Expert Network",
-        "biography": "An electrical engineer with a PhD in electrical engineering, Soukaina BOUDOUDOU is a graduate of the University of Technology of Belfort-Montbéliard and the Mohammadia School of Engineers. Her research focuses on energy management, hybrid electrical systems and microgrids.\n\nHer career includes postdoctoral research on storage combining batteries and supercapacitors. At IRESEN, she evaluated and monitored research projects before taking responsibility for R&D&I programmes and the expert network, connecting scientific expertise, project support and energy-transition challenges."
+        "biography": "An electrical engineer with a PhD in electrical engineering, Soukaina BOUDOUDOUH is a graduate of the University of Technology of Belfort-Montbéliard and the Mohammadia School of Engineers. Her research focuses on energy management, hybrid electrical systems and microgrids.\n\nHer career includes postdoctoral research on storage combining batteries and supercapacitors. At IRESEN, she evaluated and monitored research projects before taking responsibility for R&D&I programmes and the expert network, connecting scientific expertise, project support and energy-transition challenges."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
@@ -2875,17 +2880,17 @@
       },
       "laila": {
         "name": "Laila TYDRINI",
-        "role": "Administrative Manager",
-        "biography": "Laila TYDRINI joined IRESEN in 2012 as an accounting officer. Over the years, her responsibilities expanded to financial management, human resources and the Institute’s administration.\n\nAs Administrative Manager, she now oversees a substantial share of support activities: quality, human resources, finance, accounting, preparation of financial statements, administration and legal affairs follow-up. Her career has accompanied the Institute’s organisational development and the changing resources needed by its teams."
+        "role": "Administrative & Financial Director",
+        "biography": "Laila TYDRINI joined IRESEN in 2012 as an accounting officer. Over the years, her responsibilities expanded to financial management, human resources and the Institute’s administration.\n\nAs Administrative and Financial Director, she now oversees a substantial share of support activities: quality, human resources, finance, accounting, preparation of financial statements, administration and legal affairs follow-up. Her career has accompanied the Institute’s organisational development and the changing resources needed by its teams."
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Strategy and Organisation",
+        "role": "Director of Strategy, Governance & Organisation",
         "biography": "Imane MOUBACHIR works in strategy and organisation at IRESEN. Her activities concern translating the Institute’s priorities into action, management tools and improvements to internal operations.\n\nHer work connects institutional priorities, the coordination of activities and the organisation of resources used by the teams."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "Information Technology and Information Systems",
+        "role": "Head of IT & Information Systems Department",
         "biography": "Jamaleddine FOUHAM works in information technology and information systems at IRESEN. His remit concerns the operation and development of the Institute’s IT and digital tools.\n\nHe supports teams’ uses and the needs of scientific and administrative activities, contributing to the organisation’s daily operations."
       },
       "samir": {
