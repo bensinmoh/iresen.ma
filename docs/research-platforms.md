@@ -142,3 +142,32 @@ production browser journeys pass, including FR/EN/AR at 320/390/768/1024/1440px,
 200% text, keyboard, axe and no-JavaScript reading. Desktop GreenH2A and mobile
 Arabic logo captures inspected. Local search rebuilt (eight CMS records and
 synchronized static catalogue). No deployment or institutional copy change.
+
+## Supplied infrastructure photography and tones — 2026-10-15
+
+All thirteen supplied visuals are used: the original GEP and GreenH2A files match
+existing registered sources and reuse their existing derivatives; the supplied
+GSBP aerial replaces that chapter’s image; ten named equipment photographs replace
+the corresponding pending-image blocks across GEP, GSBP and GEP Maroc–Côte d’Ivoire.
+The three GreenH2A equipment slots retain their pending state because no distinct
+matching photographs were supplied. Its main image remains labelled 3D and the
+platform remains in development. No capability or readiness claim changes.
+
+Native SVG color matrices provide reversible per-source-group tone correction:
+neutral whites, controlled saturation, gentle shadow lift, less blue in the
+thin-film laboratory and more restrained aerial views. There is no generative
+photograph used and no scene content/identity/equipment change. Sources remain
+untouched; EXIF-aware proportional WebP derivatives strip metadata and retain
+reserved dimensions, responsive delivery and lazy loading. See
+`infrastructure-photo-assets.json` for source/output fingerprints, and the complete
+`src/data/image-provenance.json` registry. Eleven new media references have explicit
+FR/EN/AR titles/descriptions drawn from existing localized interface copy. GEP and
+GreenH2A retain their existing media results.
+
+Verification: final production build/TypeScript, lint and 170 unit tests pass.
+Four final browser journeys pass: FR/EN/AR at 320/390/768/1024/1440px, 200% text,
+keyboard focus, axe and no-JavaScript reading. Ten equipment images are asserted;
+checks explicitly scroll lazy images into view before decoding. Full chapter
+captures were inspected at 390/1440px. The new image directory has a scoped Next
+optimizer allowlist entry with query strings disallowed. The outdoor-PV crop aligns
+right to exclude its source white margin. Local search was rebuilt. No deployment.

@@ -562,3 +562,24 @@
     display: block;
   }
 }
+
+.infrastructureImage {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-signature);
+  background: var(--color-surface);
+}
+.infrastructureImage img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.page :global(.hero-media img) {
+  filter: url(#platform-tone-aerial);
+}
+
+.page :global(#infrastructure-outdoor-pv) img {
+  object-position: right center;
+}

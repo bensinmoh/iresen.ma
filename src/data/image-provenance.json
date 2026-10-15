@@ -540,6 +540,72 @@
     "references": ["docs/hero-assets-generated-2026-10-09.json", "docs/hero-assets.json"]
   },
   {
+    "path": "/images/infrastructure/agrivoltaic-greenhouse.webp",
+    "sha256": "4b9956ede1b77812c3521a5117888d3eed7f14c6023f4dd40d8ca58173902baf",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/building-park.webp",
+    "sha256": "e8395b921fcaf829869c77c5515dd1bd59374abd79fd3e27a2741ebcba88da0f",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/ismart.webp",
+    "sha256": "524c42b996bfc0d4658c953033160dfbe588473364751d0b66e54f5be2a5a392",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/laboratory-tests.webp",
+    "sha256": "22f436742fd40c3273453e519b0eb2a9a551d9375407fc6ec5503fb5e38886f9",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/outdoor-pv.webp",
+    "sha256": "4a533e5af4865adef13d85c688280e72540fee86fe85b0530a8b44cd43c07971",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/outdoor-tests.webp",
+    "sha256": "229879c021ca776b07156fec890ec9b882e2e5185582312bea45f236ade0115e",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/smart-grid.webp",
+    "sha256": "2c043fd19aeea09b57e6ef731014701298a6c8c26627a6b2c96f3b28dfdb06a7",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/solar-village.webp",
+    "sha256": "19f6589500eee7891ef30c293f949f0077e0552a19a9f11d560abce755f8a2d7",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/supervision.webp",
+    "sha256": "c969299164aa86655ab3d34399ebfaa144e72a52fa6135682d486a54946067c8",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/thin-film.webp",
+    "sha256": "a80dddc15ac7fa6588bb852009e538affa2ef22d230965d936c48d3f6d0b0c8c",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/infrastructure/weather-station.webp",
+    "sha256": "afaecc82413bbf659b1a0d01524d2c192395a7def45d042f35bba685f572cdd7",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
     "path": "/images/institute/fifteen-year-report-cover-cutout.webp",
     "sha256": "e7052abced91f2f73fb6709dc852712bce652646bdcfbc1311f86765f1c56107",
     "category": "ai-assisted",

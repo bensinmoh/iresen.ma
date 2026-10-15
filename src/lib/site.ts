@@ -1,3 +1,4 @@
+import infrastructurePhotos from '@/data/infrastructure-photos.json' with { type: 'json' }
 import { usefulLinks } from '@/lib/useful-links'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import patentRecords from '@/data/patents.json' with { type: 'json' }
@@ -208,6 +209,10 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   return (
     normalized === 'main-content' ||
     normalized === 'page-sections' ||
+    (pageId === 'platforms' &&
+      infrastructurePhotos.some(
+        ({ id, index }) => index !== null && normalized === `infrastructure-${id}`,
+      )) ||
     (pageId === 'network' &&
       networkLaboratories.some(({ id }) => normalized === laboratoryAnchor(id))) ||
     (pageId === 'media' && usefulLinks.some(({ id }) => normalized === `link-${id}`)) ||

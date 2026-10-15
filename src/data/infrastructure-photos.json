@@ -1,0 +1,101 @@
+[
+  {
+    "id": "thin-film",
+    "platform": "gep",
+    "index": 0,
+    "grade": "blue",
+    "src": "/images/infrastructure/thin-film.webp",
+    "width": 1400,
+    "height": 933
+  },
+  {
+    "id": "laboratory-tests",
+    "platform": "gep",
+    "index": 1,
+    "grade": "warm",
+    "src": "/images/infrastructure/laboratory-tests.webp",
+    "width": 1400,
+    "height": 933
+  },
+  {
+    "id": "outdoor-tests",
+    "platform": "gep",
+    "index": 2,
+    "grade": "neutral",
+    "src": "/images/infrastructure/outdoor-tests.webp",
+    "width": 1400,
+    "height": 795
+  },
+  {
+    "id": "solar-village",
+    "platform": "gsbp",
+    "index": 0,
+    "grade": "aerial",
+    "src": "/images/infrastructure/solar-village.webp",
+    "width": 1400,
+    "height": 1050
+  },
+  {
+    "id": "smart-grid",
+    "platform": "gsbp",
+    "index": 1,
+    "grade": "warm",
+    "src": "/images/infrastructure/smart-grid.webp",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "ismart",
+    "platform": "gsbp",
+    "index": 2,
+    "grade": "warm",
+    "src": "/images/infrastructure/ismart.webp",
+    "width": 1258,
+    "height": 1080
+  },
+  {
+    "id": "outdoor-pv",
+    "platform": "gep-mci",
+    "index": 0,
+    "grade": "neutral",
+    "src": "/images/infrastructure/outdoor-pv.webp",
+    "width": 1400,
+    "height": 788
+  },
+  {
+    "id": "agrivoltaic-greenhouse",
+    "platform": "gep-mci",
+    "index": 1,
+    "grade": "neutral",
+    "src": "/images/infrastructure/agrivoltaic-greenhouse.webp",
+    "width": 1400,
+    "height": 884
+  },
+  {
+    "id": "weather-station",
+    "platform": "gep-mci",
+    "index": 2,
+    "grade": "neutral",
+    "src": "/images/infrastructure/weather-station.webp",
+    "width": 776,
+    "height": 515
+  },
+  {
+    "id": "supervision",
+    "platform": "gep-mci",
+    "index": 3,
+    "grade": "warm",
+    "src": "/images/infrastructure/supervision.webp",
+    "width": 1400,
+    "height": 860
+  },
+  {
+    "id": "building-park",
+    "platform": "gsbp",
+    "index": null,
+    "grade": "aerial",
+    "src": "/images/infrastructure/building-park.webp",
+    "width": 1400,
+    "height": 1050
+  }
+]

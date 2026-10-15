@@ -1,3 +1,4 @@
+import infrastructurePhotos from '@/data/infrastructure-photos.json' with { type: 'json' }
 import { usefulLinks } from '@/lib/useful-links'
 import { isAiGeneratedImage } from '@/lib/image-provenance'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
@@ -561,6 +562,26 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   },
+  ...infrastructurePhotos.map((photo) => ({
+    id: `infrastructure-photo-${photo.id}`,
+    url: photo.src,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const platformId = photo.platform as keyof typeof messages.fr.Platforms.platforms
+        const copy = messages[locale].Platforms.platforms[platformId]
+        const item =
+          photo.index === null ? undefined : Object.values(copy.infrastructure)[photo.index]
+        return [
+          locale,
+          {
+            title: item?.title ?? copy.name,
+            description: item?.description ?? messages[locale].Platforms.imageAlt[platformId],
+          },
+        ]
+      }),
+    ) as PublicAssetReference['text'],
+  })),
   ...homePlatforms.flatMap(({ id }) =>
     [false, true].map((logo) => ({
       id: `platform-${logo ? 'logo-' : 'photo-'}${id}`,

@@ -3,7 +3,12 @@ import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
 import { RoadmapAxisIcon } from '@/components/roadmap/RoadmapAxisIcon'
-import { researchPlatforms } from '@/lib/platforms'
+import { PhotoToneDefinitions } from './PhotoToneDefinitions'
+import {
+  researchPlatforms,
+  platformInfrastructurePhotos,
+  platformChapterPhoto,
+} from '@/lib/platforms'
 import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
@@ -43,6 +48,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
   const intro = t.raw('intro.paragraphs') as string[]
   return (
     <div className={styles.page} data-platforms-page>
+      <PhotoToneDefinitions />
       <PageHero
         pageId="platforms"
         locale={locale}
@@ -88,6 +94,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
             const paragraphs = t.raw(`platforms.${id}.paragraphs`) as string[]
             const themes = t.raw(`platforms.${id}.themes`) as string[]
             const development = id === 'greenh2a'
+            const chapterPhoto = platformChapterPhoto(id)
             return (
               <section
                 key={id}
@@ -101,10 +108,13 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                   <div className={`${styles.feature} ${index % 2 ? styles.reverse : ''}`}>
                     <figure className={styles.photograph}>
                       <Image
-                        src={`/images/platforms/${id}.webp`}
+                        src={chapterPhoto?.src ?? `/images/platforms/${id}.webp`}
+                        style={{
+                          filter: `url(#platform-tone-${chapterPhoto?.grade ?? (development ? 'visualization' : 'aerial')})`,
+                        }}
                         alt={t(`imageAlt.${id}`)}
-                        width={platform.width}
-                        height={platform.height}
+                        width={chapterPhoto?.width ?? platform.width}
+                        height={chapterPhoto?.height ?? platform.height}
                         sizes="(max-width: 63.999rem) 94vw, (min-width: 128rem) 60rem, 49vw"
                       />
                       <figcaption>
@@ -175,24 +185,42 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                     <div
                       className={`${styles.infrastructureGrid} ${infrastructureCount === 4 ? styles.four : ''}`}
                     >
-                      {Array.from({ length: infrastructureCount }, (_, i) => (
-                        <article key={i}>
-                          <div
-                            className={styles.infrastructurePhoto}
-                            aria-label={t('photoPending', {
-                              title: t(`platforms.${id}.infrastructure.${i}.title`),
-                            })}
-                            role="img"
-                          >
-                            <ValorisationIcon
-                              name={(['flask', 'bulb', 'chart-line', 'search'] as const)[i]!}
-                            />
-                            <span>{t('photoPendingLabel')}</span>
-                          </div>
-                          <h3>{t(`platforms.${id}.infrastructure.${i}.title`)}</h3>
-                          <p>{t(`platforms.${id}.infrastructure.${i}.description`)}</p>
-                        </article>
-                      ))}
+                      {Array.from({ length: infrastructureCount }, (_, i) => {
+                        const photo = platformInfrastructurePhotos.find(
+                          (image) => image.platform === id && image.index === i,
+                        )
+                        return (
+                          <article key={i} id={photo ? `infrastructure-${photo.id}` : undefined}>
+                            {photo ? (
+                              <div className={styles.infrastructureImage}>
+                                <Image
+                                  src={photo.src}
+                                  alt={t(`platforms.${id}.infrastructure.${i}.title`)}
+                                  width={photo.width}
+                                  height={photo.height}
+                                  sizes="(max-width: 39.999rem) 94vw, (max-width: 63.999rem) 46vw, 31vw"
+                                  style={{ filter: `url(#platform-tone-${photo.grade})` }}
+                                />
+                              </div>
+                            ) : (
+                              <div
+                                className={styles.infrastructurePhoto}
+                                aria-label={t('photoPending', {
+                                  title: t(`platforms.${id}.infrastructure.${i}.title`),
+                                })}
+                                role="img"
+                              >
+                                <ValorisationIcon
+                                  name={(['flask', 'bulb', 'chart-line', 'search'] as const)[i]!}
+                                />
+                                <span>{t('photoPendingLabel')}</span>
+                              </div>
+                            )}
+                            <h3>{t(`platforms.${id}.infrastructure.${i}.title`)}</h3>
+                            <p>{t(`platforms.${id}.infrastructure.${i}.description`)}</p>
+                          </article>
+                        )
+                      })}
                     </div>
                   </div>
                 </div>
