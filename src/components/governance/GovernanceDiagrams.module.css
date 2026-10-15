@@ -278,11 +278,11 @@
   background: var(--color-blue);
 }
 .branch[data-pole='0'] > h4 {
-  background: var(--color-transition-green);
+  background: color-mix(in srgb, var(--color-transition-green) 65%, var(--color-navy));
   color: var(--color-white);
 }
 .branch[data-pole='2'] > h4 {
-  background: var(--color-innovation-lime);
+  background: color-mix(in srgb, var(--color-innovation-lime) 45%, var(--color-navy));
   color: var(--color-white);
 }
 .branch > h4 svg {
