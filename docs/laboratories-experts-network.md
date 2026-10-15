@@ -135,3 +135,18 @@ no-JavaScript reading. Geometry confirms the enlarged canvas exceeds the fixed
 map/list row height without horizontal overflow. The decorative canvas ignores
 pointer events, while points remain interactive; search/filter/reset controls sit
 above decoration. Desktop and mobile RTL captures inspected. Search is synchronized.
+
+## Directory introduction and filter row — 2026-10-15
+
+The owner’s final ordering places the existing introduction/title on the left and
+search/topic controls on the right, in one desktop row. Arabic follows natural RTL
+column order; mobile/tablet stacks introduction before controls. The introduction
+remains a server-rendered slot, avoiding duplicate copy. Topic filters use a pale
+blue surface distinct from the white input and a compact 2rem minimum height;
+selected filters retain primary blue and white text. Existing filtering/search
+behavior, accessible labels, content and search references are unchanged.
+
+Validation: final production build/TypeScript, lint and formatting pass. Four
+network browser journeys pass in FR/EN/AR at 320–1440px, including 200% text,
+filter/search/reset, map/list geometry, contacts, keyboard/Escape, axe and no-JS.
+Desktop French and mobile RTL captures inspected. No content/search change or deployment.

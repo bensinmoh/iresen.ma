@@ -100,14 +100,16 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
           className={`container ${styles.section} ${styles.directorySection}`}
           aria-labelledby="network-directory-title"
         >
-          <header className={`${styles.heading} ${styles.directoryHeading}`}>
-            <div>
-              <p className={styles.eyebrow}>{t('directory.eyebrow')}</p>
-              <h2 id="network-directory-title">{t('directory.title')}</h2>
-              <p>{t('directory.description')}</p>
-            </div>
-          </header>
           <LaboratoryDirectory
+            introduction={
+              <header className={styles.directoryHeading}>
+                <div>
+                  <p className={styles.eyebrow}>{t('directory.eyebrow')}</p>
+                  <h2 id="network-directory-title">{t('directory.title')}</h2>
+                  <p>{t('directory.description')}</p>
+                </div>
+              </header>
+            }
             records={records}
             labels={{
               map: t('directory.map'),

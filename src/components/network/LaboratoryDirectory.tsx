@@ -9,7 +9,7 @@ import { Leaf } from '@phosphor-icons/react/dist/ssr/Leaf'
 import { X } from '@phosphor-icons/react/dist/ssr/X'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 
-import { useState, useRef, useEffect, type FormEvent } from 'react'
+import { useState, useRef, useEffect, type FormEvent, type ReactNode } from 'react'
 import {
   laboratoryTopics,
   normalizeLaboratoryQuery,
@@ -61,8 +61,10 @@ const topicIcons = {
 export function LaboratoryDirectory({
   records,
   labels,
+  introduction,
 }: {
   records: LaboratoryCard[]
+  introduction: ReactNode
   labels: DirectoryLabels
 }) {
   const [selected, setSelected] = useState<string | null>(null)
@@ -131,49 +133,54 @@ export function LaboratoryDirectory({
   }
   return (
     <div className={styles.directory}>
-      <form className={styles.search} role="search" onSubmit={submit}>
-        <label htmlFor="laboratory-query">{labels.label}</label>
-        <div>
-          <input
-            id="laboratory-query"
-            type="search"
-            value={draft}
-            onChange={(event) => {
-              setDraft(event.target.value)
-              if (!event.target.value) setQuery('')
-            }}
-            placeholder={labels.placeholder}
-          />
-          <button type="submit" className="button button-primary">
-            <NavigationIcon name="search" />
-            {labels.search}
-          </button>
+      <div className={styles.directoryTop}>
+        {introduction}
+        <div className={styles.directoryControls}>
+          <form className={styles.search} role="search" onSubmit={submit}>
+            <label htmlFor="laboratory-query">{labels.label}</label>
+            <div>
+              <input
+                id="laboratory-query"
+                type="search"
+                value={draft}
+                onChange={(event) => {
+                  setDraft(event.target.value)
+                  if (!event.target.value) setQuery('')
+                }}
+                placeholder={labels.placeholder}
+              />
+              <button type="submit" className="button button-primary">
+                <NavigationIcon name="search" />
+                {labels.search}
+              </button>
+            </div>
+          </form>
+          <div className={styles.filters} role="group" aria-label={labels.theme}>
+            <button
+              type="button"
+              aria-pressed={!topic}
+              onClick={() => {
+                setSelected(null)
+                setTopic('')
+              }}
+            >
+              {labels.all}
+            </button>
+            {laboratoryTopics.map((id) => (
+              <button
+                key={id}
+                type="button"
+                aria-pressed={topic === id}
+                onClick={() => {
+                  setSelected(null)
+                  setTopic(id)
+                }}
+              >
+                {labels.topics[id]}
+              </button>
+            ))}
+          </div>
         </div>
-      </form>
-      <div className={styles.filters} role="group" aria-label={labels.theme}>
-        <button
-          type="button"
-          aria-pressed={!topic}
-          onClick={() => {
-            setSelected(null)
-            setTopic('')
-          }}
-        >
-          {labels.all}
-        </button>
-        {laboratoryTopics.map((id) => (
-          <button
-            key={id}
-            type="button"
-            aria-pressed={topic === id}
-            onClick={() => {
-              setSelected(null)
-              setTopic(id)
-            }}
-          >
-            {labels.topics[id]}
-          </button>
-        ))}
       </div>
       <div className={styles.resultBar}>
         <p role="status" aria-live="polite" aria-atomic="true">
