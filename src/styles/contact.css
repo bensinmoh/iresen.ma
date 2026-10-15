@@ -173,7 +173,7 @@
 
 .contact-platforms,
 .contact-faq {
-  padding-block: clamp(3rem, 4.167vw, 5rem);
+  padding-block: var(--section-space);
 }
 
 .contact-platforms > p {
@@ -209,7 +209,7 @@
 }
 
 .contact-form-section {
-  padding-block: clamp(3rem, 4.167vw, 5rem);
+  padding-block: var(--section-space);
   background: var(--color-action-surface);
 }
 

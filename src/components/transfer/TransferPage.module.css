@@ -9,11 +9,11 @@
   border-block-start: 0;
 }
 .intro {
-  padding-block: var(--space-12) var(--space-16);
+  padding-block: var(--section-space);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: var(--layout-gap);
 }
 .intro h2,
 .header h2 {
@@ -31,7 +31,7 @@
   color: var(--color-text-muted);
 }
 .section {
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
   border-block-start: 1px solid var(--color-border);
   scroll-margin-block-start: var(--space-8);
 }

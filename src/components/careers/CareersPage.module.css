@@ -1,6 +1,6 @@
 .page {
   --careers-section-surface: var(--color-surface);
-  --careers-section-space: clamp(2.5rem, 3.333vw, 4rem);
+  --careers-section-space: var(--section-space);
   color: var(--color-text);
 }
 .page h2 {

@@ -20,7 +20,7 @@
   margin-block: 0 1rem;
 }
 .section {
-  padding-block: clamp(3rem, 5vw, 6rem);
+  padding-block: var(--section-space);
 }
 .navigation {
   display: flex;
@@ -37,9 +37,9 @@
 .heading {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 2rem 4rem;
+  gap: var(--layout-gap);
   align-items: end;
-  margin-block-end: 2.5rem;
+  margin-block-end: var(--space-6);
 }
 .heading > p {
   max-inline-size: 65ch;
@@ -81,7 +81,7 @@
   margin-block-end: 1.5rem;
 }
 .directorySection {
-  padding-block: clamp(2rem, 3.5vw, 4rem);
+  padding-block: var(--section-space);
 }
 .directoryTop {
   display: grid;
@@ -517,13 +517,13 @@
 .skills {
   background: var(--color-navy);
   color: white;
-  padding-block: clamp(3rem, 5vw, 6rem);
+  padding-block: var(--section-space);
 }
 .skillsInner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: var(--layout-gap);
 }
 .practicePhoto {
   border-radius: var(--radius-signature);

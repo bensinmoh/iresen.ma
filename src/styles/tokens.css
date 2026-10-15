@@ -35,6 +35,8 @@
   --font-size-figure-label: 1.125rem;
   --color-figure-label: rgb(255 255 255 / 70%);
   --container-width: 120rem;
+  --section-space: clamp(2rem, 3vw, 3rem);
+  --layout-gap: clamp(1.5rem, 3vw, 3rem);
   --gutter: clamp(1.25rem, 3.125vw, 4rem);
   /* Distance from the capped content grid to the viewport edge. */
   --page-bleed: max(var(--gutter), calc((100vw - var(--container-width)) / 2));

@@ -8,7 +8,7 @@
   scroll-margin-block-start: var(--home-section-scroll-margin, 6rem);
 }
 .core {
-  padding: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 2vw, 2rem);
   background: var(--color-navy);
   color: var(--color-white);
   border-radius: var(--radius-signature);
@@ -149,7 +149,7 @@
 .ecosystem {
   grid-column: 1 / -1;
   margin: var(--space-8) 0 0;
-  padding: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 2vw, 2rem);
   background: var(--color-action-surface);
   border-radius: var(--radius-signature);
 }

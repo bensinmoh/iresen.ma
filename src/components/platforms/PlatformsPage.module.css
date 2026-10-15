@@ -16,15 +16,15 @@
   line-height: 1.8;
 }
 .intro {
-  padding-block: clamp(3rem, 6vw, 6rem) 1.5rem;
+  padding-block: var(--section-space) 1.5rem;
 }
 .chapter {
-  padding-block: clamp(2rem, 3vw, 3rem);
+  padding-block: var(--section-space);
 }
 .introHeading {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  gap: var(--layout-gap);
 }
 .introHeading p {
   margin-block: 0 1rem;
@@ -86,7 +86,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(2rem, 4vw, 5rem);
+  gap: var(--layout-gap);
 }
 .reverse {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -196,13 +196,13 @@
   font-size: var(--font-size-label);
 }
 .network {
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
   background: var(--color-action-surface);
 }
 .networkInner {
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: var(--layout-gap);
 }
 .networkInner > div {
   flex: 1;

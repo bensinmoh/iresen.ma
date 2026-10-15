@@ -263,3 +263,19 @@ Text, original logos, canonical anchors, destinations and search metadata remain
 The shared selector protects these metrics from generic page-paragraph styles.
 
 Verification is recorded in `docs/shared-surtitles.md`.
+
+## Public-page spacing rhythm — 2026-10-15
+
+The owner commissions a whole-site spacing review before merge. Ordinary editorial
+sections use the shared `--section-space` (32–48px), and paired content columns
+use `--layout-gap` (24–48px). This replaces independently oversized 72–104px
+section insets and 80–112px column gaps where found. Homepage section spacing uses
+the same role; its research chapter loses the extra 8–12rem bottom reservation.
+Roadmap body chapters grow with content rather than reserving an entire viewport.
+Platform photographs, typography and natural chapter heights retain their previous
+configuration: the withdrawn viewport-fit experiment is not restored.
+
+Keep deliberate hero geometry, reading measures, brand clear space, map/list
+alignment, timeline/report overlap and functional form/map areas. Utility pages
+already have a compact reading rhythm and need no density change. See
+[the reviewed scope and verification](docs/site-spacing-review.md).

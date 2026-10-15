@@ -1920,3 +1920,19 @@ Text, original logos, canonical anchors, destinations and search metadata remain
 The shared selector protects these metrics from generic page-paragraph styles.
 
 Verification is recorded in `docs/shared-surtitles.md`.
+
+## Shared editorial spacing — 2026-10-15
+
+Use `--section-space: clamp(2rem, 3vw, 3rem)` for ordinary public editorial section
+insets and `--layout-gap: clamp(1.5rem, 3vw, 3rem)` for paired content columns.
+These roles reuse the existing spacing scale. They replace oversized page-local
+section/column rules in the audited consumers; they are not a universal override
+on every section, card or control. Adjacent sections therefore reserve at most
+6rem total at their boundary, instead of frequently accumulating 9–12rem.
+
+The main 120rem content cap, viewport-wide surface breakout, gutters, body reading
+measures, typography and assets remain. Preserve hero viewport behavior and
+functional empty space (form controls, map frame, image slots and overlays).
+Roadmap body panels use natural content height; platform viewport-fit behavior
+was withdrawn. See [the complete scope](site-spacing-review.md) for exclusions,
+all-page coverage and actual validation.

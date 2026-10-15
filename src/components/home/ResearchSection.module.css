@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
   margin-inline: calc(-1 * var(--page-bleed));
-  padding: var(--home-section-padding) var(--page-bleed) clamp(8rem, 10vw, 12rem);
+  padding: var(--home-section-padding) var(--page-bleed);
   color: var(--color-white);
   background: var(--color-navy);
   box-shadow: 0 0 0 100vmax var(--color-navy);
@@ -31,7 +31,7 @@
 .chooser {
   display: grid;
   grid-template-columns: minmax(18rem, 1fr) minmax(0, 1.6fr);
-  column-gap: clamp(3rem, 5vw, 6rem);
+  column-gap: var(--layout-gap);
   margin-inline-start: calc((100% - var(--space-8)) / 5 + var(--space-8));
 }
 

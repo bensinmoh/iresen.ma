@@ -46,7 +46,7 @@
   background: var(--color-action-surface);
 }
 .section {
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
   scroll-margin-block-start: 7rem;
 }
 .heading {
@@ -675,7 +675,7 @@
   min-block-size: 76dvh;
 }
 :global(body):has(.page) :global(.page-hero--media) :global(.hero-body) {
-  padding-block-end: 5rem;
+  padding-block-end: var(--section-space);
 }
 @media (prefers-reduced-motion: reduce) {
   :global(html):has(.page) {

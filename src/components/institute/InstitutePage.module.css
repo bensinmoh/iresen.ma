@@ -10,7 +10,7 @@
 .position,
 .missions,
 .values {
-  padding-block: clamp(3rem, 5vw, 6rem);
+  padding-block: var(--section-space);
 }
 .page h2 {
   font-size: clamp(1.75rem, 3.1vw, 3.5rem);
@@ -32,7 +32,7 @@
   overflow: hidden;
   background: var(--color-navy);
   color: var(--color-white);
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
   padding-block-start: clamp(2rem, 3vw, 3rem);
 }
 .statementImage {
@@ -76,10 +76,10 @@
 .values {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  gap: var(--layout-gap);
 }
 .position {
-  padding-block: clamp(2.5rem, 4vw, 4rem);
+  padding-block: var(--section-space);
 }
 .position h2 {
   max-inline-size: 24ch;
@@ -101,13 +101,13 @@
 .missionsHeading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  gap: var(--layout-gap);
   margin-block-end: var(--space-12);
 }
 .mission {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  gap: var(--layout-gap);
   padding-block: var(--space-12);
   border-block-start: 1px solid var(--color-border);
 }
@@ -170,7 +170,7 @@
 .cooperation {
   background: var(--color-navy);
   color: var(--color-white);
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
 }
 .cooperation .purpose {
   color: var(--color-white);
@@ -216,7 +216,7 @@
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
 }
 .ambitionCopy {
-  padding: clamp(3rem, 5vw, 5rem) var(--gutter);
+  padding: var(--section-space) var(--gutter);
 }
 .ambitionCopy h2 {
   font-size: clamp(1.6rem, 2.5vw, 2.8rem);
@@ -234,7 +234,7 @@
 .history {
   background: var(--color-navy);
   color: var(--color-white);
-  padding-block: clamp(3rem, 5vw, 6rem);
+  padding-block: var(--section-space);
   border-block-start: 1px solid var(--color-footer-divider);
 }
 .historyHeading {
@@ -310,7 +310,7 @@
 .report {
   position: relative;
   background: var(--color-white);
-  padding-block: clamp(3rem, 5vw, 6rem);
+  padding-block: var(--section-space);
 }
 .reportCover {
   position: absolute;
@@ -342,7 +342,7 @@
   display: flex;
   gap: var(--space-8);
   flex-wrap: wrap;
-  margin-block-start: var(--space-12);
+  margin-block-start: var(--space-8);
   padding-block-start: var(--space-8);
   border-block-start: 1px solid var(--color-border);
 }
@@ -423,7 +423,7 @@
   flex-wrap: wrap;
   gap: var(--space-4);
   justify-content: center;
-  margin-block-start: var(--space-12);
+  margin-block-start: var(--space-8);
 }
 .timelineControls[hidden] {
   display: none;
@@ -627,7 +627,7 @@
 
 /* Institute editorial composition, inspired by the owner's October narrative reference. */
 .position {
-  padding-block: clamp(3.5rem, 6vw, 6.5rem);
+  padding-block: var(--section-space);
   row-gap: var(--space-12);
   align-items: start;
 }
@@ -635,7 +635,7 @@
   background: var(--color-surface);
   box-shadow: 0 0 0 100vmax var(--color-surface);
   clip-path: inset(0 -100vmax);
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
 }
 .missionsHeading {
   display: block;
@@ -647,7 +647,7 @@
   margin-block-end: var(--space-6);
 }
 .mission {
-  padding-block: clamp(2rem, 4vw, 4rem);
+  padding-block: clamp(1.5rem, 2vw, 2rem);
 }
 .mission header {
   max-inline-size: 32rem;
@@ -698,7 +698,7 @@
   color: var(--color-navy);
 }
 .ambitionCopy {
-  padding-block: clamp(3rem, 6vw, 6rem);
+  padding-block: var(--section-space);
 }
 .orientations {
   gap: 0;

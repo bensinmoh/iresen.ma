@@ -76,12 +76,12 @@
   scroll-margin-block-start: 2rem;
 }
 .strategy {
-  padding-block: 4rem 2rem;
+  padding-block: var(--section-space) var(--space-6);
 }
 .strategyIntro {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 5vw;
+  gap: var(--layout-gap);
 }
 .strategy h2 {
   max-inline-size: 18ch;
@@ -124,8 +124,8 @@
 }
 .stage {
   position: relative;
-  min-block-size: 100svh;
-  padding-block: 4.5rem 3rem;
+  min-block-size: 0;
+  padding-block: var(--section-space);
   display: flex;
   align-items: center;
   overflow: clip;
@@ -138,7 +138,7 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 2rem 5vw;
+  gap: var(--layout-gap);
 }
 .copy {
   grid-column: 1 / -1;
@@ -360,7 +360,7 @@
 }
 .collaboration {
   position: relative;
-  padding-block: 5rem;
+  padding-block: var(--section-space);
   text-align: center;
 }
 .collaboration h2 {
