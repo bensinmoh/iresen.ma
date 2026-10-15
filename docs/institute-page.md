@@ -134,3 +134,15 @@ leading column and the semicircle/description in the trailing column on desktop.
 At 64rem and below they stack in reading order; Arabic mirrors the columns.
 Diagram labels scale with their own container width to remain inside the smaller
 semicircle. Content, canonical anchors and search copy are unchanged.
+
+## Institute model refinement — 2026-10-15
+
+The owner rejected the semicircular model as inconsistent with the site. The
+Institute overview now pairs its introduction with a navy editorial R&I panel,
+using existing signature corners, cyan SVG/label accents and native white text.
+The three mission descriptions and links follow on fine separators; complementary
+dimensions and capabilities retain their content and destinations. This scoped
+refinement uses the Figma design-system evidence (2211:6303/2211:6298) and current
+website tokens rather than introducing new diagram geometry or color roles.
+Mobile/tablet stack the overview; Arabic uses logical reading order. Public text,
+anchors and search references are unchanged, so no index rebuild is required.
