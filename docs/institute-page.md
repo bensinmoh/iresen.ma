@@ -146,3 +146,11 @@ refinement uses the Figma design-system evidence (2211:6303/2211:6298) and curre
 website tokens rather than introducing new diagram geometry or color roles.
 Mobile/tablet stack the overview; Arabic uses logical reading order. Public text,
 anchors and search references are unchanged, so no index rebuild is required.
+
+Refinement check ledger: isolated production build (including TypeScript) passed;
+lint passed with the temporary build directory excluded; changed-file Prettier,
+whitespace and Impeccable detector passed. Production Chromium checked FR/EN/AR at
+390, 768 and 1440px: no document overflow or clipped text blocks detected. Section
+captures were inspected for desktop French, tablet English and mobile Arabic.
+No new interaction or public search resource was introduced. Full current-head
+CI remains the merge gate; no deployment is included.
