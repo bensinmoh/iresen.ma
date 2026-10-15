@@ -18,7 +18,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   }) => {
     test.setTimeout(120_000)
     const catalog = { fr, en, ar }[locale]
-    for (const id of footerPageIds) {
+    for (const id of footerPageIds.filter((id) => id !== 'usefulLinks')) {
       await page.goto(pageHref(id, locale))
       const root = page.locator('[data-utility-page]')
       await expect(page.locator('.footer-utilities button')).toHaveCount(0)

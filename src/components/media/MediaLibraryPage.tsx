@@ -3,7 +3,8 @@ import type { Locale } from '@/i18n/locales'
 import { PageShell } from '@/components/layout/PageShell'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { pageHref } from '@/lib/site'
-import { mediaPhotos, mediaLinks } from '@/lib/media-library'
+import { usefulLinks } from '@/lib/useful-links'
+import { mediaPhotos } from '@/lib/media-library'
 import { findPublicLibraryVideos } from '@/lib/content/media-library'
 import { ReportList } from './ReportList'
 import { PhotoGallery } from './PhotoGallery'
@@ -12,6 +13,7 @@ import styles from './MediaLibrary.module.css'
 
 export async function MediaLibraryPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'MediaLibrary' })
+  const linksCopy = await getTranslations({ locale, namespace: 'UsefulLinks' })
   let failed = false
   const videos = await findPublicLibraryVideos(locale).catch(() => {
     failed = true
@@ -110,20 +112,20 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
         <section id="press-resources" className={styles.section} aria-label={t('links')}>
           {header(t('links'), '04', t('linkNote'))}
           <div className={styles.links}>
-            {mediaLinks.map((link) => (
+            {usefulLinks.map((link, index) => (
               <a
                 id={`link-${link.id}`}
                 key={link.id}
-                href={link.url}
+                href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>
                   <strong>
-                    <bdi>{link.name}</bdi>
+                    <bdi>{linksCopy(`items.${index}.title`)}</bdi>
                   </strong>
                   <span>
-                    <bdi>{link.title}</bdi>
+                    <bdi>{linksCopy(`items.${index}.description`)}</bdi>
                   </span>
                 </span>
                 <span className={styles.externalIcon}>

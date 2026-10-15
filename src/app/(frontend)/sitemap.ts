@@ -30,7 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       },
     })),
     ...pageIds
-      .filter((id) => id !== 'events')
+      .filter((id) => id !== 'events' && id !== 'usefulLinks')
       .flatMap((id) =>
         locales.map((locale) => ({
           url: new URL(pageHref(id, locale), baseUrl).toString(),

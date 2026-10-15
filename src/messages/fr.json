@@ -707,7 +707,7 @@
       },
       "press-resources": {
         "title": "Liens utiles",
-        "description": "Accéder aux sites des institutions de l’écosystème énergétique marocain."
+        "description": "Cartes énergétiques et géoscientifiques, outils et plateformes externes utiles à la recherche et à la transition énergétique."
       },
       "credits-reuse": {
         "title": "Crédits & réutilisation",
@@ -2359,7 +2359,7 @@
       "fr": "Français",
       "en": "Anglais"
     },
-    "linkNote": "Accéder aux sites des institutions de l’écosystème énergétique marocain.",
+    "linkNote": "Cartes énergétiques et géoscientifiques, outils et plateformes externes utiles à la recherche et à la transition énergétique.",
     "unavailable": "La vidéothèque est temporairement indisponible. Réessayez plus tard.",
     "previousVideos": "Vidéos précédentes",
     "nextVideos": "Vidéos suivantes",
@@ -3477,7 +3477,7 @@
     "googlePrivacy": "Confidentialité de Google"
   },
   "UsefulLinks": {
-    "description": "Explorez ces ressources externes pour consulter les cartes énergétiques et géoscientifiques du Maroc.",
+    "description": "Cartes énergétiques et géoscientifiques, outils et plateformes externes utiles à la recherche et à la transition énergétique.",
     "items": [
       {
         "id": "solar-cadastre",
@@ -3498,6 +3498,21 @@
         "id": "masen-solar-atlas",
         "title": "Atlas solaire MASEN",
         "description": "Carte interactive de l’atlas solaire, ouverte sur les coordonnées fournies."
+      },
+      {
+        "id": "evplan",
+        "title": "EVPLAN",
+        "description": "Outil de cartographie et de planification des infrastructures de recharge pour véhicules électriques."
+      },
+      {
+        "id": "pv-mapping",
+        "title": "PV Mapping",
+        "description": "Accéder à l’outil PV Mapping."
+      },
+      {
+        "id": "solartwin",
+        "title": "SolarTwin",
+        "description": "Accéder à la plateforme SolarTwin."
       }
     ]
   },

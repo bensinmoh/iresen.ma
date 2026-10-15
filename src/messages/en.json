@@ -1117,7 +1117,7 @@
       },
       "press-resources": {
         "title": "Useful links",
-        "description": "Visit the institutions of Morocco’s energy ecosystem."
+        "description": "Energy and geoscience maps, external tools and platforms for research and the energy transition."
       },
       "credits-reuse": {
         "title": "Credits & reuse",
@@ -2349,7 +2349,7 @@
       "fr": "French",
       "en": "English"
     },
-    "linkNote": "Visit the institutions of Morocco’s energy ecosystem.",
+    "linkNote": "Energy and geoscience maps, external tools and platforms for research and the energy transition.",
     "unavailable": "The video library is temporarily unavailable. Please try again later.",
     "previousVideos": "Previous videos",
     "nextVideos": "Next videos",
@@ -3467,7 +3467,7 @@
     "googlePrivacy": "Google privacy"
   },
   "UsefulLinks": {
-    "description": "Explore these external resources for energy and geoscientific maps of Morocco.",
+    "description": "Energy and geoscience maps, external tools and platforms for research and the energy transition.",
     "items": [
       {
         "id": "solar-cadastre",
@@ -3488,6 +3488,21 @@
         "id": "masen-solar-atlas",
         "title": "MASEN Solar Atlas",
         "description": "Interactive solar atlas map, opened at the supplied coordinates."
+      },
+      {
+        "id": "evplan",
+        "title": "EVPLAN",
+        "description": "Mapping and planning tool for electric vehicle charging infrastructure."
+      },
+      {
+        "id": "pv-mapping",
+        "title": "PV Mapping",
+        "description": "Access the PV Mapping tool."
+      },
+      {
+        "id": "solartwin",
+        "title": "SolarTwin",
+        "description": "Access the SolarTwin platform."
       }
     ]
   },

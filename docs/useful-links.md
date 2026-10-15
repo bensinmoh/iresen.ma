@@ -1,24 +1,35 @@
-# Useful links — 2026-10-12
+# Useful links — consolidation, 2026-10-15
 
-The owner commissioned a dedicated public FR/EN/AR page, stable ID `usefulLinks`,
-with `/fr/liens-utiles`, `/en/useful-links`, `/ar/روابط-مفيدة`. It appears in the
-footer and sitemap; page, mapping-tools section and each of its four stable tool anchors are projected
-to localized search.
+The owner replaces the separate Useful links page with the existing Media library
+section `press-resources`. Its seven external resources share one registry in
+`src/lib/useful-links.ts`: the four original mapping tools plus EVPLAN, PV Mapping
+and SolarTwin, preserving the exact owner URLs and MASEN map coordinates.
+The former five institutional links are replaced by this tool catalogue.
 
-The four exact owner destinations are stored in `src/lib/useful-links.ts`, including
-the MASEN query coordinates. Localized descriptions are working editorial copy;
-there are no copied logos, thumbnails, embeds, remote fetches or tracking providers.
-Links open with noopener/noreferrer. An unavailable provider does not hide the link
-or break rendering; the MASEN tool could not be fetched during the initial read.
+The stable routing ID `usefulLinks` remains a compatibility alias. Its FR/EN/AR
+URLs permanently redirect to the Media library section. Footer and HTML sitemap
+shortcuts point there directly; the XML sitemap omits the alias. Shared route
+helpers resolve previous tool anchors to their canonical `link-<id>` destinations.
+There is no separate page rendering or duplicate search result. Each tool has a
+localized searchable title, description and canonical section anchor.
 
-Composition follows the existing compact utility title band and readable tool
-rows. The retained research-institute benchmark informs clear visitor actions
-and honest external-resource descriptions, without adopting new factual claims
-or its embedded recommendations as instructions. Shared original SVG arrows,
-logical spacing, keyboard focus and Arabic reading order remain.
+FR/EN/AR descriptions remain editorial working copy. EVPLAN’s indexed provider
+page describes electric-vehicle charging planning; PV Mapping and SolarTwin
+could not be inspected, so their descriptions simply identify the destination.
+No provider content, logo, embed, runtime fetch or tracking service is imported.
+External links retain noopener/noreferrer and shared Phosphor arrows.
+No deployment, DNS or visibility change is authorized.
 
-This authorized route addition expands the previous 22-page baseline to 23;
-existing routes and IDs remain canonical. No deployment or DNS change.
+Validation is recorded in the delivery ledger below.
 
-Original resource names and domain acronyms, including MASEN/Green H2 Atlas, remain
-in per-tool search metadata in every locale, without replacing localized display text.
+## Verification — 2026-10-15
+
+- Final production build including TypeScript, lint and 170 unit tests pass.
+- Six production browser journeys pass: old-URL redirects and seven exact external
+  destinations in FR/EN/AR at 390/768/1440px, plus existing media/filter/dialog
+  accessibility journeys at 320/768/1440px. Arabic redirect URLs are URI-encoded
+  before writing the Location header. Desktop FR and mobile RTL captures inspected.
+- The local search index was rebuilt: eight public CMS records, static catalogue
+  synchronized. Old standalone-page/tool and former institution-link results are
+  withdrawn; seven localized tool results point to reachable media anchors.
+- No provider availability guarantee is inferred from link rendering; no deployment.
