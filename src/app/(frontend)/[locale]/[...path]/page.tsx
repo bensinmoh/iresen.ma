@@ -105,6 +105,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
         : 1
     return <NewsEventsPage locale={locale} listing page={Math.min(currentPage, 1000)} />
   }
+  if (pageId === 'usefulLinks') permanentRedirect(encodeURI(pageHref('usefulLinks', locale)))
   if (pageId === 'events') permanentRedirect(pageHref('events', locale))
   if (pageId === 'news') return <NewsEventsPage locale={locale} />
   if (pageId === 'search') {
@@ -176,7 +177,6 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
     pageId === 'privacy' ||
     pageId === 'cookies' ||
     pageId === 'accessibility' ||
-    pageId === 'usefulLinks' ||
     pageId === 'sitemap'
   )
     return <UtilityPage pageId={pageId} locale={locale} />

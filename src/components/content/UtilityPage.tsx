@@ -11,7 +11,6 @@ import {
   resourcePatentLink,
 } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
-import { usefulLinks } from '@/lib/useful-links'
 import { CookiePreferencesButton } from '@/components/privacy/CookieConsent'
 
 type UtilityPageId = (typeof footerPageIds)[number]
@@ -35,14 +34,13 @@ function readableText(value: string, locale: Locale) {
 }
 
 export async function UtilityPage({ pageId, locale }: { pageId: UtilityPageId; locale: Locale }) {
-  const [titles, navigation, text, copy, footer, news, linksCopy] = await Promise.all([
+  const [titles, navigation, text, copy, footer, news] = await Promise.all([
     getTranslations({ locale, namespace: 'Pages' }),
     getTranslations({ locale, namespace: 'Navigation' }),
     getTranslations({ locale, namespace: `PageSections.${pageId}` }),
     getTranslations({ locale, namespace: 'UtilityPages' }),
     getTranslations({ locale, namespace: 'Footer' }),
     getTranslations({ locale, namespace: 'NewsEvents' }),
-    getTranslations({ locale, namespace: 'UsefulLinks' }),
   ])
   const contact = (
     <address className="utility-contact">
@@ -69,27 +67,7 @@ export async function UtilityPage({ pageId, locale }: { pageId: UtilityPageId; l
         </div>
       </header>
       <div className="container utility-body" id="page-sections">
-        {pageId === 'usefulLinks' ? (
-          <section
-            id="mapping-tools"
-            aria-labelledby="mapping-tools-title"
-            className="useful-tools"
-          >
-            <h2 id="mapping-tools-title">{text('mapping-tools.title')}</h2>
-            <p>{linksCopy('description')}</p>
-            <ul>
-              {usefulLinks.map((link, index) => (
-                <li key={link.id} id={link.id} data-motion-reveal>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <h3>{linksCopy(`items.${index}.title`)}</h3>
-                    <NavigationIcon name="arrow" />
-                  </a>
-                  <p>{linksCopy(`items.${index}.description`)}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : pageId === 'sitemap' ? (
+        {pageId === 'sitemap' ? (
           <nav id="site-pages" className="utility-sitemap" aria-label={titles('sitemap')}>
             {groups.map((group) => (
               <section key={group.id} aria-labelledby={`sitemap-${group.id}`}>

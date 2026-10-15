@@ -23,7 +23,7 @@
 .history,
 .current,
 .final {
-  padding-block: clamp(3rem, 6vw, 6rem);
+  padding-block: var(--section-space);
 }
 .intro,
 .current {
@@ -32,26 +32,11 @@
 .splitHeading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: var(--layout-gap);
   align-items: start;
 }
 .prose p {
   max-inline-size: 72ch;
-}
-.eyebrow {
-  display: flex;
-  gap: var(--space-3);
-  align-items: center;
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-}
-.eyebrow span {
-  inline-size: 1.2rem;
-  block-size: 0.75rem;
-  flex: none;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center / contain no-repeat;
 }
 .cards,
 .archives {
@@ -89,7 +74,7 @@
 .impactInner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  gap: var(--layout-gap);
   align-items: center;
 }
 .impact header > p {
@@ -150,10 +135,6 @@
   background: var(--color-navy);
   color: var(--color-white);
 }
-.process .eyebrow {
-  color: var(--color-energy-cyan);
-  justify-content: center;
-}
 .centerHeading {
   max-inline-size: 60rem;
   margin-inline: auto;
@@ -167,8 +148,8 @@
 .steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 3rem 2.5rem;
-  margin-block: 3rem 2rem;
+  gap: var(--space-8);
+  margin-block: var(--space-8);
   padding: 0;
   list-style: none;
 }
@@ -528,7 +509,7 @@
 .approachGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: var(--layout-gap);
   align-items: stretch;
 }
 .approachGrid .people {
@@ -559,9 +540,6 @@
   margin-inline: auto;
   max-inline-size: 70ch;
   text-align: center;
-}
-.process .centerHeading .eyebrow {
-  max-inline-size: none;
 }
 .cards svg,
 .outcomes svg {

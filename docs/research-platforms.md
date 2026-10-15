@@ -126,3 +126,78 @@ Verification ledger: development FR at 1440px gives 0px title-top and action-bot
 differences against GEP's photo frame; Arabic at 390px has no page overflow and
 retains all 13 photo slots. Focused source lint, formatting and whitespace checks
 only. Global tests, production build, merge and deployment remain deferred.
+
+## Platform logo refinement — 2026-10-15
+
+The owner requests larger logos on this page and supplies the original white
+GreenH2A SVG. Desktop logo boxes now scale from 9rem to 14rem, with 7rem height.
+Below 40rem, 10rem × 5rem logos occupy their own heading row, preserving title
+reading width. GreenH2A uses the supplied white original directly on navy, without
+the previous white cartouche. The original SVG is copied byte-for-byte and its
+hash/provenance is recorded in `platform-assets.json`; the previous logo and
+homepage usage remain. The new served asset has localized media search references.
+
+Verification: production build/TypeScript, lint and 170 unit tests pass. Four
+production browser journeys pass, including FR/EN/AR at 320/390/768/1024/1440px,
+200% text, keyboard, axe and no-JavaScript reading. Desktop GreenH2A and mobile
+Arabic logo captures inspected. Local search rebuilt (eight CMS records and
+synchronized static catalogue). No deployment or institutional copy change.
+
+## Supplied infrastructure photography and tones — 2026-10-15
+
+All thirteen supplied visuals are used: the original GEP and GreenH2A files match
+existing registered sources and reuse their existing derivatives; the supplied
+GSBP aerial replaces that chapter’s image; ten named equipment photographs replace
+the corresponding pending-image blocks across GEP, GSBP and GEP Maroc–Côte d’Ivoire.
+The three GreenH2A equipment slots retain their pending state because no distinct
+matching photographs were supplied. Its main image remains labelled 3D and the
+platform remains in development. No capability or readiness claim changes.
+
+Native SVG color matrices provide reversible per-source-group tone correction:
+neutral whites, controlled saturation, gentle shadow lift, less blue in the
+thin-film laboratory and more restrained aerial views. There is no generative
+photograph used and no scene content/identity/equipment change. Sources remain
+untouched; EXIF-aware proportional WebP derivatives strip metadata and retain
+reserved dimensions, responsive delivery and lazy loading. See
+`infrastructure-photo-assets.json` for source/output fingerprints, and the complete
+`src/data/image-provenance.json` registry. Eleven new media references have explicit
+FR/EN/AR titles/descriptions drawn from existing localized interface copy. GEP and
+GreenH2A retain their existing media results.
+
+Verification: final production build/TypeScript, lint and 170 unit tests pass.
+Four final browser journeys pass: FR/EN/AR at 320/390/768/1024/1440px, 200% text,
+keyboard focus, axe and no-JavaScript reading. Ten equipment images are asserted;
+checks explicitly scroll lazy images into view before decoding. Full chapter
+captures were inspected at 390/1440px. The new image directory has a scoped Next
+optimizer allowlist entry with query strings disallowed. The outdoor-PV crop aligns
+right to exclude its source white margin. Local search was rebuilt. No deployment.
+
+## GreenH2A compact equipment bands — 2026-10-15
+
+The owner replaces GreenH2A’s three missing-photograph containers with decorative
+cyan bands, 0.75rem high, while photographs are unavailable. The former placeholder
+icons, image roles and pending-photo labels are removed. Equipment titles and
+explanations remain, along with the main 3D visualization and development status.
+FR/EN/AR unused pending-photo strings are withdrawn from the search catalogue too.
+No new photograph, claim or public destination is introduced.
+
+Validation: production build/TypeScript, lint, formatting, 170 unit tests and four
+FR/EN/AR platforms browser journeys pass (320–1440px, 200% text, keyboard, axe and
+no JavaScript). Desktop bands and mobile RTL chapter inspected; local search
+rebuilt. No deployment.
+
+## Platform section spacing — 2026-10-15
+
+The owner withdraws the viewport-height experiment and retains the previous photo,
+type, logo and content layout. Only the excessive vertical section padding changes:
+the introduction ends with 1.5rem, and platform chapters use 2–3rem above/below,
+instead of 3–6rem. At wide desktop widths, the intro-to-first-platform gap falls
+from 12rem to 4.5rem. No viewport-sized frame, image compression, text hiding,
+new disclosure behavior or minimum-height constraint is introduced. Content,
+anchors, media and search references remain unchanged.
+
+Verification: final isolated production build including TypeScript, lint,
+formatting and whitespace pass. Four platform browser journeys pass in FR/EN/AR
+at 320–1440px, including 200% text, keyboard, axe, media decoding and no-JavaScript
+reading. Desktop FR and mobile AR captures inspected. Earlier unit/search evidence
+remains valid. No deployment.

@@ -120,6 +120,18 @@
       "bytes": 4776,
       "treatment": "Byte-identical original served; inline white display retains exact source path and original filled outline with no added stroke, approximately 16/512 to match lighter map display",
       "kind": "decorative expertise/consulting icon"
+    },
+    {
+      "id": "greenh2a-white",
+      "received": "2026-10-15",
+      "source": "Logo GreenH2A White.svg",
+      "sourceSha256": "d34651d4f4f51ed6ae8073ec8969cc2bbe98c17fb414591548c90fac4bee3b03",
+      "url": "/brand/platforms/greenh2a-white.svg",
+      "width": 372.17,
+      "height": 131.54,
+      "bytes": 3117,
+      "treatment": "Owner-supplied original SVG copied byte-for-byte for the platforms page; no geometry or color changes.",
+      "kind": "owner-supplied platform logo"
     }
   ]
 }

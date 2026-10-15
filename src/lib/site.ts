@@ -1,3 +1,4 @@
+import infrastructurePhotos from '@/data/infrastructure-photos.json' with { type: 'json' }
 import { usefulLinks } from '@/lib/useful-links'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
 import patentRecords from '@/data/patents.json' with { type: 'json' }
@@ -179,6 +180,14 @@ export const footerNavigationGroups = [
 
 export function pageHref(pageId: PageId, locale: Locale, anchor?: string): string {
   if (pageId === 'events') return pageHref('news', locale, 'events')
+  if (pageId === 'usefulLinks') {
+    const id = anchor?.replace(/^#/, '')
+    return pageHref(
+      'media',
+      locale,
+      usefulLinks.some((link) => link.id === id) ? `link-${id}` : 'press-resources',
+    )
+  }
   const path = pages[pageId].pathnames[locale]
   const href = `/${locale}${path === '/' ? '' : path}`
   return anchor && isSupportedAnchor(pageId, anchor) ? `${href}#${anchor.replace(/^#/, '')}` : href
@@ -200,8 +209,13 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
   return (
     normalized === 'main-content' ||
     normalized === 'page-sections' ||
+    (pageId === 'platforms' &&
+      infrastructurePhotos.some(
+        ({ id, index }) => index !== null && normalized === `infrastructure-${id}`,
+      )) ||
     (pageId === 'network' &&
       networkLaboratories.some(({ id }) => normalized === laboratoryAnchor(id))) ||
+    (pageId === 'media' && usefulLinks.some(({ id }) => normalized === `link-${id}`)) ||
     (pageId === 'media' && mediaPhotoRecords.some((photo) => normalized === `photo-${photo.id}`)) ||
     (pageId === 'news' &&
       [

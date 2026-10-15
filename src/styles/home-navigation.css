@@ -3,7 +3,7 @@
 }
 
 .home-section-navigation + .page-shell {
-  --home-section-padding: clamp(2rem, 3vw, 3rem);
+  --home-section-padding: var(--section-space);
   padding-block-start: 0;
   padding-block-end: 0;
 }

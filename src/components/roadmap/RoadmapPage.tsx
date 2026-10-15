@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -26,10 +27,7 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
         </div>
         <div className={styles.shade} />
         <div className={`container ${styles.heroContent}`}>
-          <p className="hero-eyebrow">
-            <span aria-hidden="true" />
-            {t('eyebrow')}
-          </p>
+          <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
           <h1 id="hero-title">{t('title')}</h1>
           <p className={styles.tagline}>{t('tagline')}</p>
           <p className={styles.introduction}>{t('description')}</p>

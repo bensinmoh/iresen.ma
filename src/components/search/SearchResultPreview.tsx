@@ -1,5 +1,8 @@
 'use client'
 
+import { FileText } from '@phosphor-icons/react/dist/ssr/FileText'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+
 import Image from 'next/image'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -63,14 +66,7 @@ export function SearchResultPreview({
     )
   return (
     <div className="search-result-preview search-file-preview">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M5 3h9l5 5v13H5V3Zm9 0v5h5M8 12h8M8 16h8"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <SiteIcon icon={FileText} size={40} />
       <span>{preview.format || t(preview.kind === 'news' ? 'types.news' : 'types.document')}</span>
       {preview.kind === 'pdf' && preview.url && (
         <details

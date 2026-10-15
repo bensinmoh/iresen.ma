@@ -10,7 +10,7 @@ describe('utility-page public discovery', () => {
   for (const locale of ['fr', 'en', 'ar'] as const) {
     it(`${locale}: indexes current notices and withdraws the unused sitemap scaffolds`, () => {
       const catalog = { fr, en, ar }[locale]
-      for (const id of footerPageIds) {
+      for (const id of footerPageIds.filter((id) => id !== 'usefulLinks')) {
         const page = documents.find((entry) => entry.id === `page:${id}:${locale}`)!
         expect(page.url).toBe(pageHref(id, locale))
         expect(page.title).toBe(catalog.Pages[id])

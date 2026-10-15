@@ -9,11 +9,11 @@
   border-block-start: 0;
 }
 .intro {
-  padding-block: var(--space-12) var(--space-16);
+  padding-block: var(--section-space);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: var(--layout-gap);
 }
 .intro h2,
 .header h2 {
@@ -31,14 +31,14 @@
   color: var(--color-text-muted);
 }
 .section {
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
   border-block-start: 1px solid var(--color-border);
   scroll-margin-block-start: var(--space-8);
 }
 .light,
 .ink {
-  margin-inline: calc(-1 * var(--gutter));
-  padding-inline: var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding-inline: var(--page-bleed);
 }
 .light {
   background: var(--color-action-surface);
@@ -60,21 +60,6 @@
   margin: 0;
   max-inline-size: 40rem;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin: 0;
-}
-.eyebrow img {
-  block-size: 0.75rem;
-  inline-size: auto;
-}
-.ink .eyebrow,
 .pathwayIcon {
   color: var(--color-energy-cyan);
 }
@@ -360,17 +345,6 @@
 .selectWrap {
   position: relative;
 }
-.selectWrap select {
-  appearance: none;
-  padding-inline-end: 3rem;
-}
-.selectWrap svg {
-  position: absolute;
-  inset-inline-end: var(--space-4);
-  inset-block-start: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
 .catalogBar {
   display: flex;
   align-items: center;
@@ -525,8 +499,7 @@
 .doors a {
   margin-block-start: var(--space-6);
 }
-.page:dir(rtl) h2,
-.page:dir(rtl) .eyebrow {
+.page:dir(rtl) h2 {
   letter-spacing: normal;
   line-height: 1.5;
 }

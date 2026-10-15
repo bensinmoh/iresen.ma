@@ -9,8 +9,8 @@
   border-block-start: 0;
 }
 .section {
-  margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(3rem, 5vw, 5rem) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: var(--section-space) var(--page-bleed);
   scroll-margin-block-start: var(--space-8);
 }
 .introduction {
@@ -41,17 +41,8 @@
   font-size: 1.125rem;
   color: var(--color-text-muted);
 }
-.eyebrow {
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
 .ink {
   background: var(--color-navy);
-  color: var(--color-white);
-}
-.ink .eyebrow {
   color: var(--color-white);
 }
 .ink .introduction > p,
@@ -113,11 +104,12 @@
   padding: 0;
 }
 .needs .editorial {
-  padding: clamp(3rem, 4vw, 5rem) var(--gutter);
+  padding: var(--section-space) var(--gutter);
+  padding-inline-start: var(--page-bleed);
 }
 .needs .introduction {
   display: block;
-  margin-block-end: clamp(2.5rem, 5vw, 5rem);
+  margin-block-end: var(--space-8);
 }
 .needs .introduction h2 {
   max-inline-size: 22ch;
@@ -208,7 +200,7 @@
 }
 .contact {
   text-align: center;
-  padding-block: clamp(2.5rem, 4vw, 4rem);
+  padding-block: var(--section-space);
 }
 .contact .introduction {
   display: block;
@@ -223,8 +215,7 @@
   max-inline-size: 60ch;
 }
 .page:dir(rtl) h2,
-.page:dir(rtl) h3,
-.page:dir(rtl) .eyebrow {
+.page:dir(rtl) h3 {
   letter-spacing: normal;
 }
 .page:dir(rtl) h2 {
@@ -354,11 +345,6 @@
 
 .contact {
   background: var(--color-innovation-lime);
-  color: var(--color-navy);
-}
-.contact .eyebrow {
-  max-inline-size: none;
-  margin-inline: auto;
   color: var(--color-navy);
 }
 .contact .introduction > p {

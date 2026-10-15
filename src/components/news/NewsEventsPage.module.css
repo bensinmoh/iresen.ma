@@ -1,7 +1,6 @@
 .page {
   overflow-wrap: anywhere;
   color: var(--color-text);
-  --section-space: clamp(2.5rem, 4.167vw, 5rem);
 }
 .page h2 {
   font-size: clamp(1.75rem, 2.61vw, 3.125rem);
@@ -43,22 +42,6 @@
 .heroContent {
   padding-block: 10rem 5rem;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: var(--font-size-label);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.eyebrow::before {
-  content: '';
-  inline-size: 0.46rem;
-  block-size: 0.75rem;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center/contain no-repeat;
-  flex: none;
-}
 .hero h1 {
   font-size: var(--hero-title-size);
   font-weight: 700;
@@ -93,7 +76,7 @@
 .newsGrid {
   display: grid;
   grid-template-columns: minmax(0, 1.48fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 2.7vw, 3.25rem);
+  gap: var(--layout-gap);
 }
 .newsGrid > div:first-child {
   display: flex;
@@ -236,7 +219,7 @@
 .trainingGrid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: clamp(2rem, 4vw, 5rem);
+  gap: var(--layout-gap);
 }
 .trainingPhoto {
   position: relative;
@@ -267,13 +250,6 @@
 }
 .trainingLower p {
   color: var(--color-footer-muted);
-}
-.trainingLower .eyebrow {
-  color: white;
-  font-size: 1.25rem;
-  text-transform: none;
-  letter-spacing: -0.02em;
-  line-height: 1.4;
 }
 .exchangePhoto {
   position: relative;
@@ -483,7 +459,7 @@
 .page :is(section, article)[id] {
   scroll-margin-block-start: 6rem;
 }
-.page:dir(rtl) :is(h1, h2, h3, .meta, .eyebrow, .role) {
+.page:dir(rtl) :is(h1, h2, h3, .meta, .role) {
   letter-spacing: 0;
 }
 .page:dir(rtl) .shade {

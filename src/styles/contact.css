@@ -14,16 +14,6 @@
   overflow-wrap: anywhere;
 }
 
-.contact-eyebrow {
-  margin-block-end: var(--space-2);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
 .contact-page .button {
   gap: var(--space-3);
   min-inline-size: 0;
@@ -35,7 +25,6 @@
 .contact-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  max-inline-size: calc(var(--container-width) + var(--gutter) * 2);
   margin-inline: auto;
 }
 
@@ -45,6 +34,7 @@
   position: relative;
   isolation: isolate;
   padding: var(--contact-intro-inset) var(--gutter);
+  padding-inline-start: var(--page-bleed);
   padding-block-end: var(--contact-photo-reveal);
   min-block-size: 35rem;
   overflow: hidden;
@@ -60,7 +50,8 @@
 .contact-intro-text::before {
   content: '';
   position: absolute;
-  inset-inline: calc(-1 * var(--gutter));
+  inset-inline-start: calc(-1 * var(--page-bleed));
+  inset-inline-end: calc(-1 * var(--gutter));
   inset-block-start: calc(-1 * var(--contact-intro-inset));
   inset-block-end: calc(-1 * var(--contact-photo-reveal));
   z-index: -1;
@@ -107,11 +98,11 @@
 
 .contact-headquarters {
   padding: var(--space-16) var(--gutter);
+  padding-inline-end: var(--page-bleed);
   color: var(--color-white);
   background: var(--color-navy);
 }
 
-.contact-headquarters .contact-eyebrow,
 .contact-details dt {
   color: var(--color-footer-muted);
 }
@@ -182,7 +173,7 @@
 
 .contact-platforms,
 .contact-faq {
-  padding-block: clamp(3rem, 4.167vw, 5rem);
+  padding-block: var(--section-space);
 }
 
 .contact-platforms > p {
@@ -218,7 +209,7 @@
 }
 
 .contact-form-section {
-  padding-block: clamp(3rem, 4.167vw, 5rem);
+  padding-block: var(--section-space);
   background: var(--color-action-surface);
 }
 
@@ -231,25 +222,6 @@
 
 .contact-form-heading h2 {
   white-space: pre-line;
-}
-
-.contact-form-heading .contact-eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  max-inline-size: none;
-  margin-inline: auto;
-}
-
-.contact-form-heading .contact-eyebrow > img {
-  flex-shrink: 0;
-  inline-size: auto;
-  block-size: 1em;
-}
-
-.contact-form-heading .contact-eyebrow > span {
-  min-inline-size: 0;
 }
 
 .contact-form-heading > p:last-child {
@@ -356,7 +328,7 @@
   gap: clamp(2rem, 8vw, 9.5rem);
 }
 
-.contact-faq-intro > p:not(.contact-eyebrow) {
+.contact-faq-intro > p:not([data-section-eyebrow]) {
   color: var(--color-text-muted);
 }
 
@@ -381,7 +353,8 @@
 }
 
 .contact-faq-toggle {
-  display: block;
+  display: grid;
+  place-items: center;
   position: relative;
   flex: 0 0 2.75rem;
   block-size: 2.75rem;
@@ -394,23 +367,12 @@
   overflow-wrap: anywhere;
 }
 
-.contact-faq-toggle::before,
-.contact-faq-toggle::after {
-  content: '';
-  position: absolute;
-  inset: 50% auto auto 50%;
-  inline-size: 1.125rem;
-  block-size: 1px;
-  background: currentColor;
-  transform: translate(-50%, -50%);
-}
-
-.contact-faq-toggle::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.contact-faq-list details[open] .contact-faq-toggle::after {
+.contact-faq-toggle .faq-minus,
+.contact-faq-list details[open] .contact-faq-toggle .faq-plus {
   display: none;
+}
+.contact-faq-list details[open] .contact-faq-toggle .faq-minus {
+  display: block;
 }
 
 .contact-faq-answer {
@@ -454,7 +416,6 @@
 html[lang='ar'] .contact-page h1,
 html[lang='ar'] .contact-page h2,
 html[lang='ar'] .contact-page h3,
-html[lang='ar'] .contact-eyebrow,
 html[lang='ar'] .contact-details dt,
 html[lang='ar'] .contact-field label {
   letter-spacing: normal;

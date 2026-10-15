@@ -179,3 +179,104 @@ refinement uses the Figma design-system evidence (2211:6303/2211:6298) and curre
 website tokens rather than introducing new diagram geometry or color roles.
 Mobile/tablet stack the overview; Arabic uses logical reading order. Public text,
 anchors and search references are unchanged, so no index rebuild is required.
+
+## Compact homepage collaboration — 2026-10-15
+
+The collaboration section uses a three-column/two-row desktop grid, with
+international cooperation below the main action. Four pathways remain on tablet;
+five use a native horizontal rail on mobile. Reuse existing dark-surface colors,
+compact heading roles, fine separators and mobile-only borderless pills. This
+scoped composition adds no shared token or new imagery. See the collaboration
+scope for content withdrawal, responsive ranges and search synchronization.
+
+## Shared homepage surtitles — 2026-10-15
+
+The seven owner-selected homepage surtitles use `SectionEyebrow`: the same native
+paragraph, 18px (1.125rem) regular type, 1.5 line-height, uppercase Latin text,
+0.06em Latin tracking, 12px icon gap and 16px following space. Arabic keeps natural
+tracking. Blue, white and cyan are the homepage tone variants; the original Apex Leaf
+SVG is used unchanged as a current-color mask on every variant. The mission
+surtitle centers leaf and text together. Actual section titles remain headings;
+the R&I title now provides the mission section's level-two heading, with its three
+mission titles at level three. No label wording, anchor, destination or search
+metadata changes. This replaces the separate local eyebrow styles.
+
+The mission surtitle explicitly fills the quotation width before centering its
+leaf/text group, overriding the shared paragraph reading measure. A compact pale
+blue `capabilities-cooperation` band now separates platforms and collaboration;
+it reuses existing Narrative content, current action-surface/text tokens and a
+two-column desktop / stacked mobile composition. No new palette or imagery.
+
+## Viewport-wide section geometry — 2026-10-15
+
+Owner examples exposed a shared capped-grid breakout defect on wide viewports:
+sections expanded by only the fixed gutter even after the 120rem content cap
+created larger exterior margins. The shared `--page-bleed` role now derives the
+actual distance to the viewport edge from the gutter and content cap. All ten
+existing negative-gutter breakout patterns consume it, with matching content
+insets: homepage surfaces, media library, collaboration and transfer chapters.
+Contact's separately capped split introduction uses the same role for its outer
+insets and fills the viewport. Ordinary reading gutters and the content cap
+remain unchanged; split-column inner gaps keep the normal gutter. This corrects
+background geometry rather than widening reading text or hiding page overflow.
+Content, anchors, media originals and search projections are unchanged.
+
+## Phosphor interface icons — 2026-10-15
+
+The owner selects regular-weight Phosphor for interface icons, subject pictograms
+and arrows. Use the shared SiteIcon defaults, per-icon SSR imports, inherited
+color and existing functional sizes/RTL rules. Preserve Apex Leaf, original marks,
+geography and structural diagram/control geometry. Replace text-symbol arrows
+and CSS imitation icons through the same family; native behavior and accessible
+control names remain. See the [complete audit and source record](docs/icon-system.md).
+
+## Native select caret placement — 2026-10-15
+
+All native single-select controls in public pages and the isolated CMS use one
+shared `selects.css` rule: Phosphor CaretDown regular as an inline SVG background,
+20px from the logical trailing edge, with reserved text padding equal to the
+inset + 20px glyph + 0.75rem clearance. Decorative glyph/inset dimensions stay
+fixed when only text is enlarged, preserving reading space in narrow controls. RTL swaps the physical background side.
+Keep native select semantics, labels, keyboard, focus and disabled states. Existing
+duplicate overlay carets/local padding rules are removed. Forced-colors restores
+the browser's native arrow; multiple/listbox selects retain native presentation.
+The data-URL vector is decorative interface geometry, not a standalone public
+media/search resource. No content, route or publication-gate changes.
+
+## Shared public surtitles — 2026-10-15
+
+The owner extends the homepage `SectionEyebrow` to public-page section surtitles
+and ordinary hero stage labels: one native paragraph, regular 1.125rem type,
+1.5 leading, 0.06em Latin tracking, uppercase, 12px leaf/text gap and 16px following
+space. Arabic has natural tracking. Every variant uses the unchanged original
+Apex Leaf SVG as a decorative current-color mask. Blue, white and cyan adapt to
+light/dark surfaces; the existing institutional navy role is available on the lime
+cooperation surface. Centering is an explicit shared option; local font, pseudo-leaf
+and spacing overrides are removed rather than repeated across page modules.
+
+This covers Institute, Governance/biographies, Roadmap, Programmes, Projects,
+Platforms and infrastructure groups, Network, Collaboration, Transfer, Careers,
+News/listing, Publications, Media and Contact/form/location. The homepage brand
+identifier, navigation captions, counters and call-status metadata retain their
+separate roles. Content headings remain headings; the Institute quotation uses
+the same named paragraph/region-label semantics as the homepage quotation.
+Text, original logos, canonical anchors, destinations and search metadata remain.
+The shared selector protects these metrics from generic page-paragraph styles.
+
+Verification is recorded in `docs/shared-surtitles.md`.
+
+## Public-page spacing rhythm — 2026-10-15
+
+The owner commissions a whole-site spacing review before merge. Ordinary editorial
+sections use the shared `--section-space` (32–48px), and paired content columns
+use `--layout-gap` (24–48px). This replaces independently oversized 72–104px
+section insets and 80–112px column gaps where found. Homepage section spacing uses
+the same role; its research chapter loses the extra 8–12rem bottom reservation.
+Roadmap body chapters grow with content rather than reserving an entire viewport.
+Platform photographs, typography and natural chapter heights retain their previous
+configuration: the withdrawn viewport-fit experiment is not restored.
+
+Keep deliberate hero geometry, reading measures, brand clear space, map/list
+alignment, timeline/report overlap and functional form/map areas. Utility pages
+already have a compact reading rhythm and need no density change. See
+[the reviewed scope and verification](docs/site-spacing-review.md).

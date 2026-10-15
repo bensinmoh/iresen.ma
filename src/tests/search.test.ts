@@ -312,7 +312,7 @@ describe('explicit public search catalog', () => {
     expect(new Set(documents.map(({ id }) => id)).size).toBe(documents.length)
     for (const locale of contentLocales) {
       for (const pageId of pageIds) {
-        if (pageId === 'search' || pageId === 'events') {
+        if (pageId === 'search' || pageId === 'events' || pageId === 'usefulLinks') {
           expect(documents.some(({ id }) => id === `page:${pageId}:${locale}`)).toBe(false)
           continue
         }

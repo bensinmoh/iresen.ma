@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -22,10 +23,7 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
       </div>
       <div className={styles.layout}>
         <header className={styles.introduction}>
-          <p className={styles.eyebrow}>
-            <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
-            <span>{t('eyebrow')}</span>
-          </p>
+          <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
           <h2 id="platforms-heading">{t('title')}</h2>
           <div className={styles.context}>
             <p>{t('description')}</p>

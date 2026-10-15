@@ -20,7 +20,7 @@ describe('October institutional narrative', () => {
         'skills',
         'cooperation',
       ])
-      expect(Object.keys(catalog.HomeCollaboration.paths)).toHaveLength(6)
+      expect(Object.keys(catalog.HomeCollaboration.paths)).toHaveLength(5)
       expect(
         catalog.Engagement.workWithUs.sections['organisation-contributions'].items,
       ).toHaveLength(6)

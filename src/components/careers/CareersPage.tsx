@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { getTranslations } from 'next-intl/server'
@@ -35,7 +36,7 @@ export async function CareersPage({ locale }: { locale: Locale }) {
         />
         <div className={styles.shade} />
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.eyebrow}>{t('eyebrow')}</p>
+          <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
           <h1 id="hero-title">
             {t('titleStart')}
             <br />
@@ -68,7 +69,7 @@ export async function CareersPage({ locale }: { locale: Locale }) {
             </div>
             <div className={styles.environmentCopy}>
               <header>
-                <p className={styles.eyebrow}>{t('environment.eyebrow')}</p>
+                <SectionEyebrow>{t('environment.eyebrow')}</SectionEyebrow>
                 <h2 id="environment-title">{t('environment.title')}</h2>
                 <p>{t('environment.description')}</p>
               </header>

@@ -93,3 +93,103 @@ statements. No other contact or laboratory photography is invented. City names,
 contact names and map UI are localized working copy in FR/EN/AR. Laboratory search
 projections include the supplied city and GEP name; the newly supplied vector has
 its own localized media reference, distinct from the older homepage icon.
+
+## Compact map and directory — 2026-10-15
+
+Owner correction reduces the explorer to a shared responsive height: 25–30rem
+on desktop and 18–24rem on stacked layouts. The list and map use the same local
+height variable, including when opening a map record. The Morocco canvas retains
+its original aspect ratio and geographic orientation; coordinates are unchanged.
+The list uses native vertical scrolling, a visible scrollbar, a localized region
+name and keyboard access. Smaller row spacing and six Phosphor topic icons make
+the fourteen laboratories easier to scan; disclosures and contact details remain.
+The directory heading/filter/result gaps and section padding are tightened.
+The requested approximate-location instruction and its translations are withdrawn
+from visible content and search metadata. Detail overlays remain scrollable below
+the northern map points, with Escape and trigger-focus restoration preserved.
+
+Validation: final production build/TypeScript, lint and 170 unit tests pass.
+Four network browser journeys pass in FR/EN/AR, covering 320/390/768/1024/1440px,
+200% text, filters, all fourteen rows/icons, direct anchors/no JavaScript, contacts,
+map selection, Escape/focus restoration and axe. Browser geometry asserts list/map
+height equality within 1px and list overflow at every checked width. Desktop French
+and mobile Arabic captures inspected. The local search index was rebuilt. No deployment.
+
+## Intervention notice withdrawal — 2026-10-15
+
+At the owner’s request, the intervention-modes notice beginning “Les modalités et
+l’accès se définissent au cas par cas” and its EN/AR equivalents are removed from
+the page, locale catalogues and public search body. Its unused CSS rule is removed.
+Other intervention descriptions, contact data and development-status wording remain.
+
+Owner follow-up enlarges the map canvas by up to 30%, preserving its aspect ratio
+and moving its points with the geography. It may extend above/below the fixed
+explorer row; the compact list keeps its height and scrolling. Canvas width is
+capped to the column on narrow screens, preventing horizontal overflow. A small
+vertical offset keeps the northern point clear of the filter controls.
+
+Final verification: production build/TypeScript, lint, formatting and 170 unit tests
+pass. Four final FR/EN/AR network browser journeys pass at 320–1440px, with 200%
+text, filters/reset, map selection, disclosures, contacts, keyboard/Escape, axe and
+no-JavaScript reading. Geometry confirms the enlarged canvas exceeds the fixed
+map/list row height without horizontal overflow. The decorative canvas ignores
+pointer events, while points remain interactive; search/filter/reset controls sit
+above decoration. Desktop and mobile RTL captures inspected. Search is synchronized.
+
+## Directory introduction and filter row — 2026-10-15
+
+The owner’s final ordering places the existing introduction/title on the left and
+search/topic controls on the right, in one desktop row. Arabic follows natural RTL
+column order; mobile/tablet stacks introduction before controls. The introduction
+remains a server-rendered slot, avoiding duplicate copy. Topic filters use a pale
+blue surface distinct from the white input and a compact 2rem minimum height;
+selected filters retain primary blue and white text. Existing filtering/search
+behavior, accessible labels, content and search references are unchanged.
+
+Validation: final production build/TypeScript, lint and formatting pass. Four
+network browser journeys pass in FR/EN/AR at 320–1440px, including 200% text,
+filter/search/reset, map/list geometry, contacts, keyboard/Escape, axe and no-JS.
+Desktop French and mobile RTL captures inspected. No content/search change or deployment.
+
+## Laboratory reading size and explorer height — 2026-10-15
+
+The owner restores normal body text in laboratory rows: names, institution/city
+and thematic disclosures use the shared 1rem body size and inherited body leading
+(1.6 FR/EN, 1.85 AR). The previous compressed title leading and smaller metadata
+are removed. The shared map/list height increases by exactly 20% at every breakpoint:
+30–36rem desktop, 21.6–28.8rem stacked. Native list scrolling remains active. The
+proportional map grows with this height where column width permits; narrow-screen
+width caps remain to prevent horizontal overflow or distorted geography.
+
+Validation: final production build/TypeScript, lint and formatting pass. Four
+FR/EN/AR network browser journeys pass at 320–1440px, including filters, geometry,
+keyboard, axe, 200% text and no JavaScript. Desktop FR and mobile AR typography
+captures inspected. Existing unit evidence remains valid for unchanged data and
+search logic; no content/search change or deployment.
+
+## Circular map preview — 2026-10-15
+
+The owner replaces the rectangular map detail with a compact navy circle, capped
+at 336px and bounded by the map frame. A single 560ms transform animation grows
+from the selected point's measured position and diameter, gently overshoots and
+settles. Desktop placement stays near that point; below 40rem the final circle
+centers in the map/screen and topic filters center their wrapped rows. Resizing
+recalculates geometry without changing geography or the equal map/list heights.
+Reduced motion displays the final circle immediately.
+
+The preview centers the Phosphor subject icon, laboratory name, institution and
+city. Its topic remains an accessible icon label. Numbered controls for laboratories
+in the same city sit at the circle's bottom. The compact reading area scrolls when
+large text or long localized names need more space; full details/contacts remain
+in native list disclosures. Close, Escape and map-background dismissal restore
+trigger focus; explicit selection moves focus to the close control. Original
+records, public text, anchors and search references remain unchanged.
+
+Verification: final isolated production build including TypeScript, lint,
+formatting and whitespace checks pass. Four network browser journeys pass in
+FR/EN/AR at 320/390/768/1024/1440px, including 200% text, filtering, list disclosures,
+contact access, direct anchors/no JavaScript, keyboard/Escape/focus and axe.
+Geometry checks verify the opening starts at the clicked point's center/diameter,
+the final preview is circular and bounded, and mobile circles/filters are centered.
+Reduced motion disables the reveal. Desktop FR and mobile FR/AR captures inspected.
+Existing unit/search evidence remains valid for unchanged data; no deployment.

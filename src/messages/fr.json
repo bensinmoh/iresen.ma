@@ -167,6 +167,10 @@
         "title": "Des capacités au service de l’innovation",
         "description": "Des laboratoires aux démonstrateurs, mobiliser des moyens pour la recherche, les essais et la formation, selon les capacités disponibles ou en développement."
       },
+      "capabilities-cooperation": {
+        "title": "De vos besoins au travail commun",
+        "description": "Une plateforme peut contribuer à une recherche, à des essais et à la formation. Un partenariat peut réunir les expertises et les ressources nécessaires à plusieurs contributions."
+      },
       "collaboration": {
         "title": "Collaborer avec IRESEN",
         "description": "Un besoin d’analyse, de recherche ou de compétences ? Réunissons les expertises et les ressources pour construire un travail commun."
@@ -703,7 +707,7 @@
       },
       "press-resources": {
         "title": "Liens utiles",
-        "description": "Accéder aux sites des institutions de l’écosystème énergétique marocain."
+        "description": "Cartes énergétiques et géoscientifiques, outils et plateformes externes utiles à la recherche et à la transition énergétique."
       },
       "credits-reuse": {
         "title": "Crédits & réutilisation",
@@ -1539,6 +1543,7 @@
     }
   },
   "HomeCollaboration": {
+    "navigation": "Choisir un public",
     "title": "Collaborer avec IRESEN",
     "description": "Un besoin d’analyse, de recherche ou de compétences ? Réunissons les expertises et les ressources pour construire un travail commun.",
     "action": "Découvrir les modalités de collaboration",
@@ -1564,12 +1569,6 @@
         "description": "Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes.",
         "action": "Discuter de vos besoins"
       },
-      "territories": {
-        "audience": "Territoires et acteurs du développement",
-        "title": "Quelles solutions répondent à nos besoins et contraintes locales ?",
-        "description": "Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales.",
-        "action": "Présenter un besoin territorial"
-      },
       "international": {
         "audience": "Partenaires internationaux et bailleurs",
         "title": "Quelles capacités et quels projets pouvons-nous développer ensemble ?",
@@ -1583,7 +1582,7 @@
         "action": "Explorer les opportunités"
       }
     },
-    "searchText": "État, institutions et opérateurs publics Comment la recherche peut-elle servir les priorités nationales ? Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques. Échanger sur vos priorités Universités et équipes de recherche Comment faire progresser nos recherches et leurs applications ? Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats. Explorer les programmes Industriels et entreprises Comment relever nos défis technologiques et de décarbonation ? Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes. Discuter de vos besoins Territoires et acteurs du développement Quelles solutions répondent à nos besoins et contraintes locales ? Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales. Présenter un besoin territorial Partenaires internationaux et bailleurs Quelles capacités et quels projets pouvons-nous développer ensemble ? Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes. Construire une coopération Talents et grand public À quoi sert cette recherche et comment y contribuer ? Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles. Explorer les opportunités"
+    "searchText": "État, institutions et opérateurs publics Comment la recherche peut-elle servir les priorités nationales ? Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques. Échanger sur vos priorités Universités et équipes de recherche Comment faire progresser nos recherches et leurs applications ? Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats. Explorer les programmes Industriels et entreprises Comment relever nos défis technologiques et de décarbonation ? Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes. Discuter de vos besoins Partenaires internationaux et bailleurs Quelles capacités et quels projets pouvons-nous développer ensemble ? Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes. Construire une coopération Talents et grand public À quoi sert cette recherche et comment y contribuer ? Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles. Explorer les opportunités"
   },
   "HomePlatforms": {
     "eyebrow": "Plateformes & expertise",
@@ -2360,7 +2359,7 @@
       "fr": "Français",
       "en": "Anglais"
     },
-    "linkNote": "Accéder aux sites des institutions de l’écosystème énergétique marocain.",
+    "linkNote": "Cartes énergétiques et géoscientifiques, outils et plateformes externes utiles à la recherche et à la transition énergétique.",
     "unavailable": "La vidéothèque est temporairement indisponible. Réessayez plus tard.",
     "previousVideos": "Vidéos précédentes",
     "nextVideos": "Vidéos suivantes",
@@ -2951,8 +2950,7 @@
           "title": "Formation & transmission",
           "description": "Chercheurs, doctorants et équipes techniques : partager des méthodes et développer des compétences au fil de la pratique."
         }
-      ],
-      "notice": "Les modalités et l’accès se définissent au cas par cas ; cette présentation ne constitue pas un catalogue de prestations ouvertes."
+      ]
     },
     "directory": {
       "eyebrow": "Laboratoires mis en place",
@@ -2978,9 +2976,9 @@
         "bioenergy": "Bioénergie"
       },
       "map": "Carte des laboratoires",
-      "approximate": "Localisations approximatives par ville. Sélectionnez un point ou un laboratoire pour afficher sa fiche.",
       "close": "Fermer la fiche",
-      "gepName": "Abdelatif GHENNIOUI"
+      "gepName": "Abdelatif GHENNIOUI",
+      "list": "Laboratoires du réseau"
     },
     "skills": {
       "title": "La recherche se transmet par la pratique.",
@@ -3272,9 +3270,7 @@
       "description": "Découvrez le réseau de plateformes d’IRESEN : technologies solaires, bâtiments durables, réseaux intelligents et hydrogène vert, au Maroc et en Afrique."
     },
     "accessNote": "Les modalités d’accès, les essais et les formations se définissent avec les équipes selon les besoins et les capacités disponibles. Les infrastructures en développement sont distinguées des moyens opérationnels.",
-    "readDetails": "Lire la présentation complète",
-    "photoPendingLabel": "Photographie à venir",
-    "photoPending": "Photographie à venir : {title}"
+    "readDetails": "Lire la présentation complète"
   },
   "Programmes": {
     "eyebrow": "Programmes R&D&I",
@@ -3478,7 +3474,7 @@
     "googlePrivacy": "Confidentialité de Google"
   },
   "UsefulLinks": {
-    "description": "Explorez ces ressources externes pour consulter les cartes énergétiques et géoscientifiques du Maroc.",
+    "description": "Cartes énergétiques et géoscientifiques, outils et plateformes externes utiles à la recherche et à la transition énergétique.",
     "items": [
       {
         "id": "solar-cadastre",
@@ -3499,6 +3495,21 @@
         "id": "masen-solar-atlas",
         "title": "Atlas solaire MASEN",
         "description": "Carte interactive de l’atlas solaire, ouverte sur les coordonnées fournies."
+      },
+      {
+        "id": "evplan",
+        "title": "EVPLAN",
+        "description": "Outil de cartographie et de planification des infrastructures de recharge pour véhicules électriques."
+      },
+      {
+        "id": "pv-mapping",
+        "title": "PV Mapping",
+        "description": "Accéder à l’outil PV Mapping."
+      },
+      {
+        "id": "solartwin",
+        "title": "SolarTwin",
+        "description": "Accéder à la plateforme SolarTwin."
       }
     ]
   },

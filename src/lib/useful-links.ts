@@ -4,4 +4,7 @@ export const usefulLinks = [
   { id: 'green-hydrogen-atlas', href: 'https://greenh2atlas.ma/map' },
   { id: 'mineral-deposits', href: 'https://cartesgeoscientifiques.mem.gov.ma/gites/' },
   { id: 'masen-solar-atlas', href: 'https://solaratlas.masen.ma/map?s=31.625815:-7.989137' },
+  { id: 'evplan', href: 'https://evplan.org/' },
+  { id: 'pv-mapping', href: 'https://pvmapping.cartographie.ma/' },
+  { id: 'solartwin', href: 'https://solartwin-webiste.vercel.app/' },
 ] as const

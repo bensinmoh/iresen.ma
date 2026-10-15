@@ -1,6 +1,6 @@
 .section {
-  margin-inline: calc(-1 * var(--gutter));
-  padding: var(--home-section-padding) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: var(--home-section-padding) var(--page-bleed);
   background: var(--color-action-surface);
   box-shadow: 0 0 0 100vmax var(--color-action-surface);
   clip-path: inset(0 -100vmax);
@@ -13,22 +13,6 @@
   justify-content: space-between;
   gap: var(--space-8);
   margin-block-end: clamp(1.5rem, 2.5vw, 2.5rem);
-}
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-block: 0 var(--space-4);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.eyebrow img {
-  inline-size: auto;
-  block-size: 0.75rem;
 }
 
 .header h2 {
@@ -186,7 +170,6 @@
   transform: none;
 }
 .section:dir(rtl) .header h2,
-.eyebrow:dir(rtl),
 .card h3:dir(rtl) {
   letter-spacing: normal;
   line-height: 1.6;

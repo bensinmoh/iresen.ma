@@ -1,3 +1,4 @@
+import infrastructurePhotos from '@/data/infrastructure-photos.json' with { type: 'json' }
 import { usefulLinks } from '@/lib/useful-links'
 import { isAiGeneratedImage } from '@/lib/image-provenance'
 import { networkLaboratories, laboratoryAnchor } from '@/lib/network'
@@ -9,7 +10,7 @@ import {
   governanceBoardLogo,
 } from '@/lib/governance'
 import { publications, titleTopics, publicationAnchor } from '@/lib/publications'
-import { mediaPhotos, mediaReports, mediaLinks } from '@/lib/media-library'
+import { mediaPhotos, mediaReports } from '@/lib/media-library'
 import { samirBiographies, samirBiographyTexts, samirPhotoId } from '@/lib/samir-biography'
 import {
   selectedNews,
@@ -50,6 +51,9 @@ const usefulToolAliases = [
   'Green H2 Atlas GreenH2Atlas greenh2atlas.ma',
   'Carte des Gîtes Minéraux du Maroc cartesgeoscientifiques.mem.gov.ma',
   'MASEN Solar Atlas solaratlas.masen.ma',
+  'EVPLAN electric vehicle charging recharge véhicules électriques evplan.org',
+  'PV Mapping photovoltaïque photovoltaic pvmapping.cartographie.ma',
+  'SolarTwin solartwin-webiste.vercel.app',
 ]
 
 export type PublicAssetReference = {
@@ -508,7 +512,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Network.directory.map,
-          description: messages[locale].Network.directory.approximate,
+          description: messages[locale].Network.directory.description,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -544,6 +548,40 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   },
+  {
+    id: 'platform-logo-greenh2a-white',
+    url: '/brand/platforms/greenh2a-white.svg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: `${messages[locale].HomePlatforms.logoLabel} ${messages[locale].HomePlatforms.platforms.greenh2a.name}`,
+          description: messages[locale].HomePlatforms.platforms.greenh2a.searchText,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
+  ...infrastructurePhotos.map((photo) => ({
+    id: `infrastructure-photo-${photo.id}`,
+    url: photo.src,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const platformId = photo.platform as keyof typeof messages.fr.Platforms.platforms
+        const copy = messages[locale].Platforms.platforms[platformId]
+        const item =
+          photo.index === null ? undefined : Object.values(copy.infrastructure)[photo.index]
+        return [
+          locale,
+          {
+            title: item?.title ?? copy.name,
+            description: item?.description ?? messages[locale].Platforms.imageAlt[platformId],
+          },
+        ]
+      }),
+    ) as PublicAssetReference['text'],
+  })),
   ...homePlatforms.flatMap(({ id }) =>
     [false, true].map((logo) => ({
       id: `platform-${logo ? 'logo-' : 'photo-'}${id}`,
@@ -807,7 +845,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
     const catalog = messages[locale]
     for (const pageId of pageIds) {
       // Internal query/results pages must not recursively appear in their own results.
-      if (pageId === 'search' || pageId === 'events') continue
+      if (pageId === 'search' || pageId === 'events' || pageId === 'usefulLinks') continue
       if (pageId === 'contact') {
         documents.push(...contactSearchDocuments(locale))
         continue
@@ -937,20 +975,6 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Projects.updatingTitle,
           catalog.Projects.updatingDescription,
         )
-      if (pageId === 'usefulLinks') {
-        body.push(...engagementSearchText(catalog.UsefulLinks))
-        usefulLinks.forEach((link, index) => {
-          const copy = catalog.UsefulLinks.items[index]
-          documents.push({
-            id: `section:usefulLinks:${link.id}:${locale}`,
-            locale,
-            title: copy.title,
-            body: `${copy.description} ${usefulToolAliases[index]}`,
-            url: pageHref('usefulLinks', locale, link.id),
-            type: 'section',
-          })
-        })
-      }
       if (['legal', 'privacy', 'cookies', 'accessibility'].includes(pageId))
         body.push(...engagementSearchText(catalog.PageSections[pageId]))
       if (pageId === 'sitemap')
@@ -1005,7 +1029,6 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               catalog.NewsEvents.allNews,
               catalog.Navigation.patents,
             )
-          if (pageId === 'usefulLinks') body.push(...engagementSearchText(catalog.UsefulLinks))
           if (pageId === 'programmes') {
             const programmeCopy = {
               'programmes-collaborations': catalog.Programmes.intro,
@@ -1382,11 +1405,11 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         url: pageHref('media', locale, `report-${report.id}`),
         type: 'report' as const,
       })),
-      ...mediaLinks.map((link) => ({
+      ...usefulLinks.map((link, index) => ({
         id: `section:library:link-${link.id}:${locale}`,
         locale,
-        title: link.name,
-        body: `${link.title} ${catalog.MediaLibrary.linkNote}`,
+        title: catalog.UsefulLinks.items[index].title,
+        body: `${catalog.UsefulLinks.items[index].description} ${usefulToolAliases[index]}`,
         url: pageHref('media', locale, `link-${link.id}`),
         type: 'section' as const,
       })),

@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -62,7 +63,9 @@ export async function PublicationsPage({
           className={styles.heroImage}
         />
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.eyebrow}>{t('label')}</p>
+          <SectionEyebrow tone="white" centered>
+            {t('label')}
+          </SectionEyebrow>
           <h1 id="hero-title">
             <span>{t('accent')}</span> {t('title')}
           </h1>
@@ -122,7 +125,7 @@ export async function PublicationsPage({
       <section id="publication-catalogue" className={`container ${styles.section}`}>
         <header className={styles.heading}>
           <div>
-            <p className={styles.eyebrow}>{t('label')}</p>
+            <SectionEyebrow>{t('label')}</SectionEyebrow>
             <h2>{t('articles')}</h2>
           </div>
           <p>{t('note')}</p>

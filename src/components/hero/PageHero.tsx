@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import type { Locale } from '@/i18n/locales'
@@ -48,10 +49,19 @@ export async function PageHero({
         <div className={`container hero-body${pageId === 'home' ? ' hero-body--certified' : ''}`}>
           <div className="hero-copy">
             <div className="hero-introduction">
-              <p className={`hero-eyebrow${pageId === 'home' ? ' hero-eyebrow--brand' : ''}`}>
-                <span aria-hidden="true" />
-                {eyebrow ?? t(`stages.${definition.stage}`)}
-              </p>
+              {pageId === 'home' ? (
+                <p className={`hero-eyebrow${pageId === 'home' ? ' hero-eyebrow--brand' : ''}`}>
+                  <span aria-hidden="true" />
+                  {eyebrow ?? t(`stages.${definition.stage}`)}
+                </p>
+              ) : (
+                <SectionEyebrow
+                  tone={pageId === 'programmes' ? 'blue' : 'white'}
+                  centered={definition.layout === 'center'}
+                >
+                  {eyebrow ?? t(`stages.${definition.stage}`)}
+                </SectionEyebrow>
+              )}
               <h1 id="hero-title">
                 {title ?? (pageId === 'home' ? t('homeTitle') : titles(pageId))}
               </h1>

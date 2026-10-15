@@ -8,7 +8,7 @@
   scroll-margin-block-start: var(--home-section-scroll-margin, 6rem);
 }
 .core {
-  padding: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 2vw, 2rem);
   background: var(--color-navy);
   color: var(--color-white);
   border-radius: var(--radius-signature);
@@ -18,13 +18,7 @@
   grid-template-columns: 1fr 1.4fr;
   gap: var(--space-4) var(--space-8);
 }
-.label {
-  color: var(--color-energy-cyan);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  margin: 0;
-}
-.core h3 {
+.core > header h2 {
   grid-column: 1;
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 3rem);
@@ -64,7 +58,7 @@
   block-size: 2rem;
   color: var(--color-energy-cyan);
 }
-.missions h4 {
+.missions h3 {
   margin-block: var(--space-3);
   font-size: clamp(1.25rem, 1.8vw, 1.75rem);
   line-height: 1.4;
@@ -155,7 +149,7 @@
 .ecosystem {
   grid-column: 1 / -1;
   margin: var(--space-8) 0 0;
-  padding: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 2vw, 2rem);
   background: var(--color-action-surface);
   border-radius: var(--radius-signature);
 }
@@ -199,8 +193,8 @@
 .ecosystem > p {
   line-height: 1.7;
 }
-.model:dir(rtl) h3,
-.model:dir(rtl) h4 {
+.model:dir(rtl) h2,
+.model:dir(rtl) h3 {
   letter-spacing: normal;
   line-height: 1.6;
 }
@@ -213,9 +207,6 @@
   }
   .core > header > p:last-child {
     margin-block-start: var(--space-4);
-  }
-  .label {
-    margin-block-end: var(--space-3);
   }
 }
 @media (max-width: 47.999rem) {

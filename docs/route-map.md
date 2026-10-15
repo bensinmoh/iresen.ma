@@ -120,3 +120,9 @@ The canonical `platforms` route is developed with four chapter anchors registere
 ## CMS call detail family — 2026-10-11
 
 The owner commissions one page per CMS call beneath the localized canonical Programmes route: `/{locale}/{programmes-path}/{reference}`. The stable reference is shared across translations; main page IDs remain the chosen 22. `callHref` / `callReferenceFromPath`, proxy, renderer, header/locale links, metadata, sitemap and guarded search projection handle this family together. Unpublished/private/unapproved translations have no public destination. See [workflow](calls-for-projects.md).
+
+## Useful links consolidation — 2026-10-15
+
+`usefulLinks` remains a stable compatibility ID; its three localized URLs now
+permanently redirect to `media#press-resources`. Navigation helpers point directly
+to that section (or its seven tool anchors). The XML sitemap excludes this alias.

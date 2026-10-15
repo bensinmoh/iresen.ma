@@ -1,5 +1,8 @@
 'use client'
 
+import { CaretDown } from '@phosphor-icons/react/dist/ssr/CaretDown'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+
 import { useLocale, useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
@@ -108,23 +111,7 @@ export function LocaleSelector({ fullNames = false, variant = 'inline' }: Locale
             <bdi lang={currentLocale} dir={currentLocale === 'ar' ? 'rtl' : 'ltr'}>
               {languageNames[currentLocale]}
             </bdi>
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              className="locale-dropdown-chevron"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="m4 6 4 4 4-4"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <SiteIcon icon={CaretDown} className="locale-dropdown-chevron" size={16} />
           </summary>
           <ul className="locale-dropdown-options">
             {links.map((link) => (

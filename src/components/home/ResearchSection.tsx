@@ -1,5 +1,7 @@
 'use client'
 
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
+
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import type { Locale } from '@/i18n/locales'
@@ -37,10 +39,7 @@ export function ResearchSection({ locale, copy }: { locale: Locale; copy: Resear
       aria-labelledby="research-heading"
     >
       <div className={styles.header}>
-        <p className={styles.eyebrow}>
-          <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
-          <span>{copy.eyebrow}</span>
-        </p>
+        <SectionEyebrow tone="white">{copy.eyebrow}</SectionEyebrow>
         <h2 id="research-heading">{copy.title}</h2>
       </div>
       <div className={styles.chooser}>

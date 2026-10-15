@@ -142,3 +142,13 @@ to center its constrained reading width beneath the full-width submit button.
 The owner replaces the hero JOIN wordmark with REJOINDRE in French and انضموا إلى in Arabic; English retains JOIN. French is enlarged and Arabic stays on one line, with responsive logo space.
 
 The Arabic follow-up reverses the physical order of the logo and join label.
+
+## Hero signature alignment — 2026-10-15
+
+Owner correction: French JOIN text and the original IRESEN wordmark use the same
+lower-edge bleed as English. Arabic retains its text position and offsets only
+the original logo downward. A local CSS variable shares the existing desktop
+0.65rem/mobile 0.45rem offset; no logo source, geometry or copy changes.
+Production build/TypeScript and lint pass; three existing careers browser journeys
+pass in FR/EN/AR at 320/390/768/1440px. Signature captures inspected. No content or
+search change, database fixture insertion, or deployment.

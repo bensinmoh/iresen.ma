@@ -1,6 +1,15 @@
 'use client'
 
-import { useState, useRef, useEffect, type FormEvent } from 'react'
+import { Sun } from '@phosphor-icons/react/dist/ssr/Sun'
+import { BatteryCharging } from '@phosphor-icons/react/dist/ssr/BatteryCharging'
+import { Circuitry } from '@phosphor-icons/react/dist/ssr/Circuitry'
+import { Atom } from '@phosphor-icons/react/dist/ssr/Atom'
+import { ChargingStation } from '@phosphor-icons/react/dist/ssr/ChargingStation'
+import { Leaf } from '@phosphor-icons/react/dist/ssr/Leaf'
+import { X } from '@phosphor-icons/react/dist/ssr/X'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+
+import { useState, useRef, useEffect, useLayoutEffect, type FormEvent, type ReactNode } from 'react'
 import {
   laboratoryTopics,
   normalizeLaboratoryQuery,
@@ -25,7 +34,7 @@ export type LaboratoryCard = {
 }
 type DirectoryLabels = {
   map: string
-  approximate: string
+  list: string
   close: string
   label: string
   placeholder: string
@@ -40,15 +49,27 @@ type DirectoryLabels = {
   topics: Record<LaboratoryTopic, string>
 }
 
+const topicIcons = {
+  solar: Sun,
+  storage: BatteryCharging,
+  grid: Circuitry,
+  materials: Atom,
+  mobility: ChargingStation,
+  bioenergy: Leaf,
+}
+
 export function LaboratoryDirectory({
   records,
   labels,
+  introduction,
 }: {
   records: LaboratoryCard[]
+  introduction: ReactNode
   labels: DirectoryLabels
 }) {
   const [selected, setSelected] = useState<string | null>(null)
   const trigger = useRef<HTMLButtonElement | null>(null)
+  const mapRef = useRef<HTMLDivElement | null>(null)
   const [draft, setDraft] = useState('')
   const [query, setQuery] = useState('')
   const [topic, setTopic] = useState<LaboratoryTopic | ''>('')
@@ -70,6 +91,7 @@ export function LaboratoryDirectory({
       ),
   )
   const active = visible.find((record) => record.id === selected)
+  const activeLocation = active?.location
   const locations = Object.entries(laboratoryLocations)
     .map(([id, point]) => ({
       id,
@@ -92,9 +114,51 @@ export function LaboratoryDirectory({
     return () => window.removeEventListener('hashchange', revealLinkedLaboratory)
   }, [records])
 
+  useLayoutEffect(() => {
+    const map = mapRef.current
+    if (!map || !activeLocation) return
+    const location = activeLocation
+    function positionBubble() {
+      if (!map) return
+      const pin = map.querySelector<HTMLButtonElement>(`[data-map-pin="${location}"]`)
+      if (!pin) return
+      const frame = map.getBoundingClientRect()
+      const point = pin.getBoundingClientRect()
+      const diameter = Math.min(336, frame.width - 16, frame.height - 16)
+      const radius = diameter / 2
+      const pinX = point.left + point.width / 2 - frame.left
+      const pinY = point.top + point.height / 2 - frame.top
+      const mobile = window.matchMedia('(max-width: 39.999rem)').matches
+      const x = mobile
+        ? frame.width / 2
+        : Math.max(radius + 8, Math.min(frame.width - radius - 8, pinX))
+      const y = mobile
+        ? frame.height / 2
+        : Math.max(radius + 8, Math.min(frame.height - radius - 8, pinY))
+      for (const [name, value] of Object.entries({
+        'bubble-size': diameter,
+        'bubble-x': x,
+        'bubble-y': y,
+        'bubble-dx': pinX - x,
+        'bubble-dy': pinY - y,
+      }))
+        map.style.setProperty(`--${name}`, `${value}px`)
+      map.style.setProperty('--bubble-start-scale', String(point.width / diameter))
+    }
+    positionBubble()
+    const observer = new ResizeObserver(positionBubble)
+    observer.observe(map)
+    return () => observer.disconnect()
+  }, [activeLocation])
+
   function select(record: LaboratoryCard, button: HTMLButtonElement) {
     trigger.current = button
     setSelected(record.id)
+    requestAnimationFrame(() =>
+      mapRef.current
+        ?.querySelector<HTMLButtonElement>('[data-map-close]')
+        ?.focus({ preventScroll: true }),
+    )
   }
   function close() {
     setSelected(null)
@@ -113,49 +177,54 @@ export function LaboratoryDirectory({
   }
   return (
     <div className={styles.directory}>
-      <form className={styles.search} role="search" onSubmit={submit}>
-        <label htmlFor="laboratory-query">{labels.label}</label>
-        <div>
-          <input
-            id="laboratory-query"
-            type="search"
-            value={draft}
-            onChange={(event) => {
-              setDraft(event.target.value)
-              if (!event.target.value) setQuery('')
-            }}
-            placeholder={labels.placeholder}
-          />
-          <button type="submit" className="button button-primary">
-            <NavigationIcon name="search" />
-            {labels.search}
-          </button>
+      <div className={styles.directoryTop}>
+        {introduction}
+        <div className={styles.directoryControls}>
+          <form className={styles.search} role="search" onSubmit={submit}>
+            <label htmlFor="laboratory-query">{labels.label}</label>
+            <div>
+              <input
+                id="laboratory-query"
+                type="search"
+                value={draft}
+                onChange={(event) => {
+                  setDraft(event.target.value)
+                  if (!event.target.value) setQuery('')
+                }}
+                placeholder={labels.placeholder}
+              />
+              <button type="submit" className="button button-primary">
+                <NavigationIcon name="search" />
+                {labels.search}
+              </button>
+            </div>
+          </form>
+          <div className={styles.filters} role="group" aria-label={labels.theme}>
+            <button
+              type="button"
+              aria-pressed={!topic}
+              onClick={() => {
+                setSelected(null)
+                setTopic('')
+              }}
+            >
+              {labels.all}
+            </button>
+            {laboratoryTopics.map((id) => (
+              <button
+                key={id}
+                type="button"
+                aria-pressed={topic === id}
+                onClick={() => {
+                  setSelected(null)
+                  setTopic(id)
+                }}
+              >
+                {labels.topics[id]}
+              </button>
+            ))}
+          </div>
         </div>
-      </form>
-      <div className={styles.filters} role="group" aria-label={labels.theme}>
-        <button
-          type="button"
-          aria-pressed={!topic}
-          onClick={() => {
-            setSelected(null)
-            setTopic('')
-          }}
-        >
-          {labels.all}
-        </button>
-        {laboratoryTopics.map((id) => (
-          <button
-            key={id}
-            type="button"
-            aria-pressed={topic === id}
-            onClick={() => {
-              setSelected(null)
-              setTopic(id)
-            }}
-          >
-            {labels.topics[id]}
-          </button>
-        ))}
       </div>
       <div className={styles.resultBar}>
         <p role="status" aria-live="polite" aria-atomic="true">
@@ -167,8 +236,22 @@ export function LaboratoryDirectory({
           </button>
         )}
       </div>
-      <div className={styles.explorer}>
-        <div className={styles.laboratories}>
+      <div
+        className={styles.explorer}
+        onKeyDown={(event) => {
+          if (event.key === 'Escape' && active) {
+            event.preventDefault()
+            close()
+          }
+        }}
+      >
+        <div
+          className={styles.laboratories}
+          role="region"
+          aria-label={labels.list}
+          tabIndex={0}
+          data-laboratory-list
+        >
           {records.map((record) => (
             <article
               key={record.id}
@@ -182,7 +265,7 @@ export function LaboratoryDirectory({
                 aria-pressed={active?.id === record.id}
                 onClick={(event) => select(record, event.currentTarget)}
               >
-                <ValorisationIcon name="flask" />
+                <SiteIcon icon={topicIcons[record.topic]} />
                 <span>
                   <strong>{record.title}</strong>
                   <span>
@@ -200,20 +283,16 @@ export function LaboratoryDirectory({
           ))}
         </div>
         <div className={styles.mapColumn}>
-          <p id="laboratory-map-help" className={styles.mapHelp}>
-            {labels.approximate}
-          </p>
           <div
+            ref={mapRef}
             className={styles.map}
             role="group"
             aria-label={labels.map}
-            aria-describedby="laboratory-map-help"
-            onKeyDown={(event) => {
-              if (event.key === 'Escape' && active) {
-                event.preventDefault()
+            onClick={(event) => {
+              if (active && !(event.target as Element).closest('button, [data-map-details]'))
                 close()
-              }
             }}
+            data-laboratory-map
           >
             <div className={styles.mapCanvas}>
               <div className={styles.mapShape} aria-hidden="true" />
@@ -235,6 +314,7 @@ export function LaboratoryDirectory({
             </div>
             {active && (
               <section
+                key={active.location}
                 className={styles.mapDetails}
                 aria-labelledby="map-laboratory-title"
                 data-map-details
@@ -242,34 +322,38 @@ export function LaboratoryDirectory({
                 <button
                   type="button"
                   className={styles.closeDetails}
+                  data-map-close
                   aria-label={labels.close}
                   onClick={close}
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path d="m6 6 12 12M18 6 6 18" />
-                  </svg>
+                  <SiteIcon icon={X} />
                 </button>
-                <p className={styles.labTopic}>{labels.topics[active.topic]}</p>
-                <h3 id="map-laboratory-title">{active.title}</h3>
-                <LaboratoryDetails record={active} labels={labels} />
+                <div className={styles.bubbleContent} tabIndex={0}>
+                  <span
+                    className={styles.bubbleTopic}
+                    role="img"
+                    aria-label={labels.topics[active.topic]}
+                  >
+                    <SiteIcon icon={topicIcons[active.topic]} />
+                  </span>
+                  <h3 id="map-laboratory-title">{active.title}</h3>
+                  <p className={styles.affiliation}>{active.institution}</p>
+                  <p className={styles.city}>{active.city}</p>
+                </div>
                 {visible.filter((record) => record.location === active.location).length > 1 && (
                   <div className={styles.cityLabs}>
                     {visible
                       .filter((record) => record.location === active.location)
-                      .map((record) => (
+                      .map((record, index) => (
                         <button
                           key={record.id}
                           type="button"
+                          aria-label={record.title}
+                          title={record.title}
                           aria-pressed={record.id === active.id}
                           onClick={() => setSelected(record.id)}
                         >
-                          {record.title}
+                          {index + 1}
                         </button>
                       ))}
                   </div>

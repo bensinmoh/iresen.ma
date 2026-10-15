@@ -455,9 +455,6 @@ for (const locale of locales) {
         expect(overflowing, `${locale}: ${width}px, ${textSize}% text`).toEqual([])
         const selectSpacing = await page.locator('.search-sort-select').evaluate((wrapper) => {
           const select = wrapper.querySelector('select')!
-          const icon = wrapper.querySelector('svg')!
-          const field = select.getBoundingClientRect()
-          const arrow = icon.getBoundingClientRect()
           const style = getComputedStyle(select)
           const canvas = document.createElement('canvas').getContext('2d')!
           canvas.font = style.font
@@ -465,7 +462,7 @@ for (const locale of locales) {
             ...Array.from(select.options, (option) => canvas.measureText(option.text).width),
           )
           return {
-            inset: style.direction === 'rtl' ? arrow.left - field.left : field.right - arrow.right,
+            inset: parseFloat(style.getPropertyValue('--select-chevron-inset')),
             textSpace:
               select.clientWidth -
               parseFloat(style.paddingInlineStart) -
@@ -473,8 +470,8 @@ for (const locale of locales) {
               textWidth,
             gap:
               parseFloat(style.paddingInlineEnd) -
-              arrow.width -
-              parseFloat(getComputedStyle(icon).insetInlineEnd),
+              parseFloat(style.backgroundSize) -
+              parseFloat(style.getPropertyValue('--select-chevron-inset')),
           }
         })
         expect(

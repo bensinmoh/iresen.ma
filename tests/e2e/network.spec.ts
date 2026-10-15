@@ -28,6 +28,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(page.locator('#request-expertise')).toHaveCount(0)
     const cards = page.locator('[data-laboratory-card]:visible')
     await expect(cards).toHaveCount(14)
+    await expect(cards.locator('button > svg')).toHaveCount(14)
     const directory = page.locator('#scientific-network')
     await directory.scrollIntoViewIfNeeded()
     const input = page.locator('#laboratory-query')
@@ -36,6 +37,27 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await directory.locator('[data-map-pin="marrakech"]').click()
     const detail = directory.locator('[data-map-details]')
     await expect(detail).toBeVisible()
+    const origin = await detail.evaluate((node) => {
+      const animation = node.getAnimations()[0]
+      if (!animation) return null
+      animation.pause()
+      animation.currentTime = 0
+      const bubble = node.getBoundingClientRect()
+      const pin = document.querySelector('[data-map-pin="marrakech"]')!.getBoundingClientRect()
+      const result = {
+        x: Math.abs(bubble.left + bubble.width / 2 - pin.left - pin.width / 2),
+        y: Math.abs(bubble.top + bubble.height / 2 - pin.top - pin.height / 2),
+        size: Math.abs(bubble.width - pin.width),
+      }
+      animation.finish()
+      return result
+    })
+    expect(origin).not.toBeNull()
+    expect(origin!.x).toBeLessThan(1)
+    expect(origin!.y).toBeLessThan(1)
+    expect(origin!.size).toBeLessThan(1)
+    await expect(detail.locator('[role="img"]')).toHaveCount(1)
+    await expect(detail.locator('h3')).toHaveCSS('text-align', 'center')
     await expect(detail.locator('h3')).toHaveText(await cards.nth(1).locator('strong').innerText())
     await detail.locator('button[aria-pressed]').last().click()
     await expect(cards.nth(13).locator('button')).toHaveAttribute('aria-pressed', 'true')
@@ -47,7 +69,11 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(detail).toHaveCount(0)
     await expect(directory.locator('[data-map-pin="marrakech"]')).toBeFocused()
     await cards.nth(12).locator('button').click()
-    await expect(detail.locator('a[href="mailto:ghennioui@iresen.org"]')).toBeVisible()
+    await expect(detail.locator('address')).toHaveCount(0)
+    await expect(detail.locator('[data-map-close]')).toBeFocused()
+    await cards.nth(12).locator('summary').focus()
+    await page.keyboard.press('Enter')
+    await expect(cards.nth(12).locator('a[href="mailto:ghennioui@iresen.org"]')).toBeVisible()
     await input.fill('')
     await input.fill('marrakech')
     await input.press('Enter')
@@ -101,8 +127,36 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     ).resolves.toMatchObject({ violations: [] })
     for (const width of [320, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 900 })
+      if (await detail.count()) await detail.locator('button').first().click()
       await directory.locator('[data-map-pin="marrakech"]').click()
       await expect(detail).toBeVisible()
+      await expect
+        .poll(() =>
+          detail.evaluate(
+            (node) =>
+              node.getAnimations().filter((animation) => animation.playState !== 'finished').length,
+          ),
+        )
+        .toBe(0)
+      const bubbleBox = await detail.boundingBox()
+      expect(Math.abs(bubbleBox!.width - bubbleBox!.height)).toBeLessThan(1)
+      expect(bubbleBox!.width).toBeLessThanOrEqual(336)
+      await expect(detail).toHaveCSS('border-radius', '50%')
+      const list = directory.locator('[data-laboratory-list]')
+      const map = directory.locator('[data-laboratory-map]')
+      const [listBox, mapBox] = await Promise.all([list.boundingBox(), map.boundingBox()])
+      expect(Math.abs(listBox!.height - mapBox!.height)).toBeLessThan(1)
+      if (width < 640) {
+        expect(Math.abs(bubbleBox!.x + bubbleBox!.width / 2 - width / 2)).toBeLessThan(1)
+        await expect(directory.locator('[role="group"]').first()).toHaveCSS(
+          'justify-content',
+          'center',
+        )
+      }
+      const canvasBox = await map.locator(':scope > div').first().boundingBox()
+      if (width >= 1024) expect(canvasBox!.height).toBeGreaterThan(mapBox!.height)
+      expect(await list.evaluate((node) => node.scrollHeight > node.clientHeight)).toBe(true)
+      await directory.screenshot({ path: `/tmp/network-compact-${locale}-${width}.png` })
       await expect
         .poll(() =>
           page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1),
@@ -113,6 +167,10 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.locator('#expertise-in-action').screenshot({
       path: `.cache/crosslink-review/${locale}-network-mobile.png`,
     })
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await detail.locator('button').first().click()
+    await directory.locator('[data-map-pin="marrakech"]').click()
+    await expect(detail).toHaveCSS('animation-name', 'none')
     await page.setViewportSize({ width: 768, height: 900 })
     await page.addStyleTag({ content: 'html { font-size: 200% !important }' })
     await expect

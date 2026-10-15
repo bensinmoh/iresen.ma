@@ -120,3 +120,9 @@ Alliances, PhaseIII drafting and separately commissioned integrations remain ope
 Do not silently activate online intake, newsletter, analytics, OAuth or new CMS models.
 See [IT handover](docs/it-handover.fr.md), [deployment](docs/deployment.md),
 [current preparation](docs/public-release-preparation.md) and [backlog](docs/backlog.md).
+
+Useful links consolidation (2026-10-15): the owner selects the Media library’s
+`press-resources` section as the sole useful-tools catalogue. It reuses the four
+former dedicated-page resources and adds the exact EVPLAN, PV Mapping and SolarTwin
+URLs supplied by the owner. `usefulLinks` is a permanent compatibility route alias;
+its footer shortcut points to the media section. See `docs/useful-links.md`.

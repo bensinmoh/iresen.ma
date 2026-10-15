@@ -1,5 +1,5 @@
 .page {
-  margin-inline: calc(-1 * var(--gutter));
+  margin-inline: calc(-1 * var(--page-bleed));
   color: var(--color-navy);
   overflow-wrap: anywhere;
 }
@@ -7,11 +7,11 @@
 .navigation,
 .section,
 .credits {
-  padding-inline: var(--gutter);
+  padding-inline: var(--page-bleed);
 }
 .intro {
   padding-block: 2rem 3rem;
-  max-inline-size: 70rem;
+  max-inline-size: calc(70rem + 2 * (var(--page-bleed) - var(--gutter)));
 }
 .intro h2 {
   font-size: clamp(1.8rem, 3vw, 3.1rem);
@@ -23,10 +23,6 @@
 .intro > p:last-child {
   max-inline-size: 65ch;
   color: var(--color-text-muted);
-}
-.eyebrow {
-  font-size: var(--font-size-label);
-  color: var(--color-blue);
 }
 .navigation {
   display: grid;
@@ -50,7 +46,7 @@
   background: var(--color-action-surface);
 }
 .section {
-  padding-block: clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
   scroll-margin-block-start: 7rem;
 }
 .heading {
@@ -326,7 +322,6 @@
   background: var(--color-navy);
   color: white;
 }
-.ink .eyebrow,
 .ink .heading p,
 .ink article p {
   color: var(--color-footer-muted);
@@ -680,7 +675,7 @@
   min-block-size: 76dvh;
 }
 :global(body):has(.page) :global(.page-hero--media) :global(.hero-body) {
-  padding-block-end: 5rem;
+  padding-block-end: var(--section-space);
 }
 @media (prefers-reduced-motion: reduce) {
   :global(html):has(.page) {

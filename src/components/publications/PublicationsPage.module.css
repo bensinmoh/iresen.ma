@@ -30,24 +30,6 @@
 .heroContent > p {
   margin: 0 auto 2rem;
 }
-.eyebrow {
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.hero .eyebrow {
-  justify-content: center;
-}
-.eyebrow::before {
-  content: '';
-  inline-size: 0.46rem;
-  block-size: 0.75rem;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center/contain no-repeat;
-}
 .search {
   max-inline-size: 88rem;
   margin: 2rem auto 1.5rem;
@@ -109,7 +91,7 @@
 }
 .section,
 .reports {
-  padding-block: clamp(3rem, 4.167vw, 5rem);
+  padding-block: var(--section-space);
 }
 .heading {
   display: flex;
@@ -123,10 +105,6 @@
   line-height: 1.7;
   margin: 0;
 }
-.heading .eyebrow {
-  color: var(--color-blue);
-  margin: 0 0 0.75rem;
-}
 .page h2 {
   font-size: clamp(1.75rem, 2.6vw, 3.125rem);
   font-weight: 500;
@@ -137,7 +115,7 @@
 .catalogue {
   display: grid;
   grid-template-columns: minmax(15rem, 0.32fr) minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 5rem);
+  gap: var(--layout-gap);
   align-items: start;
 }
 .filters {
@@ -255,7 +233,7 @@
   max-inline-size: 75ch;
   line-height: 1.7;
 }
-:global([dir='rtl']) .page :is(h1, h2, h3, .eyebrow) {
+:global([dir='rtl']) .page :is(h1, h2, h3) {
   letter-spacing: normal;
 }
 @media (max-width: 70rem) {

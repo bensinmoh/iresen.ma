@@ -1,5 +1,11 @@
 'use client'
 
+import { CaretDown } from '@phosphor-icons/react/dist/ssr/CaretDown'
+
+import { List } from '@phosphor-icons/react/dist/ssr/List'
+import { X } from '@phosphor-icons/react/dist/ssr/X'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+
 import { useLocale, useTranslations } from 'next-intl'
 import { useCallback, useEffect, useRef, type KeyboardEvent } from 'react'
 import { isLocale, defaultLocale } from '@/i18n/locales'
@@ -211,6 +217,7 @@ export function SiteHeader() {
       <details className="navigation-group" data-navigation-group={group.id} key={group.id}>
         <summary>
           <span>{t(group.id)}</span>
+          <SiteIcon icon={CaretDown} className="navigation-group-caret" size={20} />
         </summary>
         <ul>
           {group.pages.map((pageId) => (
@@ -435,29 +442,8 @@ export function SiteHeader() {
                 <span className="glass-reflection" aria-hidden="true" />
                 <span className="menu-open-label">{t('menu')}</span>
                 <span className="menu-close-label">{t('closeMenu')}</span>
-                <svg
-                  className="menu-icon"
-                  aria-hidden="true"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
-                  fill="none"
-                >
-                  <path
-                    className="menu-icon-bars"
-                    d="M3 6h18M3 12h18M3 18h18"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    className="menu-icon-close"
-                    d="m6 6 12 12M6 18 18 6"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  />
-                </svg>
+                <SiteIcon icon={List} className="menu-icon menu-icon-bars" size={20} />
+                <SiteIcon icon={X} className="menu-icon menu-icon-close" size={20} />
               </summary>
               <nav aria-label={t('label')} className="menu-panel">
                 <div className="container menu-content">

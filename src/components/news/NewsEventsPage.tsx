@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -132,7 +133,7 @@ export async function NewsEventsPage({
         />
         <div className={styles.shade} />
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.eyebrow}>{t('eyebrow')}</p>
+          <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
           <h1 id="hero-title">
             {t('titleStart')}
             <br />
@@ -220,7 +221,7 @@ export async function NewsEventsPage({
                   <h2 id="training-title">{t('trainingTitle')}</h2>
                   <div className={styles.trainingLower}>
                     <div>
-                      <p className={styles.eyebrow}>{t('trainingHeading')}</p>
+                      <SectionEyebrow tone="white">{t('trainingHeading')}</SectionEyebrow>
                       <p>{t('trainingDescription')}</p>
                       <a className="button button-primary" href={pageHref('network', locale)}>
                         {t('trainingAction')}

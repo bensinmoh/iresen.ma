@@ -7,11 +7,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
   test(`${locale}: platform discovery, real destinations, accessibility and reflow`, async ({
     page,
   }, testInfo) => {
+    test.setTimeout(60_000)
     await page.goto(pageHref('platforms', locale))
     const region = page.locator('[data-platforms-page]')
     expect((await page.title()).match(/IRESEN/g)).toHaveLength(1)
     await expect(region.locator('h1')).toHaveCount(1)
     await expect(region.locator('[data-platform]')).toHaveCount(4)
+    await expect(region.locator('article[id^="infrastructure-"] img')).toHaveCount(10)
     for (const anchor of platformLegacyAnchors)
       await expect(region.locator(`#${anchor}`)).toHaveCount(1)
     await expect(region.locator('.hero-primary')).toHaveAttribute('href', '#green-energy-park')
@@ -52,9 +54,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
           await section.evaluate((element) =>
             element.scrollIntoView({ block: 'start', behavior: 'instant' }),
           )
-          await section.locator('img').evaluateAll(async (images) => {
-            await Promise.all(images.map((image) => (image as HTMLImageElement).decode()))
-          })
+          for (const image of await section.locator('img').all()) {
+            await image.scrollIntoViewIfNeeded()
+            await expect(image).toHaveJSProperty('complete', true)
+            await image.evaluate((element) => (element as HTMLImageElement).decode())
+          }
+          await section.evaluate((element) =>
+            element.scrollIntoView({ block: 'start', behavior: 'instant' }),
+          )
           await page.screenshot({
             path: testInfo.outputPath(`${locale}-${width}-${target.replace(/[.#]/g, '')}.png`),
           })

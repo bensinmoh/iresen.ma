@@ -677,9 +677,6 @@ textarea {
   min-height: 42px;
   padding: 10px 12px;
 }
-select {
-  padding-inline-end: 28px;
-}
 textarea {
   width: 100%;
   resize: vertical;

@@ -35,6 +35,7 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
         { id: 'platform-network-expertise' },
       ],
     },
+    { id: 'capabilities-cooperation' },
     { id: 'collaboration' },
     { id: 'news-events' },
   ],

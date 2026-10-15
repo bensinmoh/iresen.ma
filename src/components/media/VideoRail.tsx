@@ -1,5 +1,8 @@
 'use client'
 
+import { PlayCircle } from '@phosphor-icons/react/dist/ssr/PlayCircle'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+
 import Image from 'next/image'
 import { useEffect, useId, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -159,17 +162,7 @@ export function VideoRail({
                 />
               )}
               <span className={styles.videoPlay} aria-hidden="true">
-                <svg width="64" height="64" viewBox="0 0 40 40" fill="none">
-                  <circle
-                    cx="20"
-                    cy="20"
-                    r="18"
-                    fill="rgb(18 52 90 / 45%)"
-                    stroke="currentColor"
-                    strokeWidth="1.2"
-                  />
-                  <path d="m16 12 12 8-12 8z" fill="currentColor" />
-                </svg>
+                <SiteIcon icon={PlayCircle} size={64} />
               </span>
               <span className={styles.videoCopy}>
                 <span className={styles.videoTitle}>

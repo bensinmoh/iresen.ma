@@ -23,7 +23,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       'photo-portrait-dg-iresen-samir-rachidi',
     )
     await expect(library.locator('article[id^="report-"]')).toHaveCount(10)
-    await expect(library.locator('#press-resources .navigation-icon')).toHaveCount(5)
+    await expect(library.locator('#press-resources .navigation-icon')).toHaveCount(7)
     for (const width of [320, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(

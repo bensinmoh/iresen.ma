@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -31,10 +32,9 @@ export async function TransferPage({ locale }: { locale: Locale }) {
   const header = (key: 'process' | 'ip' | 'pathways' | 'catalog' | 'doors', id: string) => (
     <header className={styles.header}>
       <div>
-        <p className={styles.eyebrow}>
-          <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
+        <SectionEyebrow tone={key === 'pathways' ? 'cyan' : 'blue'}>
           {t(`${key}.label`)}
-        </p>
+        </SectionEyebrow>
         <h2 id={`${id}-heading`}>{t(`${key}.title`)}</h2>
       </div>
       <p>{t(`${key}.${key === 'doors' ? 'note' : 'description'}`)}</p>
@@ -58,7 +58,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
             />
           </div>
           <div className={styles.introCopy}>
-            <p className={styles.eyebrow}>{t('eyebrow')}</p>
+            <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
             <h2 id="results-to-transfer-heading">{t('title')}</h2>
             <p>{t('intro')}</p>
             <div className={styles.actions}>

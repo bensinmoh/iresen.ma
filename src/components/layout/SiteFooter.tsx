@@ -1,3 +1,5 @@
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { footerNavigationGroups, footerPageIds, pageHref, pageLinkHref } from '@/lib/site'
@@ -7,25 +9,7 @@ import { FooterIcon } from './FooterIcon'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 
 function FooterArrow() {
-  return (
-    <svg
-      className="footer-arrow"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <path
-        d="M4 12h16m-6-6 6 6-6 6"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
+  return <SiteIcon icon={ArrowRight} className="footer-arrow" size={20} />
 }
 
 export async function SiteFooter({ locale }: { locale: Locale }) {

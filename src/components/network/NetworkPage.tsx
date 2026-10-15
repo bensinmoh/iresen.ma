@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -57,7 +58,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
         >
           <header className={styles.heading}>
             <div>
-              <p className={styles.eyebrow}>{t('eyebrow')}</p>
+              <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
               <h2 id="network-domains-title">{t('domains.title')}</h2>
             </div>
             <p>{t('domains.description')}</p>
@@ -93,26 +94,27 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
                 </article>
               ))}
             </div>
-            <p className={styles.notice}>{t('modes.notice')}</p>
           </div>
         </section>
         <section
           id="scientific-network"
-          className={`container ${styles.section}`}
+          className={`container ${styles.section} ${styles.directorySection}`}
           aria-labelledby="network-directory-title"
         >
-          <header className={`${styles.heading} ${styles.directoryHeading}`}>
-            <div>
-              <p className={styles.eyebrow}>{t('directory.eyebrow')}</p>
-              <h2 id="network-directory-title">{t('directory.title')}</h2>
-              <p>{t('directory.description')}</p>
-            </div>
-          </header>
           <LaboratoryDirectory
+            introduction={
+              <header className={styles.directoryHeading}>
+                <div>
+                  <SectionEyebrow>{t('directory.eyebrow')}</SectionEyebrow>
+                  <h2 id="network-directory-title">{t('directory.title')}</h2>
+                  <p>{t('directory.description')}</p>
+                </div>
+              </header>
+            }
             records={records}
             labels={{
               map: t('directory.map'),
-              approximate: t('directory.approximate'),
+              list: t('directory.list'),
               close: t('directory.close'),
               label: t('directory.label'),
               placeholder: t('directory.placeholder'),
@@ -146,7 +148,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
               />
             </div>
             <div>
-              <p className={styles.eyebrow}>{sections('skills-training.title')}</p>
+              <SectionEyebrow tone="cyan">{sections('skills-training.title')}</SectionEyebrow>
               <h2 id="network-skills-title">{t('skills.title')}</h2>
               <p>{t('skills.description')}</p>
               <ul>
@@ -174,7 +176,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
         >
           <header className={styles.heading}>
             <div>
-              <p className={styles.eyebrow}>{sections('expertise-in-action.title')}</p>
+              <SectionEyebrow>{sections('expertise-in-action.title')}</SectionEyebrow>
               <h2 id="network-examples-title">{t('examples.title')}</h2>
             </div>
             <p>{t('examples.description')}</p>

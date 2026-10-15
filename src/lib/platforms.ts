@@ -1,8 +1,12 @@
+import infrastructurePhotos from '@/data/infrastructure-photos.json' with { type: 'json' }
 import { homePlatforms } from './home-platforms'
 
 // Manuscript sections; missing official destinations deliberately stay absent.
 export const researchPlatforms = homePlatforms.map((platform, index) => ({
   ...platform,
+  logoSrc: `/brand/platforms/${platform.id === 'greenh2a' ? 'greenh2a-white' : platform.id}.svg`,
+  logoWidth: platform.id === 'greenh2a' ? 372.17 : platform.logoWidth,
+  logoHeight: platform.id === 'greenh2a' ? 131.54 : platform.logoHeight,
   anchor: [
     'green-energy-park',
     'green-smart-building-park',
@@ -21,3 +25,11 @@ export const platformLegacyAnchors = [
   'access-platforms',
   'projects-resources',
 ] as const
+
+export const platformInfrastructurePhotos = infrastructurePhotos.filter(
+  (photo) => photo.index !== null,
+)
+
+export function platformChapterPhoto(id: string) {
+  return infrastructurePhotos.find((photo) => photo.platform === id && photo.index === null)
+}

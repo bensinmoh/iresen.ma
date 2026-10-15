@@ -59,7 +59,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       await expect
         .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1))
         .toBe(true)
-      const eyebrow = await region.locator('.hero-eyebrow').boundingBox()
+      const eyebrow = await region.locator('.page-hero [data-section-eyebrow]').boundingBox()
       expect(Math.abs(eyebrow!.x + eyebrow!.width / 2 - width / 2)).toBeLessThan(2)
       if (width === 390 || width === 1440) {
         for (const target of [

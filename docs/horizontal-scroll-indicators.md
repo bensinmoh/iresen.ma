@@ -161,3 +161,11 @@ Original names are `Screen Recording 2026-10-10 at <time>.mov`, supplied under
 | 20.47.28 | `90e75db9ed742e77462d68914467ef0694ef98c8dceec51924f01b689cf44105` |
 
 No raw recording or extracted screenshot is imported, served or indexed.
+
+## Homepage collaboration — 2026-10-15
+
+The owner commissions the existing mobile-only pill pattern for collaboration:
+five audience cards, five borderless marks, native RTL scrolling, keyboard access,
+reduced-motion feedback and indicators centered below the rail. The scoped rail
+uses Science Blue for the active mark on ink. Tablet/desktop use the compact grid
+and no indicators. See [current scope](home-collaboration.md#compact-audience-layout--2026-10-15).

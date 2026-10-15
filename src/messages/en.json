@@ -577,6 +577,10 @@
         "title": "Capabilities that advance innovation",
         "description": "From laboratories to demonstrators, mobilise resources for research, testing and training according to capabilities available or in development."
       },
+      "capabilities-cooperation": {
+        "title": "From your needs to shared work",
+        "description": "A platform can support research, testing and training. A partnership can bring together expertise and resources for several contributions."
+      },
       "collaboration": {
         "title": "Collaborate with IRESEN",
         "description": "A need for analysis, research or skills? Let us bring together expertise and resources to build joint work."
@@ -1113,7 +1117,7 @@
       },
       "press-resources": {
         "title": "Useful links",
-        "description": "Visit the institutions of Morocco’s energy ecosystem."
+        "description": "Energy and geoscience maps, external tools and platforms for research and the energy transition."
       },
       "credits-reuse": {
         "title": "Credits & reuse",
@@ -1539,6 +1543,7 @@
     }
   },
   "HomeCollaboration": {
+    "navigation": "Choose an audience",
     "title": "Collaborate with IRESEN",
     "description": "A need for analysis, research or skills? Let us bring together expertise and resources to build joint work.",
     "action": "Explore ways to collaborate",
@@ -1564,12 +1569,6 @@
         "description": "Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms.",
         "action": "Discuss your needs"
       },
-      "territories": {
-        "audience": "Territories and development actors",
-        "title": "Which solutions suit our local needs and constraints?",
-        "description": "Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills.",
-        "action": "Describe a territorial need"
-      },
       "international": {
         "audience": "International partners and funders",
         "title": "Which capabilities and projects can we develop together?",
@@ -1583,7 +1582,7 @@
         "action": "Explore opportunities"
       }
     },
-    "searchText": "State, institutions and public operators How can research serve national priorities? Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities. Discuss your priorities Universities and research teams How can we advance research and its applications? Build joint work, share experimental facilities and skills, and prepare the maturation of results. Explore programmes Industry and businesses How can we address technological and decarbonisation challenges? Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms. Discuss your needs Territories and development actors Which solutions suit our local needs and constraints? Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills. Describe a territorial need International partners and funders Which capabilities and projects can we develop together? Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems. Build a cooperation Talent and the public What is this research for and how can I contribute? Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities. Explore opportunities"
+    "searchText": "State, institutions and public operators How can research serve national priorities? Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities. Discuss your priorities Universities and research teams How can we advance research and its applications? Build joint work, share experimental facilities and skills, and prepare the maturation of results. Explore programmes Industry and businesses How can we address technological and decarbonisation challenges? Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms. Discuss your needs International partners and funders Which capabilities and projects can we develop together? Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems. Build a cooperation Talent and the public What is this research for and how can I contribute? Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities. Explore opportunities"
   },
   "HomePlatforms": {
     "eyebrow": "Platforms & expertise",
@@ -2350,7 +2349,7 @@
       "fr": "French",
       "en": "English"
     },
-    "linkNote": "Visit the institutions of Morocco’s energy ecosystem.",
+    "linkNote": "Energy and geoscience maps, external tools and platforms for research and the energy transition.",
     "unavailable": "The video library is temporarily unavailable. Please try again later.",
     "previousVideos": "Previous videos",
     "nextVideos": "Next videos",
@@ -2941,8 +2940,7 @@
           "title": "Training & knowledge sharing",
           "description": "Researchers, doctoral students and technical teams: share methods and develop skills through practice."
         }
-      ],
-      "notice": "Arrangements and access are defined individually; this overview is not a catalogue of services available for booking."
+      ]
     },
     "directory": {
       "eyebrow": "Established laboratories",
@@ -2968,9 +2966,9 @@
         "bioenergy": "Bioenergy"
       },
       "map": "Laboratory map",
-      "approximate": "Approximate city locations. Select a point or a laboratory to view its details.",
       "close": "Close details",
-      "gepName": "Abdelatif GHENNIOUI"
+      "gepName": "Abdelatif GHENNIOUI",
+      "list": "Network laboratories"
     },
     "skills": {
       "title": "Research skills grow through practice.",
@@ -3262,9 +3260,7 @@
       }
     },
     "accessNote": "Access, testing and training arrangements are defined with the teams according to needs and available capabilities. Infrastructure under development is distinguished from operational facilities.",
-    "readDetails": "Read the full overview",
-    "photoPendingLabel": "Photograph coming soon",
-    "photoPending": "Photograph coming soon: {title}"
+    "readDetails": "Read the full overview"
   },
   "Programmes": {
     "eyebrow": "R&D&I programmes",
@@ -3468,7 +3464,7 @@
     "googlePrivacy": "Google privacy"
   },
   "UsefulLinks": {
-    "description": "Explore these external resources for energy and geoscientific maps of Morocco.",
+    "description": "Energy and geoscience maps, external tools and platforms for research and the energy transition.",
     "items": [
       {
         "id": "solar-cadastre",
@@ -3489,6 +3485,21 @@
         "id": "masen-solar-atlas",
         "title": "MASEN Solar Atlas",
         "description": "Interactive solar atlas map, opened at the supplied coordinates."
+      },
+      {
+        "id": "evplan",
+        "title": "EVPLAN",
+        "description": "Mapping and planning tool for electric vehicle charging infrastructure."
+      },
+      {
+        "id": "pv-mapping",
+        "title": "PV Mapping",
+        "description": "Access the PV Mapping tool."
+      },
+      {
+        "id": "solartwin",
+        "title": "SolarTwin",
+        "description": "Access the SolarTwin platform."
       }
     ]
   },

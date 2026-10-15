@@ -1,6 +1,6 @@
 .section {
-  margin-inline: calc(-1 * var(--gutter));
-  padding: var(--home-section-padding) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: var(--home-section-padding) var(--page-bleed);
   background: var(--color-white);
   scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
   overflow-wrap: anywhere;
@@ -11,20 +11,6 @@
   gap: var(--space-8);
   align-items: start;
   margin-block-end: clamp(1.5rem, 2.5vw, 2.5rem);
-}
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin: 0 0 var(--space-4);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.eyebrow img {
-  inline-size: auto;
-  block-size: 0.75rem;
 }
 .header h2 {
   max-inline-size: 22ch;

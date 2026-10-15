@@ -1,5 +1,5 @@
 import { expect, test } from './fixtures'
-import { pageHref } from '../../src/lib/site'
+import { pages, pageHref } from '../../src/lib/site'
 import { usefulLinks } from '../../src/lib/useful-links'
 test('public production closes administrative and private resources', async ({ request }) => {
   for (const path of [
@@ -46,13 +46,20 @@ test('HTML has an unpredictable CSP nonce and hydrates without script violations
 })
 for (const locale of ['fr', 'en', 'ar'] as const)
   test(`${locale}: useful tools preserve URLs and never embed providers`, async ({ page }) => {
-    await page.goto(pageHref('usefulLinks', locale))
-    await expect(page.locator('#mapping-tools li')).toHaveCount(4)
+    await page.goto(`/${locale}${pages.usefulLinks.pathnames[locale]}`)
+    await expect(page).toHaveURL(
+      (url) => decodeURI(url.pathname) + url.hash === pageHref('media', locale, 'press-resources'),
+    )
+    await expect(page.locator('#press-resources a')).toHaveCount(7)
     for (const link of usefulLinks)
-      await expect(page.locator(`#${link.id} a`)).toHaveAttribute('href', link.href)
+      await expect(page.locator(`#link-${link.id}`)).toHaveAttribute('href', link.href)
     await expect(page.locator('iframe')).toHaveCount(0)
+    await page.locator('#press-resources').scrollIntoViewIfNeeded()
+    await page.screenshot({ path: `/tmp/useful-links-${locale}-desktop.png` })
     for (const width of [390, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 })
+      await page.locator('#press-resources').scrollIntoViewIfNeeded()
+      await page.screenshot({ path: `/tmp/useful-links-${locale}-${width}.png` })
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
         true,
       )

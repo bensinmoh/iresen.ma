@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
@@ -29,15 +30,15 @@ export async function IntegratedModel({
         aria-labelledby={`${prefix}-research-title`}
       >
         <header>
-          <p className={styles.label}>{t('coreLabel')}</p>
-          <h3 id={`${prefix}-research-title`}>{t('coreTitle')}</h3>
+          <SectionEyebrow tone="cyan">{t('coreLabel')}</SectionEyebrow>
+          <h2 id={`${prefix}-research-title`}>{t('coreTitle')}</h2>
           <p>{t('coreDescription')}</p>
         </header>
         <div className={styles.missions}>
           {researchMissions.map(({ id, legacyAnchor, pageId }, index) => (
             <article id={prefix === 'mission' ? legacyAnchor : `${prefix}-${id}`} key={id}>
               <ValorisationIcon name={(['bulb', 'flask', 'arrows-exchange'] as const)[index]} />
-              <h4>{t(`missions.${id}.title`)}</h4>
+              <h3>{t(`missions.${id}.title`)}</h3>
               <p>{t(`missions.${id}.description`)}</p>
               <a href={pageHref(pageId, locale)}>
                 {t(`missions.${id}.action`)}
