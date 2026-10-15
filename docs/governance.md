@@ -624,3 +624,12 @@ Run the complete CI and tests, then merge when green. Local format, ESLint,
 TypeScript and all 170 unit tests pass. Withdrawn resources now live only as a
 legacy supported anchor, not a registered content section or empty translation.
 Scientific profile assertions follow the h3 hierarchy and new-tab contract.
+
+CI 366: formatting, lint, types, all unit/integration tests, production build
+and 335 browser tests passed, including the Governance journeys. Five browser
+failures identify four fixes: suppress entry movement on interactive search
+results; recognize only named governance diagrams/country flags in the SVG
+audit; use cyan for small history titles on navy; shorten the French sort option
+to “Récents” so it fits with enlarged text and the existing caret reserve.
+The search click was reproduced and verified through the local browser after
+the fix. Full CI is rerun before merge; no failed check is bypassed.

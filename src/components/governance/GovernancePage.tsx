@@ -87,6 +87,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
           <div className={styles.boardNetwork}>
             <svg
               className={styles.boardConnections}
+              data-structural-diagram="board-connections"
               viewBox="0 0 1000 1000"
               preserveAspectRatio="none"
               aria-hidden="true"

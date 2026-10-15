@@ -44,6 +44,7 @@ export function ScientificNetwork({ children }: { children: ReactNode }) {
     <div ref={root} className={styles.scientists} data-motion-owned data-illustrative-network>
       <svg
         className={styles.scienceConnections}
+        data-structural-diagram="scientific-network"
         viewBox="0 0 1000 1000"
         preserveAspectRatio="none"
         aria-hidden="true"

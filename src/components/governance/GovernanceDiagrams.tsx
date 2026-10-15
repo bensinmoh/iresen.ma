@@ -18,6 +18,7 @@ export async function GovernanceDiagram({ locale }: { locale: Locale }) {
       >
         <svg
           className={styles.flowDirection}
+          data-structural-diagram="governance-flow"
           viewBox="0 0 1200 24"
           preserveAspectRatio="none"
           aria-hidden="true"

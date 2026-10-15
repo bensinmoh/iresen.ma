@@ -208,7 +208,7 @@ export async function SearchPage({
               )}
             </section>
           ) : (
-            <ol className="search-results" aria-label={t('resultsLabel')}>
+            <ol className="search-results" aria-label={t('resultsLabel')} data-motion-owned>
               {result.items.map((item) => (
                 <li key={item.id}>
                   <article

@@ -29,6 +29,16 @@ test('public routes use decorative Phosphor icons and retain only identity/struc
         nodes
           .filter(
             (el) =>
+              !(
+                el.closest('[data-governance-page]') &&
+                ['governance-flow', 'board-connections', 'scientific-network'].includes(
+                  el.getAttribute('data-structural-diagram') ?? '',
+                )
+              ) &&
+              !(
+                el.closest('[data-illustrative-network]') &&
+                ['fr', 'de', 'eu', 'ma', 'br'].includes(el.getAttribute('data-country-flag') ?? '')
+              ) &&
               !el.classList.contains('footer-icon') &&
               el.getAttribute('width') !== '0' &&
               el.getAttribute('viewBox') !== '0 0 65 65',

@@ -286,7 +286,7 @@
   box-shadow: 0 0 0 0.5rem rgb(70 152 202 / 16%);
 }
 .timeline h3 {
-  color: var(--color-science-blue);
+  color: var(--color-energy-cyan);
   margin-block-end: var(--space-3);
 }
 .timeline li > p:not(.year) {

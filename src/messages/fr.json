@@ -1348,7 +1348,7 @@
     },
     "sortLabel": "Trier par",
     "relevance": "Pertinence",
-    "newest": "Plus récents",
+    "newest": "Récents",
     "apply": "Appliquer",
     "resultCount": "{count, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
     "resultsLabel": "Résultats de recherche",

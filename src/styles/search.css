@@ -143,6 +143,10 @@
   background: var(--color-white);
 }
 
+.search-page .search-sort-select select[data-ui-field] {
+  padding-inline-start: var(--space-2);
+}
+
 .search-summary {
   margin-block: var(--space-6) var(--space-2);
   color: var(--color-text-muted);
