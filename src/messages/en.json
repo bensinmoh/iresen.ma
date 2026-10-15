@@ -1539,6 +1539,7 @@
     }
   },
   "HomeCollaboration": {
+    "navigation": "Choose an audience",
     "title": "Collaborate with IRESEN",
     "description": "A need for analysis, research or skills? Let us bring together expertise and resources to build joint work.",
     "action": "Explore ways to collaborate",
@@ -1564,12 +1565,6 @@
         "description": "Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms.",
         "action": "Discuss your needs"
       },
-      "territories": {
-        "audience": "Territories and development actors",
-        "title": "Which solutions suit our local needs and constraints?",
-        "description": "Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills.",
-        "action": "Describe a territorial need"
-      },
       "international": {
         "audience": "International partners and funders",
         "title": "Which capabilities and projects can we develop together?",
@@ -1583,7 +1578,7 @@
         "action": "Explore opportunities"
       }
     },
-    "searchText": "State, institutions and public operators How can research serve national priorities? Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities. Discuss your priorities Universities and research teams How can we advance research and its applications? Build joint work, share experimental facilities and skills, and prepare the maturation of results. Explore programmes Industry and businesses How can we address technological and decarbonisation challenges? Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms. Discuss your needs Territories and development actors Which solutions suit our local needs and constraints? Mobilise resource knowledge, studies, technological adaptation, experimentation and local skills. Describe a territorial need International partners and funders Which capabilities and projects can we develop together? Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems. Build a cooperation Talent and the public What is this research for and how can I contribute? Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities. Explore opportunities"
+    "searchText": "State, institutions and public operators How can research serve national priorities? Mobilise studies, scientific expertise, programming and experimentation to inform technology choices while respecting public responsibilities. Discuss your priorities Universities and research teams How can we advance research and its applications? Build joint work, share experimental facilities and skills, and prepare the maturation of results. Explore programmes Industry and businesses How can we address technological and decarbonisation challenges? Develop, test and adapt solutions to your processes and uses with relevant expertise and platforms. Discuss your needs International partners and funders Which capabilities and projects can we develop together? Bring together expertise and resources for joint projects, scientific exchanges and cooperation between Morocco, Africa and other ecosystems. Build a cooperation Talent and the public What is this research for and how can I contribute? Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities. Explore opportunities"
   },
   "HomePlatforms": {
     "eyebrow": "Platforms & expertise",

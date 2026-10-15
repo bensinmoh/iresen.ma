@@ -15,7 +15,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.goto(pageHref('home', locale, 'collaboration'))
     const section = page.locator('#collaboration')
     await expect(section.locator('h2')).toHaveText(catalogs[locale].HomeCollaboration.title)
-    await expect(section.locator('article')).toHaveCount(6)
+    await expect(section.locator('article')).toHaveCount(5)
     await expect(section.locator('header a')).toHaveAttribute(
       'href',
       pageHref('workWithUs', locale, 'choose-pathway'),
@@ -33,19 +33,37 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       'href',
       pageHref('programmes', locale),
     )
+    const desktop = await section.locator('header, article').evaluateAll((nodes) =>
+      nodes.map((node) => {
+        const r = node.getBoundingClientRect()
+        return { top: r.top, left: r.left }
+      }),
+    )
+    expect(new Set(desktop.map((r) => Math.round(r.top))).size).toBe(2)
+    expect(new Set(desktop.map((r) => Math.round(r.left))).size).toBe(3)
     await section.screenshot({ path: `.cache/collaboration-review/${locale}-desktop.png` })
     for (const width of [320, 390, 768, 1024]) {
       await page.setViewportSize({ width, height: 1000 })
       await expect
         .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
         .toBe(true)
-      for (const link of await section.locator('a').all()) {
+      await expect(section.locator('article:visible')).toHaveCount(width > 640 ? 4 : 5)
+      for (const link of await section.locator('a:visible').all()) {
         await link.focus()
         await expect(link).toBeFocused()
         await expect(link).toBeInViewport()
       }
     }
     await page.setViewportSize({ width: 390, height: 1000 })
+    const controls = section.locator('[data-collaboration-navigation]')
+    await expect(controls.locator('button')).toHaveCount(5)
+    await controls.locator('button').last().click()
+    await expect(controls.locator('button').last()).toHaveAttribute('aria-current', 'true')
+    await expect(section.locator('article').last()).toBeInViewport()
+    await section
+      .locator('[data-collaboration-rail]')
+      .evaluate((el) => el.scrollTo({ left: 0, behavior: 'instant' }))
+    await expect(controls.locator('button').first()).toHaveAttribute('aria-current', 'true')
     await section.screenshot({ path: `.cache/collaboration-review/${locale}-mobile.png` })
     for (const width of [320, 390, 768, 1024]) {
       await page.setViewportSize({ width, height: 1000 })
@@ -77,7 +95,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     expect((await response.json()).items).toContainEqual(
       expect.objectContaining({ url: pageHref('home', locale, 'collaboration') }),
     )
-    await section.locator('article a').nth(2).click()
+    await section.locator('[data-audience="industry"] a').click()
     await expect(page).toHaveURL(/subject=platforms#send-request$/)
     await expect(page.locator('select[name="subject"]')).toHaveValue('platforms')
   })
@@ -90,7 +108,7 @@ test('collaboration remains available without JavaScript', async ({ browser }) =
   })
   const page = await context.newPage()
   await page.goto('/ar#collaboration')
-  await expect(page.locator('#collaboration article')).toHaveCount(6)
+  await expect(page.locator('#collaboration article')).toHaveCount(5)
   await page.locator('#collaboration article a').first().focus()
   await expect(page.locator('#collaboration article a').first()).toBeFocused()
   await context.close()

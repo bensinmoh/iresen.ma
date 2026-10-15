@@ -1539,6 +1539,7 @@
     }
   },
   "HomeCollaboration": {
+    "navigation": "Choisir un public",
     "title": "Collaborer avec IRESEN",
     "description": "Un besoin d’analyse, de recherche ou de compétences ? Réunissons les expertises et les ressources pour construire un travail commun.",
     "action": "Découvrir les modalités de collaboration",
@@ -1564,12 +1565,6 @@
         "description": "Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes.",
         "action": "Discuter de vos besoins"
       },
-      "territories": {
-        "audience": "Territoires et acteurs du développement",
-        "title": "Quelles solutions répondent à nos besoins et contraintes locales ?",
-        "description": "Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales.",
-        "action": "Présenter un besoin territorial"
-      },
       "international": {
         "audience": "Partenaires internationaux et bailleurs",
         "title": "Quelles capacités et quels projets pouvons-nous développer ensemble ?",
@@ -1583,7 +1578,7 @@
         "action": "Explorer les opportunités"
       }
     },
-    "searchText": "État, institutions et opérateurs publics Comment la recherche peut-elle servir les priorités nationales ? Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques. Échanger sur vos priorités Universités et équipes de recherche Comment faire progresser nos recherches et leurs applications ? Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats. Explorer les programmes Industriels et entreprises Comment relever nos défis technologiques et de décarbonation ? Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes. Discuter de vos besoins Territoires et acteurs du développement Quelles solutions répondent à nos besoins et contraintes locales ? Mobiliser connaissance des ressources, études, adaptation technologique, expérimentation et compétences locales. Présenter un besoin territorial Partenaires internationaux et bailleurs Quelles capacités et quels projets pouvons-nous développer ensemble ? Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes. Construire une coopération Talents et grand public À quoi sert cette recherche et comment y contribuer ? Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles. Explorer les opportunités"
+    "searchText": "État, institutions et opérateurs publics Comment la recherche peut-elle servir les priorités nationales ? Mobiliser études, expertise scientifique, programmation et expérimentation pour éclairer les choix technologiques, dans le respect des responsabilités publiques. Échanger sur vos priorités Universités et équipes de recherche Comment faire progresser nos recherches et leurs applications ? Construire des travaux communs, partager les moyens expérimentaux et les compétences, et préparer la maturation des résultats. Explorer les programmes Industriels et entreprises Comment relever nos défis technologiques et de décarbonation ? Développer, tester et adapter des solutions aux contraintes de vos procédés et de vos usages, avec les expertises et les plateformes pertinentes. Discuter de vos besoins Partenaires internationaux et bailleurs Quelles capacités et quels projets pouvons-nous développer ensemble ? Réunir expertises et ressources pour des projets communs, des échanges scientifiques et des coopérations entre le Maroc, l’Afrique et les autres écosystèmes. Construire une coopération Talents et grand public À quoi sert cette recherche et comment y contribuer ? Découvrir les travaux, la formation par la recherche, la transmission des savoir-faire et les opportunités scientifiques et professionnelles disponibles. Explorer les opportunités"
   },
   "HomePlatforms": {
     "eyebrow": "Plateformes & expertise",

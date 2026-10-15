@@ -6,8 +6,7 @@ export const collaborationCount = '+120'
 export const collaborationPaths = [
   { id: 'research', pageId: 'programmes' },
   { id: 'solution', pageId: 'opportunities' },
+  { id: 'international', pageId: 'workWithUs' },
   { id: 'industry', pageId: 'contact', topic: 'platforms' },
   { id: 'decision', pageId: 'contact', topic: 'agency' },
-  { id: 'territories', pageId: 'contact', topic: 'partnerships' },
-  { id: 'international', pageId: 'workWithUs' },
 ] as const satisfies readonly { id: string; pageId: PageId; topic?: ContactTopic }[]

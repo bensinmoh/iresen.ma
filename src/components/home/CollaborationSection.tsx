@@ -3,6 +3,7 @@ import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { collaborationCount, collaborationPaths } from '@/lib/home-collaboration'
 import { pageHref } from '@/lib/site'
+import { CollaborationRail } from './CollaborationRail'
 import styles from './CollaborationSection.module.css'
 
 export async function CollaborationSection({ locale }: { locale: Locale }) {
@@ -17,9 +18,15 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
             {t('action')} <NavigationIcon name="arrow" />
           </a>
         </header>
-        <div className={styles.paths}>
+        <CollaborationRail
+          className={styles.paths}
+          locale={locale}
+          label={t('navigation')}
+          navigationLabel={t('navigation')}
+          itemLabels={collaborationPaths.map(({ id }) => t(`paths.${id}.audience`))}
+        >
           {collaborationPaths.map((path) => (
-            <article key={path.id} className={styles.path}>
+            <article key={path.id} className={styles.path} data-audience={path.id}>
               <p className={styles.audience}>{t(`paths.${path.id}.audience`)}</p>
               <h3>{t(`paths.${path.id}.title`)}</h3>
               <p className={styles.description}>{t(`paths.${path.id}.description`)}</p>
@@ -35,7 +42,7 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
               </a>
             </article>
           ))}
-        </div>
+        </CollaborationRail>
       </div>
       <div className={styles.proof}>
         <p className={styles.count}>

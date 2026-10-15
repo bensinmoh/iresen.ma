@@ -1824,3 +1824,12 @@ refinement uses the Figma design-system evidence (2211:6303/2211:6298) and curre
 website tokens rather than introducing new diagram geometry or color roles.
 Mobile/tablet stack the overview; Arabic uses logical reading order. Public text,
 anchors and search references are unchanged, so no index rebuild is required.
+
+## Compact homepage collaboration — 2026-10-15
+
+The collaboration section uses a three-column/two-row desktop grid, with
+international cooperation below the main action. Four pathways remain on tablet;
+five use a native horizontal rail on mobile. Reuse existing dark-surface colors,
+compact heading roles, fine separators and mobile-only borderless pills. This
+scoped composition adds no shared token or new imagery. See the collaboration
+scope for content withdrawal, responsive ranges and search synchronization.

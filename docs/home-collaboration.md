@@ -67,3 +67,33 @@ The website-wide final content search sanity check remains pending.
 
 Review captures: [French desktop](screenshots/home-collaboration-fr-desktop.png),
 [Arabic mobile](screenshots/home-collaboration-ar-mobile.png).
+
+## Compact audience layout — 2026-10-15
+
+The owner's latest correction supersedes the six-path homepage layout. Withdraw
+Territories from this section and its FR/EN/AR search projection; other pages keep
+their own audience scope. Desktop has three equal columns and two rows: introduction
+and primary action in cell 1, Research/Talents in cells 2/3, International below the
+primary action in cell 4, and Industry/Public institutions in cells 5/6. Typography,
+reading measure and gaps are reduced using existing tokens, without truncating copy.
+
+Tablet (above 40rem through 64rem) places the introduction above four pathways;
+International is hidden at these widths and Territories is absent everywhere.
+Mobile (up to 40rem) shows the five pathways in a native horizontal snap rail, with
+a neighboring card visible and five borderless expanding pills below. Native
+scrolling, keyboard focus and pill selection stay synchronized, including Arabic
+RTL and reduced motion. Without JavaScript, the native rail and scrollbar remain.
+The +120/certification proof band and canonical destinations remain unchanged.
+
+Search retains `section:home:collaboration:{locale}` and the existing home section
+anchor. The five current audiences supply the localized searchable body; local
+static/CMS search synchronization has been run. No new public resource is created.
+
+Verification ledger: production build (including TypeScript), lint, all 170 unit
+tests, formatting and the scoped Impeccable detector passed. Production Chromium
+checks cover FR/EN/AR, desktop grid geometry, four visible tablet publics, mobile
+pills and native scrolling, keyboard link access, 320–1440px reflow, 200% text,
+axe, canonical/contact destinations, local search and no-JavaScript reading.
+The rail's accessible region name is distinct from the enclosing section. Source
+order follows the desktop reading order, including International in cell 4.
+Full current-head CI remains mandatory before merge; no deployment is included.
