@@ -166,3 +166,30 @@ FR/EN/AR network browser journeys pass at 320–1440px, including filters, geome
 keyboard, axe, 200% text and no JavaScript. Desktop FR and mobile AR typography
 captures inspected. Existing unit evidence remains valid for unchanged data and
 search logic; no content/search change or deployment.
+
+## Circular map preview — 2026-10-15
+
+The owner replaces the rectangular map detail with a compact navy circle, capped
+at 336px and bounded by the map frame. A single 560ms transform animation grows
+from the selected point's measured position and diameter, gently overshoots and
+settles. Desktop placement stays near that point; below 40rem the final circle
+centers in the map/screen and topic filters center their wrapped rows. Resizing
+recalculates geometry without changing geography or the equal map/list heights.
+Reduced motion displays the final circle immediately.
+
+The preview centers the Phosphor subject icon, laboratory name, institution and
+city. Its topic remains an accessible icon label. Numbered controls for laboratories
+in the same city sit at the circle's bottom. The compact reading area scrolls when
+large text or long localized names need more space; full details/contacts remain
+in native list disclosures. Close, Escape and map-background dismissal restore
+trigger focus; explicit selection moves focus to the close control. Original
+records, public text, anchors and search references remain unchanged.
+
+Verification: final isolated production build including TypeScript, lint,
+formatting and whitespace checks pass. Four network browser journeys pass in
+FR/EN/AR at 320/390/768/1024/1440px, including 200% text, filtering, list disclosures,
+contact access, direct anchors/no JavaScript, keyboard/Escape/focus and axe.
+Geometry checks verify the opening starts at the clicked point's center/diameter,
+the final preview is circular and bounded, and mobile circles/filters are centered.
+Reduced motion disables the reveal. Desktop FR and mobile FR/AR captures inspected.
+Existing unit/search evidence remains valid for unchanged data; no deployment.
