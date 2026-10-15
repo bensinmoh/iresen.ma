@@ -85,7 +85,8 @@
 .wordmark {
   position: absolute;
   inset-inline-end: var(--gutter);
-  inset-block-end: -0.65rem;
+  --wordmark-bleed: 0.65rem;
+  inset-block-end: calc(-1 * var(--wordmark-bleed));
   display: flex;
   align-items: end;
   gap: clamp(0.75rem, 1.5vw, 1.8rem);
@@ -115,6 +116,12 @@
 .page:lang(ar) .wordmark {
   inline-size: min(66vw, 60rem);
   inset-block-end: 0;
+}
+.page:lang(fr) .wordmark {
+  inset-block-end: calc(-1 * var(--wordmark-bleed));
+}
+.page:lang(ar) .heroLogo {
+  transform: translateY(var(--wordmark-bleed));
 }
 .page:lang(ar) .wordmark {
   flex-direction: row-reverse;
@@ -717,7 +724,8 @@
   .page .wordmark,
   .page:dir(rtl) .wordmark {
     inline-size: min(80vw, 25rem);
-    inset-block-end: -0.45rem;
+    --wordmark-bleed: 0.45rem;
+    inset-block-end: calc(-1 * var(--wordmark-bleed));
     inset-inline-start: 50%;
     inset-inline-end: auto;
     transform: translateX(-50%);
@@ -816,6 +824,11 @@
   .page:lang(fr) .wordmark,
   .page:lang(ar) .wordmark {
     inline-size: min(90vw, 30rem);
+  }
+  .page:lang(fr) .wordmark {
+    inset-block-end: calc(-1 * var(--wordmark-bleed));
+  }
+  .page:lang(ar) .wordmark {
     inset-block-end: 0;
   }
   .page:lang(fr) .join,
