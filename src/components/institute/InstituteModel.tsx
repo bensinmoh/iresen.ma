@@ -29,42 +29,12 @@ export async function InstituteModel({
         <div className={styles.overview} data-institute-overview>
           <div className={styles.introduction}>{children}</div>
           <div className={styles.visual}>
-            <div className={styles.diagram}>
-              <svg viewBox="0 0 800 410" aria-hidden="true" className={styles.arc}>
-                <path
-                  d="M30 400 A370 370 0 0 1 770 400"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  strokeDasharray="2 7"
-                />
-                <path
-                  d="M50 400 A350 350 0 0 1 218 101 L288 224 A210 210 0 0 0 190 400 Z"
-                  className={styles.develop}
-                />
-                <path
-                  d="M232 93 A350 350 0 0 1 568 93 L498 216 A210 210 0 0 0 302 216 Z"
-                  className={styles.test}
-                />
-                <path
-                  d="M582 101 A350 350 0 0 1 750 400 L610 400 A210 210 0 0 0 512 224 Z"
-                  className={styles.transfer}
-                />
-                <path d="M210 400 A190 190 0 0 1 590 400 Z" className={styles.center} />
-              </svg>
-              <div className={styles.core}>
-                <ValorisationIcon name="flask" />
-                <p>{t('coreLabel')}</p>
-                <h3 id="institute-model-research-title">{t('coreTitle')}</h3>
-              </div>
-              {researchMissions.map(({ id }, i) => (
-                <span key={id} className={`${styles.orbitLabel} ${styles[id]}`}>
-                  <bdi>{String(i + 1).padStart(2, '0')}</bdi>
-                  <strong>{t(`missions.${id}.title`)}</strong>
-                </span>
-              ))}
+            <div className={styles.core}>
+              <ValorisationIcon name="flask" />
+              <p>{t('coreLabel')}</p>
+              <h3 id="institute-model-research-title">{t('coreTitle')}</h3>
+              <p className={styles.description}>{t('coreDescription')}</p>
             </div>
-            <p className={styles.description}>{t('coreDescription')}</p>
           </div>
         </div>
         <div className={styles.missions}>

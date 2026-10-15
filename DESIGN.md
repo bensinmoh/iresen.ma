@@ -167,3 +167,15 @@ mobile short summaries retain complete source reading through native disclosures
 Thirteen landscape placeholders reserve future owner-supplied infrastructure
 photos; existing photography and brand vectors remain unchanged. This is a scoped
 platform composition using current tokens, not a new universal page template.
+
+## Institute model refinement — 2026-10-15
+
+The owner rejected the semicircular model as inconsistent with the site. The
+Institute overview now pairs its introduction with a navy editorial R&I panel,
+using existing signature corners, cyan SVG/label accents and native white text.
+The three mission descriptions and links follow on fine separators; complementary
+dimensions and capabilities retain their content and destinations. This scoped
+refinement uses the Figma design-system evidence (2211:6303/2211:6298) and current
+website tokens rather than introducing new diagram geometry or color roles.
+Mobile/tablet stack the overview; Arabic uses logical reading order. Public text,
+anchors and search references are unchanged, so no index rebuild is required.
