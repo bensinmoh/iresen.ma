@@ -1,0 +1,24 @@
+/* Phosphor CaretDown regular, @phosphor-icons/react 2.1.10, MIT.
+   Geometry/source: docs/references/icons/phosphor-audit.json. */
+select:not([multiple]):not([size]),
+select:not([multiple])[size='1'] {
+  appearance: none;
+  padding-inline-end: calc(
+    var(--select-chevron-inset) + var(--select-chevron-size) + var(--space-3)
+  );
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22%2312345a%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20d%3D%22M213.66%2C101.66l-80%2C80a8%2C8%2C0%2C0%2C1-11.32%2C0l-80-80A8%2C8%2C0%2C0%2C1%2C53.66%2C90.34L128%2C164.69l74.34-74.35a8%2C8%2C0%2C0%2C1%2C11.32%2C11.32Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-size: var(--select-chevron-size) var(--select-chevron-size);
+  background-position: right var(--select-chevron-inset) center;
+}
+select:not([multiple]):not([size]):dir(rtl),
+select:not([multiple])[size='1']:dir(rtl) {
+  background-position: left var(--select-chevron-inset) center;
+}
+@media (forced-colors: active) {
+  select:not([multiple]):not([size]),
+  select:not([multiple])[size='1'] {
+    appearance: auto;
+    background-image: none;
+  }
+}

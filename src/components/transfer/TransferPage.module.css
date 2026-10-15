@@ -360,17 +360,6 @@
 .selectWrap {
   position: relative;
 }
-.selectWrap select {
-  appearance: none;
-  padding-inline-end: 3rem;
-}
-.selectWrap svg {
-  position: absolute;
-  inset-inline-end: var(--space-4);
-  inset-block-start: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
 .catalogBar {
   display: flex;
   align-items: center;

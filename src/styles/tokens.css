@@ -38,6 +38,8 @@
   --gutter: clamp(1.25rem, 3.125vw, 4rem);
   /* Distance from the capped content grid to the viewport edge. */
   --page-bleed: max(var(--gutter), calc((100vw - var(--container-width)) / 2));
+  --select-chevron-inset: 1.25rem;
+  --select-chevron-size: 1.25rem;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;

@@ -304,7 +304,6 @@ export function CareersApplications({
                   </option>
                 ))}
               </select>
-              <NavigationIcon name="chevron" />
             </div>
           </div>
           <div className={styles.field}>

@@ -555,17 +555,6 @@
 .selectWrap {
   position: relative;
 }
-.selectWrap select {
-  appearance: none;
-  padding-inline-end: 3.25rem;
-}
-.selectWrap > :global(.navigation-icon) {
-  pointer-events: none;
-  position: absolute;
-  inset-inline-end: 1.25rem;
-  inset-block-start: 50%;
-  transform: translateY(-50%);
-}
 .upload {
   position: relative;
   padding: 1.75rem;

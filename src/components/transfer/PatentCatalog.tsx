@@ -130,7 +130,6 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
                 </option>
               ))}
             </select>
-            <NavigationIcon name="chevron" />
           </span>
         </label>
         <label>
@@ -150,7 +149,6 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
               ))}
               {unknownYear && <option value="unknown">{t('catalog.unknown')}</option>}
             </select>
-            <NavigationIcon name="chevron" />
           </span>
         </label>
         <label>
@@ -169,7 +167,6 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
                 </option>
               ))}
             </select>
-            <NavigationIcon name="chevron" />
           </span>
         </label>
       </div>

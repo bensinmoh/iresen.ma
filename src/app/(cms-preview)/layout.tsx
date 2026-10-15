@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import localFont from 'next/font/local'
 import '@/styles/tokens.css'
+import '@/styles/selects.css'
 import '@/components/cms-preview/cms-preview.css'
 
 const latin = localFont({

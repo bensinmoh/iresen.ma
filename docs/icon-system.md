@@ -78,3 +78,22 @@ approximate 200KB route-JS target; no same-environment pre-icon delta was measur
 Per-icon SSR imports avoid a catalog barrel and no icon font or external icon
 request is introduced. Full current-head CI is required before merging; no
 deployment or public/CMS gate change is included.
+
+## Native select follow-up — 2026-10-15
+
+The owner's screenshot identifies a native browser arrow touching the field edge.
+A shared stylesheet now covers all six public single-select locations and every
+isolated CMS select, including controls previously using separate SVG overlays.
+The Phosphor CaretDown regular geometry is rendered from the pinned package into
+an inline SVG data URL (approved navy), recorded in the mapping inventory. Logical
+text padding and an explicit 1.25rem inset keep the glyph away from both the field
+edge and the selected label, including Arabic and enlarged text. No extra DOM,
+JavaScript or network request is needed. Forced-colors retains native controls.
+
+Select follow-up checks: final production build/TypeScript and lint pass. All 33
+selected public browser journeys and four isolated CMS journeys pass. Dedicated
+FR/EN/AR measurements cover contact, careers, three patent filters and search sort
+at 390/1440px with 100%/200% text: consistent glyph inset, reserved label clearance,
+no duplicate overlay, native selection and forced-colors fallback. French/Arabic
+field captures were inspected. The careers journey's temporary local record uses
+its finally cleanup; no sample offer is retained. Existing public/CMS gates remain.

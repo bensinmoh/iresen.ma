@@ -162,7 +162,6 @@ export async function SearchPage({
                   <option value="relevance">{t('relevance')}</option>
                   <option value="newest">{t('newest')}</option>
                 </select>
-                <NavigationIcon name="chevron" />
               </div>
               <button className="button button-outline" type="submit">
                 {t('apply')}

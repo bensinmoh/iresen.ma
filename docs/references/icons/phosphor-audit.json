@@ -110,5 +110,14 @@
     "geography": "Original Morocco vector and decorative geography",
     "diagrams": "Native HTML/CSS connectors, timeline/progress/rail geometry and governance portrait SVG filters",
     "controls": "Native checkboxes, focus rings, shared signature corners and useful circular control containers"
+  },
+  "cssGlyphs": {
+    "src/styles/selects.css": {
+      "icon": "CaretDown",
+      "source": "@phosphor-icons/react/dist/ssr/CaretDown",
+      "weight": "regular",
+      "color": "#12345A",
+      "rendering": "Inline SVG data URL for native single-select background; no public media/search result"
+    }
   }
 }

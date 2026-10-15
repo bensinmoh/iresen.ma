@@ -229,3 +229,15 @@ color and existing functional sizes/RTL rules. Preserve Apex Leaf, original mark
 geography and structural diagram/control geometry. Replace text-symbol arrows
 and CSS imitation icons through the same family; native behavior and accessible
 control names remain. See the [complete audit and source record](docs/icon-system.md).
+
+## Native select caret placement — 2026-10-15
+
+All native single-select controls in public pages and the isolated CMS use one
+shared `selects.css` rule: Phosphor CaretDown regular as an inline SVG background,
+1.25rem from the logical trailing edge, with reserved text padding equal to the
+inset + 1.25rem glyph + 0.75rem clearance. RTL swaps the physical background side.
+Keep native select semantics, labels, keyboard, focus and disabled states. Existing
+duplicate overlay carets/local padding rules are removed. Forced-colors restores
+the browser's native arrow; multiple/listbox selects retain native presentation.
+The data-URL vector is decorative interface geometry, not a standalone public
+media/search resource. No content, route or publication-gate changes.
