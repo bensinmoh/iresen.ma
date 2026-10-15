@@ -15,9 +15,11 @@
 .page p {
   line-height: 1.8;
 }
-.intro,
+.intro {
+  padding-block: clamp(3rem, 6vw, 6rem) 1.5rem;
+}
 .chapter {
-  padding-block: clamp(3rem, 6vw, 6rem);
+  padding-block: clamp(2rem, 3vw, 3rem);
 }
 .introHeading {
   display: grid;

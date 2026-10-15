@@ -185,3 +185,19 @@ Validation: production build/TypeScript, lint, formatting, 170 unit tests and fo
 FR/EN/AR platforms browser journeys pass (320–1440px, 200% text, keyboard, axe and
 no JavaScript). Desktop bands and mobile RTL chapter inspected; local search
 rebuilt. No deployment.
+
+## Platform section spacing — 2026-10-15
+
+The owner withdraws the viewport-height experiment and retains the previous photo,
+type, logo and content layout. Only the excessive vertical section padding changes:
+the introduction ends with 1.5rem, and platform chapters use 2–3rem above/below,
+instead of 3–6rem. At wide desktop widths, the intro-to-first-platform gap falls
+from 12rem to 4.5rem. No viewport-sized frame, image compression, text hiding,
+new disclosure behavior or minimum-height constraint is introduced. Content,
+anchors, media and search references remain unchanged.
+
+Verification: final isolated production build including TypeScript, lint,
+formatting and whitespace pass. Four platform browser journeys pass in FR/EN/AR
+at 320–1440px, including 200% text, keyboard, axe, media decoding and no-JavaScript
+reading. Desktop FR and mobile AR captures inspected. Earlier unit/search evidence
+remains valid. No deployment.
