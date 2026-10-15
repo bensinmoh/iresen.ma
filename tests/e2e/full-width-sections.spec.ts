@@ -27,6 +27,29 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
               requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
             ),
         )
+        await expect
+          .poll(
+            () =>
+              page.locator(selector).evaluateAll((nodes) =>
+                Math.max(
+                  ...nodes
+                    .filter(
+                      (el) =>
+                        !el.closest('[data-engagement-page="transfer"]') ||
+                        getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)',
+                    )
+                    .map((el) => {
+                      const rect = el.getBoundingClientRect()
+                      return Math.max(
+                        Math.abs(rect.left),
+                        Math.abs(rect.right - document.documentElement.clientWidth),
+                      )
+                    }),
+                ),
+              ),
+            { message: `${pageId}/${width}: responsive breakout settles at viewport edges` },
+          )
+          .toBeLessThanOrEqual(1)
         const bounds = await page.locator(selector).evaluateAll((nodes) =>
           nodes
             .filter((el) => {

@@ -14,17 +14,23 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         await page.setViewportSize({ width, height: 1000 })
         for (const scale of ['100%', '200%']) {
           await page.evaluate((value) => (document.documentElement.style.fontSize = value), scale)
+          await page.evaluate(
+            () =>
+              new Promise<void>((resolve) =>
+                requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+              ),
+          )
           const geometry = await fields.evaluateAll((nodes) =>
             nodes.map((el) => {
               const s = getComputedStyle(el)
               const size = parseFloat(s.backgroundSize)
-              const root = parseFloat(getComputedStyle(document.documentElement).fontSize)
               return {
+                id: (el as HTMLSelectElement).id || (el as HTMLSelectElement).name,
                 appearance: s.appearance,
                 phosphor: s.backgroundImage.includes('data:image/svg+xml'),
                 padding: parseFloat(s.paddingInlineEnd),
                 size,
-                inset: root * 1.25,
+                inset: parseFloat(s.getPropertyValue('--select-chevron-inset')),
                 position: s.backgroundPositionX,
                 rtl: s.direction === 'rtl',
                 count: el.parentElement?.querySelectorAll(':scope > svg').length,
@@ -34,7 +40,10 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
           for (const field of geometry) {
             expect(field.appearance).toBe('none')
             expect(field.phosphor).toBe(true)
-            expect(field.padding).toBeGreaterThanOrEqual(field.size + field.inset + 10)
+            expect(
+              field.padding,
+              `${locale}/${id}/${width}/${scale}: ${JSON.stringify(field)}`,
+            ).toBeGreaterThanOrEqual(field.size + field.inset + 10)
             expect(field.position).toBe(
               field.rtl ? `${field.inset}px` : `calc(100% - ${field.inset}px)`,
             )

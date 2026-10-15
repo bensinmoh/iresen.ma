@@ -11,6 +11,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     page,
     request,
   }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' })
     await page.setViewportSize({ width: 1440, height: 1000 })
     await page.goto(pageHref('home', locale, 'collaboration'))
     const section = page.locator('#collaboration')

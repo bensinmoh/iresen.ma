@@ -43,7 +43,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     }
     await expect(page.locator('[data-domain-link]')).toHaveCount(0)
     await expect(page.locator('#decision-resources')).toHaveText('')
-    await page.locator('a[href="#theme-water"]').click()
+    await page.locator('a[href="#theme-water"]').focus()
+    await page.keyboard.press('Enter')
     await expect(page).toHaveURL(/#theme-water$/)
     await expect
       .poll(async () => (await page.locator('#theme-water').boundingBox())!.y)

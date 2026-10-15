@@ -69,3 +69,25 @@ are not mistaken for excessive whitespace. No public search rebuild is needed.
   and functional control geometry are preserved.
 - Existing 170-unit/search evidence is reused for unchanged data/logic. Full
   current-head CI remains mandatory before merge. No deployment is authorized.
+
+## CI follow-up
+
+The first full CI on `7c03f52` passed audit, generated CMS artifacts, formatting,
+lint, TypeScript, 170 unit tests, integration and production build. Browser results
+were 326 passing, six failing, two retry-only successes and four conditional skips.
+The isolated CMS-preview step did not run because the preceding browser step failed.
+
+Investigation found an obsolete search test querying the removed overlay SVG,
+layout assertions sampling first-arrival animations, and native select sizing that
+left too little reading room at 200% text. Search checks now measure the served
+background caret and retain longest-option fit/clearance assertions. Decorative
+caret dimensions and logical inset stay 20px when text alone enlarges; the search
+sort wrapper reserves usable width and a constant 12px leading inset. Normal-size
+appearance is preserved. Other text sizes, glyphs and routes remain unchanged.
+
+The collaboration layout check uses reduced motion, with motion covered by its
+separate suite. The wide-surface check polls actual viewport edges after responsive
+layout settles and retains its exact edge/overflow assertions. The Roadmap anchor
+journey activates its native link with the keyboard, preserving URL/destination
+checks. No failing assertion or locale is skipped or removed. Fresh production
+build/lint pass; focused FR/EN/AR confirmation and new full CI recorded in the PR.

@@ -234,8 +234,9 @@ control names remain. See the [complete audit and source record](docs/icon-syste
 
 All native single-select controls in public pages and the isolated CMS use one
 shared `selects.css` rule: Phosphor CaretDown regular as an inline SVG background,
-1.25rem from the logical trailing edge, with reserved text padding equal to the
-inset + 1.25rem glyph + 0.75rem clearance. RTL swaps the physical background side.
+20px from the logical trailing edge, with reserved text padding equal to the
+inset + 20px glyph + 0.75rem clearance. Decorative glyph/inset dimensions stay
+fixed when only text is enlarged, preserving reading space in narrow controls. RTL swaps the physical background side.
 Keep native select semantics, labels, keyboard, focus and disabled states. Existing
 duplicate overlay carets/local padding rules are removed. Forced-colors restores
 the browser's native arrow; multiple/listbox selects retain native presentation.

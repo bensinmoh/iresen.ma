@@ -86,7 +86,7 @@ A shared stylesheet now covers all six public single-select locations and every
 isolated CMS select, including controls previously using separate SVG overlays.
 The Phosphor CaretDown regular geometry is rendered from the pinned package into
 an inline SVG data URL (approved navy), recorded in the mapping inventory. Logical
-text padding and an explicit 1.25rem inset keep the glyph away from both the field
+text padding and an explicit 20px inset keep the glyph away from both the field
 edge and the selected label, including Arabic and enlarged text. No extra DOM,
 JavaScript or network request is needed. Forced-colors retains native controls.
 
