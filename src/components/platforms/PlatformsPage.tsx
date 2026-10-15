@@ -121,7 +121,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                         </div>
                         <Image
                           className={styles.logo}
-                          src={`/brand/platforms/${id}.svg`}
+                          src={platform.logoSrc}
                           alt=""
                           width={platform.logoWidth}
                           height={platform.logoHeight}

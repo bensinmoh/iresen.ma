@@ -126,3 +126,19 @@ Verification ledger: development FR at 1440px gives 0px title-top and action-bot
 differences against GEP's photo frame; Arabic at 390px has no page overflow and
 retains all 13 photo slots. Focused source lint, formatting and whitespace checks
 only. Global tests, production build, merge and deployment remain deferred.
+
+## Platform logo refinement — 2026-10-15
+
+The owner requests larger logos on this page and supplies the original white
+GreenH2A SVG. Desktop logo boxes now scale from 9rem to 14rem, with 7rem height.
+Below 40rem, 10rem × 5rem logos occupy their own heading row, preserving title
+reading width. GreenH2A uses the supplied white original directly on navy, without
+the previous white cartouche. The original SVG is copied byte-for-byte and its
+hash/provenance is recorded in `platform-assets.json`; the previous logo and
+homepage usage remain. The new served asset has localized media search references.
+
+Verification: production build/TypeScript, lint and 170 unit tests pass. Four
+production browser journeys pass, including FR/EN/AR at 320/390/768/1024/1440px,
+200% text, keyboard, axe and no-JavaScript reading. Desktop GreenH2A and mobile
+Arabic logo captures inspected. Local search rebuilt (eight CMS records and
+synchronized static catalogue). No deployment or institutional copy change.

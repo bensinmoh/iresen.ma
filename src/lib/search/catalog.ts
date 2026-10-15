@@ -547,6 +547,20 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   },
+  {
+    id: 'platform-logo-greenh2a-white',
+    url: '/brand/platforms/greenh2a-white.svg',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: `${messages[locale].HomePlatforms.logoLabel} ${messages[locale].HomePlatforms.platforms.greenh2a.name}`,
+          description: messages[locale].HomePlatforms.platforms.greenh2a.searchText,
+        },
+      ]),
+    ) as PublicAssetReference['text'],
+  },
   ...homePlatforms.flatMap(({ id }) =>
     [false, true].map((logo) => ({
       id: `platform-${logo ? 'logo-' : 'photo-'}${id}`,

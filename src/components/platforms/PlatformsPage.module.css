@@ -196,9 +196,8 @@
   color: white;
 }
 .development .logo {
-  background: white;
-  padding: 0.5rem;
-  border-radius: var(--radius-action);
+  background: transparent;
+  padding: 0;
 }
 .development .location,
 .development .number,
@@ -348,8 +347,8 @@
   line-height: 1.5;
 }
 .logo {
-  inline-size: clamp(5rem, 7vw, 8rem);
-  block-size: 4rem;
+  inline-size: clamp(9rem, 14vw, 14rem);
+  block-size: 7rem;
 }
 .copy .lead {
   margin: 0;
@@ -496,12 +495,12 @@
 }
 @media (max-width: 39.999rem) {
   .chapterHeading {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
   }
   .logo {
-    grid-column: auto;
-    inline-size: 5rem;
-    block-size: 3rem;
+    grid-column: 1;
+    inline-size: 10rem;
+    block-size: 5rem;
   }
   .themes {
     grid-template-columns: repeat(4, minmax(5.5rem, 1fr));
