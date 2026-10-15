@@ -203,18 +203,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                                 />
                               </div>
                             ) : (
-                              <div
-                                className={styles.infrastructurePhoto}
-                                aria-label={t('photoPending', {
-                                  title: t(`platforms.${id}.infrastructure.${i}.title`),
-                                })}
-                                role="img"
-                              >
-                                <ValorisationIcon
-                                  name={(['flask', 'bulb', 'chart-line', 'search'] as const)[i]!}
-                                />
-                                <span>{t('photoPendingLabel')}</span>
-                              </div>
+                              <div className={styles.infrastructureBand} aria-hidden="true" />
                             )}
                             <h3>{t(`platforms.${id}.infrastructure.${i}.title`)}</h3>
                             <p>{t(`platforms.${id}.infrastructure.${i}.description`)}</p>

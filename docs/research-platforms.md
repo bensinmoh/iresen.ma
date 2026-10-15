@@ -171,3 +171,17 @@ checks explicitly scroll lazy images into view before decoding. Full chapter
 captures were inspected at 390/1440px. The new image directory has a scoped Next
 optimizer allowlist entry with query strings disallowed. The outdoor-PV crop aligns
 right to exclude its source white margin. Local search was rebuilt. No deployment.
+
+## GreenH2A compact equipment bands — 2026-10-15
+
+The owner replaces GreenH2A’s three missing-photograph containers with decorative
+cyan bands, 0.75rem high, while photographs are unavailable. The former placeholder
+icons, image roles and pending-photo labels are removed. Equipment titles and
+explanations remain, along with the main 3D visualization and development status.
+FR/EN/AR unused pending-photo strings are withdrawn from the search catalogue too.
+No new photograph, claim or public destination is introduced.
+
+Validation: production build/TypeScript, lint, formatting, 170 unit tests and four
+FR/EN/AR platforms browser journeys pass (320–1440px, 200% text, keyboard, axe and
+no JavaScript). Desktop bands and mobile RTL chapter inspected; local search
+rebuilt. No deployment.

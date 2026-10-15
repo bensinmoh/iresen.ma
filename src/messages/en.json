@@ -3261,9 +3261,7 @@
       }
     },
     "accessNote": "Access, testing and training arrangements are defined with the teams according to needs and available capabilities. Infrastructure under development is distinguished from operational facilities.",
-    "readDetails": "Read the full overview",
-    "photoPendingLabel": "Photograph coming soon",
-    "photoPending": "Photograph coming soon: {title}"
+    "readDetails": "Read the full overview"
   },
   "Programmes": {
     "eyebrow": "R&D&I programmes",

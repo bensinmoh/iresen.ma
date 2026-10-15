@@ -3271,9 +3271,7 @@
       "description": "Découvrez le réseau de plateformes d’IRESEN : technologies solaires, bâtiments durables, réseaux intelligents et hydrogène vert, au Maroc et en Afrique."
     },
     "accessNote": "Les modalités d’accès, les essais et les formations se définissent avec les équipes selon les besoins et les capacités disponibles. Les infrastructures en développement sont distinguées des moyens opérationnels.",
-    "readDetails": "Lire la présentation complète",
-    "photoPendingLabel": "Photographie à venir",
-    "photoPending": "Photographie à venir : {title}"
+    "readDetails": "Lire la présentation complète"
   },
   "Programmes": {
     "eyebrow": "Programmes R&D&I",
