@@ -1,6 +1,6 @@
 .section {
-  margin-inline: calc(-1 * var(--gutter));
-  padding: var(--home-section-padding) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: var(--home-section-padding) var(--page-bleed);
   background: var(--color-white);
   scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
   overflow-wrap: anywhere;

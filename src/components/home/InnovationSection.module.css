@@ -1,6 +1,6 @@
 .section {
-  margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(2rem, 3vw, 3rem) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: clamp(2rem, 3vw, 3rem) var(--page-bleed);
   background: var(--color-surface);
   color: var(--color-navy);
   overflow-wrap: anywhere;

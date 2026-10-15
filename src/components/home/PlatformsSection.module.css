@@ -1,8 +1,8 @@
 .section {
   position: relative;
   isolation: isolate;
-  margin-inline: calc(-1 * var(--gutter));
-  padding: var(--home-section-padding) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: var(--home-section-padding) var(--page-bleed);
   color: var(--color-white);
   background: var(--color-navy);
   overflow-wrap: anywhere;

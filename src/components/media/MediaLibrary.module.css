@@ -1,5 +1,5 @@
 .page {
-  margin-inline: calc(-1 * var(--gutter));
+  margin-inline: calc(-1 * var(--page-bleed));
   color: var(--color-navy);
   overflow-wrap: anywhere;
 }
@@ -7,11 +7,11 @@
 .navigation,
 .section,
 .credits {
-  padding-inline: var(--gutter);
+  padding-inline: var(--page-bleed);
 }
 .intro {
   padding-block: 2rem 3rem;
-  max-inline-size: 70rem;
+  max-inline-size: calc(70rem + 2 * (var(--page-bleed) - var(--gutter)));
 }
 .intro h2 {
   font-size: clamp(1.8rem, 3vw, 3.1rem);

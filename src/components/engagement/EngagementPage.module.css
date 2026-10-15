@@ -9,8 +9,8 @@
   border-block-start: 0;
 }
 .section {
-  margin-inline: calc(-1 * var(--gutter));
-  padding: clamp(3rem, 5vw, 5rem) var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding: clamp(3rem, 5vw, 5rem) var(--page-bleed);
   scroll-margin-block-start: var(--space-8);
 }
 .introduction {
@@ -114,6 +114,7 @@
 }
 .needs .editorial {
   padding: clamp(3rem, 4vw, 5rem) var(--gutter);
+  padding-inline-start: var(--page-bleed);
 }
 .needs .introduction {
   display: block;

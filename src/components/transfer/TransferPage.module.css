@@ -37,8 +37,8 @@
 }
 .light,
 .ink {
-  margin-inline: calc(-1 * var(--gutter));
-  padding-inline: var(--gutter);
+  margin-inline: calc(-1 * var(--page-bleed));
+  padding-inline: var(--page-bleed);
 }
 .light {
   background: var(--color-action-surface);

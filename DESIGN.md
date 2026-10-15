@@ -206,3 +206,17 @@ leaf/text group, overriding the shared paragraph reading measure. A compact pale
 blue `capabilities-cooperation` band now separates platforms and collaboration;
 it reuses existing Narrative content, current action-surface/text tokens and a
 two-column desktop / stacked mobile composition. No new palette or imagery.
+
+## Viewport-wide section geometry — 2026-10-15
+
+Owner examples exposed a shared capped-grid breakout defect on wide viewports:
+sections expanded by only the fixed gutter even after the 120rem content cap
+created larger exterior margins. The shared `--page-bleed` role now derives the
+actual distance to the viewport edge from the gutter and content cap. All ten
+existing negative-gutter breakout patterns consume it, with matching content
+insets: homepage surfaces, media library, collaboration and transfer chapters.
+Contact's separately capped split introduction uses the same role for its outer
+insets and fills the viewport. Ordinary reading gutters and the content cap
+remain unchanged; split-column inner gaps keep the normal gutter. This corrects
+background geometry rather than widening reading text or hiding page overflow.
+Content, anchors, media originals and search projections are unchanged.
