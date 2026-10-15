@@ -17,23 +17,6 @@
 .page p {
   margin-block: 0 1rem;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.eyebrow::before {
-  content: '';
-  inline-size: 0.46rem;
-  block-size: 0.75rem;
-  flex: none;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center/contain no-repeat;
-}
 .hero {
   position: relative;
   isolation: isolate;
@@ -60,9 +43,6 @@
   padding-block: clamp(10rem, 16.5vw, 19.8rem) 6rem;
   position: relative;
   z-index: 1;
-}
-.hero .eyebrow {
-  color: white;
 }
 .hero h1 {
   font-size: var(--hero-title-size);
@@ -445,7 +425,7 @@
   padding: clamp(1.5rem, 3.125vw, 3.75rem);
   border-radius: 2.5rem 0 2.5rem 0;
 }
-.internshipCard > p:not(.eyebrow) {
+.internshipCard > p:not([data-section-eyebrow]) {
   color: var(--color-text-muted);
   font-size: 1rem;
   line-height: 1.55;
@@ -494,9 +474,6 @@
 .application > header {
   text-align: center;
   margin-block-end: 2rem;
-}
-.application .eyebrow {
-  justify-content: center;
 }
 .form {
   max-inline-size: 55.625rem;
@@ -618,7 +595,7 @@
 }
 :global(html[lang='ar'])
   .page
-  :is(h1, h2, h3, h4, .eyebrow, .department, .location, .field > label, .facts dt) {
+  :is(h1, h2, h3, h4, .department, .location, .field > label, .facts dt) {
   letter-spacing: normal;
 }
 :global(html[dir='rtl']) .shade {

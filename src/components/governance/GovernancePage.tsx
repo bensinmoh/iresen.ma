@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -57,7 +58,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
           className={`container ${styles.intro}`}
           aria-labelledby="governance-mission-title"
         >
-          <p className={styles.eyebrow}>{t('title')}</p>
+          <SectionEyebrow>{t('title')}</SectionEyebrow>
           <h2 id="governance-mission-title">{t('mission.title')}</h2>
           <p className={styles.lead}>{t('introduction')}</p>
           <div className={styles.missionCopy}>{paragraphs('mission.paragraphs', 3)}</div>
@@ -70,7 +71,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
         >
           <header className={styles.heading}>
             <div>
-              <p className={styles.eyebrow}>01</p>
+              <p className={styles.sectionIndex}>01</p>
               <h2 id="administration-title">{t('councils.administration.title')}</h2>
               <p className={styles.tagline}>{t('councils.administration.tagline')}</p>
             </div>
@@ -106,7 +107,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
           <div className="container">
             <header className={styles.heading}>
               <div>
-                <p className={styles.eyebrow}>02</p>
+                <p className={styles.sectionIndex}>02</p>
                 <h2 id="science-title">{t('councils.science.title')}</h2>
                 <p className={styles.tagline}>{t('councils.science.tagline')}</p>
               </div>
@@ -174,7 +175,7 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
           <div className="container">
             <header className={styles.heading}>
               <div>
-                <p className={styles.eyebrow}>{t('tabs.organisation')}</p>
+                <SectionEyebrow>{t('tabs.organisation')}</SectionEyebrow>
                 <h2 id="organisation-title">{t('organisation.title')}</h2>
                 <p className={styles.tagline}>{t('organisation.summary')}</p>
               </div>

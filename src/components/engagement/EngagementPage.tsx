@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -62,7 +63,12 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
               <div className={styles.editorial}>
                 <header className={styles.introduction}>
                   <div>
-                    <p className={styles.eyebrow}>{copy.label}</p>
+                    <SectionEyebrow
+                      tone={contact ? 'navy' : needs || kind === 'audiences' ? 'white' : 'blue'}
+                      centered={contact}
+                    >
+                      {copy.label}
+                    </SectionEyebrow>
                     <h2 id={`${id}-heading`}>{sections(`${id}.title`)}</h2>
                   </div>
                   <p>{sections(`${id}.description`)}</p>

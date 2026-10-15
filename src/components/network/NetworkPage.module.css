@@ -22,24 +22,6 @@
 .section {
   padding-block: clamp(3rem, 5vw, 6rem);
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-.eyebrow::before {
-  content: '';
-  inline-size: 0.46rem;
-  block-size: 0.75rem;
-  flex: none;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center/contain no-repeat;
-}
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -496,9 +478,6 @@
   align-items: center;
   gap: clamp(2rem, 5vw, 6rem);
 }
-.skills .eyebrow {
-  color: var(--color-energy-cyan);
-}
 .practicePhoto {
   border-radius: var(--radius-signature);
   overflow: hidden;
@@ -555,8 +534,7 @@
 .page :global(.navigation-icon-arrow) {
   flex: none;
 }
-.page:dir(rtl) h2,
-.page:dir(rtl) .eyebrow {
+.page:dir(rtl) h2 {
   letter-spacing: normal;
 }
 @media (max-width: 74.999rem) {

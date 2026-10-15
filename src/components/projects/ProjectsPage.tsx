@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -21,7 +22,7 @@ export async function ProjectsPage({ locale }: { locale: Locale }) {
           className={styles.heroPhoto}
         />
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.eyebrow}>{t('eyebrow')}</p>
+          <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
           <h1 id="hero-title">
             {t('titleStart')} <span>{t('titleAccent')}</span>
           </h1>

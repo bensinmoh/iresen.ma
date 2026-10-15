@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { Plus } from '@phosphor-icons/react/dist/ssr/Plus'
 import { Minus } from '@phosphor-icons/react/dist/ssr/Minus'
 import { SiteIcon } from '@/components/ui/SiteIcon'
@@ -61,7 +62,7 @@ export async function ContactPage({
           </div>
         </div>
         <div className="contact-headquarters">
-          <p className="contact-eyebrow">{t('headquarters.eyebrow')}</p>
+          <SectionEyebrow tone="white">{t('headquarters.eyebrow')}</SectionEyebrow>
           <h2>{t('headquarters.title')}</h2>
           <dl className="contact-details">
             <div>
@@ -129,7 +130,7 @@ export async function ContactPage({
         aria-labelledby="contact-faq-heading"
       >
         <div className="contact-faq-intro">
-          <p className="contact-eyebrow">{t('faq.eyebrow')}</p>
+          <SectionEyebrow>{t('faq.eyebrow')}</SectionEyebrow>
           <h2 id="contact-faq-heading">{t('faq.title')}</h2>
           <p>{t('faq.description')}</p>
           <a href="#send-request" className="button button-primary">

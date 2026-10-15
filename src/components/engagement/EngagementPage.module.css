@@ -41,17 +41,8 @@
   font-size: 1.125rem;
   color: var(--color-text-muted);
 }
-.eyebrow {
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
 .ink {
   background: var(--color-navy);
-  color: var(--color-white);
-}
-.ink .eyebrow {
   color: var(--color-white);
 }
 .ink .introduction > p,
@@ -224,8 +215,7 @@
   max-inline-size: 60ch;
 }
 .page:dir(rtl) h2,
-.page:dir(rtl) h3,
-.page:dir(rtl) .eyebrow {
+.page:dir(rtl) h3 {
   letter-spacing: normal;
 }
 .page:dir(rtl) h2 {
@@ -355,11 +345,6 @@
 
 .contact {
   background: var(--color-innovation-lime);
-  color: var(--color-navy);
-}
-.contact .eyebrow {
-  max-inline-size: none;
-  margin-inline: auto;
   color: var(--color-navy);
 }
 .contact .introduction > p {

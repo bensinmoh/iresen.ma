@@ -28,21 +28,6 @@
   margin-block: 0 1rem;
   max-inline-size: 72ch;
 }
-.eyebrow {
-  display: flex;
-  gap: var(--space-3);
-  align-items: center;
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-}
-.eyebrow span {
-  inline-size: 1.2rem;
-  block-size: 0.75rem;
-  flex: none;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center / contain no-repeat;
-}
 .values {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -173,12 +158,6 @@
 .infrastructure {
   margin-block-start: 2.5rem;
 }
-.infrastructureLabel {
-  font-size: var(--font-size-label);
-  color: var(--color-blue);
-  margin-block: 0 1.25rem;
-  text-transform: uppercase;
-}
 .infrastructureGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -201,7 +180,6 @@
 }
 .development .location,
 .development .number,
-.development .infrastructureLabel,
 .development svg {
   color: var(--color-energy-cyan);
 }

@@ -1,4 +1,6 @@
 'use client'
+
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { useState, useRef, useEffect, useSyncExternalStore, type FormEvent } from 'react'
@@ -90,7 +92,7 @@ export function CareersApplications({
       >
         <span id="find-opportunity" />
         <header>
-          <p className={styles.eyebrow}>{t('offers.eyebrow')}</p>
+          <SectionEyebrow>{t('offers.eyebrow')}</SectionEyebrow>
           <h2 id="offers-title">{t('offers.title')}</h2>
         </header>
         {unavailable ? (
@@ -196,7 +198,7 @@ export function CareersApplications({
         />
         <div className={`container ${styles.internshipGrid}`}>
           <div className={styles.internshipCard}>
-            <p className={styles.eyebrow}>{t('internship.eyebrow')}</p>
+            <SectionEyebrow>{t('internship.eyebrow')}</SectionEyebrow>
             <h2 id="internship-title">{t('internship.title')}</h2>
             {paragraphs.map((text) => (
               <p key={text}>{text}</p>
@@ -229,7 +231,7 @@ export function CareersApplications({
         aria-labelledby="application-title"
       >
         <header>
-          <p className={styles.eyebrow}>{t('form.eyebrow')}</p>
+          <SectionEyebrow centered>{t('form.eyebrow')}</SectionEyebrow>
           <h2 id="application-title">{t('form.title')}</h2>
         </header>
         <form

@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { PageShell } from '@/components/layout/PageShell'
@@ -28,9 +29,9 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
   const header = (label: string, number: string, description?: string) => (
     <header className={styles.heading}>
       <div>
-        <span className={styles.eyebrow}>
+        <SectionEyebrow tone={number === '02' ? 'white' : 'blue'}>
           {number} / {t('label')}
-        </span>
+        </SectionEyebrow>
         <h2>{label}</h2>
       </div>
       {description && <p>{description}</p>}
@@ -46,7 +47,7 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
     <PageShell title={t('label')} locale={locale} pageId="media" showBreadcrumb={false}>
       <div className={styles.page} data-media-library>
         <section id="featured-media" className={styles.intro}>
-          <p className={styles.eyebrow}>{t('label')}</p>
+          <SectionEyebrow>{t('label')}</SectionEyebrow>
           <h2>{t('intro')}</h2>
           <p>{t('description')}</p>
         </section>

@@ -60,21 +60,6 @@
   margin: 0;
   max-inline-size: 40rem;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin: 0;
-}
-.eyebrow img {
-  block-size: 0.75rem;
-  inline-size: auto;
-}
-.ink .eyebrow,
 .pathwayIcon {
   color: var(--color-energy-cyan);
 }
@@ -514,8 +499,7 @@
 .doors a {
   margin-block-start: var(--space-6);
 }
-.page:dir(rtl) h2,
-.page:dir(rtl) .eyebrow {
+.page:dir(rtl) h2 {
   letter-spacing: normal;
   line-height: 1.5;
 }

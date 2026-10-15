@@ -24,10 +24,6 @@
   max-inline-size: 65ch;
   color: var(--color-text-muted);
 }
-.eyebrow {
-  font-size: var(--font-size-label);
-  color: var(--color-blue);
-}
 .navigation {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -326,7 +322,6 @@
   background: var(--color-navy);
   color: white;
 }
-.ink .eyebrow,
 .ink .heading p,
 .ink article p {
   color: var(--color-footer-muted);

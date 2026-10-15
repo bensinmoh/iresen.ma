@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -19,11 +20,8 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
   const narrative = await getTranslations({ locale, namespace: 'Narrative' })
   const paragraphs = (key: string, count: number) =>
     Array.from({ length: count }, (_, i) => <p key={i}>{t(`${key}.${i}`)}</p>)
-  const label = (text: string) => (
-    <p className={styles.eyebrow}>
-      <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
-      {text}
-    </p>
+  const label = (text: string, tone: 'blue' | 'white' = 'blue') => (
+    <SectionEyebrow tone={tone}>{text}</SectionEyebrow>
   )
   const activities = (index: number, count: number) => (
     <dl className={styles.activities}>
@@ -54,10 +52,9 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
               className={styles.statementImage}
             />
             <div className={`container ${styles.statementContent}`}>
-              <h2 id="institute-mission-title" className={styles.eyebrow}>
-                <Image src="/brand/apex-leaf.svg" alt="" width={1773} height={2870} unoptimized />
+              <SectionEyebrow id="institute-mission-title" tone="white" centered>
                 {t('missionLabel')}
-              </h2>
+              </SectionEyebrow>
               <blockquote>
                 <p>
                   <span className={styles.quoteMark} aria-hidden="true">
@@ -135,7 +132,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         >
           <div className={`container ${styles.split}`}>
             <header>
-              {label(t('cooperationLabel'))}
+              {label(t('cooperationLabel'), 'white')}
               <h2 id="cooperation-title">{t('missions.3.title')}</h2>
               <p className={styles.purpose}>{t('missions.3.purpose')}</p>
             </header>
@@ -170,7 +167,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         </section>
         <section id="ambition-2035" className={styles.ambition} aria-labelledby="ambition-title">
           <div className={styles.ambitionCopy}>
-            {label(t('ambitionLabel'))}
+            {label(t('ambitionLabel'), 'white')}
             <h2 id="ambition-title">{t('ambition.statement')}</h2>
             <div className={styles.reading}>{paragraphs('ambition.paragraphs', 2)}</div>
             <dl className={styles.orientations}>
@@ -194,7 +191,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         <section id="institute-history" className={styles.history} aria-labelledby="history-title">
           <div className="container">
             <div id="key-figures" className={styles.historyHeading}>
-              {label(t('historyLabel'))}
+              {label(t('historyLabel'), 'white')}
               <h2 id="history-title">{t('historyTitle')}</h2>
               <div className={styles.reading}>{paragraphs('historyIntro', 1)}</div>
             </div>

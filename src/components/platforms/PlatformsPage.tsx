@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -65,10 +66,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
         >
           <header className={styles.introHeading}>
             <div>
-              <p className={styles.eyebrow}>
-                <span aria-hidden="true" />
-                {t('eyebrow')}
-              </p>
+              <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
               <h2 id="platform-intro-title">{t('intro.title')}</h2>
             </div>
             <div>
@@ -176,12 +174,12 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                     </div>
                   </div>
                   <div className={styles.infrastructure}>
-                    <p
-                      className={styles.infrastructureLabel}
+                    <SectionEyebrow
+                      tone={development ? 'cyan' : 'blue'}
                       id={id === 'gep' ? 'capabilities-availability' : undefined}
                     >
                       {t(development ? 'developmentLabel' : 'infrastructureLabel')}
-                    </p>
+                    </SectionEyebrow>
                     <div
                       className={`${styles.infrastructureGrid} ${infrastructureCount === 4 ? styles.four : ''}`}
                     >

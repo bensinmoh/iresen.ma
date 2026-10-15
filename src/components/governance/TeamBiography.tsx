@@ -1,5 +1,7 @@
 'use client'
 
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
+
 import Image from 'next/image'
 import { useEffect, useId, useRef, useState } from 'react'
 import { FooterIcon } from '@/components/layout/FooterIcon'
@@ -152,7 +154,7 @@ export function TeamBiography({
             />
           </div>
           <div className={styles.biographyCopy}>
-            <p className={styles.eyebrow}>{biographyLabel}</p>
+            <SectionEyebrow>{biographyLabel}</SectionEyebrow>
             <div className={styles.biographyName}>
               <h2 id={titleId}>
                 <bdi>{name}</bdi>

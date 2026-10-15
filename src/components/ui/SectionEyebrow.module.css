@@ -1,4 +1,4 @@
-.eyebrow {
+.eyebrow[data-section-eyebrow] {
   display: flex;
   align-items: center;
   align-self: start;
@@ -11,13 +11,13 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.eyebrow[data-tone='white'] {
+.eyebrow[data-section-eyebrow][data-tone='white'] {
   color: var(--color-white);
 }
-.eyebrow[data-tone='cyan'] {
+.eyebrow[data-section-eyebrow][data-tone='cyan'] {
   color: var(--color-energy-cyan);
 }
-.eyebrow[data-centered] {
+.eyebrow[data-section-eyebrow][data-centered] {
   justify-content: center;
   inline-size: 100%;
   max-inline-size: none;
@@ -32,7 +32,11 @@
   background: currentColor;
   mask: url('/brand/apex-leaf.svg') center / contain no-repeat;
 }
-.eyebrow:dir(rtl) {
+.eyebrow[data-section-eyebrow]:dir(rtl) {
   letter-spacing: normal;
   line-height: 1.5;
+}
+
+.eyebrow[data-section-eyebrow][data-tone='navy'] {
+  color: var(--color-navy);
 }

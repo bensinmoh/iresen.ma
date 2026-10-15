@@ -9,7 +9,7 @@ export function SectionEyebrow({
 }: {
   children: ReactNode
   id?: string
-  tone?: 'blue' | 'white' | 'cyan'
+  tone?: 'blue' | 'white' | 'cyan' | 'navy'
   centered?: boolean
 }) {
   return (

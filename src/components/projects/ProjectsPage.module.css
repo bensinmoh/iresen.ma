@@ -25,21 +25,6 @@
 .heroContent {
   padding-block: 10rem 6rem;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.eyebrow::before {
-  content: '';
-  inline-size: 0.46rem;
-  block-size: 0.75rem;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center/contain no-repeat;
-}
 .hero h1 {
   max-inline-size: 52%;
   font-size: var(--hero-title-size);
@@ -93,7 +78,4 @@
   .hero::before {
     background: rgb(244 247 248 / 85%);
   }
-}
-:global([dir='rtl']) .eyebrow {
-  letter-spacing: normal;
 }

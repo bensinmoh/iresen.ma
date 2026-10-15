@@ -194,7 +194,7 @@ scope for content withdrawal, responsive ranges and search synchronization.
 The seven owner-selected homepage surtitles use `SectionEyebrow`: the same native
 paragraph, 18px (1.125rem) regular type, 1.5 line-height, uppercase Latin text,
 0.06em Latin tracking, 12px icon gap and 16px following space. Arabic keeps natural
-tracking. Blue, white and cyan are the only tone variants; the original Apex Leaf
+tracking. Blue, white and cyan are the homepage tone variants; the original Apex Leaf
 SVG is used unchanged as a current-color mask on every variant. The mission
 surtitle centers leaf and text together. Actual section titles remain headings;
 the R&I title now provides the mission section's level-two heading, with its three
@@ -241,3 +241,25 @@ duplicate overlay carets/local padding rules are removed. Forced-colors restores
 the browser's native arrow; multiple/listbox selects retain native presentation.
 The data-URL vector is decorative interface geometry, not a standalone public
 media/search resource. No content, route or publication-gate changes.
+
+## Shared public surtitles — 2026-10-15
+
+The owner extends the homepage `SectionEyebrow` to public-page section surtitles
+and ordinary hero stage labels: one native paragraph, regular 1.125rem type,
+1.5 leading, 0.06em Latin tracking, uppercase, 12px leaf/text gap and 16px following
+space. Arabic has natural tracking. Every variant uses the unchanged original
+Apex Leaf SVG as a decorative current-color mask. Blue, white and cyan adapt to
+light/dark surfaces; the existing institutional navy role is available on the lime
+cooperation surface. Centering is an explicit shared option; local font, pseudo-leaf
+and spacing overrides are removed rather than repeated across page modules.
+
+This covers Institute, Governance/biographies, Roadmap, Programmes, Projects,
+Platforms and infrastructure groups, Network, Collaboration, Transfer, Careers,
+News/listing, Publications, Media and Contact/form/location. The homepage brand
+identifier, navigation captions, counters and call-status metadata retain their
+separate roles. Content headings remain headings; the Institute quotation uses
+the same named paragraph/region-label semantics as the homepage quotation.
+Text, original logos, canonical anchors, destinations and search metadata remain.
+The shared selector protects these metrics from generic page-paragraph styles.
+
+Verification is recorded in `docs/shared-surtitles.md`.

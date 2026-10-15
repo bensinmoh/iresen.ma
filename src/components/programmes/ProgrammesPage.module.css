@@ -38,21 +38,6 @@
 .prose p {
   max-inline-size: 72ch;
 }
-.eyebrow {
-  display: flex;
-  gap: var(--space-3);
-  align-items: center;
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-}
-.eyebrow span {
-  inline-size: 1.2rem;
-  block-size: 0.75rem;
-  flex: none;
-  background: currentColor;
-  mask: url('/brand/apex-leaf.svg') center / contain no-repeat;
-}
 .cards,
 .archives {
   display: grid;
@@ -149,10 +134,6 @@
 .final {
   background: var(--color-navy);
   color: var(--color-white);
-}
-.process .eyebrow {
-  color: var(--color-energy-cyan);
-  justify-content: center;
 }
 .centerHeading {
   max-inline-size: 60rem;
@@ -559,9 +540,6 @@
   margin-inline: auto;
   max-inline-size: 70ch;
   text-align: center;
-}
-.process .centerHeading .eyebrow {
-  max-inline-size: none;
 }
 .cards svg,
 .outcomes svg {

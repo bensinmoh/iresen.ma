@@ -27,7 +27,7 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
             <NavigationIcon name="arrow" />
             {t('back')}
           </a>
-          <p className={styles.eyebrow}>
+          <p className={styles.callMeta}>
             <bdi>{call.acronym}</bdi>
             <span className={styles.status}>{t(`states.${state}`)}</span>
           </p>

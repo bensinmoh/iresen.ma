@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import type { Locale } from '@/i18n/locales'
@@ -81,10 +82,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
         >
           <div className="container">
             <header className={styles.approachHeading}>
-              <p className={styles.eyebrow}>
-                <span aria-hidden="true" />
-                {t('intro.eyebrow')}
-              </p>
+              <SectionEyebrow>{t('intro.eyebrow')}</SectionEyebrow>
               <h2 id="programme-intro-title">{t('intro.title')}</h2>
             </header>
             <div className={styles.approachGrid}>
@@ -127,10 +125,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
         >
           <div className={`container ${styles.impactInner}`}>
             <header>
-              <p className={styles.eyebrow}>
-                <span aria-hidden="true" />
-                {t('impact.eyebrow')}
-              </p>
+              <SectionEyebrow>{t('impact.eyebrow')}</SectionEyebrow>
               <h2 id="programme-impact-title">{t('impact.title')}</h2>
               <p>{t('impact.description')}</p>
               <div className={styles.figure}>
@@ -178,10 +173,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
         >
           <div className="container">
             <header className={styles.centerHeading}>
-              <p className={styles.eyebrow}>
-                <span aria-hidden="true" />
+              <SectionEyebrow tone="cyan" centered>
                 {t('process.eyebrow')}
-              </p>
+              </SectionEyebrow>
               <h2 id="programme-process-title">{t('process.title')}</h2>
               <p>{t('process.description')}</p>
             </header>
@@ -207,10 +201,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
           <div className="container">
             <header className={styles.splitHeading}>
               <div>
-                <p className={styles.eyebrow}>
-                  <span aria-hidden="true" />
-                  {t('history.eyebrow')}
-                </p>
+                <SectionEyebrow>{t('history.eyebrow')}</SectionEyebrow>
                 <h2 id="programme-history-title">{t('history.title')}</h2>
               </div>
               <div>
@@ -256,10 +247,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
         >
           {activeCalls.length ? (
             <div className="container">
-              <p className={styles.eyebrow}>
-                <span aria-hidden="true" />
-                {t('current.eyebrow')}
-              </p>
+              <SectionEyebrow>{t('current.eyebrow')}</SectionEyebrow>
               <h2 id="programme-current-title">{callsCopy('active')}</h2>
               <div className={styles.archives}>{activeCalls.map(callCard)}</div>
             </div>
@@ -267,10 +255,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
             <div className={`container ${styles.empty}`}>
               <ValorisationIcon name="file-certificate" />
               <div>
-                <p className={styles.eyebrow}>
-                  <span aria-hidden="true" />
-                  {t('current.eyebrow')}
-                </p>
+                <SectionEyebrow>{t('current.eyebrow')}</SectionEyebrow>
                 <h2 id="programme-current-title">{t('current.title')}</h2>
                 <p>{t('current.description')}</p>
                 <div className={styles.actions}>

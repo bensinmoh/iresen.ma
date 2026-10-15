@@ -14,16 +14,6 @@
   overflow-wrap: anywhere;
 }
 
-.contact-eyebrow {
-  margin-block-end: var(--space-2);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
 .contact-page .button {
   gap: var(--space-3);
   min-inline-size: 0;
@@ -113,7 +103,6 @@
   background: var(--color-navy);
 }
 
-.contact-headquarters .contact-eyebrow,
 .contact-details dt {
   color: var(--color-footer-muted);
 }
@@ -235,25 +224,6 @@
   white-space: pre-line;
 }
 
-.contact-form-heading .contact-eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  max-inline-size: none;
-  margin-inline: auto;
-}
-
-.contact-form-heading .contact-eyebrow > img {
-  flex-shrink: 0;
-  inline-size: auto;
-  block-size: 1em;
-}
-
-.contact-form-heading .contact-eyebrow > span {
-  min-inline-size: 0;
-}
-
 .contact-form-heading > p:last-child {
   margin-inline: auto;
   color: var(--color-text-muted);
@@ -358,7 +328,7 @@
   gap: clamp(2rem, 8vw, 9.5rem);
 }
 
-.contact-faq-intro > p:not(.contact-eyebrow) {
+.contact-faq-intro > p:not([data-section-eyebrow]) {
   color: var(--color-text-muted);
 }
 
@@ -446,7 +416,6 @@
 html[lang='ar'] .contact-page h1,
 html[lang='ar'] .contact-page h2,
 html[lang='ar'] .contact-page h3,
-html[lang='ar'] .contact-eyebrow,
 html[lang='ar'] .contact-details dt,
 html[lang='ar'] .contact-field label {
   letter-spacing: normal;
