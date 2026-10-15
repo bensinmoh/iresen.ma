@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { IntegratedModel } from '@/components/narrative/IntegratedModel'
@@ -18,17 +18,9 @@ export async function MissionSection({ locale }: { locale: Locale }) {
       className={styles.section}
     >
       <div className={styles.introduction}>
-        <h2 id={`${homeMissionSectionId}-heading`} className={styles.eyebrow}>
-          <Image
-            src="/brand/apex-leaf.svg"
-            alt=""
-            aria-hidden="true"
-            width={1773}
-            height={2870}
-            unoptimized
-          />
-          <span>{t('eyebrow')}</span>
-        </h2>
+        <SectionEyebrow id={`${homeMissionSectionId}-heading`} centered>
+          {t('eyebrow')}
+        </SectionEyebrow>
         <blockquote className={styles.statement}>
           <p>
             <span className={styles.quoteMark} aria-hidden="true">

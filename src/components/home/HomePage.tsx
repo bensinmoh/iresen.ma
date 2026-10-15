@@ -11,6 +11,7 @@ import { MissionSection } from './MissionSection'
 import { NewsSection } from './NewsSection'
 import { InnovationSection } from './InnovationSection'
 import { PlatformsSection } from './PlatformsSection'
+import { CollaborationBridge } from './CollaborationBridge'
 import { CollaborationSection } from './CollaborationSection'
 import { homeNavigation } from '@/lib/home-navigation'
 
@@ -41,11 +42,13 @@ export async function HomePage({ locale }: { locale: Locale }) {
           'research-priorities',
           'innovation-value-chain',
           'platforms-expertise',
+          'capabilities-cooperation',
           'collaboration',
           'news-events',
         ]}
       />
       <PlatformsSection locale={locale} />
+      <CollaborationBridge locale={locale} />
       <CollaborationSection locale={locale} />
       <NewsSection locale={locale} />
     </PageShell>

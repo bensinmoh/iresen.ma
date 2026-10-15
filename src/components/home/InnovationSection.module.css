@@ -15,13 +15,6 @@
   gap: var(--space-8);
   margin-block-end: var(--space-8);
 }
-.eyebrow {
-  margin: 0 0 var(--space-3);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 400;
-  text-transform: uppercase;
-}
 .header h2 {
   max-inline-size: 28ch;
   margin: 0;

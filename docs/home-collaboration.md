@@ -97,3 +97,24 @@ axe, canonical/contact destinations, local search and no-JavaScript reading.
 The rail's accessible region name is distinct from the enclosing section. Source
 order follows the desktop reading order, including International in cell 4.
 Full current-head CI remains mandatory before merge; no deployment is included.
+
+## Light transition before collaboration — 2026-10-15
+
+The owner commissions a short pale-blue section between the dark platforms and
+collaboration sections to improve page rhythm. `capabilities-cooperation` is a
+stable home section anchor, registered centrally and localized through
+`PageSections.home`; normal page/section search projections include its heading
+and description in FR/EN/AR. The text reuses the existing Narrative capabilities
+note: platforms can contribute to research, testing and training; partnerships
+can bring expertise and resources together. The new short heading is working
+editorial copy. No new service, proof, metric, route or primary navigation item.
+Desktop pairs heading and text, mobile stacks them with natural text growth.
+
+Follow-up verification: production build/TypeScript, lint and 170 unit tests pass.
+Seven existing homepage journeys and three new FR/EN/AR surtitles/transition tests
+pass on the final runtime. Coverage includes seven identical paragraph/type roles,
+original leaf masks, colors, 320/390/768/1440px, 200% text, mission centering against
+the full section (rather than its paragraph), transition placement and compact
+height, and localized search discovery. Desktop French and mobile Arabic captures
+were inspected. Public search was synchronized locally. Browser test-only fixture
+repairs did not change runtime after this production build.

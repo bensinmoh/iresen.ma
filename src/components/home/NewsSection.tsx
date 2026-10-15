@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { newsListingHref } from '@/lib/site'
@@ -24,17 +24,7 @@ export async function NewsSection({
     <section id={homeNewsSectionId} aria-labelledby="home-news-heading" className={styles.section}>
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>
-            <Image
-              src="/brand/apex-leaf.svg"
-              alt=""
-              aria-hidden="true"
-              width={1773}
-              height={2870}
-              unoptimized
-            />
-            {t('eyebrow')}
-          </p>
+          <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
           <h2 id="home-news-heading">{t('title')}</h2>
         </div>
         <a href={newsListingHref(locale)} className={styles.all}>

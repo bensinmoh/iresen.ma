@@ -1,3 +1,4 @@
+import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -16,7 +17,7 @@ export async function InnovationSection({ locale }: { locale: Locale }) {
     >
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>{t('eyebrow')}</p>
+          <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
           <h2 id="innovation-heading">{t('title')}</h2>
         </div>
         <p className={styles.introduction}>{t('description')}</p>

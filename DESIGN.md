@@ -188,3 +188,21 @@ five use a native horizontal rail on mobile. Reuse existing dark-surface colors,
 compact heading roles, fine separators and mobile-only borderless pills. This
 scoped composition adds no shared token or new imagery. See the collaboration
 scope for content withdrawal, responsive ranges and search synchronization.
+
+## Shared homepage surtitles — 2026-10-15
+
+The seven owner-selected homepage surtitles use `SectionEyebrow`: the same native
+paragraph, 18px (1.125rem) regular type, 1.5 line-height, uppercase Latin text,
+0.06em Latin tracking, 12px icon gap and 16px following space. Arabic keeps natural
+tracking. Blue, white and cyan are the only tone variants; the original Apex Leaf
+SVG is used unchanged as a current-color mask on every variant. The mission
+surtitle centers leaf and text together. Actual section titles remain headings;
+the R&I title now provides the mission section's level-two heading, with its three
+mission titles at level three. No label wording, anchor, destination or search
+metadata changes. This replaces the separate local eyebrow styles.
+
+The mission surtitle explicitly fills the quotation width before centering its
+leaf/text group, overriding the shared paragraph reading measure. A compact pale
+blue `capabilities-cooperation` band now separates platforms and collaboration;
+it reuses existing Narrative content, current action-surface/text tokens and a
+two-column desktop / stacked mobile composition. No new palette or imagery.

@@ -39,20 +39,6 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin: 0 0 var(--space-4);
-  font-size: var(--font-size-label);
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.eyebrow img {
-  block-size: 0.75rem;
-  inline-size: auto;
-  filter: brightness(0) invert(1);
-}
 .introduction h2 {
   max-inline-size: 17ch;
   margin: 0;

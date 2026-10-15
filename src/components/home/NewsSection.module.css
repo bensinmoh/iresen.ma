@@ -15,22 +15,6 @@
   margin-block-end: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-block: 0 var(--space-4);
-  color: var(--color-blue);
-  font-size: var(--font-size-label);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.eyebrow img {
-  inline-size: auto;
-  block-size: 0.75rem;
-}
-
 .header h2 {
   margin: 0;
   font-size: clamp(2rem, 3.125vw, 3.75rem);
@@ -186,7 +170,6 @@
   transform: none;
 }
 .section:dir(rtl) .header h2,
-.eyebrow:dir(rtl),
 .card h3:dir(rtl) {
   letter-spacing: normal;
   line-height: 1.6;

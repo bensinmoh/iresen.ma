@@ -164,13 +164,13 @@ for (const locale of locales) {
     await expect(section).toHaveAccessibleName(/\S/)
     await expect(section.locator('blockquote')).toContainText(catalogs[locale].Institute.statement)
     const core = section.locator('#mission-research')
-    await expect(core.locator('h3')).toHaveText(catalogs[locale].Narrative.coreTitle)
-    await expect(core.locator('h4')).toHaveCount(3)
+    await expect(core.locator('h2')).toHaveText(catalogs[locale].Narrative.coreTitle)
+    await expect(core.locator('h3')).toHaveCount(3)
     if (locale === 'fr')
       await expect(core).not.toContainText('Trois missions complémentaires, sans étapes obligées.')
     for (const mission of researchMissions) {
       const item = page.locator(`#${mission.legacyAnchor}`)
-      await expect(item.locator('h4')).toHaveText(
+      await expect(item.locator('h3')).toHaveText(
         catalogs[locale].Narrative.missions[mission.id].title,
       )
       await expect(item.locator('a')).toHaveAttribute('href', pageHref(mission.pageId, locale))
