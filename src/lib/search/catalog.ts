@@ -512,7 +512,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Network.directory.map,
-          description: messages[locale].Network.directory.approximate,
+          description: messages[locale].Network.directory.description,
         },
       ]),
     ) as PublicAssetReference['text'],

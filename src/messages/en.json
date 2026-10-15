@@ -2967,9 +2967,9 @@
         "bioenergy": "Bioenergy"
       },
       "map": "Laboratory map",
-      "approximate": "Approximate city locations. Select a point or a laboratory to view its details.",
       "close": "Close details",
-      "gepName": "Abdelatif GHENNIOUI"
+      "gepName": "Abdelatif GHENNIOUI",
+      "list": "Network laboratories"
     },
     "skills": {
       "title": "Research skills grow through practice.",

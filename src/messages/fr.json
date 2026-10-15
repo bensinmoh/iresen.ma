@@ -2977,9 +2977,9 @@
         "bioenergy": "Bioénergie"
       },
       "map": "Carte des laboratoires",
-      "approximate": "Localisations approximatives par ville. Sélectionnez un point ou un laboratoire pour afficher sa fiche.",
       "close": "Fermer la fiche",
-      "gepName": "Abdelatif GHENNIOUI"
+      "gepName": "Abdelatif GHENNIOUI",
+      "list": "Laboratoires du réseau"
     },
     "skills": {
       "title": "La recherche se transmet par la pratique.",

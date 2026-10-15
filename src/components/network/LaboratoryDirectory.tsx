@@ -1,5 +1,11 @@
 'use client'
 
+import { Sun } from '@phosphor-icons/react/dist/ssr/Sun'
+import { BatteryCharging } from '@phosphor-icons/react/dist/ssr/BatteryCharging'
+import { Circuitry } from '@phosphor-icons/react/dist/ssr/Circuitry'
+import { Atom } from '@phosphor-icons/react/dist/ssr/Atom'
+import { ChargingStation } from '@phosphor-icons/react/dist/ssr/ChargingStation'
+import { Leaf } from '@phosphor-icons/react/dist/ssr/Leaf'
 import { X } from '@phosphor-icons/react/dist/ssr/X'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 
@@ -28,7 +34,7 @@ export type LaboratoryCard = {
 }
 type DirectoryLabels = {
   map: string
-  approximate: string
+  list: string
   close: string
   label: string
   placeholder: string
@@ -41,6 +47,15 @@ type DirectoryLabels = {
   theme: string
   contact: string
   topics: Record<LaboratoryTopic, string>
+}
+
+const topicIcons = {
+  solar: Sun,
+  storage: BatteryCharging,
+  grid: Circuitry,
+  materials: Atom,
+  mobility: ChargingStation,
+  bioenergy: Leaf,
 }
 
 export function LaboratoryDirectory({
@@ -171,7 +186,13 @@ export function LaboratoryDirectory({
         )}
       </div>
       <div className={styles.explorer}>
-        <div className={styles.laboratories}>
+        <div
+          className={styles.laboratories}
+          role="region"
+          aria-label={labels.list}
+          tabIndex={0}
+          data-laboratory-list
+        >
           {records.map((record) => (
             <article
               key={record.id}
@@ -185,7 +206,7 @@ export function LaboratoryDirectory({
                 aria-pressed={active?.id === record.id}
                 onClick={(event) => select(record, event.currentTarget)}
               >
-                <ValorisationIcon name="flask" />
+                <SiteIcon icon={topicIcons[record.topic]} />
                 <span>
                   <strong>{record.title}</strong>
                   <span>
@@ -203,14 +224,11 @@ export function LaboratoryDirectory({
           ))}
         </div>
         <div className={styles.mapColumn}>
-          <p id="laboratory-map-help" className={styles.mapHelp}>
-            {labels.approximate}
-          </p>
           <div
             className={styles.map}
             role="group"
             aria-label={labels.map}
-            aria-describedby="laboratory-map-help"
+            data-laboratory-map
             onKeyDown={(event) => {
               if (event.key === 'Escape' && active) {
                 event.preventDefault()

@@ -93,3 +93,24 @@ statements. No other contact or laboratory photography is invented. City names,
 contact names and map UI are localized working copy in FR/EN/AR. Laboratory search
 projections include the supplied city and GEP name; the newly supplied vector has
 its own localized media reference, distinct from the older homepage icon.
+
+## Compact map and directory — 2026-10-15
+
+Owner correction reduces the explorer to a shared responsive height: 25–30rem
+on desktop and 18–24rem on stacked layouts. The list and map use the same local
+height variable, including when opening a map record. The Morocco canvas retains
+its original aspect ratio and geographic orientation; coordinates are unchanged.
+The list uses native vertical scrolling, a visible scrollbar, a localized region
+name and keyboard access. Smaller row spacing and six Phosphor topic icons make
+the fourteen laboratories easier to scan; disclosures and contact details remain.
+The directory heading/filter/result gaps and section padding are tightened.
+The requested approximate-location instruction and its translations are withdrawn
+from visible content and search metadata. Detail overlays remain scrollable below
+the northern map points, with Escape and trigger-focus restoration preserved.
+
+Validation: final production build/TypeScript, lint and 170 unit tests pass.
+Four network browser journeys pass in FR/EN/AR, covering 320/390/768/1024/1440px,
+200% text, filters, all fourteen rows/icons, direct anchors/no JavaScript, contacts,
+map selection, Escape/focus restoration and axe. Browser geometry asserts list/map
+height equality within 1px and list overflow at every checked width. Desktop French
+and mobile Arabic captures inspected. The local search index was rebuilt. No deployment.

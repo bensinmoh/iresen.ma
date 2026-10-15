@@ -58,7 +58,15 @@
       "CaretDown",
       "MagnifyingGlass"
     ],
-    "src/components/network/LaboratoryDirectory.tsx": ["X"],
+    "src/components/network/LaboratoryDirectory.tsx": [
+      "Atom",
+      "BatteryCharging",
+      "ChargingStation",
+      "Circuitry",
+      "Leaf",
+      "Sun",
+      "X"
+    ],
     "src/components/transfer/ValorisationIcon.tsx": [
       "ArrowsLeftRight",
       "Certificate",

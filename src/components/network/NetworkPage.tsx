@@ -98,7 +98,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
         </section>
         <section
           id="scientific-network"
-          className={`container ${styles.section}`}
+          className={`container ${styles.section} ${styles.directorySection}`}
           aria-labelledby="network-directory-title"
         >
           <header className={`${styles.heading} ${styles.directoryHeading}`}>
@@ -112,7 +112,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
             records={records}
             labels={{
               map: t('directory.map'),
-              approximate: t('directory.approximate'),
+              list: t('directory.list'),
               close: t('directory.close'),
               label: t('directory.label'),
               placeholder: t('directory.placeholder'),

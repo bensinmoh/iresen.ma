@@ -28,6 +28,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(page.locator('#request-expertise')).toHaveCount(0)
     const cards = page.locator('[data-laboratory-card]:visible')
     await expect(cards).toHaveCount(14)
+    await expect(cards.locator('button > svg')).toHaveCount(14)
     const directory = page.locator('#scientific-network')
     await directory.scrollIntoViewIfNeeded()
     const input = page.locator('#laboratory-query')
@@ -103,6 +104,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       await page.setViewportSize({ width, height: 900 })
       await directory.locator('[data-map-pin="marrakech"]').click()
       await expect(detail).toBeVisible()
+      const list = directory.locator('[data-laboratory-list]')
+      const map = directory.locator('[data-laboratory-map]')
+      const [listBox, mapBox] = await Promise.all([list.boundingBox(), map.boundingBox()])
+      expect(Math.abs(listBox!.height - mapBox!.height)).toBeLessThan(1)
+      expect(await list.evaluate((node) => node.scrollHeight > node.clientHeight)).toBe(true)
+      await directory.screenshot({ path: `/tmp/network-compact-${locale}-${width}.png` })
       await expect
         .poll(() =>
           page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1),
