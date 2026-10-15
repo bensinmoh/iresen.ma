@@ -93,7 +93,6 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
                 </article>
               ))}
             </div>
-            <p className={styles.notice}>{t('modes.notice')}</p>
           </div>
         </section>
         <section

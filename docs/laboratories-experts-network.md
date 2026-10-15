@@ -114,3 +114,24 @@ Four network browser journeys pass in FR/EN/AR, covering 320/390/768/1024/1440px
 map selection, Escape/focus restoration and axe. Browser geometry asserts list/map
 height equality within 1px and list overflow at every checked width. Desktop French
 and mobile Arabic captures inspected. The local search index was rebuilt. No deployment.
+
+## Intervention notice withdrawal — 2026-10-15
+
+At the owner’s request, the intervention-modes notice beginning “Les modalités et
+l’accès se définissent au cas par cas” and its EN/AR equivalents are removed from
+the page, locale catalogues and public search body. Its unused CSS rule is removed.
+Other intervention descriptions, contact data and development-status wording remain.
+
+Owner follow-up enlarges the map canvas by up to 30%, preserving its aspect ratio
+and moving its points with the geography. It may extend above/below the fixed
+explorer row; the compact list keeps its height and scrolling. Canvas width is
+capped to the column on narrow screens, preventing horizontal overflow. A small
+vertical offset keeps the northern point clear of the filter controls.
+
+Final verification: production build/TypeScript, lint, formatting and 170 unit tests
+pass. Four final FR/EN/AR network browser journeys pass at 320–1440px, with 200%
+text, filters/reset, map selection, disclosures, contacts, keyboard/Escape, axe and
+no-JavaScript reading. Geometry confirms the enlarged canvas exceeds the fixed
+map/list row height without horizontal overflow. The decorative canvas ignores
+pointer events, while points remain interactive; search/filter/reset controls sit
+above decoration. Desktop and mobile RTL captures inspected. Search is synchronized.
