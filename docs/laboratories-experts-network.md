@@ -150,3 +150,19 @@ Validation: final production build/TypeScript, lint and formatting pass. Four
 network browser journeys pass in FR/EN/AR at 320–1440px, including 200% text,
 filter/search/reset, map/list geometry, contacts, keyboard/Escape, axe and no-JS.
 Desktop French and mobile RTL captures inspected. No content/search change or deployment.
+
+## Laboratory reading size and explorer height — 2026-10-15
+
+The owner restores normal body text in laboratory rows: names, institution/city
+and thematic disclosures use the shared 1rem body size and inherited body leading
+(1.6 FR/EN, 1.85 AR). The previous compressed title leading and smaller metadata
+are removed. The shared map/list height increases by exactly 20% at every breakpoint:
+30–36rem desktop, 21.6–28.8rem stacked. Native list scrolling remains active. The
+proportional map grows with this height where column width permits; narrow-screen
+width caps remain to prevent horizontal overflow or distorted geography.
+
+Validation: final production build/TypeScript, lint and formatting pass. Four
+FR/EN/AR network browser journeys pass at 320–1440px, including filters, geometry,
+keyboard, axe, 200% text and no JavaScript. Desktop FR and mobile AR typography
+captures inspected. Existing unit evidence remains valid for unchanged data and
+search logic; no content/search change or deployment.

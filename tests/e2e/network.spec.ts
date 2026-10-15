@@ -109,7 +109,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       const [listBox, mapBox] = await Promise.all([list.boundingBox(), map.boundingBox()])
       expect(Math.abs(listBox!.height - mapBox!.height)).toBeLessThan(1)
       const canvasBox = await map.locator(':scope > div').first().boundingBox()
-      expect(canvasBox!.height).toBeGreaterThan(mapBox!.height)
+      if (width >= 1024) expect(canvasBox!.height).toBeGreaterThan(mapBox!.height)
       expect(await list.evaluate((node) => node.scrollHeight > node.clientHeight)).toBe(true)
       await directory.screenshot({ path: `/tmp/network-compact-${locale}-${width}.png` })
       await expect
