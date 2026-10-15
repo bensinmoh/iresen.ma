@@ -1,14 +1,12 @@
+import { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr/EnvelopeSimple'
+import { MapPin } from '@phosphor-icons/react/dist/ssr/MapPin'
+import { Phone } from '@phosphor-icons/react/dist/ssr/Phone'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 type FooterIconName = 'location' | 'phone' | 'email' | 'linkedin' | 'youtube'
-
-const linePaths = {
-  location: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z',
-  phone: 'M20 21a18 18 0 0 1-17-17l4-1 3 5-3 2a13 13 0 0 0 7 7l2-3 5 3-1 4Z',
-  email: 'M3 5h18v14H3V5Zm0 1 9 7 9-7',
-} as const
-
+const icons = { location: MapPin, phone: Phone, email: EnvelopeSimple }
 export function FooterIcon({ name }: { name: FooterIconName }) {
-  const linePath = name in linePaths ? linePaths[name as keyof typeof linePaths] : undefined
-
+  if (name !== 'linkedin' && name !== 'youtube')
+    return <SiteIcon icon={icons[name]} className="footer-icon" />
   return (
     <svg
       className="footer-icon"
@@ -19,15 +17,7 @@ export function FooterIcon({ name }: { name: FooterIconName }) {
       aria-hidden="true"
       focusable="false"
     >
-      {linePath ? (
-        <path
-          d={linePath}
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      ) : name === 'linkedin' ? (
+      {name === 'linkedin' ? (
         <path
           fill="currentColor"
           d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5V9h3v10ZM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-3v-5.2c0-1.4-.5-2-1.5-2-1.1 0-1.5.8-1.5 2V19h-3V9h2.9v1.4A3.4 3.4 0 0 1 16 8.8c2.1 0 3 1.4 3 4V19Z"

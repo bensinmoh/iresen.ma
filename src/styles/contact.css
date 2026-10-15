@@ -383,7 +383,8 @@
 }
 
 .contact-faq-toggle {
-  display: block;
+  display: grid;
+  place-items: center;
   position: relative;
   flex: 0 0 2.75rem;
   block-size: 2.75rem;
@@ -396,23 +397,12 @@
   overflow-wrap: anywhere;
 }
 
-.contact-faq-toggle::before,
-.contact-faq-toggle::after {
-  content: '';
-  position: absolute;
-  inset: 50% auto auto 50%;
-  inline-size: 1.125rem;
-  block-size: 1px;
-  background: currentColor;
-  transform: translate(-50%, -50%);
-}
-
-.contact-faq-toggle::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.contact-faq-list details[open] .contact-faq-toggle::after {
+.contact-faq-toggle .faq-minus,
+.contact-faq-list details[open] .contact-faq-toggle .faq-plus {
   display: none;
+}
+.contact-faq-list details[open] .contact-faq-toggle .faq-minus {
+  display: block;
 }
 
 .contact-faq-answer {

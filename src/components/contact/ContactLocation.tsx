@@ -1,3 +1,4 @@
+import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { ConsentMap } from '@/components/privacy/ConsentMap'
@@ -23,7 +24,7 @@ export async function ContactLocation({ locale }: { locale: Locale }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t('externalLink')} <span aria-hidden="true">↗</span>
+          {t('externalLink')} <NavigationIcon name="arrow-up-right" />
         </a>
       </div>
       <div className="contact-map">

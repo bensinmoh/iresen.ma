@@ -1,28 +1,16 @@
-export function NavigationIcon({ name }: { name: 'search' | 'chevron' | 'arrow' }) {
+import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr/ArrowUpRight'
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight'
+import { CaretDown } from '@phosphor-icons/react/dist/ssr/CaretDown'
+import { MagnifyingGlass } from '@phosphor-icons/react/dist/ssr/MagnifyingGlass'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+const icons = {
+  search: MagnifyingGlass,
+  chevron: CaretDown,
+  arrow: ArrowRight,
+  'arrow-up-right': ArrowUpRight,
+} as const
+export function NavigationIcon({ name }: { name: keyof typeof icons }) {
   return (
-    <svg
-      className={`navigation-icon navigation-icon-${name}`}
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-    >
-      {name === 'search' ? (
-        <>
-          <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="1.7" />
-          <path d="m16 16 5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-        </>
-      ) : (
-        <path
-          d={name === 'chevron' ? 'm6 9 6 6 6-6' : 'M5 12h14m-6-6 6 6-6 6'}
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      )}
-    </svg>
+    <SiteIcon icon={icons[name]} size={20} className={`navigation-icon navigation-icon-${name}`} />
   )
 }

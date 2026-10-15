@@ -1,3 +1,7 @@
+import { Plus } from '@phosphor-icons/react/dist/ssr/Plus'
+import { Minus } from '@phosphor-icons/react/dist/ssr/Minus'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import Image from 'next/image'
 import type { Patent } from '@/lib/patents'
 import { getTranslations } from 'next-intl/server'
@@ -52,7 +56,7 @@ export async function ContactPage({
             </h1>
             <p>{t('hero.description')}</p>
             <a href="#send-request" className="button button-primary">
-              {t('hero.action')} <span aria-hidden="true">⌄</span>
+              {t('hero.action')} <NavigationIcon name="chevron" />
             </a>
           </div>
         </div>
@@ -89,7 +93,7 @@ export async function ContactPage({
                 <h3>{t(`departments.${department}.title`)}</h3>
                 <p>{t(`departments.${department}.description`)}</p>
                 <a href={topicHref(department)}>
-                  {t('departments.action')} <span aria-hidden="true">↗</span>
+                  {t('departments.action')} <NavigationIcon name="arrow-up-right" />
                 </a>
               </div>
             ))}
@@ -111,7 +115,7 @@ export async function ContactPage({
               </h3>
               <p>{t(`platforms.${platform}.description`)}</p>
               <a href={pageHref('platforms', locale)}>
-                {t('platforms.action')} <span aria-hidden="true">↗</span>
+                {t('platforms.action')} <NavigationIcon name="arrow-up-right" />
               </a>
             </article>
           ))}
@@ -137,7 +141,10 @@ export async function ContactPage({
             <details key={question}>
               <summary>
                 <span>{t(`faq.questions.${question}.question`)}</span>
-                <span className="contact-faq-toggle" aria-hidden="true" />
+                <span className="contact-faq-toggle" aria-hidden="true">
+                  <SiteIcon icon={Plus} className="faq-plus" />
+                  <SiteIcon icon={Minus} className="faq-minus" />
+                </span>
               </summary>
               <div className="contact-faq-answer">
                 <p>{t(`faq.questions.${question}.answer`)}</p>
@@ -150,7 +157,7 @@ export async function ContactPage({
                         : pageHref(pageId, locale)
                   }
                 >
-                  {t(`faq.questions.${question}.action`)} <span aria-hidden="true">↗</span>
+                  {t(`faq.questions.${question}.action`)} <NavigationIcon name="arrow-up-right" />
                 </a>
               </div>
             </details>

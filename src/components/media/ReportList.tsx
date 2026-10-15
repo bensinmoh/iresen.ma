@@ -1,3 +1,5 @@
+import { FilePdf } from '@phosphor-icons/react/dist/ssr/FilePdf'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { mediaReports } from '@/lib/media-library'
@@ -11,13 +13,7 @@ export async function ReportList({ locale }: { locale: Locale }) {
       {mediaReports.map((report) => (
         <article id={`report-${report.id}`} key={report.id}>
           <div className={styles.reportMark} aria-hidden="true">
-            <svg width="32" height="38" viewBox="0 0 32 38" fill="none">
-              <path
-                d="M4 1h16l8 8v28H4zM20 1v9h8M9 17h14M9 23h14M9 29h9"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-            </svg>
+            <SiteIcon icon={FilePdf} size={32} />
             <span>PDF</span>
           </div>
           <div>

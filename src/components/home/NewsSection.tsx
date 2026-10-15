@@ -1,3 +1,5 @@
+import { CalendarBlank } from '@phosphor-icons/react/dist/ssr/CalendarBlank'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -48,30 +50,7 @@ export async function NewsSection({
               </h3>
               {(post.publishedAt || post.publicationMonth) && (
                 <time dateTime={post.publishedAt ?? post.publicationMonth}>
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <rect
-                      x="3"
-                      y="5"
-                      width="18"
-                      height="16"
-                      rx="3"
-                      stroke="currentColor"
-                      strokeWidth="1.7"
-                    />
-                    <path
-                      d="M7 3v5m10-5v5M3 11h18"
-                      stroke="currentColor"
-                      strokeWidth="1.7"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+                  <SiteIcon icon={CalendarBlank} size={22} />
                   {new Intl.DateTimeFormat(locale, {
                     ...(post.publishedAt ? { day: 'numeric' as const } : {}),
                     month: 'long',

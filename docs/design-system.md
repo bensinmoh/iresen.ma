@@ -1873,3 +1873,12 @@ and FR/EN/AR: both surface edges match the viewport within 1px, with no document
 horizontal overflow. Resize measurements await two rendering frames. Shared
 surtitle/mission-centering regressions also pass on this runtime. Wide French
 home/contact and Arabic media captures were inspected. Content/search unchanged.
+
+## Phosphor interface icons — 2026-10-15
+
+The owner selects regular-weight Phosphor for interface icons, subject pictograms
+and arrows. Use the shared SiteIcon defaults, per-icon SSR imports, inherited
+color and existing functional sizes/RTL rules. Preserve Apex Leaf, original marks,
+geography and structural diagram/control geometry. Replace text-symbol arrows
+and CSS imitation icons through the same family; native behavior and accessible
+control names remain. See the [complete audit and source record](icon-system.md).

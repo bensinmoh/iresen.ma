@@ -1,5 +1,8 @@
 'use client'
 
+import { X } from '@phosphor-icons/react/dist/ssr/X'
+import { SiteIcon } from '@/components/ui/SiteIcon'
+
 import { useState, useRef, useEffect, type FormEvent } from 'react'
 import {
   laboratoryTopics,
@@ -245,15 +248,7 @@ export function LaboratoryDirectory({
                   aria-label={labels.close}
                   onClick={close}
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path d="m6 6 12 12M18 6 6 18" />
-                  </svg>
+                  <SiteIcon icon={X} />
                 </button>
                 <p className={styles.labTopic}>{labels.topics[active.topic]}</p>
                 <h3 id="map-laboratory-title">{active.title}</h3>

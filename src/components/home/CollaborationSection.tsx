@@ -1,3 +1,5 @@
+import { ShieldCheck } from '@phosphor-icons/react/dist/ssr/ShieldCheck'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -50,21 +52,7 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
           <span>{t('collaborators')}</span>
         </p>
         <aside className={styles.certification} aria-label={`${t('certified')} ISO 9001:2015`}>
-          <svg
-            viewBox="0 0 40 44"
-            width="40"
-            height="44"
-            fill="none"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="M20 3 35 9v12c0 9-8 16-15 20C13 37 5 30 5 21V9L20 3Z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path d="m12 21 6 6 11-12" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
+          <SiteIcon icon={ShieldCheck} size={40} />
           <div>
             <p>
               {t('certified')} <bdi dir="ltr">ISO 9001:2015</bdi>
