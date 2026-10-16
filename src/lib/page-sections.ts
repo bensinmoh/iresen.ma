@@ -12,7 +12,7 @@ export type SectionDefinition = {
 }
 
 // Editorial scaffolds follow the received section proposal within the canonical
-// 23-page route map. Page introductions are already provided by the heroes.
+// 24-page route map. Page introductions are already provided by the heroes.
 // Titles and short content briefs live in the locale catalogs, not this map.
 export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
   home: [
@@ -132,6 +132,7 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'institutional-reports' },
     { id: 'use-cite-resources' },
   ],
+  patents: [],
   media: [
     { id: 'featured-media' },
     { id: 'find-media' },

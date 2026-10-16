@@ -7,9 +7,8 @@ import { PageShell } from '@/components/layout/PageShell'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { engagementContactHref } from '@/lib/engagement'
-import { patents, patentThemes } from '@/lib/patents'
 import { ValorisationIcon, type ValorisationIconName } from './ValorisationIcon'
-import { PatentCatalog } from './PatentCatalog'
+import { PatentSection } from './PatentSection'
 import styles from './TransferPage.module.css'
 
 const processIcons: ValorisationIconName[] = [
@@ -174,44 +173,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
             ))}
           </div>
         </section>
-        <section
-          id="adoption-initiatives"
-          aria-labelledby="adoption-initiatives-heading"
-          className={`${styles.section} ${styles.light}`}
-        >
-          {header('catalog', 'adoption-initiatives')}
-          <div
-            id="valorisation-figures"
-            className={styles.figures}
-            aria-labelledby="valorisation-figures-heading"
-          >
-            <Heading as="h3" size="label" id="valorisation-figures-heading">
-              {t('figures.label')}
-            </Heading>
-            <dl>
-              <div>
-                <dt>{t('figures.filed')}</dt>
-                <dd>
-                  <bdi>{patents.length}</bdi>
-                </dd>
-              </div>
-              <div>
-                <dt>{t('figures.themes')}</dt>
-                <dd>
-                  <bdi>{patentThemes.length}</bdi>
-                </dd>
-              </div>
-              <div>
-                <dt>{t('figures.date')}</dt>
-                <dd>
-                  <span className={styles.period}>{t('figures.period')}</span>
-                </dd>
-              </div>
-            </dl>
-            <p>{t('figures.note')}</p>
-          </div>
-          <PatentCatalog locale={locale} />
-        </section>
+        <PatentSection locale={locale} />
         <section
           id="build-transfer"
           aria-labelledby="build-transfer-heading"

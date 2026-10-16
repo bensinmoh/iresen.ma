@@ -1,5 +1,146 @@
 # Change log
 
+## 2026-10-16 — Coordinated validation corrections
+
+- Preserve localized 404 responses without self-rewrites and decode Arabic news
+  listing/article paths consistently.
+- Reveal direct patent anchors after clearing stale catalogue filters; search
+  regression checks use the dedicated patent destination.
+- Fix the Programmes action at the 640px breakpoint and restore full contrast
+  on pathway step numbers.
+- Reconcile browser contracts with the standalone patent page, structural
+  positioning diagram, viewport-sized roadmap titles and aligned network filters.
+- Complete new-image provenance/search coverage; retain public/private content gates.
+
+## 2026-10-16 — Ministry titles
+
+- Update the three changed current ministry labels and governance section/search
+  text in FR/EN/AR using the owner-supplied appointment list.
+- Preserve historical report attributions, source files and board membership.
+
+## 2026-10-16 — GEP-MCI image replacement
+
+- Use the owner-supplied campus image in GEP-MCI homepage and platform features,
+  preserving layout and updating the shared media search reference/provenance.
+
+## 2026-10-16 — Alternating roadmap technical-sheet backgrounds
+
+- Apply the technical drawing reference to alternate section backgrounds, using
+  a restrained grid and frame with a once-per-arrival reveal.
+- Keep images unannotated, exclusive native accordions and viewport composition.
+
+## 2026-10-16 — Technical theme drawings
+
+- Remove the watercolor underpainting from thematic illustrations and retain the
+  technical drawing, accessible descriptions and existing reveal.
+
+## 2026-10-16 — Roadmap theme viewport composition
+
+- Fit the seven desktop thematic scenes to viewport height with compact reading
+  hierarchy and bounded illustrations; remove sticky positioning. Align next-theme
+  anchor destinations flush to the viewport top without the shared reading gap.
+- Preserve content growth for open axes and accessible stacked mobile reading.
+  Allow only one open research axis per theme through native exclusive disclosures.
+
+## 2026-10-16 — Footer social links
+
+- Add official Facebook and Instagram destinations with existing SVG brand marks
+  and localized accessible labels to the shared footer.
+
+## 2026-10-16 — Patent catalogue closing note
+
+- Remove the standalone base-period line and center the remaining note in thin
+  italic type across locales.
+
+## 2026-10-16 — Collaboration note withdrawal
+
+- Remove the owner-identified closing notes and their dividers from the organisation
+  contributions, choose-pathway and need-to-project sections in all locales and localized search projections.
+
+## 2026-10-16 — Platforms hero photograph
+
+- Use the owner-supplied outdoor testing photograph with optimized landscape and
+  mobile crops, preserving hero text, contrast and navigation.
+- Record provenance and localized media search metadata.
+
+## 2026-10-16 — Internal navigation and homepage hero
+
+- Resolve every canonical localized page and the news listing directly, fixing
+  redirect loops that blocked Institute accordion and other cross-page links.
+- Add locale/path and actual accordion navigation regression coverage; audit the
+  local rendered internal link graph and anchors.
+- Lower homepage text/actions and ISO proof; place the idle cue in an overlay
+  without reserved vertical space. Match every hero bottom inset to its lateral
+  container gutter, including mobile and capped wide layouts.
+
+## 2026-10-16 — Supplied Green Energy Park photograph
+
+- Replace the Institute core card illustration with the owner’s supplied photo,
+  preserving its blue fade and using a compact optimized WebP.
+- Record provenance and localized media search references.
+
+## 2026-10-16 — Researched editorial mission statement
+
+- Replace the small side-column quotation with a full-width statement, larger
+  reading type, hanging curved blue marks and fine rules, informed by Monotype
+  typography guidance and the current IRESEN design direction.
+
+## 2026-10-16 — Institute mission quotation
+
+- Frame the exact mission statement with large IRESEN-blue opening/closing marks,
+  retaining responsive reading, Arabic direction and accessible quotation semantics.
+
+## 2026-10-16 — Cue placement and faster research pathway
+
+- Center the scroll text above its icon and fade the cue over 350ms on scrolling.
+- Remove the pathway Pause button and advance every ten seconds with a shorter
+  transition; manual selection, hover/focus and reduced motion retain control.
+
+## 2026-10-16 — Local Institute preview routing
+
+- Resolve the localized Institute route directly to prevent a redirect back to
+  itself, following the existing Programmes route handling.
+- Restart the local development server and open the French Institute preview.
+
+## 2026-10-16 — Idle hero scroll invitation
+
+- Reveal the mouse cue after five idle seconds, followed by fine uppercase text;
+  exit after 6.5 seconds and wait 45 idle seconds before repeating.
+- Preserve keyboard access, reduced motion, mobile behavior and hero geometry.
+
+## 2026-10-16 — Programme process-note typography
+
+- Render the call-terms note in weight 200 italic using the existing font.
+
+## 2026-10-16 — Programme impact layout balance
+
+- Place the introduction beside the title and the projects action below the three
+  expected benefits, aligned with the feature base on desktop.
+- Preserve natural stacked reading on smaller screens, content and destinations.
+
+## 2026-10-16 — Research pathway controls and slow progression
+
+- Connect the three numbered Research & Innovation steps with clear active buttons.
+- Advance every 20 seconds with pause/resume, reading/visibility interruptions and
+  reduced-motion support; reserve panel height and preserve native deep links.
+- Add localized controls and relevant search metadata; browser suites remain held.
+
+## 2026-10-16 — Institute contribution refinement
+
+- Align the contribution heading with accordion icons; reuse the existing laboratory
+  illustration with a navy fade in the core card’s upper-right corner.
+- Start all complementary disclosures closed and retain exclusive native opening.
+- Update responsive assertions; full checks remain paused under the shared hold.
+
+## 2026-10-16 — Dedicated patent catalogue
+
+- Add localized Brevets / Patents pages under Resources using the exact shared
+  Transfer catalogue section, including current figures, filters and patent cards.
+- Route Resources navigation, footer, sitemap and patent search results to the new
+  page; preserve the existing Transfer section and deep links.
+- Verify local FR/EN/AR previews, responsive layouts and rebuilt search destinations.
+  Full tests, production build, CI and merge remain paused at the owner's request.
+
 ## 2026-10-16 — Stack and tooling maintenance
 
 - Apply compatible Next.js/React security patches and current patch releases for
@@ -1321,3 +1462,112 @@ labels; localized search references retain Latin-name discovery.
 - Retain sources, chronology caveats and missing-content boundaries; register
   canonical, locale, sitemap and search destinations without deployment.
 - See [scope and verification](docs/calls-catalogue-2026.md).
+
+### 2026-10-16 — Institute ambition quotation
+
+- Replace the split ambition section with a solar background and only the
+  original quotation plus localized 2035 subtitle; preserve its anchor.
+- Remove withdrawn explanatory copy from the ambition search projection and
+  associate the existing background media reference with Institute.
+- Scoped development verification and shared-checkout hold recorded in
+  `docs/institute-page.md`; no deployment or merge.
+
+- Ambition follow-up: move subtitle above; set quotation in bold italic and fit
+  the complete French text into four desktop lines.
+
+- Compact ambition follow-up: reduce section height, position quotation left and
+  add a full-color AI-generated thoughtful portrait with alpha, provenance,
+  localized search metadata and the exact Next image allowlist entry.
+
+- Recompose ambition scene with integrated person and matching alpha foreground;
+  let the color silhouette emerge above the section while the solar scene stays
+  clipped and navy-treated. Preserve compact quotation and localized search.
+
+- Cool ambition imagery to neutral daylight and a blue overshirt; preserve natural
+  skin colors, matching foreground extraction and the out-of-frame effect.
+
+- Fix ambition head clipping at wide desktop widths using shared contain geometry;
+  deliver the foreground as lossless WebP without optimizer recompression.
+
+- Reserve contour-shaped negative space and a breathing margin around the
+  ambition portrait so the quotation cannot touch the shoulder or arm.
+
+- Redesign Institute values using reference-style white cards and Transition Green
+  icon pastilles; remove sticky heading and preserve all five localized values.
+
+- On mobile, enlarge the ambition portrait modestly and flow the quotation down
+  its left side using the real alpha contour and a 12px clearance margin.
+
+- Set values pictograms to owner-requested white on Transition Green circles.
+
+- Center the visible ambition text vertically while preserving silhouette clearance.
+
+- Remove the horizontal ambition background seam at tablet widths by keeping
+  the solar landscape full bleed beneath the independent foreground portrait.
+
+- Keep values on one horizontal row; enable native keyboard/touch/RTL scrolling
+  whenever five readable cards no longer fit, preserving the static title.
+
+- Add the owner-requested six-color IRESEN line at the bottom edge of every
+  shared public footer, with fixed brand order and proportions in all locales.
+
+- Owner correction: place the six-color IRESEN line above every shared footer.
+
+- Keep the Institute founding date and pathway rail together on a single line.
+
+## 2026-10-16 — Institute editorial variant
+
+- Implement the owner-selected Éditorial mission/positioning composition with
+  existing IRESEN components and tokens; preserve the exact mission and all
+  existing section destinations.
+- Consolidate R&I and complementary contributions, add accessible progressive
+  activity tabs and complete working FR/EN/AR copy/search references.
+- Inspect development layouts/interactions/search; update relevant regression
+  assertions. Final production checks/CI/Git remain paused by coordination.
+  See [scope and ledger](docs/institute-editorial.md).
+
+Institute editorial owner refinement — 2026-10-16: remove the standalone project
+pathway note in FR/EN/AR and search, and reduce editorial section padding to the
+existing 24px token. See [scope](docs/institute-editorial.md).
+
+Institute positioning redesign — 2026-10-16: add the owner-requested dark navy
+surface, accessible three-way interface diagram with official white logo, four
+existing common capacities and readable mobile/RTL branching. Context-only prose
+is not inserted. Search and pending regression assertions follow the new content;
+local scoped checks pass, full verification remains held.
+
+Institute closing refinement — 2026-10-16: owner-selected dark band with larger
+white/Cyan typography and three SVG topic rows; mobile/RTL reflow and all source
+wording preserved. Full verification/Git remain held by coordination.
+
+Institute owner correction — 2026-10-16: withdraw the positioning diagram caption
+and policy-note/footer rule in all locales and Institute search; preserve the
+figure's accessible name and shared narrative wording elsewhere.
+
+Institute diagram icon follow-up — 2026-10-16: add licensed Phosphor Target,
+Atom and Buildings SVGs above the three native pole labels, with compact mobile
+sizes. Copy, geometry, official logo and search references stay unchanged.
+
+Institute contribution owner correction — 2026-10-16: align title/introduction
+with complementary labels, stretch navy core from title top to final disclosure
+bottom, balance four-side spacing and group native accordions for one open item.
+Pending browser regressions cover alignment/exclusivity; full checks remain held.
+
+Institute positioning spacing — 2026-10-16: reduce the desktop gap before common
+capacities to 16px by keeping the introductory grid row intrinsic. Mobile stack
+and all content remain unchanged.
+
+Institute spacing balance — 2026-10-16: unify normal section insets at 32–40px
+and tighten accumulated internal gaps to add breathing room with limited extra
+scrolling. Preserve side gutters, alignment, exclusive disclosures and special
+image clearances; content/search remain unchanged.
+
+Institute activity bullets — 2026-10-16: add compact blue original Apex Leaf SVG
+markers to complementary activity lists, with native list semantics and RTL-aware
+continuation alignment. No copy or search change.
+
+Institute mobile ambition correction — 2026-10-16: remove narrow full-paragraph
+padding; fit left-aligned French text to the existing portrait's actual silhouette
+while keeping its base on the section bottom. Preserve Arabic direction, all
+wording/assets and desktop composition. Scoped dev review passes; final build/CI
+and regression suites remain held.

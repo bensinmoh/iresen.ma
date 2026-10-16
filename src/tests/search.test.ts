@@ -1,3 +1,4 @@
+import { imageProvenance } from '@/lib/image-provenance'
 import { governanceScientists, governanceTeam } from '@/lib/governance'
 import { existsSync, readdirSync } from 'node:fs'
 import path from 'node:path'
@@ -36,7 +37,7 @@ describe('multilingual search text', () => {
         (item) => item.url === pageHref('institute', locale, 'institute-research'),
       )!
       expect(research.type).toBe('section')
-      expect(research.body).toContain(catalog.Institute.missions[1].activities[2].description)
+      expect(research.body).toContain(catalog.Narrative.missions.transfer.description)
       const history = documents.find(
         (item) => item.url === pageHref('institute', locale, 'institute-history'),
       )!
@@ -340,6 +341,13 @@ describe('explicit public search catalog', () => {
     const references = new Set([...publicAssetReferences.map(({ url }) => url)])
     const derivatives = new Set<string>([
       '/videos/hero-mobile.mp4',
+      ...imageProvenance
+        .filter(
+          ({ path }) =>
+            path.startsWith('/images/institute/ambition-') &&
+            path !== '/images/institute/ambition-solar-scene-cool.webp',
+        )
+        .map(({ path }) => path),
       ...Object.values(heroImages)
         .filter(({ src, mobile }) => src !== mobile.src)
         .map(({ mobile }) => mobile.src),

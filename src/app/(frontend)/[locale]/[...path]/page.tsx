@@ -32,6 +32,7 @@ import { EmptyPage } from '@/components/content/EmptyPage'
 import { NotFoundPage } from '@/components/content/NotFoundPage'
 import { ContactPage } from '@/components/contact/ContactPage'
 import { CareersPage } from '@/components/careers/CareersPage'
+import { PatentsPage } from '@/components/transfer/PatentsPage'
 import { TransferPage } from '@/components/transfer/TransferPage'
 import { findPatent } from '@/lib/patents'
 import { EngagementPage } from '@/components/engagement/EngagementPage'
@@ -40,7 +41,7 @@ import { createPageMetadata } from '../../page-metadata'
 import { newsHref, newsSlugFromPath } from '@/lib/content/routes'
 import { findPublishedNewsBySlug } from '@/lib/content/queries'
 import { NewsArticle } from '@/components/content/NewsArticle'
-import { getSiteUrl, isIndexingEnabled, pages } from '@/lib/site'
+import { getSiteUrl, isIndexingEnabled } from '@/lib/site'
 import { searchAdapter, validateSearchInput, type SearchInput } from '@/lib/search/adapter'
 import { SearchPage } from '@/components/search/SearchPage'
 
@@ -51,14 +52,7 @@ type ContentPageProps = {
 
 export async function generateMetadata({ params }: ContentPageProps): Promise<Metadata> {
   const { locale, path } = await params
-  const pageId =
-    pageIdFromPathname(`/${path.join('/')}`) ??
-    (isLocale(locale) &&
-    [pages.programmes.pathnames[locale], encodeURI(pages.programmes.pathnames[locale])].includes(
-      `/${path.join('/')}`,
-    )
-      ? 'programmes'
-      : undefined)
+  const pageId = pageIdFromPathname(`/${path.join('/')}`, isLocale(locale) ? locale : undefined)
   if (!isLocale(locale)) notFound()
   const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
   if (callReference === callsListingReference)
@@ -139,14 +133,7 @@ export async function generateMetadata({ params }: ContentPageProps): Promise<Me
 
 export default async function ContentPage({ params, searchParams }: ContentPageProps) {
   const { locale, path } = await params
-  const pageId =
-    pageIdFromPathname(`/${path.join('/')}`) ??
-    (isLocale(locale) &&
-    [pages.programmes.pathnames[locale], encodeURI(pages.programmes.pathnames[locale])].includes(
-      `/${path.join('/')}`,
-    )
-      ? 'programmes'
-      : undefined)
+  const pageId = pageIdFromPathname(`/${path.join('/')}`, isLocale(locale) ? locale : undefined)
   if (!isLocale(locale)) notFound()
   const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
   if (callReference === callsListingReference) return <CallsListingPage locale={locale} />
@@ -230,6 +217,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   if (pageId === 'priorities') return <RoadmapPage locale={locale} />
   if (pageId === 'media') return <MediaLibraryPage locale={locale} />
   if (pageId === 'opportunities') return <CareersPage locale={locale} />
+  if (pageId === 'patents') return <PatentsPage locale={locale} />
   if (pageId === 'transfer') return <TransferPage locale={locale} />
   if (pageId === 'workWithUs') return <EngagementPage pageId={pageId} locale={locale} />
   if (

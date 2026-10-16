@@ -9,7 +9,6 @@ import {
   pageHref,
   pageLinkHref,
   newsListingHref,
-  resourcePatentLink,
 } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { CookiePreferencesButton } from '@/components/privacy/CookieConsent'
@@ -84,14 +83,7 @@ export async function UtilityPage({ pageId, locale }: { pageId: UtilityPageId; l
                       </a>
                     </li>
                   ))}
-                  {group.id === 'research' && (
-                    <li>
-                      <a href={resourcePatentLink(locale)}>
-                        {navigation('patents')}
-                        <NavigationIcon name="arrow" />
-                      </a>
-                    </li>
-                  )}
+
                   {group.id === 'resources' && (
                     <li>
                       <a href={newsListingHref(locale)}>

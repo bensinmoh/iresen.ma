@@ -18,7 +18,7 @@ test('patent result types and resource filters work in FR/EN/AR', async ({ page 
     await expect(results.first().locator('.search-result-type')).toHaveText(labels[locale][2]!)
     await expect(
       page.locator(
-        `.search-results h2 a[href="${pageHref('transfer', locale, `patent-${patent.reference}`)}"]`,
+        `.search-results h2 a[href="${pageHref('patents', locale, `patent-${patent.reference}`)}"]`,
       ),
     ).toBeVisible()
     for (const label of labels[locale])

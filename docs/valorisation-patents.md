@@ -305,3 +305,32 @@ or withdrawn by this interface-only option correction.
 Verification: the eight focused patent tests pass, scoped ESLint and whitespace
 checks pass, and development FR confirms all three granted-only option lists.
 No global suite, build or merge was run.
+
+## Dedicated Brevets page — 2026-10-16
+
+The owner commissions a Resources page that reproduces the current patent section
+exactly. `PatentSection` now supplies both Transfer and the dedicated `patents`
+route: same current granted-patent data, figures, copy, filters, register links and
+contact actions. Only heading ranks adapt to the standalone page's document outline.
+Resources navigation no longer jumps to Transfer. Existing Transfer anchors remain;
+patent search results now use the standalone canonical destination with unchanged
+stable search identifiers. No additional hero, image or institutional claim is added.
+FR/EN/AR metadata, footer and sitemap consume the central route authority.
+
+Full tests, production build, CI and merge remain deferred at the owner's request.
+Scoped lint/format and local development-preview verification accompany this change.
+
+Local verification: scoped ESLint/format and whitespace checks pass. Development
+previews in FR/EN/AR confirm HTTP 200, one main heading, canonical metadata,
+Resources links, exact catalogue text parity, filtering and direct patent anchors.
+390/768/1440px layouts have no document overflow; French desktop and Arabic mobile
+captures are inspected. The local search index was rebuilt and reference 37705
+returns the new dedicated anchor in all three languages. Updated route/search and
+browser regression tests are prepared for final batch validation, not run during
+this hold.
+
+Owner catalogue-note refinement — 2026-10-16: remove the standalone “Base au
+T4 2026” line from the closing catalogue note in FR/EN/AR and derived search
+copy. Keep the catalogue/legal-status explanation, centered with font-weight
+200 and italic styling. This scoped presentation change preserves patent data
+and the source reference period recorded elsewhere.

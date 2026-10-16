@@ -1,3 +1,7 @@
+/* Theme anchors occupy the complete viewport, without the site's reading gap. */
+:global(html):has(.panel) {
+  scroll-padding-block-start: 0;
+}
 .hero {
   position: relative;
   display: flex;
@@ -107,11 +111,11 @@
   margin-block-end: 1rem;
 }
 .panel {
-  --arrival: 1;
-  --art-x: 0rem;
-  --art-y: 5rem;
+  --plate-grid: rgb(41 107 180 / 5%);
+  --plate-major: rgb(41 107 180 / 8%);
+  --plate-frame: rgb(41 107 180 / 20%);
   position: relative;
-  scroll-margin-block-start: 2rem;
+  scroll-margin-block-start: 0;
   color: var(--color-navy);
   background: var(--color-surface);
 }
@@ -150,7 +154,6 @@
 }
 .titleFrame h2 {
   max-inline-size: 32ch;
-  transform: translateY(calc((1 - var(--arrival)) * 2rem));
 }
 .headline {
   max-inline-size: 65ch;
@@ -164,11 +167,6 @@
   align-items: center;
   min-inline-size: 0;
   mix-blend-mode: multiply;
-  transform: translate(
-      calc((1 - var(--arrival)) * var(--art-x)),
-      calc((1 - var(--arrival)) * var(--art-y))
-    )
-    scale(calc(0.94 + var(--arrival) * 0.06));
 }
 .imageLayers {
   position: relative;
@@ -180,17 +178,10 @@
   block-size: auto;
   object-fit: contain;
 }
-.imageLayers .original {
-  opacity: 0.12;
-}
 .imageLayers .drawing {
-  position: absolute;
-  inset: 0;
-  block-size: 100%;
   opacity: 0.95;
   filter: contrast(3) brightness(1.15) saturate(0.65);
   mix-blend-mode: multiply;
-  clip-path: inset(0 calc((1 - var(--arrival)) * 100%) 0 0);
 }
 .questions {
   align-self: center;
@@ -268,12 +259,9 @@
   text-decoration: none;
 }
 .hydrogen {
-  --art-x: 5rem;
-  --art-y: 2rem;
   background: color-mix(in srgb, var(--color-energy-cyan) 22%, white);
 }
 .industry {
-  --art-x: -2rem;
   background: var(--color-white);
 }
 .industry .artwork,
@@ -294,39 +282,36 @@
   color: var(--color-white);
 }
 .circular {
-  --art-y: 3rem;
   background: color-mix(in srgb, var(--color-innovation-lime) 13%, white);
 }
 .buildings {
-  --art-y: -4rem;
   background: var(--color-blue);
   color: var(--color-white);
 }
 .mobility {
-  --art-x: -5rem;
-  --art-y: 0rem;
 }
 .water .drawing,
 .buildings .drawing,
 .mobility .drawing {
   filter: grayscale(1) invert(1) contrast(3);
   mix-blend-mode: screen;
-  opacity: 0.95;
 }
 .water .artwork,
 .buildings .artwork,
 .mobility .artwork {
   mix-blend-mode: screen;
 }
+.water,
+.buildings,
+.mobility {
+  --plate-grid: rgb(255 255 255 / 4%);
+  --plate-major: rgb(255 255 255 / 7%);
+  --plate-frame: rgb(255 255 255 / 18%);
+}
 .water .chapterFooter a,
 .buildings .chapterFooter a,
 .mobility .chapterFooter a {
   color: inherit;
-}
-.water .original,
-.buildings .original,
-.mobility .original {
-  opacity: 0.14;
 }
 .water .axis,
 .buildings .axis,
@@ -382,12 +367,67 @@
   transform: scaleX(-1);
 }
 @media (min-width: 64rem) {
-  /* Stage takeover follows native scroll. Only illustrations transform; opening
-     axes never changes sticky wrappers or the heights of earlier chapters. */
+  /* One reading scene per viewport; intrinsic rows can grow for open axes,
+     enlarged text and unusually short windows. No pinned illustration. */
+  .panel {
+    --font-size-research-heading: clamp(1.75rem, min(3.3vw, 5svh), 3rem);
+  }
+  .stage,
+  .panel:first-child .stage {
+    --theme-inset: clamp(1rem, 3svh, 2rem);
+    min-block-size: 100svh;
+    padding-block: var(--theme-inset);
+  }
+  .scene {
+    min-block-size: calc(100svh - var(--theme-inset) * 2);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    row-gap: clamp(0.75rem, 2svh, 1.25rem);
+  }
+  .label {
+    margin-block-end: 0.5rem;
+  }
+  .headline {
+    margin-block-start: 0.5rem;
+    font-size: clamp(1.125rem, 2.3svh, 1.375rem);
+  }
   .artwork {
-    position: sticky;
-    inset-block-start: 2rem;
-    align-self: start;
+    position: static;
+    align-self: center;
+  }
+  .imageLayers {
+    block-size: min(48svh, 32rem);
+  }
+  .imageLayers .drawing {
+    block-size: 100%;
+  }
+  .description {
+    line-height: 1.55;
+  }
+  .axes {
+    margin-block-start: 1rem;
+  }
+  .axes h3,
+  .benefits h3 {
+    margin-block-end: 0.5rem;
+  }
+  .axis summary {
+    min-block-size: 2.75rem;
+    padding-block: 0.5rem;
+    grid-template-columns: minmax(0, 1fr) 2rem;
+    gap: 0.75rem;
+  }
+  .axisIcon {
+    max-block-size: 2.5rem;
+  }
+  .benefits {
+    margin-block-start: var(--space-6);
+    padding: 0.875rem 1.125rem;
+  }
+  .benefits p {
+    line-height: 1.55;
+  }
+  .chapterFooter {
+    padding-block-start: 0;
   }
 }
 @media (max-width: 63.99rem) {
@@ -503,12 +543,55 @@
     justify-content: center;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .titleFrame h2,
-  .artwork {
-    transform: none;
+/* A technical sheet on alternating themes; artwork and controls stay unchanged. */
+.panel:nth-child(odd) .stage::before,
+.panel:nth-child(odd) .stage::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+.panel:nth-child(odd) .stage::before {
+  inset: 0;
+  background-image:
+    linear-gradient(var(--plate-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--plate-major) 1px, transparent 1px),
+    linear-gradient(var(--plate-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--plate-grid) 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px,
+    24px 24px,
+    24px 24px;
+}
+.panel:nth-child(odd) .stage::after {
+  inset: 0.75rem;
+  border: 1px solid var(--plate-frame);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .panel:nth-child(odd)[data-plate-entered]:not([data-plate-settled]) .stage::before {
+    animation: plateReveal 1000ms var(--ease-arrival) both;
   }
-  .imageLayers .drawing {
-    clip-path: none;
+  .panel:nth-child(odd)[data-plate-entered]:not([data-plate-settled]) .stage::after {
+    animation: plateReveal 1200ms var(--ease-arrival) both;
+  }
+}
+@keyframes plateReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+@media (max-width: 40rem) {
+  .panel:nth-child(odd) .stage::after {
+    inset: 0.375rem;
+  }
+  .panel:nth-child(odd) .stage::before {
+    background-size:
+      96px 96px,
+      96px 96px,
+      24px 24px,
+      24px 24px;
   }
 }

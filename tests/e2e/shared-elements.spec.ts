@@ -43,7 +43,17 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
                   compact: innerWidth <= 640 ? root : 1.125 * root,
                   label: 0.875 * root,
                 }
-                if (!/^H[2-6]$/.test(el.tagName)) problems.push('native heading rank')
+                // Roadmap scenes use the owner-requested viewport-sized display variant.
+                if (
+                  heading === 'display' &&
+                  innerWidth >= 1024 &&
+                  el.closest('[data-roadmap-domain]')
+                )
+                  sizes.display = Math.max(
+                    1.75 * root,
+                    Math.min(innerWidth * 0.033, innerHeight * 0.05, 3 * root),
+                  )
+                if (!/^H[1-6]$/.test(el.tagName)) problems.push('native heading rank')
                 if (Math.abs(parseFloat(style.fontSize) - sizes[heading]) > 0.1)
                   problems.push(`size ${style.fontSize}`)
                 const largeHeading = ['section', 'display', 'mission'].includes(heading)

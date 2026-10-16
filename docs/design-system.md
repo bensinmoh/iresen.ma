@@ -1996,9 +1996,255 @@ spacing and native RTL direction. Stretch variants share available space; other
 strips retain natural item widths. Homepage centering is safe under overflow.
 Hero pathways, home/body navigation, media categories and laboratory/search
 filters use the shared role. Scroll areas remain keyboard-focusable, with inset
-focus rings; no pills or arrow controls are added. The laboratory reset remains
-centered on its own reserved row. No content, route or search projection changes.
+focus rings; no pills or arrow controls are added. The laboratory reset stays
+beside its scrollable topic strip in a reserved trailing column. No content, route or search projection changes.
 
 Verification: scoped source/lint/format checks only; final rendered review and
 CI remain pending because this session cannot bind a new production server or
 write to GitHub. Previous production-build evidence predates this CSS correction.
+
+## Institute ambition quotation — 2026-10-16
+
+The scoped 2035 ambition treatment uses a full-bleed solar landscape with a navy
+contrast veil, fluid bold italic white quotation and cyan guillemets. The shared white
+SectionEyebrow sits above the quotation as the subtitle. Desktop type and measure
+keep the complete French quotation within four lines; mobile wraps naturally. Preserve the original quotation, natural
+Arabic tracking/leading and a content-driven mobile height. This is a local
+editorial composition, not a new universal section template. See
+[scope and check ledger](institute-page.md).
+
+Ambition composition follow-up (2026-10-16): compact 22–28rem desktop band,
+left-positioned bold italic quotation and subtitle, with a full-color thoughtful
+fictional portrait on the right above the navy-treated solar background. Keep
+text clear of the silhouette; mobile gives the portrait a separate bottom area.
+The portrait is conceptual AI imagery with provenance in institute-assets.json.
+
+Integrated ambition scene follow-up — 2026-10-16: the owner replaces the isolated
+portrait composition with a generated solar landscape containing the same person
+and an alpha extraction from that scene. Desktop background and foreground share
+the same full-canvas geometry and bottom-right crop; only the scenery is clipped
+and navy-treated. The color silhouette overflows the top by about 40–64px, with
+text above its transparent region. Mobile keeps a landscape reading surface and
+the matching silhouette below the text, avoiding duplicate background figures.
+The previous portrait is retained as a source; scene/cutout provenance and prompts
+are recorded in institute-assets.json. The cutout shares the scene search result.
+
+Ambition palette correction — 2026-10-16: owner rejects the warm sunset/terracotta
+treatment. Current scene and matching cutout use neutral daylight, muted blue
+overshirt, natural skin and blue-grey landscape to blend with IRESEN navy/blue.
+Composition, compact quotation, foreground layering and top overflow remain.
+The new versioned WebPs retain prior source assets; generation prompts and hashes
+are recorded in institute-assets.json. Existing localized media search ID points
+to the current scene; cutout shares its result.
+
+Portrait clipping/detail correction — 2026-10-16: the full-width canvas previously
+used cover, which cropped the head once the desktop section height reached its
+cap. Desktop scene and foreground now share bottom-right contain geometry. An
+existing full-bleed solar layer fills the remaining area; the integrated scene's
+leading edge blends into it. Mobile retains its isolated bottom crop. Foreground
+uses a 354,432-byte lossless alpha WebP directly from the original generation,
+without Next image downsampling/recompression; no higher native resolution is
+claimed. At 2048px desktop, the complete head and top overflow are verified,
+with no section horizontal overflow. Original and intermediate files remain.
+The new cutout is a delivery derivative sharing the scene's search result.
+
+Ambition silhouette clearance — 2026-10-16: owner requests shaped negative space
+between quotation and person. A non-painted right float uses CSS shape-outside
+to reserve a head-to-elbow contour plus 24–48px breathing room. Text flows around
+that exclusion instead of ending at a fixed 73% column. The exclusion stays
+physically right with the portrait, including RTL; mobile disables it because
+text and portrait already occupy separate vertical areas. Copy, routes, assets
+and search projections are unchanged.
+
+Development verification: FR1280 quotation remains four lines with visible
+shoulder/arm clearance; EN1024 has no section overflow and clear separation.
+Mobile Arabic retains the previous stack. Changed-file formatting/whitespace
+pass; no application-suite run under the current shared-checkout hold.
+
+Institute values cards — 2026-10-16: owner commissions the supplied reference
+composition for the five existing values: centered static heading, pale shared
+surface, white signature-corner cards and regular Phosphor SVGs in circular
+Transition Green (#50A684) pastilles with navy glyphs for contrast. Remove the
+previous sticky header and numbered editorial rows. Desktop uses five columns;
+tablet uses two with the final card spanning both; mobile stacks all five.
+Existing FR/EN/AR wording and the institute-values anchor/search projection stay
+unchanged. No new public media or factual copy is added.
+
+Mobile ambition text wrap — 2026-10-16: owner requests a modestly larger person
+and quotation continuing into the lower-left area. Mobile now floats a tight
+lossless alpha crop within the quotation, with a 12px shape margin and CSS
+shape-outside using the actual image transparency. Full-width opening lines
+transition into narrower lines beside the silhouette; French native hyphenation
+avoids arbitrary broken words. Portrait width is 52% of the reading area (about
+264px tall at 390px versus the earlier 240px); no fixed empty bottom strip.
+The existing desktop composition is unchanged. The crop shares the original
+scene search result, with provenance in institute-assets.json.
+
+Values icon owner correction — 2026-10-16: decorative SVGs now use white on
+Transition Green pastilles. This supersedes the earlier navy glyph treatment.
+Value names remain native navy text; no content, layout or search change.
+
+Ambition vertical alignment — 2026-10-16: center the visible subtitle/quotation
+group independently of the taller float used for silhouette clearance. A scoped
+CSS offset compensates only when the exclusion is taller than the actual copy;
+mobile retains its existing natural contour flow. FR1280 development inspection
+measures text/section center difference below 0.01px. Copy, shape clearance, media
+and search remain unchanged; formatting/whitespace checked, full checks held.
+
+Tablet ambition background correction — 2026-10-16: at 40–80rem the panorama
+contain layer could leave a visible horizontal top edge over the base landscape.
+These widths now use only the continuous full-bleed landscape underneath the
+independently contained color silhouette. Desktop panorama and mobile alpha-flow
+compositions retain their existing rules. No asset, content or search changes.
+FR900 development capture confirms uninterrupted background, complete silhouette,
+centered text and no section overflow. Formatting/whitespace pass; broad checks
+remain paused by the shared-checkout hold.
+
+Values horizontal navigation — 2026-10-16: owner replaces responsive wrapping
+with one native horizontally scrollable row as soon as five cards no longer fit.
+Auto columns retain a 14rem minimum and share space evenly when all five fit;
+mobile cards use min(82vw,20rem) to reveal the following card. Keep the existing
+white SVG/Transition Green cards and static title. The localized definition list
+is keyboard-focusable and labelled by the heading, with native RTL scrolling,
+proximity snap, contained horizontal overscroll and inset focus outline. No new
+pills, arrows, JavaScript or media; copy/anchors/search remain unchanged.
+
+Dev checks: FR390 has five equal-top cards and 1663px scroll width in a 358px
+viewport; keyboard ArrowRight scrolls 40px. AR768 retains RTL and a single row
+with native overflow. Scoped ESLint, formatting and whitespace pass; full
+tests/build/CI/Git remain held by coordination.
+
+## IRESEN footer line — 2026-10-16
+
+The owner commissions the supplied six-color line at the very top of every
+shared public footer. A decorative 6px full-bleed strip uses current tokens in
+fixed physical left-to-right order: navy 40%, IRESEN blue 25%, Science Blue 15%,
+Energy Cyan 6%, Transition Green 10%, Innovation Lime 4%. Hard color stops retain
+these exact proportions at every width, including Arabic. The line sits at the
+upper footer edge above its content, never behind text, and adds no focus or reading
+stop. No new image, content, route or search resource is introduced.
+
+Owner placement correction — 2026-10-16: the IRESEN line belongs ABOVE every
+public footer, at its upper edge. This supersedes the earlier bottom placement.
+Keep all six colors, proportions and fixed physical order unchanged.
+
+Institute hero band single row — 2026-10-16: keep the localized founding label,
+2011 and existing pathway navigation in one horizontal row at every width. The
+founding label/year share a baseline and retain their existing type roles; the
+pathway rail takes remaining space and keeps native touch/keyboard/RTL scrolling.
+This locally overrides the earlier narrow stacked founding block, without
+changing other pages, destinations, text or search references.
+
+## Institute editorial variant — 2026-10-16
+
+The owner-selected Éditorial composition reuses existing Heading, SectionEyebrow,
+SVG icons, signature corners and semantic palette. Three native disclosures sit
+beside one dominant R&I surface; the activity focus uses underlined blue selected
+tabs with a visible focus outline and mirrored RTL keyboard navigation. Mobile
+retains all three labels; narrow positioning terms stack. No new shared token
+or universal page template. [Scope and verification](institute-editorial.md).
+
+## Institute positioning diagram — 2026-10-16
+
+Owner-requested navy contrast uses white headings and existing footer-muted text,
+with Science Blue/Cyan/Green diagram outlines/translucent fills. Native labels
+and the unchanged white logo explain a common three-way interface. Below 40rem,
+logical CSS connectors link readable text nodes to one hub. This is a scoped
+semantic diagram; it adds no token, asset or animation. Existing section discovery
+includes its labels/capacities. [Scope and verification](institute-editorial.md).
+
+## Institute closing band — 2026-10-16
+
+Scoped owner-requested composition reuses Heading, navy/white/Cyan roles and
+licensed Phosphor glyphs. Two native heading lines sit beside three ruled topic
+rows; below 40rem they stack with a logical top divider. No token, new motion,
+public resource or interaction is introduced. Existing copy/search remains.
+[Scope](institute-editorial.md).
+
+## Institute contribution grid — 2026-10-16
+
+Scoped owner alignment uses the same grid tracks for heading/core/disclosures;
+heading text includes the shared icon-and-gap inset. The navy core spans both
+right-column rows, with equal existing-gutter padding. Effective outer vertical
+spacing matches the side gutters. A native named details group prevents multiple
+concurrent expansions. No new tokens, content or dependency.
+[Scope](institute-editorial.md).
+
+## Institute section rhythm — 2026-10-16
+
+Normal Institute sections share a page-local 32–40px fluid inset using the
+existing section-spacing role. Shared site values and side gutters do not change.
+Internal 16/24/32px token spacing keeps related copy compact, and special image/
+report clearances retain ownership. This supersedes equal side-gutter/vertical
+spacing for the contributions wrapper only. [Scope](institute-editorial.md).
+
+## Mobile ambition contour — 2026-10-16
+
+The owner replaces the narrow fixed column with native text wrapping around an
+outline sampled from the existing portrait alpha. A bounded mobile layout fit
+keeps the portrait's base on the section edge, retaining 12px clearance and
+full-width opening lines. Preserve natural reading, Arabic direction and existing
+quote typography. No image bytes, palette, shared token or new motion changes.
+[Scope](institute-editorial.md).
+
+Contribution refinement — 2026-10-16: align the Institute heading with disclosure
+icons; fade an existing illustrative laboratory image into the physical upper-right
+corner of its navy core card. All disclosures start closed, with exclusive native
+opening. No shared palette/token or image-byte changes. [Scope](institute-editorial.md).
+
+Research pathway — 2026-10-16: owner-requested numbered connected step controls
+use navy for the active step, blue outlines for available steps and a restrained
+time indicator. Explicit slow autoplay has pause/resume, reading/visibility stops
+and reduced-motion handling. Reserve native panel height; preserve links and RTL.
+This scoped exception adds no shared token or animation dependency. [Scope](institute-editorial.md).
+
+Programme impact — 2026-10-16: place heading/introduction in paired columns,
+then the illustrative figure beside the benefits and their action. The action
+closes the trailing column at the feature base; mobile preserves native reading
+order. Scoped layout only, using current tokens and signature geometry. [Scope](programmes-rdi.md).
+
+Idle hero invitation — 2026-10-16: the owner requests a five-second idle reveal
+from behind the highlight band, followed by fine uppercase text beside the centered
+mouse. Use a bounded 6.5-second sequence and 15-second idle cooldown; cancel on
+scroll/hidden tabs, retain static keyboard/reduced-motion access and existing mobile
+visibility. No hero geometry or new motion dependency. [Behavior](site-motion.md).
+
+Owner refinements — 2026-10-16: center the idle hint above the mouse, reserve
+desktop action clearance and fade out over 350ms on scroll. The Institute pathway
+now advances every ten seconds without the visible playback button; a manual
+choice stops automatic progression. These corrections supersede the earlier
+side-label and twenty-second playback-control composition. [Motion](site-motion.md).
+
+Mission quotation — 2026-10-16: use large signature-blue opening and closing
+guillemets at the top/bottom of the exact mission statement. Decorative marks
+remain separate from accessible text; responsive logical tracks and RTL mirroring
+retain natural reading. Scoped typography, with no new token. [Scope](institute-editorial.md).
+
+Mission quotation — latest owner correction, 2026-10-16: replace the split
+guillemets with a full-width editorial statement, fluid 18–26px reading type,
+hanging curved quotation marks in signature blue and two light hairline rules.
+Retain existing font, exact copy and Arabic direction.
+[Research and scope](institute-editorial.md).
+
+Hero overlay — 2026-10-16: the owner withdraws additional cue clearance. Certified
+homepage copy/actions/proof align near the scene bottom with a 32px inset; the idle
+cue layers above content without a flow reservation. [Scope](heroes.md).
+
+Uniform hero inset — latest owner correction, 2026-10-16: all shared heroes use
+`--page-bleed` for the bottom content inset, matching the actual left/right container
+distance (including the maximum container width). Remove the fixed homepage,
+Programmes and Media bottom overrides and the narrower mobile homepage container.
+Bottom-align hero content so this inset is the actual content-to-band distance.
+Preserve horizontal composition modes, header clearance and overlay cue.
+
+Roadmap technical-sheet background — 2026-10-16: scope the reference-inspired
+engineering grid and inset frame to alternating thematic sections (1/3/5/7).
+Keep the other sections plain and illustrations unannotated. This is a roadmap
+composition, not a new global background pattern. Native anchors, exclusive axes,
+reduced-motion fallback and existing brand surfaces remain. [Scope](roadmap.md).
+
+Validation refinement — 2026-10-16: pathway step numbers use full text opacity
+so inactive small labels preserve contrast. Programmes follows the inclusive
+40rem mobile breakpoint for its full-width action and removes its text-column
+indent at that width. Roadmap display headings retain the commissioned viewport
+variant; the shared semantic heading primitive also supports a page-level h1.

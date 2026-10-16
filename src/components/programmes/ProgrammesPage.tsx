@@ -101,49 +101,56 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
           aria-labelledby="programme-impact-title"
         >
           <div className={`container ${styles.impactInner}`}>
-            <header>
-              <SectionEyebrow>{t('impact.eyebrow')}</SectionEyebrow>
-              <Heading as="h2" size="section" id="programme-impact-title">
-                {t('impact.title')}
-              </Heading>
+            <header className={styles.impactHeading}>
+              <div>
+                <SectionEyebrow>{t('impact.eyebrow')}</SectionEyebrow>
+                <Heading as="h2" size="section" id="programme-impact-title">
+                  {t('impact.title')}
+                </Heading>
+              </div>
               <p>{t('impact.description')}</p>
-              <div className={styles.figure}>
-                <Image
-                  src="/images/achievements/aquasolar.webp"
-                  alt={t('productAlt')}
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 63.999rem) 94vw, 46vw"
-                />
-                <div className={styles.figureCaption}>
-                  <strong>
-                    <bdi>69</bdi>
-                  </strong>
-                  <div>
-                    <p>{t('figureLabel')}</p>
-                    <small>{t('reference')}</small>
-                  </div>
+            </header>
+            <div className={styles.figure}>
+              <Image
+                src="/images/achievements/aquasolar.webp"
+                alt={t('productAlt')}
+                width={1200}
+                height={800}
+                sizes="(max-width: 63.999rem) 94vw, 46vw"
+              />
+              <div className={styles.figureCaption}>
+                <strong>
+                  <bdi>69</bdi>
+                </strong>
+                <div>
+                  <p>{t('figureLabel')}</p>
+                  <small>{t('reference')}</small>
                 </div>
               </div>
-              <a className="button button-primary" href={pageHref('projects', locale)}>
+            </div>
+            <div className={styles.outcomeColumn}>
+              <div className={styles.outcomes}>
+                {impact.map((item, i) => (
+                  <article key={item.title}>
+                    <ValorisationIcon
+                      name={(['flask', 'building-factory-2', 'chart-line'] as const)[i]!}
+                    />
+                    <div>
+                      <Heading as="h3" size="card">
+                        {item.title}
+                      </Heading>
+                      <p>{item.description}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <a
+                className={`button button-primary ${styles.impactAction}`}
+                href={pageHref('projects', locale)}
+              >
                 {t('projects')}
                 <NavigationIcon name="arrow" />
               </a>
-            </header>
-            <div className={styles.outcomes}>
-              {impact.map((item, i) => (
-                <article key={item.title}>
-                  <ValorisationIcon
-                    name={(['flask', 'building-factory-2', 'chart-line'] as const)[i]!}
-                  />
-                  <div>
-                    <Heading as="h3" size="card">
-                      {item.title}
-                    </Heading>
-                    <p>{item.description}</p>
-                  </div>
-                </article>
-              ))}
             </div>
           </div>
         </section>

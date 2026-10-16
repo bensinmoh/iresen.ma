@@ -18,6 +18,9 @@ if (
 }
 const nextConfig = {
   output: 'standalone',
+  outputFileTracingIncludes: {
+    '/api/careers/*': ['./assets/careers/*.pdf'],
+  },
   outputFileTracingExcludes: {
     '*': [
       './.env*',
@@ -50,6 +53,11 @@ const nextConfig = {
       { pathname: '/images/roadmap/**', search: '' },
       { pathname: '/images/governance/**', search: '' },
       { pathname: '/images/institute/fifteen-year-report-cover-cutout.webp', search: '' },
+      { pathname: '/images/institute/green-energy-park-research.webp', search: '' },
+      { pathname: '/images/institute/ambition-vision-portrait.webp', search: '' },
+      { pathname: '/images/institute/ambition-solar-scene-cool.webp', search: '' },
+      { pathname: '/images/institute/ambition-solar-person-cool.webp', search: '' },
+      { pathname: '/images/institute/ambition-solar-person-detail.webp', search: '' },
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/infrastructure/**', search: '' },
       { pathname: '/images/programmes/**', search: '' },

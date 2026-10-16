@@ -5,7 +5,7 @@
 One modular Node.js application: Next.js 16.4.1 / React 19.3.1 / Payload 3.90.2,
 with PostgreSQL, next-intl and native CSS/Web Animations. Public locale routes use
 server rendering, request-time publication checks and no translation fallback.
-The central site map holds 23 stable page IDs, plus canonical detail/list aliases.
+The central site map holds 24 stable page IDs, plus canonical detail/list aliases.
 
 CMS collections are Users, Pages, News, Media, Opportunities, Calls and Projects.
 The retained publication/patent corpora are independent files. The sourced Projects

@@ -204,3 +204,19 @@ counts retain their live status region; search metadata and anchors are unchange
 Check ledger: targeted ESLint, formatting and whitespace checks only. Production
 build, browser validation, full tests, CI and Git completion remain pending under
 the shared-checkout hold; no other workstream readiness is inferred.
+
+## Inline filter reset — owner correction, 2026-10-16
+
+The reset remains alongside the topic strip in a two-column toolbar at every
+width, aligned to the logical trailing side. The strip shrinks and scrolls
+natively; the reset keeps its full label outside the scrolling area. Its reserved
+place and disabled empty state remain stable when filters change. This supersedes
+the centered separate-row placement above. Content, search and reset behavior are
+unchanged. CI/full tests/builds remain paused at the owner's request; use the
+local development preview for the scoped responsive check.
+
+Development-preview check: FR/EN/AR at 320, 390, 768 and 1440px verifies the
+same-row reset, unchanged toolbar height after selecting/clearing a theme and no
+document overflow. 200% text also stays within the page. French desktop and Arabic
+mobile captures inspected. The mobile topic strip uses leading alignment so its
+first controls remain reachable under overflow. Production/CI validation is deferred.

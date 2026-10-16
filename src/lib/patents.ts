@@ -1,3 +1,4 @@
+import { canonicalNames } from './names'
 import records from '@/data/patents.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from './site'
@@ -31,7 +32,10 @@ export type Patent = {
 }
 
 /** Owner-selected, minimal public projection. The source workbook is never served. */
-export const filedPatents = records as Patent[]
+export const filedPatents = records.map((record) => ({
+  ...record,
+  depositor: record.depositor ? canonicalNames(record.depositor) : null,
+})) as Patent[]
 export const filedPatentCount = filedPatents.length
 /** Public IP portfolio: only source-confirmed accepted / granted patents. */
 export const patents = filedPatents.filter((patent) => patent.granted === true)

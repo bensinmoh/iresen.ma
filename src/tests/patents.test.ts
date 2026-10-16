@@ -159,7 +159,7 @@ describe('owner-selected patent catalogue', () => {
           (r) => r.id === `section:transfer:patent-${p.reference}:${locale}`,
         )!
         expect(record.type).toBe('patent')
-        expect(record.url).toBe(pageHref('transfer', locale, `patent-${p.reference}`))
+        expect(record.url).toBe(pageHref('patents', locale, `patent-${p.reference}`))
         expect(record.url).toContain(`#patent-${p.reference}`)
         expect(record.title).toContain(p.title[locale])
         expect(record.body).toContain(p.title[locale])

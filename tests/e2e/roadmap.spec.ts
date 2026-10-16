@@ -47,14 +47,19 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.keyboard.press('Enter')
     await expect(page).toHaveURL(/#theme-water$/)
     await expect
-      .poll(async () => (await page.locator('#theme-water').boundingBox())!.y)
-      .toBeLessThan(60)
+      .poll(async () => Math.abs((await page.locator('#theme-water').boundingBox())!.y))
+      .toBeLessThan(2)
     const firstAxis = page.locator('#theme-water details').first()
     await firstAxis.locator('summary').click()
     await expect(firstAxis).toHaveAttribute('open', '')
     await expect(firstAxis.locator('p')).toBeVisible()
     await expect(firstAxis.locator('summary svg')).toHaveCSS('transform', 'none')
     await expect(firstAxis.locator('summary svg')).toHaveCount(1)
+    const secondAxis = page.locator('#theme-water details').nth(1)
+    await secondAxis.locator('summary').click()
+    await expect(secondAxis).toHaveAttribute('open', '')
+    await expect(firstAxis).not.toHaveAttribute('open', '')
+    await expect(page.locator('#theme-water details[open]')).toHaveCount(1)
     for (const width of [320, 390, 768, 1024]) {
       await page.setViewportSize({ width, height: 900 })
       await expect

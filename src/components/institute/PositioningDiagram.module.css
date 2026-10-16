@@ -1,0 +1,149 @@
+.figure {
+  margin: 0;
+  min-inline-size: 0;
+  align-self: center;
+  inline-size: 100%;
+  max-inline-size: 40rem;
+  justify-self: center;
+}
+.diagram {
+  position: relative;
+  aspect-ratio: 6 / 5;
+  isolation: isolate;
+}
+.geometry {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  z-index: -1;
+  stroke-width: 1.5;
+}
+.geometry .priorities {
+  stroke: var(--color-science-blue);
+  fill: color-mix(in srgb, var(--color-science-blue) 18%, transparent);
+}
+.geometry .science {
+  stroke: var(--color-energy-cyan);
+  fill: color-mix(in srgb, var(--color-energy-cyan) 14%, transparent);
+}
+.geometry .needs {
+  stroke: var(--color-transition-green);
+  fill: color-mix(in srgb, var(--color-transition-green) 22%, transparent);
+}
+.labels {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.labels li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  position: absolute;
+  inline-size: 28%;
+  text-align: center;
+  font-size: var(--font-size-editorial-body);
+  font-weight: 600;
+  line-height: 1.6;
+  text-wrap: balance;
+  transform: translate(-50%, -50%);
+}
+.labels li > svg {
+  flex: none;
+  inline-size: 2rem;
+  block-size: 2rem;
+  color: var(--color-white);
+}
+.labels .priorities {
+  left: 50%;
+  top: 21%;
+}
+.labels .science {
+  left: 27%;
+  top: 71%;
+}
+.labels .needs {
+  left: 73%;
+  top: 71%;
+}
+.hub {
+  position: absolute;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  inline-size: 24%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: var(--color-navy);
+  border: 1px solid var(--color-energy-cyan);
+  border-radius: 50%;
+}
+.hub img {
+  inline-size: 72%;
+  block-size: auto;
+}
+@media (max-width: 40rem) {
+  .diagram {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 5rem;
+    gap: var(--space-8);
+    align-items: center;
+    aspect-ratio: auto;
+  }
+  .geometry {
+    display: none;
+  }
+  .labels {
+    position: relative;
+    display: grid;
+    gap: var(--space-3);
+    padding-inline-end: var(--space-6);
+  }
+  .labels::after {
+    content: '';
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block: 0;
+    border-inline-end: 1px solid var(--color-energy-cyan);
+  }
+  .labels li:is(.priorities, .science, .needs) {
+    position: relative;
+    inset: auto;
+    transform: none;
+    inline-size: auto;
+    padding: var(--space-3) var(--space-2);
+    font-size: var(--font-size-label);
+    border: 1px solid var(--color-energy-cyan);
+    background: color-mix(in srgb, var(--color-energy-cyan) 8%, var(--color-navy));
+  }
+  .labels li > svg {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+  }
+  .labels li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 100%;
+    inline-size: var(--space-6);
+    border-block-start: 1px solid var(--color-energy-cyan);
+  }
+  .hub {
+    position: relative;
+    inset: auto;
+    transform: none;
+    inline-size: 5rem;
+    margin: 0;
+  }
+  .hub::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 100%;
+    inline-size: var(--space-8);
+    border-block-start: 1px solid var(--color-energy-cyan);
+  }
+}

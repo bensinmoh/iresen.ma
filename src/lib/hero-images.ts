@@ -1,6 +1,13 @@
 // Native photographic assets and their full-height mobile crops.
 // Provenance, prompts, pixel sizes and hashes: docs/hero-assets.json.
 export const heroImages = {
+  // Owner-supplied outdoor test platform; original remains private.
+  'platform-outdoor': {
+    src: '/images/heroes/platform-outdoor.webp',
+    width: 1920,
+    height: 1080,
+    mobile: { src: '/images/heroes/platform-outdoor-mobile.webp', width: 720, height: 1080 },
+  },
   // Reuses the supplied documentary GEP image and its existing media result.
   'platform-gep': {
     src: '/images/platforms/gep.webp',

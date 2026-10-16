@@ -2,7 +2,7 @@
 
 import { Heading } from '@/components/ui/Heading'
 
-import { useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import {
@@ -24,7 +24,13 @@ const subscribeHash = (notify: () => void) => {
 const currentHash = () => window.location.hash
 const serverHash = () => 'server'
 
-export function PatentCatalog({ locale }: { locale: Locale }) {
+export function PatentCatalog({
+  locale,
+  headingLevel = 'h3',
+}: {
+  locale: Locale
+  headingLevel?: 'h2' | 'h3'
+}) {
   const t = useTranslations('Transfer')
   const [query, setQuery] = useState('')
   const [theme, setTheme] = useState('')
@@ -33,6 +39,30 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
   // All records remain in server HTML for anchor discovery and no-JavaScript reading.
   const [limit, setLimit] = useState<number | null>(pageSize)
   const hash = useSyncExternalStore(subscribeHash, currentHash, serverHash)
+  // A direct patent destination takes precedence over filters left on this page.
+  useEffect(() => {
+    let frame = 0
+    const revealDestination = () => {
+      const patent = patents.find(
+        (item) => window.location.hash === `#${patentAnchor(item.reference)}`,
+      )
+      if (!patent) return
+      setQuery('')
+      setTheme('')
+      setYear('')
+      setDepositor('')
+      setLimit(pageSize)
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        document.getElementById(patentAnchor(patent.reference))?.scrollIntoView({ block: 'start' })
+      })
+    }
+    window.addEventListener('hashchange', revealDestination)
+    return () => {
+      window.removeEventListener('hashchange', revealDestination)
+      cancelAnimationFrame(frame)
+    }
+  }, [])
   const results = filterPatents(query, theme, year, depositor, locale)
   const grid = useRef<HTMLDivElement>(null)
   const positions = useRef(new Map<string, { x: number; y: number }>())
@@ -209,7 +239,12 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
                 <span key={id}>{t(`themes.${id}`)}</span>
               ))}
             </div>
-            <Heading as="h3" size="compact" lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+            <Heading
+              as={headingLevel}
+              size="compact"
+              lang={locale}
+              dir={locale === 'ar' ? 'rtl' : 'ltr'}
+            >
               {patent.title[locale]}
             </Heading>
             <p>{patent.description[locale]}</p>
@@ -258,9 +293,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
           </button>
         </div>
       )}
-      <p className={styles.note}>
-        {t('catalog.note')} <span>{t('catalog.updated')}</span>
-      </p>
+      <p className={`${styles.note} ${styles.catalogNote}`}>{t('catalog.note')}</p>
     </div>
   )
 }

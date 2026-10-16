@@ -1,0 +1,28 @@
+{
+  "o2605": {
+    "file": "o2605.pdf",
+    "source": "O2605 - Chargé(e) de le Communication & du Digital.pdf",
+    "sha256": "3d3681358b378b2f172e419b1ac27240df6b65b42b2613e3d27f36752f896412",
+    "locale": "fr",
+    "originalSha256": "41ea278e4065eec4aec4309db4d63aa40a9503ed1743034dcd354fec7a7bc0f9",
+    "correction": {
+      "authorizedOn": "2026-10-16",
+      "publicationDate": "2026-10-15",
+      "applicationDeadline": "2026-11-15",
+      "scope": "Two date values only; original typography and layout retained."
+    }
+  },
+  "o2609": {
+    "file": "o2609.pdf",
+    "source": "O2609 - Ingénieur(e) brevets.pdf",
+    "sha256": "527251562a172e5d6dfb5fcc467fabd81da826d1131342f0648b4a33a3ac2190",
+    "locale": "fr",
+    "originalSha256": "308fe06378b0d99733c7669d609595c488657c05f15612a089a40995216e7364",
+    "correction": {
+      "authorizedOn": "2026-10-16",
+      "publicationDate": "2026-10-15",
+      "applicationDeadline": "2026-11-15",
+      "scope": "Two date values only; original typography and layout retained."
+    }
+  }
+}

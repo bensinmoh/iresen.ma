@@ -6,3 +6,7 @@ export const homePlatforms = [
   { id: 'gep-mci', width: 1280, height: 960, logoWidth: 199, logoHeight: 99 },
   { id: 'greenh2a', width: 1400, height: 881, logoWidth: 531, logoHeight: 235 },
 ] as const
+
+export function platformPhotoPath(id: string) {
+  return id === 'gep-mci' ? '/images/platforms/gep-mci-campus.webp' : `/images/platforms/${id}.webp`
+}

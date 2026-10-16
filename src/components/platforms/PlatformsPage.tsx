@@ -1,3 +1,4 @@
+import { platformPhotoPath } from '@/lib/home-platforms'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
@@ -111,7 +112,7 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                   <div className={`${styles.feature} ${index % 2 ? styles.reverse : ''}`}>
                     <figure className={styles.photograph}>
                       <Image
-                        src={chapterPhoto?.src ?? `/images/platforms/${id}.webp`}
+                        src={chapterPhoto?.src ?? platformPhotoPath(id)}
                         style={{
                           filter: `url(#platform-tone-${chapterPhoto?.grade ?? (development ? 'visualization' : 'aerial')})`,
                         }}

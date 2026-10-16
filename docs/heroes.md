@@ -387,3 +387,52 @@ The owner broadened the certification wording from research funding agency to
 the earlier 8 October description in the homepage hero and collaboration
 section, with explicit EN/AR equivalents. ISO 9001:2015 remains the detailed
 standard. This records supplied wording rather than independent verification.
+
+## Lower homepage composition and overlay cue — 2026-10-16
+
+The owner moves homepage copy/actions and ISO certification lower in the hero and
+explicitly rejects vertical space reserved for the idle cue. The certified hero
+now ends its content 32px above the highlight band; its text/actions and proof
+retain their existing grid relationship. Remove the extra scroll-clearance custom
+property from all heroes. The cue remains an absolutely positioned clipped reveal
+layer, above hero content at z-index 20, without changing the content's flow.
+Pointer events remain confined to its visible link. Initial delay, above-icon
+label, fade/cooldown, keyboard and reduced-motion behavior remain unchanged.
+
+FR1440 development inspection: actions and certification share an 812px bottom,
+32px above the scene edge. The cue is absolute and has no clearance variable;
+focused display changes the copy bounds by under 1px (native subpixel rounding).
+AR390 has no page overflow and retains its hidden desktop mouse cue. Existing
+hero assertions now check overlay positioning rather than dedicated clearance.
+Full production/browser suites and CI remain held by shared coordination.
+
+Uniform hero inset — latest owner correction, 2026-10-16: all shared heroes use
+`--page-bleed` for the bottom content inset, matching the actual left/right container
+distance (including the maximum container width). Remove the fixed homepage,
+Programmes and Media bottom overrides and the narrower mobile homepage container.
+Bottom-align hero content so this inset is the actual content-to-band distance.
+Preserve horizontal composition modes, header clearance and overlay cue.
+
+Local restart verification: PostgreSQL was stopped and returned HTTP 500; restarting
+the existing Compose database restored HTTP 200 on FR home/Institute/Programmes/Media
+and AR home. Scoped formatting, ESLint and whitespace checks pass. The browser
+policy blocked acquiring the existing failed-page tab, so the latest shared inset
+has source/HTTP verification only; rendered geometry remains pending.
+
+## Supplied outdoor test photograph — 2026-10-16
+
+The owner replaces only the Platforms hero with `Plateforme de test outdoor.jpg`.
+Use a 1920×1080 WebP (384 KB) and a 720×1080 mobile crop (159 KB), retaining the
+circular test structure and PV installations. Preserve the shared shade, copy,
+links and lower-band spacing. The original stays private and byte-identical;
+source/derivative hashes are recorded in `hero-assets.json`. The mobile derivative
+shares the desktop asset's localized public search reference. The former GEP image
+remains available to other existing uses.
+
+Verification: scoped ESLint/Prettier and whitespace checks pass. FR/EN/AR
+Platforms HTML serves the new image/mobile source with HTTP 200; both files and
+the Next image optimization endpoint return 200. Local search finds the media
+reference in all three locales. The mobile derivative was visually inspected.
+Rendered-page review remains pending because the existing preview is a blocked
+`data:` error tab; no browser-policy workaround was attempted. Production checks
+remain held by shared coordination.

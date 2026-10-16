@@ -171,3 +171,17 @@ if a selected item changes structure.
 
 Publication, deployment, DNS, visibility and provider changes retain separate
 authorization. Backlog statuses reflect the coordinated implementation batch; final current-head CI must pass before merge.
+
+## Owner-commissioned increment — 2026-10-16
+
+The dedicated Resources patent page is implemented locally using the shared
+Transfer catalogue. No separate data source or CMS workflow is commissioned.
+Local preview/search checks pass; full batch validation and CI remain deferred
+until the owner finishes the current modifications. See [scope](valorisation-patents.md).
+
+Search follow-up — 2026-10-16: investigate Arabic hamza normalization consistency
+between generated search vectors and normalized queries. After ministry-name
+updates, “الأداء العمومي” does not find the governance documents although both
+raw/normalized body contain the new phrase; “العمومي” and “الطاقة والمعادن” find
+them. Keep publication/locale gates intact and add a focused regression when
+fixing the tokenizer. This observation does not authorize unrelated corpus edits.

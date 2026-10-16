@@ -10,33 +10,34 @@ boundaries remain. The owner reserves the explicit merge GO for the review branc
 
 These boundaries come from the development brief and describe the current approved route baseline implemented in `src/lib/site.ts`. Keep one stable page ID per conceptual page, with localized paths in code. Listing/detail templates may be added without creating new primary navigation branches. Implemented routes do not establish that their institutional content or services are ready for publication.
 
-Chosen on 2026-10-08 following the owner's request for one consistent structure: the 2026-10-12 owner-authorized Useful links addition expands this to **23 stable page IDs** as the working baseline. The central definition in [src/lib/site.ts](../src/lib/site.ts) supplies localized routing and internal links. Suggested alternative paths are not supported routes. See [ADR 0004](adr/0004-canonical-working-site-structure.md) for the decision and the procedure for updating all affected consumers together.
+Chosen on 2026-10-08 following the owner's request for one consistent structure: the owner-authorized Useful links (2026-10-12) and Brevets (2026-10-16) additions expand this to **24 stable page IDs** as the working baseline. The central definition in [src/lib/site.ts](../src/lib/site.ts) supplies localized routing and internal links. Suggested alternative paths are not supported routes. See [ADR 0004](adr/0004-canonical-working-site-structure.md) for the decision and the procedure for updating all affected consumers together.
 
-| Page          | French path                                 | Boundary                                             |
-| ------------- | ------------------------------------------- | ---------------------------------------------------- |
-| Home          | `/fr`                                       | Introductory hero; section placeholders              |
-| Institute     | `/fr/institut`                              | Identity, mission and key figures in one page        |
-| Governance    | `/fr/institut/gouvernance`                  | Separate page                                        |
-| Priorities    | `/fr/recherche-innovation/priorites`        | Priorities and roadmaps                              |
-| Programmes    | `/fr/recherche-innovation/programmes`       | Listing, then programme details                      |
-| Projects      | `/fr/recherche-innovation/projets`          | Listing, then project details                        |
-| Platforms     | `/fr/expertise-experimentation/plateformes` | Listing, then platform details                       |
-| Network       | `/fr/expertise-experimentation/reseau`      | Laboratory/expert network                            |
-| Transfer      | `/fr/valorisation-transfert`                | Onepager                                             |
-| Collaboration | `/fr/collaborer-avec-nous`                  | Onepager                                             |
-| News          | `/fr/ressources/actualites`                 | News/press release listing and articles              |
-| Events        | `/fr/ressources/evenements`                 | Event listing and details                            |
-| Publications  | `/fr/ressources/publications-rapports`      | Unified publication/report listing and details       |
-| Media         | `/fr/ressources/mediatheque`                | Media listing and relevant views                     |
-| Opportunities | `/fr/ressources/opportunites-carrieres`     | Careers, opportunities and calls with filters        |
-| Search        | `/fr/recherche`                             | Results; noindex                                     |
-| Contact       | `/fr/contact`                               | Onepager; unavailable until real delivery exists     |
-| Legal         | `/fr/mentions-legales`                      | Footer utility                                       |
-| Privacy       | `/fr/confidentialite`                       | Footer utility                                       |
-| Cookies       | `/fr/preferences-cookies`                   | Footer utility; service depends on actual processing |
-| Accessibility | `/fr/accessibilite`                         | Footer utility; records actual assessed status       |
-| Useful links  | `/fr/liens-utiles`                          | Four owner-selected external mapping resources       |
-| Sitemap       | `/fr/plan-du-site`                          | Human-readable footer utility                        |
+| Page          | French path                                 | Boundary                                                   |
+| ------------- | ------------------------------------------- | ---------------------------------------------------------- |
+| Home          | `/fr`                                       | Introductory hero; section placeholders                    |
+| Institute     | `/fr/institut`                              | Identity, mission and key figures in one page              |
+| Governance    | `/fr/institut/gouvernance`                  | Separate page                                              |
+| Priorities    | `/fr/recherche-innovation/priorites`        | Priorities and roadmaps                                    |
+| Programmes    | `/fr/recherche-innovation/programmes`       | Listing, then programme details                            |
+| Projects      | `/fr/recherche-innovation/projets`          | Listing, then project details                              |
+| Platforms     | `/fr/expertise-experimentation/plateformes` | Listing, then platform details                             |
+| Network       | `/fr/expertise-experimentation/reseau`      | Laboratory/expert network                                  |
+| Transfer      | `/fr/valorisation-transfert`                | Onepager                                                   |
+| Collaboration | `/fr/collaborer-avec-nous`                  | Onepager                                                   |
+| News          | `/fr/ressources/actualites`                 | News/press release listing and articles                    |
+| Events        | `/fr/ressources/evenements`                 | Event listing and details                                  |
+| Publications  | `/fr/ressources/publications-rapports`      | Unified publication/report listing and details             |
+| Patents       | `/fr/ressources/brevets`                    | Shared granted-patent catalogue, also retained on Transfer |
+| Media         | `/fr/ressources/mediatheque`                | Media listing and relevant views                           |
+| Opportunities | `/fr/ressources/opportunites-carrieres`     | Careers, opportunities and calls with filters              |
+| Search        | `/fr/recherche`                             | Results; noindex                                           |
+| Contact       | `/fr/contact`                               | Onepager; unavailable until real delivery exists           |
+| Legal         | `/fr/mentions-legales`                      | Footer utility                                             |
+| Privacy       | `/fr/confidentialite`                       | Footer utility                                             |
+| Cookies       | `/fr/preferences-cookies`                   | Footer utility; service depends on actual processing       |
+| Accessibility | `/fr/accessibilite`                         | Footer utility; records actual assessed status             |
+| Useful links  | `/fr/liens-utiles`                          | Four owner-selected external mapping resources             |
+| Sitemap       | `/fr/plan-du-site`                          | Human-readable footer utility                              |
 
 Cookie preferences become required if the chosen processing needs them. Legal placeholder text must not claim compliance or invent registration numbers.
 
@@ -135,3 +136,12 @@ base in FR/EN/AR; no new top-level stable ID is added. The existing locale
 selector/header resolve these children through the call path helper. Proxy,
 metadata, sitemap and search register the same destinations. See
 [catalogue scope](calls-catalogue-2026.md).
+
+## Dedicated patent catalogue — 2026-10-16
+
+The owner adds `patents` under Resources: `/fr/ressources/brevets`,
+`/en/resources/patents`, `/ar/الموارد/براءات-الاختراع`. The page renders the exact
+shared catalogue section from Transfer, including its figures and filters, without
+an extra photographic hero. Resources navigation, footer and sitemap use this page.
+The Transfer section and its anchors remain available. Patent search records retain
+their stable IDs and now open the dedicated page's corresponding patent anchors.

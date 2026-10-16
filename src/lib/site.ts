@@ -102,6 +102,15 @@ export const pages = {
       ar: '/الموارد/المنشورات-والتقارير',
     },
   },
+  patents: {
+    path: '/resources/patents',
+    pathnames: {
+      fr: '/ressources/brevets',
+      en: '/resources/patents',
+      ar: '/الموارد/براءات-الاختراع',
+    },
+    anchors: ['adoption-initiatives', 'valorisation-figures'],
+  },
   media: {
     path: '/resources/media',
     pathnames: {
@@ -160,7 +169,10 @@ export const navigationGroups = [
   { id: 'institute', pages: ['institute', 'governance'] },
   { id: 'research', pages: ['priorities', 'programmes', 'projects'] },
   { id: 'expertise', pages: ['platforms', 'network'] },
-  { id: 'resources', pages: ['news', 'events', 'publications', 'media', 'opportunities'] },
+  {
+    id: 'resources',
+    pages: ['news', 'events', 'publications', 'media', 'opportunities', 'patents'],
+  },
 ] as const satisfies ReadonlyArray<{ id: string; pages: readonly PageId[] }>
 
 export const footerPageIds = [
@@ -175,7 +187,7 @@ export const footerPageIds = [
 export const footerNavigationGroups = [
   { id: 'institute', pages: ['home', 'institute', 'governance', 'opportunities'] },
   { id: 'science', pages: ['priorities', 'programmes', 'projects', 'platforms', 'network'] },
-  { id: 'resources', pages: ['publications', 'media', 'news', 'events'] },
+  { id: 'resources', pages: ['publications', 'patents', 'media', 'news', 'events'] },
   { id: 'collaboration', pages: ['workWithUs', 'contact', 'transfer'] },
 ] as const satisfies ReadonlyArray<{ id: string; pages: readonly PageId[] }>
 
@@ -194,14 +206,22 @@ export function pageHref(pageId: PageId, locale: Locale, anchor?: string): strin
   return anchor && isSupportedAnchor(pageId, anchor) ? `${href}#${anchor.replace(/^#/, '')}` : href
 }
 
-// Resources shortcut reuses the canonical transfer route and portfolio anchor.
+// Resources shortcut uses the dedicated patent catalogue.
 export function resourcePatentLink(locale: Locale): string {
-  return pageHref('transfer', locale, 'adoption-initiatives')
+  return pageHref('patents', locale)
 }
 
-export function pageIdFromPathname(pathname: string): PageId | undefined {
-  const normalized = pathname === '/' ? '/' : pathname.replace(/\/$/, '')
-  return pageIds.find((id) => pages[id].path === normalized)
+export function pageIdFromPathname(pathname: string, locale?: Locale): PageId | undefined {
+  let decoded: string
+  try {
+    decoded = decodeURI(pathname)
+  } catch {
+    return undefined
+  }
+  const normalized = decoded === '/' ? '/' : decoded.replace(/\/$/, '')
+  return pageIds.find(
+    (id) => pages[id].path === normalized || (locale && pages[id].pathnames[locale] === normalized),
+  )
 }
 
 export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
@@ -234,6 +254,8 @@ export function isSupportedAnchor(pageId: PageId, anchor: string): boolean {
       (normalized === 'valorisation-figures' ||
         normalized === 'ismart-example' ||
         patentRecords.some((p) => p.granted === true && normalized === `patent-${p.reference}`))) ||
+    (pageId === 'patents' &&
+      patentRecords.some((p) => p.granted === true && normalized === `patent-${p.reference}`)) ||
     definition.anchors?.includes(normalized) === true ||
     pageSections[pageId].some(
       (section) =>
@@ -261,7 +283,12 @@ export function newsListingHref(locale: Locale): string {
   return `/${locale}${newsListingPaths[locale]}`
 }
 export function isNewsListingPath(path: string, locale: Locale): boolean {
-  return path === newsListingPath || path === newsListingPaths[locale]
+  try {
+    const decoded = decodeURI(path)
+    return decoded === newsListingPath || decoded === newsListingPaths[locale]
+  } catch {
+    return false
+  }
 }
 export function pageLinkHref(pageId: PageId, locale: Locale): string {
   return pageHref(pageId, locale, pageId === 'news' ? 'news' : undefined)

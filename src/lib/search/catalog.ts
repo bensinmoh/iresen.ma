@@ -1,3 +1,4 @@
+import { institutionalAffiliations } from '../institutions'
 import { callPartners } from '@/lib/call-partners'
 import { archiveCalls, archiveCard, archiveProfile } from '@/lib/call-archives'
 import { callCopy } from '@/lib/call-copy'
@@ -34,7 +35,7 @@ import ar from '@/messages/ar.json'
 import { homeInnovationSectionId, innovationSteps } from '@/lib/home-innovation'
 import { collaborationCount } from '@/lib/home-collaboration'
 import { homeAchievements, homeAchievementsSectionId } from '@/lib/home-achievements'
-import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
+import { homePlatforms, homePlatformsSectionId, platformPhotoPath } from '@/lib/home-platforms'
 import { homeFigures } from '@/lib/figures'
 import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
@@ -115,6 +116,28 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  {
+    id: 'institute-green-energy-park-research',
+    url: '/images/institute/green-energy-park-research.webp',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Green Energy Park — recherche en laboratoire',
+        description:
+          'Photographie fournie du Green Energy Park : un chercheur auprès d’un équipement de laboratoire, avec des modules photovoltaïques au premier plan. Visuel du bloc Recherche & Innovation de la page Institut.',
+      },
+      en: {
+        title: 'Green Energy Park — laboratory research',
+        description:
+          'Supplied Green Energy Park photograph showing a researcher beside laboratory equipment, with photovoltaic modules in the foreground. Image used in the Institute page Research & Innovation block.',
+      },
+      ar: {
+        title: 'Green Energy Park — البحث داخل المختبر',
+        description:
+          'صورة مقدّمة لـ Green Energy Park تُظهر باحثًا بجانب تجهيزات مختبرية وألواحًا كهروضوئية في المقدمة. تُستخدم في قسم البحث والابتكار ضمن صفحة المعهد.',
+      },
+    },
+  },
   ...Object.values(callPartners)
     .filter((partner) => partner.id !== 'iresen')
     .map((partner) => ({
@@ -149,6 +172,28 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         },
       ]),
     ) as PublicAssetReference['text'],
+  },
+  {
+    id: 'institute-ambition-vision-portrait',
+    url: '/images/institute/ambition-solar-scene-cool.webp',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Vision et ambition — portrait illustratif',
+        description:
+          'Scène solaire africaine générée par IA intégrant une personne pensive en couleurs, illustration symbolique de l’ambition 2035 et de l’innovation solaire en Afrique. Ne représente pas une collaboratrice réelle.',
+      },
+      en: {
+        title: 'Vision and ambition — illustrative portrait',
+        description:
+          'AI-generated African solar landscape integrating a thoughtful person in full color, symbolizing the 2035 ambition and solar innovation in Africa. Does not depict a real staff member.',
+      },
+      ar: {
+        title: 'الرؤية والطموح — صورة توضيحية',
+        description:
+          'مشهد شمسي أفريقي مولد بالذكاء الاصطناعي يتضمن شخصية متأملة بالألوان، ترمز إلى طموح 2035 والابتكار الشمسي في أفريقيا. لا تمثل موظفة حقيقية.',
+      },
+    },
   },
   {
     id: 'institute-fifteen-year-report-cover',
@@ -607,10 +652,24 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       }),
     ) as PublicAssetReference['text'],
   })),
+  {
+    id: 'platform-photo-gep-mci-original',
+    url: '/images/platforms/gep-mci.webp',
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const copy = messages[locale].HomePlatforms.platforms['gep-mci']
+        return [
+          locale,
+          { title: copy.name, description: [copy.imageDescription, copy.searchText].join(' ') },
+        ]
+      }),
+    ) as PublicAssetReference['text'],
+  },
   ...homePlatforms.flatMap(({ id }) =>
     [false, true].map((logo) => ({
       id: `platform-${logo ? 'logo-' : 'photo-'}${id}`,
-      url: logo ? `/brand/platforms/${id}.svg` : `/images/platforms/${id}.webp`,
+      url: logo ? `/brand/platforms/${id}.svg` : platformPhotoPath(id),
       type: 'media' as const,
       text: Object.fromEntries(
         contentLocales.map((locale) => {
@@ -665,16 +724,42 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   })),
+  {
+    id: 'hero-platform-outdoor',
+    url: '/images/heroes/platform-outdoor.webp',
+    type: 'media',
+    text: {
+      fr: {
+        title: 'Plateforme de test outdoor — Infrastructures & plateformes',
+        description:
+          'Photographie fournie par IRESEN de la plateforme de test en extérieur : installations photovoltaïques et équipements d’expérimentation solaire.',
+      },
+      en: {
+        title: 'Outdoor test platform — Infrastructure & platforms',
+        description:
+          'IRESEN-supplied photograph of the outdoor test platform, with photovoltaic installations and solar experimentation equipment.',
+      },
+      ar: {
+        title: 'منصة الاختبار الخارجية — البنيات التحتية والمنصات',
+        description:
+          'صورة مقدمة من IRESEN لمنصة الاختبار الخارجية، تضم تجهيزات كهروضوئية ومعدات للتجارب الشمسية.',
+      },
+    },
+  },
   ...Object.entries(heroImages)
-    .filter(([id]) => !['media-library', 'headquarters', 'platform-gep'].includes(id))
+    .filter(
+      ([id]) => !['media-library', 'headquarters', 'platform-gep', 'platform-outdoor'].includes(id),
+    )
     .map(([id, image]) => {
       // Contact has a dedicated headquarters photograph; its former illustration is
       // still served, but must not be described as the current contact page image.
       const relatedPages = pageIds.filter(
         (pageId) =>
           pageId !== 'contact' &&
-          !['legal', 'privacy', 'cookies', 'accessibility', 'sitemap'].includes(pageId) &&
-          heroes[pageId].photo === id,
+          !['legal', 'privacy', 'cookies', 'accessibility', 'sitemap', 'patents'].includes(
+            pageId,
+          ) &&
+          (heroes[pageId].photo === id || (pageId === 'institute' && id === 'solar-horizon')),
       )
       return {
         id: `hero-${id}`,
@@ -887,6 +972,11 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           ...engagementSearchText(catalog.NewsEvents.summaries),
           ...engagementSearchText(catalog.NewsEvents.events),
         )
+      if (pageId === 'patents')
+        body.push(
+          ...engagementSearchText(catalog.Transfer.catalog),
+          ...engagementSearchText(catalog.Transfer.figures),
+        )
       if (pageId === 'publications') body.push(...engagementSearchText(catalog.Publications))
       if (pageId === 'network') body.push(...engagementSearchText(catalog.Network))
       if (pageId === 'platforms') body.push(...engagementSearchText(catalog.Platforms))
@@ -904,8 +994,27 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       }
       if (pageId === 'institute')
         body.push(
-          ...engagementSearchText(catalog.Institute),
-          ...engagementSearchText(catalog.Narrative),
+          ...engagementSearchText({
+            title: catalog.Institute.title,
+            introduction: catalog.Institute.introduction,
+            statement: catalog.Institute.statement,
+            editorial: catalog.Institute.editorial,
+            values: catalog.Institute.values,
+            ambition: { statement: catalog.Institute.ambition.statement },
+            timeline: catalog.Institute.timeline,
+            report: catalog.Institute.report,
+          }),
+          ...engagementSearchText({
+            core: catalog.Narrative.coreDescription,
+            missions: catalog.Narrative.missions,
+            dimensions: catalog.Narrative.dimensions,
+            capabilities: {
+              expertise: catalog.Narrative.capabilities.expertise,
+              programmes: catalog.Narrative.capabilities.programmes,
+              platforms: catalog.Narrative.capabilities.platforms,
+              partnerships: catalog.Narrative.capabilities.partnerships,
+            },
+          }),
         )
       if (pageId === 'governance') {
         const governanceCopy = {
@@ -1149,22 +1258,49 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             const instituteCopy = {
               about: catalog.Institute.introduction,
               'institute-positioning': {
-                position: catalog.Institute.position,
-                ecosystem: catalog.Narrative.ecosystem,
+                title: catalog.Institute.editorial.positionTitle,
+                body: catalog.Institute.editorial.positionBody,
+                interface: catalog.Institute.editorial.interface,
+                capabilities: {
+                  expertise: catalog.Narrative.capabilities.expertise,
+                  programmes: catalog.Narrative.capabilities.programmes,
+                  platforms: catalog.Narrative.capabilities.platforms,
+                  partnerships: catalog.Narrative.capabilities.partnerships,
+                },
               },
-              mission: catalog.Institute.statement,
+              mission: {
+                statement: catalog.Institute.statement,
+                title: catalog.Institute.editorial.missionTitle,
+                accent: catalog.Institute.editorial.missionAccent,
+                slogan: catalog.Institute.editorial.slogan,
+              },
               capabilities: {
-                introduction: catalog.Institute.missionsIntro,
-                model: catalog.Narrative,
+                editorial: catalog.Institute.editorial,
+                core: catalog.Narrative.coreDescription,
+                missions: catalog.Narrative.missions,
+                dimensions: catalog.Narrative.dimensions,
               },
-              'institute-studies': catalog.Institute.missions[0],
-              'institute-research': catalog.Institute.missions[1],
-              'institute-skills': catalog.Institute.missions[2],
-              'institute-cooperation': catalog.Institute.missions[3],
+              'institute-studies': {
+                ...catalog.Narrative.dimensions.studies,
+                activities: catalog.Institute.editorial.dimensions.studies,
+              },
+              'institute-research': {
+                core: catalog.Narrative.coreDescription,
+                missions: catalog.Narrative.missions,
+                pathway: catalog.Institute.editorial.pathwayTitle,
+                verbs: catalog.Institute.editorial.verbs,
+              },
+              'institute-skills': {
+                ...catalog.Narrative.dimensions.skills,
+                activities: catalog.Institute.editorial.dimensions.skills,
+              },
+              'institute-cooperation': {
+                ...catalog.Narrative.dimensions.cooperation,
+                activities: catalog.Institute.editorial.dimensions.cooperation,
+              },
               'institute-values': catalog.Institute.values,
               'ambition-2035': {
-                ambition: catalog.Institute.ambition,
-                orientations: catalog.Narrative.orientations,
+                statement: catalog.Institute.ambition.statement,
               },
               'key-figures': catalog.Institute.historyIntro,
               'institute-history': catalog.Institute.timeline,
@@ -1290,7 +1426,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           }
           if (pageId === 'institute' && entry.id.startsWith('institute-model-')) {
             const id = entry.id.replace('institute-model-', '')
-            if (id === 'research') body.push(...engagementSearchText(catalog.Narrative.missions))
+            if (id === 'research') body.push(catalog.Narrative.coreDescription)
+            if (id === 'develop' || id === 'test' || id === 'transfer')
+              body.push(...engagementSearchText(catalog.Institute.editorial.verbs[id]))
+            if (id === 'studies' || id === 'skills' || id === 'cooperation')
+              body.push(
+                ...engagementSearchText({
+                  ...catalog.Narrative.dimensions[id],
+                  activities: catalog.Institute.editorial.dimensions[id],
+                }),
+              )
           }
           if (pageId === 'home' && entry.id === 'collaboration') {
             const collaboration = catalog.HomeCollaboration
@@ -1395,7 +1540,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
         ]
           .filter(Boolean)
           .join(' '),
-        url: pageHref('transfer', locale, patentAnchor(patent.reference)),
+        url: pageHref('patents', locale, patentAnchor(patent.reference)),
         type: 'patent',
       })
     }
@@ -1515,7 +1660,11 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       })
     }
   }
-  return documents
+  return documents.map((document) => ({
+    ...document,
+    body:
+      document.body + ' ' + institutionalAffiliations(document.body, document.locale).searchText,
+  }))
 }
 
 export function catalogRevision(documents = staticSearchDocuments()): string {

@@ -238,3 +238,15 @@ build (including TypeScript) pass. Three production browser journeys cover FR/EN
 programme navigation, selection after reload and empty programmes; mobile FR/AR
 captures are inspected. Browser checks use installed Chrome; the default bundled
 Playwright browser is unavailable locally. Full current-head CI remains the merge gate.
+
+## Identity consistency — 16 October 2026
+
+Project display uses the shared sourced university/establishment identities and
+curated personal names. The existing query field recognises establishment aliases
+and parent university names, including FSTS/UH1, FSTT/UAE, EMI/UM5, ENSAK/UIT,
+ENSAM Meknès/UMI and ESTF/USMBA. No additional university/establishment filters are
+introduced, following the owner's correction. ENSAM Rabat duplication, MAScIR's
+city suffix, Semlalia's city suffix and Tahala's former regional wording are
+normalised for display. CNEREE and CNESTEN use full names followed by their
+acronyms after a dash; Green Energy Park omits the Benguerir suffix. Original evidence and PDF bytes remain unchanged. See
+[the reference, source editions and check ledger](references/university-registry/README.md).

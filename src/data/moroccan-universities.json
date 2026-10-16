@@ -1,0 +1,4370 @@
+{
+  "checkedAt": "2026-10-16",
+  "sources": [
+    {
+      "id": "mesrsi-public-2024-2025",
+      "url": "https://data.gov.ma/data/fr/dataset/90572d12-5c23-4187-b151-12923a1587ac/resource/fb9c2300-77f7-461c-86a5-9184b00e57d9/download/universites-publiques-2024-2025.xlsx",
+      "period": "2024-2025",
+      "sha256": "82e7226679c617c7095af2e1f452323993dd4fd7dd746071234aa299600c00b1"
+    },
+    {
+      "id": "mesrsi-private-2025-2026",
+      "url": "https://www.enssup.gov.ma/storage/enssup%20priv%C3%A9/2025/Liste%20des%20universit%C3%A9s%20priv%C3%A9es%20autoris%C3%A9es%20au%20titre%20de%20l%27ann%C3%A9e%20universitaire%202025-2026.pdf",
+      "period": "2025-2026",
+      "sha256": "a033cc162632c7ee1e289511e99b563e41409d7f662a29da7ea193d039fd0fdc"
+    },
+    {
+      "id": "aui-schools-2026",
+      "url": "https://aui.ma/",
+      "period": "consulted 2026-10-16"
+    },
+    {
+      "id": "quaraouiyine-institutions",
+      "url": "https://www.habous.gov.ma/مؤسسة-محمد-السادس-للعلماء-الأفارقة/جامعة-القرويين/7244-تعريف-بجامعة-القرويين.html",
+      "period": "2015 legal organisation; consulted 2026-10-16"
+    },
+    {
+      "id": "uh1-directory-2026",
+      "url": "https://preinscription.uh1.ac.ma/preinscription/ER.html",
+      "period": "consulted 2026-10-16"
+    },
+    {
+      "id": "independent-institutions-official",
+      "url": "https://www.onousc.ma/liste-des-etablissements",
+      "period": "consulted 2026-10-16"
+    },
+    {
+      "id": "ma-independent-inpt-official",
+      "url": "https://www.inpt.ac.ma/",
+      "period": "official institution; consulted 2026-10-16"
+    },
+    {
+      "id": "ma-independent-ensmr-official",
+      "url": "https://www.ensmr.ac.ma/",
+      "period": "official institution; consulted 2026-10-16"
+    },
+    {
+      "id": "ma-independent-iav-hassan-ii-official",
+      "url": "https://www.iav.ac.ma/fr/histoire",
+      "period": "official institution; consulted 2026-10-16"
+    },
+    {
+      "id": "aui-ssah-2026",
+      "url": "https://aui.ma/school-of-social-sciences-arts-and-humanities",
+      "period": "consulted 2026-10-16"
+    },
+    {
+      "id": "uh1-innia-2026",
+      "url": "https://www.uh1.ac.ma/composantes/sciences-de-leducation-sciences-humaines-et-sociales/institut-national-du-numerique-et-de-lintelligence-artificielle-innia/",
+      "period": "consulted 2026-10-16"
+    },
+    {
+      "id": "uca-safi-2026",
+      "url": "https://fps.uca.ma/",
+      "period": "consulted 2026-10-16"
+    },
+    {
+      "id": "cneree-uca-2026",
+      "url": "https://cneree.uca.ma/presentation-cneree/",
+      "period": "consulted 2026-10-16"
+    }
+  ],
+  "universities": [
+    {
+      "id": "ma-university-um5",
+      "name": "Université Mohammed V de Rabat - UM5",
+      "arabicName": "جامعة محمد الخامس بالرباط - UM5",
+      "acronym": "UM5",
+      "city": "Rabat",
+      "aliases": [
+        "Université Mohammed V de Rabat",
+        "Université Mohammed V - Rabat -",
+        "Mohammed V University",
+        "Université Mohammed V",
+        "Université Mohamed V",
+        "UM5",
+        "Université Mohammed V-Agdal Rabat",
+        "Mohammed V-Agdal University, Rabat",
+        "جامعة محمد الخامس",
+        "جامعة محمد الخامس - الرباط-"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uh2c",
+      "name": "Université Hassan II de Casablanca - UH2C",
+      "arabicName": "جامعة الحسن الثاني بالدار البيضاء - UH2C",
+      "acronym": "UH2C",
+      "city": "Casablanca",
+      "aliases": [
+        "Université Hassan II de Casablanca",
+        "Université Hassan II - Casablanca -",
+        "Université Hassan II",
+        "Hassan II University",
+        "UH2C",
+        "جامعة الحسن الثاني",
+        "جامعة الحسن الثاني - الدار البيضاء -"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-usmba",
+      "name": "Université Sidi Mohammed Ben Abdellah - USMBA",
+      "arabicName": "جامعة سيدي محمد بن عبد الله - USMBA",
+      "acronym": "USMBA",
+      "city": "Fès",
+      "aliases": [
+        "Université Sidi Mohamed Ben Abdellah de Fès",
+        "Université Sidi Mohamed Ben Abdellah - Fès -",
+        "Sidi Mohammed Ben Abdellah University",
+        "Université Sidi Mohamed Ben Abdellah (USMBA)",
+        "Université Sidi Mohammed Ben Abdellah (USMBA)",
+        "Université Sidi Mohammed Ben Abdellah",
+        "Sidi Mohamed Ben Abdellah University (USMBA)",
+        "Sidi Mohammed Ben Abdellah University (USMBA)",
+        "USMBA",
+        "جامعة سيدي محمد بن عبد الله (USMBA)",
+        "جامعة سيدي محمد بن عبد الله",
+        "جامعة سيدي محمد بن عبد الله - فاس -",
+        "Université Sidi Mohamed Ben Abdellah"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uca",
+      "name": "Université Cadi Ayyad - UCA",
+      "arabicName": "جامعة القاضي عياض - UCA",
+      "acronym": "UCA",
+      "city": "Marrakech",
+      "aliases": [
+        "Université Cadi Ayyad de Marrakech",
+        "Université Cadi Ayyad - Marrakech -",
+        "Cadi Ayyad University",
+        "Université Cadi Ayyad Marrakech",
+        "Université Cadi AYYAD (UCA)",
+        "Université Cadi Ayyad",
+        "Cadi AYYAD University (UCA)",
+        "Cadi Ayyad University Marrakech",
+        "UCA",
+        "جامعة القاضي عياض (UCA)",
+        "جامعة القاضي عياض مراكش",
+        "جامعة القاضي عياض",
+        "جامعة القاضي عياض - مراكش -"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-usms",
+      "name": "Université Sultan Moulay Slimane - USMS",
+      "arabicName": "جامعة السلطان مولاي سليمان - بني ملال - - USMS",
+      "acronym": "USMS",
+      "city": "Béni Mellal",
+      "aliases": [
+        "Université Sultan Moulay Slimane de Béni Mellal",
+        "Université Sultan Moulay Slimane - Béni Mellal -",
+        "جامعة السلطان مولاي سليمان - بني ملال -",
+        "Université Sultan Moulay Slimane"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-ump",
+      "name": "Université Mohammed Premier - UMP",
+      "arabicName": "جامعة محمد الأول بوجدة - UMP",
+      "acronym": "UMP",
+      "city": "Oujda",
+      "aliases": [
+        "Université Mohammed Premier de Oujda",
+        "Université Mohammed Premier - Oujda -",
+        "Mohammed First University",
+        "Université Mohamed Premier Oujda",
+        "Université Mohammed Premier",
+        "Mohamed Premier University Oujda",
+        "UMP",
+        "جامعة محمد الأول بوجدة",
+        "جامعة محمد الأول - وجدة -"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uae",
+      "name": "Université Abdelmalek Essaâdi - UAE",
+      "arabicName": "جامعة عبد المالك السعدي - UAE",
+      "acronym": "UAE",
+      "city": "Tétouan",
+      "aliases": [
+        "Université Abdelmalek Essaadi de Tétouan",
+        "Université Abdelmalek Essaadi - Tétouan -",
+        "Abdelmalek Essaâdi University",
+        "Université Abdelmalek Essaâdi",
+        "UAE",
+        "جامعة عبد المالك السعدي",
+        "جامعة عبد المالك السعدي - تطوان -",
+        "Université Abdelmalek Essaadi"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-ucd",
+      "name": "Université Chouaib Doukkali - UCD",
+      "arabicName": "جامعة شعيب الدكالي- الجديدة - - UCD",
+      "acronym": "UCD",
+      "city": "El Jadida",
+      "aliases": [
+        "Université Chouaib Doukkali de El Jadida",
+        "Université Chouaib Doukkali - El Jadida -",
+        "جامعة شعيب الدكالي- الجديدة -",
+        "Université Chouaib Doukkali"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uh1",
+      "name": "Université Hassan 1er - UH1",
+      "arabicName": "جامعة الحسن الأول - UH1",
+      "acronym": "UH1",
+      "city": "Settat",
+      "aliases": [
+        "Université Hassan 1er de Settat",
+        "Université Hassan 1er - Settat -",
+        "Université Hassan Premier",
+        "Université Hassan 1er Settat",
+        "Université Hassan 1er",
+        "Hassan First University",
+        "UH1",
+        "جامعة الحسن الأول",
+        "جامعة الحسن الأول - سطات -"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-umi",
+      "name": "Université Moulay Ismaïl - UMI",
+      "arabicName": "جامعة مولاي إسماعيل - مكناس - - UMI",
+      "acronym": "UMI",
+      "city": "Meknès",
+      "aliases": [
+        "Université Moulay Ismail de Meknès",
+        "Université Moulay Ismail - Meknès -",
+        "Moulay Ismail University",
+        "Université Moulay Ismaïl",
+        "UMI",
+        "جامعة مولاي إسماعيل - مكناس -",
+        "Université Moulay Ismail"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uit",
+      "name": "Université Ibn Tofail - UIT",
+      "arabicName": "جامعة ابن طفيل - UIT",
+      "acronym": "UIT",
+      "city": "Kénitra",
+      "aliases": [
+        "Université Ibn Tofaïl de Kénitra",
+        "Université Ibn Tofaïl - Kénitra -",
+        "Ibn Tofail University",
+        "UIT Kenitra",
+        "Université Ibn Tofail",
+        "UIT",
+        "جامعة ابن طفيل",
+        "UIT القنيطرة",
+        "جامعة ابن طفيل - القنيطرة -",
+        "Université Ibn Tofaïl"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uiz",
+      "name": "Université Ibn Zohr - UIZ",
+      "arabicName": "جامعة ابن زهر - UIZ",
+      "acronym": "UIZ",
+      "city": "Agadir",
+      "aliases": [
+        "Université Ibn Zohr de Agadir",
+        "Université Ibn Zohr - Agadir -",
+        "Ibn Zohr University",
+        "Université Ibn Zohr",
+        "UIZ",
+        "جامعة ابن زهر",
+        "جامعة ابن زهر - أكادير -"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-university-uic",
+      "name": "Université Internationale de Casablanca - UIC",
+      "arabicName": "",
+      "acronym": "UIC",
+      "city": "Casablanca",
+      "aliases": ["Université Internationale de Casablanca"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-universiapolis",
+      "name": "Université Internationale d’Agadir - Universiapolis",
+      "arabicName": "",
+      "acronym": "Universiapolis",
+      "city": "Agadir",
+      "aliases": ["Université Internationale d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-upm",
+      "name": "Université Privée de Marrakech Tensift El Haouz - UPM",
+      "arabicName": "",
+      "acronym": "UPM",
+      "city": "Marrakech",
+      "aliases": ["Université Privée de Marrakech Tensift El Haouz"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-mundiapolis",
+      "name": "Université Privée Mundiapolis - Mundiapolis",
+      "arabicName": "",
+      "acronym": "Mundiapolis",
+      "city": "Casablanca",
+      "aliases": ["Université Privée Mundiapolis"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-upf",
+      "name": "Université Privée de Fès - UPF",
+      "arabicName": "",
+      "acronym": "UPF",
+      "city": "Fès",
+      "aliases": ["Université Privée de Fès"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-upssa",
+      "name": "Université Privée de la Santé et des Sciences d’Agadir - UPSSA",
+      "arabicName": "",
+      "acronym": "UPSSA",
+      "city": "Agadir",
+      "aliases": ["Université Privée de la Santé et des Sciences d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-universite-internationale-privee-averroes",
+      "name": "Université Internationale Privée Averroès",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "aliases": ["Université Internationale Privée Averroès"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-uir",
+      "name": "Université Internationale de Rabat - UIR",
+      "arabicName": "الجامعة الدولية بالرباط - UIR",
+      "acronym": "UIR",
+      "city": "Rabat",
+      "aliases": [
+        "Université Internationale de Rabat",
+        "Université Internationale de Rabat Privée (UIR)",
+        "Université Internationale de Rabat (UIR)",
+        "International University of Rabat",
+        "UIR",
+        "International University of Rabat (UIR)",
+        "جامعة الرباط الدولية (UIR)",
+        "جامعة الرباط الدولية",
+        "الجامعة الدولية بالرباط"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-um6p",
+      "name": "Université Mohammed VI Polytechnique - UM6P",
+      "arabicName": "جامعة محمد السادس متعددة التخصصات التقنية - UM6P",
+      "acronym": "UM6P",
+      "city": "Benguérir",
+      "aliases": [
+        "Université Mohammed VI Polytechnique",
+        "Mohammed VI Polytechnic University",
+        "Université Mohammed VI Polytechnique — UM6P",
+        "UM6P",
+        "جامعة محمد السادس متعددة التخصصات التقنية"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-um6ss",
+      "name": "Université Mohammed VI des Sciences et de la Santé - UM6SS",
+      "arabicName": "",
+      "acronym": "UM6SS",
+      "city": "Casablanca",
+      "aliases": ["Université Mohammed VI des Sciences et de la Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-uiass",
+      "name": "Université Internationale Abulcasis des Sciences et de la Santé - UIASS",
+      "arabicName": "",
+      "acronym": "UIASS",
+      "city": "Rabat",
+      "aliases": ["Université Internationale Abulcasis des Sciences et de la Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-uemf",
+      "name": "Université Euro-Méditerranéenne de Fès - UEMF",
+      "arabicName": "الجامعة الأورومتوسطية بفاس - UEMF",
+      "acronym": "UEMF",
+      "city": "Fès",
+      "aliases": [
+        "Université Euro-Méditerranéenne de Fès",
+        "Euro-Mediterranean University of Fez",
+        "Université Euro-Méditerranéenne de Fés",
+        "UEMF",
+        "الجامعة الأورومتوسطية بفاس"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"]
+    },
+    {
+      "id": "ma-university-aui",
+      "name": "Université Al Akhawayn - AUI",
+      "arabicName": "جامعة الأخوين - AUI",
+      "acronym": "AUI",
+      "city": "Ifrane",
+      "aliases": [
+        "Université Al Akhawayn",
+        "Al Akhawayn University",
+        "Université AlAkhawayn -IFRANE",
+        "Université Alakhawyn",
+        "AlAkhawayn University -IFRANE",
+        "Alakhawyn University",
+        "جامعة الأخوين-إفران",
+        "جامعة الأخوين"
+      ],
+      "sourceIds": ["aui-schools-2026"]
+    },
+    {
+      "id": "ma-university-uaq",
+      "name": "Université Al Quaraouiyine - UAQ",
+      "arabicName": "جامعة القرويين - UAQ",
+      "acronym": "UAQ",
+      "city": "Fès",
+      "aliases": ["Université Al Quaraouiyine", "Al Quaraouiyine University", "جامعة القرويين"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    }
+  ],
+  "establishments": [
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-agdal-rabat",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Agdal Rabat - FSJES Agdal Rabat",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية أكدال الرباط - FSJES Agdal Rabat",
+      "acronym": "FSJES Agdal Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Agdal Rabat",
+        "FSJES Agdal Rabat",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية أكدال الرباط",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-souissi-rabat",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Souissi Rabat - FSJES Souissi Rabat",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية السويسي الرباط - FSJES Souissi Rabat",
+      "acronym": "FSJES Souissi Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Souissi Rabat",
+        "FSJES Souissi Rabat",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية السويسي الرباط",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-sale",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Salé - FSJES Salé",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية سلا - FSJES Salé",
+      "acronym": "FSJES Salé",
+      "city": "Salé",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Salé",
+        "FSJES Salé",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية سلا",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-rabat",
+      "name": "Faculté des Lettres et des Sciences Humaines Rabat - FLSH Rabat",
+      "arabicName": "كلية الآداب والعلوم الإنسانية الرباط - FLSH Rabat",
+      "acronym": "FLSH Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Rabat",
+        "FLSH Rabat",
+        "كلية الآداب والعلوم الإنسانية الرباط",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-rabat",
+      "name": "Faculté des Sciences de Rabat - FSR",
+      "arabicName": "كلية العلوم الرباط - FS Rabat",
+      "acronym": "FS Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté des Sciences Rabat",
+        "FS Rabat",
+        "كلية العلوم الرباط",
+        "FS",
+        "Faculté des Sciences Rabat - FS Rabat",
+        "Faculté des sciences,Université Mohamed V",
+        "Faculty of Sciences, Mohamed V University",
+        "Faculté des Sciences de Rabat",
+        "FSR"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-rabat",
+      "name": "Faculté de Médecine et de Pharmacie Rabat - FMP Rabat",
+      "arabicName": "كلية الطب والصيدلة الرباط - FMP Rabat",
+      "acronym": "FMP Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Rabat",
+        "FMP Rabat",
+        "كلية الطب والصيدلة الرباط",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-dentaire-rabat",
+      "name": "Faculté de Médecine Dentaire Rabat - FMD Rabat",
+      "arabicName": "كلية طب الأسنان الرباط - FMD Rabat",
+      "acronym": "FMD Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté de Médecine Dentaire Rabat",
+        "FMD Rabat",
+        "كلية طب الأسنان الرباط",
+        "FMD"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-mohammadia-d-ingenieurs-rabat",
+      "name": "École Mohammadia d’Ingénieurs - EMI",
+      "arabicName": "المدرسة المحمدية للمهندسين الرباط - EMI Rabat",
+      "acronym": "EMI Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Ecole Mohammadia d'Ingénieurs Rabat",
+        "EMI Rabat",
+        "المدرسة المحمدية للمهندسين الرباط",
+        "EMI",
+        "Ecole Mohammadia d’Ingénieurs",
+        "École Mohammadia d’Ingénieurs"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-d-informatique-et-d-analyse-des-systemes-rabat",
+      "name": "École Nationale Supérieure d'Informatique et d'Analyse des Systèmes Rabat - ENSIAS Rabat",
+      "arabicName": "المدرسة الوطنية العليا للمعلوماتية وتحليل النظم الرباط - ENSIAS Rabat",
+      "acronym": "ENSIAS Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Ecole Nationale Supérieure d'Informatique et d'Analyse des Systèmes Rabat",
+        "ENSIAS Rabat",
+        "المدرسة الوطنية العليا للمعلوماتية وتحليل النظم الرباط",
+        "ENSIAS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-des-arts-et-metiers-rabat",
+      "name": "École Nationale Supérieure d’Arts et Métiers de Rabat - ENSAM Rabat",
+      "arabicName": "المدرسة الوطنية العليا للفنون والمهن الرباط - ENSAM Rabat",
+      "acronym": "ENSAM Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Ecole Nationale Supérieure des Arts et Métiers Rabat",
+        "ENSAM Rabat",
+        "المدرسة الوطنية العليا للفنون والمهن الرباط",
+        "ENSAM",
+        "École Nationale Supérieure des Arts et Métiers Rabat - ENSAM Rabat",
+        "Ecole Nationale Supérieure d’Arts et Métiers (ENSAM Rabat)",
+        "National School of Arts and Crafts (ENSAM Rabat)",
+        "École Nationale Supérieure d’Arts et Métiers de Rabat",
+        "École Nationale Supérieure d’Arts et Métiers de Rabat - ENSAMR",
+        "Ecole Nationale Supérieure d’Arts et Métiers (École Nationale Supérieure des Arts et Métiers Rabat - ENSAM Rabat)",
+        "Ecole Nationale Supérieure d’Arts et Métiers (ENSAM Rabat)"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-de-l-education-rabat",
+      "name": "Faculté des Sciences de l'Éducation Rabat - FSE Rabat",
+      "arabicName": "كلية علوم التربية الرباط - FSE Rabat",
+      "acronym": "FSE Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Faculté des Sciences de l'Education Rabat",
+        "FSE Rabat",
+        "كلية علوم التربية الرباط",
+        "FSE"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-de-rabat",
+      "name": "École Normale Supérieure de Rabat - ENSR",
+      "arabicName": "المدرسة العليا للأساتذة الرباط - ENS Rabat",
+      "acronym": "ENS Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Ecole Normale Supérieure de Rabat",
+        "ENS Rabat",
+        "المدرسة العليا للأساتذة الرباط",
+        "ENS RABAT",
+        "École Normale Supérieure de Rabat",
+        "ENS",
+        "ENSR"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-sale",
+      "name": "École Supérieure de Technologie Salé - EST Salé",
+      "arabicName": "المدرسة العليا للتكنولوجيا سلا - EST Salé",
+      "acronym": "EST Salé",
+      "city": "Salé",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Ecole Supérieure de Technologie Salé",
+        "EST Salé",
+        "المدرسة العليا للتكنولوجيا سلا",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-scientifique-rabat",
+      "name": "Institut Scientifique Rabat - IS Rabat",
+      "arabicName": "المعهد العلمي الرباط - IS Rabat",
+      "acronym": "IS Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": ["Institut Scientifique Rabat", "IS Rabat", "المعهد العلمي الرباط", "IS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-d-etudes-et-de-recherches-pour-l-arabisation-rabat",
+      "name": "Institut d'Études et de Recherches pour l'Arabisation Rabat - IERA Rabat",
+      "arabicName": "معهد الدراسات والأبحاث للتعريب الرباط - IERA Rabat",
+      "acronym": "IERA Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Institut d'Etudes et de Recherches pour l'Arabisation Rabat",
+        "IERA Rabat",
+        "معهد الدراسات والأبحاث للتعريب الرباط",
+        "IERA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-universitaire-des-etudes-africaines-euro-mediterraneennes-et-ibero-americaines",
+      "name": "Institut Universitaire des Études Africaines, Euro-méditerranéennes et Ibéro-américaines - IUEAEMIA Rabat",
+      "arabicName": "المعهد الجامعي للدراسات الإفريقية والأور ومتوسطية والإييرية الأمريكية - IUEAEMIA Rabat",
+      "acronym": "IUEAEMIA Rabat",
+      "city": "Rabat",
+      "universityId": "ma-university-um5",
+      "aliases": [
+        "Institut Universitaire des Etudes Africaines, Euro-méditerranéennes et Ibéro-américaines",
+        "IUEAEMIA Rabat",
+        "المعهد الجامعي للدراسات الإفريقية والأور ومتوسطية والإييرية الأمريكية",
+        "IUEAEMIA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-ain-chock-casablanca",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Aïn Chock Casablanca - FSJES Aïn Chock Casablanca",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية عين الشق الدار البيضاء - FSJES Aïn Chock Casablanca",
+      "acronym": "FSJES Aïn Chock Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Aïn Chock Casablanca",
+        "FSJES Aïn Chock Casablanca",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية عين الشق الدار البيضاء",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-ain-sebaa-casablanca",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Aïn Sebaa Casablanca - FSJES Aïn Sebaa Casablanca",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية عين السبع الدار البيضاء - FSJES Aïn Sebaa Casablanca",
+      "acronym": "FSJES Aïn Sebaa Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Aïn Sebaa Casablanca",
+        "FSJES Aïn Sebaa Casablanca",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية عين السبع الدار البيضاء",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-mohammedia",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Mohammedia - FSJES Mohammedia",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية المحمدية - FSJES Mohammedia",
+      "acronym": "FSJES Mohammedia",
+      "city": "Mohammedia",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Mohammedia",
+        "FSJES Mohammedia",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية المحمدية",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-ain-chock-casablanca",
+      "name": "Faculté des Lettres et des Sciences Humaines Aïn Chock Casablanca - FLSH Aïn Chock Casablanca",
+      "arabicName": "كلية الآداب والعلوم الإنسانية عين الشق الدار البيضاء - FLSH Aïn Chock Casablanca",
+      "acronym": "FLSH Aïn Chock Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Aïn Chock Casablanca",
+        "FLSH Aïn Chock Casablanca",
+        "كلية الآداب والعلوم الإنسانية عين الشق الدار البيضاء",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-ben-m-sick-casablanca",
+      "name": "Faculté des Sciences Ben M’Sik - FSBM",
+      "arabicName": "كلية الآداب والعلوم الإنسانية بن مسيك الدار البيضاء - FLSH Ben M'Sick Casablanca",
+      "acronym": "FLSH Ben M'Sick Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Ben M'Sick Casablanca",
+        "FLSH Ben M'Sick Casablanca",
+        "كلية الآداب والعلوم الإنسانية بن مسيك الدار البيضاء",
+        "FLSH",
+        "Faculté des Lettres et des Sciences Humaines Ben M'Sick Casablanca - FLSH Ben M'Sick Casablanca",
+        "Faculté des Sciences Ben M'Sik - Université Hassan II Mohamedia (UH2M)",
+        "Ben M'Sik Faculty of Sciences - Hassan II Mohamedia University (UH2M)",
+        "Faculté des Sciences Ben M’Sik",
+        "FSBM"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-mohammedia",
+      "name": "Faculté des Lettres et des Sciences Humaines Mohammedia - FLSH Mohammedia",
+      "arabicName": "كلية الآداب والعلوم الإنسانية المحمدية - FLSH Mohammedia",
+      "acronym": "FLSH Mohammedia",
+      "city": "Mohammedia",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Mohammedia",
+        "FLSH Mohammedia",
+        "كلية الآداب والعلوم الإنسانية المحمدية",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-ain-chock-casablanca",
+      "name": "Faculté des Sciences Aïn Chock Casablanca - FS Aïn Chock Casablanca",
+      "arabicName": "كلية العلوم عين الشق الدار البيضاء - FS Aïn Chock Casablanca",
+      "acronym": "FS Aïn Chock Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Sciences Aïn Chock Casablanca",
+        "FS Aïn Chock Casablanca",
+        "كلية العلوم عين الشق الدار البيضاء",
+        "FS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-ben-m-sick-casablanca",
+      "name": "Faculté des Sciences Ben M'Sick Casablanca - FS Ben M'Sick Casablanca",
+      "arabicName": "كلية العلوم بن مسيك الدار البيضاء - FS Ben M'Sick Casablanca",
+      "acronym": "FS Ben M'Sick Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Sciences Ben M'Sick Casablanca",
+        "FS Ben M'Sick Casablanca",
+        "كلية العلوم بن مسيك الدار البيضاء",
+        "FS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-mohammedia",
+      "name": "Faculté des Sciences et Techniques Mohammedia - FST Mohammedia",
+      "arabicName": "كلية العلوم والتقنيات المحمدية - FST Mohammedia",
+      "acronym": "FST Mohammedia",
+      "city": "Mohammedia",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté des Sciences et Techniques Mohammedia",
+        "FST Mohammedia",
+        "كلية العلوم والتقنيات المحمدية",
+        "FST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-casablanca",
+      "name": "Faculté de Médecine et de Pharmacie Casablanca - FMP Casablanca",
+      "arabicName": "كلية الطب والصيدلة الدار البيضاء - FMP Casablanca",
+      "acronym": "FMP Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Casablanca",
+        "FMP Casablanca",
+        "كلية الطب والصيدلة الدار البيضاء",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-dentaire-casablanca",
+      "name": "Faculté de Médecine Dentaire Casablanca - FMD Casablanca",
+      "arabicName": "كلية طب الأسنان الدار البيضاء - FMD Casablanca",
+      "acronym": "FMD Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Faculté de Médecine Dentaire Casablanca",
+        "FMD Casablanca",
+        "كلية طب الأسنان الدار البيضاء",
+        "FMD"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-d-electricite-et-de-mecanique-casablanca",
+      "name": "École Nationale Supérieure d'Electricité et de Mécanique Casablanca - ENSEM Casablanca",
+      "arabicName": "المدرسة الوطنية العليا للكهرباء والميكانيك الدار البيضاء - ENSEM Casablanca",
+      "acronym": "ENSEM Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Nationale Supérieure d'Electricité et de Mécanique Casablanca",
+        "ENSEM Casablanca",
+        "المدرسة الوطنية العليا للكهرباء والميكانيك الدار البيضاء",
+        "ENSEM"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-des-arts-et-metiers-casablanca",
+      "name": "École Nationale Supérieure des Arts et Métiers Casablanca - ENSAM Casablanca",
+      "arabicName": "المدرسة الوطنية العليا للفنون والمهن الدار البيضاء - ENSAM Casablanca",
+      "acronym": "ENSAM Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Nationale Supérieure des Arts et Métiers Casablanca",
+        "ENSAM Casablanca",
+        "المدرسة الوطنية العليا للفنون والمهن الدار البيضاء",
+        "ENSAM"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-casablanca",
+      "name": "École Nationale de Commerce et de Gestion Casablanca - ENCG Casablanca",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير الدار البيضاء - ENCG Casablanca",
+      "acronym": "ENCG Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Casablanca",
+        "ENCG Casablanca",
+        "المدرسة الوطنية للتجارة والتسيير الدار البيضاء",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-casablanca",
+      "name": "École Normale Supérieure Casablanca - ENS Casablanca",
+      "arabicName": "المدرسة العليا للأساتذة الدار البيضاء - ENS Casablanca",
+      "acronym": "ENS Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Normale Supérieure Casablanca",
+        "ENS Casablanca",
+        "المدرسة العليا للأساتذة الدار البيضاء",
+        "ENS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-de-l-enseignement-technique-mohammedia",
+      "name": "École Normale Supérieure de l’Enseignement Technique de Mohammedia - ENSET",
+      "arabicName": "المدرسة العليا لأساتذة التعليم التقني بالمحمدية - ENSET",
+      "acronym": "ENSET Mohammedia",
+      "city": "Mohammedia",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Normale Supérieure de l'Enseignement Technique Mohammedia",
+        "ENSET Mohammedia",
+        "المدرسة العليا لأساتذة التعليم التقني المحمدية",
+        "École Normale Supérieure de l’Enseignement Technique de Mohammedia",
+        "ENSET المحمدية",
+        "ENSET"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-casablanca",
+      "name": "École Supérieure de Technologie Casablanca - EST Casablanca",
+      "arabicName": "المدرسة العليا للتكنولوجيا الدار البيضاء - EST Casablanca",
+      "acronym": "EST Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Supérieure de Technologie Casablanca",
+        "EST Casablanca",
+        "المدرسة العليا للتكنولوجيا الدار البيضاء",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieur-d-art-et-design-casablanca",
+      "name": "École Nationale Supérieur d'Art et Design Casablanca - ENSAD Casablanca",
+      "arabicName": "المدرسة الوطنية العليا للفن والتصميم الدار البيضاء - ENSAD Casablanca",
+      "acronym": "ENSAD Casablanca",
+      "city": "Casablanca",
+      "universityId": "ma-university-uh2c",
+      "aliases": [
+        "Ecole Nationale Supérieur d'Art et Design Casablanca",
+        "ENSAD Casablanca",
+        "المدرسة الوطنية العليا للفن والتصميم الدار البيضاء",
+        "ENSAD"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-chariaa-fes",
+      "name": "Faculté Chariâa Fès - Faculté Chariâa Fès",
+      "arabicName": "كلية الشريعة فاس - Faculté Chariâa Fès",
+      "acronym": "Faculté Chariâa Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": ["Faculté Chariâa Fès", "كلية الشريعة فاس"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-fes",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Fès - FSJES Fès",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية فاس - FSJES Fès",
+      "acronym": "FSJES Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Fès",
+        "FSJES Fès",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية فاس",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-dhar-el-mahraz-fes",
+      "name": "Faculté des Lettres et des Sciences Humaines Dhar El Mahraz Fès - FLSH Dhar El Mahraz Fès",
+      "arabicName": "كلية الآداب والعلوم الإنسانية ظهر المهراز فاس - FLSH Dhar El Mahraz Fès",
+      "acronym": "FLSH Dhar El Mahraz Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Dhar El Mahraz Fès",
+        "FLSH Dhar El Mahraz Fès",
+        "كلية الآداب والعلوم الإنسانية ظهر المهراز فاس",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-sais-fes",
+      "name": "Faculté des Lettres et des Sciences Humaines Sais Fès - FLSH Sais Fès",
+      "arabicName": "كلية الآداب والعلوم الإنسانية سايس فاس - FLSH Sais Fès",
+      "acronym": "FLSH Sais Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Sais Fès",
+        "FLSH Sais Fès",
+        "كلية الآداب والعلوم الإنسانية سايس فاس",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-dhar-el-mahraz-fes",
+      "name": "Faculté des Sciences Dhar El Mahraz Fès - FS Dhar El Mahraz Fès",
+      "arabicName": "كلية العلوم ظهر المهراز فاس - FS Dhar El Mahraz Fès",
+      "acronym": "FS Dhar El Mahraz Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté des Sciences Dhar El Mahraz Fès",
+        "FS Dhar El Mahraz Fès",
+        "كلية العلوم ظهر المهراز فاس",
+        "FS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-taza",
+      "name": "Faculté Polydisciplinaire Taza - FP Taza",
+      "arabicName": "الكلية المتعددة التخصصات تازة - FP Taza",
+      "acronym": "FP Taza",
+      "city": "Taza",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté Polydisciplinaire Taza",
+        "FP Taza",
+        "الكلية المتعددة التخصصات تازة",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-sais-fes",
+      "name": "Faculté des Sciences et Techniques Sais Fès - FST Sais Fès",
+      "arabicName": "كلية العلوم والتقنيات سايس فاس - FST Sais Fès",
+      "acronym": "FST Sais Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté des Sciences et Techniques Sais Fès",
+        "FST Sais Fès",
+        "كلية العلوم والتقنيات سايس فاس",
+        "FST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-de-pharmacie-et-de-medecine-dentaire-de-fes",
+      "name": "Faculté de Médecine, de Pharmacie et de Médecine Dentaire de Fès - FMPMD Fès",
+      "arabicName": "كلية الطب والصيدلة وطب الأسنان فاس - FMPMD Fès",
+      "acronym": "FMPMD Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Faculté de Médecine, de Pharmacie et de Médecine Dentaire de Fès",
+        "FMPMD Fès",
+        "كلية الطب والصيدلة وطب الأسنان فاس",
+        "FMPMD"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-fes",
+      "name": "École Nationale des Sciences Appliquées Fès - ENSA Fès",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية فاس - ENSA Fès",
+      "acronym": "ENSA Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Fès",
+        "ENSA Fès",
+        "المدرسة الوطنية للعلوم التطبيقية فاس",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-fes",
+      "name": "École Nationale de Commerce et de Gestion Fès - ENCG Fès",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير فاس - ENCG Fès",
+      "acronym": "ENCG Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Fès",
+        "ENCG Fès",
+        "المدرسة الوطنية للتجارة والتسيير فاس",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-fes",
+      "name": "École Normale Supérieure Fès - ENS Fès",
+      "arabicName": "المدرسة العليا للأساتذة فاس - ENS Fès",
+      "acronym": "ENS Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": ["Ecole Normale Supérieure Fès", "ENS Fès", "المدرسة العليا للأساتذة فاس", "ENS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-fes",
+      "name": "École Supérieure de Technologie de Fès - ESTF",
+      "arabicName": "المدرسة العليا للتكنولوجيا بفاس - ESTF",
+      "acronym": "EST Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Ecole Supérieure de Technologie Fès",
+        "EST Fès",
+        "المدرسة العليا للتكنولوجيا فاس",
+        "EST Fez",
+        "École Supérieure de Technologie de Fès",
+        "EST فاس",
+        "EST",
+        "ESTF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-des-sciences-de-sport-de-fes",
+      "name": "Institut des Sciences de Sport de Fès - ISS Fès",
+      "arabicName": "معهد علوم الرياضة فاس - ISS Fès",
+      "acronym": "ISS Fès",
+      "city": "Fès",
+      "universityId": "ma-university-usmba",
+      "aliases": [
+        "Institut des Sciences de Sport de Fès",
+        "ISS Fès",
+        "معهد علوم الرياضة فاس",
+        "ISS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-la-langue-arabe-marrakech",
+      "name": "Faculté de la Langue Arabe Marrakech - FLA Marrakech",
+      "arabicName": "كلية اللغة العربية مراكش - FLA Marrakech",
+      "acronym": "FLA Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté de la Langue Arabe Marrakech",
+        "FLA Marrakech",
+        "كلية اللغة العربية مراكش",
+        "FLA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-marrakech",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Marrakech - FSJES Marrakech",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية مراكش - FSJES Marrakech",
+      "acronym": "FSJES Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Marrakech",
+        "FSJES Marrakech",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية مراكش",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-el-kelaa-des-sraghna",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales EL Kelâa des Sraghna - FSJES EL Kelâa des Sraghna",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية قلعة السراغنة - FSJES EL Kelâa des Sraghna",
+      "acronym": "FSJES EL Kelâa des Sraghna",
+      "city": "EL Kelâa des Sraghna",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales EL Kelâa des Sraghna",
+        "FSJES EL Kelâa des Sraghna",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية قلعة السراغنة",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-marrakech",
+      "name": "Faculté des Lettres et des Sciences Humaines Marrakech - FLSH Marrakech",
+      "arabicName": "كلية الآداب والعلوم الإنسانية مراكش - FLSH Marrakech",
+      "acronym": "FLSH Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Marrakech",
+        "FLSH Marrakech",
+        "كلية الآداب والعلوم الإنسانية مراكش",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-semlalia-marrakech",
+      "name": "Faculté des Sciences Semlalia - FSSM",
+      "arabicName": "كلية العلوم السملالية مراكش - FS Semlalia Marrakech",
+      "acronym": "FS Semlalia Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté des Sciences Semlalia Marrakech",
+        "FS Semlalia Marrakech",
+        "كلية العلوم السملالية مراكش",
+        "FS",
+        "Faculté des Sciences Semlalia Marrakech - FS Semlalia Marrakech",
+        "Faculté des sciences Semlalia - Université Cadi Ayyad, Marrakech",
+        "Semlalia Faculty of Sciences - Cadi Ayyad University, Marrakech",
+        "Faculté des Sciences Semlalia de Marrakech",
+        "Faculté des Sciences Semlalia de Marrakech - FSSM",
+        "Faculté des sciences Semlalia - Université Cadi Ayyad - UCA, Marrakech",
+        "Faculté des Sciences Semlalia - FSSM",
+        "FSSM"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-safi",
+      "name": "Faculté Polydisciplinaire Safi - FP Safi",
+      "arabicName": "الكلية المتعددة التخصصات آسفي - FP Safi",
+      "acronym": "FP Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté Polydisciplinaire Safi",
+        "FP Safi",
+        "الكلية المتعددة التخصصات آسفي",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-gueliz-marrakech",
+      "name": "Faculté des Sciences et Techniques Guéliz Marrakech - FST Guéliz Marrakech",
+      "arabicName": "كلية العلوم والتقنيات كليز مراكش - FST Guéliz Marrakech",
+      "acronym": "FST Guéliz Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté des Sciences et Techniques Guéliz Marrakech",
+        "FST Guéliz Marrakech",
+        "كلية العلوم والتقنيات كليز مراكش",
+        "FST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-marrakech",
+      "name": "Faculté de Médecine et de Pharmacie Marrakech - FMP Marrakech",
+      "arabicName": "كلية الطب والصيدلة مراكش - FMP Marrakech",
+      "acronym": "FMP Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Marrakech",
+        "FMP Marrakech",
+        "كلية الطب والصيدلة مراكش",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-marrakech",
+      "name": "École Nationale des Sciences Appliquées Marrakech - ENSA Marrakech",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية مراكش - ENSA Marrakech",
+      "acronym": "ENSA Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Marrakech",
+        "ENSA Marrakech",
+        "المدرسة الوطنية للعلوم التطبيقية مراكش",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-safi",
+      "name": "École Nationale des Sciences Appliquées Safi - ENSA Safi",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية آسفي - ENSA Safi",
+      "acronym": "ENSA Safi",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Safi",
+        "ENSA Safi",
+        "المدرسة الوطنية للعلوم التطبيقية آسفي",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-marrakech",
+      "name": "École Nationale de Commerce et de Gestion Marrakech - ENCG Marrakech",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير مراكش - ENCG Marrakech",
+      "acronym": "ENCG Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Marrakech",
+        "ENCG Marrakech",
+        "المدرسة الوطنية للتجارة والتسيير مراكش",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-marrakech",
+      "name": "École Normale Supérieure Marrakech - ENS Marrakech",
+      "arabicName": "المدرسة العليا للأساتذة مراكش - ENS Marrakech",
+      "acronym": "ENS Marrakech",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Normale Supérieure Marrakech",
+        "ENS Marrakech",
+        "المدرسة العليا للأساتذة مراكش",
+        "ENS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-safi",
+      "name": "École Supérieure de Technologie Safi - EST Safi",
+      "arabicName": "المدرسة العليا للتكنولوجيا آسفي - EST Safi",
+      "acronym": "EST Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Supérieure de Technologie Safi",
+        "EST Safi",
+        "المدرسة العليا للتكنولوجيا آسفي",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-essaouira",
+      "name": "École Supérieure de Technologie Essaouira - EST Essaouira",
+      "arabicName": "المدرسة العليا للتكنولوجيا الصويرة - EST Essaouira",
+      "acronym": "EST Essaouira",
+      "city": "Essaouira",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Supérieure de Technologie Essaouira",
+        "EST Essaouira",
+        "المدرسة العليا للتكنولوجيا الصويرة",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-el-kelaa-des-sraghna",
+      "name": "École Supérieure de Technologie EL Kelâa des Sraghna - EST EL Kelâa des Sraghna",
+      "arabicName": "المدرسة العليا للتكنولوجيا قلعة السراغنة - EST EL Kelâa des Sraghna",
+      "acronym": "EST EL Kelâa des Sraghna",
+      "city": "EL Kelâa des Sraghna",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "Ecole Supérieure de Technologie EL Kelâa des Sraghna",
+        "EST EL Kelâa des Sraghna",
+        "المدرسة العليا للتكنولوجيا قلعة السراغنة",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-d-economie-et-de-gestion-beni-mellal",
+      "name": "Faculté d'Economie et de Gestion Béni Mellal - FEG Béni Mellal",
+      "arabicName": "كلية الاقتصاد والتدبير بني ملال - FEG Béni Mellal",
+      "acronym": "FEG Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Faculté d'Economie et de Gestion Béni Mellal",
+        "FEG Béni Mellal",
+        "كلية الاقتصاد والتدبير بني ملال",
+        "FEG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-beni-mellal",
+      "name": "Faculté des Lettres et des Sciences Humaines Béni Mellal - FLSH Béni Mellal",
+      "arabicName": "كلية الآداب والعلوم الإنسانية بني ملال - FLSH Béni Mellal",
+      "acronym": "FLSH Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Béni Mellal",
+        "FLSH Béni Mellal",
+        "كلية الآداب والعلوم الإنسانية بني ملال",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-beni-mellal",
+      "name": "Faculté Polydisciplinaire Béni Mellal - FP Béni Mellal",
+      "arabicName": "الكلية المتعددة التخصصات بني ملال - FP Béni Mellal",
+      "acronym": "FP Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Faculté Polydisciplinaire Béni Mellal",
+        "FP Béni Mellal",
+        "الكلية المتعددة التخصصات بني ملال",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-khouribga",
+      "name": "Faculté Polydisciplinaire Khouribga - FP Khouribga",
+      "arabicName": "الكلية المتعددة التخصصات خريبكة - FP Khouribga",
+      "acronym": "FP Khouribga",
+      "city": "Khouribga",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Faculté Polydisciplinaire Khouribga",
+        "FP Khouribga",
+        "الكلية المتعددة التخصصات خريبكة",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-beni-mellal",
+      "name": "Faculté des Sciences et Techniques Béni Mellal - FST Béni Mellal",
+      "arabicName": "كلية العلوم والتقنيات بني ملال - FST Béni Mellal",
+      "acronym": "FST Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Faculté des Sciences et Techniques Béni Mellal",
+        "FST Béni Mellal",
+        "كلية العلوم والتقنيات بني ملال",
+        "FST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-beni-mellal",
+      "name": "Faculté de Médecine et de Pharmacie Béni Mellal - FMP Béni Mellal",
+      "arabicName": "كلية الطب والصيدلة بني ملال - FMP Béni Mellal",
+      "acronym": "FMP Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Béni Mellal",
+        "FMP Béni Mellal",
+        "كلية الطب والصيدلة بني ملال",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-beni-mellal",
+      "name": "École Nationale des Sciences Appliquées Béni Mellal - ENSA Béni Mellal",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية بني ملال - ENSA Béni Mellal",
+      "acronym": "ENSA Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Béni Mellal",
+        "ENSA Béni Mellal",
+        "المدرسة الوطنية للعلوم التطبيقية بني ملال",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-khouribga",
+      "name": "École Nationale des Sciences Appliquées Khouribga - ENSA Khouribga",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية خريبكة - ENSA Khouribga",
+      "acronym": "ENSA Khouribga",
+      "city": "Khouribga",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Khouribga",
+        "ENSA Khouribga",
+        "المدرسة الوطنية للعلوم التطبيقية خريبكة",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-beni-mellal",
+      "name": "École Nationale de Commerce et de Gestion Béni Mellal - ENCG Béni Mellal",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير بني ملال - ENCG Béni Mellal",
+      "acronym": "ENCG Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Béni Mellal",
+        "ENCG Béni Mellal",
+        "المدرسة الوطنية للتجارة والتسيير بني ملال",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-l-education-et-de-la-formation-beni-mellal",
+      "name": "École Supérieure de l'Éducation et de la Formation Béni Mellal - ESEF Béni Mellal",
+      "arabicName": "المدرسة العليا للتربية والتكوين بني ملال - ESEF Béni Mellal",
+      "acronym": "ESEF Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Supérieure de l'Education et de la Formation Béni Mellal",
+        "ESEF Béni Mellal",
+        "المدرسة العليا للتربية والتكوين بني ملال",
+        "ESEF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-beni-mellal",
+      "name": "École Supérieure de Technologie Béni Mellal - EST Béni Mellal",
+      "arabicName": "المدرسة العليا للتكنولوجيا بني ملال - EST Béni Mellal",
+      "acronym": "EST Béni Mellal",
+      "city": "Béni Mellal",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Supérieure de Technologie Béni Mellal",
+        "EST Béni Mellal",
+        "المدرسة العليا للتكنولوجيا بني ملال",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-khenifra",
+      "name": "École Supérieure de Technologie Khénifra - EST Khénifra",
+      "arabicName": "المدرسة العليا للتكنولوجيا خنيفرة - EST Khénifra",
+      "acronym": "EST Khénifra",
+      "city": "Khénifra",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Supérieure de Technologie Khénifra",
+        "EST Khénifra",
+        "المدرسة العليا للتكنولوجيا خنيفرة",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-fquih-ben-salah",
+      "name": "École Supérieure de Technologie Fquih Ben Salah - EST Fquih Ben Salah",
+      "arabicName": "المدرسة العليا للتكنولوجيا الفقيه بنصالح - EST Fquih Ben Salah",
+      "acronym": "EST Fquih Ben Salah",
+      "city": "Fquih Ben Salah",
+      "universityId": "ma-university-usms",
+      "aliases": [
+        "Ecole Supérieure de Technologie Fquih Ben Salah",
+        "EST Fquih Ben Salah",
+        "المدرسة العليا للتكنولوجيا الفقيه بنصالح",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-oujda",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Oujda - FSJES Oujda",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية وجدة - FSJES Oujda",
+      "acronym": "FSJES Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Oujda",
+        "FSJES Oujda",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية وجدة",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-oujda",
+      "name": "Faculté des Lettres et des Sciences Humaines Oujda - FLSH Oujda",
+      "arabicName": "كلية الآداب والعلوم الإنسانية وجدة - FLSH Oujda",
+      "acronym": "FLSH Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Oujda",
+        "FLSH Oujda",
+        "كلية الآداب والعلوم الإنسانية وجدة",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-oujda",
+      "name": "Faculté des Sciences Oujda - FS Oujda",
+      "arabicName": "كلية العلوم وجدة - FS Oujda",
+      "acronym": "FS Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": ["Faculté des Sciences Oujda", "FS Oujda", "كلية العلوم وجدة", "FS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-nador",
+      "name": "Faculté Polydisciplinaire Nador - FP Nador",
+      "arabicName": "الكلية المتعددة التخصصات الناظور - FP Nador",
+      "acronym": "FP Nador",
+      "city": "Nador",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Faculté Polydisciplinaire Nador",
+        "FP Nador",
+        "الكلية المتعددة التخصصات الناظور",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-oujda",
+      "name": "Faculté de Médecine et de Pharmacie Oujda - FMP Oujda",
+      "arabicName": "كلية الطب والصيدلة وجدة - FMP Oujda",
+      "acronym": "FMP Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Oujda",
+        "FMP Oujda",
+        "كلية الطب والصيدلة وجدة",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-oujda",
+      "name": "École Nationale des Sciences Appliquées Oujda - ENSA Oujda",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية وجدة - ENSA Oujda",
+      "acronym": "ENSA Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Oujda",
+        "ENSA Oujda",
+        "المدرسة الوطنية للعلوم التطبيقية وجدة",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-de-l-intelligence-artificielle-et-du-digital-berkene",
+      "name": "École Nationale Supérieure de l'Intelligence Artificielle et du Digital Berkene - ENSIAD Berkene",
+      "arabicName": "المدرسة الوطنية العليا للذكاء الاصطناعي والرقمنة بركان - ENSIAD Berkene",
+      "acronym": "ENSIAD Berkene",
+      "city": "Berkene",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Ecole Nationale Supérieure de l'Intelligence Artificielle et du Digital Berkene",
+        "ENSIAD Berkene",
+        "المدرسة الوطنية العليا للذكاء الاصطناعي والرقمنة بركان",
+        "ENSIAD"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-oujda",
+      "name": "École Nationale de Commerce et de Gestion Oujda - ENCG Oujda",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير وجدة - ENCG Oujda",
+      "acronym": "ENCG Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Oujda",
+        "ENCG Oujda",
+        "المدرسة الوطنية للتجارة والتسيير وجدة",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-l-education-et-de-la-formation-oujda",
+      "name": "École Supérieure de l'Éducation et de la Formation Oujda - ESEF Oujda",
+      "arabicName": "المدرسة العليا للتربية والتكوين وجدة - ESEF Oujda",
+      "acronym": "ESEF Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Ecole Supérieure de l'Education et de la Formation Oujda",
+        "ESEF Oujda",
+        "المدرسة العليا للتربية والتكوين وجدة",
+        "ESEF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-oujda",
+      "name": "École Supérieure de Technologie Oujda - EST Oujda",
+      "arabicName": "المدرسة العليا للتكنولوجيا وجدة - EST Oujda",
+      "acronym": "EST Oujda",
+      "city": "Oujda",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Ecole Supérieure de Technologie Oujda",
+        "EST Oujda",
+        "المدرسة العليا للتكنولوجيا وجدة",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-nador",
+      "name": "École Supérieure de Technologie Nador - EST Nador",
+      "arabicName": "المدرسة العليا للتكنولوجيا الناظور - EST Nador",
+      "acronym": "EST Nador",
+      "city": "Nador",
+      "universityId": "ma-university-ump",
+      "aliases": [
+        "Ecole Supérieure de Technologie Nador",
+        "EST Nador",
+        "المدرسة العليا للتكنولوجيا الناظور",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-oussoul-eddine-tetouan",
+      "name": "Faculté Oussoul Eddine Tétouan - FOE Tétouan",
+      "arabicName": "كلية أصول الدين تطوان - FOE Tétouan",
+      "acronym": "FOE Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": ["Faculté Oussoul Eddine Tétouan", "FOE Tétouan", "كلية أصول الدين تطوان", "FOE"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-tanger",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Tanger - FSJES Tanger",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية طنجة - FSJES Tanger",
+      "acronym": "FSJES Tanger",
+      "city": "Tanger",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Tanger",
+        "FSJES Tanger",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية طنجة",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-tetouan",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Tétouan - FSJES Tétouan",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية تطوان - FSJES Tétouan",
+      "acronym": "FSJES Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Tétouan",
+        "FSJES Tétouan",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية تطوان",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-tetouan",
+      "name": "Faculté des Lettres et des Sciences Humaines Tétouan - FLSH Tétouan",
+      "arabicName": "كلية الآداب والعلوم الإنسانية تطوان - FLSH Tétouan",
+      "acronym": "FLSH Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Tétouan",
+        "FLSH Tétouan",
+        "كلية الآداب والعلوم الإنسانية تطوان",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-tetouan",
+      "name": "Faculté des Sciences Tétouan - FS Tétouan",
+      "arabicName": "كلية العلوم تطوان - FS Tétouan",
+      "acronym": "FS Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": ["Faculté des Sciences Tétouan", "FS Tétouan", "كلية العلوم تطوان", "FS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-larache",
+      "name": "Faculté Polydisciplinaire Larache - FP Larache",
+      "arabicName": "الكلية المتعددة التخصصات العرائش - FP Larache",
+      "acronym": "FP Larache",
+      "city": "Larache",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté Polydisciplinaire Larache",
+        "FP Larache",
+        "الكلية المتعددة التخصصات العرائش",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-kssar-el-kebir",
+      "name": "Faculté Polydisciplinaire Kssar El Kébir - FP Kssar El Kébir",
+      "arabicName": "الكلية المتعددة التخصصات القصر الكبير - FP Kssar El Kébir",
+      "acronym": "FP Kssar El Kébir",
+      "city": "Kssar El Kébir",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté Polydisciplinaire Kssar El Kébir",
+        "FP Kssar El Kébir",
+        "الكلية المتعددة التخصصات القصر الكبير",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-tanger",
+      "name": "Faculté des Sciences et Techniques de Tanger - FSTT",
+      "arabicName": "كلية العلوم والتقنيات بطنجة - FSTT",
+      "acronym": "FST Tanger",
+      "city": "Tanger",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté des Sciences et Techniques Tanger",
+        "FST Tanger",
+        "كلية العلوم والتقنيات طنجة",
+        "FST de Tanger",
+        "Faculté des Sciences et Techniques de Tanger",
+        "FST Tangier",
+        "FST طنجة",
+        "FST",
+        "FSTT"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-al-hoceima",
+      "name": "Faculté des Sciences et Techniques Al Hoceima - FST Al Hoceima",
+      "arabicName": "كلية العلوم والتقنيات الحسيمة - FST Al Hoceima",
+      "acronym": "FST Al Hoceima",
+      "city": "Al Hoceima",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté des Sciences et Techniques Al Hoceima",
+        "FST Al Hoceima",
+        "كلية العلوم والتقنيات الحسيمة",
+        "FST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-pharmacie-tanger",
+      "name": "Faculté de Médecine et Pharmacie Tanger - FMP Tanger",
+      "arabicName": "كلية الطب والصيدلة طنجة - FMP Tanger",
+      "acronym": "FMP Tanger",
+      "city": "Tanger",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Faculté de Médecine et Pharmacie Tanger",
+        "FMP Tanger",
+        "كلية الطب والصيدلة طنجة",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-tanger",
+      "name": "École Nationale des Sciences Appliquées Tanger - ENSA Tanger",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية طنجة - ENSA Tanger",
+      "acronym": "ENSA Tanger",
+      "city": "Tanger",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Tanger",
+        "ENSA Tanger",
+        "المدرسة الوطنية للعلوم التطبيقية طنجة",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-tetouan",
+      "name": "École Nationale des Sciences Appliquées Tétouan - ENSA Tétouan",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية تطوان - ENSA Tétouan",
+      "acronym": "ENSA Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Tétouan",
+        "ENSA Tétouan",
+        "المدرسة الوطنية للعلوم التطبيقية تطوان",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-al-hoceima",
+      "name": "École Nationale des Sciences Appliquées Al Hoceima - ENSA Al Hoceima",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية الحسيمة - ENSA Al Hoceima",
+      "acronym": "ENSA Al Hoceima",
+      "city": "Al Hoceima",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Al Hoceima",
+        "ENSA Al Hoceima",
+        "المدرسة الوطنية للعلوم التطبيقية الحسيمة",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-tanger",
+      "name": "École Nationale de Commerce et de Gestion Tanger - ENCG Tanger",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير طنجة - ENCG Tanger",
+      "acronym": "ENCG Tanger",
+      "city": "Tanger",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Tanger",
+        "ENCG Tanger",
+        "المدرسة الوطنية للتجارة والتسيير طنجة",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-tetouan",
+      "name": "École Normale Supérieure Tétouan - ENS Tétouan",
+      "arabicName": "المدرسة العليا للأساتذة تطوان - ENS Tétouan",
+      "acronym": "ENS Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Normale Supérieure Tétouan",
+        "ENS Tétouan",
+        "المدرسة العليا للأساتذة تطوان",
+        "ENS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-roi-fahd-de-traduction-tanger",
+      "name": "École Supérieure Roi Fahd de Traduction Tanger - ESRFT Tanger",
+      "arabicName": "مدرسة الملك فهد العليا للترجمة طنجة - ESRFT Tanger",
+      "acronym": "ESRFT Tanger",
+      "city": "Tanger",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Supérieure Roi Fahd de Traduction Tanger",
+        "ESRFT Tanger",
+        "مدرسة الملك فهد العليا للترجمة طنجة",
+        "ESRFT"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-tetouan",
+      "name": "École Supérieure de Technologie Tétouan - EST Tétouan",
+      "arabicName": "المدرسة العليا للتكنولوجيا تطوان - EST Tétouan",
+      "acronym": "EST Tétouan",
+      "city": "Tétouan",
+      "universityId": "ma-university-uae",
+      "aliases": [
+        "Ecole Supérieure de Technologie Tétouan",
+        "EST Tétouan",
+        "المدرسة العليا للتكنولوجيا تطوان",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-el-jadida",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales El Jadida - FSJES El Jadida",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية الجديدة - FSJES El Jadida",
+      "acronym": "FSJES El Jadida",
+      "city": "El Jadida",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales El Jadida",
+        "FSJES El Jadida",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية الجديدة",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-el-jadida",
+      "name": "Faculté des Lettres et des Sciences Humaines El Jadida - FLSH El Jadida",
+      "arabicName": "كلية الآداب والعلوم الإنسانية الجديدة - FLSH El Jadida",
+      "acronym": "FLSH El Jadida",
+      "city": "El Jadida",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines El Jadida",
+        "FLSH El Jadida",
+        "كلية الآداب والعلوم الإنسانية الجديدة",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-el-jadida",
+      "name": "Faculté des Sciences El Jadida - FS El Jadida",
+      "arabicName": "كلية العلوم الجديدة - FS El Jadida",
+      "acronym": "FS El Jadida",
+      "city": "El Jadida",
+      "universityId": "ma-university-ucd",
+      "aliases": ["Faculté des Sciences El Jadida", "FS El Jadida", "كلية العلوم الجديدة", "FS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-sidi-bennour",
+      "name": "Faculté Polydisciplinaire Sidi Bennour - FP Sidi Bennour",
+      "arabicName": "الكلية المتعددة التخصصات سيدي بنور - FP Sidi Bennour",
+      "acronym": "FP Sidi Bennour",
+      "city": "Sidi Bennour",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Faculté Polydisciplinaire Sidi Bennour",
+        "FP Sidi Bennour",
+        "الكلية المتعددة التخصصات سيدي بنور",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-el-jadida",
+      "name": "École Nationale des Sciences Appliquées El Jadida - ENSA El Jadida",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية الجديدة - ENSA El Jadida",
+      "acronym": "ENSA El Jadida",
+      "city": "El Jadida",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées El Jadida",
+        "ENSA El Jadida",
+        "المدرسة الوطنية للعلوم التطبيقية الجديدة",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-el-jadida",
+      "name": "École Nationale de Commerce et de Gestion El Jadida - ENCG El Jadida",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير الجديدة - ENCG El Jadida",
+      "acronym": "ENCG El Jadida",
+      "city": "El Jadida",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion El Jadida",
+        "ENCG El Jadida",
+        "المدرسة الوطنية للتجارة والتسيير الجديدة",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-l-education-et-de-la-formation-el-jadida",
+      "name": "École Supérieure de l'Éducation et de la Formation El Jadida - ESEF El Jadida",
+      "arabicName": "المدرسة العليا للتربية والتكوين الجديدة - ESEF El Jadida",
+      "acronym": "ESEF El Jadida",
+      "city": "El Jadida",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Ecole Supérieure de l'Education et de la Formation El Jadida",
+        "ESEF El Jadida",
+        "المدرسة العليا للتربية والتكوين الجديدة",
+        "ESEF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieur-de-technologie-sidi-bennour",
+      "name": "École Supérieur de Technologie Sidi Bennour - EST Sidi Bennour",
+      "arabicName": "المدرسة العليا للتكنولوجيا سيدي بنور - EST Sidi Bennour",
+      "acronym": "EST Sidi Bennour",
+      "city": "Sidi Bennour",
+      "universityId": "ma-university-ucd",
+      "aliases": [
+        "Ecole Supérieur de Technologie Sidi Bennour",
+        "EST Sidi Bennour",
+        "المدرسة العليا للتكنولوجيا سيدي بنور",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-et-politiques-settat",
+      "name": "Faculté des Sciences Juridiques et Politiques Settat - FSJP Settat",
+      "arabicName": "كلية العلوم القانونية والسياسية سطات - FSJP Settat",
+      "acronym": "FSJP Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Faculté des Sciences Juridiques et Politiques Settat",
+        "FSJP Settat",
+        "كلية العلوم القانونية والسياسية سطات",
+        "FSJP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-d-economie-et-de-gestion-settat",
+      "name": "Faculté d'Economie et de Gestion Settat - FEG Settat",
+      "arabicName": "كلية الاقتصاد والتدبير سطات - FEG Settat",
+      "acronym": "FEG Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Faculté d'Economie et de Gestion Settat",
+        "FEG Settat",
+        "كلية الاقتصاد والتدبير سطات",
+        "FEG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-langues-arts-et-science-humaines-settat",
+      "name": "Faculté des Langues, Arts et Science humaines Settat - FLASH Settat",
+      "arabicName": "كلية اللغات والفنون والعلوم الإنسانية سطات - FLASH Settat",
+      "acronym": "FLASH Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Faculté des Langues, Arts et Science humaines Settat",
+        "FLASH Settat",
+        "كلية اللغات والفنون والعلوم الإنسانية سطات",
+        "FLASH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-settat",
+      "name": "Faculté des Sciences et Techniques de Settat - FSTS",
+      "arabicName": "كلية العلوم والتقنيات بسطات - FSTS",
+      "acronym": "FST Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Faculté des Sciences et Techniques Settat",
+        "FST Settat",
+        "كلية العلوم والتقنيات سطات",
+        "FST de Settat",
+        "Faculté des Sciences et Techniques de Settat",
+        "FST سطات",
+        "FST",
+        "FSTS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-berrechid",
+      "name": "École Nationale des Sciences Appliquées Berrechid - ENSA Berrechid",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية برشيد - ENSA Berrechid",
+      "acronym": "ENSA Berrechid",
+      "city": "Berrechid",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Berrechid",
+        "ENSA Berrechid",
+        "المدرسة الوطنية للعلوم التطبيقية برشيد",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-settat",
+      "name": "École Nationale de Commerce et de Gestion Settat - ENCG Settat",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير سطات - ENCG Settat",
+      "acronym": "ENCG Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Settat",
+        "ENCG Settat",
+        "المدرسة الوطنية للتجارة والتسيير سطات",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-l-education-et-de-la-formation-berrechid",
+      "name": "École Supérieure de l'Éducation et de la Formation Berrechid - ESEF Berrechid",
+      "arabicName": "المدرسة العليا للتربية والتكوين برشيد - ESEF Berrechid",
+      "acronym": "ESEF Berrechid",
+      "city": "Berrechid",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Ecole Supérieure de l'Education et de la Formation Berrechid",
+        "ESEF Berrechid",
+        "المدرسة العليا للتربية والتكوين برشيد",
+        "ESEF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-superieur-des-sciences-de-la-sante-settat",
+      "name": "Institut Supérieur des Sciences de la Santé Settat - ISSS Settat",
+      "arabicName": "المعهد العالي لعلوم الصحة سطات - ISSS Settat",
+      "acronym": "ISSS Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Institut Supérieur des Sciences de la Santé Settat",
+        "ISSS Settat",
+        "المعهد العالي لعلوم الصحة سطات",
+        "ISSS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-des-sciences-du-sport-settat",
+      "name": "Institut des Sciences du Sport Settat - ISS Settat",
+      "arabicName": "معهد علوم الرياضة سطات - ISS Settat",
+      "acronym": "ISS Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": [
+        "Institut des Sciences du Sport Settat",
+        "ISS Settat",
+        "معهد علوم الرياضة سطات",
+        "ISS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-meknes",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Meknès - FSJES Meknès",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية مكناس - FSJES Meknès",
+      "acronym": "FSJES Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Meknès",
+        "FSJES Meknès",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية مكناس",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-meknes",
+      "name": "Faculté des Lettres et des Sciences Humaines Meknès - FLSH Meknès",
+      "arabicName": "كلية الآداب والعلوم الإنسانية مكناس - FLSH Meknès",
+      "acronym": "FLSH Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Meknès",
+        "FLSH Meknès",
+        "كلية الآداب والعلوم الإنسانية مكناس",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-meknes",
+      "name": "Faculté des Sciences Meknès - FS Meknès",
+      "arabicName": "كلية العلوم مكناس - FS Meknès",
+      "acronym": "FS Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": ["Faculté des Sciences Meknès", "FS Meknès", "كلية العلوم مكناس", "FS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-errachidia",
+      "name": "Faculté Polydisciplinaire Errachidia - FP Errachidia",
+      "arabicName": "الكلية المتعددة التخصصات الرشيدية - FP Errachidia",
+      "acronym": "FP Errachidia",
+      "city": "Errachidia",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Faculté Polydisciplinaire Errachidia",
+        "FP Errachidia",
+        "الكلية المتعددة التخصصات الرشيدية",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-et-techniques-errachidia",
+      "name": "Faculté des Sciences et Techniques Errachidia - FST Errachidia",
+      "arabicName": "كلية العلوم والتقنيات الرشيدية - FST Errachidia",
+      "acronym": "FST Errachidia",
+      "city": "Errachidia",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Faculté des Sciences et Techniques Errachidia",
+        "FST Errachidia",
+        "كلية العلوم والتقنيات الرشيدية",
+        "FST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-pharmacie-errachidia",
+      "name": "Faculté de Médecine et Pharmacie Errachidia - FMP Errachidia",
+      "arabicName": "كلية الطب والصيدلة الرشيدية - FMP Errachidia",
+      "acronym": "FMP Errachidia",
+      "city": "Errachidia",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Faculté de Médecine et Pharmacie Errachidia",
+        "FMP Errachidia",
+        "كلية الطب والصيدلة الرشيدية",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-des-arts-et-metiers-meknes",
+      "name": "École Nationale Supérieure d’Arts et Métiers de Meknès - ENSAM",
+      "arabicName": "المدرسة الوطنية العليا للفنون والمهن مكناس - ENSAM Meknès",
+      "acronym": "ENSAM Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Ecole Nationale Supérieure des Arts et Métiers Meknès",
+        "ENSAM Meknès",
+        "المدرسة الوطنية العليا للفنون والمهن مكناس",
+        "ENSAM Meknes",
+        "École Nationale Supérieure d’Arts et Métiers de Meknès",
+        "ENSAM"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-meknes",
+      "name": "École Nationale de Commerce et de Gestion Meknès - ENCG Meknès",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير مكناس - ENCG Meknès",
+      "acronym": "ENCG Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Meknès",
+        "ENCG Meknès",
+        "المدرسة الوطنية للتجارة والتسيير مكناس",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-normale-superieure-meknes",
+      "name": "École Normale Supérieure Meknès - ENS Meknès",
+      "arabicName": "المدرسة العليا للأساتذة مكناس - ENS Meknès",
+      "acronym": "ENS Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Ecole Normale Supérieure Meknès",
+        "ENS Meknès",
+        "المدرسة العليا للأساتذة مكناس",
+        "ENS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-meknes",
+      "name": "École Supérieure de Technologie Meknès - EST Meknès",
+      "arabicName": "المدرسة العليا للتكنولوجيا مكناس - EST Meknès",
+      "acronym": "EST Meknès",
+      "city": "Meknès",
+      "universityId": "ma-university-umi",
+      "aliases": [
+        "Ecole Supérieure de Technologie Meknès",
+        "EST Meknès",
+        "المدرسة العليا للتكنولوجيا مكناس",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-et-politiques-kenitra",
+      "name": "Faculté des Sciences Juridiques et Politiques Kénitra - FSJP Kénitra",
+      "arabicName": "كلية العلوم القانونية والسياسية القنيطرة - FSJP Kénitra",
+      "acronym": "FSJP Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Faculté des Sciences Juridiques et Politiques Kénitra",
+        "FSJP Kénitra",
+        "كلية العلوم القانونية والسياسية القنيطرة",
+        "FSJP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-d-economie-et-de-gestion-kenitra",
+      "name": "Faculté d'Economie et de Gestion Kénitra - FEG Kénitra",
+      "arabicName": "كلية الاقتصاد والتدبير القنيطرة - FEG Kénitra",
+      "acronym": "FEG Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Faculté d'Economie et de Gestion Kénitra",
+        "FEG Kénitra",
+        "كلية الاقتصاد والتدبير القنيطرة",
+        "FEG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-facultes-des-langues-des-lettres-et-des-arts-kenitra",
+      "name": "Facultés des Langues, des Lettres et des Arts Kénitra - FLLA Kénitra",
+      "arabicName": "كلية اللغات والآداب والفنون القنيطرة - FLLA Kénitra",
+      "acronym": "FLLA Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Facultés des Langues, des Lettres et des Arts Kénitra",
+        "FLLA Kénitra",
+        "كلية اللغات والآداب والفنون القنيطرة",
+        "FLLA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-humaines-et-sociale-kenitra",
+      "name": "Faculté des Sciences Humaines et Sociale Kénitra - FSHS Kénitra",
+      "arabicName": "كلية العلوم الإنسانية والاجتماعية القنيطرة - FSHS Kénitra",
+      "acronym": "FSHS Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Faculté des Sciences Humaines et Sociale Kénitra",
+        "FSHS Kénitra",
+        "كلية العلوم الإنسانية والاجتماعية القنيطرة",
+        "FSHS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-kenitra",
+      "name": "Faculté des Sciences Kénitra - FS Kénitra",
+      "arabicName": "كلية العلوم القنيطرة - FS Kénitra",
+      "acronym": "FS Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": ["Faculté des Sciences Kénitra", "FS Kénitra", "كلية العلوم القنيطرة", "FS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-de-kenitra",
+      "name": "École Nationale des Sciences Appliquées de Kénitra - ENSAK",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية القنيطرة - ENSA Kénitra",
+      "acronym": "ENSA Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées de Kénitra",
+        "ENSA Kénitra",
+        "المدرسة الوطنية للعلوم التطبيقية القنيطرة",
+        "ENSA KENITRA",
+        "École Nationale des Sciences Appliquées de Kénitra",
+        "ENSA",
+        "ENSAK"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieur-de-chimie-kenitra",
+      "name": "École Nationale Supérieur de Chimie Kénitra - ENSC Kénitra",
+      "arabicName": "المدرسة الوطنية العليا للكيمياء القنيطرة - ENSC Kénitra",
+      "acronym": "ENSC Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Ecole Nationale Supérieur de Chimie Kénitra",
+        "ENSC Kénitra",
+        "المدرسة الوطنية العليا للكيمياء القنيطرة",
+        "ENSC"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-kenitra",
+      "name": "École Nationale de Commerce et de Gestion Kénitra - ENCG Kénitra",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير القنيطرة - ENCG Kénitra",
+      "acronym": "ENCG Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Kénitra",
+        "ENCG Kénitra",
+        "المدرسة الوطنية للتجارة والتسيير القنيطرة",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-l-education-et-de-la-formation-kenitra",
+      "name": "École Supérieure de l'Éducation et de la Formation Kénitra - ESEF Kénitra",
+      "arabicName": "المدرسة العليا للتربية والتكوين القنيطرة - ESEF Kénitra",
+      "acronym": "ESEF Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Ecole Supérieure de l'Education et de la Formation Kénitra",
+        "ESEF Kénitra",
+        "المدرسة العليا للتربية والتكوين القنيطرة",
+        "ESEF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieur-de-technologie-kenitra",
+      "name": "École Supérieur de Technologie Kénitra - EST Kénitra",
+      "arabicName": "المدرسة العليا للتكنولوجيا القنيطرة - EST Kénitra",
+      "acronym": "EST Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Ecole Supérieur de Technologie Kénitra",
+        "EST Kénitra",
+        "المدرسة العليا للتكنولوجيا القنيطرة",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-institut-des-metiers-du-sport-kenitra",
+      "name": "Institut des Métiers du Sport Kénitra - IMS Kénitra",
+      "arabicName": "معهد مهن الرياضة القنيطرة - IMS Kénitra",
+      "acronym": "IMS Kénitra",
+      "city": "Kénitra",
+      "universityId": "ma-university-uit",
+      "aliases": [
+        "Institut des Métiers du Sport Kénitra",
+        "IMS Kénitra",
+        "معهد مهن الرياضة القنيطرة",
+        "IMS"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-chariaa-agadir",
+      "name": "Faculté Chariâa Agadir - Faculté Chariâa Agadir",
+      "arabicName": "كلية الشريعة أكادير - Faculté Chariâa Agadir",
+      "acronym": "Faculté Chariâa Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": ["Faculté Chariâa Agadir", "كلية الشريعة أكادير"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-agadir",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Agadir - FSJES Agadir",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية أكادير - FSJES Agadir",
+      "acronym": "FSJES Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Agadir",
+        "FSJES Agadir",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية أكادير",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-juridiques-economiques-et-sociales-ait-melloul",
+      "name": "Faculté des Sciences Juridiques, Économiques et Sociales Ait Melloul - FSJES Ait Melloul",
+      "arabicName": "كلية العلوم القانونية والاقتصادية والاجتماعية أيت ملول - FSJES Ait Melloul",
+      "acronym": "FSJES Ait Melloul",
+      "city": "Ait Melloul",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté des Sciences Juridiques, Economiques et Sociales Ait Melloul",
+        "FSJES Ait Melloul",
+        "كلية العلوم القانونية والاقتصادية والاجتماعية أيت ملول",
+        "FSJES"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-d-economie-et-de-gestion-guelmim",
+      "name": "Faculté d'Economie et de Gestion Guelmim - FEG Guelmim",
+      "arabicName": "كلية الاقتصاد والتدبير كلميم - FEG Guelmim",
+      "acronym": "FEG Guelmim",
+      "city": "FEG Guelmim",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté d'Economie et de Gestion Guelmim",
+        "FEG Guelmim",
+        "كلية الاقتصاد والتدبير كلميم",
+        "FEG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-lettres-et-des-sciences-humaines-agadir",
+      "name": "Faculté des Lettres et des Sciences Humaines Agadir - FLSH Agadir",
+      "arabicName": "كلية الآداب والعلوم الإنسانية أكادير - FLSH Agadir",
+      "acronym": "FLSH Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté des Lettres et des Sciences Humaines Agadir",
+        "FLSH Agadir",
+        "كلية الآداب والعلوم الإنسانية أكادير",
+        "FLSH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-langues-arts-et-science-humaines-ait-melloul",
+      "name": "Faculté des Langues, Arts et Science humaines Ait Melloul - FLASH Ait Melloul",
+      "arabicName": "كلية اللغات والفنون والعلوم الإنسانية أيت ملول - FLASH Ait Melloul",
+      "acronym": "FLASH Ait Melloul",
+      "city": "Ait Melloul",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté des Langues, Arts et Science humaines Ait Melloul",
+        "FLASH Ait Melloul",
+        "كلية اللغات والفنون والعلوم الإنسانية أيت ملول",
+        "FLASH"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-agadir",
+      "name": "Faculté des Sciences Agadir - FS Agadir",
+      "arabicName": "كلية العلوم أكادير - FS Agadir",
+      "acronym": "FS Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": ["Faculté des Sciences Agadir", "FS Agadir", "كلية العلوم أكادير", "FS"],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-des-sciences-appliquees-ait-melloul",
+      "name": "Faculté des Sciences Appliquées Ait Melloul - FSA Ait Melloul",
+      "arabicName": "كلية العلوم التطبيقية أيت ملول - FSA Ait Melloul",
+      "acronym": "FSA Ait Melloul",
+      "city": "Ait Melloul",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté des Sciences Appliquées Ait Melloul",
+        "FSA Ait Melloul",
+        "كلية العلوم التطبيقية أيت ملول",
+        "FSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-ouarzazate",
+      "name": "Faculté Polydisciplinaire Ouarzazate - FP Ouarzazate",
+      "arabicName": "الكلية المتعددة التخصصات ورزازات - FP Ouarzazate",
+      "acronym": "FP Ouarzazate",
+      "city": "Ouarzazate",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté Polydisciplinaire Ouarzazate",
+        "FP Ouarzazate",
+        "الكلية المتعددة التخصصات ورزازات",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-taroudant",
+      "name": "Faculté Polydisciplinaire Taroudant - FP Taroudant",
+      "arabicName": "الكلية المتعددة التخصصات تارودانت - FP Taroudant",
+      "acronym": "FP Taroudant",
+      "city": "Taroudant",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté Polydisciplinaire Taroudant",
+        "FP Taroudant",
+        "الكلية المتعددة التخصصات تارودانت",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-polydisciplinaire-es-semara",
+      "name": "Faculté Polydisciplinaire Es-Semara - FP Es-Semara",
+      "arabicName": "الكلية المتعددة التخصصات السمارة - FP Es-Semara",
+      "acronym": "FP Es-Semara",
+      "city": "Es-Semara",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté Polydisciplinaire Es-Semara",
+        "FP Es-Semara",
+        "الكلية المتعددة التخصصات السمارة",
+        "FP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-agadir",
+      "name": "Faculté de Médecine et de Pharmacie Agadir - FMP Agadir",
+      "arabicName": "كلية الطب والصيدلة أكادير - FMP Agadir",
+      "acronym": "FMP Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Agadir",
+        "FMP Agadir",
+        "كلية الطب والصيدلة أكادير",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-laayoune",
+      "name": "Faculté de Médecine et de Pharmacie Laâyoune - FMP Laâyoune",
+      "arabicName": "كلية الطب والصيدلة العيون - FMP Laâyoune",
+      "acronym": "FMP Laâyoune",
+      "city": "Laâyoune",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Laâyoune",
+        "FMP Laâyoune",
+        "كلية الطب والصيدلة العيون",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-guelmim",
+      "name": "Faculté de Médecine et de Pharmacie Guelmim - FMP Guelmim",
+      "arabicName": "كلية الطب والصيدلة كلميم - FMP Guelmim",
+      "acronym": "FMP Guelmim",
+      "city": "Guelmim",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Faculté de Médecine et de Pharmacie Guelmim",
+        "FMP Guelmim",
+        "كلية الطب والصيدلة كلميم",
+        "FMP"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-des-sciences-appliquees-agadir",
+      "name": "École Nationale des Sciences Appliquées Agadir - ENSA Agadir",
+      "arabicName": "المدرسة الوطنية للعلوم التطبيقية أكادير - ENSA Agadir",
+      "acronym": "ENSA Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Nationale des Sciences Appliquées Agadir",
+        "ENSA Agadir",
+        "المدرسة الوطنية للعلوم التطبيقية أكادير",
+        "ENSA"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-superieure-de-l-intelligence-artificielle-et-sciences-des-donnees-taroudant",
+      "name": "École Nationale Supérieure de l'Intelligence Artificielle et Sciences des Données Taroudant - ENSlASD Taroudant",
+      "arabicName": "المدرسة الوطنية العليا للذكاء الاصطناعي وعلوم المعطيات تارودانت - ENSlASD Taroudant",
+      "acronym": "ENSlASD Taroudant",
+      "city": "Taroudant",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Nationale Supérieure de l'Intelligence Artificielle et Sciences des Données Taroudant",
+        "ENSlASD Taroudant",
+        "المدرسة الوطنية العليا للذكاء الاصطناعي وعلوم المعطيات تارودانت"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-agadir",
+      "name": "École Nationale de Commerce et de Gestion Agadir - ENCG Agadir",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير أكادير - ENCG Agadir",
+      "acronym": "ENCG Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Agadir",
+        "ENCG Agadir",
+        "المدرسة الوطنية للتجارة والتسيير أكادير",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-nationale-de-commerce-et-de-gestion-dakhla",
+      "name": "École Nationale de Commerce et de Gestion Dakhla - ENCG Dakhla",
+      "arabicName": "المدرسة الوطنية للتجارة والتسيير الداخلة - ENCG Dakhla",
+      "acronym": "ENCG Dakhla",
+      "city": "Dakhla",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Nationale de Commerce et de Gestion Dakhla",
+        "ENCG Dakhla",
+        "المدرسة الوطنية للتجارة والتسيير الداخلة",
+        "ENCG"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-l-education-et-de-la-formation-agadir",
+      "name": "École Supérieure de l'Éducation et de la Formation Agadir - ESEF Agadir",
+      "arabicName": "المدرسة العليا للتربية والتكوين أكادير - ESEF Agadir",
+      "acronym": "ESEF Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Supérieure de l'Education et de la Formation Agadir",
+        "ESEF Agadir",
+        "المدرسة العليا للتربية والتكوين أكادير",
+        "ESEF"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-agadir",
+      "name": "École Supérieure de Technologie Agadir - EST Agadir",
+      "arabicName": "المدرسة العليا للتكنولوجيا أكادير - EST Agadir",
+      "acronym": "EST Agadir",
+      "city": "Agadir",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Supérieure de Technologie Agadir",
+        "EST Agadir",
+        "المدرسة العليا للتكنولوجيا أكادير",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-guelmim",
+      "name": "École Supérieure de Technologie Guelmim - EST Guelmim",
+      "arabicName": "المدرسة العليا للتكنولوجيا كلميم - EST Guelmim",
+      "acronym": "EST Guelmim",
+      "city": "Guelmim",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Supérieure de Technologie Guelmim",
+        "EST Guelmim",
+        "المدرسة العليا للتكنولوجيا كلميم",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-laayoune",
+      "name": "École Supérieure de Technologie Laâyoune - EST Laâyoune",
+      "arabicName": "المدرسة العليا للتكنولوجيا العيون - EST Laâyoune",
+      "acronym": "EST Laâyoune",
+      "city": "Laâyoune",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Supérieure de Technologie Laâyoune",
+        "EST Laâyoune",
+        "المدرسة العليا للتكنولوجيا العيون",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-dakhla",
+      "name": "École Supérieure de Technologie Dakhla - EST Dakhla",
+      "arabicName": "المدرسة العليا للتكنولوجيا الداخلة - EST Dakhla",
+      "acronym": "EST Dakhla",
+      "city": "Dakhla",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Supérieure de Technologie Dakhla",
+        "EST Dakhla",
+        "المدرسة العليا للتكنولوجيا الداخلة",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-ecole-superieure-de-technologie-ouarzazate",
+      "name": "École Supérieure de Technologie Ouarzazate - EST Ouarzazate",
+      "arabicName": "المدرسة العليا للتكنولوجيا ورزازات - EST Ouarzazate",
+      "acronym": "EST Ouarzazate",
+      "city": "Ouarzazate",
+      "universityId": "ma-university-uiz",
+      "aliases": [
+        "Ecole Supérieure de Technologie Ouarzazate",
+        "EST Ouarzazate",
+        "المدرسة العليا للتكنولوجيا ورزازات",
+        "EST"
+      ],
+      "sourceIds": ["mesrsi-public-2024-2025"]
+    },
+    {
+      "id": "ma-establishment-uic-faculte-privee-de-commerce-et-de-gestion-casablanca",
+      "name": "Faculté Privée de Commerce et de Gestion",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-uic",
+      "aliases": ["Faculté privée de commerce et de gestion"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-uic-faculte-privee-des-sciences-de-sante-casablanca",
+      "name": "Faculté Privée des Sciences de Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-uic",
+      "aliases": ["Faculté Privée des sciences de santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-uic-ecole-privee-d-ingenierie-casablanca",
+      "name": "École Privée d’Ingénierie",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-uic",
+      "aliases": ["Ecole Privée d’Ingénierie"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-uic-faculte-internationale-de-medecine-dentaire-de-casablanca-casablanca",
+      "name": "Faculté Internationale de Médecine Dentaire de Casablanca",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-uic",
+      "aliases": ["Faculté Internationale de Médecine Dentaire de Casablanca"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-uic-faculte-privee-de-medecine-et-de-pharmacie-de-l-uic-casablanca",
+      "name": "Faculté Privée de Médecine et de Pharmacie de l’UIC",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-uic",
+      "aliases": ["Faculté Privée de Médecine et de Pharmacie de l’UIC"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-uic-ecole-privee-d-architecture-uic-casablanca",
+      "name": "École Privée d’Architecture UIC",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-uic",
+      "aliases": ["Ecole Privée d’Architecture UIC"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-isiam-faculte-des-sciences-de-gestion-agadir",
+      "name": "ISIAM Faculté des Sciences de Gestion",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["ISIAM Faculté des sciences de gestion"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-ecole-polytechnique-privee-d-agadir-agadir",
+      "name": "École Polytechnique Privée d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Ecole Polytechnique Privée d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-ecole-superieure-de-tourisme-et-de-technologie-hoteliere-privee-agadir",
+      "name": "École Supérieure de Tourisme et de Technologie Hôtelière Privée",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Ecole Supérieure de Tourisme et de Technologie Hôtelière Privée"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-ecole-privee-de-droit-des-sciences-politiques-et-humaines-agadir",
+      "name": "École Privée de Droit des Sciences Politiques et Humaines",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Ecole Privée de Droit des Sciences Politiques et Humaines"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-faculte-des-sciences-de-la-reeducation-et-des-techniques-de-sante-agadir",
+      "name": "Faculté des Sciences de la Rééducation et des Techniques de Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Faculté des Sciences de la Rééducation et des Techniques de Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-faculte-de-pharmacie-et-d-industrie-pharmaceutique-d-universiapolis-privee-agadir",
+      "name": "Faculté de Pharmacie et d’Industrie Pharmaceutique d’Universiapolis Privée",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Faculté de Pharmacie et d’Industrie Pharmaceutique d’Universiapolis Privée"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-annexe-laayoune-d-isiam-faculte-privee-des-sciences-de-gestion-laayoune",
+      "name": "Annexe Laâyoune d’ISIAM Faculté Privée des Sciences de Gestion",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Laâyoune",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Annexe Laâyoune d’ISIAM Faculté Privée des Sciences de Gestion"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-annexe-laayoune-de-l-ecole-privee-polytechnique-d-agadir-laayoune",
+      "name": "Annexe Laâyoune de l’École Privée Polytechnique d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Laâyoune",
+      "universityId": "ma-university-universiapolis",
+      "aliases": ["Annexe Laâyoune de l’Ecole Privée Polytechnique d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-universiapolis-annexe-laayoune-de-la-faculte-des-sciences-de-la-reeducation-et-des-techniques-de-sante-laayoune",
+      "name": "Annexe Laâyoune de la Faculté des Sciences de la Rééducation et des Techniques de Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Laâyoune",
+      "universityId": "ma-university-universiapolis",
+      "aliases": [
+        "Annexe Laâyoune de la Faculté des Sciences de la Rééducation et des Techniques de Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 1
+    },
+    {
+      "id": "ma-establishment-upm-faculte-privee-de-management-et-de-gouvernance-marrakech",
+      "name": "Faculté Privée de Management et de Gouvernance",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Faculté privée de Management et de Gouvernance"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-ecole-d-ingenierie-et-d-innovation-privee-e2im-marrakech",
+      "name": "École d’Ingénierie et d’Innovation Privée - E2IM",
+      "arabicName": "",
+      "acronym": "E2IM",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Ecole d’Ingénierie et d’Innovation Privée (E2IM)", "E2IM"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-ecole-superieure-d-hotellerie-sup-hotellerie-marrakech",
+      "name": "École Supérieure d’Hôtellerie (Sup Hôtellerie)",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Ecole Supérieure d’Hôtellerie (Sup Hôtellerie)"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-ecole-superieure-d-informatique-appliquee-a-la-gestion-esiag-marrakech",
+      "name": "École Supérieure d’Informatique Appliquée à la Gestion - ESIAG",
+      "arabicName": "",
+      "acronym": "ESIAG",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Ecole Supérieure d’Informatique Appliquée à la Gestion (ESIAG)", "ESIAG"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-faculte-privee-de-l-art-culture-et-media-audiovisuel-marrakech",
+      "name": "Faculté Privée de l’Art, Culture et Média- Audiovisuel",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Faculté privée de l’Art, Culture et Média- Audiovisuel"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-faculte-privee-des-metiers-et-technologies-de-la-sante-marrakech",
+      "name": "Faculté Privée des Métiers et Technologies de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Faculté privée des Métiers et Technologies de la Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-faculte-privee-de-medecine-de-marrakech-marrakech",
+      "name": "Faculté Privée de Médecine de Marrakech",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Faculté Privée de Médecine de Marrakech"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-faculte-privee-de-pharmacie-marrakech-marrakech",
+      "name": "Faculté Privée de Pharmacie Marrakech",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Faculté Privée de Pharmacie Marrakech"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-faculte-privee-de-medecine-dentaire-marrakech-marrakech",
+      "name": "Faculté Privée de Médecine Dentaire Marrakech",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["Faculté Privée de Médecine Dentaire Marrakech"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upm-sup-de-co-ecole-superieure-de-commerce-marrakech",
+      "name": "SUP de Co École Supérieure de Commerce",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-upm",
+      "aliases": ["SUP de Co Ecole Supérieure de Commerce"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-mundiapolis-faculte-privee-mundiapolis-de-management-casablanca",
+      "name": "Faculté Privée Mundiapolis de Management",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-mundiapolis",
+      "aliases": ["Faculté Privée Mundiapolis de Management"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-mundiapolis-ecole-d-ingenierie-mundiapolis-privee-casablanca",
+      "name": "École d’Ingénierie Mundiapolis Privée",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-mundiapolis",
+      "aliases": ["Ecole d’Ingénierie Mundiapolis Privée"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-mundiapolis-institut-mundiapolis-prive-des-sciences-politiques-juridiques-et-sociales-casablanca",
+      "name": "Institut Mundiapolis Privé des Sciences Politiques Juridiques et Sociales",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-mundiapolis",
+      "aliases": ["Institut Mundiapolis privé des Sciences Politiques Juridiques et Sociales"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-mundiapolis-faculte-mundiapolis-privee-des-sciences-de-la-sante-casablanca",
+      "name": "Faculté Mundiapolis Privée des Sciences de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-mundiapolis",
+      "aliases": ["Faculté Mundiapolis privée des Sciences de la Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upf-faculte-privee-des-sciences-de-l-ingenieur-de-fes-fsi-fes",
+      "name": "Faculté Privée des Sciences de l’Ingénieur de Fès - FSI",
+      "arabicName": "",
+      "acronym": "FSI",
+      "city": "Fès",
+      "universityId": "ma-university-upf",
+      "aliases": ["Faculté privée des Sciences de l’Ingénieur de Fès (FSI)", "FSI"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upf-fes-business-school-fbs-fes",
+      "name": "Fès Business School - FBS",
+      "arabicName": "",
+      "acronym": "FBS",
+      "city": "Fès",
+      "universityId": "ma-university-upf",
+      "aliases": ["Fès Business School (FBS)", "FBS"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upf-ecole-superieure-privee-des-metiers-de-l-architecture-et-du-batiment-esmab-fes",
+      "name": "École Supérieure Privée des Métiers de l’Architecture et du Bâtiment - ESMAB",
+      "arabicName": "",
+      "acronym": "ESMAB",
+      "city": "Fès",
+      "universityId": "ma-university-upf",
+      "aliases": [
+        "Ecole Supérieure Privée des Métiers de l’Architecture et du Bâtiment (ESMAB)",
+        "ESMAB"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upf-faculte-privee-des-sciences-paramedicales-et-techniques-de-sante-de-fes-fes",
+      "name": "Faculté Privée des Sciences Paramédicales et Techniques de Sante de Fès",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Fès",
+      "universityId": "ma-university-upf",
+      "aliases": ["Faculté Privée des Sciences Paramédicales et Techniques de Sante de Fès"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upf-faculte-de-medecine-dentaire-upf-privee-fes",
+      "name": "Faculté de Médecine Dentaire UPF Privée",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Fès",
+      "universityId": "ma-university-upf",
+      "aliases": ["Faculté de Médecine Dentaire UPF Privée"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upf-institut-superieur-prive-des-sciences-de-l-ingenieur-technologia-privee-rabat",
+      "name": "Institut Supérieur Privé des Sciences de l’Ingénieur (Technologia Privée)",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-upf",
+      "aliases": ["Institut Supérieur Privé des Sciences de l’Ingénieur (Technologia privée)"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 2
+    },
+    {
+      "id": "ma-establishment-upssa-faculte-privee-de-medecine-d-agadir-agadir",
+      "name": "Faculté Privée de Médecine d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-upssa",
+      "aliases": ["Faculté Privée de Médecine d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-upssa-faculte-privee-de-pharmacie-d-agadir-agadir",
+      "name": "Faculté Privée de Pharmacie d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-upssa",
+      "aliases": ["Faculté Privée de Pharmacie d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-upssa-faculte-privee-des-sciences-infirmieres-et-techniques-de-sante-d-agadir-agadir",
+      "name": "Faculté Privée des Sciences Infirmières et Techniques de Santé d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-upssa",
+      "aliases": ["Faculté Privée des Sciences Infirmières et Techniques de Santé d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-upssa-faculte-privee-des-sciences-biomedicales-appliquees-d-agadir-agadir",
+      "name": "Faculté Privée des Sciences Biomédicales Appliquées d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-upssa",
+      "aliases": ["Faculté Privée des Sciences Biomédicales Appliquées d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-upssa-faculte-privee-de-medecine-dentaire-d-agadir-agadir",
+      "name": "Faculté Privée de Médecine Dentaire d’Agadir",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-upssa",
+      "aliases": ["Faculté Privée de Médecine Dentaire d’Agadir"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-averroes-faculte-privee-de-droit-et-sciences-politiques-aslp-casablanca",
+      "name": "Faculté Privée de Droit et Sciences Politiques - ASLP",
+      "arabicName": "",
+      "acronym": "ASLP",
+      "city": "Casablanca",
+      "universityId": "ma-university-universite-internationale-privee-averroes",
+      "aliases": ["Faculté Privée de Droit et Sciences Politiques (ASLP)", "ASLP"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-averroes-averroes-business-school-privee-casablanca",
+      "name": "Averroès Business School Privée",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-universite-internationale-privee-averroes",
+      "aliases": ["Averroès Business School Privée (Ex ESIG)"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-averroes-averroes-engineering-school-prive-casablanca",
+      "name": "Averroès Engineering School Privé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-universite-internationale-privee-averroes",
+      "aliases": ["Averroès Engineering School Privé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 3
+    },
+    {
+      "id": "ma-establishment-uir-uir-ecole-superieure-d-informatique-et-du-numerique-esin-rabat",
+      "name": "UIR École Supérieure d’Informatique et du Numérique - ESIN",
+      "arabicName": "",
+      "acronym": "ESIN",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["UIR Ecole Supérieure d’Informatique et du Numérique (ESIN)", "ESIN"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-uir-business-school-uir-bs-rabat",
+      "name": "UIR Business School - UIR BS",
+      "arabicName": "",
+      "acronym": "UIR BS",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["UIR Business School (UIR BS)", "UIR", "UIR BS"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-uir-school-of-aerospace-engineering-uir-sae-rabat",
+      "name": "UIR School of Aerospace Engineering - UIR SAE",
+      "arabicName": "",
+      "acronym": "UIR SAE",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["UIR School of Aerospace Engineering (UIR SAE)", "UIR", "UIR SAE"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-uir-institut-des-etudes-politiques-et-juridiques-sciences-po-rabat-prive-uir-iepj-rabat",
+      "name": "UIR Institut des Études Politiques et Juridiques Sciences Po Rabat Privé - UIR IEPJ",
+      "arabicName": "",
+      "acronym": "UIR IEPJ",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": [
+        "UIR Institut des Etudes Politiques et Juridiques Sciences Po Rabat Privé (UIR IEPJ)",
+        "UIR",
+        "UIR IEPJ"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-ecole-superieure-de-l-energie-de-l-environnement-et-du-genie-civil-eseegc-rabat",
+      "name": "École Supérieure de l’Energie, de l’Environnement et du Génie Civil - ESEEGC",
+      "arabicName": "",
+      "acronym": "ESEEGC",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": [
+        "Ecole Supérieure de l’Energie, de l’Environnement et du Génie Civil (ESEEGC) (Ex: ECINE)",
+        "ESEEGC"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-ecole-superieure-d-architecture-de-rabat-rabat",
+      "name": "École Supérieure d’Architecture de Rabat",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["Ecole Supérieure d’Architecture de Rabat"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-faculte-internationale-de-medecine-dentaire-de-rabat-rabat",
+      "name": "Faculté Internationale de Médecine Dentaire de Rabat",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["Faculté Internationale de Médecine Dentaire de Rabat"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-ecole-superieure-des-sciences-paramedicales-de-rabat-rabat",
+      "name": "École Supérieure des Sciences Paramédicales de Rabat",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["Ecole Supérieure des Sciences Paramédicales de Rabat"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-uir-faculte-internationale-de-medecine-de-rabat-rabat",
+      "name": "Faculté Internationale de Médecine de Rabat",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uir",
+      "aliases": ["Faculté Internationale de Médecine de Rabat"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-faculte-de-gouvernance-des-sciences-economiques-et-sociales-fgses-sala-el-jadida",
+      "name": "Faculté de Gouvernance, des Sciences Économiques et Sociales - FGSES",
+      "arabicName": "",
+      "acronym": "FGSES",
+      "city": "Sala El Jadida",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Faculté de Gouvernance, des Sciences Economiques et Sociales (FGSES)", "FGSES"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-annexe-de-l-africa-business-school-of-ocp-sala-el-jadida",
+      "name": "Annexe de l'Africa Business School of OCP",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Sala El Jadida",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Annexe de l'Africa Business School of OCP"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-annexe-de-l-um6p-school-of-computer-science-um6p-cs-sala-el-jadida",
+      "name": "Annexe de l'UM6P School of Computer Science - UM6P-CS",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Sala El Jadida",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Annexe de l'UM6P School of Computer Science - UM6P-CS", "UM6P-CS"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-ecole-des-sciences-de-l-agriculture-de-la-fertilisation-et-de-l-environnement-esafe-ben-guerir",
+      "name": "École des Sciences de l’Agriculture, de la Fertilisation et de l’Environnement - ESAFE",
+      "arabicName": "",
+      "acronym": "ESAFE",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": [
+        "Ecole des Sciences de l’Agriculture, de la Fertilisation et de l’Environnement (ESAFE)",
+        "ESAFE"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-africa-business-school-of-ocp-ben-guerir",
+      "name": "Africa Business School of OCP",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Africa Business School of OCP"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-school-of-architecture-planning-et-design-ben-guerir",
+      "name": "School of Architecture, Planning et Design",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["School of Architecture, Planning et Design"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-institute-of-science-technology-and-innovation-ben-guerir",
+      "name": "Institute of Science, Technology and Innovation",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Institute of Science, Technology and Innovation"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-green-tech-institute-ben-guerir",
+      "name": "Green Tech Institute",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Green Tech Institute"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-um6p-school-of-computer-science-um6p-cs-ben-guerir",
+      "name": "UM6P School of Computer Science - UM6P-CS",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["UM6P School of Computer Science - UM6P-CS", "UM6P-CS"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-faculty-of-medical-sciences-ben-guerir",
+      "name": "Faculty of Medical Sciences",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": [
+        "Faculty of Medical Sciences (Absorbsion de l'Institut Supérieur des Sciences Biologiques et Paramédicales)"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-um6p-school-of-applied-sciences-and-engineering-ben-guerir",
+      "name": "UM6P School of Applied Sciences and Engineering",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Ben Guérir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["UM6P School of Applied Sciences and Engineering"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6p-ecole-de-management-industriel-emine-agadir",
+      "name": "École de Management Industriel - EMINE",
+      "arabicName": "",
+      "acronym": "EMINE",
+      "city": "Agadir",
+      "universityId": "ma-university-um6p",
+      "aliases": ["Ecole de Management Industriel (EMINE)", "EMINE"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 4
+    },
+    {
+      "id": "ma-establishment-um6ss-faculte-mohammed-vi-des-sciences-infirmieres-et-des-professions-de-la-sante-casablanca",
+      "name": "Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-faculte-mohammed-vi-de-medecine-casablanca",
+      "name": "Faculté Mohammed VI de Médecine",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Faculté Mohammed VI de Médecine"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-ecole-superieure-mohammed-vi-des-ingenieurs-en-sciences-de-la-sante-casablanca",
+      "name": "École Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Ecole Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-ecole-internationale-mohammed-vi-de-sante-publique-casablanca",
+      "name": "École Internationale Mohammed VI de Santé Publique",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Ecole Internationale Mohammed VI de Santé Publique"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-faculte-mohammed-vi-de-pharmacie-casablanca",
+      "name": "Faculté Mohammed VI de Pharmacie",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Faculté Mohammed VI de Pharmacie"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-institut-superieur-mohammed-vi-de-biosciences-et-biotechnologies-isbb-casablanca",
+      "name": "Institut Supérieur Mohammed VI de Biosciences et Biotechnologies - ISBB",
+      "arabicName": "",
+      "acronym": "ISBB",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Institut Supérieur Mohammed VI de Biosciences et Biotechnologies (ISBB)",
+        "ISBB"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-international-digital-health-institute-idhi-casablanca",
+      "name": "International Digital Health Institute - IDHI",
+      "arabicName": "",
+      "acronym": "IDHI",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["International Digital Health Institute (IDHI)", "IDHI"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-faculte-mohammed-vi-de-medecine-dentaire-casablanca",
+      "name": "Faculté Mohammed VI de Médecine Dentaire",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Casablanca",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Faculté Mohammed VI de Médecine Dentaire"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-rabat-de-la-faculte-mohammed-vi-des-sciences-infirmieres-et-des-professions-de-la-sante-rabat",
+      "name": "Annexe Rabat de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Rabat de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-rabat-de-la-faculte-mohammed-vi-de-medecine-rabat",
+      "name": "Annexe Rabat de la Faculté Mohammed VI de Médecine",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Annexe Rabat de la Faculté Mohammed VI de Médecine"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-rabat-de-l-ecole-superieure-mohammed-vi-des-ingenieurs-en-sciences-de-la-sante-rabat",
+      "name": "Annexe Rabat de l'École Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Rabat de l'Ecole Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-ecole-mohammed-vi-de-medecine-veterinaire-rabat",
+      "name": "École Mohammed VI de Médecine Vétérinaire",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Ecole Mohammed VI de Médecine Vétérinaire"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-dakhla-de-la-faculte-mohammed-vi-des-sciences-infirmieres-et-des-professions-de-la-sante-dakhla",
+      "name": "Annexe Dakhla de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Dakhla",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Dakhla de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-dakhla-de-la-faculte-mohammed-vi-de-medecine-dakhla",
+      "name": "Annexe Dakhla de la Faculté Mohammed VI de Médecine",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Dakhla",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Annexe Dakhla de la Faculté Mohammed VI de Médecine"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-dakhla-de-l-ecole-superieure-mohammed-vi-des-ingenieurs-en-sciences-de-la-sante-dakhla",
+      "name": "Annexe Dakhla de l'École Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Dakhla",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Dakhla de l'Ecole Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-agadir-de-la-faculte-mohammed-vi-des-sciences-infirmieres-et-des-professions-de-la-sante-agadir",
+      "name": "Annexe Agadir de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Agadir de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-agadir-de-la-faculte-mohammed-vi-de-medecine-agadir",
+      "name": "Annexe Agadir de la Faculté Mohammed VI de Médecine",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Annexe Agadir de la Faculté Mohammed VI de Médecine"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-agadir-de-l-ecole-superieure-mohammed-vi-des-ingenieurs-en-sciences-de-la-sante-agadir",
+      "name": "Annexe Agadir de l'École Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Agadir",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Agadir de l'Ecole Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-marrakech-de-la-faculte-mohammed-vi-des-sciences-infirmieres-et-des-professions-de-la-sante-marrakech",
+      "name": "Annexe Marrakech de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Marrakech de la Faculté Mohammed VI des Sciences Infirmières et des Professions de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-marrakech-de-la-faculte-mohammed-vi-de-medecine-marrakech",
+      "name": "Annexe Marrakech de la Faculté Mohammed VI de Médecine",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-um6ss",
+      "aliases": ["Annexe Marrakech de la Faculté Mohammed VI de Médecine"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-um6ss-annexe-marrakech-de-l-ecole-superieure-mohammed-vi-des-ingenieurs-en-sciences-de-la-sante-marrakech",
+      "name": "Annexe Marrakech de l'École Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Marrakech",
+      "universityId": "ma-university-um6ss",
+      "aliases": [
+        "Annexe Marrakech de l'Ecole Supérieure Mohammed VI des Ingénieurs en Sciences de la Santé"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 5
+    },
+    {
+      "id": "ma-establishment-uiass-faculte-de-medecine-abulcasis-rabat",
+      "name": "Faculté de Mèdecine Abulcasis",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": ["Faculté de Mèdecine Abulcasis"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-faculte-des-sciences-infirmieres-et-du-management-hospitalier-fasimh-rabat",
+      "name": "Faculté des Sciences Infirmières et du Management Hospitalier - FASIMH",
+      "arabicName": "",
+      "acronym": "FASIMH",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": [
+        "Faculté des Sciences Infirmières et du Management Hospitalier (FASIMH)",
+        "FASIMH"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-institut-superieur-d-ingenierie-et-des-technologies-de-sante-isits-rabat",
+      "name": "Institut Supérieur d’Ingénierie et des Technologies de Santé - ISITS",
+      "arabicName": "",
+      "acronym": "ISITS",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": ["Institut Supérieur d’Ingénierie et des Technologies de Santé (ISITS)", "ISITS"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-faculte-de-medecine-dentaire-abulcasis-rabat",
+      "name": "Faculté de Médecine Dentaire Abulcasis",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": ["Faculté de Médecine Dentaire Abulcasis"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-faculte-de-pharmacie-abulcasis-rabat",
+      "name": "Faculté de Pharmacie Abulcasis",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": ["Faculté de Pharmacie Abulcasis"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-ecole-d-ingenieurs-abulcasis-rabat",
+      "name": "École d’Ingénieurs Abulcasis",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": ["Ecole d’Ingénieurs Abulcasis"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-institut-veterinaire-abulcasis-iva-rabat",
+      "name": "Institut Vétérinaire Abulcasis - IVA",
+      "arabicName": "",
+      "acronym": "IVA",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": ["(Institut Vétérinaire Abulcasis (IVA)", "IVA"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uiass-institut-superieur-abulcasis-de-psychologie-et-des-sciences-de-l-education-isapse-rabat",
+      "name": "Institut Supérieur Abulcasis de Psychologie et des Sciences de l’Éducation - ISAPSE",
+      "arabicName": "",
+      "acronym": "ISAPSE",
+      "city": "Rabat",
+      "universityId": "ma-university-uiass",
+      "aliases": [
+        "Institut Supérieur Abulcasis de Psychologie et des Sciences de l’Education (ISAPSE)",
+        "ISAPSE"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-faculte-euro-mediterraneenne-des-sciences-humaines-et-sociales-fes",
+      "name": "Faculté Euro- Méditerranéenne des Sciences Humaines et Sociales",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Faculté Euro- Méditerranéenne des Sciences Humaines et Sociales"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-institut-euro-mediterraneen-des-technologies-insa-euro-mediterannee-fes",
+      "name": "Institut Euro- Méditerranéen des Technologies (INSA Euro- méditérannée)",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Institut Euro- Méditerranéen des Technologies (INSA Euro- méditérannée)"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-euromed-business-school-fes",
+      "name": "Euromed Business School",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Euromed Business School"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-institut-euromed-des-sciences-juridiques-et-politiques-fes",
+      "name": "Institut Euromed des Sciences Juridiques et Politiques",
+      "arabicName": "",
+      "acronym": "",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Institut Euromed des Sciences Juridiques et Politiques"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-ecole-euro-mediterraneenne-d-architecture-de-design-et-d-urbanisme-eemadu-fes",
+      "name": "École Euro-méditerranéenne d’Architecture, de Design et d’Urbanisme - EEMADU",
+      "arabicName": "",
+      "acronym": "EEMADU",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": [
+        "Ecole Euro-méditerranéenne d’Architecture, de Design et d’Urbanisme (EEMADU)",
+        "EEMADU"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-ecole-euro-med-d-ingenierie-digitale-et-intelligence-artificielle-eeidia-fes",
+      "name": "École Euro-Med d'Ingénierie Digitale et Intelligence Artificielle - EEIDIA",
+      "arabicName": "",
+      "acronym": "EEIDIA",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": [
+        "Ecole Euro-Med d'Ingénierie Digitale et Intelligence Artificielle (EEIDIA)",
+        "EEIDIA"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-ecole-d-ingenieur-en-biomedical-et-biotechnologie-eibb-fes",
+      "name": "École d’Ingénieur en Biomédical et Biotechnologie - EIBB",
+      "arabicName": "",
+      "acronym": "EIBB",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Ecole d’Ingénieur en Biomédical et Biotechnologie (EIBB)", "EIBB"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-euromed-polytechnic-school-eps-fes",
+      "name": "Euromed Polytechnic School - EPS",
+      "arabicName": "",
+      "acronym": "EPS",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Euromed Polytechnic School (EPS)", "EPS"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-faculte-euromed-de-pharmacie-fep-fes",
+      "name": "Faculté Euromed de Pharmacie - FEP",
+      "arabicName": "",
+      "acronym": "FEP",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Faculté Euromed de Pharmacie (FEP)", "FEP"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-faculte-euromed-de-medecine-fem-fes",
+      "name": "Faculté Euromed de Médecine - FEM",
+      "arabicName": "",
+      "acronym": "FEM",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Faculté Euromed de Médecine (FEM)", "FEM"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-faculte-euromed-de-medecine-dentaire-femd-fes",
+      "name": "Faculté Euromed de Médecine Dentaire - FEMD",
+      "arabicName": "",
+      "acronym": "FEMD",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": ["Faculté Euromed de Médecine Dentaire (FEMD)", "FEMD"],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-uemf-faculte-euromed-des-sciences-infirmieres-et-techniques-de-sante-fesits-fes",
+      "name": "Faculté Euromed des Sciences Infirmières et Techniques de Santé - FESITS",
+      "arabicName": "",
+      "acronym": "FESITS",
+      "city": "Fès",
+      "universityId": "ma-university-uemf",
+      "aliases": [
+        "Faculté Euromed des Sciences Infirmières et Techniques de Santé (FESITS)",
+        "FESITS"
+      ],
+      "sourceIds": ["mesrsi-private-2025-2026"],
+      "sourcePage": 6
+    },
+    {
+      "id": "ma-establishment-aui-sba",
+      "name": "School of Business Administration - SBA",
+      "arabicName": "",
+      "acronym": "SBA",
+      "city": "Ifrane",
+      "universityId": "ma-university-aui",
+      "aliases": ["School of Business Administration", "SBA"],
+      "sourceIds": ["aui-schools-2026"]
+    },
+    {
+      "id": "ma-establishment-aui-ssah",
+      "name": "School of Social Sciences, Arts and Humanities - SSAH",
+      "arabicName": "",
+      "acronym": "SSAH",
+      "city": "Ifrane",
+      "universityId": "ma-university-aui",
+      "aliases": [
+        "School of Social Sciences, Arts and Humanities",
+        "School of Humanities and Social Sciences",
+        "SHSS",
+        "SSAH"
+      ],
+      "sourceIds": ["aui-schools-2026", "aui-ssah-2026"]
+    },
+    {
+      "id": "ma-establishment-aui-sse",
+      "name": "School of Science and Engineering - SSE",
+      "arabicName": "",
+      "acronym": "SSE",
+      "city": "Ifrane",
+      "universityId": "ma-university-aui",
+      "aliases": ["School of Science and Engineering", "SSE"],
+      "sourceIds": ["aui-schools-2026"]
+    },
+    {
+      "id": "ma-establishment-uaq-1",
+      "name": "",
+      "arabicName": "مؤسسة دار الحديث الحسنية",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["مؤسسة دار الحديث الحسنية"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-2",
+      "name": "",
+      "arabicName": "معهد محمد السادس للقراءات والدراسات القرآنية",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["معهد محمد السادس للقراءات والدراسات القرآنية"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-3",
+      "name": "",
+      "arabicName": "معهد محمد السادس لتكوين الأئمة والمرشدين والمرشدات",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["معهد محمد السادس لتكوين الأئمة والمرشدين والمرشدات"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-4",
+      "name": "",
+      "arabicName": "المعهد الملكي للبحث في تاريخ المغرب",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["المعهد الملكي للبحث في تاريخ المغرب"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-5",
+      "name": "",
+      "arabicName": "معهد الفكر والحضارة الإسلامية بالدار البيضاء",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["معهد الفكر والحضارة الإسلامية بالدار البيضاء"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-6",
+      "name": "",
+      "arabicName": "جامع القرويين",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["جامع القرويين"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-7",
+      "name": "",
+      "arabicName": "معهد تاريخ العلوم الإسلامية",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["معهد تاريخ العلوم الإسلامية"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-uaq-8",
+      "name": "",
+      "arabicName": "مدرسة العلوم الإسلامية",
+      "acronym": "",
+      "city": "",
+      "universityId": "ma-university-uaq",
+      "aliases": ["مدرسة العلوم الإسلامية"],
+      "sourceIds": ["quaraouiyine-institutions"]
+    },
+    {
+      "id": "ma-establishment-faculte-de-medecine-et-de-pharmacie-de-settat",
+      "name": "Faculté de Médecine et de Pharmacie de Settat - FMP Settat",
+      "arabicName": "",
+      "acronym": "FMP Settat",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": ["Faculté de Médecine et de Pharmacie de Settat", "FMP Settat", "FMP"],
+      "sourceIds": ["uh1-directory-2026"]
+    },
+    {
+      "id": "ma-establishment-institut-national-du-numerique-et-de-l-intelligence-artificielle",
+      "name": "Institut National du Numérique et de l’Intelligence Artificielle - INNIA",
+      "arabicName": "",
+      "acronym": "INNIA",
+      "city": "Settat",
+      "universityId": "ma-university-uh1",
+      "aliases": ["Institut National du Numérique et de l’Intelligence Artificielle", "INNIA"],
+      "sourceIds": ["uh1-directory-2026", "uh1-innia-2026"]
+    },
+    {
+      "id": "ma-establishment-fsa-safi",
+      "name": "Faculté des Sciences Appliquées de Safi - FSA Safi",
+      "arabicName": "",
+      "acronym": "FSA Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": ["Faculté des Sciences Appliquées de Safi", "FSA", "FSA Safi"],
+      "sourceIds": ["uca-safi-2026"]
+    },
+    {
+      "id": "ma-establishment-fshs-safi",
+      "name": "Faculté des Sciences Humaines et Sociales de Safi - FSHS Safi",
+      "arabicName": "",
+      "acronym": "FSHS Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": ["Faculté des Sciences Humaines et Sociales de Safi", "FSHS", "FSHS Safi"],
+      "sourceIds": ["uca-safi-2026"]
+    },
+    {
+      "id": "ma-establishment-flla-safi",
+      "name": "Faculté des Langues, Lettres et Arts de Safi - FLLA Safi",
+      "arabicName": "",
+      "acronym": "FLLA Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": ["Faculté des Langues, Lettres et Arts de Safi", "FLLA", "FLLA Safi"],
+      "sourceIds": ["uca-safi-2026"]
+    },
+    {
+      "id": "ma-establishment-feg-safi",
+      "name": "Faculté d’Économie et de Gestion de Safi - FEG Safi",
+      "arabicName": "",
+      "acronym": "FEG Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": ["Faculté d’Économie et de Gestion de Safi", "FEG", "FEG Safi"],
+      "sourceIds": ["uca-safi-2026"]
+    },
+    {
+      "id": "ma-establishment-fsjp-safi",
+      "name": "Faculté des Sciences Juridiques et Politiques de Safi - FSJP Safi",
+      "arabicName": "",
+      "acronym": "FSJP Safi",
+      "city": "Safi",
+      "universityId": "ma-university-uca",
+      "aliases": ["Faculté des Sciences Juridiques et Politiques de Safi", "FSJP", "FSJP Safi"],
+      "sourceIds": ["uca-safi-2026"]
+    },
+    {
+      "id": "ma-research-centre-cneree",
+      "name": "Centre national d’études et de recherches sur l’eau et l’énergie - CNEREE",
+      "arabicName": "",
+      "acronym": "CNEREE",
+      "city": "Marrakech",
+      "universityId": "ma-university-uca",
+      "aliases": [
+        "CNEREE",
+        "Centre national d’études et de recherches sur l’eau et l’énergie",
+        "Centre national d'études et de recherches sur l'eau et l'énergie",
+        "CNEREE - Université Cadi Ayyad - Marrakech",
+        "CNEREE - Université Cadi Ayyad - UCA - Marrakech",
+        "CNEREE - Cadi Ayyad University - Marrakech",
+        "CNEREE - جامعة القاضي عياض - مراكش"
+      ],
+      "sourceIds": ["cneree-uca-2026"]
+    }
+  ],
+  "independentInstitutions": [
+    {
+      "id": "ma-independent-inpt",
+      "name": "Institut National des Postes et Télécommunications - INPT",
+      "arabicName": "",
+      "acronym": "INPT",
+      "city": "Rabat",
+      "aliases": ["INPT, Rabat", "Institut National des Postes et Télécommunications"],
+      "sourceIds": ["ma-independent-inpt-official"]
+    },
+    {
+      "id": "ma-independent-ensmr",
+      "name": "École Nationale Supérieure des Mines de Rabat - ENSMR",
+      "arabicName": "",
+      "acronym": "ENSMR",
+      "city": "Rabat",
+      "aliases": [
+        "Ecole Nationale Supérieure des Mines de Rabat",
+        "École Nationale Supérieure des Mines de Rabat",
+        "National Higher School of Mines of Rabat"
+      ],
+      "sourceIds": ["ma-independent-ensmr-official"]
+    },
+    {
+      "id": "ma-independent-iav-hassan-ii",
+      "name": "Institut Agronomique et Vétérinaire Hassan II - IAV Hassan II",
+      "arabicName": "معهد الحسن الثاني للزراعة والبيطرة - IAV Hassan II",
+      "acronym": "IAV Hassan II",
+      "city": "Rabat",
+      "aliases": [
+        "Institut Agronomique et Vétérinaire Hassan II",
+        "Hassan II Agronomic and Veterinary Institute",
+        "Institut Agronomique et Vétérinaire Hassan II",
+        "معهد الحسن الثاني للزراعة والبيطرة"
+      ],
+      "sourceIds": ["ma-independent-iav-hassan-ii-official"]
+    }
+  ]
+}

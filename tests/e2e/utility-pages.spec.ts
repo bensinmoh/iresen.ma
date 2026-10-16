@@ -42,13 +42,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       if (id === 'sitemap') {
         const map = root.locator('.utility-sitemap')
         await expect(map.locator('p')).toHaveCount(0)
-        await expect(map.locator('a')).toHaveCount(pageIds.length + 2)
+        await expect(map.locator('a')).toHaveCount(pageIds.length + 1)
         for (const pageId of pageIds)
           await expect(map.locator(`a[href="${pageLinkHref(pageId, locale)}"]`)).toHaveCount(1)
         await expect(map.locator(`a[href="${newsListingHref(locale)}"]`)).toHaveCount(1)
         await expect(
           map
-            .getByRole('region', { name: catalog.Navigation.research, exact: true })
+            .getByRole('region', { name: catalog.Navigation.resources, exact: true })
             .getByRole('link', { name: catalog.Navigation.patents, exact: true }),
         ).toHaveAttribute('href', resourcePatentLink(locale))
         await map.getByRole('link', { name: catalog.Navigation.patents, exact: true }).click()

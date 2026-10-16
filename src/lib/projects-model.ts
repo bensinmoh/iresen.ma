@@ -16,6 +16,7 @@ export const projectDomains = [
 ] as const
 export const projectStatuses = ['active', 'completed', 'planned'] as const
 export type ProjectRecord = {
+  institutionSearchText?: string
   id: string
   acronym: string
   title: Record<Locale, string>
@@ -91,6 +92,7 @@ export function filterProjectRecords(
         project.year,
         project.startText[locale],
         project.location[locale],
+        project.institutionSearchText,
         project.durationMonths,
         project.budgetMAD,
         project.budgetMAD === null ? '' : new Intl.NumberFormat(locale).format(project.budgetMAD),

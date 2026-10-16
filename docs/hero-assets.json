@@ -564,6 +564,27 @@
         "bytes": 80022,
         "outputSHA256": "cd8622b108251074391c6c018dce8c8436fc5ed97ae6777902e3166f1bf23bfb"
       }
+    },
+    {
+      "id": "platform-outdoor",
+      "date": "2026-10-16",
+      "source": "Owner-supplied documentary photograph",
+      "sourceFileName": "Plateforme de test outdoor.jpg",
+      "sourceSHA256": "8a971b8e82e808d7e496d919fdda52b7a7245998930fd73ae439685ed18cf6e7",
+      "sourceDimensions": [5557, 3126],
+      "file": "public/images/heroes/platform-outdoor.webp",
+      "outputDimensions": [1920, 1080],
+      "bytes": 384270,
+      "outputSHA256": "989e5ee8cc1d4198c02b35cbc148893dcca7e6297c8b4cc9e21d7f07526f37bc",
+      "mobile": {
+        "file": "public/images/heroes/platform-outdoor-mobile.webp",
+        "outputDimensions": [720, 1080],
+        "bytes": 159458,
+        "outputSHA256": "1cc65b68a628dc710b9d3b03d1a6e49ea5593bc1a7f3d1158b72d651810e43f1"
+      },
+      "notes": [
+        "Owner-authorized replacement of the platforms page hero only. Source remains outside the repository; no retouching. Mobile crop retains the circular test structure and photovoltaic arrays."
+      ]
     }
   ]
 }

@@ -132,6 +132,21 @@
       "bytes": 3117,
       "treatment": "Owner-supplied original SVG copied byte-for-byte for the platforms page; no geometry or color changes.",
       "kind": "owner-supplied platform logo"
+    },
+    {
+      "id": "gep-mci-campus",
+      "source": "Modern Campus Building with Solar Panels.png",
+      "sourceSha256": "da7ad7074381d4b8b7cd7f61202174488739cd333012ba933319cba4efc9e011",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "url": "/images/platforms/gep-mci-campus.webp",
+      "width": 1280,
+      "height": 960,
+      "bytes": 289644,
+      "outputSha256": "ccbc98f520c65317d9b8beb1595a5adb2b38ea03f4812694f6433f0bcfcecdc9",
+      "treatment": "Owner-selected replacement; proportional WebP derivative, no retouching. Original unchanged outside repository.",
+      "kind": "owner-supplied replacement image; documentary authenticity not independently established",
+      "date": "2026-10-16"
     }
   ]
 }

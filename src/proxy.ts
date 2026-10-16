@@ -7,7 +7,14 @@ import createMiddleware from 'next-intl/middleware'
 import { NextRequest, NextResponse } from 'next/server'
 import { routing } from '@/i18n/routing'
 import { defaultLocale, isLocale } from '@/i18n/locales'
-import { pageIds, pages, isNewsListingPath, pageHref } from '@/lib/site'
+import {
+  pageIds,
+  pages,
+  isNewsListingPath,
+  pageHref,
+  pageIdFromPathname,
+  newsListingPaths,
+} from '@/lib/site'
 import { newsSlugFromPath } from '@/lib/content/routes'
 import { findArchiveCall } from '@/lib/call-archives'
 import { callReferenceFromPath, callsListingReference } from '@/lib/calls'
@@ -36,9 +43,14 @@ async function localeResponse(request: NextRequest) {
     return NextResponse.redirect(new URL(pageHref('events', locale), request.url), 308)
   }
 
-  // The catch-all page resolves this localized path directly. Rewriting it to
-  // the internal next-intl pathname can redirect back to itself in standalone.
-  if (hasLocale && pagePath === pages.programmes.pathnames[locale]) {
+  // Resolve canonical localized pages directly. Rewriting the catch-all to an
+  // internal next-intl pathname can redirect back to the same public URL.
+  const localizedPageId = pageIdFromPathname(pagePath, locale)
+  if (
+    hasLocale &&
+    ((localizedPageId && pages[localizedPageId].pathnames[locale] === pagePath) ||
+      pagePath === newsListingPaths[locale])
+  ) {
     const localeHeaders = new Headers(request.headers)
     localeHeaders.set('x-next-intl-locale', locale)
     return NextResponse.next({ request: { headers: localeHeaders } })
@@ -75,19 +87,19 @@ async function localeResponse(request: NextRequest) {
   )
     return handleLocaleRouting(request)
 
-  // Set the HTTP status before rendering the localized unknown-page response.
-  // Register future detail routes here alongside their shared page resolver.
+  // Canonical unknown locale paths already reach the catch-all. Forward their
+  // locale directly instead of rewriting the request back to the same URL.
+  const localeHeaders = new Headers(request.headers)
+  localeHeaders.set('x-next-intl-locale', locale)
+  const options = {
+    status: 404,
+    request: { headers: localeHeaders },
+    headers: { 'X-Robots-Tag': 'noindex, nofollow' },
+  }
+  if (hasLocale) return NextResponse.next(options)
   const localizedUrl = request.nextUrl.clone()
-  if (!hasLocale) localizedUrl.pathname = `/${defaultLocale}${pathname}`
-  const localizedRequest = hasLocale
-    ? request
-    : new NextRequest(localizedUrl, { headers: request.headers })
-  const response = handleLocaleRouting(localizedRequest)
-  const headers = new Headers(response.headers)
-  headers.delete('link')
-  headers.delete('x-middleware-next')
-  headers.set('X-Robots-Tag', 'noindex, nofollow')
-  return NextResponse.rewrite(localizedUrl, { status: 404, headers })
+  localizedUrl.pathname = `/${defaultLocale}${pathname}`
+  return NextResponse.rewrite(localizedUrl, options)
 }
 
 export default async function proxy(request: NextRequest) {

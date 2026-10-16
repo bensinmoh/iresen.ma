@@ -188,7 +188,8 @@
     "cookies": "Cookie preferences",
     "accessibility": "Accessibility",
     "sitemap": "Sitemap",
-    "usefulLinks": "Useful links"
+    "usefulLinks": "Useful links",
+    "patents": "Patents"
   },
   "Footer": {
     "tagline": "Research that moves energy forward.",
@@ -382,7 +383,7 @@
       {
         "year": "2026",
         "title": "Continental expansion and fifteenth anniversary",
-        "description": "The inauguration of Green Energy Park Morocco–Côte d’Ivoire in Yamoussoukro extends the cooperation between IRESEN, UM6P and INP-HB. The Institute also celebrates fifteen years of contributions to research, innovation and skills development."
+        "description": "The inauguration of Green Energy Park Morocco–Côte d’Ivoire in Yamoussoukro extends the cooperation between IRESEN, Université Mohammed VI Polytechnique - UM6P and INP-HB. The Institute also celebrates fifteen years of contributions to research, innovation and skills development."
       },
       {
         "year": "2023",
@@ -397,7 +398,7 @@
       {
         "year": "2019",
         "title": "Solar Decathlon Africa",
-        "description": "IRESEN and UM6P organise the first African edition of Solar Decathlon in Benguerir. The competition brings university teams together to design and build sustainable buildings, combining innovation, demonstration and learning."
+        "description": "IRESEN and Université Mohammed VI Polytechnique - UM6P organise the first African edition of Solar Decathlon in Benguerir. The competition brings university teams together to design and build sustainable buildings, combining innovation, demonstration and learning."
       },
       {
         "year": "2017",
@@ -438,7 +439,72 @@
     "next": "Next milestone",
     "coverAlt": "Cover mockup for the fifteen-year report: “15 ans d’impact”, 2026.",
     "coverSearchText": "Owner-supplied cover mockup for IRESEN’s fifteen-year activity report, 2011–2026. Cover text: 15 ANS D’IMPACT, 2026. This cover image is not the report PDF.",
-    "historyProgressLabel": "Timeline progress"
+    "historyProgressLabel": "Timeline progress",
+    "editorial": {
+      "missionTitle": "Connect research with the needs of the",
+      "missionAccent": "energy transition.",
+      "slogan": "Research that moves energy forward.",
+      "positionTitle": "Where needs and solutions meet.",
+      "positionBody": "IRESEN connects national priorities, scientific research and socioeconomic needs. We bring together skills, programmes and experimental capabilities to develop scientific and technological responses suited to Morocco.",
+      "interface": {
+        "priorities": "National priorities",
+        "science": "Scientific research",
+        "needs": "Socioeconomic actors"
+      },
+      "contributionsLabel": "Our four contributions",
+      "contributionsTitle": "One model. Capabilities that reinforce each other.",
+      "contributionsIntro": "One core activity and three complementary dimensions, combined according to each project’s needs.",
+      "dimensions": {
+        "studies": ["Studies", "Roadmaps", "Monitoring", "Techno-economic analyses"],
+        "skills": [
+          "Training and doctoral researchers",
+          "Scientific exchanges",
+          "Knowledge sharing",
+          "Science communication"
+        ],
+        "cooperation": ["Partnerships", "International projects", "Networks", "Science diplomacy"]
+      },
+      "focusLabel": "Research & Innovation · In action",
+      "focusTitle": "From knowledge to application.",
+      "focusIntro": "Three complementary contributions to advance solutions.",
+      "tabsLabel": "The three Research & Innovation missions",
+      "pathwayTitle": "One pathway, three stages",
+      "pathwayHint": "Explore each stage",
+      "verbs": {
+        "develop": {
+          "purpose": "Design · Adapt · Improve",
+          "title": "Bring suitable solutions to life.",
+          "activities": [
+            "Programmes and calls for projects",
+            "Collaborative and internal research",
+            "Co-development with industry",
+            "Technology adaptation"
+          ]
+        },
+        "test": {
+          "purpose": "Test · Measure · Demonstrate",
+          "title": "Understand performance. Reduce uncertainty.",
+          "activities": [
+            "Platforms and laboratories",
+            "Characterisation and measurements",
+            "Demonstrators and pilot projects",
+            "Testing in real operating conditions"
+          ]
+        },
+        "transfer": {
+          "purpose": "Protect · Mature · Transfer",
+          "title": "Prepare research results for use.",
+          "activities": [
+            "Intellectual property and know-how",
+            "Technology maturation",
+            "Transfer and licensing",
+            "Entrepreneurial support"
+          ]
+        }
+      },
+      "closing": "Strengthen technological mastery.\nCreate value for Morocco.",
+      "closingTopics": "Decarbonisation · Competitiveness · Sustainable development"
+    }
   },
   "States": {
     "empty": "No published content yet.",
@@ -489,7 +555,8 @@
       "events": "Find events and meetings.",
       "publications": "Read publications and reports.",
       "media": "Browse visual and audiovisual resources.",
-      "opportunities": "Find opportunities, careers and calls for projects."
+      "opportunities": "Find opportunities, careers and calls for projects.",
+      "patents": "Explore the technology portfolio and filed patents."
     },
     "features": {
       "workWithUs": "Discover opportunities to collaborate with IRESEN.",
@@ -501,6 +568,7 @@
     "homeTitle": "Research for the energy transition.",
     "discover": "Discover",
     "continue": "Explore further",
+    "scrollDown": "SCROLL DOWN",
     "certification": {
       "label": "Certified",
       "description": "Africa’s first research institute certified to ISO 9001."
@@ -538,7 +606,8 @@
       "cookies": "Cookies are small files stored by your browser. The website distinguishes items necessary for its operation and remembering your choice from optional external services. No advertising or audience analytics tool is integrated.",
       "accessibility": "IRESEN aims to provide an experience usable by as many people as possible in French, English and Arabic. Design takes WCAG 2.2 Level AA as a reference for readability, keyboard navigation, structured content and small-screen behaviour.",
       "sitemap": "Direct links to IRESEN website pages, grouped by topic in the selected language.",
-      "usefulLinks": "Explore these external resources for energy and geoscientific maps of Morocco."
+      "usefulLinks": "Explore these external resources for energy and geoscientific maps of Morocco.",
+      "patents": "IRESEN supports the management of an intellectual property (IP) portfolio of 30 granted patents. Explore technologies relevant to your needs."
     },
     "figuresLabel": "Key figures",
     "figures": {
@@ -704,8 +773,8 @@
         "description": "Connect research with the needs of the energy transition and sustainable development and build, together with our partners, the capabilities needed to develop, test and valorise innovative solutions in pursuit of this ambition."
       },
       "capabilities": {
-        "title": "An integrated research and innovation model",
-        "description": "Research & Innovation is IRESEN’s core activity, with three missions: Develop, Test and Valorise. Studies & Expertise, Skills & Capacities and Cooperation & Outreach strengthen and broaden this contribution. They can also directly address specific needs. These contributions draw on shared capabilities. Their combination depends on the need; it describes neither an organisational chart nor a compulsory pathway."
+        "title": "One model. Capabilities that reinforce each other.",
+        "description": "One core activity and three complementary dimensions, combined according to each project’s needs."
       },
       "ambition-2035": {
         "title": "Our ambition for 2035",
@@ -720,8 +789,8 @@
         "description": "Since its creation, IRESEN has supported collaborative research, helped equip teams and developed research and experimentation platforms with its partners. Studies, expertise, training and technology transfer enrich this work. The fifteen-year activity report puts this journey into perspective: programmes undertaken, key achievements, capacities developed and cooperation built. It offers a view of the Institute’s contributions and the lessons that inform its next steps."
       },
       "institute-positioning": {
-        "title": "Our positioning",
-        "description": "Research rooted in Morocco’s needs, open to the world"
+        "title": "Where needs and solutions meet.",
+        "description": "IRESEN connects national priorities, scientific research and socioeconomic needs. We bring together skills, programmes and experimental capabilities to develop scientific and technological responses suited to Morocco."
       },
       "institute-values": {
         "title": "Our values",
@@ -733,7 +802,7 @@
       },
       "institute-studies": {
         "title": "Studies & Expertise",
-        "description": "IRESEN provides the knowledge, data and analysis needed to prepare public, scientific and industrial decisions. This mission helps build a better understanding of technological options and their application conditions in Morocco and the region."
+        "description": "Data, studies, monitoring and foresight to inform scientific, technological and strategic choices."
       },
       "institute-research": {
         "title": "Research & Innovation",
@@ -741,7 +810,7 @@
       },
       "institute-skills": {
         "title": "Skills & Capacities",
-        "description": "IRESEN helps individuals, teams and stakeholders develop the skills needed to understand, practise, assess and further develop technologies with greater autonomy."
+        "description": "Develop talent, share know-how and support people and organisations in understanding and mastering technologies."
       },
       "institute-cooperation": {
         "title": "Cooperation & Outreach",
@@ -783,7 +852,7 @@
       },
       "council-representatives": {
         "title": "The Board of Directors",
-        "description": "The board of directors Setting direction and monitoring delivery. Chaired by right by the minister responsible for energy or their representative, the board of directors defines IRESEN’s policy and general direction. It monitors programmes and projects, adopts budgets and accounts, approves agreements and partnerships, and oversees the Institute’s management. It draws on scientific expertise and committee work to inform its decisions. It appoints the Director General and evaluates the performance of the executive management. Members of the board of directors The scientific council Informing research priorities and assessing project relevance. Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Members of the scientific council Ministry of Economy and Finance Ministry of Energy Transition and Sustainable Development Ministry of Higher Education, Scientific Research and Innovation Ministry of Industry and Trade OCP Moroccan Agency for Energy Efficiency — AMEE Nareva Mohammed VI Polytechnic University — UM6P National Office of Hydrocarbons and Mines — ONHYM Energy Federation National Centre for Nuclear Energy, Sciences and Technology — CNESTEN Moroccan Agency for Sustainable Energy - MASEN National Office of Electricity and Drinking Water — ONEE R&D Maroc Managem National Federation of Electricity, Electronics and Renewable Energy — FENELEC"
+        "description": "The board of directors Setting direction and monitoring delivery. Chaired by right by the minister responsible for energy or their representative, the board of directors defines IRESEN’s policy and general direction. It monitors programmes and projects, adopts budgets and accounts, approves agreements and partnerships, and oversees the Institute’s management. It draws on scientific expertise and committee work to inform its decisions. It appoints the Director General and evaluates the performance of the executive management. Members of the board of directors The scientific council Informing research priorities and assessing project relevance. Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Members of the scientific council Ministry of Economy, Finance and Public Performance Ministry of Energy, Mines and Sustainable Development Ministry of Higher Education, Scientific Research and Innovation Ministry of Industry, Trade, Investment and Economic Inclusion OCP Moroccan Agency for Energy Efficiency — AMEE Nareva Université Mohammed VI Polytechnique - UM6P — Université Mohammed VI Polytechnique - UM6P National Office of Hydrocarbons and Mines — ONHYM Energy Federation National Centre for Nuclear Energy, Sciences and Technology — Centre National de l’Énergie, des Sciences et des Techniques Nucléaires - CNESTEN Moroccan Agency for Sustainable Energy - MASEN National Office of Electricity and Drinking Water — ONEE R&D Maroc Managem National Federation of Electricity, Electronics and Renewable Energy — FENELEC"
       },
       "leadership-organisation": {
         "title": "Executive management and three complementary divisions",
@@ -799,7 +868,7 @@
       },
       "scientific-council": {
         "title": "The Scientific Council",
-        "description": "Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Dr. Ahmed ENNAOUI Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin Dr. Abdelhakim ARTIBA President of Université Polytechnique Hauts-de-France M. Diego PAVIA President of InnoEnergy at the European Institute of Technology Dr. Florence LAMBERT CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission Dr. Ralf B. WEHRSPOHN Executive President of the Fraunhofer Institute / Professor at Martin Luther University Halle Dr. Robert PITZ-PAAL Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA) Dr. Tijani BOUNAHMIDI Director of the Technological Innovation Centre, Vice President of Mohammed V-Agdal University, Rabat Dr. Vlademiro MIRANDA Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil"
+        "description": "Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Dr. Ahmed ENNAOUI Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin Dr. Abdelhakim ARTIBA President of Université Polytechnique Hauts-de-France - UPHF M. Diego PAVIA President of InnoEnergy at the European Institute of Technology Dr. Florence LAMBERT CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission Dr. Ralf B. WEHRSPOHN Executive President of the Fraunhofer Institute / Professor at Université Martin Luther de Halle-Wittenberg - MLU Dr. Robert PITZ-PAAL Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA) Dr. Tijani BOUNAHMIDI Director of the Technological Innovation Centre, Vice President of Université Mohammed V de Rabat - UM5 Dr. Vlademiro MIRANDA Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil"
       },
       "governance-oversight": {
         "title": "Monitoring commitments and overseeing management",
@@ -911,7 +980,7 @@
     "platforms": {
       "choose-by-need": {
         "title": "One network, complementary expertise",
-        "description": "IRESEN’s platform network grew from an ambition to build, with its partners, the scientific and technological capabilities needed for the energy transition. Developed notably with Mohammed VI Polytechnic University and the support of national and international partners, it brings research, training and innovation closer to the needs of society and industry."
+        "description": "IRESEN’s platform network grew from an ambition to build, with its partners, the scientific and technological capabilities needed for the energy transition. Developed notably with Université Mohammed VI Polytechnique - UM6P and the support of national and international partners, it brings research, training and innovation closer to the needs of society and industry."
       },
       "platform-network": {
         "title": "Our research platforms",
@@ -1135,7 +1204,7 @@
       },
       "find-opportunity": {
         "title": "Job opportunities",
-        "description": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition."
+        "description": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition. Internship types: final-year project (PFE), observation, practical, hybrid, volunteering."
       },
       "working-at-iresen": {
         "title": "Why join us",
@@ -1321,7 +1390,8 @@
         "title": "Mapping tools",
         "description": "Explore these external resources for energy and geoscientific maps of Morocco."
       }
-    }
+    },
+    "patents": {}
   },
   "Search": {
     "headerLabel": "Quick site search",
@@ -1525,7 +1595,7 @@
         "title": "IRESEN takes part in the Impact Pioneers ’26 programme in Sweden."
       },
       "7514300639057797120": {
-        "title": "Samir Rachidi discusses how local expertise can support industrial development."
+        "title": "Samir RACHIDI discusses how local expertise can support industrial development."
       },
       "7514298051914588161": {
         "title": "IRESEN contributes to discussions at the Dii Leadership Summit in Istanbul."
@@ -1598,7 +1668,7 @@
         "category": "Solar · storage",
         "description": "In Benguerir, test photovoltaics, solar thermal technologies and storage, from laboratory to field.",
         "imageDescription": "Aerial view of Green Energy Park in Benguerir, showing its laboratories and solar fields.",
-        "searchText": "GEP Green Energy Park Benguerir photovoltaics PV concentrated solar power CSP solar thermal energy storage testing qualification"
+        "searchText": "Green Energy Park photovoltaics PV concentrated solar power CSP solar thermal energy storage testing qualification"
       },
       "gsbp": {
         "name": "Green & Smart Building Park",
@@ -1612,7 +1682,7 @@
         "category": "Cooperation · experimentation",
         "description": "In Yamoussoukro, study solar technologies in a semi-tropical climate and develop local skills.",
         "imageDescription": "Building and photovoltaic installations at Green Energy Park Morocco–Côte d’Ivoire.",
-        "searchText": "GEP-MCI GEP MCI Green Energy Park Morocco Côte d’Ivoire Ivory Coast Yamoussoukro INP-HB solar South-South cooperation training"
+        "searchText": "Green Energy Park Maroc–Côte d’Ivoire Green Energy Park MCI Green Energy Park Morocco Côte d’Ivoire Ivory Coast Yamoussoukro INP-HB solar South-South cooperation training"
       },
       "greenh2a": {
         "name": "GreenH2A",
@@ -1807,7 +1877,6 @@
               "description": "Explore maturation, valorisation or transfer within Research & Innovation. Describe the result, its stage and the uses being considered."
             }
           ],
-          "note": "These entry points complement one another. The expertise, facilities and partners to involve depend on the need, available capabilities and the collaboration framework.",
           "checklist": []
         },
         "organisation-contributions": {
@@ -1844,8 +1913,7 @@
               "description": "Discover research work, research-based training, knowledge sharing and available scientific and professional opportunities."
             }
           ],
-          "checklist": [],
-          "note": "The need determines the relevant contributions. Arrangements, resources and collaboration conditions are defined together."
+          "checklist": []
         },
         "collaboration-arrangements": {
           "label": "The framework",
@@ -1886,7 +1954,6 @@
               "description": "Clarify the collaboration framework, then document the work, use of results and lessons to share."
             }
           ],
-          "note": "These pointers are not an admission procedure. A call for projects or a specific scheme retains its own conditions.",
           "checklist": []
         },
         "collaboration-references": {
@@ -2048,7 +2115,6 @@
       "showAll": "Show all",
       "original": "Titles follow the selected language; applicant names retain their original wording.",
       "note": "This catalogue includes only granted patents from the IP portfolio. Consult each PatentRegister record for its current legal status.",
-      "updated": "Dataset as of the fourth quarter of 2026",
       "noJavaScript": "Without JavaScript, all 30 granted patents are displayed. Filters require JavaScript."
     },
     "figures": {
@@ -2180,8 +2246,18 @@
       "internship": "Internship application",
       "kind": "Application type",
       "offer": "Position",
+      "internshipType": "Internship type",
+      "internshipTypes": {
+        "pfe": "Final-year project (PFE)",
+        "observation": "Observation internship",
+        "practical": "Practical internship",
+        "hybrid": "Hybrid internship",
+        "volunteering": "Volunteering",
+        "other": "Other"
+      },
+      "externalApplication": "Continue your application for this role using the dedicated form.",
       "spontaneous": "Unsolicited application",
-      "message": "Message",
+      "message": "Motivation",
       "messagePlaceholder": "Your background, motivation and availability",
       "cv": "CV (PDF, Word)",
       "upload": "Choose your CV",
@@ -2241,7 +2317,7 @@
     "noImage": "IRESEN publication",
     "photos": {
       "hero": "Speaker addressing an audience — Figma reference photograph.",
-      "podcast": "Samir Rachidi in Oman Climate Week’s Masarat podcast.",
+      "podcast": "Samir RACHIDI in Oman Climate Week’s Masarat podcast.",
       "oman": "Photographs of IRESEN’s participation in Oman Climate Week 2026.",
       "sweden": "IRESEN post about the Impact Pioneers ’26 MENA week in Sweden.",
       "istanbul": "IRESEN post about the Dii Desert Energy Leadership Summit in Istanbul.",
@@ -2252,7 +2328,7 @@
       "worldptx": "Official visual announcing the sixth World Power-to-X Summit in 2027."
     },
     "summaries": {
-      "7514300639057797120": "In Oman Climate Week’s Masarat podcast, Samir Rachidi discusses local skills, knowledge transfer and support for ideas and startups to develop industrial solutions.",
+      "7514300639057797120": "In Oman Climate Week’s Masarat podcast, Samir RACHIDI discusses local skills, knowledge transfer and support for ideas and startups to develop industrial solutions.",
       "7514335153415131136": "A week of shared learning and connections in Sweden through Impact Pioneers ’26 MENA.",
       "7514298051914588161": "Highlights from IRESEN’s participation in the Dii Desert Energy Leadership Summit in Istanbul, connecting clean energy, continents and markets.",
       "7510672994734727168": "In Muscat, discussions on climate action, green hydrogen and cooperation between Moroccan and Omani energy ecosystems.",
@@ -2265,7 +2341,7 @@
         "meta": "14–16 September 2026",
         "place": "Muscat · Oman",
         "description": "IRESEN participated in Oman Climate Week 2026, exchanging perspectives on climate action, green hydrogen and the energy transition.",
-        "detail": "Samir Rachidi joined the UNFCCC-led peer exchange on Nationally Determined Contribution (NDC) implementation in the MENA region. The mission also included discussions with Hydrom and the Oman Hydrogen Centre and a framework memorandum with the Majan Council."
+        "detail": "Samir RACHIDI joined the UNFCCC-led peer exchange on Nationally Determined Contribution (NDC) implementation in the MENA region. The mission also included discussions with Hydrom and the Oman Hydrogen Centre and a framework memorandum with the Majan Council."
       },
       "cop31": {
         "name": "Side events · COP31",
@@ -2305,7 +2381,7 @@
     "eventPosition": "Event {current} of {total}",
     "newsTitles": {
       "7514335153415131136": "IRESEN takes part in the Impact Pioneers ’26 programme in Sweden.",
-      "7514300639057797120": "Samir Rachidi discusses how local expertise can support industrial development.",
+      "7514300639057797120": "Samir RACHIDI discusses how local expertise can support industrial development.",
       "7514298051914588161": "IRESEN contributes to discussions at the Dii Leadership Summit in Istanbul.",
       "7510672994734727168": "IRESEN strengthens dialogue on green hydrogen at Oman Climate Week.",
       "7508575272049229824": "IRESEN and Majan Council establish a framework for energy cooperation.",
@@ -2855,17 +2931,17 @@
     "memberLogo": "Logo of {name}",
     "portrait": "Portrait of {name}",
     "board": {
-      "min-finance": "Ministry of Economy and Finance",
-      "min-energie": "Ministry of Energy Transition and Sustainable Development",
+      "min-finance": "Ministry of Economy, Finance and Public Performance",
+      "min-energie": "Ministry of Energy, Mines and Sustainable Development",
       "minensup": "Ministry of Higher Education, Scientific Research and Innovation",
-      "micep": "Ministry of Industry and Trade",
+      "micep": "Ministry of Industry, Trade, Investment and Economic Inclusion",
       "ocp": "OCP",
       "amee": "Moroccan Agency for Energy Efficiency — AMEE",
       "nareva": "Nareva",
-      "um6p": "Mohammed VI Polytechnic University — UM6P",
+      "um6p": "Université Mohammed VI Polytechnique - UM6P — Université Mohammed VI Polytechnique - UM6P",
       "onhym": "National Office of Hydrocarbons and Mines — ONHYM",
       "federation-de-lener": "Energy Federation",
-      "cnesten": "National Centre for Nuclear Energy, Sciences and Technology — CNESTEN",
+      "cnesten": "National Centre for Nuclear Energy, Sciences and Technology — Centre National de l’Énergie, des Sciences et des Techniques Nucléaires - CNESTEN",
       "masen": "Moroccan Agency for Sustainable Energy - MASEN",
       "onee": "National Office of Electricity and Drinking Water — ONEE",
       "rd-maroc": "R&D Maroc",
@@ -2880,7 +2956,7 @@
       },
       "artiba": {
         "name": "Dr. Abdelhakim ARTIBA",
-        "role": "President of Université Polytechnique Hauts-de-France",
+        "role": "President of Université Polytechnique Hauts-de-France - UPHF",
         "country": "France"
       },
       "pavia": {
@@ -2895,7 +2971,7 @@
       },
       "wehrspohn": {
         "name": "Dr. Ralf B. WEHRSPOHN",
-        "role": "Executive President of the Fraunhofer Institute / Professor at Martin Luther University Halle",
+        "role": "Executive President of the Fraunhofer Institute / Professor at Université Martin Luther de Halle-Wittenberg - MLU",
         "country": "Germany"
       },
       "pitz-paal": {
@@ -2905,7 +2981,7 @@
       },
       "bounahmidi": {
         "name": "Dr. Tijani BOUNAHMIDI",
-        "role": "Director of the Technological Innovation Centre, Vice President of Mohammed V-Agdal University, Rabat",
+        "role": "Director of the Technological Innovation Centre, Vice President of Université Mohammed V de Rabat - UM5",
         "country": "Morocco"
       },
       "miranda": {
@@ -2918,7 +2994,7 @@
       "soukaina": {
         "name": "Soukaina BOUDOUDOUH",
         "role": "Director of R&D&I Programmes and the Expert Network",
-        "biography": "An electrical engineer with a PhD in electrical engineering, Soukaina BOUDOUDOUH is a graduate of the University of Technology of Belfort-Montbéliard and the Mohammadia School of Engineers. Her research focuses on energy management, hybrid electrical systems and microgrids.\n\nHer career includes postdoctoral research on storage combining batteries and supercapacitors. At IRESEN, she evaluated and monitored research projects before taking responsibility for R&D&I programmes and the expert network, connecting scientific expertise, project support and energy-transition challenges."
+        "biography": "An electrical engineer with a PhD in electrical engineering, Soukaina BOUDOUDOUH is a graduate of the Université de Technologie de Belfort-Montbéliard - UTBM and the Mohammadia School of Engineers. Her research focuses on energy management, hybrid electrical systems and microgrids.\n\nHer career includes postdoctoral research on storage combining batteries and supercapacitors. At IRESEN, she evaluated and monitored research projects before taking responsibility for R&D&I programmes and the expert network, connecting scientific expertise, project support and energy-transition challenges."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
@@ -3064,72 +3140,72 @@
     "labs": {
       "power-electronics": {
         "title": "Power electronics",
-        "institution": "Hassan First University",
+        "institution": "Université Hassan 1er - UH1",
         "city": "Settat"
       },
       "battery-testing": {
         "title": "Battery testing",
-        "institution": "Cadi Ayyad University",
+        "institution": "Université Cadi Ayyad - UCA",
         "city": "Marrakech"
       },
       "nanoparticles": {
         "title": "Nanoparticles",
-        "institution": "Al Akhawayn University",
+        "institution": "Université Al Akhawayn - AUI",
         "city": "Ifrane"
       },
       "phase-change": {
         "title": "Phase-change materials",
-        "institution": "Hassan II University",
+        "institution": "Université Hassan II de Casablanca - UH2C",
         "city": "Casablanca"
       },
       "concentrated-pv": {
         "title": "Concentrated photovoltaics",
-        "institution": "Sidi Mohammed Ben Abdellah University",
+        "institution": "Université Sidi Mohammed Ben Abdellah - USMBA",
         "city": "Fez"
       },
       "smart-grids": {
         "title": "Smart grids",
-        "institution": "Ibn Tofail University",
+        "institution": "Université Ibn Tofail - UIT",
         "city": "Kenitra"
       },
       "methanisation": {
         "title": "Anaerobic digestion",
-        "institution": "Ibn Tofail University",
+        "institution": "Université Ibn Tofail - UIT",
         "city": "Kenitra"
       },
       "low-temperature-solar": {
         "title": "Low-temperature solar thermal energy",
-        "institution": "Sidi Mohammed Ben Abdellah University (USMBA)",
+        "institution": "Université Sidi Mohammed Ben Abdellah - USMBA (Université Sidi Mohammed Ben Abdellah - USMBA)",
         "city": "Fez"
       },
       "thermal-storage": {
         "title": "Thermal storage",
-        "institution": "Ibn Zohr University",
+        "institution": "Université Ibn Zohr - UIZ",
         "city": "Agadir"
       },
       "solar-thermal": {
         "title": "Solar thermal energy",
-        "institution": "International University of Rabat",
+        "institution": "Université Internationale de Rabat - UIR",
         "city": "Rabat"
       },
       "nanolubricants": {
         "title": "Nanolubricants",
-        "institution": "Abdelmalek Essaâdi University",
+        "institution": "Université Abdelmalek Essaâdi - UAE",
         "city": "Tangier"
       },
       "electric-mobility": {
         "title": "Electric mobility",
-        "institution": "Cadi Ayyad University",
+        "institution": "Université Cadi Ayyad - UCA",
         "city": "Marrakech"
       },
       "solar-energy": {
         "title": "Solar energy",
-        "institution": "Green Energy Park (GEP)",
+        "institution": "Green Energy Park",
         "city": "Ben Guerir"
       },
       "thermal-production": {
         "title": "Thermal energy production",
-        "institution": "Cadi Ayyad University",
+        "institution": "Université Cadi Ayyad - UCA",
         "city": "Marrakech"
       }
     }
@@ -3148,13 +3224,13 @@
     "imageAlt": {
       "gep": "Aerial view of Green Energy Park in Benguerir and its solar installations.",
       "gsbp": "Prototype houses in the Solar Village at Green & Smart Building Park.",
-      "gep-mci": "Photovoltaic installations at Green Energy Park Morocco–Côte d’Ivoire in Yamoussoukro.",
+      "gep-mci": "Supplied image for Green Energy Park Morocco–Côte d’Ivoire: building and solar panels.",
       "greenh2a": "3D visualization of equipment for the GreenH2A project; this rendering does not document an operational installation."
     },
     "intro": {
       "title": "One network, complementary expertise",
       "paragraphs": [
-        "IRESEN’s platform network grew from an ambition to build, with its partners, the scientific and technological capabilities needed for the energy transition. Developed notably with Mohammed VI Polytechnic University and the support of national and international partners, it brings research, training and innovation closer to the needs of society and industry.",
+        "IRESEN’s platform network grew from an ambition to build, with its partners, the scientific and technological capabilities needed for the energy transition. Developed notably with Université Mohammed VI Polytechnique - UM6P and the support of national and international partners, it brings research, training and innovation closer to the needs of society and industry.",
         "Each platform offers a complementary specialization and experimental environment. Their network enables shared equipment and teams, combines expertise and studies solutions in different climatic and territorial conditions, in Morocco and across Africa.",
         "Produce knowledge, develop and adapt technologies, evaluate their performance and prepare their use in response to Morocco’s needs. A platform can support research, testing and training. A partnership can bring together expertise and resources for several contributions."
       ],
@@ -3188,7 +3264,7 @@
         "lead": "Develop and qualify solar technologies",
         "location": "Benguerir · Morocco",
         "paragraphs": [
-          "Developed jointly by IRESEN and Mohammed VI Polytechnic University, Green Energy Park combines applied research, testing and training in solar technologies. It brings together specialized laboratories and outdoor installations to study energy materials, components and systems.",
+          "Developed jointly by IRESEN and Université Mohammed VI Polytechnique - UM6P, Green Energy Park combines applied research, testing and training in solar technologies. It brings together specialized laboratories and outdoor installations to study energy materials, components and systems.",
           "Its distinctive approach connects laboratory experimentation with field assessment. Technologies can be developed, compared and tested in local climatic conditions to improve their performance and reliability."
         ],
         "themes": [
@@ -3213,14 +3289,14 @@
         },
         "action": "Learn more about Green Energy Park",
         "mobile": "Solar research, testing and training, from laboratories to outdoor facilities in Benguerir.",
-        "compact": "In Benguerir, IRESEN and UM6P bring together solar research, testing and training. Laboratories and outdoor facilities support comparison of technologies in local climate conditions."
+        "compact": "In Benguerir, IRESEN and Université Mohammed VI Polytechnique - UM6P bring together solar research, testing and training. Laboratories and outdoor facilities support comparison of technologies in local climate conditions."
       },
       "gsbp": {
         "name": "Green & Smart Building Park",
         "lead": "Experiment with sustainable buildings and smart energy systems",
         "location": "Benguerir · Morocco",
         "paragraphs": [
-          "Green & Smart Building Park is a research, testing and training platform for sustainable buildings, energy efficiency, smart grids and sustainable mobility. Developed by IRESEN and UM6P with support from Korean cooperation, it brings together construction, energy and digital disciplines.",
+          "Green & Smart Building Park is a research, testing and training platform for sustainable buildings, energy efficiency, smart grids and sustainable mobility. Developed by IRESEN and Université Mohammed VI Polytechnique - UM6P with support from Korean cooperation, it brings together construction, energy and digital disciplines.",
           "Designed as a full-scale laboratory, it studies materials, architecture, equipment and uses together. This approach helps design more efficient, comfortable buildings while exploring their interaction with renewable generation, storage and electric mobility."
         ],
         "themes": [
@@ -3252,7 +3328,7 @@
         "lead": "Adapt solar technologies to West African conditions",
         "location": "Yamoussoukro · Côte d’Ivoire",
         "paragraphs": [
-          "Located at the Institut National Polytechnique Félix Houphouët-Boigny, Green Energy Park Morocco–Côte d’Ivoire extends the model developed in Benguerir. A collaboration between IRESEN, UM6P, Green Energy Park and INP-HB, it combines applied research, experimentation and skills development.",
+          "Located at the Institut National Polytechnique Félix Houphouët-Boigny, Green Energy Park Morocco–Côte d’Ivoire extends the model developed in Benguerir. A collaboration between IRESEN, Université Mohammed VI Polytechnique - UM6P, Green Energy Park and INP-HB, it combines applied research, experimentation and skills development.",
           "Its distinctive role is to study solar technologies in a different climatic environment, close to local needs. It expands the network’s capabilities to compare solution performance, adapt applications and train researchers, students and professionals in the region."
         ],
         "themes": [
@@ -3281,14 +3357,14 @@
         },
         "action": "Learn more about Green Energy Park Morocco–Côte d’Ivoire",
         "mobile": "Solar research, testing in West African climate conditions and skills development in Yamoussoukro.",
-        "compact": "In Yamoussoukro, cooperation between IRESEN, UM6P, GEP and INP-HB connects solar research, testing in West African climate conditions and skills development."
+        "compact": "In Yamoussoukro, cooperation between IRESEN, Université Mohammed VI Polytechnique - UM6P, Green Energy Park and INP-HB connects solar research, testing in West African climate conditions and skills development."
       },
       "greenh2a": {
         "name": "GreenH2A",
         "lead": "Prepare industrial applications for green hydrogen",
         "location": "Jorf Lasfar · Morocco",
         "paragraphs": [
-          "Developed by IRESEN, Mohammed VI Polytechnic University and OCP Group, GreenH2A is a platform dedicated to research and innovation in green hydrogen and its Power-to-X applications: converting renewable electricity into hydrogen and added-value molecules.",
+          "Developed by IRESEN, Université Mohammed VI Polytechnique - UM6P and OCP Group, GreenH2A is a platform dedicated to research and innovation in green hydrogen and its Power-to-X applications: converting renewable electricity into hydrogen and added-value molecules.",
           "Its distinctive approach covers the entire value chain, from hydrogen production to conversion and industrial uses. It aims to compare technologies, develop pilots and produce the knowledge needed for skills development and deployment of the sector."
         ],
         "themes": [

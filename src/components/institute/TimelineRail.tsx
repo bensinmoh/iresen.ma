@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import styles from './InstitutePage.module.css'
+import railStyles from './TimelineRail.module.css'
 
 export function TimelineRail({
   children,
@@ -83,7 +84,12 @@ export function TimelineRail({
       >
         {children}
       </ol>
-      <div ref={controls} className={styles.timelineControls} dir={direction} hidden>
+      <div
+        ref={controls}
+        className={`${styles.timelineControls} ${railStyles.controls}`}
+        dir={direction}
+        hidden
+      >
         <div
           className={styles.timelineProgress}
           role="progressbar"

@@ -8,6 +8,15 @@ describe('combined news/events destinations', () => {
     it(`${locale}: keeps listing segments out of CMS article routes and index destinations`, () => {
       const listing = newsListingHref(locale).slice(locale.length + 1)
       expect(isNewsListingPath(listing, locale)).toBe(true)
+      expect(isNewsListingPath(encodeURI(listing), locale)).toBe(true)
+      expect(newsSlugFromPath(encodeURI(listing), locale)).toBeNull()
+      expect(
+        newsSlugFromPath(
+          encodeURI(`${pageHref('news', locale).slice(locale.length + 1)}/بحث-جديد`),
+          locale,
+        ),
+      ).toBe('بحث-جديد')
+      expect(newsSlugFromPath('/%E0%A4%A', locale)).toBeNull()
       expect(newsSlugFromPath(listing, locale)).toBeNull()
       expect(isNewsSlug(listing.split('/').at(-1), locale)).toBe(false)
       expect(isNewsSlug('list', locale)).toBe(false)

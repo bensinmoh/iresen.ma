@@ -1,5 +1,75 @@
 # Careers page and opportunity database — 2026-10-10
 
+## Real offers restored — 2026-10-16
+
+The owner commissions the two supplied French offers in the existing current-offer
+section: O2605, Chargé(e) de la communication & du digital, and O2609,
+Ingénieur(e) brevets. Both are CDI roles in Rabat, within Partenariats & Marketing
+de l’Innovation, published in their source on 15 October 2026 with an application
+deadline of 15 November 2026. The existing dynamic accordions require no UI change.
+The filename-derived references identify the local records; the communication
+title's grammatical typo is corrected. The owner's follow-up replaces the full
+on-page transcription with a short introduction, four mission bullets and four
+profile/application bullets per role. `src/data/career-offers-fr.json` records
+these summaries, source filenames and SHA-256 hashes.
+Internal recruitment requests and their desired start date are excluded, as is
+the uncertain reporting line for the patent role. The later PDF follow-up below authorizes the two public offer originals only.
+
+Run `SEARCH_WORKER_DISABLED=true node scripts/run.mjs tsx scripts/import-career-offers.ts`
+to populate a loopback database using an existing local administrator. The importer
+preserves existing records on repeat runs, rebuilds search through the existing
+guarded indexer and verifies two anonymous FR records and zero EN/AR records.
+Only French is approved for this integration; no translation fallback is enabled.
+The original PDF notices replace TXT for these two references (see below). The owner supplies
+external application destinations in `src/data/career-application-links.json`:
+O2605 → `https://tally.so/r/5BRlgv`; O2609 → `https://tally.so/r/KYbka8`.
+Their Apply actions are native links to those forms. These roles appear automatically in the current-offer selector; selecting one
+shows its dedicated Tally action instead of local candidate fields. Spontaneous
+applications and internships retain their existing email-draft workflow. No candidate information is passed in the URL.
+The external forms' fields, submission and receipt are outside this implementation.
+Use the importer with `--update` only to explicitly refresh these two records;
+ordinary runs preserve later CMS edits. Both paths rebuild the guarded search index.
+
+Local verification: import and anonymous locale gates pass; search rebuild includes
+the two offers. The development page renders both stable offer anchors, both FR
+TXT downloads return their current notices, and browser verification confirms
+the patent offer opens from its direct hash and its Apply action now links to the owner-supplied Tally form. Scoped ESLint, Prettier and whitespace pass.
+Full checks/CI/merge remain subject to the shared-checkout hold.
+The available runtime is Node 24.19.0 (24.21.0 also installed), below the requested
+24.22.0; this import is not evidence of validation on the pinned runtime.
+
+## Original PDF actions — 2026-10-16
+
+The owner supplies the two public offer PDFs and asks the download actions to open
+them. The owner subsequently authorizes date-corrected copies served from `assets/careers/o2605.pdf` and
+`assets/careers/o2609.pdf`; `src/data/career-documents.json` records source names,
+original and corrected SHA-256 hashes and French-only eligibility. Internal recruitment requests remain
+excluded. Next standalone tracing explicitly includes these two assets.
+
+The existing `/api/careers/{reference}?locale=fr` destinations now serve
+`application/pdf` with inline disposition after the existing anonymous
+public/open/published/locale checks. The action no longer forces a browser
+download. No unguarded static URL is introduced. Missing/unapproved locales and
+withdrawn offers retain 404 behavior. Other future offers retain TXT fallback.
+The existing guarded CMS document search references keep their stable identities,
+canonical API destinations, descriptions and withdrawal lifecycle; no duplicate
+static asset result is added. Previously rebuilt search references remain valid
+because the URL and eligibility are unchanged. Tally application links remain.
+
+Owner date correction: publication/launch is **15 October 2026** and the deadline
+is **15 November 2026** in both served PDFs. Only the two date text operands on
+the first page are changed, reusing the original font, positioning and layout.
+The two remaining page content streams are unchanged. The supplied source files
+in Downloads remain untouched. This resolves the earlier PDF/Word discrepancy;
+the website summaries and guarded search descriptions already use these dates.
+
+Verification: scoped ESLint/formatting and whitespace pass. Both local endpoints
+return the corrected PDFs; original-versus-corrected hashes are recorded. First-page
+renderings inspected for both roles; three pages and unchanged remaining content
+streams verified. Inline disposition,
+PDF content type and no-store headers verified. Unapproved EN returns 404.
+Full production build/CI remain held under shared-checkout coordination.
+
 The owner commissioned faithful implementation of the Carrières frame
 [`804:8705`](https://www.figma.com/design/0go8QANZAH73ed9AoCdHkf/IRESEN-OFFICIAL-FILE?node-id=804-8705),
 with the attached `careers.png` as a visual reference. Their later message
@@ -152,3 +222,48 @@ the original logo downward. A local CSS variable shares the existing desktop
 Production build/TypeScript and lint pass; three existing careers browser journeys
 pass in FR/EN/AR at 320/390/768/1440px. Signature captures inspected. No content or
 search change, database fixture insertion, or deployment.
+
+## Offer reference hierarchy — 2026-10-16
+
+Owner correction: each offer row places its localized reference label above the
+isolated LTR offer code. The label is 12px, italic and shared muted grey; the code
+retains its existing 14px style. Both lines align physically left with a compact
+4px gap. Existing row grids, native disclosure behavior and localized accessible
+names remain. No content/search text or publication eligibility changes.
+Development browser inspection confirms stacked labels, italic styling and equal
+left edges for O2605; both FR rows visually inspected at 1280px. Scoped lint,
+formatting and whitespace pass; production validation remains under the hold.
+
+## Conditional application selector — 2026-10-16
+
+The owner requests automatic current offers in the form and internship categories.
+Employment uses the same locale-approved, published/open `offers` result as the
+accordion list, including the two Tally roles. Selecting either role exposes its
+native external application link and hides local candidate fields, avoiding a
+second application path. Switching between employment/internship clears the offer
+and previous draft. No candidate data is passed to Tally by the website.
+
+Internship changes the label to Type de stage and supplies PFE (final-year
+project), observation, practical, hybrid, volunteering and Other. These express
+candidate requests, not a guarantee that placements exist. The chosen category
+is included in the email draft body and subject. FR/EN/AR labels and search terms
+are complete working copy. Search retains existing canonical section references.
+
+Verification: scoped ESLint, formatting and whitespace; development browser
+confirms both current offers, O2609's correct Tally link, conditional stage label,
+six internship options and observation selection at 1280px. Full production/CI
+checks remain held. No submission to an external form was performed.
+
+## Motivation field label — 2026-10-16
+
+Owner wording correction: the application textarea label changes from Message to
+Motivations (FR), Motivation (EN) and دوافع الترشح (AR). Input name, validation,
+placeholder and draft behavior remain unchanged. Locale JSON, scoped formatting
+and whitespace checked; no search description or destination changes.
+
+## New-tab offer actions — 2026-10-16
+
+Owner requests `target="_blank"`: Tally links in offer details and the application
+selector, plus offer PDF links, open a new tab with `rel="noopener noreferrer"`.
+In-page anchors and email-draft actions retain their existing behavior.
+Scoped ESLint, formatting and whitespace checks pass.

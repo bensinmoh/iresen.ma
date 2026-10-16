@@ -1,3 +1,7 @@
+import {
+  canonicalInstitutionNames as canonicalNames,
+  institutionalAffiliations,
+} from './institutions'
 import { getPayload } from 'payload'
 import { searchDatabase } from './search/database'
 import config from '../payload.config'
@@ -40,15 +44,25 @@ export function projectRecord(record: Project, locale: Locale): ProjectRecord {
     fr: '',
     en: '',
     ar: '',
-    [locale]: value ?? '',
+    [locale]: value ? canonicalNames(value) : '',
   })
   const paragraphs = (value: string | null | undefined) => ({
     fr: [],
     en: [],
     ar: [],
-    [locale]: value?.split(/\n\s*\n/).filter(Boolean) ?? [],
+    [locale]: value
+      ? canonicalNames(value)
+          .split(/\n\s*\n/)
+          .filter(Boolean)
+      : [],
   })
   return {
+    institutionSearchText: institutionalAffiliations(
+      [record.location, record.hostingPlatform, record.coordinatorAffiliation, record.consortium]
+        .filter(Boolean)
+        .join(' '),
+      locale,
+    ).searchText,
     id: record.reference,
     acronym: record.acronym,
     title: copy(record.title),

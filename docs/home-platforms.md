@@ -137,3 +137,16 @@ no content, file or public destination is added. FR/EN/AR remain working copy.
 ## Research platforms page — 2026-10-11
 
 The four homepage card actions now open their specific canonical platform chapters. This supersedes the earlier generic-overview action; existing homepage content, card motion, media and search references remain. See [platform page](research-platforms.md).
+
+Owner image replacement — 2026-10-16: use the supplied “Modern Campus Building
+with Solar Panels.png” for the main GEP-MCI image on the homepage and Platforms
+page. An optimized 1280×960 WebP preserves the established 4:3 geometry. Central
+image routing and the existing localized media search reference use the new URL.
+Source/derivative hashes are in platform-assets.json; the source remains private
+and unchanged. This replacement does not establish new documentary claims or
+alter logos, infrastructure galleries or institutional text.
+
+Verification: main GEP-MCI image loads in the FR desktop feature and was visually
+inspected. FR/EN/AR homepage and Platforms HTML use the new URL; local media
+search resolves to it. Localized alternative text describes the supplied image.
+Scoped lint/format/whitespace pass; full checks remain held by coordination.

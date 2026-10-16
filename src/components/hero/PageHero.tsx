@@ -7,6 +7,7 @@ import { homeFigures } from '@/lib/figures'
 import { homeMissions } from '@/lib/home-missions'
 import { pageHref, pageLinkHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
+import { HeroScrollCue } from './HeroScrollCue'
 import { HeroViewport } from './HeroViewport'
 import { HeroPhoto } from './HeroPhoto'
 import { HomeHeroVideo } from './HomeHeroVideo'
@@ -125,11 +126,10 @@ export async function PageHero({
               </a>
             </div>
           </div>
-          <a className="hero-scroll" href="#page-sections" aria-label={t('continue')}>
-            <span className="hero-scroll-mouse" aria-hidden="true">
-              <span className="hero-scroll-wheel" />
-            </span>
-          </a>
+          <HeroScrollCue
+            label={t('scrollDown')}
+            tone={pageId === 'programmes' ? 'blue' : 'white'}
+          />
         </div>
       </div>
       {pageId !== 'media' && (
