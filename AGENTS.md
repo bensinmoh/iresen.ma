@@ -188,7 +188,7 @@ Read `.agents/skills/README.md` before using vendored Taste/Impeccable. Its IRES
 
 Use the existing checkout. Cloud tasks are already isolated: do not create a Git worktree unless the user requests it.
 
-Use Node 24.19.0 and pnpm 11.19.0. Setup: `pnpm install --frozen-lockfile`, `pnpm setup:local`, `pnpm db:up`, `pnpm db:wait`, `pnpm cms:migrate`, `pnpm dev`. Bootstrap an administrator only with explicitly supplied temporary credentials using `pnpm cms:bootstrap`.
+Use Node 24.22.0 and pnpm 11.28.2. See [the stack review](docs/stack-maintenance-2026-10.md) for current compatibility decisions. Setup: `pnpm install --frozen-lockfile`, `pnpm setup:local`, `pnpm db:up`, `pnpm db:wait`, `pnpm cms:migrate`, `pnpm dev`. Bootstrap an administrator only with explicitly supplied temporary credentials using `pnpm cms:bootstrap`.
 
 Checks: `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:integration`, `pnpm build`, `pnpm test:e2e`. Integration/browser checks require the local database; browser checks use a production build. Review generated CMS types/import maps/migrations when schemas change.
 

@@ -1,5 +1,16 @@
 # Change log
 
+## 2026-10-16 — Stack and tooling maintenance
+
+- Apply compatible Next.js/React security patches and current patch releases for
+  validation, linting, formatting, unit tests, browser tests and Node declarations.
+- Align Node 24.22 LTS and pnpm 11.28.2 across repository, Docker and CI; pin
+  setup-node 7.1.0 and official Node/PostgreSQL 17.11 images by verified digests.
+- Preserve supported Payload/GraphQL/TypeScript versions and package trust checks;
+  remove obsolete Playwright age exceptions and unsupported workspace stateDir.
+- Correct the architecture inventory to include the sourced Projects collection.
+  See `docs/stack-maintenance-2026-10.md` for sources and validation boundaries.
+
 ## 2026-10-16 — CI integration corrections
 
 - Resume the owner-confirmed frozen integration batch and validate against an

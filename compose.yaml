@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:17.9-bookworm@sha256:47f917f7409eacd22fc5dfb1dee634e1b55cf0c01d1a7eb701be2227a03e0641
+    image: postgres:17.11-bookworm@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826
     env_file: .env.local
     ports:
       - '127.0.0.1:${POSTGRES_PORT:-5432}:5432'
