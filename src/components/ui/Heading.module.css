@@ -1,0 +1,56 @@
+.heading {
+  margin-block: 0 var(--space-4);
+}
+.heading[data-ui-heading] {
+  font-size: var(--font-size-section-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.heading[data-ui-heading='display'] {
+  font-size: var(--font-size-research-heading);
+}
+.heading[data-ui-heading='mission'] {
+  font-size: var(--font-size-mission-heading);
+  font-weight: 600;
+}
+.heading[data-ui-heading='card'] {
+  font-size: var(--font-size-card-heading);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.heading[data-ui-heading='compact'] {
+  font-size: var(--font-size-editorial-body);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.heading[data-ui-heading='label'] {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+.heading[data-ui-heading]:dir(rtl) {
+  letter-spacing: normal;
+  line-height: 1.45;
+}
+
+@media (max-width: 40rem) {
+  .heading[data-ui-heading]:is(
+      [data-ui-heading='section'],
+      [data-ui-heading='display'],
+      [data-ui-heading='mission']
+    ) {
+    font-weight: 700;
+    line-height: 1.2142857143;
+    letter-spacing: -0.02em;
+  }
+  .heading[data-ui-heading]:dir(rtl) {
+    letter-spacing: normal;
+    line-height: 1.45;
+  }
+}

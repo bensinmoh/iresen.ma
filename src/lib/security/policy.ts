@@ -4,7 +4,13 @@ export function administrationEnabled() {
   return process.env.NODE_ENV !== 'production' || process.env.CMS_ADMIN_ENABLED === 'true'
 }
 export function publicCmsRequestAllowed(method: string, pathname: string) {
-  return ['GET', 'HEAD'].includes(method) && /^\/api\/media\/file\/[^/]+$/.test(pathname)
+  return (
+    ['GET', 'HEAD'].includes(method) &&
+    (/^\/api\/media\/file\/[^/]+$/.test(pathname) ||
+      /^\/api\/projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/(?:asset\/(image|portrait)|note)$/.test(
+        pathname,
+      ))
+  )
 }
 /** Public media reads must not inherit staff privileges from an old cookie/API token. */
 export function anonymousCmsRequest(source: Pick<Request, 'url' | 'method' | 'headers'>) {

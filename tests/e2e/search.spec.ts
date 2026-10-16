@@ -443,6 +443,8 @@ for (const locale of locales) {
         const overflowing = await page.locator('.search-page').evaluate((main) =>
           [...main.querySelectorAll<HTMLElement>('input, button, select, a')]
             .filter((control) => {
+              // Native filter rails intentionally keep offscreen links available by scrolling.
+              if (control.closest('[data-ui-rail]')) return false
               const bounds = control.getBoundingClientRect()
               return (
                 bounds.width > 0 &&
@@ -453,6 +455,19 @@ for (const locale of locales) {
             .map((control) => control.textContent?.trim() || control.getAttribute('name')),
         )
         expect(overflowing, `${locale}: ${width}px, ${textSize}% text`).toEqual([])
+        await page.keyboard.press('Escape')
+        if ((await page.locator('.site-menu').getAttribute('open')) !== null) {
+          await page.keyboard.press('Escape')
+        }
+        await expect(page.locator('#main-content')).not.toHaveAttribute('inert')
+        const filterRail = page.locator('.search-page [data-ui-rail]')
+        await filterRail.focus()
+        await expect(filterRail).toBeFocused()
+        for (const filter of await filterRail.getByRole('link').all()) {
+          await filter.focus()
+          await expect(filter).toBeFocused()
+          await expect(filter).toBeInViewport()
+        }
         const selectSpacing = await page.locator('.search-sort-select').evaluate((wrapper) => {
           const select = wrapper.querySelector('select')!
           const style = getComputedStyle(select)

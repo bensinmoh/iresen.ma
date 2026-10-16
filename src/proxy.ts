@@ -9,7 +9,8 @@ import { routing } from '@/i18n/routing'
 import { defaultLocale, isLocale } from '@/i18n/locales'
 import { pageIds, pages, isNewsListingPath, pageHref } from '@/lib/site'
 import { newsSlugFromPath } from '@/lib/content/routes'
-import { callReferenceFromPath } from '@/lib/calls'
+import { findArchiveCall } from '@/lib/call-archives'
+import { callReferenceFromPath, callsListingReference } from '@/lib/calls'
 import { searchDatabase } from '@/lib/search/database'
 
 const handleLocaleRouting = createMiddleware(routing)
@@ -35,17 +36,37 @@ async function localeResponse(request: NextRequest) {
     return NextResponse.redirect(new URL(pageHref('events', locale), request.url), 308)
   }
 
+  // The catch-all page resolves this localized path directly. Rewriting it to
+  // the internal next-intl pathname can redirect back to itself in standalone.
+  if (hasLocale && pagePath === pages.programmes.pathnames[locale]) {
+    const localeHeaders = new Headers(request.headers)
+    localeHeaders.set('x-next-intl-locale', locale)
+    return NextResponse.next({ request: { headers: localeHeaders } })
+  }
+
   const callReference = callReferenceFromPath(pagePath, locale)
   // Decide before streaming so a private/missing translation is a real HTTP 404.
   // This is the live guarded source view, not a potentially stale search index.
-  const publicCall = callReference
-    ? (
-        await searchDatabase().query(
-          "SELECT 1 FROM search_public_sources WHERE origin='calls' AND slug=$1 AND locale=$2 LIMIT 1",
-          [callReference, locale],
-        )
-      ).rowCount === 1
-    : false
+  const publicCall =
+    callReference === callsListingReference ||
+    Boolean(callReference && findArchiveCall(callReference)) ||
+    (callReference
+      ? (
+          await searchDatabase().query(
+            "SELECT 1 FROM search_public_sources WHERE origin='calls' AND slug=$1 AND locale=$2 LIMIT 1",
+            [callReference, locale],
+          )
+        ).rowCount === 1
+      : false)
+  if (hasLocale && callReference && !publicCall) {
+    const localeHeaders = new Headers(request.headers)
+    localeHeaders.set('x-next-intl-locale', locale)
+    return NextResponse.next({
+      status: 404,
+      request: { headers: localeHeaders },
+      headers: { 'X-Robots-Tag': 'noindex, nofollow' },
+    })
+  }
   if (
     isKnownPage ||
     isNewsListingPath(pagePath, locale) ||

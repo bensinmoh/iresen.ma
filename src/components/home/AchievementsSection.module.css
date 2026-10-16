@@ -15,11 +15,6 @@
 .header h2 {
   max-inline-size: 22ch;
   margin: 0;
-  font-size: clamp(2rem, 3.125vw, 3.75rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
 }
 .introduction {
   margin: 0;
@@ -71,11 +66,6 @@
 }
 .card h3 {
   margin: 0 0 var(--space-3);
-  font-size: clamp(1.25rem, 1.4vw, 1.625rem);
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
 }
 .description {
   margin: 0;
@@ -142,8 +132,6 @@
   outline: 2px solid var(--color-blue);
   outline-offset: 4px;
 }
-.section:dir(rtl) h2,
-.section:dir(rtl) h3,
 .section:dir(rtl) .category {
   letter-spacing: normal;
   line-height: 1.6;

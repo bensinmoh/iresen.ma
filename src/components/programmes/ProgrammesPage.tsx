@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
@@ -8,56 +9,28 @@ import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
 import styles from './ProgrammesPage.module.css'
-import { findPublishedCalls, type PublicCall } from '@/lib/content/call-queries'
-import { callHref, callState } from '@/lib/calls'
+import { findPublishedCalls } from '@/lib/content/call-queries'
+import { callsListingHref } from '@/lib/calls'
+import { callCards } from '@/lib/call-archives'
+import { callCopy } from '@/lib/call-copy'
+import { CallCards } from './CallCards'
+import callsStyles from './CallsCatalogue.module.css'
 
 type Item = { title: string; description: string; category?: string }
-const historicalSources = [
-  'https://www.uit.ac.ma/realisation-dun-chargeur-bidirectionnel-et-sans-contact-pour-les-vehicules-electriques-a-technologie/',
-  'https://www.uca.ma/fr/news/iresen-lancement-de-lappel-a-projet-green-innoboost-20-dernier-delai-de-soumission-31-janvier-2021',
-  'https://www.cdti.es/programas-bilaterales-marruecos',
-] as const
-
 export async function ProgrammesPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Programmes' })
-  const callsCopy = await getTranslations({ locale, namespace: 'Calls' })
   const calls = await findPublishedCalls(locale)
-  const activeCalls = calls.filter((call) => ['open', 'upcoming'].includes(callState(call)))
-  const archivedCalls = calls.filter((call) => ['closed', 'cancelled'].includes(callState(call)))
-  const callCard = (call: PublicCall) => (
-    <article key={call.id} id={`call-${call.reference}`}>
-      <p className={styles.archiveLabel}>{callsCopy(`states.${callState(call)}`)}</p>
-      <p className={styles.category}>
-        <bdi>{call.acronym}</bdi> · <bdi>{call.launchYear}</bdi>
-      </p>
-      <h3>
-        <a href={callHref(call.reference, locale)}>{call.title}</a>
-      </h3>
-      <p>
-        {call.description.slice(0, 240)}
-        {call.description.length > 240 ? '…' : ''}
-      </p>
-      <p className={styles.note}>
-        {callsCopy('deadline')} :{' '}
-        <time dateTime={call.deadlineAt}>
-          {new Intl.DateTimeFormat(locale, {
-            dateStyle: 'long',
-            timeZone: 'Africa/Casablanca',
-          }).format(new Date(call.deadlineAt))}
-        </time>
-      </p>
-      <a className={styles.textLink} href={callHref(call.reference, locale)}>
-        {callsCopy('view')}
-        <NavigationIcon name="arrow" />
-      </a>
-    </article>
-  )
+  const cards = callCards(locale, calls)
+  const preview = [
+    ...cards.filter((call) => call.state === 'open' || call.state === 'upcoming'),
+    ...cards.filter((call) => call.state === 'closed' || call.state === 'cancelled'),
+  ].slice(0, 4)
+  const archiveCopy = callCopy[locale]
   const titleParts = t('title').split('. ')
   const contactHref = `${pageHref('contact', locale)}?subject=agency`
   const intro = t.raw('intro.items') as Item[]
   const impact = t.raw('impact.items') as Item[]
   const process = t.raw('process.items') as Item[]
-  const history = t.raw('history.items') as Item[]
   return (
     <div className={styles.page} data-programmes-page>
       <PageHero
@@ -83,7 +56,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
           <div className="container">
             <header className={styles.approachHeading}>
               <SectionEyebrow>{t('intro.eyebrow')}</SectionEyebrow>
-              <h2 id="programme-intro-title">{t('intro.title')}</h2>
+              <Heading as="h2" size="section" id="programme-intro-title">
+                {t('intro.title')}
+              </Heading>
             </header>
             <div className={styles.approachGrid}>
               <figure className={styles.people} data-motion-reveal>
@@ -107,12 +82,14 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
               {intro.map((item, i) => (
                 <article key={item.title}>
                   <ValorisationIcon name={(['flask', 'rocket', 'arrows-exchange'] as const)[i]!} />
-                  <h3>{item.title}</h3>
+                  <Heading as="h3" size="card">
+                    {item.title}
+                  </Heading>
                   <p>{item.description}</p>
                 </article>
               ))}
             </div>
-            <a className={styles.textLink} href={pageHref('priorities', locale)}>
+            <a data-ui-link className={styles.textLink} href={pageHref('priorities', locale)}>
               {t('priorities')}
               <NavigationIcon name="arrow" />
             </a>
@@ -126,7 +103,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
           <div className={`container ${styles.impactInner}`}>
             <header>
               <SectionEyebrow>{t('impact.eyebrow')}</SectionEyebrow>
-              <h2 id="programme-impact-title">{t('impact.title')}</h2>
+              <Heading as="h2" size="section" id="programme-impact-title">
+                {t('impact.title')}
+              </Heading>
               <p>{t('impact.description')}</p>
               <div className={styles.figure}>
                 <Image
@@ -158,7 +137,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
                     name={(['flask', 'building-factory-2', 'chart-line'] as const)[i]!}
                   />
                   <div>
-                    <h3>{item.title}</h3>
+                    <Heading as="h3" size="card">
+                      {item.title}
+                    </Heading>
                     <p>{item.description}</p>
                   </div>
                 </article>
@@ -176,7 +157,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
               <SectionEyebrow tone="cyan" centered>
                 {t('process.eyebrow')}
               </SectionEyebrow>
-              <h2 id="programme-process-title">{t('process.title')}</h2>
+              <Heading as="h2" size="section" id="programme-process-title">
+                {t('process.title')}
+              </Heading>
               <p>{t('process.description')}</p>
             </header>
             <ol className={styles.steps}>
@@ -185,7 +168,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
                   <span className={styles.stepNumber} aria-hidden="true">
                     <bdi>0{i + 1}</bdi>
                   </span>
-                  <h3>{item.title.split(' — ')[1]}</h3>
+                  <Heading as="h3" size="card">
+                    {item.title.split(' — ')[1]}
+                  </Heading>
                   <p>{item.description}</p>
                 </li>
               ))}
@@ -195,82 +180,27 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
         </section>
         <section
           id="calls-for-projects"
-          className={styles.history}
+          className={callsStyles.surface}
           aria-labelledby="programme-history-title"
         >
           <div className="container">
-            <header className={styles.splitHeading}>
+            <header className={callsStyles.heading}>
               <div>
                 <SectionEyebrow>{t('history.eyebrow')}</SectionEyebrow>
                 <h2 id="programme-history-title">{t('history.title')}</h2>
               </div>
               <div>
                 <p>{t('history.description')}</p>
-                <p className={styles.note}>{t('historicalNote')}</p>
+                <a className="button button-primary" href={callsListingHref(locale)}>
+                  {archiveCopy.all}
+                  <NavigationIcon name="arrow" />
+                </a>
               </div>
             </header>
-            <div className={styles.archives}>
-              {history.map((item, i) => (
-                <article key={item.title} id={`historical-call-${i + 1}`}>
-                  <p className={styles.archiveLabel}>{t('archiveLabel')}</p>
-                  <p className={styles.category}>{item.category}</p>
-                  <h3>
-                    <bdi>{item.title}</bdi>
-                  </h3>
-                  <p>{item.description}</p>
-                  <details>
-                    <summary>
-                      {t('details')}
-                      <NavigationIcon name="arrow" />
-                    </summary>
-                    <p>{t('processNote')}</p>
-                    <a className={styles.textLink} href={historicalSources[i]}>
-                      {t('sourceLink')}
-                      <NavigationIcon name="arrow" />
-                    </a>
-                  </details>
-                </article>
-              ))}
+            <div id="participate">
+              <CallCards calls={preview} locale={locale} />
             </div>
-            {archivedCalls.length > 0 && (
-              <div>
-                <h3>{callsCopy('archives')}</h3>
-                <div className={styles.archives}>{archivedCalls.map(callCard)}</div>
-              </div>
-            )}
           </div>
-        </section>
-        <section
-          id="participate"
-          className={styles.current}
-          aria-labelledby="programme-current-title"
-        >
-          {activeCalls.length ? (
-            <div className="container">
-              <SectionEyebrow>{t('current.eyebrow')}</SectionEyebrow>
-              <h2 id="programme-current-title">{callsCopy('active')}</h2>
-              <div className={styles.archives}>{activeCalls.map(callCard)}</div>
-            </div>
-          ) : (
-            <div className={`container ${styles.empty}`}>
-              <ValorisationIcon name="file-certificate" />
-              <div>
-                <SectionEyebrow>{t('current.eyebrow')}</SectionEyebrow>
-                <h2 id="programme-current-title">{t('current.title')}</h2>
-                <p>{t('current.description')}</p>
-                <div className={styles.actions}>
-                  <a className="button button-primary" href="#calls-for-projects">
-                    {t('archivesAction')}
-                    <NavigationIcon name="arrow" />
-                  </a>
-                  <a className={styles.textLink} href={contactHref}>
-                    {t('programmeContact')}
-                    <NavigationIcon name="arrow" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
         </section>
         <section
           id="practical-questions"
@@ -279,7 +209,9 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
         >
           <div className={`container ${styles.finalInner}`}>
             <div>
-              <h2 id="programme-final-title">{t('final.title')}</h2>
+              <Heading as="h2" size="section" id="programme-final-title">
+                {t('final.title')}
+              </Heading>
               <p>{t('final.description')}</p>
             </div>
             <div className={styles.actions}>
@@ -287,7 +219,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
                 {t('contact')}
                 <NavigationIcon name="arrow" />
               </a>
-              <a className={styles.textLink} href={pageHref('workWithUs', locale)}>
+              <a data-ui-link className={styles.textLink} href={pageHref('workWithUs', locale)}>
                 {t('cooperate')}
                 <NavigationIcon name="arrow" />
               </a>

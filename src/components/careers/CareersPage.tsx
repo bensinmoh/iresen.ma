@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -70,7 +71,9 @@ export async function CareersPage({ locale }: { locale: Locale }) {
             <div className={styles.environmentCopy}>
               <header>
                 <SectionEyebrow>{t('environment.eyebrow')}</SectionEyebrow>
-                <h2 id="environment-title">{t('environment.title')}</h2>
+                <Heading as="h2" size="section" id="environment-title">
+                  {t('environment.title')}
+                </Heading>
                 <p>{t('environment.description')}</p>
               </header>
               <ul className={styles.features}>
@@ -80,7 +83,9 @@ export async function CareersPage({ locale }: { locale: Locale }) {
                       <CareersIcon name={(['impact', 'equipment', 'ecosystem'] as const)[index]} />
                     </span>
                     <div>
-                      <h3>{feature.title}</h3>
+                      <Heading as="h3" size="card">
+                        {feature.title}
+                      </Heading>
                       <p>{feature.description}</p>
                     </div>
                   </li>

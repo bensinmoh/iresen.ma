@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { PlayCircle } from '@phosphor-icons/react/dist/ssr/PlayCircle'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 
@@ -220,9 +222,9 @@ export function VideoRail({
         }}
       >
         <div className={styles.dialogBar}>
-          <h2 id="video-dialog-title">
+          <Heading as="h2" size="compact" id="video-dialog-title">
             <bdi>{active?.title}</bdi>
-          </h2>
+          </Heading>
           <div className={styles.videoActions}>
             {active && (
               <a href={active.url} download dir="auto">

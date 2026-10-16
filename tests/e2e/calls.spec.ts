@@ -72,7 +72,7 @@ test('CMS call pages, files, dates, archives and withdrawal in all public locale
     for (const locale of ['fr', 'en', 'ar'] as const) {
       await page.emulateMedia({ reducedMotion: 'reduce' })
       await page.goto(pageHref('programmes', locale))
-      await page.locator(`#participate #call-${reference} h3 a`).click()
+      await page.locator(`#participate #call-${reference} a`).click()
       await expect(page).toHaveURL((url) => decodeURI(url.pathname) === callHref(reference, locale))
       const region = page.locator('[data-call-page]')
       await expect(region.locator('h1')).toHaveText(callTestCopy(locale).title)

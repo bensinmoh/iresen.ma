@@ -20,10 +20,12 @@ reuse this authority. Public modules include the institute, governance, research
 priorities/programmes, platforms, laboratory network, collaboration, valorisation,
 news/events, publications/reports, media, careers, contact and useful links.
 
-The collaborative-project catalogue is empty at the owner's request. All 24
-fictional records and 72 PDF notes have been withdrawn; old note URLs return 404.
-Careers also has no fictional offers. Keep both empty until verified sources are
-commissioned. The publications corpus retains 1,199 records (T4 2026); the patent
+The [collaborative-project catalogue](docs/projects.md) now uses a real Payload
+collection: 60 owner-selected source projects imported locally, with English/Arabic
+working translations in review. Filters, pagination and detailed reading are restored;
+missing facts remain empty and scientific-production counters are excluded. All 24
+fictional records and 72 old PDF notes stay withdrawn; old note URLs return 404.
+Careers still has no fictional offers. The publications corpus retains 1,199 records (T4 2026); the patent
 catalogue retains 59 records. Neither corpus is deleted by project withdrawal.
 
 Public CMS reads enforce publication and locale approval with no translation
@@ -88,6 +90,10 @@ administrator only with explicitly supplied temporary credentials using
 
 ## Commands and checks
 
+Concurrent editing chats must follow [chat orchestration](docs/chat-orchestration.md).
+Check `node scripts/coordinate-work.mjs status` before edits. Local tests/builds
+remain paused until every writer reports ready and the coordinator freezes the batch.
+
 ```sh
 pnpm lint
 pnpm test
@@ -138,4 +144,25 @@ check remains required once final website content is approved.
 
 [Architecture](docs/architecture.md) · [Design system](docs/design-system.md) ·
 [Security/privacy](docs/security-and-privacy.md) · [Current preparation report](docs/public-release-preparation.md) ·
+[Shared public elements and verification](docs/shared-elements.md) ·
 [Siteweb backlog](docs/backlog.md)
+
+Mobile Figma refinement (2026-10-15): [reviewed source nodes, responsive rules and verification](docs/mobile-figma-review.md).
+
+## Calls catalogue — 2026-10-15
+
+The Programmes devices section now links to a full 21-entry historical calls
+catalogue and individual reference pages, with FR/EN/AR filters and source notes.
+All supplied calls are closed; exact final content remains pending. See
+[scope, sources and verification](docs/calls-catalogue-2026.md).
+
+## Sourced projects — 2026-10-15
+
+The local import, review flags, guarded external asset storage and repeatable commands
+are documented in [projects](docs/projects.md). Preserve `.local/projects` with the
+database; it contains source/contact records and is excluded from Git and standalone
+tracing. `PROJECTS_LOCAL_REVIEW=true` exposes working EN/AR only for local review;
+production mode also requires `CMS_LOCAL_REVIEW=true`, and `PUBLIC_RELEASE=true`
+always disables it. Public search contains only approved locales.
+
+Project follow-ups use homogeneous AI-assisted descriptions, short previews and compact objective bullets. Project actions open guarded local PDFs; current PDF files remain unchanged until the updated project list. See [project scope](docs/projects.md).

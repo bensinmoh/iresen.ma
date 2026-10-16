@@ -1,0 +1,737 @@
+{
+  "profiles": {
+    "thermal": {
+      "summary": {
+        "fr": "Recherche appliquée sur le solaire thermique et ses applications, en associant compétences scientifiques et développement technologique.",
+        "en": "Applied research into solar thermal energy and its applications, connecting scientific expertise with technology development.",
+        "ar": "بحث تطبيقي في الطاقة الشمسية الحرارية وتطبيقاتها، يجمع الخبرات العلمية والتطوير التكنولوجي."
+      },
+      "themes": {
+        "fr": ["Solaire thermique", "Applications et stockage de chaleur"],
+        "en": ["Solar thermal energy", "Heat applications and storage"],
+        "ar": ["الطاقة الشمسية الحرارية", "تطبيقات الحرارة وتخزينها"]
+      },
+      "audience": {
+        "fr": "Équipes de recherche et partenaires industriels. Les conditions propres à cette édition restent à confirmer.",
+        "en": "Research teams and industrial partners. Edition-specific requirements remain to be confirmed.",
+        "ar": "فرق البحث والشركاء الصناعيون. شروط هذه الدورة في انتظار التأكيد."
+      },
+      "partners": ["IRESEN"],
+      "shortThemes": {
+        "fr": ["Solaire thermique", "Stockage"],
+        "en": ["Solar thermal", "Storage"],
+        "ar": ["الشمسية الحرارية", "التخزين"]
+      }
+    },
+    "pvwind": {
+      "summary": {
+        "fr": "Des projets collaboratifs de recherche appliquée dans le photovoltaïque et l’éolien, pour développer des composants, des systèmes et des applications adaptés aux besoins énergétiques.",
+        "en": "Collaborative applied research in photovoltaics and wind energy, developing components, systems and applications for energy needs.",
+        "ar": "مشاريع تعاونية للبحث التطبيقي في الطاقة الكهروضوئية وطاقة الرياح، لتطوير المكونات والأنظمة والتطبيقات."
+      },
+      "themes": {
+        "fr": ["Solaire photovoltaïque", "Énergie éolienne"],
+        "en": ["Solar photovoltaics", "Wind energy"],
+        "ar": ["الطاقة الشمسية الكهروضوئية", "طاقة الرياح"]
+      },
+      "audience": {
+        "fr": "Universités, instituts de recherche et industriels réunis en consortium.",
+        "en": "Universities, research institutes and industry working in consortia.",
+        "ar": "جامعات ومعاهد بحث ومؤسسات صناعية ضمن ائتلافات."
+      },
+      "partners": ["IRESEN"],
+      "shortThemes": {
+        "fr": ["Photovoltaïque", "Éolien"],
+        "en": ["Photovoltaics", "Wind"],
+        "ar": ["الكهروضوئية", "الرياح"]
+      }
+    },
+    "thermalbio": {
+      "summary": {
+        "fr": "Un appel dédié au solaire thermique et à la biomasse pour soutenir le développement de solutions énergétiques et les collaborations entre recherche et industrie.",
+        "en": "A call focused on solar thermal energy and biomass, supporting energy solutions and research–industry collaboration.",
+        "ar": "دعوة مخصصة للطاقة الشمسية الحرارية والكتلة الحيوية، لدعم الحلول الطاقية والتعاون بين البحث والصناعة."
+      },
+      "themes": {
+        "fr": ["Solaire thermique", "Biomasse"],
+        "en": ["Solar thermal energy", "Biomass"],
+        "ar": ["الطاقة الشمسية الحرارية", "الكتلة الحيوية"]
+      },
+      "audience": {
+        "fr": "Universités et industriels marocains. Les modalités détaillées de l’édition restent à documenter.",
+        "en": "Moroccan universities and industrial companies. Detailed edition rules remain to be documented.",
+        "ar": "جامعات ومؤسسات صناعية مغربية. تفاصيل شروط الدورة في انتظار التوثيق."
+      },
+      "partners": ["IRESEN"],
+      "shortThemes": {
+        "fr": ["Solaire thermique", "Biomasse"],
+        "en": ["Solar thermal", "Biomass"],
+        "ar": ["الشمسية الحرارية", "الكتلة الحيوية"]
+      }
+    },
+    "maghrenov": {
+      "summary": {
+        "fr": "Un dispositif conjoint IRESEN–KIC InnoEnergy pour des innovations euro-marocaines dans les énergies renouvelables et l’efficacité énergétique.",
+        "en": "An IRESEN–KIC InnoEnergy scheme for joint European–Moroccan innovation in renewable energy and energy efficiency.",
+        "ar": "آلية مشتركة بين IRESEN وKIC InnoEnergy لدعم الابتكار الأوروبي المغربي في الطاقات المتجددة والنجاعة الطاقية."
+      },
+      "themes": {
+        "fr": ["Énergies renouvelables", "Efficacité énergétique"],
+        "en": ["Renewable energy", "Energy efficiency"],
+        "ar": ["الطاقات المتجددة", "النجاعة الطاقية"]
+      },
+      "audience": {
+        "fr": "Consortiums euro-marocains développant des produits ou services innovants.",
+        "en": "European–Moroccan consortia developing innovative products or services.",
+        "ar": "ائتلافات أوروبية مغربية تعمل على تطوير منتجات أو خدمات مبتكرة."
+      },
+      "partners": ["IRESEN", "KIC InnoEnergy"],
+      "shortThemes": {
+        "fr": ["EnR", "Efficacité énergétique"],
+        "en": ["Renewables", "Energy efficiency"],
+        "ar": ["الطاقات المتجددة", "النجاعة الطاقية"]
+      }
+    },
+    "innoprojets": {
+      "summary": {
+        "fr": "Soutenir la recherche et le développement appliqués aux énergies renouvelables, avec des produits, procédés et services valorisables issus de collaborations université–industrie.",
+        "en": "Supporting applied renewable energy R&D and collaborative university–industry work on useful products, processes and services.",
+        "ar": "دعم البحث والتطوير التطبيقي في الطاقات المتجددة، ومنتجات وعمليات وخدمات ناتجة عن التعاون بين الجامعة والصناعة."
+      },
+      "themes": {
+        "fr": ["Solaire thermique et photovoltaïque", "Éolien et biomasse"],
+        "en": ["Solar thermal and photovoltaic energy", "Wind and biomass"],
+        "ar": ["الطاقة الشمسية الحرارية والكهروضوئية", "طاقة الرياح والكتلة الحيوية"]
+      },
+      "audience": {
+        "fr": "Projets collaboratifs impliquant les universités et les industriels marocains.",
+        "en": "Collaborative projects involving Moroccan universities and industrial companies.",
+        "ar": "مشاريع تعاونية تجمع الجامعات والمؤسسات الصناعية المغربية."
+      },
+      "partners": ["IRESEN"],
+      "shortThemes": {
+        "fr": ["EnR", "Recherche appliquée"],
+        "en": ["Renewables", "Applied research"],
+        "ar": ["الطاقات المتجددة", "البحث التطبيقي"]
+      }
+    },
+    "project": {
+      "summary": {
+        "fr": "Une édition de soutien à la recherche appliquée et au développement de technologies vertes, dont des travaux sur la valorisation énergétique de la biomasse.",
+        "en": "An edition supporting applied research and green technology development, including work on biomass energy recovery.",
+        "ar": "دورة لدعم البحث التطبيقي وتطوير التكنولوجيات الخضراء، بما فيها تثمين الكتلة الحيوية لإنتاج الطاقة."
+      },
+      "themes": {
+        "fr": ["Technologies vertes", "Valorisation énergétique de la biomasse"],
+        "en": ["Green technologies", "Biomass energy recovery"],
+        "ar": ["التكنولوجيات الخضراء", "التثمين الطاقي للكتلة الحيوية"]
+      },
+      "audience": {
+        "fr": "Équipes scientifiques et partenaires socio-économiques. Les critères de l’édition seront complétés avec le texte original.",
+        "en": "Scientific teams and economic partners. Edition criteria will be completed from the original call text.",
+        "ar": "فرق علمية وشركاء اقتصاديون. ستستكمل معايير الدورة انطلاقاً من نص الدعوة الأصلي."
+      },
+      "partners": ["IRESEN"],
+      "shortThemes": {
+        "fr": ["Technologies vertes", "Biomasse"],
+        "en": ["Green technology", "Biomass"],
+        "ar": ["تكنولوجيات خضراء", "الكتلة الحيوية"]
+      }
+    },
+    "boost": {
+      "summary": {
+        "fr": "Accompagner la maturation d’innovations vertes et leur préparation au marché, en rapprochant entrepreneurs, chercheurs et moyens d’expérimentation.",
+        "en": "Supporting green innovation maturation and market preparation, connecting entrepreneurs, researchers and testing capabilities.",
+        "ar": "مواكبة إنضاج الابتكارات الخضراء والتحضير للسوق، عبر الربط بين رواد الأعمال والباحثين وإمكانات التجريب."
+      },
+      "themes": {
+        "fr": ["Innovation verte", "Maturation et transfert technologique"],
+        "en": ["Green innovation", "Maturation and technology transfer"],
+        "ar": ["الابتكار الأخضر", "الإنضاج ونقل التكنولوجيا"]
+      },
+      "audience": {
+        "fr": "Entrepreneurs, industriels et chercheurs de l’écosystème national de l’innovation verte.",
+        "en": "Entrepreneurs, industrial companies and researchers in the national green innovation ecosystem.",
+        "ar": "رواد أعمال ومؤسسات صناعية وباحثون ضمن المنظومة الوطنية للابتكار الأخضر."
+      },
+      "partners": ["IRESEN"],
+      "shortThemes": {
+        "fr": ["Innovation verte", "Transfert"],
+        "en": ["Green innovation", "Transfer"],
+        "ar": ["الابتكار الأخضر", "نقل التكنولوجيا"]
+      }
+    },
+    "espamaroc": {
+      "summary": {
+        "fr": "Une coopération Maroc–Espagne pour développer des produits, procédés et services innovants dans les technologies énergétiques vertes.",
+        "en": "Moroccan–Spanish cooperation on innovative products, processes and services in green energy technologies.",
+        "ar": "تعاون مغربي إسباني لتطوير منتجات وعمليات وخدمات مبتكرة في تكنولوجيات الطاقة الخضراء."
+      },
+      "themes": {
+        "fr": [
+          "Énergies renouvelables et efficacité énergétique",
+          "Stockage, réseaux intelligents et mobilité durable"
+        ],
+        "en": [
+          "Renewable energy and energy efficiency",
+          "Storage, smart grids and sustainable mobility"
+        ],
+        "ar": ["الطاقات المتجددة والنجاعة الطاقية", "التخزين والشبكات الذكية والتنقل المستدام"]
+      },
+      "audience": {
+        "fr": "Partenaires marocains et espagnols réunis en consortium. La composition et le financement sont régis par chaque édition et par les règles nationales.",
+        "en": "Moroccan and Spanish partners working in consortia. Composition and funding follow each edition’s text and national rules.",
+        "ar": "شركاء مغاربة وإسبان ضمن ائتلافات. تخضع تركيبة الائتلاف والتمويل لنص كل دورة والقواعد الوطنية."
+      },
+      "partners": ["IRESEN", "CDTI"],
+      "shortThemes": {
+        "fr": ["EnR", "Stockage"],
+        "en": ["Renewables", "Storage"],
+        "ar": ["الطاقات المتجددة", "التخزين"]
+      }
+    },
+    "micall": {
+      "summary": {
+        "fr": "Un appel multilatéral sur la transformation numérique au service de la transition énergétique, dans le cadre de Smart Energy Systems et Mission Innovation.",
+        "en": "A multilateral call on digital transformation for the green energy transition, under Smart Energy Systems and Mission Innovation.",
+        "ar": "دعوة متعددة الأطراف حول التحول الرقمي لخدمة الانتقال الطاقي، في إطار Smart Energy Systems وMission Innovation."
+      },
+      "themes": {
+        "fr": ["Digitalisation de l’énergie", "Systèmes et réseaux énergétiques intelligents"],
+        "en": ["Energy digitalisation", "Smart energy systems and networks"],
+        "ar": ["رقمنة الطاقة", "الأنظمة والشبكات الطاقية الذكية"]
+      },
+      "audience": {
+        "fr": "Consortiums transnationaux ; chaque financeur applique ses propres conditions nationales d’éligibilité.",
+        "en": "Transnational consortia; each funding agency applies its own national eligibility rules.",
+        "ar": "ائتلافات عابرة للحدود؛ تطبق كل جهة ممولة شروط الأهلية الوطنية الخاصة بها."
+      },
+      "partners": ["IRESEN", "ERA-Net Smart Energy Systems", "Mission Innovation"],
+      "shortThemes": {
+        "fr": ["Numérique", "Smart grids"],
+        "en": ["Digital", "Smart grids"],
+        "ar": ["الرقمنة", "الشبكات الذكية"]
+      }
+    },
+    "leapre": {
+      "summary": {
+        "fr": "Le partenariat Europe–Afrique pour la recherche et l’innovation dans les énergies renouvelables mobilise des consortiums transnationaux et des agences nationales de financement.",
+        "en": "The Europe–Africa renewable energy research and innovation partnership brings together transnational consortia and national funding agencies.",
+        "ar": "تجمع الشراكة الأوروبية الإفريقية للبحث والابتكار في الطاقات المتجددة ائتلافات عابرة للحدود ووكالات تمويل وطنية."
+      },
+      "themes": {
+        "fr": ["Énergies renouvelables", "Accès à l’énergie et systèmes durables"],
+        "en": ["Renewable energy", "Energy access and sustainable systems"],
+        "ar": ["الطاقات المتجددة", "الولوج إلى الطاقة والأنظمة المستدامة"]
+      },
+      "audience": {
+        "fr": "Consortiums Europe–Afrique. Pour le volet IRESEN 2021, le texte prévoit un partenaire scientifique et un partenaire économique marocains.",
+        "en": "Europe–Africa consortia. The 2021 IRESEN rules require Moroccan scientific and business partners.",
+        "ar": "ائتلافات أوروبية إفريقية. تنص قواعد IRESEN لسنة 2021 على مشاركة شريك علمي وشريك اقتصادي مغربيين."
+      },
+      "partners": ["IRESEN", "LEAP-RE"],
+      "shortThemes": {
+        "fr": ["EnR", "Accès à l’énergie"],
+        "en": ["Renewables", "Energy access"],
+        "ar": ["الطاقات المتجددة", "الولوج إلى الطاقة"]
+      }
+    },
+    "omrane": {
+      "summary": {
+        "fr": "L’innovation au service de l’aménagement et de la construction durables : identifier et accompagner des solutions pour le bâtiment et les villes de demain.",
+        "en": "Innovation for sustainable urban development and construction: identifying and supporting solutions for buildings and cities.",
+        "ar": "الابتكار لخدمة التهيئة والبناء المستدامين: تحديد ومواكبة حلول للمباني ومدن المستقبل."
+      },
+      "themes": {
+        "fr": [
+          "Aménagement urbain et construction",
+          "Matériaux, isolation et bâtiment intelligent"
+        ],
+        "en": ["Urban development and construction", "Materials, insulation and smart buildings"],
+        "ar": ["التهيئة الحضرية والبناء", "المواد والعزل والمباني الذكية"]
+      },
+      "audience": {
+        "fr": "Startups et porteurs de solutions innovantes dans l’aménagement et la construction. Les critères dépendent de l’édition.",
+        "en": "Startups and innovators in urban development and construction. Requirements depend on the edition.",
+        "ar": "شركات ناشئة وحاملو حلول مبتكرة في التهيئة والبناء. تختلف الشروط حسب الدورة."
+      },
+      "partners": ["IRESEN", "Groupe Al Omrane"],
+      "shortThemes": {
+        "fr": ["Bâtiment", "Ville durable"],
+        "en": ["Buildings", "Sustainable cities"],
+        "ar": ["البناء", "المدينة المستدامة"]
+      }
+    },
+    "h2": {
+      "summary": {
+        "fr": "Une coopération franco-marocaine de recherche appliquée pour développer les technologies de l’hydrogène décarboné et préparer leur transfert industriel.",
+        "en": "French–Moroccan applied research cooperation to develop low-carbon hydrogen technologies and prepare industrial transfer.",
+        "ar": "تعاون فرنسي مغربي في البحث التطبيقي لتطوير تكنولوجيات الهيدروجين منخفض الكربون والتحضير لنقلها إلى الصناعة."
+      },
+      "themes": {
+        "fr": ["Hydrogène décarboné", "Recherche appliquée et transfert technologique"],
+        "en": ["Low-carbon hydrogen", "Applied research and technology transfer"],
+        "ar": ["الهيدروجين منخفض الكربون", "البحث التطبيقي ونقل التكنولوجيا"]
+      },
+      "audience": {
+        "fr": "Consortiums franco-marocains associant recherche et acteurs économiques.",
+        "en": "French–Moroccan consortia connecting research and economic partners.",
+        "ar": "ائتلافات فرنسية مغربية تربط البحث بالفاعلين الاقتصاديين."
+      },
+      "partners": ["IRESEN", "SATT Paris-Saclay", "AFD"],
+      "shortThemes": {
+        "fr": ["Hydrogène", "Transfert"],
+        "en": ["Hydrogen", "Transfer"],
+        "ar": ["الهيدروجين", "نقل التكنولوجيا"]
+      }
+    },
+    "leapse": {
+      "summary": {
+        "fr": "Une édition du partenariat Europe–Afrique sur l’énergie durable, pour des projets collaboratifs de recherche et d’innovation soumis aux règles de chaque financeur.",
+        "en": "An edition of the Europe–Africa sustainable energy partnership for collaborative research and innovation, subject to each funding agency’s rules.",
+        "ar": "دورة من الشراكة الأوروبية الإفريقية حول الطاقة المستدامة، لمشاريع تعاونية للبحث والابتكار وفق قواعد كل جهة ممولة."
+      },
+      "themes": {
+        "fr": [
+          "Énergies renouvelables et systèmes intelligents",
+          "Usages productifs, cuisson propre et hydrogène vert"
+        ],
+        "en": [
+          "Renewable energy and smart systems",
+          "Productive uses, clean cooking and green hydrogen"
+        ],
+        "ar": [
+          "الطاقات المتجددة والأنظمة الذكية",
+          "الاستخدامات الإنتاجية والطهي النظيف والهيدروجين الأخضر"
+        ]
+      },
+      "audience": {
+        "fr": "Consortiums comprenant des partenaires européens et africains, issus de la recherche et du secteur économique ; règles nationales à consulter pour chaque édition.",
+        "en": "Consortia of European and African partners from research and business; national rules must be checked for each edition.",
+        "ar": "ائتلافات تضم شركاء أوروبيين وأفارقة من البحث والقطاع الاقتصادي؛ تراجع القواعد الوطنية لكل دورة."
+      },
+      "partners": ["IRESEN", "LEAP-SE"],
+      "shortThemes": {
+        "fr": ["EnR", "Hydrogène vert"],
+        "en": ["Renewables", "Green hydrogen"],
+        "ar": ["الطاقات المتجددة", "الهيدروجين الأخضر"]
+      }
+    }
+  },
+  "records": [
+    {
+      "reference": "innotherm-2012",
+      "title": "InnoTherm I & II — InnoTherm 2012",
+      "year": 2012,
+      "period": "2012-02",
+      "profile": "thermal",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IRESEN — Strategic Outlook, 2014",
+          "url": "https://www.res4med.org/wp-content/uploads/2017/05/StrategicOutlook_Morocco-Rabat_16-09-2014-IKKEN.pdf"
+        }
+      ]
+    },
+    {
+      "reference": "innopv-innowind-2013",
+      "title": "InnoPV & InnoWind 2013",
+      "year": 2013,
+      "period": "2013-01",
+      "profile": "pvwind",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IRESEN — Strategic Outlook, 2014",
+          "url": "https://www.res4med.org/wp-content/uploads/2017/05/StrategicOutlook_Morocco-Rabat_16-09-2014-IKKEN.pdf"
+        }
+      ]
+    },
+    {
+      "reference": "innotherm-2013",
+      "title": "InnoTherm III — InnoTherm 2013",
+      "year": 2013,
+      "period": "2013-06",
+      "profile": "thermal",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IRESEN — Strategic Outlook, 2014",
+          "url": "https://www.res4med.org/wp-content/uploads/2017/05/StrategicOutlook_Morocco-Rabat_16-09-2014-IKKEN.pdf"
+        }
+      ]
+    },
+    {
+      "reference": "innotherm-innobiomass-2014",
+      "title": "InnoTherm & InnoBiomass 2014",
+      "year": 2014,
+      "period": "2014-03",
+      "profile": "thermalbio",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "USMBA — Convention SOL’R-SHEMSY, 2015",
+          "url": "https://www.usmba.ac.ma/~usmba2/events/signature-de-la-convention-de-financement-du-projet-solr-shemsy-innoprojets-iresen-par-lecole-superieure-de-technologie-de-fes/"
+        }
+      ],
+      "note": {
+        "fr": "La période de mars 2014 provient de la chronologie fournie. L’USMBA mentionne un lancement en mai 2014 ; le calendrier original reste à vérifier.",
+        "en": "March 2014 comes from the supplied chronology. USMBA mentions a May 2014 launch; the original calendar remains to be checked.",
+        "ar": "تعود فترة مارس 2014 إلى التسلسل المقدم. تذكر جامعة سيدي محمد بن عبد الله إطلاقاً في ماي 2014؛ الجدول الأصلي في انتظار التحقق."
+      }
+    },
+    {
+      "reference": "innopv-innowind-2014",
+      "title": "InnoPV & InnoWind 2014",
+      "year": 2014,
+      "period": "2014-03",
+      "profile": "pvwind",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IRESEN — Strategic Outlook, 2014",
+          "url": "https://www.res4med.org/wp-content/uploads/2017/05/StrategicOutlook_Morocco-Rabat_16-09-2014-IKKEN.pdf"
+        }
+      ]
+    },
+    {
+      "reference": "innomaghrenov-2015",
+      "title": "INNOMAGHRENOV 2015",
+      "year": 2015,
+      "period": "2015-03",
+      "profile": "maghrenov",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "Le Matin — InnoMaghrenov, 13 mars 2015",
+          "url": "https://lematin.ma/journal/2015/energie-durable_une-journee-de-networking--pour-des-partenariats-maroco-europeens/219628.html"
+        }
+      ],
+      "note": {
+        "fr": "La chronologie retient mars 2015. L’article du 13 mars indique un lancement en février et une clôture annoncée au 10 avril 2015.",
+        "en": "The chronology uses March 2015. The 13 March article reports a February launch and an announced deadline of 10 April 2015.",
+        "ar": "يعتمد التسلسل مارس 2015. يذكر مقال 13 مارس إطلاقاً في فبراير وأجلاً معلناً في 10 أبريل 2015."
+      },
+      "funding": {
+        "fr": "Enveloppe annoncée de 30 millions de dirhams, cofinancée par IRESEN et KIC InnoEnergy.",
+        "en": "Announced envelope of MAD 30 million, co-funded by IRESEN and KIC InnoEnergy.",
+        "ar": "غلاف معلن بقيمة 30 مليون درهم، بتمويل مشترك من IRESEN وKIC InnoEnergy."
+      }
+    },
+    {
+      "reference": "innoprojets-2015",
+      "title": "InnoProjets 2015",
+      "year": 2015,
+      "period": "2015-04",
+      "profile": "innoprojets",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "Fédération de l’Énergie — Énergie & Stratégie, T2 2015",
+          "url": "https://www.fedenerg.ma/wp-content/uploads/pdf/ES_41.PDF"
+        }
+      ]
+    },
+    {
+      "reference": "green-innoproject-2018",
+      "title": "Green InnoPROJECT 2018",
+      "year": 2018,
+      "period": "2018",
+      "profile": "project",
+      "kind": "development",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IRESEN — BIOF2S, Green InnoPROJECT 2018",
+          "url": "https://fr.linkedin.com/posts/iresen_biof2s-innovationverte-transition%C3%A9nerg%C3%A9tique-activity-7121158336489607168-xO8w"
+        }
+      ]
+    },
+    {
+      "reference": "green-innoboost-2018",
+      "title": "Green InnoBOOST 2018",
+      "year": 2018,
+      "period": "2018",
+      "profile": "boost",
+      "kind": "acceleration",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IEA — Green Innoboost",
+          "url": "https://www.iea.org/articles/green-innoboost"
+        }
+      ]
+    },
+    {
+      "reference": "innoespamaroc-2018-2019",
+      "title": "InnoESPAMAROC 2018–2019 — 1re édition",
+      "year": 2018,
+      "period": "2018-12",
+      "profile": "espamaroc",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "CDTI — Première édition, annonce 2018",
+          "url": "https://www.cdti.es/sites/default/files/2023-05/newsletter_noviembre_2018_0.pdf"
+        }
+      ],
+      "note": {
+        "fr": "La chronologie fournie retient décembre 2018. Le bulletin CDTI annonce une ouverture au 1er novembre 2018 ; la date effective et les reports restent à confirmer.",
+        "en": "The supplied chronology uses December 2018. The CDTI bulletin announced opening on 1 November 2018; the effective date and extensions remain to be confirmed.",
+        "ar": "يعتمد التسلسل المقدم دجنبر 2018. أعلن بيان CDTI فتح الدعوة في 1 نونبر 2018؛ التاريخ الفعلي والتمديدات في انتظار التأكيد."
+      }
+    },
+    {
+      "reference": "innoespamaroc-2020",
+      "title": "InnoESPAMAROC 2020 — 2e édition",
+      "year": 2019,
+      "period": "2019-09",
+      "profile": "espamaroc",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "CDTI — Deuxième édition, 23 septembre 2019",
+          "url": "https://www.cdti.es/gl/node/12889"
+        }
+      ],
+      "note": {
+        "fr": "Le nom de l’édition est 2020 ; le CDTI annonce une ouverture le 17 septembre 2019 et une échéance au 24 janvier 2020.",
+        "en": "The edition is named 2020; CDTI announced opening on 17 September 2019 and a deadline of 24 January 2020.",
+        "ar": "تحمل الدورة اسم 2020؛ أعلن CDTI فتحها في 17 شتنبر 2019 وحدد الأجل في 24 يناير 2020."
+      }
+    },
+    {
+      "reference": "green-innoboost-2-2020",
+      "title": "Green InnoBOOST 2.0",
+      "year": 2020,
+      "period": "2020-11",
+      "profile": "boost",
+      "kind": "acceleration",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "Université Cadi Ayyad — Green InnoBOOST 2.0",
+          "url": "https://www.uca.ma/fr/news/iresen-lancement-de-lappel-a-projet-green-innoboost-20-dernier-delai-de-soumission-31-janvier-2021"
+        },
+        {
+          "title": "IEA — Green Innoboost",
+          "url": "https://www.iea.org/articles/green-innoboost"
+        }
+      ],
+      "note": {
+        "fr": "Lancement retenu en novembre 2020 ; l’annonce universitaire indique une échéance au 31 janvier 2021. L’IEA décrit la formule remaniée en 2021.",
+        "en": "Launch recorded in November 2020; the university notice lists a 31 January 2021 deadline. IEA describes the format revised in 2021.",
+        "ar": "اعتمد نونبر 2020 للإطلاق؛ يحدد الإعلان الجامعي الأجل في 31 يناير 2021. وتصف الوكالة الدولية للطاقة الصيغة المعدلة سنة 2021."
+      },
+      "funding": {
+        "fr": "L’IEA décrit un financement pouvant atteindre 1,5 million de dirhams par projet pour la formule 2.0. Les modalités exactes de l’édition doivent être confirmées.",
+        "en": "IEA describes funding of up to MAD 1.5 million per project under the 2.0 format. Exact edition terms remain to be confirmed.",
+        "ar": "تصف الوكالة الدولية للطاقة تمويلاً يصل إلى 1.5 مليون درهم لكل مشروع في صيغة 2.0. الشروط الدقيقة للدورة في انتظار التأكيد."
+      }
+    },
+    {
+      "reference": "mi-call20",
+      "title": "MI CALL20",
+      "year": 2020,
+      "period": "2020-12",
+      "profile": "micall",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "TA ČR — EnerDigit MICall20",
+          "url": "https://tacr.gov.cz/en/enerdigit-joint-call-2020-micall20-on-digital-transformation-for-green-energy-transition-is-open/"
+        }
+      ],
+      "note": {
+        "fr": "Le calendrier international indique une ouverture le 14 décembre 2020, un enregistrement obligatoire au 17 février 2021 et un dépôt complet au 6 mai 2021.",
+        "en": "The international calendar lists opening on 14 December 2020, mandatory registration by 17 February 2021 and full proposals by 6 May 2021.",
+        "ar": "يحدد الجدول الدولي الفتح في 14 دجنبر 2020 والتسجيل الإلزامي في 17 فبراير 2021 والمقترحات الكاملة في 6 ماي 2021."
+      }
+    },
+    {
+      "reference": "innoespamaroc-2021",
+      "title": "InnoESPAMAROC 2021 — 3e édition",
+      "year": 2021,
+      "period": "2021-01",
+      "profile": "espamaroc",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "Université Ibn Tofail — INNO-ESPAMAROC 2021",
+          "url": "https://fs.uit.ac.ma/appel-a-projet-inno-espamaroc-energy-2021-iresen/"
+        }
+      ]
+    },
+    {
+      "reference": "leap-re-2021",
+      "title": "LEAP-RE 2021",
+      "year": 2021,
+      "period": "2021-01",
+      "profile": "leapre",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "LEAP-RE — Call text 2021",
+          "url": "https://www.leap-re.eu/wp-content/uploads/2021/01/LEAP-RE-Cofund-Call-2021_CALL-TEXT-v9.pdf"
+        }
+      ],
+      "funding": {
+        "fr": "Le texte 2021 indique un maximum de 150 000 euros demandés par projet pour le volet IRESEN, avec un niveau de maturité TRL 6 à 9.",
+        "en": "The 2021 call text lists a maximum request of EUR 150,000 per project under IRESEN rules, at TRL 6–9.",
+        "ar": "يحدد نص 2021 سقفاً للتمويل المطلوب قدره 150 ألف يورو لكل مشروع ضمن قواعد IRESEN، بمستوى نضج تكنولوجي من 6 إلى 9."
+      }
+    },
+    {
+      "reference": "ibtikar-al-omrane-2023",
+      "title": "IBTIKAR AL OMRANE — 2023",
+      "year": 2023,
+      "period": "2023-05",
+      "profile": "omrane",
+      "kind": "acceleration",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "Groupe Al Omrane — Rapport financier annuel 2023 (AMMC)",
+          "url": "https://www.ammc.ma/sites/default/files/AL_Omrane_RFA_2023.pdf"
+        }
+      ],
+      "note": {
+        "fr": "Le rapport Al Omrane 2023 décrit un appel lancé en mai pour deux mois, puis un parcours de sélection, d’incubation et d’accélération, en partenariat avec IRESEN et Tamwilcom. Il s’agit du lancement du programme, distinct de l’appel 2025.",
+        "en": "Al Omrane’s 2023 report describes a two-month call launched in May, followed by selection, incubation and acceleration with IRESEN and Tamwilcom. This programme launch is distinct from the 2025 call.",
+        "ar": "يصف تقرير العمران لسنة 2023 دعوة أطلقت في ماي لمدة شهرين، تليها مراحل الانتقاء والاحتضان والتسريع مع IRESEN وتمويلكم. إطلاق البرنامج منفصل عن دعوة 2025."
+      },
+      "partners": ["IRESEN", "Groupe Al Omrane", "Tamwilcom"]
+    },
+    {
+      "reference": "innoespamaroc-2024",
+      "title": "InnoESPAMAROC — 4e édition",
+      "year": 2024,
+      "period": "2024-09",
+      "profile": "espamaroc",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "CDTI — Quatrième édition, 9 octobre 2024",
+          "url": "https://www.cdti.es/noticias/el-cdti-intensifica-la-colaboracion-tecnologica-empresarial-con-marruecos-en-el-sector"
+        }
+      ],
+      "note": {
+        "fr": "Ouverture le 2 septembre 2024 ; présentation institutionnelle le 9 octobre ; échéance de première phase annoncée au 4 décembre 2024.",
+        "en": "Opened on 2 September 2024; institutional presentation on 9 October; announced first-stage deadline on 4 December 2024.",
+        "ar": "فتحت الدعوة في 2 شتنبر 2024؛ وقدمت مؤسساتياً في 9 أكتوبر؛ وأعلن عن أجل المرحلة الأولى في 4 دجنبر 2024."
+      },
+      "periodLabel": {
+        "fr": "Septembre–octobre 2024",
+        "en": "September–October 2024",
+        "ar": "شتنبر–أكتوبر 2024"
+      }
+    },
+    {
+      "reference": "inno-france-maroc-green-h2-2024",
+      "title": "Inno France–Maroc Green H2 Tech Transfert",
+      "year": 2024,
+      "period": "2024-10",
+      "profile": "h2",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "Fédération de l’Énergie — Inno France–Maroc Green H2, 2025",
+          "url": "https://www.fedenerg.ma/2025/10/13/mgh-energy-iresen-accord-de-developpement-pour-la-capture-du-co2-dans-lair-direct-air-capture/"
+        }
+      ],
+      "note": {
+        "fr": "La convention IRESEN–SATT Paris-Saclay–AFD est signée le 4 juillet 2024. Octobre 2024 est conservé comme période de référence fournie pour l’appel.",
+        "en": "The IRESEN–SATT Paris-Saclay–AFD agreement was signed on 4 July 2024. October 2024 is retained as the supplied reference period for the call.",
+        "ar": "وقعت اتفاقية IRESEN وSATT Paris-Saclay وAFD في 4 يوليوز 2024. احتفظ بأكتوبر 2024 كفترة مرجعية مقدمة للدعوة."
+      }
+    },
+    {
+      "reference": "leap-se-2025",
+      "title": "LEAP-SE 2025",
+      "year": 2025,
+      "period": "2025-01",
+      "profile": "leapse",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "UEFISCDI — LEAP-SE 2025",
+          "url": "https://uefiscdi.gov.ro/long-term-joint-eu-au-research-and-innovation-partnership-on-sustainable-energy-leap-se-leap-se-2025-812"
+        }
+      ],
+      "note": {
+        "fr": "Ouverture le 14 janvier 2025 ; prépropositions le 27 mars ; propositions complètes le 11 septembre 2025, selon le calendrier UEFISCDI. Les règles nationales restent distinctes.",
+        "en": "Opened on 14 January 2025; pre-proposals on 27 March; full proposals on 11 September 2025, according to UEFISCDI. National rules remain separate.",
+        "ar": "الفتح في 14 يناير 2025؛ المقترحات الأولية في 27 مارس؛ المقترحات الكاملة في 11 شتنبر 2025، وفق UEFISCDI. تبقى القواعد الوطنية مستقلة."
+      },
+      "duration": {
+        "fr": "Durée des projets : 12 à 36 mois, sous réserve des règles nationales.",
+        "en": "Project duration: 12–36 months, subject to national rules.",
+        "ar": "مدة المشاريع: من 12 إلى 36 شهراً، وفق القواعد الوطنية."
+      }
+    },
+    {
+      "reference": "ibtikar-al-omrane-2025",
+      "title": "IBTIKAR AL OMRANE 2025",
+      "year": 2025,
+      "period": "2025-05",
+      "profile": "omrane",
+      "kind": "acceleration",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "IRESEN — Prolongation IBTIKAR AL OMRANE 2025",
+          "url": "https://fr.linkedin.com/posts/iresen_ibtikaralomrane2025-innovation-constructiondurable-activity-7356674992375271424-vSNu"
+        }
+      ],
+      "note": {
+        "fr": "Une communication officielle IRESEN prolonge la soumission jusqu’au 28 septembre 2025. Cette échéance remplace les premières annonces de clôture.",
+        "en": "An official IRESEN announcement extends submission to 28 September 2025, superseding earlier deadline notices.",
+        "ar": "يمدد إعلان رسمي لـ IRESEN أجل التقديم إلى 28 شتنبر 2025، ليحل محل الآجال المعلنة سابقاً."
+      }
+    },
+    {
+      "reference": "leap-se-2026",
+      "title": "LEAP-SE 2026",
+      "year": 2026,
+      "period": "2025-11",
+      "profile": "leapse",
+      "kind": "cooperation",
+      "state": "closed",
+      "sources": [
+        {
+          "title": "NCN — LEAP-SE Cofund Call 2026",
+          "url": "https://www.ncn.gov.pl/ogloszenia/konkursy/leap-se-2026"
+        },
+        {
+          "title": "PtJ — LEAP-SE, calendrier 2026",
+          "url": "https://www.ptj.de/foerdermoeglichkeiten/anwendungsorientierte-grundlagenforschung-energie/leap-se"
+        }
+      ],
+      "note": {
+        "fr": "Appel publié le 19 novembre 2025. La chronologie fournie situe la confirmation IRESEN en janvier 2026 ; cette confirmation reste à documenter. La clôture des propositions complètes est fixée au 24 juin 2026 par le PtJ.",
+        "en": "Call published on 19 November 2025. The supplied chronology places IRESEN confirmation in January 2026; that confirmation still needs a source. PtJ lists 24 June 2026 for full proposals.",
+        "ar": "نشرت الدعوة في 19 نونبر 2025. يحدد التسلسل المقدم تأكيد IRESEN في يناير 2026؛ هذا التأكيد في انتظار التوثيق. يحدد PtJ أجل المقترحات الكاملة في 24 يونيو 2026."
+      },
+      "periodLabel": {
+        "fr": "Novembre 2025 / janvier 2026",
+        "en": "November 2025 / January 2026",
+        "ar": "نونبر 2025 / يناير 2026"
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -93,13 +94,21 @@ export async function NewsEventsPage({
     )
   }
   function article(card: Card, compact = false) {
+    const linkedInProps =
+      card.source === 'linkedin' ? { target: '_blank', rel: 'noopener noreferrer' } : {}
     return (
       <article
         id={card.id}
         key={card.id}
         className={`${styles.article} ${compact ? styles.compact : ''}`}
       >
-        <a href={card.href} className={styles.imageLink} tabIndex={-1} aria-hidden="true">
+        <a
+          href={card.href}
+          {...linkedInProps}
+          className={styles.imageLink}
+          tabIndex={-1}
+          aria-hidden="true"
+        >
           {media(card, !compact)}
         </a>
         <div className={styles.articleCopy}>
@@ -107,11 +116,13 @@ export async function NewsEventsPage({
             {card.date && <time dateTime={card.date}>{dateLabel(card.date)}</time>}
             <span>{card.source === 'linkedin' ? 'LinkedIn' : t('source')}</span>
           </p>
-          <h3>
-            <a href={card.href}>{card.title}</a>
-          </h3>
+          <Heading as="h3" size="card">
+            <a href={card.href} {...linkedInProps}>
+              {card.title}
+            </a>
+          </Heading>
           {!compact && <p>{card.summary}</p>}
-          <a className={styles.read} href={card.href}>
+          <a data-ui-link className={styles.read} href={card.href} {...linkedInProps}>
             <span>{t('read')}</span>
             <NavigationIcon name="arrow" />
           </a>
@@ -157,7 +168,9 @@ export async function NewsEventsPage({
               </>
             )}
             <header className={styles.heading}>
-              <h2 id="news-title">{listing ? t('allNews') : t('news')}</h2>
+              <Heading as="h2" size="section" id="news-title">
+                {listing ? t('allNews') : t('news')}
+              </Heading>
               <a
                 className="button button-primary"
                 href={listing ? pageHref('news', locale, 'news') : newsListingHref(locale)}
@@ -218,7 +231,9 @@ export async function NewsEventsPage({
                 </div>
                 <div className={styles.trainingCopy}>
                   <span id="knowledge-sharing" />
-                  <h2 id="training-title">{t('trainingTitle')}</h2>
+                  <Heading as="h2" size="section" id="training-title">
+                    {t('trainingTitle')}
+                  </Heading>
                   <div className={styles.trainingLower}>
                     <div>
                       <SectionEyebrow tone="white">{t('trainingHeading')}</SectionEyebrow>
@@ -244,7 +259,9 @@ export async function NewsEventsPage({
               <div className="container">
                 <span id="related-events-resources" />
                 <header className={styles.eventHeader}>
-                  <h2 id="events-title">{t('eventTitle')}</h2>
+                  <Heading as="h2" size="section" id="events-title">
+                    {t('eventTitle')}
+                  </Heading>
                   <p>{t('eventIntro')}</p>
                 </header>
                 <EventRail
@@ -269,7 +286,9 @@ export async function NewsEventsPage({
                       </div>
                       <div className={styles.eventCopy}>
                         <p className={styles.role}>{t(event.role)}</p>
-                        <h3>{t(`events.${event.id}.name`)}</h3>
+                        <Heading as="h3" size="card">
+                          {t(`events.${event.id}.name`)}
+                        </Heading>
                         <p>{t(`events.${event.id}.description`)}</p>
                         <dl className={styles.eventFacts}>
                           <div>
@@ -302,7 +321,7 @@ export async function NewsEventsPage({
                               </>
                             )}
                             {event.href && (
-                              <a href={event.href} className={styles.read}>
+                              <a data-ui-link href={event.href} className={styles.read}>
                                 <span>{event.id === 'oman' ? t('source') : t('official')}</span>
                                 <NavigationIcon name="arrow" />
                               </a>
@@ -318,13 +337,20 @@ export async function NewsEventsPage({
             <section className={styles.follow} id="follow-iresen" aria-labelledby="follow-title">
               <div className="container">
                 <header className={styles.heading}>
-                  <h2 id="follow-title">{t('follow')}</h2>
+                  <Heading as="h2" size="section" id="follow-title">
+                    {t('follow')}
+                  </Heading>
                   <p>{t('followDescription')}</p>
                 </header>
                 <ul className={styles.socials}>
                   {newsSocialLinks.map((social) => (
                     <li key={social.id}>
-                      <a href={social.href} aria-label={social.name}>
+                      <a
+                        href={social.href}
+                        target={social.id === 'linkedin' ? '_blank' : undefined}
+                        rel={social.id === 'linkedin' ? 'noopener noreferrer' : undefined}
+                        aria-label={social.name}
+                      >
                         <SocialIcon name={social.id} />
                         <bdi>{social.name}</bdi>
                         <NavigationIcon name="arrow" />

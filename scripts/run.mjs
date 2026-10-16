@@ -2,6 +2,7 @@ import { spawn } from 'node:child_process'
 import { mkdirSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { assertCoordinated } from './work-coordination.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 try {
@@ -17,12 +18,29 @@ process.env.CMS_UPLOAD_DIRECTORY = path.resolve(
   process.env.CMS_UPLOAD_DIRECTORY || '.local/uploads',
 )
 
+process.env.PROJECTS_ASSET_DIRECTORY = path.resolve(
+  root,
+  process.env.PROJECTS_ASSET_DIRECTORY || '.local/projects/assets',
+)
+
+process.env.PROJECTS_NOTES_DIRECTORY = path.resolve(
+  root,
+  process.env.PROJECTS_NOTES_DIRECTORY || '.local/projects/notes',
+)
+
 // Cloud runtimes may restrict the home directory. Native loaders need a private writable cache.
 process.env.XDG_CACHE_HOME ??= path.join(root, '.cache/native')
 process.env.npm_config_cache ??= path.join(root, '.cache/npm')
 mkdirSync(process.env.XDG_CACHE_HOME, { recursive: true, mode: 0o700 })
 
 const [command, ...args] = process.argv.slice(2)
+if (
+  command === 'vitest' ||
+  command === 'playwright' ||
+  (command === 'next' && args[0] === 'build')
+) {
+  assertCoordinated(root)
+}
 const packages = {
   next: 'next',
   eslint: 'eslint',

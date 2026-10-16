@@ -12,6 +12,22 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       await page.evaluate(() => document.fonts.ready)
       for (const width of [390, 1440]) {
         await page.setViewportSize({ width, height: 1000 })
+        if (await page.locator('[data-section-eyebrow]').count()) {
+          await expect
+            .poll(() =>
+              page
+                .locator('[data-section-eyebrow]')
+                .first()
+                .evaluate((el) => getComputedStyle(el).fontSize),
+            )
+            .toBe(width <= 640 ? '14px' : '18px')
+        }
+        await page.evaluate(
+          () =>
+            new Promise<void>((resolve) =>
+              requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+            ),
+        )
         const values = await page.locator('[data-section-eyebrow]').evaluateAll((nodes) => {
           const colors: Record<string, string> = {}
           for (const [tone, token] of Object.entries({
@@ -49,10 +65,10 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         for (const value of values) {
           expect(value, `${locale}/${id}/${width}: ${value.text}`).toMatchObject({
             tag: 'P',
-            font: '18px',
+            font: width <= 640 ? '14px' : '18px',
             weight: '400',
-            line: '27px',
-            tracking: locale === 'ar' ? 'normal' : '1.08px',
+            line: width <= 640 ? '21px' : '27px',
+            tracking: locale === 'ar' ? 'normal' : width <= 640 ? '1.4px' : '1.08px',
             transform: 'uppercase',
             tone: true,
             leaf: true,

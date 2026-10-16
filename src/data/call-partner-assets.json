@@ -1,0 +1,114 @@
+{
+  "context": "Owner-requested original partner marks for calls detail pages. IRESEN reuses the delivered brand original; no duplicate import.",
+  "assets": {
+    "omrane": {
+      "source": "https://www.alomrane.gov.ma/bundles/omranesocle/refonte2/images/contenus/logo-omrane.png?v4.4",
+      "finalUrl": "https://www.alomrane.gov.ma/bundles/omranesocle/refonte2/images/contenus/logo-omrane.png?v4.4",
+      "path": "public/images/call-partners/omrane.png",
+      "sha256": "8684f1db8fb4f3060627986ca9e195fa8c1d79f2389cbe983c090a99c8a6e73b",
+      "bytes": 13697,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/omrane.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "tamwilcom": {
+      "source": "https://www.tamwilcom.ma/themes/custom/tamwilcom/images/header-logo.svg",
+      "finalUrl": "https://www.tamwilcom.ma/themes/custom/tamwilcom/images/header-logo.svg",
+      "path": "public/images/call-partners/tamwilcom.svg",
+      "sha256": "e6eaa17ba36374f544592f8b290f031b152f7f1bd4d7200b7636d96aecd01a06",
+      "bytes": 20429,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/tamwilcom.svg",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "satt": {
+      "source": "https://satt-paris-saclay.fr/wp-content/uploads/2019/06/logo-satt-paris-saclay-retina.png",
+      "finalUrl": "https://satt-paris-saclay.fr/wp-content/uploads/2019/06/logo-satt-paris-saclay-retina.png",
+      "path": "public/images/call-partners/satt.png",
+      "sha256": "2ae3c5f11620a2d73be47993b128d3ea02dab7b16467b82a3a371b2917dfac28",
+      "bytes": 10179,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/satt.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "afd": {
+      "source": "https://www.afd.fr/sites/default/files/2025-03/logo_AFD.png",
+      "finalUrl": "https://www.afd.fr/sites/default/files/2025-03/logo_AFD.png",
+      "path": "public/images/call-partners/afd.png",
+      "sha256": "a5ce49e0425da9242b626c0a7dbf31fdfc2bb880096a01bdf45ec3585370af46",
+      "bytes": 10480,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/afd.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "mission": {
+      "source": "https://mission-innovation.net/wp-content/uploads/2021/10/cropped-MI-Parent-Full-Colour-1-e1635541326459.png",
+      "finalUrl": "https://mission-innovation.net/wp-content/uploads/2021/10/cropped-MI-Parent-Full-Colour-1-e1635541326459.png",
+      "path": "public/images/call-partners/mission-innovation.png",
+      "sha256": "073c907451fd95e8b396da9b8efa71fd816fa9349ba455dd32ee254037558ffb",
+      "bytes": 12459,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/mission-innovation.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "ses": {
+      "source": "https://www.eranet-smartenergysystems.eu/img/logo.png",
+      "finalUrl": "https://www.eranet-smartenergysystems.eu/img/logo.png",
+      "path": "public/images/call-partners/smart-energy-systems.png",
+      "sha256": "d37e925875e350b9732a1e596738dc756a246b32e356a038f246b46ba888b8ac",
+      "bytes": 18740,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/smart-energy-systems.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "leapre": {
+      "source": "https://eeb.uir.ac.ma/wp-content/uploads/2023/09/leap-re-logo-1.png",
+      "finalUrl": "https://eeb.uir.ac.ma/wp-content/uploads/2023/09/leap-re-logo-1.png",
+      "path": "public/images/call-partners/leap-re.png",
+      "sha256": "72882a83eee3b55d7e107ac44b122ee8d88b7e2b715279f15547dc05f405fdaf",
+      "bytes": 60522,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/leap-re.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "cdti": {
+      "source": "https://www.eranet-smartenergysystems.eu/global/images/cms/logoscroller/logo_CDTI.png",
+      "finalUrl": "https://www.eranet-smartenergysystems.eu/global/images/cms/logoscroller/logo_CDTI.png",
+      "path": "public/images/call-partners/cdti.png",
+      "sha256": "ec6711a93f73dea51874c79b3892e32bfd4d174d7806984d861146f00a5f0059",
+      "bytes": 50266,
+      "retrieved": "2026-10-15",
+      "transformation": "none",
+      "publicPath": "/images/call-partners/cdti.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "innoenergy": {
+      "source": "https://eng.kuleuven.be/en/research/phd/template-one-page-poster-map/logo/kic-innoenergy-logo-colour.jpg",
+      "path": "public/images/call-partners/innoenergy.png",
+      "transformation": "none; historical full KIC mark from university-hosted asset",
+      "retrieved": "2026-10-15",
+      "sha256": "ed5e6e529b4fe5e17f3c61c10923536341afa32b8485239b534e320b5c262c27",
+      "bytes": 4191,
+      "publicPath": "/images/call-partners/innoenergy.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    },
+    "leapse": {
+      "source": "https://leap-energy.eu/docs/call-funding/LEAP-SE_2026_Call-text-V1_4.pdf",
+      "path": "public/images/call-partners/leap-se.png",
+      "sourceSha256": "194b2e6a7a3d6e620577fd6fd95fcefbd896c9ceab0ec2128208a4dcd21c4186",
+      "transformation": "Extract embedded page-1 RGB image and reconstruct its original soft-mask alpha; no redraw, recoloring or cropping. PDF stays local, not a new website download.",
+      "retrieved": "2026-10-15",
+      "sha256": "46040d07af270318116711dad7da6eba30d12a0faab475f33304e09e236b74f8",
+      "bytes": 22669,
+      "publicPath": "/images/call-partners/leap-se.png",
+      "rights": "Third-party trademark, used for owner-requested contextual partner identification. No general redistribution licence inferred."
+    }
+  }
+}

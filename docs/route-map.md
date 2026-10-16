@@ -126,3 +126,12 @@ The owner commissions one page per CMS call beneath the localized canonical Prog
 `usefulLinks` remains a stable compatibility ID; its three localized URLs now
 permanently redirect to `media#press-resources`. Navigation helpers point directly
 to that section (or its seven tool anchors). The XML sitemap excludes this alias.
+
+## Calls listing and historical details — 2026-10-15
+
+The existing localized `programmes` base has one `/calls` child listing and
+21 stable detail references through `callHref`. `callsListingHref` shares that
+base in FR/EN/AR; no new top-level stable ID is added. The existing locale
+selector/header resolve these children through the call path helper. Proxy,
+metadata, sitemap and search register the same destinations. See
+[catalogue scope](calls-catalogue-2026.md).

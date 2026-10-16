@@ -289,9 +289,18 @@ test('the centered scroll cue supports motion preferences and keyboard navigatio
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 900 })
       await page.emulateMedia({ reducedMotion: width === 390 ? 'reduce' : 'no-preference' })
-      // The homepage mobile cue is redundant with its full-width section action.
+      // Mobile uses the full-width action; the mouse cue is a desktop affordance.
       await page.goto(pageHref(width === 390 ? 'institute' : 'home', locale))
       const cue = page.locator('.hero-scroll')
+      if (width === 390) {
+        await expect(cue).toBeHidden()
+        const action = page.locator('.hero-primary')
+        await action.focus()
+        await expect(action).toBeFocused()
+        await page.keyboard.press('Enter')
+        await expect(page).toHaveURL(/#page-sections$/)
+        continue
+      }
       await expect(cue).toHaveAccessibleName(/\S/)
       const wheel = cue.locator('.hero-scroll-wheel')
       await expect(wheel).toHaveCSS('animation-name', width === 390 ? 'none' : 'hero-scroll-wheel')
@@ -354,7 +363,7 @@ test('without JavaScript the institute hero, mission and Arabic disclosures rema
   await page.goto(pageHref('institute', 'ar'))
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.locator('.page-hero h1')).toBeVisible()
-  await page.locator('.hero-scroll').click()
+  await page.locator('.hero-primary').click()
   await expect(page).toHaveURL(/#page-sections$/)
   await expect(page.locator('#mission blockquote')).toBeVisible()
   await page.locator('#institute-studies summary').click()

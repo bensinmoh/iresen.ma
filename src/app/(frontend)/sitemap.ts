@@ -1,8 +1,9 @@
+import { archiveCalls } from '@/lib/call-archives'
 import type { MetadataRoute } from 'next'
 import { locales } from '@/i18n/locales'
 import { getSiteUrl, isIndexingEnabled, pageHref, pageIds, newsListingHref } from '@/lib/site'
 import { findPublishedCalls } from '@/lib/content/call-queries'
-import { callHref } from '@/lib/calls'
+import { callHref, callsListingHref } from '@/lib/calls'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (!isIndexingEnabled()) return []
@@ -17,6 +18,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   )
 
   return [
+    ...locales.flatMap((locale) =>
+      [
+        callsListingHref(locale),
+        ...archiveCalls.map((call) => callHref(call.reference, locale)),
+      ].map((path) => ({ url: new URL(path, baseUrl).toString() })),
+    ),
     ...calls.flat(),
     ...locales.map((locale) => ({
       url: new URL(newsListingHref(locale), baseUrl).toString(),

@@ -18,11 +18,6 @@
 .header h2 {
   max-inline-size: 28ch;
   margin: 0;
-  font-size: clamp(1.75rem, 2.2vw, 2.5rem);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
 }
 .introduction {
   max-inline-size: 57ch;
@@ -66,10 +61,6 @@
 }
 .steps h3 {
   margin: 0 0 var(--space-2);
-  font-size: var(--font-size-action);
-  font-weight: 600;
-  line-height: 1.45;
-  text-wrap: balance;
 }
 .steps li > p {
   margin: 0;
@@ -98,12 +89,8 @@
 .link {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-4);
-  min-block-size: 2.75rem;
   padding-block: var(--space-2);
   color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 600;
   text-decoration: none;
 }
 .link svg {
@@ -116,10 +103,6 @@
 .link:focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 4px;
-}
-.section:dir(rtl) h2 {
-  letter-spacing: normal;
-  line-height: 1.5;
 }
 .section:dir(rtl) svg {
   transform: scaleX(-1);

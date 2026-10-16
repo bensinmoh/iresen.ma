@@ -160,7 +160,12 @@ export async function PageHero({
                   </strong>
                 </p>
               )}
-              <nav aria-label={t('pathways')} className="hero-pathways">
+              <nav
+                aria-label={t('pathways')}
+                className="hero-pathways"
+                data-ui-rail="stretch"
+                tabIndex={0}
+              >
                 {homeMissions.map(({ id, pageId, destinationAnchor }) => (
                   <a key={id} href={pageHref(pageId, locale, destinationAnchor)}>
                     <span>{t(`domains.${id}`)}</span>

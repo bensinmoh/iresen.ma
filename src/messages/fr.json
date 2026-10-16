@@ -372,27 +372,23 @@
         "description": "Une gouvernance au service des missions de l’Institut Association à but non lucratif créée à l’initiative de l’État, IRESEN rassemble des institutions publiques, des entreprises et des acteurs académiques autour des enjeux de recherche et d’innovation pour la transition énergétique. Ses instances articulent les orientations stratégiques, l’évaluation scientifique, le suivi des engagements et le contrôle de la gestion. La convention État–IRESEN encadre les missions confiées à l’Institut, les moyens associés et les objectifs à suivre. Cette articulation relie les besoins nationaux aux travaux de recherche, aux capacités expérimentales et aux possibilités d’utilisation des résultats."
       },
       "council-representatives": {
-        "title": "Conseil et représentants",
-        "description": "Le conseil d’administration Définir les orientations et suivre leur réalisation. Présidé de droit par le ministre chargé de l’énergie ou son représentant, le conseil d’administration définit la politique et les orientations générales d’IRESEN. Il suit les programmes et les projets, arrête les budgets et les comptes, approuve les conventions et les partenariats et contrôle la gestion de l’Institut. Il s’appuie sur l’expertise scientifique et les travaux des comités pour prendre ses décisions. Il nomme le Directeur général et évalue la performance de la Direction générale. Les membres du conseil d’administration Le conseil scientifique Éclairer les priorités de recherche et apprécier la pertinence des projets. Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques. Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement. Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale. Les membres du conseil scientifique Ministère de l’Économie et des Finances Ministère de la Transition Énergétique et du Développement Durable Ministère de l’Enseignement Supérieur, de la Recherche Scientifique et de l’Innovation Ministère de l’Industrie et du Commerce OCP Agence Marocaine pour l’Efficacité Énergétique — AMEE Nareva Université Mohammed VI Polytechnique — UM6P Office National des Hydrocarbures et des Mines — ONHYM Fédération de l’Énergie Centre National de l’Énergie, des Sciences et des Techniques Nucléaires — CNESTEN Masen Office National de l’Électricité et de l’Eau Potable — ONEE R&D Maroc Managem Fédération Nationale de l’Électricité, de l’Électronique et des Énergies Renouvelables — FENELEC"
+        "title": "Le Conseil d’Administration",
+        "description": "Le conseil d’administration Définir les orientations et suivre leur réalisation. Présidé de droit par le ministre chargé de l’énergie ou son représentant, le conseil d’administration définit la politique et les orientations générales d’IRESEN. Il suit les programmes et les projets, arrête les budgets et les comptes, approuve les conventions et les partenariats et contrôle la gestion de l’Institut. Il s’appuie sur l’expertise scientifique et les travaux des comités pour prendre ses décisions. Il nomme le Directeur général et évalue la performance de la Direction générale. Les membres du conseil d’administration Le conseil scientifique Éclairer les priorités de recherche et apprécier la pertinence des projets. Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques. Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement. Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale. Les membres du conseil scientifique Ministère de l’Économie et des Finances Ministère de la Transition Énergétique et du Développement Durable Ministère de l’Enseignement Supérieur, de la Recherche Scientifique et de l’Innovation Ministère de l’Industrie et du Commerce OCP Agence Marocaine pour l’Efficacité Énergétique — AMEE Nareva Université Mohammed VI Polytechnique — UM6P Office National des Hydrocarbures et des Mines — ONHYM Fédération de l’Énergie Centre National de l’Énergie, des Sciences et des Techniques Nucléaires — CNESTEN Agence Marocaine des Énergies Durable - MASEN Office National de l’Électricité et de l’Eau Potable — ONEE R&D Maroc Managem Fédération Nationale de l’Électricité, de l’Électronique et des Énergies Renouvelables — FENELEC"
       },
       "leadership-organisation": {
         "title": "Une Direction générale et trois pôles complémentaires",
-        "description": "Les pôles Recherche, Développement et Impulsion, les membres de l’équipe et leurs parcours professionnels."
+        "description": "La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements. Trois pôles structurent les fonctions scientifiques, de développement et de support. Soukaina BOUDOUDOUH Directrice des Programmes R&D&I et du Réseau d’Experts Ayoub HIRT Directeur du Développement des Plateformes et des Projets Structurants Mouhcine BENMEZIANE Directeur des Partenariats et du Marketing de l’Innovation Laila TYDRINI Directrice Administrative & Financière Imane MOUBACHIR Directrice Stratégie, Gouvernance & Organisation Jamaleddine FOUHAM Chef du Département IT & Systèmes d’Information Samir RACHIDI Directeur Scientifique par Intérim"
       },
       "department-responsibilities": {
         "title": "Les responsabilités des directions",
-        "description": "Pôle Développement Développer les capacités, les coopérations et le pilotage de l’Institut. Direction Développement des Plateformes et Projets Structurants Conduire la création et le développement des infrastructures et des capacités nécessaires à la recherche et à l’expérimentation. Direction Partenariats et Marketing de l’Innovation Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation. Direction Stratégie et Organisation Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut. Pôle Scientifique Structurer les programmes et mobiliser l’expertise scientifique. Direction des Programmes R&D&I et du Réseau d’Experts Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre. Direction scientifique Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités. Pôle Support Apporter les ressources et les services nécessaires à l’action des équipes. Direction Administrative et Financière Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique. Direction IT et SI Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut. Soukaina BOUDOUDOU Directrice DPRDIRE Ayoub HIRT Directeur DPPS Mouhcine BENMEZIANE Directeur DPARMI Laila TYDRINI Directrice DAF Imane MOUBACHIR Strat & Orga Jamaleddine FOUHAM IT et SI Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU travaille sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux. Ses travaux s’inscrivent dans les enjeux de stockage, d’efficacité énergétique et d’intégration des énergies renouvelables. Elle exerce à l’IRESEN comme directrice DPRDIRE. Ayoub HIRT est directeur DPPS à l’IRESEN. Son parcours au sein de l’institut comprend des activités en chimie verte, bioénergie et agritech. Ses interventions professionnelles portent notamment sur l’hydrogène vert, le Power-to-X et le rôle de la recherche et des compétences dans le développement de ces filières. Mouhcine BENMEZIANE est directeur DPARMI à l’IRESEN. Son parcours professionnel s’inscrit dans la coopération, les partenariats et les écosystèmes d’innovation pour la transition énergétique. Ses prises de parole abordent notamment les échanges internationaux, les technologies vertes, l’hydrogène et le Power-to-X. Laila TYDRINI est directrice DAF à l’IRESEN. Elle intervient dans le périmètre administratif et financier de l’institut. Imane MOUBACHIR exerce à l’IRESEN dans le périmètre Strat & Orga. Son activité porte sur la stratégie et l’organisation de l’institut. Jamaleddine FOUHAM intervient à l’IRESEN dans le périmètre IT et SI, consacré à l’informatique et aux systèmes d’information."
+        "description": "Pôle Développement Direction Développement des Plateformes et Projets Structurants Conduire la création et le développement des infrastructures et des capacités nécessaires à la recherche et à l’expérimentation. Direction Partenariats et Marketing de l’Innovation Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation. Direction Stratégie, Gouvernance & Organisation Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut. Pôle Recherche Direction des Programmes R&D&I et du Réseau d’Experts Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre. Direction Scientifique Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités. Pôle Impulsion Direction Administrative et Financière Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique. Département IT & Systèmes d’Information Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut."
       },
       "science-platforms": {
         "title": "Une organisation mobilisée autour des contributions d’IRESEN",
         "description": "Une organisation mobilisée autour des contributions d’IRESEN Les trois pôles contribuent ensemble aux missions de l’Institut. Les études et l’expertise éclairent les choix ; la recherche et l’innovation font avancer les solutions ; les compétences et les capacités renforcent les savoir-faire. Les programmes, les plateformes et le réseau d’experts mobilisent des moyens complémentaires selon les besoins. Les partenariats et la coopération relient ces travaux aux acteurs publics, scientifiques et industriels. Dans le domaine Recherche & Innovation, cette complémentarité permet de développer les connaissances et les solutions, d’en éprouver les performances et de préparer la valorisation des résultats."
       },
-      "documents-contact": {
-        "title": "Pour approfondir",
-        "description": "Pour approfondir Les programmes, les plateformes et le réseau d’experts mobilisent des moyens complémentaires selon les besoins. Les partenariats et la coopération relient ces travaux aux acteurs publics, scientifiques et industriels."
-      },
       "scientific-council": {
-        "title": "Le conseil scientifique",
+        "title": "Le Conseil Scientifique",
         "description": "Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques. Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement. Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale. Dr. Ahmed ENNAOUI Ancien Directeur de Recherche à l’Institut des systèmes des matériaux hétérogènes Helmholtz Berlin Dr. Abdelhakim ARTIBA Président de l'Université Polytechnique Hauts-de-France M. Diego PAVIA Président de InnoEnergy de l’Institut Européen de Technologie Dr. Florence LAMBERT Directeur CEA-LITEN / Présidente de la Commission Industrie, Emplois et Innovation Dr. Ralf B. WEHRSPOHN Président Exécutif de l'Institut Fraunhofer / Prof. à l’Université Martin Luther Halle Dr. Robert PITZ-PAAL Directeur de l’Institut de Recherche Solaire au Centre Aérospatial (DLR), Vice président de l’Agence Internationale de l’Energie (AIE) Dr. Tijani BOUNAHMIDI Directeur du Centre d’Innovation Technologique, Vice-président de l’Université Mohammed V-Agdal Rabat Dr. Vlademiro MIRANDA Membre du directoire de l’INESC TEC-INESC Technologies, Président de l’INESC R&D du Brésil"
       },
       "governance-oversight": {
@@ -483,23 +479,23 @@
     "projects": {
       "featured-results": {
         "title": "Réalisations à découvrir",
-        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
+        "description": "Explorez les projets de recherche collaborative soutenus par IRESEN."
       },
       "find-project": {
         "title": "Recherche libre",
-        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
+        "description": "Recherchez un projet par mot-clé, thématique, année ou programme."
       },
       "project-catalogue": {
-        "title": "Les projets seront bientôt mis à jour",
-        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
+        "title": "Catalogue des projets",
+        "description": "Consultez les descriptions, les objectifs scientifiques et les fiches PDF disponibles."
       },
       "understanding-results": {
         "title": "Repères pour lire les résultats",
-        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
+        "description": "Consultez les descriptions, les objectifs scientifiques et les fiches PDF disponibles."
       },
       "related-capabilities": {
         "title": "Projets et capacités associées",
-        "description": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche."
+        "description": "Découvrez les programmes et les capacités associés aux projets."
       }
     },
     "platforms": {
@@ -1352,7 +1348,7 @@
     },
     "sortLabel": "Trier par",
     "relevance": "Pertinence",
-    "newest": "Plus récents",
+    "newest": "Récents",
     "apply": "Appliquer",
     "resultCount": "{count, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
     "resultsLabel": "Résultats de recherche",
@@ -2425,13 +2421,65 @@
     "eyebrow": "Recherche & Innovation",
     "titleStart": "Le portefeuille vivant de l’innovation",
     "titleAccent": "marocaine.",
-    "description": "Explorer les projets de recherche, développement et innovation par thématique, programme et étape de réalisation.",
+    "description": "Explorer les projets de recherche, développement et innovation par thématique, programme et année de lancement.",
+    "query": "Recherche libre",
+    "placeholder": "Mot-clé, acronyme, technologie…",
+    "domain": "Thématique",
+    "year": "Année",
+    "status": "Statut",
+    "programme": "Programme",
+    "all": "Tous",
+    "reset": "Réinitialiser les filtres",
+    "count": "{count, plural, =0 {Aucun projet ne correspond} one {# projet correspond} other {# projets correspondent}} à votre recherche",
+    "empty": "Aucun projet ne correspond à ces critères.",
+    "emptyHelp": "Essayez un autre mot-clé ou réinitialisez les filtres.",
+    "acronym": "Acronyme",
+    "duration": "Durée",
+    "budget": "Budget global",
+    "launch": "Date de début",
+    "months": "{count} mois",
+    "pagination": "Pages du catalogue",
+    "page": "Page {number}",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "catalogue": "Catalogue de projets R&D&I",
+    "domains": {
+      "thermal": "Solaire thermique",
+      "grids": "Réseaux intelligents",
+      "efficiency": "Efficacité énergétique",
+      "photovoltaic": "Solaire photovoltaïque",
+      "wind": "Énergie éolienne",
+      "hydrogen": "Hydrogène vert",
+      "storage": "Stockage d’énergie",
+      "biomass": "Biomasse",
+      "materials": "Matériaux",
+      "water": "Eau, énergie et agriculture",
+      "other": "Autres thématiques"
+    },
+    "statuses": {
+      "active": "En cours",
+      "completed": "Clôturé",
+      "planned": "À venir"
+    },
     "photos": {
       "hero": "Composition de verre avec le symbole IRESEN bleu."
     },
+    "details": "Voir le projet {name}",
+    "viewDetails": "Découvrir le projet",
+    "close": "Fermer le détail du projet",
+    "overview": "Présentation du projet",
+    "hostingPlatform": "Plateforme d’accueil",
+    "coordinator": "Coordinateur",
+    "consortium": "Consortium",
+    "objectives": "Objectifs scientifiques",
+    "contactCoordinator": "Contacter le coordinateur",
+    "contactSubject": "Projet {name} — demande de contact",
     "updatingTitle": "Les projets seront bientôt mis à jour",
     "updatingDescription": "Le catalogue des projets collaboratifs est en cours de mise à jour. Consultez nos programmes pour découvrir notre démarche.",
-    "programmesLink": "Découvrir les programmes R&D&I"
+    "programmesLink": "Découvrir les programmes R&D&I",
+    "sourceLink": "Consulter la fiche (PDF)",
+    "location": "Lieu",
+    "reviewNotice": "Revue locale — traduction de travail en attente de validation éditoriale."
   },
   "Roadmap": {
     "title": "Feuille de route R&D",
@@ -2663,32 +2711,32 @@
           "description": "Encadre les engagements de l’Institut et les moyens apportés par l’État."
         },
         {
-          "title": "Assemblée générale",
+          "title": "Assemblée Générale",
           "description": "Réunit les membres, élit les administrateurs, approuve les comptes et modifie les statuts."
         }
       ],
-      "board": "Conseil d’administration",
+      "board": "Conseil d’Administration",
       "chair": "Présidé de droit par le ministre chargé de l’énergie ou son représentant.",
       "decision": "Oriente, arrête les budgets et les comptes, nomme le Directeur général.",
       "oversight": [
         {
-          "title": "Comité de stratégie et de suivi",
+          "title": "Comité de Stratégie et de Suivi",
           "description": "Suit les plans d’action et l’avancement des engagements."
         },
         {
-          "title": "Comité d’audit",
+          "title": "Comité d’Audit",
           "description": "Examine les comptes, le contrôle interne et les audits ; recommande au Conseil."
         },
         {
-          "title": "Conseil scientifique",
+          "title": "Conseil Scientifique",
           "description": "Éclaire les axes de R&D et évalue les projets avant décision du Conseil."
         },
         {
-          "title": "Commissaire aux comptes",
+          "title": "Commissaire aux Comptes",
           "description": "Certifie les comptes, présente son rapport à l’Assemblée générale et échange avec le comité d’audit."
         }
       ],
-      "execution": "Direction générale",
+      "execution": "Direction Générale",
       "executionDescription": "Met en œuvre les décisions du Conseil et lui rend compte.",
       "coordination": "Vision, priorités et coordination des trois pôles."
     },
@@ -2705,38 +2753,38 @@
     },
     "councils": {
       "administration": {
-        "title": "Le conseil d’administration",
+        "title": "Le Conseil d’Administration",
         "tagline": "Définir les orientations et suivre leur réalisation.",
         "paragraphs": [
           "Présidé de droit par le ministre chargé de l’énergie ou son représentant, le conseil d’administration définit la politique et les orientations générales d’IRESEN. Il suit les programmes et les projets, arrête les budgets et les comptes, approuve les conventions et les partenariats et contrôle la gestion de l’Institut.",
           "Il s’appuie sur l’expertise scientifique et les travaux des comités pour prendre ses décisions. Il nomme le Directeur général et évalue la performance de la Direction générale."
         ],
-        "membersTitle": "Les membres du conseil d’administration"
+        "membersTitle": "Les Membres du Conseil d’Administration"
       },
       "science": {
-        "title": "Le conseil scientifique",
+        "title": "Le Conseil Scientifique",
         "tagline": "Éclairer les priorités de recherche et apprécier la pertinence des projets.",
         "paragraphs": [
           "Réunissant des experts internationaux des technologies propres, le conseil scientifique met en perspective les besoins du Maroc avec les avancées scientifiques et les trajectoires technologiques.",
           "Il examine les axes de recherche et formule des recommandations sur les programmes. Il évalue la pertinence scientifique des projets proposés au financement et soumet ses recommandations au conseil d’administration, auquel revient la décision de leur acceptation et de leur financement.",
           "Son expertise contribue à la qualité des travaux et à leur adéquation avec les enjeux de la transition énergétique nationale."
         ],
-        "membersTitle": "Les membres du conseil scientifique"
+        "membersTitle": "Les Membres du Conseil Scientifique"
       }
     },
     "oversight": {
       "title": "Le suivi des engagements et le contrôle de la gestion",
       "items": [
         {
-          "title": "Le Comité de stratégie et de suivi",
+          "title": "Le Comité de Stratégie et de Suivi",
           "description": "Il veille à la cohérence des activités d’IRESEN avec la stratégie énergétique nationale et les engagements de la convention État–IRESEN. Il examine les plans d’action, l’avancement des projets et les rapports d’exécution, et propose les ajustements nécessaires aux instances compétentes."
         },
         {
-          "title": "Le Comité d’audit",
+          "title": "Le Comité d’Audit",
           "description": "Il assiste le conseil d’administration dans l’examen de l’information financière, du contrôle interne et de la gestion des risques. Il analyse les conclusions des audits, formule des recommandations et suit les mesures correctrices. La certification des comptes relève du commissaire aux comptes."
         },
         {
-          "title": "L’Assemblée générale",
+          "title": "L’Assemblée Générale",
           "description": "Elle réunit les membres de l’association, approuve les comptes annuels et les rapports d’activité et financier, et vote le budget prévisionnel. Elle exerce les attributions qui lui sont réservées par les statuts."
         }
       ]
@@ -2744,7 +2792,9 @@
     "organisation": {
       "title": "Une Direction générale et trois pôles complémentaires",
       "description": "La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements.",
-      "summary": "L’organisation fonctionnelle comprend trois pôles et sept directions.",
+      "descriptionResearch": "Le pôle Recherche relie les programmes R&D&I, la direction scientifique et le réseau d’experts aux projets collaboratifs et aux plateformes.",
+      "descriptionDivisions": "Le pôle Développement associe infrastructures, partenariats et stratégie. Le pôle Impulsion apporte les moyens administratifs, financiers et numériques nécessaires à leur mise en œuvre.",
+      "summary": "Trois pôles structurent les fonctions scientifiques, de développement et de support.",
       "poles": [
         {
           "title": "Pôle Développement",
@@ -2759,7 +2809,7 @@
               "description": "Assurer la communication, développer les partenariats et la coopération, et accompagner la propriété intellectuelle, la valorisation et le marketing de l’innovation."
             },
             {
-              "title": "Direction Stratégie et Organisation",
+              "title": "Direction Stratégie, Gouvernance & Organisation",
               "description": "Accompagner la définition et la déclinaison de la stratégie, structurer les outils de pilotage et améliorer le fonctionnement de l’Institut."
             }
           ]
@@ -2773,7 +2823,7 @@
               "description": "Organiser les programmes, les domaines scientifiques et les contributions du réseau d’experts à leur mise en œuvre."
             },
             {
-              "title": "Direction scientifique",
+              "title": "Direction Scientifique",
               "description": "Apporter un regard transversal sur les orientations, la cohérence et la qualité scientifiques des activités."
             }
           ]
@@ -2787,7 +2837,7 @@
               "description": "Assurer la gestion financière, administrative et humaine, ainsi que la formation, les actions sociales, les achats, les moyens généraux et l’accompagnement juridique."
             },
             {
-              "title": "Direction IT et SI",
+              "title": "Département IT & Systèmes d’Information",
               "description": "Accompagner le fonctionnement et l’évolution des systèmes d’information et des outils numériques de l’Institut."
             }
           ]
@@ -2802,7 +2852,6 @@
         "Dans le domaine Recherche & Innovation, cette complémentarité permet de développer les connaissances et les solutions, d’en éprouver les performances et de préparer la valorisation des résultats."
       ]
     },
-    "resourcesTitle": "Pour approfondir",
     "navigation": "Explorer la gouvernance",
     "tabs": {
       "councils": "Les conseils",
@@ -2810,7 +2859,7 @@
       "responsibilities": "Les directions"
     },
     "president": "Président",
-    "directorGeneral": "Directeur général",
+    "directorGeneral": "Directeur Général",
     "directorGeneralName": "Samir RACHIDI",
     "teamTitle": "Une équipe au service des missions",
     "memberLogo": "Logo de {name}",
@@ -2827,7 +2876,7 @@
       "onhym": "Office National des Hydrocarbures et des Mines — ONHYM",
       "federation-de-lener": "Fédération de l’Énergie",
       "cnesten": "Centre National de l’Énergie, des Sciences et des Techniques Nucléaires — CNESTEN",
-      "masen": "Masen",
+      "masen": "Agence Marocaine des Énergies Durable - MASEN",
       "onee": "Office National de l’Électricité et de l’Eau Potable — ONEE",
       "rd-maroc": "R&D Maroc",
       "managem": "Managem",
@@ -2836,71 +2885,79 @@
     "scientists": {
       "ennaoui": {
         "name": "Dr. Ahmed ENNAOUI",
-        "role": "Ancien Directeur de Recherche à l’Institut des systèmes des matériaux hétérogènes Helmholtz Berlin"
+        "role": "Ancien Directeur de Recherche à l’Institut des systèmes des matériaux hétérogènes Helmholtz Berlin",
+        "country": "Allemagne"
       },
       "artiba": {
         "name": "Dr. Abdelhakim ARTIBA",
-        "role": "Président de l'Université Polytechnique Hauts-de-France"
+        "role": "Président de l'Université Polytechnique Hauts-de-France",
+        "country": "France"
       },
       "pavia": {
         "name": "M. Diego PAVIA",
-        "role": "Président de InnoEnergy de l’Institut Européen de Technologie"
+        "role": "Président de InnoEnergy de l’Institut Européen de Technologie",
+        "country": "Europe"
       },
       "lambert": {
         "name": "Dr. Florence LAMBERT",
-        "role": "Directeur CEA-LITEN / Présidente de la Commission Industrie, Emplois et Innovation"
+        "role": "Directeur CEA-LITEN / Présidente de la Commission Industrie, Emplois et Innovation",
+        "country": "France"
       },
       "wehrspohn": {
         "name": "Dr. Ralf B. WEHRSPOHN",
-        "role": "Président Exécutif de l'Institut Fraunhofer / Prof. à l’Université Martin Luther Halle"
+        "role": "Président Exécutif de l'Institut Fraunhofer / Prof. à l’Université Martin Luther Halle",
+        "country": "Allemagne"
       },
       "pitz-paal": {
         "name": "Dr. Robert PITZ-PAAL",
-        "role": "Directeur de l’Institut de Recherche Solaire au Centre Aérospatial (DLR), Vice président de l’Agence Internationale de l’Energie (AIE)"
+        "role": "Directeur de l’Institut de Recherche Solaire au Centre Aérospatial (DLR), Vice président de l’Agence Internationale de l’Energie (AIE)",
+        "country": "Allemagne"
       },
       "bounahmidi": {
         "name": "Dr. Tijani BOUNAHMIDI",
-        "role": "Directeur du Centre d’Innovation Technologique, Vice-président de l’Université Mohammed V-Agdal Rabat"
+        "role": "Directeur du Centre d’Innovation Technologique, Vice-président de l’Université Mohammed V-Agdal Rabat",
+        "country": "Maroc"
       },
       "miranda": {
         "name": "Dr. Vlademiro MIRANDA",
-        "role": "Membre du directoire de l’INESC TEC-INESC Technologies, Président de l’INESC R&D du Brésil"
+        "role": "Membre du directoire de l’INESC TEC-INESC Technologies, Président de l’INESC R&D du Brésil",
+        "country": "Brésil"
       }
     },
     "team": {
       "soukaina": {
-        "name": "Soukaina BOUDOUDOU",
-        "role": "Directrice des programmes R&D&I et du réseau d’experts",
-        "biography": "Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOU est diplômée de l’Université de technologie de Belfort-Montbéliard et de l’École Mohammadia d’Ingénieurs. Ses travaux portent sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux.\n\nSon parcours comprend un postdoctorat consacré au stockage associant batteries et supercondensateurs. À l’IRESEN, elle a exercé des responsabilités d’évaluation et de suivi des projets de recherche avant de diriger les programmes R&D&I et le réseau d’experts. Elle contribue ainsi à relier l’expertise scientifique, le soutien aux projets et les enjeux de la transition énergétique."
+        "name": "Soukaina BOUDOUDOUH",
+        "role": "Directrice des Programmes R&D&I et du Réseau d’Experts",
+        "biography": "Docteure et ingénieure en énergie électrique, Soukaina BOUDOUDOUH est diplômée de l’Université de technologie de Belfort-Montbéliard et de l’École Mohammadia d’Ingénieurs. Ses travaux portent sur la gestion de l’énergie, les systèmes électriques hybrides et les microréseaux.\n\nSon parcours comprend un postdoctorat consacré au stockage associant batteries et supercondensateurs. À l’IRESEN, elle a exercé des responsabilités d’évaluation et de suivi des projets de recherche avant de diriger les programmes R&D&I et le réseau d’experts. Elle contribue ainsi à relier l’expertise scientifique, le soutien aux projets et les enjeux de la transition énergétique."
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "Directeur du développement des plateformes et des projets structurants",
+        "role": "Directeur du Développement des Plateformes et des Projets Structurants",
         "biography": "Ayoub HIRT est directeur du développement des plateformes et des projets structurants à l’IRESEN. Son parcours au sein de l’Institut comprend la responsabilité du département Chimie verte, Bioénergie et Agritech, ainsi que des activités de recherche et d’innovation dans les technologies énergétiques.\n\nSes domaines d’intervention comprennent l’hydrogène vert, le Power-to-X et la bioénergie. Il participe aux échanges entre acteurs scientifiques, institutionnels et industriels sur le développement de ces filières, leurs infrastructures et les compétences nécessaires à leur déploiement."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
-        "role": "Directeur des partenariats et du marketing de l’innovation",
+        "role": "Directeur des Partenariats et du Marketing de l’Innovation",
         "biography": "Mouhcine BENMEZIANE est directeur des partenariats et du marketing de l’innovation à l’IRESEN. Depuis plus d’une décennie, il développe des coopérations et des liens entre recherche, acteurs publics et entreprises dans le domaine des technologies vertes. Son parcours à l’Institut associe coopération internationale, communication scientifique et veille technologique.\n\nIl s’attache à rendre les travaux de recherche lisibles, à rapprocher les expertises et à construire des partenariats utiles à l’innovation. Son approche relie la compréhension des technologies, la diffusion des connaissances et la mise en relation des acteurs, au service de la transition énergétique et du rayonnement de la recherche marocaine.\n\nTitulaire d’un master en sciences et technologies, spécialité ingénierie du management industriel, et d’une licence en génie mécanique, il complète ce parcours par la formation continue. Il a notamment suivi des formations en communication scientifique, en énergies renouvelables et en stratégie d’entreprise durable, dont le programme Sustainable Business Strategy de Harvard Business School Online."
       },
       "laila": {
         "name": "Laila TYDRINI",
-        "role": "Responsable administrative",
-        "biography": "Laila TYDRINI a rejoint l’IRESEN en 2012 comme chargée de la comptabilité. Au fil des années, elle a élargi ses responsabilités à la gestion financière, aux ressources humaines et à l’administration de l’Institut.\n\nAujourd’hui responsable administrative, elle supervise une large part des activités de support : qualité, ressources humaines, finances, comptabilité, préparation des bilans, administration et suivi des affaires juridiques. Son parcours accompagne la structuration de l’Institut et l’évolution des moyens nécessaires au travail de ses équipes."
+        "role": "Directrice Administrative & Financière",
+        "biography": "Laila TYDRINI a rejoint l’IRESEN en 2012 comme chargée de la comptabilité. Au fil des années, elle a élargi ses responsabilités à la gestion financière, aux ressources humaines et à l’administration de l’Institut.\n\nAujourd’hui directrice administrative et financière, elle supervise une large part des activités de support : qualité, ressources humaines, finances, comptabilité, préparation des bilans, administration et suivi des affaires juridiques. Son parcours accompagne la structuration de l’Institut et l’évolution des moyens nécessaires au travail de ses équipes."
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Stratégie et organisation",
+        "role": "Directrice Stratégie, Gouvernance & Organisation",
         "biography": "Imane MOUBACHIR exerce à l’IRESEN dans le domaine de la stratégie et de l’organisation. Son activité porte sur la déclinaison des orientations de l’Institut, les outils de pilotage et l’amélioration de son fonctionnement interne.\n\nElle intervient ainsi à l’articulation entre les priorités institutionnelles, la coordination des activités et l’organisation des moyens mobilisés par les équipes."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "Technologies de l’information et systèmes d’information",
+        "role": "Chef du Département IT & Systèmes d’Information",
         "biography": "Jamaleddine FOUHAM intervient à l’IRESEN dans le domaine des technologies de l’information et des systèmes d’information. Son périmètre concerne le fonctionnement et l’évolution des outils informatiques et numériques de l’Institut.\n\nIl accompagne les usages des équipes et les besoins liés aux activités scientifiques et administratives, en appui au fonctionnement quotidien de l’organisation."
       },
       "samir": {
         "name": "Samir RACHIDI",
-        "role": "Directeur scientifique par intérim"
+        "role": "Directeur Scientifique par Intérim"
       }
     },
     "biography": {

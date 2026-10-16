@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -67,7 +68,9 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
           <header className={styles.introHeading}>
             <div>
               <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-              <h2 id="platform-intro-title">{t('intro.title')}</h2>
+              <Heading as="h2" size="section" id="platform-intro-title">
+                {t('intro.title')}
+              </Heading>
             </div>
             <div>
               {intro.map((paragraph) => (
@@ -79,7 +82,9 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
             {(['arrows-exchange', 'flask', 'chart-line'] as const).map((icon, i) => (
               <article key={icon}>
                 <ValorisationIcon name={icon} />
-                <h3>{t(`intro.values.${i}.title`)}</h3>
+                <Heading as="h3" size="card">
+                  {t(`intro.values.${i}.title`)}
+                </Heading>
                 <p>{t(`intro.values.${i}.description`)}</p>
               </article>
             ))}
@@ -122,9 +127,9 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                     <div className={styles.copy}>
                       <header className={styles.chapterHeading}>
                         <div>
-                          <h2 id={`${anchor}-title`}>
+                          <Heading as="h2" size="section" id={`${anchor}-title`}>
                             <bdi>{t(`platforms.${id}.name`)}</bdi>
-                          </h2>
+                          </Heading>
                           <p className={styles.location}>{t(`platforms.${id}.location`)}</p>
                         </div>
                         <Image
@@ -136,7 +141,9 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                         />
                       </header>
                       {development && <p className={styles.status}>{t('development')}</p>}
-                      <h3 className={styles.lead}>{t(`platforms.${id}.lead`)}</h3>
+                      <Heading as="h3" size="card" className={styles.lead}>
+                        {t(`platforms.${id}.lead`)}
+                      </Heading>
                       <ul className={styles.themes} aria-label={t('themesLabel')} tabIndex={0}>
                         {themes.map((theme, i) => (
                           <li key={theme}>
@@ -203,7 +210,9 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
                             ) : (
                               <div className={styles.infrastructureBand} aria-hidden="true" />
                             )}
-                            <h3>{t(`platforms.${id}.infrastructure.${i}.title`)}</h3>
+                            <Heading as="h3" size="card">
+                              {t(`platforms.${id}.infrastructure.${i}.title`)}
+                            </Heading>
                             <p>{t(`platforms.${id}.infrastructure.${i}.description`)}</p>
                           </article>
                         )
@@ -223,7 +232,9 @@ export async function PlatformsPage({ locale }: { locale: Locale }) {
           <span id="projects-resources" className={styles.anchor} />
           <div className={`container ${styles.networkInner}`}>
             <div>
-              <h2 id="platform-network-title">{t('network.title')}</h2>
+              <Heading as="h2" size="section" id="platform-network-title">
+                {t('network.title')}
+              </Heading>
               <p>{t('network.description')}</p>
             </div>
             <a className="button button-primary" href={pageHref('network', locale)}>

@@ -1,0 +1,597 @@
+{
+  "microcsp": {
+    "summary": "Étudier comment le solaire à concentration et le stockage peuvent faciliter l’intégration des énergies renouvelables au réseau.",
+    "description": "MicroCSP étudie la contribution du solaire à concentration associé au stockage à l’intégration des énergies renouvelables dans le réseau électrique. Le projet examine l’intérêt de petites unités réparties sur le réseau pour en améliorer la stabilité, en combinant recherche, optimisation dans le contexte marocain et validation expérimentale sur le campus de l’EMI.",
+    "objectives": [
+      "Étudier et optimiser l’intégration du MicroCSP dans le contexte marocain.",
+      "Valider les modèles sur un système MicroCSP de 6 kW et un système MicroPV de 6,5 kW installés sur le campus de l’EMI."
+    ]
+  },
+  "autoconsopv": {
+    "summary": "Piloter les usages électriques pour maximiser l’autoconsommation photovoltaïque et limiter les surplus injectés au réseau.",
+    "description": "AutoConsoPV s’intéresse à l’intégration des centrales photovoltaïques dans les bâtiments résidentiels et industriels. Le projet vise à ajuster le fonctionnement des équipements à la production solaire disponible afin de maximiser l’autoconsommation. Il cherche également à éviter l’injection de surplus susceptibles de perturber les réseaux électriques basse et moyenne tension.",
+    "objectives": [
+      "Adapter le pilotage des charges électriques à leurs caractéristiques et à la production solaire instantanée.",
+      "Optimiser l’utilisation locale de l’énergie photovoltaïque dans l’habitat et l’industrie.",
+      "Éviter les injections excédentaires et faciliter l’intégration des installations pour le gestionnaire du réseau."
+    ]
+  },
+  "melhy": {
+    "summary": "Évaluer la faisabilité technique, économique et environnementale du stockage d’hydrogène dans les cavités salines marocaines.",
+    "description": "MELHY étudie le stockage souterrain de l’hydrogène dans les cavités salines au Maroc. Le projet examine sa faisabilité technique, économique et environnementale, notamment pour des cycles fréquents d’injection et de soutirage. Il vise à caractériser le potentiel national et à proposer une infrastructure ainsi qu’un modèle économique adaptés aux nouveaux usages de l’hydrogène.",
+    "objectives": [
+      "Évaluer le potentiel national des cavités salines pour le stockage d’hydrogène vert.",
+      "Étudier la faisabilité du stockage et des cycles d’injection et de soutirage.",
+      "Proposer une infrastructure pour les besoins énergétiques nationaux et l’exportation de molécules vertes.",
+      "Définir un modèle économique opérationnel."
+    ]
+  },
+  "onduleur": {
+    "summary": "Concevoir et fabriquer localement un onduleur photovoltaïque de 6 kVA adapté aux contraintes du marché marocain.",
+    "description": "ONDULEUR porte sur le développement local d’un onduleur photovoltaïque de 6 kVA adapté aux besoins et aux contraintes environnementales du Maroc. L’approche associe électronique de puissance, conception modulaire et maîtrise des coûts pour alimenter des sites isolés ou raccordés à un réseau de qualité insuffisante, avec une préparation à la fabrication industrielle.",
+    "objectives": [
+      "Dimensionner, simuler et tester les étages de puissance, le suivi MPPT et la conversion DC/AC.",
+      "Concevoir les cartes de commande, de puissance, de pilotage et d’affichage.",
+      "Dimensionner le champ photovoltaïque et tester le prototype.",
+      "Mettre en place le laboratoire d’électronique de puissance à l’Université Hassan 1er.",
+      "Préparer la fabrication industrielle et la commercialisation des premiers prototypes avec A2S."
+    ]
+  },
+  "intelligent-pv": {
+    "summary": "Exploiter les données et l’intelligence artificielle pour améliorer le suivi, l’exploitation et la maintenance des actifs photovoltaïques.",
+    "description": "Intelligent PV vise à développer des outils de traitement des données pour l’exploitation et la maintenance des installations photovoltaïques. Le projet combine indicateurs de performance, historiques de fonctionnement et données en temps réel afin d’aider les opérateurs à évaluer leurs actifs. Les outils doivent s’adapter aux contextes marocain et espagnol et à plusieurs types d’installations.",
+    "objectives": [
+      "Développer un logiciel d’analyse des actifs photovoltaïques fondé sur le cloud et la science des données.",
+      "Aider les exploitants à améliorer la maintenance, la performance et la fiabilité de leurs installations.",
+      "Assurer une utilisation modulaire avec différents onduleurs, des toitures aux grandes centrales et au pompage solaire."
+    ]
+  },
+  "chams": {
+    "summary": "Développer un champ solaire de Fresnel modulaire, conçu au Maroc pour fournir de la chaleur à moyenne température.",
+    "description": "CHAMS concerne un champ solaire de Fresnel développé par l’ENSA de Meknès, dont la fiche source situe le prototype au Green Energy Park. Sa conception privilégie des matériaux simples et recyclables, un démontage facilité et un coût réduit. Le projet explore une architecture modulaire de concentration solaire destinée à différentes puissances et applications thermiques.",
+    "objectives": [
+      "Réaliser un champ solaire utilisant un fluide caloporteur à environ 250 °C.",
+      "Valider les performances optiques du champ, du récepteur et des outils de calcul.",
+      "Étudier des centrales modulaires de 200 kW à 2 MW pour des températures de 250 à 350 °C."
+    ]
+  },
+  "imprimante-3d-portable": {
+    "summary": "Développer une imprimante 3D mobile pour fabriquer sur chantier des éléments de construction personnalisés.",
+    "description": "Imprimante 3D portable explore la fabrication additive directement sur les chantiers. Le projet vise un procédé de construction reproductible et personnalisable, adapté à plusieurs contextes géographiques au Maroc et en Afrique. Il associe une méthode de conception agile à une plateforme robotique portable pour produire sur place des éléments préfabriqués sur mesure.",
+    "objectives": [
+      "Définir une méthode de conception de bâtiments imprimables adaptable aux imprévus du chantier.",
+      "Développer une imprimante portable par extrusion et une plateforme robotique évolutive.",
+      "Viser une réduction de 30 % du temps d’installation grâce à une approche intégrée de la construction et du cycle de vie."
+    ]
+  },
+  "csp-ait-baha": {
+    "summary": "Étudier l’apport du solaire thermique à la cogénération de la cimenterie d’Aït Baha et au stockage de chaleur.",
+    "description": "CSP AIT BAHA étudie l’intégration d’une installation solaire thermique à la cogénération de la cimenterie d’Aït Baha. Le projet prévoit d’associer la chaleur solaire à celle récupérée sur les gaz du four pour alimenter un cycle de Rankine organique. Le suivi expérimental doit permettre de valider le fonctionnement du système et d’explorer le potentiel de stockage thermique des roches locales.",
+    "objectives": [
+      "Définir et installer les équipements de mesure et de suivi.",
+      "Valider le modèle de fonctionnement par des essais et des simulations.",
+      "Collecter et exploiter les données de fonctionnement et les résultats des tests.",
+      "Créer un laboratoire de stockage thermique à l’Université Ibn Zohr et caractériser les roches de la région."
+    ]
+  },
+  "green-grid": {
+    "summary": "Concevoir un micro-réseau associant énergies renouvelables, stockage et usages intelligents dans le contexte africain.",
+    "description": "GREEN-GRID porte sur la conception et le déploiement d’un micro-réseau intelligent adapté au contexte africain. Le système proposé associe production renouvelable, stockage et gestion locale des usages, notamment la chaleur domestique, l’eau chaude, l’éclairage public et la recharge électrique. Le projet étudie les services et les conditions nécessaires à une alimentation coordonnée et fiable.",
+    "objectives": [
+      "Intégrer une production décentralisée au plus près des consommateurs.",
+      "Coordonner la gestion locale et son articulation avec la production électrique centralisée.",
+      "Étudier les cadres facilitant les échanges d’électricité et les services de réseau.",
+      "Optimiser l’exploitation, la maintenance et l’évolution du réseau.",
+      "Renforcer la qualité, la sécurité et la fiabilité de l’alimentation, avec des conditions favorisant la concurrence."
+    ]
+  },
+  "aquasolar": {
+    "summary": "Associer le solaire à concentration au dessalement pour répondre aux besoins en eau et en énergie de différentes régions.",
+    "description": "AQUASOLAR étudie le couplage entre énergie solaire à concentration et dessalement de l’eau au Maroc. Le stockage de chaleur doit permettre d’alimenter les procédés de dessalement au-delà de la seule disponibilité solaire. L’analyse prend en compte les ressources hydriques, le climat, les besoins locaux et les dimensions socio-économiques pour identifier des solutions adaptées aux régions étudiées.",
+    "objectives": [
+      "Identifier les solutions de production d’eau et d’énergie adaptées aux régions étudiées.",
+      "Repérer les sites favorables au couplage solaire thermique et dessalement.",
+      "Dimensionner les installations solaires et les unités de dessalement.",
+      "Concevoir et installer un système couplé, puis en évaluer l’économie."
+    ]
+  },
+  "dessalementem": {
+    "summary": "Développer une unité de dessalement alimentée par les énergies renouvelables pour de petites communautés.",
+    "description": "DessalementEM vise un concept de production d’eau douce à partir d’eau de mer, alimenté notamment par l’énergie solaire. Le projet s’appuie sur l’évaporation avec compression mécanique de vapeur pour étudier une installation à faible maintenance. Les travaux portent sur les bilans thermiques, les échangeurs et l’optimisation d’un pilote destiné à faciliter l’accès à l’eau potable de petites communautés.",
+    "objectives": [
+      "Réaliser une unité de dessalement par compression mécanique de vapeur visant 5 m³ par jour.",
+      "Établir les bilans énergétiques et les conditions de faisabilité thermique.",
+      "Dimensionner les échangeurs à tubes et calandre selon la méthode BELL.",
+      "Tester, régler et optimiser le pilote ainsi que les conditions de fonctionnement des colonnes et échangeurs."
+    ]
+  },
+  "agriculture-2-0": {
+    "summary": "Réunir capteurs et outils de suivi dans une plateforme destinée à une gestion plus précise des exploitations agricoles.",
+    "description": "AGRICULTURE 2.0 associe des outils de mesure et de suivi pour mieux gérer la variabilité des sols et des cultures. Le projet vise une plateforme intégrant plusieurs dispositifs téléguidés et des données en temps réel. Cette approche doit aider les exploitants à prendre leurs décisions, à mieux utiliser les ressources et à réduire les coûts ainsi que les apports de produits chimiques.",
+    "objectives": [
+      "Mesurer les paramètres physico-chimiques des sols et des plantes à l’aide de capteurs.",
+      "Assurer un suivi continu et fournir des informations utiles aux décisions de gestion.",
+      "Réduire les besoins en engrais, produits chimiques, temps et ressources.",
+      "Améliorer la traçabilité et les archives de l’exploitation."
+    ]
+  },
+  "mcp": {
+    "summary": "Intégrer des matériaux à changement de phase aux bâtiments et aux capteurs solaires pour mieux stocker et gérer la chaleur.",
+    "description": "MCP étudie l’usage des matériaux à changement de phase pour le stockage de chaleur et l’isolation des bâtiments. Les travaux comparent des locaux et des capteurs solaires avec et sans ces matériaux, notamment dans les murs, les plafonds et les systèmes de chauffage. L’objectif est d’évaluer leur contribution au confort d’hiver et à la protection contre les excès de chaleur en été.",
+    "objectives": [
+      "Étudier les transferts thermiques pendant la charge et la décharge des matériaux à changement de phase.",
+      "Appliquer le stockage thermique au chauffage passif résidentiel au Maroc.",
+      "Intégrer des matériaux encapsulés aux murs et aux dalles pour améliorer la densité de stockage.",
+      "Évaluer une solution associant stockage hivernal et isolation contre la chaleur estivale."
+    ]
+  },
+  "upisree": {
+    "summary": "Concevoir une unité intelligente de stockage électrique pour faciliter l’intégration des énergies renouvelables.",
+    "description": "UPISREE porte sur une unité intelligente de stockage de l’énergie électrique destinée aux usages publics et industriels. Le projet cherche à renforcer l’intégration des énergies renouvelables en étudiant les composants, le dimensionnement et les stratégies de gestion du stockage. Un prototype réduit, accessible à distance, doit permettre de préparer une éventuelle fabrication à plus grande échelle.",
+    "objectives": [
+      "Étudier et caractériser les composants de stockage électrique.",
+      "Dimensionner et concevoir un prototype à échelle réduite accessible à distance.",
+      "Développer et valider les protocoles d’extraction, de stockage et de restitution de l’énergie.",
+      "Préparer un cahier des charges pour un éventuel transfert à un partenaire industriel."
+    ]
+  },
+  "batteries": {
+    "summary": "Étudier des batteries lithium-ion performantes et des matériaux d’électrode issus des ressources minérales marocaines.",
+    "description": "BATTERIES s’intéresse au stockage électrochimique de l’énergie solaire pour mieux rapprocher une production intermittente des besoins de consommation. Le projet privilégie l’étude des matériaux, les essais électrochimiques et les prototypes lithium-ion. Il explore des électrodes fondées sur des ressources minérales marocaines pour rechercher un compromis entre performance, coût et potentiel de valorisation.",
+    "objectives": [
+      "Concevoir des batteries performantes en travaillant sur les matériaux d’électrode.",
+      "Réaliser des essais électrochimiques et des prototypes de batteries.",
+      "Évaluer le stockage de l’énergie produite par de petits panneaux solaires.",
+      "Développer des matériaux compétitifs à partir de ressources marocaines, notamment phosphates, cobalt, nickel et manganèse."
+    ]
+  },
+  "smartdrone4pv": {
+    "summary": "Inspecter les installations photovoltaïques par drone et analyser les images pour détecter automatiquement leurs défauts.",
+    "description": "SmartDrone4PV vise un service d’inspection automatique des installations photovoltaïques à partir d’images acquises par drone. Le projet combine plusieurs capteurs, l’analyse d’images par objets et l’apprentissage profond pour repérer les défauts des panneaux. Une architecture de traitement des données doit soutenir l’analyse des volumes collectés, la prévision de production et la validation sur site.",
+    "objectives": [
+      "Adapter un drone à des caméras RGB, thermiques et SWIR.",
+      "Développer des algorithmes de détection automatique des défauts photovoltaïques.",
+      "Concevoir une architecture Big Data distribuée pour traiter les images et prévoir la production.",
+      "Tester la solution sur des sites de validation et préparer sa commercialisation."
+    ]
+  },
+  "nanocoating-and-testing": {
+    "summary": "Développer des revêtements de miroirs solaires pour limiter l’encrassement, améliorer la réflexion et réduire la maintenance.",
+    "description": "NANOCOATING AND TESTING étudie des revêtements destinés aux miroirs des centrales solaires à concentration. Le projet recherche des matériaux plus durables et efficaces pour préserver les performances optiques et limiter les besoins de maintenance. Les travaux associent caractérisation des surfaces, mesure des effets de la poussière et essais dans différentes conditions climatiques au Maroc.",
+    "objectives": [
+      "Améliorer l’efficacité des miroirs tout en réduisant les besoins de maintenance.",
+      "Caractériser les propriétés physico-chimiques des surfaces et leurs conditions d’exposition.",
+      "Mesurer les pertes optiques dues à la poussière par spectrophotométrie.",
+      "Installer un module CSP à Ifrane et conduire les essais sur site."
+    ]
+  },
+  "phnamathex": {
+    "summary": "Valoriser les phosphates marocains dans de nouveaux matériaux d’électrode pour batteries lithium-ion et sodium-ion.",
+    "description": "PhNAMathex étudie la synthèse de matériaux d’anode et de cathode de type NASICON à partir de phosphates marocains. Le projet utilise le séchage par pulvérisation pour maîtriser la taille et la morphologie des nanocomposites. Les travaux portent sur les formulations d’électrodes, leur compatibilité avec l’électrolyte et le passage à l’échelle pilote pour améliorer les performances des batteries.",
+    "objectives": [
+      "Synthétiser des matériaux à morphologie contrôlée par séchage par pulvérisation.",
+      "Optimiser les formulations d’anode et de cathode pour les batteries lithium-ion et sodium-ion.",
+      "Améliorer les surfaces et leur compatibilité avec l’électrolyte, avec une capacité négative visée supérieure à 400 mAh/g.",
+      "Étudier la tenue en cyclage, les coûts et les conditions de transfert industriel."
+    ]
+  },
+  "iotucm": {
+    "summary": "Développer un micro-réseau universitaire intégrant autoproduction, stockage et gestion intelligente de l’énergie.",
+    "description": "IoTUCM explore une architecture de micro-réseau à l’INPT, en commençant par trois bâtiments pilotes avant une extension envisagée au campus. Le projet associe autoproduction renouvelable, autoconsommation et stockage. Il étudie les échanges d’énergie entre bâtiments et les outils de gestion nécessaires à un campus plus autonome, avec une vocation pédagogique et de recherche.",
+    "objectives": [
+      "Concevoir un campus universitaire visant une quasi-autonomie énergétique.",
+      "Implémenter un micro-réseau renouvelable destiné à l’enseignement et à la recherche.",
+      "Développer un centre de données consacré à l’efficacité énergétique.",
+      "Concevoir des algorithmes de gestion des échanges entre bâtiments et des périodes de stockage."
+    ]
+  },
+  "sirocco": {
+    "summary": "Associer un champ de Fresnel et un stockage sur lit de roche pour produire de la chaleur destinée aux procédés industriels.",
+    "description": "SIROCCO vise le développement d’une chaudière solaire à concentration associée à un stockage sur lit de roche. Le projet s’appuie sur les travaux CHAMS et COLDSUN pour préparer un module à caractère industriel fournissant de la chaleur autour de 200 °C. Il combine l’optimisation du champ de Fresnel, du récepteur et du contrôle avec une perspective de commercialisation euro-méditerranéenne.",
+    "objectives": [
+      "Définir et optimiser les composants du système, les héliostats et le suivi solaire.",
+      "Collecter les données et préparer les autorisations d’installation du prototype.",
+      "Étudier les performances du récepteur par expérimentation et simulation thermo-fluidique.",
+      "Développer le contrôle, les alarmes et la configuration finale en vue de la commercialisation."
+    ]
+  },
+  "holsys": {
+    "summary": "Combiner objets connectés et analyse de données pour piloter l’énergie et le confort dans les bâtiments intelligents.",
+    "description": "HOLSYS vise une plateforme de gestion énergétique des bâtiments combinant objets connectés, Big Data et apprentissage automatique en temps réel. Le projet étudie des services tenant compte de l’occupation, de la météo et de la production renouvelable. Des essais sont prévus à l’UIR et à l’ENSAK, avant un déploiement envisagé sur un démonstrateur du Green Energy Park.",
+    "objectives": [
+      "Intégrer capteurs, actionneurs et analyse de données pour des services adaptés au contexte.",
+      "Piloter le chauffage, la ventilation, la climatisation et l’éclairage selon l’occupation prévue.",
+      "Coordonner production renouvelable et réponse à la demande à partir de prévisions en temps réel.",
+      "Évaluer les services en termes d’économies d’énergie et de confort."
+    ]
+  },
+  "m-s-f": {
+    "summary": "Développer un réfrigérateur solaire mobile sur triporteur pour le transport de produits périssables.",
+    "description": "M.S.F, ou Mobile Solar Fridge, porte sur un réfrigérateur solaire monté sur triporteur pour le transport de produits périssables. Le projet associe des panneaux photovoltaïques, une enceinte isolée et un système frigorifique. Il prévoit plusieurs prototypes adaptés aux marchandises transportées ainsi qu’une organisation de production pour préparer une commercialisation au Maroc puis en Afrique.",
+    "objectives": [
+      "Organiser les ateliers d’isolation thermique, d’électricité, de réfrigération et d’assemblage.",
+      "Concevoir et fabriquer quatre prototypes de réfrigérateurs solaires mobiles.",
+      "Adapter les prototypes au transport du lait, du poisson, des médicaments, du chocolat et des glaces."
+    ]
+  },
+  "lightin": {
+    "summary": "Développer une solution d’éclairage LED associée aux énergies renouvelables et à la télésurveillance du parc lumineux.",
+    "description": "Light’In vise une solution intégrée d’éclairage LED alimentée par l’énergie solaire et, selon les configurations, éolienne. Le projet associe assemblage de luminaires et télésurveillance pour suivre chaque point lumineux et mieux organiser la maintenance. Il prévoit un transfert entre université et industriels, une démarche de certification et la préparation d’une production locale.",
+    "objectives": [
+      "Renforcer le transfert technologique entre l’université et les industriels.",
+      "Fabriquer au Maroc des luminaires LED fondés sur la propriété intellectuelle universitaire.",
+      "Préparer la certification et un atelier dédié au Tech-Center de l’UIR.",
+      "Étudier la commercialisation nationale et une éventuelle ouverture au marché africain."
+    ]
+  },
+  "escoobox": {
+    "summary": "Concevoir une borne connectée de recharge pour scooters électriques avec géolocalisation et paiement numérique.",
+    "description": "eSCOOBOX développe un concept de recharge connecté pour scooters électriques adapté au marché marocain. La solution associe une borne identifiée par QR code, une application mobile et un serveur central. Elle vise à mesurer l’énergie délivrée, suivre l’état des bornes et gérer l’accès à la recharge ainsi que le paiement, avec une validation prévue sur une zone limitée.",
+    "objectives": [
+      "Développer un prototype préindustriel du boîtier électronique de recharge.",
+      "Créer les applications de géolocalisation, de paiement et d’activation de la borne.",
+      "Préparer un dépôt de brevet sur le concept global.",
+      "Tester une preuve de concept avec un scooter ou un vélo électrique."
+    ]
+  },
+  "tanksun": {
+    "summary": "Étudier des réservoirs concentriques en béton pour améliorer le stockage thermique à sels fondus des centrales solaires.",
+    "description": "TANKSUN explore un stockage thermique à sels fondus constitué de deux réservoirs concentriques en béton, l’un chaud à l’intérieur et l’autre froid à l’extérieur. Le projet cherche à répondre aux contraintes structurelles et à la corrosion rencontrées dans les configurations existantes. Il associe développement de matériaux, conception des réservoirs et validation de prototypes.",
+    "objectives": [
+      "Définir les exigences techniques et les méthodes d’évaluation.",
+      "Développer des bétons à forte capacité thermique et des aciers économiques résistant aux sels.",
+      "Concevoir, construire et valider des prototypes de réservoirs à sels fondus.",
+      "Évaluer les performances économiques et environnementales de la technologie."
+    ]
+  },
+  "vanabat": {
+    "summary": "Adapter une batterie à flux de vanadium aux climats chauds et à son intégration dans un bâtiment photovoltaïque.",
+    "description": "VANABAT étudie l’adaptation des batteries à flux de vanadium aux climats chauds, notamment aux températures estivales de la région de Fès. Le projet associe optimisation du stockage, intégration à une installation photovoltaïque et gestion intelligente de l’énergie. Il vise à limiter les contraintes de refroidissement et à préparer des outils de dimensionnement pour les applications combinant solaire et stockage.",
+    "objectives": [
+      "Optimiser une batterie à flux de vanadium de 50 kW pour les climats chauds.",
+      "Intégrer la batterie au réseau d’un bâtiment équipé de 100 kWc photovoltaïques.",
+      "Développer un système prévisionnel de gestion de la production, de la consommation et du stockage.",
+      "Créer un outil de dimensionnement et préparer la commercialisation sur le marché marocain."
+    ]
+  },
+  "ecomataf": {
+    "summary": "Valoriser des fibres végétales et des liants naturels dans des matériaux de construction à bonnes performances énergétiques.",
+    "description": "ECoMatAF vise des briques et éléments de construction issus de matériaux naturels ou recyclés disponibles localement. Le projet associe agro-fibres traitées et liants argileux stabilisés pour rechercher de bonnes propriétés thermiques et mécaniques. Les travaux vont de la formulation et des essais en laboratoire à la fabrication pilote, avec une perspective de mise sur le marché national.",
+    "objectives": [
+      "Concevoir des briques et panneaux à base d’agro-fibres et de liants naturels.",
+      "Fabriquer et caractériser les prototypes selon les normes nationales.",
+      "Tester la fabrication à l’échelle industrielle et adapter le procédé.",
+      "Préparer la mise sur le marché de matériaux innovants en terre crue et fibres végétales recyclées."
+    ]
+  },
+  "gesys": {
+    "summary": "Concevoir et tester un stockage d’énergie par gravité associé à une gestion intelligente et aux énergies renouvelables.",
+    "description": "GESYS porte sur un système de stockage de l’énergie par gravité, de sa conception aux essais expérimentaux. Le projet combine simulations, prototypage et évaluation pour examiner ses capacités de stockage et ses possibilités de fabrication. Une gestion intelligente et un couplage avec des sources photovoltaïques et éoliennes doivent permettre d’en étudier l’intégration dans un démonstrateur.",
+    "objectives": [
+      "Concevoir, réaliser et optimiser le système de stockage gravitaire.",
+      "Évaluer la faisabilité et les conditions pratiques de fabrication.",
+      "Développer une gestion intelligente et tester le couplage au solaire et à l’éolien.",
+      "Préparer le déploiement du démonstrateur GESYS."
+    ]
+  },
+  "enroptimizer": {
+    "summary": "Développer un réseau intelligent capable d’ajuster la production renouvelable, le stockage et la demande aux contextes régionaux.",
+    "description": "EnROptimizer vise une infrastructure de réseau intelligent intégrant production renouvelable décentralisée, stockage et gestion de la demande. Le projet s’appuie sur des données en temps réel pour ajuster la production aux usages. Il prévoit une plateforme ouverte, des mécanismes d’apprentissage et des capteurs adaptés afin d’étudier des configurations répondant aux particularités des régions marocaines.",
+    "objectives": [
+      "Développer une plateforme de données ouverte pour les réseaux intelligents régionaux.",
+      "Analyser l’efficacité des configurations pour rapprocher production et consommation.",
+      "Identifier les besoins d’évolution du réseau et prévoir ses comportements à partir des données.",
+      "Concevoir des capteurs et un compteur intelligent adaptés au réseau marocain."
+    ]
+  },
+  "dppfem": {
+    "summary": "Étudier un prototype de réfrigération magnétique utilisant des matériaux magnétocaloriques et des nanofluides.",
+    "description": "DPPFEM vise le développement d’un prototype rotatif de réfrigération magnétique. Le projet mobilise des matériaux magnétocaloriques et des nanofluides comme fluides caloporteurs, en s’appuyant sur les travaux de l’équipe sur ces deux composants. Il associe modélisation, mise en forme des matériaux et essais du prototype pour évaluer son fonctionnement et son potentiel de réduction de la consommation électrique.",
+    "objectives": [
+      "Modéliser le système et optimiser les matériaux composites.",
+      "Concevoir, réaliser et mettre en fonctionnement le prototype.",
+      "Optimiser les paramètres de fonctionnement.",
+      "Évaluer les résultats et les performances énergétiques obtenues."
+    ]
+  },
+  "ctai": {
+    "summary": "Développer des cloisons thermo-acoustiques à base de liège et les évaluer dans un bâtiment démonstrateur.",
+    "description": "CTAI explore des matériaux thermo-acoustiques écologiques pour réduire les besoins énergétiques des bâtiments sur leur cycle de vie. Le projet valorise notamment le liège dans des panneaux composites et associe caractérisation en laboratoire, jumeau numérique et essais à échelle réelle. Un bâtiment témoin au Green Energy Park doit permettre de confronter les modèles aux mesures.",
+    "objectives": [
+      "Formuler des panneaux composites à base de liège et améliorer leurs propriétés.",
+      "Créer un jumeau numérique sur la plateforme Dassault Systèmes.",
+      "Évaluer les cloisons dans un bâtiment intelligent témoin au Green Energy Park.",
+      "Installer un réseau de capteurs pour le diagnostic énergétique et le suivi du cycle de vie.",
+      "Étudier l’adaptation de l’approche aux matériaux disponibles en Afrique subsaharienne."
+    ]
+  },
+  "ssh": {
+    "summary": "Concevoir un séchoir solaire hybride avec régulation automatique pour valoriser les produits locaux.",
+    "description": "SSH vise un séchoir solaire hybride adapté aux matières premières et aux usages marocains. Le projet associe une source de chaleur secondaire à un contrôle de la température, de l’humidité et du débit d’air. Il étudie le stockage de l’énergie et les conditions de séchage pour valoriser les produits locaux en milieu urbain ou rural, avec des adaptations industrielles envisagées.",
+    "objectives": [
+      "Concevoir un séchoir solaire avec un appoint thermique pour compenser l’intermittence.",
+      "Réguler la température, l’humidité et le débit d’air de séchage.",
+      "Étudier le stockage des excédents d’énergie.",
+      "Développer un système d’information sur les produits et une gestion énergétique limitant la consommation."
+    ]
+  },
+  "cbscvev2x": {
+    "summary": "Étudier une recharge bidirectionnelle sans contact pour véhicules électriques et son intégration aux infrastructures.",
+    "description": "CBSCVEV2X étudie un chargeur bidirectionnel sans contact pour les véhicules électriques, intégrant la technologie V2X. Le projet vise une solution conciliant simplicité, sécurité et flexibilité pour le secteur automobile. Les travaux couvrent la recharge par induction, la conversion d’énergie, la commande et l’intégration au véhicule ainsi qu’aux infrastructures nécessaires.",
+    "objectives": [
+      "Définir les cas d’usage et les standards de recharge.",
+      "Étudier la compatibilité électromagnétique de la recharge par induction.",
+      "Concevoir la conversion, la commande et la gestion de l’énergie.",
+      "Intégrer le chargeur au véhicule et à son infrastructure.",
+      "Tester et valider le système de recharge."
+    ]
+  },
+  "msc-bitume": {
+    "summary": "Maintenir un stockage de bitume en température grâce au solaire thermique et évaluer un passage à l’échelle industrielle.",
+    "description": "MSC Bitume vise un démonstrateur solaire maintenant 80 tonnes de bitume à environ 150 °C. Le projet associe un champ solaire, du stockage thermique et des dispositifs de contrôle pour évaluer la productivité et l’intérêt économique de la solution. Une étude de faisabilité doit examiner son transfert à un stockage de 3 000 tonnes et à d’autres usages industriels comparables.",
+    "objectives": [
+      "Concevoir et tester le maintien en température du bitume par énergie solaire.",
+      "Mesurer la productivité du champ, les performances du stockage et le retour sur investissement.",
+      "Optimiser le contrôle et les températures de consigne sur le pilote.",
+      "Étudier le changement d’échelle vers 3 000 tonnes et les applications industrielles similaires."
+    ]
+  },
+  "hybridbath": {
+    "summary": "Associer solaire et biomasse locale pour améliorer la production de chaleur dans les hammams traditionnels.",
+    "description": "HYBRIDBATH étudie l’association du solaire thermique et de chaudières à biomasse pour les hammams traditionnels. Le projet explore notamment le couplage du micro-CSP avec des ressources locales comme les grignons d’olive et les résidus de fruits à coque. Il vise une production d’eau chaude et de chauffage plus efficace, tout en réduisant le recours au bois-énergie et les émissions associées.",
+    "objectives": [
+      "Améliorer l’efficacité énergétique des hammams traditionnels.",
+      "Réduire le recours au bois-énergie grâce à l’hybridation solaire-biomasse.",
+      "Développer la production d’eau chaude sanitaire et le chauffage par plancher chauffant.",
+      "Évaluer des chaudières à biomasse visant un rendement supérieur à 80 %."
+    ]
+  },
+  "cr-seapi": {
+    "summary": "Concevoir une serre agrivoltaïque intelligente pour mieux gérer l’eau, le sol et l’énergie en agriculture.",
+    "description": "CR-SEAPI vise une serre pilote agrivoltaïque intelligente adaptée aux contraintes climatiques et aux besoins agricoles nationaux et régionaux. Le projet associe conception de la serre, contrôle à distance et suivi des cultures pour mieux gérer l’eau, le sol et l’énergie. Les essais doivent permettre d’évaluer les solutions proposées et de préparer leur valorisation et leur transfert.",
+    "objectives": [
+      "Étudier, concevoir et réaliser la serre agrivoltaïque avec le partenaire industriel.",
+      "Développer un contrôle intelligent et une télésurveillance par radiofréquence.",
+      "Suivre les cultures par des techniques nucléaires et conventionnelles.",
+      "Valoriser les résultats et préparer le transfert technologique ainsi qu’un projet de start-up."
+    ]
+  },
+  "digesteur": {
+    "summary": "Valoriser les effluents de l’industrie papier-carton par méthanisation, cogénération et production de biofertilisant.",
+    "description": "DIGESTEUR étudie la méthanisation des effluents organiques de l’industrie papier-carton. Le projet vise un pilote associant production de biogaz, purification et valorisation par cogénération. Il prévoit aussi le traitement du digestat en biofertilisant. La caractérisation des effluents et les essais doivent aider à optimiser les paramètres du procédé et à préparer le choix d’une technologie industrielle.",
+    "objectives": [
+      "Caractériser les effluents et les boues et déterminer leur potentiel méthanogène.",
+      "Réaliser un pilote de méthanisation et optimiser la production de biogaz.",
+      "Dimensionner la purification et la cogénération pour produire de l’électricité ou de la chaleur.",
+      "Traiter le digestat pour une valorisation agricole.",
+      "Définir les paramètres et les choix technologiques d’un éventuel digesteur industriel."
+    ]
+  },
+  "solrshemsy": {
+    "summary": "Développer un chauffe-eau solaire à tubes sous vide fabriqué localement et accessible au logement social.",
+    "description": "SOLR’SHEMSY vise un chauffe-eau solaire à tubes sous vide conçu et fabriqué au Maroc. Le projet recherche un équilibre entre conformité aux normes européennes, coût et intégration locale des composants. Il associe optimisation technique et économique du produit, analyse de fabrication et préparation d’un procédé industriel pour rendre cette solution plus accessible au logement social.",
+    "objectives": [
+      "Concevoir un chauffe-eau solaire adapté au logement social, avec un prix visé n’excédant pas 4 000 DH.",
+      "Développer un modèle visant 90 % de composants fabriqués localement.",
+      "Optimiser les composants, les coûts et le processus de fabrication.",
+      "Établir la fiche du prototype et concevoir un procédé industriel complet."
+    ]
+  },
+  "bioresol": {
+    "summary": "Transformer les résidus de trituration des olives en biocombustibles solides et évaluer leurs usages industriels.",
+    "description": "BIORESOL s’intéresse à la production de biocombustibles solides à partir de résidus de trituration des olives. Le projet étudie la disponibilité et la composition de cette biomasse, puis les conditions de séchage et de densification. Des essais en combustion et en gazéification doivent permettre d’évaluer ses usages énergétiques et de préparer un dimensionnement industriel adapté aux besoins locaux.",
+    "objectives": [
+      "Caractériser la disponibilité et la composition des grignons d’olive.",
+      "Mettre en place un séchoir et une unité pilote de densification.",
+      "Optimiser l’humidité et évaluer les combustibles en combustion et en gazéification.",
+      "Identifier les besoins des industries proches et dimensionner une installation avec son cahier des charges."
+    ]
+  },
+  "veres": {
+    "summary": "Développer une station de recharge solaire pour motocycles électriques et un triporteur destiné au transport de marchandises.",
+    "description": "VERES porte sur une station de recharge solaire destinée notamment aux motocycles électriques à deux et trois roues. Le projet associe panneaux photovoltaïques, batteries et électronique de puissance dans une solution conçue pour être reproductible par de petites unités de fabrication. Il prévoit une station mobile ainsi qu’une adaptation de la recharge à un triporteur électrique de transport.",
+    "objectives": [
+      "Développer une station photovoltaïque de recharge pour motocycles électriques.",
+      "Concevoir une station mobile avec une structure solaire démontable et transportable.",
+      "Développer un triporteur électrique destiné aux marchandises.",
+      "Adapter les panneaux et le chargeur du projet au triporteur."
+    ]
+  },
+  "wimecom": {
+    "summary": "Étudier un réseau de compteurs intelligents sans fil, résilient et adapté aux fréquences disponibles au Maroc.",
+    "description": "WiMeCOM étudie les communications des réseaux de compteurs intelligents dans des environnements urbains et ruraux. Le projet s’intéresse aux perturbations, aux obstacles de propagation et aux contraintes énergétiques des modules. Il vise des solutions sans fil fiables, adaptées au plan de fréquences marocain et aux exigences de fonctionnement des réseaux électriques intelligents.",
+    "objectives": [
+      "Réduire la consommation des communications multicouches pour prolonger l’autonomie des modules.",
+      "Développer des topologies capables de résister aux pannes récurrentes.",
+      "Réaliser un réseau maillé sans fil conforme au plan national de fréquences."
+    ]
+  },
+  "biof2s": {
+    "summary": "Produire un combustible solide à partir de biomasse humide par carbonisation hydrothermale alimentée au solaire.",
+    "description": "BIOF2S étudie la production d’un combustible solide, l’hydrochar, à partir de biomasse telle que les grignons d’olive. Le procédé de carbonisation hydrothermale utilise un concentrateur solaire pour apporter la chaleur et peut traiter une matière humide. Le projet vise un pilote permettant d’examiner la valorisation de résidus et les applications du combustible dans les secteurs consommateurs de chaleur.",
+    "objectives": [
+      "Concevoir un pilote de production d’hydrochar à partir de biomasse cellulosique.",
+      "Utiliser la chaleur solaire à concentration pour la carbonisation hydrothermale.",
+      "Évaluer la valorisation de résidus agro-industriels et, éventuellement, de déchets urbains.",
+      "Étudier les usages thermiques et les perspectives de production et de commercialisation du combustible."
+    ]
+  },
+  "tahalagrid": {
+    "summary": "Étudier un micro-réseau démonstrateur pour huit bâtiments publics, combinant production locale et pilotage des usages.",
+    "description": "TahalaGrid vise un micro-réseau démonstrateur regroupant huit bâtiments publics de la commune de N’Tahala. Le projet associe production solaire locale, comptage et pilotage dynamique des charges. Il cherche à définir une architecture énergétique réplicable pour mieux intégrer les productions décentralisées, maîtriser la facture de la collectivité et renforcer la qualité de l’alimentation.",
+    "objectives": [
+      "Développer un démonstrateur reliant huit bâtiments publics de N’Tahala.",
+      "Intégrer les productions photovoltaïque et solaire thermique avec un pilotage dynamique des charges.",
+      "Modéliser la production locale pour améliorer l’autonomie et la sécurité énergétiques.",
+      "Évaluer une réduction de facture visée de 70 % et la diminution des émissions associées."
+    ]
+  },
+  "ecsp-bwfod": {
+    "summary": "Coupler une petite centrale solaire thermodynamique et le dessalement par osmose directe pour produire eau et électricité.",
+    "description": "ECSP-BWFOD étudie une unité de production simultanée d’électricité et d’eau potable pour une collectivité située en zone aride. Le projet couple une centrale solaire à concentration à un procédé de dessalement d’eaux saumâtres par osmose directe. Il explore la récupération de chaleur, les besoins de pompage et les conditions de valorisation industrielle des technologies développées.",
+    "objectives": [
+      "Évaluer la cogénération à partir de centrales solaires à concentration de petite puissance.",
+      "Développer un dessalement par osmose directe intégrant une machine osmotique.",
+      "Concevoir une unité couplée de production d’eau potable et d’électricité.",
+      "Préparer la protection par brevet et les perspectives d’industrialisation nationale et internationale."
+    ]
+  },
+  "microonduleur-pv": {
+    "summary": "Intégrer au panneau photovoltaïque une électronique miniaturisée pour transférer, suivre et optimiser sa puissance.",
+    "description": "MicroOnduleur PV vise un système électronique miniaturisé intégré au panneau photovoltaïque. Le projet couvre le hacheur, le micro-onduleur, le chargeur de batterie et l’adaptateur d’impédance, ainsi que leur commande et leur suivi. La conception, le prototypage et les essais sont envisagés au Maroc pour préparer une production locale et une maintenance à distance de l’installation.",
+    "objectives": [
+      "Optimiser une architecture DC et ses composants pour améliorer le rendement et réduire l’encombrement.",
+      "Couvrir des besoins allant de quelques centaines de watts à plusieurs dizaines de kilowatts.",
+      "Organiser la production locale, le télédiagnostic et les niveaux de maintenance.",
+      "Viser une durée de vie de vingt ans pour l’électronique de puissance.",
+      "Créer un environnement unifié de commande et de suivi des panneaux par réseau M2M."
+    ]
+  },
+  "soleil": {
+    "summary": "Développer un nettoyage photovoltaïque automatique limitant l’encrassement, les micro-rayures et la consommation d’eau.",
+    "description": "SOLEIL étudie les pertes de production photovoltaïque liées à l’encrassement et les moyens de les limiter. Le projet recherche une solution corrective de nettoyage automatique qui préserve les surfaces des modules et réduit les besoins en eau. Les travaux portent sur l’évaluation des dépôts, le développement de solutions adaptées aux suiveurs solaires et la validation de leur efficacité.",
+    "objectives": [
+      "Mesurer l’encrassement et ses effets sur la production électrique.",
+      "Développer des solutions de nettoyage adaptées aux suiveurs solaires à deux axes.",
+      "Valider l’efficacité des solutions proposées."
+    ]
+  },
+  "fappb": {
+    "summary": "Optimiser un biodigesteur agricole par la sélection de ferments et un système intelligent de contrôle du procédé.",
+    "description": "FAPPB vise l’amélioration du biodigesteur agricole développé par Biodôme. Le projet associe sélection de mélanges bactériens, production de ferments et contrôle électronique pour améliorer la fermentation, le rendement et la fiabilité. Un prototype optimisé doit être adapté aux petites exploitations disposant d’un cheptel d’au moins cinq animaux, avec une perspective de commercialisation par Biodôme.",
+    "objectives": [
+      "Concevoir un prototype optimisé pour les petites exploitations agricoles.",
+      "Sélectionner les mélanges bactériens et développer la production de ferments.",
+      "Développer un dispositif électronique d’acquisition et de contrôle.",
+      "Améliorer la production de biogaz et préparer la commercialisation par Biodôme."
+    ]
+  },
+  "nano-lubrifiants": {
+    "summary": "Formuler des lubrifiants à base de nanoparticules pour réduire les frottements et l’usure des éoliennes.",
+    "description": "NANO LUBRIFIANTS étudie des formulations contenant des additifs à base de nanoparticules pour les organes mécaniques des éoliennes. Le projet cherche à améliorer leur fonctionnement dans des conditions difficiles en réduisant frottements, usure et pertes d’énergie. Les travaux associent synthèse des additifs, stabilité des suspensions, essais tribologiques et analyse du passage à l’échelle industrielle.",
+    "objectives": [
+      "Optimiser la synthèse d’additifs à faible coût dans une approche de chimie verte.",
+      "Caractériser la structure et la morphologie des nanoparticules.",
+      "Stabiliser les suspensions et tester les formulations par rhéologie et tribologie.",
+      "Étudier l’intensification du procédé, les coûts et la faisabilité d’un transfert industriel."
+    ]
+  },
+  "frigo-solaire": {
+    "summary": "Concevoir un réfrigérateur solaire sur triporteur, isolé avec des matériaux naturels dont le bois de palmier dattier.",
+    "description": "Frigo Solaire vise un caisson réfrigéré monté sur un châssis tracté par un motocycle pour transporter des produits périssables. L’électricité provient de panneaux photovoltaïques et l’isolation mobilise des matériaux naturels, notamment le bois de palmier dattier, ainsi que des composites. Le projet s’adresse au commerce de proximité et cherche à améliorer les conditions de conservation durant le transport.",
+    "objectives": [
+      "Adapter la chaîne du froid aux besoins des transporteurs de produits périssables.",
+      "Utiliser l’énergie solaire pour réduire les émissions associées au transport réfrigéré.",
+      "Améliorer les conditions de conservation et le service des marchands ambulants.",
+      "Valoriser le bois de palmier dans l’isolation et soutenir les petits projets de proximité."
+    ]
+  },
+  "propre-ma": {
+    "summary": "Établir une cartographie régionale de la productivité photovoltaïque à partir d’un réseau national de mesures.",
+    "description": "PROPRE.MA vise une carte de productivité photovoltaïque couvrant les régions du Maroc. Le projet s’appuie sur une vingtaine d’installations utilisant différentes technologies de silicium et sur un réseau national de mesures. Les données collectées doivent permettre de comparer les rendements locaux, de calibrer les estimations et d’aider à l’évaluation de futurs projets photovoltaïques.",
+    "objectives": [
+      "Calculer les productivités mensuelles et annuelles à partir des mesures horaires.",
+      "Proposer une méthode corrélative applicable à différentes zones du Maroc.",
+      "Calibrer la carte de productivité par des mesures de terrain, de rayonnement et de température.",
+      "Déterminer le productible des installations photovoltaïques raccordées au réseau."
+    ]
+  },
+  "pv-emul": {
+    "summary": "Développer des émulateurs photovoltaïques de 1 et 5 kW pour tester les onduleurs dans des conditions reproductibles.",
+    "description": "PV-EMUL vise deux émulateurs de panneaux photovoltaïques destinés à l’évaluation des onduleurs raccordés au réseau. Les dispositifs de 1 et 5 kW doivent reproduire les caractéristiques électriques des panneaux selon l’ensoleillement et la température. Le projet associe modèles, simulation et commande embarquée FPGA/DSP pour préparer des essais reproductibles, indépendants des conditions météorologiques.",
+    "objectives": [
+      "Développer un cadre de validation et de certification des onduleurs photovoltaïques.",
+      "Définir un protocole d’essai utilisable par les laboratoires de certification.",
+      "Concevoir et réaliser les émulateurs de 1 et 5 kW.",
+      "Tester les onduleurs sous différentes conditions simulées de rayonnement et de température."
+    ]
+  },
+  "windturbine": {
+    "summary": "Concevoir une petite éolienne domestique utilisant des matériaux locaux dans le cadre des normes IEC 61400.",
+    "description": "Windturbine étudie une petite éolienne domestique dans le cadre de la série de normes IEC 61400. Le projet privilégie des matériaux disponibles localement, dont le bois, pour rechercher une fabrication accessible, fiable et durable. Les travaux portent sur la captation en vent faible, la prévision de production et la réduction des coûts, avec une application envisagée aux zones rurales isolées.",
+    "objectives": [
+      "Optimiser la surface balayée, les charges et les composants pour les vents faibles.",
+      "Développer les outils de prévision de la production énergétique.",
+      "Préparer une petite éolienne adaptée aux besoins des zones rurales isolées.",
+      "Réduire les coûts de fabrication pour faciliter l’accès aux équipements renouvelables."
+    ]
+  },
+  "secrets": {
+    "summary": "Étudier la gestion énergétique d’un quartier durable par un réseau intelligent coordonnant les usages et les sources propres.",
+    "description": "SECRETS explore l’optimisation énergétique à l’échelle d’un quartier durable plutôt que bâtiment par bâtiment. Le projet s’appuie sur un réseau intelligent pour maximiser l’usage des sources propres et limiter les appels au réseau de distribution. Il associe architecture de commande, dispositifs de pilotage, simulations et essais en laboratoire pour préparer une mise en œuvre à plus grande échelle.",
+    "objectives": [
+      "Définir les spécifications d’un réseau intelligent pour l’optimisation d’un ensemble de bâtiments.",
+      "Créer une installation de laboratoire pour tester les concepts et produire des spécifications transférables à l’industrie.",
+      "Renforcer les compétences spécialisées dans ce domaine au Maroc."
+    ]
+  },
+  "loucom": {
+    "summary": "Développer un photovoltaïque à concentration à bas coût adapté aux conditions climatiques marocaines.",
+    "description": "LOUCOM étudie des technologies de cellules photovoltaïques destinées à des panneaux à concentration adaptés au Maroc. Le projet associe conception optique, structures de support et suivi solaire, avec une intégration à des fonctions de réseau intelligent. Des essais sur panneaux concentrateurs et une démonstration dans des fermes solaires doivent permettre d’en évaluer la fiabilité sur site.",
+    "objectives": [
+      "Concevoir une solution optique de concentration solaire.",
+      "Développer un automate pour piloter le suivi et surveiller les capteurs.",
+      "Concevoir des structures fixes et mobiles à faible coût.",
+      "Évaluer la fiabilité du système sur site avec un suivi électrique."
+    ]
+  },
+  "moresolar": {
+    "summary": "Développer le suivi et la prévision de production des centrales photovoltaïques pour faciliter leur intégration au réseau.",
+    "description": "MORESOLAR vise des outils de surveillance, de commande et de prévision pour les centrales photovoltaïques au Maroc. Le projet cherche à améliorer l’exploitation et les échanges avec le réseau électrique en anticipant la production, les défaillances et la durée de vie des installations. Ces outils doivent tenir compte des conditions locales pour accompagner l’intégration du solaire à grande échelle.",
+    "objectives": [
+      "Développer un suivi et une commande adaptatifs pour les grandes installations photovoltaïques.",
+      "Concevoir un simulateur de production adapté à l’environnement marocain.",
+      "Développer une prévision des défaillances et de la durée de vie des installations."
+    ]
+  },
+  "coldsun": {
+    "summary": "Associer un champ de Fresnel, une machine à absorption et un stockage sur roche pour une climatisation solaire réversible.",
+    "description": "COLDSUN étudie une solution de climatisation solaire réversible de 200 kW associant un champ de Fresnel, une machine à absorption double effet et un stockage sur lit de roche. Le projet vise à maîtriser le coût et les besoins énergétiques tout en prolongeant la production au-delà des heures d’ensoleillement. Il associe conception, simulation et optimisation des usages de chaleur et de froid.",
+    "objectives": [
+      "Concevoir et dimensionner le prototype, le champ solaire et l’unité à absorption.",
+      "Simuler le fonctionnement couplé du champ, du groupe froid et du stockage.",
+      "Étudier les héliostats, leur implantation et les contraintes mécaniques.",
+      "Évaluer les économies d’énergie, la réduction des émissions et l’allègement des pointes estivales.",
+      "Optimiser les usages de chauffage, de climatisation et d’eau chaude sanitaire."
+    ]
+  },
+  "climsol": {
+    "summary": "Étudier un pilote de climatisation et de chauffage solaires pour protéger les élevages avicoles des fortes chaleurs.",
+    "description": "CLIMSOL vise une solution solaire de climatisation et de chauffage de petite taille pour les élevages avicoles. Le projet répond aux contraintes des vagues de chaleur estivales, qui affectent la santé des volailles et les performances d’élevage. Il étudie un système à absorption adapté aux conditions climatiques et aux besoins de régulation thermique des bâtiments agricoles.",
+    "objectives": [
+      "Concevoir une solution pour limiter les surchauffes lors d’épisodes dépassant 40 à 45 °C.",
+      "Réaliser un système de refroidissement à absorption utilisant l’énergie solaire.",
+      "Prévoir le chauffage selon les besoins de santé et de confort des volailles."
+    ]
+  },
+  "fss": {
+    "summary": "Modéliser et piloter les séchoirs solaires pour améliorer leur gestion énergétique et la qualité des produits séchés.",
+    "description": "FSS étudie l’amélioration du fonctionnement des séchoirs solaires par le suivi et la maîtrise des conditions intérieures. Le projet associe modélisation des flux solaires et thermiques, prototypes de séchage direct et indirect et campagnes de mesure. Il cherche à optimiser la consommation d’énergie, la durée de séchage et la qualité des produits, notamment pour le bois et les aliments.",
+    "objectives": [
+      "Développer un outil d’aide à la gestion énergétique et modéliser les flux thermiques.",
+      "Concevoir et tester un séchoir direct pour le bois et un séchoir indirect pour les aliments.",
+      "Réaliser un capteur solaire à air et étudier l’effet de la ventilation.",
+      "Conduire des campagnes de mesure pour optimiser le fonctionnement des séchoirs."
+    ]
+  },
+  "sflash": {
+    "summary": "Utiliser la chaleur solaire pour le séchage flash des phosphates et le séchage rotatif des boues de lavage.",
+    "description": "Sflash étudie l’apport de la chaleur solaire au séchage des phosphates et des boues de lavage, comme source principale ou d’appoint. Le projet retient un séchoir flash pour les phosphates et un séchoir rotatif pour les boues afin de tenir compte des contraintes industrielles. Les essais et la modélisation doivent aider à dimensionner les unités et à préparer une étude d’application à grande échelle.",
+    "objectives": [
+      "Évaluer les caractéristiques et les performances des technologies sur banc d’essais.",
+      "Concevoir une alimentation thermique par solaire à concentration.",
+      "Modéliser le couplage entre source solaire et séchage pour aider au dimensionnement.",
+      "Réaliser une étude d’avant-projet pour une application industrielle aux phosphates et aux boues."
+    ]
+  },
+  "prsm": {
+    "summary": "Étudier le rafraîchissement solaire à absorption et concevoir un système de climatisation de faible puissance.",
+    "description": "PRSM étudie les procédés de rafraîchissement solaire adaptés au Maroc, en particulier les systèmes de faible puissance frigorifique. Le projet s’appuie sur une installation de production d’eau glacée à absorption alimentée par de l’eau chaude solaire. Il associe caractérisation, modélisation et conception pour examiner les usages résidentiels et contribuer à la formation des futurs ingénieurs.",
+    "objectives": [
+      "Caractériser une installation d’eau glacée à absorption alimentée par le solaire.",
+      "Modéliser et optimiser les performances du système.",
+      "Concevoir une climatisation solaire de faible puissance adaptée au résidentiel.",
+      "Développer un outil expérimental et numérique pour la formation des ingénieurs."
+    ]
+  }
+}

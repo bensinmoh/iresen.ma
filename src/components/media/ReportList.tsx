@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { FilePdf } from '@phosphor-icons/react/dist/ssr/FilePdf'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
@@ -21,9 +22,9 @@ export async function ReportList({ locale }: { locale: Locale }) {
               MTEDD · {t(`languages.${report.language}`)} ·{' '}
               {(report.bytes / 1000000).toLocaleString(locale, { maximumFractionDigits: 1 })} MB
             </p>
-            <h3>
+            <Heading as="h3" size="compact">
               <bdi>{report.title}</bdi>
-            </h3>
+            </Heading>
             <p>{report.description[locale]}</p>
             <a href={report.url} target="_blank" rel="noopener noreferrer">
               {t('source')}{' '}

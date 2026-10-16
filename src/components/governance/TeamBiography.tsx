@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 
 import Image from 'next/image'
@@ -156,13 +158,15 @@ export function TeamBiography({
           <div className={styles.biographyCopy}>
             <SectionEyebrow>{biographyLabel}</SectionEyebrow>
             <div className={styles.biographyName}>
-              <h2 id={titleId}>
+              <Heading as="h2" size="compact" id={titleId}>
                 <bdi>{name}</bdi>
-              </h2>
+              </Heading>
               {linkedin && (
                 <a
                   className={styles.biographyLinkedin}
                   href={linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={`${linkedinLabel} — ${name}`}
                   title={linkedinLabel}
                 >

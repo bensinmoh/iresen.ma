@@ -50,10 +50,12 @@ locale paths, links, metadata, sitemap/search and documentation together.
   eligible CMS calls/details. Balanced responsive approach and centered lifecycle
   copy outside the steps. Keep the sourced 69-project agency figure independent
   from the withdrawn fictional catalogue.
-- **Collaborative projects:** empty catalogue, retained original hero/five anchors,
-  “Les projets seront bientôt mis à jour” and EN/AR working adaptations. All 24
-  fictional records, 72 notes, professor/consortium fillers and exclusive visuals
-  are withdrawn. Old downloads return 404. A real model/source is future work.
+- **Collaborative projects:** restored source-backed catalogue with 60 local Payload
+  records, native filters/pagination/detail dialogs and original source references.
+  EN/AR working translations are locally reviewable and remain outside public
+  publication/search until locale approval. Missing facts stay empty; scientific
+  production counters are excluded. The former 24 fictional records, 72 PDFs and
+  fabricated partner marks remain withdrawn; old note downloads return 404.
 - **Platforms:** five supplied platform destinations/photos/logos, actual maturity,
   capabilities and contacts. GreenH2A retains in-development/3D wording.
 - **Laboratory network:** 14 supplied records, local topic/query filtering and
@@ -115,7 +117,7 @@ visibility and indexing changes need explicit release authorization; none is del
 IT must confirm capacity/regions/storage, secrets, private identity, edge rules,
 worker ownership, redacted monitoring, backup/restore and incident response.
 
-Final editorial/translation/legal review, the real report PDF, verified project data,
+Final editorial/translation/legal review, the real report PDF, current project-status/partner verification,
 Alliances, PhaseIII drafting and separately commissioned integrations remain open.
 Do not silently activate online intake, newsletter, analytics, OAuth or new CMS models.
 See [IT handover](docs/it-handover.fr.md), [deployment](docs/deployment.md),
@@ -126,3 +128,13 @@ Useful links consolidation (2026-10-15): the owner selects the Media library’s
 former dedicated-page resources and adds the exact EVPLAN, PV Mapping and SolarTwin
 URLs supplied by the owner. `usefulLinks` is a permanent compatibility route alias;
 its footer shortcut points to the media section. See `docs/useful-links.md`.
+
+## Calls archive increment — 2026-10-15
+
+The owner commissions 21 closed historical programme/edition entries, the
+Programmes devices preview, a child catalogue and sourced preparatory detail
+pages. Working content awaits final copy/translation review. Native filters and
+future status states are supported; no applications, alerts, results or downloads
+are invented. See [scope](docs/calls-catalogue-2026.md).
+
+Project editorial follow-ups (2026-10-15): homogeneous AI-assisted descriptions, shorter card previews, compact scientific-objective bullets and guarded local PDF actions. The source notice is withdrawn from UI/search. Current PDF files remain unchanged pending the updated list; withdrawn fictional PDFs remain absent.

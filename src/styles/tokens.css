@@ -29,6 +29,8 @@
   --font-size-action: 1.125rem;
   --font-size-editorial-body: 1.125rem;
   --font-size-overline: 1rem;
+  --font-size-section-heading: clamp(1.75rem, 2.61vw, 3.125rem);
+  --font-size-card-heading: clamp(1.125rem, 1.5vw, 1.5rem);
   --font-size-research-heading: clamp(2rem, 4.167vw, 3.75rem);
   --font-size-mission-heading: clamp(1.75rem, 3.4723vw, 3.125rem);
   --font-size-figure: clamp(2.25rem, 4.167vw, 3.75rem);
@@ -71,4 +73,21 @@
   --color-hero-shade: rgb(5 17 29 / 78%);
   --z-header: 10;
   --z-skip: 30;
+}
+
+/* Mobile composition measured from Figma's 402px frames (1479:5838 onward). */
+@media (max-width: 40rem) {
+  :root {
+    --gutter: 1rem;
+    --section-space: 3rem;
+    --font-size-action: 1rem;
+    --font-size-editorial-body: 1rem;
+    --font-size-section-heading: 1.75rem;
+    --font-size-research-heading: 1.75rem;
+    --font-size-mission-heading: 1.75rem;
+    --font-size-card-heading: 1.25rem;
+    --font-size-figure: 1.875rem;
+    --font-size-figure-label: 0.875rem;
+    --hero-title-size: 2rem;
+  }
 }

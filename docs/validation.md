@@ -1,5 +1,70 @@
 # Foundation validation
 
+## Integrated test run — 2026-10-16
+
+The owner requests CI, synchronization, merge and cleanup. The inherited frozen
+fingerprint verified successfully; the registry retains explicit confirmation
+that all editing streams finished. Node 24.19.0 and pnpm 11.19.0 are in use.
+All 173 unit tests, 32 integration tests across six files, ten coordination
+tests, full lint and formatting pass. Production dependency audit reports no
+known vulnerabilities; the documentation audit has no missing files.
+Integration uses a new disposable PostgreSQL 17.9 container on port 55439;
+the owner's populated database and project/PDF files remain untouched.
+
+The initial production Chrome run passed 316 browser cases and skipped nine
+opt-in cases. Of 26 failures, 18 stemmed from call-card accessible labels escaping
+the mobile rail, four were disk-space errors, one exposed missing call-partner
+image optimizer eligibility, and three assumed every search-filter link must
+be onscreen despite the owner's single-line native-scroll requirement.
+Disposable build caches were cleared. A fresh coordination hold covers the
+card positioning fix, explicit image allowlist entry and search tests that check
+keyboard focus brings each rail link into view while retaining document reflow.
+The fresh corrected production build passes, including TypeScript and standalone
+packaging. All 26 affected browser cases now pass: 23 on the first correction
+pass and three search cases after waiting for native menu toggle to restore
+main-content focusability. This yields 342 validated browser cases plus nine
+opt-in skips across the initial run and targeted rechecks. FR desktop programme
+cards and AR mobile catalogue screenshots were inspected. Final exact-head CI
+and merge outcomes are recorded on the integration pull request. Earlier session
+permission limitations below are historical. No deployment or visibility change
+is included.
+
+## Final responsive follow-ups — 2026-10-16
+
+The owner requests tests/CI/merge after the mobile follow-ups. Full local lint,
+formatting, all 173 unit tests (26 files), and the isolated production build
+including TypeScript and standalone packaging pass on the final runtime. This
+includes the centered laboratory reset, single-line navigation/filter strips,
+mobile call-card rails, compact Board fallback and nonwrapping 69 figure. The
+call calendar reuses the existing Phosphor icon family.
+
+GitHub write was retried and rejected by the automatic approval gate:
+`MCP tool call requires approval, but approval policy is never`. PR 119 remains
+on its earlier head `61e61dfc9be19dcaa9b12a6cf9b960b5ace1bec1`; it does not
+contain this final local batch. No final-head CI run or merge is claimed. Database
+integration and production-browser checks remain outstanding; browser/network
+authorization and server-bind restrictions prevent final local rendered review.
+Canonical tsconfig is restored after the build; only documentation changes follow.
+
+## Coordinated integration — 2026-10-15
+
+Owner confirmed all editing chats finished. The coordinated batch combines Governance,
+shared elements, mobile rules, sourced calls/projects and the laboratory reset.
+
+- Full local formatting and lint pass on Node 24.19.0 / pnpm 11.19.0.
+- All 173 unit tests pass (26 files).
+- Isolated production build `.local/integration-final-build` passes, including
+  TypeScript and complete standalone tracing/packaging. Canonical tsconfig excludes
+  review-build globs afterwards; no runtime source changed after this build.
+- Integration fixes register nine sourced call-partner marks in image provenance,
+  remove a withdrawn project-partner search label, and verify the 21-call archive
+  projection rather than the superseded historical sample list.
+- Final production-browser startup was blocked by the session: `listen EPERM`
+  on `127.0.0.1:3199`. No final-runtime browser pass is claimed here.
+- GitHub blob creation was rejected: `MCP tool call requires approval, but approval
+policy is never`. No remote commit, new CI run or merge is claimed for this batch.
+  Current-head database/browser CI remains mandatory before merge.
+
 ## Institutional narrative — 2026-10-14
 
 The [dedicated review branch](institutional-narrative-2026.md) implements the
@@ -3953,3 +4018,70 @@ Filter/sort preservation, page reset, keyboard activation, highlight and API
 correction checks remain. Runtime/ranking is unchanged; the same production build
 was reused for the four affected FR/EN/AR scenarios, all of which passed.
 Final CI remains required.
+
+## Figma mobile design rules — 2026-10-15
+
+Local Chrome production review passes for 21 non-alias public routes in FR/EN/AR
+at 320/402/640/768/1440px, with no document overflow. All 48 distinct scoped
+browser tests pass on the final isolated build (44 in the full confirmation,
+then six affected tests after test-only corrections). Coverage includes shared
+roles, mobile hero actions, navigation, footer/newsletter state, native anchors,
+figure keyboard access, 200% text, no-JavaScript and reduced motion. Production
+FR/EN/AR mobile captures were inspected. Lint, build/TypeScript, changed-file
+formatting and whitespace pass; doc audit reports no missing documents. Physical
+iOS/Android/Safari and remote CI are not claimed. The pre-existing uncommitted
+shared-element refactor is preserved; see [source evidence and local delivery
+boundary](mobile-figma-review.md).
+
+## Sourced projects and editorial follow-ups — 2026-10-15
+
+Local import contains 60 real projects, 60 images and 57 available portraits.
+Unsupported status/budget/duration/platform/affiliation/consortium fields remain
+empty. FR is locally published; all 60 EN and 60 AR records remain pending review.
+Original source files and contacts stay in ignored local storage. AI-assisted
+editorial datasets cover all 60 references in FR/EN/AR; cards use short summaries
+and objectives use compact native bullets. The owner-withdrawn source notice is
+removed from UI/search. PDF files are left unchanged as requested.
+
+Before the shared hold, 39 scoped unit tests and the initial project integration
+scenario passed; a production build passed after correcting standalone tracing.
+These results predate the final summaries/PDF lifecycle and notice removal and
+are not final-head evidence. Scoped formatting/lint and development previews are
+permitted during hold; final unit/integration/browser checks, production build,
+CI and merge await all writers and the shared freeze. Latest added PDF revision
+and withdrawal scenarios remain pending. No deployment is included.
+
+Final permitted checks: scoped ESLint and Prettier pass; repository whitespace
+check passes. Development preview confirms VANABAT details in FR/EN/AR, compact
+bullets and the local PDF action, with the withdrawn notice absent. French mobile
+390px rendering was inspected; the temporary browser viewport was reset. Local
+search reconciliation contains 60 French project results, 117 media and 60 current
+PDF documents. EN/AR remain excluded from public discovery. Final production and
+automated regression coverage remains pending the shared freeze.
+
+Coordinator-name follow-up: all 180 localized database values match the curated
+mapping; all 180 existing note revisions remain reachable and locale statuses
+remain FR published / EN-AR review. FR SmartDrone4PV preview shows `Imane SEBARI`;
+AR shows `إيمان سباري`. Scoped importer ESLint/formatting pass. No PDF bytes are
+rewritten. Full automated checks remain deferred under the shared hold.
+
+Project filter follow-up: development preview of the real catalogue confirms
+`rachidi` → MELHY in FR/EN/AR, `RACHIDI MELHY` → MELHY after native form
+submission, and `رشيدي` → MELHY after Arabic form submission. The filter now reads
+all populated public project fields and localized metadata labels. The existing
+source-review e2e scenario gains the coordinator regression. Scoped ESLint,
+formatting and whitespace are checked; automated scenarios/production build remain
+pending the shared freeze. No database, publication gate or PDF changes.
+
+Project coordinator presentation follow-up: development preview inspected VANABAT
+in French desktop and Arabic 390px mobile. Both display the email and enlarged
+circular portrait; Arabic alignment and the complete email fit without horizontal
+overflow. No telephone link remains in the coordinator block. Browser viewport
+was reset. Scoped ESLint/formatting pass and whitespace is checked; the existing
+e2e mail-link assertion is updated for the visible email plus contact action.
+Automated regression/production verification remains pending shared freeze.
+
+Partner section follow-up withdrawn by owner: remove only the in-progress
+partner/logo section and associated projection/styles/localized label. No data or
+assets were imported. Preserve the existing project corrections. Scoped lint,
+formatting and whitespace checked; full checks remain under the shared hold.

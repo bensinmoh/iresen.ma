@@ -86,7 +86,12 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             <ul>
               {footerSocialLinks.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} aria-label={footer('socialLink', { network: link.name })}>
+                  <a
+                    href={link.href}
+                    target={link.id === 'linkedin' ? '_blank' : undefined}
+                    rel={link.id === 'linkedin' ? 'noopener noreferrer' : undefined}
+                    aria-label={footer('socialLink', { network: link.name })}
+                  >
                     {link.id === 'researchgate' ? (
                       <span className="footer-researchgate-mark" aria-hidden="true" dir="ltr">
                         R<sup>G</sup>

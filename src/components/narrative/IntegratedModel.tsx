@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -31,14 +32,18 @@ export async function IntegratedModel({
       >
         <header>
           <SectionEyebrow tone="cyan">{t('coreLabel')}</SectionEyebrow>
-          <h2 id={`${prefix}-research-title`}>{t('coreTitle')}</h2>
+          <Heading as="h2" size="section" id={`${prefix}-research-title`}>
+            {t('coreTitle')}
+          </Heading>
           <p>{t('coreDescription')}</p>
         </header>
         <div className={styles.missions}>
           {researchMissions.map(({ id, legacyAnchor, pageId }, index) => (
             <article id={prefix === 'mission' ? legacyAnchor : `${prefix}-${id}`} key={id}>
               <ValorisationIcon name={(['bulb', 'flask', 'arrows-exchange'] as const)[index]} />
-              <h3>{t(`missions.${id}.title`)}</h3>
+              <Heading as="h3" size="mission">
+                {t(`missions.${id}.title`)}
+              </Heading>
               <p>{t(`missions.${id}.description`)}</p>
               <a href={pageHref(pageId, locale)}>
                 {t(`missions.${id}.action`)}
@@ -58,7 +63,9 @@ export async function IntegratedModel({
             aria-labelledby={`${prefix}-${id}-title`}
           >
             <ValorisationIcon name={(['chart-line', 'bulb', 'arrows-exchange'] as const)[index]} />
-            <h3 id={`${prefix}-${id}-title`}>{t(`dimensions.${id}.title`)}</h3>
+            <Heading as="h3" size="mission" id={`${prefix}-${id}-title`}>
+              {t(`dimensions.${id}.title`)}
+            </Heading>
             <p>{t(`dimensions.${id}.description`)}</p>
             <a href={pageHref(pageId, locale, anchor)}>
               {t(`dimensions.${id}.action`)}
@@ -69,7 +76,9 @@ export async function IntegratedModel({
       </div>
       {detailed && (
         <div className={styles.capabilities}>
-          <h3>{t('capabilitiesLabel')}</h3>
+          <Heading as="h3" size="mission">
+            {t('capabilitiesLabel')}
+          </Heading>
           <ul>
             {sharedCapabilities.map((id) => (
               <li key={id}>{t(`capabilities.${id}`)}</li>

@@ -1,8 +1,21 @@
 import type { Locale } from '@/i18n/locales'
 import { pageHref, pages } from '@/lib/site'
 
+/** One child listing under the canonical programmes page; not a new top-level ID. */
+export const callsListingReference = 'calls'
+export function callsListingHref(locale: Locale) {
+  return callHref(callsListingReference, locale)
+}
+export function isCallsListingPath(path: string, locale: Locale) {
+  return callReferenceFromPath(path, locale) === callsListingReference
+}
+
 export function isCallReference(value: unknown): value is string {
-  return typeof value === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)
+  return (
+    typeof value === 'string' &&
+    value !== callsListingReference &&
+    /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)
+  )
 }
 export function callHref(reference: string, locale: Locale) {
   return `${pageHref('programmes', locale)}/${encodeURIComponent(reference)}`
@@ -16,7 +29,7 @@ export function callReferenceFromPath(path: string, locale: Locale): string | nu
   for (const base of [pages.programmes.path, pages.programmes.pathnames[locale]]) {
     if (!path.startsWith(`${base}/`)) continue
     const reference = path.slice(base.length + 1)
-    if (isCallReference(reference)) return reference
+    if (reference === callsListingReference || isCallReference(reference)) return reference
   }
   return null
 }

@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
@@ -107,6 +109,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
         <label className={styles.searchField}>
           <span>{t('catalog.search')}</span>
           <input
+            data-ui-field
             type="search"
             disabled={hash === 'server'}
             value={query}
@@ -118,6 +121,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
           <span id="patent-theme-label">{t('catalog.theme')}</span>
           <span className={styles.selectWrap}>
             <select
+              data-ui-field
               disabled={hash === 'server'}
               aria-labelledby="patent-theme-label"
               value={theme}
@@ -136,6 +140,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
           <span id="patent-year-label">{t('catalog.year')}</span>
           <span className={styles.selectWrap}>
             <select
+              data-ui-field
               disabled={hash === 'server'}
               aria-labelledby="patent-year-label"
               value={year}
@@ -155,6 +160,7 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
           <span id="patent-depositor-label">{t('catalog.depositor')}</span>
           <span className={styles.selectWrap}>
             <select
+              data-ui-field
               disabled={hash === 'server'}
               aria-labelledby="patent-depositor-label"
               value={depositor}
@@ -203,20 +209,24 @@ export function PatentCatalog({ locale }: { locale: Locale }) {
                 <span key={id}>{t(`themes.${id}`)}</span>
               ))}
             </div>
-            <h3 lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+            <Heading as="h3" size="compact" lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
               {patent.title[locale]}
-            </h3>
+            </Heading>
             <p>{patent.description[locale]}</p>
             <p className={styles.applicant}>
               <span>{t('catalog.depositor')}</span>
               <bdi>{patent.depositor}</bdi>
             </p>
             <div className={styles.patentActions}>
-              <a href={patent.registerUrl} className={styles.link}>
+              <a data-ui-link href={patent.registerUrl} className={styles.link}>
                 {t('catalog.view')}
                 <NavigationIcon name="arrow" />
               </a>
-              <a href={patentContactHref(locale, patent.reference)} className={styles.link}>
+              <a
+                data-ui-link
+                href={patentContactHref(locale, patent.reference)}
+                className={styles.link}
+              >
                 {t('catalog.discuss')}
                 <NavigationIcon name="arrow" />
               </a>

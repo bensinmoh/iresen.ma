@@ -280,3 +280,54 @@ Keep deliberate hero geometry, reading measures, brand clear space, map/list
 alignment, timeline/report overlap and functional form/map areas. Utility pages
 already have a compact reading rhythm and need no density change. See
 [the reviewed scope and verification](docs/site-spacing-review.md).
+
+## Shared public element roles — 2026-10-15
+
+The owner commissions D02: consolidate equivalent HTML roles and geometry while
+retaining contextual colors, alignment and composition. `Heading` separates the
+native heading rank from six shared visual sizes. Native text actions use
+`data-ui-link`; public text/search/select/textarea fields use `data-ui-field`.
+Existing `.button`, SectionEyebrow, section spacing and icon families remain the
+common foundations. Retired local type/control metrics do not become page-level
+copies again. Cards, diagrams and specialized controls keep their functional
+composition. See [inventory, contracts and actual verification](docs/shared-elements.md).
+
+## Figma mobile rules — 2026-10-15
+
+At or below 40rem, apply the reviewed 402px mobile reference through shared roles:
+32px hero titles; 28px/34px bold section/display/mission titles; 20px card titles;
+14px surtitles with 8px original-leaf gaps; 16px editorial, 20px header/home-hero
+and 24px menu/footer insets. Shared hero actions stack at full width with a 50px
+minimum height and 12px gap. Figure rails use compact 150px items/30px values,
+with native scrolling and current sourced figures. Editorial insets use 48px.
+Retain readable body/field/action text, 18px shared hero descriptions, enlarged-text
+growth, native semantics and natural Arabic tracking/leading. Tablet/desktop
+roles and current content/media remain. See [source nodes, adaptations and checks](docs/mobile-figma-review.md).
+
+## Governance iterative composition — 2026-10-15
+
+D03 separates four institutional responsibility columns with readable stage
+bands and a common body type role (bold title, light attribution). The Board
+uses the original IRESEN mark as a central hub, with original member marks and
+adjacent names. Scientific cards form an illustrative, geographically unverified
+network over the existing world silhouette; 4.8-second once-only viewport motion
+respects reduced motion. Narrow layouts prioritize native text/link reading.
+Oversight uses three pale-blue editorial panels. Shared tokens and headings
+remain authoritative; no new palette or universal template is introduced.
+This is an ongoing owner-review batch; see [scope](docs/governance.md#iterative-redesign--2026-10-15).
+
+## Single-line navigation and filter strips — 2026-10-15
+
+Owner correction: `data-ui-rail` marks public orientation/filter strips. Keep
+labels and items on one line at every width; use native horizontal scrolling
+when their intrinsic widths exceed the container. Reuse existing type, colors,
+spacing and native RTL direction. Stretch variants share available space; other
+strips retain natural item widths. Homepage centering is safe under overflow.
+Hero pathways, home/body navigation, media categories and laboratory/search
+filters use the shared role. Scroll areas remain keyboard-focusable, with inset
+focus rings; no pills or arrow controls are added. The laboratory reset remains
+centered on its own reserved row. No content, route or search projection changes.
+
+Verification: scoped source/lint/format checks only; final rendered review and
+CI remain pending because this session cannot bind a new production server or
+write to GitHub. Previous production-build evidence predates this CSS correction.

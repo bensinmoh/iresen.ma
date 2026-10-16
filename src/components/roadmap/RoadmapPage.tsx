@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -36,7 +37,7 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
               {t('explore')}
               <NavigationIcon name="chevron" />
             </a>
-            <a className={styles.secondary} href={pageHref('programmes', locale)}>
+            <a data-ui-link className={styles.secondary} href={pageHref('programmes', locale)}>
               {t('programmes')}
               <NavigationIcon name="arrow" />
             </a>
@@ -51,7 +52,9 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
         >
           <span id="technology-roadmaps" className={styles.anchor} />
           <div className={styles.strategyIntro}>
-            <h2 id="strategy-title">{t('introductionTitle')}</h2>
+            <Heading as="h2" size="section" id="strategy-title">
+              {t('introductionTitle')}
+            </Heading>
             <div>
               {[0, 1].map((index) => (
                 <p key={index}>{t(`introductionParagraphs.${index}`)}</p>
@@ -61,7 +64,9 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
           <ol className={styles.steps}>
             {[0, 1, 2].map((index) => (
               <li key={index}>
-                <h3>{t(`steps.${index}.title`)}</h3>
+                <Heading as="h3" size="card">
+                  {t(`steps.${index}.title`)}
+                </Heading>
                 <p>{t(`steps.${index}.description`)}</p>
               </li>
             ))}
@@ -85,7 +90,9 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
                         {t('theme')} <bdi>{String(index + 1).padStart(2, '0')}</bdi>
                       </p>
                       <div className={styles.titleFrame}>
-                        <h2 id={`theme-${id}-title`}>{t(`chapters.${id}.title`)}</h2>
+                        <Heading as="h2" size="display" id={`theme-${id}-title`}>
+                          {t(`chapters.${id}.title`)}
+                        </Heading>
                       </div>
                       <p className={styles.headline}>{t(`chapters.${id}.headline`)}</p>
                     </header>
@@ -112,7 +119,9 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
                     <div className={styles.questions}>
                       <p className={styles.description}>{t(`chapters.${id}.description`)}</p>
                       <div className={styles.axes}>
-                        <h3>{t('axes')}</h3>
+                        <Heading as="h3" size="label">
+                          {t('axes')}
+                        </Heading>
                         {[0, 1, 2, 3].map((axis) => (
                           <details key={axis} className={styles.axis}>
                             <summary>
@@ -124,7 +133,9 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
                         ))}
                       </div>
                       <div className={styles.benefits}>
-                        <h3>{t('benefitsLabel')}</h3>
+                        <Heading as="h3" size="label">
+                          {t('benefitsLabel')}
+                        </Heading>
                         <p>{t(`chapters.${id}.benefits`)}</p>
                       </div>
                     </div>
@@ -151,7 +162,9 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
           aria-labelledby="collaboration-title"
         >
           <span id="priorities-projects" className={styles.anchor} />
-          <h2 id="collaboration-title">{t('collaborationTitle')}</h2>
+          <Heading as="h2" size="section" id="collaboration-title">
+            {t('collaborationTitle')}
+          </Heading>
           {[0, 1].map((index) => (
             <p key={index}>{t(`collaborationParagraphs.${index}`)}</p>
           ))}
@@ -160,7 +173,7 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
               {t('collaboration')}
               <NavigationIcon name="arrow" />
             </a>
-            <a className={styles.secondary} href={pageHref('projects', locale)}>
+            <a data-ui-link className={styles.secondary} href={pageHref('projects', locale)}>
               {t('projects')}
               <NavigationIcon name="arrow" />
             </a>

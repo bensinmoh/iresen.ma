@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { useRef, useState, useSyncExternalStore } from 'react'
 import { flushSync } from 'react-dom'
 import type { Locale } from '@/i18n/locales'
@@ -215,7 +217,7 @@ export function PublicationCatalogue({
           >
             <p className={styles.topic}>{p.topicLabel}</p>
             <div>
-              <h3>
+              <Heading as="h3" size="compact">
                 {p.doiUrl ? (
                   <a href={p.doiUrl} target="_blank" rel="noopener noreferrer">
                     <bdi>{p.title}</bdi>
@@ -223,7 +225,7 @@ export function PublicationCatalogue({
                 ) : (
                   <bdi>{p.title}</bdi>
                 )}
-              </h3>
+              </Heading>
               <div className={styles.meta}>
                 <time dateTime={String(p.year)}>
                   {p.year.toLocaleString(locale, { useGrouping: false })}
@@ -234,6 +236,7 @@ export function PublicationCatalogue({
               </div>
               {p.doiUrl ? (
                 <a
+                  data-ui-link
                   className={styles.read}
                   href={p.doiUrl}
                   target="_blank"

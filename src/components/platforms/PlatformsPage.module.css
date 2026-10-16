@@ -2,15 +2,7 @@
   overflow-wrap: anywhere;
 }
 .page h2 {
-  font-size: clamp(1.75rem, 2.8vw, 3rem);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
   margin-block: 0 1.5rem;
-  text-wrap: balance;
-}
-.page h3 {
-  font-size: 1.125rem;
-  line-height: 1.5;
 }
 .page p {
   line-height: 1.8;
@@ -123,10 +115,7 @@
   min-inline-size: 0;
 }
 .copy .lead {
-  font-size: clamp(1.375rem, 1.65vw, 1.875rem);
-  line-height: 1.4;
   margin-block: 0 1.5rem;
-  text-wrap: balance;
 }
 .copy p {
   max-inline-size: 70ch;
@@ -207,9 +196,6 @@
 .networkInner > div {
   flex: 1;
 }
-.networkInner h2 {
-  font-size: clamp(1.5rem, 2.1vw, 2.25rem);
-}
 .networkInner p {
   margin: 0;
   max-inline-size: 75ch;
@@ -219,9 +205,6 @@
 }
 .anchor {
   display: block;
-}
-.page:dir(rtl) h2 {
-  letter-spacing: normal;
 }
 @media (max-width: 63.999rem) {
   .introHeading,
@@ -319,7 +302,6 @@
   margin: 0;
 }
 .chapterHeading h2 {
-  font-size: clamp(1.6rem, 2.4vw, 2.6rem);
   margin: 0;
 }
 .chapterHeading .location {
@@ -332,7 +314,6 @@
 }
 .copy .lead {
   margin: 0;
-  font-size: clamp(1.15rem, 1.5vw, 1.5rem);
 }
 .copy .status {
   margin: 0;

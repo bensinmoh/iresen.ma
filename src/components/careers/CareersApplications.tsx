@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -93,7 +95,9 @@ export function CareersApplications({
         <span id="find-opportunity" />
         <header>
           <SectionEyebrow>{t('offers.eyebrow')}</SectionEyebrow>
-          <h2 id="offers-title">{t('offers.title')}</h2>
+          <Heading as="h2" size="section" id="offers-title">
+            {t('offers.title')}
+          </Heading>
         </header>
         {unavailable ? (
           <p role="status" className={styles.empty}>
@@ -121,7 +125,9 @@ export function CareersApplications({
                   <span className={styles.toggle} aria-hidden="true" />
                 </summary>
                 <div className={styles.offerDetail}>
-                  <h3>{offer.title}</h3>
+                  <Heading as="h3" size="card">
+                    {offer.title}
+                  </Heading>
                   <p className={styles.summary}>{offer.summary}</p>
                   <dl className={styles.facts}>
                     {(['contract', 'location', 'experience', 'availability'] as const).map(
@@ -136,7 +142,9 @@ export function CareersApplications({
                   <div className={styles.requirements}>
                     {(['missions', 'profile'] as const).map((key) => (
                       <section key={key}>
-                        <h4>{t(`offers.${key}`)}</h4>
+                        <Heading as="h4" size="label">
+                          {t(`offers.${key}`)}
+                        </Heading>
                         <ul>
                           {offer[key]
                             .split('\n')
@@ -179,7 +187,9 @@ export function CareersApplications({
             <span aria-hidden="true" className={styles.emptyIcon}>
               <NavigationIcon name="arrow" />
             </span>
-            <h3>{t('offers.emptyTitle')}</h3>
+            <Heading as="h3" size="card">
+              {t('offers.emptyTitle')}
+            </Heading>
             <p>{t('offers.emptyDescription')}</p>
             <a href="#questions-unsolicited-applications" className="button button-primary">
               {t('offers.emptyAction')} <NavigationIcon name="arrow" />
@@ -199,7 +209,9 @@ export function CareersApplications({
         <div className={`container ${styles.internshipGrid}`}>
           <div className={styles.internshipCard}>
             <SectionEyebrow>{t('internship.eyebrow')}</SectionEyebrow>
-            <h2 id="internship-title">{t('internship.title')}</h2>
+            <Heading as="h2" size="section" id="internship-title">
+              {t('internship.title')}
+            </Heading>
             {paragraphs.map((text) => (
               <p key={text}>{text}</p>
             ))}
@@ -232,7 +244,9 @@ export function CareersApplications({
       >
         <header>
           <SectionEyebrow centered>{t('form.eyebrow')}</SectionEyebrow>
-          <h2 id="application-title">{t('form.title')}</h2>
+          <Heading as="h2" size="section" id="application-title">
+            {t('form.title')}
+          </Heading>
         </header>
         <form
           ref={formRef}
@@ -250,6 +264,7 @@ export function CareersApplications({
               <div className={styles.field} key={key}>
                 <label htmlFor={`career-${key}`}>{t(`form.${key}`)}</label>
                 <input
+                  data-ui-field
                   id={`career-${key}`}
                   name={key}
                   type={key === 'email' ? 'email' : key === 'phone' ? 'tel' : 'text'}
@@ -290,6 +305,7 @@ export function CareersApplications({
             <label htmlFor="career-offer">{t('form.offer')}</label>
             <div className={styles.selectWrap}>
               <select
+                data-ui-field
                 id="career-offer"
                 name="offer"
                 value={selected}
@@ -311,6 +327,7 @@ export function CareersApplications({
           <div className={styles.field}>
             <label htmlFor="career-message">{t('form.message')}</label>
             <textarea
+              data-ui-field
               id="career-message"
               name="message"
               rows={6}

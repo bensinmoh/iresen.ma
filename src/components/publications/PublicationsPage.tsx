@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -81,6 +82,7 @@ export async function PublicationsPage({
               {t('placeholder')}
             </label>
             <input
+              data-ui-field
               id="publication-query"
               name="q"
               type="search"
@@ -126,7 +128,9 @@ export async function PublicationsPage({
         <header className={styles.heading}>
           <div>
             <SectionEyebrow>{t('label')}</SectionEyebrow>
-            <h2>{t('articles')}</h2>
+            <Heading as="h2" size="section">
+              {t('articles')}
+            </Heading>
           </div>
           <p>{t('note')}</p>
         </header>
@@ -179,14 +183,18 @@ export async function PublicationsPage({
       <section id="institutional-reports" className={styles.reports}>
         <div className="container">
           <header className={styles.heading}>
-            <h2>{reports('reports')}</h2>
+            <Heading as="h2" size="section">
+              {reports('reports')}
+            </Heading>
             <p>{reports('sourceNote')}</p>
           </header>
           <ReportList locale={locale} />
         </div>
       </section>
       <section id="use-cite-resources" className={`container ${styles.cite}`}>
-        <h2>{t('cite')}</h2>
+        <Heading as="h2" size="section">
+          {t('cite')}
+        </Heading>
         <p>{t('rights')}</p>
       </section>
     </div>

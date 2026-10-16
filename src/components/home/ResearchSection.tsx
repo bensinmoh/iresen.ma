@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 
 import { useEffect, useRef } from 'react'
@@ -40,7 +42,9 @@ export function ResearchSection({ locale, copy }: { locale: Locale; copy: Resear
     >
       <div className={styles.header}>
         <SectionEyebrow tone="white">{copy.eyebrow}</SectionEyebrow>
-        <h2 id="research-heading">{copy.title}</h2>
+        <Heading as="h2" size="display" id="research-heading">
+          {copy.title}
+        </Heading>
       </div>
       <div className={styles.chooser}>
         {researchThemes.map((theme, index) => {
@@ -81,7 +85,9 @@ export function ResearchSection({ locale, copy }: { locale: Locale; copy: Resear
                       <span className={styles.number}>
                         {copy.axis} <bdi>{String(axisIndex + 1).padStart(2, '0')}</bdi>
                       </span>
-                      <h3>{axis}</h3>
+                      <Heading as="h3" size="compact">
+                        {axis}
+                      </Heading>
                     </li>
                   ))}
                 </ol>
