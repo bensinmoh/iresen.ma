@@ -658,9 +658,6 @@
 :global(body):has(.page) :global(.page-hero--media) {
   min-block-size: 76dvh;
 }
-:global(body):has(.page) :global(.page-hero--media) :global(.hero-body) {
-  padding-block-end: var(--section-space);
-}
 @media (prefers-reduced-motion: reduce) {
   :global(html):has(.page) {
     scroll-behavior: auto;

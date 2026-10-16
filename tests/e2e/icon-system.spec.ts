@@ -36,6 +36,10 @@ test('public routes use decorative Phosphor icons and retain only identity/struc
                 )
               ) &&
               !(
+                el.closest('[data-positioning-diagram]') &&
+                el.getAttribute('data-structural-diagram') === 'institute-positioning'
+              ) &&
+              !(
                 el.closest('[data-illustrative-network]') &&
                 ['fr', 'de', 'eu', 'ma', 'br'].includes(el.getAttribute('data-country-flag') ?? '')
               ) &&

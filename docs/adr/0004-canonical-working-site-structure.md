@@ -85,3 +85,11 @@ paths, bringing the current authority to 23 pages. Footer, sitemap, locale copy,
 metadata and localized search change together; existing IDs remain. See
 [delivered scope](../useful-links.md). The original 22-page decision above is
 historical evidence, not the current count.
+
+## Owner-authorized amendment — 2026-10-16
+
+Stable ID `patents` adds a dedicated Resources page in FR/EN/AR, bringing the
+route authority to 24 IDs. It reuses the existing Transfer patent section; no
+patent data or publication gates change. Resources navigation, footer, sitemap,
+metadata and search destinations change together. Existing Transfer anchors remain.
+See [the catalogue scope](../valorisation-patents.md).

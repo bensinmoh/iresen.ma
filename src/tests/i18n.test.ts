@@ -2,7 +2,14 @@ import { describe, expect, it } from 'vitest'
 import ar from '@/messages/ar.json'
 import en from '@/messages/en.json'
 import fr from '@/messages/fr.json'
-import { isSupportedAnchor, pageHref, pageIds, pages } from '@/lib/site'
+import {
+  isSupportedAnchor,
+  pageHref,
+  pageIds,
+  pages,
+  pageIdFromPathname,
+  resourcePatentLink,
+} from '@/lib/site'
 
 function messageKeys(value: Record<string, unknown>, prefix = ''): string[] {
   return Object.entries(value)
@@ -30,6 +37,23 @@ describe('trilingual UI contract', () => {
     expect(pageHref('home', 'fr', '#unknown')).toBe('/fr')
     expect(isSupportedAnchor('institute', 'mission')).toBe(true)
     expect(isSupportedAnchor('home', 'mission')).toBe(false)
+    for (const locale of ['fr', 'en', 'ar'] as const) {
+      expect(resourcePatentLink(locale)).toBe(pageHref('patents', locale))
+      expect(resourcePatentLink(locale)).not.toContain('#')
+      expect(isSupportedAnchor('patents', 'patent-37705')).toBe(true)
+    }
+  })
+  it('resolves every localized public page and encoded Arabic paths', () => {
+    for (const locale of ['fr', 'en', 'ar'] as const) {
+      for (const id of pageIds) {
+        const pathname = pages[id].pathnames[locale]
+        expect(pageIdFromPathname(pathname, locale)).toBe(id)
+        expect(pageIdFromPathname(encodeURI(pathname), locale)).toBe(id)
+        expect(pageIdFromPathname(pages[id].path)).toBe(id)
+      }
+    }
+    expect(pageIdFromPathname('/unknown', 'fr')).toBeUndefined()
+    expect(pageIdFromPathname('/%E0%A4%A', 'ar')).toBeUndefined()
   })
   it('keeps each locale route map unambiguous', () => {
     for (const locale of ['fr', 'en', 'ar'] as const) {

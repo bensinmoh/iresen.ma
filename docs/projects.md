@@ -218,3 +218,35 @@ fields remain empty. Verification of the cached source found 289 consortium imag
 across 60 fiches, with numeric-only alt labels and invalid numeric host URLs;
 these do not identify partner organisations. Existing coordinator/email/portrait,
 filter and PDF behavior remains unchanged.
+
+## Call-to-catalogue navigation — 2026-10-16
+
+Every archive and published CMS call offers a localized “View projects” action
+at the bottom of its details (below “Sources consulted” on archive pages).
+It opens the canonical projects route with `programme` preselected and the
+`find-project` anchor. Archive editions use the historical listing labels where
+available; other editions retain their own title, and CMS calls use their acronym.
+This is programme discovery, not a verified selection-call attribution: project
+records, `selectionCallReference`, dates and publication gates are unchanged.
+A programme with no eligible projects remains selected and shows the empty state;
+it must never silently fall back to the entire catalogue. Reset restores all
+eligible projects. Existing canonical call/project search registrations already
+cover these destinations; no new public resource or search result is created.
+
+Verification: 174 unit tests, scoped ESLint/format checks and an isolated production
+build (including TypeScript) pass. Three production browser journeys cover FR/EN/AR,
+programme navigation, selection after reload and empty programmes; mobile FR/AR
+captures are inspected. Browser checks use installed Chrome; the default bundled
+Playwright browser is unavailable locally. Full current-head CI remains the merge gate.
+
+## Identity consistency — 16 October 2026
+
+Project display uses the shared sourced university/establishment identities and
+curated personal names. The existing query field recognises establishment aliases
+and parent university names, including FSTS/UH1, FSTT/UAE, EMI/UM5, ENSAK/UIT,
+ENSAM Meknès/UMI and ESTF/USMBA. No additional university/establishment filters are
+introduced, following the owner's correction. ENSAM Rabat duplication, MAScIR's
+city suffix, Semlalia's city suffix and Tahala's former regional wording are
+normalised for display. CNEREE and CNESTEN use full names followed by their
+acronyms after a dash; Green Energy Park omits the Benguerir suffix. Original evidence and PDF bytes remain unchanged. See
+[the reference, source editions and check ledger](references/university-registry/README.md).

@@ -1,0 +1,354 @@
+[
+  {
+    "name": "Université Internationale de Rabat - UIR",
+    "aliases": [
+      "Université Internationale de Rabat Privée (UIR)",
+      "Université Internationale de Rabat (UIR)",
+      "International University of Rabat",
+      "UIR",
+      "Université Internationale de Rabat",
+      "International University of Rabat (UIR)"
+    ],
+    "arabicName": "الجامعة الدولية بالرباط - UIR",
+    "arabicAliases": [
+      "جامعة الرباط الدولية (UIR)",
+      "جامعة الرباط الدولية",
+      "الجامعة الدولية بالرباط"
+    ]
+  },
+  {
+    "name": "Université Hassan 1er - UH1",
+    "aliases": [
+      "Université Hassan Premier",
+      "Université Hassan 1er Settat",
+      "Université Hassan 1er",
+      "Hassan First University",
+      "Université Hassan 1er",
+      "UH1"
+    ],
+    "arabicName": "جامعة الحسن الأول - UH1",
+    "arabicAliases": ["جامعة الحسن الأول"]
+  },
+  {
+    "name": "Université Hassan II de Casablanca - UH2C",
+    "aliases": [
+      "Université Hassan II de Casablanca",
+      "Université Hassan II",
+      "Hassan II University",
+      "Université Hassan II de Casablanca",
+      "UH2C"
+    ],
+    "arabicName": "جامعة الحسن الثاني بالدار البيضاء - UH2C",
+    "arabicAliases": ["جامعة الحسن الثاني"]
+  },
+  {
+    "name": "Université Cadi Ayyad - UCA",
+    "aliases": [
+      "Cadi Ayyad University",
+      "Université Cadi Ayyad Marrakech",
+      "Université Cadi AYYAD (UCA)",
+      "Université Cadi Ayyad",
+      "Cadi AYYAD University (UCA)",
+      "Cadi Ayyad University Marrakech",
+      "UCA"
+    ],
+    "arabicName": "جامعة القاضي عياض - UCA",
+    "arabicAliases": ["جامعة القاضي عياض (UCA)", "جامعة القاضي عياض مراكش", "جامعة القاضي عياض"]
+  },
+  {
+    "name": "Université Ibn Tofail - UIT",
+    "aliases": ["Ibn Tofail University", "UIT Kenitra", "Université Ibn Tofail", "UIT"],
+    "arabicName": "جامعة ابن طفيل - UIT",
+    "arabicAliases": ["جامعة ابن طفيل", "UIT القنيطرة"]
+  },
+  {
+    "name": "Université Ibn Zohr - UIZ",
+    "aliases": ["Ibn Zohr University", "Université Ibn Zohr", "UIZ"],
+    "arabicName": "جامعة ابن زهر - UIZ",
+    "arabicAliases": ["جامعة ابن زهر"]
+  },
+  {
+    "name": "Université Sidi Mohammed Ben Abdellah - USMBA",
+    "aliases": [
+      "Sidi Mohammed Ben Abdellah University",
+      "Université Sidi Mohamed Ben Abdellah (USMBA)",
+      "Université Sidi Mohammed Ben Abdellah (USMBA)",
+      "Université Sidi Mohammed Ben Abdellah",
+      "Sidi Mohamed Ben Abdellah University (USMBA)",
+      "Sidi Mohammed Ben Abdellah University (USMBA)",
+      "USMBA"
+    ],
+    "arabicName": "جامعة سيدي محمد بن عبد الله - USMBA",
+    "arabicAliases": ["جامعة سيدي محمد بن عبد الله (USMBA)", "جامعة سيدي محمد بن عبد الله"]
+  },
+  {
+    "name": "Université Abdelmalek Essaâdi - UAE",
+    "aliases": ["Abdelmalek Essaâdi University", "Université Abdelmalek Essaâdi", "UAE"],
+    "arabicName": "جامعة عبد المالك السعدي - UAE",
+    "arabicAliases": ["جامعة عبد المالك السعدي"]
+  },
+  {
+    "name": "Université Mohammed VI Polytechnique - UM6P",
+    "aliases": [
+      "Mohammed VI Polytechnic University",
+      "Université Mohammed VI Polytechnique — UM6P",
+      "Université Mohammed VI Polytechnique",
+      "UM6P"
+    ],
+    "arabicName": "جامعة محمد السادس متعددة التخصصات التقنية - UM6P",
+    "arabicAliases": ["جامعة محمد السادس متعددة التخصصات التقنية"]
+  },
+  {
+    "name": "Université Mohammed V de Rabat - UM5",
+    "aliases": [
+      "Mohammed V University",
+      "Université Mohammed V",
+      "Université Mohamed V",
+      "Université Mohammed V de Rabat",
+      "UM5",
+      "Université Mohammed V-Agdal Rabat",
+      "Mohammed V-Agdal University, Rabat"
+    ],
+    "arabicName": "جامعة محمد الخامس بالرباط - UM5",
+    "arabicAliases": ["جامعة محمد الخامس"]
+  },
+  {
+    "name": "Université Al Akhawayn - AUI",
+    "aliases": [
+      "Al Akhawayn University",
+      "Université AlAkhawayn -IFRANE",
+      "Université Alakhawyn",
+      "Université Al Akhawayn",
+      "AlAkhawayn University -IFRANE",
+      "Alakhawyn University"
+    ],
+    "arabicName": "جامعة الأخوين - AUI",
+    "arabicAliases": ["جامعة الأخوين-إفران", "جامعة الأخوين"]
+  },
+  {
+    "name": "Université Euro-Méditerranéenne de Fès - UEMF",
+    "aliases": [
+      "Euro-Mediterranean University of Fez",
+      "Université Euro-Méditerranéenne de Fés",
+      "Université Euro-Méditerranéenne de Fès",
+      "UEMF"
+    ],
+    "arabicName": "الجامعة الأورومتوسطية بفاس - UEMF",
+    "arabicAliases": ["الجامعة الأورومتوسطية بفاس"]
+  },
+  {
+    "name": "Université Mohammed Premier - UMP",
+    "aliases": [
+      "Mohammed First University",
+      "Université Mohamed Premier Oujda",
+      "Université Mohammed Premier",
+      "Mohamed Premier University Oujda",
+      "UMP"
+    ],
+    "arabicName": "جامعة محمد الأول بوجدة - UMP",
+    "arabicAliases": ["جامعة محمد الأول بوجدة"]
+  },
+  {
+    "name": "Université Moulay Ismaïl - UMI",
+    "aliases": ["Moulay Ismail University", "Université Moulay Ismaïl", "UMI"],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Faculté des Sciences et Techniques de Settat - FSTS",
+    "aliases": ["FST de Settat", "FST Settat", "Faculté des Sciences et Techniques de Settat"],
+    "arabicName": "كلية العلوم والتقنيات بسطات - FSTS",
+    "arabicAliases": ["FST سطات"]
+  },
+  {
+    "name": "Faculté des Sciences et Techniques de Tanger - FSTT",
+    "aliases": [
+      "FST Tanger",
+      "FST de Tanger",
+      "Faculté des Sciences et Techniques de Tanger",
+      "FST Tangier"
+    ],
+    "arabicName": "كلية العلوم والتقنيات بطنجة - FSTT",
+    "arabicAliases": ["FST طنجة"]
+  },
+  {
+    "name": "École Mohammadia d’Ingénieurs - EMI",
+    "aliases": ["EMI", "Ecole Mohammadia d’Ingénieurs", "École Mohammadia d’Ingénieurs"],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "École Normale Supérieure de Rabat - ENSR",
+    "aliases": ["ENS RABAT", "École Normale Supérieure de Rabat"],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "École Nationale des Sciences Appliquées de Kénitra - ENSAK",
+    "aliases": ["ENSA KENITRA", "École Nationale des Sciences Appliquées de Kénitra"],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "École Nationale Supérieure d’Arts et Métiers de Meknès - ENSAM",
+    "aliases": [
+      "ENSAM Meknes",
+      "ENSAM Meknès",
+      "École Nationale Supérieure d’Arts et Métiers de Meknès"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "École Nationale Supérieure des Mines de Rabat - ENSMR",
+    "aliases": [
+      "Ecole Nationale Supérieure des Mines de Rabat",
+      "École Nationale Supérieure des Mines de Rabat",
+      "National Higher School of Mines of Rabat"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Institut National des Postes et Télécommunications - INPT",
+    "aliases": ["INPT, Rabat", "Institut National des Postes et Télécommunications"],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "École Supérieure de Technologie de Fès - ESTF",
+    "aliases": ["EST Fès", "EST Fez", "École Supérieure de Technologie de Fès"],
+    "arabicName": "المدرسة العليا للتكنولوجيا بفاس - ESTF",
+    "arabicAliases": ["EST فاس"]
+  },
+  {
+    "name": "École Normale Supérieure de l’Enseignement Technique de Mohammedia - ENSET",
+    "aliases": [
+      "ENSET Mohammedia",
+      "École Normale Supérieure de l’Enseignement Technique de Mohammedia"
+    ],
+    "arabicName": "المدرسة العليا لأساتذة التعليم التقني بالمحمدية - ENSET",
+    "arabicAliases": ["ENSET المحمدية"]
+  },
+  {
+    "name": "École Nationale Supérieure d’Arts et Métiers de Rabat - ENSAM Rabat",
+    "aliases": [
+      "Ecole Nationale Supérieure d’Arts et Métiers (ENSAM Rabat)",
+      "National School of Arts and Crafts (ENSAM Rabat)",
+      "École Nationale Supérieure d’Arts et Métiers de Rabat",
+      "École Nationale Supérieure d’Arts et Métiers de Rabat - ENSAMR",
+      "Ecole Nationale Supérieure d’Arts et Métiers (École Nationale Supérieure des Arts et Métiers Rabat - ENSAM Rabat)",
+      "Ecole Nationale Supérieure d’Arts et Métiers (ENSAM Rabat)"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Institut Agronomique et Vétérinaire Hassan II - IAV Hassan II",
+    "aliases": [
+      "Institut Agronomique et Vétérinaire Hassan II",
+      "Hassan II Agronomic and Veterinary Institute",
+      "Institut Agronomique et Vétérinaire Hassan II"
+    ],
+    "arabicName": "معهد الحسن الثاني للزراعة والبيطرة - IAV Hassan II",
+    "arabicAliases": ["معهد الحسن الثاني للزراعة والبيطرة"]
+  },
+  {
+    "name": "Université Polytechnique Hauts-de-France - UPHF",
+    "aliases": [
+      "Université Polytechnique Hauts-de-France",
+      "Université Polytechnique Hauts-de-France"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Université Jean Monnet Saint-Étienne - UJM",
+    "aliases": [
+      "Université Jean-Monet",
+      "Jean Monnet University",
+      "Université Jean Monnet Saint-Étienne"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Université de Technologie de Belfort-Montbéliard - UTBM",
+    "aliases": [
+      "Université de Technologie de Belfort-Montbéliard",
+      "University of Technology of Belfort-Montbéliard",
+      "Université de Technologie de Belfort-Montbéliard"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Université Martin Luther de Halle-Wittenberg - MLU",
+    "aliases": [
+      "Université Martin Luther Halle",
+      "Martin Luther University Halle",
+      "Université Martin Luther de Halle-Wittenberg"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Faculté des Sciences Ben M’Sik - FSBM",
+    "aliases": [
+      "Faculté des Sciences Ben M'Sik - Université Hassan II Mohamedia (UH2M)",
+      "Ben M'Sik Faculty of Sciences - Hassan II Mohamedia University (UH2M)",
+      "Faculté des Sciences Ben M’Sik"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Faculté des Sciences Semlalia - FSSM",
+    "aliases": [
+      "Faculté des sciences Semlalia - Université Cadi Ayyad, Marrakech",
+      "Semlalia Faculty of Sciences - Cadi Ayyad University, Marrakech",
+      "Faculté des Sciences Semlalia de Marrakech",
+      "Faculté des Sciences Semlalia de Marrakech - FSSM",
+      "Faculté des sciences Semlalia - Université Cadi Ayyad - UCA, Marrakech",
+      "Faculté des sciences Semlalia - Université Cadi Ayyad, Marrakech"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Faculté des Sciences de Rabat - FSR",
+    "aliases": [
+      "Faculté des sciences,Université Mohamed V",
+      "Faculty of Sciences, Mohamed V University",
+      "Faculté des Sciences de Rabat"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Centre national d’études et de recherches sur l’eau et l’énergie - CNEREE",
+    "aliases": [
+      "CNEREE",
+      "Centre national d’études et de recherches sur l’eau et l’énergie",
+      "Centre national d'études et de recherches sur l'eau et l'énergie",
+      "CNEREE - Université Cadi Ayyad - Marrakech",
+      "CNEREE - Université Cadi Ayyad - UCA - Marrakech",
+      "CNEREE - Cadi Ayyad University - Marrakech",
+      "CNEREE - جامعة القاضي عياض - مراكش"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  },
+  {
+    "name": "Centre National de l’Énergie, des Sciences et des Techniques Nucléaires - CNESTEN",
+    "aliases": [
+      "CNESTEN",
+      "Centre National de l’Energie des Sciences et Techniques de l’Energie Nucléaires (CNESTEN)",
+      "Centre National de l’Énergie, des Sciences et des Techniques Nucléaires — CNESTEN",
+      "Centre National de l’Énergie, des Sciences et des Techniques Nucléaires (CNESTEN)",
+      "National Energy Center for Nuclear Energy Sciences and Techniques (CNESTEN)"
+    ],
+    "arabicName": "",
+    "arabicAliases": []
+  }
+]

@@ -41,7 +41,16 @@ describe('October institutional narrative', () => {
       const position = documents.find(
         (d) => d.id === `section:institute:institute-positioning:${locale}`,
       )!
-      expect(position.body).toContain(catalog.Narrative.ecosystem.note)
+      expect(position.body).not.toContain(catalog.Narrative.ecosystem.note)
+      expect(position.body).not.toContain(catalog.Narrative.ecosystem.role)
+      expect(position.body).toContain(catalog.Narrative.capabilities.platforms)
+      for (const id of ['develop', 'test', 'transfer'] as const) {
+        const verb = documents.find(
+          (d) => d.id === `section:institute:institute-model-${id}:${locale}`,
+        )!
+        for (const activity of catalog.Institute.editorial.verbs[id].activities)
+          expect(verb.body).toContain(activity)
+      }
       for (const [id, item] of Object.entries(catalog.HomeAchievements.items)) {
         const record = documents.find((d) => d.id === `section:home:achievement-${id}:${locale}`)!
         expect(record.body).toContain(item.proof.scope)

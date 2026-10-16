@@ -377,3 +377,28 @@ notes, private evidence or unapproved EN/AR translations are indexed. The local
 review opt-in never expands search eligibility. See [scope](projects.md).
 
 Project PDF discovery uses one `document` result per eligible locale/reference and a guarded local note endpoint. Missing, stale, withdrawn and unapproved notes are excluded by the live source view. The owner-withdrawn historical-source notice is removed from page search metadata; current PDF contents remain unchanged pending the updated project list.
+
+## University and establishment identities — 16 October 2026
+
+The [sourced national identity reference](references/university-registry/README.md)
+connects direct establishments to their university through explicit IDs. Existing
+public project, laboratory and static/CMS resource metadata includes relevant
+names and aliases in the available source languages. Searching an establishment
+can identify its parent; searching a parent can retrieve its actual affiliated
+resources. Shared acronyms never select an arbitrary campus, and a parent-only
+resource does not invent participation by all its children. Registry records do
+not become new standalone public search results. No new filter controls are added.
+
+Run `pnpm search:rebuild` after identity/alias changes to refresh CMS projections
+and spelling vocabulary alongside the static catalogue. This does not change
+publication approval, review-locale eligibility, projects or their PDF revisions.
+The final-content search sanity check remains pending.
+
+## Dedicated patent catalogue — 2026-10-16
+
+The Resources `patents` page has its own localized page reference and metadata.
+Existing granted-patent search records retain their stable IDs, but their canonical
+URLs now use `pageHref('patents', locale, patentAnchor(reference))`. The shared
+catalogue remains on Transfer for existing links; no duplicate patent result is
+registered. The new page adds no hero media. Rebuild the local index after this
+projection change; CI and production release remain separately paused.

@@ -438,6 +438,18 @@
     "references": ["docs/hero-assets.json"]
   },
   {
+    "path": "/images/heroes/platform-outdoor-mobile.webp",
+    "sha256": "1cc65b68a628dc710b9d3b03d1a6e49ea5593bc1a7f3d1158b72d651810e43f1",
+    "category": "source-reference",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
+    "path": "/images/heroes/platform-outdoor.webp",
+    "sha256": "989e5ee8cc1d4198c02b35cbc148893dcca7e6297c8b4cc9e21d7f07526f37bc",
+    "category": "source-reference",
+    "references": ["docs/hero-assets.json"]
+  },
+  {
     "path": "/images/heroes/reading-9d347e0a2ed8.webp",
     "sha256": "9d347e0a2ed8a30dbd4bf1b114599c3d2a53c37ea3fad724c101e4f205f6d868",
     "category": "ai-generated",
@@ -660,9 +672,57 @@
     "references": ["docs/infrastructure-photo-assets.json"]
   },
   {
+    "path": "/images/institute/ambition-solar-person-cool.webp",
+    "sha256": "6647b83c9fe724451e532772cc3787d7fd09e7f5d9dd66aed70405440da1490b",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-solar-person-detail.webp",
+    "sha256": "89541b11d7f31342f67fa4e5a914ff751d93f66d2d2d58574011cb384d435a74",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-solar-person-mobile.webp",
+    "sha256": "9ec1ab09ace9a4bf72f7e0dd7b19cc31e3b0a63f1c8844693cdc00cf4525c0e5",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-solar-person.webp",
+    "sha256": "3191844d08c148b36c56093ac1d44ca663cb5ee1acdc37e02f8f04e82aea2c66",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-solar-scene-cool.webp",
+    "sha256": "5ea8bc2f01884848339716d4779887218305ed226c83d3b0192b0518b0234769",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-solar-scene.webp",
+    "sha256": "13e637027cbd58d74d1d0572e9a2e1057a495aca71c7204e376eb31f24961ad2",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-vision-portrait.webp",
+    "sha256": "50e461a073ceca83d67821986882860c3835462cd8dcd392d19d779feb4696a5",
+    "category": "ai-generated",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
     "path": "/images/institute/fifteen-year-report-cover-cutout.webp",
     "sha256": "e7052abced91f2f73fb6709dc852712bce652646bdcfbc1311f86765f1c56107",
     "category": "ai-assisted",
+    "references": ["docs/institute-assets.json"]
+  },
+  {
+    "path": "/images/institute/green-energy-park-research.webp",
+    "sha256": "0f1f09c51b016e17db265e61f5115879778af925394d5cf9d6b9067157e6ff81",
+    "category": "source-reference",
     "references": ["docs/institute-assets.json"]
   },
   {
@@ -940,6 +1000,12 @@
     "sha256": "f8e8e2dc3e58cdf8c520dea75c7ff003aa1fed65e0eeff5a5e6f15d3845e054d",
     "category": "source-reference",
     "references": ["docs/news-events-assets.json"]
+  },
+  {
+    "path": "/images/platforms/gep-mci-campus.webp",
+    "sha256": "ccbc98f520c65317d9b8beb1595a5adb2b38ea03f4812694f6433f0bcfcecdc9",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"]
   },
   {
     "path": "/images/platforms/gep-mci.webp",

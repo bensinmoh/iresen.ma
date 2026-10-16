@@ -14,7 +14,7 @@ providers. [French IT handover](docs/it-handover.fr.md) · [Deployment](docs/dep
 
 ## Current scope
 
-The route authority is `src/lib/site.ts`: 23 stable pages, including search and
+The route authority is `src/lib/site.ts`: 24 stable pages, including search and
 six footer utilities. News/event aliases and published call/news detail routes
 reuse this authority. Public modules include the institute, governance, research
 priorities/programmes, platforms, laboratory network, collaboration, valorisation,

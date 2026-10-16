@@ -48,3 +48,24 @@ describe('commissioned historical call catalogue', () => {
     expect(filterCallCards(cards, { query: 'no-such-programme' })).toEqual([])
   })
 })
+
+describe('call programme discovery', () => {
+  it('uses historical labels without inventing a match for unrepresented programmes', async () => {
+    const { archiveProjectProgramme } = await import('@/lib/call-archives')
+    const { programmeProjectsHref } = await import('@/lib/projects-model')
+    for (const locale of ['fr', 'en', 'ar'] as const) {
+      for (const call of archiveCalls) {
+        const programme = archiveProjectProgramme(call)
+        const url = new URL(programmeProjectsHref(programme, locale), 'http://localhost')
+        expect(url.searchParams.get('programme')).toBe(programme)
+        expect(url.hash).toBe('#find-project')
+      }
+    }
+    expect(
+      archiveProjectProgramme(archiveCalls.find((c) => c.reference === 'innotherm-2013')!),
+    ).toBe('InnoTherm III')
+    expect(
+      archiveProjectProgramme(archiveCalls.find((c) => c.reference === 'ibtikar-al-omrane-2025')!),
+    ).toBe('IBTIKAR AL OMRANE 2025')
+  })
+})

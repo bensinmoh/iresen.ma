@@ -1,5 +1,10 @@
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
+import applicationLinks from '@/data/career-application-links.json'
+
+export function careerApplicationHref(reference: string): string | undefined {
+  return applicationLinks[reference as keyof typeof applicationLinks]
+}
 
 export type CareerOffer = {
   id: number

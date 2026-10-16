@@ -281,3 +281,40 @@ The owner removes the duplicate Manage my cookies footer button. Keep the
 existing Cookie preferences utility link in FR/EN/AR; it leads to the page with
 the preferences control. Initial-visit choices, withdrawal and blocked-map
 preferences remain available. See [useful-information pages](utility-pages.md).
+
+## IRESEN footer line — 2026-10-16
+
+The owner commissions the supplied six-color line at the very top of every
+shared public footer. A decorative 6px full-bleed strip uses current tokens in
+fixed physical left-to-right order: navy 40%, IRESEN blue 25%, Science Blue 15%,
+Energy Cyan 6%, Transition Green 10%, Innovation Lime 4%. Hard color stops retain
+these exact proportions at every width, including Arabic. The line sits at the
+upper footer edge above its content, never behind text, and adds no focus or reading
+stop. No new image, content, route or search resource is introduced.
+
+Verification: FR Contact at 1280px and AR Institute at 390px inspected in
+development. Computed strip height is 6px, footer/line width matches viewport,
+bottom aligns with the page edge, and all six hard stops retain the fixed
+physical order in RTL. Formatting and whitespace pass. Shared component/CSS
+covers every public page; no per-page duplication. Full tests/build/CI/Git remain
+paused under the shared-checkout hold.
+
+Owner placement correction — 2026-10-16: the IRESEN line belongs ABOVE every
+public footer, at its upper edge. This supersedes the earlier bottom placement.
+Keep all six colors, proportions and fixed physical order unchanged.
+
+## Facebook and Instagram — owner addition, 2026-10-16
+
+Add Facebook (`https://www.facebook.com/IRESEN/`) and Instagram
+(`https://www.instagram.com/iresen_officiel/`) to the shared footer in all locales.
+Reuse the already documented official destinations and Simple Icons SVG paths
+from the News page, with 24px monochrome marks, existing 44px focusable links and
+localized accessible names. New links open in a separate tab with noopener
+noreferrer. News references the same destination records; original SVG files
+remain unchanged. No new public page/media or search resource is created.
+
+Verification: FR/EN/AR development HTML returns HTTP 200 and includes both
+destinations with localized accessible labels. Scoped ESLint, Prettier and
+whitespace checks pass. Existing footer E2E iterates the shared destination list;
+full browser/production suites remain held by shared coordination. Latest rendered
+layout inspection is pending because the existing preview tab is blocked.

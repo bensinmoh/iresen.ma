@@ -19,4 +19,6 @@ export const footerSocialLinks = [
     name: 'ResearchGate',
     href: 'https://www.researchgate.net/institution/Institut-of-Research-in-Solar-Energy-and-New-Energies',
   },
+  { id: 'facebook', name: 'Facebook', href: 'https://www.facebook.com/IRESEN/' },
+  { id: 'instagram', name: 'Instagram', href: 'https://www.instagram.com/iresen_officiel/' },
 ] as const

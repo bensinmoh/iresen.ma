@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
-import { homePlatforms, homePlatformsSectionId } from '@/lib/home-platforms'
+import { homePlatforms, homePlatformsSectionId, platformPhotoPath } from '@/lib/home-platforms'
 import { researchPlatforms } from '@/lib/platforms'
 import { pageHref } from '@/lib/site'
 import { PlatformCard } from './PlatformCard'
@@ -55,7 +55,7 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
                 <div className={styles.visual}>
                   <Image
                     className={styles.photo}
-                    src={`/images/platforms/${platform.id}.webp`}
+                    src={platformPhotoPath(platform.id)}
                     alt={t(`platforms.${platform.id}.imageDescription`)}
                     width={platform.width}
                     height={platform.height}

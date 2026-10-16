@@ -115,3 +115,31 @@ the lifecycle steps is centered; timeline content keeps its reading alignment.
 Scientific outline icons use Science Blue. Anchors, claims and supplied images
 remain, including the sourced 69-project institutional figure: withdrawing the
 fictional catalogue does not withdraw that separately sourced historical count.
+
+## Impact composition correction — 2026-10-16
+
+The owner moves the introduction out of the title's leading column into the
+trailing half of the shared heading row. The image/69-project caption now sits
+beside the three expected benefits, with the existing Discover projects action
+below that list. The action aligns with the list text and with the bottom of the
+photo/figure block on desktop. On tablet/mobile, native DOM order is heading,
+introduction, figure, benefits, action; the compact mobile action has no inset.
+This Read-mode adjustment preserves content, figure provenance, SVG icons,
+localized destinations, signature corners, current identity and section padding.
+Existing `research-results` and asset/search references remain applicable: there
+is no new content, resource or route to index.
+
+Development FR1440 confirms introduction in the trailing column, all three items,
+no section overflow, and a 0px action/figure bottom difference. The Taste/Impeccable
+layout detector reports no findings. Full suites/build/CI remain held by the
+shared-checkout protocol; this reversible layout adjustment adds no redundant test.
+
+Final scoped verification: EN1440 also measures a 0px action/figure bottom
+difference. AR390 stacks title/introduction/figure/benefits/action without page
+or section overflow. Scoped ESLint, Prettier and whitespace checks pass.
+
+Process-note typography — 2026-10-16: owner requests a hairline italic treatment
+for the sentence on each call’s terms. Use weight 200, the lightest installed
+Latin variable-font weight, with CSS italic (the existing normal-only font is
+synthesized by the browser). Keep its text, centered measure and contrast intact
+in every locale. No font asset, search content or shared token changes.

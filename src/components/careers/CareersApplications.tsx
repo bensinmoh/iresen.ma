@@ -10,7 +10,12 @@ import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
 import { contactEmailHref } from '@/lib/contact'
-import { careerAnchor, careerDownloadHref, type CareerOffer } from '@/lib/careers'
+import {
+  careerAnchor,
+  careerApplicationHref,
+  careerDownloadHref,
+  type CareerOffer,
+} from '@/lib/careers'
 import styles from './CareersPage.module.css'
 import { CareersIcon } from './CareersIcon'
 
@@ -32,6 +37,16 @@ export function CareersApplications({
   )
   const [selected, setSelected] = useState('')
   const [kind, setKind] = useState('employment')
+  const [internshipType, setInternshipType] = useState('pfe')
+  const internshipTypes = [
+    'pfe',
+    'observation',
+    'practical',
+    'hybrid',
+    'volunteering',
+    'other',
+  ] as const
+  const applicationHref = kind === 'employment' ? careerApplicationHref(selected) : undefined
   const [filename, setFilename] = useState('')
   const [fileError, setFileError] = useState('')
   const [draft, setDraft] = useState('')
@@ -67,8 +82,12 @@ export function CareersApplications({
       input.setCustomValidity(read(key) ? '' : t('form.required'))
     }
     if (!form.reportValidity() || fileError) return
-    const offer = offers.find((offer) => offer.reference === selected)
-    const title = offer?.title ?? t('form.spontaneous')
+    const offer =
+      kind === 'employment' ? offers.find((offer) => offer.reference === selected) : undefined
+    const title =
+      kind === 'internship'
+        ? t(`form.internshipTypes.${internshipType}`)
+        : (offer?.title ?? t('form.spontaneous'))
     const body = [
       t(`form.${kind}`),
       title,
@@ -113,7 +132,10 @@ export function CareersApplications({
               >
                 <summary>
                   <span className={styles.department}>
-                    {t('offers.reference', { reference: offer.reference.toUpperCase() })}
+                    <span className={styles.referenceLabel}>
+                      {t('offers.reference', { reference: '' }).trim()}
+                    </span>
+                    <bdi>{offer.reference.toUpperCase()}</bdi>
                   </span>
                   <span className={styles.offerHeading}>
                     <span>
@@ -160,17 +182,29 @@ export function CareersApplications({
                     ))}
                   </div>
                   <div className={styles.offerActions}>
-                    <button
-                      className="button button-primary"
-                      type="button"
-                      onClick={() => chooseOffer(offer.reference)}
-                    >
-                      {t('offers.apply')} <NavigationIcon name="arrow" />
-                    </button>
+                    {careerApplicationHref(offer.reference) ? (
+                      <a
+                        className="button button-primary"
+                        href={careerApplicationHref(offer.reference)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {t('offers.apply')} <NavigationIcon name="arrow" />
+                      </a>
+                    ) : (
+                      <button
+                        className="button button-primary"
+                        type="button"
+                        onClick={() => chooseOffer(offer.reference)}
+                      >
+                        {t('offers.apply')} <NavigationIcon name="arrow" />
+                      </button>
+                    )}
                     <a
                       className={`button ${styles.download}`}
                       href={careerDownloadHref(offer.reference, locale)}
-                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {t('offers.download')}{' '}
                       <span className={styles.downArrow}>
@@ -259,32 +293,34 @@ export function CareersApplications({
           }}
           className={styles.form}
         >
-          <div className={styles.formGrid}>
-            {(['firstName', 'lastName', 'email', 'phone'] as const).map((key) => (
-              <div className={styles.field} key={key}>
-                <label htmlFor={`career-${key}`}>{t(`form.${key}`)}</label>
-                <input
-                  data-ui-field
-                  id={`career-${key}`}
-                  name={key}
-                  type={key === 'email' ? 'email' : key === 'phone' ? 'tel' : 'text'}
-                  autoComplete={
-                    {
-                      firstName: 'given-name',
-                      lastName: 'family-name',
-                      email: 'email',
-                      phone: 'tel',
-                    }[key]
-                  }
-                  required={key !== 'phone'}
-                  maxLength={key === 'phone' ? 50 : 200}
-                  placeholder={t(`form.${key}Placeholder`)}
-                  dir={key === 'email' || key === 'phone' ? 'ltr' : undefined}
-                  disabled={!ready}
-                />
-              </div>
-            ))}
-          </div>
+          {!applicationHref && (
+            <div className={styles.formGrid}>
+              {(['firstName', 'lastName', 'email', 'phone'] as const).map((key) => (
+                <div className={styles.field} key={key}>
+                  <label htmlFor={`career-${key}`}>{t(`form.${key}`)}</label>
+                  <input
+                    data-ui-field
+                    id={`career-${key}`}
+                    name={key}
+                    type={key === 'email' ? 'email' : key === 'phone' ? 'tel' : 'text'}
+                    autoComplete={
+                      {
+                        firstName: 'given-name',
+                        lastName: 'family-name',
+                        email: 'email',
+                        phone: 'tel',
+                      }[key]
+                    }
+                    required={key !== 'phone'}
+                    maxLength={key === 'phone' ? 50 : 200}
+                    placeholder={t(`form.${key}Placeholder`)}
+                    dir={key === 'email' || key === 'phone' ? 'ltr' : undefined}
+                    disabled={!ready}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
           <fieldset className={styles.radios}>
             <legend className="sr-only">{t('form.kind')}</legend>
             {['employment', 'internship'].map((value) => (
@@ -294,7 +330,11 @@ export function CareersApplications({
                   name="kind"
                   value={value}
                   checked={kind === value}
-                  onChange={() => setKind(value)}
+                  onChange={() => {
+                    setKind(value)
+                    setSelected('')
+                    setDraft('')
+                  }}
                   disabled={!ready}
                 />
                 {t(`form.${value}`)}
@@ -302,95 +342,124 @@ export function CareersApplications({
             ))}
           </fieldset>
           <div className={styles.field}>
-            <label htmlFor="career-offer">{t('form.offer')}</label>
+            <label htmlFor="career-offer">
+              {t(kind === 'internship' ? 'form.internshipType' : 'form.offer')}
+            </label>
             <div className={styles.selectWrap}>
               <select
                 data-ui-field
                 id="career-offer"
-                name="offer"
-                value={selected}
+                name={kind === 'internship' ? 'internshipType' : 'offer'}
+                value={kind === 'internship' ? internshipType : selected}
                 onChange={(event) => {
-                  setSelected(event.target.value)
+                  if (kind === 'internship') setInternshipType(event.target.value)
+                  else setSelected(event.target.value)
                   setDraft('')
                 }}
                 disabled={!ready}
               >
-                <option value="">{t('form.spontaneous')}</option>
-                {offers.map((offer) => (
-                  <option key={offer.reference} value={offer.reference}>
-                    {offer.title}
-                  </option>
-                ))}
+                {kind === 'internship' ? (
+                  internshipTypes.map((type) => (
+                    <option key={type} value={type}>
+                      {t(`form.internshipTypes.${type}`)}
+                    </option>
+                  ))
+                ) : (
+                  <>
+                    <option value="">{t('form.spontaneous')}</option>
+                    {offers.map((offer) => (
+                      <option key={offer.reference} value={offer.reference}>
+                        {offer.title}
+                      </option>
+                    ))}
+                  </>
+                )}
               </select>
             </div>
           </div>
-          <div className={styles.field}>
-            <label htmlFor="career-message">{t('form.message')}</label>
-            <textarea
-              data-ui-field
-              id="career-message"
-              name="message"
-              rows={6}
-              required
-              maxLength={4000}
-              placeholder={t('form.messagePlaceholder')}
-              disabled={!ready}
-            />
-          </div>
-          <div className={styles.field}>
-            <label htmlFor="career-cv">{t('form.cv')}</label>
-            <div className={styles.upload}>
-              <CareersIcon name="upload" />
-              <div>
-                <strong>{filename || t('form.upload')}</strong>
-                <span id="cv-hint">{t('form.maxSize')}</span>
-              </div>
-              <input
-                id="career-cv"
-                name="cv"
-                type="file"
-                accept=".pdf,.doc,.docx"
-                aria-describedby={`cv-hint${fileError ? ' cv-error' : ''}`}
-                aria-invalid={Boolean(fileError)}
-                disabled={!ready}
-                onChange={(event) => {
-                  const file = event.target.files?.[0]
-                  const valid =
-                    !file || (file.size <= 5_000_000 && /\.(pdf|docx?)$/i.test(file.name))
-                  setFileError(valid ? '' : t('form.fileError'))
-                  setFilename(valid ? (file?.name ?? '') : '')
-                  if (!valid) event.target.value = ''
-                }}
-              />
+          {applicationHref ? (
+            <div role="status">
+              <p>{t('form.externalApplication')}</p>
+              <a
+                className={`button button-primary ${styles.submit}`}
+                href={applicationHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('offers.apply')} <NavigationIcon name="arrow" />
+              </a>
             </div>
-            {fileError && (
-              <p id="cv-error" role="alert" className={styles.error}>
-                {fileError}
+          ) : (
+            <>
+              <div className={styles.field}>
+                <label htmlFor="career-message">{t('form.message')}</label>
+                <textarea
+                  data-ui-field
+                  id="career-message"
+                  name="message"
+                  rows={6}
+                  required
+                  maxLength={4000}
+                  placeholder={t('form.messagePlaceholder')}
+                  disabled={!ready}
+                />
+              </div>
+              <div className={styles.field}>
+                <label htmlFor="career-cv">{t('form.cv')}</label>
+                <div className={styles.upload}>
+                  <CareersIcon name="upload" />
+                  <div>
+                    <strong>{filename || t('form.upload')}</strong>
+                    <span id="cv-hint">{t('form.maxSize')}</span>
+                  </div>
+                  <input
+                    id="career-cv"
+                    name="cv"
+                    type="file"
+                    accept=".pdf,.doc,.docx"
+                    aria-describedby={`cv-hint${fileError ? ' cv-error' : ''}`}
+                    aria-invalid={Boolean(fileError)}
+                    disabled={!ready}
+                    onChange={(event) => {
+                      const file = event.target.files?.[0]
+                      const valid =
+                        !file || (file.size <= 5_000_000 && /\.(pdf|docx?)$/i.test(file.name))
+                      setFileError(valid ? '' : t('form.fileError'))
+                      setFilename(valid ? (file?.name ?? '') : '')
+                      if (!valid) event.target.value = ''
+                    }}
+                  />
+                </div>
+                {fileError && (
+                  <p id="cv-error" role="alert" className={styles.error}>
+                    {fileError}
+                  </p>
+                )}
+              </div>
+              <button
+                type="submit"
+                className={`button button-primary ${styles.submit}`}
+                disabled={!ready}
+              >
+                {t('form.action')} <NavigationIcon name="arrow" />
+              </button>
+              <div role="status" aria-live="polite">
+                {draft && (
+                  <>
+                    <p>{t('form.prepared')}</p>
+                    <a className="button button-primary" href={draft}>
+                      {t('form.openEmail')}
+                    </a>
+                  </>
+                )}
+              </div>
+              <p className={styles.disclosure}>
+                {t.rich('form.notice', {
+                  privacy: (chunks) => <a href={pageHref('privacy', locale)}>{chunks}</a>,
+                })}
               </p>
-            )}
-          </div>
-          <button
-            type="submit"
-            className={`button button-primary ${styles.submit}`}
-            disabled={!ready}
-          >
-            {t('form.action')} <NavigationIcon name="arrow" />
-          </button>
-          <div role="status" aria-live="polite">
-            {draft && (
-              <>
-                <p>{t('form.prepared')}</p>
-                <a className="button button-primary" href={draft}>
-                  {t('form.openEmail')}
-                </a>
-              </>
-            )}
-          </div>
-          <p className={styles.disclosure}>
-            {t.rich('form.notice', {
-              privacy: (chunks) => <a href={pageHref('privacy', locale)}>{chunks}</a>,
-            })}
-          </p>
+            </>
+          )}
         </form>
       </section>
     </>

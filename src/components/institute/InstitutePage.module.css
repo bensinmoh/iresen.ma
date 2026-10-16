@@ -1,4 +1,6 @@
 .page {
+  /* A compact page-local rhythm; shared site tokens keep their existing values. */
+  --section-space: clamp(2rem, 2.8vw, 2.5rem);
   overflow-wrap: anywhere;
 }
 .page :global(.hero-copy) {
@@ -8,8 +10,7 @@
   max-inline-size: 64ch;
 }
 .position,
-.missions,
-.values {
+.missions {
   padding-block: var(--section-space);
 }
 .page h2 {
@@ -64,8 +65,7 @@
   margin: 0;
 }
 .position,
-.split,
-.values {
+.split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
   gap: var(--layout-gap);
@@ -172,8 +172,7 @@
   margin-block-start: var(--space-6);
 }
 .cooperation .reading p,
-.cooperation dd,
-.ambition .reading p {
+.cooperation dd {
   color: var(--color-footer-muted);
 }
 .cooperation .details {
@@ -182,46 +181,169 @@
 .cooperation summary {
   color: var(--color-white);
 }
-.values dl {
-  margin: 0;
-}
-.values dl > div {
-  display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-  gap: var(--space-6);
-  padding-block: var(--space-6);
-  border-block-start: 1px solid var(--color-border);
-}
-.values dt {
-  font-weight: 600;
-  line-height: 1.6;
-}
-.values dd {
-  margin: 0;
-  color: var(--color-text-muted);
-  line-height: 1.75;
-}
 .ambition {
+  --portrait-rise: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  min-block-size: clamp(22rem, 29vw, 28rem);
+  padding-block: var(--section-space);
   background: var(--color-navy);
   color: var(--color-white);
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
 }
-.ambitionCopy {
-  padding: var(--section-space) var(--gutter);
-}
-.ambitionCopy h2 {
-  margin-block-end: var(--space-8);
-}
-.ambitionImage {
-  position: relative;
-  min-block-size: 28rem;
+.ambitionScene {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
   overflow: hidden;
 }
-.ambitionImage img {
-  object-fit: cover;
-  object-position: center;
+.ambitionBackground,
+.ambitionPortrait {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  inline-size: 100%;
+  block-size: calc(100% + var(--portrait-rise));
+  object-fit: contain;
+  object-position: right bottom;
 }
+.ambitionBackground {
+  mask-image: linear-gradient(90deg, transparent, black 40%);
+}
+.ambitionMobileBackground {
+  z-index: -1;
+  display: block;
+  object-fit: cover;
+}
+.ambition::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgb(9 31 55 / 88%), rgb(9 31 55 / 68%)),
+    linear-gradient(0deg, rgb(9 31 55 / 35%), transparent 45%);
+}
+.ambitionContent {
+  position: relative;
+  z-index: 1;
+  min-inline-size: 0;
+}
+.ambitionText {
+  inline-size: 100%;
+  text-align: left;
+  /* The float reserves more height than the copy; center the visible text. */
+  transform: translateY(max(0px, calc(clamp(8rem, 10vw, 11rem) - 50%)));
+}
+/* Text exclusion follows the head-to-elbow contour without painting a shape. */
+.ambitionText::before {
+  content: '';
+  float: right;
+  inline-size: 34%;
+  block-size: clamp(16rem, 20vw, 22rem);
+  shape-outside: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 70%, 12% 40%, 25% 20%);
+  shape-margin: clamp(1.5rem, 2vw, 3rem);
+}
+.ambitionPortrait {
+  z-index: 0;
+  pointer-events: none;
+}
+:global(html[dir='rtl']) .ambitionText {
+  text-align: right;
+}
+.ambitionQuote {
+  max-inline-size: none;
+  margin: 0;
+}
+.ambitionQuote p {
+  margin: 0;
+  font-size: var(--font-size-section-heading);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.ambitionQuote .quoteMark {
+  font-size: 1em;
+}
+:global(html[dir='rtl']) .ambitionQuote p {
+  letter-spacing: normal;
+  line-height: 1.45;
+}
+/* At tablet ratios the panoramic composite would letterbox; keep the continuous
+   landscape underneath the independently contained silhouette instead. */
+@media (min-width: 40.001rem) and (max-width: 79.999rem) {
+  .ambitionBackground {
+    display: none;
+  }
+}
+.ambitionMobilePortrait {
+  display: none;
+}
+@media (max-width: 40rem) {
+  .ambition {
+    min-block-size: 0;
+    padding-block: 3rem;
+  }
+  .ambitionText {
+    transform: none;
+  }
+  .ambitionText::before {
+    display: none;
+  }
+  .ambitionBackground,
+  .ambitionPortrait {
+    display: none;
+  }
+  .ambitionMobileBackground {
+    display: block;
+  }
+  .ambitionQuote {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .ambitionQuote[data-contour-ready] {
+    display: flow-root;
+  }
+  .ambitionQuote[data-contour-ready]::before {
+    content: '';
+    float: right;
+    inline-size: 52%;
+    block-size: var(--ambition-flow-height);
+    shape-outside: var(--ambition-contour);
+    shape-margin: 0.75rem;
+  }
+  .ambitionMobilePortrait {
+    display: block;
+    position: static;
+    align-self: flex-end;
+    inline-size: 52%;
+    block-size: auto;
+    margin-block-end: -3rem;
+    pointer-events: none;
+  }
+  .ambitionQuote[data-contour-ready] .ambitionMobilePortrait {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: calc(-1 * var(--ambition-edge-clearance));
+  }
+  .ambitionQuote p {
+    padding: 0;
+    text-align: start;
+    font-weight: 700;
+    line-height: 1.2142857143;
+    letter-spacing: -0.02em;
+    hyphens: auto;
+    overflow-wrap: normal;
+    text-wrap: wrap;
+  }
+}
+
 .history {
   background: var(--color-navy);
   color: var(--color-white);
@@ -353,41 +475,21 @@
   letter-spacing: normal;
 }
 
-@media (min-width: 120rem) {
-  .ambition {
-    max-inline-size: var(--container-width);
-    margin-inline: auto;
-  }
-}
 @media (max-width: 64rem) {
   .position,
   .missionsHeading,
   .mission,
-  .split,
-  .values {
+  .split {
     grid-template-columns: 1fr;
     gap: var(--space-8);
-  }
-  .ambition {
-    grid-template-columns: 1fr;
-  }
-  .ambitionImage {
-    min-block-size: 24rem;
   }
   .position h2 {
     max-inline-size: 32ch;
   }
 }
 @media (max-width: 40rem) {
-  .values dl > div {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
   .timeline > li {
     flex-basis: min(25rem, 85vw);
-  }
-  .ambitionImage {
-    min-block-size: 18rem;
   }
   .reportActions a {
     max-inline-size: 100%;
@@ -596,20 +698,6 @@
     transform: translateX(23.1%);
   }
 }
-.orientations {
-  display: grid;
-  gap: var(--space-6);
-  margin-block: var(--space-8) 0;
-}
-.orientations dt {
-  font-weight: 600;
-  line-height: 1.6;
-  color: var(--color-energy-cyan);
-}
-.orientations dd {
-  margin: var(--space-2) 0 0;
-  line-height: 1.7;
-}
 
 /* Institute editorial composition, inspired by the owner's October narrative reference. */
 .position {
@@ -650,77 +738,69 @@
   letter-spacing: normal;
   font-size: var(--font-size-action);
 }
+
+/* Owner reference: centered heading and white icon cards; no sticky title. */
 .values {
-  grid-template-columns: 0.7fr 1.5fr;
-  align-items: start;
+  padding-block: var(--section-space) calc(var(--section-space) + 2rem);
+  background: var(--color-surface);
 }
-.values > header {
-  position: sticky;
-  inset-block-start: 7rem;
+.valuesHeading {
+  position: static;
+  text-align: center;
+  margin-block-end: var(--space-8);
 }
-.values dl {
-  counter-reset: institute-value;
+.valueCards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max(14rem, calc((100% - 4 * var(--space-4)) / 5));
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline proximity;
+  scrollbar-width: none;
+  gap: var(--space-4);
+  margin: 0;
 }
-.values dl > div {
-  position: relative;
-  grid-template-columns: 0.8fr 1.4fr;
-  padding-inline-start: 3rem;
-  padding-block: var(--space-8);
-}
-.values dl > div::before {
-  counter-increment: institute-value;
-  content: counter(institute-value, decimal-leading-zero);
-  position: absolute;
-  inset-block-start: var(--space-8);
-  inset-inline-start: 0;
-  font-size: var(--font-size-label);
-  color: var(--color-blue);
-}
-.values dt {
-  font-size: var(--font-size-action);
-  color: var(--color-navy);
-}
-.ambitionCopy {
-  padding-block: var(--section-space);
-}
-.orientations {
-  gap: 0;
-}
-.orientations > div {
-  padding-block: var(--space-6);
-  border-block-start: 1px solid var(--color-footer-divider);
-}
-.orientations dt {
-  color: var(--color-white);
-  font-size: var(--font-size-action);
-}
-.orientations dd {
-  color: var(--color-footer-muted);
-}
-.ambitionImage {
-  margin: var(--space-12) var(--gutter) var(--space-12) 0;
+.valueCards > div {
+  scroll-snap-align: start;
+  min-inline-size: 0;
+  padding: clamp(1.25rem, 1.6vw, 2rem);
   border-radius: var(--radius-signature);
+  background: var(--color-white);
 }
-:global(html[dir='rtl']) .ambitionImage {
-  margin-inline: 0 var(--gutter);
+.valueCards dt {
+  color: var(--color-navy);
+  font-size: var(--font-size-action);
+  font-weight: 600;
+  line-height: 1.4;
 }
-@media (max-width: 64rem) {
-  .values > header {
-    position: static;
-  }
-  .values {
-    grid-template-columns: 1fr;
-  }
-  .ambitionImage {
-    margin: 0 var(--gutter) var(--space-12);
-  }
-  :global(html[dir='rtl']) .ambitionImage {
-    margin-inline: var(--gutter);
-  }
+.valueIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  margin-block-end: var(--space-8);
+  border-radius: 50%;
+  background: var(--color-transition-green);
+  color: var(--color-white);
+}
+.valueCards dd {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+.valueCards::-webkit-scrollbar {
+  display: none;
+}
+.valueCards:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: -3px;
 }
 @media (max-width: 40rem) {
-  .values dl > div {
-    grid-template-columns: 1fr;
-    padding-inline-start: 2.5rem;
+  .valueCards {
+    grid-auto-columns: min(82vw, 20rem);
+  }
+  .valueIcon {
+    margin-block-end: var(--space-6);
   }
 }

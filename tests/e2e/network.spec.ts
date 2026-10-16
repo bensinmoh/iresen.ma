@@ -150,7 +150,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         expect(Math.abs(bubbleBox!.x + bubbleBox!.width / 2 - width / 2)).toBeLessThan(1)
         await expect(directory.locator('[role="group"]').first()).toHaveCSS(
           'justify-content',
-          'center',
+          'flex-start',
         )
       }
       const canvasBox = await map.locator(':scope > div').first().boundingBox()

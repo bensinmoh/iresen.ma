@@ -1,3 +1,9 @@
+import { Flask } from '@phosphor-icons/react/dist/ssr/Flask'
+import { Target } from '@phosphor-icons/react/dist/ssr/Target'
+import { Handshake } from '@phosphor-icons/react/dist/ssr/Handshake'
+import { BookOpen } from '@phosphor-icons/react/dist/ssr/BookOpen'
+import { ShieldCheck } from '@phosphor-icons/react/dist/ssr/ShieldCheck'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
@@ -9,30 +15,18 @@ import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { TimelineRail } from './TimelineRail'
-import { InstituteModel } from './InstituteModel'
-import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
-import { EcosystemModel } from '@/components/narrative/EcosystemModel'
-import { strategicOrientations } from '@/lib/institutional-narrative'
+import { AmbitionQuote } from './AmbitionQuote'
+import { InstituteEditorial } from './InstituteEditorial'
 import styles from './InstitutePage.module.css'
 
 export async function InstitutePage({ locale }: { locale: Locale }) {
+  const valueIcons = [Flask, Target, Handshake, BookOpen, ShieldCheck]
   const t = await getTranslations({ locale, namespace: 'Institute' })
   const pages = await getTranslations({ locale, namespace: 'Pages' })
-  const narrative = await getTranslations({ locale, namespace: 'Narrative' })
   const paragraphs = (key: string, count: number) =>
     Array.from({ length: count }, (_, i) => <p key={i}>{t(`${key}.${i}`)}</p>)
   const label = (text: string, tone: 'blue' | 'white' = 'blue') => (
     <SectionEyebrow tone={tone}>{text}</SectionEyebrow>
-  )
-  const activities = (index: number, count: number) => (
-    <dl className={styles.activities}>
-      {Array.from({ length: count }, (_, i) => (
-        <div key={i}>
-          <dt>{t(`missions.${index}.activities.${i}.title`)}</dt>
-          <dd>{t(`missions.${index}.activities.${i}.description`)}</dd>
-        </div>
-      ))}
-    </dl>
   )
   return (
     <div data-institute-page className={styles.page}>
@@ -43,162 +37,81 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         description={t('introduction.0')}
       />
       <div id="page-sections">
-        <section id="about" aria-labelledby="institute-mission-title">
-          <div id="mission" className={styles.statement}>
+        <InstituteEditorial locale={locale} />
+        <section id="institute-values" className={styles.values} aria-labelledby="values-title">
+          <div className="container">
+            <header className={styles.valuesHeading}>
+              <Heading as="h2" size="section" id="values-title">
+                {t('valuesLabel')}
+              </Heading>
+            </header>
+            <dl className={styles.valueCards} tabIndex={0} aria-labelledby="values-title">
+              {valueIcons.map((icon, i) => (
+                <div key={i}>
+                  <dt>
+                    <span className={styles.valueIcon}>
+                      <SiteIcon icon={icon} size={28} />
+                    </span>
+                    {t(`values.${i}.title`)}
+                  </dt>
+                  <dd>{t(`values.${i}.description`)}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+        <section id="ambition-2035" className={styles.ambition} aria-labelledby="ambition-title">
+          <div className={styles.ambitionScene} aria-hidden="true">
             <Image
-              src={heroImages['solar-aerial'].src}
+              src="/images/institute/ambition-solar-scene-cool.webp"
+              alt=""
+              width={2172}
+              height={724}
+              sizes="100vw"
+              className={styles.ambitionBackground}
+            />
+            <Image
+              src={heroImages['solar-horizon'].src}
               alt=""
               fill
               sizes="100vw"
-              className={styles.statementImage}
+              className={styles.ambitionMobileBackground}
             />
-            <div className={`container ${styles.statementContent}`}>
-              <SectionEyebrow id="institute-mission-title" tone="white" centered>
-                {t('missionLabel')}
+          </div>
+          <Image
+            src="/images/institute/ambition-solar-person-detail.webp"
+            alt=""
+            width={2172}
+            height={724}
+            unoptimized
+            className={styles.ambitionPortrait}
+          />
+          <div className={`container ${styles.ambitionContent}`}>
+            <div className={styles.ambitionText}>
+              <SectionEyebrow id="ambition-title" tone="white">
+                {t('ambitionLabel')}
               </SectionEyebrow>
-              <blockquote>
+              <AmbitionQuote className={styles.ambitionQuote}>
+                <Image
+                  src="/images/institute/ambition-solar-person-mobile.webp"
+                  alt=""
+                  width={493}
+                  height={700}
+                  unoptimized
+                  className={styles.ambitionMobilePortrait}
+                />
                 <p>
                   <span className={styles.quoteMark} aria-hidden="true">
                     «{' '}
                   </span>
-                  {t('statement')}
+                  {t('ambition.statement')}
                   <span className={styles.quoteMark} aria-hidden="true">
                     {' '}
                     »
                   </span>
                 </p>
-              </blockquote>
+              </AmbitionQuote>
             </div>
-          </div>
-        </section>
-        <section
-          id="institute-positioning"
-          className={`container ${styles.position}`}
-          aria-labelledby="position-title"
-        >
-          <header>
-            {label(t('positionLabel'))}
-            <Heading as="h2" size="section" id="position-title">
-              {t('position.title')}
-            </Heading>
-          </header>
-          <div className={styles.reading}>{paragraphs('position.paragraphs', 3)}</div>
-          <EcosystemModel locale={locale} />
-        </section>
-        <section
-          id="capabilities"
-          className={`container ${styles.missions}`}
-          aria-labelledby="missions-title"
-        >
-          <InstituteModel locale={locale}>
-            <header className={styles.missionsHeading}>
-              <Heading as="h2" size="section" id="missions-title">
-                {t('missionsLabel')}
-              </Heading>
-              <div className={styles.reading}>{paragraphs('missionsIntro', 3)}</div>
-            </header>
-          </InstituteModel>
-          {(
-            [
-              { id: 'institute-research', i: 1 },
-              { id: 'institute-studies', i: 0 },
-              { id: 'institute-skills', i: 2 },
-            ] as const
-          ).map(({ id, i }) => (
-            <section key={id} id={id} className={styles.mission} aria-labelledby={`${id}-title`}>
-              <header>
-                <span className={styles.number} aria-hidden="true">
-                  <ValorisationIcon name={i === 1 ? 'flask' : i === 0 ? 'chart-line' : 'bulb'} />
-                </span>
-                <p className={styles.purpose}>{t(`missions.${i}.purpose`)}</p>
-                <Heading as="h3" size="mission" id={`${id}-title`}>
-                  {t(`missions.${i}.title`)}
-                </Heading>
-              </header>
-              <div className={styles.reading}>
-                {t(`missions.${i}.introduction`)
-                  .split('\n\n')
-                  .map((text, j) => (
-                    <p key={j}>{text}</p>
-                  ))}
-                <details className={styles.details}>
-                  <summary>
-                    {t('detailsLabel')}
-                    <NavigationIcon name="chevron" />
-                  </summary>
-                  {activities(i, i === 0 ? 4 : 5)}
-                </details>
-              </div>
-            </section>
-          ))}
-        </section>
-        <section
-          id="institute-cooperation"
-          className={styles.cooperation}
-          aria-labelledby="cooperation-title"
-        >
-          <div className={`container ${styles.split}`}>
-            <header>
-              {label(t('cooperationLabel'), 'white')}
-              <Heading as="h2" size="section" id="cooperation-title">
-                {t('missions.3.title')}
-              </Heading>
-              <p className={styles.purpose}>{t('missions.3.purpose')}</p>
-            </header>
-            <div className={styles.reading}>
-              <p>{t('missions.3.introduction')}</p>
-              <details className={styles.details}>
-                <summary>
-                  {t('detailsLabel')}
-                  <NavigationIcon name="chevron" />
-                </summary>
-                {activities(3, 5)}
-              </details>
-            </div>
-          </div>
-        </section>
-        <section
-          id="institute-values"
-          className={`container ${styles.values}`}
-          aria-labelledby="values-title"
-        >
-          <header>
-            <Heading as="h2" size="section" id="values-title">
-              {t('valuesLabel')}
-            </Heading>
-          </header>
-          <dl>
-            {Array.from({ length: 5 }, (_, i) => (
-              <div key={i}>
-                <dt>{t(`values.${i}.title`)}</dt>
-                <dd>{t(`values.${i}.description`)}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-        <section id="ambition-2035" className={styles.ambition} aria-labelledby="ambition-title">
-          <div className={styles.ambitionCopy}>
-            {label(t('ambitionLabel'), 'white')}
-            <Heading as="h2" size="section" id="ambition-title">
-              {t('ambition.statement')}
-            </Heading>
-            <div className={styles.reading}>{paragraphs('ambition.paragraphs', 2)}</div>
-            <dl className={styles.orientations}>
-              {strategicOrientations.map((id) => (
-                <div key={id}>
-                  <dt>{narrative(`orientations.${id}.title`)}</dt>
-                  <dd>{narrative(`orientations.${id}.description`)}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-          <div className={styles.ambitionImage} aria-hidden="true">
-            <Image
-              src={heroImages.workshop.src}
-              alt=""
-              fill
-              sizes="(max-width: 64rem) 100vw, 45vw"
-            />
           </div>
         </section>
         <section id="institute-history" className={styles.history} aria-labelledby="history-title">

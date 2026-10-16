@@ -88,6 +88,7 @@ for (const locale of locales) {
         pageId !== 'publications' &&
         pageId !== 'projects' &&
         pageId !== 'priorities' &&
+        pageId !== 'patents' &&
         pageId !== 'news' &&
         pageId !== 'events' &&
         !footerPageIds.some((utilityPageId) => utilityPageId === pageId),
@@ -291,7 +292,7 @@ test('the centered scroll cue supports motion preferences and keyboard navigatio
       await page.emulateMedia({ reducedMotion: width === 390 ? 'reduce' : 'no-preference' })
       // Mobile uses the full-width action; the mouse cue is a desktop affordance.
       await page.goto(pageHref(width === 390 ? 'institute' : 'home', locale))
-      const cue = page.locator('.hero-scroll')
+      const cue = page.locator('.hero-scroll a')
       if (width === 390) {
         await expect(cue).toBeHidden()
         const action = page.locator('.hero-primary')
@@ -302,16 +303,18 @@ test('the centered scroll cue supports motion preferences and keyboard navigatio
         continue
       }
       await expect(cue).toHaveAccessibleName(/\S/)
-      const wheel = cue.locator('.hero-scroll-wheel')
-      await expect(wheel).toHaveCSS('animation-name', width === 390 ? 'none' : 'hero-scroll-wheel')
+      const wheel = cue.locator('[data-scroll-wheel]')
+      await cue.focus()
+      await expect(wheel).toHaveCSS('animation-name', 'none')
       const cueBounds = (await cue.boundingBox())!
-      const actionsBounds = (await page.locator('.hero-actions').boundingBox())!
       const bandBounds = (await page.locator('.hero-highlights').boundingBox())!
       expect(Math.abs(cueBounds.x + cueBounds.width / 2 - width / 2)).toBeLessThan(1)
       expect(cueBounds.width).toBeGreaterThanOrEqual(44)
       expect(cueBounds.height).toBeGreaterThanOrEqual(44)
-      expect(cueBounds.y - actionsBounds.y - actionsBounds.height).toBeGreaterThanOrEqual(15)
-      expect(bandBounds.y - cueBounds.y - cueBounds.height).toBeGreaterThanOrEqual(11)
+      await expect(page.locator('[data-idle-scroll-cue]')).toHaveCSS('position', 'absolute')
+      await expect(page.locator('[data-idle-scroll-cue]')).toHaveCSS('z-index', '20')
+      await expect(page.locator('.hero-body')).toHaveCSS('justify-content', 'flex-end')
+      expect(bandBounds.y - cueBounds.y - cueBounds.height).toBeGreaterThanOrEqual(0)
       await cue.focus()
       await expect(cue).toBeFocused()
       await expect(cue).toHaveCSS('outline-style', 'solid')
@@ -369,4 +372,35 @@ test('without JavaScript the institute hero, mission and Arabic disclosures rema
   await page.locator('#institute-studies summary').click()
   await expect(page.locator('#institute-studies details')).toHaveAttribute('open', '')
   await context.close()
+})
+
+test('hero scroll invitation waits for idle, hides on scroll and repeats only after a long idle', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 })
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.clock.install()
+  await page.goto(pageHref('institute', 'fr'))
+  const cue = page.locator('[data-idle-scroll-cue]')
+  await expect(cue).toHaveAttribute('data-ready', 'true')
+  await expect(cue).not.toHaveAttribute('data-revealed')
+  await page.clock.runFor(4900)
+  await expect(cue).not.toHaveAttribute('data-revealed')
+  await page.clock.runFor(200)
+  await expect(cue).toHaveAttribute('data-revealed', 'true')
+  await expect(cue.locator('a')).toHaveAccessibleName('DÉFILER VERS LE BAS')
+  await page.clock.runFor(6500)
+  await expect(cue).not.toHaveAttribute('data-revealed')
+  await page.clock.runFor(14000)
+  await expect(cue).not.toHaveAttribute('data-revealed')
+  await page.clock.runFor(1100)
+  await expect(cue).toHaveAttribute('data-revealed', 'true')
+  await page.evaluate(() => window.scrollTo(0, 20))
+  await expect(cue).toHaveAttribute('data-exiting', 'true')
+  await page.clock.runFor(400)
+  await expect(cue).not.toHaveAttribute('data-revealed')
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await expect(cue.locator('[data-scroll-wheel]')).toHaveCSS('animation-name', 'none')
+  await page.clock.runFor(50000)
+  await expect(cue).not.toHaveAttribute('data-revealed')
 })

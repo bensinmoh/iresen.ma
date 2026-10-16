@@ -58,7 +58,9 @@ export function ProjectsExperience({
 
   const value = (key: string) =>
     typeof current[key] === 'string' ? current[key].slice(0, 200) : ''
-  const programmes = [...new Set(records.map((p) => p.programme).filter(Boolean))]
+  const programmes = [
+    ...new Set([...records.map((p) => p.programme), value('programme')].filter(Boolean)),
+  ]
   const years = [...new Set(records.filter((p) => p.year !== null).map((p) => String(p.year)))]
     .sort()
     .reverse()
@@ -71,7 +73,7 @@ export function ProjectsExperience({
     status: projectStatuses.includes(value('status') as (typeof projectStatuses)[number])
       ? value('status')
       : '',
-    programme: programmes.includes(value('programme')) ? value('programme') : '',
+    programme: value('programme'),
   }
   const results = filterProjectRecords(records, filters, locale, (project) => [
     t(`domains.${project.domain}`),

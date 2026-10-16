@@ -1,3 +1,4 @@
+import { institutionalAffiliations } from '@/lib/institutions'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
@@ -33,7 +34,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
     title: t(`labs.${id}.title`),
     institution: t(`labs.${id}.institution`),
     city: t(`labs.${id}.city`),
-    discovery: `${original(`labs.${id}.title`)} ${original(`labs.${id}.institution`)} ${original(`labs.${id}.city`)} ${id === 'power-electronics' ? original('directory.name') : ''}`,
+    discovery: `${institutionalAffiliations(original(`labs.${id}.institution`), locale).searchText} ${original(`labs.${id}.title`)} ${original(`labs.${id}.institution`)} ${original(`labs.${id}.city`)} ${id === 'power-electronics' ? original('directory.name') : ''}`,
     ...(id === suppliedLaboratoryContact.id
       ? { contact: { name: t('directory.name'), email: suppliedLaboratoryContact.email } }
       : id === 'solar-energy'

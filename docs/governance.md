@@ -641,3 +641,37 @@ the radial connections, and retain the responsive member list. The mark no
 longer creates a standalone row or whitespace above the organisations when the
 hub diagram does not fit. Larger layouts retain the unchanged original logo.
 Source/format checks only; rendered review is blocked by browser authorization.
+
+## Current ministry titles — owner update, 2026-10-16
+
+The owner supplies [H24info's appointment list](https://h24info.ma/maroc/politique/officiel-roi-nomme-les-membres-du-nouveau-gouvernement/),
+published 16 October 2026 at 15:29 UTC, and requests current ministry titles site-wide.
+Update the three changed board-organisation labels and their section/search copy:
+
+- Economy, Finance and Public Performance.
+- Energy, Mines and Sustainable Development.
+- Industry, Trade, Investment and Economic Inclusion.
+
+Higher Education, Scientific Research and Innovation is unchanged in the supplied
+list. French follows the supplied list, with typographic normalization; EN/AR
+are working editorial adaptations under the existing locale review gates.
+Do not change board membership, officeholders, logos or institutional destinations
+from a title update. Historical report names/MTEDD credits and private references
+retain their period-specific wording and original bytes.
+
+Verification limit: the official Maroc.ma government directory still displays
+the preceding cabinet when consulted. H24info links the MAP announcement at
+`https://www.mapexpress.ma/actualite/flashinfo/sm-roi-preside-ceremonie-nomination-membres-du-nouveau-gouvernement-2/`;
+that endpoint returned HTTP 403 during review. Thus the supplied article is the
+source for these owner-commissioned current labels, not a claim of independently
+verified legal portfolio succession. Shared label/search sources remain synchronized.
+
+Verification: current labels appear in FR/EN/AR development HTML (HTTP 200).
+FR1440 desktop and AR390 mobile board labels were inspected without horizontal
+overflow. Exact local search finds governance for “Performance publique”,
+“Public Performance” and “الطاقة والمعادن”; “العمومي” also finds the updated Arabic
+finance label. The complete Arabic “الأداء العمومي” query does not match despite
+the updated body/body_norm being present in the public index; this is a separate
+Arabic hamza/tokenization limitation, not a missing title update. Local dev was
+restarted to refresh catalog state. Formatting/whitespace checks pass; full
+checks/CI/Git remain held under shared coordination.

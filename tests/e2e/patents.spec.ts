@@ -212,3 +212,27 @@ test('compact desktop filters and classic card motion respect reduced motion', a
       .evaluateAll((cards) => cards.flatMap((card) => card.getAnimations()).length),
   ).toBe(0)
 })
+
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: dedicated patents page reuses the Transfer catalogue`, async ({ page }) => {
+    await page.goto(pageHref('transfer', locale, 'adoption-initiatives'))
+    const section = page.locator('#adoption-initiatives')
+    await expect(section.locator('article:visible')).toHaveCount(6)
+    const original = await section.innerText()
+    await page.goto(pageHref('patents', locale))
+    await expect(page.locator('[data-patents-page] h1')).toHaveCount(1)
+    await expect(section.locator('article:visible')).toHaveCount(6)
+    expect(await section.innerText()).toBe(original)
+    await section.getByRole('searchbox').fill('37705')
+    await expect(section.locator('article:visible')).toHaveCount(1)
+    await expect(section.locator('#patent-37705')).toBeVisible()
+    for (const width of [390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 })
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1),
+      ).toBe(true)
+    }
+    await page.goto(pageHref('patents', locale, 'patent-53044'))
+    await expect(page.locator('#patent-53044')).toBeVisible()
+  })
+}

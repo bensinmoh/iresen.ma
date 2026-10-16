@@ -68,7 +68,7 @@ for (const locale of locales) {
       name: messages.Footer.socialLabel,
       exact: true,
     })
-    await expect(social.getByRole('link')).toHaveCount(3)
+    await expect(social.getByRole('link')).toHaveCount(footerSocialLinks.length)
     for (const link of footerSocialLinks) {
       await expect(social.getByRole('link', { name: new RegExp(link.name) })).toHaveAttribute(
         'href',

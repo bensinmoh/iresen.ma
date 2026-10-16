@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n/locales'
+import { pageHref } from '@/lib/site'
 
 export const projectDomains = [
   'thermal',
@@ -15,6 +16,7 @@ export const projectDomains = [
 ] as const
 export const projectStatuses = ['active', 'completed', 'planned'] as const
 export type ProjectRecord = {
+  institutionSearchText?: string
   id: string
   acronym: string
   title: Record<Locale, string>
@@ -90,6 +92,7 @@ export function filterProjectRecords(
         project.year,
         project.startText[locale],
         project.location[locale],
+        project.institutionSearchText,
         project.durationMonths,
         project.budgetMAD,
         project.budgetMAD === null ? '' : new Intl.NumberFormat(locale).format(project.budgetMAD),
@@ -118,4 +121,8 @@ export function filterProjectRecords(
 
 export function projectNoteHref(reference: string, locale: Locale) {
   return `/api/projects/${encodeURIComponent(reference)}/note?locale=${locale}`
+}
+
+export function programmeProjectsHref(programme: string, locale: Locale) {
+  return `${pageHref('projects', locale)}?${new URLSearchParams({ programme })}#find-project`
 }

@@ -7,7 +7,6 @@ import { pageHref } from '@/lib/site'
 import {
   roadmapDomains,
   roadmapDimensions,
-  roadmapMediaPath,
   roadmapDrawingPath,
   roadmapHeroPath,
 } from '@/lib/roadmap'
@@ -99,17 +98,10 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
                     <figure className={styles.artwork}>
                       <div className={styles.imageLayers}>
                         <Image
-                          src={roadmapMediaPath(id)}
+                          src={roadmapDrawingPath(id)}
                           alt={t(`chapters.${id}.imageAlt`)}
                           width={roadmapDimensions[id].width}
                           height={roadmapDimensions[id].height}
-                          sizes="(max-width: 63.99rem) 100vw, 55vw"
-                          className={styles.original}
-                        />
-                        <Image
-                          src={roadmapDrawingPath(id)}
-                          alt=""
-                          fill
                           sizes="(max-width: 63.99rem) 100vw, 55vw"
                           className={styles.drawing}
                         />
@@ -123,7 +115,7 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
                           {t('axes')}
                         </Heading>
                         {[0, 1, 2, 3].map((axis) => (
-                          <details key={axis} className={styles.axis}>
+                          <details key={axis} name={`roadmap-axes-${id}`} className={styles.axis}>
                             <summary>
                               <span>{t(`chapters.${id}.axes.${axis}.title`)}</span>
                               <RoadmapAxisIcon theme={id} axis={axis} className={styles.axisIcon} />

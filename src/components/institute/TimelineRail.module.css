@@ -1,0 +1,5 @@
+@media (min-width: 64.001rem) {
+  .controls {
+    padding-inline-start: clamp(8rem, 16vw, 20rem);
+  }
+}

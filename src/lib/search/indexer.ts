@@ -1,3 +1,7 @@
+import {
+  canonicalInstitutionNames as canonicalNames,
+  institutionalAffiliations,
+} from '../institutions'
 import { execFile } from 'node:child_process'
 import { readFile, realpath, stat } from 'node:fs/promises'
 import path from 'node:path'
@@ -252,7 +256,12 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
                   : source.origin === 'news'
                     ? 'news'
                     : mediaType(source.mime_type),
-          body: [source.body_text, richTextPlainText(source.rich_body), fileText]
+          body: [
+            canonicalNames(source.body_text ?? ''),
+            institutionalAffiliations(source.body_text ?? '', source.locale).searchText,
+            richTextPlainText(source.rich_body),
+            fileText,
+          ]
             .filter(Boolean)
             .join(' '),
           ...(source.published_at ? { publishedAt: source.published_at.toISOString() } : {}),
@@ -296,7 +305,11 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
                     kind === 'portrait' && assets.coordinatorName
                       ? assets.coordinatorName
                       : source.title,
-                  body: source.body_text ?? source.title,
+                  body:
+                    canonicalNames(source.body_text ?? source.title) +
+                    ' ' +
+                    institutionalAffiliations(source.body_text ?? source.title, source.locale)
+                      .searchText,
                   url: `${assetPath}?locale=${source.locale}`,
                   type: 'media',
                 },
@@ -324,7 +337,11 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
                   id: `project-note:${source.source_id}:${source.locale}`,
                   locale: source.locale,
                   title: source.title,
-                  body: source.body_text ?? source.title,
+                  body:
+                    canonicalNames(source.body_text ?? source.title) +
+                    ' ' +
+                    institutionalAffiliations(source.body_text ?? source.title, source.locale)
+                      .searchText,
                   url: `${notePath}?locale=${source.locale}`,
                   type: 'document',
                 },

@@ -103,3 +103,64 @@ Each research axis has a subject-specific outline SVG from Tabler Icons v3.35.0
 the title row, stretching to its available height, and replaces the chevron.
 The icon remains fixed when opening the native disclosure. Arabic follows the
 mirrored reading order. No raster icon or new dependency is introduced.
+
+## Viewport theme composition — owner correction, 2026-10-16
+
+The seven themes use a compact desktop scene with a minimum height of 100svh,
+height-aware heading, spacing and illustration sizing, and compact 44px minimum
+axis targets. Keep the complete heading, illustration, four closed axes, benefits
+and next-theme control together. Remove sticky illustration positioning; native
+scrolling and the existing once-per-visit arrival remain. No new scroll effect is
+commissioned yet. Intrinsic rows grow for open details, enlarged text or short
+windows instead of clipping content. Below 64rem, retain natural stacked reading.
+
+Verification: all three localized development routes return HTTP 200 with the
+seven theme sections intact. Scoped formatting and whitespace checks pass; no
+sticky declaration remains in the roadmap component styles. Latest rendered
+viewport-fit measurements remain pending because the existing browser preview
+is blocked; no production/browser suite ran while shared coordination is held.
+
+Next-theme anchor correction — 2026-10-16: on the roadmap only, remove the
+global 24px root scroll-padding gap and thematic scroll margins. Native next-theme
+links now align the target section flush to the viewport top, preserving hashes,
+history, keyboard navigation and reduced-motion behavior. The existing localized
+anchor E2E now expects alignment within 2px; execution remains held with the batch.
+
+Owner accordion correction — 2026-10-16: each theme groups its four native
+`details` with a shared, theme-specific `name`. Opening an axis closes the previous
+axis in that theme; all remain closed initially and the active one can be closed.
+The existing localized interaction test now checks opening the second closes the
+first. Native keyboard/no-JavaScript behavior remains available.
+
+Owner spacing correction — 2026-10-16: increase desktop space between the last
+axis and the intended-benefits box from 16px to the shared 24px token, matching
+the natural mobile gap while retaining the compact viewport composition.
+
+Owner drawing refinement — 2026-10-16: following the thematic-section work,
+remove the faint watercolor/photo underpainting from the seven illustrations.
+Render only the technical drawing, keeping its existing blue-grey/white treatments,
+arrival reveal and accessible image description. The drawing now supplies intrinsic
+image geometry; desktop viewport bounds remain. Original media bytes, source
+provenance and other page photographs remain unchanged.
+
+## Alternating technical-sheet backgrounds — latest owner clarification, 2026-10-16
+
+Apply the reference's technical-sheet language to the section background rather
+than interactive annotations on the illustration. Themes 1/3/5/7 have a subtle
+24px grid with 120px major lines and an inset hairline frame; themes 2/4/6 keep
+their existing flat surface. Light/dark contrast follows the section palette.
+No image pins, spotlights, new image derivatives, extra copy, dimensions or
+approval stamps are introduced. Keep native exclusive disclosures and all sources.
+
+A single bounded CSS reveal draws in the background grid/frame on arrival;
+reduced motion and no JavaScript show the full background. Focus settles the
+effect immediately. The observer no longer tracks scroll frames or changes image
+transforms. Existing desktop 100svh scenes and stacked mobile flow remain.
+
+Development review: FR1440×900 all seven closed themes measure 900px; alternating
+pseudo-elements follow 1/3/5/7 only. FR next-theme navigation aligns the target
+within 1px and opening a second axis closes the first. EN1440×900 dark Mobility
+and AR390×844 native accordions/RTL were inspected; mobile has no horizontal
+overflow. Scoped lint/format/whitespace checks pass. Reduced-motion coverage is
+source inspection only; full automated/production checks remain held. Canonical
+anchors, approved text and search projections are unchanged.

@@ -1,3 +1,5 @@
+import { programmeProjectsHref } from '@/lib/projects-model'
+import { callCopy } from '@/lib/call-copy'
 import { Heading } from '@/components/ui/Heading'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -171,6 +173,12 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
               ))}
           </ul>
         </section>
+        <div className={styles.projectsAction}>
+          <a className="button button-primary" href={programmeProjectsHref(call.acronym, locale)}>
+            {callCopy[locale].viewProjects}
+            <NavigationIcon name="arrow" />
+          </a>
+        </div>
       </div>
     </article>
   )

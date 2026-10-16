@@ -23,7 +23,7 @@ export const heroes = {
   },
   programmes: { photo: 'research', layout: 'center', stage: 'research', related: 'projects' },
   projects: { photo: 'team', layout: 'start', stage: 'research', related: 'workWithUs' },
-  platforms: { photo: 'platform-gep', layout: 'start', stage: 'research', related: 'network' },
+  platforms: { photo: 'platform-outdoor', layout: 'start', stage: 'research', related: 'network' },
   network: { photo: 'workshop', layout: 'end', stage: 'expertiseSkills', related: 'platforms' },
   transfer: { photo: 'research', layout: 'start', stage: 'research', related: 'workWithUs' },
   workWithUs: {
@@ -35,6 +35,7 @@ export const heroes = {
   news: { photo: 'solar-city', layout: 'start', stage: 'resources', related: 'events' },
   events: { photo: 'conference', layout: 'end', stage: 'resources', related: 'news' },
   publications: { photo: 'reading', layout: 'start', stage: 'resources', related: 'media' },
+  patents: { photo: 'research', layout: 'editorial', stage: 'resources', related: 'transfer' },
   media: { photo: 'media-library', layout: 'center', stage: 'resources', related: 'publications' },
   opportunities: {
     photo: 'careers-onboarding',

@@ -88,8 +88,14 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    target={link.id === 'linkedin' ? '_blank' : undefined}
-                    rel={link.id === 'linkedin' ? 'noopener noreferrer' : undefined}
+                    target={
+                      ['linkedin', 'facebook', 'instagram'].includes(link.id) ? '_blank' : undefined
+                    }
+                    rel={
+                      ['linkedin', 'facebook', 'instagram'].includes(link.id)
+                        ? 'noopener noreferrer'
+                        : undefined
+                    }
                     aria-label={footer('socialLink', { network: link.name })}
                   >
                     {link.id === 'researchgate' ? (

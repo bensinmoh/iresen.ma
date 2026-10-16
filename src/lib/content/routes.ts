@@ -19,6 +19,11 @@ export function newsHref(slug: string, locale: Locale): string {
 
 /** Accept only the one implemented article family, in canonical or localized form. */
 export function newsSlugFromPath(pathname: string, locale: Locale): string | null {
+  try {
+    pathname = decodeURI(pathname)
+  } catch {
+    return null
+  }
   if (isNewsListingPath(pathname, locale)) return null
   for (const base of [pages.news.path, pages.news.pathnames[locale]]) {
     if (!pathname.startsWith(`${base}/`)) continue

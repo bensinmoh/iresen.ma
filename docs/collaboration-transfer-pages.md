@@ -70,3 +70,17 @@ live Figma cooperation frame within the current shared rules. FR/EN canonical
 paths change together; permanent redirects retain the former URLs. Shared
 navigation, footer, SEO and search consume the updated central definition.
 See [scope and reference decisions](collaborate-page.md).
+
+Owner withdrawal — 2026-10-16: remove the organisation-contributions closing
+note beginning “Le besoin détermine les contributions pertinentes” and its
+divider in FR/EN/AR. The optional note is absent from localized content; the
+existing conditional paragraph therefore renders neither text nor separator,
+and shared section/page search projections no longer include it.
+
+Owner follow-up — 2026-10-16: also withdraw the `need-to-project` note
+beginning “Ces repères ne constituent pas une procédure d’admission” in FR/EN/AR.
+Its conditional paragraph/divider and derived search text disappear together.
+
+Owner follow-up — 2026-10-16: remove the `choose-pathway` closing note
+beginning “Ces entrées se complètent” and its divider in FR/EN/AR, including
+the derived search text. Other section content and destinations are preserved.

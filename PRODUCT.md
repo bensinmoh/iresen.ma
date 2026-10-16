@@ -27,7 +27,7 @@ for this branch. Final source verification/editorial approval stays separate.
 
 ## Implemented public journeys
 
-The only routing authority is `src/lib/site.ts`: 23 stable IDs, localized paths,
+The only routing authority is `src/lib/site.ts`: 24 stable IDs, localized paths,
 supported anchors and shared helpers. Six footer utilities include Useful links.
 News/event aliases, news listing and published call/news details reuse this map.
 Existing anchors remain compatible; route changes follow ADR0004 and update all
@@ -138,3 +138,9 @@ future status states are supported; no applications, alerts, results or download
 are invented. See [scope](docs/calls-catalogue-2026.md).
 
 Project editorial follow-ups (2026-10-15): homogeneous AI-assisted descriptions, shorter card previews, compact scientific-objective bullets and guarded local PDF actions. The source notice is withdrawn from UI/search. Current PDF files remain unchanged pending the updated list; withdrawn fictional PDFs remain absent.
+
+Institute editorial update — 2026-10-16: the owner-selected Éditorial variant
+replaces repeated mission chapters with one R&I core, three complementary native
+disclosures and three activity tabs. Exact mission, canonical anchors and existing
+hero/values/ambition/history/report survive. New FR/EN/AR interface copy retains
+editorial review status. [Scope and verification](docs/institute-editorial.md).

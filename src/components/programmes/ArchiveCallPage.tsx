@@ -1,3 +1,5 @@
+import { programmeProjectsHref } from '@/lib/projects-model'
+import { archiveProjectProgramme } from '@/lib/call-archives'
 import { CallThemeIcon } from './CallThemeIcon'
 import Image from 'next/image'
 import { callPartners } from '@/lib/call-partners'
@@ -143,6 +145,15 @@ export function ArchiveCallPage({
               ))}
             </ul>
           </section>
+          <div className={styles.projectsAction}>
+            <a
+              className="button button-primary"
+              href={programmeProjectsHref(archiveProjectProgramme(call), locale)}
+            >
+              {t.viewProjects}
+              <NavigationIcon name="arrow" />
+            </a>
+          </div>
         </aside>
       </div>
       {related.length > 0 && (
