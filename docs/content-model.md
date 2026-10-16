@@ -52,9 +52,22 @@ collection exists. See [careers scope](careers.md) for fields and lifecycle.
 
 ## Public release preparation — 2026-10-12
 
-Projects have no active data source after full demonstration withdrawal. Do not
-restore the former JSON/PDF model. Existing publication/patent files and CMS Calls
+The demonstration withdrawal is historical; the owner's 2026-10-15 commission
+restores a real source-backed Payload collection (see below). Do not restore the
+former fictional JSON/PDF records. Existing publication/patent files and CMS Calls
 remain independent. Useful links is localized static content, not a new collection.
 `public_search_limits` is a private operational table with HMAC keys, per-minute
 counts and expiry; it contains no user account, typed query or raw address. Its
 explicit migration is registered; no generated Payload collection/type is added.
+
+## Sourced Projects — 2026-10-15
+
+The `projects` collection restores the previous record anatomy with optional
+unknown facts, localized narrative/objectives/theme/start-date/location, verified
+source provenance and existing publication/role/version gates. The owner-selected
+60 French source records are imported locally; EN/AR working translations remain
+in review. Scientific-production counters have no fields. Media use controlled
+external-storage endpoints; the live search projection and lifecycle triggers
+share publication/locale eligibility. See [schema/import/page scope](projects.md).
+
+Project follow-ups add a localized short `summary` and private `project_notes` metadata (locale, content revision, filename, SHA-256, generation date). Serving and discovery require a matching current localized revision and existing public project eligibility. Missing facts remain null; no scientific-production counters are modeled.

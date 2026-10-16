@@ -1,5 +1,11 @@
 # Verification without duplicate work
 
+When multiple chats share the checkout, first follow
+[chat orchestration](chat-orchestration.md). The owner's 2026-10-15 hold requires
+explicit readiness from every editing chat before tests/builds, pushes, CI or merge.
+Use the frozen-input check before validation and release the batch only after
+reconciliation. Existing full current-head CI and branch review gates still apply.
+
 Owner instruction — 2026-10-12: retain all CI checks, responsive review and
 FR/EN/AR coverage, while avoiding repeated checks of unchanged inputs.
 

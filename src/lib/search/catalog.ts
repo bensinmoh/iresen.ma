@@ -1,3 +1,7 @@
+import { callPartners } from '@/lib/call-partners'
+import { archiveCalls, archiveCard, archiveProfile } from '@/lib/call-archives'
+import { callCopy } from '@/lib/call-copy'
+import { callsListingHref } from '@/lib/calls'
 import infrastructurePhotos from '@/data/infrastructure-photos.json' with { type: 'json' }
 import { usefulLinks } from '@/lib/useful-links'
 import { isAiGeneratedImage } from '@/lib/image-provenance'
@@ -111,6 +115,27 @@ const assetLabels = {
 
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
+  ...Object.values(callPartners)
+    .filter((partner) => partner.id !== 'iresen')
+    .map((partner) => ({
+      id: `call-partner-${partner.id}`,
+      url: partner.logo,
+      type: 'media' as const,
+      text: {
+        fr: {
+          title: `Logo ${partner.name}`,
+          description: `Logo original de ${partner.name}, associé aux dispositifs et appels à projets IRESEN. Identification de l’organisme ou du programme, avec lien vers son site.`,
+        },
+        en: {
+          title: `${partner.name} logo`,
+          description: `Original ${partner.name} logo, associated with IRESEN programmes and calls. Identifies the organisation or programme and links to its website.`,
+        },
+        ar: {
+          title: `شعار ${partner.name}`,
+          description: `الشعار الأصلي لـ ${partner.name}، ضمن برامج ودعوات مشاريع IRESEN. تعريف بالهيئة أو البرنامج مع رابط إلى موقعه.`,
+        },
+      },
+    })),
   {
     id: 'programmes-collaborative-prototyping',
     url: '/images/programmes/collaborative-prototyping.webp',
@@ -183,7 +208,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Governance.scientists[id].name,
-          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
+          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}. ${messages[locale].Governance.scientists[id].country}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -413,19 +438,19 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
     type: 'media',
     text: {
       fr: {
-        title: 'Carte du monde — coopération et rayonnement',
+        title: 'Carte du monde — coopération et expertise scientifique',
         description:
-          'Silhouette vectorielle décorative des terres émergées, sans frontières, pays partenaires ni données de couverture. Illustration de la section coopération IRESEN : partenariats, programmes LEAP-RE, LEAP-SE, MED-GEM, réseaux et échanges scientifiques.',
+          'Silhouette vectorielle décorative des terres émergées, sans frontières, pays partenaires ni données de couverture. Illustration de la section coopération IRESEN : partenariats, programmes LEAP-RE, LEAP-SE, MED-GEM, réseaux et échanges scientifiques. Également réutilisée pour le réseau illustratif du Conseil scientifique ; la disposition des membres ne représente pas leurs localisations.',
       },
       en: {
-        title: 'World map — cooperation and outreach',
+        title: 'World map — cooperation and scientific expertise',
         description:
-          'Decorative vector land silhouette without borders, partner countries or coverage data. Illustration for IRESEN cooperation: partnerships, LEAP-RE, LEAP-SE, MED-GEM programmes, networks and scientific exchanges.',
+          'Decorative vector land silhouette without borders, partner countries or coverage data. Illustration for IRESEN cooperation: partnerships, LEAP-RE, LEAP-SE, MED-GEM programmes, networks and scientific exchanges. Also reused for the illustrative Scientific Council network; member placement does not represent their locations.',
       },
       ar: {
-        title: 'خريطة العالم — التعاون والإشعاع',
+        title: 'خريطة العالم — التعاون والخبرة العلمية',
         description:
-          'صورة ظلية متجهية زخرفية لليابسة دون حدود أو بلدان شريكة أو بيانات تغطية. توضيح لقسم تعاون IRESEN: الشراكات وبرامج LEAP-RE، LEAP-SE، MED-GEM والشبكات والتبادلات العلمية.',
+          'صورة ظلية متجهية زخرفية لليابسة دون حدود أو بلدان شريكة أو بيانات تغطية. توضيح لقسم تعاون IRESEN: الشراكات وبرامج LEAP-RE، LEAP-SE، MED-GEM والشبكات والتبادلات العلمية. تُستخدم كذلك لتوضيح شبكة المجلس العلمي، ولا يعكس ترتيب الأعضاء مواقعهم الجغرافية.',
       },
     },
   },
@@ -867,7 +892,9 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
       if (pageId === 'platforms') body.push(...engagementSearchText(catalog.Platforms))
       if (pageId === 'programmes') {
         const programmeCopy = Object.fromEntries(
-          Object.entries(catalog.Programmes).filter(([key]) => key !== 'current'),
+          Object.entries(catalog.Programmes).filter(
+            ([key]) => key !== 'current' && key !== 'history',
+          ),
         )
         body.push(
           ...engagementSearchText(programmeCopy),
@@ -969,12 +996,7 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           }),
         )
       if (pageId === 'institute') body.push('2011', catalog.Hero.founded)
-      if (pageId === 'projects')
-        body.push(
-          catalog.Projects.description,
-          catalog.Projects.updatingTitle,
-          catalog.Projects.updatingDescription,
-        )
+      if (pageId === 'projects') body.push(catalog.Projects.description)
       if (['legal', 'privacy', 'cookies', 'accessibility'].includes(pageId))
         body.push(...engagementSearchText(catalog.PageSections[pageId]))
       if (pageId === 'sitemap')
@@ -1043,12 +1065,16 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
                 note: catalog.Programmes.processNote,
               },
               'calls-for-projects': {
-                ...catalog.Programmes.history,
-                note: catalog.Programmes.historicalNote,
+                title: catalog.Programmes.history.title,
+                description: catalog.Programmes.history.description,
+                items: archiveCalls.map((call) => {
+                  const card = archiveCard(call, locale)
+                  return { title: card.title, description: card.summary }
+                }),
               },
               participate: {
                 title: catalog.Calls.active,
-                description: catalog.Calls.discoveryDescription,
+                description: callCopy[locale].description,
               },
               'practical-questions': catalog.Programmes.final,
             }
@@ -1086,6 +1112,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               body.push(...engagementSearchText(copy[entry.id as keyof typeof copy]))
             }
           }
+          if (pageId === 'governance' && entry.id === 'scientific-council')
+            body.push(...engagementSearchText(catalog.Governance.scientists))
           if (pageId === 'governance' && entry.id === 'bodies-responsibilities')
             body.push(...engagementSearchText(catalog.Governance.diagrams))
           if (pageId === 'governance' && entry.id === 'leadership-organisation')
@@ -1456,6 +1484,35 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           url: asset.url,
           type: asset.type,
         })
+    }
+  }
+  for (const locale of contentLocales) {
+    documents.push({
+      id: `page:calls-listing:${locale}`,
+      locale,
+      title: callCopy[locale].all,
+      body: callCopy[locale].description,
+      url: callsListingHref(locale),
+      type: 'page',
+    })
+    for (const call of archiveCalls) {
+      const card = archiveCard(call, locale)
+      const profile = archiveProfile(call)
+      documents.push({
+        id: `page:call-archive:${call.reference}:${locale}`,
+        locale,
+        title: card.title,
+        body: [
+          card.summary,
+          card.period,
+          callCopy[locale].states.closed,
+          ...card.themes,
+          profile.audience[locale],
+          ...(call.partners || profile.partners),
+        ].join(' '),
+        url: card.href,
+        type: 'page',
+      })
     }
   }
   return documents

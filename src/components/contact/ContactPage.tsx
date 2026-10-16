@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { Plus } from '@phosphor-icons/react/dist/ssr/Plus'
 import { Minus } from '@phosphor-icons/react/dist/ssr/Minus'
@@ -63,7 +64,9 @@ export async function ContactPage({
         </div>
         <div className="contact-headquarters">
           <SectionEyebrow tone="white">{t('headquarters.eyebrow')}</SectionEyebrow>
-          <h2>{t('headquarters.title')}</h2>
+          <Heading as="h2" size="section">
+            {t('headquarters.title')}
+          </Heading>
           <dl className="contact-details">
             <div>
               <dt>{t('headquarters.addressLabel')}</dt>
@@ -91,7 +94,9 @@ export async function ContactPage({
           <nav className="contact-departments" aria-label={t('departments.label')}>
             {departments.map((department) => (
               <div key={department}>
-                <h3>{t(`departments.${department}.title`)}</h3>
+                <Heading as="h3" size="card">
+                  {t(`departments.${department}.title`)}
+                </Heading>
                 <p>{t(`departments.${department}.description`)}</p>
                 <a href={topicHref(department)}>
                   {t('departments.action')} <NavigationIcon name="arrow-up-right" />
@@ -106,14 +111,16 @@ export async function ContactPage({
         id="page-sections"
         aria-labelledby="contact-platforms-heading"
       >
-        <h2 id="contact-platforms-heading">{t('platforms.title')}</h2>
+        <Heading as="h2" size="section" id="contact-platforms-heading">
+          {t('platforms.title')}
+        </Heading>
         <p>{t('platforms.description')}</p>
         <div className="contact-platform-grid">
           {platforms.map((platform) => (
             <article key={platform}>
-              <h3>
+              <Heading as="h3" size="card">
                 <bdi dir="ltr">{t(`platforms.${platform}.title`)}</bdi>
-              </h3>
+              </Heading>
               <p>{t(`platforms.${platform}.description`)}</p>
               <a href={pageHref('platforms', locale)}>
                 {t('platforms.action')} <NavigationIcon name="arrow-up-right" />
@@ -131,7 +138,9 @@ export async function ContactPage({
       >
         <div className="contact-faq-intro">
           <SectionEyebrow>{t('faq.eyebrow')}</SectionEyebrow>
-          <h2 id="contact-faq-heading">{t('faq.title')}</h2>
+          <Heading as="h2" size="section" id="contact-faq-heading">
+            {t('faq.title')}
+          </Heading>
           <p>{t('faq.description')}</p>
           <a href="#send-request" className="button button-primary">
             {t('faq.contact')} <span aria-hidden="true">⌃</span>

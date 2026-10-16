@@ -43,11 +43,6 @@
   max-inline-size: 17ch;
   margin: 0;
   color: inherit;
-  font-size: clamp(2rem, 3.125vw, 3.75rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
 }
 .context {
   margin-block-start: auto;
@@ -173,11 +168,6 @@
 .card h3 {
   margin: 0 0 var(--space-3);
   color: inherit;
-  font-size: clamp(1.25rem, 1.45vw, 1.75rem);
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
 }
 .description {
   margin: 0 0 var(--space-4);
@@ -246,9 +236,6 @@
 .network h3 {
   margin: 0 0 var(--space-2);
   color: inherit;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.5;
 }
 .network a {
   display: inline-flex;
@@ -272,11 +259,6 @@
   max-inline-size: 65ch;
   margin: 0;
   line-height: 1.65;
-}
-.section:dir(rtl) h2,
-.section:dir(rtl) h3 {
-  letter-spacing: normal;
-  line-height: 1.6;
 }
 .section:dir(rtl) a svg {
   transform: scaleX(-1);

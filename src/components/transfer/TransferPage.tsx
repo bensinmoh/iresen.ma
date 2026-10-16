@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -35,7 +36,9 @@ export async function TransferPage({ locale }: { locale: Locale }) {
         <SectionEyebrow tone={key === 'pathways' ? 'cyan' : 'blue'}>
           {t(`${key}.label`)}
         </SectionEyebrow>
-        <h2 id={`${id}-heading`}>{t(`${key}.title`)}</h2>
+        <Heading as="h2" size="section" id={`${id}-heading`}>
+          {t(`${key}.title`)}
+        </Heading>
       </div>
       <p>{t(`${key}.${key === 'doors' ? 'note' : 'description'}`)}</p>
     </header>
@@ -59,14 +62,16 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           </div>
           <div className={styles.introCopy}>
             <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-            <h2 id="results-to-transfer-heading">{t('title')}</h2>
+            <Heading as="h2" size="section" id="results-to-transfer-heading">
+              {t('title')}
+            </Heading>
             <p>{t('intro')}</p>
             <div className={styles.actions}>
               <a className="button button-primary" href="#build-transfer">
                 {t('innovationAction')}
                 <NavigationIcon name="arrow" />
               </a>
-              <a className={styles.link} href="#adoption-initiatives">
+              <a data-ui-link className={styles.link} href="#adoption-initiatives">
                 {t('exploreAction')}
                 <NavigationIcon name="arrow" />
               </a>
@@ -86,7 +91,9 @@ export async function TransferPage({ locale }: { locale: Locale }) {
                   <span>{String(index + 1).padStart(2, '0')}</span>
                   <ValorisationIcon name={processIcons[index]} />
                 </div>
-                <h3>{step}</h3>
+                <Heading as="h3" size="card">
+                  {step}
+                </Heading>
               </li>
             ))}
           </ol>
@@ -159,7 +166,9 @@ export async function TransferPage({ locale }: { locale: Locale }) {
             {(t.raw('pathways.items') as Item[]).map((item, index) => (
               <article key={item.title}>
                 <ValorisationIcon name={pathwayIcons[index]} className={styles.pathwayIcon} />
-                <h3>{item.title}</h3>
+                <Heading as="h3" size="card">
+                  {item.title}
+                </Heading>
                 <p>{item.description}</p>
               </article>
             ))}
@@ -176,7 +185,9 @@ export async function TransferPage({ locale }: { locale: Locale }) {
             className={styles.figures}
             aria-labelledby="valorisation-figures-heading"
           >
-            <h3 id="valorisation-figures-heading">{t('figures.label')}</h3>
+            <Heading as="h3" size="label" id="valorisation-figures-heading">
+              {t('figures.label')}
+            </Heading>
             <dl>
               <div>
                 <dt>{t('figures.filed')}</dt>
@@ -226,7 +237,9 @@ export async function TransferPage({ locale }: { locale: Locale }) {
                   />
                 </div>
                 <div className={styles.doorCopy}>
-                  <h3>{item.title}</h3>
+                  <Heading as="h3" size="card">
+                    {item.title}
+                  </Heading>
                   <p>{item.description}</p>
                   <a
                     className={index === 0 ? 'button button-primary' : styles.link}
@@ -239,7 +252,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
               </article>
             ))}
           </div>
-          <a className={styles.link} href={engagementContactHref(locale)}>
+          <a data-ui-link className={styles.link} href={engagementContactHref(locale)}>
             {t('doors.contact')}
             <NavigationIcon name="arrow" />
           </a>

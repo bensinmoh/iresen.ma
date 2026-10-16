@@ -75,7 +75,12 @@ export function HomeSectionNavigation({
           }
         `}</style>
       </noscript>
-      <ul className="container home-section-navigation-list horizontal-scroll">
+      <ul
+        className="container home-section-navigation-list horizontal-scroll"
+        data-ui-rail="navigation"
+        tabIndex={0}
+        aria-label={label}
+      >
         {items.map(({ id, label: itemLabel }) => (
           <li key={id}>
             <a href={`#${id}`} aria-current={activeId === id ? 'location' : undefined}>

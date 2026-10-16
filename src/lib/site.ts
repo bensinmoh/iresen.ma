@@ -25,6 +25,7 @@ export const pages = {
     anchors: ['about', 'mission', 'key-figures'],
   },
   governance: {
+    anchors: ['documents-contact'],
     path: '/institute/governance',
     pathnames: {
       fr: '/institut/gouvernance',

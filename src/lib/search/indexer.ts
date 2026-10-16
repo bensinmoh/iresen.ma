@@ -22,7 +22,7 @@ import type { PublicSearchDocument, SearchLocale } from './types'
 import { VOCABULARY_VERSION, writePublicVocabulary } from './vocabulary'
 
 const executeFile = promisify(execFile)
-type Origin = 'pages' | 'news' | 'media' | 'opportunities' | 'calls'
+type Origin = 'pages' | 'news' | 'media' | 'opportunities' | 'calls' | 'projects'
 type Source = {
   origin: Origin
   source_id: string
@@ -173,6 +173,8 @@ export async function extractPublicFileText(filename: string, mimeType: string):
 }
 
 function sourceUrl(source: Source): string | undefined {
+  if (source.origin === 'projects' && isCallReference(source.slug))
+    return `${pageHref('projects', source.locale)}?project=${encodeURIComponent(source.slug)}#project-details`
   if (source.origin === 'calls' && isCallReference(source.slug))
     return callHref(source.slug, source.locale)
   if (
@@ -241,13 +243,15 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
           title: source.title,
           url,
           type:
-            source.origin === 'pages' || source.origin === 'calls'
-              ? 'page'
-              : source.origin === 'opportunities'
-                ? 'section'
-                : source.origin === 'news'
-                  ? 'news'
-                  : mediaType(source.mime_type),
+            source.origin === 'projects'
+              ? 'project'
+              : source.origin === 'pages' || source.origin === 'calls'
+                ? 'page'
+                : source.origin === 'opportunities'
+                  ? 'section'
+                  : source.origin === 'news'
+                    ? 'news'
+                    : mediaType(source.mime_type),
           body: [source.body_text, richTextPlainText(source.rich_body), fileText]
             .filter(Boolean)
             .join(' '),
@@ -262,6 +266,75 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
             source.source_revision,
           ),
         )
+        if (
+          source.origin === 'projects' &&
+          source.rich_body &&
+          typeof source.rich_body === 'object'
+        ) {
+          const assets = source.rich_body as {
+            imagePath?: string
+            portraitPath?: string
+            coordinatorName?: string
+            notePath?: string
+          }
+          for (const [kind, assetPath] of [
+            ['image', assets.imagePath],
+            ['portrait', assets.portraitPath],
+          ]) {
+            if (
+              typeof assetPath !== 'string' ||
+              !/^\/api\/projects\/[a-z0-9-]+\/asset\/(image|portrait)$/.test(assetPath)
+            )
+              continue
+            vocabularyDocuments.push(
+              await writeDocument(
+                client,
+                {
+                  id: `projects-media:${source.source_id}:${kind}:${source.locale}`,
+                  locale: source.locale,
+                  title:
+                    kind === 'portrait' && assets.coordinatorName
+                      ? assets.coordinatorName
+                      : source.title,
+                  body: source.body_text ?? source.title,
+                  url: `${assetPath}?locale=${source.locale}`,
+                  type: 'media',
+                },
+                source.origin,
+                source.source_id,
+                source.source_revision,
+              ),
+            )
+          }
+        }
+        if (
+          source.origin === 'projects' &&
+          source.rich_body &&
+          typeof source.rich_body === 'object'
+        ) {
+          const notePath = (source.rich_body as { notePath?: string }).notePath
+          if (
+            typeof notePath === 'string' &&
+            /^\/api\/projects\/[a-z0-9-]+\/note$/.test(notePath)
+          ) {
+            vocabularyDocuments.push(
+              await writeDocument(
+                client,
+                {
+                  id: `project-note:${source.source_id}:${source.locale}`,
+                  locale: source.locale,
+                  title: source.title,
+                  body: source.body_text ?? source.title,
+                  url: `${notePath}?locale=${source.locale}`,
+                  type: 'document',
+                },
+                source.origin,
+                source.source_id,
+                source.source_revision,
+              ),
+            )
+          }
+        }
         if (source.origin === 'opportunities' && source.slug) {
           vocabularyDocuments.push(
             await writeDocument(
@@ -357,7 +430,7 @@ export function stopSearchWorker(): void {
 export async function rebuildSearchIndex(): Promise<number> {
   await initializeSearchCatalog()
   await searchDatabase().query(`INSERT INTO search_index_jobs (origin, source_id)
-    SELECT 'pages', id::text FROM pages UNION ALL SELECT 'news', id::text FROM news UNION ALL SELECT 'media', id::text FROM media UNION ALL SELECT 'opportunities', id::text FROM opportunities UNION ALL SELECT 'calls', id::text FROM calls
+    SELECT 'pages', id::text FROM pages UNION ALL SELECT 'news', id::text FROM news UNION ALL SELECT 'media', id::text FROM media UNION ALL SELECT 'opportunities', id::text FROM opportunities UNION ALL SELECT 'calls', id::text FROM calls UNION ALL SELECT 'projects', id::text FROM projects
     ON CONFLICT (origin, source_id) DO UPDATE SET next_try=now(), attempts=0`)
   // Removed/private/stale rows cannot survive even an interrupted rebuild.
   await searchDatabase()

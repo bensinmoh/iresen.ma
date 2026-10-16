@@ -44,7 +44,6 @@
   flex: 1;
   min-inline-size: 0;
   border: 0;
-  padding: 1rem;
   background: white;
 }
 .frequent {
@@ -106,10 +105,6 @@
   margin: 0;
 }
 .page h2 {
-  font-size: clamp(1.75rem, 2.6vw, 3.125rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
   margin: 0;
 }
 .catalogue {
@@ -184,10 +179,6 @@
   line-height: 1.6;
 }
 .article h3 {
-  font-size: clamp(1.125rem, 1.4vw, 1.55rem);
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
   margin: 0 0 1rem;
 }
 .article h3 a:hover {
@@ -206,11 +197,8 @@
 }
 .read {
   display: inline-flex;
-  gap: 0.65rem;
   align-items: center;
   color: var(--color-blue);
-  font-size: var(--font-size-label);
-  font-weight: 700;
   padding-block: 0.75rem;
   margin-block-start: 0.75rem;
 }
@@ -360,9 +348,6 @@
   }
   .search input {
     flex: none;
-    min-block-size: 3.5rem;
-    border-radius: var(--radius-action);
-    padding: 1rem 1.25rem;
   }
   .search button {
     inline-size: 100%;
@@ -391,5 +376,17 @@
   .figureTrack > div {
     padding-inline: 0 1.5rem;
     align-items: start;
+  }
+}
+
+@media (max-width: 40rem) {
+  .hero h1 {
+    font-size: var(--hero-title-size);
+    line-height: 1.1875;
+    letter-spacing: -0.02em;
+  }
+  .hero h1:dir(rtl) {
+    line-height: 1.45;
+    letter-spacing: normal;
   }
 }

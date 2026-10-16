@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { CalendarBlank } from '@phosphor-icons/react/dist/ssr/CalendarBlank'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
@@ -27,9 +28,11 @@ export async function NewsSection({
       <header className={styles.header}>
         <div>
           <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-          <h2 id="home-news-heading">{t('title')}</h2>
+          <Heading as="h2" size="display" id="home-news-heading">
+            {t('title')}
+          </Heading>
         </div>
-        <a href={newsListingHref(locale)} className={styles.all}>
+        <a data-ui-link href={newsListingHref(locale)} className={styles.all}>
           {t('all')}
           <NavigationIcon name="arrow" />
         </a>
@@ -41,13 +44,13 @@ export async function NewsSection({
               <p className={styles.source}>
                 <bdi>{t('source')}</bdi>
               </p>
-              <h3 lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-                <a href={linkedInPostHref(post.id)}>
+              <Heading as="h3" size="card" lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+                <a href={linkedInPostHref(post.id)} target="_blank" rel="noopener noreferrer">
                   {t.has(`posts.${post.id.split(':').at(-1)}.title`)
                     ? t(`posts.${post.id.split(':').at(-1)}.title`)
                     : post.commentary || t('shared')}
                 </a>
-              </h3>
+              </Heading>
               {(post.publishedAt || post.publicationMonth) && (
                 <time dateTime={post.publishedAt ?? post.publicationMonth}>
                   <SiteIcon icon={CalendarBlank} size={22} />
@@ -59,7 +62,13 @@ export async function NewsSection({
                   }).format(new Date(post.publishedAt ?? `${post.publicationMonth}-01T12:00:00Z`))}
                 </time>
               )}
-              <a href={linkedInPostHref(post.id)} className={styles.read}>
+              <a
+                data-ui-link
+                href={linkedInPostHref(post.id)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.read}
+              >
                 {t('read')}
                 <NavigationIcon name="arrow" />
               </a>

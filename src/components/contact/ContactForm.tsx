@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 
 import { useState, useSyncExternalStore, type FormEvent } from 'react'
@@ -62,7 +64,9 @@ export function ContactForm({
       <div className="container">
         <div className="contact-form-heading">
           <SectionEyebrow centered>{t('eyebrow')}</SectionEyebrow>
-          <h2 id="contact-form-heading">{t('title')}</h2>
+          <Heading as="h2" size="section" id="contact-form-heading">
+            {t('title')}
+          </Heading>
           <p>{t('description')}</p>
         </div>
         <form
@@ -86,6 +90,7 @@ export function ContactForm({
                   )}
                 </label>
                 <input
+                  data-ui-field
                   id={`contact-${name}`}
                   name={name}
                   type={name === 'email' ? 'email' : name === 'phone' ? 'tel' : 'text'}
@@ -110,6 +115,7 @@ export function ContactForm({
           <div className="contact-field">
             <label htmlFor="contact-subject">{t('subject.label')}</label>
             <select
+              data-ui-field
               id="contact-subject"
               name="subject"
               required
@@ -133,6 +139,7 @@ export function ContactForm({
           <div className="contact-field">
             <label htmlFor="contact-message">{t('message.label')}</label>
             <textarea
+              data-ui-field
               id="contact-message"
               name="message"
               defaultValue={

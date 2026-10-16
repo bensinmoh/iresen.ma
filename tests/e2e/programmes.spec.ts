@@ -1,3 +1,5 @@
+import { callCopy } from '../../src/lib/call-copy'
+import { callsListingHref } from '../../src/lib/calls'
 import { test, expect } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
 import { pageHref } from '../../src/lib/site'
@@ -24,21 +26,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     )
     await expect(region.locator('#research-results img')).toHaveAttribute('src', /aquasolar/)
     await expect(region.locator('#project-lifecycle li')).toHaveCount(6)
-    await expect(region.locator('#calls-for-projects article[id^="historical-call-"]')).toHaveCount(
-      3,
-    )
-    const activeCount = await region.locator('#participate article').count()
-    await expect(region.locator('#participate h2')).toHaveText(
-      activeCount ? { fr, en, ar }[locale].Calls.active : copy.current.title,
-    )
+    await expect(region.locator('#calls-for-projects [data-call-card]')).toHaveCount(4)
     await region.locator('.hero-primary').click()
     await expect(page).toHaveURL(/#participate$/)
-    await expect(region.locator('#participate h2')).toBeInViewport()
-    const disclosure = region.locator('details').first()
-    await disclosure.locator('summary').focus()
-    await page.keyboard.press('Enter')
-    await expect(disclosure).toHaveAttribute('open', '')
-    await expect(disclosure.locator('a')).toHaveAttribute('href', /uit.ac.ma/)
+    await expect(region.locator('#participate')).toBeInViewport()
+    await region.getByRole('link', { name: callCopy[locale].all, exact: true }).click()
+    await expect(page).toHaveURL(callsListingHref(locale))
+    await expect(page.locator('[data-call-origin="archive"]')).toHaveCount(21)
+    await page.goto(pageHref('programmes', locale))
     await region.locator('#practical-questions a').first().click()
     await expect(page).toHaveURL(`${pageHref('contact', locale)}?subject=agency`)
     await expect(page.locator('select[name="subject"]')).toHaveValue('agency')
@@ -51,8 +46,8 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     )
     const results = (await response.json()).items as { id: string; url: string }[]
     expect(
-      results.find(({ id }) => id === `section:programmes:calls-for-projects:${locale}`)?.url,
-    ).toBe(pageHref('programmes', locale, 'calls-for-projects'))
+      results.find(({ id }) => id === `page:call-archive:green-innoboost-2-2020:${locale}`)?.url,
+    ).toBe(pageHref('programmes', locale) + '/green-innoboost-2-2020')
     for (const width of [320, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       await page.evaluate(() => document.fonts.ready)
@@ -99,8 +94,10 @@ test('Arabic programme content and archives work without JavaScript', async ({ b
   await page.goto(pageHref('programmes', 'ar'))
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   const archives = page.locator('[data-programmes-page] #calls-for-projects')
-  await archives.locator('details summary').first().click()
-  await expect(archives.locator('details[open] a')).toBeVisible()
+  await expect(archives.locator('[data-call-card]')).toHaveCount(4)
+  await archives.getByRole('link', { name: callCopy.ar.all, exact: true }).click()
+  await expect(page.locator('[data-call-origin="archive"]')).toHaveCount(21)
+  await page.goto(pageHref('programmes', 'ar'))
   await expect(page.locator('#project-lifecycle li')).toHaveCount(6)
   await context.close()
 })

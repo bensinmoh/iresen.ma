@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import type { Locale } from '@/i18n/locales'
 import type { PageId } from '@/lib/site'
 import { findPublishedPage } from '@/lib/content/queries'
@@ -8,7 +9,9 @@ export async function PublishedPageContent({ pageId, locale }: { pageId: PageId;
   if (!content) return null
   return (
     <article className="published-content" id="published-content" aria-labelledby="published-title">
-      <h2 id="published-title">{content.title}</h2>
+      <Heading as="h2" size="section" id="published-title">
+        {content.title}
+      </Heading>
       <p className="published-summary">{content.summary}</p>
       <PublishedBody body={content.body} />
     </article>

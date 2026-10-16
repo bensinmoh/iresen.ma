@@ -21,11 +21,6 @@
   max-inline-size: 30ch;
   margin: 0;
   color: inherit;
-  font-size: var(--font-size-research-heading);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: calc(7 / 6);
-  text-wrap: pretty;
 }
 
 .chooser {
@@ -134,9 +129,6 @@
 .axes h3 {
   margin: 0;
   color: inherit;
-  font-size: var(--font-size-body);
-  font-weight: 500;
-  line-height: 1.5;
   overflow-wrap: anywhere;
 }
 .action {
@@ -179,13 +171,6 @@
     rgb(18 52 90 / 35%) 75%,
     rgb(18 52 90 / 12%) 100%
   );
-}
-.section:dir(rtl) .header h2 {
-  letter-spacing: normal;
-  line-height: 1.5;
-}
-.section:dir(rtl) .axes h3 {
-  line-height: 1.8;
 }
 .section:dir(rtl) .action svg {
   transform: scaleX(-1);
@@ -236,10 +221,6 @@
   .description {
     font-size: var(--font-size-action);
     margin-block-end: var(--space-6);
-  }
-
-  .axes h3 {
-    font-size: var(--font-size-body);
   }
   .panorama {
     position: absolute;

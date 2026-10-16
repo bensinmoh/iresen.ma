@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import Image from 'next/image'
 import { useLayoutEffect, useRef, useState } from 'react'
 import type { Locale } from '@/i18n/locales'
@@ -113,7 +115,13 @@ export function PhotoGallery({
 
   return (
     <>
-      <div className={styles.filters} aria-label={copy.all}>
+      <div
+        className={styles.filters}
+        role="group"
+        aria-label={copy.all}
+        data-ui-rail="filters"
+        tabIndex={0}
+      >
         {['all', ...Object.keys(copy.categories)].map((key) => (
           <button
             key={key}
@@ -166,7 +174,9 @@ export function PhotoGallery({
                 </a>
                 <figcaption>
                   <span>{copy.categories[photo.category]}</span>
-                  <h3>{photo.title[locale]}</h3>
+                  <Heading as="h3" size="compact">
+                    {photo.title[locale]}
+                  </Heading>
                 </figcaption>
               </figure>
             ))}
@@ -192,9 +202,9 @@ export function PhotoGallery({
         }}
       >
         <div className={styles.dialogBar}>
-          <h2 id="photo-dialog-title">
+          <Heading as="h2" size="compact" id="photo-dialog-title">
             {isBiography ? `${copy.biography} — ${samirBiography.name}` : active?.title[locale]}
-          </h2>
+          </Heading>
           <button
             type="button"
             className={styles.iconButton}
@@ -213,7 +223,9 @@ export function PhotoGallery({
                 dir={locale === 'ar' ? 'rtl' : 'ltr'}
                 className={styles.biographyText}
               >
-                <h3>{samirBiography.name}</h3>
+                <Heading as="h3" size="compact">
+                  {samirBiography.name}
+                </Heading>
                 <div className={styles.biographyRoles}>
                   {samirBiography.roles.map((role) => (
                     <p key={role}>{role}</p>

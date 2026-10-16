@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
@@ -24,7 +25,9 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
       <div className={styles.layout}>
         <header className={styles.introduction}>
           <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
-          <h2 id="platforms-heading">{t('title')}</h2>
+          <Heading as="h2" size="display" id="platforms-heading">
+            {t('title')}
+          </Heading>
           <div className={styles.context}>
             <p>{t('description')}</p>
             <nav aria-label={t('navigation')} className={styles.destinations}>
@@ -73,9 +76,9 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
                     />
                   </div>
                   <div className={styles.summary}>
-                    <h3 id={`platform-${platform.id}-heading`}>
+                    <Heading as="h3" size="card" id={`platform-${platform.id}-heading`}>
                       <bdi>{t(`platforms.${platform.id}.name`)}</bdi>
-                    </h3>
+                    </Heading>
                     <div className={styles.details} data-platform-details>
                       <p className={styles.description}>
                         {t(`platforms.${platform.id}.description`)}
@@ -105,11 +108,11 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
               <PlatformNetworkIcon kind={id} />
             </div>
             <div className={styles.networkCopy}>
-              <h3 id={`platform-network-${id}-heading`}>
+              <Heading as="h3" size="card" id={`platform-network-${id}-heading`}>
                 <a href={pageHref('network', locale)}>
                   <span>{t(`network.${id}.title`)}</span> <NavigationIcon name="arrow" />
                 </a>
-              </h3>
+              </Heading>
               <p>{t(`network.${id}.description`)}</p>
             </div>
           </article>

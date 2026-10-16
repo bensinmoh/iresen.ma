@@ -63,9 +63,6 @@
 .secondary {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  min-block-size: 2.75rem;
-  font-weight: 600;
   text-underline-offset: 0.3rem;
 }
 .secondary svg {
@@ -85,9 +82,6 @@
 }
 .strategy h2 {
   max-inline-size: 18ch;
-  font-size: clamp(2rem, 3.5vw, 3.75rem);
-  line-height: 1.15;
-  text-wrap: balance;
 }
 .strategy p {
   line-height: 1.7;
@@ -109,7 +103,6 @@
   padding-block-start: 2rem;
 }
 .steps h3 {
-  font-size: 1.75rem;
   color: var(--color-blue);
   margin-block-end: 1rem;
 }
@@ -157,11 +150,6 @@
 }
 .titleFrame h2 {
   max-inline-size: 32ch;
-  font-size: clamp(2.25rem, 4vw, 4.75rem);
-  line-height: 1.12;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
   transform: translateY(calc((1 - var(--arrival)) * 2rem));
 }
 .headline {
@@ -218,8 +206,6 @@
 }
 .axes h3,
 .benefits h3 {
-  font-size: var(--font-size-label);
-  font-weight: 600;
   margin-block-end: 0.75rem;
 }
 .axis {
@@ -364,9 +350,6 @@
   text-align: center;
 }
 .collaboration h2 {
-  font-size: clamp(2rem, 3vw, 3.25rem);
-  line-height: 1.2;
-  text-wrap: balance;
   margin-block-end: 1.5rem;
 }
 .collaboration p {
@@ -380,7 +363,6 @@
   margin-block-start: 2rem;
 }
 .hero:lang(ar) h1,
-.panel:lang(ar) h2,
 .label:lang(ar) {
   letter-spacing: normal;
   line-height: 1.3;
@@ -455,7 +437,6 @@
   }
   .titleFrame h2 {
     max-inline-size: none;
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
   }
   .description {
     max-inline-size: 75ch;
@@ -470,7 +451,9 @@
     padding-block-end: 3rem;
   }
   .heroContent h1 {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: var(--hero-title-size);
+    line-height: 1.1875;
+    letter-spacing: -0.02em;
   }
   .tagline {
     font-size: 1.25rem;
@@ -505,11 +488,7 @@
     padding-block-start: 1.25rem;
   }
   .steps h3 {
-    font-size: 1.5rem;
     margin-block-end: 0.5rem;
-  }
-  .titleFrame h2 {
-    font-size: 2rem;
   }
   .headline {
     font-size: 1.125rem;
@@ -522,9 +501,6 @@
   }
   .collaboration .secondary {
     justify-content: center;
-  }
-  .hero .secondary {
-    font-size: 0.9375rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -1,5 +1,7 @@
 'use client'
 
+import { Heading } from '@/components/ui/Heading'
+
 import { Sun } from '@phosphor-icons/react/dist/ssr/Sun'
 import { BatteryCharging } from '@phosphor-icons/react/dist/ssr/BatteryCharging'
 import { Circuitry } from '@phosphor-icons/react/dist/ssr/Circuitry'
@@ -184,6 +186,7 @@ export function LaboratoryDirectory({
             <label htmlFor="laboratory-query">{labels.label}</label>
             <div>
               <input
+                data-ui-field
                 id="laboratory-query"
                 type="search"
                 value={draft}
@@ -199,30 +202,46 @@ export function LaboratoryDirectory({
               </button>
             </div>
           </form>
-          <div className={styles.filters} role="group" aria-label={labels.theme}>
-            <button
-              type="button"
-              aria-pressed={!topic}
-              onClick={() => {
-                setSelected(null)
-                setTopic('')
-              }}
+          <div className={styles.filterToolbar}>
+            <div
+              className={styles.filters}
+              role="group"
+              aria-label={labels.theme}
+              data-ui-rail="filters"
+              tabIndex={0}
             >
-              {labels.all}
-            </button>
-            {laboratoryTopics.map((id) => (
               <button
-                key={id}
                 type="button"
-                aria-pressed={topic === id}
+                aria-pressed={!topic}
                 onClick={() => {
                   setSelected(null)
-                  setTopic(id)
+                  setTopic('')
                 }}
               >
-                {labels.topics[id]}
+                {labels.all}
               </button>
-            ))}
+              {laboratoryTopics.map((id) => (
+                <button
+                  key={id}
+                  type="button"
+                  aria-pressed={topic === id}
+                  onClick={() => {
+                    setSelected(null)
+                    setTopic(id)
+                  }}
+                >
+                  {labels.topics[id]}
+                </button>
+              ))}
+            </div>
+            <button
+              className={styles.resetFilters}
+              type="button"
+              onClick={reset}
+              disabled={!query && !topic}
+            >
+              {labels.reset}
+            </button>
           </div>
         </div>
       </div>
@@ -230,11 +249,6 @@ export function LaboratoryDirectory({
         <p role="status" aria-live="polite" aria-atomic="true">
           {labels.results.replace('{count}', String(visible.length))}
         </p>
-        {(query || topic) && (
-          <button type="button" onClick={reset}>
-            {labels.reset}
-          </button>
-        )}
       </div>
       <div
         className={styles.explorer}
@@ -336,7 +350,9 @@ export function LaboratoryDirectory({
                   >
                     <SiteIcon icon={topicIcons[active.topic]} />
                   </span>
-                  <h3 id="map-laboratory-title">{active.title}</h3>
+                  <Heading as="h3" size="card" id="map-laboratory-title">
+                    {active.title}
+                  </Heading>
                   <p className={styles.affiliation}>{active.institution}</p>
                   <p className={styles.city}>{active.city}</p>
                 </div>

@@ -1,5 +1,30 @@
 # IRESEN coding entrypoint
 
+## Shared-checkout orchestration — 2026-10-15
+
+Before editing, read [the chat coordination protocol](docs/chat-orchestration.md)
+and run `node scripts/coordinate-work.mjs status`. The owner requires all editing
+chats to finish before tests/CI/merge. Join with your stable workstream ID, report
+only your own readiness, and preserve concurrent work. While held, do not push,
+dispatch CI, run full tests/builds or merge. Frozen batches allow checks but no
+source edits. Start a new hold before further editing. Do not bypass or delete
+the local registry. This supersedes automatic completion until the batch is ready.
+
+## Sourced project restoration — 2026-10-15
+
+The owner now commissions the 60 real projects linked from IRESEN's Agence de
+Moyens page, local database population, EN/AR working translations and restoration
+of the former catalogue interface. This supersedes the empty-page state only.
+Scientific-production counters are explicitly excluded; unsupported facts stay
+empty. Keep fictional records/PDFs withdrawn; preserve original hero/routes/anchors and
+locale publication gates. EN/AR remain in review; local review is explicitly gated
+and never enabled by `PUBLIC_RELEASE=true`. See [current scope](docs/projects.md).
+Owner follow-ups require homogeneous short descriptions/previews, compact objective
+bullets and local PDF actions. The historical-source notice is withdrawn from UI
+and search. Leave current PDF files unchanged until the updated project list.
+Coordinator follow-up: use `Prénom NOM` in FR/EN and Arabic-script names in AR;
+reuse the curated mapping and preserve existing PDF bytes for this name-only edit.
+
 ## Current narrative implementation — 2026-10-14
 
 The owner now commissions the complete PDF narrative plan on the dedicated

@@ -193,3 +193,14 @@ Geometry checks verify the opening starts at the clicked point's center/diameter
 the final preview is circular and bounded, and mobile circles/filters are centered.
 Reduced motion disables the reveal. Desktop FR and mobile FR/AR captures inspected.
 Existing unit/search evidence remains valid for unchanged data; no deployment.
+
+## Stable filter reset — 2026-10-15
+
+The reset action now sits centered below the topic filters in all three locales.
+The filter strip stays on one line and scrolls natively when space runs out. It remains present and disabled when no query/topic is active, so
+changing or clearing a filter cannot insert an extra row above the map. Result
+counts retain their live status region; search metadata and anchors are unchanged.
+
+Check ledger: targeted ESLint, formatting and whitespace checks only. Production
+build, browser validation, full tests, CI and Git completion remain pending under
+the shared-checkout hold; no other workstream readiness is inferred.

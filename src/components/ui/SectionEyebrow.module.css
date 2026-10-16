@@ -40,3 +40,18 @@
 .eyebrow[data-section-eyebrow][data-tone='navy'] {
   color: var(--color-navy);
 }
+
+@media (max-width: 40rem) {
+  .eyebrow[data-section-eyebrow] {
+    gap: var(--space-2);
+    font-size: var(--font-size-label);
+    letter-spacing: 0.1em;
+  }
+  .eyebrow[data-section-eyebrow]:dir(rtl) {
+    letter-spacing: normal;
+  }
+  .leaf {
+    inline-size: 0.4375rem;
+    block-size: 0.6875rem;
+  }
+}

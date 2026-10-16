@@ -73,6 +73,7 @@ export interface Config {
     media: Media;
     opportunities: Opportunity;
     calls: Call;
+    projects: Project;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -86,6 +87,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     opportunities: OpportunitiesSelect<false> | OpportunitiesSelect<true>;
     calls: CallsSelect<false> | CallsSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -411,6 +413,80 @@ export interface Call {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  reference: string;
+  acronym: string;
+  title?: string | null;
+  description?: string | null;
+  summary?: string | null;
+  theme?: string | null;
+  startText?: string | null;
+  location?: string | null;
+  hostingPlatform?: string | null;
+  coordinatorName?: string | null;
+  coordinatorAffiliation?: string | null;
+  objectives?: string | null;
+  consortium?: string | null;
+  programme?: string | null;
+  selectionCallReference?: string | null;
+  launchYear?: number | null;
+  domain?:
+    | (
+        | 'thermal'
+        | 'grids'
+        | 'efficiency'
+        | 'photovoltaic'
+        | 'wind'
+        | 'hydrogen'
+        | 'storage'
+        | 'biomass'
+        | 'materials'
+        | 'water'
+        | 'other'
+      )
+    | null;
+  projectStatus?: ('active' | 'completed' | 'planned') | null;
+  durationMonths?: number | null;
+  budgetMAD?: number | null;
+  coordinatorEmail?: string | null;
+  coordinatorPhone?: string | null;
+  imagePath?: string | null;
+  portraitPath?: string | null;
+  /**
+   * Verified partner names and controlled local asset URLs only.
+   */
+  consortiumLogos?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  sourceUrl?: string | null;
+  sourceHash?: string | null;
+  retrievedAt?: string | null;
+  translationReview?: ('source' | 'pending' | 'approved') | null;
+  /**
+   * Approval applies only to the selected language. A publisher then publishes the revision.
+   */
+  publicationStatus: 'draft' | 'review' | 'published';
+  visibility: 'private' | 'public';
+  editorialOwner?: (number | null) | User;
+  /**
+   * Private editorial notes; excluded from public API responses.
+   */
+  internalNotes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -456,6 +532,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'calls';
         value: number | Call;
+      } | null)
+    | ({
+        relationTo: 'projects';
+        value: number | Project;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -653,6 +733,48 @@ export interface CallsSelect<T extends boolean = true> {
   conditionsDocument?: T;
   submissionUrl?: T;
   cancelled?: T;
+  publicationStatus?: T;
+  visibility?: T;
+  editorialOwner?: T;
+  internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  reference?: T;
+  acronym?: T;
+  title?: T;
+  description?: T;
+  summary?: T;
+  theme?: T;
+  startText?: T;
+  location?: T;
+  hostingPlatform?: T;
+  coordinatorName?: T;
+  coordinatorAffiliation?: T;
+  objectives?: T;
+  consortium?: T;
+  programme?: T;
+  selectionCallReference?: T;
+  launchYear?: T;
+  domain?: T;
+  projectStatus?: T;
+  durationMonths?: T;
+  budgetMAD?: T;
+  coordinatorEmail?: T;
+  coordinatorPhone?: T;
+  imagePath?: T;
+  portraitPath?: T;
+  consortiumLogos?: T;
+  sourceUrl?: T;
+  sourceHash?: T;
+  retrievedAt?: T;
+  translationReview?: T;
   publicationStatus?: T;
   visibility?: T;
   editorialOwner?: T;

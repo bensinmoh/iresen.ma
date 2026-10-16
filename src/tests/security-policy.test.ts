@@ -16,8 +16,12 @@ describe('public production boundaries', () => {
   })
   it('allows public media bytes only, never raw collections or writes', () => {
     expect(publicCmsRequestAllowed('GET', '/api/media/file/photo.webp')).toBe(true)
+    expect(publicCmsRequestAllowed('GET', '/api/projects/microcsp/asset/image')).toBe(true)
+    expect(publicCmsRequestAllowed('POST', '/api/projects/microcsp/asset/image')).toBe(false)
     for (const path of [
       '/api/users',
+      '/api/projects',
+      '/api/projects/microcsp/asset/secret',
       '/api/pages',
       '/api/users/login',
       '/api/media/file/a/../secret',

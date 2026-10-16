@@ -22,11 +22,6 @@
 .introduction h2 {
   margin-block: var(--space-4) 0;
   max-inline-size: 25ch;
-  font-size: clamp(2rem, 2.6vw, 3.125rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
   overflow-wrap: anywhere;
 }
 .introduction p,
@@ -63,11 +58,6 @@
 }
 .items h3 {
   margin: 0 0 var(--space-3);
-  font-size: clamp(1.25rem, 1.4vw, 1.625rem);
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
 }
 .items p {
   color: var(--color-text-muted);
@@ -75,11 +65,7 @@
 .link {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-4);
-  min-block-size: 2.75rem;
   margin-block-start: var(--space-3);
-  font-size: var(--font-size-label);
-  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
@@ -113,7 +99,6 @@
 }
 .needs .introduction h2 {
   max-inline-size: 22ch;
-  font-size: clamp(2rem, 3vw, 3.5rem);
 }
 .needs .introduction > p {
   margin-block-start: var(--space-6);
@@ -208,18 +193,10 @@
 }
 .contact h2 {
   max-inline-size: none;
-  font-size: clamp(2.5rem, 5vw, 5rem);
 }
 .contact .introduction > p {
   margin: var(--space-4) auto 0;
   max-inline-size: 60ch;
-}
-.page:dir(rtl) h2,
-.page:dir(rtl) h3 {
-  letter-spacing: normal;
-}
-.page:dir(rtl) h2 {
-  line-height: 1.45;
 }
 .page:dir(rtl) .link svg {
   transform: scaleX(-1);

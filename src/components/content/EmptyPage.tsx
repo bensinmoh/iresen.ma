@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { CookiePreferencesButton } from '@/components/privacy/CookieConsent'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -20,7 +21,9 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
     pageId === 'sitemap' ? (
       <div className="sitemap-grid">
         <section>
-          <h3>{navigation('label')}</h3>
+          <Heading as="h3" size="card">
+            {navigation('label')}
+          </Heading>
           <ul>
             {(['home', 'transfer', 'workWithUs', 'search', 'contact'] as const).map((id) => (
               <li key={id}>
@@ -31,7 +34,9 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
         </section>
         {navigationGroups.map((group) => (
           <section key={group.id}>
-            <h3>{navigation(group.id)}</h3>
+            <Heading as="h3" size="card">
+              {navigation(group.id)}
+            </Heading>
             <ul>
               {group.pages.map((id) => (
                 <li key={id}>
@@ -42,7 +47,9 @@ export async function EmptyPage({ pageId, locale }: { pageId: PageId; locale: Lo
           </section>
         ))}
         <section>
-          <h3>{navigation('usefulLinks')}</h3>
+          <Heading as="h3" size="card">
+            {navigation('usefulLinks')}
+          </Heading>
           <ul>
             {footerPageIds.map((id) => (
               <li key={id}>

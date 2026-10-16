@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
@@ -18,7 +19,9 @@ export async function InnovationSection({ locale }: { locale: Locale }) {
       <header className={styles.header}>
         <div>
           <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-          <h2 id="innovation-heading">{t('title')}</h2>
+          <Heading as="h2" size="section" id="innovation-heading">
+            {t('title')}
+          </Heading>
         </div>
         <p className={styles.introduction}>{t('description')}</p>
       </header>
@@ -29,7 +32,9 @@ export async function InnovationSection({ locale }: { locale: Locale }) {
               <bdi dir="ltr">{String(index + 1).padStart(2, '0')}</bdi>
               {index < innovationSteps.length - 1 && <NavigationIcon name="arrow" />}
             </div>
-            <h3>{t(`steps.${id}.title`)}</h3>
+            <Heading as="h3" size="compact">
+              {t(`steps.${id}.title`)}
+            </Heading>
             <p>{t(`steps.${id}.description`)}</p>
           </li>
         ))}
@@ -39,7 +44,7 @@ export async function InnovationSection({ locale }: { locale: Locale }) {
           <span>{t('support')}</span>
           <span>{t('feedback')}</span>
         </p>
-        <a className={styles.link} href={pageHref('transfer', locale)}>
+        <a data-ui-link className={styles.link} href={pageHref('transfer', locale)}>
           {t('action')} <NavigationIcon name="arrow" />
         </a>
       </div>

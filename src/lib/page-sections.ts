@@ -68,7 +68,6 @@ export const pageSections: Record<PageId, readonly SectionDefinition[]> = {
     { id: 'leadership-organisation' },
     { id: 'department-responsibilities' },
     { id: 'science-platforms' },
-    { id: 'documents-contact' },
   ],
   priorities: [
     { id: 'needs-challenges' },

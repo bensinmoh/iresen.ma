@@ -1,10 +1,19 @@
+import { CallsListingPage } from '@/components/programmes/CallsListingPage'
+import { ArchiveCallPage } from '@/components/programmes/ArchiveCallPage'
+import { findArchiveCall, archiveProfile } from '@/lib/call-archives'
+import { callCopy } from '@/lib/call-copy'
 import { headers } from 'next/headers'
 import { consumeSearchRequest } from '@/lib/security/search-limit'
 import { NetworkPage } from '@/components/network/NetworkPage'
 import { PlatformsPage } from '@/components/platforms/PlatformsPage'
 import { ProgrammesPage } from '@/components/programmes/ProgrammesPage'
 import { CallPage } from '@/components/programmes/CallPage'
-import { callHref, callReferenceFromPath } from '@/lib/calls'
+import {
+  callHref,
+  callReferenceFromPath,
+  callsListingReference,
+  callsListingHref,
+} from '@/lib/calls'
 import { findPublishedCall } from '@/lib/content/call-queries'
 import { GovernancePage } from '@/components/governance/GovernancePage'
 import { InstitutePage } from '@/components/institute/InstitutePage'
@@ -31,7 +40,7 @@ import { createPageMetadata } from '../../page-metadata'
 import { newsHref, newsSlugFromPath } from '@/lib/content/routes'
 import { findPublishedNewsBySlug } from '@/lib/content/queries'
 import { NewsArticle } from '@/components/content/NewsArticle'
-import { getSiteUrl, isIndexingEnabled } from '@/lib/site'
+import { getSiteUrl, isIndexingEnabled, pages } from '@/lib/site'
 import { searchAdapter, validateSearchInput, type SearchInput } from '@/lib/search/adapter'
 import { SearchPage } from '@/components/search/SearchPage'
 
@@ -42,9 +51,50 @@ type ContentPageProps = {
 
 export async function generateMetadata({ params }: ContentPageProps): Promise<Metadata> {
   const { locale, path } = await params
-  const pageId = pageIdFromPathname(`/${path.join('/')}`)
+  const pageId =
+    pageIdFromPathname(`/${path.join('/')}`) ??
+    (isLocale(locale) &&
+    [pages.programmes.pathnames[locale], encodeURI(pages.programmes.pathnames[locale])].includes(
+      `/${path.join('/')}`,
+    )
+      ? 'programmes'
+      : undefined)
   if (!isLocale(locale)) notFound()
   const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
+  if (callReference === callsListingReference)
+    return {
+      title: callCopy[locale].title,
+      description: callCopy[locale].description,
+      alternates: {
+        canonical: new URL(callsListingHref(locale), getSiteUrl()).toString(),
+        languages: Object.fromEntries(
+          ['fr', 'en', 'ar'].map((language) => [
+            language,
+            new URL(callsListingHref(language as 'fr' | 'en' | 'ar'), getSiteUrl()).toString(),
+          ]),
+        ),
+      },
+      robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
+    }
+  const archive = callReference ? findArchiveCall(callReference) : undefined
+  if (archive)
+    return {
+      title: archive.title,
+      description: archiveProfile(archive).summary[locale],
+      alternates: {
+        canonical: new URL(callHref(archive.reference, locale), getSiteUrl()).toString(),
+        languages: Object.fromEntries(
+          ['fr', 'en', 'ar'].map((language) => [
+            language,
+            new URL(
+              callHref(archive.reference, language as 'fr' | 'en' | 'ar'),
+              getSiteUrl(),
+            ).toString(),
+          ]),
+        ),
+      },
+      robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
+    }
   if (callReference) {
     const call = await findPublishedCall(callReference, locale)
     if (!call) return { robots: { index: false, follow: false } }
@@ -89,9 +139,19 @@ export async function generateMetadata({ params }: ContentPageProps): Promise<Me
 
 export default async function ContentPage({ params, searchParams }: ContentPageProps) {
   const { locale, path } = await params
-  const pageId = pageIdFromPathname(`/${path.join('/')}`)
+  const pageId =
+    pageIdFromPathname(`/${path.join('/')}`) ??
+    (isLocale(locale) &&
+    [pages.programmes.pathnames[locale], encodeURI(pages.programmes.pathnames[locale])].includes(
+      `/${path.join('/')}`,
+    )
+      ? 'programmes'
+      : undefined)
   if (!isLocale(locale)) notFound()
   const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
+  if (callReference === callsListingReference) return <CallsListingPage locale={locale} />
+  const archive = callReference ? findArchiveCall(callReference) : undefined
+  if (archive) return <ArchiveCallPage call={archive} locale={locale} />
   if (callReference) {
     const call = await findPublishedCall(callReference, locale)
     if (!call) notFound()
@@ -161,7 +221,7 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   }
   if (pageId === 'publications')
     return <PublicationsPage locale={locale} parameters={await searchParams} />
-  if (pageId === 'projects') return <ProjectsPage locale={locale} />
+  if (pageId === 'projects') return <ProjectsPage locale={locale} parameters={await searchParams} />
   if (pageId === 'governance') return <GovernancePage locale={locale} />
   if (pageId === 'network') return <NetworkPage locale={locale} />
   if (pageId === 'platforms') return <PlatformsPage locale={locale} />

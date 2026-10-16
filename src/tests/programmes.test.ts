@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { staticSearchDocuments, publicAssetReferences } from '@/lib/search/catalog'
 import { pageSections } from '@/lib/page-sections'
 import { pageHref, isSupportedAnchor } from '@/lib/site'
+import { archiveCalls, archiveCard } from '@/lib/call-archives'
 import fr from '@/messages/fr.json'
 import en from '@/messages/en.json'
 import ar from '@/messages/ar.json'
@@ -17,7 +18,13 @@ describe('programme manuscript and public discovery', () => {
         ['programmes-collaborations', copy.intro.items],
         ['research-results', copy.impact.items],
         ['project-lifecycle', copy.process.items],
-        ['calls-for-projects', copy.history.items],
+        [
+          'calls-for-projects',
+          archiveCalls.map((call) => {
+            const card = archiveCard(call, locale)
+            return { title: card.title, description: card.summary }
+          }),
+        ],
       ] as const) {
         const document = documents.find(
           ({ id }) => id === `section:programmes:${anchor}:${locale}`,

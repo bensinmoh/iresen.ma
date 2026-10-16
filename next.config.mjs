@@ -2,6 +2,11 @@ import { withPayload } from '@payloadcms/next/withPayload'
 import createNextIntlPlugin from 'next-intl/plugin'
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
+const buildDirectory = process.env.NEXT_BUILD_DIRECTORY || '.next'
+// An isolated review build may itself be inside .local. Keep its runtime chunks
+// while excluding private inputs, uploads, caches and every other local build.
+const localBuildRoot = buildDirectory.match(/^\.local\/([a-zA-Z0-9_-]+)(?:\/|$)/)?.[1]
+const localTraceExclusion = localBuildRoot ? `./.local/!(${localBuildRoot}){,/**}` : './.local/**'
 
 /** @type {import('next').NextConfig} */
 if (
@@ -14,10 +19,17 @@ if (
 const nextConfig = {
   output: 'standalone',
   outputFileTracingExcludes: {
-    '*': ['./.env*', './docs/**', './private-references/**', './tests/**'],
+    '*': [
+      './.env*',
+      localTraceExclusion,
+      './.cache/**',
+      './docs/**',
+      './private-references/**',
+      './tests/**',
+    ],
   },
   // Allow a production review build while the owner's development server keeps running.
-  distDir: process.env.NEXT_BUILD_DIRECTORY || '.next',
+  distDir: buildDirectory,
   // The existing loopback review URL must receive dev assets and hot updates too.
   allowedDevOrigins: ['127.0.0.1'],
   poweredByHeader: false,
@@ -41,6 +53,7 @@ const nextConfig = {
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/infrastructure/**', search: '' },
       { pathname: '/images/programmes/**', search: '' },
+      { pathname: '/images/call-partners/**', search: '' },
       { pathname: '/images/achievements/**', search: '' },
       { pathname: '/images/collaborate/**', search: '' },
       { pathname: '/images/transfer/ismart-product.webp', search: '' },

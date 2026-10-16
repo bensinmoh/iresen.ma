@@ -366,3 +366,14 @@ rejections return 429/Retry-After; the page shows localized waiting copy. See
 [security](security-and-privacy.md) for trusted-proxy and expiry requirements.
 The final multilingual content sanity check remains open until editorial content
 and terminology are approved.
+
+## Source-backed project discovery — 2026-10-15
+
+The owner's real-project import supersedes the empty-catalogue projection. Payload
+Projects has a guarded live source view, queued update/delete indexing and stable
+project results opening the restored detail reader. Approved image/portrait results
+use no-store endpoints that recheck the same project/locale. No counters, fabricated
+notes, private evidence or unapproved EN/AR translations are indexed. The local
+review opt-in never expands search eligibility. See [scope](projects.md).
+
+Project PDF discovery uses one `document` result per eligible locale/reference and a guarded local note endpoint. Missing, stale, withdrawn and unapproved notes are excluded by the live source view. The owner-withdrawn historical-source notice is removed from page search metadata; current PDF contents remain unchanged pending the updated project list.

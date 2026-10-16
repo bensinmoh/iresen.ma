@@ -1,16 +1,5 @@
-.contact-page h2 {
-  font-size: clamp(1.75rem, 2.604vw, 3.125rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
-}
-
 .contact-page h3 {
   margin: 0;
-  font-size: clamp(1.0625rem, 1.354vw, 1.625rem);
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
   overflow-wrap: anywhere;
 }
 
@@ -109,8 +98,6 @@
 
 .contact-headquarters h2 {
   margin-block-end: var(--space-8);
-  font-size: clamp(2rem, 3.125vw, 3.75rem);
-  font-weight: 600;
 }
 
 .contact-headquarters a {
@@ -156,7 +143,6 @@
 }
 
 .contact-departments h3 {
-  font-size: clamp(1.125rem, 1.354vw, 1.625rem);
   margin-block-end: var(--space-3);
 }
 
@@ -276,17 +262,12 @@
   min-inline-size: 0;
   inline-size: 100%;
   border: 1px solid var(--color-control-outline);
-  border-radius: 0;
-  padding: var(--space-4) var(--space-6);
   color: var(--color-navy);
   background: var(--color-white);
-  min-block-size: 3.75rem;
-  line-height: 1.5;
 }
 
 .contact-field textarea {
   resize: vertical;
-  min-block-size: 12.5rem;
 }
 
 .contact-field input::placeholder,
@@ -460,7 +441,7 @@ html[lang='ar'] .contact-field label {
   }
 
   .contact-intro-text h1 {
-    font-size: clamp(2.25rem, 7vw, 3rem);
+    font-size: var(--hero-title-size);
   }
 
   .contact-details > div {
@@ -490,11 +471,5 @@ html[lang='ar'] .contact-field label {
 
   .contact-faq-list summary {
     gap: var(--space-3);
-  }
-
-  .contact-field input,
-  .contact-field select,
-  .contact-field textarea {
-    padding-inline: var(--space-3);
   }
 }

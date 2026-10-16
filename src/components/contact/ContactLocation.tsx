@@ -1,3 +1,4 @@
+import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { getTranslations } from 'next-intl/server'
@@ -16,7 +17,9 @@ export async function ContactLocation({ locale }: { locale: Locale }) {
       <div className="container contact-location-heading">
         <div>
           <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-          <h2 id="contact-location-heading">{t('title')}</h2>
+          <Heading as="h2" size="section" id="contact-location-heading">
+            {t('title')}
+          </Heading>
           <p>{footer('address')}</p>
         </div>
         <a

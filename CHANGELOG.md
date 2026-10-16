@@ -1,5 +1,84 @@
 # Change log
 
+## 2026-10-16 — CI integration corrections
+
+- Resume the owner-confirmed frozen integration batch and validate against an
+  isolated PostgreSQL container, preserving the populated local database.
+- Contain call-card accessible labels inside mobile rails and allow supplied
+  call-partner images through the existing local image optimizer.
+- Verify native search filter rails through focus and viewport access rather than
+  requiring every horizontally scrollable item to be onscreen simultaneously.
+- Record local evidence and initial browser findings in `docs/validation.md`;
+  exact-head CI remains the merge gate.
+
+## 2026-10-15 — Single-line orientation strips
+
+- Present programme preview/catalogue call cards in native mobile horizontal rails.
+- Keep the sourced 69-project value on one line in the programme impact caption.
+- Center the laboratory reset below its filter row.
+- Omit the Board’s central IRESEN logo when the radial diagram falls back to a list.
+- Share native horizontal overflow across public orientation/category strips,
+  preserving single-line labels, keyboard scrolling and RTL.
+- Source checks only; final visual/production CI verification remains pending.
+
+## 2026-10-15 — Coordinated integration verification
+
+- Consolidate owner-completed Governance, shared elements, mobile, calls, projects
+  and laboratory filtering; update development backlog delivery statuses.
+- Reconcile withdrawn project copy, the 21-call search projection and partner-logo
+  provenance. All 173 unit tests, lint/format and standalone production build pass.
+- Final browser startup and GitHub writes are blocked by session permissions;
+  current-head CI and merge remain pending. See `docs/validation.md`.
+
+## 2026-10-15 — Shared-checkout orchestration
+
+- Add an explicit participant registry, checks hold and content fingerprint freeze
+  for concurrent editing chats; never infer completion from inactivity.
+- Guard local test/build entrypoints while held; preserve full fresh-checkout CI.
+- Cross-thread app access failed; readiness from existing chats remains unconfirmed.
+- See `docs/chat-orchestration.md` for operating steps and enforcement limits.
+
+## 2026-10-15 — Sourced projects restored
+
+- Import 60 owner-selected IRESEN project records into a real Payload collection;
+  retain original source archives, partial dates and absent facts. Exclude scientific counters.
+- Prepare English/Arabic working translations with terminology corrections, keeping
+  both locales in editorial review and outside public search.
+- Restore native catalogue filters, six-record pagination, accessible detail reading
+  and PDF/contact actions; retain withdrawal of fictional records and PDF notes.
+- Serve 60 images/57 available portraits through current-public guarded endpoints.
+  Add source/media search lifecycle and exclude private local storage from tracing.
+- Replace coordinator telephone display with email, omit phones from visitor
+  projection/filtering and enlarge portraits into circular crops. PDFs unchanged.
+- Extend project free-text filtering to all populated public fields, including
+  coordinators and scientific objectives; Arabic also accepts Latin name aliases.
+- Normalize coordinator names as `Prénom NOM` in FR/EN and Arabic-script names
+  in AR for all 60 projects; preserve current PDF files and locale approval gates.
+- Homogenize 60 descriptions and shorten previews; use compact scientific-objective
+  bullets, with reviewed EN/AR editorial adaptations. Remove the owner-withdrawn
+  source notice from the interface and search.
+- Link real projects to guarded local PDFs; leave current files unchanged pending
+  the updated project list. Final tests/build/CI await shared-checkout freeze.
+- See `docs/projects.md` for repeatable import, storage and verification boundaries.
+
+## 2026-10-15 — Governance D03, ongoing owner review
+
+- Close D01/D02 on owner confirmation; keep D03 open for iterative corrections.
+- Correct leadership roles and Soukaina BOUDOUDOUH; synchronize localized search
+  copy and withdraw the final governance resources block while retaining its anchor.
+- Redesign responsibility columns, Board membership hub, illustrative Scientific
+  Council network and pale-blue oversight panels. Keep original marks/portraits.
+- No CI, push, production build or merge until the owner finishes the batch.
+
+## 2026-10-15 — Shared public elements (D02)
+
+- Record owner-confirmed completion of the Platforms redesign (D05).
+- Centralize editorial heading roles, native text-action metrics and public form
+  field geometry; retire competing page rules while keeping contextual colors,
+  alignment, native semantics and page composition.
+- Add a multilingual responsive browser regression. Browser review and Git/PR
+  completion remain blocked by session permissions; see `docs/shared-elements.md`.
+
 ## 2026-10-14 — Institutional narrative review branch
 
 - Update six colleague biographies from public professional sources and owner
@@ -1214,3 +1293,20 @@ labels; localized search references retain Latin-name discovery.
 - Group the 14 laboratories by ten approximate city positions, with accessible
   selection, detail dismissal and native list disclosures.
 - Add supplied GEP city/contact, FR/EN/AR map copy and localized search references.
+
+## 2026-10-15 — Figma mobile design rules
+
+- Review live mobile frames and apply their shared typography, narrow gutters,
+  stacked hero actions, compact figure rails and footer geometry at ≤40rem.
+- Preserve current institutional content, original media, approved colors, native
+  menu/search/forms, desktop composition and Arabic reading behavior.
+- Record source nodes, intentional readability adaptations and actual validation
+  in [the mobile review](docs/mobile-figma-review.md).
+
+## 2026-10-15 — Calls catalogue and archive templates
+
+- Adapt the owner’s reference to the existing Nos dispositifs section.
+- Add the full localized catalogue, combined filters and 21 closed detail pages.
+- Retain sources, chronology caveats and missing-content boundaries; register
+  canonical, locale, sitemap and search destinations without deployment.
+- See [scope and verification](docs/calls-catalogue-2026.md).

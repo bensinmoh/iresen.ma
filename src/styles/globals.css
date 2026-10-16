@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './tokens.css';
 @import './selects.css';
+@import './elements.css';
 @import './cookies.css';
 @import './utility-pages.css';
 @import './contact.css';
@@ -150,6 +151,35 @@ ul {
 
 .horizontal-scroll::-webkit-scrollbar {
   display: none;
+}
+
+/* Shared navigation/filter strips retain readable labels instead of wrapping. */
+:root [data-ui-rail] {
+  display: flex;
+  flex-wrap: nowrap;
+  min-inline-size: 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-padding-inline: var(--space-2);
+  scrollbar-width: none;
+}
+
+:root [data-ui-rail]::-webkit-scrollbar {
+  display: none;
+}
+
+:root [data-ui-rail] > * {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+:root [data-ui-rail='stretch'] > * {
+  flex-grow: 1;
+}
+
+:root [data-ui-rail] :focus-visible,
+:root [data-ui-rail]:focus-visible {
+  outline-offset: -3px;
 }
 
 .skip-link {
@@ -475,7 +505,10 @@ html[dir='rtl'] .header-search-disclosure[data-search-side='end'][open] > .heade
   padding: var(--space-2) var(--space-4);
   border: 1px solid transparent;
   border-radius: var(--radius-action);
+  font-size: var(--font-size-action);
   font-weight: 600;
+  line-height: 1.5;
+  gap: var(--space-3);
   text-decoration: none;
   transition: background-color var(--duration-fast);
 }
@@ -3066,5 +3099,127 @@ html:has([data-publications-page])::view-transition {
 @media (prefers-reduced-motion: reduce) {
   .navigation-group-caret {
     transition: none;
+  }
+}
+
+/* Mobile rules shared by the current public content, adapted from the Figma frames. */
+@media (max-width: 40rem) {
+  #main-content .button {
+    inline-size: 100%;
+    min-block-size: 3.125rem;
+  }
+
+  .site-header > .header-container {
+    inline-size: calc(100% - 2.5rem);
+  }
+
+  .site-header:has(.site-menu[open]) > .header-container {
+    inline-size: calc(100% - 3rem);
+  }
+
+  .page-hero .hero-body {
+    justify-content: flex-end;
+    padding-block: calc(var(--hero-header-height) + var(--space-8)) var(--space-8);
+  }
+
+  .page-hero .hero-copy {
+    inline-size: 100%;
+    max-inline-size: none;
+  }
+
+  .page-hero .hero-copy h1 {
+    max-inline-size: none;
+    font-size: var(--hero-title-size);
+    line-height: 1.1875;
+    letter-spacing: -0.02em;
+  }
+
+  .page-hero .hero-copy h1:dir(rtl) {
+    letter-spacing: normal;
+    line-height: 1.45;
+  }
+
+  .page-hero .hero-description {
+    margin-block-start: var(--space-4);
+  }
+
+  .page-hero .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+    margin-block-start: 1.25rem;
+  }
+
+  .page-hero .hero-actions a {
+    justify-content: center;
+    inline-size: 100%;
+    min-block-size: 3.125rem;
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-body);
+    line-height: 1.5;
+    text-align: center;
+    gap: var(--space-2);
+  }
+
+  .page-hero .hero-related {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-action);
+    color: var(--color-navy);
+    background: var(--color-white);
+    text-decoration: none;
+  }
+
+  .page-hero .hero-related:hover {
+    background: var(--color-surface);
+  }
+
+  .page-hero .hero-scroll {
+    display: none;
+  }
+
+  .hero-body--certified .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
+
+  .hero-body--certified .hero-eyebrow:dir(rtl) {
+    letter-spacing: normal;
+  }
+
+  .page-hero--home .hero-body {
+    inline-size: calc(100% - 2.5rem);
+  }
+
+  .hero-figures {
+    grid-auto-columns: min(75%, 9.375rem);
+    gap: var(--space-6);
+    padding-inline: 1.25rem;
+    scroll-padding-inline: 1.25rem;
+  }
+
+  .hero-figures .key-figure-label {
+    line-height: 1.5;
+  }
+
+  .site-footer > .container {
+    inline-size: calc(100% - 3rem);
+  }
+
+  .footer-grid {
+    gap: 1.875rem;
+  }
+
+  .footer-links li a,
+  a.footer-contact-value {
+    min-block-size: 2.75rem;
+  }
+
+  .footer-contact-item {
+    gap: var(--space-3);
+  }
+
+  .footer-newsletter-input {
+    border-radius: var(--radius-action);
   }
 }

@@ -1,0 +1,48 @@
+/* Shared public control roles. Page modules own colors, alignment and composition. */
+a[data-ui-link][href] {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 2.75rem;
+  max-inline-size: 100%;
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  line-height: 1.5;
+  text-underline-offset: 0.2em;
+}
+a[data-ui-link][href] > svg {
+  flex: none;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+a[data-ui-link][href]:hover {
+  text-decoration: underline;
+}
+[data-ui-field]:is(input, select, textarea):not([type='hidden']) {
+  min-inline-size: 0;
+  inline-size: 100%;
+  min-block-size: 3.5rem;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-action);
+  font-family: inherit;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+}
+[data-ui-field]:is(textarea):not([type='hidden']) {
+  min-block-size: 10rem;
+  resize: vertical;
+}
+[data-ui-field]:is(select):not([multiple]):not([size]),
+[data-ui-field]:is(select):not([multiple])[size='1'] {
+  padding-inline-end: calc(
+    var(--select-chevron-inset) + var(--select-chevron-size) + var(--space-3)
+  );
+}
+[data-ui-field]:is(input, select, textarea):not([type='hidden']):focus-visible {
+  outline: var(--focus-field-width) solid var(--color-focus);
+  outline-offset: -1px;
+}
+[data-ui-field]:is(input, select, textarea):not([type='hidden']):disabled,
+.button:disabled {
+  cursor: not-allowed;
+}
