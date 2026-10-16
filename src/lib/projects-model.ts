@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n/locales'
+import { pageHref } from '@/lib/site'
 
 export const projectDomains = [
   'thermal',
@@ -118,4 +119,8 @@ export function filterProjectRecords(
 
 export function projectNoteHref(reference: string, locale: Locale) {
   return `/api/projects/${encodeURIComponent(reference)}/note?locale=${locale}`
+}
+
+export function programmeProjectsHref(programme: string, locale: Locale) {
+  return `${pageHref('projects', locale)}?${new URLSearchParams({ programme })}#find-project`
 }

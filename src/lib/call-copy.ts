@@ -1,5 +1,6 @@
 export const callCopy = {
   fr: {
+    viewProjects: 'Consulter les projets',
     submissionForm: 'Accéder au formulaire de soumission',
     termsOfReference: 'Télécharger les termes de référence',
     closedAction: 'Appel à projets clôturé',
@@ -48,6 +49,7 @@ export const callCopy = {
     },
   },
   en: {
+    viewProjects: 'View projects',
     submissionForm: 'Access the submission form',
     termsOfReference: 'Download the terms of reference',
     closedAction: 'Call for projects closed',
@@ -95,6 +97,7 @@ export const callCopy = {
     },
   },
   ar: {
+    viewProjects: 'الاطلاع على المشاريع',
     submissionForm: 'الوصول إلى استمارة التقديم',
     termsOfReference: 'تحميل الشروط المرجعية',
     closedAction: 'دعوة المشاريع مغلقة',

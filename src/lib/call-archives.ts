@@ -102,3 +102,21 @@ export function filterCallCards(
       ),
   )
 }
+
+/** Historical listing labels: navigation by programme, not verified selection attribution. */
+export function archiveProjectProgramme(call: (typeof archiveCalls)[number]) {
+  const labels: Record<string, string> = {
+    'innotherm-2012': 'InnoThermI&II',
+    'innotherm-2013': 'InnoTherm III',
+    'innotherm-innobiomass-2014': 'InnoTherm/InnoBiomass 2014',
+    'innopv-innowind-2013': 'InnoPV/InnoWind 2013',
+    'innopv-innowind-2014': 'InnoPV/InnoWind 2014',
+    'innomaghrenov-2015': 'InnoMaghrenov15',
+    'innoprojets-2015': 'InnoProjets 2015',
+    'green-innoproject-2018': 'InnoPROJECT 2018',
+    'green-innoboost-2018': 'InnoBOOST 2018',
+    'innoespamaroc-2018-2019': 'InnoESPAMAROC ENERGY 2019',
+    'innoespamaroc-2020': 'InnoESPAMAROC ENERGY 2020',
+  }
+  return labels[call.reference] ?? call.title
+}

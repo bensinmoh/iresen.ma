@@ -59,3 +59,38 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(page.locator('[data-calls-listing]')).toBeVisible()
   })
 }
+
+for (const locale of ['fr', 'en', 'ar'] as const) {
+  test(`${locale}: call opens programme-filtered projects, including empty programmes`, async ({
+    page,
+  }, testInfo) => {
+    for (const [reference, programme] of [
+      ['innotherm-2013', 'InnoTherm III'],
+      ['ibtikar-al-omrane-2025', 'IBTIKAR AL OMRANE 2025'],
+    ]) {
+      await page.goto(callHref(reference!, locale))
+      const action = page.getByRole('link', { name: callCopy[locale].viewProjects, exact: true })
+      await expect(action).toBeVisible()
+      expect(
+        await action.evaluate((el) =>
+          Boolean(el.closest('aside')?.querySelector('#call-sources-title')),
+        ),
+      ).toBe(true)
+      if (reference === 'innotherm-2013') {
+        await page.setViewportSize({ width: 390, height: 844 })
+        await action.scrollIntoViewIfNeeded()
+        await page.screenshot({ path: testInfo.outputPath(`${locale}-projects-action.png`) })
+        expect(
+          await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1),
+        ).toBe(true)
+      }
+      await action.click()
+      await expect(page.locator('select[name="programme"]')).toHaveValue(programme!)
+      expect(new URL(page.url()).searchParams.get('programme')).toBe(programme)
+      if (reference === 'ibtikar-al-omrane-2025')
+        await expect(page.locator('#featured-results article')).toHaveCount(0)
+      await page.reload()
+      await expect(page.locator('select[name="programme"]')).toHaveValue(programme!)
+    }
+  })
+}

@@ -139,3 +139,7 @@
     justify-content: center;
   }
 }
+
+.projectsAction {
+  padding-block: var(--section-space);
+}

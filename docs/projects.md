@@ -218,3 +218,23 @@ fields remain empty. Verification of the cached source found 289 consortium imag
 across 60 fiches, with numeric-only alt labels and invalid numeric host URLs;
 these do not identify partner organisations. Existing coordinator/email/portrait,
 filter and PDF behavior remains unchanged.
+
+## Call-to-catalogue navigation — 2026-10-16
+
+Every archive and published CMS call offers a localized “View projects” action
+at the bottom of its details (below “Sources consulted” on archive pages).
+It opens the canonical projects route with `programme` preselected and the
+`find-project` anchor. Archive editions use the historical listing labels where
+available; other editions retain their own title, and CMS calls use their acronym.
+This is programme discovery, not a verified selection-call attribution: project
+records, `selectionCallReference`, dates and publication gates are unchanged.
+A programme with no eligible projects remains selected and shows the empty state;
+it must never silently fall back to the entire catalogue. Reset restores all
+eligible projects. Existing canonical call/project search registrations already
+cover these destinations; no new public resource or search result is created.
+
+Verification: 174 unit tests, scoped ESLint/format checks and an isolated production
+build (including TypeScript) pass. Three production browser journeys cover FR/EN/AR,
+programme navigation, selection after reload and empty programmes; mobile FR/AR
+captures are inspected. Browser checks use installed Chrome; the default bundled
+Playwright browser is unavailable locally. Full current-head CI remains the merge gate.

@@ -577,3 +577,7 @@
     block-size: 2.75rem;
   }
 }
+
+.projectsAction {
+  margin-block-start: 1.5rem;
+}
