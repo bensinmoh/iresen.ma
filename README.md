@@ -42,18 +42,26 @@ review configuration and is forbidden in a public release.
 
 | Component                   | Version |
 | --------------------------- | ------- |
-| Node.js                     | 24.19.0 |
-| pnpm                        | 11.19.0 |
-| Next.js                     | 16.4.0  |
-| React / React DOM           | 19.3.0  |
+| Node.js                     | 24.22.0 |
+| pnpm                        | 11.28.2 |
+| Next.js                     | 16.4.1  |
+| React / React DOM           | 19.3.1  |
 | Payload / official adapters | 3.90.2  |
-| PostgreSQL local/CI         | 17.9    |
+| PostgreSQL configured/CI    | 17.11   |
 
 Use the committed lockfile and `pnpm-workspace.yaml`, including security overrides.
 Do not independently upgrade Next and Payload. Read the installed Next guides
 before implementing framework changes.
 
+Current developer tools: TypeScript 6.0.3, ESLint 10.12.0 with typescript-eslint
+8.71.2, Prettier 3.9.10, Vitest 5.0.4 and Playwright 1.64.1. The
+[October stack review](docs/stack-maintenance-2026-10.md) records compatibility,
+upstream sources and validation. Docker and CI use the same Node/pnpm pins.
+
 ## Local setup
+
+Install the pinned Node/pnpm versions with your version manager first. With nvm,
+`nvm install && nvm use` reads `.nvmrc`.
 
 ```sh
 pnpm install --frozen-lockfile

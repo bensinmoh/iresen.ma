@@ -2,6 +2,12 @@
 
 Date: 2026-10-07. Status: accepted for the development foundation.
 
+Maintenance update — 2026-10-16: the [stack review](../stack-maintenance-2026-10.md)
+supersedes the historical runtime/package-manager/setup-node pins below. Current
+Node 24.22.0, pnpm 11.28.2 and setup-node 7.1.0 retain strict compatibility and
+immutable action pins. Workspace `stateDir` is removed because current pnpm
+requires machine configuration for that setting; store/cache remain project-local.
+
 `next-intl` 4.14.9 declares `@swc/core ~1.16.0`. Recent SWC compressed carriers reject the cloud sandbox's mapped root ownership before materializing their verified native image. Moving the cache does not correct that ancestry.
 
 Pin only next-intl's SWC dependency to stable **1.16.2**, inside the declared compatibility range. This version ships the original native addon. Its official npm SHA-512 integrity was checked, the native target and TypeScript transform were tested in this sandbox, and next-intl's extraction plugin was exercised successfully. Keep the pin and lockfile reviewed together. Revisit it when the carrier/runtime compatibility issue is resolved. No TLS, artifact integrity or cache trust checks are disabled.

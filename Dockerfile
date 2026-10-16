@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.7
-FROM node:24.19.0-bookworm-slim AS base
+FROM node:24.22.0-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5 AS base
 WORKDIR /app
-RUN npm install --global pnpm@11.19.0 && npm cache clean --force
+RUN npm install --global pnpm@11.28.2 && npm cache clean --force
 
 FROM base AS dependencies
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
@@ -23,7 +23,7 @@ USER node
 # Supply runtime secrets and execute migrations/rebuild before replacing the web instance.
 CMD ["pnpm", "cms:migrate"]
 
-FROM node:24.19.0-bookworm-slim AS runtime
+FROM node:24.22.0-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5 AS runtime
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils && rm -rf /var/lib/apt/lists/*
 COPY --from=build /app/.next/standalone ./

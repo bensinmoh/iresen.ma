@@ -2,7 +2,6 @@ packages:
   - .
 storeDir: .cache/pnpm/store
 cacheDir: .cache/pnpm/cache
-stateDir: .cache/pnpm/state
 saveExact: true
 strictPeerDependencies: true
 engineStrict: true
@@ -21,7 +20,3 @@ allowBuilds:
   esbuild: true
   sharp: true
   unrs-resolver: true
-minimumReleaseAgeExclude:
-  - '@playwright/test@1.64.0'
-  - playwright-core@1.64.0
-  - playwright@1.64.0

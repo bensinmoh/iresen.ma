@@ -1,5 +1,29 @@
 # Foundation validation
 
+## Stack maintenance — 2026-10-16
+
+The owner commissions compatible stack/tool updates and a new verified merge.
+See [selected versions and upstream sources](stack-maintenance-2026-10.md).
+Local validation uses checksum-verified Node 24.22.0 and pnpm 11.28.2 without
+changing global installations. Frozen-lockfile installation, strict peer
+resolution, full lint/format, all 173 unit tests and all 32 integration tests pass.
+Integration runs against a disposable PostgreSQL 17.11 container; the owner's
+populated database and original running container remain unchanged.
+
+The full dependency audit retains one pre-existing development-only advisory,
+GHSA-vfj7-8cjw-p6xm, in the official Next lint plugin's braces chain; upstream has
+no patched release. No audit exclusion or rule weakening is added. Production
+audit reports no known vulnerabilities. The isolated production build, including
+TypeScript and standalone packaging, passes; Next-generated temporary tsconfig
+paths are removed afterwards. Dockerfile `--check` passes without warnings.
+Docker image manifests/digests and the setup-node release commit were verified
+against official upstream sources. All 50 targeted production-browser cases pass,
+including CMS call publication/withdrawal fixtures, public access controls,
+search/image optimization and all-page FR/EN/AR reflow at 320/402/640/768/1440px.
+Enlarged text, native keyboard access and scoped accessibility checks are included.
+French homepage and Arabic contact mobile captures were inspected. Full exact-head
+CI and merge results are recorded on the maintenance PR. No deployment.
+
 ## Integrated test run — 2026-10-16
 
 The owner requests CI, synchronization, merge and cleanup. The inherited frozen
