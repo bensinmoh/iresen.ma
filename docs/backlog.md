@@ -131,7 +131,7 @@ maintenance are separate from delivered single-record editing.
 | B09 | P1       | Calls for projects management                           | Complete management of existing Calls; add C04 gaps, SDGs, lifecycle controls, terms/submission links and detail/search synchronization.                                                                    | **Partly delivered:** native/common-database management and 21-edition public catalogue. Verify C04 field/status gaps and provide missing source content.                                                                                                                                                                                      |
 | B10 | P2       | Events management                                       | Manage dates/time zones, venue/format, status, imagery and registration links; distinguish confirmed facts from pending/preparation entries and curate featured events.                                     | **Delivered foundation:** management and locale/public/search workflow. Confirm actual dates, registrations and pending event content; no invented programme.                                                                                                                                                                                  |
 | B11 | P1       | Media library management                                | Extend Media upload, localized captions/search text, rights, variants and replacement/withdrawal; separate private/public files and revoke withdrawn bytes/previews/search.                                 | **Partly delivered:** five management views, private-first upload/replace, protected access and deletion workflow. Approved assets/rights remain C10/D08; production storage/backup policy remains R01/R02.                                                                                                                                    |
-| B12 | P2       | Manage remaining website databases                      | Inventory datasets, collections/globals and remaining editorial needs, including roadmap, values, governance, platforms and experts; scope reusable relationships and CRUD without duplicating collections. | Common authoring records/editors and a limited CSV rehearsal delivered; server-side business imports/XLSX remain to connect. public projections are incomplete for static page/organisation content. Inventory and connect each approved template. Expert-network analysis only: no expert data/import/directory. Preserve the two-role model. |
+| B12 | P2       | Manage remaining website databases                      | Inventory datasets, collections/globals and remaining editorial needs, including roadmap, values, governance, platforms and experts; scope reusable relationships and CRUD without duplicating collections. | Common authoring records/editors and a limited CSV rehearsal delivered; server-side business imports/XLSX remain to connect. Public projections are incomplete for static page/organisation content. Inventory and connect each approved template. Expert-network analysis only: no expert data/import/directory. Preserve the two-role model. |
 | B13 | P1       | Glossary, synonyms, vocabulary, dictionary and acronyms | Manage reviewed FR/EN/AR terminology/expansions with history, preview/rebuild and relevance checks. Preserve exact-before-linguistic/typo/related ordering; exclude private/withdrawn vocabulary.           | Terminology editing foundation exists; public search vocabulary/glossary integration, rebuild workflow and linguistic review remain. R04; Arabic recall issue below. [Search](search.md).                                                                                                                                                      |
 | B14 | P2       | GUI log                                                 | Define administrative activity/audit log, UI errors or both; provide selected restricted views, filters, redaction and retention. Editorial audit identifies who changed what and when.                     | Server audit history and its searchable 200-entry GUI are delivered. Technical supervision is unconnected; retention/redaction policy, monitoring and safe job retry remain.                                                                                                                                                                   |
 
@@ -156,6 +156,20 @@ video-specific recommendation is marked adopted in this planning update.
 Content preparation can proceed independently of service integrations. Already
 merged design/CMS work does not need to be commissioned or tested again merely
 because its earlier backlog status was stale.
+
+## Newly observed verification blocker — 17 October 2026
+
+The documentation-only backlog PR #124 encountered a failure in
+[CI run 378](https://github.com/bensinmoh/iresen.ma/actions/runs/39019313018).
+Formatting, lint, types, 273 unit tests, 32 integration tests and build pass;
+353 public browser journeys pass, but the hero idle-scroll invitation timing test
+fails at `tests/e2e/heroes.spec.ts:389`, including its retry. The cue is already
+revealed after advancing the test clock by 4,900 ms. The isolated CMS step is
+skipped after that failure. This does not invalidate the recorded successful
+PR #123 run, nor establish whether the new failure is test-clock synchronization
+or application behavior. Investigate and verify the timer deterministically,
+then obtain successful current-head CI before merging PR #124. Do not weaken or
+skip the check. No runtime fix is included in this backlog reconciliation.
 
 ## Before production
 
