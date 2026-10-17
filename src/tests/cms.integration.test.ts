@@ -101,7 +101,7 @@ integration('CMS authorization and localized publication (PostgreSQL)', () => {
       data: {
         email: `publisher-${suffix}@example.invalid`,
         password: randomUUID(),
-        role: 'publisher',
+        role: 'admin',
       },
     })
     userIDs.push(publisher.id)
@@ -191,7 +191,7 @@ integration('CMS authorization and localized publication (PostgreSQL)', () => {
         locale: 'fr',
         data: { _status: 'published', publicationStatus: 'published' },
       }),
-    ).rejects.toThrow('Only a publisher')
+    ).rejects.toThrow('Only an administrator')
   })
 
   it('keeps private media metadata inaccessible to anonymous readers', async () => {

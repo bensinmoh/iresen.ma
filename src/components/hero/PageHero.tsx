@@ -1,9 +1,11 @@
+import { siteEditorialIndicators } from '@/lib/cms-workspace/editorial-indicators'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import type { Locale } from '@/i18n/locales'
 import { heroes } from '@/lib/heroes'
-import { homeFigures } from '@/lib/figures'
+import { resolveHomeFigures } from '@/lib/figures'
+import { siteIndicatorTotals } from '@/lib/cms-workspace/indicator-totals'
 import { homeMissions } from '@/lib/home-missions'
 import { pageHref, pageLinkHref, type PageId } from '@/lib/site'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -31,11 +33,14 @@ export async function PageHero({
   secondaryAction?: { label: string; href: string }
   eyebrow?: string
 }) {
+  const indicators = pageId === 'home' ? await siteEditorialIndicators(locale) : null
   const t = await getTranslations({ locale, namespace: 'Hero' })
   const engagement = await getTranslations({ locale, namespace: 'Engagement' })
   const transfer = await getTranslations({ locale, namespace: 'Transfer' })
   const titles = await getTranslations({ locale, namespace: 'Pages' })
   const definition = heroes[pageId]
+  const totals = pageId === 'home' ? await siteIndicatorTotals(locale) : null
+  const homeFigures = totals ? resolveHomeFigures(totals.projects, totals.publications, totals) : []
 
   return (
     <HeroViewport
@@ -69,17 +74,17 @@ export async function PageHero({
               {lead && <p className="hero-description">{lead}</p>}
               <p className="hero-description">{description ?? t(`descriptions.${pageId}`)}</p>
             </div>
-            {pageId === 'home' && (
+            {pageId === 'home' && indicators?.certification && (
               <aside
                 className="hero-certification glass-surface"
-                aria-label={`${t('certification.label')} ISO 9001:2015`}
+                aria-label={`${t('certification.label')} ${indicators.certification}`}
               >
                 <span className="glass-reflection" aria-hidden="true" />
                 <div className="hero-certification-heading">
                   <span className="hero-certification-label">{t('certification.label')}</span>
                   <bdi className="hero-certification-standard" dir="ltr">
-                    <span>ISO</span>
-                    <span>9001:2015</span>
+                    <span>{indicators.certification.split(' ')[0]}</span>
+                    <span>{indicators.certification.split(' ').slice(1).join(' ')}</span>
                   </bdi>
                 </div>
                 <p className="hero-certification-description">{t('certification.description')}</p>
@@ -144,7 +149,10 @@ export async function PageHero({
               {homeFigures.map(({ id, value }) => (
                 <div className="key-figure" key={id}>
                   <dt className="key-figure-label">{t(`figures.${id}`)}</dt>
-                  <dd className="key-figure-value">
+                  <dd
+                    className="key-figure-value"
+                    data-project-total={id === 'collaborativeProjects' ? value : undefined}
+                  >
                     <bdi dir="ltr">{value}</bdi>
                   </dd>
                 </div>

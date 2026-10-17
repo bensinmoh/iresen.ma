@@ -277,7 +277,7 @@ export function ProjectsExperience({
                 if (event.target instanceof HTMLSelectElement) submit(event.currentTarget)
               }}
             >
-              <div className={styles.fields}>
+              <div className={styles.fields} role="group" aria-label={t('query')} tabIndex={0}>
                 <div className={styles.query}>
                   <label htmlFor="project-query">{t('query')}</label>
                   <div className={styles.searchField}>
@@ -352,7 +352,7 @@ export function ProjectsExperience({
                     <div className={styles.cardVisual}>
                       <Image
                         src={`${project.image}?locale=${locale}`}
-                        alt=""
+                        alt={project.imageIllustration || ''}
                         width={900}
                         height={430}
                         unoptimized

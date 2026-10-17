@@ -1,3 +1,4 @@
+import { editorialIndicatorDefaults } from '@/lib/editorial-indicators'
 import { institutionalAffiliations } from '../institutions'
 import { callPartners } from '@/lib/call-partners'
 import { archiveCalls, archiveCard, archiveProfile } from '@/lib/call-archives'
@@ -29,14 +30,13 @@ import { patents, patentAnchor } from '@/lib/patents'
 import { collaborationAudiences, engagementSearchText } from '@/lib/engagement'
 import { roadmapMedia, roadmapMediaPath, roadmapDrawingPath, roadmapHeroPath } from '@/lib/roadmap'
 
-import fr from '@/messages/fr.json'
-import en from '@/messages/en.json'
-import ar from '@/messages/ar.json'
+import fr from '@/messages/fr.json' with { type: 'json' }
+import en from '@/messages/en.json' with { type: 'json' }
+import ar from '@/messages/ar.json' with { type: 'json' }
 import { homeInnovationSectionId, innovationSteps } from '@/lib/home-innovation'
-import { collaborationCount } from '@/lib/home-collaboration'
 import { homeAchievements, homeAchievementsSectionId } from '@/lib/home-achievements'
 import { homePlatforms, homePlatformsSectionId, platformPhotoPath } from '@/lib/home-platforms'
-import { homeFigures } from '@/lib/figures'
+import { homeFigures, resolveHomeFigures } from '@/lib/figures'
 import { footerContact } from '@/lib/footer'
 import { heroes } from '@/lib/heroes'
 import { heroImages } from '@/lib/hero-images'
@@ -50,6 +50,8 @@ import { contentLocales } from '@/lib/content/publication'
 import type { PublicSearchDocument, SearchLocale } from './types'
 
 const messages = { fr, en, ar }
+const defaultMessages = messages
+const defaultCorpora = { publications, patents, reports: mediaReports, archives: archiveCalls }
 // Original resource names/domain acronyms remain discoverable in translated interfaces.
 const usefulToolAliases = [
   'Cadastre Solaire Maroc cartographie.ma',
@@ -837,8 +839,10 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
 ]
 
 /** The contact template replaces its earlier, no-longer-rendered editorial scaffolds. */
-function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
-  const catalog = messages[locale]
+function contactSearchDocuments(
+  locale: SearchLocale,
+  catalog = messages[locale],
+): PublicSearchDocument[] {
   const copy = catalog.Contact
   const heroTitle = `${copy.hero.title} ${copy.hero.accent}`
   const headquarters = [
@@ -949,15 +953,40 @@ function contactSearchDocuments(locale: SearchLocale): PublicSearchDocument[] {
   ]
 }
 
-export function staticSearchDocuments(): PublicSearchDocument[] {
+export function staticSearchDocuments(
+  localized = defaultMessages,
+  corpora = defaultCorpora,
+  editorial?: Record<
+    SearchLocale,
+    { collaborators: string | null; certification: string | null; youngResearchers?: string | null }
+  >,
+  totals?: {
+    projects: number | null
+    publications: number | null
+    patents: number | null
+    laboratories: number | null
+  },
+): PublicSearchDocument[] {
+  const messages = localized
+  const { publications, patents, reports: mediaReports, archives: archiveCalls } = corpora
   const documents: PublicSearchDocument[] = []
   for (const locale of contentLocales) {
     const catalog = messages[locale]
+    const indicators = editorial?.[locale] ?? editorialIndicatorDefaults
+    const figures = totals
+      ? resolveHomeFigures(totals.projects, totals.publications, {
+          ...totals,
+          youngResearchers:
+            indicators.youngResearchers === undefined
+              ? editorialIndicatorDefaults.youngResearchers
+              : indicators.youngResearchers,
+        })
+      : homeFigures
     for (const pageId of pageIds) {
       // Internal query/results pages must not recursively appear in their own results.
       if (pageId === 'search' || pageId === 'events' || pageId === 'usefulLinks') continue
       if (pageId === 'contact') {
-        documents.push(...contactSearchDocuments(locale))
+        documents.push(...contactSearchDocuments(locale, catalog))
         continue
       }
       const body = [catalog.Hero.descriptions[pageId], catalog.Hero.stages[heroes[pageId].stage]]
@@ -1075,12 +1104,12 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
           catalog.Narrative.coreDescription,
           ...engagementSearchText(catalog.HomeAchievements.items),
           catalog.Hero.homeTitle,
-          'ISO 9001:2015',
+          indicators.certification ?? '',
           catalog.Hero.certification.label,
           catalog.Hero.certification.description,
           catalog.Footer.tagline,
           catalog.Footer.description,
-          ...homeFigures.map(({ id, value }) => `${value} ${catalog.Hero.figures[id]}`),
+          ...figures.map(({ id, value }) => `${value ?? ''} ${catalog.Hero.figures[id]}`),
           catalog.HomeMissions.eyebrow,
           catalog.HomeMissions.functions,
           catalog.PageSections.home[homeCooperationAnchor].title,
@@ -1165,7 +1194,6 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
               'programmes-collaborations': catalog.Programmes.intro,
               'research-results': {
                 ...catalog.Programmes.impact,
-                value: '69',
                 label: catalog.Programmes.figureLabel,
                 reference: catalog.Programmes.reference,
               },
@@ -1441,8 +1469,8 @@ export function staticSearchDocuments(): PublicSearchDocument[] {
             const collaboration = catalog.HomeCollaboration
             body.push(
               collaboration.searchText,
-              `${collaborationCount} ${collaboration.collaborators}`,
-              'ISO 9001:2015',
+              `${indicators.collaborators ?? ''} ${collaboration.collaborators}`,
+              indicators.certification ?? '',
               collaboration.certification,
               ...Object.values(collaboration.paths).flatMap((path) => [
                 path.audience,

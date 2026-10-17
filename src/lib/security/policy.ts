@@ -3,6 +3,15 @@ export function administrationEnabled() {
   if (process.env.PUBLIC_RELEASE === 'true') return false
   return process.env.NODE_ENV !== 'production' || process.env.CMS_ADMIN_ENABLED === 'true'
 }
+/** Private custom CMS entry, including its authenticated workspace endpoints. */
+export function cmsInterfaceEnabled() {
+  return (
+    process.env.PUBLIC_RELEASE !== 'true' &&
+    (process.env.NODE_ENV !== 'production' ||
+      (process.env.CMS_LOCAL_REVIEW === 'true' &&
+        process.env.CMS_INTERFACE_PREVIEW_ENABLED === 'true'))
+  )
+}
 export function publicCmsRequestAllowed(method: string, pathname: string) {
   return (
     ['GET', 'HEAD'].includes(method) &&

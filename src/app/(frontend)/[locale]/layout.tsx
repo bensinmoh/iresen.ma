@@ -9,6 +9,7 @@ import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { CookieConsent } from '@/components/privacy/CookieConsent'
 import { SiteMotion } from '@/components/layout/SiteMotion'
+import { siteIndicatorTotals } from '@/lib/cms-workspace/indicator-totals'
 
 export default async function LocaleLayout({
   children,
@@ -31,12 +32,17 @@ export default async function LocaleLayout({
     /* Invalid or unavailable cookie storage never permits optional services. */
   }
 
+  const totals = await siteIndicatorTotals(locale)
   return (
     <>
       <a className="skip-link" href="#main-content">
         {t('skip')}
       </a>
-      <SiteHeader />
+      <SiteHeader
+        totalProjects={totals.projects}
+        totalPublications={totals.publications}
+        figureValues={totals}
+      />
       <main id="main-content" tabIndex={-1}>
         {children}
       </main>

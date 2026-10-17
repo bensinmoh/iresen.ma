@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   administrationEnabled,
+  cmsInterfaceEnabled,
   anonymousCmsRequest,
   contentSecurityPolicy,
   publicCmsRequestAllowed,
@@ -13,6 +14,17 @@ describe('public production boundaries', () => {
     vi.stubEnv('CMS_ADMIN_ENABLED', 'true')
     vi.stubEnv('PUBLIC_RELEASE', 'true')
     expect(administrationEnabled()).toBe(false)
+  })
+  it('preserves both local review opt-ins for the renamed custom CMS', () => {
+    vi.stubEnv('NODE_ENV', 'production')
+    vi.stubEnv('PUBLIC_RELEASE', 'false')
+    vi.stubEnv('CMS_LOCAL_REVIEW', 'true')
+    vi.stubEnv('CMS_INTERFACE_PREVIEW_ENABLED', 'false')
+    expect(cmsInterfaceEnabled()).toBe(false)
+    vi.stubEnv('CMS_INTERFACE_PREVIEW_ENABLED', 'true')
+    expect(cmsInterfaceEnabled()).toBe(true)
+    vi.stubEnv('PUBLIC_RELEASE', 'true')
+    expect(cmsInterfaceEnabled()).toBe(false)
   })
   it('allows public media bytes only, never raw collections or writes', () => {
     expect(publicCmsRequestAllowed('GET', '/api/media/file/photo.webp')).toBe(true)

@@ -14,9 +14,25 @@ export type PublicNewsCard = {
   image?: { src: string; alt: string }
   source: 'cms'
 }
-export async function findPublicNewsCards(locale: Locale, page = 1) {
+export async function findPublicNewsCards(locale: Locale, page = 1, highlightId?: string | null) {
   const result = await findPublishedNews(locale, 12, page)
   const payload = await getPayload({ config })
+  if (highlightId?.startsWith('cms-')) {
+    const id = Number(highlightId.slice(4))
+    if (Number.isSafeInteger(id) && id > 0 && !result.docs.some((article) => article.id === id)) {
+      const highlighted = await payload.find({
+        collection: 'news',
+        locale,
+        fallbackLocale: false,
+        overrideAccess: false,
+        draft: false,
+        depth: 0,
+        limit: 1,
+        where: { id: { equals: id } },
+      })
+      result.docs.push(...highlighted.docs)
+    }
+  }
   const cards = await Promise.all(
     result.docs.map(async (article): Promise<PublicNewsCard | null> => {
       if (

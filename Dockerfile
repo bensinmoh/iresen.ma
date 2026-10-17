@@ -25,11 +25,12 @@ CMD ["pnpm", "cms:migrate"]
 
 FROM node:24.22.0-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5 AS runtime
 WORKDIR /app
-RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils chromium && rm -rf /var/lib/apt/lists/*
 COPY --from=build /app/.next/standalone ./
 COPY --from=build /app/.next/static ./.next/static
 COPY --from=build /app/public ./public
 RUN mkdir -p /app/.next/cache /app/uploads && chown -R node:node /app/.next/cache /app/uploads
+ENV PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium
 ENV NODE_ENV=production HOSTNAME=0.0.0.0 PORT=3000 CMS_ADMIN_ENABLED=false CMS_LOCAL_REVIEW=false PUBLIC_RELEASE=true CMS_UPLOAD_DIRECTORY=/app/uploads
 USER node
 EXPOSE 3000

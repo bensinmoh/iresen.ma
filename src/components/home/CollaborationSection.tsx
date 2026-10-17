@@ -1,16 +1,18 @@
+import { siteEditorialIndicators } from '@/lib/cms-workspace/editorial-indicators'
 import { Heading } from '@/components/ui/Heading'
 import { ShieldCheck } from '@phosphor-icons/react/dist/ssr/ShieldCheck'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
-import { collaborationCount, collaborationPaths } from '@/lib/home-collaboration'
+import { collaborationPaths } from '@/lib/home-collaboration'
 import { pageHref } from '@/lib/site'
 import { CollaborationRail } from './CollaborationRail'
 import styles from './CollaborationSection.module.css'
 
 export async function CollaborationSection({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'HomeCollaboration' })
+  const indicators = await siteEditorialIndicators(locale)
   return (
     <section id="collaboration" aria-labelledby="collaboration-heading" className={styles.section}>
       <div className={styles.layout}>
@@ -53,19 +55,26 @@ export async function CollaborationSection({ locale }: { locale: Locale }) {
         </CollaborationRail>
       </div>
       <div className={styles.proof}>
-        <p className={styles.count}>
-          <bdi dir="ltr">{collaborationCount}</bdi>
-          <span>{t('collaborators')}</span>
-        </p>
-        <aside className={styles.certification} aria-label={`${t('certified')} ISO 9001:2015`}>
-          <SiteIcon icon={ShieldCheck} size={40} />
-          <div>
-            <p>
-              {t('certified')} <bdi dir="ltr">ISO 9001:2015</bdi>
-            </p>
-            <p>{t('certification')}</p>
-          </div>
-        </aside>
+        {indicators.collaborators && (
+          <p className={styles.count}>
+            <bdi dir="ltr">{indicators.collaborators}</bdi>
+            <span>{t('collaborators')}</span>
+          </p>
+        )}
+        {indicators.certification && (
+          <aside
+            className={styles.certification}
+            aria-label={`${t('certified')} ${indicators.certification}`}
+          >
+            <SiteIcon icon={ShieldCheck} size={40} />
+            <div>
+              <p>
+                {t('certified')} <bdi dir="ltr">{indicators.certification}</bdi>
+              </p>
+              <p>{t('certification')}</p>
+            </div>
+          </aside>
+        )}
       </div>
     </section>
   )

@@ -38,7 +38,8 @@ describe('programme manuscript and public discovery', () => {
       const impact = documents.find(
         ({ id }) => id === `section:programmes:research-results:${locale}`,
       )!
-      expect(impact.body).toContain('69')
+      expect(impact.body).toContain(copy.figureLabel)
+      expect(impact.body).not.toMatch(/\b69\b/)
       expect(impact.body).toContain(copy.reference)
       const page = documents.find(({ id }) => id === `page:programmes:${locale}`)!
       expect(page.body).toContain(copy.title)

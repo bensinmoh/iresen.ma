@@ -8,7 +8,7 @@ type TopicAliases = Readonly<Record<SearchLocale, readonly string[]>>
  * related search terms, not institutional claims or inferred translations of
  * individual CMS records. Technology topics remain separate from one another.
  */
-const topicAliases: readonly TopicAliases[] = [
+export const topicAliases: readonly TopicAliases[] = [
   {
     fr: [
       'plateforme',

@@ -13,6 +13,7 @@ import { News } from './cms/collections/News'
 import { Opportunities } from './cms/collections/Opportunities'
 import { Pages } from './cms/collections/Pages'
 import { Users } from './cms/collections/Users'
+import { developmentCsrfOrigins } from './lib/cms-workspace/origin'
 import { startSearchWorker } from './lib/search/indexer'
 
 const sourceDirectory = path.dirname(fileURLToPath(import.meta.url))
@@ -60,6 +61,12 @@ export default buildConfig({
   graphQL: { disable: true },
   upload: { limits: { fileSize: 10_000_000 } },
   typescript: { outputFile: path.resolve(sourceDirectory, 'payload-types.ts') },
-  ...(siteURL ? { serverURL: siteURL, cors: [siteURL], csrf: [siteURL] } : {}),
+  ...(siteURL
+    ? {
+        serverURL: siteURL,
+        cors: [siteURL],
+        csrf: developmentCsrfOrigins(siteURL, process.env.NODE_ENV),
+      }
+    : {}),
   telemetry: false,
 })

@@ -1,3 +1,4 @@
+import { siteArchivedCalls } from '@/lib/cms-workspace/public-corpora'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
 import { callCards } from '@/lib/call-archives'
@@ -10,7 +11,7 @@ import styles from './CallsCatalogue.module.css'
 
 export async function CallsListingPage({ locale }: { locale: Locale }) {
   const t = callCopy[locale]
-  const calls = callCards(locale, await findPublishedCalls(locale))
+  const calls = callCards(locale, await findPublishedCalls(locale), await siteArchivedCalls())
   return (
     <div data-calls-listing>
       <header className={styles.listHeader}>

@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { searchDatabase } from './search/database'
 import type { Locale } from '@/i18n/locales'
 
+/** Legacy archival exports only. Visitor downloads use onDemandProjectNote. */
 export function projectNotesDirectory() {
   return path.resolve(process.env.PROJECTS_NOTES_DIRECTORY || '.local/projects/notes')
 }

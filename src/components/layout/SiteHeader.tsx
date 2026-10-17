@@ -19,14 +19,23 @@ import {
   type PageId,
 } from '@/lib/site'
 import { navigationPanels, type NavigationGroup } from '@/lib/navigation'
-import { homeFigures } from '@/lib/figures'
+import { resolveHomeFigures, type HomeFigureOverrides } from '@/lib/figures'
 import { LocaleSelector } from './LocaleSelector'
 import { HeaderSearch } from './HeaderSearch'
 import { SiteLogo } from '@/components/brand/SiteLogo'
 import { NavigationIcon } from './NavigationIcon'
 import { callReferenceFromPath } from '@/lib/calls'
 
-export function SiteHeader() {
+export function SiteHeader({
+  totalProjects = null,
+  totalPublications = null,
+  figureValues,
+}: {
+  totalProjects?: number | null
+  totalPublications?: number | null
+  figureValues?: HomeFigureOverrides
+}) {
+  const homeFigures = resolveHomeFigures(totalProjects, totalPublications, figureValues)
   const currentLocale = useLocale()
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale
   const t = useTranslations('Navigation')
@@ -296,7 +305,12 @@ export function SiteHeader() {
                 </div>
                 {figure && (
                   <p className="key-figure mega-menu-figure">
-                    <strong className="key-figure-value">
+                    <strong
+                      className="key-figure-value"
+                      data-project-total={
+                        figure.id === 'collaborativeProjects' ? figure.value : undefined
+                      }
+                    >
                       <bdi dir="ltr">{figure.value}</bdi>
                     </strong>
                     <span className="key-figure-label">{figureCopy(`figures.${figure.id}`)}</span>

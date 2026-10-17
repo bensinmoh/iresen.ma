@@ -121,3 +121,21 @@ controller/hosting/publication contacts, Law 09-08/CNDP obligations and provider
 transfers. No regulatory identifiers or retention periods should be invented. Email
 is still composed locally; CMS delivery, online intake and MFA/SSO are not delivered.
 Future administration requires a separate private instance/access design and approval.
+
+## On-demand collaborative-project PDFs — 16 October 2026
+
+Visitor downloads require Chromium plus the pinned production `playwright-core`
+dependency. The runtime Docker stage installs Debian Chromium and sets
+`PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium`. Direct Node hosting must supply a
+compatible executable and set that absolute path. Chromium requires executable
+temporary storage; allow its child processes and include it in provider resource
+sizing. Two renders run per process, with at most eight distinct pending requests.
+The new Docker layer has not been built locally during the shared hold.
+
+Next tracing includes the two embedded font files and original brand SVG for the
+PDF route; retain their relative paths in standalone output. Project images use
+the existing external `PROJECTS_ASSET_DIRECTORY` mount. No static project PDF set
+or writable PDF directory is required. The old notes directory and database table
+are optional archival/export compatibility only. Cache is process-local, up to
+20 MiB/32 entries, ten minutes; restart discards it. It does not authorize content.
+See [implementation and check ledger](project-pdf-on-demand.md).

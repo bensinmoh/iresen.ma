@@ -6,14 +6,15 @@ import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { findCareerOffers } from '@/lib/content/careers'
 import { type CareerOffer } from '@/lib/careers'
-import { collaborationCount } from '@/lib/home-collaboration'
-import { homeFigures } from '@/lib/figures'
+import { siteEditorialIndicators } from '@/lib/cms-workspace/editorial-indicators'
+import { totalProjects } from '@/lib/project-count'
 import { CareersApplications } from './CareersApplications'
 import styles from './CareersPage.module.css'
 import { CareersIcon } from './CareersIcon'
 
 export async function CareersPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Careers' })
+  const indicators = await siteEditorialIndicators(locale)
   let offers: CareerOffer[] = []
   let unavailable = false
   try {
@@ -22,7 +23,7 @@ export async function CareersPage({ locale }: { locale: Locale }) {
     unavailable = true
   }
   const features = t.raw('environment.features') as { title: string; description: string }[]
-  const projects = homeFigures.find((figure) => figure.id === 'collaborativeProjects')!.value
+  const projects = await totalProjects()
   return (
     <div className={styles.page} data-careers-page>
       <section className={styles.hero} aria-labelledby="hero-title">
@@ -93,17 +94,23 @@ export async function CareersPage({ locale }: { locale: Locale }) {
               </ul>
               <dl className={styles.figures}>
                 {[
-                  ['ISO 9001:2015', t('environment.certified')],
-                  [collaborationCount, t('environment.collaborators')],
-                  [projects, t('environment.projects')],
-                ].map(([value, label]) => (
-                  <div key={label}>
-                    <dt>{label}</dt>
-                    <dd>
-                      <bdi dir="ltr">{value}</bdi>
-                    </dd>
-                  </div>
-                ))}
+                  [indicators.certification, t('environment.certified')],
+                  [indicators.collaborators, t('environment.collaborators')],
+                  [projects ?? '—', t('environment.projects')],
+                ]
+                  .filter(([value]) => value !== null)
+                  .map(([value, label]) => (
+                    <div key={label}>
+                      <dt>{label}</dt>
+                      <dd
+                        data-project-total={
+                          label === t('environment.projects') ? (projects ?? undefined) : undefined
+                        }
+                      >
+                        <bdi dir="ltr">{value}</bdi>
+                      </dd>
+                    </div>
+                  ))}
               </dl>
             </div>
           </div>

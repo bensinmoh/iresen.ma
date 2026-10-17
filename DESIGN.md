@@ -295,7 +295,7 @@ composition. See [inventory, contracts and actual verification](docs/shared-elem
 ## Figma mobile rules — 2026-10-15
 
 At or below 40rem, apply the reviewed 402px mobile reference through shared roles:
-32px hero titles; 28px/34px bold section/display/mission titles; 20px card titles;
+32px hero titles; 26px/34px bold section/display/mission titles; 20px card titles;
 14px surtitles with 8px original-leaf gaps; 16px editorial, 20px header/home-hero
 and 24px menu/footer insets. Shared hero actions stack at full width with a 50px
 minimum height and 12px gap. Figure rails use compact 150px items/30px values,
@@ -567,3 +567,43 @@ so inactive small labels preserve contrast. Programmes follows the inclusive
 40rem mobile breakpoint for its full-width action and removes its text-column
 indent at that width. Roadmap display headings retain the commissioned viewport
 variant; the shared semantic heading primitive also supports a page-level h1.
+
+Event rail follow-up — 16 October 2026: desktop event navigation reuses the
+Institute chronology's centered circular arrows, compact counter and progress
+track. Existing light-surface tokens adapt its contrast; mobile pills remain.
+
+Later owner screenshot overrides the circular event controls: desktop uses larger
+primary-blue signature-corner square buttons, white arrows and a fine long progress
+track, without a visible counter. The chronology itself is unchanged.
+
+Final owner size correction — 16 October 2026: the homepage Achievements rail is
+now the exact size/spacing reference for desktop event controls: 3.25rem (52px)
+buttons, 20px SVG arrows, `radius-action`, space-4 gaps and a 0.375rem progress
+track capped at 16rem. This replaces the oversized screenshot interpretation.
+The track/disabled surface is white against the existing pale event section.
+No visible counter; keyboard, RTL, mobile behavior and routes remain unchanged.
+
+CMS action controls — 16 October 2026: list actions use compact 44px square SVG
+buttons with diagonal signature corners. Pastel blue identifies opening a record,
+amber its draft action, green its review action and rose recoverable deletion.
+Accessible names and hover/focus labels accompany icons; saved editors retain
+full action text beside the same squares. Role and confirmation rules still apply.
+
+Owner compact-size correction: list action squares are 26px with 15px SVGs and
+4px gaps, matching the FR/EN/AR badge scale. Editor actions remain 44px.
+
+CMS news highlight — 16 October 2026: the compact amber star selects the unique
+article À la une. Its current selection uses an emphasized amber square and a visible column
+label; saved editors expose the same action and a read-only boolean summary.
+
+Owner highlight correction: no separate À la une column. A filled Phosphor star
+identifies the selected article; alternatives retain outline stars. Keep the
+selected amber surface and accessible pressed-state label for both account roles.
+
+CMS sidebar counter correction: totals are muted upright text in the font’s lightest weight (200); the white numeric
+badge is reserved for nonzero review/incomplete-item counts, deduplicated by item.
+Active-row totals use a lighter gray for contrast against the primary blue.
+
+Publication count legibility — 16 October 2026: metric numerals remain on one
+line. At intermediate desktop widths (64–90rem), labels sit below their number;
+wide desktop keeps the existing side-by-side composition, mobile keeps its rail.

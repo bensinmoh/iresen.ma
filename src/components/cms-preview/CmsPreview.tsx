@@ -1,14 +1,41 @@
 'use client'
+import {
+  mediaTypes,
+  mediaType,
+  mediaDefaults,
+  mediaMimes,
+  type MediaType,
+} from '@/lib/cms-preview/media-types'
+import { MediaTypeChooser } from './MediaTypeChooser'
 
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react'
+import { Recruitment } from './Recruitment'
+import { OrganigramOverview } from './OrganigramOverview'
+import { AccountMenu } from './AccountMenu'
+import { DeleteImpactSummary } from './DeleteImpactSummary'
+import type { DeleteImpact } from '@/lib/cms-preview/delete-impact'
+import { EntryActions } from './EntryActions'
+import { Trash } from './Trash'
+import { Analytics, displayField } from './Analytics'
+import { BusinessField, DataStructure, SchemaTable } from './DataStructure'
+import { connectionRecord, relationErrors } from '@/lib/cms-preview/connection'
+import {
+  grantedPatents,
+  supportedProjects,
+  publicModuleCount,
+  filedPatentReferences,
+} from '@/lib/cms-preview/indicators'
+import { externalConnections } from '@/lib/cms-preview/integrations'
 import { CmsIcon, type IconName } from './CmsIcon'
 import {
   canEdit,
+  editorialTextComplete,
+  fieldValue,
+  fieldApplies,
   canTransition,
   createEntry,
-  initialWorkspace,
   languages,
   modules,
   parseCsv,
@@ -25,11 +52,16 @@ import {
   type Status,
 } from '@/lib/cms-preview/model'
 import {
+  contentConnected,
   getServerSnapshot,
   getSnapshot,
   getStorageError,
   persist,
   subscribe,
+  uploadConnectedMedia,
+  performContentAction,
+  getDeleteImpact,
+  type ContentAction,
 } from '@/lib/cms-preview/store'
 
 function subscribeRoute(listener: () => void) {
@@ -42,7 +74,8 @@ function subscribeMobile(listener: () => void) {
   return () => media.removeEventListener('change', listener)
 }
 function routeSnapshot() {
-  const hash = window.location.hash.slice(1)
+  const raw = window.location.hash.slice(1)
+  const hash = raw === 'people' ? 'organigram' : raw === 'programmes' ? 'calls' : raw
   return modules.some((m) => m.id === hash) || utilityModules.some((m) => m.id === hash)
     ? hash
     : 'dashboard'
@@ -124,7 +157,19 @@ function Dialog({
   )
 }
 
-export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
+export function CmsPreview({
+  registry,
+  connected,
+  onDirty,
+  onLogout,
+  logoutBusy,
+}: {
+  registry: PageRegistry[]
+  connected?: { id: number; name: string; role: Role; avatarUrl?: string }
+  onDirty?: (dirty: boolean) => void
+  onLogout?: () => void
+  logoutBusy?: boolean
+}) {
   const mobile = useSyncExternalStore(
     subscribeMobile,
     () => window.matchMedia('(max-width: 760px)').matches,
@@ -137,11 +182,12 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
   const view = selectedView ?? routedView
   const [sidebar, setSidebar] = useState(false)
   const [collapsed, setCollapsed] = useState(false)
-  const [role, setRole] = useState<Role>('admin')
+  const role = connected?.role ?? 'admin'
   const [query, setQuery] = useState('')
   const [globalQuery, setGlobalQuery] = useState('')
   const [status, setStatus] = useState('all')
   const [localeFilter, setLocaleFilter] = useState<Language>('fr')
+  const [mediaKind, setMediaKind] = useState<MediaType>('photos')
   const [sort, setSort] = useState('recent')
   const [page, setPage] = useState(1)
   const [selection, setSelection] = useState<string[]>([])
@@ -150,6 +196,41 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
   const [language, setLanguage] = useState<Language>('fr')
   const [tab, setTab] = useState('content')
   const [errors, setErrors] = useState<string[]>([])
+  const [entryAction, setEntryAction] = useState<{
+    id: string
+    title: string
+    action: ContentAction
+    language: Language
+    note: string
+  } | null>(null)
+  const [deleteImpact, setDeleteImpact] = useState<DeleteImpact | null>(null)
+  const [impactLoading, setImpactLoading] = useState(false)
+  const [impactReload, setImpactReload] = useState(0)
+  const [actionBusy, setActionBusy] = useState(false)
+  const [actionError, setActionError] = useState('')
+  const impactId = entryAction?.action === 'delete' ? entryAction.id : null
+  useEffect(() => {
+    let cancelled = false
+    if (impactId) {
+      getDeleteImpact(impactId)
+        .then((impact) => {
+          if (!cancelled) setDeleteImpact(impact)
+        })
+        .catch((error) => {
+          if (!cancelled)
+            setActionError(
+              error instanceof Error ? error.message : 'Analyse des impacts impossible.',
+            )
+        })
+        .finally(() => {
+          if (!cancelled) setImpactLoading(false)
+        })
+    }
+    return () => {
+      cancelled = true
+    }
+  }, [impactId, impactReload])
+
   const [message, setMessage] = useState('')
   const [preview, setPreview] = useState<'desktop' | 'mobile' | null>(null)
   const [confirmation, setConfirmation] = useState<{
@@ -158,9 +239,29 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
     label: string
     action: () => void
   } | null>(null)
-  const dirty = Boolean(draft && JSON.stringify(draft) !== baseline)
+  const [recruitmentDirty, setRecruitmentDirty] = useState(false)
+  const dirty = Boolean(draft && JSON.stringify(draft) !== baseline) || recruitmentDirty
+  useEffect(() => {
+    onDirty?.(dirty)
+    return () => onDirty?.(false)
+  }, [dirty, onDirty])
   const workspaceList = ['review-queue', 'translations', 'drafts'].includes(view)
-  const currentModule = modules.find((module) => module.id === view)
+  const baseModule = modules.find((module) => module.id === view)
+  const selectedMediaKind = draft?.module === 'media' ? mediaType(draft) : mediaKind
+  const currentModule =
+    baseModule?.id === 'media'
+      ? {
+          ...baseModule,
+          columns: [...mediaTypes.find((type) => type.id === selectedMediaKind)!.columns],
+          fields: baseModule.fields.filter(
+            (field) =>
+              selectedMediaKind !== 'links' ||
+              ['resourceKind', 'sourceUrl', 'usage', 'visibility', 'sourceRecord'].includes(
+                field.key,
+              ),
+          ),
+        }
+      : baseModule
   const title =
     currentModule?.label ??
     utilityModules.find((module) => module.id === view)?.label ??
@@ -257,7 +358,11 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
       setDraft(structuredClone(entry))
       setBaseline(JSON.stringify(entry))
       setView(entry.module)
-      setLanguage('fr')
+      setLanguage(
+        ['review-queue', 'dashboard'].includes(view)
+          ? (languages.find((lang) => entry.variants[lang].status === 'review') ?? localeFilter)
+          : localeFilter,
+      )
       setTab('content')
       setErrors([])
       setMessage('')
@@ -267,7 +372,9 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
     })
   }
   function create(module: string) {
-    open(createEntry(module, id(), new Date().toISOString()))
+    const entry = createEntry(module, id(), new Date().toISOString())
+    if (module === 'media') entry.shared = { ...entry.shared, ...mediaDefaults(mediaKind) }
+    open(entry)
   }
   function updateVariant(key: 'title' | 'body' | 'seoTitle' | 'seoDescription', value: string) {
     if (draft)
@@ -276,36 +383,56 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
         variants: { ...draft.variants, [language]: { ...draft.variants[language], [key]: value } },
       })
   }
-  function save(nextStatus?: Status) {
+  async function save(nextStatus?: Status) {
     if (!draft) return
     try {
+      const relations = relationErrors(draft, workspace.entries)
+      if (relations.length) throw new Error(relations.join(' '))
       const next = saveEntry(workspace, draft, language, role, new Date().toISOString(), nextStatus)
-      persist(next)
-      const saved = next.entries.find((entry) => entry.id === draft.id)!
+      const committed = await persist(next, Boolean(connected))
+      const saved = committed.entries.find((entry) => entry.id === draft.id)!
       setDraft(structuredClone(saved))
       setBaseline(JSON.stringify(saved))
       setErrors([])
       setMessage(
         nextStatus
-          ? `${statusLabels[nextStatus]} en ${language.toUpperCase()} dans cet atelier uniquement.`
-          : 'Brouillon enregistré dans ce navigateur.',
+          ? `${statusLabels[nextStatus]} en ${language.toUpperCase()} ${connected ? 'enregistré en base.' : 'dans cet atelier uniquement.'}`
+          : connected
+            ? 'Brouillon enregistré dans PostgreSQL.'
+            : 'Brouillon enregistré dans ce navigateur.',
       )
     } catch (error) {
       setErrors([error instanceof Error ? error.message : 'Vérifiez les champs.'])
     }
   }
+  function requestEntryAction(entry: Entry, action: ContentAction, locale: Language) {
+    protect(() => {
+      setActionError('')
+      setDeleteImpact(null)
+      setImpactLoading(action === 'delete')
+      setEntryAction({
+        id: entry.id,
+        title: entry.variants[locale].title || entry.reference,
+        action,
+        language: locale,
+        note: '',
+      })
+    })
+  }
   function transition(target: Status) {
     if (!draft) return
-    const validation = validateEntry(draft, language, target !== 'archived')
+    const validation = target === 'draft' ? [] : validateEntry(draft, language, true)
     if (validation.length) {
       setErrors(validation)
       return
     }
-    if (target === 'published' || target === 'archived')
+    if (target === 'published')
       setConfirmation({
-        title: target === 'published' ? 'Simuler la publication ?' : 'Archiver cette langue ?',
-        body: `${draft.variants[language].title} · ${language.toUpperCase()}. Cette action est locale et n’affecte aucune page du site.`,
-        label: target === 'published' ? 'Publier dans l’atelier' : 'Archiver dans l’atelier',
+        title: connected
+          ? 'Valider cette révision en base ?'
+          : 'Valider et simuler la publication ?',
+        body: `${draft.variants[language].title} · ${language.toUpperCase()}. ${connected ? 'La publication de la source conserve ses règles de visibilité et de validation de langue.' : 'Cette action est locale et n’affecte aucune page du site.'}`,
+        label: connected ? 'Valider / publier en base' : 'Valider / publier dans l’atelier',
         action: () => save(target),
       })
     else save(target)
@@ -313,16 +440,20 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
   function archiveSelection() {
     const selected = workspace.entries.filter((entry) => selection.includes(entry.id))
     setConfirmation({
-      title: `Archiver ${selected.length} élément(s) ?`,
-      body: `La variante ${localeFilter.toUpperCase()} de chaque élément sélectionné sera archivée dans cet atelier. Les autres langues restent inchangées.`,
-      label: 'Archiver la sélection',
-      action: () => {
+      title: `Retirer ${selected.length} élément(s) en brouillon ?`,
+      body: `La variante ${localeFilter.toUpperCase()} de chaque élément sélectionné sera remise en brouillon et son instantané validé sera retiré dans cet atelier. Les autres langues restent inchangées.`,
+      label: 'Retirer de la publication locale',
+      action: async () => {
         let next = workspace
-        for (const entry of selected)
-          next = saveEntry(next, entry, localeFilter, role, new Date().toISOString(), 'archived')
-        persist(next)
+        for (const entry of selected) {
+          const revision = structuredClone(entry)
+          revision.comment = 'Retrait groupé par l’administrateur.'
+          next = saveEntry(next, revision, localeFilter, role, new Date().toISOString(), 'draft')
+          delete next.entries.find((item) => item.id === entry.id)!.publicVariants[localeFilter]
+        }
+        await persist(next, Boolean(connected))
         setSelection([])
-        setMessage(`${selected.length} élément(s) archivés localement.`)
+        setMessage(`${selected.length} élément(s) retirés localement.`)
       },
     })
   }
@@ -336,7 +467,7 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
         : view === 'translations'
           ? !entry.variants.en.title || !entry.variants.ar.title
           : entry.variants.fr.status === 'draft'
-      : entry.module === view,
+      : entry.module === view && (view !== 'media' || mediaType(entry) === mediaKind),
   )
   const filtered = inModule
     .filter((entry) => {
@@ -348,11 +479,16 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
           .includes(query.toLocaleLowerCase('fr'))
       )
     })
-    .sort((a, b) =>
-      sort === 'title'
+    .sort((a, b) => {
+      if (view === 'news') {
+        const highlightOrder =
+          Number(b.shared.highlight === 'true') - Number(a.shared.highlight === 'true')
+        if (highlightOrder) return highlightOrder
+      }
+      return sort === 'title'
         ? a.variants[localeFilter].title.localeCompare(b.variants[localeFilter].title, 'fr')
-        : b.updatedAt.localeCompare(a.updatedAt),
-    )
+        : b.updatedAt.localeCompare(a.updatedAt)
+    })
   const totalPages = Math.max(1, Math.ceil(filtered.length / 8))
   const visible = filtered.slice(
     (Math.min(page, totalPages) - 1) * 8,
@@ -375,6 +511,9 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
   const missing = accessibleEntries.filter(
     (entry) => !entry.variants.en.title || !entry.variants.ar.title,
   )
+  const draftCount = accessibleEntries.filter(
+    (entry) => entry.variants.fr.status === 'draft',
+  ).length
 
   return (
     <div className={`cms-app ${collapsed ? 'cms-collapsed' : ''}`}>
@@ -425,42 +564,69 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
             <CmsIcon name="dashboard" />
             <span>Tableau de bord</span>
           </button>
-          {[...new Set(availableModules.map((m) => m.group))].map((group) => (
-            <div className="cms-nav-group" key={group}>
-              <p>{group}</p>
-              {availableModules
-                .filter((m) => m.group === group)
-                .map((module) => (
-                  <button
-                    key={module.id}
-                    title={module.label}
-                    className={`cms-nav-item ${view === module.id ? 'active' : ''}`}
-                    aria-current={view === module.id ? 'page' : undefined}
-                    onClick={() => navigate(module.id)}
-                  >
-                    <CmsIcon name={module.icon} />
-                    <span>{module.label}</span>
-                    {module.id === 'news' &&
-                      pending.filter((e) => e.module === 'news').length > 0 && (
-                        <b>{pending.filter((e) => e.module === 'news').length}</b>
-                      )}
-                  </button>
-                ))}
-              {group === 'Administration' &&
-                utilityModules.map((module) => (
-                  <button
-                    key={module.id}
-                    title={module.label}
-                    className={`cms-nav-item ${view === module.id ? 'active' : ''}`}
-                    aria-current={view === module.id ? 'page' : undefined}
-                    onClick={() => navigate(module.id)}
-                  >
-                    <CmsIcon name={module.icon} />
-                    <span>{module.label}</span>
-                  </button>
-                ))}
-            </div>
-          ))}
+          {[...new Set([...availableModules.map((m) => m.group), 'Administration'])].map(
+            (group) => (
+              <div className="cms-nav-group" key={group}>
+                <p>{group}</p>
+                {availableModules
+                  .filter((m) => m.group === group)
+                  .map((module) => {
+                    const records = accessibleEntries.filter((entry) => entry.module === module.id)
+                    const attention = records.filter((entry) =>
+                      languages.some(
+                        (locale) =>
+                          entry.variants[locale].status === 'review' ||
+                          !editorialTextComplete(entry, locale),
+                      ),
+                    ).length
+                    return (
+                      <button
+                        key={module.id}
+                        title={module.label}
+                        className={`cms-nav-item ${view === module.id ? 'active' : ''}`}
+                        aria-current={view === module.id ? 'page' : undefined}
+                        onClick={() => navigate(module.id)}
+                      >
+                        <CmsIcon name={module.icon} />
+                        <span>{module.label}</span>
+                        {connected && module.id !== 'users' && (
+                          <em
+                            className="cms-nav-total"
+                            title={`${records.length} fiche(s) au total`}
+                          >
+                            {records.length}
+                          </em>
+                        )}
+                        {attention > 0 && (
+                          <b
+                            className="cms-nav-attention"
+                            aria-label={`${attention} fiche(s) en revue ou à compléter`}
+                            title="En revue ou à compléter"
+                          >
+                            {attention}
+                          </b>
+                        )}
+                      </button>
+                    )
+                  })}
+                {group === 'Administration' &&
+                  utilityModules
+                    .filter((module) => module.id !== 'trash' || role === 'admin')
+                    .map((module) => (
+                      <button
+                        key={module.id}
+                        title={module.label}
+                        className={`cms-nav-item ${view === module.id ? 'active' : ''}`}
+                        aria-current={view === module.id ? 'page' : undefined}
+                        onClick={() => navigate(module.id)}
+                      >
+                        <CmsIcon name={module.icon} />
+                        <span>{module.label}</span>
+                      </button>
+                    ))}
+              </div>
+            ),
+          )}
         </nav>
         <Link href="/fr" prefetch={false} className="cms-site-link">
           <CmsIcon name="globe" />
@@ -492,37 +658,22 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
               onChange={(e) => setGlobalQuery(e.target.value)}
             />
           </div>
-          <div className="cms-profile">
-            <span className="cms-avatar" aria-hidden="true">
-              ME
-            </span>
-            <label htmlFor="role">
-              Profil de test
-              <select
-                id="role"
-                value={role}
-                onChange={(e) => {
-                  const chosenRole = e.target.value as Role
-                  protect(() => {
-                    setRole(chosenRole)
-                    setDraft(null)
-                    if (view === 'users') setView('dashboard')
-                  })
-                }}
-              >
-                {Object.entries(roleLabels).map(([value, label]) => (
-                  <option key={value} value={value}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <AccountMenu
+            name={connected?.name ?? 'Compte'}
+            avatarUrl={connected?.avatarUrl}
+            role={role}
+            busy={logoutBusy}
+            onLogout={onLogout}
+          />
         </header>
         <div className="cms-demo-band">
           <span className="cms-demo-dot" aria-hidden="true" />
-          <strong>Mode démonstration</strong>
-          <span>Modifications locales · aucune connexion au site ou aux bases de données</span>
+          <strong>{connected ? 'CMS connecté' : 'Mode démonstration'}</strong>
+          <span>
+            {connected
+              ? 'Enregistrements PostgreSQL · session authentifiée · CV privés'
+              : 'Modifications locales · aucune connexion au site ou aux bases de données'}
+          </span>
         </div>
         <main id="cms-main" className="cms-main">
           <div className="cms-page-heading">
@@ -552,19 +703,30 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
               </h1>
               <p>
                 {draft
-                  ? 'Révision locale · le site conserve son contenu actuel'
-                  : (currentModule?.description ??
-                    (view === 'dashboard'
-                      ? 'Votre espace pour préparer, relire et organiser les contenus.'
-                      : 'Préparer le fonctionnement avant de connecter les services.'))}
+                  ? connected
+                    ? 'Révision enregistrée dans PostgreSQL après sauvegarde'
+                    : 'Révision locale · le site conserve son contenu actuel'
+                  : connected && currentModule
+                    ? currentModule.id === 'users'
+                      ? 'Gérer les comptes réels et leurs droits.'
+                      : `${workspace.entries.filter((entry) => entry.module === currentModule.id).length} fiches enregistrées dans PostgreSQL · formulaires, langues et historique.`
+                    : (currentModule?.description ??
+                      (view === 'dashboard'
+                        ? 'Votre espace pour préparer, relire et organiser les contenus.'
+                        : 'Contenus PostgreSQL, journal et état des services.'))}
               </p>
             </div>
-            {!draft && currentModule && !currentModule.fixed && canEdit(role, view) && (
-              <button className="cms-button cms-primary" onClick={() => create(view)}>
-                <CmsIcon name="plus" />
-                Ajouter
-              </button>
-            )}
+            {!draft &&
+              currentModule &&
+              !currentModule.fixed &&
+              !(connected && view === 'users') &&
+              view !== 'careers' &&
+              canEdit(role, view) && (
+                <button className="cms-button cms-primary" onClick={() => create(view)}>
+                  <CmsIcon name="plus" />
+                  Ajouter
+                </button>
+              )}
           </div>
           <div role="status" className={message ? 'cms-feedback' : 'cms-sr-only'}>
             {message}
@@ -648,14 +810,21 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                     ['content', 'Contenu'],
                     ['seo', 'Recherche & SEO'],
                     ['history', 'Historique'],
+                    ['schema', 'Structure & types'],
                   ].map(([value, label]) => (
                     <button key={value} aria-pressed={tab === value} onClick={() => setTab(value)}>
                       {label}
                     </button>
                   ))}
                 </div>
+                {tab === 'schema' && currentModule && (
+                  <SchemaTable module={currentModule} entry={draft} />
+                )}
                 {tab === 'content' && (
-                  <fieldset disabled={!canEdit(role, view)} className="cms-fields">
+                  <fieldset
+                    disabled={!canEdit(role, view) || draft.variants[language].status === 'review'}
+                    className="cms-fields"
+                  >
                     {view === 'pages' && (
                       <p className="cms-context">
                         Page et section existantes :{' '}
@@ -669,7 +838,8 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                       </p>
                     )}
                     <label>
-                      Titre <span className="cms-required">requis</span>
+                      {view === 'faq' ? 'Question' : 'Titre'}{' '}
+                      <span className="cms-required">requis</span>
                       <input
                         lang={language}
                         dir={language === 'ar' ? 'rtl' : 'ltr'}
@@ -679,7 +849,18 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                       />
                     </label>
                     <label>
-                      Texte / présentation
+                      {view === 'faq'
+                        ? 'Réponse'
+                        : view === 'projects'
+                          ? 'Description du projet'
+                          : (view === 'organigram' && draft.shared.recordType === 'person') ||
+                              view === 'scientific-council'
+                            ? 'Biographie'
+                            : view === 'news'
+                              ? 'Corps de l’actualité'
+                              : view === 'publications'
+                                ? 'Résumé bibliographique (facultatif)'
+                                : 'Texte / présentation'}
                       <textarea
                         lang={language}
                         dir={language === 'ar' ? 'rtl' : 'ltr'}
@@ -688,13 +869,30 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                         onChange={(e) => updateVariant('body', e.target.value)}
                       />
                       <small>
-                        Texte brut pour cette validation. Le futur éditeur enrichi conservera les
-                        formats autorisés du site.
+                        Le texte est enregistré en base ; les champs métier ci-dessous conservent la
+                        structure de la rubrique.
                       </small>
                     </label>
                     {(currentModule?.fields ?? []).length > 0 && (
                       <div className="cms-section-divider">
-                        <h2>Informations partagées</h2>
+                        <h2>Champs métier · {currentModule?.label}</h2>
+                        {connected && draft.shared._sourceDataset && (
+                          <p className="cms-context">
+                            Source reprise en base : <code>{draft.shared._sourceDataset}</code>. Les
+                            modifications de cette fiche sont conservées dans PostgreSQL ; la source
+                            originale reste consultable ci-dessous.
+                          </p>
+                        )}
+                        {draft.shared.sourceImagePath?.startsWith('/') && (
+                          <Image
+                            src={draft.shared.sourceImagePath}
+                            alt=""
+                            width={160}
+                            height={110}
+                            unoptimized
+                            className="cms-record-image"
+                          />
+                        )}
                         <p>
                           Une modification partagée remet les langues en brouillon ; leurs versions
                           publiées locales sont conservées.
@@ -702,89 +900,92 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                       </div>
                     )}
                     <div className="cms-field-grid">
-                      {currentModule?.fields.map((field) => (
-                        <label
-                          key={field.key}
-                          className={field.type === 'textarea' ? 'cms-field-wide' : ''}
-                        >
-                          {field.label}
-                          {['mediaId', 'documentId', 'destinationId'].includes(field.key) ? (
-                            <select
-                              value={draft.shared[field.key] ?? ''}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  shared: { ...draft.shared, [field.key]: e.target.value },
-                                })
-                              }
-                            >
-                              <option value="">Aucune sélection</option>
-                              {field.key === 'destinationId'
-                                ? registry.map((page) => (
-                                    <option key={page.id} value={page.id}>
-                                      {page.title}
-                                    </option>
-                                  ))
-                                : workspace.entries
-                                    .filter((entry) => entry.module === 'media')
-                                    .map((entry) => (
-                                      <option key={entry.id} value={entry.id}>
-                                        {entry.variants.fr.title || entry.reference}
-                                      </option>
-                                    ))}
-                            </select>
-                          ) : field.type === 'textarea' ? (
-                            <textarea
-                              rows={3}
-                              dir="auto"
-                              value={draft.shared[field.key] ?? ''}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  shared: { ...draft.shared, [field.key]: e.target.value },
-                                })
-                              }
-                            />
-                          ) : (
-                            <input
-                              type={field.type ?? 'text'}
-                              dir="auto"
-                              value={draft.shared[field.key] ?? ''}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  shared: { ...draft.shared, [field.key]: e.target.value },
-                                })
-                              }
-                            />
-                          )}
-                          {field.help && <small>{field.help}</small>}
-                        </label>
-                      ))}
+                      {currentModule?.fields
+                        .filter(
+                          (field) =>
+                            fieldApplies(draft, field) &&
+                            (!field.readOnly || fieldValue(draft, field, language)),
+                        )
+                        .filter(
+                          (field) =>
+                            view !== 'pages' || !['pageId', 'sectionId'].includes(field.key),
+                        )
+                        .map((field) => (
+                          <BusinessField
+                            key={field.key}
+                            field={field}
+                            entry={draft}
+                            language={language}
+                            entries={workspace.entries}
+                            change={(value) =>
+                              setDraft((current) =>
+                                !current || current.id !== draft.id
+                                  ? current
+                                  : field.key === 'reference'
+                                    ? { ...current, reference: value }
+                                    : field.localized
+                                      ? {
+                                          ...current,
+                                          variants: {
+                                            ...current.variants,
+                                            [language]: {
+                                              ...current.variants[language],
+                                              fields: {
+                                                ...current.variants[language].fields,
+                                                [field.key]: value,
+                                              },
+                                            },
+                                          },
+                                        }
+                                      : {
+                                          ...current,
+                                          shared: { ...current.shared, [field.key]: value },
+                                        },
+                              )
+                            }
+                          />
+                        ))}
                     </div>
-                    {view === 'media' && (
+                    {view === 'media' && selectedMediaKind !== 'links' && (
                       <label>
                         Choisir un fichier local
                         <input
                           type="file"
-                          accept="image/jpeg,image/png,image/webp,application/pdf,video/mp4"
-                          onChange={(e) => {
+                          accept={mediaMimes(selectedMediaKind).join(',')}
+                          onChange={async (e) => {
                             const file = e.target.files?.[0]
                             if (!file) return
                             if (file.size > 10 * 1024 * 1024) {
                               setErrors(['Choisir un fichier de moins de 10 Mo.'])
                               return
                             }
-                            if (
-                              ![
-                                'image/jpeg',
-                                'image/png',
-                                'image/webp',
-                                'application/pdf',
-                                'video/mp4',
-                              ].includes(file.type)
-                            ) {
-                              setErrors(['Format non pris en charge dans cet atelier.'])
+                            if (!mediaMimes(selectedMediaKind).includes(file.type)) {
+                              setErrors([
+                                'Choisir un fichier correspondant au type de ressource sélectionné.',
+                              ])
+                              return
+                            }
+                            if (connected) {
+                              try {
+                                const entry = await uploadConnectedMedia(
+                                  file,
+                                  draft.variants.fr.title,
+                                )
+                                setDraft({
+                                  ...entry,
+                                  shared: { ...entry.shared, ...mediaDefaults(selectedMediaKind) },
+                                })
+                                setBaseline(JSON.stringify(entry))
+                                setMessage(
+                                  'Nouveau média privé téléversé et enregistré en base. Compléter ses métadonnées avant toute publication.',
+                                )
+                              } catch (error) {
+                                setErrors([
+                                  error instanceof Error
+                                    ? error.message
+                                    : 'Téléversement impossible.',
+                                ])
+                              }
                               return
                             }
                             setFilePreview(
@@ -795,8 +996,8 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                               shared: {
                                 ...draft.shared,
                                 fileName: file.name,
-                                fileSize: `${Math.round(file.size / 1024)} Ko`,
-                                fileType: file.type,
+                                sizeBytes: String(file.size),
+                                mimeType: file.type,
                               },
                             })
                             setMessage(
@@ -823,7 +1024,10 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                   </fieldset>
                 )}
                 {tab === 'seo' && (
-                  <fieldset disabled={!canEdit(role, view)} className="cms-fields">
+                  <fieldset
+                    disabled={!canEdit(role, view) || draft.variants[language].status === 'review'}
+                    className="cms-fields"
+                  >
                     <label>
                       Titre de recherche / SEO
                       <input
@@ -859,8 +1063,9 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                       </p>
                     </div>
                     <p className="cms-help">
-                      Aucun index public n’est mis à jour. Les URL, canonical et langues publiées
-                      seront calculés à la connexion.
+                      {connected
+                        ? 'Les collections publiques existantes conservent leurs règles d’indexation et de publication. Les nouveaux modules sont enregistrés en base ; leur projection sur le site reste à développer.'
+                        : 'Aucun index public n’est mis à jour. Les URL, canonical et langues publiées seront calculés à la connexion.'}
                     </p>
                   </fieldset>
                 )}
@@ -879,10 +1084,14 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                           </div>
                           <button
                             className="cms-button"
-                            disabled={!canEdit(role, view)}
+                            disabled={
+                              !canEdit(role, view) ||
+                              draft.variants[revision.language].status === 'review'
+                            }
                             onClick={() => {
                               setDraft({
                                 ...draft,
+                                shared: structuredClone(revision.shared ?? draft.shared),
                                 variants: {
                                   ...draft.variants,
                                   [revision.language]: { ...revision.variant, status: 'draft' },
@@ -909,29 +1118,67 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
               </section>
               <aside className="cms-editor-aside">
                 <section className="cms-panel">
-                  <h2>Préparer la révision</h2>
+                  <h2>Circuit de publication</h2>
+                  {connected && (
+                    <label className="cms-workflow-visibility">
+                      Visibilité du contenu
+                      <select
+                        disabled={role !== 'admin'}
+                        value={draft.shared.visibility ?? 'private'}
+                        onChange={(event) =>
+                          setDraft({
+                            ...draft,
+                            shared: { ...draft.shared, visibility: event.target.value },
+                          })
+                        }
+                      >
+                        <option value="private">Privé · gestion interne</option>
+                        <option value="public">Public · après validation</option>
+                      </select>
+                      <small className="cms-help">
+                        Le serveur applique les droits et la validation de chaque langue. La
+                        visibilité seule ne publie rien.
+                      </small>
+                    </label>
+                  )}
+                  <p className="cms-help">
+                    L’éditeur rédige et soumet. L’administrateur valide / publie, ou décline avec un
+                    motif. Une modification validée repart en brouillon.
+                  </p>
                   <ol className="cms-workflow">
-                    {(['draft', 'review', 'validated', 'published'] as Status[]).map(
-                      (step, index) => (
-                        <li
-                          className={draft.variants[language].status === step ? 'current' : ''}
-                          key={step}
-                        >
-                          <span>{index + 1}</span>
-                          {statusLabels[step]}
-                        </li>
-                      ),
-                    )}
+                    {(['draft', 'review', 'published'] as Status[]).map((step, index) => (
+                      <li
+                        className={draft.variants[language].status === step ? 'current' : ''}
+                        key={step}
+                      >
+                        <span>{index + 1}</span>
+                        {statusLabels[step]}
+                      </li>
+                    ))}
                   </ol>
                   <p className="cms-help">
-                    {dirty ? 'Modifications non enregistrées' : 'Révision locale à jour'}
+                    {dirty
+                      ? 'Modifications non enregistrées'
+                      : connected
+                        ? 'Révision enregistrée en base'
+                        : 'Révision locale à jour'}
                     {draft.publicVariants[language] &&
-                      ' · Une version publiée locale est conservée.'}
+                      ' · La version validée reste distincte du brouillon.'}
                   </p>
                   <div className="cms-stacked-actions">
+                    {workspace.entries.some((entry) => entry.id === draft.id) && (
+                      <EntryActions
+                        entry={workspace.entries.find((entry) => entry.id === draft.id)!}
+                        language={language}
+                        role={role}
+                        action={requestEntryAction}
+                      />
+                    )}
                     <button
                       className="cms-button cms-primary"
-                      disabled={!canEdit(role, view)}
+                      disabled={
+                        !canEdit(role, view) || draft.variants[language].status === 'review'
+                      }
                       onClick={() => save()}
                     >
                       Enregistrer le brouillon
@@ -941,7 +1188,7 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                       onClick={() =>
                         download(
                           'revision-atelier.json',
-                          JSON.stringify(draft, null, 2),
+                          JSON.stringify(connectionRecord(draft), null, 2),
                           'application/json',
                         )
                       }
@@ -951,9 +1198,12 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                     <button className="cms-button" onClick={() => setPreview('desktop')}>
                       Prévisualiser
                     </button>
-                    {(['review', 'validated', 'published', 'archived'] as Status[])
-                      .filter((target) =>
-                        canTransition(role, draft.variants[language].status, target),
+                    {(['review', 'published', 'draft'] as Status[])
+                      .filter(
+                        (target) =>
+                          target === 'published' &&
+                          target !== draft.variants[language].status &&
+                          canTransition(role, draft.variants[language].status, target),
                       )
                       .map((target) => (
                         <button
@@ -963,17 +1213,18 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                         >
                           {target === 'review'
                             ? 'Soumettre à validation'
-                            : target === 'validated'
-                              ? 'Valider cette langue'
-                              : target === 'published'
-                                ? 'Simuler la publication'
-                                : 'Archiver cette langue'}
+                            : target === 'published'
+                              ? 'Valider / publier'
+                              : draft.variants[language].status === 'review'
+                                ? 'Décliner · retour en brouillon'
+                                : 'Préparer une nouvelle révision'}
                         </button>
                       ))}
                   </div>
                   <p className="cms-help">
-                    Droits simulés pour le profil {roleLabels[role].toLowerCase()}. Ils ne
-                    constituent pas une authentification.
+                    {connected
+                      ? `Droits du compte ${roleLabels[role].toLowerCase()}, contrôlés côté serveur.`
+                      : `Droits simulés pour le profil ${roleLabels[role].toLowerCase()}. Ils ne constituent pas une authentification.`}
                   </p>
                 </section>
                 <section className="cms-panel">
@@ -984,7 +1235,10 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                   <textarea
                     id="internal-note"
                     rows={4}
-                    disabled={!canEdit(role, view)}
+                    disabled={
+                      !canEdit(role, view) ||
+                      (role === 'editor' && draft.variants[language].status === 'review')
+                    }
                     value={draft.comment}
                     onChange={(e) => setDraft({ ...draft, comment: e.target.value })}
                     placeholder="Motif de correction ou point à vérifier…"
@@ -1001,9 +1255,60 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                 </section>
               </aside>
             </div>
+          ) : view === 'users' && connected ? (
+            <section className="cms-panel">
+              <h2>Comptes et droits</h2>
+              <p>
+                Les comptes réels sont gérés dans l’administration authentifiée. Les deux rôles
+                disponibles sont administrateur et éditeur.
+              </p>
+              <Link className="cms-button" href="/admin/collections/users" prefetch={false}>
+                Gérer les comptes
+              </Link>
+            </section>
+          ) : view === 'trash' ? (
+            <Trash
+              role={role}
+              version={workspace}
+              restore={(id, title) => {
+                setActionError('')
+                setEntryAction({ id, title, action: 'restore', language: 'fr', note: '' })
+              }}
+            />
+          ) : view === 'careers' ? (
+            <Recruitment
+              key={role}
+              offers={workspace.entries.filter((entry) => entry.module === 'careers')}
+              role={role}
+              openOffer={open}
+              offerActions={(entry) => (
+                <EntryActions
+                  entry={entry}
+                  language="fr"
+                  role={role}
+                  open={open}
+                  compact
+                  action={requestEntryAction}
+                />
+              )}
+              createOffer={() => create('careers')}
+              onDirty={setRecruitmentDirty}
+            />
+          ) : view === 'data-model' ? (
+            <DataStructure />
+          ) : view === 'analytics' ? (
+            <Analytics
+              workspace={{ ...workspace, entries: accessibleEntries }}
+              navigate={navigate}
+            />
           ) : view === 'dashboard' ? (
             <>
-              <div className="cms-summary">
+              <Analytics
+                workspace={{ ...workspace, entries: accessibleEntries }}
+                compact
+                navigate={navigate}
+              />
+              <div className={`cms-summary${draftCount === 0 ? ' cms-summary-three' : ''}`}>
                 {[
                   {
                     title: 'En attente de revue',
@@ -1020,32 +1325,35 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                     help: 'Compléter les traductions',
                   },
                   {
-                    title: 'Brouillons locaux',
-                    count: accessibleEntries.filter((e) => e.variants.fr.status === 'draft').length,
+                    title: connected ? 'Brouillons' : 'Brouillons locaux',
+                    count: draftCount,
+                    hidden: draftCount === 0,
                     icon: 'document',
                     action: () => navigate('drafts'),
                     help: 'Continuer la rédaction',
                   },
                   {
                     title: 'Services à connecter',
-                    count: 4,
+                    count: externalConnections.length,
                     icon: 'link',
                     action: () => navigate('integrations'),
                     help: 'Voir les dépendances',
                   },
-                ].map((item) => (
-                  <button className="cms-summary-item" key={item.title} onClick={item.action}>
-                    <div>
-                      <span>{item.title}</span>
-                      <CmsIcon name={item.icon as IconName} />
-                    </div>
-                    <strong>{item.count}</strong>
-                    <small>
-                      {item.help}
-                      <CmsIcon name="arrow" />
-                    </small>
-                  </button>
-                ))}
+                ]
+                  .filter((item) => !item.hidden)
+                  .map((item) => (
+                    <button className="cms-summary-item" key={item.title} onClick={item.action}>
+                      <div>
+                        <span>{item.title}</span>
+                        <CmsIcon name={item.icon as IconName} />
+                      </div>
+                      <strong>{item.count}</strong>
+                      <small>
+                        {item.help}
+                        <CmsIcon name="arrow" />
+                      </small>
+                    </button>
+                  ))}
               </div>
               <div className="cms-dashboard-grid">
                 <section className="cms-panel">
@@ -1053,7 +1361,7 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                     <h2>À traiter</h2>
                     <span>{pending.length} révisions</span>
                   </div>
-                  {pending.map((entry) => (
+                  {pending.slice(0, 8).map((entry) => (
                     <button className="cms-task" key={entry.id} onClick={() => open(entry)}>
                       <span className="cms-task-icon">
                         <CmsIcon
@@ -1072,33 +1380,35 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                   ))}
                   {!pending.length && (
                     <Empty title="Aucune revue en attente">
-                      Soumettez un brouillon pour essayer ce parcours.
+                      Les prochaines soumissions apparaîtront ici.
                     </Empty>
                   )}
                   <div className="cms-panel-footer">
-                    Les compteurs décrivent uniquement les exemples de cet atelier.
+                    {connected
+                      ? 'Les compteurs décrivent les fiches enregistrées dans PostgreSQL.'
+                      : 'Les compteurs décrivent uniquement les exemples de cet atelier.'}
                   </div>
                 </section>
-                <section className="cms-panel cms-audience">
-                  <div className="cms-panel-heading">
-                    <h2>Audience du site</h2>
-                    <select aria-label="Période d’audience" defaultValue="30">
-                      <option value="7">7 derniers jours</option>
-                      <option value="30">30 derniers jours</option>
-                      <option value="90">90 derniers jours</option>
-                    </select>
-                  </div>
-                  <CmsIcon name="globe" />
-                  <h3>Les données d’audience seront ici</h3>
+                <section className="cms-panel">
+                  <h2>Deux rôles, trois étapes</h2>
+                  <ol className="cms-workflow">
+                    <li>
+                      <span>1</span>Brouillon · rédaction par l’éditeur
+                    </li>
+                    <li>
+                      <span>2</span>En revue · décision de l’administrateur
+                    </li>
+                    <li>
+                      <span>3</span>Validé / publié · instantané local conservé
+                    </li>
+                  </ol>
                   <p>
-                    Matomo n’est pas connecté. Visites, pages vues et sources de trafic sont
-                    indisponibles.
+                    Un refus motivé renvoie en brouillon. Les décisions sont propres à chaque langue
+                    et figurent dans l’historique.
                   </p>
-                  <button className="cms-text-button" onClick={() => navigate('integrations')}>
-                    Préparer la connexion
-                    <CmsIcon name="arrow" />
+                  <button className="cms-button" onClick={() => navigate('review-queue')}>
+                    Ouvrir la file de revue
                   </button>
-                  <small>Aucune statistique inventée · aucun suivi activé</small>
                 </section>
               </div>
               <section className="cms-panel">
@@ -1163,44 +1473,41 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
               }}
             />
           ) : view === 'figures' ? (
-            <Figures role={role} entries={workspace.entries} open={open} />
+            <Figures
+              role={role}
+              entries={workspace.entries}
+              open={open}
+              actions={(entry) => (
+                <EntryActions
+                  entry={entry}
+                  language="fr"
+                  role={role}
+                  open={open}
+                  compact
+                  action={requestEntryAction}
+                />
+              )}
+            />
           ) : view === 'integrations' ? (
             <Integrations />
           ) : view === 'backups' ? (
             <section className="cms-panel">
-              <Empty title="Aucune sauvegarde serveur connectée">
-                Le CMS et le stockage ne sont pas reliés à cet atelier. L’export ci-dessous copie
-                uniquement la session de démonstration.
+              <Empty title="Export des contenus enregistrés">
+                L’export reprend les contenus chargés depuis PostgreSQL. Il exclut les comptes, mots
+                de passe et CV ; il ne remplace pas une sauvegarde complète de la base.
               </Empty>
               <div className="cms-panel-footer cms-actions">
                 <button
                   className="cms-button"
                   onClick={() =>
                     download(
-                      'iresen-atelier-local.json',
+                      'iresen-contenus.json',
                       JSON.stringify(workspace, null, 2),
                       'application/json',
                     )
                   }
                 >
-                  Exporter la session locale
-                </button>
-                <button
-                  className="cms-button"
-                  disabled={role !== 'admin'}
-                  onClick={() =>
-                    setConfirmation({
-                      title: 'Réinitialiser cet atelier ?',
-                      body: 'Les contenus et journaux locaux de ce navigateur seront remplacés par les exemples initiaux. Exportez votre session si vous souhaitez la conserver.',
-                      label: 'Réinitialiser les exemples',
-                      action: () => {
-                        persist(initialWorkspace())
-                        setMessage('Atelier local réinitialisé.')
-                      },
-                    })
-                  }
-                >
-                  Réinitialiser les exemples
+                  Exporter les contenus JSON
                 </button>
               </div>
             </section>
@@ -1208,8 +1515,10 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
             <Imports
               entries={workspace.entries}
               role={role}
-              apply={(entries) => {
-                persist({
+              apply={async (entries) => {
+                if (connected && !contentConnected())
+                  throw new Error('Rechargez la connexion au CMS avant d’importer.')
+                await persist({
                   ...workspace,
                   entries: [
                     ...workspace.entries.filter(
@@ -1238,6 +1547,31 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
             <Logs logs={workspace.logs} />
           ) : currentModule || workspaceList ? (
             <>
+              {view === 'media' && (
+                <MediaTypeChooser
+                  entries={workspace.entries}
+                  value={mediaKind}
+                  change={(kind) => {
+                    setMediaKind(kind)
+                    setPage(1)
+                    setSelection([])
+                    setQuery('')
+                    setStatus('all')
+                  }}
+                />
+              )}
+              {view === 'organigram' && (
+                <OrganigramOverview
+                  entries={workspace.entries}
+                  language={localeFilter}
+                  open={open}
+                  create={(kind) => {
+                    const entry = createEntry('organigram', id(), new Date().toISOString())
+                    entry.shared.recordType = kind
+                    open(entry)
+                  }}
+                />
+              )}
               {view === 'news' && (
                 <div className="cms-inline-notice">
                   <CmsIcon name="link" />
@@ -1268,12 +1602,8 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                         {Object.entries(roleLabels).map(([value, label]) => (
                           <tr key={value}>
                             <th>{label}</th>
-                            <td>{value === 'reader' ? 'Consultation' : 'Modification locale'}</td>
-                            <td>
-                              {value === 'admin' || value === 'publisher'
-                                ? 'Simulation autorisée'
-                                : 'Indisponible'}
-                            </td>
+                            <td>Rédaction et soumission</td>
+                            <td>{value === 'admin' ? 'Simulation autorisée' : 'Indisponible'}</td>
                             <td>{value === 'admin' ? 'Simulation autorisée' : 'Indisponible'}</td>
                           </tr>
                         ))}
@@ -1355,10 +1685,10 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                         <span>{selection.length} sélectionné(s)</span>
                         <button
                           className="cms-button"
-                          disabled={!canTransition(role, 'draft', 'archived')}
+                          disabled={role !== 'admin'}
                           onClick={archiveSelection}
                         >
-                          Archiver
+                          Retirer en brouillon
                         </button>
                       </>
                     )}
@@ -1368,13 +1698,25 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                         download(
                           `${view}-atelier.csv`,
                           [
-                            ['reference', 'title', 'body', 'status', 'language'],
+                            [
+                              'reference',
+                              'title',
+                              'body',
+                              'status',
+                              'language',
+                              ...(currentModule?.fields
+                                .filter((field) => field.key !== 'reference')
+                                .map((field) => field.key) ?? []),
+                            ],
                             ...filtered.map((e) => [
                               e.reference,
                               e.variants[localeFilter].title,
                               e.variants[localeFilter].body,
                               e.variants[localeFilter].status,
                               localeFilter,
+                              ...(currentModule?.fields
+                                .filter((field) => field.key !== 'reference')
+                                .map((field) => fieldValue(e, field, localeFilter)) ?? []),
                             ]),
                           ]
                             .map((row) => row.map(safeCsvCell).join(','))
@@ -1410,11 +1752,17 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                               />
                             </th>
                             <th>Contenu</th>
+                            {currentModule?.columns?.map((key) => (
+                              <th key={key}>
+                                {currentModule.fields.find((field) => field.key === key)?.label ??
+                                  key}
+                              </th>
+                            ))}
                             <th>État {localeFilter.toUpperCase()}</th>
                             <th>Langues</th>
                             <th>Modification</th>
-                            <th>
-                              <span className="cms-sr-only">Action</span>
+                            <th scope="col" className="cms-actions-column">
+                              Actions
                             </th>
                           </tr>
                         </thead>
@@ -1436,6 +1784,16 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                                 />
                               </td>
                               <td>
+                                {entry.shared.sourceImagePath?.startsWith('/') && (
+                                  <Image
+                                    src={entry.shared.sourceImagePath}
+                                    alt=""
+                                    width={72}
+                                    height={48}
+                                    unoptimized
+                                    className="cms-row-thumbnail"
+                                  />
+                                )}
                                 <button
                                   className="cms-title-button"
                                   dir="auto"
@@ -1443,8 +1801,26 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                                 >
                                   {entry.variants[localeFilter].title || 'Traduction à compléter'}
                                 </button>
-                                <small className="cms-row-reference">{entry.reference}</small>
                               </td>
+                              {currentModule?.columns?.map((key) => (
+                                <td key={key} className="cms-business-cell" dir="auto">
+                                  {['sourceUrl', 'doi'].includes(key) &&
+                                  /^https?:\/\//i.test(entry.shared[key] ?? '') ? (
+                                    <a
+                                      className="cms-source-link"
+                                      href={entry.shared[key]}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      title={entry.shared[key]}
+                                      aria-label={`${key === 'doi' ? 'Accéder à la publication' : 'Lien · source de'} ${entry.variants[localeFilter].title || entry.reference}`}
+                                    >
+                                      {key === 'doi' ? 'Accéder à la publication' : 'Lien'}
+                                    </a>
+                                  ) : (
+                                    displayField(entry, key, localeFilter, workspace.entries)
+                                  )}
+                                </td>
+                              ))}
                               <td>
                                 <Badge status={entry.variants[localeFilter].status} />
                               </td>
@@ -1453,13 +1829,14 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                               </td>
                               <td>{date(entry.updatedAt)}</td>
                               <td>
-                                <button
-                                  className="cms-icon-button"
-                                  aria-label={`Ouvrir ${entry.variants[localeFilter].title || entry.reference}`}
-                                  onClick={() => open(entry)}
-                                >
-                                  <CmsIcon name="arrow" />
-                                </button>
+                                <EntryActions
+                                  entry={entry}
+                                  language={localeFilter}
+                                  role={role}
+                                  compact
+                                  open={open}
+                                  action={requestEntryAction}
+                                />
                               </td>
                             </tr>
                           ))}
@@ -1493,23 +1870,157 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
                     title={
                       query || status !== 'all'
                         ? 'Aucun résultat pour ces filtres'
-                        : 'Aucun contenu dans cet atelier'
+                        : connected
+                          ? 'Aucun contenu enregistré'
+                          : 'Aucun contenu dans cet atelier'
                     }
                   >
                     {query || status !== 'all'
                       ? 'Modifiez votre recherche ou revenez à tous les états.'
-                      : 'Créez un brouillon local pour valider le formulaire et le parcours. Les bases réelles ne sont pas chargées.'}
+                      : connected
+                        ? 'Créez une fiche : son enregistrement sera conservé dans PostgreSQL.'
+                        : 'Créez un brouillon local pour valider le formulaire et le parcours. Les bases réelles ne sont pas chargées.'}
                   </Empty>
                 )}
               </section>
             </>
           ) : null}
+          {!draft && currentModule && (
+            <details className="cms-panel cms-schema-disclosure">
+              <summary>Voir les champs et types · {currentModule.label}</summary>
+              <SchemaTable module={currentModule} />
+            </details>
+          )}
           <footer className="cms-footer">
-            <span>IRESEN · Atelier de validation du CMS</span>
+            <span>IRESEN · {connected ? 'Gestion du site' : 'Atelier de validation du CMS'}</span>
             <span>Interface FR · contenus FR / EN / AR · Africa/Casablanca</span>
           </footer>
         </main>
       </div>
+      {entryAction && (
+        <Dialog
+          title={
+            entryAction.action === 'highlight'
+              ? 'Mettre cet article à la une ?'
+              : entryAction.action === 'delete'
+                ? 'Supprimer cette fiche ?'
+                : entryAction.action === 'restore'
+                  ? 'Restaurer cette fiche ?'
+                  : entryAction.action === 'review'
+                    ? 'Remettre en revue ?'
+                    : 'Remettre en brouillon ?'
+          }
+          close={() => {
+            if (!actionBusy) setEntryAction(null)
+          }}
+        >
+          <p>
+            <strong>{entryAction.title}</strong>
+          </p>
+          <p>
+            {entryAction.action === 'highlight'
+              ? 'Cet article deviendra le seul article à la une et remplacera la sélection actuelle. Les textes et leurs validations restent inchangés.'
+              : entryAction.action === 'delete'
+                ? 'La fiche sera retirée des listes et des publications dynamiques dans toutes les langues. Elle restera récupérable dans la corbeille.'
+                : entryAction.action === 'restore'
+                  ? 'La fiche reviendra en brouillon privé. Une nouvelle validation sera nécessaire.'
+                  : `Cette action concerne la langue ${entryAction.language.toUpperCase()}. La version validée est conservée pendant la nouvelle rédaction ou revue.`}
+          </p>
+          {entryAction.action === 'delete' && (
+            <>
+              {impactLoading && <p role="status">Analyse des dépendances en base…</p>}
+              {deleteImpact && <DeleteImpactSummary impact={deleteImpact} />}
+              <button
+                type="button"
+                className="cms-button"
+                disabled={impactLoading || actionBusy}
+                onClick={() => {
+                  setActionError('')
+                  setDeleteImpact(null)
+                  setImpactLoading(true)
+                  setImpactReload((value) => value + 1)
+                }}
+              >
+                Actualiser les impacts
+              </button>
+            </>
+          )}
+          <label className="cms-action-note">
+            Motif / note interne
+            <textarea
+              rows={3}
+              value={entryAction.note}
+              disabled={actionBusy}
+              onChange={(event) => setEntryAction({ ...entryAction, note: event.target.value })}
+            />
+          </label>
+          {actionError && (
+            <p role="alert" className="cms-error">
+              {actionError}
+            </p>
+          )}
+          <div className="cms-actions">
+            <button
+              className="cms-button"
+              disabled={actionBusy}
+              onClick={() => setEntryAction(null)}
+            >
+              Annuler
+            </button>
+            <button
+              className="cms-button cms-primary"
+              disabled={
+                actionBusy ||
+                (entryAction.action === 'delete' &&
+                  (impactLoading ||
+                    !deleteImpact ||
+                    deleteImpact.id !== entryAction.id ||
+                    deleteImpact.blockers.length > 0))
+              }
+              onClick={async () => {
+                setActionBusy(true)
+                setActionError('')
+                try {
+                  const updated = await performContentAction(
+                    entryAction.id,
+                    entryAction.action,
+                    entryAction.language,
+                    entryAction.note,
+                    entryAction.action === 'delete' ? (deleteImpact ?? undefined) : undefined,
+                  )
+                  if (draft?.id === entryAction.id) {
+                    const saved = updated.entries.find((entry) => entry.id === draft.id)
+                    setDraft(saved ? structuredClone(saved) : null)
+                    setBaseline(saved ? JSON.stringify(saved) : '')
+                  }
+                  setSelection((previous) => previous.filter((id) => id !== entryAction.id))
+                  if (entryAction.action === 'delete') setPage(1)
+                  setMessage(
+                    entryAction.action === 'highlight'
+                      ? 'Article mis à la une.'
+                      : entryAction.action === 'delete'
+                        ? 'Fiche déplacée dans la corbeille.'
+                        : entryAction.action === 'restore'
+                          ? 'Fiche restaurée en brouillon privé.'
+                          : `Fiche remise en ${entryAction.action === 'review' ? 'revue' : 'brouillon'}.`,
+                  )
+                  setEntryAction(null)
+                } catch (error) {
+                  setActionError(error instanceof Error ? error.message : 'Action impossible.')
+                } finally {
+                  setActionBusy(false)
+                }
+              }}
+            >
+              {actionBusy
+                ? 'Enregistrement…'
+                : entryAction.action === 'delete'
+                  ? 'Confirmer la suppression'
+                  : 'Confirmer'}
+            </button>
+          </div>
+        </Dialog>
+      )}
       {confirmation && (
         <Dialog title={confirmation.title} close={() => setConfirmation(null)}>
           <p>{confirmation.body}</p>
@@ -1519,9 +2030,9 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
             </button>
             <button
               className="cms-button cms-primary"
-              onClick={() => {
+              onClick={async () => {
                 try {
-                  confirmation.action()
+                  await confirmation.action()
                 } catch (error) {
                   setErrors([error instanceof Error ? error.message : 'Action impossible.'])
                 }
@@ -1560,6 +2071,19 @@ export function CmsPreview({ registry }: { registry: PageRegistry[] }) {
             <Image src="/brand/logo-primary.svg" alt="IRESEN" width={120} height={40} />
             <h2>{draft.variants[language].title || 'Titre à compléter'}</h2>
             <p>{draft.variants[language].body || 'Texte à compléter dans cette langue.'}</p>
+            <dl className="cms-preview-fields">
+              {currentModule?.fields
+                .filter(
+                  (field) =>
+                    fieldApplies(draft, field) && fieldValue(draft, field, language).trim(),
+                )
+                .map((field) => (
+                  <div key={field.key}>
+                    <dt>{field.label}</dt>
+                    <dd>{displayField(draft, field.key, language, workspace.entries)}</dd>
+                  </div>
+                ))}
+            </dl>
           </article>
         </Dialog>
       )}
@@ -1623,22 +2147,28 @@ function PageChooser({
           <span>Structure fixe</span>
         </div>
         {page.sections.map((section) => {
-          const entry = entries.find((e) => e.id === `${page.id}--${section.id}`)
+          const entry = entries.find(
+            (e) => e.shared.pageId === page.id && e.shared.sectionId === section.id,
+          )
           return (
-            <button
-              className="cms-result-row"
-              key={section.id}
-              onClick={() => (entry ? open(entry) : create(page, section))}
-            >
-              <CmsIcon name="document" />
-              <span>
-                <strong>{section.title}</strong>
-                <small>
-                  {entry ? 'Révision locale disponible' : 'Commencer une révision locale vide'}
-                </small>
-              </span>
-              <CmsIcon name="arrow" />
-            </button>
+            <div key={section.id}>
+              <button
+                className="cms-result-row"
+                key={section.id}
+                onClick={() => (entry ? open(entry) : create(page, section))}
+              >
+                <CmsIcon name="document" />
+                <span>
+                  <strong>{section.title}</strong>
+                  <small>
+                    {entry
+                      ? 'Contenu chargé depuis PostgreSQL'
+                      : 'Aucun contenu enregistré pour cette section'}
+                  </small>
+                </span>
+                <CmsIcon name="arrow" />
+              </button>
+            </div>
           )
         })}
         {!page.sections.length && (
@@ -1646,9 +2176,29 @@ function PageChooser({
             Les destinations utilitaires conservent leurs modèles actuels.
           </Empty>
         )}
+        <div className="cms-section-divider">
+          <h2>Textes détaillés du site</h2>
+          <p>
+            Missions, chronologie, axes de recherche, biographies, liens et autres textes imbriqués.
+          </p>
+          {entries
+            .filter((entry) => entry.shared.catalogNamespace)
+            .map((entry) => (
+              <div key={entry.id}>
+                <button className="cms-result-row" key={entry.id} onClick={() => open(entry)}>
+                  <CmsIcon name="document" />
+                  <span>
+                    <strong>{entry.variants.fr.title}</strong>
+                    <small>Contenu FR / EN / AR · PostgreSQL</small>
+                  </span>
+                  <CmsIcon name="arrow" />
+                </button>
+              </div>
+            ))}
+        </div>
         <div className="cms-panel-footer">
-          Les textes servis ne sont pas importés ici. Les champs éditables seront affinés par modèle
-          avant la connexion.
+          Les textes et les contenus structurés du site sont enregistrés en base commune. Les
+          variantes en cours de rédaction conservent leur étape de validation.
         </div>
       </section>
     </div>
@@ -1658,27 +2208,47 @@ function Figures({
   role,
   entries,
   open,
+  actions,
 }: {
   role: Role
   entries: Entry[]
   open: (entry: Entry) => void
+  actions: (entry: Entry) => ReactNode
 }) {
   const calculated = [
     {
+      title: 'Nombre d’appels à projets',
+      value: String(publicModuleCount(entries, 'calls')),
+      source: 'Répertoire des appels à projets · base commune',
+      rule: 'Nombre de fiches d’appels à projets avec une version publique validée (FR), toutes éditions confondues. Ne représente pas uniquement les appels ouverts.',
+    },
+    {
+      title: 'Projets collaboratifs soutenus',
+      value: String(supportedProjects(entries)),
+      source: 'Catalogue des projets · versions publiques validées en français',
+      rule: 'Projets du catalogue public validé, hors fiches privées et brouillons sans version validée. Les modifications en cours ne remplacent pas la version validée.',
+    },
+    {
       title: 'Publications retenues',
-      value: '1 199',
+      value: String(publicModuleCount(entries, 'publications')),
       source: 'Corpus structuré · T4 2026',
-      rule: 'Références retenues dans la sélection approuvée ; exclusions conservées.',
+      rule: 'Références publiques validées dans la sélection approuvée ; exclusions conservées.',
     },
     {
       title: 'Références de dépôt de brevets',
-      value: '59',
+      value: String(filedPatentReferences(entries)),
       source: 'Catalogue structuré de dépôts',
-      rule: 'Références retenues. Ne signifie ni actifs, ni délivrés, ni commercialisés.',
+      rule: 'Références validées du portefeuille, y compris les dépôts dont la fiche individuelle reste privée. Ce total agrégé ne signifie ni actifs, ni délivrés, ni commercialisés.',
+    },
+    {
+      title: 'Brevets accordés du portefeuille PI',
+      value: String(grantedPatents(entries)),
+      source: 'Portefeuille PI · statut accepté / délivré renseigné en base',
+      rule: 'Versions publiques validées dont le champ « Accepté / délivré dans la source » vaut Oui. Les dépôts non accordés ou sans statut sont exclus ; aucune commercialisation n’est déduite.',
     },
     {
       title: 'Laboratoires du réseau',
-      value: '14',
+      value: String(publicModuleCount(entries, 'laboratories')),
       source: 'Référentiel fourni',
       rule: 'Fiches de laboratoires ; positions des villes approximatives.',
     },
@@ -1715,57 +2285,81 @@ function Figures({
         </table>
       </div>
       <div className="cms-panel-footer">
-        Valeurs documentées du dépôt, sans recalcul ni lecture de base. Les projets de démonstration
-        sont exclus.
+        Effectifs calculés à partir des fiches chargées depuis PostgreSQL. Aucun indicateur inventé.
       </div>
       <div className="cms-section-divider">
-        <h2>Valeur éditoriale à tester</h2>
-        <p>Un brouillon permet de discuter source, période, unité et justification.</p>
-        <button
-          className="cms-button"
-          disabled={role === 'reader'}
-          onClick={() => {
-            const existing = entries.find((e) => e.id === 'editorial-figure')
-            const entry =
-              existing ?? createEntry('figures', 'editorial-figure', new Date().toISOString())
-            if (!existing) entry.variants.fr.title = 'Exemple — indicateur éditorial à sourcer'
-            open(entry)
-          }}
-        >
-          Préparer un indicateur local
-        </button>
+        <h2>Indicateurs éditoriaux du site</h2>
+        {entries
+          .filter((entry) => entry.module === 'figures')
+          .map((entry) => (
+            <div key={entry.id} className="cms-indicator-row">
+              <button
+                key={entry.id}
+                className="cms-result-row"
+                disabled={!canEdit(role, 'figures')}
+                onClick={() => open(entry)}
+              >
+                <span>
+                  <strong>{entry.variants.fr.title}</strong>
+                  <small>
+                    {entry.shared.value} · {entry.shared.source}
+                  </small>
+                </span>
+              </button>
+              {actions(entry)}
+            </div>
+          ))}
       </div>
     </section>
   )
 }
 function Integrations() {
+  const records = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot).entries
   const [selected, setSelected] = useState<string | null>(null)
-  const connections = [
-    {
-      name: 'LinkedIn',
-      text: 'Posts de la page officielle, doublons et revue éditoriale.',
-      needs: 'Application approuvée, droits sur la page et OAuth côté serveur.',
-    },
-    {
-      name: 'Matomo',
-      text: 'Visites, pages vues, langues et sources de trafic.',
-      needs: 'Instance approuvée, définitions des mesures et adaptateur de rapports.',
-    },
-    {
-      name: 'Classification IA',
-      text: 'Propositions de thèmes et synthèses à relire.',
-      needs: 'Fournisseur choisi, confidentialité et schéma de réponse validé.',
-    },
-    {
-      name: 'Recherche et indexation',
-      text: 'Publication, retrait et vocabulaire FR / EN / AR.',
-      needs: 'Raccordement au moteur et à sa file durable existante.',
-    },
-  ]
   return (
     <section className="cms-panel">
-      <h2>Connexions prévues</h2>
-      {connections.map((connection) => (
+      <h2>Connexions des données</h2>
+      {contentConnected() && (
+        <>
+          <p className="cms-context">
+            PostgreSQL connecté. Les collections ci-dessous sont enregistrées en base. Les services
+            externes figurent séparément.
+          </p>
+          <div className="cms-table-scroll">
+            <table>
+              <caption>État des rubriques du CMS</caption>
+              <thead>
+                <tr>
+                  <th>Rubrique</th>
+                  <th>Fiches</th>
+                  <th>Stockage</th>
+                  <th>État</th>
+                </tr>
+              </thead>
+              <tbody>
+                {modules
+                  .filter((module) => module.id !== 'users')
+                  .map((module) => (
+                    <tr key={module.id}>
+                      <th>{module.label}</th>
+                      <td>{records.filter((entry) => entry.module === module.id).length}</td>
+                      <td>
+                        <code>cms_authoring_entries</code> · {module.id}
+                      </td>
+                      <td>Connectée</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+      <p className="cms-context">
+        Recherche interne : moteur PostgreSQL et références FR / EN / AR raccordés aux versions
+        validées.
+      </p>
+      <h3>Services externes</h3>
+      {externalConnections.map((connection) => (
         <div className="cms-integration-row" key={connection.name}>
           <span className="cms-task-icon">
             <CmsIcon name="link" />
@@ -1829,7 +2423,7 @@ function Logs({ logs }: { logs: ReturnType<typeof getSnapshot>['logs'] }) {
                 <th>Action</th>
                 <th>Ressource</th>
                 <th>Langue</th>
-                <th>Profil simulé</th>
+                <th>Rôle</th>
               </tr>
             </thead>
             <tbody>
@@ -1859,7 +2453,8 @@ function Logs({ logs }: { logs: ReturnType<typeof getSnapshot>['logs'] }) {
         </Empty>
       )}
       <div className="cms-panel-footer">
-        Journal de démonstration modifiable via le navigateur ; ne constitue pas un audit sécurisé.
+        Les actions sont enregistrées côté serveur avec le compte authentifié. Les 200 dernières
+        traces sont affichées.
       </div>
     </section>
   )
@@ -1871,11 +2466,18 @@ function Imports({
 }: {
   entries: Entry[]
   role: Role
-  apply: (entries: Entry[]) => void
+  apply: (entries: Entry[]) => void | Promise<void>
 }) {
   const [moduleId, setModuleId] = useState('news')
   const [rows, setRows] = useState<string[][]>([])
-  const [mapping, setMapping] = useState({ reference: '', title: '', body: '' })
+  const [mapping, setMapping] = useState<Record<string, string>>({
+    reference: '',
+    title: '',
+    body: '',
+  })
+  const importFields =
+    modules.find((module) => module.id === moduleId)?.fields.filter((field) => !field.readOnly) ??
+    []
   const [phase, setPhase] = useState(1)
   const [error, setError] = useState('')
   const [done, setDone] = useState(false)
@@ -1884,12 +2486,56 @@ function Imports({
     reference: row[headers.indexOf(mapping.reference)]?.trim() ?? '',
     title: row[headers.indexOf(mapping.title)]?.trim() ?? '',
     body: row[headers.indexOf(mapping.body)] ?? '',
+    fields: Object.fromEntries(
+      importFields.map((field) => [field.key, row[headers.indexOf(mapping[field.key])] ?? '']),
+    ),
     line: index + 2,
   }))
+  function prepareRecord(record: (typeof records)[number], newId: string): Entry {
+    const existing = entries.find((e) => e.module === moduleId && e.reference === record.reference)
+    const entry = existing
+      ? structuredClone(existing)
+      : createEntry(moduleId, newId, new Date().toISOString())
+    entry.reference = record.reference
+    entry.variants.fr = {
+      ...entry.variants.fr,
+      title: record.title,
+      body: record.body,
+      status: 'draft',
+    }
+    for (const field of importFields) {
+      if (!mapping[field.key] || field.key === 'reference') continue
+      if (field.localized) entry.variants.fr.fields[field.key] = record.fields[field.key]
+      else entry.shared[field.key] = record.fields[field.key]
+    }
+    const errors = [...validateEntry(entry, 'fr'), ...relationErrors(entry, entries)]
+    if (errors.length) throw new Error(`Ligne ${record.line} : ${errors.join(' ')}`)
+    if (existing && JSON.stringify(existing.shared) !== JSON.stringify(entry.shared))
+      for (const lang of languages) entry.variants[lang].status = 'draft'
+    entry.updatedAt = new Date().toISOString()
+    return entry
+  }
+  const issues = new Map(
+    records.map((record) => {
+      try {
+        prepareRecord(record, `import-validation-${record.line}`)
+        return [record.line, ''] as const
+      } catch (error) {
+        return [record.line, error instanceof Error ? error.message : 'Champs invalides'] as const
+      }
+    }),
+  )
   const valid = records.filter(
     (record) =>
       record.reference &&
       record.title &&
+      !issues.get(record.line) &&
+      !entries.some(
+        (entry) =>
+          entry.module === moduleId &&
+          entry.reference === record.reference &&
+          entry.variants.fr.status === 'review',
+      ) &&
       records.filter((other) => other.reference === record.reference).length === 1,
   )
   const duplicates = records.filter(
@@ -1945,7 +2591,13 @@ function Imports({
             onClick={() =>
               download(
                 'modele-atelier.csv',
-                'reference,title,body\nTEST-001,Exemple de titre,Texte à relire\n',
+                [
+                  'reference,title,body,' +
+                    importFields
+                      .map((field) => field.key)
+                      .filter((key) => key !== 'reference')
+                      .join(','),
+                ].join('\n') + '\n',
                 'text/csv',
               )
             }
@@ -1957,7 +2609,7 @@ function Imports({
             <input
               type="file"
               accept=".csv,text/csv"
-              disabled={role === 'reader'}
+              disabled={!canEdit(role, 'figures')}
               onChange={async (e) => {
                 const file = e.target.files?.[0]
                 if (!file) return
@@ -1973,6 +2625,14 @@ function Imports({
                     reference: parsed[0].includes('reference') ? 'reference' : '',
                     title: parsed[0].includes('title') ? 'title' : '',
                     body: parsed[0].includes('body') ? 'body' : '',
+                    ...Object.fromEntries(
+                      importFields
+                        .filter((field) => field.key !== 'reference')
+                        .map((field) => [
+                          field.key,
+                          parsed[0].includes(field.key) ? field.key : '',
+                        ]),
+                    ),
                   })
                   setError('')
                   setPhase(2)
@@ -1991,6 +2651,11 @@ function Imports({
             reference: 'Identifiant métier (requis)',
             title: 'Titre français (requis)',
             body: 'Texte français',
+            ...Object.fromEntries(
+              importFields
+                .filter((field) => field.key !== 'reference')
+                .map((field) => [field.key, field.label + ' (' + field.type + ')']),
+            ),
           }).map(([key, label]) => (
             <label key={key}>
               {label}
@@ -2009,7 +2674,7 @@ function Imports({
           ))}
           <button
             className="cms-button cms-primary"
-            disabled={!mapping.reference || !mapping.title || role === 'reader'}
+            disabled={!mapping.reference || !mapping.title || !canEdit(role, 'figures')}
             onClick={() => setPhase(3)}
           >
             Vérifier les lignes
@@ -2026,7 +2691,8 @@ function Imports({
             <p>
               {records.length - valid.length} ligne(s) ignorée(s), dont {duplicates.length} avec
               identifiant répété. Les mises à jour remplacent titre/texte FR et remettent cette
-              langue en brouillon ; les versions publiées locales sont conservées.
+              langue en brouillon ; les versions publiées locales sont conservées. Les fiches en
+              revue sont exclues des imports.
             </p>
           </div>
           <div className="cms-table-scroll">
@@ -2050,7 +2716,8 @@ function Imports({
                         ? updates.includes(record)
                           ? 'Mise à jour FR'
                           : 'Création brouillon'
-                        : 'Ignorée'}
+                        : issues.get(record.line) ||
+                          'Ignorée : titre / référence manquant, doublon ou fiche en revue'}
                     </td>
                   </tr>
                 ))}
@@ -2062,7 +2729,7 @@ function Imports({
           </p>
           <button
             className="cms-button cms-primary"
-            disabled={!valid.length || role === 'reader'}
+            disabled={!valid.length || !canEdit(role, 'figures')}
             onClick={() => setPhase(4)}
           >
             Continuer vers la confirmation
@@ -2074,32 +2741,18 @@ function Imports({
           <h3>{done ? 'Import local terminé' : 'Confirmer ces changements locaux'}</h3>
           <p>
             {valid.length} brouillon(s) FR dans {modules.find((m) => m.id === moduleId)?.label}.
-            Aucune base, aucun indicateur et aucun index public ne sera modifié.
+            {contentConnected()
+              ? 'Ces brouillons seront enregistrés dans PostgreSQL après validation serveur, sans publication automatique.'
+              : 'Aucune base, aucun indicateur et aucun index public ne sera modifié.'}
           </p>
           {!done && (
             <button
               className="cms-button cms-primary"
-              disabled={role === 'reader'}
-              onClick={() => {
-                const imported = valid.map((record) => {
-                  const existing = entries.find(
-                    (e) => e.module === moduleId && e.reference === record.reference,
-                  )
-                  const entry = existing
-                    ? structuredClone(existing)
-                    : createEntry(moduleId, id(), new Date().toISOString())
-                  entry.reference = record.reference
-                  entry.variants.fr = {
-                    ...entry.variants.fr,
-                    title: record.title,
-                    body: record.body,
-                    status: 'draft',
-                  }
-                  entry.updatedAt = new Date().toISOString()
-                  return entry
-                })
+              disabled={!canEdit(role, 'figures')}
+              onClick={async () => {
                 try {
-                  apply(imported)
+                  const imported = valid.map((record) => prepareRecord(record, id()))
+                  await apply(imported)
                   setDone(true)
                 } catch (error) {
                   setError(error instanceof Error ? error.message : 'Import local impossible.')

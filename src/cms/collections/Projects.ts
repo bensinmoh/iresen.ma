@@ -31,7 +31,7 @@ export const Projects: CollectionConfig = {
           !canPublish(req.user) &&
           (data._status === 'published' || data.publicationStatus === 'published')
         )
-          throw new APIError('Only publishers can publish.', 403)
+          throw new APIError('Only an administrator can publish.', 403)
         if (
           current._status === 'published' &&
           current.visibility === 'public' &&

@@ -8,16 +8,16 @@ const body = {
 }
 
 describe('editorial role boundaries', () => {
-  it('permits publication only for publishers and administrators', () => {
+  it('permits publication only for administrators', () => {
     expect(canPublish({ role: 'admin' })).toBe(true)
-    expect(canPublish({ role: 'publisher' })).toBe(true)
+    expect(canPublish({ role: 'publisher' })).toBe(false)
     expect(canPublish({ role: 'editor' })).toBe(false)
     expect(canPublish(null)).toBe(false)
     expect(canPublish({ role: 'translator' })).toBe(false)
   })
   it('keeps account administration separate from publishing', () => {
     expect(isAdministrator({ role: 'publisher' })).toBe(false)
-    expect(isStaff({ role: 'publisher' })).toBe(true)
+    expect(isStaff({ role: 'publisher' })).toBe(false)
     expect(isStaff({ role: 'unknown' })).toBe(false)
   })
 })

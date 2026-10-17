@@ -60,3 +60,4 @@ jobs:
         env:
           CMS_INTERFACE_PREVIEW_ENABLED: 'true'
           CMS_LOCAL_REVIEW: 'true'
+          CMS_WORKSPACE_ENABLED: 'true'

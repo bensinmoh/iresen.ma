@@ -153,7 +153,7 @@
       },
       "figures": {
         "title": "IRESEN en chiffres",
-        "description": "69 projets collaboratifs soutenus, 59 brevets déposés, +1000 jeunes chercheurs soutenus, +1100 publications scientifiques et +18 laboratoires universitaires mis en place."
+        "description": "Projets soutenus, brevets, chercheurs, publications et laboratoires : les indicateurs actualisés du site."
       },
       "research-priorities": {
         "title": "Nos thématiques de recherche au service de la transition énergétique",
@@ -2393,6 +2393,8 @@
     "pendingContent": "Contenu à compléter",
     "placeholderDescription": "Les informations seront ajoutées prochainement.",
     "eventNavigation": "Navigation des événements",
+    "previousEvents": "Événements précédents",
+    "nextEvents": "Événements suivants",
     "eventPosition": "Événement {current} sur {total}",
     "newsTitles": {
       "7514335153415131136": "IRESEN participe au programme Impact Pioneers ’26 en Suède.",
@@ -2516,7 +2518,7 @@
     "emptyHelp": "Essayez un autre mot-clé ou réinitialisez les filtres.",
     "acronym": "Acronyme",
     "duration": "Durée",
-    "budget": "Budget global",
+    "budget": "Financement accordé par IRESEN",
     "launch": "Date de début",
     "months": "{count} mois",
     "pagination": "Pages du catalogue",
@@ -2539,8 +2541,8 @@
     },
     "statuses": {
       "active": "En cours",
-      "completed": "Clôturé",
-      "planned": "À venir"
+      "completed": "Achevé / clôturé",
+      "planned": "En démarrage / à venir"
     },
     "photos": {
       "hero": "Composition de verre avec le symbole IRESEN bleu."
@@ -2550,6 +2552,7 @@
     "close": "Fermer le détail du projet",
     "overview": "Présentation du projet",
     "hostingPlatform": "Plateforme d’accueil",
+    "coordinatorAffiliation": "Établissement de coordination",
     "coordinator": "Coordinateur",
     "consortium": "Consortium",
     "objectives": "Objectifs scientifiques",
@@ -3425,7 +3428,7 @@
     "archivesAction": "Consulter les appels précédents",
     "programmeContact": "Contacter l’équipe Programmes R&D&I",
     "historicalNote": "Ces dispositifs sont présentés à titre historique. Leurs modalités et leurs éditions sont distinctes des appels actuellement ouverts.",
-    "reference": "Bilan de l’agence de moyens — 2025.",
+    "reference": "Catalogue des projets collaboratifs.",
     "figureLabel": "projets R&D&I sélectionnés à l’issue d’appels à projets",
     "sourceLink": "Consulter la référence institutionnelle",
     "processNote": "Les modalités précises sont définies dans le cahier des charges de chaque appel.",

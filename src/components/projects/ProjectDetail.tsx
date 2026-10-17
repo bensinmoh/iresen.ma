@@ -14,6 +14,7 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
     [t('acronym'), project.acronym],
     [t('launch'), project.startText[locale]],
     [t('programme'), project.programme],
+    [t('status'), project.status ? t(`statuses.${project.status}`) : ''],
     [t('hostingPlatform'), project.details.hostingPlatform[locale]],
     [t('location'), project.location[locale]],
     [
@@ -32,7 +33,7 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
       {project.image && (
         <Image
           src={`${project.image}?locale=${locale}`}
-          alt=""
+          alt={project.imageIllustration || ''}
           width={900}
           height={430}
           unoptimized

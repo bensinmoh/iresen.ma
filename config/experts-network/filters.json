@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "activation": "deferred",
+  "resultUnit": "distinct-expert",
+  "combineBetweenFilters": "AND",
+  "combineWithinFilter": "OR",
+  "assignmentRule": "Specialty, level, intervention and validation conditions must match the same assignment; programme derives from that specialty.",
+  "filters": [
+    {
+      "key": "q",
+      "kind": "text",
+      "fields": ["name", "organisation", "keywords", "specialty"],
+      "scope": "public-approved-fields-only"
+    },
+    { "key": "programme", "kind": "multi", "reference": "reference.json#/programmes" },
+    {
+      "key": "specialty",
+      "kind": "multi",
+      "reference": "reference.json#/specialties",
+      "dependsOn": "programme"
+    },
+    { "key": "organisation", "kind": "multi" },
+    { "key": "city", "kind": "multi" },
+    { "key": "country", "kind": "multi", "emptyValue": "unknown" },
+    { "key": "geographicScope", "kind": "multi", "values": ["national", "international"] },
+    {
+      "key": "expertType",
+      "kind": "multi",
+      "values": ["internal", "external", "partner", "consultant", "doctoral-postdoctoral"]
+    },
+    {
+      "key": "intervention",
+      "kind": "multi",
+      "reference": "reference.json#/sourceVocabularies/Domaine d’intervention"
+    },
+    {
+      "key": "expertiseLevel",
+      "kind": "multi",
+      "internalOnly": true,
+      "values": ["beginner", "intermediate", "advanced", "expert"]
+    },
+    {
+      "key": "availability",
+      "kind": "multi",
+      "internalOnly": true,
+      "values": ["available", "partial", "unavailable", "to-confirm"]
+    },
+    {
+      "key": "recordStatus",
+      "kind": "multi",
+      "internalOnly": true,
+      "values": ["incomplete", "review", "validated", "refresh", "inactive"]
+    },
+    {
+      "key": "validationStatus",
+      "kind": "multi",
+      "internalOnly": true,
+      "values": ["review", "validated", "refresh", "inactive"]
+    },
+    { "key": "needsReview", "kind": "boolean", "internalOnly": true }
+  ],
+  "counts": "Distinct experts per candidate value with all other active filters applied; never expose internal or unapproved profiles.",
+  "pagination": {
+    "defaultSize": 20,
+    "maxSize": 100,
+    "stableSort": ["familyName", "givenName", "id"]
+  },
+  "unknownPolicy": "No inferred country, availability, experience, level or validation; missing values remain unknown.",
+  "publicDefault": "disabled"
+}

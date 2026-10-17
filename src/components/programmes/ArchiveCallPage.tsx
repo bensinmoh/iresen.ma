@@ -1,3 +1,4 @@
+import { siteArchivedCalls } from '@/lib/cms-workspace/public-corpora'
 import { programmeProjectsHref } from '@/lib/projects-model'
 import { archiveProjectProgramme } from '@/lib/call-archives'
 import { CallThemeIcon } from './CallThemeIcon'
@@ -11,7 +12,7 @@ import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { CallCards } from './CallCards'
 import styles from './CallsCatalogue.module.css'
 
-export function ArchiveCallPage({
+export async function ArchiveCallPage({
   call,
   locale,
 }: {
@@ -20,7 +21,7 @@ export function ArchiveCallPage({
 }) {
   const t = callCopy[locale]
   const profile = archiveProfile(call)
-  const related = archiveCalls
+  const related = (await siteArchivedCalls())
     .filter((other) => other.reference !== call.reference && other.profile === call.profile)
     .slice(-2)
     .reverse()

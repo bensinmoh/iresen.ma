@@ -19,6 +19,7 @@ const arabic = localFont({
 export const metadata: Metadata = {
   title: 'Atelier de contenu | IRESEN',
   description: 'Interface locale de validation du CMS IRESEN.',
+  icons: { icon: { url: '/brand/apex-leaf-lime.svg', type: 'image/svg+xml', sizes: 'any' } },
   robots: { index: false, follow: false },
 }
 

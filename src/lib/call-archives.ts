@@ -1,4 +1,4 @@
-import data from '@/data/call-archives.json'
+import data from '@/data/call-archives.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
 import { callHref, callState } from '@/lib/calls'
 import type { PublicCall } from '@/lib/content/call-queries'
@@ -18,12 +18,14 @@ export type CallCardData = {
   shortThemes?: string[]
   href: string
 }
-export const archiveCalls = data.records
-export function findArchiveCall(reference: string) {
-  return archiveCalls.find((call) => call.reference === reference)
+type ArchiveProfile = (typeof data.profiles)[keyof typeof data.profiles]
+export type ArchiveCall = (typeof data.records)[number] & { resolvedProfile?: ArchiveProfile }
+export const archiveCalls: ArchiveCall[] = data.records
+export function findArchiveCall(reference: string, records = archiveCalls) {
+  return records.find((call) => call.reference === reference)
 }
 export function archiveProfile(call: (typeof archiveCalls)[number]) {
-  return data.profiles[call.profile as keyof typeof data.profiles]
+  return call.resolvedProfile ?? data.profiles[call.profile as keyof typeof data.profiles]
 }
 export function formatArchivePeriod(period: string, locale: Locale) {
   if (period.length === 4)
@@ -50,10 +52,14 @@ export function archiveCard(call: (typeof archiveCalls)[number], locale: Locale)
     href: callHref(call.reference, locale),
   }
 }
-export function callCards(locale: Locale, published: PublicCall[] = []): CallCardData[] {
-  const references = new Set(archiveCalls.map((call) => call.reference))
+export function callCards(
+  locale: Locale,
+  published: PublicCall[] = [],
+  records = archiveCalls,
+): CallCardData[] {
+  const references = new Set(records.map((call) => call.reference))
   return [
-    ...archiveCalls.map((call) => archiveCard(call, locale)),
+    ...records.map((call) => archiveCard(call, locale)),
     ...published
       .filter((call) => !references.has(call.reference))
       .map((call): CallCardData => ({
@@ -74,8 +80,8 @@ export function callCards(locale: Locale, published: PublicCall[] = []): CallCar
   ].sort(
     (a, b) =>
       b.year - a.year ||
-      (findArchiveCall(b.reference)?.period || '').localeCompare(
-        findArchiveCall(a.reference)?.period || '',
+      (findArchiveCall(b.reference, records)?.period || '').localeCompare(
+        findArchiveCall(a.reference, records)?.period || '',
       ) ||
       b.reference.localeCompare(a.reference),
   )
@@ -117,6 +123,11 @@ export function archiveProjectProgramme(call: (typeof archiveCalls)[number]) {
     'green-innoboost-2018': 'InnoBOOST 2018',
     'innoespamaroc-2018-2019': 'InnoESPAMAROC ENERGY 2019',
     'innoespamaroc-2020': 'InnoESPAMAROC ENERGY 2020',
+    'innoespamaroc-2021': 'InnoESPA Maroc 2021',
+    'innoespamaroc-2024': 'Inno ESPA MAROC ENERGY 2024',
+    'leap-re-2021': 'LEAP-RE 2021',
+    'inno-france-maroc-green-h2-2024': 'Inno France Maroc Tech transfert 2024',
+    'leap-se-2025': 'LEAP SE 2025',
   }
   return labels[call.reference] ?? call.title
 }

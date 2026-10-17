@@ -25,6 +25,8 @@ export const networkLaboratories = [
   { id: 'solar-energy', topic: 'solar', location: 'benguerir' },
   { id: 'thermal-production', topic: 'solar', location: 'marrakech' },
 ] as const
+/** Complete laboratory roster, independent of map/catalogue filters. */
+export const totalLaboratories = networkLaboratories.length
 export type LaboratoryId = (typeof networkLaboratories)[number]['id']
 export const suppliedLaboratoryContact = {
   id: 'power-electronics',

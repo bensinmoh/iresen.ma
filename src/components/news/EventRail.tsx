@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
+import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import type { Locale } from '@/i18n/locales'
 import styles from './EventRail.module.css'
 
@@ -11,6 +12,8 @@ export function EventRail({
   label,
   navigationLabel,
   itemLabels,
+  previousLabel,
+  nextLabel,
 }: {
   children: ReactNode
   className: string
@@ -18,6 +21,8 @@ export function EventRail({
   label: string
   navigationLabel: string
   itemLabels: string[]
+  previousLabel: string
+  nextLabel: string
 }) {
   const rail = useRef<HTMLDivElement>(null)
   const id = useId()
@@ -99,6 +104,16 @@ export function EventRail({
         : 'smooth',
     })
   }
+  // At the end several cards can share a clamped stop; skip stops that cannot move.
+  const previousIndex = position.stops.findLastIndex(
+    (stop) => stop < position.stops[position.current] - 1,
+  )
+  const nextIndex = position.stops.findIndex((stop) => stop > position.stops[position.current] + 1)
+  const lastStop = position.stops.at(-1) ?? 0
+  const desktopCurrent =
+    lastStop > 1 && position.stops[position.current] >= lastStop - 1
+      ? itemLabels.length
+      : position.current + 1
   return (
     <>
       <div
@@ -113,24 +128,63 @@ export function EventRail({
         {children}
       </div>
       {position.overflow && itemLabels.length > 1 && (
-        <div
-          className={styles.controls}
-          role="group"
-          aria-label={navigationLabel}
-          data-event-navigation
-        >
-          {itemLabels.map((itemLabel, index) => (
+        <>
+          <div
+            className={styles.controls}
+            role="group"
+            aria-label={navigationLabel}
+            data-event-navigation
+          >
+            {itemLabels.map((itemLabel, index) => (
+              <button
+                key={itemLabel}
+                type="button"
+                className={styles.pill}
+                aria-label={itemLabel}
+                aria-controls={id}
+                aria-current={index === position.current ? 'true' : undefined}
+                onClick={() => goTo(index)}
+              />
+            ))}
+          </div>
+          <div
+            className={styles.desktopControls}
+            role="group"
+            aria-label={navigationLabel}
+            data-event-desktop-navigation
+          >
+            <div
+              className={styles.progress}
+              role="progressbar"
+              aria-label={navigationLabel}
+              aria-valuemin={1}
+              aria-valuemax={itemLabels.length}
+              aria-valuenow={desktopCurrent}
+              aria-valuetext={itemLabels[desktopCurrent - 1]}
+            >
+              <span style={{ inlineSize: `${(desktopCurrent / itemLabels.length) * 100}%` }} />
+            </div>
             <button
-              key={itemLabel}
               type="button"
-              className={styles.pill}
-              aria-label={itemLabel}
+              className={styles.previous}
+              aria-label={previousLabel}
               aria-controls={id}
-              aria-current={index === position.current ? 'true' : undefined}
-              onClick={() => goTo(index)}
-            />
-          ))}
-        </div>
+              disabled={previousIndex < 0}
+              onClick={() => goTo(previousIndex)}
+            >
+              <NavigationIcon name="arrow" />
+            </button>
+            <button
+              type="button"
+              aria-label={nextLabel}
+              aria-controls={id}
+              disabled={nextIndex < 0}
+              onClick={() => goTo(nextIndex)}
+            >
+              <NavigationIcon name="arrow" />
+            </button>
+          </div>
+        </>
       )}
     </>
   )

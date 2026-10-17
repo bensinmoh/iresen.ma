@@ -19,6 +19,24 @@ its full-width input and suggestions expand in normal flow. Enter or the magnifi
 and reduced-motion users retain the native form. Suggestions use the same public
 search service as full results, with debounce and cancellation.
 
+## Common-database site projection — 2026-10-16
+
+The local `SITE_CONTENT_DATABASE_ENABLED=true` opt-in makes the retained site
+catalogues and resource readers use the same PostgreSQL authoring source as `/admin`.
+Search calls `siteSearchDocuments()` through its existing catalogue initialization;
+committed content revisions invalidate its in-process source cache. Stable IDs,
+canonical URLs, current eligibility and the transactional index/vocabulary pipeline
+are retained. Draft metadata comes from neither the current shared fields nor
+private revisions: resource readers use captured validated shared metadata. Accounts,
+notes, applicants and private CVs remain outside this projection.
+
+The initial read-only parity inspection found 4,818 references and zero content
+or URL differences from the current retained site. This is baseline source parity,
+not a claim that a new public release, full search suite or index rebuild occurred.
+Native CMS queries keep explicit access and locale/publication gates. Existing
+EN/AR delivered interface baselines remain working text; importing them does not
+approve new translations. See the [CMS inventory and check ledger](cms-interface-preview.md).
+
 ## Content coverage
 
 ### Result previews

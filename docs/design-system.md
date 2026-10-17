@@ -1099,7 +1099,7 @@ above the bottom band. Its accessible name uses the existing localized
 At default text size, the target is 44 × 44px and the white outline is 24 × 36px.
 Wheel motion uses CSS transform/opacity for three 1.6-second cycles, with no
 animation under `prefers-reduced-motion`. The bottom reserve is 72px instead of
-the former fluid 80–128px, except on the homepage at `40rem` and below: its
+the former fluid 80–126px, except on the homepage at `40rem` and below: its
 redundant cue is hidden and reserve reduces to 32px at default text size.
 Natural hero growth is retained.
 Executed checks and renderings remain in [the validation log](validation.md).
@@ -1584,7 +1584,7 @@ native scroll position stay synchronized in FR/EN/AR. The controls occupy a
 centered band between the cards and the section boundary. Desktop/tablet retain
 native scrolling without the scrollbar after enhancement; without JavaScript,
 the scrollbar remains available. Mobile social links retain accessible names,
-28px vector icons and one non-scrolling row. Desktop labels remain.
+26px vector icons and one non-scrolling row. Desktop labels remain.
 
 This scoped change adds no public resource or destination: existing event,
 social-link and section search references remain authoritative. See
@@ -1965,7 +1965,7 @@ remains pending because this session cannot open a browser.
 ## Figma mobile rules — 2026-10-15
 
 At or below 40rem, apply the reviewed 402px mobile reference through shared roles:
-32px hero titles; 28px/34px bold section/display/mission titles; 20px card titles;
+32px hero titles; 26px/34px bold section/display/mission titles; 20px card titles;
 14px surtitles with 8px original-leaf gaps; 16px editorial, 20px header/home-hero
 and 24px menu/footer insets. Shared hero actions stack at full width with a 50px
 minimum height and 12px gap. Figure rails use compact 150px items/30px values,
@@ -2248,3 +2248,30 @@ so inactive small labels preserve contrast. Programmes follows the inclusive
 40rem mobile breakpoint for its full-width action and removes its text-column
 indent at that width. Roadmap display headings retain the commissioned viewport
 variant; the shared semantic heading primitive also supports a page-level h1.
+
+Event navigation reuse — 16 October 2026: the desktop events rail adopts the
+Institute timeline's circular 56px SVG controls, counter and progress track,
+adapted to its existing light surface using shared navy/border/science-blue
+roles. Logical direction mirrors Arabic; visible focus and disabled edge states
+remain explicit. This is scoped reuse, not a change to other rail behavior.
+
+Later owner event screenshot correction: use primary-blue square navigation
+buttons with the existing physical diagonal signature corners and white SVG
+arrows, a longer fine progress track and no visible counter. This supersedes the
+circular event treatment above only; other rails retain their current designs.
+
+Final owner size correction — 16 October 2026: the homepage Achievements rail is
+now the exact size/spacing reference for desktop event controls: 3.25rem (52px)
+buttons, 20px SVG arrows, `radius-action`, space-4 gaps and a 0.375rem progress
+track capped at 16rem. This replaces the oversized screenshot interpretation.
+The track/disabled surface is white against the existing pale event section.
+No visible counter; keyboard, RTL, mobile behavior and routes remain unchanged.
+
+CMS action controls — 16 October 2026: list actions use compact 44px square SVG
+buttons with diagonal signature corners. Pastel blue identifies opening a record,
+amber its draft action, green its review action and rose recoverable deletion.
+Accessible names and hover/focus labels accompany icons; saved editors retain
+full action text beside the same squares. Role and confirmation rules still apply.
+
+Owner compact-size correction: list action squares are 26px with 15px SVGs and
+4px gaps, matching the FR/EN/AR badge scale. Editor actions remain 44px.

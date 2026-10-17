@@ -118,3 +118,8 @@ the full section (rather than its paragraph), transition placement and compact
 height, and localized search discovery. Desktop French and mobile Arabic captures
 were inspected. Public search was synchronized locally. Browser test-only fixture
 repairs did not change runtime after this production build.
+
+CMS editorial-indicator follow-up — 16 October 2026: the existing +120 count and
+ISO 9001:2015 standard now read the common database's validated locale snapshots.
+The same values drive careers and the hero ISO reference. Future CMS value/version
+edits require publication approval; existing section/search IDs and layout remain.

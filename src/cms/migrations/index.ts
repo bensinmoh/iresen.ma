@@ -1,3 +1,7 @@
+import * as migration_20261017_001000_news_highlight from './20261017_001000_news_highlight';
+import * as migration_20261016_200000_cms_workspace from './20261016_200000_cms_workspace';
+import * as migration_20261016_235000_cms_trash from './20261016_235000_cms_trash';
+import * as migration_20261016_230000_cms_account_avatars from './20261016_230000_cms_account_avatars';
 import * as migration_20261007_223159 from './20261007_223159';
 import * as migration_20261009_190000_search from './20261009_190000_search';
 import * as migration_20261009_220000_search_relevance from './20261009_220000_search_relevance';
@@ -54,4 +58,8 @@ export const migrations = [
     down: migration_20261015_230525_project_summaries_and_notes.down,
     name: '20261015_230525_project_summaries_and_notes'
   },
+  { up: migration_20261016_200000_cms_workspace.up, down: migration_20261016_200000_cms_workspace.down, name: '20261016_200000_cms_workspace' },
+  { up: migration_20261016_230000_cms_account_avatars.up, down: migration_20261016_230000_cms_account_avatars.down, name: '20261016_230000_cms_account_avatars' },
+  { up: migration_20261016_235000_cms_trash.up, down: migration_20261016_235000_cms_trash.down, name: '20261016_235000_cms_trash' },
+  { up: migration_20261017_001000_news_highlight.up, down: migration_20261017_001000_news_highlight.down, name: '20261017_001000_news_highlight' },
 ];

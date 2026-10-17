@@ -1,28 +1,45 @@
-// Browser-only review model. Never import CMS clients, domain databases or public projections here.
+import { moduleContracts } from './contracts'
+// Pure authoring contracts shared by the authenticated UI/server; no database client or public corpus imports.
 export const languages = ['fr', 'en', 'ar'] as const
 export type Language = (typeof languages)[number]
-export type Status = 'draft' | 'review' | 'validated' | 'published' | 'archived'
-export type Role = 'admin' | 'editor' | 'publisher' | 'translator' | 'reader'
+export type Status = 'draft' | 'review' | 'published'
+export type Role = 'admin' | 'editor'
 export const statusLabels: Record<Status, string> = {
   draft: 'Brouillon',
   review: 'En revue',
-  validated: 'Validé',
-  published: 'Publié localement',
-  archived: 'Archivé',
+  published: 'Validé / publié',
 }
 export const roleLabels: Record<Role, string> = {
   admin: 'Administrateur',
   editor: 'Éditeur',
-  publisher: 'Responsable de publication',
-  translator: 'Traducteur',
-  reader: 'Lecteur interne',
 }
 export type Field = {
   key: string
   label: string
-  type?: 'text' | 'textarea' | 'date' | 'url' | 'email' | 'number'
+  type?:
+    | 'text'
+    | 'textarea'
+    | 'date'
+    | 'url'
+    | 'email'
+    | 'number'
+    | 'relation'
+    | 'select'
+    | 'boolean'
+    | 'json'
   help?: string
   required?: boolean
+  readOnly?: boolean
+  localized?: boolean
+  relationTo?: string
+  imageUpload?: boolean
+  many?: boolean
+  options?: readonly string[]
+  optionLabels?: Record<string, string>
+  min?: number
+  max?: number
+  showFor?: readonly string[]
+  relationKinds?: readonly string[]
 }
 export type Module = {
   id: string
@@ -32,6 +49,8 @@ export type Module = {
   description: string
   fields: Field[]
   fixed?: boolean
+  columns?: string[]
+  storage?: string
 }
 const f = (key: string, label: string, type: Field['type'] = 'text', help?: string): Field => ({
   key,
@@ -39,7 +58,7 @@ const f = (key: string, label: string, type: Field['type'] = 'text', help?: stri
   type,
   help,
 })
-export const modules: Module[] = [
+const baseModules: Module[] = [
   {
     id: 'news',
     label: 'Actualités',
@@ -155,7 +174,8 @@ export const modules: Module[] = [
     label: 'Carrières',
     group: 'Communication',
     icon: 'users',
-    description: 'Aucune offre fictive n’est préchargée. Tester un brouillon local si nécessaire.',
+    description:
+      'Gérer les offres, dossiers de candidature, stages, candidatures spontanées, shortlists et entretiens dans cet atelier local.',
     fields: [
       f('type', 'Type d’opportunité'),
       f('place', 'Lieu'),
@@ -191,30 +211,31 @@ export const modules: Module[] = [
     ],
   },
   {
-    id: 'organisations',
-    label: 'Organismes',
-    group: 'Institut et réseau',
-    icon: 'network',
-    description: 'Gérer les organismes présents et leurs relations.',
-    fields: [
-      f('type', 'Type d’organisme'),
-      f('website', 'Site officiel', 'url'),
-      f('relationship', 'Relation avec IRESEN'),
-      f('provenance', 'Source'),
-    ],
-  },
-  {
-    id: 'people',
-    label: 'Personnes',
+    id: 'organigram',
+    label: 'Organigramme',
     group: 'Institut et réseau',
     icon: 'users',
-    description: 'Préparer les fonctions, biographies et profils sourcés.',
-    fields: [
-      f('function', 'Fonction confirmée'),
-      f('affiliation', 'Affiliation'),
-      f('profile', 'Profil professionnel', 'url'),
-      f('provenance', 'Source de la biographie'),
-    ],
+    description:
+      'Gérer les pôles, directions, fonctions, personnes, portraits et biographies dans une hiérarchie commune.',
+    fields: [],
+  },
+  {
+    id: 'board',
+    label: 'Conseil d’administration',
+    group: 'Institut et réseau',
+    icon: 'network',
+    description:
+      'Gérer les sièges, institutions représentées, représentants et mandats du conseil d’administration.',
+    fields: [],
+  },
+  {
+    id: 'scientific-council',
+    label: 'Conseil scientifique',
+    group: 'Institut et réseau',
+    icon: 'research',
+    description:
+      'Gérer les membres, affiliations, expertises, biographies et mandats du conseil scientifique.',
+    fields: [],
   },
   {
     id: 'pages',
@@ -269,18 +290,6 @@ export const modules: Module[] = [
     fields: [f('scope', 'Périmètre'), f('related', 'Concepts associés')],
   },
   {
-    id: 'programmes',
-    label: 'Programmes',
-    group: 'Référentiels',
-    icon: 'document',
-    description: 'Préparer les programmes et références communes.',
-    fields: [
-      f('reference', 'Identifiant métier'),
-      f('scope', 'Périmètre'),
-      f('source', 'Source', 'url'),
-    ],
-  },
-  {
     id: 'glossary',
     label: 'Glossaire et recherche',
     group: 'Référentiels',
@@ -299,6 +308,15 @@ export const modules: Module[] = [
     ],
   },
   {
+    id: 'faq',
+    label: 'FAQ',
+    group: 'Contenu du site',
+    icon: 'document',
+    description:
+      'Gérer les questions, réponses, catégories et emplacements de la FAQ en FR, EN et AR.',
+    fields: [],
+  },
+  {
     id: 'users',
     label: 'Utilisateurs et droits',
     group: 'Administration',
@@ -311,7 +329,27 @@ export const modules: Module[] = [
     ],
   },
 ]
+export const modules: Module[] = baseModules.map((module) => ({
+  ...module,
+  ...moduleContracts[module.id],
+  storage:
+    module.id === 'users'
+      ? 'users (comptes Payload authentifiés)'
+      : `cms_authoring_entries · module=${module.id} · shared / variants JSONB ; adaptateur natif quand disponible`,
+  fields: [
+    ...(moduleContracts[module.id]?.fields ?? module.fields),
+    {
+      key: 'sourceRecord',
+      label: 'Données originales de la source',
+      type: 'json' as const,
+      readOnly: true,
+    },
+  ],
+}))
 export const utilityModules = [
+  { id: 'trash', label: 'Corbeille', icon: 'document' },
+  { id: 'analytics', label: 'Analytics', icon: 'dashboard' },
+  { id: 'data-model', label: 'Structure des données', icon: 'research' },
   { id: 'integrations', label: 'Intégrations', icon: 'link' },
   { id: 'imports', label: 'Imports', icon: 'upload' },
   { id: 'logs', label: 'Journaux', icon: 'clock' },
@@ -323,6 +361,7 @@ export type Variant = {
   status: Status
   seoTitle: string
   seoDescription: string
+  fields: Record<string, string>
 }
 export type Revision = {
   id: string
@@ -330,8 +369,14 @@ export type Revision = {
   language: Language
   variant: Variant
   note: string
+  shared?: Record<string, string>
 }
 export type Entry = {
+  source?: {
+    collection: 'news' | 'projects' | 'calls' | 'opportunities' | 'pages' | 'media'
+    id: number
+    revision: string
+  }
   id: string
   module: string
   reference: string
@@ -364,13 +409,14 @@ export const emptyVariant = (): Variant => ({
   status: 'draft',
   seoTitle: '',
   seoDescription: '',
+  fields: {},
 })
 export function createEntry(module: string, id: string, at: string): Entry {
   return {
     id,
     module,
     reference: id,
-    shared: {},
+    shared: module === 'organigram' ? { recordType: 'person' } : {},
     variants: { fr: emptyVariant(), en: emptyVariant(), ar: emptyVariant() },
     updatedAt: at,
     history: [],
@@ -379,61 +425,140 @@ export function createEntry(module: string, id: string, at: string): Entry {
   }
 }
 export function initialWorkspace(): Workspace {
-  const seeds = [
-    ['news', 'Exemple — atelier de recherche', 'review'],
-    ['news', 'Exemple — entretien scientifique', 'draft'],
-    ['news', 'Exemple — retour d’expérience', 'validated'],
-    ['news', 'Exemple — ressource à traduire', 'draft'],
-    ['events', 'Exemple — rencontre technique', 'review'],
-    ['events', 'Exemple — séminaire', 'draft'],
-    ['publications', 'Example bibliographic title — review fixture', 'draft'],
-    ['patents', 'Exemple — référence de dépôt', 'draft'],
-    ['media', 'Exemple — photographie à documenter', 'review'],
-    ['laboratories', 'Exemple — fiche laboratoire', 'draft'],
-    ['platforms', 'Exemple — fiche infrastructure', 'draft'],
-    ['glossary', 'Exemple — terme à définir', 'draft'],
-    ['users', 'Profil de démonstration — équipe éditoriale', 'draft'],
-  ] as const
-  return {
-    version: 1,
-    entries: seeds.map(([module, title, status], index) => {
-      const entry = createEntry(module, `demo-${index + 1}`, '2026-10-11T09:00:00Z')
-      entry.variants.fr = {
-        ...emptyVariant(),
-        title,
-        body: 'Texte de démonstration pour tester la rédaction et la validation. À remplacer dans votre navigateur.',
-        status,
-      }
-      return entry
-    }),
-    logs: [],
-  }
+  return { version: 1, entries: [], logs: [] }
 }
 export function canEdit(role: Role, module: string): boolean {
-  if (role === 'reader') return false
+  if (!['admin', 'editor'].includes(role)) return false
   if (module === 'users') return role === 'admin'
   return true
 }
 export function canTransition(role: Role, from: Status, to: Status): boolean {
-  if (role === 'reader') return false
-  if (to === 'draft') return true
-  if (to === 'review') return from === 'draft'
-  if (role !== 'admin' && role !== 'publisher') return false
+  if (!['admin', 'editor'].includes(role)) return false
+  if (to === 'draft') return from !== 'review' || role === 'admin'
+  if (to === 'review') return from === 'draft' || (role === 'admin' && from === 'published')
+  return role === 'admin' && from === 'review' && to === 'published'
+}
+export function fieldApplies(entry: Entry, field: Field): boolean {
+  if (
+    entry.module === 'media' &&
+    entry.shared.resourceKind === 'links' &&
+    !['resourceKind', 'sourceUrl', 'usage', 'visibility', 'sourceRecord'].includes(field.key)
+  )
+    return false
+  return !field.showFor || field.showFor.includes(entry.shared.recordType ?? 'person')
+}
+export function relationCandidate(entry: Entry, field: Field, candidate: Entry): boolean {
   return (
-    (to === 'validated' && from === 'review') ||
-    (to === 'published' && from === 'validated') ||
-    to === 'archived'
+    candidate.id !== entry.id &&
+    candidate.module === field.relationTo &&
+    (!field.relationKinds || field.relationKinds.includes(candidate.shared.recordType ?? 'person'))
+  )
+}
+export function hierarchyErrors(entry: Entry, entries: Entry[]): string[] {
+  if (entry.module !== 'organigram') return []
+  const seen = new Set([entry.id])
+  let parent: string | undefined = entry.shared.parentId
+  while (parent) {
+    if (seen.has(parent)) return ['Le rattachement crée une boucle dans l’organigramme.']
+    seen.add(parent)
+    parent = entries.find((candidate) => candidate.id === parent)?.shared.parentId
+  }
+  return []
+}
+export function migrateGovernance(workspace: Workspace): Workspace {
+  const previousOrganisations = workspace.entries.filter(
+    (entry) => entry.module === 'organisations',
+  )
+  for (const entry of workspace.entries) {
+    if (entry.module === 'people') {
+      entry.module = 'organigram'
+      entry.shared.recordType = 'person'
+    }
+    for (const key of ['affiliation', 'institution', 'organisers', 'funders']) {
+      const raw = entry.shared[key]
+      if (raw)
+        entry.shared[key] = raw
+          .split('\n')
+          .map(
+            (id) => previousOrganisations.find((item) => item.id === id)?.variants.fr.title || id,
+          )
+          .join('\n')
+    }
+  }
+  // Withdrawn module entries remain only in full-session exports; never relabel them as councils/calls.
+  return workspace
+}
+export function fieldValue(entry: Entry, field: Field, language: Language): string {
+  return (
+    (field.localized ? entry.variants[language].fields?.[field.key] : entry.shared[field.key]) ?? ''
+  )
+}
+export function editorialBodyRequired(module: string): boolean {
+  return ![
+    'publications',
+    'board',
+    'scientific-council',
+    'laboratories',
+    'themes',
+    'coordinates',
+  ].includes(module)
+}
+export function editorialTextComplete(entry: Entry, language: Language): boolean {
+  return Boolean(
+    entry.variants[language].title.trim() &&
+    (!editorialBodyRequired(entry.module) || entry.variants[language].body.trim()),
   )
 }
 export function validateEntry(entry: Entry, language: Language, strict = false): string[] {
   const variant = entry.variants[language]
   const errors: string[] = []
   if (!variant.title.trim()) errors.push('Le titre est requis.')
-  if (strict && !variant.body.trim())
+  if (
+    strict &&
+    entry.module === 'media' &&
+    entry.shared.resourceKind === 'links' &&
+    !entry.shared.sourceUrl?.trim()
+  )
+    errors.push('Adresse du lien : champ requis avant revue.')
+  if (strict && !variant.body.trim() && editorialBodyRequired(entry.module))
     errors.push('Le texte est requis pour soumettre cette langue.')
   for (const field of modules.find((m) => m.id === entry.module)?.fields ?? []) {
-    const value = entry.shared[field.key]?.trim()
-    if (!value) continue
+    if (!fieldApplies(entry, field)) continue
+    const value = fieldValue(entry, field, language).trim()
+    if (!value) {
+      if (
+        strict &&
+        field.required &&
+        !(field.key === 'publishedAt' && entry.shared.publicationMonth) &&
+        !(['start', 'end'].includes(field.key) && entry.shared.archivePeriod)
+      )
+        errors.push(`${field.label} : champ requis avant revue.`)
+      continue
+    }
+    if (field.type === 'select' && !field.options?.includes(value))
+      errors.push(`${field.label} : choisir une valeur proposée.`)
+    if (field.type === 'boolean' && !['true', 'false'].includes(value))
+      errors.push(`${field.label} : choisir oui ou non.`)
+    if (field.type === 'json') {
+      try {
+        JSON.parse(value)
+      } catch {
+        errors.push(`${field.label} : JSON invalide.`)
+      }
+    }
+    if (
+      field.type === 'date' &&
+      (!/^\d{4}-\d{2}-\d{2}$/.test(value) ||
+        Number.isNaN(Date.parse(value)) ||
+        new Date(value).toISOString().slice(0, 10) !== value)
+    )
+      errors.push(`${field.label} : date invalide.`)
+    if (
+      field.type === 'number' &&
+      ((field.min !== undefined && Number(value) < field.min) ||
+        (field.max !== undefined && Number(value) > field.max))
+    )
+      errors.push(`${field.label} : valeur hors limites.`)
     if (field.type === 'url') {
       try {
         if (!['https:', 'http:'].includes(new URL(value).protocol)) throw new Error()
@@ -446,6 +571,12 @@ export function validateEntry(entry: Entry, language: Language, strict = false):
     if (field.type === 'number' && !Number.isFinite(Number(value)))
       errors.push(`${field.label} : saisir un nombre.`)
   }
+  if (
+    entry.shared.mandateStart &&
+    entry.shared.mandateEnd &&
+    entry.shared.mandateEnd < entry.shared.mandateStart
+  )
+    errors.push('La fin du mandat doit suivre son début.')
   if (entry.shared.start && entry.shared.end && entry.shared.end < entry.shared.start)
     errors.push('La date de fin doit suivre la date de début.')
   return errors
@@ -458,16 +589,63 @@ export function saveEntry(
   at: string,
   nextStatus?: Status,
 ): Workspace {
+  if (!modules.some((module) => module.id === entry.module)) throw new Error('Module inconnu.')
+  if (
+    workspace.entries.some(
+      (candidate) =>
+        candidate.id !== entry.id &&
+        candidate.module === entry.module &&
+        candidate.reference === entry.reference,
+    )
+  )
+    throw new Error('Cette référence existe déjà dans ce module.')
   if (!canEdit(role, entry.module)) throw new Error('Ce profil ne peut pas modifier ce module.')
   const existing = workspace.entries.find((e) => e.id === entry.id)
   const from = existing?.variants[language].status ?? 'draft'
+  if (from === 'review' && !nextStatus)
+    throw new Error('Valider ou décliner cette révision avant de modifier le contenu.')
+  if (from === 'review' && role === 'editor')
+    throw new Error(
+      'Cette révision est en revue : l’administrateur doit la valider ou la renvoyer.',
+    )
+  if (nextStatus === 'draft' && from === 'review' && !entry.comment.trim())
+    throw new Error('Indiquer le motif du retour en brouillon dans la note interne.')
   if (nextStatus && !canTransition(role, from, nextStatus))
     throw new Error('Cette étape n’est pas accessible pour ce profil.')
-  const errors = validateEntry(
-    entry,
-    language,
-    Boolean(nextStatus && nextStatus !== 'draft' && nextStatus !== 'archived'),
+  for (const field of modules.find((module) => module.id === entry.module)?.fields ?? []) {
+    if (
+      fieldApplies(entry, field) &&
+      field.type === 'relation' &&
+      entry.shared[field.key]
+        ?.split('\n')
+        .filter(Boolean)
+        .some(
+          (id) =>
+            !workspace.entries.some(
+              (candidate) => candidate.id === id && relationCandidate(entry, field, candidate),
+            ),
+        )
+    )
+      throw new Error(`${field.label} : référence locale introuvable.`)
+  }
+  if (
+    entry.module === 'organigram' &&
+    workspace.entries.some(
+      (candidate) =>
+        candidate.id !== entry.id &&
+        candidate.module === 'organigram' &&
+        ((candidate.shared.parentId === entry.id && entry.shared.recordType === 'person') ||
+          (fieldApplies(candidate, { key: 'headId', label: '', showFor: ['pole', 'department'] }) &&
+            candidate.shared.headId === entry.id &&
+            entry.shared.recordType !== 'person')),
+    )
   )
+    throw new Error(
+      'Cette fiche est utilisée comme unité ou responsable : corriger les rattachements avant de changer son type.',
+    )
+  const hierarchy = hierarchyErrors(entry, workspace.entries)
+  if (hierarchy.length) throw new Error(hierarchy.join(' '))
+  const errors = validateEntry(entry, language, Boolean(nextStatus && nextStatus !== 'draft'))
   if (errors.length) throw new Error(errors.join(' '))
   const changed =
     existing &&
@@ -488,12 +666,12 @@ export function saveEntry(
       language,
       variant: { ...saved.variants[language] },
       note: saved.comment,
+      shared: structuredClone(saved.shared),
     },
     ...(existing?.history ?? []),
   ].slice(0, 30)
   saved.publicVariants = structuredClone(existing?.publicVariants ?? {})
   if (nextStatus === 'published') saved.publicVariants[language] = { ...saved.variants[language] }
-  if (nextStatus === 'archived') delete saved.publicVariants[language]
   const log: Log = {
     id: `${entry.id}-${at}`,
     at,

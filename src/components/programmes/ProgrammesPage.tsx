@@ -1,3 +1,4 @@
+import { siteArchivedCalls } from '@/lib/cms-workspace/public-corpora'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
@@ -15,12 +16,14 @@ import { callCards } from '@/lib/call-archives'
 import { callCopy } from '@/lib/call-copy'
 import { CallCards } from './CallCards'
 import callsStyles from './CallsCatalogue.module.css'
+import { totalProjects } from '@/lib/project-count'
 
 type Item = { title: string; description: string; category?: string }
 export async function ProgrammesPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Programmes' })
   const calls = await findPublishedCalls(locale)
-  const cards = callCards(locale, calls)
+  const projectTotal = await totalProjects()
+  const cards = callCards(locale, calls, await siteArchivedCalls())
   const preview = [
     ...cards.filter((call) => call.state === 'open' || call.state === 'upcoming'),
     ...cards.filter((call) => call.state === 'closed' || call.state === 'cancelled'),
@@ -119,8 +122,8 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
                 sizes="(max-width: 63.999rem) 94vw, 46vw"
               />
               <div className={styles.figureCaption}>
-                <strong>
-                  <bdi>69</bdi>
+                <strong data-project-total={projectTotal ?? undefined}>
+                  <bdi>{projectTotal ?? '—'}</bdi>
                 </strong>
                 <div>
                   <p>{t('figureLabel')}</p>

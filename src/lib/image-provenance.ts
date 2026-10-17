@@ -1,4 +1,4 @@
-import inventory from '@/data/image-provenance.json'
+import inventory from '@/data/image-provenance.json' with { type: 'json' }
 
 /** Source evidence, not visual guesses. AI-assisted edits preserve a supplied subject. */
 export const imageProvenance = inventory

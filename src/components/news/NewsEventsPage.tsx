@@ -1,3 +1,4 @@
+import { publicNewsHighlight } from '@/lib/cms-workspace/public-news-highlight'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
@@ -49,12 +50,20 @@ export async function NewsEventsPage({
     previous: false,
   }
   let unavailable = false
+  let highlightId: string | null = null
   try {
-    cms = await findPublicNewsCards(locale, page)
+    highlightId = await publicNewsHighlight(locale)
+  } catch {
+    unavailable = true
+  }
+  try {
+    cms = await findPublicNewsCards(locale, page, listing ? undefined : highlightId)
   } catch {
     unavailable = true
   }
   const cards = page === 1 ? [...news, ...cms.cards] : cms.cards
+  const highlighted = cards.find((card) => card.id === highlightId)
+  const otherNews = cards.filter((card) => card.id !== highlighted?.id)
   function dateLabel(date: string) {
     return new Intl.DateTimeFormat(locale, {
       month: 'long',
@@ -187,10 +196,10 @@ export async function NewsEventsPage({
             {listing ? (
               <div className={styles.listing}>{cards.map((card) => article(card, true))}</div>
             ) : (
-              <div className={styles.newsGrid}>
-                <div>{article(news[0]!)}</div>
+              <div className={highlighted ? styles.newsGrid : styles.listing}>
+                {highlighted && <div>{article(highlighted)}</div>}
                 <div className={styles.sideNews}>
-                  {news.slice(1).map((card) => article(card, true))}
+                  {otherNews.map((card) => article(card, true))}
                 </div>
               </div>
             )}
@@ -269,6 +278,8 @@ export async function NewsEventsPage({
                   locale={locale}
                   label={t('eventTitle')}
                   navigationLabel={t('eventNavigation')}
+                  previousLabel={t('previousEvents')}
+                  nextLabel={t('nextEvents')}
                   itemLabels={newsEvents.map(
                     (event, index) =>
                       `${t('eventPosition', { current: index + 1, total: newsEvents.length })} — ${t(`events.${event.id}.name`)}`,

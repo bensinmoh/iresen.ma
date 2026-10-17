@@ -1,3 +1,7 @@
+import { Star } from '@phosphor-icons/react/dist/ssr/Star'
+import { PencilSimple } from '@phosphor-icons/react/dist/ssr/PencilSimple'
+import { ClipboardText } from '@phosphor-icons/react/dist/ssr/ClipboardText'
+import { Trash } from '@phosphor-icons/react/dist/ssr/Trash'
 import { ArrowLeft } from '@phosphor-icons/react/dist/ssr/ArrowLeft'
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight'
 import { CalendarBlank } from '@phosphor-icons/react/dist/ssr/CalendarBlank'
@@ -5,6 +9,8 @@ import { CaretRight } from '@phosphor-icons/react/dist/ssr/CaretRight'
 import { Check } from '@phosphor-icons/react/dist/ssr/Check'
 import { Clock } from '@phosphor-icons/react/dist/ssr/Clock'
 import { FileText } from '@phosphor-icons/react/dist/ssr/FileText'
+import { VideoCamera } from '@phosphor-icons/react/dist/ssr/VideoCamera'
+import { FolderOpen } from '@phosphor-icons/react/dist/ssr/FolderOpen'
 import { Flask } from '@phosphor-icons/react/dist/ssr/Flask'
 import { Globe } from '@phosphor-icons/react/dist/ssr/Globe'
 import { Images } from '@phosphor-icons/react/dist/ssr/Images'
@@ -21,8 +27,14 @@ import { Users } from '@phosphor-icons/react/dist/ssr/Users'
 import { X } from '@phosphor-icons/react/dist/ssr/X'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 const icons = {
+  star: Star,
+  edit: PencilSimple,
+  review: ClipboardText,
+  trash: Trash,
   dashboard: SquaresFour,
   document: FileText,
+  folder: FolderOpen,
+  video: VideoCamera,
   calendar: CalendarBlank,
   media: Images,
   research: Flask,
@@ -44,6 +56,19 @@ const icons = {
   link: Link,
 } as const
 export type IconName = keyof typeof icons
-export function CmsIcon({ name }: { name: keyof typeof icons }) {
+export function CmsIcon({ name, filled = false }: { name: keyof typeof icons; filled?: boolean }) {
+  if (name === 'star' && filled)
+    return (
+      <Star
+        size={20}
+        weight="fill"
+        color="currentColor"
+        className="site-icon"
+        aria-hidden="true"
+        focusable="false"
+        data-icon-set="phosphor"
+        data-icon-weight="fill"
+      />
+    )
   return <SiteIcon icon={icons[name]} size={20} />
 }

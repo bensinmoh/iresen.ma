@@ -97,7 +97,7 @@ describe('localized public media file authorization', () => {
     expect(find).toHaveBeenCalledOnce()
   })
 
-  it.each(['admin', 'editor', 'publisher'] as const)(
+  it.each(['admin', 'editor'] as const)(
     'preserves authorized %s file preview and metadata access without a public lookup',
     async (role) => {
       const { args, find } = fileRequest('all', [], role)

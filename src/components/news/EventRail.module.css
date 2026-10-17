@@ -56,3 +56,62 @@
     transition: none;
   }
 }
+
+.desktopControls {
+  display: none;
+}
+@media (min-width: 64.001rem) {
+  .desktopControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-block-start: var(--space-8);
+  }
+  .desktopControls button {
+    display: grid;
+    place-items: center;
+    inline-size: 3.25rem;
+    block-size: 3.25rem;
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-action);
+    background: var(--color-blue);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  .desktopControls button:hover:not(:disabled) {
+    background: var(--color-navy);
+  }
+  .desktopControls button:disabled {
+    background: var(--color-white);
+    color: var(--color-blue);
+    cursor: default;
+  }
+  .desktopControls button:focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 4px;
+  }
+  .desktopControls button svg {
+    inline-size: 20px;
+    block-size: 20px;
+  }
+  .desktopControls .previous svg {
+    rotate: 180deg;
+  }
+  .progress {
+    inline-size: clamp(5rem, 18vw, 16rem);
+    block-size: 0.375rem;
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--color-blue) 35%, var(--color-white));
+    overflow: hidden;
+    margin-inline-end: var(--space-4);
+  }
+  .progress span {
+    display: block;
+    block-size: 100%;
+    border-radius: inherit;
+    background: var(--color-blue);
+  }
+}

@@ -3,12 +3,12 @@ import {
   institutionalAffiliations,
 } from './institutions'
 import { getPayload } from 'payload'
-import { searchDatabase } from './search/database'
 import config from '../payload.config'
 import type { Project } from '../payload-types'
 import type { Locale } from '@/i18n/locales'
 import type { ProjectRecord } from './projects-model'
 import coordinators from '../data/project-coordinators.json' with { type: 'json' }
+import { projectIllustrationDescription } from './project-illustrations'
 
 // Arabic display names retain the original public Latin identity as a search alias.
 // Other working translations are never exposed as fallback content.
@@ -75,6 +75,9 @@ export function projectRecord(record: Project, locale: Locale): ProjectRecord {
     durationMonths: record.durationMonths ?? null,
     budgetMAD: record.budgetMAD ?? null,
     image: record.imagePath ?? null,
+    imageIllustration: record.imagePath
+      ? projectIllustrationDescription(record.reference, locale) || record.title || undefined
+      : undefined,
     theme: copy(record.theme),
     startText: copy(record.startText),
     location: copy(record.location),
@@ -151,19 +154,10 @@ export async function findProjects(locale: Locale, reference?: string) {
       objectives: true,
     },
   })
-  const notes = result.docs.length
-    ? await searchDatabase().query<{ reference: string }>(
-        `SELECT p.reference FROM projects p JOIN projects_locales l ON l._parent_id=p.id AND l._locale::text=$1
-       JOIN project_notes n ON n.project_id=p.id AND n.locale=$1 AND n.content_revision=project_content_revision(p,l)
-     WHERE p.id=ANY($2::int[])`,
-        [locale, result.docs.map((record) => record.id)],
-      )
-    : { rows: [] }
-  const available = new Set(notes.rows.map((note) => note.reference))
   return result.docs
     .filter((record) => record.title?.trim() && record.description?.trim())
     .map((record) => ({
       ...projectRecord(record as Project, locale),
-      noteAvailable: available.has(record.reference!),
+      noteAvailable: true,
     }))
 }

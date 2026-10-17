@@ -104,3 +104,28 @@ The final whole-site content/glossary sanity check remains pending.
 
 See [asset provenance](publications-page-assets.json),
 [database provenance](publications.md) and [verification](validation.md).
+
+## Shared publication figure — 16 October 2026
+
+The owner requests a database-derived home figure with rounded “+” notation.
+`totalPublications` in `src/lib/publication-count.ts` counts all retained database
+rows, independently of catalogue filters (currently 1,199). The publication page
+uses the exact shared count. The home figure uses the same count rounded down to
+the nearest hundred: 1,199 displays `+1100`, 1,200 displays `+1200`. Totals below
+100 display exactly, including zero. `roundedPublicationTotal` centralizes this
+format; no hard-coded publication figure remains. The server passes only the
+numeric count to the header. Static home search metadata retains the figure label
+without a numeric snapshot. This does not alter the retained corpus or locale gates.
+
+Verification: scoped ESLint, formatting and whitespace pass. Direct formatting
+checks cover unavailable/zero/sub-hundred totals and the 1,199→1,100 and
+1,200→1,200 thresholds. Local browser reads confirm `+1100` against the 1,199
+source rows on FR/EN desktop (1440px) and AR mobile (390px). The local search
+catalogue is synchronized. Full tests/build/CI/Git remain held by coordination.
+
+Indicator audit follow-up — 16 October 2026: the four band values now come from
+the common-database/canonical public census (currently 1199 publications, 59 filed
+references, 70 supported projects, 21 calls). The former 69/18 literals are removed.
+See [definitions and verification](numeric-indicators-audit.md). Catalogue filters
+do not change these institutional totals. Number text does not wrap; intermediate
+desktop widths stack labels while mobile retains its native rail.

@@ -16,7 +16,7 @@ export function publicationGuard(kind: 'pages' | 'news' | 'media'): CollectionBe
 
     if (!canPublish(req.user)) {
       if (explicitlyPublishing)
-        throw new APIError('Only a publisher or administrator can publish content.', 403)
+        throw new APIError('Only an administrator can publish content.', 403)
       data._status = 'draft'
       // Previously approved copy becomes a new draft; it never replaces the live revision.
       if (current.publicationStatus === 'published') data.publicationStatus = 'draft'

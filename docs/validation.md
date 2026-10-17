@@ -4109,3 +4109,24 @@ Partner section follow-up withdrawn by owner: remove only the in-progress
 partner/logo section and associated projection/styles/localized label. No data or
 assets were imported. Preserve the existing project corrections. Scoped lint,
 formatting and whitespace checked; full checks remain under the shared hold.
+
+## Project PDF generation on demand — 16 October 2026
+
+The owner approves a shared localized template with generation on click and a
+bounded temporary memory cache, then explicitly asks this chat to stop for another
+chat to run CI. Real local route checks generated AquaSolar FR/EN/AR PDFs with
+current images; Poppler renders and PDF links/page counts were inspected. Warm
+responses match cached bytes; public mode blocks warmed unapproved translations,
+private/withdrawn/unknown references and invalid locales. A French HTTP request
+also succeeds on the development server. The frozen install passes its supply-chain
+check; scoped lint/format/whitespace are checked. New cache tests and the updated
+integration lifecycle scenario await the coordinator's final suite/build/CI.
+Docker/standalone browser packaging is prepared but not built during this hold.
+See [the handoff ledger](project-pdf-on-demand.md).
+
+Project PDF cleanup follow-up: owner explicitly requests deletion of old fiches.
+Removed 1,110 legacy project PDFs (including backups and seven obsolete standalone
+outputs) plus their workbook ZIP; preserved the three new verification samples,
+all source records/images and unrelated documents. Detailed private hash inventory
+and the updated handoff record this cleanup. On-demand HTTP download is rechecked;
+no CI, build or Git operation is run.
