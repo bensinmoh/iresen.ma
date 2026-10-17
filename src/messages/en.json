@@ -632,7 +632,7 @@
       },
       "figures": {
         "title": "IRESEN in figures",
-        "description": "69 collaborative projects supported, 59 patents filed, +1000 young researchers supported, +1100 scientific publications and +18 university laboratories established."
+        "description": "Supported projects, patents, researchers, publications and laboratories: the site’s current indicators."
       },
       "research-priorities": {
         "title": "Research themes serving the energy transition",
@@ -2378,6 +2378,8 @@
     "pendingContent": "Content pending",
     "placeholderDescription": "Details will be added soon.",
     "eventNavigation": "Event navigation",
+    "previousEvents": "Previous events",
+    "nextEvents": "Next events",
     "eventPosition": "Event {current} of {total}",
     "newsTitles": {
       "7514335153415131136": "IRESEN takes part in the Impact Pioneers ’26 programme in Sweden.",
@@ -2501,7 +2503,7 @@
     "emptyHelp": "Try another keyword or reset the filters.",
     "acronym": "Acronym",
     "duration": "Duration",
-    "budget": "Total budget",
+    "budget": "Funding awarded by IRESEN",
     "launch": "Start date",
     "months": "{count} months",
     "pagination": "Catalogue pages",
@@ -2524,8 +2526,8 @@
     },
     "statuses": {
       "active": "Ongoing",
-      "completed": "Completed",
-      "planned": "Upcoming"
+      "completed": "Completed / closed",
+      "planned": "Starting / upcoming"
     },
     "photos": {
       "hero": "Glass composition with the blue IRESEN symbol."
@@ -2535,6 +2537,7 @@
     "close": "Close project details",
     "overview": "Project overview",
     "hostingPlatform": "Hosting platform",
+    "coordinatorAffiliation": "Coordinating institution",
     "coordinator": "Coordinator",
     "consortium": "Consortium",
     "objectives": "Scientific objectives",
@@ -3410,7 +3413,7 @@
     "archivesAction": "Browse previous calls",
     "programmeContact": "Contact the R&D&I Programmes team",
     "historicalNote": "These schemes are presented as historical examples. Their terms and editions are separate from currently open calls.",
-    "reference": "Agency of means report — 2025.",
+    "reference": "Collaborative project catalogue.",
     "figureLabel": "R&D&I projects selected through calls for projects",
     "sourceLink": "Read the institutional reference",
     "processNote": "The precise terms are set out in the specifications for each call.",

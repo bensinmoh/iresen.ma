@@ -334,3 +334,18 @@ T4 2026” line from the closing catalogue note in FR/EN/AR and derived search
 copy. Keep the catalogue/legal-status explanation, centered with font-weight
 200 and italic styling. This scoped presentation change preserves patent data
 and the source reference period recorded elsewhere.
+
+## Shared filed-patent figure — 16 October 2026
+
+The owner requests that the home “Brevets déposés” figure derive from all records
+in the patent database. `src/lib/patent-count.ts` now exports `totalPatents` from
+`src/data/patents.json`, the versioned structured database described above.
+`homeFigures` and the existing `filedPatentCount` reuse this shared value, currently 59. Additions or withdrawals update the figure with the database revision; there
+is no separately hard-coded total. The public technology portfolio keeps its
+existing granted-only filter and its distinct count. Home search metadata uses
+the same database-derived figure. No CMS migration or new publication is involved.
+
+Verification: scoped ESLint, formatting and whitespace checks pass. Development
+browser reads confirm the figure equals the database's 59 rows on FR/EN desktop
+(1440px) and AR mobile (390px). No layout changed. Full tests/build/CI and Git
+completion remain held by shared-checkout coordination.

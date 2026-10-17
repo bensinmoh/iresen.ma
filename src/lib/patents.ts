@@ -1,4 +1,5 @@
 import { canonicalNames } from './names'
+import { totalPatents } from './patent-count'
 import records from '@/data/patents.json' with { type: 'json' }
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from './site'
@@ -36,11 +37,11 @@ export const filedPatents = records.map((record) => ({
   ...record,
   depositor: record.depositor ? canonicalNames(record.depositor) : null,
 })) as Patent[]
-export const filedPatentCount = filedPatents.length
+export const filedPatentCount = totalPatents
 /** Public IP portfolio: only source-confirmed accepted / granted patents. */
 export const patents = filedPatents.filter((patent) => patent.granted === true)
 /** Filter values must be represented in the granted IP portfolio. */
-export const patentFilterOptions = {
+export const getPatentFilterOptions = (patents: Patent[]) => ({
   themes: patentThemes.filter((theme) => patents.some((patent) => patent.themes.includes(theme))),
   years: [
     ...new Set(
@@ -51,7 +52,8 @@ export const patentFilterOptions = {
     (a, b) => a.localeCompare(b, 'fr'),
   ),
   unknownYear: patents.some((patent) => patent.filingYear === null),
-}
+})
+export const patentFilterOptions = getPatentFilterOptions(patents)
 export const patentSourceDate = '2026-10-07'
 export function patentAnchor(reference: string) {
   return `patent-${reference}`
@@ -69,11 +71,12 @@ export function filterPatents(
   year: string,
   depositor: string,
   locale: Locale,
+  records: Patent[] = patents,
 ) {
   const normalize = (text: string) =>
     text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase(locale)
   const terms = normalize(query.trim()).split(/\s+/).filter(Boolean)
-  return patents.filter((p) => {
+  return records.filter((p) => {
     const text = normalize(
       [p.reference, p.title[locale], p.description[locale], p.depositor ?? ''].join(' '),
     )

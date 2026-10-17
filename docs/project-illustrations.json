@@ -1,0 +1,222 @@
+[
+  {
+    "reference": "pinremat",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Create one premium landscape 16:9 scientific editorial illustration for IRESEN project PINREMAT, whose documented subject is PVC window profiles incorporating new insulation made from recycled materials for energy efficiency. Show a carefully composed architectural material study: a clean cutaway white PVC window-frame profile with an insulating core, a few recycled polymer granules and subtle layered material samples on a matte off-white work surface. Polished realistic 3D illustration, believable materials, restrained institutional blue #296BB4 accents and soft blue-grey shadows, quiet daylight, crisp main subject with plenty of breathing room. Image fills the landscape frame, main subject centered for card cropping. This is a conceptual illustration, not a photograph or evidence of an actual project prototype. No people, no buildings or institutional branding, no text, no letters, no diagrams with labels, no logos, no watermark. Do not depict measured results or product certification.",
+    "sourceSHA256": "abf2d6e436e2d5f64d6ef521470d617f7cc0564c047bd5088e6948a242d560d9",
+    "sha256": "91d096e77790b08bf5be711ee5cc571997f1c2c28a62ef4f6bcd4359adf37c69",
+    "bytes": 90438,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/pinremat/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Profilé PVC et isolant issu de matériaux recyclés.",
+      "en": "Generated illustration : PVC profile and insulation from recycled materials.",
+      "ar": "رسم توضيحي مولّد : مقطع PVC وعازل من مواد معاد تدويرها."
+    },
+    "generatedAt": "2026-10-16T18:46:14.656Z",
+    "originalFile": ".local/projects/generated-images/pinremat/source.png",
+    "servedFile": ".local/projects/assets/pinremat/image.webp"
+  },
+  {
+    "reference": "soltanair",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN research-project card. Polished realistic 3D illustration, off-white matte setting, restrained institutional blue #296BB4 and pale blue-grey accents, soft daylight, refined believable materials, centered subject composed for a wide crop. This is an illustrative concept, not a photograph or proof of an actual built project. No people, text, letters, logos, branding, labels or watermarks. Documented theme: energy storage, project SOLTANAIR; no detailed project description is available. Show a technology-neutral sculptural energy storage concept: modular pale ceramic and metal storage blocks with carefully arranged blue translucent energy channels and a small solar-cell material plane. Avoid choosing or claiming a specific battery chemistry or actual installation.",
+    "sourceSHA256": "77983ed45e8110e726d40314b2e77c62d161aaa57058a8d3c44bb932692ddc57",
+    "sha256": "400314a2099e83167cd45ef27f5bde18ab27eff320b42a902aa4ee71ee126660",
+    "bytes": 73938,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/soltanair/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept de stockage d’énergie.",
+      "en": "Generated illustration : Energy storage concept.",
+      "ar": "رسم توضيحي مولّد : تصور لتخزين الطاقة."
+    },
+    "generatedAt": "2026-10-16T18:46:14.732Z",
+    "originalFile": ".local/projects/generated-images/soltanair/source.png",
+    "servedFile": ".local/projects/assets/soltanair/image.webp"
+  },
+  {
+    "reference": "ev-plan",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN research-project card. Polished realistic 3D illustration, off-white matte setting, restrained institutional blue #296BB4 and pale blue-grey accents, soft daylight, refined believable materials, centered subject composed for a wide crop. This is an illustrative concept, not a photograph or proof of an actual built project. No people, text, letters, logos, branding, labels or watermarks. Documented theme: sustainable mobility, project EV Plan. Show an unbranded streamlined electric vehicle beside a modest charging point, a solar canopy and a subtle clean roadway study, as an elegant miniature architectural scene. Avoid any real vehicle brand, real location, claims of an actual delivered vehicle or infrastructure.",
+    "sourceSHA256": "3c7b82ef2365c8daddad43cf82394ba7e26696a60cd4160b6352a75c5f4213a3",
+    "sha256": "ed2e1e179c542e96206f0dcf9641d5fce12890e501d130eaf66157aa2c013e66",
+    "bytes": 112202,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/ev-plan/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Mobilité électrique et recharge solaire.",
+      "en": "Generated illustration : Electric mobility and solar charging.",
+      "ar": "رسم توضيحي مولّد : التنقل الكهربائي والشحن بالطاقة الشمسية."
+    },
+    "generatedAt": "2026-10-16T18:46:14.813Z",
+    "originalFile": ".local/projects/generated-images/ev-plan/source.png",
+    "servedFile": ".local/projects/assets/ev-plan/image.webp"
+  },
+  {
+    "reference": "lswater",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN research-project card. Polished realistic 3D illustration, off-white matte setting, restrained institutional blue #296BB4 and pale blue-grey accents, soft daylight, refined believable materials, centered subject composed for a wide crop. This is an illustrative concept, not a photograph or proof of an actual built project. No people, text, letters, logos, branding, labels or watermarks. Project Lenium SolarWater (LSWater), documented theme renewable energy; no detailed technical description is provided. Show a quiet conceptual composition of photovoltaic modules interacting with a restrained blue water surface and clean energy channels on an abstract architectural plinth. No assertion of a particular engineered treatment process or actual facility.",
+    "sourceSHA256": "38ce75ed2d35c02ab639015fd23372cfba1662de27c96a9833e3c1cf15ddae5c",
+    "sha256": "9b12441c58ef7440a97194ed162fc7df5e71fbbf72e9bc46564cd2e4ac0fee28",
+    "bytes": 94630,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/lswater/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Énergie solaire et eau.",
+      "en": "Generated illustration : Solar energy and water.",
+      "ar": "رسم توضيحي مولّد : الطاقة الشمسية والماء."
+    },
+    "generatedAt": "2026-10-16T18:46:14.887Z",
+    "originalFile": ".local/projects/generated-images/lswater/source.png",
+    "servedFile": ".local/projects/assets/lswater/image.webp"
+  },
+  {
+    "reference": "restart",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN project card, polished realistic 3D concept, off-white and light neutral architectural materials, blue #296BB4 accents, quiet natural light, crisp centered subject and wide safe crop. Clearly a conceptual illustrative scene, not evidence of an actual delivered prototype or institution. No people, text, letters, logos, watermarks, claims or certification labels. Project RESTART is documented as recycling spent lithium-ion batteries and end-of-life photovoltaic panels, recovering metals and preparing a possible start-up. Show an elegant circular material-recovery tabletop arrangement: opened unbranded cylindrical cells, a fragmented solar-cell panel, neatly separated small metallic granules and recovered sheets, composed in a restrained circular flow. Clean and scientific, not hazardous waste or a production facility.",
+    "sourceSHA256": "33b32224344e37cd9de1e41ae493aab4d3b159799b739f0b28458c1ac78fde24",
+    "sha256": "1a853865757305ffbded995851a744d13cbd67f4a941bc3afe08d5b8087542f7",
+    "bytes": 121258,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/restart/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Recyclage de batteries et panneaux photovoltaïques, récupération des matériaux.",
+      "en": "Generated illustration : Battery and photovoltaic panel recycling, material recovery.",
+      "ar": "رسم توضيحي مولّد : إعادة تدوير البطاريات والألواح الكهروضوئية واسترجاع المواد."
+    },
+    "generatedAt": "2026-10-16T18:46:14.968Z",
+    "originalFile": ".local/projects/generated-images/restart/source.png",
+    "servedFile": ".local/projects/assets/restart/image.webp"
+  },
+  {
+    "reference": "e-pave",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN project card, polished realistic 3D concept, off-white and light neutral architectural materials, blue #296BB4 accents, quiet natural light, crisp centered subject and wide safe crop. Clearly a conceptual illustrative scene, not evidence of an actual delivered prototype or institution. No people, text, letters, logos, watermarks, claims or certification labels. Project E-PAVE has the documented theme renewable energy and no detailed description. Show a technology-neutral renewable energy concept with a small photovoltaic surface and a slim wind turbine on sculptural low architectural terraces. Keep it generic: do not infer paving technology, road generation, product design or claimed project infrastructure from the acronym.",
+    "sourceSHA256": "e1f648a2ab759a55a250d6bf6e51020d2ba25dbd4e2758736c119f87f2898c8c",
+    "sha256": "b288360e401ccc781417c1575def88b3ea15ebc240c18266000b9646a7b82475",
+    "bytes": 75672,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/e-pave/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept d’énergies renouvelables, solaire et éolien.",
+      "en": "Generated illustration : Renewable energy concept, solar and wind.",
+      "ar": "رسم توضيحي مولّد : تصور للطاقات المتجددة، الشمس والرياح."
+    },
+    "generatedAt": "2026-10-16T18:46:15.040Z",
+    "originalFile": ".local/projects/generated-images/e-pave/source.png",
+    "servedFile": ".local/projects/assets/e-pave/image.webp"
+  },
+  {
+    "reference": "stdscwg",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN project card, polished realistic 3D concept, off-white and light neutral architectural materials, blue #296BB4 accents, quiet natural light, crisp centered subject and wide safe crop. Clearly a conceptual illustrative scene, not evidence of an actual delivered prototype or institution. No people, text, letters, logos, watermarks, claims or certification labels. Documented themes: sustainable desalination, potable water, seawater and brackish groundwater, green energy and embedded systems. Show a conceptual compact water-treatment unit with slender membrane cylinders, clear blue water channels, a small solar panel and a restrained sensor module, in a clean coastal-inspired light setting. No proprietary design, no engineering performance claims, no labels.",
+    "sourceSHA256": "e843c58126ba539ac1409d614f14d1fc0564116c023e16cace0e4bbc3a4eb8b1",
+    "sha256": "10841cd348eeb80d55f4629e12bdcffd2448c26468f56e08e47dbcfb7ab18584",
+    "bytes": 125206,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/stdscwg/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept de dessalement alimenté par une énergie renouvelable.",
+      "en": "Generated illustration : Renewable-powered desalination concept.",
+      "ar": "رسم توضيحي مولّد : تصور لتحلية المياه باستخدام الطاقة المتجددة."
+    },
+    "generatedAt": "2026-10-16T18:46:15.121Z",
+    "originalFile": ".local/projects/generated-images/stdscwg/source.png",
+    "servedFile": ".local/projects/assets/stdscwg/image.webp"
+  },
+  {
+    "reference": "dakh2a",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. One premium landscape 16:9 scientific editorial illustration for an IRESEN project card, polished realistic 3D concept, off-white and light neutral architectural materials, blue #296BB4 accents, quiet natural light, crisp centered subject and wide safe crop. Clearly a conceptual illustrative scene, not evidence of an actual delivered prototype or institution. No people, text, letters, logos, watermarks, claims or certification labels. Documented project DAKH2A theme green hydrogen. Show an elegant abstract green-hydrogen research concept: a compact electrolyzer module, two unbranded metallic storage cylinders and blue fluid connections with a modest solar surface behind. Use realistic clean materials and an illustrative miniature composition, not an actual plant or location.",
+    "sourceSHA256": "b63fa5f646a7e72d34c50021717756b13c32c9e02fb20f91399aa425ed57aff8",
+    "sha256": "ba3e0312268c8d61a080f58ffa670175f56a4bd10a1473c2cd9175ce5f481107",
+    "bytes": 86180,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/dakh2a/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept de production et stockage d’hydrogène vert.",
+      "en": "Generated illustration : Green hydrogen production and storage concept.",
+      "ar": "رسم توضيحي مولّد : تصور لإنتاج الهيدروجين الأخضر وتخزينه."
+    },
+    "generatedAt": "2026-10-16T18:46:15.197Z",
+    "originalFile": ".local/projects/generated-images/dakh2a/source.png",
+    "servedFile": ".local/projects/assets/dakh2a/image.webp"
+  },
+  {
+    "reference": "greenh2hub",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Create one refined landscape 16:9 scientific editorial illustration for an IRESEN collaborative research-project card. Premium realistic 3D illustrative render, matte off-white architectural surfaces, restrained blue #296BB4 accents and soft daylight, believable metallic and glass materials, centered main composition for card cropping. A conceptual illustration only, not a real facility, product photograph or evidence of delivered project results. No people, no text, no letters, no logos, no watermark. Project GreenH2Hub belongs to the documented France–Morocco green-hydrogen cooperation call; its detailed description is absent. Depict an abstract research-cooperation hub for green energy: a few small clean connected energy modules and vertical hydrogen-style storage cylinders arranged around an open central courtyard, with restrained solar and wind elements in the background. Do not invent a real laboratory, precise campus, industrial scale or proprietary technology.",
+    "sourceSHA256": "c6d66aac34538da942deb41561c44c41fa57275b0138b71fdb6a832e12579be6",
+    "sha256": "1572a28b3c6b97200fad615f72e165751b2224380b7d3230f8265df009f9ee8e",
+    "bytes": 143980,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/greenh2hub/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept de coopération en recherche sur l’hydrogène vert.",
+      "en": "Generated illustration : Green hydrogen research cooperation concept.",
+      "ar": "رسم توضيحي مولّد : تصور للتعاون البحثي في الهيدروجين الأخضر."
+    },
+    "generatedAt": "2026-10-16T18:46:15.281Z",
+    "originalFile": ".local/projects/generated-images/greenh2hub/source.png",
+    "servedFile": ".local/projects/assets/greenh2hub/image.webp"
+  },
+  {
+    "reference": "great-h2",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Create one refined landscape 16:9 scientific editorial illustration for an IRESEN collaborative research-project card. Premium realistic 3D illustrative render, matte off-white architectural surfaces, restrained blue #296BB4 accents and soft daylight, believable metallic and glass materials, centered main composition for card cropping. A conceptual illustration only, not a real facility, product photograph or evidence of delivered project results. No people, no text, no letters, no logos, no watermark. Documented themes: renewable energy, hydrogen production, storage, transport and value chain. Depict an illustrative miniature value-chain scene on a continuous light architectural base: modest solar/wind sources on one side, compact electrolyzer and storage cylinders centrally, a small unbranded tube-trailer transport element at the other end. Balanced blue-grey materials, no labels or arrow diagrams. No real site, company marks or performance claims.",
+    "sourceSHA256": "ea0b52921bd3e227f50c9d3d18e723daae22df621da2d951dae40db55439a256",
+    "sha256": "02ab90524f1871d85035e7413c1ea5f7f0a11dd3c872ed76c08dfbb08f6f68ff",
+    "bytes": 95438,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/great-h2/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept de chaîne de valeur de l’hydrogène, production, stockage et transport.",
+      "en": "Generated illustration : Hydrogen value-chain concept, production, storage and transport.",
+      "ar": "رسم توضيحي مولّد : تصور لسلسلة قيمة الهيدروجين، الإنتاج والتخزين والنقل."
+    },
+    "generatedAt": "2026-10-16T18:46:15.357Z",
+    "originalFile": ".local/projects/generated-images/great-h2/source.png",
+    "servedFile": ".local/projects/assets/great-h2/image.webp"
+  },
+  {
+    "reference": "pragma-e",
+    "kind": "conceptual-illustration",
+    "generator": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Create one refined landscape 16:9 scientific editorial illustration for an IRESEN collaborative research-project card. Premium realistic 3D illustrative render, matte off-white architectural surfaces, restrained blue #296BB4 accents and soft daylight, believable metallic and glass materials, centered main composition for card cropping. A conceptual illustration only, not a real facility, product photograph or evidence of delivered project results. No people, no text, no letters, no logos, no watermark. Project PRAGMA-E aims to strengthen Morocco's green-ammonia sector through renewable energy potential and fertiliser expertise. Show an illustrative compact green-ammonia research concept: clean metallic synthesis vessels and a few storage cylinders alongside a modest solar surface, with a small tray of white fertiliser granules in the foreground. Abstract and unbranded, no actual plant location, no chemicals labelled, no claim of commercial production or achieved results.",
+    "sourceSHA256": "b7b083649522e829990764d70e12c10070ed16d3b709a00bf44f02800d58fc59",
+    "sha256": "6f7cd852777810f298a74c7a0f110f915e2a928015387f488eba20c72a636d0f",
+    "bytes": 112976,
+    "width": 1200,
+    "height": 675,
+    "url": "/api/projects/pragma-e/asset/image",
+    "descriptions": {
+      "fr": "Illustration générée : Concept d’ammoniac vert, énergies renouvelables et engrais.",
+      "en": "Generated illustration : Green ammonia, renewable energy and fertiliser concept.",
+      "ar": "رسم توضيحي مولّد : تصور للأمونيا الخضراء والطاقات المتجددة والأسمدة."
+    },
+    "generatedAt": "2026-10-16T18:46:15.438Z",
+    "originalFile": ".local/projects/generated-images/pragma-e/source.png",
+    "servedFile": ".local/projects/assets/pragma-e/image.webp"
+  }
+]

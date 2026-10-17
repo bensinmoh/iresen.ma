@@ -6,8 +6,8 @@ import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } fr
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import {
-  patents,
-  patentFilterOptions,
+  type Patent,
+  getPatentFilterOptions,
   filterPatents,
   patentAnchor,
   patentContactHref,
@@ -27,10 +27,14 @@ const serverHash = () => 'server'
 export function PatentCatalog({
   locale,
   headingLevel = 'h3',
+  records,
 }: {
   locale: Locale
+  records: Patent[]
   headingLevel?: 'h2' | 'h3'
 }) {
+  const patents = records
+  const patentFilterOptions = getPatentFilterOptions(records)
   const t = useTranslations('Transfer')
   const [query, setQuery] = useState('')
   const [theme, setTheme] = useState('')
@@ -62,8 +66,8 @@ export function PatentCatalog({
       window.removeEventListener('hashchange', revealDestination)
       cancelAnimationFrame(frame)
     }
-  }, [])
-  const results = filterPatents(query, theme, year, depositor, locale)
+  }, [patents])
+  const results = filterPatents(query, theme, year, depositor, locale, records)
   const grid = useRef<HTMLDivElement>(null)
   const positions = useRef(new Map<string, { x: number; y: number }>())
   const visibleKey = results

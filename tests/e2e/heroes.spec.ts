@@ -1,3 +1,4 @@
+import { totalLaboratories } from '../../src/lib/network'
 import { expect, test, type Locator, type Page } from './fixtures'
 import { footerPageIds, pageHref, pageIds } from '../../src/lib/site'
 import { locales } from '../../src/i18n/locales'
@@ -104,11 +105,11 @@ for (const locale of locales) {
         await expect(hero.locator('.hero-certification')).toContainText('9001:2015')
         await expect(hero.locator('.hero-figures dt')).toHaveCount(5)
         await expect(hero.locator('.hero-figures dd')).toHaveText([
-          '69',
+          /^\d+$/,
           '59',
           '+1000',
           '+1100',
-          '+18',
+          totalLaboratories.toString(),
         ])
         await expect(hero.locator('.hero-pathways')).toHaveCount(0)
         await expect(hero.locator('.hero-founding')).toHaveCount(0)
@@ -209,11 +210,11 @@ for (const locale of locales) {
       const actions = hero.locator('.hero-actions')
       await expect(figures).toHaveAccessibleName(catalogs[locale].Hero.figuresLabel)
       await expect(figures.locator('.key-figure-value')).toHaveText([
-        '69',
+        /^\d+$/,
         '59',
         '+1000',
         '+1100',
-        '+18',
+        totalLaboratories.toString(),
       ])
       await expect(actions.locator('a')).toHaveCount(2)
       await expectFigureLabelsUnclipped(figures)

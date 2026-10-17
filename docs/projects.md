@@ -1,5 +1,29 @@
 # Collaborative projects
 
+## Latest image refresh — 16 October 2026
+
+All 70 project images are now replaced following the owner's corrected request:
+64 new compositions from scratch and six recreations based on their original
+images (TahalaGrid, HYBRID-BATH, Frigo Solaire, CSP Ait Baha, CHAMS, AquaSolar).
+The previous images remain privately backed up. PDFs, portraits, publication gates
+and canonical asset URLs are preserved. See [current assets and checks](project-image-refresh-20261016.md).
+
+## Latest workbook update — 16 October 2026
+
+The owner supplied the updated technical workbook and explicitly confirmed all
+70 projects and M.S.F's withdrawal. This supersedes the historical 60-project
+roster and PDF-preservation deferral below. The local database/catalogue now has
+70 public French projects, 140 EN/AR working adaptations in review and 210 current,
+hash-verified PDFs. M.S.F remains private with its history/files preserved. Local
+search is rebuilt; source/review footer notices are replaced by canonical website
+links, and emails have the requested contact label. AutoConsoPV is closed. All 70
+projects now have images; 11 new conceptual illustrations retain internal provenance
+without a generated-image label in the interface. Filters stay on one horizontally
+scrollable row. The shared `totalProjects()` value drives home, menu, programmes
+and careers figures from the current public roster, superseding the historical
+fixed 69 below. Shared-checkout full checks
+and Git remain held; no deployment. See [reconciliation, workflow and evidence](projects-workbook-1026.md).
+
 ## Sourced catalogue — 2026-10-15
 
 The owner commissions extraction of the projects listed at
@@ -131,14 +155,13 @@ current publication/locale gate and `private, no-store`. Invalid references/kind
 missing files, withdrawn projects and unapproved public locales return 404. Browser
 requests stay on the current site; the source hosts are not embedded.
 
-PDF metadata lives in the private `project_notes` table. A localized public-content
-revision and SHA-256 check prevent serving a missing, corrupt or stale note. The
-PDF action is absent when the current revision has no matching note. The guarded
-`/api/projects/{reference}/note?locale={locale}` route shares project eligibility.
-Files remain under ignored `.local/projects/notes`; standalone installations use
-`PROJECTS_NOTES_DIRECTORY`. `scripts/generate-project-notes.ts` generates notes
-explicitly from current local records; it is not run on visitor requests. No PDF
-regeneration is commissioned for the latest corrections.
+Visitor PDFs now use on-demand generation from a single localized HTML template.
+The guarded `/api/projects/{reference}/note?locale={locale}` route checks the live
+project/locale before and after rendering. A bounded temporary memory cache keys
+actual HTML, including text, image bytes, logo, fonts and template. Missing static
+files or old `project_notes` registrations no longer hide the PDF action. Legacy
+exports and backup copies have been deleted at the owner’s subsequent request.
+See [implementation, runtime requirements and verification](project-pdf-on-demand.md).
 
 The live `search_public_sources` view, insert/update/delete triggers, worker and
 rebuild include approved projects, their media and current PDF documents. Stable project results point to
@@ -250,3 +273,16 @@ city suffix, Semlalia's city suffix and Tahala's former regional wording are
 normalised for display. CNEREE and CNESTEN use full names followed by their
 acronyms after a dash; Green Energy Park omits the Benguerir suffix. Original evidence and PDF bytes remain unchanged. See
 [the reference, source editions and check ledger](references/university-registry/README.md).
+
+## On-demand PDF follow-up — 16 October 2026
+
+The owner approves replacing the routine 210-file set with one shared layout and
+FR/EN/AR messages, generated on click from current project data and images.
+This supersedes earlier requests to preserve PDF presentation. Original exports were initially preserved privately, then deleted at the owner’s
+explicit follow-up below. No language approval or production deployment
+is inferred. The owner explicitly leaves final tests/build/CI to another chat;
+this workstream stops after scoped development verification and readiness reporting.
+
+Owner follow-up: delete the old generated PDFs and associated ZIP, including
+backup/obsolete-build copies. The new on-demand generator and three verification
+samples remain. See the deletion ledger in [the PDF handoff](project-pdf-on-demand.md).

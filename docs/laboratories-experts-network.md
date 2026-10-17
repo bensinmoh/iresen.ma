@@ -220,3 +220,18 @@ same-row reset, unchanged toolbar height after selecting/clearing a theme and no
 document overflow. 200% text also stays within the page. French desktop and Arabic
 mobile captures inspected. The mobile topic strip uses leading alignment so its
 first controls remain reachable under overflow. Production/CI validation is deferred.
+
+## Shared laboratory figure — 16 October 2026
+
+The owner requests that the home laboratory figure count the actual laboratory
+base. `totalLaboratories` now derives from `networkLaboratories.length` in
+`src/lib/network.ts`. The shared home figures and their search projection use
+this exact count, currently **14**, superseding the fixed `+18` figure. Catalogue
+and map filters do not change the total. No absent laboratories are invented and
+no laboratory records, localized names, assets or publication gates are changed.
+The existing hero browser expectations now derive from the same roster.
+
+Verification: scoped ESLint, formatting and whitespace checks pass. Development
+browser reads confirm the roster-derived 14 on FR/EN desktop (1440px) and AR
+mobile (390px). Search is rebuilt with the current figure. Full tests/build/CI
+and Git completion remain held by shared-checkout coordination.

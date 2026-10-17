@@ -31,7 +31,7 @@ export const Calls: CollectionConfig = {
         const current = { ...originalDoc, ...data }
         if (!canPublish(req.user)) {
           if (data._status === 'published' || data.publicationStatus === 'published')
-            throw new APIError('Only publishers can publish.', 403)
+            throw new APIError('Only an administrator can publish.', 403)
           data._status = 'draft'
           if (current.publicationStatus === 'published') data.publicationStatus = 'draft'
         }

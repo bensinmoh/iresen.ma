@@ -273,5 +273,60 @@
     "givenName": "Abdelmajid",
     "familyName": "JAMIL",
     "ar": "عبد المجيد جميل"
+  },
+  "ELFARISSI Latifa": {
+    "givenName": "Latifa",
+    "familyName": "ELFARISSI",
+    "ar": "لطيفة الفارسي"
+  },
+  "Aabla YAHYA": {
+    "givenName": "Aabla",
+    "familyName": "YAHYA",
+    "ar": "عبلة يحيى"
+  },
+  "Abdelilah Rochd": {
+    "givenName": "Abdelilah",
+    "familyName": "ROCHD",
+    "ar": "عبد الإله رشد"
+  },
+  "Mouaky Ammar": {
+    "givenName": "Ammar",
+    "familyName": "MOUAKY",
+    "ar": "عمار مواقي"
+  },
+  "Ismael Saadoune": {
+    "givenName": "Ismail",
+    "familyName": "SAADOUNE",
+    "ar": "إسماعيل سعدون"
+  },
+  "Nacer AKKOURI": {
+    "givenName": "Nacer",
+    "familyName": "AKKOURI",
+    "ar": "ناصر أكوري"
+  },
+  "Khalid Guissi, Ibrahim EL BHIRI": {
+    "givenName": "Khalid GUISSI, Ibrahim",
+    "familyName": "EL BHIRI",
+    "ar": "خالد الكيسي، إبراهيم البحيري"
+  },
+  "Louis MOROCHO": {
+    "givenName": "Louis",
+    "familyName": "MOROCHO",
+    "ar": "لويس موروتشو"
+  },
+  "Ahmed CHEBAK": {
+    "givenName": "Ahmed",
+    "familyName": "CHEBAK",
+    "ar": "أحمد شباك"
+  },
+  "Pr. Yassine Sadiki Amari": {
+    "givenName": "Yassine",
+    "familyName": "SADIKI AMARI",
+    "ar": "ياسين صديقي عماري"
+  },
+  "Omar EL Mounkachi": {
+    "givenName": "Omar",
+    "familyName": "EL MOUNKACHI",
+    "ar": "عمر المونكاشي"
   }
 }

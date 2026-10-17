@@ -34,9 +34,20 @@ Contact/applications compose local email drafts; no server intake or delivery is
 implemented. Google Maps loads only after optional-service consent. LinkedIn
 content is curated, without OAuth/synchronization. CMS email is unconfigured.
 
-Production administration is closed by default. `/cms-preview` is an isolated
-local design tool, with no real data or Payload writes. It requires explicit local
-review configuration and is forbidden in a public release.
+Production administration is closed by default. `/admin` opens the custom CMS;
+`CMS_WORKSPACE_ENABLED=true` connects it to the local database with an existing
+administrator/editor session. Retained publications, patents, calls, laboratories,
+organisation/councils, news/events, FAQ and page-section records are imported into
+the authenticated PostgreSQL authoring store on first load. Full page catalogues,
+registered site assets and existing search vocabulary are included. There is no
+runtime demonstration mode: the workspace must be enabled.
+`SITE_CONTENT_DATABASE_ENABLED=true` reads the retained site catalogues/resources
+from this common database; public readers and search use validated snapshots, with
+existing delivered translation baselines and native publication gates preserved.
+See the [complete CMS inventory and verification](docs/cms-interface-preview.md).
+`/cms-preview` redirects to `/admin` in local review. Both are forbidden in a public
+release; production local review requires both explicit review flags. Native account
+management remains under `/admin/collections/users` with its existing admin gate.
 
 ## Pinned environment
 
@@ -173,4 +184,4 @@ tracing. `PROJECTS_LOCAL_REVIEW=true` exposes working EN/AR only for local revie
 production mode also requires `CMS_LOCAL_REVIEW=true`, and `PUBLIC_RELEASE=true`
 always disables it. Public search contains only approved locales.
 
-Project follow-ups use homogeneous AI-assisted descriptions, short previews and compact objective bullets. Project actions open guarded local PDFs; current PDF files remain unchanged until the updated project list. See [project scope](docs/projects.md).
+Project follow-ups use homogeneous AI-assisted descriptions, short previews and compact objective bullets. Project actions generate guarded PDFs on demand from one FR/EN/AR template and current data/images, using a bounded temporary memory cache. Old static project PDF exports have been deleted; see [runtime and verification](docs/project-pdf-on-demand.md). See [project scope](docs/projects.md).

@@ -5,8 +5,8 @@ import type { Locale } from '@/i18n/locales'
 import { PageShell } from '@/components/layout/PageShell'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { pageHref } from '@/lib/site'
-import { usefulLinks } from '@/lib/useful-links'
-import { mediaPhotos } from '@/lib/media-library'
+import { siteLibraryLinks } from '@/lib/cms-workspace/media-links'
+import { siteMedia } from '@/lib/cms-workspace/public-corpora'
 import { findPublicLibraryVideos } from '@/lib/content/media-library'
 import { ReportList } from './ReportList'
 import { PhotoGallery } from './PhotoGallery'
@@ -14,8 +14,9 @@ import { VideoRail } from './VideoRail'
 import styles from './MediaLibrary.module.css'
 
 export async function MediaLibraryPage({ locale }: { locale: Locale }) {
+  const { photos: mediaPhotos } = await siteMedia()
   const t = await getTranslations({ locale, namespace: 'MediaLibrary' })
-  const linksCopy = await getTranslations({ locale, namespace: 'UsefulLinks' })
+  const usefulLinks = await siteLibraryLinks(locale)
   let failed = false
   const videos = await findPublicLibraryVideos(locale).catch(() => {
     failed = true
@@ -124,7 +125,7 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
         <section id="press-resources" className={styles.section} aria-label={t('links')}>
           {header(t('links'), '04', t('linkNote'))}
           <div className={styles.links}>
-            {usefulLinks.map((link, index) => (
+            {usefulLinks.map((link) => (
               <a
                 id={`link-${link.id}`}
                 key={link.id}
@@ -134,10 +135,10 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
               >
                 <span>
                   <strong>
-                    <bdi>{linksCopy(`items.${index}.title`)}</bdi>
+                    <bdi>{link.title}</bdi>
                   </strong>
                   <span>
-                    <bdi>{linksCopy(`items.${index}.description`)}</bdi>
+                    <bdi>{link.description}</bdi>
                   </span>
                 </span>
                 <span className={styles.externalIcon}>

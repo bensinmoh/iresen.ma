@@ -115,3 +115,52 @@ width/color animation. With scripts disabled, native scrolling remains visible.
 The five social vector icons occupy a fixed, non-scrolling mobile row without
 visible labels or arrows; explicit accessible names preserve their identities.
 The later content completion adds one news notice, two event records and four public images with FR/EN/AR search references. Existing routes and publication gates remain.
+
+## Desktop event navigation — owner follow-up, 16 October 2026
+
+The owner identifies that horizontal event navigation is not discoverable on
+desktop and requests the Institute timeline's visual language. Above 64rem,
+overflowing event rails now show centered circular previous/next SVG controls,
+a synchronized event counter and progress track beneath the cards. Arrows use
+existing measured card stops, skipping duplicate clamped stops at the trailing
+edge so each enabled click moves. Controls disable at either edge; native
+scrolling synchronizes their state. No overflow means no controls.
+
+FR/EN/AR accessible labels, keyboard focus, Arabic arrow mirroring and reduced
+motion follow the existing site behavior. Mobile retains its per-event pills;
+tablet retains native scrolling. Event content, stable anchors and existing
+search references are unchanged; this adds navigation to the same public section.
+
+Development verification: 1440px FR/EN/AR, arrow forward/back, end limits,
+keyboard Enter/focus, progress completion and page containment pass. At 768px
+desktop controls are hidden; at 390px existing mobile pills remain visible and
+the page fits. Desktop FR/AR captures inspected. An initial immediate resize
+measurement preceded layout settling; the settled checks pass in all locales.
+Scoped ESLint/Prettier and whitespace checks pass. Full tests, production build
+and CI remain with the coordinating chat under the shared hold. Private captures
+and verifier are in `.local/projects/on-demand-pdf/events-*` and `verify-events.mjs`.
+
+Owner screenshot correction — 16 October 2026: replace circular desktop controls
+with larger primary-blue square buttons using physical top-left/bottom-right
+signature corners and white SVG arrows. A longer fine blue progress bar with a
+pale track precedes them; remove the visible numeric counter. Accessible progress
+values and localized arrow labels remain. Scrolling, disabled edges, keyboard,
+Arabic direction and mobile pills retain the verified behavior.
+
+Final owner size correction — 16 October 2026: the homepage Achievements rail is
+now the exact size/spacing reference for desktop event controls: 3.25rem (52px)
+buttons, 20px SVG arrows, `radius-action`, space-4 gaps and a 0.375rem progress
+track capped at 16rem. This replaces the oversized screenshot interpretation.
+The track/disabled surface is white against the existing pale event section.
+No visible counter; keyboard, RTL, mobile behavior and routes remain unchanged.
+
+Owner contrast correction — 16 October 2026: the desktop event progress track
+uses a 35% primary-blue/white mix so the unfilled length remains visible against
+the pale section. Compact homepage-derived button dimensions remain unchanged.
+
+CMS highlight follow-up — 16 October 2026: the featured article now follows the
+common database’s exclusive `highlight` selection, initially the owner-selected
+Samir RACHIDI podcast article. Administrator star actions replace that selection
+atomically; a PostgreSQL partial unique index enforces at most one. Publication
+and locale gates remain required. Existing article/search identities, content,
+routes and media are preserved; this changes selection metadata only.

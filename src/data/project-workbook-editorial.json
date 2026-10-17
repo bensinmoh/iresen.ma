@@ -1,0 +1,77 @@
+{
+  "pinremat": {
+    "fr": {
+      "title": "Profilés PVC intégrant un nouvel isolant issu de matériaux recyclés",
+      "description": "PINREMAT étudie des profilés PVC intégrant un nouvel isolant élaboré à partir de matériaux recyclés. Le projet s’inscrit dans le programme InnoESPA Maroc 2021 et dans la thématique de l’efficacité énergétique.",
+      "summary": "Des profilés PVC intégrant un nouvel isolant élaboré à partir de matériaux recyclés.",
+      "objectives": [
+        "Étudier l’intégration d’un isolant issu de matériaux recyclés dans des profilés PVC."
+      ]
+    },
+    "en": {
+      "title": "PVC profiles incorporating new insulation made from recycled materials",
+      "description": "PINREMAT studies PVC profiles incorporating new insulation made from recycled materials. The project is part of InnoESPA Maroc 2021 and addresses energy efficiency.",
+      "summary": "PVC profiles incorporating new insulation made from recycled materials.",
+      "objectives": [
+        "Study the integration of insulation made from recycled materials into PVC profiles."
+      ]
+    },
+    "ar": {
+      "title": "مقاطع من PVC تدمج عازلاً جديداً من مواد معاد تدويرها",
+      "description": "يدرس مشروع PINREMAT مقاطع من PVC تدمج عازلاً جديداً مصنوعاً من مواد معاد تدويرها. يندرج المشروع ضمن برنامج InnoESPA Maroc 2021 وموضوع النجاعة الطاقية.",
+      "summary": "مقاطع من PVC تدمج عازلاً جديداً مصنوعاً من مواد معاد تدويرها.",
+      "objectives": ["دراسة إدماج عازل من مواد معاد تدويرها في مقاطع PVC."]
+    }
+  },
+  "restart": {
+    "fr": {
+      "title": "Recyclage des batteries lithium-ion et des panneaux photovoltaïques en fin de vie",
+      "description": "RESTART porte sur le recyclage des batteries lithium-ion usagées et des panneaux photovoltaïques en fin de vie. Le projet associe le développement de procédés de récupération des métaux à une perspective de création de start-up, dans le cadre de LEAP-RE 2021.",
+      "summary": "Récupérer les métaux des batteries et panneaux photovoltaïques en fin de vie, avec une perspective de start-up.",
+      "objectives": [
+        "Développer des procédés de récupération des métaux des batteries et panneaux photovoltaïques en fin de vie.",
+        "Préparer la mise en œuvre d’une start-up autour de ces procédés."
+      ]
+    },
+    "en": {
+      "title": "Recycling end-of-life lithium-ion batteries and photovoltaic panels",
+      "description": "RESTART addresses the recycling of used lithium-ion batteries and end-of-life photovoltaic panels. Under LEAP-RE 2021, it links the development of metal recovery processes to the prospect of establishing a start-up.",
+      "summary": "Recovering metals from end-of-life batteries and photovoltaic panels, with a view to creating a start-up.",
+      "objectives": [
+        "Develop metal recovery processes for end-of-life batteries and photovoltaic panels.",
+        "Prepare the establishment of a start-up around these processes."
+      ]
+    },
+    "ar": {
+      "title": "إعادة تدوير بطاريات الليثيوم أيون والألواح الكهروضوئية عند نهاية عمرها",
+      "description": "يتناول مشروع RESTART إعادة تدوير بطاريات الليثيوم أيون المستعملة والألواح الكهروضوئية عند نهاية عمرها. ويربط ضمن برنامج LEAP-RE 2021 تطوير عمليات استرجاع المعادن بأفق إنشاء شركة ناشئة.",
+      "summary": "استرجاع المعادن من البطاريات والألواح الكهروضوئية عند نهاية عمرها، في أفق إنشاء شركة ناشئة.",
+      "objectives": [
+        "تطوير عمليات استرجاع المعادن من البطاريات والألواح الكهروضوئية عند نهاية عمرها.",
+        "التحضير لإنشاء شركة ناشئة حول هذه العمليات."
+      ]
+    }
+  },
+  "pragma-e": {
+    "fr": {
+      "title": "Renforcer la filière de l’ammoniac vert au Maroc",
+      "description": "PRAGMA-E vise à renforcer le rôle du Maroc dans le développement de la filière de l’ammoniac vert. Le projet s’appuie sur le potentiel national en énergies renouvelables et sur l’expertise du pays dans le domaine des engrais. Il relève de LEAP SE 2025 et est en cours de démarrage.",
+      "summary": "Renforcer la filière de l’ammoniac vert en s’appuyant sur les énergies renouvelables et l’expertise marocaine des engrais.",
+      "objectives": [
+        "Renforcer le rôle du Maroc dans le développement de la filière de l’ammoniac vert."
+      ]
+    },
+    "en": {
+      "title": "Strengthening Morocco’s green ammonia sector",
+      "description": "PRAGMA-E aims to strengthen Morocco’s role in developing the green ammonia sector, drawing on its renewable energy potential and expertise in fertilisers. The project belongs to LEAP SE 2025 and is starting up.",
+      "summary": "Strengthening green ammonia through Morocco’s renewable energy potential and expertise in fertilisers.",
+      "objectives": ["Strengthen Morocco’s role in developing the green ammonia sector."]
+    },
+    "ar": {
+      "title": "تعزيز قطاع الأمونيا الخضراء في المغرب",
+      "description": "يهدف مشروع PRAGMA-E إلى تعزيز دور المغرب في تطوير قطاع الأمونيا الخضراء، بالاستناد إلى إمكاناته في الطاقات المتجددة وخبرته في مجال الأسمدة. يندرج المشروع ضمن برنامج LEAP SE 2025 وهو في طور الانطلاق.",
+      "summary": "تعزيز الأمونيا الخضراء بالاستناد إلى إمكانات المغرب في الطاقات المتجددة وخبرته في الأسمدة.",
+      "objectives": ["تعزيز دور المغرب في تطوير قطاع الأمونيا الخضراء."]
+    }
+  }
+}

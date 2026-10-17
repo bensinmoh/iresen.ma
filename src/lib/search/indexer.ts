@@ -1,3 +1,4 @@
+import { siteSearchDocuments } from '@/lib/cms-workspace/site-search'
 import {
   canonicalInstitutionNames as canonicalNames,
   institutionalAffiliations,
@@ -7,6 +8,7 @@ import { readFile, realpath, stat } from 'node:fs/promises'
 import path from 'node:path'
 import { promisify } from 'node:util'
 import type { PoolClient } from 'pg'
+import { projectIllustrationDescription } from '../project-illustrations'
 
 import { careerHref, careerDownloadHref } from '@/lib/careers'
 import { callHref, isCallReference } from '@/lib/calls'
@@ -44,6 +46,7 @@ type Source = {
 
 let catalogReady: Promise<string> | undefined
 let currentRevision: string | undefined
+let authoringRevision: number | undefined
 
 async function writeDocument(
   client: PoolClient,
@@ -79,9 +82,24 @@ async function writeDocument(
 
 /** Explicit runtime catalog only; CMS reindex/extraction never runs in request latency. */
 export async function initializeSearchCatalog(): Promise<string> {
+  if (process.env.SITE_CONTENT_DATABASE_ENABLED === 'true') {
+    const meta = await searchDatabase().query(
+      "SELECT revision FROM cms_workspace_meta WHERE scope='content'",
+    )
+    const nextRevision = Number(meta.rows[0]?.revision)
+    if (authoringRevision !== nextRevision) {
+      currentRevision = undefined
+      catalogReady = undefined
+      authoringRevision = nextRevision
+    }
+  }
   if (currentRevision) return currentRevision
+  const sourceRevisionAtStart = authoringRevision
   catalogReady ??= (async () => {
-    const documents = staticSearchDocuments()
+    const documents =
+      process.env.SITE_CONTENT_DATABASE_ENABLED === 'true'
+        ? await siteSearchDocuments()
+        : staticSearchDocuments()
     const revision = catalogRevision(documents)
     const client = await searchDatabase().connect()
     try {
@@ -131,7 +149,7 @@ export async function initializeSearchCatalog(): Promise<string> {
         )
       }
       await client.query('COMMIT')
-      currentRevision = revision
+      if (authoringRevision === sourceRevisionAtStart) currentRevision = revision
       return revision
     } catch (error) {
       await client.query('ROLLBACK')
@@ -140,7 +158,7 @@ export async function initializeSearchCatalog(): Promise<string> {
       client.release()
     }
   })().catch((error: unknown) => {
-    catalogReady = undefined
+    if (authoringRevision === sourceRevisionAtStart) catalogReady = undefined
     throw error
   })
   return catalogReady
@@ -306,6 +324,10 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
                       ? assets.coordinatorName
                       : source.title,
                   body:
+                    (kind === 'image'
+                      ? (projectIllustrationDescription(source.slug ?? '', source.locale) ?? '')
+                      : '') +
+                    ' ' +
                     canonicalNames(source.body_text ?? source.title) +
                     ' ' +
                     institutionalAffiliations(source.body_text ?? source.title, source.locale)
@@ -325,7 +347,8 @@ export async function processSearchJobs(batchSize = 5): Promise<number> {
           source.rich_body &&
           typeof source.rich_body === 'object'
         ) {
-          const notePath = (source.rich_body as { notePath?: string }).notePath
+          // Every eligible project has an on-demand brief; no archived file is required.
+          const notePath = source.slug ? `/api/projects/${source.slug}/note` : null
           if (
             typeof notePath === 'string' &&
             /^\/api\/projects\/[a-z0-9-]+\/note$/.test(notePath)

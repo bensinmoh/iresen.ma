@@ -1,5 +1,6 @@
 import {
   administrationEnabled,
+  cmsInterfaceEnabled,
   publicCmsRequestAllowed,
   contentSecurityPolicy,
 } from '@/lib/security/policy'
@@ -104,22 +105,23 @@ async function localeResponse(request: NextRequest) {
 
 export default async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
-  if (path === '/admin' || path.startsWith('/admin/')) {
-    if (!administrationEnabled())
-      return new NextResponse(null, {
-        status: 404,
-        headers: { 'Cache-Control': 'private, no-store' },
-      })
-    return NextResponse.next()
-  }
   if (path === '/cms-preview' || path.startsWith('/cms-preview/')) {
-    if (
-      process.env.PUBLIC_RELEASE === 'true' ||
-      (process.env.NODE_ENV === 'production' && process.env.CMS_LOCAL_REVIEW !== 'true')
-    )
+    if (!cmsInterfaceEnabled())
       return new NextResponse(null, {
         status: 404,
-        headers: { 'Cache-Control': 'private, no-store' },
+        headers: { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow' },
+      })
+    const destination = request.nextUrl.clone()
+    destination.pathname = path.replace(/^\/cms-preview(?=\/|$)/, '/admin')
+    return NextResponse.redirect(destination, 308)
+  }
+  if (path === '/admin' || path.startsWith('/admin/')) {
+    const workspaceRoute =
+      path === '/admin' || path === '/admin/api' || path.startsWith('/admin/api/')
+    if (!(workspaceRoute ? cmsInterfaceEnabled() : administrationEnabled()))
+      return new NextResponse(null, {
+        status: 404,
+        headers: { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow' },
       })
     return NextResponse.next()
   }

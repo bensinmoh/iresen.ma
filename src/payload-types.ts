@@ -134,7 +134,7 @@ export interface UserAuthOperations {
 export interface User {
   id: number;
   name?: string | null;
-  role: 'admin' | 'editor' | 'publisher';
+  role: 'admin' | 'editor';
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -191,7 +191,7 @@ export interface Page {
     description?: string | null;
   };
   /**
-   * Approval applies only to the selected language. A publisher then publishes the revision.
+   * Approval applies only to the selected language. An administrator then publishes the revision.
    */
   publicationStatus: 'draft' | 'review' | 'published';
   visibility: 'private' | 'public';
@@ -243,7 +243,7 @@ export interface News {
     description?: string | null;
   };
   /**
-   * Approval applies only to the selected language. A publisher then publishes the revision.
+   * Approval applies only to the selected language. An administrator then publishes the revision.
    */
   publicationStatus: 'draft' | 'review' | 'published';
   visibility: 'private' | 'public';
@@ -275,7 +275,7 @@ export interface Media {
   rights?: string | null;
   credit?: string | null;
   /**
-   * Approval applies only to the selected language. A publisher then publishes the revision.
+   * Approval applies only to the selected language. An administrator then publishes the revision.
    */
   publicationStatus: 'draft' | 'review' | 'published';
   visibility: 'private' | 'public';
@@ -328,7 +328,7 @@ export interface Opportunity {
    */
   profile?: string | null;
   /**
-   * Approval applies only to the selected language. A publisher then publishes the revision.
+   * Approval applies only to the selected language. An administrator then publishes the revision.
    */
   publicationStatus: 'draft' | 'review' | 'published';
   visibility: 'private' | 'public';
@@ -398,7 +398,7 @@ export interface Call {
    */
   cancelled?: boolean | null;
   /**
-   * Approval applies only to the selected language. A publisher then publishes the revision.
+   * Approval applies only to the selected language. An administrator then publishes the revision.
    */
   publicationStatus: 'draft' | 'review' | 'published';
   visibility: 'private' | 'public';
@@ -472,7 +472,7 @@ export interface Project {
   retrievedAt?: string | null;
   translationReview?: ('source' | 'pending' | 'approved') | null;
   /**
-   * Approval applies only to the selected language. A publisher then publishes the revision.
+   * Approval applies only to the selected language. An administrator then publishes the revision.
    */
   publicationStatus: 'draft' | 'review' | 'published';
   visibility: 'private' | 'public';

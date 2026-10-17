@@ -25,18 +25,25 @@ export type PublicationTopic = (typeof definitions)[number][0]
 export function titleTopics(title: string) {
   return definitions.filter(([, pattern]) => pattern.test(title)).map(([id]) => id)
 }
-export const publicationTopics = definitions
-  .map(([id]) => ({
-    id,
-    count: publications.filter((p) => titleTopics(p.title).includes(id)).length,
-  }))
-  .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id))
+export const getPublicationTopics = (records: Publication[]) =>
+  definitions
+    .map(([id]) => ({
+      id,
+      count: records.filter((p) => titleTopics(p.title).includes(id)).length,
+    }))
+    .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id))
+export const publicationTopics = getPublicationTopics(publications)
 export const frequentPublicationTopics = publicationTopics.slice(0, 6)
 export const publicationYears = [...new Set(publications.map((p) => p.year))].sort((a, b) => b - a)
 const normalize = (text: string) => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()
-export function filterPublications(query: string, topics: string[] = [], years: string[] = []) {
+export function filterPublications(
+  query: string,
+  topics: string[] = [],
+  years: string[] = [],
+  records: Publication[] = publications,
+) {
   const terms = normalize(query).split(/\s+/).filter(Boolean)
-  return publications
+  return records
     .filter((p) => {
       const text = normalize([p.title, p.authors, p.doiUrl, p.theme, p.journal, p.type].join(' '))
       return (

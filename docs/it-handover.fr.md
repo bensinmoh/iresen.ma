@@ -73,3 +73,12 @@ prouvent pas une conformité complète ni une invulnérabilité. Prévoir survei
 correctifs réguliers et tests de sécurité en préproduction. Le rapport détaillé
 et les résultats se trouvent dans [la préparation](public-release-preparation.md) ;
 les commandes, configurations et procédures dans [le guide de déploiement](deployment.md).
+
+## Fiches des projets à la demande — 16 octobre 2026
+
+Les fiches PDF sont produites au clic à partir des données et de l’image actuelles,
+avec un modèle commun FR/EN/AR. Il n’est plus nécessaire de déployer 210 PDF.
+Les anciennes fiches stockées et leur archive ZIP ont été supprimées à la demande du propriétaire. Prévoir Chromium côté serveur
+(`PLAYWRIGHT_EXECUTABLE_PATH`) et le répertoire externe des images ; l’image Docker
+prévoit Chromium. Le cache temporaire reste en mémoire et les droits de publication
+sont revérifiés à chaque téléchargement. Voir le [détail technique et les contrôles](project-pdf-on-demand.md).

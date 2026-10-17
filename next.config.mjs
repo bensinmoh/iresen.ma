@@ -18,7 +18,13 @@ if (
 }
 const nextConfig = {
   output: 'standalone',
+  serverExternalPackages: ['playwright-core'],
   outputFileTracingIncludes: {
+    '/api/projects/*/note': [
+      './src/fonts/plus-jakarta-sans/plus-jakarta-sans-latin-variable.woff2',
+      './src/fonts/alexandria/alexandria-arabic-variable.woff2',
+      './public/brand/logo-primary.svg',
+    ],
     '/api/careers/*': ['./assets/careers/*.pdf'],
   },
   outputFileTracingExcludes: {
@@ -104,7 +110,10 @@ const nextConfig = {
       },
       {
         source: '/admin/:path*',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'Cache-Control', value: 'private, no-store' },
+        ],
       },
       {
         source: '/api/:path*',

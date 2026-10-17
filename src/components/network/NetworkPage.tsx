@@ -1,3 +1,5 @@
+import { siteContent } from '@/lib/cms-workspace/site-content'
+import { validatedShared } from '@/lib/cms-preview/indicators'
 import { institutionalAffiliations } from '@/lib/institutions'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
@@ -26,21 +28,38 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
   const sections = await getTranslations({ locale, namespace: 'PageSections.network' })
   const navigation = await getTranslations({ locale, namespace: 'Navigation' })
   const photo = heroImages.workshop
-  const records = networkLaboratories.map(({ id, topic, location }) => ({
-    id,
-    topic,
-    location,
-    anchor: laboratoryAnchor(id),
-    title: t(`labs.${id}.title`),
-    institution: t(`labs.${id}.institution`),
-    city: t(`labs.${id}.city`),
-    discovery: `${institutionalAffiliations(original(`labs.${id}.institution`), locale).searchText} ${original(`labs.${id}.title`)} ${original(`labs.${id}.institution`)} ${original(`labs.${id}.city`)} ${id === 'power-electronics' ? original('directory.name') : ''}`,
-    ...(id === suppliedLaboratoryContact.id
-      ? { contact: { name: t('directory.name'), email: suppliedLaboratoryContact.email } }
-      : id === 'solar-energy'
-        ? { contact: { name: t('directory.gepName'), email: 'ghennioui@iresen.org' } }
-        : {}),
-  }))
+  const eligibleLabs = new Set(
+    (await siteContent())
+      .filter(
+        (row) =>
+          row.module === 'laboratories' &&
+          validatedShared({
+            module: row.module,
+            shared: row.shared,
+            publicVariants: row.public_variants,
+          })?.visibility === 'public',
+      )
+      .map((row) => row.reference),
+  )
+  const records = networkLaboratories
+    .filter(
+      (lab) => process.env.SITE_CONTENT_DATABASE_ENABLED !== 'true' || eligibleLabs.has(lab.id),
+    )
+    .map(({ id, topic, location }) => ({
+      id,
+      topic,
+      location,
+      anchor: laboratoryAnchor(id),
+      title: t(`labs.${id}.title`),
+      institution: t(`labs.${id}.institution`),
+      city: t(`labs.${id}.city`),
+      discovery: `${institutionalAffiliations(original(`labs.${id}.institution`), locale).searchText} ${original(`labs.${id}.title`)} ${original(`labs.${id}.institution`)} ${original(`labs.${id}.city`)} ${id === 'power-electronics' ? original('directory.name') : ''}`,
+      ...(id === suppliedLaboratoryContact.id
+        ? { contact: { name: t('directory.name'), email: suppliedLaboratoryContact.email } }
+        : id === 'solar-energy'
+          ? { contact: { name: t('directory.gepName'), email: 'ghennioui@iresen.org' } }
+          : {}),
+    }))
   const icons = ['search', 'flask', 'chart-line', 'arrows-exchange'] as const
   return (
     <div className={styles.page} data-network-page>

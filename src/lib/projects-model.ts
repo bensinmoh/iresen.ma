@@ -31,6 +31,7 @@ export type ProjectRecord = {
   durationMonths: number | null
   budgetMAD: number | null
   image: string | null
+  imageIllustration?: string
   theme: Record<Locale, string>
   startText: Record<Locale, string>
   location: Record<Locale, string>

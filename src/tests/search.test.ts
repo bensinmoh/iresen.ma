@@ -357,6 +357,9 @@ describe('explicit public search catalog', () => {
       samirCutout,
       samirPortraitDownload,
     ])
+    // Admin-only UI decoration is intentionally outside the public content index.
+    const adminUiAssets = new Set(['/brand/apex-leaf-lime.svg'])
+    for (const file of adminUiAssets) expect(references.has(file)).toBe(false)
     const publicRoot = path.resolve(process.cwd(), 'public')
     const publicFiles = readdirSync(publicRoot, { recursive: true, withFileTypes: true })
       .filter((entry) => entry.isFile() && !entry.name.startsWith('.'))
@@ -365,7 +368,9 @@ describe('explicit public search catalog', () => {
       publicAssetReferences.length,
     )
     for (const file of publicFiles)
-      expect(references.has(file) || derivatives.has(file), file).toBe(true)
+      expect(references.has(file) || derivatives.has(file) || adminUiAssets.has(file), file).toBe(
+        true,
+      )
     for (const asset of publicAssetReferences) {
       expect(existsSync(path.join(publicRoot, asset.url))).toBe(true)
       expect(derivatives.has(asset.url)).toBe(false)

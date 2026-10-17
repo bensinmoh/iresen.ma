@@ -17,7 +17,7 @@ export const publicationFields: Field[] = [
     admin: {
       position: 'sidebar',
       description:
-        'Approval applies only to the selected language. A publisher then publishes the revision.',
+        'Approval applies only to the selected language. An administrator then publishes the revision.',
     },
   },
   {

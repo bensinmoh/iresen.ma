@@ -1,8 +1,8 @@
-import { findProjects } from '@/lib/projects'
-import { currentProjectNote } from '@/lib/project-notes'
+import { onDemandProjectNote } from '@/lib/project-note-document'
 import { isContentLocale } from '@/lib/content/publication'
 
 export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
 const headers = {
   'Cache-Control': 'private, no-store',
   'X-Content-Type-Options': 'nosniff',
@@ -15,11 +15,16 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   // All withdrawn demonstration URLs remain closed without querying real records.
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id) || /^demo-\d{3}$/.test(id) || !isContentLocale(locale))
     return new Response(null, { status: 404, headers })
-  const project = (await findProjects(locale, id))[0]
-  if (!project) return new Response(null, { status: 404, headers })
-  const bytes = await currentProjectNote(id, locale)
+  let bytes: Buffer | null
+  try {
+    bytes = await onDemandProjectNote(id, locale)
+  } catch (error) {
+    console.error('Project PDF generation failed', { reference: id, locale, error })
+    // Rendering is retryable; never fall back to an outdated archived PDF.
+    return new Response(null, { status: 503, headers: { ...headers, 'Retry-After': '5' } })
+  }
   if (!bytes) return new Response(null, { status: 404, headers })
-  return new Response(bytes, {
+  return new Response(new Uint8Array(bytes), {
     headers: {
       ...headers,
       'Content-Type': 'application/pdf',

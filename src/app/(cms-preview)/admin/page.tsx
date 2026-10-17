@@ -1,20 +1,15 @@
 import { notFound } from 'next/navigation'
+import { cmsInterfaceEnabled } from '@/lib/security/policy'
 import { pageIds, pageHref } from '@/lib/site'
 import { pageSections } from '@/lib/page-sections'
 import messages from '@/messages/fr.json'
-import { CmsPreview } from '@/components/cms-preview/CmsPreview'
+import { ConnectedCms } from '@/components/cms-preview/ConnectedCms'
+import { workspaceEnabled } from '@/lib/cms-workspace/auth'
 
 export const dynamic = 'force-dynamic'
 
 export default function Page() {
-  // This unauthenticated local design tool is absent in production unless explicitly enabled.
-  if (process.env.PUBLIC_RELEASE === 'true') notFound()
-  if (
-    process.env.NODE_ENV === 'production' &&
-    (process.env.CMS_LOCAL_REVIEW !== 'true' ||
-      process.env.CMS_INTERFACE_PREVIEW_ENABLED !== 'true')
-  )
-    notFound()
+  if (!cmsInterfaceEnabled() || !workspaceEnabled()) notFound()
   const sectionNames = messages.PageSections as Record<string, Record<string, { title?: string }>>
   const registry = pageIds.map((id) => ({
     id,
@@ -25,5 +20,5 @@ export default function Page() {
       title: sectionNames[id]?.[section.id]?.title ?? section.id,
     })),
   }))
-  return <CmsPreview registry={registry} />
+  return <ConnectedCms registry={registry} />
 }

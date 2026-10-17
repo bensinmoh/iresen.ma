@@ -1,8 +1,8 @@
+import { sitePatents } from '@/lib/cms-workspace/public-corpora'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
-import { patents, patentThemes } from '@/lib/patents'
 import { PatentCatalog } from './PatentCatalog'
 import styles from './TransferPage.module.css'
 
@@ -13,6 +13,7 @@ export async function PatentSection({
   locale: Locale
   standalone?: boolean
 }) {
+  const patents = await sitePatents()
   const t = await getTranslations({ locale, namespace: 'Transfer' })
   return (
     <section
@@ -47,7 +48,7 @@ export async function PatentSection({
           <div>
             <dt>{t('figures.themes')}</dt>
             <dd>
-              <bdi>{patentThemes.length}</bdi>
+              <bdi>{new Set(patents.flatMap((patent) => patent.themes)).size}</bdi>
             </dd>
           </div>
           <div>
@@ -59,7 +60,7 @@ export async function PatentSection({
         </dl>
         <p>{t('figures.note')}</p>
       </div>
-      <PatentCatalog locale={locale} headingLevel={standalone ? 'h2' : 'h3'} />
+      <PatentCatalog records={patents} locale={locale} headingLevel={standalone ? 'h2' : 'h3'} />
     </section>
   )
 }

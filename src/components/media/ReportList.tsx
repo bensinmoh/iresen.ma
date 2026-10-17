@@ -3,11 +3,12 @@ import { FilePdf } from '@phosphor-icons/react/dist/ssr/FilePdf'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/locales'
-import { mediaReports } from '@/lib/media-library'
+import { siteMedia } from '@/lib/cms-workspace/public-corpora'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import styles from './MediaLibrary.module.css'
 
 export async function ReportList({ locale }: { locale: Locale }) {
+  const { reports: mediaReports } = await siteMedia()
   const t = await getTranslations({ locale, namespace: 'MediaLibrary' })
   return (
     <div className={styles.reports}>

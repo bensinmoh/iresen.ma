@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "status": "preparation-only",
+  "source": {
+    "filename": "Cartographie_Experts_Programmes_Thematiques_PMO.xlsx",
+    "sha256": "025b5979e550ef74f993e786a900be471dcf5d001c662e5b1facf77aab6aaabf",
+    "analysedAt": "2026-10-16",
+    "expertRowsImported": 0
+  },
+  "programmes": [
+    {
+      "id": "programme-01",
+      "sourceLabel": "Green Hydrogen",
+      "labelFr": "Green Hydrogen"
+    },
+    {
+      "id": "programme-02",
+      "sourceLabel": "Bioénergie",
+      "labelFr": "Bioénergie"
+    },
+    {
+      "id": "programme-03",
+      "sourceLabel": "Agritech & Nexus Eau-Énergie",
+      "labelFr": "Agritech & Nexus Eau-Énergie"
+    },
+    {
+      "id": "programme-04",
+      "sourceLabel": "Carbon & Décarbonation",
+      "labelFr": "Carbon & Décarbonation"
+    },
+    {
+      "id": "programme-05",
+      "sourceLabel": "E-Mobilité",
+      "labelFr": "E-Mobilité"
+    },
+    {
+      "id": "programme-06",
+      "sourceLabel": "Ville durable",
+      "labelFr": "Ville durable"
+    },
+    {
+      "id": "programme-07",
+      "sourceLabel": "Énergies renouvelables",
+      "labelFr": "Énergies renouvelables"
+    },
+    {
+      "id": "programme-08",
+      "sourceLabel": "Réseaux intelligents",
+      "labelFr": "Réseaux intelligents"
+    },
+    {
+      "id": "programme-09",
+      "sourceLabel": "Efficacité énergétique & Décarbonation",
+      "labelFr": "Efficacité énergétique & Décarbonation"
+    },
+    {
+      "id": "programme-10",
+      "sourceLabel": "Décarbonation industrie",
+      "labelFr": "Décarbonation industrie"
+    }
+  ],
+  "specialties": [
+    {
+      "id": "programme-01-specialty-01",
+      "programmeId": "programme-01",
+      "sourceLabel": "Production d’hydrogène renouvelable",
+      "labelFr": "Production d’hydrogène renouvelable"
+    },
+    {
+      "id": "programme-01-specialty-02",
+      "programmeId": "programme-01",
+      "sourceLabel": "Électrolyseurs et matériaux",
+      "labelFr": "Électrolyseurs et matériaux"
+    },
+    {
+      "id": "programme-01-specialty-03",
+      "programmeId": "programme-01",
+      "sourceLabel": "Stockage, transport et distribution H₂",
+      "labelFr": "Stockage, transport et distribution H₂"
+    },
+    {
+      "id": "programme-01-specialty-04",
+      "programmeId": "programme-01",
+      "sourceLabel": "Dérivés et molécules de synthèse (e-fuels, ammoniac, méthanol)",
+      "labelFr": "Dérivés et molécules de synthèse (e-fuels, ammoniac, méthanol)"
+    },
+    {
+      "id": "programme-01-specialty-05",
+      "programmeId": "programme-01",
+      "sourceLabel": "Usages industriels et mobilité H₂",
+      "labelFr": "Usages industriels et mobilité H₂"
+    },
+    {
+      "id": "programme-01-specialty-06",
+      "programmeId": "programme-01",
+      "sourceLabel": "Analyse technico-économique, ACV et certification",
+      "labelFr": "Analyse technico-économique, ACV et certification"
+    },
+    {
+      "id": "programme-02-specialty-01",
+      "programmeId": "programme-02",
+      "sourceLabel": "Biomasse et ressources",
+      "labelFr": "Biomasse et ressources"
+    },
+    {
+      "id": "programme-02-specialty-02",
+      "programmeId": "programme-02",
+      "sourceLabel": "Méthanisation et biogaz",
+      "labelFr": "Méthanisation et biogaz"
+    },
+    {
+      "id": "programme-02-specialty-03",
+      "programmeId": "programme-02",
+      "sourceLabel": "Biocarburants et carburants durables",
+      "labelFr": "Biocarburants et carburants durables"
+    },
+    {
+      "id": "programme-02-specialty-04",
+      "programmeId": "programme-02",
+      "sourceLabel": "Valorisation des déchets organiques",
+      "labelFr": "Valorisation des déchets organiques"
+    },
+    {
+      "id": "programme-02-specialty-05",
+      "programmeId": "programme-02",
+      "sourceLabel": "Procédés de conversion et bioraffinerie",
+      "labelFr": "Procédés de conversion et bioraffinerie"
+    },
+    {
+      "id": "programme-03-specialty-01",
+      "programmeId": "programme-03",
+      "sourceLabel": "Agrivoltaïsme et agriculture intelligente",
+      "labelFr": "Agrivoltaïsme et agriculture intelligente"
+    },
+    {
+      "id": "programme-03-specialty-02",
+      "programmeId": "programme-03",
+      "sourceLabel": "Irrigation efficace et pompage solaire",
+      "labelFr": "Irrigation efficace et pompage solaire"
+    },
+    {
+      "id": "programme-03-specialty-03",
+      "programmeId": "programme-03",
+      "sourceLabel": "Dessalement et traitement de l’eau",
+      "labelFr": "Dessalement et traitement de l’eau"
+    },
+    {
+      "id": "programme-03-specialty-04",
+      "programmeId": "programme-03",
+      "sourceLabel": "Réutilisation des eaux usées",
+      "labelFr": "Réutilisation des eaux usées"
+    },
+    {
+      "id": "programme-03-specialty-05",
+      "programmeId": "programme-03",
+      "sourceLabel": "Gestion intégrée Eau-Énergie-Alimentation",
+      "labelFr": "Gestion intégrée Eau-Énergie-Alimentation"
+    },
+    {
+      "id": "programme-03-specialty-06",
+      "programmeId": "programme-03",
+      "sourceLabel": "Capteurs, IoT et agriculture de précision",
+      "labelFr": "Capteurs, IoT et agriculture de précision"
+    },
+    {
+      "id": "programme-04-specialty-01",
+      "programmeId": "programme-04",
+      "sourceLabel": "Captage du CO₂",
+      "labelFr": "Captage du CO₂"
+    },
+    {
+      "id": "programme-04-specialty-02",
+      "programmeId": "programme-04",
+      "sourceLabel": "Utilisation du CO₂ (CCU)",
+      "labelFr": "Utilisation du CO₂ (CCU)"
+    },
+    {
+      "id": "programme-04-specialty-03",
+      "programmeId": "programme-04",
+      "sourceLabel": "Stockage du CO₂ (CCS)",
+      "labelFr": "Stockage du CO₂ (CCS)"
+    },
+    {
+      "id": "programme-04-specialty-04",
+      "programmeId": "programme-04",
+      "sourceLabel": "Mesure, reporting et vérification carbone",
+      "labelFr": "Mesure, reporting et vérification carbone"
+    },
+    {
+      "id": "programme-04-specialty-05",
+      "programmeId": "programme-04",
+      "sourceLabel": "ACV, empreinte carbone et marchés carbone",
+      "labelFr": "ACV, empreinte carbone et marchés carbone"
+    },
+    {
+      "id": "programme-05-specialty-01",
+      "programmeId": "programme-05",
+      "sourceLabel": "Véhicules électriques et hybrides",
+      "labelFr": "Véhicules électriques et hybrides"
+    },
+    {
+      "id": "programme-05-specialty-02",
+      "programmeId": "programme-05",
+      "sourceLabel": "Batteries, stockage et seconde vie",
+      "labelFr": "Batteries, stockage et seconde vie"
+    },
+    {
+      "id": "programme-05-specialty-03",
+      "programmeId": "programme-05",
+      "sourceLabel": "Recharge et infrastructures",
+      "labelFr": "Recharge et infrastructures"
+    },
+    {
+      "id": "programme-05-specialty-04",
+      "programmeId": "programme-05",
+      "sourceLabel": "Hydrogène pour la mobilité",
+      "labelFr": "Hydrogène pour la mobilité"
+    },
+    {
+      "id": "programme-05-specialty-05",
+      "programmeId": "programme-05",
+      "sourceLabel": "Mobilité intelligente et modélisation",
+      "labelFr": "Mobilité intelligente et modélisation"
+    },
+    {
+      "id": "programme-06-specialty-01",
+      "programmeId": "programme-06",
+      "sourceLabel": "Bâtiments et quartiers durables",
+      "labelFr": "Bâtiments et quartiers durables"
+    },
+    {
+      "id": "programme-06-specialty-02",
+      "programmeId": "programme-06",
+      "sourceLabel": "Smart city et jumeaux numériques",
+      "labelFr": "Smart city et jumeaux numériques"
+    },
+    {
+      "id": "programme-06-specialty-03",
+      "programmeId": "programme-06",
+      "sourceLabel": "Mobilité urbaine durable",
+      "labelFr": "Mobilité urbaine durable"
+    },
+    {
+      "id": "programme-06-specialty-04",
+      "programmeId": "programme-06",
+      "sourceLabel": "Gestion intelligente de l’eau et des déchets",
+      "labelFr": "Gestion intelligente de l’eau et des déchets"
+    },
+    {
+      "id": "programme-06-specialty-05",
+      "programmeId": "programme-06",
+      "sourceLabel": "Résilience climatique et urbanisme",
+      "labelFr": "Résilience climatique et urbanisme"
+    },
+    {
+      "id": "programme-07-specialty-01",
+      "programmeId": "programme-07",
+      "sourceLabel": "Solaire photovoltaïque",
+      "labelFr": "Solaire photovoltaïque"
+    },
+    {
+      "id": "programme-07-specialty-02",
+      "programmeId": "programme-07",
+      "sourceLabel": "Solaire thermique et CSP",
+      "labelFr": "Solaire thermique et CSP"
+    },
+    {
+      "id": "programme-07-specialty-03",
+      "programmeId": "programme-07",
+      "sourceLabel": "Éolien",
+      "labelFr": "Éolien"
+    },
+    {
+      "id": "programme-07-specialty-04",
+      "programmeId": "programme-07",
+      "sourceLabel": "Énergies marines",
+      "labelFr": "Énergies marines"
+    },
+    {
+      "id": "programme-07-specialty-05",
+      "programmeId": "programme-07",
+      "sourceLabel": "Hybr idation et systèmes multi-énergies",
+      "labelFr": "Hybridation et systèmes multi-énergies"
+    },
+    {
+      "id": "programme-07-specialty-06",
+      "programmeId": "programme-07",
+      "sourceLabel": "Prévision, exploitation et maintenance",
+      "labelFr": "Prévision, exploitation et maintenance"
+    },
+    {
+      "id": "programme-08-specialty-01",
+      "programmeId": "programme-08",
+      "sourceLabel": "Smart grids et micro-réseaux",
+      "labelFr": "Smart grids et micro-réseaux"
+    },
+    {
+      "id": "programme-08-specialty-02",
+      "programmeId": "programme-08",
+      "sourceLabel": "Stockage et flexibilité",
+      "labelFr": "Stockage et flexibilité"
+    },
+    {
+      "id": "programme-08-specialty-03",
+      "programmeId": "programme-08",
+      "sourceLabel": "Électronique de puissance",
+      "labelFr": "Électronique de puissance"
+    },
+    {
+      "id": "programme-08-specialty-04",
+      "programmeId": "programme-08",
+      "sourceLabel": "Pilotage, prévision et gestion de la demande",
+      "labelFr": "Pilotage, prévision et gestion de la demande"
+    },
+    {
+      "id": "programme-08-specialty-05",
+      "programmeId": "programme-08",
+      "sourceLabel": "Interopérabilité, cybersécurité et données",
+      "labelFr": "Interopérabilité, cybersécurité et données"
+    },
+    {
+      "id": "programme-09-specialty-01",
+      "programmeId": "programme-09",
+      "sourceLabel": "Audit et efficacité énergétique",
+      "labelFr": "Audit et efficacité énergétique"
+    },
+    {
+      "id": "programme-09-specialty-02",
+      "programmeId": "programme-09",
+      "sourceLabel": "Bâtiments performants",
+      "labelFr": "Bâtiments performants"
+    },
+    {
+      "id": "programme-09-specialty-03",
+      "programmeId": "programme-09",
+      "sourceLabel": "Systèmes thermiques et froid",
+      "labelFr": "Systèmes thermiques et froid"
+    },
+    {
+      "id": "programme-09-specialty-04",
+      "programmeId": "programme-09",
+      "sourceLabel": "Électrification des procédés",
+      "labelFr": "Électrification des procédés"
+    },
+    {
+      "id": "programme-09-specialty-05",
+      "programmeId": "programme-09",
+      "sourceLabel": "Management de l’énergie et ISO 50001",
+      "labelFr": "Management de l’énergie et ISO 50001"
+    },
+    {
+      "id": "programme-10-specialty-01",
+      "programmeId": "programme-10",
+      "sourceLabel": "Décarbonation des procédés industriels",
+      "labelFr": "Décarbonation des procédés industriels"
+    },
+    {
+      "id": "programme-10-specialty-02",
+      "programmeId": "programme-10",
+      "sourceLabel": "Chaleur industrielle renouvelable",
+      "labelFr": "Chaleur industrielle renouvelable"
+    },
+    {
+      "id": "programme-10-specialty-03",
+      "programmeId": "programme-10",
+      "sourceLabel": "Hydrogène et matières premières bas-carbone",
+      "labelFr": "Hydrogène et matières premières bas-carbone"
+    },
+    {
+      "id": "programme-10-specialty-04",
+      "programmeId": "programme-10",
+      "sourceLabel": "Économie circulaire et symbiose industrielle",
+      "labelFr": "Économie circulaire et symbiose industrielle"
+    },
+    {
+      "id": "programme-10-specialty-05",
+      "programmeId": "programme-10",
+      "sourceLabel": "Jumeaux numériques et optimisation des procédés",
+      "labelFr": "Jumeaux numériques et optimisation des procédés"
+    }
+  ],
+  "sourceVocabularies": {
+    "Type d’expert": ["Interne", "Externe", "Partenaire", "Consultant", "Doctorant/Postdoctorant"],
+    "Niveau d’expertise": ["Débutant", "Intermédiaire", "Avancé", "Expert"],
+    "Statut de fiche": ["À renseigner", "À valider", "Validé", "À actualiser", "Inactif"],
+    "Disponibilité": ["Disponible", "Partiellement disponible", "Non disponible", "À confirmer"],
+    "Domaine d’intervention": [
+      "Recherche",
+      "Développement expérimental",
+      "Expertise",
+      "Transfert/valorisation",
+      "Gestion de projet",
+      "Autre"
+    ],
+    "Genre (facultatif)": ["F", "H", "Non renseigné"]
+  },
+  "records": []
+}

@@ -1,3 +1,4 @@
+import { siteArchivedCalls } from '@/lib/cms-workspace/public-corpora'
 import { CallsListingPage } from '@/components/programmes/CallsListingPage'
 import { ArchiveCallPage } from '@/components/programmes/ArchiveCallPage'
 import { findArchiveCall, archiveProfile } from '@/lib/call-archives'
@@ -70,7 +71,9 @@ export async function generateMetadata({ params }: ContentPageProps): Promise<Me
       },
       robots: { index: isIndexingEnabled(), follow: isIndexingEnabled() },
     }
-  const archive = callReference ? findArchiveCall(callReference) : undefined
+  const archive = callReference
+    ? findArchiveCall(callReference, await siteArchivedCalls())
+    : undefined
   if (archive)
     return {
       title: archive.title,
@@ -137,7 +140,9 @@ export default async function ContentPage({ params, searchParams }: ContentPageP
   if (!isLocale(locale)) notFound()
   const callReference = callReferenceFromPath(`/${path.join('/')}`, locale)
   if (callReference === callsListingReference) return <CallsListingPage locale={locale} />
-  const archive = callReference ? findArchiveCall(callReference) : undefined
+  const archive = callReference
+    ? findArchiveCall(callReference, await siteArchivedCalls())
+    : undefined
   if (archive) return <ArchiveCallPage call={archive} locale={locale} />
   if (callReference) {
     const call = await findPublishedCall(callReference, locale)

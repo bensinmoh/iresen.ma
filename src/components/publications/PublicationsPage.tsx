@@ -1,3 +1,5 @@
+import { sitePublications } from '@/lib/cms-workspace/public-corpora'
+import { siteIndicatorTotals } from '@/lib/cms-workspace/indicator-totals'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
@@ -6,15 +8,7 @@ import type { Locale } from '@/i18n/locales'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { ReportList } from '@/components/media/ReportList'
 import { pageHref } from '@/lib/site'
-import { filedPatentCount } from '@/lib/patents'
-import {
-  publications,
-  publicationTopics,
-  frequentPublicationTopics,
-  publicationYears,
-  filterPublications,
-  titleTopics,
-} from '@/lib/publications'
+import { getPublicationTopics, filterPublications, titleTopics } from '@/lib/publications'
 import styles from './PublicationsPage.module.css'
 import { PublicationCatalogue } from './PublicationCatalogue'
 import { FrequentSearches } from './FrequentSearches'
@@ -27,6 +21,15 @@ export async function PublicationsPage({
   locale: Locale
   parameters: Parameters
 }) {
+  const [publications, totals] = await Promise.all([
+    sitePublications(),
+    siteIndicatorTotals(locale),
+  ])
+  const publicationTopics = getPublicationTopics(publications)
+  const frequentPublicationTopics = publicationTopics.slice(0, 6)
+  const publicationYears = [...new Set(publications.map((record) => record.year))].sort(
+    (a, b) => b - a,
+  )
   const t = await getTranslations({ locale, namespace: 'Publications' })
   const reports = await getTranslations({ locale, namespace: 'MediaLibrary' })
   const value = (key: string) =>
@@ -111,13 +114,13 @@ export async function PublicationsPage({
             aria-label={t('figures')}
           >
             {[
-              [publications.length, 'publications'],
-              [filedPatentCount, 'patents'],
-              [69, 'projects'],
-              [18, 'calls'],
+              [totals.publications, 'publications'],
+              [totals.patents, 'patents'],
+              [totals.projects, 'projects'],
+              [totals.calls, 'calls'],
             ].map(([number, key]) => (
               <div key={key}>
-                <strong>{Number(number).toLocaleString(locale)}</strong>
+                <strong>{number === null ? '—' : Number(number).toLocaleString(locale)}</strong>
                 <span>{t(String(key))}</span>
               </div>
             ))}
@@ -143,7 +146,7 @@ export async function PublicationsPage({
           initialYears={years}
           initialLimit={limit}
           initialSelection={value('publication')}
-          records={filterPublications(query).map((p) => ({
+          records={filterPublications(query, [], [], publications).map((p) => ({
             id: p.id,
             title: p.title,
             authors: p.authors,

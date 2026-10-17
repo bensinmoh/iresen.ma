@@ -1,14 +1,20 @@
-import { randomUUID, createHash } from 'node:crypto'
-import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { randomUUID } from 'node:crypto'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import type { Payload } from 'payload'
-import { callActor, textPdf } from '../../tests/fixtures/calls'
+import { callActor } from '../../tests/fixtures/calls'
 import { processSearchJobs } from '@/lib/search/indexer'
 import { searchDatabase } from '@/lib/search/database'
 import { GET as note } from '@/app/(frontend)/api/projects/[id]/note/route'
 import { GET as asset } from '@/app/(frontend)/api/projects/[id]/asset/[kind]/route'
+import { totalProjects } from '@/lib/project-count'
+
+// Exercise data/access/search lifecycle without requiring a browser in the DB suite.
+vi.mock('@/lib/project-note-renderer', () => ({
+  renderProjectNote: vi.fn(async (html: string) => Buffer.from(html)),
+}))
 
 const integration = process.env.CMS_INTEGRATION === '1' ? describe : describe.skip
 integration('real project schema and publication lifecycle', () => {
@@ -43,6 +49,8 @@ integration('real project schema and publication lifecycle', () => {
     else process.env.PROJECTS_LOCAL_REVIEW = oldReview
   })
   it('allows absent optional facts, blocks missing translations and immediately withdraws discovery', async () => {
+    const baseline = await totalProjects()
+    expect(baseline).not.toBeNull()
     const record = await payload.create({
       collection: 'projects',
       locale: 'fr',
@@ -63,6 +71,7 @@ integration('real project schema and publication lifecycle', () => {
       },
     })
     id = record.id
+    expect(await totalProjects()).toBe(baseline! + 1)
     const imageRequest = new Request(
       `http://localhost/api/projects/${reference}/asset/image?locale=fr`,
     )
@@ -80,18 +89,10 @@ integration('real project schema and publication lifecycle', () => {
         })
       ).status,
     ).toBe(404)
-    const pdf = textPdf('Temporary isolated project brief')
-    const filename = `${reference}-fr.pdf`
-    await writeFile(path.join(assets, filename), pdf)
-    await searchDatabase().query(
-      `INSERT INTO project_notes(project_id,locale,content_revision,filename,sha256)
-      SELECT p.id,'fr',project_content_revision(p,l),$2,$3 FROM projects p JOIN projects_locales l ON l._parent_id=p.id AND l._locale='fr' WHERE p.id=$1`,
-      [id, filename, createHash('sha256').update(pdf).digest('hex')],
-    )
     const noteRequest = new Request(`http://localhost/api/projects/${reference}/note?locale=fr`)
-    expect((await note(noteRequest, { params: Promise.resolve({ id: reference }) })).status).toBe(
-      200,
-    )
+    const initialNote = await note(noteRequest, { params: Promise.resolve({ id: reference }) })
+    expect(initialNote.status).toBe(200)
+    expect(await initialNote.text()).toContain('Temporary isolated database test.')
     const query = {
       collection: 'projects' as const,
       where: { id: { equals: id } },
@@ -145,14 +146,18 @@ integration('real project schema and publication lifecycle', () => {
       overrideAccess: false,
       data: { description: 'Updated project description.' },
     })
-    expect((await note(noteRequest, { params: Promise.resolve({ id: reference }) })).status).toBe(
-      404,
-    )
-    const changed = await searchDatabase().query(
-      "SELECT rich_body FROM search_public_sources WHERE origin='projects' AND source_id=$1",
-      [String(id)],
-    )
-    expect(changed.rows[0].rich_body.notePath).toBeNull()
+    const updatedNote = await note(noteRequest, { params: Promise.resolve({ id: reference }) })
+    expect(updatedNote.status).toBe(200)
+    expect(await updatedNote.text()).toContain('Updated project description.')
+    await processSearchJobs(50)
+    expect(
+      (
+        await searchDatabase().query(
+          "SELECT 1 FROM search_documents WHERE origin='projects' AND source_id=$1 AND type='document'",
+          [String(id)],
+        )
+      ).rowCount,
+    ).toBe(1)
     await payload.update({
       collection: 'projects',
       id,
@@ -161,6 +166,10 @@ integration('real project schema and publication lifecycle', () => {
       overrideAccess: false,
       data: { publicationStatus: 'review', _status: 'published' },
     })
+    expect(await totalProjects()).toBe(baseline)
+    expect((await note(noteRequest, { params: Promise.resolve({ id: reference }) })).status).toBe(
+      404,
+    )
     expect(
       (
         await searchDatabase().query(
