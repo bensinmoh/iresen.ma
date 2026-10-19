@@ -45,8 +45,7 @@ runtime demonstration mode: the workspace must be enabled.
 from this common database; public readers and search use validated snapshots, with
 existing delivered translation baselines and native publication gates preserved.
 See the [complete CMS inventory and verification](docs/cms-interface-preview.md).
-`/cms-preview` redirects to `/admin` in local review. Both are forbidden in a public
-release; production local review requires both explicit review flags. Native account
+`/cms-preview` redirects to `/admin` in local review. In public release, `CMS_WORKSPACE_ENABLED=true` enables the authenticated `/admin` workspace; `/cms-preview` and native Payload administration remain closed. Production local review outside public release requires both explicit review flags. Native account
 management remains under `/admin/collections/users` with its existing admin gate.
 
 ## Pinned environment
@@ -95,8 +94,8 @@ administrator only with explicitly supplied temporary credentials using
 - `NEXT_PUBLIC_SITE_URL`: canonical public origin; set the approved HTTPS domain
   before the release build because public variables are embedded at build time.
 - `SITE_INDEXING_ENABLED=false`: retain until editorial/legal and release approval.
-- `PUBLIC_RELEASE=true`: mandatory on the public instance; administrative opt-ins
-  cannot override it. Keep `CMS_ADMIN_ENABLED=false`, `CMS_LOCAL_REVIEW=false` and
+- `PUBLIC_RELEASE=true`: mandatory on the public instance; native Payload administration
+  remains closed. `CMS_WORKSPACE_ENABLED=true` enables the authenticated custom `/admin` CMS. Keep `CMS_ADMIN_ENABLED=false`, `CMS_LOCAL_REVIEW=false` and
   `CMS_INTERFACE_PREVIEW_ENABLED=false` there.
 - `TRUSTED_PROXY_CLIENT_IP_HEADER`: `cf-connecting-ip` or `x-real-ip`, only behind a
   proxy that strips untrusted values and overwrites this header. Unconfigured

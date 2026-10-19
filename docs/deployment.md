@@ -6,8 +6,8 @@ IRESEN IT coordinates the release. [French handover](it-handover.fr.md).
 
 ## Provider prerequisites
 
-Confirm Linux/container or persistent Node hosting, Node 24.19.0, pnpm 11.19.0,
-PostgreSQL (local/CI 17.9), `pg_trgm`, database migration access, persistent media,
+Confirm Linux/container or persistent Node hosting, Node 24.22.0, pnpm 11.28.2,
+PostgreSQL (local/CI 17.11), `pg_trgm`, database migration access, persistent media,
 HTTPS origin certificate, backup/restore access, monitoring and a durable search
 worker. This is a server application, not a static PHP/WordPress upload or static
 export. The provider must confirm capacity and regions; no production sizing or
@@ -120,7 +120,7 @@ IT/legal must review cookie management, privacy, terms/conditions within legal n
 controller/hosting/publication contacts, Law 09-08/CNDP obligations and provider data
 transfers. No regulatory identifiers or retention periods should be invented. Email
 is still composed locally; CMS delivery, online intake and MFA/SSO are not delivered.
-Future administration requires a separate private instance/access design and approval.
+The authenticated custom CMS is available on `/admin` when `CMS_WORKSPACE_ENABLED=true`, including public release (owner instruction, 19 October 2026). Native Payload administration, raw collection APIs and `/cms-preview` stay closed.
 
 ## On-demand collaborative-project PDFs — 16 October 2026
 
@@ -139,3 +139,23 @@ or writable PDF directory is required. The old notes directory and database tabl
 are optional archival/export compatibility only. Cache is process-local, up to
 20 MiB/32 entries, ten minutes; restart discards it. It does not authorize content.
 See [implementation and check ledger](project-pdf-on-demand.md).
+
+## Authenticated CMS deployment — 19 October 2026
+
+The owner now authorizes the authenticated custom `/admin` workspace in public
+release, superseding the earlier local-only restriction. Use
+[the production environment template](../.env.production.example) and set
+`PUBLIC_RELEASE=true` with `CMS_WORKSPACE_ENABLED=true`. Keep native admin and
+local review flags false. Restart the deployed application using this revision;
+changing variables on an older revision will not remove its 404 gate.
+
+Set `NEXT_PUBLIC_SITE_URL` to the real HTTPS origin before the build and at runtime.
+Provision persistent PostgreSQL and upload/project-asset storage. Apply
+`pnpm cms:migrate` and `pnpm search:rebuild` against the deployment database using
+the operations image. Local database records/accounts are not transferred by a
+code deployment. For a fresh database only, run `pnpm cms:bootstrap` with explicitly
+supplied `CMS_BOOTSTRAP_EMAIL` and a new `CMS_BOOTSTRAP_PASSWORD` (at least 16
+characters) temporarily injected as secrets; remove these bootstrap variables
+afterward. Existing accounts must be managed by an administrator.
+
+Verification ledger: 19 targeted security-policy/origin tests passed; targeted ESLint and whitespace checks passed; isolated production build (including TypeScript) passed. Production-mode HTTP checks: `/admin` and `/fr` 200; unauthenticated session/content 401; raw `/api/users`, native account administration and `/cms-preview` 404. No provider deployment or data transfer performed.

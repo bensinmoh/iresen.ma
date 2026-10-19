@@ -65,7 +65,7 @@ export async function POST(request: Request) {
     response.cookies.set(`${payload.config.cookiePrefix}-token`, result.token!, {
       httpOnly: true,
       sameSite: 'strict',
-      secure: new URL(request.url).protocol === 'https:',
+      secure: process.env.NODE_ENV === 'production' || new URL(request.url).protocol === 'https:',
       path: '/',
       maxAge: 7200,
     })
@@ -87,7 +87,7 @@ export async function DELETE(request: Request) {
     response.cookies.set(`${payload.config.cookiePrefix}-token`, '', {
       httpOnly: true,
       sameSite: 'strict',
-      secure: new URL(request.url).protocol === 'https:',
+      secure: process.env.NODE_ENV === 'production' || new URL(request.url).protocol === 'https:',
       path: '/',
       maxAge: 0,
     })

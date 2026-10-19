@@ -9,6 +9,18 @@ import {
 import { searchClientKey } from '@/lib/security/search-limit'
 afterEach(() => vi.unstubAllEnvs())
 describe('public production boundaries', () => {
+  it('allows the authenticated workspace in public release while keeping raw APIs closed', () => {
+    vi.stubEnv('NODE_ENV', 'production')
+    vi.stubEnv('PUBLIC_RELEASE', 'true')
+    vi.stubEnv('CMS_WORKSPACE_ENABLED', 'false')
+    expect(cmsInterfaceEnabled()).toBe(false)
+    vi.stubEnv('CMS_WORKSPACE_ENABLED', 'true')
+    expect(cmsInterfaceEnabled()).toBe(true)
+    expect(administrationEnabled()).toBe(false)
+    expect(publicCmsRequestAllowed('POST', '/api/users')).toBe(false)
+    vi.stubEnv('CMS_WORKSPACE_ENABLED', 'false')
+    expect(cmsInterfaceEnabled()).toBe(false)
+  })
   it('closes admin even when a conflicting opt-in exists in a public release', () => {
     vi.stubEnv('NODE_ENV', 'production')
     vi.stubEnv('CMS_ADMIN_ENABLED', 'true')
@@ -16,6 +28,7 @@ describe('public production boundaries', () => {
     expect(administrationEnabled()).toBe(false)
   })
   it('preserves both local review opt-ins for the renamed custom CMS', () => {
+    vi.stubEnv('CMS_WORKSPACE_ENABLED', 'false')
     vi.stubEnv('NODE_ENV', 'production')
     vi.stubEnv('PUBLIC_RELEASE', 'false')
     vi.stubEnv('CMS_LOCAL_REVIEW', 'true')
