@@ -106,7 +106,7 @@ async function localeResponse(request: NextRequest) {
 export default async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
   if (path === '/cms-preview' || path.startsWith('/cms-preview/')) {
-    if (!cmsInterfaceEnabled())
+    if (process.env.PUBLIC_RELEASE === 'true' || !cmsInterfaceEnabled())
       return new NextResponse(null, {
         status: 404,
         headers: { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow' },

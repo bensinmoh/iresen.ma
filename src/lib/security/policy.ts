@@ -5,6 +5,7 @@ export function administrationEnabled() {
 }
 /** Private custom CMS entry, including its authenticated workspace endpoints. */
 export function cmsInterfaceEnabled() {
+  if (process.env.PUBLIC_RELEASE === 'true') return process.env.CMS_WORKSPACE_ENABLED === 'true'
   return (
     process.env.PUBLIC_RELEASE !== 'true' &&
     (process.env.NODE_ENV !== 'production' ||
