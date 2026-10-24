@@ -1,0 +1,16 @@
+{
+  "received": "2026-10-23",
+  "sourceManifest": "docs/photo-asset-library.json",
+  "sourceId": "iresen-photo-002",
+  "sourceFilename": "IRESEN_Formation_Atelier-collaboratif-autour-de-documents_002.jpg",
+  "sourceSha256": "d23b5da0bb4413418a046cba552e77b0cda7e9e5a42d3cd05c4d8a89f6634747",
+  "originalWidth": 2048,
+  "originalHeight": 1365,
+  "qualityNotes": [],
+  "src": "/images/collaborate/needs-workshop-002.webp",
+  "width": 1600,
+  "height": 1066,
+  "bytes": 201568,
+  "sha256": "366c02b93f2125a8202041e058589fcdb40e6be39af5b04ca9b69a11ed2cd84d",
+  "transformation": "Proportional WebP resize to 1600px, quality 82; no enlargement, generation or source changes. Owner selected replacement scope: collaboration needs section."
+}

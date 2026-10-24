@@ -20,7 +20,7 @@ export async function ReportList({ locale }: { locale: Locale }) {
           </div>
           <div>
             <p className={styles.meta}>
-              MTEDD · {t(`languages.${report.language}`)} ·{' '}
+              MEMDD · {t(`languages.${report.language}`)} ·{' '}
               {(report.bytes / 1000000).toLocaleString(locale, { maximumFractionDigits: 1 })} MB
             </p>
             <Heading as="h3" size="compact">

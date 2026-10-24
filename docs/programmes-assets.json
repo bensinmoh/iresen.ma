@@ -16,6 +16,37 @@
       "bytes": 114052,
       "transform": "Full frame proportional downsampling to 1200px width; WebP quality 86, effort 6. No composition edit.",
       "status": "AI-generated illustrative fictional product-prototyping team, not actual IRESEN people, products or premises."
+    },
+    {
+      "id": "programmes-research-team-computers",
+      "sourceId": "iresen-photo-064",
+      "sourceFilename": "IRESEN_Laboratoires_Equipe-travaillant-sur-ordinateurs-en-laboratoire_064.jpg",
+      "sourceSha256": "dcf02a2937f1e85b1e2583a60546bd357c224f99c5f63be55792a5a94b6291b4",
+      "servedPath": "/images/programmes/research-team-computers.webp",
+      "servedSha256": "64b8a07105e173d7ca8c6d16eff02fe2fa1e86b84174bb8336c06f420332968e",
+      "width": 1600,
+      "height": 901,
+      "bytes": 55192,
+      "transform": "Proportional WebP resize from supplied JPG; no enlargement, crop or generative edit.",
+      "status": "Current owner-requested photograph replacing the rejected reused Transfer image."
+    },
+    {
+      "id": "programmes-gep-outdoor-pv-testing",
+      "sourceId": "iresen-photo-073",
+      "sourceFilename": "IRESEN_GEP_Rangees-de-modules-photovoltaiques-en-essais-exterieurs_073.jpg",
+      "sourceSha256": "ff16535c865d8b887e80d4237c7261b31fed8875dea162e4e044fd995805f1d1",
+      "servedPath": "/images/programmes/gep-outdoor-pv-testing.webp",
+      "servedSha256": "e0f662ef549fcb6572155f7385fbbca9e28b98a8f1c4a7a9115a58b839ae522a",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 215226,
+      "transform": "Proportional 1600px WebP from supplied collection JPG; no enlargement in this derivative, no crop or generative edit. Collection JPG itself is upscaled from 3008x2000; no higher native resolution claimed."
     }
-  ]
+  ],
+  "currentSelection": "programmes-gep-outdoor-pv-testing",
+  "currentSelectionEvidence": {
+    "sourceId": "iresen-photo-073",
+    "servedPath": "/images/programmes/gep-outdoor-pv-testing.webp",
+    "method": "Latest owner-selected GEP 073, no visible caption."
+  }
 }

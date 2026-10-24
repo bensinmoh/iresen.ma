@@ -1,10 +1,11 @@
 .section {
+  --platforms-ink: var(--color-navy);
   position: relative;
   isolation: isolate;
   margin-inline: calc(-1 * var(--page-bleed));
   padding: var(--home-section-padding) var(--page-bleed);
-  color: var(--color-white);
-  background: var(--color-navy);
+  color: var(--platforms-ink);
+  background: var(--color-surface);
   overflow-wrap: anywhere;
   scroll-margin-block-start: var(--home-section-scroll-margin, 2rem);
 }
@@ -17,18 +18,9 @@
 .background img {
   object-fit: cover;
   object-position: 42% center;
+  opacity: 0.12;
 }
-.background::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgb(5 17 29 / 73%),
-    rgb(5 17 29 / 58%) 45%,
-    rgb(5 17 29 / 80%)
-  );
-}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
@@ -71,10 +63,10 @@
   text-decoration: none;
 }
 .destinations a {
-  color: var(--color-white);
+  color: var(--platforms-ink);
   text-decoration: underline;
   text-underline-offset: 0.4em;
-  text-decoration-color: rgb(255 255 255 / 55%);
+  text-decoration-color: color-mix(in srgb, var(--platforms-ink) 55%, transparent);
 }
 .destinations a:hover {
   text-decoration-color: currentColor;
@@ -193,11 +185,11 @@
   transform: translateX(0.2rem);
 }
 .section a:focus-visible {
-  outline: 2px solid var(--color-white);
+  outline: 2px solid var(--platforms-ink);
   outline-offset: 5px;
 }
 .destinations a:focus-visible {
-  outline-color: var(--color-white);
+  outline-color: var(--platforms-ink);
 }
 .network {
   display: grid;
@@ -205,8 +197,8 @@
   margin-block-start: var(--space-8);
   padding-block: var(--space-6);
   gap: var(--space-8);
-  border-block-start: 1px solid rgb(255 255 255 / 35%);
-  border-block-end: 1px solid rgb(255 255 255 / 35%);
+  border-block-start: 1px solid color-mix(in srgb, var(--platforms-ink) 25%, transparent);
+  border-block-end: 1px solid color-mix(in srgb, var(--platforms-ink) 25%, transparent);
 }
 .network article {
   display: flex;
@@ -217,7 +209,7 @@
 }
 .networkIcon {
   flex: 0 0 auto;
-  color: var(--color-white);
+  color: inherit;
   padding-block-start: var(--space-1);
 }
 .networkIcon svg {
@@ -230,7 +222,7 @@
   min-inline-size: 0;
 }
 .network article + article {
-  border-inline-start: 1px solid rgb(255 255 255 / 35%);
+  border-inline-start: 1px solid color-mix(in srgb, var(--platforms-ink) 25%, transparent);
   padding-inline-start: var(--space-8);
 }
 .network h3 {
@@ -253,7 +245,7 @@
 .network a svg {
   flex: 0 0 auto;
   inline-size: 1.25rem;
-  color: var(--color-energy-cyan);
+  color: var(--platforms-ink);
 }
 .network p {
   max-inline-size: 65ch;
@@ -291,7 +283,7 @@
   }
   .network article + article {
     border-inline-start: none;
-    border-block-start: 1px solid rgb(255 255 255 / 35%);
+    border-block-start: 1px solid color-mix(in srgb, var(--platforms-ink) 25%, transparent);
     padding-inline-start: 0;
     padding-block-start: var(--space-6);
   }
@@ -429,4 +421,8 @@
   .card:hover .visual::before {
     opacity: 1;
   }
+}
+
+.section .introduction p:global([data-section-eyebrow]) {
+  color: var(--platforms-ink);
 }

@@ -17,6 +17,7 @@ import { callCopy } from '@/lib/call-copy'
 import { CallCards } from './CallCards'
 import callsStyles from './CallsCatalogue.module.css'
 import { totalProjects } from '@/lib/project-count'
+import { programmesPhoto } from '@/lib/programmes-photo'
 
 type Item = { title: string; description: string; category?: string }
 export async function ProgrammesPage({ locale }: { locale: Locale }) {
@@ -67,13 +68,12 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
               <figure className={styles.people} data-motion-reveal>
                 <div className={styles.approachPhoto}>
                   <Image
-                    src="/images/programmes/collaborative-prototyping.webp"
-                    alt={t('researchAlt')}
+                    src={programmesPhoto.src}
+                    alt={programmesPhoto.descriptions[locale]}
                     fill
                     sizes="(max-width: 63.999rem) 94vw, 46vw"
                   />
                 </div>
-                <figcaption>{t('illustrationNote')}</figcaption>
               </figure>
               <div className={styles.prose} data-motion-reveal>
                 {(t.raw('intro.paragraphs') as string[]).map((paragraph) => (
@@ -172,7 +172,7 @@ export async function ProgrammesPage({ locale }: { locale: Locale }) {
               </Heading>
               <p>{t('process.description')}</p>
             </header>
-            <ol className={styles.steps}>
+            <ol className={styles.steps} aria-labelledby="programme-process-title" tabIndex={0}>
               {process.map((item, i) => (
                 <li key={item.title}>
                   <span className={styles.stepNumber} aria-hidden="true">

@@ -359,3 +359,50 @@ exception to Institute and resolve those two page IDs consistently in metadata a
 page rendering. Canonical routes, publication gates and search URLs stay unchanged.
 FR local browser preview now renders successfully; scoped ESLint, format and
 whitespace checks pass. Full tests/build/CI remain held by shared coordination.
+
+## Supplied King portrait replacement — 2026-10-23
+
+The owner replaces the fictional woman in `ambition-2035` with the supplied
+transparent photograph of His Majesty King Mohammed VI, physically on the left.
+The ambition wording remains IRESEN's statement. The desktop cutout keeps the
+existing 40–64px upper image-box overlap into the values section; live
+copy occupies the right column, including Arabic with RTL text direction.
+The shared solar-horizon image supplies the background without the former woman.
+
+The owner’s correction requires the complete supplied photograph at every width,
+without cropping the crown or the solar panel. Desktop uses `object-fit: contain`
+and top-left positioning inside the overlapping image box. At or below 40rem,
+the same complete image is used. Native text exclusion follows its right alpha
+edge, and the existing height fitting
+keeps the photograph flush with the section bottom. The no-JavaScript fallback
+retains complete text followed by the portrait. There is no mirroring or
+generative modification. Source and delivery hashes
+are recorded in [the asset manifest](institute-assets.json). Original source stays
+outside the repository. Desktop and mobile share one complete file and the existing stable media
+search ID, whose URL and FR/EN/AR descriptions now identify the supplied image;
+former fictional imagery is no longer rendered or referenced by public search.
+
+Verification ledger: targeted ESLint passed on the component, contour enhancement
+and search catalog. Development Chrome review covers FR/EN/AR at 320, 390, 768,
+1024 and 1440px, including desktop overhang, mobile bottom alignment and complete
+quotation flow. No horizontal page overflow was observed. FR/EN/AR at 390px with 200% root text size preserve complete quotation containment and exact portrait bottom alignment; the French no-JavaScript mobile fallback also preserves text and portrait without overflow. This is development
+preview evidence, not a production-build or complete accessibility claim.
+Production build, current-head CI, search-index rebuild and merge remain pending
+under the shared-checkout hold (`deployment-ready` reservation still pending).
+
+Owner correction — 2026-10-23: withdraw the cropped mobile derivative and desktop
+cover fit. The complete supplied composition is visible at every width; the
+upper overlap remains, while desktop containment can leave space below the image
+at narrow aspect ratios. Mobile retains the section-bottom alignment. Earlier
+subject-crop preview evidence is superseded by the uncropped development review.
+
+Glasses transparency correction — 2026-10-23: the owner requests removal of the
+old backdrop trapped inside the exposed eyeglass lens only. A manually traced,
+supersampled alpha mask changes 429 alpha pixels near x703–726/y182–211 in the
+1535×1024 delivery image. Lossless WebP output was decoded and compared with the
+previous delivery: zero visible RGB changes, zero RGB changes outside the mask,
+and no alpha changes elsewhere. Eyes, face, frames, the panel reflection and the
+full uncropped composition remain. This uses deterministic alpha editing, with
+no generated replacement. The original supplied photograph remains untouched;
+updated delivery hash and reproducible mask coordinates are in the asset manifest.
+The stable media URL/search description and all layout behavior remain applicable.

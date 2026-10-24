@@ -4,6 +4,8 @@ import { z } from 'zod'
 import type { Project } from '../src/payload-types'
 import names from '../src/data/project-coordinators.json' with { type: 'json' }
 import editorial from '../src/data/project-editorial-fr.json' with { type: 'json' }
+import editorialEn from '../src/data/project-editorial-en.json' with { type: 'json' }
+import editorialAr from '../src/data/project-editorial-ar.json' with { type: 'json' }
 import additions from '../src/data/project-workbook-editorial.json' with { type: 'json' }
 import {
   canonicalInstitutionNames,
@@ -158,10 +160,10 @@ export const prepared = input.rows.map((row) => {
         title: row.acronym,
         description:
           locale === 'fr'
-            ? `Projet ${row.acronym}${row.theme ? ` dans la thématique « ${row.theme} »` : ''}. Le descriptif détaillé n’est pas renseigné dans le suivi transmis.`
+            ? `Projet ${row.acronym}${row.theme ? ` dans la thématique « ${row.theme} »` : ''}.`
             : locale === 'en'
-              ? `Project ${row.acronym}${theme ? ` in the field of ${theme[0]}` : ''}. No detailed description is provided in the supplied project tracker.`
-              : `مشروع ${row.acronym}${theme ? ` في مجال ${theme[1]}` : ''}. لا تتضمن وثيقة التتبع المقدمة وصفاً تفصيلياً للمشروع.`,
+              ? `Project ${row.acronym}${theme ? ` in the field of ${theme[0]}` : ''}.`
+              : `مشروع ${row.acronym}${theme ? ` في مجال ${theme[1]}` : ''}.`,
         summary:
           locale === 'fr'
             ? `Projet ${row.acronym}${row.theme ? ` : ${row.theme}` : ''}.`
@@ -199,7 +201,11 @@ export const prepared = input.rows.map((row) => {
           consortium: row.partners
             ? sourceInstitutions(row.partners).replace(/^•\s*/gm, '').replace(/\n+/g, '\n\n')
             : null,
-          objectives: copy.objectives.join('\n\n') || null,
+          objectives:
+            (row.reference === 'solrshemsy'
+              ? { fr: editorial, en: editorialEn, ar: editorialAr }[locale].solrshemsy.objectives
+              : copy.objectives
+            ).join('\n\n') || null,
         },
       ]
     }),

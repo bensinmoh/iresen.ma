@@ -607,3 +607,17 @@ Active-row totals use a lighter gray for contrast against the primary blue.
 Publication count legibility — 16 October 2026: metric numerals remain on one
 line. At intermediate desktop widths (64–90rem), labels sit below their number;
 wide desktop keeps the existing side-by-side composition, mobile keeps its rail.
+
+## Thumbnail subject framing — owner correction, 23 October 2026
+
+Video previews fill their card without embedded black bands. Use per-thumbnail
+zoom and focal position to frame visible people or architecture; retain the
+original source image and preserve the selected framing during hover/focus.
+
+## Monetary typography — owner correction, 23 October 2026
+
+Use `3 938 394 MAD`: Latin digits, U+00A0 grouping and currency separator, no decimals,
+rounded down to whole currency units. Preserve source precision and currency.
+Use the shared formatter for structured budgets, consistent full amounts in
+financial prose and LTR isolation within Arabic text. Apply to project details,
+call budgets, archival funding copy and on-demand project PDFs.

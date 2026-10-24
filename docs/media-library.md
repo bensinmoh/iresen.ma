@@ -25,7 +25,7 @@ source information. Its source remains unchanged; no additional route is introdu
   document titles and language are retained. Descriptions are localized working
   copy based on the documents. PDFs remain at their external source; neither a
   private-source PDF import nor a Drive sharing change is made.
-- Official destinations for MASEN, ANRE, AMEE, ONEE and MTEDD.
+- Official destinations for MASEN, ANRE, AMEE, ONEE and MEMDD.
 
 The twenty photos are recorded in `src/data/media-photos.json`; source hashes and
 public derivative fingerprints are in `docs/media-library-photos.json`.
@@ -82,7 +82,7 @@ whole-site glossary/content sanity check remains pending final website content.
 - [Owner-supplied Ministry strategies folder](https://drive.google.com/drive/folders/16ruE_KIPGATcGTyEzkbsRxrYZA-hu0Jv).
 - [MASEN](https://www.masen.ma/), [ANRE](https://anre.ma/),
   [AMEE](https://amee.ma/), [ONEE](https://www.one.org.ma/),
-  [MTEDD](https://www.mtedd.gov.ma/).
+  [MEMDD](https://www.mtedd.gov.ma/).
 - The supplied portrait filename identifies Samir Rachidi; the current role is
   supported by the [Université Ibn Tofail, 4 March 2026](https://www.uit.ac.ma/le-president-de-luniversite-ibn-tofail-a-recu-dr-samir-rachidi-directeur-general-de-iresen/).
 
@@ -133,3 +133,175 @@ must update this inventory and record generation/retouch provenance. Private
 originals are not imported; no image bytes, routes, gallery layout, publication
 gates or deployment are changed. The final whole-site glossary sanity check
 remains pending final content.
+
+## Focused photo curation — 2026-10-23
+
+The owner's latest request replaces the earlier twenty-image gallery with a
+selection from the local **IRESEN_Photos_4K_JPG** project. The current gallery has
+**25 images**: 24 documentary photographs selected from its 216 retained entries,
+plus the unchanged official DG portrait, retained first with its biography.
+The selection covers laboratory work, photovoltaic characterization and tests,
+solar installations, smart grids, physical demonstrators, platform architecture
+and headquarters identification. Event coverage, inaugurations, visits, group
+portraits, low-detail originals and repeated viewpoints are excluded. A 4K output
+filename alone is not evidence of detail: the selected collection sources all
+have original long edges of at least 3840px and no meaningful prior enlargement.
+Collection thumbnails/contact sheets were inspected before selection.
+
+The existing layout, viewer, downloads, keyboard access, reduced-motion behavior
+and canonical anchors remain. Filters are offered only for represented categories;
+the empty Events filter is absent. FR/EN/AR captions describe visible subjects and
+source-identified places/equipment, without adding capability or performance claims.
+New gallery derivatives preserve the complete source composition, with proportional
+2560px maximum long edge, no enlargement, WebP quality 85 and stripped metadata.
+Next Image retains responsive, lazy-loaded display derivatives; the 25 full download
+files total 16,502,684 bytes, not an initial-page transfer measurement. Supplied
+originals and the rest of the photo collection remain outside the repository.
+
+[The current source/hash manifest](media-library-photos.json) records collection
+IDs, original resolutions, delivery hashes, selection rationale and ten withdrawn
+gallery identities. Other uses of historical assets are not removed by a gallery
+curation request. The image-provenance inventory includes all new delivery files.
+Each retained/new gallery item has one stable `library-photo-*` search identity
+with a reachable image URL and FR/EN/AR metadata through the existing projection.
+After local index synchronization there are 25 gallery image results per locale
+and zero results for the ten withdrawn gallery identities.
+
+The running local site uses CMS authoring projections, so source JSON alone does
+not update its gallery. The narrowly scoped local command
+`node scripts/run.mjs tsx scripts/sync-curated-media-photos.ts --apply` reconciles
+only gallery photo records and the GreenH2A image-description leaves in the two
+platform namespaces. It refuses remote database hosts, saves a private pre-change
+backup, records revisions/audit, preserves unrelated fields and editorial changes,
+and withdraws old gallery records by visibility rather than deletion. New EN/AR
+authoring variants retain review status; this does not approve translations or
+alter deployment/publication gates. Existing administrator attribution is reused;
+no account is created. Repeat dry-run: zero updates and zero additions. The earlier
+database handover export predates this local content change.
+
+Verification ledger: changed-file formatting, targeted ESLint and whitespace
+checks pass. All 209 served raster paths have current provenance fingerprints.
+Chrome development review on Node 24.22.0 covers FR/EN/AR at 320, 390, 768, 1024 and
+1440px; all four category filters, 25 images, loaded viewer image, arrow navigation,
+Escape/focus restoration and 200% text reflow pass. Desktop French and mobile Arabic
+captures were visually inspected. All 25 full-image links also remain available
+without JavaScript. The homepage GreenH2A image and its visualization label load
+correctly, and the mobile platform page stays within its viewport. The local search rebuild completed, with SQL
+verification of localized inclusion, withdrawals and the new GreenH2A URL.
+Production build, full automated suites and current-head CI remain pending under
+the shared-checkout hold. Existing browser expectations now follow the catalogue
+size rather than the superseded hard-coded twenty-photo count.
+
+### JPG downloads, WebP previews — owner correction, 2026-10-23
+
+Gallery thumbnails and the enlarged viewer continue to use WebP. Each photo now
+has an explicit `downloadSrc`: the Download action serves an actual JPEG file,
+not a renamed WebP. The 24 collection photographs have metadata-stripped JPEG
+copies with a maximum 3840px long edge, without enlargement, cropping or new color
+processing (MozJPEG quality 90). The existing official DG JPEG remains unchanged.
+These JPGs load only on download; the preview image sources are unchanged.
+
+The 25 JPG downloads total 44,645,926 bytes. Per-file dimensions, source linkage,
+bytes and SHA-256 are recorded beside each WebP in `media-library-photos.json`;
+the raster provenance inventory includes each JPG. Both formats belong to the
+same photo and retain its single existing `library-photo-*` search result, with
+WebP as its canonical media preview. No duplicate JPG search entries are created.
+The local CMS photo source snapshots were reconciled with these download URLs,
+with backup and revision history, while preserving statuses and captions.
+
+Verification: French, English and Arabic viewer previews remain WebP; clicking
+Download saves a `.jpg` whose actual file signature is JPEG. All 25 JPG destinations
+return HTTP 200 with `image/jpeg`. Formatting, targeted lint, fingerprints and
+whitespace checks pass. Production build/current-head CI remain pending the shared
+checkout hold.
+
+Complete asset intake — 2026-10-23: the owner subsequently requests all 216 active
+collection photos as reusable website assets for later placement. They are ingested
+as private local JPGs, WebP previews and private draft CMS media; the selected
+25-image public gallery remains unchanged. See [the internal asset library](photo-asset-library.md).
+
+### Stronger research images and panorama emphasis — 2026-10-23
+
+The owner replaces the Oculus pavilion and the GSBP claustra/garden detail with
+collection photo 190 (outdoor photographic inspection of PV modules) and photo
+130 (panorama of the solar-testing platform). The later owner correction puts
+the panorama first in the final five-photo group, giving it the large desktop
+slot; the inspection occupies a secondary tile. Mobile source order follows
+that same editorial priority. The gallery remains at 25 images.
+
+New FR/EN/AR titles describe the visible activity/site without adding performance
+claims. The original source compositions remain complete in the WebP delivery
+files and JPG downloads; the existing responsive grid controls thumbnail framing.
+The private original assets remain in the full library. Oculus and claustra/garden
+are withdrawn from the gallery and its search projection, with CMS revision history
+preserved. Their files remain as historical assets. The official GEPMCI website
+image is unchanged.
+
+The two replacements use the normal static `library-photo-*` search projection.
+The local index was rebuilt: each new identity has FR/EN/AR entries, the two
+withdrawn identities have none, and the private full-library assets still have
+zero public search results. Current previews total 15,047,972 bytes; the 25 JPG
+downloads total 41,717,965 bytes, neither an initial-page transfer measurement.
+
+Verification: FR/EN/AR development views at 390/768/1440px, both viewers and real
+JPG downloads pass. The final panorama emphasis was confirmed in French desktop
+and Arabic mobile views. Source/provenance fingerprints, changed-file formatting
+and whitespace checks pass. Production checks/CI remain pending the shared hold.
+
+## YouTube vidéothèque — owner update, 23 October 2026
+
+The seven owner-supplied IRESEN YouTube videos now replace the CMS-hosted video
+selection in the public rail, in the supplied order. Original YouTube titles,
+channel attribution, watch URLs, official thumbnail sources and preview hashes
+are recorded in `src/data/youtube-videos.json`. Thumbnails were retrieved through
+YouTube oEmbed on 23 October 2026 and converted to local WebP previews. They are
+source references, not generated imagery or a claim of unrestricted reuse.
+
+Cards, blurred thumbnail echoes, native scrolling, mobile pills, dialog styling,
+keyboard focus and Arabic direction remain. Playback uses an iframe on
+`www.youtube-nocookie.com`, created only while its viewer is open and external
+services are allowed. Closing the dialog unmounts the player. No local video file
+is requested by this section; the former download action opens the original
+YouTube watch URL. Existing original files and historical CMS records are retained.
+Original video titles remain unchanged across the three localized interfaces.
+
+The existing external-service consent category now explicitly includes YouTube;
+its two labels are reconciled locally with backup, revisions and audit through
+`scripts/sync-youtube-consent.ts --apply`. The viewer offers an explicit consent
+action or a direct YouTube link. CSP permits only the exact privacy-enhanced
+YouTube frame host in addition to the previously allowed hosts. All seven videos
+have static localized search references; thumbnails share their video's result.
+
+Verification ledger: targeted ESLint, Prettier and whitespace; development Chrome
+checks in FR/EN/AR at 390, 768 and 1440 pixels (seven cards, no page overflow),
+consent gating, embed URL, Escape close, player removal and focus restoration.
+Mobile French/Arabic viewer layouts and the real YouTube institutional player inspected.
+Local search rebuilt and verified
+at seven new video references per locale. Browser-suite assertions now cover
+YouTube mounting/unmounting and all seven rail indicators. Full suites, isolated
+production verification and final-head CI await the shared coordination hold.
+
+Thumbnail framing follow-up — 23 October 2026: each video has its own
+`thumbnailZoom` and `thumbnailPosition`. Six official thumbnails contain baked-in
+black bands; CSS zoom removes those bands while positioning the visible people
+or architecture within the portrait cards. The unletterboxed aerial campus view
+keeps its natural scale. Hover/focus adds its small zoom relative to the selected
+baseline, so bands do not return during interaction. Preview bytes, source hashes,
+YouTube players, titles and search references are unchanged. Inspected all seven
+rendered desktop cards and FR/AR mobile views at 390px; no page overflow. Targeted
+ESLint, formatting and whitespace pass; production/CI remain held.
+
+Ministry naming follow-up — 23 October 2026: displayed report credits and the
+strategy report title/descriptions now use MEMDD, following the owner's current
+acronym. Search metadata uses the current Energy, Mines and Sustainable Development
+name. Local CMS metadata is synchronized with revisions and backup; original
+report PDFs and working external URLs remain unchanged. See the naming entry in
+[governance](governance.md).
+
+Public-copy correction — 23 October 2026: the reports introduction now presents
+the energy/climate reports, strategies and reference documents available to
+visitors, in their original languages. Internal supplied-folder wording is removed
+from MediaLibrary and the media/publications section metadata in FR/EN/AR. Local
+CMS catalogues and named sections are reconciled with backup, revision history
+and publication gates retained; public search is rebuilt. No file or report title
+changes in this follow-up.

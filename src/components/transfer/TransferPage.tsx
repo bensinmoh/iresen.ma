@@ -7,6 +7,7 @@ import { PageShell } from '@/components/layout/PageShell'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { engagementContactHref } from '@/lib/engagement'
+import { transferPhotos, transferContactPhotoDescriptions } from '@/lib/transfer-photos'
 import { ValorisationIcon, type ValorisationIconName } from './ValorisationIcon'
 import { PatentSection } from './PatentSection'
 import styles from './TransferPage.module.css'
@@ -53,7 +54,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
         >
           <div className={styles.introPhoto}>
             <Image
-              src="/images/missions/develop-cf05d9355bc5.webp"
+              src={transferPhotos.intro.src}
               alt={t('photos.intro')}
               fill
               sizes="(max-width: 1023px) 100vw, 45vw"
@@ -158,7 +159,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
           className={`${styles.section} ${styles.ink}`}
         >
           <div className={styles.pathwayPhoto} aria-hidden="true">
-            <Image src="/images/missions/test-f25f80001b78.webp" alt="" fill sizes="100vw" />
+            <Image src={transferPhotos.pathways.src} alt="" fill sizes="100vw" />
           </div>
           {header('pathways', 'transfer-pathways')}
           <div className={styles.pathways}>
@@ -189,13 +190,15 @@ export async function TransferPage({ locale }: { locale: Locale }) {
                 >
                   <Image
                     src={
-                      index === 0
-                        ? '/images/heroes/research-1dc2b1d2ea42.webp'
-                        : '/images/missions/transfer-6934b2efdfe4.webp'
+                      index === 0 ? transferPhotos.innovation.src : transferPhotos.technology.src
                     }
-                    alt={t(index === 0 ? 'photos.innovation' : 'photos.technology')}
+                    alt={
+                      transferContactPhotoDescriptions[index === 0 ? 'innovation' : 'technology'][
+                        locale
+                      ]
+                    }
                     fill
-                    sizes="(max-width: 639px) 150vw, 50vw"
+                    sizes="(max-width: 639px) 30vw, 15vw"
                   />
                 </div>
                 <div className={styles.doorCopy}>
@@ -204,7 +207,7 @@ export async function TransferPage({ locale }: { locale: Locale }) {
                   </Heading>
                   <p>{item.description}</p>
                   <a
-                    className={index === 0 ? 'button button-primary' : styles.link}
+                    className={styles.link}
                     href={index === 0 ? engagementContactHref(locale) : '#adoption-initiatives'}
                   >
                     {item.action}
@@ -214,10 +217,6 @@ export async function TransferPage({ locale }: { locale: Locale }) {
               </article>
             ))}
           </div>
-          <a data-ui-link className={styles.link} href={engagementContactHref(locale)}>
-            {t('doors.contact')}
-            <NavigationIcon name="arrow" />
-          </a>
         </section>
       </div>
     </PageShell>

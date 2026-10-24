@@ -11,13 +11,16 @@ const messages = { fr, en, ar }
 for (const locale of ['fr', 'en', 'ar'] as const) {
   test(`${locale} library media, filters, dialog and responsive access`, async ({ page }) => {
     const copy = messages[locale].MediaLibrary
-    await page.goto(pageHref('media', locale))
+    const response = await page.goto(pageHref('media', locale))
+    expect(response?.headers()['content-security-policy']).toContain(
+      'https://www.youtube-nocookie.com',
+    )
     const library = page.locator('[data-media-library]')
     await expect(library).toBeVisible()
     await expect(page.locator('.page-hero--media .hero-highlights')).toHaveCount(0)
     for (const { id } of pageSections.media)
       await expect(page.locator(`[id="${id}"]`)).toHaveCount(1)
-    await expect(library.locator('figure')).toHaveCount(20)
+    await expect(library.locator('figure')).toHaveCount(photos.length)
     await expect(library.locator('figure').first()).toHaveAttribute(
       'id',
       'photo-portrait-dg-iresen-samir-rachidi',
@@ -58,27 +61,38 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(dialog).not.toBeVisible()
     await expect(portrait).toBeFocused()
     await page.getByRole('button', { name: copy.all, exact: true }).click()
-    await expect(library.locator('figure')).toHaveCount(20)
+    await expect(library.locator('figure')).toHaveCount(photos.length)
     await library.evaluate((el) =>
       Promise.all(el.getAnimations({ subtree: true }).map((animation) => animation.finished)),
     )
+    await expect(page.locator('#videos article')).toHaveCount(7)
+    await expect(page.locator('[data-viewer="video"] iframe')).toHaveCount(0)
     const videoCard = page.locator('#videos article button').first()
-    if (await videoCard.count()) {
-      await videoCard.click()
-      await expect(page.getByRole('dialog')).toBeVisible()
-      await expect(
-        page.getByRole('dialog').getByRole('link', { name: copy.downloadVideo }),
-      ).toHaveAttribute('download', '')
-      const video = page.getByRole('dialog').locator('video')
-      await expect(video).toHaveAttribute('preload', 'none')
-      await expect(video.locator('source')).toHaveAttribute(
-        'src',
-        new RegExp(`/api/media/file/.+[?]locale=${locale}$`),
+    await videoCard.click()
+    const videoDialog = page.locator('[data-viewer="video"]')
+    await expect(videoDialog).toBeVisible()
+    await expect(
+      videoDialog.getByRole('link', { name: messages[locale].YouTubePlayer.watch }),
+    ).toHaveAttribute('href', 'https://www.youtube.com/watch?v=bu14dpbes2E')
+    await expect(videoDialog.locator('a[download], video')).toHaveCount(0)
+    // External services remain disabled until the visitor explicitly allows them.
+    if (!(await videoDialog.locator('iframe').count())) {
+      await page.route('https://www.youtube-nocookie.com/**', (route) =>
+        route.fulfill({
+          contentType: 'text/html',
+          body: '<html><body>YouTube player fixture</body></html>',
+        }),
       )
-      await page.keyboard.press('Escape')
-      await expect(page.getByRole('dialog')).not.toBeVisible()
-      await expect(videoCard).toBeFocused()
+      await videoDialog.getByRole('button', { name: messages[locale].YouTubePlayer.allow }).click()
     }
+    await expect(videoDialog.locator('iframe')).toHaveAttribute(
+      'src',
+      `https://www.youtube-nocookie.com/embed/bu14dpbes2E?playsinline=1&hl=${locale}&rel=0`,
+    )
+    await page.keyboard.press('Escape')
+    await expect(videoDialog).not.toBeVisible()
+    await expect(videoDialog.locator('iframe')).toHaveCount(0)
+    await expect(videoCard).toBeFocused()
     const violations = (
       await new AxeBuilder({ page })
         .include('[data-media-library]')
@@ -101,14 +115,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       ),
     ).toBe(true)
     await page.keyboard.press('Escape')
-    for (const video of await library.locator('video').all()) {
-      await expect(video).toHaveAttribute('preload', 'none')
-      await expect(video).not.toHaveAttribute('autoplay')
-      await expect(video.locator('source')).toHaveAttribute(
-        'src',
-        new RegExp(`/api/media/file/.+\\?locale=${locale}$`),
-      )
-    }
+    await expect(library.locator('video, iframe')).toHaveCount(0)
   })
 }
 
@@ -116,7 +123,7 @@ test('photos and report source links remain available without JavaScript', async
   const context = await browser.newContext({ javaScriptEnabled: false })
   const page = await context.newPage()
   await page.goto(pageHref('media', 'fr'))
-  await expect(page.locator('figure[id^="photo-"] > a')).toHaveCount(20)
+  await expect(page.locator('figure[id^="photo-"] > a')).toHaveCount(photos.length)
   await expect(page.locator('#reports article a')).toHaveCount(10)
   await expect(page.locator('figure[id^="photo-"] > a').first()).toHaveAttribute(
     'href',

@@ -24,7 +24,7 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
       </div>
       <div className={styles.layout}>
         <header className={styles.introduction}>
-          <SectionEyebrow tone="white">{t('eyebrow')}</SectionEyebrow>
+          <SectionEyebrow tone="navy">{t('eyebrow')}</SectionEyebrow>
           <Heading as="h2" size="display" id="platforms-heading">
             {t('title')}
           </Heading>
@@ -50,7 +50,6 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
                   locale,
                   researchPlatforms.find(({ id }) => id === platform.id)?.anchor,
                 )}
-                aria-label={`${t('cardLink')} — ${t(`platforms.${platform.id}.name`)}`}
               >
                 <div className={styles.visual}>
                   <Image

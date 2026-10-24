@@ -619,3 +619,10 @@
     transition: none;
   }
 }
+
+/* Mirror the photograph and its fade away from the Arabic reading edge. */
+:global(html[dir='rtl']) .coreImage {
+  right: auto;
+  left: 0;
+  transform: scaleX(-1);
+}

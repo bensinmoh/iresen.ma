@@ -16,7 +16,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     const rail = section.locator('#home-achievements')
     const copy = catalogs[locale].HomeAchievements
     await expect(section.locator('h2')).toHaveText(copy.title)
-    await expect(section.locator('article')).toHaveCount(8)
+    await expect(section.locator('article')).toHaveCount(homeAchievements.length)
     await expect(section.locator('a')).toHaveCount(0)
     await expect(section).toHaveCSS('background-color', 'rgb(255, 255, 255)')
     const next = section.getByRole('button', { name: copy.next, exact: true })
@@ -28,7 +28,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await previous.click()
     await expect(previous).toBeDisabled()
     await section.screenshot({ path: `.cache/achievements-review/${locale}-desktop.png` })
-    for (const { id } of homeAchievements) {
+    for (const { id, src } of homeAchievements) {
       const card = section.locator(`#achievement-${id}`)
       await card.scrollIntoViewIfNeeded()
       await expect(card.locator('h3')).toHaveText(copy.items[id].name)
@@ -45,9 +45,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       const media = await request.get(
         `/api/search?${new URLSearchParams({ locale, q: copy.items[id].name, type: 'media', limit: '50' })}`,
       )
-      expect((await media.json()).items).toContainEqual(
-        expect.objectContaining({ url: `/images/achievements/${id}.webp` }),
-      )
+      expect((await media.json()).items).toContainEqual(expect.objectContaining({ url: src }))
     }
     for (const width of [320, 390, 768, 1024]) {
       await page.setViewportSize({ width, height: 1000 })
@@ -113,7 +111,7 @@ test('all achievements remain available without JavaScript', async ({ browser })
   })
   const page = await context.newPage()
   await page.goto('/ar#achievement-hydrogen-roadmap')
-  await expect(page.locator('#results article')).toHaveCount(8)
+  await expect(page.locator('#results article')).toHaveCount(homeAchievements.length)
   await expect(page.locator('#achievement-hydrogen-roadmap')).toBeInViewport()
   await expect(page.locator('#results button').first()).toBeHidden()
   await context.close()

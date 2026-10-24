@@ -335,10 +335,6 @@
   }
 }
 @media (max-width: 40rem) {
-  .steps {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
   .empty > svg {
     display: none;
   }
@@ -375,10 +371,10 @@
 .page :global(.hero-shade) {
   background: linear-gradient(
     180deg,
-    rgb(244 247 248 / 88%) 0%,
-    rgb(244 247 248 / 88%) 30%,
-    rgb(244 247 248 / 88%) 80%,
-    rgb(244 247 248 / 20%) 100%
+    rgb(244 247 248 / 45%) 0%,
+    rgb(244 247 248 / 62%) 30%,
+    rgb(244 247 248 / 58%) 80%,
+    rgb(244 247 248 / 8%) 100%
   );
 }
 .page :global(.hero-body) {
@@ -482,10 +478,10 @@
   .page :global(.hero-shade) {
     background: linear-gradient(
       180deg,
-      rgb(244 247 248 / 88%) 0%,
-      rgb(244 247 248 / 88%) 25%,
-      rgb(244 247 248 / 88%) 82%,
-      rgb(244 247 248 / 35%) 100%
+      rgb(244 247 248 / 45%) 0%,
+      rgb(244 247 248 / 64%) 25%,
+      rgb(244 247 248 / 60%) 82%,
+      rgb(244 247 248 / 12%) 100%
     );
   }
   .page :global(.hero-copy h1) {
@@ -572,5 +568,28 @@
     flex: none;
     aspect-ratio: 16 / 9;
     min-block-size: 0;
+  }
+}
+
+.steps:focus-visible {
+  outline: 2px solid var(--color-energy-cyan);
+  outline-offset: -2px;
+}
+
+@media (max-width: 69.999rem) {
+  .steps {
+    display: flex;
+    gap: var(--space-6);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline proximity;
+    padding: 0.5rem 0.25rem 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-energy-cyan) transparent;
+  }
+  .steps li {
+    flex: 0 0 min(28rem, 88%);
+    min-inline-size: 0;
+    scroll-snap-align: start;
   }
 }

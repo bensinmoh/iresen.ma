@@ -1,0 +1,28 @@
+{
+  "received": "2026-10-23",
+  "scope": "Owner-selected photo128 as laboratory network page hero.",
+  "sourceManifest": "docs/photo-asset-library.json",
+  "sourceId": "iresen-photo-128",
+  "sourceFilename": "IRESEN_Laboratoires_Chercheuse-reglant-une-installation-pilote_128.jpg",
+  "sourceSha256": "6af2baec4cca60b3d1d383b54b26bc9a35d773f06f6e5b95fa00bfa744434f49",
+  "originalWidth": 5000,
+  "originalHeight": 3333,
+  "assets": [
+    {
+      "src": "/images/heroes/network-pilot-128.webp",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "a9728d414b6f241e8e635f21e5a9ba190ef5c25e38c65f74442417e45c76f4bc",
+      "bytes": 74512,
+      "transformation": "Proportional 1920px WebP, quality84, no enlargement or generative edit."
+    },
+    {
+      "src": "/images/heroes/network-pilot-128-mobile.webp",
+      "width": 720,
+      "height": 1080,
+      "sha256": "d9a555525e495bc9c23b3bfde0fd7117add0fb30ef36f7d52ca3e4cf307171f4",
+      "bytes": 38188,
+      "transformation": "Left-anchored 720x1080 photographic crop, retains researcher; WebP quality84; no generative edit."
+    }
+  ]
+}

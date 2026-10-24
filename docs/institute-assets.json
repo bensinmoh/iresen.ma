@@ -30,7 +30,7 @@
       "hasAlpha": true,
       "sha256": "50e461a073ceca83d67821986882860c3835462cd8dcd392d19d779feb4696a5",
       "bytes": 178942,
-      "status": "Superseded by integrated scene and matching cutout; original retained, no longer rendered."
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-ambition-solar-scene",
@@ -46,7 +46,7 @@
       "bytes": 266612,
       "sha256": "13e637027cbd58d74d1d0572e9a2e1057a495aca71c7204e376eb31f24961ad2",
       "searchReference": "institute-ambition-vision-portrait; foreground cutout shares the scene result",
-      "status": "Superseded by cooler blue daylight variant; source retained."
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-ambition-solar-person",
@@ -62,7 +62,7 @@
       "bytes": 92994,
       "sha256": "3191844d08c148b36c56093ac1d44ca663cb5ee1acdc37e02f8f04e82aea2c66",
       "searchReference": "institute-ambition-vision-portrait; foreground cutout shares the scene result",
-      "status": "Superseded by cooler blue daylight variant; source retained."
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-ambition-solar-scene-cool",
@@ -77,7 +77,8 @@
       "bytes": 229922,
       "sha256": "5ea8bc2f01884848339716d4779887218305ed226c83d3b0192b0518b0234769",
       "sourceSha256": "a3c5158a64f62ecde58aa3bc8f19b51a1b680e3c2e63cd06b264e02214445e8b",
-      "searchReference": "institute-ambition-vision-portrait; cutout shares scene result"
+      "searchReference": "institute-ambition-vision-portrait; cutout shares scene result",
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-ambition-solar-person-cool",
@@ -92,7 +93,8 @@
       "bytes": 90048,
       "sha256": "6647b83c9fe724451e532772cc3787d7fd09e7f5d9dd66aed70405440da1490b",
       "sourceSha256": "b1996f5eaf18182553aeab592325fb2fa6adf1989ffb58850b9fcf57182de6b7",
-      "searchReference": "institute-ambition-vision-portrait; cutout shares scene result"
+      "searchReference": "institute-ambition-vision-portrait; cutout shares scene result",
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-ambition-solar-person-detail",
@@ -105,7 +107,8 @@
       "hasAlpha": true,
       "bytes": 354432,
       "sha256": "89541b11d7f31342f67fa4e5a914ff751d93f66d2d2d58574011cb384d435a74",
-      "searchReference": "institute-ambition-vision-portrait; delivery derivative shares scene result"
+      "searchReference": "institute-ambition-vision-portrait; delivery derivative shares scene result",
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-ambition-solar-person-mobile",
@@ -119,7 +122,8 @@
       "hasAlpha": true,
       "bytes": 345408,
       "sha256": "9ec1ab09ace9a4bf72f7e0dd7b19cc31e3b0a63f1c8844693cdc00cf4525c0e5",
-      "searchReference": "institute-ambition-vision-portrait; responsive derivative shares scene result"
+      "searchReference": "institute-ambition-vision-portrait; responsive derivative shares scene result",
+      "status": "Superseded on 2026-10-23 by owner-supplied King Mohammed VI cutout; retained source, no longer rendered or indexed."
     },
     {
       "id": "institute-green-energy-park-research",
@@ -134,6 +138,57 @@
       "sha256": "0f1f09c51b016e17db265e61f5115879778af925394d5cf9d6b9067157e6ff81",
       "bytes": 100250,
       "method": "Sharp auto-orientation and proportional resize to 1280px wide; WebP quality 85, metadata stripped. No generative changes; navy treatment and fade remain CSS."
+    },
+    {
+      "id": "institute-ambition-king-mohammed-vi",
+      "created": "2026-10-23",
+      "sourceFilename": "4a3c8b4e-6045-46eb-a5cf-d82964227856.png",
+      "sourceSha256": "79f88037f8a62e8c73f311a29682c3cf09ae7912977403ebd676f191a75e77e9",
+      "sourceStatus": "Owner-supplied transparent photograph, commissioned for the Institute ambition section. Original remains outside the repository.",
+      "url": "/images/institute/ambition-king-mohammed-vi.webp",
+      "width": 1535,
+      "height": 1024,
+      "hasAlpha": true,
+      "bytes": 720530,
+      "sha256": "d826cdc6534130c3ccba4f1123817eceeaac7e9f5e0ef6ed2180600595f48353",
+      "method": "Initial Sharp WebP quality 90, alpha quality 100, metadata stripped. Owner-authorized manual alpha-only correction of the old background trapped inside the exposed eyeglass lens; 429 alpha pixels changed with supersampled edge coverage. Existing decoded RGB pixels and alpha outside that small region are preserved, verified after lossless WebP re-encoding. No generation, cropping or mirroring. Full image on desktop and mobile.",
+      "searchReference": "institute-ambition-vision-portrait; desktop/mobile share one media result",
+      "alphaCorrection": {
+        "date": "2026-10-23",
+        "bounds": {
+          "left": 702,
+          "top": 181,
+          "right": 727,
+          "bottom": 212
+        },
+        "alphaPixelsChanged": 429,
+        "visibleRgbChanges": 0,
+        "polygon": [
+          [717.4, 182.3],
+          [718.5, 184.4],
+          [720.1, 186.8],
+          [721.8, 189.6],
+          [724, 192.2],
+          [724, 201],
+          [724, 205.5],
+          [725, 208.1],
+          [725.6, 210.7],
+          [722.4, 211],
+          [719.3, 210.7],
+          [716.5, 208.5],
+          [713.8, 206],
+          [711, 203.6],
+          [708.6, 201.1],
+          [706.4, 198.4],
+          [704.8, 195.3],
+          [703.6, 192.4],
+          [704.6, 189.8],
+          [706.6, 187.5],
+          [709.3, 185.5],
+          [712.4, 183.7],
+          [715.3, 182.6]
+        ]
+      }
     }
   ]
 }

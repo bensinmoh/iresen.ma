@@ -73,5 +73,207 @@
       "summary": "تعزيز الأمونيا الخضراء بالاستناد إلى إمكانات المغرب في الطاقات المتجددة وخبرته في الأسمدة.",
       "objectives": ["تعزيز دور المغرب في تطوير قطاع الأمونيا الخضراء."]
     }
+  },
+  "soltanair": {
+    "fr": {
+      "title": "SOLTANAIR",
+      "description": "SOLTANAIR est un projet de recherche consacré au stockage de l’énergie dans le cadre du programme InnoESPA Maroc 2021. Mené au Green Energy Park à Benguérir, il réunit GEP, CMTC, SAMI SOLAR, SOLATOM et DEMEDE.",
+      "summary": "Une collaboration de recherche sur le stockage de l’énergie au Green Energy Park.",
+      "objectives": []
+    },
+    "en": {
+      "title": "SOLTANAIR",
+      "description": "SOLTANAIR is an energy storage research project within the InnoESPA Maroc 2021 programme. Based at Green Energy Park in Benguérir, it brings together GEP, CMTC, SAMI SOLAR, SOLATOM and DEMEDE.",
+      "summary": "Collaborative energy storage research at Green Energy Park.",
+      "objectives": []
+    },
+    "ar": {
+      "title": "SOLTANAIR",
+      "description": "يندرج مشروع SOLTANAIR في مجال تخزين الطاقة ضمن برنامج InnoESPA Maroc 2021. ويجمع في منصة Green Energy Park ببنجرير كلاً من GEP وCMTC وSAMI SOLAR وSOLATOM وDEMEDE.",
+      "summary": "تعاون بحثي في تخزين الطاقة بمنصة Green Energy Park.",
+      "objectives": []
+    }
+  },
+  "ev-plan": {
+    "fr": {
+      "title": "EV Plan",
+      "description": "EV Plan développe un outil de planification des infrastructures de recharge pour véhicules électriques. Fondé sur un système d’information géographique, il croise des données spatiales et des critères techniques et socio-économiques pour aider à identifier les emplacements adaptés aux bornes de recharge.",
+      "summary": "Planifier les bornes de recharge électrique à l’aide de données géographiques et d’analyses multicritères.",
+      "objectives": [
+        "Identifier les zones adaptées à l’implantation de bornes de recharge.",
+        "Accompagner la planification des infrastructures de mobilité électrique."
+      ]
+    },
+    "en": {
+      "title": "EV Plan",
+      "description": "EV Plan develops a planning tool for electric vehicle charging infrastructure. Using a geographic information system, it combines spatial data with technical and socio-economic criteria to help identify suitable charging station locations.",
+      "summary": "Plan EV charging locations using geographic data and multi-criteria analysis.",
+      "objectives": [
+        "Identify suitable areas for charging stations.",
+        "Support electric mobility infrastructure planning."
+      ]
+    },
+    "ar": {
+      "title": "EV Plan",
+      "description": "يطوّر مشروع EV Plan أداة لتخطيط البنية التحتية لشحن المركبات الكهربائية. وتعتمد على نظام للمعلومات الجغرافية يجمع البيانات المكانية والمعايير التقنية والاجتماعية والاقتصادية للمساعدة في تحديد المواقع الملائمة لمحطات الشحن.",
+      "summary": "تخطيط مواقع شحن المركبات الكهربائية بالاعتماد على البيانات الجغرافية والتحليل متعدد المعايير.",
+      "objectives": [
+        "تحديد المناطق الملائمة لإنشاء محطات الشحن.",
+        "دعم تخطيط البنية التحتية للتنقل الكهربائي."
+      ]
+    }
+  },
+  "lswater": {
+    "fr": {
+      "title": "Lenium SolarWater (LSWater)",
+      "description": "Lenium SolarWater étudie la production d’eau à partir de l’humidité de l’air grâce à l’énergie solaire. Le projet associe la captation et la condensation de cette humidité à des suiveurs solaires, dans le cadre du programme bilatéral InnoESPA Maroc.",
+      "summary": "Produire de l’eau à partir de l’humidité de l’air en mobilisant l’énergie solaire.",
+      "objectives": [
+        "Étudier la récupération de l’humidité atmosphérique.",
+        "Associer la production d’eau à un système solaire sur suiveurs."
+      ]
+    },
+    "en": {
+      "title": "Lenium SolarWater (LSWater)",
+      "description": "Lenium SolarWater studies water production from atmospheric humidity using solar energy. The project combines moisture capture and condensation with solar trackers within the bilateral InnoESPA Maroc programme.",
+      "summary": "Produce water from atmospheric humidity using solar energy.",
+      "objectives": [
+        "Study atmospheric moisture recovery.",
+        "Combine water production with a solar tracking system."
+      ]
+    },
+    "ar": {
+      "title": "Lenium SolarWater (LSWater)",
+      "description": "يدرس مشروع Lenium SolarWater إنتاج الماء من رطوبة الهواء باستخدام الطاقة الشمسية. ويجمع بين التقاط الرطوبة وتكثيفها ومتتبعات شمسية، ضمن البرنامج الثنائي InnoESPA Maroc.",
+      "summary": "إنتاج الماء من رطوبة الهواء باستخدام الطاقة الشمسية.",
+      "objectives": [
+        "دراسة استرجاع الرطوبة الموجودة في الهواء.",
+        "دمج إنتاج الماء مع نظام شمسي مزود بمتتبعات."
+      ]
+    }
+  },
+  "e-pave": {
+    "fr": {
+      "title": "E-PAVE",
+      "description": "E-PAVE explore la contribution des infrastructures routières à la transition énergétique. Retenu dans le cadre d’InnoESPA Maroc Energy 2024, le projet réunit l’UM6P, la Faculté des Sciences Aïn Chock de l’Université Hassan II de Casablanca, Fox Transport et Grupo Sitelec dans une collaboration de recherche et d’innovation entre le Maroc et l’Espagne.",
+      "summary": "Associer recherche et industrie autour des routes et de la transition énergétique.",
+      "objectives": []
+    },
+    "en": {
+      "title": "E-PAVE",
+      "description": "E-PAVE explores how road infrastructure can contribute to the energy transition. Selected under InnoESPA Maroc Energy 2024, it brings together UM6P, the Faculty of Sciences Aïn Chock at Hassan II University of Casablanca, Fox Transport and Grupo Sitelec in a Moroccan–Spanish research and innovation collaboration.",
+      "summary": "Connect research and industry around roads and the energy transition.",
+      "objectives": []
+    },
+    "ar": {
+      "title": "E-PAVE",
+      "description": "يستكشف مشروع E-PAVE مساهمة البنية التحتية الطرقية في الانتقال الطاقي. وقد اختير ضمن برنامج InnoESPA Maroc Energy 2024، ويجمع جامعة محمد السادس متعددة التخصصات التقنية وكلية العلوم عين الشق بجامعة الحسن الثاني بالدار البيضاء وFox Transport وGrupo Sitelec في تعاون بحثي وابتكاري مغربي إسباني.",
+      "summary": "ربط البحث بالصناعة في مجال الطرق والانتقال الطاقي.",
+      "objectives": []
+    }
+  },
+  "stdscwg": {
+    "fr": {
+      "title": "STDSCWG",
+      "description": "STDSCWG développe un système intelligent de dessalement thermique pour produire de l’eau à partir d’eaux saumâtres. Le projet prévoit deux prototypes expérimentaux, de petite et moyenne échelle, à l’IAV Hassan II de Rabat et d’Agadir, en partenariat avec Harmony Technology et IAP Solutions.",
+      "summary": "Développer et tester un système intelligent de dessalement des eaux saumâtres.",
+      "objectives": [
+        "Concevoir un système intelligent de dessalement thermique.",
+        "Mettre en place deux prototypes expérimentaux de tailles différentes."
+      ]
+    },
+    "en": {
+      "title": "STDSCWG",
+      "description": "STDSCWG develops a smart thermal desalination system to produce water from brackish sources. The project plans small- and medium-scale experimental prototypes at IAV Hassan II in Rabat and Agadir, in partnership with Harmony Technology and IAP Solutions.",
+      "summary": "Develop and test a smart brackish-water desalination system.",
+      "objectives": [
+        "Design a smart thermal desalination system.",
+        "Set up two experimental prototypes at different scales."
+      ]
+    },
+    "ar": {
+      "title": "STDSCWG",
+      "description": "يطوّر مشروع STDSCWG نظاماً ذكياً للتحلية الحرارية لإنتاج الماء انطلاقاً من المياه قليلة الملوحة. ويعتزم إنشاء نموذجين تجريبيين صغير ومتوسط الحجم بمعهد الحسن الثاني للزراعة والبيطرة في الرباط وأكادير، بشراكة مع Harmony Technology وIAP Solutions.",
+      "summary": "تطوير واختبار نظام ذكي لتحلية المياه قليلة الملوحة.",
+      "objectives": ["تصميم نظام ذكي للتحلية الحرارية.", "إنشاء نموذجين تجريبيين بحجمين مختلفين."]
+    }
+  },
+  "dakh2a": {
+    "fr": {
+      "title": "DAKH2A",
+      "description": "DAKH2A étudie les technologies de captage direct du CO₂ dans l’air pour les filières de carburants de synthèse associées à l’hydrogène vert. Mené par IRESEN et MGH Energy, le projet vise à comparer les solutions de captage puis à installer un démonstrateur au Maroc afin d’en optimiser le fonctionnement et les coûts.",
+      "summary": "Évaluer le captage du CO₂ atmosphérique et préparer un démonstrateur pour les carburants de synthèse.",
+      "objectives": [
+        "Comparer les technologies de captage direct du CO₂ dans l’air.",
+        "Préparer un démonstrateur au Maroc et optimiser ses paramètres de fonctionnement."
+      ]
+    },
+    "en": {
+      "title": "DAKH2A",
+      "description": "DAKH2A studies direct air capture technologies for synthetic fuels associated with green hydrogen. Led by IRESEN and MGH Energy, the project aims to compare capture solutions and install a demonstrator in Morocco to optimise operation and costs.",
+      "summary": "Assess atmospheric CO₂ capture and prepare a demonstrator for synthetic fuels.",
+      "objectives": [
+        "Compare direct air capture technologies.",
+        "Prepare a demonstrator in Morocco and optimise its operating parameters."
+      ]
+    },
+    "ar": {
+      "title": "DAKH2A",
+      "description": "يدرس مشروع DAKH2A تقنيات الالتقاط المباشر لثاني أكسيد الكربون من الهواء لخدمة مسارات الوقود الاصطناعي المرتبطة بالهيدروجين الأخضر. ويقوده IRESEN وMGH Energy بهدف مقارنة حلول الالتقاط ثم إنشاء وحدة تجريبية في المغرب لتحسين التشغيل والتكلفة.",
+      "summary": "تقييم التقاط ثاني أكسيد الكربون من الهواء وإعداد وحدة تجريبية لخدمة الوقود الاصطناعي.",
+      "objectives": [
+        "مقارنة تقنيات الالتقاط المباشر لثاني أكسيد الكربون من الهواء.",
+        "إعداد وحدة تجريبية في المغرب وتحسين معايير تشغيلها."
+      ]
+    }
+  },
+  "greenh2hub": {
+    "fr": {
+      "title": "GreenH2Hub",
+      "description": "GreenH2Hub s’inscrit dans la coopération franco-marocaine de recherche et de transfert technologique dans l’hydrogène décarboné. Le projet associe l’Université Mohammed VI Polytechnique, l’Université Ibn Tofail, l’Université de Picardie Jules Verne et H2X-Ecosystems dans le cadre du programme Inno France–Maroc Tech Transfer.",
+      "summary": "Une coopération scientifique et industrielle franco-marocaine dans l’hydrogène décarboné.",
+      "objectives": []
+    },
+    "en": {
+      "title": "GreenH2Hub",
+      "description": "GreenH2Hub is part of French–Moroccan research and technology-transfer cooperation in decarbonised hydrogen. The project brings together Mohammed VI Polytechnic University, Ibn Tofail University, the University of Picardie Jules Verne and H2X-Ecosystems within the Inno France–Maroc Tech Transfer programme.",
+      "summary": "French–Moroccan scientific and industrial cooperation in decarbonised hydrogen.",
+      "objectives": []
+    },
+    "ar": {
+      "title": "GreenH2Hub",
+      "description": "يندرج مشروع GreenH2Hub ضمن التعاون البحثي ونقل التكنولوجيا بين المغرب وفرنسا في مجال الهيدروجين منخفض الكربون. ويجمع جامعة محمد السادس متعددة التخصصات التقنية وجامعة ابن طفيل وجامعة بيكاردي جول فيرن وH2X-Ecosystems، في إطار برنامج Inno France–Maroc Tech Transfer.",
+      "summary": "تعاون علمي وصناعي مغربي فرنسي في مجال الهيدروجين منخفض الكربون.",
+      "objectives": []
+    }
+  },
+  "great-h2": {
+    "fr": {
+      "title": "GREAT-H2",
+      "description": "GREAT-H2 développe un outil de planification de la chaîne de valeur de l’hydrogène vert fondé sur un système d’information géographique. Le projet associe l’évaluation des ressources renouvelables à la planification de la production, du stockage et de l’intégration aux réseaux, avec Green Energy Park et Energy Pool.",
+      "summary": "Planifier la production, le stockage et l’intégration de l’hydrogène vert à l’aide d’un outil géographique.",
+      "objectives": [
+        "Évaluer les ressources renouvelables pour la planification de l’hydrogène.",
+        "Relier production, stockage et intégration aux réseaux dans un outil d’aide à la décision."
+      ]
+    },
+    "en": {
+      "title": "GREAT-H2",
+      "description": "GREAT-H2 develops a geographic information system tool for planning the green hydrogen value chain. The project links renewable resource assessment with production, storage and grid-integration planning, bringing together Green Energy Park and Energy Pool.",
+      "summary": "Plan green hydrogen production, storage and grid integration using a geographic tool.",
+      "objectives": [
+        "Assess renewable resources for hydrogen planning.",
+        "Connect production, storage and grid integration in a decision-support tool."
+      ]
+    },
+    "ar": {
+      "title": "GREAT-H2",
+      "description": "يطوّر مشروع GREAT-H2 أداة قائمة على نظام للمعلومات الجغرافية لتخطيط سلسلة قيمة الهيدروجين الأخضر. ويربط تقييم الموارد المتجددة بتخطيط الإنتاج والتخزين والاندماج في الشبكات، بمشاركة Green Energy Park وEnergy Pool.",
+      "summary": "تخطيط إنتاج الهيدروجين الأخضر وتخزينه واندماجه في الشبكات باستخدام أداة جغرافية.",
+      "objectives": [
+        "تقييم الموارد المتجددة لتخطيط مشاريع الهيدروجين.",
+        "ربط الإنتاج والتخزين والاندماج في الشبكات ضمن أداة لدعم القرار."
+      ]
+    }
   }
 }

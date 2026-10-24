@@ -73,7 +73,7 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
           <span id="decision-resources" className={styles.anchor} />
         </section>
         <RoadmapMotion>
-          <div id="domains-directions">
+          <div id="domains-directions" className={styles.domains}>
             {roadmapDomains.map((id, index) => (
               <section
                 key={id}
@@ -85,9 +85,20 @@ export async function RoadmapPage({ locale }: { locale: Locale }) {
                 <div className={styles.stage}>
                   <div className={`container ${styles.scene}`} data-scene-content>
                     <header className={styles.copy}>
-                      <p className={styles.label}>
-                        {t('theme')} <bdi>{String(index + 1).padStart(2, '0')}</bdi>
-                      </p>
+                      <div className={styles.chapterTop}>
+                        <p className={styles.label}>
+                          {t('theme')} <bdi>{String(index + 1).padStart(2, '0')}</bdi>
+                        </p>
+                        {index > 0 && (
+                          <a
+                            className={styles.previousChapter}
+                            href={`#theme-${roadmapDomains[index - 1]}`}
+                          >
+                            <NavigationIcon name="chevron" />
+                            {t('previous')}
+                          </a>
+                        )}
+                      </div>
                       <div className={styles.titleFrame}>
                         <Heading as="h2" size="display" id={`theme-${id}-title`}>
                           {t(`chapters.${id}.title`)}

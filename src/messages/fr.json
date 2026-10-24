@@ -247,14 +247,6 @@
         "title": "WorldPtX Summit",
         "description": "Un sommet mondial consacré au Power-to-X et à ses applications. Organiser les échanges et le partage d’expertise entre partenaires."
       },
-      "achievement-upilot-h2": {
-        "title": "uPilot H₂",
-        "description": "Le premier pilote de production d’hydrogène vert au Maroc. Mobiliser une installation pilote pour l’apprentissage et l’expérimentation."
-      },
-      "achievement-propre-ma": {
-        "title": "PROPRE.MA",
-        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire. Articuler installations universitaires, observation et recherche."
-      },
       "achievement-cartography": {
         "title": "Cartographie",
         "description": "La cartographie des ressources renouvelables du pays et le zoning pour éclairer les choix énergétiques. Mobiliser les données spatiales, la cartographie et le zoning."
@@ -282,6 +274,10 @@
       "mission-cooperation": {
         "title": "Coopération & Rayonnement",
         "description": "Réunir les partenaires, les expertises et les ressources ; construire des projets communs et faire connaître les contributions marocaines."
+      },
+      "achievement-outdoor-pv": {
+        "title": "Plateformes de test PV outdoor",
+        "description": "Des plateformes d’essais photovoltaïques en extérieur pour suivre et comparer les performances des technologies en conditions réelles."
       }
     },
     "institute": {
@@ -681,7 +677,7 @@
       },
       "institutional-reports": {
         "title": "Rapports & stratégies",
-        "description": "Documents externes regroupés dans le dossier de référence fourni. Le titre et la langue du fichier original sont conservés."
+        "description": "Rapports, stratégies et documents de référence sur l’énergie et le climat, à consulter dans leur langue d’origine."
       },
       "use-cite-resources": {
         "title": "Utiliser et citer les ressources",
@@ -715,7 +711,7 @@
       },
       "reports": {
         "title": "Rapports & stratégies",
-        "description": "Documents externes regroupés dans le dossier de référence fourni. Le titre et la langue du fichier original sont conservés."
+        "description": "Rapports, stratégies et documents de référence sur l’énergie et le climat, à consulter dans leur langue d’origine."
       }
     },
     "opportunities": {
@@ -1693,8 +1689,8 @@
         "name": "GreenH2A",
         "category": "Hydrogène vert · Power-to-X",
         "description": "À Jorf Lasfar, étudier l’hydrogène vert et le Power-to-X à l’échelle pilote. Plateforme en développement.",
-        "imageDescription": "Vue 3D d’ingénierie d’une installation pilote GreenH2A, avec équipements et tuyauteries ; illustration de conception.",
-        "searchText": "GreenH2A Green Hydrogen to Applications hydrogène vert H2 Power-to-X PtX électrolyse Jorf Lasfar pilote en développement"
+        "imageDescription": "Visualisation de l’usine pilote GAPP GreenH2A achevée, avec équipements et tuyauteries extérieurs ; image de projection, et non photographie de l’état actuel.",
+        "searchText": "GreenH2A Green Hydrogen to Applications hydrogène vert H2 Power-to-X PtX électrolyse Jorf Lasfar pilote en développement GAPP ammoniac vert usine pilote"
       }
     },
     "network": {
@@ -1714,10 +1710,23 @@
     "eyebrow": "Réalisations",
     "title": "Nos réalisations emblématiques",
     "description": "Ces exemples illustrent des capacités et des résultats. Les effets économiques, industriels ou environnementaux nécessitent des mesures propres à chaque réalisation.",
-    "label": "Les huit réalisations",
+    "label": "Les réalisations emblématiques",
     "previous": "Réalisations précédentes",
     "next": "Réalisations suivantes",
     "items": {
+      "outdoor-pv": {
+        "name": "Plateformes de test PV outdoor",
+        "category": "Infrastructure",
+        "description": "Des plateformes d’essais photovoltaïques en extérieur pour suivre et comparer les performances des technologies en conditions réelles.",
+        "imageDescription": "Vue panoramique des installations d’essais solaires du Green Energy Park à Benguerir.",
+        "searchText": "PV photovoltaïque essais outdoor extérieur performances modules solaires Green Energy Park Benguerir",
+        "proof": {
+          "need": "Évaluer les technologies photovoltaïques dans les conditions climatiques locales.",
+          "contribution": "Relier recherche et expérimentation sur des installations d’essais en extérieur.",
+          "result": "Des plateformes de test pour suivre et comparer les performances des technologies solaires.",
+          "scope": "Des capacités expérimentales dont les résultats dépendent des technologies et des conditions d’essai."
+        }
+      },
       "village-solaire": {
         "name": "Village Solaire",
         "category": "Infrastructure",
@@ -1729,32 +1738,6 @@
           "contribution": "Associer démonstration, recherche et apprentissage autour de maisons solaires.",
           "result": "Un village de bâtiments solaires, fruit de la compétition Solar Decathlon Africa.",
           "scope": "Une capacité expérimentale ; les économies d’énergie dépendent des mesures propres aux bâtiments."
-        }
-      },
-      "ismart": {
-        "name": "iSmart",
-        "category": "Startup",
-        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine. Rapprocher développement technologique, fabrication locale et valorisation.",
-        "imageDescription": "Borne de recharge iSmart et présentation du produit.",
-        "searchText": "mobilité électrique recharge véhicules électriques startup marocaine",
-        "proof": {
-          "need": "Développer des solutions de recharge pour la mobilité électrique.",
-          "contribution": "Rapprocher développement technologique, fabrication locale et valorisation.",
-          "result": "Une borne de recharge pour véhicules électriques 100 % marocaine.",
-          "scope": "Le produit illustre la valorisation ; il ne suffit pas à établir un volume d’adoption ou des émissions évitées."
-        }
-      },
-      "aquasolar": {
-        "name": "AquaSolar",
-        "category": "Démonstrateur",
-        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire. Développer et expérimenter une solution mobile et modulaire.",
-        "imageDescription": "Unité AquaSolar avec des panneaux photovoltaïques sur sa toiture.",
-        "searchText": "dessalement eau solaire unité mobile modulaire",
-        "proof": {
-          "need": "Explorer le dessalement alimenté par l’énergie solaire.",
-          "contribution": "Développer et expérimenter une solution mobile et modulaire.",
-          "result": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire.",
-          "scope": "Un démonstrateur ; les performances et les usages effectifs doivent être appréciés dans leurs conditions d’essai."
         }
       },
       "worldptx": {
@@ -1770,30 +1753,30 @@
           "scope": "Une contribution à la coopération et au rayonnement ; la tenue d’un événement ne démontre pas à elle seule des transferts."
         }
       },
-      "upilot-h2": {
-        "name": "uPilot H₂",
-        "category": "Pilote",
-        "description": "Le premier pilote de production d’hydrogène vert au Maroc. Mobiliser une installation pilote pour l’apprentissage et l’expérimentation.",
-        "imageDescription": "Unité uPilot H₂ de production d’hydrogène vert.",
-        "searchText": "uPilot H2 micro pilote hydrogène vert production Maroc",
+      "aquasolar": {
+        "name": "AquaSolar",
+        "category": "Démonstrateur",
+        "description": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire. Développer et expérimenter une solution mobile et modulaire.",
+        "imageDescription": "Unité AquaSolar avec des panneaux photovoltaïques sur sa toiture.",
+        "searchText": "dessalement eau solaire unité mobile modulaire",
         "proof": {
-          "need": "Expérimenter la production d’hydrogène vert au Maroc.",
-          "contribution": "Mobiliser une installation pilote pour l’apprentissage et l’expérimentation.",
-          "result": "Le premier pilote de production d’hydrogène vert au Maroc.",
-          "scope": "Une capacité pilote ; elle ne préjuge pas d’un déploiement industriel à grande échelle."
+          "need": "Explorer le dessalement alimenté par l’énergie solaire.",
+          "contribution": "Développer et expérimenter une solution mobile et modulaire.",
+          "result": "Une unité mobile et modulaire de dessalement alimentée par l’énergie solaire.",
+          "scope": "Un démonstrateur ; les performances et les usages effectifs doivent être appréciés dans leurs conditions d’essai."
         }
       },
-      "propre-ma": {
-        "name": "PROPRE.MA",
-        "category": "Projet R&D",
-        "description": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire. Articuler installations universitaires, observation et recherche.",
-        "imageDescription": "Panneaux photovoltaïques sur une toiture, visuel fourni pour PROPRE.MA.",
-        "searchText": "recherche et développement R&D photovoltaïque productible solaire universités marocaines",
+      "ismart": {
+        "name": "iSmart",
+        "category": "Startup",
+        "description": "Une borne de recharge pour véhicules électriques 100 % marocaine. Rapprocher développement technologique, fabrication locale et valorisation.",
+        "imageDescription": "Borne de recharge iSmart et présentation du produit.",
+        "searchText": "mobilité électrique recharge véhicules électriques startup marocaine",
         "proof": {
-          "need": "Mieux connaître le productible photovoltaïque selon les conditions locales.",
-          "contribution": "Articuler installations universitaires, observation et recherche.",
-          "result": "Un réseau de centrales photovoltaïques dans les universités marocaines pour cartographier le productible solaire.",
-          "scope": "Des moyens pour produire des connaissances sur la ressource et les performances, sans bénéfice économique chiffré ici."
+          "need": "Développer des solutions de recharge pour la mobilité électrique.",
+          "contribution": "Rapprocher développement technologique, fabrication locale et valorisation.",
+          "result": "Une borne de recharge pour véhicules électriques 100 % marocaine.",
+          "scope": "Le produit illustre la valorisation ; il ne suffit pas à établir un volume d’adoption ou des émissions évitées."
         }
       },
       "cartography": {
@@ -1996,7 +1979,8 @@
         "industry": "Illustration générée d’ingénieurs examinant un équipement industriel énergétique. Scène fictive, sans installation ni personnel IRESEN réel.",
         "research": "Illustration générée d’une scientifique étudiant un prototype de batterie au laboratoire. Scène fictive, sans équipe ni laboratoire IRESEN réel.",
         "institutions": "Illustration générée de professionnels de la planification énergétique lors d’une visite de terrain. Scène fictive, sans institution, territoire ni projet IRESEN réel identifié.",
-        "partners": "Illustration générée de coordinateurs de coopération discutant d’un projet. Scène fictive, sans partenaire, bailleur ni accord IRESEN réel identifié."
+        "partners": "Illustration générée de coordinateurs de coopération discutant d’un projet. Scène fictive, sans partenaire, bailleur ni accord IRESEN réel identifié.",
+        "needs": "Participants réunis autour de documents et d’un ordinateur lors d’un atelier collaboratif."
       }
     },
     "transfer": {
@@ -2170,9 +2154,11 @@
     },
     "contactMessage": "Je souhaite échanger avec IRESEN au sujet du brevet {reference} : {title}.",
     "photos": {
-      "intro": "Illustration générée de chercheurs examinant un prototype et ses instruments de mesure en laboratoire.",
-      "innovation": "Illustration générée d’une chercheuse étudiant un échantillon solaire sur un banc de mesure.",
-      "technology": "Illustration générée d’une spécialiste présentant un schéma de réseau énergétique sur écran."
+      "hero": "Équipe de recherche échangeant autour d’un module photovoltaïque en laboratoire.",
+      "intro": "Deux chercheurs travaillent ensemble autour d’un instrument de mesure en laboratoire.",
+      "pathways": "Atelier d’assemblage de bornes iSmart, avec plusieurs postes de travail.",
+      "innovation": "Un chercheur manipule un échantillon en laboratoire de chimie verte.",
+      "technology": "Discussion technique entre quatre participants, avec des casques de chantier sur la table."
     },
     "example": {
       "title": "Une réalisation qui illustre la valorisation",
@@ -2284,8 +2270,8 @@
       "subject": "Candidature — {offer}"
     },
     "photos": {
-      "hero": "Photographie de référence : une personne travaillant sur un ordinateur dans un espace de travail.",
-      "environment": "Photographie de référence : une équipe échange autour d’une table de travail.",
+      "hero": "Accueil et hall intérieur du siège d’IRESEN.",
+      "environment": "Une collaboratrice travaille sur un ordinateur portable à son bureau.",
       "internship": "Photographie de référence : un groupe échange dans un espace de travail partagé."
     },
     "searchText": "Carrières, recrutement, emploi, stage, doctorat, candidature spontanée, recherche appliquée, recherche et développement et innovation (R&D&I), transition énergétique."
@@ -2420,7 +2406,7 @@
     "previous": "Photo précédente",
     "next": "Photo suivante",
     "source": "Consulter le document",
-    "sourceNote": "Documents externes regroupés dans le dossier de référence fourni. Le titre et la langue du fichier original sont conservés.",
+    "sourceNote": "Rapports, stratégies et documents de référence sur l’énergie et le climat, à consulter dans leur langue d’origine.",
     "videoNote": "Films en version originale. La lecture démarre uniquement à votre demande.",
     "empty": "Aucune vidéo publiée dans cette langue pour le moment.",
     "credits": "Crédits & réutilisation",
@@ -2779,6 +2765,7 @@
     "axes": "Axes de recherche",
     "benefitsLabel": "Bénéfices recherchés",
     "next": "Thématique suivante",
+    "previous": "Thématique précédente",
     "imageNote": "Illustration conceptuelle générée ; elle ne représente pas une installation attestée.",
     "heroAlt": "Planche de travail vue en perspective, avec un diagramme technique réunissant les sept thématiques de recherche : électricité renouvelable, hydrogène, industrie, eau et agriculture, bioénergies, bâtiments et mobilité."
   },
@@ -3131,7 +3118,7 @@
       ],
       "action": "Découvrir les opportunités",
       "secondary": "Consulter les événements",
-      "imageAlt": "Illustration générée d’une équipe en atelier technique, sans attribution à un laboratoire réel."
+      "imageAlt": "Démonstration d’un équipement de laboratoire à un groupe de participantes en formation."
     },
     "examples": {
       "title": "Des spécialités, des questions concrètes.",
@@ -3243,7 +3230,7 @@
       "gep": "Vue aérienne du Green Energy Park à Benguerir, avec ses installations solaires.",
       "gsbp": "Prototypes de maisons du Village solaire au Green & Smart Building Park.",
       "gep-mci": "Visuel fourni pour le Green Energy Park Maroc–Côte d’Ivoire : bâtiment et panneaux solaires.",
-      "greenh2a": "Visualisation 3D des équipements du projet GreenH2A ; ce rendu ne documente pas une installation opérationnelle."
+      "greenh2a": "Visualisation de l’usine pilote GAPP GreenH2A achevée ; cette image ne documente pas une installation opérationnelle."
     },
     "platforms": {
       "gep": {
@@ -3591,8 +3578,8 @@
     "necessary": "Cookies nécessaires au fonctionnement",
     "necessaryDescription": "Le cookie iresen_consent conserve votre décision pendant 180 jours, sans identifiant de suivi. Les cookies d’authentification du CMS sont réservés à l’administration.",
     "alwaysActive": "Toujours actif",
-    "external": "Services externes — Google Maps",
-    "externalDescription": "Autoriser la carte Google Maps sur la page Contact. Google peut recevoir votre adresse IP et des informations sur votre navigateur et utiliser ses propres cookies. Le responsable de ce service est Google ; ses règles de confidentialité sont disponibles sur policies.google.com/privacy.",
+    "external": "Services externes — Google Maps · YouTube",
+    "externalDescription": "Autoriser la carte Google Maps et les lecteurs YouTube de la vidéothèque. Google peut recevoir votre adresse IP et des informations sur votre navigateur et utiliser ses propres cookies. Le responsable de ce service est Google ; ses règles de confidentialité sont disponibles sur policies.google.com/privacy.",
     "retention": "Votre acceptation ou votre refus est conservé pendant 180 jours sur ce navigateur. Vous pouvez retirer votre accord à tout moment depuis le pied de page ; la carte est alors retirée. Le retrait ne supprime pas les données déjà transmises à Google.",
     "save": "Enregistrer mes choix",
     "mapBlocked": "La carte Google Maps est désactivée tant que vous n’autorisez pas les services externes. Le lien d’itinéraire reste disponible.",
@@ -3736,5 +3723,10 @@
       "result": "Résultat documenté",
       "scope": "Portée"
     }
+  },
+  "YouTubePlayer": {
+    "watch": "Voir sur YouTube",
+    "blocked": "Ce lecteur YouTube nécessite votre accord pour les services externes. Vous pouvez aussi ouvrir la vidéo directement sur YouTube.",
+    "allow": "Autoriser les services externes et lire"
   }
 }

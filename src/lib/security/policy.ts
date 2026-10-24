@@ -41,7 +41,7 @@ export function contentSecurityPolicy(nonce: string, development: boolean) {
     "font-src 'self'",
     "media-src 'self' blob:",
     `connect-src 'self'${development ? ' ws: wss:' : ''}`,
-    "frame-src 'self' https://www.google.com",
+    "frame-src 'self' https://www.google.com https://www.youtube-nocookie.com",
     "frame-ancestors 'none'",
     "object-src 'none'",
     "base-uri 'self'",

@@ -1,0 +1,18 @@
+{
+  "received": "2026-10-23",
+  "scope": "Owner-requested replacement of the AI laboratory image in the network skills-training section with a real photograph from the ingested collection.",
+  "sourceManifest": "docs/photo-asset-library.json",
+  "sourceId": "iresen-photo-149",
+  "sourceFilename": "IRESEN_Formation_Green-Hydrogen-2026-visite-et-demonstration-en-laboratoire_149.jpg",
+  "sourceSha256": "821f8ff396d24379d71495dc27fcfbe8b46e80f3bf3287e00d337affa4b78433",
+  "originalWidth": 2548,
+  "originalHeight": 1390,
+  "collectionUpscaled": true,
+  "src": "/images/heroes/network-laboratory-training.webp",
+  "width": 1600,
+  "height": 873,
+  "sha256": "c037539e90a78ee5f469877e120ae7c7cfa23b3d32a1c4684fa443d8850bd368",
+  "bytes": 70292,
+  "transformation": "Proportional 1600px WebP derivative, below original resolution; quality 82, metadata stripped, no generative edit. Native wide composition retained so the instructor and participants remain visible.",
+  "context": "Visual description only; event title and year from source metadata are not asserted on the page."
+}

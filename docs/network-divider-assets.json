@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "sourceId": "iresen-photo-174",
+  "sourceFilename": "IRESEN_Laboratoires_Portrait-d-une-chercheuse-devant-des-instruments_174.jpg",
+  "sourceSha256": "6e3a1b6d7b2ae49cde9a5871d1b3cc67e914e708da6bb9fb62839aa10636f002",
+  "originalDimensions": [5000, 3333],
+  "generatedFile": "exec-c81cce86-bec4-412c-a5ff-4b4ed684ce62.png",
+  "generatedSha256": "461034522308b4d8a9579291710c3e88aff72f95aa8243a4096d153846fb6178",
+  "tool": "image_gen.imagegen",
+  "edit": "AI-assisted background extraction; preserve supplied researcher foreground and immediate scientific apparatus middle ground; replace distant walls/windows/room with alpha. Generative extraction can reconstruct details; not a pixel-identical mask.",
+  "servedPath": "/images/network/researcher-equipment-cutout-174.webp",
+  "sha256": "d1a9764ac538783ab7a27e0567060b5ac56f2a0d515f39430c31fbc1b94675dc",
+  "width": 1536,
+  "height": 1024,
+  "hasAlpha": true,
+  "bytes": 1076604,
+  "encoding": "Lossless WebP from generated RGBA PNG, native 1536x1024; original source and generated PNG retained.",
+  "placement": "Withdrawn at owner request; PNG retained for future explicit placement."
+}

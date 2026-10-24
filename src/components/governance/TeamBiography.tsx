@@ -63,7 +63,6 @@ export function TeamBiography({
         ref={trigger}
         type="button"
         aria-haspopup="dialog"
-        aria-label={`${biographyLabel} — ${name}`}
         className={
           diagram
             ? diagramStyles.portraitTrigger
@@ -76,6 +75,7 @@ export function TeamBiography({
           setOpen(true)
         }}
       >
+        <span className="sr-only">{biographyLabel}</span>
         <span
           className={
             diagram

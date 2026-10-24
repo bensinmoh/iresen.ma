@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import publications from '@/data/publications.json'
 import patents from '@/data/patents.json'
+import fr from '@/messages/fr.json'
 import { retainedContentEntries } from '@/lib/cms-workspace/retained-content'
 import { validateEntry } from '@/lib/cms-preview/model'
 import { relationErrors } from '@/lib/cms-preview/connection'
@@ -19,7 +20,12 @@ describe('retained CMS corpus ingestion', () => {
     expect(count('media')).toBeGreaterThanOrEqual(189)
     expect(count('pages')).toBe(198)
     expect(count('glossary')).toBe(12)
-    expect(entries.filter((entry) => entry.shared.catalogNamespace)).toHaveLength(36)
+    expect(
+      entries
+        .filter((entry) => entry.shared.catalogNamespace)
+        .map((entry) => entry.shared.catalogNamespace)
+        .sort(),
+    ).toEqual(Object.keys(fr).sort())
     expect(new Set(entries.map((entry) => entry.id)).size).toBe(entries.length)
     expect(retainedContentEntries('2027-01-01T00:00:00Z').map((entry) => entry.id)).toEqual(
       entries.map((entry) => entry.id),

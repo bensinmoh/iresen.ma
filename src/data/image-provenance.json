@@ -49,7 +49,7 @@
   },
   {
     "path": "/images/call-partners/afd.png",
-    "sha256": "a5ce49e0425da9242b626c0a7dbf31fdfc2bb880096a01bdf45ec3585370af46",
+    "sha256": "d71b7dfbfd6f96ec5ac5d3105670a47833c5ff4884fce3c7d919d483c2a4b9bb",
     "category": "source-reference",
     "references": ["src/data/call-partner-assets.json"]
   },
@@ -67,7 +67,7 @@
   },
   {
     "path": "/images/call-partners/leap-re.png",
-    "sha256": "72882a83eee3b55d7e107ac44b122ee8d88b7e2b715279f15547dc05f405fdaf",
+    "sha256": "d35574efee23f263d02559718cc85f203dc0534c7b698861a00d222a6d71adc9",
     "category": "source-reference",
     "references": ["src/data/call-partner-assets.json"]
   },
@@ -91,13 +91,19 @@
   },
   {
     "path": "/images/call-partners/satt.png",
-    "sha256": "2ae3c5f11620a2d73be47993b128d3ea02dab7b16467b82a3a371b2917dfac28",
+    "sha256": "d8c21eca10b97c70548e52db713560dc9760bd9faa67da947b6d2b777c348502",
     "category": "source-reference",
     "references": ["src/data/call-partner-assets.json"]
   },
   {
     "path": "/images/call-partners/smart-energy-systems.png",
     "sha256": "d37e925875e350b9732a1e596738dc756a246b32e356a038f246b46ba888b8ac",
+    "category": "source-reference",
+    "references": ["src/data/call-partner-assets.json"]
+  },
+  {
+    "path": "/images/call-partners/tamwilcom.png",
+    "sha256": "9aec3787d089fbdea933a9a19b2a1b50ad6f2dbd64df5a6de59a93cb259a26d2",
     "category": "source-reference",
     "references": ["src/data/call-partner-assets.json"]
   },
@@ -166,6 +172,12 @@
     "sha256": "832232ce6f68dd25d51223640aad6a1a069e27e9056a669dc6428d3debbd2e2f",
     "category": "ai-generated",
     "references": ["docs/collaborate-assets.json"]
+  },
+  {
+    "path": "/images/collaborate/needs-workshop-002.webp",
+    "sha256": "366c02b93f2125a8202041e058589fcdb40e6be39af5b04ca9b69a11ed2cd84d",
+    "category": "source-reference",
+    "references": ["docs/collaboration-photo-assets.json"]
   },
   {
     "path": "/images/collaborate/partners.webp",
@@ -630,6 +642,12 @@
     "references": ["docs/infrastructure-photo-assets.json"]
   },
   {
+    "path": "/images/infrastructure/outdoor-pv-243.webp",
+    "sha256": "0969128d4510504935d7dca0e4a7f21de8736d15c93f2cf29046c4eaca13c53a",
+    "category": "source-reference",
+    "references": ["docs/infrastructure-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
     "path": "/images/infrastructure/outdoor-pv.webp",
     "sha256": "4a533e5af4865adef13d85c688280e72540fee86fe85b0530a8b44cd43c07971",
     "category": "source-reference",
@@ -670,6 +688,12 @@
     "sha256": "afaecc82413bbf659b1a0d01524d2c192395a7def45d042f35bba685f572cdd7",
     "category": "source-reference",
     "references": ["docs/infrastructure-photo-assets.json"]
+  },
+  {
+    "path": "/images/institute/ambition-king-mohammed-vi.webp",
+    "sha256": "d826cdc6534130c3ccba4f1123817eceeaac7e9f5e0ef6ed2180600595f48353",
+    "category": "source-reference",
+    "references": ["docs/institute-assets.json"]
   },
   {
     "path": "/images/institute/ambition-solar-person-cool.webp",
@@ -726,32 +750,224 @@
     "references": ["docs/institute-assets.json"]
   },
   {
+    "path": "/images/media-library/analyse-cartographique.webp",
+    "sha256": "7d2031e9ed8b6717f57847df505319c20db22f79bdce6c83eed83028970d5cb1",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
     "path": "/images/media-library/aquasolar-installation.webp",
     "sha256": "92fc33ab7770acc517cffe2c88acc7977ad72752d3f3e71c7a5999fc94151ac8",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
+    "path": "/images/media-library/banc-charge-mecanique-pv.webp",
+    "sha256": "61cba5a0cbb74c20804537c2e439f2b0aa60450287b5ea039ac3bdbb56d23a32",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/banc-encrassement-enexio.webp",
+    "sha256": "8d2c9d4415ffd1a58af3709c0cdbfec848e9767deb12d57090a3fdec9350ab5d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
     "path": "/images/media-library/caracterisation-materiaux.webp",
-    "sha256": "280e713ec89c4f41616284e202e4332b9c451386b9816870ff004cbc27c3f78f",
+    "sha256": "677c5ad4076de1629cd532ff8e0f3763a7482d944e8fe54f93514cb8a7789608",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/cellules-pv-echantillons.webp",
-    "sha256": "dec952afeb1f53df966036e77f102cc01da66b1e763daf6409fc96d43cd0973d",
+    "sha256": "20c7dcda718a76692c113c5819b3c1dc43518364884627c7023ec23b5e8f6f1c",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/chimie-verte.webp",
-    "sha256": "23985c6b5421ac93deaa532cad72c159c4e0af96b9959f7f5fa86415e9a4634a",
+    "sha256": "eebbe75036d307a41cc9058bff7d6382f2870b603be23acf3aa216842eeba7b1",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/concentrateur-solaire.webp",
+    "sha256": "2e57c2cd5a679651cb4e07f247c898415daae2b714e7f38644eac39239cee0d1",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/developpement-cellules-pv.webp",
+    "sha256": "8c004b1820ae0a9fa9b416b722524d154dc712d40eeb326efe9000eb40a81ade",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/analyse-cartographique.jpg",
+    "sha256": "27f79b1b813eed2429600364ddb5ca9f5d9a9dcd909c3cb10fe3fc2d2e9d2d7d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/banc-charge-mecanique-pv.jpg",
+    "sha256": "9a88b055aba212a44c136573307f724e1b1f2af0d0a3cb838761a04cbcfec956",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/banc-encrassement-enexio.jpg",
+    "sha256": "8e689ea28101b08003144edaf9a5c7c3a52c61184b0607e2e11eb021950b2a82",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/caracterisation-materiaux.jpg",
+    "sha256": "760e4aff4a0fdfe9c9daa171e5b573ce199e6edb2fc2b8a63c2304e419ffe396",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/cellules-pv-echantillons.jpg",
+    "sha256": "3132e29ff1bf8c41781720d7b6271d5180ad8535c1d4040be8a0e99069e05a0b",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/chimie-verte.jpg",
+    "sha256": "e16bf501324fc7621c8ec04dc542c0d91865589b03050ef91a4bf43ee64c2cd5",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/concentrateur-solaire.jpg",
+    "sha256": "42056f7cb34704865919ec4b421df103fad453edac15e03c2df4219d051f075e",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/developpement-cellules-pv.jpg",
+    "sha256": "de944b7932de06c54020ec3360bebe02728e55951aae11ee032cb94d8dc2b64e",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/electronique-assemblage.jpg",
+    "sha256": "448ebe5a25640fdd29a3be3c5b812d2b3698b42fbb3d05dfb398a55cf898d5d9",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/enceinte-test-climatique.jpg",
+    "sha256": "a9c6c9a705f24510fdb9001a6e48c9e3a923234d9556a53430a2210d1e44878d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/essai-pv-simulateur-solaire.jpg",
+    "sha256": "96e807724c1df684ef590e4ac3a3f46724bdcba77ecc9eb85072189b71c54012",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/gep-centrale-solaire-thermique.jpg",
+    "sha256": "29391055892364d1cf6a2200dce81022eb191d55ed0d155f07e606b91cf4beee",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/gep-facade-batiment.jpg",
+    "sha256": "6efa4e1c19f0827705c3674592dd636bb008c369ac1ba96472330c2f7e217a7e",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/gep-vue-aerienne.jpg",
+    "sha256": "e404346d75be6c58c168899c024c291f33392c29b7155e5741d385f8222d5335",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/green-smart-building-park-vue-aerienne.jpg",
+    "sha256": "f7d2dfae3483b50e9eeb6cac0a9ff2a3ed3153e9428f2b67d04386019ec9e775",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/gsbp-campus.jpg",
+    "sha256": "619bda1478759f09bfb79fc3a7930693fc790230b9ba606f30e0be6eef8db59b",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/gsbp-protection-solaire.jpg",
+    "sha256": "299d0a62615671443c22d98d617b2e79a5b5717b7d6958fc8ea87c09159ba2f3",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/hybridbath-solaire-thermique.jpg",
+    "sha256": "007f9c74c14fae6fd8cc01a0161d9f7ba81a93903d4b6cedeabe57d230bccec0",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/inspection-photographique-pv.jpg",
+    "sha256": "56400b6bfc15959f848746fd3b51ab4d5e6ee018cc104b40d1ca267d4809e7e4",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/maison-demonstratrice-pv.jpg",
+    "sha256": "1f766d65a0463d0872bfc62826bfdc4701bb084a4c595ce86d1f139e9496e8f4",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/modules-pv-bifaciaux.jpg",
+    "sha256": "ce98802350ed6760e067c47fec0d477333722a470948fe990f4a6a17c8812def",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/observation-microscope.jpg",
+    "sha256": "99c3a2438b9aaf1f9521455b31acc667e1d5c34b24e41b022ad69967a5ea928d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/pavillon-oculus.jpg",
+    "sha256": "b9af30b35a163db3803a776dbd51f60050134a17d8f34287e5379771ac4bf8a6",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/plateforme-essais-solaires-panorama.jpg",
+    "sha256": "e017b8dbad94b1a385eb6d854098058edbb99643b6352bdebf91d0ee26384e9b",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/siege-iresen-entree.jpg",
+    "sha256": "9a88752555fee9715579b3311395f8033219cab4759582a1ef171b5bb8cec958",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/downloads/smart-grids-test-lab.jpg",
+    "sha256": "3d4803fa96a3fe29ac458a47e6b5227639ef2b4f4fba607c870fef46fb4d17f4",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/electronique-assemblage.webp",
-    "sha256": "4fbd0e619668bca0d05cc13c632cce37adb38c238d65a817ca6f1016a92cf7c3",
+    "sha256": "41cbdcbaf7dc67581d88418985fae39995fcb4a92c5e93fe2948c0705763e53b",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/enceinte-test-climatique.webp",
+    "sha256": "df0a0f40de69822a54215c9df27b26d23b0ec1c81892d6009fa31a672ccdc485",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
@@ -775,19 +991,19 @@
   },
   {
     "path": "/images/media-library/essai-pv-simulateur-solaire.webp",
-    "sha256": "2c9c5fcf7793fc556aef3b7be614ba6f4f94d59c111f1b36b79c9e3b17f24292",
+    "sha256": "48bbfee1a157fd7b1660afc30b0f2e83e40ab8525f674ead488549794d396da3",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/gep-centrale-solaire-thermique.webp",
-    "sha256": "edcfe161e96b4626cfd043edadaaf8a20354a66fefa28e47c58a09aa2fd30caf",
+    "sha256": "820307709cf8d4b03f8ae6fb4b822540756b05f0bbd5b9772d3c780b0bc53e6f",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/gep-facade-batiment.webp",
-    "sha256": "df604748bd402bf6dd67eb8428bef09760cb5fd177ef3540f550dc8ced07ab74",
+    "sha256": "71d8ef969a61266a0712462197a711d10507706178115ae166d00b942bd2a910",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
@@ -799,13 +1015,43 @@
   },
   {
     "path": "/images/media-library/gep-vue-aerienne.webp",
-    "sha256": "8547d9867b988747f1a45892b960ce5a54fe7d50b89330ec49ed30f7e140d59d",
+    "sha256": "4e20fe36ff54555ecc1efc1624cfa6d12f6b5c5bbb67102d2a16061a4fe587c0",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/green-smart-building-park-vue-aerienne.webp",
-    "sha256": "a440f5e230c08509890a1b0a915acc837e65582fdafb8f051c896ef2cd8d5388",
+    "sha256": "64bcb10ec802aed2080f74484892e0da4cc94344ff993f4c7356c40e4175b8d9",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/gsbp-campus.webp",
+    "sha256": "d8c573bf97fb044ca4bf77fa217306beb34743cbab587bd25f42c13c2c42a719",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/gsbp-protection-solaire.webp",
+    "sha256": "74fbb620e3d078125f906859f79b03a049a91e2a61ea697aa170e985bf03535d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/hybridbath-solaire-thermique.webp",
+    "sha256": "cd9bd11cd405afc41b1a05312a283553b1ed7bdf5c13be561643ab2066ed9d89",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/inspection-photographique-pv.webp",
+    "sha256": "39d140ef39cc42ceb00b04077aa490564c74337ed949d33d6353572c3092dc8a",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/maison-demonstratrice-pv.webp",
+    "sha256": "24d2a111f3197c9094473e1c8c1bbd0696f92ceaf15bb7d57b6e8c1484190c57",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
@@ -816,8 +1062,26 @@
     "references": ["docs/media-library-hero.json"]
   },
   {
+    "path": "/images/media-library/modules-pv-bifaciaux.webp",
+    "sha256": "7bc791618b4f8c20d88c3290923e5b4542858946412b2c477dd159197d309525",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
     "path": "/images/media-library/moroccan-solar-race-challenge-2016.webp",
     "sha256": "d1742c131ad42314a25a5dcaa997a770ce93a6345dbdeee91e95e92867253c32",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/observation-microscope.webp",
+    "sha256": "7eb4b05c6b42efee3407f859ebc48de113285fbacc8bdb387780ffad5363cc1d",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/pavillon-oculus.webp",
+    "sha256": "5246b79ef16c39d1a678ebd366fba47df74db31aa159adb2daadf184447e1c07",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
   },
@@ -828,10 +1092,16 @@
     "references": ["docs/media-library-photos.json"]
   },
   {
+    "path": "/images/media-library/plateforme-essais-solaires-panorama.webp",
+    "sha256": "c705a3db7bff5471b8f0b3b6ecb4260378f9612cca1cffb0fcebe53d89193fac",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
     "path": "/images/media-library/portrait-dg-iresen-samir-rachidi-official.jpg",
     "sha256": "c2633ebb43bccfe77be587b65bec260d06312cc78469ad017930fbbf052d55f8",
     "category": "source-reference",
-    "references": ["docs/samir-biography.md"]
+    "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/portrait-dg-iresen-samir-rachidi-official.webp",
@@ -850,6 +1120,18 @@
     "sha256": "36baac103d00d556967948499dccf76f707fc01cb00556c08c82b08c719398a2",
     "category": "source-reference",
     "references": ["docs/samir-portrait-cutout.json"]
+  },
+  {
+    "path": "/images/media-library/siege-iresen-entree.webp",
+    "sha256": "ddf83ab77c7e74341a90fc6f25fad21df672024277ee626f2265a1ef1986ba06",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/smart-grids-test-lab.webp",
+    "sha256": "6f2d2d1b17e14afcaedbe87cf47a754ed31d2fb9b7cbad68fec31c32434ba137",
+    "category": "source-reference",
+    "references": ["docs/media-library-photos.json"]
   },
   {
     "path": "/images/media-library/solar-decathlon-africa-village-solaire.webp",
@@ -910,6 +1192,48 @@
     "sha256": "1080f2c67793eeb22715790da7858b5006fafa83da06c13d8d5ab157d6ece03e",
     "category": "source-reference",
     "references": ["docs/media-library-photos.json"]
+  },
+  {
+    "path": "/images/media-library/youtube/4a_E0JrMAp4.webp",
+    "sha256": "d8fd51c23403239508b570d269f368a52371c2f38bf48e3bf3e475c9edeb7961",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/youtube/4C70ZqwH8Zg.webp",
+    "sha256": "3272ad4e4118bad2ec708d122285c85e55e3cf4b63052ee7f7769f4caa82c1d7",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/youtube/aennQkgk6q0.webp",
+    "sha256": "c5fc7f53291dfa607e96c28eb14757aca5d3d8d62cd5f6a4e44397dc85659f5d",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/youtube/bu14dpbes2E.webp",
+    "sha256": "86f06335715c16c00087c448cff1a4a4f557f3f0d1d257d9bde8c6e29c829331",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/youtube/JvisuCs9NKk.webp",
+    "sha256": "154f84b07b0ace80c65a303b2375a8c57fb7420c905eb4670ba435126e45a134",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/youtube/tI3XeBK0-FU.webp",
+    "sha256": "5a9df250830bf79fad6423ad9547e47cc9ae573608ef8d2fd06b0008de3a5a43",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
+  },
+  {
+    "path": "/images/media-library/youtube/zgGJZ9Ox8PY.webp",
+    "sha256": "29cd81586315b6c60d564ba9fe9b937839fe597de6ade26021b2bdb4f7013bc9",
+    "category": "source-reference",
+    "references": ["src/data/youtube-videos.json", "docs/media-library.md"]
   },
   {
     "path": "/images/missions/develop-cf05d9355bc5.webp",
@@ -1018,6 +1342,13 @@
     "sha256": "187f70a5c7ed579f9782db517a2a199f8580c0754cde212568bbd15cd662db6b",
     "category": "source-reference",
     "references": ["docs/platform-assets.json"]
+  },
+  {
+    "path": "/images/platforms/greenh2a-gapp-079.webp",
+    "sha256": "df623789fc1b274f6b6022037df8b3a480476a856cf7a44a670afc7c7bdab6d8",
+    "category": "source-reference",
+    "references": ["docs/platform-assets.json"],
+    "note": "Owner-provided visualization. Does not document an operational plant; original production method is not established by the collection metadata."
   },
   {
     "path": "/images/platforms/greenh2a.webp",
@@ -1146,9 +1477,105 @@
     "references": ["docs/roadmap-assets.json"]
   },
   {
+    "path": "/images/transfer/innovation-workshop.webp",
+    "sha256": "59825ce42ff0c9b4d05a5a4774d9aa1ee4951ab9e3ed482dbee2972dcea8c9a7",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json"]
+  },
+  {
     "path": "/images/transfer/ismart-product.webp",
     "sha256": "931a1ff250c7bc6a284bae4ae964083c9b6c6ce8b2d29e778162fbd080bf75dd",
     "category": "source-reference",
     "references": ["docs/valorisation-patents.md"]
+  },
+  {
+    "path": "/images/transfer/laboratory-collaboration.webp",
+    "sha256": "80e3f9f2f138949c3e1a95fc2de9ba6175c88ebc5d9284f6cd1c1a272470c3d8",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json"]
+  },
+  {
+    "path": "/images/transfer/pilot-testing.webp",
+    "sha256": "37f4982c9516b38674d90c8cd02c57c4dc7d702b87d83d4606f583f8987f200e",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json"]
+  },
+  {
+    "path": "/images/transfer/research-team-pv-mobile.webp",
+    "sha256": "ec39fc7db0aa623f693275ffeb792116b91feb83ef093d8c15716e20c80e221e",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json"]
+  },
+  {
+    "path": "/images/transfer/research-team-pv.webp",
+    "sha256": "a0e8e0f399f3e831480cee6b518a9957d8208b755666edb08c98a8f03e3fb50e",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json"]
+  },
+  {
+    "path": "/images/programmes/research-team-computers.webp",
+    "sha256": "64b8a07105e173d7ca8c6d16eff02fe2fa1e86b84174bb8336c06f420332968e",
+    "category": "source-reference",
+    "references": ["docs/programmes-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/heroes/network-laboratory-training.webp",
+    "sha256": "c037539e90a78ee5f469877e120ae7c7cfa23b3d32a1c4684fa443d8850bd368",
+    "category": "source-reference",
+    "references": ["docs/network-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/heroes/transfer-researcher-sample.webp",
+    "sha256": "5e5dab49a2e4fc30a29d01f4fda595ef688b80fe7a67117d6a60bfa64befab3e",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/heroes/transfer-technology-real.webp",
+    "sha256": "45382c80b2f9354a68db87fc9d69489183f4c38d5ac4b689600723c2dc75d674",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/programmes/gep-outdoor-pv-testing.webp",
+    "sha256": "e0f662ef549fcb6572155f7385fbbca9e28b98a8f1c4a7a9115a58b839ae522a",
+    "category": "source-reference",
+    "references": ["docs/programmes-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/heroes/transfer-technology-discussion-070.webp",
+    "sha256": "aa7050b45bae42a2d1dabc974e4990e3fcb174c61f180500c3e81bf6c880e8ab",
+    "category": "source-reference",
+    "references": ["docs/transfer-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/heroes/network-pilot-128.webp",
+    "sha256": "a9728d414b6f241e8e635f21e5a9ba190ef5c25e38c65f74442417e45c76f4bc",
+    "category": "source-reference",
+    "references": ["docs/network-hero-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/heroes/network-pilot-128-mobile.webp",
+    "sha256": "d9a555525e495bc9c23b3bfde0fd7117add0fb30ef36f7d52ca3e4cf307171f4",
+    "category": "source-reference",
+    "references": ["docs/network-hero-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/careers/office-portrait-170.webp",
+    "sha256": "085fda56768492c4fbbc1f4af58349618b85a8d31aec8a74f4ab14dccacc831c",
+    "category": "source-reference",
+    "references": ["docs/careers-environment-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/careers/headquarters-reception-173.webp",
+    "sha256": "596c0c448eb56e82ad9e22fcd5c507f71c7ff6bebea3763c1059cbe5b6630ba0",
+    "category": "source-reference",
+    "references": ["docs/careers-hero-photo-assets.json", "docs/photo-asset-library.json"]
+  },
+  {
+    "path": "/images/network/researcher-equipment-cutout-174.webp",
+    "sha256": "d1a9764ac538783ab7a27e0567060b5ac56f2a0d515f39430c31fbc1b94675dc",
+    "category": "ai-assisted",
+    "references": ["docs/network-divider-assets.json", "docs/photo-asset-library.json"]
   }
 ]

@@ -19,10 +19,13 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(region.locator('h1')).toHaveText(copy.title)
     for (const { id } of pageSections.programmes)
       await expect(region.locator(`#${id}`)).toHaveCount(1)
-    await expect(region.locator('.hero-photo')).toHaveAttribute('data-photo', 'research')
+    await expect(region.locator('.hero-photo')).toHaveAttribute(
+      'data-photo',
+      'programmes-pv-testing',
+    )
     await expect(region.locator('#programmes-collaborations img')).toHaveAttribute(
       'src',
-      /collaborative-prototyping/,
+      /gep-outdoor-pv-testing/,
     )
     await expect(region.locator('#research-results img')).toHaveAttribute('src', /aquasolar/)
     await expect(region.locator('#project-lifecycle li')).toHaveCount(6)

@@ -100,3 +100,11 @@ Playwright Core does not accept `timeout` in `page.pdf` options. Replaced it wit
 a cleared 15-second promise deadline; the existing browser finally block closes
 the rendering process on timeout. Focused TypeScript checking with Node types,
 ESLint and the local HTTP PDF check pass. Full coordinated checks remain pending.
+
+Monetary format — 23 October 2026: project funding uses `formatMoney` with whole
+units rounded down, Latin digits, U+00A0 thousands/currency separators and the ISO
+currency code. Financial prose uses isolated LTR amounts, including Arabic notes.
+Source numeric precision is preserved. The existing HTML fingerprint naturally
+invalidates the process-local PDF cache after this template change. Local French
+EV Plan output returns HTTP 200 and shows `1 278 600 MAD`; text and rendered page
+were inspected. Original supplied PDFs are unaffected. Formal checks remain held.

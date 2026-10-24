@@ -1,12 +1,13 @@
 'use client'
 
+import { saveConsent, useConsent } from '@/components/privacy/consent-store'
 import { Heading } from '@/components/ui/Heading'
 
 import { PlayCircle } from '@phosphor-icons/react/dist/ssr/PlayCircle'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 
 import Image from 'next/image'
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState, type CSSProperties } from 'react'
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
 import { ViewerIcon } from './ViewerIcon'
@@ -14,12 +15,13 @@ import styles from './MediaLibrary.module.css'
 import navigation from './VideoRail.module.css'
 
 type Video = {
-  id: number
+  id: string
   title: string
   caption?: string | null
   url: string
-  mimeType: string
   poster?: string
+  thumbnailZoom?: number
+  thumbnailPosition?: string
   durationSeconds?: number
 }
 export function VideoRail({
@@ -27,7 +29,6 @@ export function VideoRail({
   locale,
   label,
   close,
-  download,
 }: {
   videos: Video[]
   locale: Locale
@@ -35,11 +36,11 @@ export function VideoRail({
   previous: string
   next: string
   close: string
-  download: string
 }) {
   const rail = useRef<HTMLDivElement>(null)
   const dialog = useRef<HTMLDialogElement>(null)
-  const player = useRef<HTMLVideoElement>(null)
+  const { consent } = useConsent()
+  const youtube = useTranslations('YouTubePlayer')
   const [active, setActive] = useState<Video | null>(null)
   const t = useTranslations('VideoRailNavigation')
   const railId = useId()
@@ -139,7 +140,6 @@ export function VideoRail({
               type="button"
               className={styles.videoCard}
               aria-haspopup="dialog"
-              aria-label={video.title}
               onClick={() => {
                 setActive(video)
                 dialog.current?.showModal()
@@ -161,6 +161,12 @@ export function VideoRail({
                   fill
                   sizes="(max-width: 40rem) 78vw, 18rem"
                   className={styles.videoThumbnail}
+                  style={
+                    {
+                      objectPosition: video.thumbnailPosition,
+                      '--thumbnail-zoom': video.thumbnailZoom ?? 1,
+                    } as CSSProperties
+                  }
                 />
               )}
               <span className={styles.videoPlay} aria-hidden="true">
@@ -217,7 +223,6 @@ export function VideoRail({
         className={styles.dialog}
         aria-labelledby="video-dialog-title"
         onClose={() => {
-          player.current?.pause()
           setActive(null)
         }}
       >
@@ -227,9 +232,8 @@ export function VideoRail({
           </Heading>
           <div className={styles.videoActions}>
             {active && (
-              <a href={active.url} download dir="auto">
-                {download}
-                <ViewerIcon name="download" />
+              <a href={active.url} target="_blank" rel="noopener noreferrer" dir="auto">
+                {youtube('watch')}
               </a>
             )}
             <button
@@ -243,21 +247,29 @@ export function VideoRail({
             </button>
           </div>
         </div>
-        {active && (
-          <video
-            ref={player}
-            key={active.id}
-            className={styles.popupVideo}
-            controls
-            preload="none"
-            poster={active.poster}
-            aria-label={active.title}
-            playsInline
-          >
-            <source src={active.url} type={active.mimeType} />
-            <a href={active.url}>{active.title}</a>
-          </video>
-        )}
+        {active &&
+          (consent?.external ? (
+            <iframe
+              key={active.id}
+              className={styles.popupVideo}
+              src={`https://www.youtube-nocookie.com/embed/${active.id}?playsinline=1&hl=${locale}&rel=0`}
+              title={active.title}
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+            />
+          ) : (
+            <div className={styles.videoConsent}>
+              <p>{youtube('blocked')}</p>
+              <button
+                type="button"
+                className="button button-outline"
+                onClick={() => saveConsent(true)}
+              >
+                {youtube('allow')}
+              </button>
+            </div>
+          ))}
       </dialog>
     </>
   )

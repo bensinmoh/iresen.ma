@@ -419,9 +419,9 @@
         "ar": "يعتمد التسلسل مارس 2015. يذكر مقال 13 مارس إطلاقاً في فبراير وأجلاً معلناً في 10 أبريل 2015."
       },
       "funding": {
-        "fr": "Enveloppe annoncée de 30 millions de dirhams, cofinancée par IRESEN et KIC InnoEnergy.",
-        "en": "Announced envelope of MAD 30 million, co-funded by IRESEN and KIC InnoEnergy.",
-        "ar": "غلاف معلن بقيمة 30 مليون درهم، بتمويل مشترك من IRESEN وKIC InnoEnergy."
+        "fr": "Enveloppe annoncée de 30 000 000 MAD, cofinancée par IRESEN et KIC InnoEnergy.",
+        "en": "Announced envelope of 30 000 000 MAD, co-funded by IRESEN and KIC InnoEnergy.",
+        "ar": "غلاف معلن بقيمة 30 000 000 MAD، بتمويل مشترك من IRESEN وKIC InnoEnergy."
       }
     },
     {
@@ -533,9 +533,9 @@
         "ar": "اعتمد نونبر 2020 للإطلاق؛ يحدد الإعلان الجامعي الأجل في 31 يناير 2021. وتصف الوكالة الدولية للطاقة الصيغة المعدلة سنة 2021."
       },
       "funding": {
-        "fr": "L’IEA décrit un financement pouvant atteindre 1,5 million de dirhams par projet pour la formule 2.0. Les modalités exactes de l’édition doivent être confirmées.",
-        "en": "IEA describes funding of up to MAD 1.5 million per project under the 2.0 format. Exact edition terms remain to be confirmed.",
-        "ar": "تصف الوكالة الدولية للطاقة تمويلاً يصل إلى 1.5 مليون درهم لكل مشروع في صيغة 2.0. الشروط الدقيقة للدورة في انتظار التأكيد."
+        "fr": "L’IEA décrit un financement pouvant atteindre 1 500 000 MAD par projet pour la formule 2.0. Les modalités exactes de l’édition doivent être confirmées.",
+        "en": "IEA describes funding of up to 1 500 000 MAD per project under the 2.0 format. Exact edition terms remain to be confirmed.",
+        "ar": "تصف الوكالة الدولية للطاقة تمويلاً يصل إلى 1 500 000 MAD لكل مشروع في صيغة 2.0. الشروط الدقيقة للدورة في انتظار التأكيد."
       }
     },
     {
@@ -588,9 +588,9 @@
         }
       ],
       "funding": {
-        "fr": "Le texte 2021 indique un maximum de 150 000 euros demandés par projet pour le volet IRESEN, avec un niveau de maturité TRL 6 à 9.",
-        "en": "The 2021 call text lists a maximum request of EUR 150,000 per project under IRESEN rules, at TRL 6–9.",
-        "ar": "يحدد نص 2021 سقفاً للتمويل المطلوب قدره 150 ألف يورو لكل مشروع ضمن قواعد IRESEN، بمستوى نضج تكنولوجي من 6 إلى 9."
+        "fr": "Le texte 2021 indique un maximum de 150 000 EUR demandés par projet pour le volet IRESEN, avec un niveau de maturité TRL 6 à 9.",
+        "en": "The 2021 call text lists a maximum request of 150 000 EUR per project under IRESEN rules, at TRL 6–9.",
+        "ar": "يحدد نص 2021 سقفاً للتمويل المطلوب قدره 150 000 EUR لكل مشروع ضمن قواعد IRESEN، بمستوى نضج تكنولوجي من 6 إلى 9."
       }
     },
     {

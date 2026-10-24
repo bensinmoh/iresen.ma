@@ -150,3 +150,27 @@ Verification: main GEP-MCI image loads in the FR desktop feature and was visuall
 inspected. FR/EN/AR homepage and Platforms HTML use the new URL; local media
 search resolves to it. Localized alternative text describes the supplied image.
 Scoped lint/format/whitespace pass; full checks remain held by coordination.
+
+## GreenH2A GAPP visual replacement — 2026-10-23
+
+The owner replaces the previous indoor GreenH2A illustration with
+`IRESEN_GreenH2A_GAPP-visualisation-de-l-usine-pilote-achevee_079.jpg` from the
+IRESEN_Photos_4K_JPG collection. Its complete 3840×1960 source is proportionally
+converted to 1920×980 WebP, without a new crop or generative edit. The shared
+`platformPhotoPath` helper supplies `/images/platforms/greenh2a-gapp-079.webp` to
+both the homepage and platform page; logos and geometry remain unchanged.
+
+This is a visualization of the completed pilot plant, not documentation of a
+currently operational installation. The existing visualization label and
+in-development wording remain. FR/EN/AR alternative descriptions and searchable
+metadata now identify GAPP, green ammonia and the pilot plant. The existing
+`platform-photo-greenh2a` identity points to the new URL in all three local search
+indexes. The previous URL is no longer its destination. Source and output hashes,
+source-method uncertainty and the superseded asset are recorded in
+[platform-assets.json](platform-assets.json) and the raster provenance inventory.
+The original project image remains unchanged outside the repository.
+
+The local CMS metadata namespaces were reconciled only at these image-description
+leaves, retaining other content and statuses. Development rendering confirms the
+new visual and its label on the French and Arabic platform page. Production
+verification remains pending the shared-checkout hold; no deployment is performed.

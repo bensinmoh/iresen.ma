@@ -84,3 +84,71 @@ Its conditional paragraph/divider and derived search text disappear together.
 Owner follow-up — 2026-10-16: remove the `choose-pathway` closing note
 beginning “Ces entrées se complètent” and its divider in FR/EN/AR, including
 the derived search text. Other section content and destinations are preserved.
+
+## Real transfer-page photography — 2026-10-23
+
+The owner replaces all five AI-photo placements on Valorisation & Transfert
+with relevant photographs from the collection ingested today. The transfer hero
+uses the research team around a PV module (009), the introduction uses laboratory
+collaboration (043), the pathway backdrop shows the iSmart assembly workshop
+(213), and the two contact pathways use a collaborative innovation workshop
+(148) and a researcher adjusting a pilot installation (128). This is visual
+context, not a claim of specific licensing, adoption or commercial results.
+
+[Source hashes and derivative dimensions](transfer-photo-assets.json) identify
+the selected collection originals. The iSmart workshop reuses its existing public
+source image, whose hash matches the original fingerprint of collection item 213;
+no duplicate asset or search identity is added. Other images have proportionate
+WebP derivatives and localized descriptive alt/media text. The hero has a
+right-anchored 720 × 1080 mobile crop (about 26KB), sharing its desktop media
+identity. All original collection files remain unchanged.
+
+A dedicated transfer hero key prevents changing the shared research hero on other
+pages. Existing iSmart product photography, page layout/content and functionality
+remain. Other pages’ generated assets remain registered as AI; they are not
+reclassified by this request. Native CSS retains the dark pathway overlay and
+sets subject-aware contact-photo positions. New public photos are source-reference
+assets in provenance and have localized media search references.
+
+Verification: targeted ESLint, Prettier and whitespace checks pass. All six
+served/derivative hashes match source-reference provenance; static catalog
+checks find one media identity per photograph in each locale, with no duplicate
+mobile hero result. Live FR/EN/AR search finds the real laboratory photograph
+and excludes the former AI mission images. Development review covers French
+hero/intro/pathways/contact at desktop and 390px, English desktop introduction,
+and Arabic 390px introduction/contact, with loaded images and no page overflow.
+The narrow pilot crop retains the researcher’s face. The mobile hero uses its
+26KB crop. Production build/full tests/CI remain pending under the shared hold.
+
+The five new static file paths are explicitly allowed through one grouped Next
+image pattern, keeping within its 25-pattern limit. The installed matcher was
+checked against each allowed path and rejected unrelated paths, CMS/private
+paths and nonempty query strings. The local development server is running again
+on port 3000 after applying this configuration.
+
+## Collaboration hero and needs photo — 2026-10-23
+
+The owner requests the existing handshake hero figures in the open right side
+of the French desktop hero, clear of its copy. At 70rem and above, the existing
+image is shifted right by 28%, with a navy blend at its leading edge and a
+half-width copy measure. The original image bytes and mobile crop remain.
+Arabic reverses the placement without mirroring people or the source image.
+The adjustment is scoped to the handshake hero and does not change other heroes.
+
+“Votre besoin / Partir de votre besoin, construire une contribution utile” now
+uses real workshop photo 002 from today's collection: participants working over
+documents and a laptop. The original source is unchanged, with a proportional
+1600px WebP derivative. See [source evidence](collaboration-photo-assets.json).
+Descriptive FR/EN/AR alt text, source-reference provenance and a single localized
+media search identity replace the former decorative AI team image on this section.
+The page's other audience photos remain outside this request.
+
+Verification: targeted ESLint, Prettier and whitespace pass. The derivative hash
+matches source-reference provenance; static catalog and local API checks confirm
+a single descriptive workshop media result in FR/EN/AR. Development review covers
+French hero at 1440px and 1120px, English/Arabic hero at 1440px and Arabic needs
+section at 390px. Desktop figures stay clear of the constrained text; RTL reverses
+placement without image mirroring. Mobile retains the existing hero framing and
+the workshop displays below its copy, loaded with no page overflow. Responsive
+image sizing accounts for the tall desktop crop. Production/full tests/CI remain
+pending under the shared checkout hold.

@@ -286,3 +286,73 @@ this workstream stops after scoped development verification and readiness report
 Owner follow-up: delete the old generated PDFs and associated ZIP, including
 backup/obsolete-build copies. The new on-demand generator and three verification
 samples remain. See the deletion ledger in [the PDF handoff](project-pdf-on-demand.md).
+
+## Visitor-facing descriptions — owner correction, 23 October 2026
+
+The owner withdraws internal missing-description/tracker notices from public copy.
+Eight workbook additions now have concise FR/EN/AR narratives and previews:
+SOLTANAIR, EV Plan, Lenium SolarWater, E-PAVE, STDSCWG, DAKH2A, GreenH2Hub and
+GREAT-H2. Descriptions explain the supported project subject and collaboration;
+compact objectives are supplied only where the research aims are evidenced.
+The fallback generator now produces metadata-based copy without an internal
+missing-source sentence, preventing the same notice on future imports.
+
+Primary-source research and per-project boundaries are recorded in
+[the source ledger](project-public-copy-sources.json). DAKH2A now explains direct
+air capture of CO₂ and a planned Moroccan demonstrator. SOLTANAIR stays grounded
+in the approved energy-storage theme and consortium; GreenH2Hub uses the confirmed
+hydrogen programme and collaboration. E-PAVE stays at the evidenced road/energy
+transition level. Detailed technology or results are not inferred from project
+acronyms, generic technology pages or unverified secondary claims. Website copy
+is paraphrased; original documents and private source materials are unchanged.
+
+`scripts/update-project-public-copy.ts --apply` updates only the eight projects'
+description, summary and objective fields through Payload, with a private backup,
+normal version history, an initial guard against replacing separately edited
+narratives, a transaction and assertions preserving all publication/translation
+gates. It is repeatable without further writes. Future workbook imports reuse the
+same entries in `project-workbook-editorial.json`. No project, result, publication
+approval, partnership record, original PDF or media asset is created by this edit.
+Current on-demand PDF generation reads the updated project narrative normally.
+
+The related public report introduction now describes the available energy/climate
+reports and strategies instead of referring to an internal supplied folder. Source
+catalogues, named page sections and public variants are reconciled with backup,
+revisions and audit through `scripts/sync-public-resource-copy.ts --apply`.
+
+Verification ledger: 24 localized project records matched the new editorial copy;
+no active project description retained the internal tracker notice. Existing
+publication/translation gates were asserted unchanged by the updater. FR/EN/AR
+DAKH2A development detail views were checked at 390/1440px, including containment.
+Scoped ESLint, formatting and whitespace checks pass. Local search rebuilt; full
+production/browser suites and final-head CI remain under the shared checkout hold.
+
+## Monetary display — owner correction, 23 October 2026
+
+Public project funding and on-demand PDF metadata use the shared `formatMoney`:
+Latin digits, U+00A0 thousands separators and U+00A0 before `MAD`, with `Math.floor`
+and no decimals. For example, 1,278,600.50 is displayed as `1 278 600 MAD` in all
+locales. Database numbers retain their original precision; no source funding
+value is rounded or overwritten. Catalogue filtering also includes the displayed
+form alongside the precise numeric value.
+
+The existing SOLR’SHEMSY target price is displayed as `4 000 MAD` in FR/EN/AR.
+`scripts/update-project-money-copy.ts --apply` changes only its objective typography,
+with private backup, versions, transactional writes and publication-gate assertions.
+Workbook reimport reuses the canonical objective to prevent restoring old `DH`
+formatting from earlier local translation derivatives. Other narrative content,
+scientific targets and source originals remain unchanged.
+
+The rule covers current call budgets and archival funding prose too; original
+EUR/USD currencies are retained. `MoneyText` and the PDF equivalent isolate complete
+amounts inside Arabic sentences. Archive phrases in millions are expanded into
+the same full-number format without altering their values or qualifications.
+
+Verification ledger: targeted ESLint/format/whitespace; development FR/EN/AR
+EV Plan amount equals `1 278 600 MAD` with all three separators U+00A0; FR/AR archival
+and objective inline amounts verified, with 390px/200% root-text containment.
+A real local EV Plan French PDF returned HTTP 200, its extracted amount was checked
+and its first page visually inspected. No current CMS call had a free-text budget
+note to reconcile. Unit cases for grouping, flooring, zero/negative/non-finite
+values and inline isolation, plus an all-locale call regression using a fractional
+budget, await the shared hold's formal test/production/CI phase.

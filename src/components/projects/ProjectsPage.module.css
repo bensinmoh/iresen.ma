@@ -937,3 +937,26 @@
 .reviewNotice p {
   margin-block: 0;
 }
+
+/* The opening viewport includes the complete search band below the hero.
+   Intrinsic content can grow beyond it for short screens and enlarged text. */
+.viewport {
+  min-block-size: var(--hero-viewport-height, 100svh);
+  display: flex;
+  flex-direction: column;
+}
+.viewport .hero {
+  flex: 1 0 auto;
+  min-block-size: 0;
+  align-items: center;
+}
+.viewport .heroContent {
+  padding-block: calc(var(--hero-header-height, 10.25rem) + var(--space-6)) var(--space-6);
+}
+
+.viewport .hero h1 {
+  font-size: min(var(--hero-title-size), clamp(2rem, 6svh, 4.5rem));
+}
+.viewport .filters {
+  padding-block: clamp(1rem, 2.5svh, 2.5rem);
+}

@@ -9,7 +9,8 @@
       "ar": "سمير رشيدي — المدير العام لـ IRESEN"
     },
     "width": 1024,
-    "height": 1536
+    "height": 1536,
+    "downloadSrc": "/images/media-library/portrait-dg-iresen-samir-rachidi-official.jpg"
   },
   {
     "id": "gep-vue-aerienne",
@@ -20,32 +21,9 @@
       "en": "Green Energy Park — aerial view",
       "ar": "Green Energy Park — منظر جوي"
     },
-    "width": 1920,
-    "height": 1440
-  },
-  {
-    "id": "gep-facade-batiment",
-    "src": "/images/media-library/gep-facade-batiment.webp",
-    "category": "platforms",
-    "title": {
-      "fr": "Green Energy Park — façade",
-      "en": "Green Energy Park — façade",
-      "ar": "Green Energy Park — واجهة المبنى"
-    },
-    "width": 1920,
-    "height": 1080
-  },
-  {
-    "id": "gep-centrale-solaire-thermique",
-    "src": "/images/media-library/gep-centrale-solaire-thermique.webp",
-    "category": "platforms",
-    "title": {
-      "fr": "Green Energy Park — centrale solaire thermique",
-      "en": "Green Energy Park — solar thermal plant",
-      "ar": "Green Energy Park — محطة شمسية حرارية"
-    },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1920,
+    "downloadSrc": "/images/media-library/downloads/gep-vue-aerienne.jpg"
   },
   {
     "id": "green-smart-building-park-vue-aerienne",
@@ -56,187 +34,294 @@
       "en": "Green & Smart Building Park — aerial view",
       "ar": "Green & Smart Building Park — منظر جوي"
     },
-    "width": 1920,
-    "height": 1440
+    "width": 2560,
+    "height": 1920,
+    "downloadSrc": "/images/media-library/downloads/green-smart-building-park-vue-aerienne.jpg"
   },
   {
-    "id": "gep-laboratoire-indoor-vue-ensemble",
-    "src": "/images/media-library/gep-laboratoire-indoor-vue-ensemble.webp",
+    "id": "gep-facade-batiment",
+    "src": "/images/media-library/gep-facade-batiment.webp",
     "category": "platforms",
     "title": {
-      "fr": "Green Energy Park — laboratoire indoor",
-      "en": "Green Energy Park — indoor laboratory",
-      "ar": "Green Energy Park — المختبر الداخلي"
+      "fr": "Green Energy Park — façade principale",
+      "en": "Green Energy Park — main façade",
+      "ar": "Green Energy Park — الواجهة الرئيسية"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1440,
+    "downloadSrc": "/images/media-library/downloads/gep-facade-batiment.jpg"
   },
   {
-    "id": "caracterisation-materiaux",
-    "src": "/images/media-library/caracterisation-materiaux.webp",
-    "category": "research",
+    "id": "gep-centrale-solaire-thermique",
+    "src": "/images/media-library/gep-centrale-solaire-thermique.webp",
+    "category": "platforms",
     "title": {
-      "fr": "Caractérisation des matériaux",
-      "en": "Materials characterization",
-      "ar": "توصيف المواد"
+      "fr": "Green Energy Park — champ solaire thermique",
+      "en": "Green Energy Park — solar thermal field",
+      "ar": "Green Energy Park — حقل الطاقة الشمسية الحرارية"
     },
-    "width": 1920,
-    "height": 1280
-  },
-  {
-    "id": "chimie-verte",
-    "src": "/images/media-library/chimie-verte.webp",
-    "category": "research",
-    "title": {
-      "fr": "Chimie verte en laboratoire",
-      "en": "Green chemistry in the laboratory",
-      "ar": "الكيمياء الخضراء في المختبر"
-    },
-    "width": 1920,
-    "height": 1280
-  },
-  {
-    "id": "electronique-assemblage",
-    "src": "/images/media-library/electronique-assemblage.webp",
-    "category": "research",
-    "title": {
-      "fr": "Assemblage électronique",
-      "en": "Electronics assembly",
-      "ar": "تجميع الدوائر الإلكترونية"
-    },
-    "width": 1920,
-    "height": 1280
-  },
-  {
-    "id": "cellules-pv-echantillons",
-    "src": "/images/media-library/cellules-pv-echantillons.webp",
-    "category": "research",
-    "title": {
-      "fr": "Échantillons de cellules photovoltaïques",
-      "en": "Photovoltaic cell samples",
-      "ar": "عينات الخلايا الكهروضوئية"
-    },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/gep-centrale-solaire-thermique.jpg"
   },
   {
     "id": "essai-pv-simulateur-solaire",
     "src": "/images/media-library/essai-pv-simulateur-solaire.webp",
     "category": "research",
     "title": {
-      "fr": "Essai photovoltaïque au simulateur solaire",
-      "en": "Photovoltaic testing with a solar simulator",
-      "ar": "اختبار كهروضوئي بمحاكي شمسي"
+      "fr": "Modules photovoltaïques — essai sur banc lumineux",
+      "en": "Photovoltaic modules — light-table testing",
+      "ar": "الوحدات الكهروضوئية — اختبار على منصة مضيئة"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1706,
+    "downloadSrc": "/images/media-library/downloads/essai-pv-simulateur-solaire.jpg"
   },
   {
-    "id": "essai-pv-exterieur-operateur",
-    "src": "/images/media-library/essai-pv-exterieur-operateur.webp",
+    "id": "caracterisation-materiaux",
+    "src": "/images/media-library/caracterisation-materiaux.webp",
     "category": "research",
     "title": {
-      "fr": "Essai photovoltaïque extérieur avec opérateur",
-      "en": "Outdoor photovoltaic testing",
-      "ar": "اختبار كهروضوئي خارجي"
+      "fr": "Caractérisation des matériaux en laboratoire",
+      "en": "Materials characterization in the laboratory",
+      "ar": "توصيف المواد في المختبر"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1706,
+    "downloadSrc": "/images/media-library/downloads/caracterisation-materiaux.jpg"
   },
   {
-    "id": "essai-charge-pv-operateur",
-    "src": "/images/media-library/essai-charge-pv-operateur.webp",
+    "id": "chimie-verte",
+    "src": "/images/media-library/chimie-verte.webp",
     "category": "research",
     "title": {
-      "fr": "Essai de charge photovoltaïque avec opérateur",
-      "en": "Photovoltaic mechanical load testing",
-      "ar": "اختبار الحمل الميكانيكي للوحدات الكهروضوئية"
+      "fr": "Chimie verte — manipulation d’un échantillon",
+      "en": "Green chemistry — handling a sample",
+      "ar": "الكيمياء الخضراء — مناولة عينة"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1706,
+    "downloadSrc": "/images/media-library/downloads/chimie-verte.jpg"
   },
   {
-    "id": "pilote-experimentation",
-    "src": "/images/media-library/pilote-experimentation.webp",
+    "id": "cellules-pv-echantillons",
+    "src": "/images/media-library/cellules-pv-echantillons.webp",
     "category": "research",
     "title": {
-      "fr": "Intervention sur un équipement pilote",
-      "en": "Work on pilot equipment",
-      "ar": "العمل على معدات تجريبية"
+      "fr": "Cellules photovoltaïques — manipulation d’échantillons",
+      "en": "Photovoltaic cells — handling samples",
+      "ar": "الخلايا الكهروضوئية — مناولة العينات"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/cellules-pv-echantillons.jpg"
   },
   {
-    "id": "propre-ma-pv-toitures",
-    "src": "/images/media-library/propre-ma-pv-toitures.webp",
+    "id": "banc-charge-mecanique-pv",
+    "src": "/images/media-library/banc-charge-mecanique-pv.webp",
+    "category": "research",
+    "title": {
+      "fr": "Modules photovoltaïques — banc de charge mécanique",
+      "en": "Photovoltaic modules — mechanical load test rig",
+      "ar": "الوحدات الكهروضوئية — منصة اختبار التحمل الميكانيكي"
+    },
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/banc-charge-mecanique-pv.jpg"
+  },
+  {
+    "id": "observation-microscope",
+    "src": "/images/media-library/observation-microscope.webp",
+    "category": "research",
+    "title": {
+      "fr": "Observation au microscope en laboratoire",
+      "en": "Microscope observation in the laboratory",
+      "ar": "الفحص بالمجهر في المختبر"
+    },
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/observation-microscope.jpg"
+  },
+  {
+    "id": "enceinte-test-climatique",
+    "src": "/images/media-library/enceinte-test-climatique.webp",
+    "category": "research",
+    "title": {
+      "fr": "Essais en enceinte climatique",
+      "en": "Testing in a climatic chamber",
+      "ar": "اختبارات داخل حجرة مناخية"
+    },
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/enceinte-test-climatique.jpg"
+  },
+  {
+    "id": "electronique-assemblage",
+    "src": "/images/media-library/electronique-assemblage.webp",
+    "category": "research",
+    "title": {
+      "fr": "Électronique — manipulation d’une carte",
+      "en": "Electronics — working on a circuit board",
+      "ar": "الإلكترونيات — العمل على لوحة إلكترونية"
+    },
+    "width": 2560,
+    "height": 1706,
+    "downloadSrc": "/images/media-library/downloads/electronique-assemblage.jpg"
+  },
+  {
+    "id": "developpement-cellules-pv",
+    "src": "/images/media-library/developpement-cellules-pv.webp",
+    "category": "research",
+    "title": {
+      "fr": "Développement de cellules photovoltaïques",
+      "en": "Photovoltaic cell development",
+      "ar": "تطوير الخلايا الكهروضوئية"
+    },
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/developpement-cellules-pv.jpg"
+  },
+  {
+    "id": "analyse-cartographique",
+    "src": "/images/media-library/analyse-cartographique.webp",
+    "category": "research",
+    "title": {
+      "fr": "Analyse cartographique sur grand écran",
+      "en": "Cartographic analysis on a large screen",
+      "ar": "تحليل الخرائط على شاشة كبيرة"
+    },
+    "width": 2560,
+    "height": 1706,
+    "downloadSrc": "/images/media-library/downloads/analyse-cartographique.jpg"
+  },
+  {
+    "id": "modules-pv-bifaciaux",
+    "src": "/images/media-library/modules-pv-bifaciaux.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — modules photovoltaïques bifaciaux",
+      "en": "Green Energy Park — bifacial photovoltaic modules",
+      "ar": "Green Energy Park — وحدات كهروضوئية ثنائية الوجه"
+    },
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/modules-pv-bifaciaux.jpg"
+  },
+  {
+    "id": "concentrateur-solaire",
+    "src": "/images/media-library/concentrateur-solaire.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — concentrateur solaire parabolique",
+      "en": "Green Energy Park — parabolic solar concentrator",
+      "ar": "Green Energy Park — مُركِّز شمسي مكافئ"
+    },
+    "width": 1707,
+    "height": 2560,
+    "downloadSrc": "/images/media-library/downloads/concentrateur-solaire.jpg"
+  },
+  {
+    "id": "banc-encrassement-enexio",
+    "src": "/images/media-library/banc-encrassement-enexio.webp",
+    "category": "platforms",
+    "title": {
+      "fr": "Green Energy Park — banc d’essai d’encrassement ENEXIO",
+      "en": "Green Energy Park — ENEXIO soiling test rig",
+      "ar": "Green Energy Park — منصة ENEXIO لاختبار الاتساخ"
+    },
+    "width": 2560,
+    "height": 1920,
+    "downloadSrc": "/images/media-library/downloads/banc-encrassement-enexio.jpg"
+  },
+  {
+    "id": "hybridbath-solaire-thermique",
+    "src": "/images/media-library/hybridbath-solaire-thermique.webp",
     "category": "projects",
     "title": {
-      "fr": "PROPRE.ma — photovoltaïque en toiture",
-      "en": "PROPRE.ma — rooftop photovoltaics",
-      "ar": "PROPRE.ma — ألواح كهروضوئية على الأسطح"
+      "fr": "HybridBath — capteurs solaires en toiture",
+      "en": "HybridBath — rooftop solar collectors",
+      "ar": "HybridBath — مجمّعات شمسية على السطح"
     },
-    "width": 1920,
-    "height": 1003
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/hybridbath-solaire-thermique.jpg"
   },
   {
-    "id": "aquasolar-installation",
-    "src": "/images/media-library/aquasolar-installation.webp",
+    "id": "maison-demonstratrice-pv",
+    "src": "/images/media-library/maison-demonstratrice-pv.webp",
     "category": "projects",
     "title": {
-      "fr": "AquaSolar — installation",
-      "en": "AquaSolar — installation",
-      "ar": "AquaSolar — التجهيزات"
+      "fr": "Maison démonstratrice à toiture photovoltaïque",
+      "en": "Demonstration house with a photovoltaic roof",
+      "ar": "منزل تجريبي بسقف كهروضوئي"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1920,
+    "downloadSrc": "/images/media-library/downloads/maison-demonstratrice-pv.jpg"
   },
   {
-    "id": "moroccan-solar-race-challenge-2016",
-    "src": "/images/media-library/moroccan-solar-race-challenge-2016.webp",
-    "category": "events",
+    "id": "plateforme-essais-solaires-panorama",
+    "src": "/images/media-library/plateforme-essais-solaires-panorama.webp",
+    "category": "platforms",
     "title": {
-      "fr": "Moroccan Solar Race Challenge — 2016",
-      "en": "Moroccan Solar Race Challenge — 2016",
-      "ar": "Moroccan Solar Race Challenge — 2016"
+      "fr": "Green Energy Park — panorama de la plateforme d’essais solaires",
+      "en": "Green Energy Park — solar testing platform panorama",
+      "ar": "Green Energy Park — منظر بانورامي لمنصة الاختبارات الشمسية"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1440,
+    "downloadSrc": "/images/media-library/downloads/plateforme-essais-solaires-panorama.jpg"
   },
   {
-    "id": "world-ptx-summit-pleniere",
-    "src": "/images/media-library/world-ptx-summit-pleniere.webp",
-    "category": "events",
+    "id": "smart-grids-test-lab",
+    "src": "/images/media-library/smart-grids-test-lab.webp",
+    "category": "platforms",
     "title": {
-      "fr": "World Power-to-X Summit — plénière",
-      "en": "World Power-to-X Summit — plenary",
-      "ar": "World Power-to-X Summit — جلسة عامة"
+      "fr": "Green & Smart Building Park — Smart Grids Test Lab",
+      "en": "Green & Smart Building Park — Smart Grids Test Lab",
+      "ar": "Green & Smart Building Park — مختبر اختبار الشبكات الذكية"
     },
-    "width": 1920,
-    "height": 1279
+    "width": 2560,
+    "height": 1367,
+    "downloadSrc": "/images/media-library/downloads/smart-grids-test-lab.jpg"
   },
   {
-    "id": "solar-decathlon-africa-village-solaire",
-    "src": "/images/media-library/solar-decathlon-africa-village-solaire.webp",
-    "category": "events",
+    "id": "gsbp-campus",
+    "src": "/images/media-library/gsbp-campus.webp",
+    "category": "platforms",
     "title": {
-      "fr": "Solar Decathlon Africa — village solaire",
-      "en": "Solar Decathlon Africa — solar village",
-      "ar": "Solar Decathlon Africa — القرية الشمسية"
+      "fr": "Green & Smart Building Park — campus",
+      "en": "Green & Smart Building Park — campus",
+      "ar": "Green & Smart Building Park — الحرم"
     },
-    "width": 1920,
-    "height": 1440
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/gsbp-campus.jpg"
   },
   {
-    "id": "equipe-iresen-15-ans",
-    "src": "/images/media-library/equipe-iresen-15-ans.webp",
+    "id": "inspection-photographique-pv",
+    "src": "/images/media-library/inspection-photographique-pv.webp",
+    "category": "research",
+    "title": {
+      "fr": "Inspection photographique de modules photovoltaïques",
+      "en": "Photographic inspection of photovoltaic modules",
+      "ar": "فحص الوحدات الكهروضوئية بالتصوير"
+    },
+    "width": 2560,
+    "height": 1706,
+    "downloadSrc": "/images/media-library/downloads/inspection-photographique-pv.jpg"
+  },
+  {
+    "id": "siege-iresen-entree",
+    "src": "/images/media-library/siege-iresen-entree.webp",
     "category": "institution",
     "title": {
-      "fr": "Équipe IRESEN — 15 ans",
-      "en": "IRESEN team",
-      "ar": "فريق IRESEN"
+      "fr": "IRESEN — entrée du siège",
+      "en": "IRESEN — headquarters entrance",
+      "ar": "IRESEN — مدخل المقر"
     },
-    "width": 1920,
-    "height": 1280
+    "width": 2560,
+    "height": 1707,
+    "downloadSrc": "/images/media-library/downloads/siege-iresen-entree.jpg"
   }
 ]

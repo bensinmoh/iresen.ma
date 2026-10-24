@@ -164,3 +164,86 @@ and AR390×844 native accordions/RTL were inspected; mobile has no horizontal
 overflow. Scoped lint/format/whitespace checks pass. Reduced-motion coverage is
 source inspection only; full automated/production checks remain held. Canonical
 anchors, approved text and search projections are unchanged.
+
+## Chapter-cover transitions — owner video, 2026-10-23
+
+The supplied 19.93-second recording shows successive thematic sheets rising over
+an earlier sheet that remains in place. Desktop now uses native CSS sticky
+chapters to reproduce that relationship without intercepting wheel, touch or
+keyboard scrolling, adding a motion library, or imposing extra scroll distance.
+Existing artwork entrances and complete chapter content remain.
+
+A ResizeObserver measures each chapter, including opened axis descriptions, and
+sets a negative sticky inset when it exceeds the viewport. The whole chapter can
+therefore be read before its lower edge pins. Later siblings cover it naturally;
+the last sheet releases into the collaboration section. Keyboard focus reveals
+a previously covered sheet when navigating back. Mobile/tablet, reduced-motion
+and no-JavaScript retain normal document flow. The private recording and extracted
+analysis frames are not served or registered as public media.
+
+Development verification: French 1440×900 shows the earlier chapter stationary
+at y=0 while its successor rises over it. French 1440×620 with an expanded axis
+recomputes the negative inset; reverse keyboard focus restores a covered chapter,
+and the next-chapter link reaches its native hash. The final chapter releases
+into the conclusion. Arabic 1440×900 has the same cover behavior without overflow;
+French 390×844 retains relative positioning and normal reading. Scoped ESLint
+and Prettier pass. The new Playwright regression covers these transitions and
+reduced-motion fallback, but execution of the browser suite and full build remains
+pending under the shared-checkout hold; reduced motion was source-reviewed here.
+
+## Layered insertion and boundary snap — owner follow-up, 2026-10-23
+
+Each incoming theme now reveals its whole heading, illustration and body as
+separate layers. The heading rises first; the illustration travels farther from
+below with a small scale change; supporting copy follows. Native scroll progress
+drives opacity and transforms, with all elements settled before the sheet fully
+fits. Arabic text moves as intact blocks. Focus settles the current chapter.
+
+At the owner's explicit request, an idle snap completes partial chapter covers.
+After wheel, touch, scrolling keys or scrollbar input pauses, a cover below 50%
+returns to its starting edge; beyond halfway it settles smoothly on the next
+chapter. This operates only between desktop thematic boundaries. The additional
+reading range of a tall/expanded chapter, the introduction and the conclusion
+remain free scrolling. Active touch/scrollbar holds postpone settling. No wheel
+or touch event is cancelled; links and focus navigation retain their destinations.
+Mobile/tablet, reduced-motion and no-JavaScript keep fully visible static flow.
+
+Development checks: FR1440×900 short/long forward and reverse gestures settle to
+the expected chapter, and intermediate opacity/transforms differ by element.
+FR1440×620 remains at a 62px reading offset without snapping; an open axis likewise
+retains its intermediate reading position. FR390 has no immersive attribute,
+transform or overflow. AR1440 advances to the next chapter with intact text and
+no overflow. Focused ESLint/Prettier checks pass. Playwright assertions now cover
+insertion, snap return/advance and free reading, but execution and the runtime
+reduced-motion check remain pending under the shared-checkout hold.
+
+## Previous-theme navigation — owner follow-up
+
+Each chapter after the first now includes a localized previous-theme link at
+the top, with an upward caret. The next-theme link retains its original bottom
+position; both align to the same trailing edge, including RTL. The first has only Next and the last
+only Previous. Controls wrap on mobile and retain the same spacing and target
+size. Desktop chapter links use the measured natural document offsets so that a
+previous sticky sheet is actually revealed; hashes remain shareable. Static,
+mobile, reduced-motion and no-JavaScript navigation uses normal anchors.
+
+Verified in development: FR1440 has both control ends at x1395, with Previous at
+the top and Next at the original footer. Visible pointer activation returns to
+the previous natural chapter position and advances again correctly. FR390 aligns
+both ends at x374 without overflow; AR1440 aligns both on x45 with localized
+labels. Scoped lint/format checks pass; the shared hold still defers full suites.
+
+## Slow-scroll snapping correction
+
+Native scrollend can fire between slow wheel notches. It now schedules an idle
+check instead of snapping immediately. Both input and viewport movement restart
+a 650ms quiet period, including momentum; held touch/scrollbar gestures and scroll
+keys defer snapping until release. New input cancels an in-progress smooth settle.
+The settle's own scroll events cannot start another snap. A timed slow-wheel
+regression is prepared; full execution remains subject to the shared hold.
+
+Development check after a fresh load: four small wheel steps ~315–395ms apart
+accumulated offsets of 135, 270, 405 and 540px without returning or advancing
+between inputs. After the sequence ended, the next chapter settled at y=0.
+Targeted ESLint/Prettier pass; the timed browser regression is prepared but its
+formal execution remains deferred by the shared hold.

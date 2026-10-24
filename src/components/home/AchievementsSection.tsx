@@ -26,26 +26,36 @@ export async function AchievementsSection({ locale }: { locale: Locale }) {
         <p className={styles.introduction}>{t('description')}</p>
       </header>
       <AchievementsRail label={t('label')} previous={t('previous')} next={t('next')}>
-        {homeAchievements.map(({ id, width, height }) => (
+        {homeAchievements.map(({ id, src, width, height }) => (
           <li key={id} className={styles.card}>
             <article id={`achievement-${id}`} aria-labelledby={`achievement-${id}-heading`}>
               <div
                 className={`${styles.visual} ${id === 'hydrogen-roadmap' ? styles.reports : ''}`}
               >
-                {id === 'hydrogen-roadmap' && (
+                {id === 'hydrogen-roadmap' ? (
                   <>
-                    <div className={styles.stackBottom} aria-hidden="true" />
-                    <div className={styles.stackTop} aria-hidden="true" />
+                    <div className={styles.reportBack} aria-hidden="true" />
+                    <div className={styles.reportFront}>
+                      <Image
+                        src={src}
+                        alt={t(`items.${id}.imageDescription`)}
+                        width={width}
+                        height={height}
+                        sizes="(max-width: 39.999rem) 44vw, (max-width: 69.999rem) 24vw, 12vw"
+                        className={styles.reportCover}
+                      />
+                    </div>
                   </>
+                ) : (
+                  <Image
+                    src={src}
+                    alt={t(`items.${id}.imageDescription`)}
+                    width={width}
+                    height={height}
+                    sizes="(max-width: 39.999rem) 85vw, (max-width: 69.999rem) 46vw, (min-width: 128rem) 28rem, 24vw"
+                    className={styles.photo}
+                  />
                 )}
-                <Image
-                  src={`/images/achievements/${id}.webp`}
-                  alt={t(`items.${id}.imageDescription`)}
-                  width={width}
-                  height={height}
-                  sizes="(max-width: 39.999rem) 85vw, (max-width: 69.999rem) 46vw, (min-width: 128rem) 28rem, 24vw"
-                  className={id === 'hydrogen-roadmap' ? styles.reportCover : styles.photo}
-                />
               </div>
               <p className={styles.category}>{t(`items.${id}.category`)}</p>
               <Heading as="h3" size="card" id={`achievement-${id}-heading`}>

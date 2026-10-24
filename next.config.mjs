@@ -58,12 +58,12 @@ const nextConfig = {
       { pathname: '/images/domains/**', search: '' },
       { pathname: '/images/roadmap/**', search: '' },
       { pathname: '/images/governance/**', search: '' },
-      { pathname: '/images/institute/fifteen-year-report-cover-cutout.webp', search: '' },
-      { pathname: '/images/institute/green-energy-park-research.webp', search: '' },
-      { pathname: '/images/institute/ambition-vision-portrait.webp', search: '' },
-      { pathname: '/images/institute/ambition-solar-scene-cool.webp', search: '' },
-      { pathname: '/images/institute/ambition-solar-person-cool.webp', search: '' },
-      { pathname: '/images/institute/ambition-solar-person-detail.webp', search: '' },
+      {
+        pathname:
+          '/images/institute/{fifteen-year-report-cover-cutout,green-energy-park-research,ambition-vision-portrait,ambition-king-mohammed-vi,ambition-solar-scene-cool,ambition-solar-person-cool,ambition-solar-person-detail}.webp',
+        search: '',
+      },
+      { pathname: '/images/network/researcher-equipment-cutout-174.webp', search: '' },
       { pathname: '/images/platforms/**', search: '' },
       { pathname: '/images/infrastructure/**', search: '' },
       { pathname: '/images/programmes/**', search: '' },
@@ -71,6 +71,11 @@ const nextConfig = {
       { pathname: '/images/achievements/**', search: '' },
       { pathname: '/images/collaborate/**', search: '' },
       { pathname: '/images/transfer/ismart-product.webp', search: '' },
+      {
+        pathname:
+          '/images/transfer/{research-team-pv,research-team-pv-mobile,laboratory-collaboration,innovation-workshop,pilot-testing}.webp',
+        search: '',
+      },
       { pathname: '/images/contact/contact-background-venue.jpg', search: '' },
     ],
   },

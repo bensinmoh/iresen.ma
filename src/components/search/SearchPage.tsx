@@ -9,6 +9,7 @@ import type { SearchResult, SearchType } from '@/lib/search/adapter'
 import { highlightSearchText } from '@/lib/search/text'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { SearchSubmit } from './SearchSubmit'
+import { SearchSort } from './SearchSort'
 import { SearchResultPreview } from './SearchResultPreview'
 import { searchResultPreviews } from '@/lib/search/previews'
 
@@ -168,14 +169,11 @@ export async function SearchPage({
               {type !== 'all' && <input type="hidden" name="type" value={type} />}
               <label htmlFor="search-sort">{t('sortLabel')}</label>
               <div className="search-sort-select">
-                <select data-ui-field key={sort} id="search-sort" name="sort" defaultValue={sort}>
+                <SearchSort sort={sort}>
                   <option value="relevance">{t('relevance')}</option>
                   <option value="newest">{t('newest')}</option>
-                </select>
+                </SearchSort>
               </div>
-              <button className="button button-outline" type="submit">
-                {t('apply')}
-              </button>
             </Form>
           </div>
           {suggestedQuery && suggestedQuery !== activeQuery && (

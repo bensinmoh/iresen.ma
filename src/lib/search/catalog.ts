@@ -1,6 +1,13 @@
+import { careersHeroPhoto } from '@/lib/careers-hero-photo'
+import { careersEnvironmentPhoto } from '@/lib/careers-environment-photo'
+import { networkHeroPhoto } from '@/lib/network-hero-photo'
+import { programmesPhoto } from '@/lib/programmes-photo'
+import { networkTrainingPhoto } from '@/lib/network-photo'
+import youtubeVideos from '@/data/youtube-videos.json' with { type: 'json' }
 import { editorialIndicatorDefaults } from '@/lib/editorial-indicators'
 import { institutionalAffiliations } from '../institutions'
 import { callPartners } from '@/lib/call-partners'
+import { transferPhotos, transferContactPhotoDescriptions } from '@/lib/transfer-photos'
 import { archiveCalls, archiveCard, archiveProfile } from '@/lib/call-archives'
 import { callCopy } from '@/lib/call-copy'
 import { callsListingHref } from '@/lib/calls'
@@ -27,7 +34,11 @@ import {
 } from '@/lib/news-events'
 import { createHash } from 'node:crypto'
 import { patents, patentAnchor } from '@/lib/patents'
-import { collaborationAudiences, engagementSearchText } from '@/lib/engagement'
+import {
+  collaborationAudiences,
+  collaborationNeedPhoto,
+  engagementSearchText,
+} from '@/lib/engagement'
 import { roadmapMedia, roadmapMediaPath, roadmapDrawingPath, roadmapHeroPath } from '@/lib/roadmap'
 
 import fr from '@/messages/fr.json' with { type: 'json' }
@@ -119,6 +130,80 @@ const assetLabels = {
 /** Register every meaningful approved public file here; responsive crops are one result. */
 export const publicAssetReferences: readonly PublicAssetReference[] = [
   {
+    id: 'network-pilot-128',
+    url: networkHeroPhoto.src,
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const description = networkHeroPhoto.descriptions[locale]
+        return [locale, { title: description, description }]
+      }),
+    ) as PublicAssetReference['text'],
+  },
+  {
+    id: 'programmes-gep-outdoor-pv-testing',
+    url: programmesPhoto.src,
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const description = programmesPhoto.descriptions[locale]
+        return [locale, { title: description, description }]
+      }),
+    ) as PublicAssetReference['text'],
+  },
+  {
+    id: 'network-laboratory-training',
+    url: networkTrainingPhoto.src,
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const description = networkTrainingPhoto.descriptions[locale]
+        return [locale, { title: description, description }]
+      }),
+    ) as PublicAssetReference['text'],
+  },
+  {
+    id: 'collaboration-needs-workshop',
+    url: collaborationNeedPhoto.src,
+    type: 'media',
+    text: Object.fromEntries(
+      contentLocales.map((locale) => {
+        const description = messages[locale].Engagement.workWithUs.photos.needs
+        return [locale, { title: description, description }]
+      }),
+    ) as PublicAssetReference['text'],
+  },
+  ...Object.entries(transferPhotos)
+    .filter(([key]) => key !== 'pathways')
+    .map(([key, photo]) => ({
+      id: `transfer-photo-${key}`,
+      url: photo.src,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => {
+          const description =
+            key === 'innovation' || key === 'technology'
+              ? transferContactPhotoDescriptions[key][locale]
+              : messages[locale].Transfer.photos[key as keyof typeof messages.fr.Transfer.photos]
+          return [locale, { title: description, description }]
+        }),
+      ) as PublicAssetReference['text'],
+    })),
+  ...youtubeVideos.map((video) => ({
+    id: `library-youtube-${video.id}`,
+    url: video.url,
+    type: 'media' as const,
+    text: Object.fromEntries(
+      contentLocales.map((locale) => [
+        locale,
+        {
+          title: video.title,
+          description: `${video.title}. IRESEN — YouTube. ${messages[locale].MediaLibrary.videos}.`,
+        },
+      ]),
+    ),
+  })),
+  {
     id: 'institute-green-energy-park-research',
     url: '/images/institute/green-energy-park-research.webp',
     type: 'media',
@@ -177,23 +262,23 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
   },
   {
     id: 'institute-ambition-vision-portrait',
-    url: '/images/institute/ambition-solar-scene-cool.webp',
+    url: '/images/institute/ambition-king-mohammed-vi.webp',
     type: 'media',
     text: {
       fr: {
-        title: 'Vision et ambition — portrait illustratif',
+        title: 'Vision et ambition — Sa Majesté le Roi Mohammed VI',
         description:
-          'Scène solaire africaine générée par IA intégrant une personne pensive en couleurs, illustration symbolique de l’ambition 2035 et de l’innovation solaire en Afrique. Ne représente pas une collaboratrice réelle.',
+          'Photographie détourée de Sa Majesté le Roi Mohammed VI, fournie pour la section consacrée à l’ambition 2035 de l’IRESEN.',
       },
       en: {
-        title: 'Vision and ambition — illustrative portrait',
+        title: 'Vision and ambition — His Majesty King Mohammed VI',
         description:
-          'AI-generated African solar landscape integrating a thoughtful person in full color, symbolizing the 2035 ambition and solar innovation in Africa. Does not depict a real staff member.',
+          'Owner-supplied cutout photograph of His Majesty King Mohammed VI, displayed in the IRESEN 2035 ambition section.',
       },
       ar: {
-        title: 'الرؤية والطموح — صورة توضيحية',
+        title: 'الرؤية والطموح — صاحب الجلالة الملك محمد السادس',
         description:
-          'مشهد شمسي أفريقي مولد بالذكاء الاصطناعي يتضمن شخصية متأملة بالألوان، ترمز إلى طموح 2035 والابتكار الشمسي في أفريقيا. لا تمثل موظفة حقيقية.',
+          'صورة مفرغة لصاحب الجلالة الملك محمد السادس، مقدمة لعرضها في قسم طموح معهد البحث في الطاقة الشمسية والطاقات الجديدة في أفق 2035.',
       },
     },
   },
@@ -438,7 +523,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: photo.title[locale],
-          description: `${messages[locale].MediaLibrary.categories[photo.category as keyof typeof messages.fr.MediaLibrary.categories]} — ${photo.title[locale]}. IRESEN. ${messages[locale].MediaLibrary.rights}${photo.id === samirPhotoId ? ` ${samirBiographyTexts[locale]}` : ''}`,
+          description: `${messages[locale].MediaLibrary.categories[photo.category as keyof typeof messages.fr.MediaLibrary.categories]} — ${photo.title[locale]}. IRESEN. ${messages[locale].MediaLibrary.rights}${photo.id === samirPhotoId ? ` ${samirBiographyTexts[locale]}` : ''}${photo.id === 'plateforme-essais-solaires-panorama' ? ` ${messages[locale].HomeAchievements.items['outdoor-pv'].name}. ${messages[locale].HomeAchievements.items['outdoor-pv'].searchText}` : ''}`,
         },
       ]),
     ),
@@ -504,14 +589,29 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
 
   ...(['hero', 'environment', 'internship'] as const).map((id) => ({
     id: `careers-photo-${id}`,
-    url: `/images/careers/${id}.webp`,
+    url:
+      id === 'environment'
+        ? careersEnvironmentPhoto.src
+        : id === 'hero'
+          ? careersHeroPhoto.src
+          : `/images/careers/${id}.webp`,
     type: 'media' as const,
     text: Object.fromEntries(
       contentLocales.map((locale) => [
         locale,
         {
-          title: messages[locale].Careers.photos[id],
-          description: messages[locale].Careers.photos[id],
+          title:
+            id === 'environment'
+              ? careersEnvironmentPhoto.descriptions[locale]
+              : id === 'hero'
+                ? careersHeroPhoto.descriptions[locale]
+                : messages[locale].Careers.photos[id],
+          description:
+            id === 'environment'
+              ? careersEnvironmentPhoto.descriptions[locale]
+              : id === 'hero'
+                ? careersHeroPhoto.descriptions[locale]
+                : messages[locale].Careers.photos[id],
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -544,20 +644,22 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
       ]),
     ) as PublicAssetReference['text'],
   },
-  ...homeAchievements.map(({ id }) => ({
-    id: `achievement-photo-${id}`,
-    url: `/images/achievements/${id}.webp`,
-    type: 'media' as const,
-    text: Object.fromEntries(
-      contentLocales.map((locale) => {
-        const copy = messages[locale].HomeAchievements.items[id]
-        return [
-          locale,
-          { title: copy.name, description: `${copy.imageDescription} ${copy.searchText}` },
-        ]
-      }),
-    ) as PublicAssetReference['text'],
-  })),
+  ...homeAchievements
+    .filter(({ id }) => id !== 'outdoor-pv')
+    .map(({ id, src }) => ({
+      id: `achievement-photo-${id}`,
+      url: src,
+      type: 'media' as const,
+      text: Object.fromEntries(
+        contentLocales.map((locale) => {
+          const copy = messages[locale].HomeAchievements.items[id]
+          return [
+            locale,
+            { title: copy.name, description: `${copy.imageDescription} ${copy.searchText}` },
+          ]
+        }),
+      ) as PublicAssetReference['text'],
+    })),
   {
     id: 'platform-network-consulting',
     url: '/brand/platforms/consulting.svg',
@@ -750,7 +852,15 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
   },
   ...Object.entries(heroImages)
     .filter(
-      ([id]) => !['media-library', 'headquarters', 'platform-gep', 'platform-outdoor'].includes(id),
+      ([id]) =>
+        ![
+          'media-library',
+          'headquarters',
+          'platform-gep',
+          'platform-outdoor',
+          'transfer-research',
+          'network-pilot',
+        ].includes(id),
     )
     .map(([id, image]) => {
       // Contact has a dedicated headquarters photograph; its former illustration is
@@ -779,6 +889,15 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
                 ...(id.startsWith('solar-') ? [assetLabels[locale].solar] : []),
                 ...(id === 'solar-field' ? [assetLabels[locale].infrastructure] : []),
                 ...(id === 'wind-detail' ? [assetLabels[locale].wind] : []),
+                ...(['research', 'workshop'].includes(id)
+                  ? [
+                      {
+                        fr: 'Illustration générée de chercheurs autour d’un banc expérimental en laboratoire. Ne représente pas une équipe ou un site réel de l’IRESEN.',
+                        en: 'Generated illustration of researchers around a laboratory test bench. It does not depict an actual IRESEN team or facility.',
+                        ar: 'صورة توضيحية مولدة لباحثين حول منصة تجريبية في مختبر. لا تمثل فريقاً أو موقعاً حقيقياً تابعاً للمعهد.',
+                      }[locale],
+                    ]
+                  : []),
                 ...relatedPages.map((pageId) => messages[locale].Hero.descriptions[pageId]),
               ].join(' '),
             },
@@ -1379,6 +1498,7 @@ export function staticSearchDocuments(
             if (entry.id === 'results-to-transfer') body.push(catalog.Transfer.photos.intro)
             if (entry.id === 'build-transfer')
               body.push(catalog.Transfer.photos.innovation, catalog.Transfer.photos.technology)
+            if (entry.id === 'transfer-pathways') body.push(catalog.Transfer.photos.pathways)
           }
           if (pageId === 'home' && entry.id === homeAchievementsSectionId)
             body.push(
@@ -1602,7 +1722,7 @@ export function staticSearchDocuments(
         id: `report:library:${report.id}:${locale}`,
         locale,
         title: report.title,
-        body: `${report.description[locale]} MTEDD Ministère de la Transition Énergétique et du Développement Durable PDF ${report.language === 'fr' ? 'CDN NDC Contribution déterminée au niveau national Nationally Determined Contribution' : ''}`,
+        body: `${report.description[locale]} MEMDD Ministère de l’Énergie, des Mines et du Développement durable PDF ${report.language === 'fr' ? 'CDN NDC Contribution déterminée au niveau national Nationally Determined Contribution' : ''}`,
         url: pageHref('media', locale, `report-${report.id}`),
         type: 'report' as const,
       })),

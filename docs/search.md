@@ -420,3 +420,12 @@ URLs now use `pageHref('patents', locale, patentAnchor(reference))`. The shared
 catalogue remains on Transfer for existing links; no duplicate patent result is
 registered. The new page adds no hero media. Rebuild the local index after this
 projection change; CI and production release remain separately paused.
+
+# Immediate sorting — 19 October 2026
+
+The search sort selector applies on change without an Apply button in FR/EN/AR.
+It submits the existing localized search form, retaining the query/type and
+resetting pagination. Existing result metadata and search eligibility are unchanged.
+The browser journey asserts automatic navigation and absence of a submit button.
+Scoped ESLint, formatting and whitespace checks pass; browser execution and final
+CI remain pending behind the shared-checkout coordination hold.

@@ -1,6 +1,22 @@
+import { networkHeroPhoto } from './network-hero-photo'
+import { transferPhotos } from './transfer-photos'
+
 // Native photographic assets and their full-height mobile crops.
 // Provenance, prompts, pixel sizes and hashes: docs/hero-assets.json.
 export const heroImages = {
+  'network-pilot': networkHeroPhoto,
+  // Owner-selected Laboratoires · 008; reuse the existing gallery asset/identity.
+  'programmes-pv-testing': {
+    src: '/images/media-library/banc-charge-mecanique-pv.webp',
+    width: 2560,
+    height: 1707,
+    mobile: {
+      src: '/images/media-library/banc-charge-mecanique-pv.webp',
+      width: 2560,
+      height: 1707,
+    },
+  },
+  'transfer-research': transferPhotos.hero,
   // Owner-supplied outdoor test platform; original remains private.
   'platform-outdoor': {
     src: '/images/heroes/platform-outdoor.webp',

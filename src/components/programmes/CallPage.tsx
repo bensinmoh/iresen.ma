@@ -1,3 +1,5 @@
+import { MoneyText } from '@/components/ui/MoneyText'
+import { formatMoney } from '@/lib/money'
 import { programmeProjectsHref } from '@/lib/projects-model'
 import { callCopy } from '@/lib/call-copy'
 import { Heading } from '@/components/ui/Heading'
@@ -45,11 +47,7 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
             <div>
               <dt>{t('budget')}</dt>
               <dd>
-                {new Intl.NumberFormat(locale, {
-                  style: 'currency',
-                  currency: call.budgetCurrency,
-                  maximumFractionDigits: 2,
-                }).format(call.budgetAmount)}
+                <bdi dir="ltr">{formatMoney(call.budgetAmount, call.budgetCurrency)}</bdi>
               </dd>
             </div>
             <div>
@@ -93,7 +91,11 @@ export async function CallPage({ call, locale }: { call: PublicCall; locale: Loc
               <p key={i}>{paragraph}</p>
             ))}
           </div>
-          {call.budgetNote && <p>{call.budgetNote}</p>}
+          {call.budgetNote && (
+            <p>
+              <MoneyText>{call.budgetNote}</MoneyText>
+            </p>
+          )}
         </section>
         <section
           id="call-calendar"
