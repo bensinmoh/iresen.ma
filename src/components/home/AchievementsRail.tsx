@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react'
+import { Children, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import styles from './AchievementsSection.module.css'
 
@@ -33,6 +33,7 @@ export function AchievementsRail({
   previous: string
   next: string
 }) {
+  const initialProgress = 100 / Math.max(Children.count(children), 1)
   const rail = useRef<HTMLUListElement>(null)
   const controls = useRef<HTMLDivElement>(null)
   const automaticDirection = useRef(1)
@@ -105,7 +106,9 @@ export function AchievementsRail({
       </ul>
       <div ref={controls} className={styles.controls} hidden>
         <div className={styles.progress} aria-hidden="true">
-          <span style={{ width: `${12.5 + edges.progress * 87.5}%` }} />
+          <span
+            style={{ width: `${initialProgress + edges.progress * (100 - initialProgress)}%` }}
+          />
         </div>
         <button
           type="button"

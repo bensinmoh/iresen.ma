@@ -251,3 +251,107 @@ text wrapping, filtering, links, RTL direction and desktop/tablet grids. The rai
 has a localized region label and keyboard focus, with proximity snap and no
 animation dependency. No content, routes or search references change. Scoped
 lint/format/whitespace checks pass; rendered review and CI remain pending.
+
+## Partner logo alignment — 2026-10-23
+
+Partner cards center their logo viewport horizontally and vertically, independently
+from the label/arrow row. AFD, LEAP-RE and Al Omrane have uneven blank margins in
+their original PNGs; SVG viewports frame the visible artwork without rewriting
+or duplicating the supplied marks. Other logos retain centered contain sizing.
+The original partner files, links, labels and search references remain unchanged.
+
+Verification: targeted ESLint, Prettier and whitespace checks pass. Development
+review of the Green H2 call confirms centered IRESEN, SATT and AFD cards at
+1440px in French and 390px in Arabic, with no horizontal page overflow.
+DOM measurements confirm zero horizontal logo-slot offset and centered
+logo/label groups. Full tests/build/CI remain pending under the shared hold.
+
+## Owner-supplied SATT logo — 2026-10-23
+
+The owner supplies `SATT.png`, replacing the previous website-sourced partner
+mark with the full SATT Paris-Saclay lockup and its “Innovating with confidence”
+signature. The 3355 × 1068 PNG is served byte-identically at the existing
+`/images/call-partners/satt.png` URL. The asset manifest records the new hash
+and retains the superseded source metadata; image provenance is reconciled.
+Centered contain sizing, partner links and existing localized media references
+remain. Verification: supplied/served bytes and both manifest hashes match;
+Prettier and whitespace checks pass. The local French call page renders the
+3355 × 1068 source with zero horizontal center offset and no page overflow.
+
+## Owner-supplied AFD logo — 2026-10-23
+
+The owner supplies `AFD_logo.svg.png` (1024 × 453), replacing the previous
+website-sourced AFD PNG at `/images/call-partners/afd.png` byte-identically.
+The previous AFD framing override is removed because the new artwork already
+has balanced margins; it uses the shared centered contain viewport. The manifest
+retains superseded metadata and records the new hash, reconciled with provenance.
+Partner links and localized media search references keep their existing URLs.
+Verification: supplied/served bytes and both manifest hashes match; targeted
+ESLint, Prettier and whitespace pass. The local French call renders the full
+1024 × 453 artwork with zero horizontal center offset.
+
+## Owner-supplied CDTI logo — 2026-10-23
+
+The owner supplies `CDTI Short.svg`. Its original bytes and `0 0 274.4 78`
+viewBox are retained at `/images/call-partners/cdti.svg`; the CDTI partner
+registration now uses this vector mark. The manifest records its hash and
+retains the previous PNG metadata. The legacy PNG and its raster provenance
+remain untouched. Existing localized media registrations derive the new URL
+from the shared partner definition, retaining the same stable search identity.
+Centered contain sizing, labels and partner destinations remain.
+Verification: source/served SVG bytes and manifest hash match, XML parses,
+targeted ESLint/Prettier/whitespace checks pass. The French InnoESPAMAROC 2024
+call renders the supplied vector with zero horizontal center offset.
+
+## Logo-only partner cards — 2026-10-23
+
+The owner removes the repeated partner name/arrow row and requests more space
+around each logo. Partner cards use centered grid placement with 1.5rem padding
+on every side. The full card remains a link with its localized accessible partner
+name/new-tab label; original logo artwork and destinations remain unchanged.
+Verification: targeted ESLint, Prettier and whitespace checks pass. French
+desktop and Arabic 390px development review confirms 24px padding, centered
+logos, empty visible link text and retained localized accessible names.
+The Arabic mobile page has no horizontal overflow. Full tests/build/CI remain
+pending under the shared checkout hold.
+
+## Owner-supplied Al Omrane logo — 2026-10-23
+
+The owner supplies `Al Omrane.svg`, served byte-identically at
+`/images/call-partners/omrane.svg` with its `0 0 91.25 103.06` viewBox.
+The shared partner definition now uses this original vector and drops the
+previous PNG framing override. Padded, centered logo-only cards and accessible
+links remain. The manifest retains the superseded PNG metadata; the legacy
+PNG and its raster provenance remain unchanged. Existing localized media
+references follow the shared SVG URL and stable partner search identity.
+The shared logo image constraints allow portrait assets to shrink inside the
+56px logo slot, preventing intrinsic grid sizing from overflowing padded cards.
+Verification: supplied/served SVG bytes and manifest hash match; XML parses;
+targeted ESLint, Prettier and whitespace pass. The local French 2023 call
+renders the supplied vector centered, with the logo and slot both 56px high.
+
+## Owner-supplied Tamwilcom logo — 2026-10-23
+
+The owner supplies `Tamwilcom.png` (852 × 1133). The original is served
+byte-identically at `/images/call-partners/tamwilcom.png`; the shared partner
+definition replaces the former website-sourced SVG reference. The previous SVG
+remains intact, with its metadata retained in the asset manifest. The new raster
+provenance records the supplied file hash. Existing localized media references
+follow the shared PNG URL and stable partner identity. Centered contain sizing,
+24px card padding and accessible logo-only links remain unchanged.
+Verification: supplied/served PNG bytes and both manifest hashes match;
+targeted ESLint, Prettier and whitespace pass. The French 2023 call loads the
+852 × 1133 artwork centered, fully contained in its 56px logo slot.
+
+## Owner-supplied LEAP-RE logo — 2026-10-23
+
+The owner supplies `LEAP-RE logo text update.png` (1393 × 1129), replacing
+the previous raster at `/images/call-partners/leap-re.png` byte-identically.
+The old square-image framing override is removed so the complete supplied
+Africa–Europe mark and LEAP-RE text remain visible with centered contain sizing.
+The manifest retains previous metadata and records the new hash, reconciled
+with raster provenance. Existing localized media references, partner links
+and logo-only cards with 24px padding remain.
+Verification: original/served bytes and both manifest hashes match; targeted
+ESLint, Prettier and whitespace pass. The local French LEAP-RE 2021 call loads
+the complete 1393 × 1129 source in its 56px slot with zero horizontal center offset.

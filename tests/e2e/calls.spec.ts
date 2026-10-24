@@ -33,7 +33,7 @@ test('CMS call pages, files, dates, archives and withdrawal in all public locale
     ).rows[0]!.id
     callId = (
       await database.query<{ id: number }>(
-        "INSERT INTO calls (reference,acronym,launch_year,budget_amount,budget_currency,opening_at,deadline_at,evaluation_starts_at,evaluation_ends_at,results_at,visibility,_status) VALUES ($1,'CMS-TEST',2026,2500000,'MAD',$2,$3,$4,$5,$6,'public','published') RETURNING id",
+        "INSERT INTO calls (reference,acronym,launch_year,budget_amount,budget_currency,opening_at,deadline_at,evaluation_starts_at,evaluation_ends_at,results_at,visibility,_status) VALUES ($1,'CMS-TEST',2026,2500000.99,'MAD',$2,$3,$4,$5,$6,'public','published') RETURNING id",
         [
           reference,
           callTestDates.openingAt,
@@ -76,6 +76,9 @@ test('CMS call pages, files, dates, archives and withdrawal in all public locale
       await expect(page).toHaveURL((url) => decodeURI(url.pathname) === callHref(reference, locale))
       const region = page.locator('[data-call-page]')
       await expect(region.locator('h1')).toHaveText(callTestCopy(locale).title)
+      await expect(region.locator('bdi[dir="ltr"]').filter({ hasText: 'MAD' })).toHaveText(
+        '2\u00a0500\u00a0000\u00a0MAD',
+      )
       await expect(region.locator('#call-calendar li')).toHaveCount(4)
       await expect(region.locator('a[href="https://example.org/call-test-form"]')).toBeVisible()
       const termsHref = await region.locator('a[download]').getAttribute('href')

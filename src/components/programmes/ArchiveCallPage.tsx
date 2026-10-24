@@ -1,3 +1,4 @@
+import { MoneyText } from '@/components/ui/MoneyText'
 import { siteArchivedCalls } from '@/lib/cms-workspace/public-corpora'
 import { programmeProjectsHref } from '@/lib/projects-model'
 import { archiveProjectProgramme } from '@/lib/call-archives'
@@ -100,7 +101,11 @@ export async function ArchiveCallPage({
           </section>
           <section className={styles.chapter} id="call-documents">
             <h2>{t.practical}</h2>
-            {call.funding?.[locale] && <p>{call.funding[locale]}</p>}
+            {call.funding?.[locale] && (
+              <p>
+                <MoneyText>{call.funding[locale]}</MoneyText>
+              </p>
+            )}
             {call.duration?.[locale] && <p>{call.duration[locale]}</p>}
             <p>{t.pending}</p>
           </section>
@@ -121,10 +126,18 @@ export async function ArchiveCallPage({
                         rel="noopener noreferrer"
                         aria-label={`${partner.name} — ${t.newTab}`}
                       >
-                        <Image src={partner.logo} alt="" width={240} height={80} unoptimized />
-                        <span>
-                          <bdi>{partner.name}</bdi>
-                          <NavigationIcon name="arrow-up-right" />
+                        <span className={styles.partnerLogo} aria-hidden="true">
+                          {partner.logoFrame ? (
+                            <svg viewBox={partner.logoFrame.viewBox} focusable="false">
+                              <image
+                                href={partner.logo}
+                                width={partner.logoFrame.width}
+                                height={partner.logoFrame.height}
+                              />
+                            </svg>
+                          ) : (
+                            <Image src={partner.logo} alt="" width={240} height={80} unoptimized />
+                          )}
                         </span>
                       </a>
                     ) : (

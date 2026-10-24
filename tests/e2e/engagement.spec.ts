@@ -52,7 +52,9 @@ for (const locale of locales) {
       expect(
         (await new AxeBuilder({ page }).include('[data-engagement-page]').analyze()).violations,
       ).toEqual([])
-      await content.locator('[data-kind="contact"] .button').click()
+      await content
+        .locator(`[data-kind="contact"] a[href="${engagementContactHref(locale)}"]`)
+        .click()
       await expect
         .poll(() => decodeURI(page.url()).endsWith(engagementContactHref(locale)))
         .toBe(true)
@@ -77,7 +79,7 @@ test('Arabic transfer disclosures and contact remain usable without JavaScript',
     const disclosure = page.locator('#intellectual-property details').first()
     await disclosure.locator('summary').click()
     await expect(disclosure.locator('p')).toBeVisible()
-    await page.locator('[data-kind="contact"] .button').click()
+    await page.locator(`[data-kind="contact"] a[href="${engagementContactHref('ar')}"]`).click()
     await expect(page.locator('select[name="subject"]')).toHaveValue('partnerships')
   } finally {
     await context.close()

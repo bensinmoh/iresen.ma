@@ -144,3 +144,12 @@ replaces repeated mission chapters with one R&I core, three complementary native
 disclosures and three activity tabs. Exact mission, canonical anchors and existing
 hero/values/ambition/history/report survive. New FR/EN/AR interface copy retains
 editorial review status. [Scope and verification](docs/institute-editorial.md).
+
+## Public editorial voice — owner correction, 23 October 2026
+
+Write for visitors using verified project subjects, aims and useful context.
+Research primary sources to fill content gaps; when detail remains unavailable,
+use a shorter factual description grounded in approved metadata. Keep source
+availability, workbook/tracker commentary and editorial workflow notes in private
+records. Preserve accurate service limitations, development status and scientific
+metadata uncertainty where these help visitors assess the information.

@@ -1,7 +1,15 @@
-/** Official marks identify the recorded programme partners; no new role is inferred. */
+/** Official marks identify the recorded programme partners; no new role is inferred.
+ * Logo frames exclude uneven blank margins for centering, preserving original files.
+ */
 export const callPartners: Record<
   string,
-  { id: string; name: string; logo: string; website: string }
+  {
+    id: string
+    name: string
+    logo: string
+    website: string
+    logoFrame?: { width: number; height: number; viewBox: string }
+  }
 > = {
   IRESEN: {
     id: 'iresen',
@@ -12,19 +20,19 @@ export const callPartners: Record<
   'Groupe Al Omrane': {
     id: 'omrane',
     name: 'Groupe Al Omrane',
-    logo: '/images/call-partners/omrane.png',
+    logo: '/images/call-partners/omrane.svg',
     website: 'https://www.alomrane.gov.ma/',
   },
   Tamwilcom: {
     id: 'tamwilcom',
     name: 'Tamwilcom',
-    logo: '/images/call-partners/tamwilcom.svg',
+    logo: '/images/call-partners/tamwilcom.png',
     website: 'https://www.tamwilcom.ma/',
   },
   CDTI: {
     id: 'cdti',
     name: 'CDTI',
-    logo: '/images/call-partners/cdti.png',
+    logo: '/images/call-partners/cdti.svg',
     website: 'https://www.cdti.es/',
   },
   'KIC InnoEnergy': {

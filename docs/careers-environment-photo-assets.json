@@ -1,0 +1,16 @@
+{
+  "received": "2026-10-23",
+  "scope": "Owner-selected portrait170 replaces meeting photo in careers working-at-iresen section.",
+  "sourceManifest": "docs/photo-asset-library.json",
+  "sourceId": "iresen-photo-170",
+  "sourceFilename": "IRESEN_Equipes_Portrait-d-une-collaboratrice-au-bureau_170.jpg",
+  "sourceSha256": "88ea349a0009c6ba49d279895bde44a394ec652bf1c9c356a1da878da7e7615e",
+  "originalWidth": 5818,
+  "originalHeight": 3879,
+  "src": "/images/careers/office-portrait-170.webp",
+  "width": 1600,
+  "height": 1066,
+  "sha256": "085fda56768492c4fbbc1f4af58349618b85a8d31aec8a74f4ab14dccacc831c",
+  "bytes": 96308,
+  "transformation": "Proportional1600px WebP, quality84, no enlargement or generative edit; frame focuses at40% horizontal."
+}

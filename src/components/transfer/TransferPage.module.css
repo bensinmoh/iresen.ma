@@ -74,6 +74,7 @@
 .link {
   display: inline-flex;
   align-items: center;
+  gap: var(--space-2);
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
@@ -464,19 +465,23 @@
   object-fit: cover;
 }
 .innovationPhoto img {
-  object-position: 44% center;
+  object-position: center;
 }
 .technologyPhoto img {
-  object-position: 54% center;
+  object-position: right center;
 }
 .doors .doorCopy h3 {
   margin-block-start: 0;
 }
 .doorCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   min-inline-size: 0;
 }
 .doors a {
-  margin-block-start: var(--space-6);
+  margin-block-start: auto;
+  padding-block-start: var(--space-6);
 }
 .page:dir(rtl) .link svg,
 .page:dir(rtl) .actions svg,
@@ -541,6 +546,8 @@
 }
 .introPhoto img {
   object-fit: cover;
+  transform: scale(1.08);
+  transform-origin: center bottom;
 }
 .stageVisual {
   display: flex;

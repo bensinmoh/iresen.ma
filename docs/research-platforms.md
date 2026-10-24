@@ -201,3 +201,30 @@ formatting and whitespace pass. Four platform browser journeys pass in FR/EN/AR
 at 320–1440px, including 200% text, keyboard, axe, media decoding and no-JavaScript
 reading. Desktop FR and mobile AR captures inspected. Earlier unit/search evidence
 remains valid. No deployment.
+
+GreenH2A owner replacement — 2026-10-23: the shared platform image now uses the
+supplied GAPP completed-pilot-plant visualization, collection ID 079, with updated
+FR/EN/AR alternative descriptions. The existing visualization caption and
+in-development state remain. See [source and review notes](home-platforms.md#greenh2a-gapp-visual-replacement--2026-10-23).
+
+## Outdoor photovoltaic photograph — owner update, 23 October 2026
+
+The GEPMCI “Plateforme photovoltaïque extérieure” infrastructure card now displays
+the updated collection photograph 243, matching the same installation as the
+owner's screenshot. It uses `/images/infrastructure/outdoor-pv-243.webp`, a WebP
+derivative at the original supplied image's 1672px width. The collection source
+was previously retouched/upscaled by the owner; no additional generation,
+retouching or crop is applied to the asset. The image does not independently
+verify the current condition of the site's lawn.
+
+Preserve the card's 16:10 responsive crop, signature corners, captions and neutral
+color filter. This replaces only the infrastructure card photo; the official
+GEPMCI overview image remains unchanged. Source hashes, transformation details
+and superseded image metadata are recorded in `infrastructure-photo-assets.json`;
+the original files are retained. The existing localized infrastructure-photo
+search reference now points to the new URL, with the same stable identifier and
+approved descriptive context. No broader photo-library publication is implied.
+
+Verification: checksum of the selected source; JSON formatting and whitespace;
+FR/AR development previews at 390/1440px with successful image decode and no page
+overflow; local search rebuild. Shared production/CI checks remain on hold.

@@ -107,18 +107,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
         .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1))
         .toBe(true)
       if (width <= 640) {
-        await expect(institute.locator('#ambition-2035 blockquote')).toHaveAttribute(
-          'data-contour-ready',
-          '',
+        const ambition = institute.locator('#ambition-2035')
+        await expect(ambition.locator('blockquote img')).toHaveCount(0)
+        for (const image of await ambition.locator('img').all()) await expect(image).toBeHidden()
+        await expect(ambition.locator('blockquote p')).toContainText(
+          catalogs[locale].Institute.ambition.statement,
         )
-        await expect
-          .poll(() =>
-            institute.locator('#ambition-2035').evaluate((el) => {
-              const portrait = el.querySelector('blockquote img')!.getBoundingClientRect()
-              return Math.abs(portrait.bottom - el.getBoundingClientRect().bottom)
-            }),
-          )
-          .toBeLessThan(1)
       }
     }
     await page.emulateMedia({ reducedMotion: 'reduce' })
@@ -132,12 +126,11 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect
       .poll(() =>
         institute.locator('#ambition-2035').evaluate((el) => {
-          const portrait = el.querySelector('blockquote img')!.getBoundingClientRect()
           const text = el.querySelector('blockquote p')!.getBoundingClientRect()
           const quote = el.querySelector('blockquote')!.getBoundingClientRect()
           return (
-            Math.abs(portrait.bottom - el.getBoundingClientRect().bottom) < 1 &&
-            text.height <= quote.height + 1
+            text.height <= quote.height + 1 &&
+            Math.abs(text.left + text.width / 2 - (quote.left + quote.width / 2)) < 1
           )
         }),
       )
@@ -222,7 +215,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       const diagram = editorial.locator('[data-positioning-diagram]')
       await expect(diagram.locator('li')).toHaveCount(3)
       await expect(diagram.getByRole('img', { name: 'IRESEN', exact: true })).toBeVisible()
-      expect(await editorial.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(true)
+      await expect
+        .poll(() => editorial.evaluate((el) => el.scrollWidth <= el.clientWidth))
+        .toBe(true)
       if (width > 1024) {
         const alignment = await editorial.locator('[data-institute-overview]').evaluate((el) => {
           const core = el.querySelector('#institute-research')!.getBoundingClientRect()

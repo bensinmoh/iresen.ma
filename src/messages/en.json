@@ -726,14 +726,6 @@
         "title": "WorldPtX Summit",
         "description": "A global summit dedicated to Power-to-X and its applications. Organise exchanges and knowledge sharing between partners."
       },
-      "achievement-upilot-h2": {
-        "title": "uPilot H₂",
-        "description": "Morocco’s first pilot for green hydrogen production. Mobilise a pilot installation for learning and experimentation."
-      },
-      "achievement-propre-ma": {
-        "title": "PROPRE.MA",
-        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield. Connect university installations, observation and research."
-      },
       "achievement-cartography": {
         "title": "Resource mapping",
         "description": "Mapping the country’s renewable resources and zoning to inform energy decisions. Mobilise spatial data, mapping and zoning."
@@ -761,6 +753,10 @@
       "mission-cooperation": {
         "title": "Cooperation & Outreach",
         "description": "Bring together partners, expertise and resources; build joint projects and share Morocco’s contributions."
+      },
+      "achievement-outdoor-pv": {
+        "title": "Outdoor PV testing platforms",
+        "description": "Outdoor photovoltaic testing platforms to monitor and compare technology performance under real operating conditions."
       }
     },
     "institute": {
@@ -1160,7 +1156,7 @@
       },
       "institutional-reports": {
         "title": "Reports & strategies",
-        "description": "External documents from the supplied reference folder. Original file titles and languages are retained."
+        "description": "Reports, strategies and reference documents on energy and climate, available in their original language."
       },
       "use-cite-resources": {
         "title": "Using and citing resources",
@@ -1194,7 +1190,7 @@
       },
       "reports": {
         "title": "Reports & strategies",
-        "description": "External documents from the supplied reference folder. Original file titles and languages are retained."
+        "description": "Reports, strategies and reference documents on energy and climate, available in their original language."
       }
     },
     "opportunities": {
@@ -1688,8 +1684,8 @@
         "name": "GreenH2A",
         "category": "Green hydrogen · Power-to-X",
         "description": "In Jorf Lasfar, study green hydrogen and Power-to-X at pilot scale. A platform in development.",
-        "imageDescription": "3D engineering view of a GreenH2A pilot installation with equipment and pipework; a design visualization.",
-        "searchText": "GreenH2A Green Hydrogen to Applications green hydrogen H2 Power-to-X PtX electrolysis Jorf Lasfar pilot in development"
+        "imageDescription": "Visualization of the completed GreenH2A GAPP pilot plant, with outdoor equipment and pipework; a projected view, not a photograph of its current state.",
+        "searchText": "GreenH2A Green Hydrogen to Applications green hydrogen H2 Power-to-X PtX electrolysis Jorf Lasfar pilot in development GAPP green ammonia pilot plant"
       }
     },
     "network": {
@@ -1709,10 +1705,23 @@
     "eyebrow": "Achievements",
     "title": "Our landmark achievements",
     "description": "These examples illustrate capabilities and results. Economic, industrial or environmental effects require measurements specific to each achievement.",
-    "label": "The eight achievements",
+    "label": "Flagship achievements",
     "previous": "Previous achievements",
     "next": "Next achievements",
     "items": {
+      "outdoor-pv": {
+        "name": "Outdoor PV testing platforms",
+        "category": "Infrastructure",
+        "description": "Outdoor photovoltaic testing platforms to monitor and compare technology performance under real operating conditions.",
+        "imageDescription": "Panoramic view of the solar testing facilities at Green Energy Park in Benguerir.",
+        "searchText": "PV photovoltaic outdoor testing solar module performance Green Energy Park Benguerir",
+        "proof": {
+          "need": "Evaluate photovoltaic technologies in local climate conditions.",
+          "contribution": "Connect research and experimentation through outdoor testing facilities.",
+          "result": "Testing platforms to monitor and compare solar technology performance.",
+          "scope": "Experimental capabilities whose results depend on the technologies and test conditions."
+        }
+      },
       "village-solaire": {
         "name": "Solar Village",
         "category": "Infrastructure",
@@ -1724,32 +1733,6 @@
           "contribution": "Combine demonstration, research and learning around solar homes.",
           "result": "A village of solar buildings, born from the Solar Decathlon Africa competition.",
           "scope": "An experimental capability; energy savings depend on building-specific measurements."
-        }
-      },
-      "ismart": {
-        "name": "iSmart",
-        "category": "Startup",
-        "description": "A 100% Moroccan charging station for electric vehicles. Connect technological development, local manufacturing and valorisation.",
-        "imageDescription": "iSmart charging station and product presentation.",
-        "searchText": "electric mobility electric vehicle charging Moroccan startup",
-        "proof": {
-          "need": "Develop charging solutions for electric mobility.",
-          "contribution": "Connect technological development, local manufacturing and valorisation.",
-          "result": "A 100% Moroccan charging station for electric vehicles.",
-          "scope": "The product illustrates valorisation; it does not establish adoption volumes or avoided emissions."
-        }
-      },
-      "aquasolar": {
-        "name": "AquaSolar",
-        "category": "Demonstrator",
-        "description": "A mobile, modular desalination unit powered by solar energy. Develop and experiment with a mobile, modular solution.",
-        "imageDescription": "AquaSolar unit with photovoltaic panels on its roof.",
-        "searchText": "solar desalination water mobile modular unit",
-        "proof": {
-          "need": "Explore solar-powered desalination.",
-          "contribution": "Develop and experiment with a mobile, modular solution.",
-          "result": "A mobile, modular desalination unit powered by solar energy.",
-          "scope": "A demonstrator; performance and actual use must be assessed in their testing conditions."
         }
       },
       "worldptx": {
@@ -1765,30 +1748,30 @@
           "scope": "A contribution to cooperation and outreach; holding an event alone does not demonstrate transfers."
         }
       },
-      "upilot-h2": {
-        "name": "uPilot H₂",
-        "category": "Pilot",
-        "description": "Morocco’s first pilot for green hydrogen production. Mobilise a pilot installation for learning and experimentation.",
-        "imageDescription": "uPilot H₂ green hydrogen production unit.",
-        "searchText": "uPilot H2 micro pilot green hydrogen production Morocco",
+      "aquasolar": {
+        "name": "AquaSolar",
+        "category": "Demonstrator",
+        "description": "A mobile, modular desalination unit powered by solar energy. Develop and experiment with a mobile, modular solution.",
+        "imageDescription": "AquaSolar unit with photovoltaic panels on its roof.",
+        "searchText": "solar desalination water mobile modular unit",
         "proof": {
-          "need": "Experiment with green hydrogen production in Morocco.",
-          "contribution": "Mobilise a pilot installation for learning and experimentation.",
-          "result": "Morocco’s first pilot for green hydrogen production.",
-          "scope": "A pilot capability; it does not establish large-scale industrial deployment."
+          "need": "Explore solar-powered desalination.",
+          "contribution": "Develop and experiment with a mobile, modular solution.",
+          "result": "A mobile, modular desalination unit powered by solar energy.",
+          "scope": "A demonstrator; performance and actual use must be assessed in their testing conditions."
         }
       },
-      "propre-ma": {
-        "name": "PROPRE.MA",
-        "category": "R&D project",
-        "description": "A network of photovoltaic plants at Moroccan universities to map solar energy yield. Connect university installations, observation and research.",
-        "imageDescription": "Rooftop photovoltaic panels, image supplied for PROPRE.MA.",
-        "searchText": "research and development R&D photovoltaics solar energy yield Moroccan universities",
+      "ismart": {
+        "name": "iSmart",
+        "category": "Startup",
+        "description": "A 100% Moroccan charging station for electric vehicles. Connect technological development, local manufacturing and valorisation.",
+        "imageDescription": "iSmart charging station and product presentation.",
+        "searchText": "electric mobility electric vehicle charging Moroccan startup",
         "proof": {
-          "need": "Understand photovoltaic yield under local conditions.",
-          "contribution": "Connect university installations, observation and research.",
-          "result": "A network of photovoltaic plants at Moroccan universities to map solar energy yield.",
-          "scope": "Facilities for producing knowledge about resources and performance, without quantified economic benefit here."
+          "need": "Develop charging solutions for electric mobility.",
+          "contribution": "Connect technological development, local manufacturing and valorisation.",
+          "result": "A 100% Moroccan charging station for electric vehicles.",
+          "scope": "The product illustrates valorisation; it does not establish adoption volumes or avoided emissions."
         }
       },
       "cartography": {
@@ -1991,7 +1974,8 @@
         "industry": "Generated illustration of engineers examining industrial energy equipment. Fictional scene, without real IRESEN staff or facilities.",
         "research": "Generated illustration of a scientist studying a battery prototype in a laboratory. Fictional scene, without a real IRESEN team or laboratory.",
         "institutions": "Generated illustration of energy planning professionals on a site visit. Fictional scene, without an identified real IRESEN institution, territory or project.",
-        "partners": "Generated illustration of cooperation coordinators discussing a project. Fictional scene, without an identified real IRESEN partner, funder or agreement."
+        "partners": "Generated illustration of cooperation coordinators discussing a project. Fictional scene, without an identified real IRESEN partner, funder or agreement.",
+        "needs": "Participants working together over documents and a laptop during a collaborative workshop."
       }
     },
     "transfer": {
@@ -2158,9 +2142,11 @@
     },
     "contactMessage": "I would like to discuss patent {reference} with IRESEN: {title}.",
     "photos": {
-      "intro": "Generated illustration of researchers examining a prototype and measurement instruments in a laboratory.",
-      "innovation": "Generated illustration of a researcher studying a solar sample on a measurement bench.",
-      "technology": "Generated illustration of a specialist presenting an energy network diagram on a screen."
+      "hero": "Research team discussing a photovoltaic module in a laboratory.",
+      "intro": "Two researchers working together at a laboratory measurement instrument.",
+      "pathways": "iSmart charging-station assembly workshop with multiple workstations.",
+      "innovation": "A researcher handling a sample in a green chemistry laboratory.",
+      "technology": "A technical discussion between four participants, with construction helmets on the table."
     },
     "example": {
       "title": "An achievement illustrating valorisation",
@@ -2272,8 +2258,8 @@
       "subject": "Application — {offer}"
     },
     "photos": {
-      "hero": "Reference photograph: a person working on a laptop in a workspace.",
-      "environment": "Reference photograph: a team talking around a work table.",
+      "hero": "Reception and entrance hall inside IRESEN headquarters.",
+      "environment": "A team member working on a laptop at her desk.",
       "internship": "Reference photograph: a group talking in a shared workspace."
     },
     "searchText": "Careers, recruitment, jobs, internship, doctorate, unsolicited application, applied research, research and development and innovation (R&D&I), energy transition."
@@ -2405,7 +2391,7 @@
     "previous": "Previous photo",
     "next": "Next photo",
     "source": "View document",
-    "sourceNote": "External documents from the supplied reference folder. Original file titles and languages are retained.",
+    "sourceNote": "Reports, strategies and reference documents on energy and climate, available in their original language.",
     "videoNote": "Films in their original language. Playback starts only when requested.",
     "empty": "No videos are published in this language yet.",
     "credits": "Credits & reuse",
@@ -2764,6 +2750,7 @@
     "axes": "Research axes",
     "benefitsLabel": "Intended benefits",
     "next": "Next theme",
+    "previous": "Previous theme",
     "imageNote": "Generated conceptual illustration; it does not depict a verified facility.",
     "heroAlt": "Drafting board seen in perspective, with a technical diagram combining the seven research themes: renewable electricity, hydrogen, industry, water and agriculture, bioenergy, buildings and mobility."
   },
@@ -3116,7 +3103,7 @@
       ],
       "action": "Explore opportunities",
       "secondary": "Browse events",
-      "imageAlt": "Generated illustration of a team in a technical workshop, without attribution to a real laboratory."
+      "imageAlt": "A laboratory equipment demonstration for a group of training participants."
     },
     "examples": {
       "title": "Specialities and tangible questions.",
@@ -3228,7 +3215,7 @@
       "gep": "Aerial view of Green Energy Park in Benguerir and its solar installations.",
       "gsbp": "Prototype houses in the Solar Village at Green & Smart Building Park.",
       "gep-mci": "Supplied image for Green Energy Park Morocco–Côte d’Ivoire: building and solar panels.",
-      "greenh2a": "3D visualization of equipment for the GreenH2A project; this rendering does not document an operational installation."
+      "greenh2a": "Visualization of the completed GreenH2A GAPP pilot plant; this image does not document an operational installation."
     },
     "intro": {
       "title": "One network, complementary expertise",
@@ -3576,8 +3563,8 @@
     "necessary": "Cookies necessary for operation",
     "necessaryDescription": "The iresen_consent cookie stores your decision for 180 days without a tracking identifier. CMS authentication cookies are restricted to administration.",
     "alwaysActive": "Always active",
-    "external": "External services — Google Maps",
-    "externalDescription": "Allow Google Maps on the Contact page. Google may receive your IP address and browser information and use its own cookies. Google is responsible for this service; its privacy policy is available at policies.google.com/privacy.",
+    "external": "External services — Google Maps · YouTube",
+    "externalDescription": "Allow Google Maps and the YouTube players in the video library. Google may receive your IP address and browser information and use its own cookies. Google is responsible for this service; its privacy policy is available at policies.google.com/privacy.",
     "retention": "Your acceptance or refusal is stored for 180 days in this browser. You can withdraw permission at any time from the footer; the map is then removed. Withdrawal does not delete data already sent to Google.",
     "save": "Save my choices",
     "mapBlocked": "Google Maps is disabled until you allow external services. The directions link remains available.",
@@ -3721,5 +3708,10 @@
       "result": "Documented result",
       "scope": "Scope"
     }
+  },
+  "YouTubePlayer": {
+    "watch": "Watch on YouTube",
+    "blocked": "This YouTube player requires your consent to external services. You can also open the video directly on YouTube.",
+    "allow": "Allow external services and play"
   }
 }

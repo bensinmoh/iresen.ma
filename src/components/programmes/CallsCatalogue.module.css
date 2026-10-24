@@ -414,12 +414,9 @@
   min-inline-size: 0;
 }
 .partnerLink {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem 0.75rem;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
   min-block-size: 8.5rem;
   block-size: 100%;
   border-radius: var(--radius-action);
@@ -430,26 +427,23 @@
 .partnerLink:hover {
   outline: 1px solid var(--color-border);
 }
-.partnerLink img {
-  display: block;
+.partnerLogo {
+  display: grid;
+  place-items: center;
   inline-size: 100%;
   block-size: 3.5rem;
-  object-fit: contain;
-}
-.partnerLink > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: var(--font-size-meta);
-  line-height: 1.6;
-  text-align: center;
-}
-.partnerLink svg {
-  inline-size: 1rem;
-  block-size: 1rem;
   flex: none;
-  color: var(--color-blue);
+}
+.partnerLogo img,
+.partnerLogo svg {
+  display: block;
+  min-inline-size: 0;
+  min-block-size: 0;
+  max-block-size: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 .sourceList {
   display: grid;

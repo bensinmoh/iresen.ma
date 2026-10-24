@@ -1,3 +1,5 @@
+import { careersHeroPhoto } from '@/lib/careers-hero-photo'
+import { careersEnvironmentPhoto } from '@/lib/careers-environment-photo'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import Image from 'next/image'
@@ -28,10 +30,10 @@ export async function CareersPage({ locale }: { locale: Locale }) {
     <div className={styles.page} data-careers-page>
       <section className={styles.hero} aria-labelledby="hero-title">
         <Image
-          src="/images/careers/hero.webp"
+          src={careersHeroPhoto.src}
           alt=""
           fill
-          unoptimized
+          sizes="max(100vw, 150dvh)"
           loading="eager"
           fetchPriority="high"
           className={styles.heroPhoto}
@@ -63,10 +65,10 @@ export async function CareersPage({ locale }: { locale: Locale }) {
           <div className={`container ${styles.environmentGrid}`}>
             <div className={styles.environmentPhoto}>
               <Image
-                src="/images/careers/environment.webp"
-                alt={t('photos.environment')}
+                src={careersEnvironmentPhoto.src}
+                alt={careersEnvironmentPhoto.descriptions[locale]}
                 fill
-                unoptimized
+                sizes="(max-width: 63.999rem) 100vw, 50vw"
               />
             </div>
             <div className={styles.environmentCopy}>

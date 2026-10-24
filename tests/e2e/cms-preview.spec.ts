@@ -1,6 +1,7 @@
 import { expect, test } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
 import { retainedContentEntries } from '../../src/lib/cms-workspace/retained-content'
+import mediaPhotos from '../../src/data/media-photos.json' with { type: 'json' }
 import { createEntry } from '../../src/lib/cms-preview/model'
 
 const enabled =
@@ -209,7 +210,7 @@ test.describe('authenticated CMS shell with retained site corpus', () => {
   test('separates gallery media, video, reports, links and site assets', async ({ page }) => {
     await page.goto('/admin#media')
     for (const [label, count] of [
-      ['Photos', 20],
+      ['Photos', mediaPhotos.length],
       ['Vidéos', 0],
       ['Rapports & stratégies', 10],
       ['Liens utiles', 7],

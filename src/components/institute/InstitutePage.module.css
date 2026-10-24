@@ -199,18 +199,14 @@
   z-index: -2;
   overflow: hidden;
 }
-.ambitionBackground,
 .ambitionPortrait {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
-  inline-size: 100%;
+  inline-size: 45%;
   block-size: calc(100% + var(--portrait-rise));
   object-fit: contain;
-  object-position: right bottom;
-}
-.ambitionBackground {
-  mask-image: linear-gradient(90deg, transparent, black 40%);
+  object-position: left top;
 }
 .ambitionMobileBackground {
   z-index: -1;
@@ -234,17 +230,7 @@
 .ambitionText {
   inline-size: 100%;
   text-align: left;
-  /* The float reserves more height than the copy; center the visible text. */
-  transform: translateY(max(0px, calc(clamp(8rem, 10vw, 11rem) - 50%)));
-}
-/* Text exclusion follows the head-to-elbow contour without painting a shape. */
-.ambitionText::before {
-  content: '';
-  float: right;
-  inline-size: 34%;
-  block-size: clamp(16rem, 20vw, 22rem);
-  shape-outside: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 70%, 12% 40%, 25% 20%);
-  shape-margin: clamp(1.5rem, 2vw, 3rem);
+  padding-left: 44%;
 }
 .ambitionPortrait {
   z-index: 0;
@@ -273,74 +259,34 @@
   letter-spacing: normal;
   line-height: 1.45;
 }
-/* At tablet ratios the panoramic composite would letterbox; keep the continuous
-   landscape underneath the independently contained silhouette instead. */
-@media (min-width: 40.001rem) and (max-width: 79.999rem) {
-  .ambitionBackground {
-    display: none;
-  }
-}
-.ambitionMobilePortrait {
-  display: none;
-}
 @media (max-width: 40rem) {
   .ambition {
     min-block-size: 0;
     padding-block: 3rem;
   }
-  .ambitionText {
-    transform: none;
+  .ambitionText,
+  :global(html[dir='rtl']) .ambitionText {
+    padding-left: 0;
+    text-align: center;
   }
-  .ambitionText::before {
+  .ambitionScene,
+  .ambitionPortrait,
+  .ambition::before {
     display: none;
   }
-  .ambitionBackground,
-  .ambitionPortrait {
-    display: none;
-  }
-  .ambitionMobileBackground {
-    display: block;
-  }
-  .ambitionQuote {
-    position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .ambitionQuote[data-contour-ready] {
-    display: flow-root;
-  }
-  .ambitionQuote[data-contour-ready]::before {
-    content: '';
-    float: right;
-    inline-size: 52%;
-    block-size: var(--ambition-flow-height);
-    shape-outside: var(--ambition-contour);
-    shape-margin: 0.75rem;
-  }
-  .ambitionMobilePortrait {
-    display: block;
-    position: static;
-    align-self: flex-end;
-    inline-size: 52%;
-    block-size: auto;
-    margin-block-end: -3rem;
-    pointer-events: none;
-  }
-  .ambitionQuote[data-contour-ready] .ambitionMobilePortrait {
-    position: absolute;
-    margin: 0;
-    right: 0;
-    bottom: calc(-1 * var(--ambition-edge-clearance));
+  .ambitionText :global([data-section-eyebrow]) {
+    justify-content: center;
+    text-align: center;
   }
   .ambitionQuote p {
     padding: 0;
-    text-align: start;
+    text-align: center;
     font-weight: 700;
-    line-height: 1.2142857143;
+    line-height: 1.25;
     letter-spacing: -0.02em;
-    hyphens: auto;
-    overflow-wrap: normal;
-    text-wrap: wrap;
+    hyphens: none;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
   }
 }
 

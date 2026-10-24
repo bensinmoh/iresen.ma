@@ -43,7 +43,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     }
     await expect(page.locator('[data-domain-link]')).toHaveCount(0)
     await expect(page.locator('#decision-resources')).toHaveText('')
-    await page.locator('a[href="#theme-water"]').focus()
+    await page.locator('a[href="#theme-water"]').first().focus()
     await page.keyboard.press('Enter')
     await expect(page).toHaveURL(/#theme-water$/)
     await expect
@@ -132,4 +132,137 @@ test('server-rendered roadmap works with JavaScript disabled', async ({ browser 
     pageHref('workWithUs', 'fr'),
   )
   await context.close()
+})
+
+test('chapter covers preserve native scroll, expanded reading and reverse keyboard access', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto(pageHref('priorities', 'fr', 'theme-renewables'))
+  await expect(page.locator('[data-immersive]')).toHaveCount(1)
+  const first = page.locator('#theme-renewables')
+  const second = page.locator('#theme-hydrogen')
+  await page.evaluate(() => document.fonts.ready)
+  await expect.poll(async () => Math.abs((await first.boundingBox())!.y)).toBeLessThan(2)
+  await page.evaluate(() => window.scrollBy(0, 400))
+  await expect.poll(async () => Math.abs((await first.boundingBox())!.y)).toBeLessThan(2)
+  const secondBounds = (await second.boundingBox())!
+  expect(secondBounds.y).toBeGreaterThan(0)
+  expect(secondBounds.y).toBeLessThan(900)
+  expect(
+    await page.evaluate(() => {
+      const second = document.querySelector('#theme-hydrogen')!
+      const bounds = second.getBoundingClientRect()
+      return second.contains(document.elementFromPoint(20, bounds.top + 20))
+    }),
+  ).toBe(true)
+
+  await expect
+    .poll(() =>
+      second.locator('figure').evaluate((art) => parseFloat(getComputedStyle(art).opacity)),
+    )
+    .toBeGreaterThan(0)
+  expect(
+    await second.locator('figure').evaluate((art) => parseFloat(getComputedStyle(art).opacity)),
+  ).toBeLessThan(1)
+
+  await page.setViewportSize({ width: 1440, height: 620 })
+  await first.locator('a').focus()
+  await first.locator('summary').first().focus()
+  await page.keyboard.press('Enter')
+  await expect(first.locator('details').first()).toHaveAttribute('open', '')
+  await expect
+    .poll(() =>
+      first.evaluate((panel) => {
+        return Math.abs(
+          parseFloat(getComputedStyle(panel).top) - Math.min(0, innerHeight - panel.clientHeight),
+        )
+      }),
+    )
+    .toBeLessThan(2)
+  await page.evaluate(() => window.scrollBy(0, 400))
+  await first.locator('a').focus()
+  await expect.poll(async () => (await second.boundingBox())!.y).toBeGreaterThan(620)
+  await page.keyboard.press('Enter')
+  await expect(page).toHaveURL(/#theme-hydrogen$/)
+  await page.locator('#theme-hydrogen a[href="#theme-renewables"]').click()
+  await expect(page).toHaveURL(/#theme-renewables$/)
+  await expect.poll(async () => Math.abs((await first.boundingBox())!.y)).toBeLessThan(2)
+
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await expect(first).toHaveCSS('position', 'relative')
+  await expect(page.locator('[data-immersive]')).toHaveCount(0)
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.setViewportSize({ width: 390, height: 844 })
+  await expect(first).toHaveCSS('position', 'relative')
+})
+
+test('idle chapter snapping returns short gestures and advances longer ones', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto(pageHref('priorities', 'fr', 'theme-renewables'))
+  await expect(page.locator('[data-immersive]')).toHaveCount(1)
+  const first = page.locator('#theme-renewables')
+  const second = page.locator('#theme-hydrogen')
+  await expect.poll(async () => Math.abs((await first.boundingBox())!.y)).toBeLessThan(2)
+  await page.mouse.move(1100, 600)
+  await page.mouse.wheel(0, 240)
+  await expect.poll(async () => Math.abs((await second.boundingBox())!.y - 900)).toBeLessThan(2)
+  await page.mouse.wheel(0, 650)
+  await expect.poll(async () => Math.abs((await second.boundingBox())!.y)).toBeLessThan(2)
+  await expect(second.locator('header')).toHaveCSS('opacity', '1')
+  await expect(second.locator('figure')).toHaveCSS('opacity', '1')
+  await page.mouse.wheel(0, -240)
+  await expect.poll(async () => Math.abs((await second.boundingBox())!.y)).toBeLessThan(2)
+  await page.mouse.wheel(0, -650)
+  await expect.poll(async () => Math.abs((await second.boundingBox())!.y - 900)).toBeLessThan(2)
+
+  await page.setViewportSize({ width: 1440, height: 620 })
+  await first.locator('summary').first().focus()
+  await page.keyboard.press('Enter')
+  await expect(first.locator('details').first()).toHaveAttribute('open', '')
+  await first.locator('a').focus()
+  await page.evaluate(() =>
+    window.scrollTo({
+      top: scrollY + document.querySelector('#domains-directions')!.getBoundingClientRect().top,
+      behavior: 'instant',
+    }),
+  )
+  const readingStart = await page.evaluate(() => scrollY)
+  await page.mouse.wheel(0, 60)
+  await expect
+    .poll(() => page.evaluate((start) => scrollY - start, readingStart))
+    .toBeGreaterThan(40)
+  await expect.poll(() => page.evaluate((start) => scrollY - start, readingStart)).toBeLessThan(80)
+
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await expect(page.locator('[data-immersive]')).toHaveCount(0)
+  await expect(second.locator('figure')).toHaveCSS('transform', 'none')
+})
+
+test('slow wheel input stays uninterrupted until the gesture and movement stop', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto(pageHref('priorities', 'fr', 'theme-renewables'))
+  await expect(page.locator('[data-immersive]')).toHaveCount(1)
+  await expect
+    .poll(() =>
+      page.locator('#theme-renewables').evaluate((p) => Math.abs(p.getBoundingClientRect().top)),
+    )
+    .toBeLessThan(2)
+  const start = await page.evaluate(() => scrollY)
+  await page.mouse.move(1100, 600)
+  for (let step = 1; step <= 8; step++) {
+    await page.mouse.wheel(0, 65)
+    // Deliberately slower than the former 180ms timer and between native scrollend events.
+    await page.waitForTimeout(500)
+    const offset = (await page.evaluate(() => scrollY)) - start
+    expect(offset).toBeGreaterThan(step * 65 - 3)
+    expect(offset).toBeLessThan(step * 65 + 3)
+  }
+  await expect
+    .poll(() =>
+      page.locator('#theme-hydrogen').evaluate((p) => Math.abs(p.getBoundingClientRect().top)),
+    )
+    .toBeLessThan(2)
 })

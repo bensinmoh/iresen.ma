@@ -1,0 +1,16 @@
+{
+  "received": "2026-10-23",
+  "scope": "Owner-selected photo173 as careers page hero.",
+  "sourceManifest": "docs/photo-asset-library.json",
+  "sourceId": "iresen-photo-173",
+  "sourceFilename": "IRESEN_Siege_Accueil-et-hall-interieur-du-siege_173.jpg",
+  "sourceSha256": "a9a51a328825e1e18d75053a88c61797cd130424e4cae36431cc9348066188cc",
+  "originalWidth": 6240,
+  "originalHeight": 4160,
+  "src": "/images/careers/headquarters-reception-173.webp",
+  "width": 1920,
+  "height": 1280,
+  "sha256": "596c0c448eb56e82ad9e22fcd5c507f71c7ff6bebea3763c1059cbe5b6630ba0",
+  "bytes": 156276,
+  "transformation": "Proportional1920px WebP, quality84; no enlargement or generative edit."
+}

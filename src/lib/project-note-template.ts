@@ -1,3 +1,4 @@
+import { formatMoney, moneyParts } from './money'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { pageHref } from './site'
@@ -28,6 +29,11 @@ const escape = (value: string) =>
     (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]!,
   )
 
+const moneyText = (value: string) =>
+  moneyParts(value)
+    .map((part, index) => (index % 2 ? `<bdi dir="ltr">${escape(part)}</bdi>` : escape(part)))
+    .join('')
+
 export async function projectNoteHtml(project: ProjectRecord, locale: Locale, image?: Buffer) {
   const { latin, arabic, logo } = await templateAssets()
   const t = { fr, en, ar }[locale].Projects
@@ -42,12 +48,7 @@ export async function projectNoteHtml(project: ProjectRecord, locale: Locale, im
         ? ''
         : t.months.replace('{count}', String(project.durationMonths)),
     ],
-    [
-      t.budget,
-      project.budgetMAD === null
-        ? ''
-        : `${new Intl.NumberFormat(locale, { maximumFractionDigits: 2 }).format(project.budgetMAD)} MAD`,
-    ],
+    [t.budget, project.budgetMAD === null ? '' : formatMoney(project.budgetMAD)],
     [t.coordinator, project.details.coordinator.name[locale]],
     [t.coordinatorAffiliation, project.details.coordinator.affiliation[locale]],
   ].filter(([, value]) => value)
@@ -70,10 +71,10 @@ export async function projectNoteHtml(project: ProjectRecord, locale: Locale, im
   </style></head><body><header><img src="data:image/svg+xml;base64,${logo}" alt="IRESEN"><span>${noteTitle}</span></header>
   <p class="theme">${escape(project.theme[locale])}</p><h1><bdi>${escape(project.acronym)}</bdi></h1>${project.title[locale] !== project.acronym ? `<h2>${escape(project.title[locale])}</h2>` : ''}
   ${image ? `<img class="project-image" src="data:image/webp;base64,${image.toString('base64')}" alt="${escape(project.imageIllustration || project.title[locale])}">` : ''}
-  <p class="description">${escape(project.description[locale])}</p>
-  <dl>${metadata.map(([label, value]) => `<div><dt>${escape(label!)}</dt><dd><bdi>${escape(value!)}</bdi></dd></div>`).join('')}</dl>
-  ${project.details.consortium[locale].length ? `<section><h3>${escape(t.consortium)}</h3>${project.details.consortium[locale].map((text) => `<p>${escape(text)}</p>`).join('')}</section>` : ''}
-  ${project.details.objectives[locale].length ? `<section><h3>${escape(t.objectives)}</h3><ul>${project.details.objectives[locale].map((text) => `<li>${escape(text)}</li>`).join('')}</ul></section>` : ''}
+  <p class="description">${moneyText(project.description[locale])}</p>
+  <dl>${metadata.map(([label, value]) => `<div><dt>${escape(label!)}</dt><dd><bdi${label === t.budget ? ' dir="ltr"' : ''}>${escape(value!)}</bdi></dd></div>`).join('')}</dl>
+  ${project.details.consortium[locale].length ? `<section><h3>${escape(t.consortium)}</h3>${project.details.consortium[locale].map((text) => `<p>${moneyText(text)}</p>`).join('')}</section>` : ''}
+  ${project.details.objectives[locale].length ? `<section><h3>${escape(t.objectives)}</h3><ul>${project.details.objectives[locale].map((text) => `<li>${moneyText(text)}</li>`).join('')}</ul></section>` : ''}
   ${contact.email ? `<div class="contact"><span>${escape(contactLabel)}</span><a href="mailto:${escape(contact.email)}"><bdi>${escape(contact.email)}</bdi></a></div>` : ''}
   <footer dir="ltr"><p><a href="https://www.iresen.ma">www.iresen.ma</a></p><p><a href="${escape(projectUrl)}">${escape(`www.iresen.ma${projectPath}`)}</a></p></footer></body></html>`
 }

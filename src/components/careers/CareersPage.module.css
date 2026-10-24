@@ -136,6 +136,7 @@
 }
 .environmentPhoto img {
   object-fit: cover;
+  object-position: 40% center;
   border-radius: var(--radius-signature);
 }
 .environmentCopy {

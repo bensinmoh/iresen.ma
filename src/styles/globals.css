@@ -1252,8 +1252,28 @@ html[dir='rtl'] .navigation-icon-arrow {
 }
 
 @media (min-width: 70rem) {
+  /* Keep the handshake figures in the open trailing side of this hero. */
+  .hero-media:has([data-photo='partnership-handshake']) {
+    background: var(--color-navy);
+  }
+
+  .hero-media:has([data-photo='partnership-handshake']) > picture {
+    inset-inline-start: 30%;
+    inset-block-start: var(--hero-header-height);
+    mask-image: linear-gradient(to right, transparent, #000 25%);
+  }
+
   .hero-photo[data-photo='partnership-handshake'] {
-    object-position: center top;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .page-hero:has([data-photo='partnership-handshake']) .hero-copy {
+    max-inline-size: min(44%, 44rem);
+  }
+
+  .page-hero:dir(rtl) .hero-media:has([data-photo='partnership-handshake']) > picture {
+    mask-image: linear-gradient(to left, transparent, #000 75%);
   }
 }
 

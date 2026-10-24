@@ -93,3 +93,18 @@ recounting every command attempt.
 
 GitHub's [concurrency guidance](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency)
 supports PR-scoped cancellation with a unique run-ID fallback for other events.
+
+## Monthly dependency reminder
+
+Owner rule, 24 October 2026: before dispatching CI, inspect
+[the dependency review log](dependency-review-log.md). If the current calendar
+month has neither a completed stack/dependency review nor an already-recorded
+reminder, briefly remind the owner to review available dependency and technology
+stack updates before CI. Record that reminder once, even if the owner defers the
+updates. Do not repeat it on subsequent CI runs in the same month. A review
+completed that month satisfies this rule without another reminder.
+
+Use the owner’s local calendar month. This is a reminder tied to starting CI;
+it does not schedule unrelated messages, automatically upgrade packages, or add
+a confirmation requirement to an already-authorized CI run. Honor any request
+to update first, then perform the relevant checks and retain full final-head CI.

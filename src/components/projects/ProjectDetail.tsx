@@ -1,5 +1,8 @@
 'use client'
 
+import { MoneyText } from '@/components/ui/MoneyText'
+import { formatMoney } from '@/lib/money'
+
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import type { Locale } from '@/i18n/locales'
@@ -21,12 +24,7 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
       t('duration'),
       project.durationMonths === null ? '' : t('months', { count: project.durationMonths }),
     ],
-    [
-      t('budget'),
-      project.budgetMAD === null
-        ? ''
-        : `${new Intl.NumberFormat(locale).format(project.budgetMAD)} MAD`,
-    ],
+    [t('budget'), project.budgetMAD === null ? '' : formatMoney(project.budgetMAD)],
   ].filter(([, value]) => value)
   return (
     <>
@@ -47,7 +45,9 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
         </h3>
         <div className={styles.detailSummary}>
           {project.details.presentation[locale].map((text, i) => (
-            <p key={i}>{text}</p>
+            <p key={i}>
+              <MoneyText>{text}</MoneyText>
+            </p>
           ))}
         </div>
         <dl className={styles.detailMetadata}>
@@ -55,7 +55,7 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
             <div key={label}>
               <dt>{label}</dt>
               <dd>
-                <bdi>{value}</bdi>
+                <bdi dir={label === t('budget') ? 'ltr' : undefined}>{value}</bdi>
               </dd>
             </div>
           ))}
@@ -95,7 +95,9 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
               {t('consortium')}
             </h3>
             {project.details.consortium[locale].map((text, i) => (
-              <p key={i}>{text}</p>
+              <p key={i}>
+                <MoneyText>{text}</MoneyText>
+              </p>
             ))}
           </section>
         )}
@@ -106,7 +108,9 @@ export function ProjectDetail({ project, locale }: { project: ProjectRecord; loc
             </h3>
             <ul className={styles.objectives}>
               {project.details.objectives[locale].map((text, i) => (
-                <li key={i}>{text}</li>
+                <li key={i}>
+                  <MoneyText>{text}</MoneyText>
+                </li>
               ))}
             </ul>
           </section>

@@ -1,0 +1,62 @@
+{
+  "updated": "2026-10-23",
+  "scope": "Owner requests visitor-facing project descriptions instead of internal missing-source notices. Eight metadata-only narratives replaced; existing project identities, statuses, financial data, publication gates and source files preserved.",
+  "localSource": "Existing owner-approved 70-project workbook intake; original retained privately. Used for programme, theme, institutional affiliations and consortium identities. This manifest imports no private original or new personal data.",
+  "projects": [
+    {
+      "reference": "soltanair",
+      "basis": "Existing workbook theme, programme, hosting affiliation and consortium only. No matching primary public technical description located; do not infer the storage technology or outcomes.",
+      "urls": []
+    },
+    {
+      "reference": "ev-plan",
+      "basis": "Project website and IEA project table describe a GIS-based EV charging planning tool. Omit numerical impact and deployment claims.",
+      "urls": [
+        "https://evplan.org/",
+        "https://iea.blob.core.windows.net/assets/4b040de9-174b-4b52-87b3-8cc52f7b62c0/CleanEnergyInnovationPoliciesinEmergingandDevelopingEconomies.pdf"
+      ]
+    },
+    {
+      "reference": "lswater",
+      "basis": "Lenium's project account identifies atmospheric water capture/condensation and solar trackers; the research paper independently identifies the project and atmospheric-water-harvesting research. Preserve the owner's project status, without adopting a later completion claim.",
+      "urls": ["https://lenium.es/", "https://doi.org/10.1016/j.jece.2025.120000"]
+    },
+    {
+      "reference": "e-pave",
+      "basis": "Coordinator and partner announcements confirm the project title Electrifying Roads for a Sustainable Future, programme and consortium. Copy stays at the road/energy-transition research level; detailed piezoelectric mechanisms reported in secondary press are not adopted without a directly matched primary technical source.",
+      "urls": [
+        "https://www.linkedin.com/in/akkouri-nacer-phd-9209a548",
+        "https://www.linkedin.com/company/foxtransport-company"
+      ]
+    },
+    {
+      "reference": "stdscwg",
+      "basis": "The coordinator's project announcement identifies smart thermal brackish-water desalination and two planned prototypes at IAV Rabat/Agadir. Planned work is not described as delivered infrastructure.",
+      "urls": [
+        "https://www.linkedin.com/posts/khalid-guissi-8a754244_im-delighted-to-inform-you-that-our-project-activity-7386385537642840064--8ik"
+      ]
+    },
+    {
+      "reference": "dakh2a",
+      "basis": "Partner MGH Energy and IRESEN's project-specific professional announcements support DAC technology comparison, a planned Moroccan demonstrator and optimisation. No operational plant, costs achieved or e-fuel output claimed.",
+      "urls": [
+        "https://fr.linkedin.com/posts/mghenergy_mgh-energy-et-le-d%C3%A9partement-co2-de-liresen-activity-7379421648510201857-WmsF",
+        "https://fr.linkedin.com/posts/iresen_%F0%9D%97%A2%F0%9D%97%B3%F0%9D%97%B3%F0%9D%97%BF%F0%9D%97%B2-%F0%9D%97%B1%F0%9D%97%B2%F0%9D%97%BA%F0%9D%97%BB%F0%9D%97%B9%F0%9D%97%BC%F0%9D%97%B6-%F0%9D%97%97%F0%9D%97%BC%F0%9D%97%B0%F0%9D%98%81%F0%9D%97%BC%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81-activity-7424740283474534400-wKlQ"
+      ]
+    },
+    {
+      "reference": "greenh2hub",
+      "basis": "IRESEN's World Power-to-X Summit account confirms selection in the decarbonised-hydrogen programme. Consortium identities come from the owner-approved workbook. Do not adopt the more detailed biomass/electrolysis description from secondary press without a matched primary technical source.",
+      "urls": ["https://ma.linkedin.com/showcase/worldptxsummit/"]
+    },
+    {
+      "reference": "great-h2",
+      "basis": "UM6P's event account and IRESEN's project-specific recruitment announcement expand the GIS-based planning title; Energy Pool confirms its collaboration with GEP. Preserve the workbook's consortium/status fields where source editions differ.",
+      "urls": [
+        "https://sd.um6p.ma/news/L%E2%80%99UM6P-participe-aux-discussions-sur-l%E2%80%99hydrog%C3%A8ne/?id=68e3e168aa9d2a2baf846da9",
+        "https://fr.linkedin.com/posts/iresen_greenenergypark-greath2-hydrog%C3%A8nevert-activity-7491151931072143360-CUQl",
+        "https://www.energy-pool.com/fr/blog/energy-pool-s-affirme-comme-acteur-strategique-de-l-hydrogene-vert-au-maroc"
+      ]
+    }
+  ]
+}

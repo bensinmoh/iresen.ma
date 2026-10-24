@@ -69,3 +69,43 @@ synchronization lifecycle. No new CMS collection, route, OAuth, deployment, DNS 
 visibility change is included.
 
 Verification is recorded in [the validation log](validation.md#homepage-achievements--2026-10-10).
+
+## Owner selection — 2026-10-23
+
+The owner selects this order: outdoor PV testing platforms → Village Solaire →
+WorldPtX Summit → AquaSolar → iSmart → Cartography → green hydrogen roadmap.
+Village Solaire appears once, in position two, as explicitly confirmed. uPilot H₂
+and PROPRE.MA leave the homepage rail and its section search projection; retained
+source assets are untouched. All seven articles render in FR/EN/AR, and the progress
+indicator now derives its initial share from the card count.
+
+The new `achievement-outdoor-pv` card reuses the existing Green Energy Park testing
+platform panorama at `/images/media-library/plateforme-essais-solaires-panorama.webp`
+(2560 × 1440). Its existing provenance and media-library search reference remain
+canonical; no duplicate image or media result is created. The localized card and
+section descriptions adapt the existing Platforms content about outdoor testing,
+without new performance figures. English and Arabic remain working translations.
+
+Verification: targeted ESLint, Prettier and whitespace checks pass. Development
+inspection confirms seven cards in the selected order, loaded images and no page
+overflow at 1440px in French and 390px in Arabic/English; Arabic retains RTL.
+The French rail controls were exercised. Local search API checks find the new
+section and canonical reused media in FR/EN/AR. The existing browser test now
+uses the selected count and per-card image paths. Production build, full tests,
+CI and merge remain pending under the shared checkout hold.
+
+## Roadmap mockup refinement — 2026-10-23
+
+The owner replaces the standing/stacked three-copy mockup with two overlapping
+brochures laid flat in perspective, following the supplied brochure reference.
+A pastel green studio backdrop echoes the existing cover; paper edges, a subtle
+binding crease and soft contact shadows give the two copies depth. The official
+cover image remains byte-identical, readable and physically unmirrored in all
+locales. Native CSS composes the mockup without another bitmap or media result.
+Existing labels, alt text, search references and other achievement cards remain.
+
+Verification: targeted ESLint, Prettier and whitespace checks pass; original
+cover hash matches its asset manifest. Development review at French 1440px and
+390px and Arabic 390px confirms both copies fit the image area, the cover loads,
+no horizontal page overflow, and identical unmirrored cover transforms in RTL.
+Production build/full tests/CI remain pending under the shared checkout hold.

@@ -15,7 +15,6 @@ import { PageHero } from '@/components/hero/PageHero'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { TimelineRail } from './TimelineRail'
-import { AmbitionQuote } from './AmbitionQuote'
 import { InstituteEditorial } from './InstituteEditorial'
 import styles from './InstitutePage.module.css'
 
@@ -63,14 +62,6 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
         <section id="ambition-2035" className={styles.ambition} aria-labelledby="ambition-title">
           <div className={styles.ambitionScene} aria-hidden="true">
             <Image
-              src="/images/institute/ambition-solar-scene-cool.webp"
-              alt=""
-              width={2172}
-              height={724}
-              sizes="100vw"
-              className={styles.ambitionBackground}
-            />
-            <Image
               src={heroImages['solar-horizon'].src}
               alt=""
               fill
@@ -79,10 +70,10 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
             />
           </div>
           <Image
-            src="/images/institute/ambition-solar-person-detail.webp"
+            src="/images/institute/ambition-king-mohammed-vi.webp"
             alt=""
-            width={2172}
-            height={724}
+            width={1535}
+            height={1024}
             unoptimized
             className={styles.ambitionPortrait}
           />
@@ -91,15 +82,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
               <SectionEyebrow id="ambition-title" tone="white">
                 {t('ambitionLabel')}
               </SectionEyebrow>
-              <AmbitionQuote className={styles.ambitionQuote}>
-                <Image
-                  src="/images/institute/ambition-solar-person-mobile.webp"
-                  alt=""
-                  width={493}
-                  height={700}
-                  unoptimized
-                  className={styles.ambitionMobilePortrait}
-                />
+              <blockquote className={styles.ambitionQuote}>
                 <p>
                   <span className={styles.quoteMark} aria-hidden="true">
                     «{' '}
@@ -110,7 +93,7 @@ export async function InstitutePage({ locale }: { locale: Locale }) {
                     »
                   </span>
                 </p>
-              </AmbitionQuote>
+              </blockquote>
             </div>
           </div>
         </section>

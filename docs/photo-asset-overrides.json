@@ -1,0 +1,68 @@
+{
+  "authorization": "Owner correction 2026-10-23: use the complete seven-flags attachment for private library asset 093; keep the official GEPMCI website image unchanged.",
+  "assets": [
+    {
+      "id": "iresen-photo-093",
+      "originalPath": ".local/photo-asset-library/owner-overrides/093/9c9c641859f9/Campus facade with seven flags.png",
+      "originalSha256": "9c9c641859f9f89c3129dc99ede4ad1efc11688467400a4cbb0e5e04dce04129",
+      "preferred": {
+        "id": "iresen-photo-093",
+        "collectionId": 93,
+        "sourceFilename": "Campus facade with seven flags.png",
+        "sourceSha256": "9c9c641859f9f89c3129dc99ede4ad1efc11688467400a4cbb0e5e04dce04129",
+        "originalFilename": "Campus facade with seven flags.png",
+        "originalSha256": "9c9c641859f9f89c3129dc99ede4ad1efc11688467400a4cbb0e5e04dce04129",
+        "category": "GEPMCI",
+        "title": "Facade du GEP MCI INP HB avec drapeaux",
+        "description": "Façade du GEP MCI INP HB avec sept drapeaux, version complète fournie par le propriétaire.",
+        "keywords": [
+          "IRESEN",
+          "GEPMCI",
+          "GEP MCI",
+          "INP HB",
+          "architecture",
+          "drapeaux",
+          "flags",
+          "batiment",
+          "III_FIG_28_GEP_MCI_INP_HB",
+          "façade",
+          "facade",
+          "building",
+          "bâtiment",
+          "logos corrigés",
+          "corrected logos",
+          "version retouchée",
+          "edited version"
+        ],
+        "originalWidth": 1670,
+        "originalHeight": 942,
+        "collectionWidth": 1670,
+        "collectionHeight": 942,
+        "collectionScaleFactor": 1,
+        "qualityNotes": [
+          "Owner-selected full-frame replacement, 2026-10-23; supersedes grey-area library revision only.",
+          "Original attachment is 1670×942; no enlargement, cropping or generative changes applied."
+        ],
+        "upscaled": false,
+        "lowResolutionOriginal": false,
+        "jpg": {
+          "path": ".local/photo-asset-library/owner-overrides/093/9c9c641859f9/Campus facade with seven flags.jpg",
+          "sha256": "27540de816c8074e7b48002b4971fba27db4334d0eae5dd9ed3dbfb9be1a1000",
+          "bytes": 366811
+        },
+        "preview": {
+          "path": ".local/photo-asset-library/owner-overrides/093/9c9c641859f9/iresen-photo-093-owner-9c9c641859f9.webp",
+          "cmsFilename": "iresen-photo-093-owner-9c9c641859f9.webp",
+          "cmsSha256": "faa8063abb2ed93f99f3334e811d2f75f7ef27476dcebd8ae4dd17faa3431ef9",
+          "cmsBytes": 204134,
+          "sha256": "4e29f276291ef4835235c1a559756ae2a8d2bd90652afcf26c9b606aa75e807a",
+          "bytes": 239332,
+          "width": 1670,
+          "height": 942
+        },
+        "publication": "private-draft",
+        "translations": "not-imported"
+      }
+    }
+  ]
+}

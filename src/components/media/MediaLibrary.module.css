@@ -358,11 +358,12 @@
 }
 .videoThumbnail {
   object-fit: cover;
+  transform: scale(var(--thumbnail-zoom, 1));
   transition: transform 350ms;
 }
 .videoCard:hover .videoThumbnail,
 .videoCard:focus-visible .videoThumbnail {
-  transform: scale(1.04);
+  transform: scale(calc(var(--thumbnail-zoom, 1) * 1.04));
 }
 .videoCard::before {
   content: '';
@@ -426,11 +427,21 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+.videoConsent {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  min-block-size: 200px;
+}
 .popupVideo {
+  border: 0;
   display: block;
   inline-size: 100%;
   block-size: 100%;
-  min-block-size: 0;
+  min-block-size: 200px;
   max-block-size: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -603,6 +614,17 @@
   .dialog {
     inline-size: 80vw;
     padding: 0.75rem;
+  }
+  .dialog[data-viewer='video'] .dialogBar {
+    flex-wrap: wrap;
+  }
+  .dialog[data-viewer='video'] .dialogBar h2 {
+    flex-basis: 100%;
+    white-space: normal;
+  }
+  .dialog[data-viewer='video'] .videoActions {
+    inline-size: 100%;
+    justify-content: flex-end;
   }
   .photoStage {
     block-size: 100%;
@@ -873,7 +895,7 @@
 .biographyPortrait img {
   object-fit: cover;
   object-position: center top;
-  transform: scale(1.04);
+  transform: scale(calc(var(--thumbnail-zoom, 1) * 1.04));
   transform-origin: center top;
 }
 .biographyActions {

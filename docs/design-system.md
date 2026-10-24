@@ -140,6 +140,13 @@ The owner's reattached original color book v0.9 and seven supplied SVGs establis
 These are the shared website rules. Source measurements later in this document
 explain intent and history; they do not supersede these decisions.
 
+Public monetary values use Latin digits in all locales, groups of three digits
+separated by U+00A0 nonbreaking spaces, and a nonbreaking space before the ISO
+currency code: `3 938 394 MAD`. Floor to whole currency units for display. Preserve
+precise source values and the original currency; apply `formatMoney` to structured
+amounts and isolate complete amounts with `bdi dir="ltr"` in Arabic sentences.
+The rule also applies to on-demand PDF notes and financial prose.
+
 Public section surtitles reuse the homepage `SectionEyebrow` component in every
 locale, with its 18px regular role above 40rem and 14px mobile role, retaining the
 original Apex Leaf. Local typography and decorative-leaf duplicates are retired.
@@ -2275,3 +2282,11 @@ full action text beside the same squares. Role and confirmation rules still appl
 
 Owner compact-size correction: list action squares are 26px with 15px SVGs and
 4px gaps, matching the FR/EN/AR badge scale. Editor actions remain 44px.
+
+### Thumbnail framing — 23 October 2026
+
+Remove baked-in black bands from video card previews with per-image CSS zoom.
+Choose a focal position around the principal subject, keep unletterboxed images
+at their natural scale where suitable, and compose hover/focus scaling on top of
+the selected crop. Preserve source bytes and full video-player framing. The seven
+YouTube card settings live in `src/data/youtube-videos.json`.

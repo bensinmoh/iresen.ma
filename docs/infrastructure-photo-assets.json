@@ -11,9 +11,9 @@
     },
     {
       "id": "greenh2a",
-      "src": "/images/platforms/greenh2a.webp",
-      "source": "GreenH2A.jpg",
-      "sourceSha256": "9d9f9a50da11864607802ed7f51509d2b98a5473a21e21faa5c03694101b20c1"
+      "src": "/images/platforms/greenh2a-gapp-079.webp",
+      "source": "IRESEN_GreenH2A_GAPP-visualisation-de-l-usine-pilote-achevee_079.jpg",
+      "sourceSha256": "0fd6057db534ca4ad64c18e992802a6c6a02db7fda15de8a1fb1145294d12fac"
     }
   ],
   "assets": [
@@ -112,15 +112,35 @@
       "platform": "gep-mci",
       "index": 0,
       "grade": "neutral",
-      "src": "/images/infrastructure/outdoor-pv.webp",
-      "width": 1400,
-      "height": 788,
-      "source": "Plateforme photovoltaïque extérieure.jpg",
-      "sourceWidth": 1920,
-      "sourceHeight": 1080,
-      "sourceSha256": "75425aecddad39d94b39f91ce67f19c26500377c7d81fa6893546ddb5cd0a237",
-      "outputSha256": "4a533e5af4865adef13d85c688280e72540fee86fe85b0530a8b44cd43c07971",
-      "bytes": 202898
+      "src": "/images/infrastructure/outdoor-pv-243.webp",
+      "width": 1672,
+      "height": 941,
+      "source": "IRESEN_GEP_Vue-des-rangees-de-panneaux-photovoltaiques-exterieurs_243.jpg",
+      "sourceWidth": 3840,
+      "sourceHeight": 2161,
+      "sourceSha256": "3b90042c4322e314ba2a7bb59c4d0a356dc594a96d68ba20946fc5077b4e8f31",
+      "outputSha256": "0969128d4510504935d7dca0e4a7f21de8736d15c93f2cf29046c4eaca13c53a",
+      "bytes": 488808,
+      "collectionId": 243,
+      "originalFilename": "Solar test campus with natural lawn.png",
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "notes": "Owner-selected updated image, 23 October 2026. Previously edited/upscaled collection source; delivered at native original width without additional generation or cropping. Does not verify the current condition of the lawn.",
+      "supersedes": {
+        "id": "outdoor-pv",
+        "platform": "gep-mci",
+        "index": 0,
+        "grade": "neutral",
+        "src": "/images/infrastructure/outdoor-pv.webp",
+        "width": 1400,
+        "height": 788,
+        "source": "Plateforme photovoltaïque extérieure.jpg",
+        "sourceWidth": 1920,
+        "sourceHeight": 1080,
+        "sourceSha256": "75425aecddad39d94b39f91ce67f19c26500377c7d81fa6893546ddb5cd0a237",
+        "outputSha256": "4a533e5af4865adef13d85c688280e72540fee86fe85b0530a8b44cd43c07971",
+        "bytes": 202898
+      }
     },
     {
       "id": "agrivoltaic-greenhouse",

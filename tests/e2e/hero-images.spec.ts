@@ -60,8 +60,11 @@ async function delivery(
     })
     expect(rendered.dpr).toBe(2)
     expect(rendered.fit).toBe('cover')
-    expect(rendered.width, 'the photograph must cover the complete hero width').toBeCloseTo(
-      viewport.width,
+    // The owner-selected collaboration composition reserves 70% for the photograph on desktop.
+    const photoWidth =
+      item.pageId === 'workWithUs' && viewport.width >= 1120 ? viewport.width * 0.7 : viewport.width
+    expect(rendered.width, 'the photograph must fill its allocated hero area').toBeCloseTo(
+      photoWidth,
       0,
     )
     expect(rendered.height).toBeGreaterThan(0)

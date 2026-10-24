@@ -532,7 +532,7 @@
   display: block;
   inline-size: 100%;
   block-size: auto;
-  aspect-ratio: 4/3;
+  aspect-ratio: auto;
   object-fit: cover;
 }
 .skills p,
@@ -636,4 +636,9 @@
 .resultBar {
   position: relative;
   z-index: 1;
+}
+
+/* Keep the researcher opposite the Arabic hero copy. */
+:global(html[dir='rtl']) .page :global(.hero-photo[data-photo='network-pilot']) {
+  transform: scaleX(-1);
 }

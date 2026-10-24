@@ -470,3 +470,23 @@ Institut hero owner correction reuses the real supplied headquarters photograph
 from contact, preserving its original JPEG and existing localized media result.
 Next Image serves responsive optimized hero derivatives; no duplicate media
 reference, generated facility image or new source claim is introduced.
+
+## Complete private photo intake — 2026-10-23
+
+The owner commissions all 216 current photographs in IRESEN_Photos_4K_JPG for
+future website placements. They are now available as private local originals,
+WebP previews and private draft CMS assets, with source/quality metadata and
+stable collection IDs. This does not expand public pages or the selected gallery.
+See [the intake and verification](photo-asset-library.md) and
+[the complete manifest](photo-asset-library.json). Future placements still need
+the owner's instruction, suitable derivatives, localized metadata and normal
+public media/search registration. The source collection remains unchanged.
+
+## YouTube video previews — 23 October 2026
+
+Seven official IRESEN YouTube thumbnails are stored as local WebP card previews
+under `public/images/media-library/youtube/`. Source URLs, original titles,
+channel attribution and SHA-256 hashes are in `src/data/youtube-videos.json`;
+each derivative is registered in the image-provenance inventory. Playback is
+external and consent-gated; these previews add no locally served video files.
+See the current [vidéothèque scope](media-library.md).

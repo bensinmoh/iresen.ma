@@ -14,6 +14,7 @@ import {
   projectStatuses,
   type ProjectFilters,
 } from '@/lib/projects-model'
+import { HeroViewport } from '@/components/hero/HeroViewport'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 import { XIcon } from '@phosphor-icons/react/dist/ssr/X'
@@ -237,177 +238,85 @@ export function ProjectsExperience({
   ] as const
   return (
     <div className={styles.page} data-projects-page>
-      <section className={styles.hero} aria-labelledby="hero-title">
-        <Image
-          src="/images/projects/hero.webp"
-          alt=""
-          fill
-          sizes="100vw"
-          loading="eager"
-          fetchPriority="high"
-          className={styles.heroPhoto}
-        />
-        <div className={`container ${styles.heroContent}`}>
-          <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-          <h1 id="hero-title">
-            {t('titleStart')} <span>{t('titleAccent')}</span>
-          </h1>
-          <p className={styles.description}>{t('description')}</p>
+      <HeroViewport className={styles.viewport}>
+        <div className={styles.hero}>
+          <Image
+            src="/images/projects/hero.webp"
+            alt=""
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            className={styles.heroPhoto}
+          />
+          <div className={`container ${styles.heroContent}`}>
+            <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
+            <h1 id="hero-title">
+              {t('titleStart')} <span>{t('titleAccent')}</span>
+            </h1>
+            <p className={styles.description}>{t('description')}</p>
+          </div>
         </div>
-      </section>
-      {review && (
-        <div className={styles.reviewNotice}>
-          <p className="container" role="note" data-projects-review>
-            {t('reviewNotice')}
-          </p>
-        </div>
-      )}
-      <div id="page-sections">
-        <section id="find-project" className={styles.filters} aria-label={t('query')}>
-          <div className="container">
-            <form
-              ref={formRef}
-              action={pageHref('projects', locale)}
-              method="get"
-              onSubmit={(event) => {
-                event.preventDefault()
-                submit(event.currentTarget)
-              }}
-              onChange={(event) => {
-                if (event.target instanceof HTMLSelectElement) submit(event.currentTarget)
-              }}
-            >
-              <div className={styles.fields} role="group" aria-label={t('query')} tabIndex={0}>
-                <div className={styles.query}>
-                  <label htmlFor="project-query">{t('query')}</label>
-                  <div className={styles.searchField}>
-                    <input
-                      data-ui-field
-                      type="search"
-                      id="project-query"
-                      name="q"
-                      defaultValue={filters.query}
-                      placeholder={t('placeholder')}
-                      maxLength={200}
-                    />
-                    <button type="submit" aria-label={t('query')}>
-                      <NavigationIcon name="search" />
-                    </button>
-                  </div>
-                </div>
-                {fields.map((field) => (
-                  <label key={field.key}>
-                    {t(field.key)}
-                    <span className={styles.select}>
-                      <select data-ui-field name={field.key} defaultValue={filters[field.key]}>
-                        <option value="">{t('all')}</option>
-                        {field.values.map((v) => (
-                          <option key={v} value={v}>
-                            {field.label(v)}
-                          </option>
-                        ))}
-                      </select>
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </form>
-            <div className={styles.resultBar}>
-              <p role="status">{t('count', { count: results.length })}</p>
-              <a
-                href={pageHref('projects', locale)}
-                onClick={(event) => {
+        {review && (
+          <div className={styles.reviewNotice}>
+            <p className="container" role="note" data-projects-review>
+              {t('reviewNotice')}
+            </p>
+          </div>
+        )}
+        <div id="page-sections">
+          <section id="find-project" className={styles.filters} aria-label={t('query')}>
+            <div className="container">
+              <form
+                ref={formRef}
+                action={pageHref('projects', locale)}
+                method="get"
+                onSubmit={(event) => {
                   event.preventDefault()
-                  reset()
+                  submit(event.currentTarget)
+                }}
+                onChange={(event) => {
+                  if (event.target instanceof HTMLSelectElement) submit(event.currentTarget)
                 }}
               >
-                {t('reset')}
-              </a>
-            </div>
-          </div>
-        </section>
-        <section
-          ref={catalogueRef}
-          id="project-catalogue"
-          className={styles.catalogue}
-          aria-label={t('catalogue')}
-        >
-          <div className="container">
-            <div id="understanding-results" />
-            <div ref={gridRef} id="featured-results" className={styles.grid}>
-              {results.slice((page - 1) * 6, page * 6).map((project) => (
-                <article
-                  key={project.id}
-                  id={`project-${project.id}`}
-                  className={styles.card}
-                  aria-labelledby={`title-${project.id}`}
-                >
-                  <div className={styles.cardHeader}>
-                    <p>{project.theme[locale] || t(`domains.${project.domain}`)}</p>
-                    <span className={project.status ? styles[project.status] : undefined}>
-                      {project.status ? t(`statuses.${project.status}`) : null}
-                    </span>
-                  </div>
-                  {project.image && (
-                    <div className={styles.cardVisual}>
-                      <Image
-                        src={`${project.image}?locale=${locale}`}
-                        alt={project.imageIllustration || ''}
-                        width={900}
-                        height={430}
-                        unoptimized
-                        className={styles.cardPhoto}
+                <div className={styles.fields} role="group" aria-label={t('query')} tabIndex={0}>
+                  <div className={styles.query}>
+                    <label htmlFor="project-query">{t('query')}</label>
+                    <div className={styles.searchField}>
+                      <input
+                        data-ui-field
+                        type="search"
+                        id="project-query"
+                        name="q"
+                        defaultValue={filters.query}
+                        placeholder={t('placeholder')}
+                        maxLength={200}
                       />
+                      <button type="submit" aria-label={t('query')}>
+                        <NavigationIcon name="search" />
+                      </button>
                     </div>
-                  )}
-                  <h2 data-ui-heading="card" id={`title-${project.id}`}>
-                    <a
-                      className={styles.cardLink}
-                      href={`${href(page)}${href(page).includes('?') ? '&' : '?'}project=${project.id}#project-details`}
-                      aria-label={t('details', { name: project.acronym })}
-                      onClick={(event) => {
-                        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-                        event.preventDefault()
-                        triggerRef.current = event.currentTarget
-                        setClosing(false)
-                        setSelection(project.id)
-                      }}
-                    >
-                      <bdi>{project.acronym}</bdi>
-                    </a>
-                  </h2>
-                  <p className={styles.projectTitle}>{project.title[locale]}</p>
-                  <p className={styles.summary} data-project-summary>
-                    {project.summary[locale] || project.description[locale]}
-                  </p>
-                  <dl className={styles.metadata}>
-                    {[
-                      [t('acronym'), project.acronym],
-                      ...(project.startText[locale]
-                        ? [[t('launch'), project.startText[locale]]]
-                        : []),
-                      ...(project.programme ? [[t('programme'), project.programme]] : []),
-                    ].map(([label, detail]) => (
-                      <div key={label}>
-                        <dt>{label}</dt>
-                        <dd>
-                          <bdi>{detail}</bdi>
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                  <span className={styles.cardAction} aria-hidden="true">
-                    {t('viewDetails')} <NavigationIcon name="arrow" />
-                  </span>
-                </article>
-              ))}
-            </div>
-            {!results.length && (
-              <div className={styles.empty}>
-                <h2>{t('empty')}</h2>
-                <p>{t('emptyHelp')}</p>
+                  </div>
+                  {fields.map((field) => (
+                    <label key={field.key}>
+                      {t(field.key)}
+                      <span className={styles.select}>
+                        <select data-ui-field name={field.key} defaultValue={filters[field.key]}>
+                          <option value="">{t('all')}</option>
+                          {field.values.map((v) => (
+                            <option key={v} value={v}>
+                              {field.label(v)}
+                            </option>
+                          ))}
+                        </select>
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </form>
+              <div className={styles.resultBar}>
+                <p role="status">{t('count', { count: results.length })}</p>
                 <a
-                  className="button button-primary"
                   href={pageHref('projects', locale)}
                   onClick={(event) => {
                     event.preventDefault()
@@ -417,74 +326,168 @@ export function ProjectsExperience({
                   {t('reset')}
                 </a>
               </div>
-            )}
-            {pages > 1 && (
-              <nav aria-label={t('pagination')} className={styles.pagination}>
-                {page > 1 ? (
-                  <a
-                    href={href(page - 1)}
-                    onClick={(event) => {
-                      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-                      event.preventDefault()
-                      update({
-                        ...Object.fromEntries(
-                          new URLSearchParams(href(page - 1).split('?')[1] ?? ''),
-                        ),
-                      })
-                    }}
-                    aria-label={t('previous')}
-                  >
-                    <span className={styles.previous}></span>
-                  </a>
-                ) : (
-                  <span aria-disabled="true">
-                    <span className={styles.previous}></span>
+            </div>
+          </section>
+        </div>
+      </HeroViewport>
+      <section
+        ref={catalogueRef}
+        id="project-catalogue"
+        className={styles.catalogue}
+        aria-label={t('catalogue')}
+      >
+        <div className="container">
+          <div id="understanding-results" />
+          <div ref={gridRef} id="featured-results" className={styles.grid}>
+            {results.slice((page - 1) * 6, page * 6).map((project) => (
+              <article
+                key={project.id}
+                id={`project-${project.id}`}
+                className={styles.card}
+                aria-labelledby={`title-${project.id}`}
+              >
+                <div className={styles.cardHeader}>
+                  <p>{project.theme[locale] || t(`domains.${project.domain}`)}</p>
+                  <span className={project.status ? styles[project.status] : undefined}>
+                    {project.status ? t(`statuses.${project.status}`) : null}
                   </span>
+                </div>
+                {project.image && (
+                  <div className={styles.cardVisual}>
+                    <Image
+                      src={`${project.image}?locale=${locale}`}
+                      alt={project.imageIllustration || ''}
+                      width={900}
+                      height={430}
+                      unoptimized
+                      className={styles.cardPhoto}
+                    />
+                  </div>
                 )}
-                {Array.from({ length: pages }, (_, i) => i + 1).map((n) => (
+                <h2 data-ui-heading="card" id={`title-${project.id}`}>
                   <a
-                    key={n}
-                    href={href(n)}
+                    className={styles.cardLink}
+                    href={`${href(page)}${href(page).includes('?') ? '&' : '?'}project=${project.id}#project-details`}
+                    aria-label={t('details', { name: project.acronym })}
                     onClick={(event) => {
                       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
                       event.preventDefault()
-                      update({
-                        ...Object.fromEntries(new URLSearchParams(href(n).split('?')[1] ?? '')),
-                      })
+                      triggerRef.current = event.currentTarget
+                      setClosing(false)
+                      setSelection(project.id)
                     }}
-                    aria-label={t('page', { number: n })}
-                    aria-current={n === page ? 'page' : undefined}
                   >
-                    {n}
+                    <bdi>{project.acronym}</bdi>
                   </a>
-                ))}
-                {page < pages ? (
-                  <a
-                    href={href(page + 1)}
-                    onClick={(event) => {
-                      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-                      event.preventDefault()
-                      update({
-                        ...Object.fromEntries(
-                          new URLSearchParams(href(page + 1).split('?')[1] ?? ''),
-                        ),
-                      })
-                    }}
-                    aria-label={t('next')}
-                  >
-                    <span className={styles.next}></span>
-                  </a>
-                ) : (
-                  <span aria-disabled="true">
-                    <span className={styles.next}></span>
-                  </span>
-                )}
-              </nav>
-            )}
-            <div id="related-capabilities" />
+                </h2>
+                <p className={styles.projectTitle}>{project.title[locale]}</p>
+                <p className={styles.summary} data-project-summary>
+                  {project.summary[locale] || project.description[locale]}
+                </p>
+                <dl className={styles.metadata}>
+                  {[
+                    [t('acronym'), project.acronym],
+                    ...(project.startText[locale]
+                      ? [[t('launch'), project.startText[locale]]]
+                      : []),
+                    ...(project.programme ? [[t('programme'), project.programme]] : []),
+                  ].map(([label, detail]) => (
+                    <div key={label}>
+                      <dt>{label}</dt>
+                      <dd>
+                        <bdi>{detail}</bdi>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <span className={styles.cardAction} aria-hidden="true">
+                  {t('viewDetails')} <NavigationIcon name="arrow" />
+                </span>
+              </article>
+            ))}
           </div>
-        </section>
-      </div>
+          {!results.length && (
+            <div className={styles.empty}>
+              <h2>{t('empty')}</h2>
+              <p>{t('emptyHelp')}</p>
+              <a
+                className="button button-primary"
+                href={pageHref('projects', locale)}
+                onClick={(event) => {
+                  event.preventDefault()
+                  reset()
+                }}
+              >
+                {t('reset')}
+              </a>
+            </div>
+          )}
+          {pages > 1 && (
+            <nav aria-label={t('pagination')} className={styles.pagination}>
+              {page > 1 ? (
+                <a
+                  href={href(page - 1)}
+                  onClick={(event) => {
+                    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+                    event.preventDefault()
+                    update({
+                      ...Object.fromEntries(
+                        new URLSearchParams(href(page - 1).split('?')[1] ?? ''),
+                      ),
+                    })
+                  }}
+                  aria-label={t('previous')}
+                >
+                  <span className={styles.previous}></span>
+                </a>
+              ) : (
+                <span aria-disabled="true">
+                  <span className={styles.previous}></span>
+                </span>
+              )}
+              {Array.from({ length: pages }, (_, i) => i + 1).map((n) => (
+                <a
+                  key={n}
+                  href={href(n)}
+                  onClick={(event) => {
+                    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+                    event.preventDefault()
+                    update({
+                      ...Object.fromEntries(new URLSearchParams(href(n).split('?')[1] ?? '')),
+                    })
+                  }}
+                  aria-label={t('page', { number: n })}
+                  aria-current={n === page ? 'page' : undefined}
+                >
+                  {n}
+                </a>
+              ))}
+              {page < pages ? (
+                <a
+                  href={href(page + 1)}
+                  onClick={(event) => {
+                    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+                    event.preventDefault()
+                    update({
+                      ...Object.fromEntries(
+                        new URLSearchParams(href(page + 1).split('?')[1] ?? ''),
+                      ),
+                    })
+                  }}
+                  aria-label={t('next')}
+                >
+                  <span className={styles.next}></span>
+                </a>
+              ) : (
+                <span aria-disabled="true">
+                  <span className={styles.next}></span>
+                </span>
+              )}
+            </nav>
+          )}
+          <div id="related-capabilities" />
+        </div>
+      </section>
       {selected && !ready && (
         <section id="project-details" className={`container ${styles.fallbackDetails}`}>
           <h2>{selected.acronym}</h2>

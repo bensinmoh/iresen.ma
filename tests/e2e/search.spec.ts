@@ -286,7 +286,7 @@ test('result filters, sorting, pagination and browser history preserve the URL q
   const filteredUrl = page.url()
   const sortForm = page.locator('.search-sort-form')
   await sortForm.locator('select[name="sort"]').selectOption('newest')
-  await sortForm.locator('button[type="submit"]').click()
+  await expect(sortForm.locator('button[type="submit"]')).toHaveCount(0)
   await expect(page).toHaveURL(
     (url) =>
       url.searchParams.get('sort') === 'newest' &&

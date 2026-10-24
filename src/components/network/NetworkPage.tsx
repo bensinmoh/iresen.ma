@@ -14,7 +14,7 @@ import {
   suppliedLaboratoryContact,
   laboratoryTopics,
 } from '@/lib/network'
-import { heroImages } from '@/lib/hero-images'
+import { networkTrainingPhoto } from '@/lib/network-photo'
 import { PageHero } from '@/components/hero/PageHero'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
@@ -27,7 +27,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
   const original = await getTranslations({ locale: 'fr', namespace: 'Network' })
   const sections = await getTranslations({ locale, namespace: 'PageSections.network' })
   const navigation = await getTranslations({ locale, namespace: 'Navigation' })
-  const photo = heroImages.workshop
+  const photo = networkTrainingPhoto
   const eligibleLabs = new Set(
     (await siteContent())
       .filter(
@@ -179,7 +179,7 @@ export async function NetworkPage({ locale }: { locale: Locale }) {
                 src={photo.src}
                 width={photo.width}
                 height={photo.height}
-                alt={t('skills.imageAlt')}
+                alt={photo.descriptions[locale]}
                 sizes="(max-width: 63.999rem) 92vw, 45vw"
               />
             </div>

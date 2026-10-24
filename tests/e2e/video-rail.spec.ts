@@ -10,11 +10,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.goto(pageHref('media', locale))
     const rail = page.locator('[data-video-rail]')
     const controls = page.locator('[data-video-navigation]')
-    if (!(await rail.count())) {
-      await expect(controls).toHaveCount(0)
-      return // CI has no approved library videos; it must retain the genuine empty state.
-    }
-    await expect(rail.locator('article')).not.toHaveCount(0)
+    await expect(rail.locator('article')).toHaveCount(7)
     await expect(controls).toBeVisible()
     const buttons = controls.getByRole('button')
     await expect(buttons).toHaveCount(await rail.locator('article').count())
@@ -76,7 +72,9 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       document.documentElement.style.fontSize = '200%'
     })
     await page.setViewportSize({ width: 320, height: 900 })
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+    await expect
+      .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
+      .toBe(true)
     // A rail that fits has no redundant navigation, including after resizing.
     await rail.evaluate((el) => {
       el.style.gap = '0px'

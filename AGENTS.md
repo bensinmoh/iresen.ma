@@ -1,5 +1,16 @@
 # IRESEN coding entrypoint
 
+## Monthly dependency reminder — owner rule, 2026-10-24
+
+Before starting CI, check [the dependency review log](docs/dependency-review-log.md).
+Once per calendar month, if neither a review nor a reminder is recorded for that
+month, remind the owner to review/update dependencies and the technology stack
+before CI, then record the reminder date. Do not repeat the reminder within the
+same month. A completed review also satisfies the reminder for that month.
+The reminder alone does not authorize upgrades or create a new approval gate;
+follow the owner’s response and any existing authorization. See
+[the verification workflow](docs/verification-workflow.md#monthly-dependency-reminder).
+
 ## Shared-checkout orchestration — 2026-10-15
 
 Before editing, read [the chat coordination protocol](docs/chat-orchestration.md)

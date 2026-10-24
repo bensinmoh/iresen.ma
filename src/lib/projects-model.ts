@@ -1,3 +1,4 @@
+import { formatMoney } from './money'
 import type { Locale } from '@/i18n/locales'
 import { pageHref } from '@/lib/site'
 
@@ -96,7 +97,7 @@ export function filterProjectRecords(
         project.institutionSearchText,
         project.durationMonths,
         project.budgetMAD,
-        project.budgetMAD === null ? '' : new Intl.NumberFormat(locale).format(project.budgetMAD),
+        project.budgetMAD === null ? '' : formatMoney(project.budgetMAD),
         project.sourceUrl,
         ...project.details.presentation[locale],
         project.details.hostingPlatform[locale],

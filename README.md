@@ -52,20 +52,20 @@ management remains under `/admin/collections/users` with its existing admin gate
 
 | Component                   | Version |
 | --------------------------- | ------- |
-| Node.js                     | 24.22.0 |
-| pnpm                        | 11.28.2 |
-| Next.js                     | 16.4.1  |
+| Node.js                     | 24.22.1 |
+| pnpm                        | 11.28.6 |
+| Next.js                     | 16.4.2  |
 | React / React DOM           | 19.3.1  |
-| Payload / official adapters | 3.90.2  |
+| Payload / official adapters | 3.92.0  |
 | PostgreSQL configured/CI    | 17.11   |
 
 Use the committed lockfile and `pnpm-workspace.yaml`, including security overrides.
 Do not independently upgrade Next and Payload. Read the installed Next guides
 before implementing framework changes.
 
-Current developer tools: TypeScript 6.0.3, ESLint 10.12.0 with typescript-eslint
-8.71.2, Prettier 3.9.10, Vitest 5.0.4 and Playwright 1.64.1. The
-[October stack review](docs/stack-maintenance-2026-10.md) records compatibility,
+Current developer tools: TypeScript 6.0.3, ESLint 10.13.0 with typescript-eslint
+8.72.0, Prettier 3.9.10, Vitest 5.0.5 and Playwright 1.64.1. The
+[October stack review](docs/stack-maintenance-2026-10-24.md) records compatibility,
 upstream sources and validation. Docker and CI use the same Node/pnpm pins.
 
 ## Local setup

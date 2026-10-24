@@ -122,7 +122,12 @@ export function PhotoGallery({
         data-ui-rail="filters"
         tabIndex={0}
       >
-        {['all', ...Object.keys(copy.categories)].map((key) => (
+        {[
+          'all',
+          ...Object.keys(copy.categories).filter((key) =>
+            photos.some((photo) => photo.category === key),
+          ),
+        ].map((key) => (
           <button
             key={key}
             type="button"
@@ -337,7 +342,7 @@ export function PhotoGallery({
               </>
             )}
             {active && (
-              <a href={isBiography ? samirPortraitDownload : active.src} download>
+              <a href={isBiography ? samirPortraitDownload : active.downloadSrc} download>
                 {isBiography ? copy.downloadPortrait : copy.download} <ViewerIcon name="download" />
               </a>
             )}

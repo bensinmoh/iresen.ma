@@ -20,6 +20,9 @@ import { searchTypes, type SearchInput } from '@/lib/search/types'
 import { contentLocales } from '@/lib/content/publication'
 import { heroImages } from '@/lib/hero-images'
 import libraryVideos from '@/data/media-videos.json'
+import youtubeVideos from '@/data/youtube-videos.json' with { type: 'json' }
+import { mediaPhotos } from '@/lib/media-library'
+import { transferPhotos } from '@/lib/transfer-photos'
 import { samirCutout, samirPortraitDownload } from '@/lib/samir-biography'
 import { homeMissions, legacyMissionAnchors, homeCooperationAnchor } from '@/lib/home-missions'
 import { pageSections } from '@/lib/page-sections'
@@ -345,18 +348,53 @@ describe('explicit public search catalog', () => {
         .filter(
           ({ path }) =>
             path.startsWith('/images/institute/ambition-') &&
-            path !== '/images/institute/ambition-solar-scene-cool.webp',
+            path !== '/images/institute/ambition-king-mohammed-vi.webp',
         )
         .map(({ path }) => path),
       ...Object.values(heroImages)
         .filter(({ src, mobile }) => src !== mobile.src)
         .map(({ mobile }) => mobile.src),
-      ...libraryVideos.map(({ poster }) => poster),
+      ...youtubeVideos.map(({ poster }) => poster),
+      ...mediaPhotos.map(({ downloadSrc }) => downloadSrc),
+      transferPhotos.hero.mobile.src,
       ...governanceScientists.map((id) => `/images/governance/${id}.webp`),
       ...governanceTeam.map((id) => `/images/governance/${id}-portrait.webp`),
       samirCutout,
       samirPortraitDownload,
     ])
+    // Superseded selections remain byte-preserved; they must not create current search results.
+    const retainedPredecessors = new Set([
+      '/images/achievements/propre-ma.webp',
+      '/images/achievements/upilot-h2.webp',
+      '/images/call-partners/cdti.png',
+      '/images/call-partners/omrane.png',
+      '/images/call-partners/tamwilcom.svg',
+      '/images/careers/environment.webp',
+      '/images/careers/hero.webp',
+      '/images/heroes/transfer-technology-real.webp',
+      '/images/infrastructure/outdoor-pv.webp',
+      '/images/media-library/aquasolar-installation.webp',
+      '/images/media-library/equipe-iresen-15-ans.webp',
+      '/images/media-library/essai-charge-pv-operateur.webp',
+      '/images/media-library/essai-pv-exterieur-operateur.webp',
+      '/images/media-library/gep-laboratoire-indoor-vue-ensemble.webp',
+      '/images/media-library/gsbp-protection-solaire.webp',
+      '/images/media-library/moroccan-solar-race-challenge-2016.webp',
+      '/images/media-library/pavillon-oculus.webp',
+      '/images/media-library/pilote-experimentation.webp',
+      '/images/media-library/propre-ma-pv-toitures.webp',
+      '/images/media-library/solar-decathlon-africa-village-solaire.webp',
+      '/images/media-library/world-ptx-summit-pleniere.webp',
+      '/images/network/researcher-equipment-cutout-174.webp',
+      '/images/platforms/greenh2a.webp',
+      '/images/programmes/research-team-computers.webp',
+      '/images/transfer/innovation-workshop.webp',
+      '/images/transfer/pilot-testing.webp',
+      '/images/media-library/downloads/gsbp-protection-solaire.jpg',
+      '/images/media-library/downloads/pavillon-oculus.jpg',
+      ...libraryVideos.map(({ poster }) => poster),
+    ])
+    for (const file of retainedPredecessors) expect(references.has(file), file).toBe(false)
     // Admin-only UI decoration is intentionally outside the public content index.
     const adminUiAssets = new Set(['/brand/apex-leaf-lime.svg'])
     for (const file of adminUiAssets) expect(references.has(file)).toBe(false)
@@ -368,18 +406,25 @@ describe('explicit public search catalog', () => {
       publicAssetReferences.length,
     )
     for (const file of publicFiles)
-      expect(references.has(file) || derivatives.has(file) || adminUiAssets.has(file), file).toBe(
-        true,
-      )
+      expect(
+        references.has(file) ||
+          derivatives.has(file) ||
+          retainedPredecessors.has(file) ||
+          adminUiAssets.has(file),
+        file,
+      ).toBe(true)
     for (const asset of publicAssetReferences) {
-      expect(existsSync(path.join(publicRoot, asset.url))).toBe(true)
+      if (asset.url.startsWith('/'))
+        expect(existsSync(path.join(publicRoot, asset.url)), asset.url).toBe(true)
+      else expect(new URL(asset.url).origin).toBe('https://www.youtube.com')
       expect(derivatives.has(asset.url)).toBe(false)
       for (const locale of contentLocales) {
         expect(asset.text[locale]?.title.trim()).toBeTruthy()
         expect(asset.text[locale]?.description.trim()).toBeTruthy()
       }
     }
-    for (const image of Object.values(heroImages)) expect(references.has(image.src)).toBe(true)
+    for (const image of Object.values(heroImages))
+      expect(references.has(image.src) || retainedPredecessors.has(image.src), image.src).toBe(true)
     expect(
       publicAssetReferences.filter(({ url }) => url.startsWith('/images/contact/')),
     ).toMatchObject([

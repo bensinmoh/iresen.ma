@@ -484,7 +484,7 @@ Owner Board refinements — 2026-10-15, 21:49–21:50: remove the redundant
 the introduction-to-member-layout gap to 16px. Keep member names in media metadata.
 Centre original member marks vertically, explicitly removing image intrinsic
 minimum sizing and bounding their contained rendering to the fixed logo frame;
-no SVG bytes, geometry or crop are changed. Place MTEDD first, followed by the
+no SVG bytes, geometry or crop are changed. Place MEMDD first, followed by the
 Ministry of Economy and Finance, preserving all 16 records and links. No CI.
 
 Owner council-title correction — 2026-10-15, 21:52: use “Le Conseil
@@ -656,7 +656,7 @@ Higher Education, Scientific Research and Innovation is unchanged in the supplie
 list. French follows the supplied list, with typographic normalization; EN/AR
 are working editorial adaptations under the existing locale review gates.
 Do not change board membership, officeholders, logos or institutional destinations
-from a title update. Historical report names/MTEDD credits and private references
+from a title update. Historical report names/MEMDD credits and private references
 retain their period-specific wording and original bytes.
 
 Verification limit: the official Maroc.ma government directory still displays
@@ -675,3 +675,25 @@ the updated body/body_norm being present in the public index; this is a separate
 Arabic hamza/tokenization limitation, not a missing title update. Local dev was
 restarted to refresh catalog state. Formatting/whitespace checks pass; full
 checks/CI/Git remain held under shared coordination.
+
+## Ministry acronym — owner correction, 23 October 2026
+
+The current ministry acronym is MEMDD. Apply it to all displayed report credits,
+the strategy report's website title/descriptions and report search metadata.
+This follow-up supersedes the earlier instruction to keep period-specific report
+labels in the website interface; original linked PDFs and supplied brand files
+remain unchanged. The full ministry name already uses Energy, Mines and Sustainable
+Development; the report search body now follows it as well.
+
+The current official website remains reachable at `https://www.mtedd.gov.ma/` and
+already displays the new ministry name. Preserve that working destination rather
+than inventing a replacement domain. Historical withdrawn IDs remain solely in
+regression checks; private revision history retains the prior metadata.
+
+`scripts/sync-ministry-acronym.ts --apply` reconciles the local authoring database
+without changing publication/translation gates, saves a private backup, and records
+revisions/audit. The strategy report record was updated; no native media record
+contained the old display acronym. Rebuild the local search index after applying.
+Verification: FR/EN/AR development media-page report titles/credits, active CMS
+scan, targeted ESLint, formatting and whitespace. Full production checks and CI
+remain under the shared checkout hold.

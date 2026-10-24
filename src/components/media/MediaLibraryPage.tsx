@@ -18,7 +18,7 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'MediaLibrary' })
   const usefulLinks = await siteLibraryLinks(locale)
   let failed = false
-  const videos = await findPublicLibraryVideos(locale).catch(() => {
+  const videos = await findPublicLibraryVideos().catch(() => {
     failed = true
     return []
   })
@@ -104,7 +104,6 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
               previous={t('previousVideos')}
               next={t('nextVideos')}
               close={t('close')}
-              download={t('downloadVideo')}
             />
           ) : (
             <p className={styles.notice} role={failed ? 'alert' : undefined}>

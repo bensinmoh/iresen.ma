@@ -86,3 +86,11 @@ export const collaborationAudiences = [
   'international-partners',
   'talents-public',
 ] as const
+
+// Real workshop photo selected from today's ingested collection (source 002).
+// Source fingerprints: docs/collaboration-photo-assets.json.
+export const collaborationNeedPhoto = {
+  src: '/images/collaborate/needs-workshop-002.webp',
+  width: 1600,
+  height: 1066,
+} as const

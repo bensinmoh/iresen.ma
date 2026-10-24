@@ -7,10 +7,10 @@ import { PageShell } from '@/components/layout/PageShell'
 import { NavigationIcon } from '@/components/layout/NavigationIcon'
 import { PublishedPageContent } from '@/components/content/PublishedPageContent'
 import { ValorisationIcon, type ValorisationIconName } from '@/components/transfer/ValorisationIcon'
-import { heroImages } from '@/lib/hero-images'
 import { pageHref } from '@/lib/site'
 import {
   collaborationAudiences,
+  collaborationNeedPhoto,
   engagementSections,
   engagementContactHref,
   type EngagementSectionCopy,
@@ -43,7 +43,7 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
   const t = await getTranslations({ locale, namespace: 'Engagement' })
   const sections = await getTranslations({ locale, namespace: `PageSections.${pageId}` })
   const pages = await getTranslations({ locale, namespace: 'Pages' })
-  const photo = heroImages.team
+  const photo = collaborationNeedPhoto
 
   return (
     <PageShell title={pages(pageId)} locale={locale} pageId={pageId} showBreadcrumb={false}>
@@ -142,8 +142,8 @@ export async function EngagementPage({ pageId, locale }: { pageId: 'workWithUs';
                     src={photo.src}
                     width={photo.width}
                     height={photo.height}
-                    alt=""
-                    sizes="(max-width: 63.999rem) 100vw, 50vw"
+                    alt={t('workWithUs.photos.needs')}
+                    sizes="100vw"
                   />
                 </div>
               )}
