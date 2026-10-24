@@ -58,3 +58,11 @@ paths are reconciled before committing. Full CI on the exact final PR head,
 including dependency audit, generated CMS artifacts, integration tests, build,
 public browser suite and opt-in CMS interface suite, remains the merge gate.
 Final check outcomes and any repairs are recorded in the batch PR.
+
+The first full updated-stack CI exposed additional label-content-name mismatches
+in scientist/biography cards, homepage platform cards and numbered laboratory
+selectors. Native names now include the complete visible card text, with localized
+action hints retained for assistive technology; numbered selectors include their
+visible ordinal. The scroll-cue test pauses its clock before mounting so CI page
+load time cannot consume the initial idle window. No accessibility rule or CI
+coverage is disabled. The corrected final PR head requires a new complete CI run.

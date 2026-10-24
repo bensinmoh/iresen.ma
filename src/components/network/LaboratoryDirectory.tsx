@@ -364,7 +364,7 @@ export function LaboratoryDirectory({
                         <button
                           key={record.id}
                           type="button"
-                          aria-label={record.title}
+                          aria-label={`${index + 1} — ${record.title}`}
                           title={record.title}
                           aria-pressed={record.id === active.id}
                           onClick={() => setSelected(record.id)}

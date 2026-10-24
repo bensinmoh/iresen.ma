@@ -50,7 +50,6 @@ export async function PlatformsSection({ locale }: { locale: Locale }) {
                   locale,
                   researchPlatforms.find(({ id }) => id === platform.id)?.anchor,
                 )}
-                aria-label={`${t('cardLink')} — ${t(`platforms.${platform.id}.name`)}`}
               >
                 <div className={styles.visual}>
                   <Image

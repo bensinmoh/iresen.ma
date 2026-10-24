@@ -158,8 +158,8 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.scientistLink}
-                    aria-label={`${t('biography.linkedin')} — ${t(`scientists.${id}.name`)} — ${t(`scientists.${id}.country`)}`}
                   >
+                    <span className="sr-only">{t('biography.linkedin')}</span>
                     <Image
                       src={`/images/governance/${id}.webp`}
                       alt={t('portrait', { name: t(`scientists.${id}.name`) })}

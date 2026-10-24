@@ -380,7 +380,10 @@ test('hero scroll invitation waits for idle, hides on scroll and repeats only af
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.emulateMedia({ reducedMotion: 'no-preference' })
-  await page.clock.install()
+  // Pause before mounting so navigation/CI load time cannot consume the idle interval.
+  const startTime = new Date('2026-10-24T12:00:00Z')
+  await page.clock.install({ time: startTime })
+  await page.clock.pauseAt(new Date(startTime.getTime() + 1000))
   await page.goto(pageHref('institute', 'fr'))
   const cue = page.locator('[data-idle-scroll-cue]')
   await expect(cue).toHaveAttribute('data-ready', 'true')
