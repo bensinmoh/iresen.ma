@@ -145,3 +145,7 @@ shared catalogue section from Transfer, including its figures and filters, witho
 an extra photographic hero. Resources navigation, footer and sitemap use this page.
 The Transfer section and its anchors remain available. Patent search records retain
 their stable IDs and now open the dedicated page's corresponding patent anchors.
+
+Media library brand downloads (2026-10-27): the existing `media` page adds the
+stable `brand-assets` anchor in FR/EN/AR. Canonical paths and legacy anchors remain;
+SVG/PNG downloads are described in [the media scope](media-library.md#compact-brand-downloads--2026-10-27).

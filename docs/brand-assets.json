@@ -66,5 +66,15 @@
     "version": "Latest owner-supplied SVG, 2026-10-07",
     "transformation": "None; byte-identical copy",
     "rights": "Owner supplied and authorized website use; no standalone redistribution license asserted"
+  },
+  {
+    "source": "IRESEN Colored Logo.svg",
+    "file": "/brand/downloads/iresen-logo-color.png",
+    "sha256": "f49f3a643f62615413eba6f2c6df501dfbe2f6392e73a429d1cf9a94efd884d6",
+    "width": 2400,
+    "height": 672,
+    "bytes": 65596,
+    "transformation": "Transparent RGBA PNG rendered proportionally from the unchanged public/brand/logo-color.svg using the existing Sharp dependency; no recolouring or logo geometry edit.",
+    "rights": "Owner explicitly commissioned public SVG/PNG logo downloads in the media library on 2026-10-27; no general third-party reuse licence asserted."
   }
 ]

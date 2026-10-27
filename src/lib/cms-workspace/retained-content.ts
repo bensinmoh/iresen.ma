@@ -3,6 +3,7 @@ import { publicAssetReferences } from '@/lib/search/catalog'
 import { usefulLinks } from '@/lib/useful-links'
 import mediaPhotos from '@/data/media-photos.json' with { type: 'json' }
 import mediaReports from '@/data/media-reports.json' with { type: 'json' }
+import mediaReviewMetadata from '@/data/retained-media-review-metadata.json' with { type: 'json' }
 import { topicAliases } from '@/lib/search/concepts'
 import publicationRecords from '@/data/publications.json' with { type: 'json' }
 import patentRecords from '@/data/patents.json' with { type: 'json' }
@@ -63,6 +64,13 @@ export function retainedContentEntries(at: string): Entry[] {
         visibility: publicFR ? 'public' : 'private',
       }).map(([key, value]) => [key, stringify(value)]),
     )
+    const metadata = mediaReviewMetadata[entry.id as keyof typeof mediaReviewMetadata]
+    const hasMediaMetadata =
+      module === 'media' && Boolean(metadata) && metadata?.assetPath === entry.shared.assetPath
+    if (hasMediaMetadata) {
+      entry.shared.credit ||= metadata.credit
+      entry.shared.rights ||= metadata.rights
+    }
     for (const locale of languages) {
       const value = local(locale)
       const variant = entry.variants[locale]
@@ -77,7 +85,9 @@ export function retainedContentEntries(at: string): Entry[] {
       if (publicFR && locale === 'fr') {
         variant.status = 'published'
         entry.publicVariants.fr = structuredClone(variant)
-        entry.publicVariants.fr.fields._publishedShared = JSON.stringify(shared)
+        entry.publicVariants.fr.fields._publishedShared = JSON.stringify(
+          hasMediaMetadata ? entry.shared : shared,
+        )
       }
     }
     entries.push(entry)

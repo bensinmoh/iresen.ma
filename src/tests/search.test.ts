@@ -343,6 +343,7 @@ describe('explicit public search catalog', () => {
   it('references all served meaningful public files and keeps responsive crops under their original result', () => {
     const references = new Set([...publicAssetReferences.map(({ url }) => url)])
     const derivatives = new Set<string>([
+      '/brand/downloads/iresen-logo-color.png',
       '/videos/hero-mobile.mp4',
       ...imageProvenance
         .filter(

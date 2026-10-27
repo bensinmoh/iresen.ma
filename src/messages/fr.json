@@ -2436,7 +2436,16 @@
     "copyBiography": "Copier la biographie",
     "copiedBiography": "Biographie copiée",
     "copyBiographyError": "La copie automatique est indisponible. Vous pouvez sélectionner et copier le texte.",
-    "downloadPortrait": "Télécharger le portrait"
+    "downloadPortrait": "Télécharger le portrait",
+    "brand": {
+      "title": "La marque IRESEN",
+      "description": "Téléchargez le logo IRESEN dans son format d’origine ou en image haute définition.",
+      "svg": "Télécharger le logo SVG",
+      "png": "Télécharger le logo PNG",
+      "vector": "Vectoriel",
+      "raster": "Fond transparent · 2 400 px",
+      "alt": "Logo IRESEN en couleur"
+    }
   },
   "VideoRailNavigation": {
     "label": "Navigation de la vidéothèque",
