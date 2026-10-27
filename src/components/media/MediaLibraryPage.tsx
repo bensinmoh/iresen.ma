@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import { DownloadSimple } from '@phosphor-icons/react/dist/ssr/DownloadSimple'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 import { Heading } from '@/components/ui/Heading'
 import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
 import { getTranslations } from 'next-intl/server'
@@ -27,6 +30,7 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
     ['videos', 'videos'],
     ['reports', 'reports'],
     ['press-resources', 'links'],
+    ['brand-assets', 'brand.title'],
   ] as const
   const header = (label: string, number: string, description?: string) => (
     <header className={styles.heading}>
@@ -145,6 +149,39 @@ export async function MediaLibraryPage({ locale }: { locale: Locale }) {
                 </span>
               </a>
             ))}
+          </div>
+        </section>
+        <section id="brand-assets" className={styles.brand} aria-labelledby="brand-assets-title">
+          <Image
+            className={styles.brandLogo}
+            src="/brand/logo-color.svg"
+            width={696}
+            height={195}
+            alt={t('brand.alt')}
+            unoptimized
+          />
+          <div className={styles.brandCopy}>
+            <Heading id="brand-assets-title" as="h2" size="compact">
+              {t('brand.title')}
+            </Heading>
+            <p>{t('brand.description')}</p>
+            <small className={styles.brandFormat}>
+              <bdi>PNG</bdi> · {t('brand.raster')}
+            </small>
+          </div>
+          <div className={styles.brandDownloads}>
+            <a href="/brand/logo-color.svg" download="IRESEN-logo.svg" aria-label={t('brand.svg')}>
+              <bdi>SVG</bdi>
+              <SiteIcon icon={DownloadSimple} size={20} />
+            </a>
+            <a
+              href="/brand/downloads/iresen-logo-color.png"
+              download="IRESEN-logo.png"
+              aria-label={t('brand.png')}
+            >
+              <bdi>PNG</bdi>
+              <SiteIcon icon={DownloadSimple} size={20} />
+            </a>
           </div>
         </section>
         <section id="credits-reuse" className={styles.credits}>

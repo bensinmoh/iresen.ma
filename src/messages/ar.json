@@ -2421,7 +2421,16 @@
     "copyBiography": "نسخ السيرة الذاتية",
     "copiedBiography": "تم نسخ السيرة الذاتية",
     "copyBiographyError": "النسخ التلقائي غير متاح. يمكنك تحديد النص ونسخه.",
-    "downloadPortrait": "تنزيل الصورة الشخصية"
+    "downloadPortrait": "تنزيل الصورة الشخصية",
+    "brand": {
+      "title": "هوية IRESEN البصرية",
+      "description": "حمّل شعار IRESEN بصيغته المتجهة الأصلية أو كصورة عالية الدقة.",
+      "svg": "تحميل الشعار بصيغة SVG",
+      "png": "تحميل الشعار بصيغة PNG",
+      "vector": "صيغة متجهة",
+      "raster": "خلفية شفافة · 2400 بكسل",
+      "alt": "شعار IRESEN بالألوان"
+    }
   },
   "VideoRailNavigation": {
     "label": "التنقل في مكتبة الفيديو",

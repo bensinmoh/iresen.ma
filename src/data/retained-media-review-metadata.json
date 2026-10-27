@@ -1,0 +1,212 @@
+{
+  "retained-media-asset-collaboration-needs-workshop": {
+    "assetPath": "/images/collaborate/needs-workshop-002.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/collaborate/needs-workshop-002.webp. Traçabilité : docs/collaboration-photo-assets.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/collaboration-photo-assets.json"],
+    "sha256": "366c02b93f2125a8202041e058589fcdb40e6be39af5b04ca9b69a11ed2cd84d"
+  },
+  "retained-media-asset-library-youtube-4a_E0JrMAp4": {
+    "assetPath": "https://www.youtube.com/watch?v=4a_E0JrMAp4",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=4a_E0JrMAp4.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-library-youtube-4C70ZqwH8Zg": {
+    "assetPath": "https://www.youtube.com/watch?v=4C70ZqwH8Zg",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=4C70ZqwH8Zg.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-library-youtube-aennQkgk6q0": {
+    "assetPath": "https://www.youtube.com/watch?v=aennQkgk6q0",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=aennQkgk6q0.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-library-youtube-bu14dpbes2E": {
+    "assetPath": "https://www.youtube.com/watch?v=bu14dpbes2E",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=bu14dpbes2E.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-library-youtube-JvisuCs9NKk": {
+    "assetPath": "https://www.youtube.com/watch?v=JvisuCs9NKk",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=JvisuCs9NKk.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-library-youtube-tI3XeBK0-FU": {
+    "assetPath": "https://www.youtube.com/watch?v=tI3XeBK0-FU",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=tI3XeBK0-FU.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-library-youtube-zgGJZ9Ox8PY": {
+    "assetPath": "https://www.youtube.com/watch?v=zgGJZ9Ox8PY",
+    "credit": "IRESEN — YouTube. Source : https://www.youtube.com/watch?v=zgGJZ9Ox8PY.",
+    "rights": "Lien vers la vidéo YouTube de la chaîne IRESEN, dans la vidéothèque déjà commandée. Aucun droit de téléchargement, de redistribution ou de licence ouverte accordé.",
+    "evidence": ["src/data/youtube-videos.json"]
+  },
+  "retained-media-asset-network-laboratory-training": {
+    "assetPath": "/images/heroes/network-laboratory-training.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/heroes/network-laboratory-training.webp. Traçabilité : docs/network-photo-assets.json, docs/photo-asset-library.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/network-photo-assets.json", "docs/photo-asset-library.json"],
+    "sha256": "c037539e90a78ee5f469877e120ae7c7cfa23b3d32a1c4684fa443d8850bd368"
+  },
+  "retained-media-asset-network-pilot-128": {
+    "assetPath": "/images/heroes/network-pilot-128.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/heroes/network-pilot-128.webp. Traçabilité : docs/network-hero-assets.json, docs/photo-asset-library.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/network-hero-assets.json", "docs/photo-asset-library.json"],
+    "sha256": "a9728d414b6f241e8e635f21e5a9ba190ef5c25e38c65f74442417e45c76f4bc"
+  },
+  "retained-media-asset-programmes-gep-outdoor-pv-testing": {
+    "assetPath": "/images/programmes/gep-outdoor-pv-testing.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/programmes/gep-outdoor-pv-testing.webp. Traçabilité : docs/programmes-assets.json, docs/photo-asset-library.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/programmes-assets.json", "docs/photo-asset-library.json"],
+    "sha256": "e0f662ef549fcb6572155f7385fbbca9e28b98a8f1c4a7a9115a58b839ae522a"
+  },
+  "retained-media-asset-transfer-photo-hero": {
+    "assetPath": "/images/transfer/research-team-pv.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/transfer/research-team-pv.webp. Traçabilité : docs/transfer-photo-assets.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/transfer-photo-assets.json"],
+    "sha256": "a0e8e0f399f3e831480cee6b518a9957d8208b755666edb08c98a8f03e3fb50e"
+  },
+  "retained-media-asset-transfer-photo-innovation": {
+    "assetPath": "/images/heroes/transfer-researcher-sample.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/heroes/transfer-researcher-sample.webp. Traçabilité : docs/transfer-photo-assets.json, docs/photo-asset-library.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/transfer-photo-assets.json", "docs/photo-asset-library.json"],
+    "sha256": "5e5dab49a2e4fc30a29d01f4fda595ef688b80fe7a67117d6a60bfa64befab3e"
+  },
+  "retained-media-asset-transfer-photo-intro": {
+    "assetPath": "/images/transfer/laboratory-collaboration.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/transfer/laboratory-collaboration.webp. Traçabilité : docs/transfer-photo-assets.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/transfer-photo-assets.json"],
+    "sha256": "80e3f9f2f138949c3e1a95fc2de9ba6175c88ebc5d9284f6cd1c1a272470c3d8"
+  },
+  "retained-media-asset-transfer-photo-technology": {
+    "assetPath": "/images/heroes/transfer-technology-discussion-070.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/heroes/transfer-technology-discussion-070.webp. Traçabilité : docs/transfer-photo-assets.json, docs/photo-asset-library.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/transfer-photo-assets.json", "docs/photo-asset-library.json"],
+    "sha256": "aa7050b45bae42a2d1dabc974e4990e3fcb174c61f180500c3e81bf6c880e8ab"
+  },
+  "retained-media-photo-analyse-cartographique": {
+    "assetPath": "/images/media-library/analyse-cartographique.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/analyse-cartographique.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "7d2031e9ed8b6717f57847df505319c20db22f79bdce6c83eed83028970d5cb1"
+  },
+  "retained-media-photo-banc-charge-mecanique-pv": {
+    "assetPath": "/images/media-library/banc-charge-mecanique-pv.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/banc-charge-mecanique-pv.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "61cba5a0cbb74c20804537c2e439f2b0aa60450287b5ea039ac3bdbb56d23a32"
+  },
+  "retained-media-photo-banc-encrassement-enexio": {
+    "assetPath": "/images/media-library/banc-encrassement-enexio.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/banc-encrassement-enexio.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "8d2c9d4415ffd1a58af3709c0cdbfec848e9767deb12d57090a3fdec9350ab5d"
+  },
+  "retained-media-photo-concentrateur-solaire": {
+    "assetPath": "/images/media-library/concentrateur-solaire.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/concentrateur-solaire.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "2e57c2cd5a679651cb4e07f247c898415daae2b714e7f38644eac39239cee0d1"
+  },
+  "retained-media-photo-developpement-cellules-pv": {
+    "assetPath": "/images/media-library/developpement-cellules-pv.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/developpement-cellules-pv.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "8c004b1820ae0a9fa9b416b722524d154dc712d40eeb326efe9000eb40a81ade"
+  },
+  "retained-media-photo-enceinte-test-climatique": {
+    "assetPath": "/images/media-library/enceinte-test-climatique.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/enceinte-test-climatique.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "df0a0f40de69822a54215c9df27b26d23b0ec1c81892d6009fa31a672ccdc485"
+  },
+  "retained-media-photo-gsbp-campus": {
+    "assetPath": "/images/media-library/gsbp-campus.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/gsbp-campus.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "d8c573bf97fb044ca4bf77fa217306beb34743cbab587bd25f42c13c2c42a719"
+  },
+  "retained-media-photo-hybridbath-solaire-thermique": {
+    "assetPath": "/images/media-library/hybridbath-solaire-thermique.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/hybridbath-solaire-thermique.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "cd9bd11cd405afc41b1a05312a283553b1ed7bdf5c13be561643ab2066ed9d89"
+  },
+  "retained-media-photo-inspection-photographique-pv": {
+    "assetPath": "/images/media-library/inspection-photographique-pv.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/inspection-photographique-pv.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "39d140ef39cc42ceb00b04077aa490564c74337ed949d33d6353572c3092dc8a"
+  },
+  "retained-media-photo-maison-demonstratrice-pv": {
+    "assetPath": "/images/media-library/maison-demonstratrice-pv.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/maison-demonstratrice-pv.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "24d2a111f3197c9094473e1c8c1bbd0696f92ceaf15bb7d57b6e8c1484190c57"
+  },
+  "retained-media-photo-modules-pv-bifaciaux": {
+    "assetPath": "/images/media-library/modules-pv-bifaciaux.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/modules-pv-bifaciaux.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "7bc791618b4f8c20d88c3290923e5b4542858946412b2c477dd159197d309525"
+  },
+  "retained-media-photo-observation-microscope": {
+    "assetPath": "/images/media-library/observation-microscope.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/observation-microscope.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "7eb4b05c6b42efee3407f859ebc48de113285fbacc8bdb387780ffad5363cc1d"
+  },
+  "retained-media-photo-pavillon-oculus": {
+    "assetPath": "/images/media-library/pavillon-oculus.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/pavillon-oculus.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Conservation interne uniquement. Photographie retirée de la photothèque ; aucune remise en ligne autorisée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "5246b79ef16c39d1a678ebd366fba47df74db31aa159adb2daadf184447e1c07"
+  },
+  "retained-media-photo-plateforme-essais-solaires-panorama": {
+    "assetPath": "/images/media-library/plateforme-essais-solaires-panorama.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/plateforme-essais-solaires-panorama.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "c705a3db7bff5471b8f0b3b6ecb4260378f9612cca1cffb0fcebe53d89193fac"
+  },
+  "retained-media-photo-siege-iresen-entree": {
+    "assetPath": "/images/media-library/siege-iresen-entree.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/siege-iresen-entree.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "ddf83ab77c7e74341a90fc6f25fad21df672024277ee626f2265a1ef1986ba06"
+  },
+  "retained-media-photo-smart-grids-test-lab": {
+    "assetPath": "/images/media-library/smart-grids-test-lab.webp",
+    "credit": "Collection photographique IRESEN fournie par le propriétaire. Fichier : /images/media-library/smart-grids-test-lab.webp. Traçabilité : docs/media-library-photos.json. Photographe non identifié dans les sources.",
+    "rights": "Usage éditorial limité aux emplacements déjà commandés du site IRESEN. Aucune autorisation de réutilisation par des tiers ni licence ouverte accordée.",
+    "evidence": ["docs/media-library-photos.json"],
+    "sha256": "6f2d2d1b17e14afcaedbe87cf47a754ed31d2fb9b7cbad68fec31c32434ba137"
+  }
+}

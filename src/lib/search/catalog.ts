@@ -950,7 +950,10 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: `${id === 'apex-leaf' ? assetLabels[locale].apex : id === 'favicon' ? assetLabels[locale].favicon : assetLabels[locale].logo} — ${id}`,
-          description: assetLabels[locale].brand,
+          description:
+            id === 'logo-color'
+              ? `${messages[locale].MediaLibrary.brand.description} SVG PNG ${messages[locale].MediaLibrary.brand.raster}`
+              : assetLabels[locale].brand,
         },
       ]),
     ) as PublicAssetReference['text'],
@@ -1765,6 +1768,14 @@ export function staticSearchDocuments(
         type: 'section',
       })
     }
+    documents.push({
+      id: `section:media:brand-assets:${locale}`,
+      locale,
+      title: catalog.MediaLibrary.brand.title,
+      body: `${catalog.MediaLibrary.brand.description} ${catalog.MediaLibrary.brand.svg} ${catalog.MediaLibrary.brand.png} ${catalog.MediaLibrary.brand.raster}`,
+      url: pageHref('media', locale, 'brand-assets'),
+      type: 'section',
+    })
     for (const asset of publicAssetReferences) {
       if (isAiGeneratedImage(asset.url)) continue
       const copy = asset.text[locale]

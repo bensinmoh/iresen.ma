@@ -305,3 +305,51 @@ from MediaLibrary and the media/publications section metadata in FR/EN/AR. Local
 CMS catalogues and named sections are reconciled with backup, revision history
 and publication gates retained; public search is rebuilt. No file or report title
 changes in this follow-up.
+
+## Compact brand downloads — 2026-10-27
+
+The owner commissions a slim brand section with direct SVG and PNG logo downloads.
+The composition takes the clear logo preview/direct-download approach from
+[Slack’s media kit](https://slack.com/media-kit) and
+[Spotify’s brand assets](https://newsroom.spotify.com/media-kit/logo-and-brand-assets/),
+within the existing IRESEN identity. The retained institute benchmark’s direct
+resource access guidance also applies; its source remains unchanged.
+
+`#brand-assets` follows Useful links and is available from the page’s category
+navigation. One compact row groups the original color logo, localized heading/copy,
+PNG specifications and two native download links. Tablet/mobile stack naturally;
+Arabic reverses reading order without mirroring the mark. Shared type, palette,
+action corners and focus styles remain authoritative. No new client component,
+dependency, route or animation is added.
+
+- SVG: existing `/brand/logo-color.svg`, byte-identical to the supplied original
+  (SHA-256 `8c47a51d6e424324a91d0e5ecf2ef4d7b102ac137b02efea2b2a0971ac360396`).
+- PNG: `/brand/downloads/iresen-logo-color.png`, 2400 × 672, transparent RGBA,
+  65,596 bytes, rendered proportionally using existing Sharp. Provenance/hash is in
+  [brand-assets.json](brand-assets.json). Original SVGs remain unchanged.
+- The owner’s request authorizes these downloads; it does not establish a general
+  reuse licence or publish the private color book.
+
+Search includes `section:media:brand-assets:{locale}` and descriptive SVG/PNG
+metadata on the existing `brand-logo-color` asset result. The PNG derivative shares
+that original result. FR/EN/AR interface copy and canonical anchors are complete.
+
+Verification ledger: changed-file Prettier, targeted ESLint and whitespace checks;
+Impeccable detector returned no findings. Development Chrome inspected FR1440,
+EN768, AR390 and FR320, including real keyboard downloads and visible focus.
+SVG/PNG download hashes match the served originals; PNG alpha/dimensions verified.
+No section overflow, minimum 44px download targets and correct Arabic direction.
+Screenshots/metrics are private in `.local/media-brand-review/`.
+Production build, application suites, CI and merge remain held by the existing
+shared-checkout coordination round (`final-validation` pending); development
+review is not production verification. No deployment or DNS change.
+
+Final validation — 27 October 2026: the isolated production build and TypeScript
+pass. All 282 unit tests and the five production media-library browser tests pass
+(FR/EN/AR, accessibility, responsive layout, keyboard dialogs, no-JavaScript and
+reduced motion). Production logo review passes at FR1440/320, EN768 and AR390;
+SVG/PNG keyboard downloads work, focus is visible, controls exceed 44px and no
+section overflow occurs. Final FR desktop and Arabic mobile screenshots were
+visually inspected in `.local/ci-merge-brand-review/`. The public asset audit now
+recognizes the PNG as a derivative of the existing SVG search result. Full CI on
+the final PR revision remains the merge gate.

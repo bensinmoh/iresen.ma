@@ -2421,7 +2421,16 @@
     "copyBiography": "Copy biography",
     "copiedBiography": "Biography copied",
     "copyBiographyError": "Automatic copying is unavailable. You can select and copy the text.",
-    "downloadPortrait": "Download portrait"
+    "downloadPortrait": "Download portrait",
+    "brand": {
+      "title": "The IRESEN brand",
+      "description": "Download the IRESEN logo as an original vector or a high-resolution image.",
+      "svg": "Download SVG logo",
+      "png": "Download PNG logo",
+      "vector": "Vector",
+      "raster": "Transparent · 2,400 px",
+      "alt": "IRESEN color logo"
+    }
   },
   "VideoRailNavigation": {
     "label": "Video library navigation",

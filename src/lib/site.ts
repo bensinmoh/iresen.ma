@@ -112,6 +112,7 @@ export const pages = {
     anchors: ['adoption-initiatives', 'valorisation-figures'],
   },
   media: {
+    anchors: ['brand-assets'],
     path: '/resources/media',
     pathnames: {
       fr: '/ressources/mediatheque',
