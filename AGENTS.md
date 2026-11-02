@@ -1,5 +1,18 @@
 # IRESEN coding entrypoint
 
+## Codex updates and manual CMS editing — owner rule, 2026-11-02
+
+Implement updates requested through Codex directly in the canonical source/code/
+data, then synchronize the affected CMS information to the delivered result.
+Do not use the CMS editorial interface/workflow to implement these requests or
+create a draft modification, review submission or pending manual validation for
+them. The CMS editing workflow is for manual updates made outside Codex.
+Synchronize authorized fields and applicable existing public snapshots without
+resetting them to draft; preserve unrelated manual edits, private revision/audit
+history and backups. Content/locale publication restrictions, private-source
+exclusions and deployment authorization still apply. See
+[the CMS workflow rule](docs/cms-interface-preview.md#codex-updates-and-manual-cms-editing--owner-rule-2026-11-02).
+
 ## Monthly dependency reminder — owner rule, 2026-10-24
 
 Before starting CI, check [the dependency review log](docs/dependency-review-log.md).
