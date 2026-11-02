@@ -373,7 +373,7 @@
       },
       "leadership-organisation": {
         "title": "Une Direction générale et trois pôles complémentaires",
-        "description": "La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements. Trois pôles structurent les fonctions scientifiques, de développement et de support. Soukaina BOUDOUDOUH Directrice des Programmes R&D&I et du Réseau d’Experts Ayoub HIRT Directeur du Développement des Plateformes et des Projets Structurants Mouhcine BENMEZIANE Directeur des Partenariats et du Marketing de l’Innovation Laila TYDRINI Directrice Administrative & Financière Imane MOUBACHIR Directrice Stratégie, Gouvernance & Organisation Jamaleddine FOUHAM Chef du Département IT & Systèmes d’Information Samir RACHIDI Directeur Scientifique par Intérim"
+        "description": "La Direction générale met en œuvre les décisions du conseil d’administration. Elle coordonne les activités scientifiques, techniques, administratives et financières, mobilise les moyens nécessaires et rend compte de l’avancement des programmes et des engagements. Trois pôles structurent les fonctions scientifiques, de développement et de support. Soukaina BOUDOUDOUH Directrice des Programmes R&D&I et du Réseau d’Experts Ayoub HIRT Directeur du Développement des Plateformes Technologiques & Industrielles Mouhcine BENMEZIANE Directeur des Partenariats et du Marketing de l’Innovation Laila TYDRINI Directrice Administrative & Financière Imane MOUBACHIR Stratégie, Gouvernance & Organisation Jamaleddine FOUHAM IT & Systèmes d’Information Samir RACHIDI Directeur Scientifique par Intérim"
       },
       "department-responsibilities": {
         "title": "Les responsabilités des directions",
@@ -3012,8 +3012,8 @@
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "Directeur du Développement des Plateformes et des Projets Structurants",
-        "biography": "Ayoub HIRT est directeur du développement des plateformes et des projets structurants à l’IRESEN. Son parcours au sein de l’Institut comprend la responsabilité du département Chimie verte, Bioénergie et Agritech, ainsi que des activités de recherche et d’innovation dans les technologies énergétiques.\n\nSes domaines d’intervention comprennent l’hydrogène vert, le Power-to-X et la bioénergie. Il participe aux échanges entre acteurs scientifiques, institutionnels et industriels sur le développement de ces filières, leurs infrastructures et les compétences nécessaires à leur déploiement."
+        "role": "Directeur du Développement des Plateformes Technologiques & Industrielles",
+        "biography": "Ayoub HIRT est directeur du développement des plateformes technologiques et industrielles à l’IRESEN. Son parcours au sein de l’Institut comprend la responsabilité du département Chimie verte, Bioénergie et Agritech, ainsi que des activités de recherche et d’innovation dans les technologies énergétiques.\n\nSes domaines d’intervention comprennent l’hydrogène vert, le Power-to-X et la bioénergie. Il participe aux échanges entre acteurs scientifiques, institutionnels et industriels sur le développement de ces filières, leurs infrastructures et les compétences nécessaires à leur déploiement."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
@@ -3027,12 +3027,12 @@
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Directrice Stratégie, Gouvernance & Organisation",
+        "role": "Stratégie, Gouvernance & Organisation",
         "biography": "Imane MOUBACHIR exerce à l’IRESEN dans le domaine de la stratégie et de l’organisation. Son activité porte sur la déclinaison des orientations de l’Institut, les outils de pilotage et l’amélioration de son fonctionnement interne.\n\nElle intervient ainsi à l’articulation entre les priorités institutionnelles, la coordination des activités et l’organisation des moyens mobilisés par les équipes."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "Chef du Département IT & Systèmes d’Information",
+        "role": "IT & Systèmes d’Information",
         "biography": "Jamaleddine FOUHAM intervient à l’IRESEN dans le domaine des technologies de l’information et des systèmes d’information. Son périmètre concerne le fonctionnement et l’évolution des outils informatiques et numériques de l’Institut.\n\nIl accompagne les usages des équipes et les besoins liés aux activités scientifiques et administratives, en appui au fonctionnement quotidien de l’organisation."
       },
       "samir": {

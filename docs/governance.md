@@ -697,3 +697,43 @@ contained the old display acronym. Rebuild the local search index after applying
 Verification: FR/EN/AR development media-page report titles/credits, active CMS
 scan, targeted ESLint, formatting and whitespace. Full production checks and CI
 remain under the shared checkout hold.
+
+## Leadership titles and biography refinement — 2026-11-02
+
+The owner's latest correction supersedes the historical titles above:
+
+- Imane MOUBACHIR: **Stratégie, Gouvernance & Organisation**.
+- Jamaleddine FOUHAM: **IT & Systèmes d’Information**.
+- Ayoub HIRT: **Directeur du Développement des Plateformes Technologiques & Industrielles**.
+
+The local-only `scripts/sync-governance-titles.ts` reconciles the existing CMS
+catalogues and named records using exact replacements, with a private backup,
+revision history and audit entry. It preserves draft/publication states and
+unrelated edits; re-running it is a no-op.
+
+FR/EN/AR captions, dialog roles and existing localized section/portrait search
+metadata follow these corrections; Ayoub's biographical opening uses the same
+function. English/Arabic remain working adaptations. Department remits, biographies
+otherwise, profile URLs, portraits and stable destinations are preserved.
+
+The dialog now separates a stronger name, medium-weight blue function and quieter
+prose using a ruled identity header and generous spacing. Its narrower reading
+measure and compact mobile portrait improve reading without new assets or fonts.
+Native modal semantics, Escape/backdrop dismissal and focus restoration remain.
+
+Verification ledger (Node 24.22.1 / pnpm 11.28.6): full ESLint and changed-file
+Prettier/whitespace pass; Impeccable mechanical scan reports no findings. The
+isolated final production build includes TypeScript and passes. All 36 targeted
+i18n/search units and all nine governance production-browser scenarios pass.
+Coverage includes FR/EN/AR, 320/390/768/1024/1440px page reflow, dialog containment,
+200% text, Escape/close/backdrop dismissal, focus restoration, no-JavaScript
+reading, search discovery and no serious/critical axe findings in tested states.
+FR desktop/mobile, EN long function and AR mobile captures were visually inspected;
+keyboard/browser checks do not establish full screen-reader conformance.
+
+The first rendered pass identified retained CMS values masking source corrections;
+the local synchronizer updated six records with backup/revisions/audit and a repeat
+dry run found zero changes. Search rebuilt 283 eligible CMS records plus the
+static catalogue. Private backups and captures stay under ignored `.local/`.
+Final-head PR CI remains the merge gate; local broad integration suites were not
+repeated for this scoped change.

@@ -621,3 +621,14 @@ rounded down to whole currency units. Preserve source precision and currency.
 Use the shared formatter for structured budgets, consistent full amounts in
 financial prose and LTR isolation within Arabic text. Apply to project details,
 call budgets, archival funding copy and on-demand project PDFs.
+
+## Governance biography reading — 2026-11-02
+
+The governance biographies use the existing card-heading role for names (600),
+blue 18px functions (500) and 16px prose (400, 1.8 leading). A fine rule and
+24px separation distinguish identity from narrative; prose stays within 65ch.
+The native dialog is capped at 76rem with a pale portrait column, 48px desktop
+insets and 24px mobile insets. Portraits remain contained, becoming a compact
+240px stage on mobile. Existing fonts, physical signature corners, logical RTL
+spacing, 44px controls and native dismissal/focus restoration remain. This is
+a scoped adaptation; shared tokens and unrelated media viewers are unchanged.

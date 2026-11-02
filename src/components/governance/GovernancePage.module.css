@@ -281,7 +281,7 @@
 }
 .biographyDialog {
   margin: auto;
-  inline-size: min(96rem, calc(100% - 2rem));
+  inline-size: min(76rem, calc(100% - 2rem));
   max-block-size: calc(100dvh - 2rem);
   padding: 0;
   border: 0;
@@ -313,14 +313,23 @@
   cursor: pointer;
   z-index: 2;
 }
+.biographyClose:hover {
+  background: var(--color-action-surface);
+}
+.biographyClose:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+}
 .biographyLayout {
   background: var(--color-action-surface);
   display: grid;
-  grid-template-columns: minmax(12rem, 0.22fr) minmax(0, 0.78fr);
+  grid-template-columns: minmax(14rem, 0.28fr) minmax(0, 0.72fr);
 }
 .biographyPhoto {
-  position: relative;
-  min-block-size: 28rem;
+  position: sticky;
+  inset-block-start: 0;
+  align-self: start;
+  block-size: min(38rem, calc(100dvh - 2rem));
   background: var(--color-action-surface);
 }
 .biographyPhoto img {
@@ -328,25 +337,30 @@
   object-position: center bottom;
 }
 .biographyFullWidth {
-  display: flex;
+  display: grid;
   align-items: end;
-  min-block-size: 0;
 }
 .biographyFullWidth img {
   display: block;
   inline-size: 100%;
-  block-size: auto;
+  block-size: 100%;
+  min-block-size: 0;
 }
 .biographyCopy {
   text-align: start;
   min-inline-size: 0;
   background: var(--color-white);
-  padding: var(--space-8);
-  padding-block-start: var(--space-12);
+  padding: var(--space-12);
+}
+.biographyHeader {
+  padding-inline-end: var(--space-8);
+  padding-block-end: var(--space-6);
+  margin-block-end: var(--space-6);
+  border-block-end: 1px solid var(--color-border);
 }
 .biographyName {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: var(--space-3);
   margin-block-end: var(--space-2);
 }
@@ -356,24 +370,24 @@
 .biographyCopy h2 {
   margin: 0;
 }
-.biographyCopy p {
-  line-height: 1.6;
+.biographyBody {
+  display: grid;
+  gap: var(--space-4);
+  max-inline-size: 65ch;
 }
-.biographyDialog .biographyCopy p {
-  max-inline-size: none;
-}
-.biographyCopy > p:not([class]) {
+.biographyBody p {
   font-size: 1rem;
-  line-height: 1.6;
-  margin-block: 0 var(--space-3);
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+  color: var(--color-text-muted);
 }
 .biographyCopy .biographyRole {
-  margin-block: 0 var(--space-4);
+  margin: 0;
   color: var(--color-blue);
-  font-size: clamp(1.125rem, 1.6vw, 1.35rem);
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.45;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 .biographyLinkedin {
   display: flex;
@@ -388,8 +402,11 @@
 .biographyLinkedin svg {
   display: block;
   margin: 0;
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: 24px;
+  block-size: 24px;
+}
+.biographyLinkedin:hover {
+  background: var(--color-action-surface);
 }
 .biographyLinkedin:focus-visible {
   outline: 2px solid currentColor;
@@ -400,10 +417,18 @@
     grid-template-columns: minmax(0, 1fr);
   }
   .biographyPhoto {
-    min-block-size: 19rem;
+    position: relative;
+    block-size: 15rem;
+  }
+  .biographyPhoto img {
+    max-inline-size: 15rem;
+    margin-inline: auto;
   }
   .biographyCopy {
     padding: var(--space-6);
+  }
+  .biographyHeader {
+    padding-inline-end: 0;
   }
 }
 
@@ -421,17 +446,6 @@
   filter: url('#governance-portrait-warm-source');
 }
 
-/* Keep long biographies readable within shorter desktop viewports. */
-@media (min-width: 48.001rem) and (max-height: 50rem) {
-  .biographyCopy {
-    padding: var(--space-6);
-    padding-block-start: var(--space-8);
-    padding-block-end: var(--space-4);
-  }
-  .biographyCopy > p:not([class]) {
-    margin-block-end: var(--space-2);
-  }
-}
 /* Board membership: original marks nearest the IRESEN hub, names alongside. */
 .councils > .heading {
   margin-block-end: var(--space-4);

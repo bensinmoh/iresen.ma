@@ -82,8 +82,9 @@ test('French owner-confirmed leadership roles; page has no serious axe violation
 }) => {
   await page.goto(pageHref('governance', 'fr'))
   for (const [name, role] of [
-    ['Imane MOUBACHIR', 'Directrice Stratégie, Gouvernance & Organisation'],
-    ['Jamaleddine FOUHAM', 'Chef du Département IT & Systèmes d’Information'],
+    ['Imane MOUBACHIR', 'Stratégie, Gouvernance & Organisation'],
+    ['Ayoub HIRT', 'Directeur du Développement des Plateformes Technologiques & Industrielles'],
+    ['Jamaleddine FOUHAM', 'IT & Systèmes d’Information'],
     ['Laila TYDRINI', 'Directrice Administrative & Financière'],
   ]) {
     const card = page.locator('#department-responsibilities li').filter({ hasText: name })
@@ -159,10 +160,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
           ? catalogs[locale].Governance.directorGeneralName
           : catalogs[locale].Governance.team[id as keyof typeof catalogs.fr.Governance.team].name,
       )
+      if (id !== 'samir')
+        await expect(dialog.locator('header p')).toHaveText(
+          catalogs[locale].Governance.team[id as keyof typeof catalogs.fr.Governance.team].role,
+        )
       await expect(dialog.locator('img')).toHaveCount(1)
-      if (id === 'samir' || id === 'mouhcine')
+      if (['samir', 'mouhcine', 'imane', 'ayoub'].includes(id))
         await page.screenshot({ path: testInfo.outputPath(`${locale}-${id}-biography.png`) })
-      await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 7 : id === 'mouhcine' ? 5 : 4)
+      await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 6 : id === 'mouhcine' ? 4 : 3)
       if (url) await expect(dialog.locator('a')).toHaveAttribute('href', url)
       else await expect(dialog.locator('a')).toHaveCount(0)
       if (id === 'samir') await dialog.getByRole('button').click()
@@ -173,6 +178,12 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.locator('#team-member-soukaina').click()
     const dialog = page.getByRole('dialog')
+    await page.screenshot({ path: testInfo.outputPath(`${locale}-mobile-biography.png`) })
+    for (const width of [320, 390, 768, 1024]) {
+      await page.setViewportSize({ width, height: 844 })
+      await expect.poll(() => dialog.evaluate((e) => e.scrollWidth <= e.clientWidth + 1)).toBe(true)
+    }
+    await page.setViewportSize({ width: 390, height: 844 })
     await page.evaluate(() => (document.documentElement.style.fontSize = '200%'))
     await expect.poll(() => dialog.evaluate((e) => e.scrollWidth <= e.clientWidth + 1)).toBe(true)
     const axe = await new AxeBuilder({ page }).include('dialog[open]').analyze()

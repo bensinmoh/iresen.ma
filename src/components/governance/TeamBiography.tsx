@@ -2,8 +2,6 @@
 
 import { Heading } from '@/components/ui/Heading'
 
-import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
-
 import Image from 'next/image'
 import { useEffect, useId, useRef, useState } from 'react'
 import { FooterIcon } from '@/components/layout/FooterIcon'
@@ -152,32 +150,35 @@ export function TeamBiography({
               quality={90}
               alt={portraitAlt}
               {...(biographyFullWidth ? { width: 919, height: 1711 } : { fill: true })}
-              sizes="(max-width: 48rem) 90vw, 420px"
+              sizes="(max-width: 48rem) 240px, 360px"
             />
           </div>
           <div className={styles.biographyCopy}>
-            <SectionEyebrow>{biographyLabel}</SectionEyebrow>
-            <div className={styles.biographyName}>
-              <Heading as="h2" size="compact" id={titleId}>
-                <bdi>{name}</bdi>
-              </Heading>
-              {linkedin && (
-                <a
-                  className={styles.biographyLinkedin}
-                  href={linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${linkedinLabel} — ${name}`}
-                  title={linkedinLabel}
-                >
-                  <FooterIcon name="linkedin" />
-                </a>
-              )}
+            <header className={styles.biographyHeader}>
+              <div className={styles.biographyName}>
+                <Heading as="h2" size="card" id={titleId}>
+                  <bdi>{name}</bdi>
+                </Heading>
+                {linkedin && (
+                  <a
+                    className={styles.biographyLinkedin}
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${linkedinLabel} — ${name}`}
+                    title={linkedinLabel}
+                  >
+                    <FooterIcon name="linkedin" />
+                  </a>
+                )}
+              </div>
+              <p className={styles.biographyRole}>{role}</p>
+            </header>
+            <div className={styles.biographyBody}>
+              {paragraphs.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
             </div>
-            <p className={styles.biographyRole}>{role}</p>
-            {paragraphs.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
           </div>
         </div>
       </dialog>
