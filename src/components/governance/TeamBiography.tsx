@@ -17,6 +17,7 @@ type Props = {
   biographyPhoto?: string
   /** Frame the visible cutout, excluding source transparency where needed. */
   biographyAspectRatio?: string
+  biographyScale?: number
   portraitAlt: string
   paragraphs: string[]
   linkedin?: string
@@ -34,6 +35,7 @@ export function TeamBiography({
   photo,
   biographyPhoto = photo,
   biographyAspectRatio = '2 / 3',
+  biographyScale = 1,
   portraitAlt,
   paragraphs,
   linkedin,
@@ -150,7 +152,14 @@ export function TeamBiography({
                 style={{ aspectRatio: biographyAspectRatio }}
                 data-biography-image
               >
-                <Image src={biographyPhoto} quality={90} alt={portraitAlt} fill sizes="240px" />
+                <Image
+                  src={biographyPhoto}
+                  quality={90}
+                  alt={portraitAlt}
+                  fill
+                  sizes="360px"
+                  style={{ transform: `scale(${biographyScale})` }}
+                />
               </div>
             </div>
           </div>

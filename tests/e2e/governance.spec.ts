@@ -165,6 +165,14 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
           catalogs[locale].Governance.team[id as keyof typeof catalogs.fr.Governance.team].role,
         )
       await expect(dialog.locator('img')).toHaveCount(1)
+      const nameRoleGap = await dialog.locator('header').evaluate((header) => {
+        const name = header.querySelector('h2')!.getBoundingClientRect()
+        const role = header.querySelector('p')!.getBoundingClientRect()
+        return role.top - name.bottom
+      })
+      expect(nameRoleGap).toBeGreaterThanOrEqual(0)
+      expect(nameRoleGap).toBeLessThanOrEqual(6)
+      if (url) expect((await dialog.locator('a').boundingBox())!.height).toBeGreaterThanOrEqual(44)
       const portrait = await dialog.locator('[data-biography-portrait]').boundingBox()
       const image = await dialog.locator('[data-biography-image]').boundingBox()
       const window = (await dialog.boundingBox())!
@@ -178,8 +186,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
       ).toBeLessThanOrEqual(1)
       expect(image!.y).toBeLessThan(window.y + window.height)
       if (id === 'imane') expect((await dialog.boundingBox())!.height).toBeLessThan(550)
-      if (['samir', 'mouhcine', 'imane', 'ayoub'].includes(id))
-        await page.screenshot({ path: testInfo.outputPath(`${locale}-${id}-biography.png`) })
+      await page.screenshot({ path: testInfo.outputPath(`${locale}-${id}-biography.png`) })
       await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 6 : id === 'mouhcine' ? 4 : 3)
       if (url) await expect(dialog.locator('a')).toHaveAttribute('href', url)
       else await expect(dialog.locator('a')).toHaveCount(0)

@@ -636,3 +636,10 @@ side margins, while Samir retains his 919:1711 ratio. Mobile uses a compact 240p
 upper-body stage. Existing fonts, physical signature corners, logical RTL
 spacing, 44px controls and native dismissal/focus restoration remain. This is
 a scoped adaptation; shared tokens and unrelated media viewers are unchanged.
+
+Portrait-scale follow-up — 2026-11-02: biography-only framing enlarges Samir
+1.5×, Mouhcine 1.35× and Soukaina/Ayoub/Laila 1.1×; Imane and Jamaleddine keep
+their existing scale. Clip the display framing from the top to preserve faces
+and keep the visible frame at the bottom while scrolling. Source assets and
+organisation-card framing stay unchanged. The name/role gap is about 4px, with
+the LinkedIn action retaining a 44px target without inflating the text row.

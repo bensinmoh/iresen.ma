@@ -765,3 +765,29 @@ this correction changes no catalogues or search projection.
 The earlier final-head CI failed at the existing transitive
 `deepmerge` audit (GHSA-gcqx-w48m-w2h4), before application checks; PR 133 remains
 unmerged and no audit bypass or dependency change is authorized by this refinement.
+
+### Owner portrait-scale and identity spacing follow-up — 2026-11-02
+
+The owner requests larger portraits where people still appear undersized and a
+tighter name/role gap. Biography-only source scales are now 1.5× for Samir, 1.35×
+for Mouhcine and 1.1× for Soukaina, Ayoub and Laila; Imane/Jamaleddine retain
+their existing framing. The clipped, top-aligned display preserves faces and
+bottom-sticky frames while cropping more of the lower body. Original portrait
+bytes and organisation-card framing remain unchanged. Image sizing allows for
+the larger displayed source.
+
+The LinkedIn action previously increased the name row to 44px, creating a measured
+25px gap above the role. Its touch target stays 44px, while its layout margins
+let the text row follow the name. The resulting gap is 4–4.6px in the development
+review, including Laila's variant without LinkedIn.
+
+Verification: all seven FR development portraits and name/role gaps inspected.
+Scoped ESLint, changed-file formatting/whitespace, mechanical design scan and the
+final isolated production build including TypeScript pass. All nine governance
+production-browser scenarios pass in FR/EN/AR; the new assertions enforce a
+maximum 6px name/role gap and preserve the LinkedIn target's 44px height. Existing
+portrait width/bottom alignment, long-biography scrolling, responsive containment,
+200% text, native dismissal/focus and axe checks still pass. Final production
+captures confirm Samir/Mouhcine's closer framing and Arabic mobile. Existing
+PR 133 remains gated by the unchanged transitive deepmerge audit; no dependency
+or search/catalogue change belongs to this visual correction.

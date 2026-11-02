@@ -339,10 +339,12 @@
 .biographyImage {
   position: relative;
   inline-size: 100%;
+  overflow: hidden;
 }
 .biographyImage img {
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center top;
+  transform-origin: center top;
 }
 .biographyCopy {
   text-align: start;
@@ -358,9 +360,9 @@
 }
 .biographyName {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: var(--space-3);
-  margin-block-end: var(--space-2);
+  margin-block-end: var(--space-1);
 }
 .biographyName h2 {
   min-inline-size: 0;
@@ -394,6 +396,8 @@
   flex: 0 0 44px;
   inline-size: 44px;
   min-block-size: 44px;
+  /* Keep the full touch target without adding its height to the name/role gap. */
+  margin-block: calc(-1 * var(--space-2));
   color: var(--color-blue);
   border-radius: var(--radius-small);
 }
