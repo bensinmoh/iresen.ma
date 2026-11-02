@@ -1,5 +1,31 @@
 # CMS interface review — 2026-10-11
 
+## Codex updates and manual CMS editing — owner rule, 2026-11-02
+
+Updates requested in Codex follow a direct implementation path: change the
+canonical source, code or data first, then synchronize the corresponding CMS
+information. The CMS must reflect the delivered change rather than retain stale
+values that override it on the website. This supersedes use of the manual CMS
+editorial workflow for Codex-delivered updates.
+
+- Do not implement a Codex request through CMS editor actions or create an
+  editorial draft modification, review submission or pending manual validation.
+- Synchronize only the authorized fields in the affected records, retained source
+  baselines and applicable existing public snapshots. Do not reset those changes
+  to draft or require an extra manual CMS action to make the delivered result
+  effective. Keep synchronization narrow and idempotent.
+- Preserve unrelated manual work and existing publication/locale restrictions.
+  This rule does not independently approve unreviewed translations, private
+  content, withdrawn records, deployment or changes to visibility.
+- Retain backups, revision history and audit attribution. A private historical
+  revision is an audit record, not an editorial draft or a queued modification.
+- Reserve the CMS draft/review/validation workflow documented below for manual
+  editorial changes made outside Codex. Its controls and access rules remain.
+
+This is a working rule for future Codex updates, recorded in
+[the coding entrypoint](../AGENTS.md#codex-updates-and-manual-cms-editing--owner-rule-2026-11-02).
+Recording it changes no CMS data, publication state or runtime behavior.
+
 ## Unique news highlight — owner follow-up, 16 October 2026
 
 Actualités exposes a shared read-only boolean `highlight` and an administrator

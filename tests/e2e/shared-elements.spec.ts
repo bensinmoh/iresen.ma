@@ -129,7 +129,7 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await field.fill('Test')
     await expect(field).toHaveValue('Test')
     await field.focus()
-    expect(await field.evaluate((el) => getComputedStyle(el).outlineWidth)).toBe('2px')
+    await expect(field).toHaveCSS('outline-width', '2px')
     await expect
       .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1))
       .toBe(true)
