@@ -626,9 +626,13 @@ call budgets, archival funding copy and on-demand project PDFs.
 
 The governance biographies use the existing card-heading role for names (600),
 blue 18px functions (500) and 16px prose (400, 1.8 leading). A fine rule and
-24px separation distinguish identity from narrative; prose stays within 65ch.
-The native dialog is capped at 76rem with a pale portrait column, 48px desktop
-insets and 24px mobile insets. Portraits remain contained, becoming a compact
-240px stage on mobile. Existing fonts, physical signature corners, logical RTL
+16px separation distinguish identity from narrative; prose stays within 65ch.
+The native dialog is capped at 60rem with a pale portrait column, 32px desktop
+insets and 24px mobile insets. Height follows content rather than a viewport-sized
+portrait minimum. Portrait frames fill their column width and stay at the visible
+bottom edge while long biographies scroll;
+Imane’s square cutout uses a 722:1254 visible-subject frame to remove transparent
+side margins, while Samir retains his 919:1711 ratio. Mobile uses a compact 240px
+upper-body stage. Existing fonts, physical signature corners, logical RTL
 spacing, 44px controls and native dismissal/focus restoration remain. This is
 a scoped adaptation; shared tokens and unrelated media viewers are unchanged.

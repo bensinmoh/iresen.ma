@@ -281,7 +281,7 @@
 }
 .biographyDialog {
   margin: auto;
-  inline-size: min(76rem, calc(100% - 2rem));
+  inline-size: min(60rem, calc(100% - 2rem));
   max-block-size: calc(100dvh - 2rem);
   padding: 0;
   border: 0;
@@ -323,39 +323,37 @@
 .biographyLayout {
   background: var(--color-action-surface);
   display: grid;
-  grid-template-columns: minmax(14rem, 0.28fr) minmax(0, 0.72fr);
+  grid-template-columns: minmax(12rem, 0.24fr) minmax(0, 0.76fr);
 }
 .biographyPhoto {
-  position: sticky;
-  inset-block-start: 0;
-  align-self: start;
-  block-size: min(38rem, calc(100dvh - 2rem));
-  background: var(--color-action-surface);
-}
-.biographyPhoto img {
-  object-fit: contain;
-  object-position: center bottom;
-}
-.biographyFullWidth {
   display: grid;
   align-items: end;
+  min-inline-size: 0;
+  background: var(--color-action-surface);
 }
-.biographyFullWidth img {
-  display: block;
+.biographyFrame {
+  position: sticky;
+  inset-block-end: 0;
   inline-size: 100%;
-  block-size: 100%;
-  min-block-size: 0;
+}
+.biographyImage {
+  position: relative;
+  inline-size: 100%;
+}
+.biographyImage img {
+  object-fit: cover;
+  object-position: center bottom;
 }
 .biographyCopy {
   text-align: start;
   min-inline-size: 0;
   background: var(--color-white);
-  padding: var(--space-12);
+  padding: var(--space-8);
 }
 .biographyHeader {
   padding-inline-end: var(--space-8);
-  padding-block-end: var(--space-6);
-  margin-block-end: var(--space-6);
+  padding-block-end: var(--space-4);
+  margin-block-end: var(--space-4);
   border-block-end: 1px solid var(--color-border);
 }
 .biographyName {
@@ -375,7 +373,7 @@
   gap: var(--space-4);
   max-inline-size: 65ch;
 }
-.biographyBody p {
+.biographyDialog .biographyBody p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
@@ -417,12 +415,15 @@
     grid-template-columns: minmax(0, 1fr);
   }
   .biographyPhoto {
-    position: relative;
+    align-items: start;
+    justify-items: center;
     block-size: 15rem;
+    overflow: hidden;
   }
-  .biographyPhoto img {
+  .biographyFrame {
+    position: relative;
+    inset-block-end: auto;
     max-inline-size: 15rem;
-    margin-inline: auto;
   }
   .biographyCopy {
     padding: var(--space-6);

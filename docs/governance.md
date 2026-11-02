@@ -737,3 +737,31 @@ dry run found zero changes. Search rebuilt 283 eligible CMS records plus the
 static catalogue. Private backups and captures stay under ignored `.local/`.
 Final-head PR CI remains the merge gate; local broad integration suites were not
 repeated for this scoped change.
+
+### Owner portrait/spacing correction — 2026-11-02
+
+The first dialog refinement left excessive white space and undersized portraits.
+The owner requests compact windows, full-width blue-column portrait framing and
+Samir aligned to the bottom. The dialog now caps at 60rem, uses 32px desktop
+insets and 16px header separation, and lets content determine its height.
+Intrinsic portrait frames fill the column width and stick to the visible bottom
+edge while long text scrolls; Imane's
+722:1254 visible-subject ratio removes the square source's transparent side
+margins, and Samir's 919:1711 frame preserves his full image at the bottom.
+Mobile retains a compact upper-body stage. Biography prose now explicitly
+overrides the surrounding organisation-chart typography so Samir and colleagues
+use the same text size. Original image bytes remain unchanged.
+
+Verification for this correction: scoped ESLint, formatting/whitespace and the
+final isolated production build (including TypeScript) pass. All nine governance
+production-browser scenarios pass in FR/EN/AR, including compact Imane window
+height, portrait column width, initial visibility and bottom alignment before/after
+scrolling Samir’s long biography. Existing responsive, enlarged-text, dismissal,
+focus, no-JavaScript, search and axe checks also pass. Production captures confirm
+Imane’s framing, Samir’s visible bottom alignment at both scroll positions, and
+Arabic mobile reading. Earlier i18n/search unit evidence remains valid because
+this correction changes no catalogues or search projection.
+
+The earlier final-head CI failed at the existing transitive
+`deepmerge` audit (GHSA-gcqx-w48m-w2h4), before application checks; PR 133 remains
+unmerged and no audit bypass or dependency change is authorized by this refinement.

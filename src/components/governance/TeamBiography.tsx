@@ -15,7 +15,8 @@ type Props = {
   role: string
   photo: string
   biographyPhoto?: string
-  biographyFullWidth?: boolean
+  /** Frame the visible cutout, excluding source transparency where needed. */
+  biographyAspectRatio?: string
   portraitAlt: string
   paragraphs: string[]
   linkedin?: string
@@ -32,7 +33,7 @@ export function TeamBiography({
   role,
   photo,
   biographyPhoto = photo,
-  biographyFullWidth = false,
+  biographyAspectRatio = '2 / 3',
   portraitAlt,
   paragraphs,
   linkedin,
@@ -142,16 +143,16 @@ export function TeamBiography({
           <ViewerIcon name="close" />
         </button>
         <div className={styles.biographyLayout}>
-          <div
-            className={`${styles.biographyPhoto} ${biographyFullWidth ? styles.biographyFullWidth : ''}`}
-          >
-            <Image
-              src={biographyPhoto}
-              quality={90}
-              alt={portraitAlt}
-              {...(biographyFullWidth ? { width: 919, height: 1711 } : { fill: true })}
-              sizes="(max-width: 48rem) 240px, 360px"
-            />
+          <div className={styles.biographyPhoto} data-biography-portrait>
+            <div className={styles.biographyFrame}>
+              <div
+                className={styles.biographyImage}
+                style={{ aspectRatio: biographyAspectRatio }}
+                data-biography-image
+              >
+                <Image src={biographyPhoto} quality={90} alt={portraitAlt} fill sizes="240px" />
+              </div>
+            </div>
           </div>
           <div className={styles.biographyCopy}>
             <header className={styles.biographyHeader}>

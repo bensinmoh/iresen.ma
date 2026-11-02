@@ -165,13 +165,34 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
           catalogs[locale].Governance.team[id as keyof typeof catalogs.fr.Governance.team].role,
         )
       await expect(dialog.locator('img')).toHaveCount(1)
+      const portrait = await dialog.locator('[data-biography-portrait]').boundingBox()
+      const image = await dialog.locator('[data-biography-image]').boundingBox()
+      const window = (await dialog.boundingBox())!
+      expect(Math.abs(image!.width - portrait!.width)).toBeLessThanOrEqual(1)
+      expect(
+        Math.abs(
+          image!.y +
+            image!.height -
+            Math.min(portrait!.y + portrait!.height, window.y + window.height),
+        ),
+      ).toBeLessThanOrEqual(1)
+      expect(image!.y).toBeLessThan(window.y + window.height)
+      if (id === 'imane') expect((await dialog.boundingBox())!.height).toBeLessThan(550)
       if (['samir', 'mouhcine', 'imane', 'ayoub'].includes(id))
         await page.screenshot({ path: testInfo.outputPath(`${locale}-${id}-biography.png`) })
       await expect(dialog.locator('p')).toHaveCount(id === 'samir' ? 6 : id === 'mouhcine' ? 4 : 3)
       if (url) await expect(dialog.locator('a')).toHaveAttribute('href', url)
       else await expect(dialog.locator('a')).toHaveCount(0)
-      if (id === 'samir') await dialog.getByRole('button').click()
-      else await page.keyboard.press('Escape')
+      if (id === 'samir') {
+        await dialog.evaluate((element) => (element.scrollTop = element.scrollHeight))
+        const frame = (await dialog.locator('[data-biography-image]').boundingBox())!
+        const viewport = (await dialog.boundingBox())!
+        expect(Math.abs(frame.y + frame.height - viewport.y - viewport.height)).toBeLessThanOrEqual(
+          1,
+        )
+        await page.screenshot({ path: testInfo.outputPath(`${locale}-samir-biography-bottom.png`) })
+        await dialog.getByRole('button').click()
+      } else await page.keyboard.press('Escape')
       await expect(dialog).not.toBeVisible()
       await expect(trigger).toBeFocused()
     }

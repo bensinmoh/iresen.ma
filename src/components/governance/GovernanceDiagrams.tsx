@@ -97,7 +97,7 @@ export async function OrganisationDiagram({ locale }: { locale: Locale }) {
             role={t('directorGeneral')}
             photo={samirCutout}
             biographyPhoto={samirCutout}
-            biographyFullWidth
+            biographyAspectRatio="919 / 1711"
             portraitAlt={t('portrait', { name: t('directorGeneralName') })}
             paragraphs={samirBiographies[locale].paragraphs}
             linkedin={governanceTeamLinkedin.samir}
@@ -143,7 +143,13 @@ export async function OrganisationDiagram({ locale }: { locale: Locale }) {
                           ? samirCutout
                           : `/images/governance/${person}-portrait.png`
                       }
-                      biographyFullWidth={person === 'samir'}
+                      biographyAspectRatio={
+                        person === 'samir'
+                          ? '919 / 1711'
+                          : person === 'imane'
+                            ? '722 / 1254'
+                            : undefined
+                      }
                       portraitAlt={t('portrait', { name: t(`team.${person}.name`) })}
                       paragraphs={
                         person === 'samir'
