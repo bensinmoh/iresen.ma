@@ -697,3 +697,97 @@ contained the old display acronym. Rebuild the local search index after applying
 Verification: FR/EN/AR development media-page report titles/credits, active CMS
 scan, targeted ESLint, formatting and whitespace. Full production checks and CI
 remain under the shared checkout hold.
+
+## Leadership titles and biography refinement — 2026-11-02
+
+The owner's latest correction supersedes the historical titles above:
+
+- Imane MOUBACHIR: **Stratégie, Gouvernance & Organisation**.
+- Jamaleddine FOUHAM: **IT & Systèmes d’Information**.
+- Ayoub HIRT: **Directeur du Développement des Plateformes Technologiques & Industrielles**.
+
+The local-only `scripts/sync-governance-titles.ts` reconciles the existing CMS
+catalogues and named records using exact replacements, with a private backup,
+revision history and audit entry. It preserves draft/publication states and
+unrelated edits; re-running it is a no-op.
+
+FR/EN/AR captions, dialog roles and existing localized section/portrait search
+metadata follow these corrections; Ayoub's biographical opening uses the same
+function. English/Arabic remain working adaptations. Department remits, biographies
+otherwise, profile URLs, portraits and stable destinations are preserved.
+
+The dialog now separates a stronger name, medium-weight blue function and quieter
+prose using a ruled identity header and generous spacing. Its narrower reading
+measure and compact mobile portrait improve reading without new assets or fonts.
+Native modal semantics, Escape/backdrop dismissal and focus restoration remain.
+
+Verification ledger (Node 24.22.1 / pnpm 11.28.6): full ESLint and changed-file
+Prettier/whitespace pass; Impeccable mechanical scan reports no findings. The
+isolated final production build includes TypeScript and passes. All 36 targeted
+i18n/search units and all nine governance production-browser scenarios pass.
+Coverage includes FR/EN/AR, 320/390/768/1024/1440px page reflow, dialog containment,
+200% text, Escape/close/backdrop dismissal, focus restoration, no-JavaScript
+reading, search discovery and no serious/critical axe findings in tested states.
+FR desktop/mobile, EN long function and AR mobile captures were visually inspected;
+keyboard/browser checks do not establish full screen-reader conformance.
+
+The first rendered pass identified retained CMS values masking source corrections;
+the local synchronizer updated six records with backup/revisions/audit and a repeat
+dry run found zero changes. Search rebuilt 283 eligible CMS records plus the
+static catalogue. Private backups and captures stay under ignored `.local/`.
+Final-head PR CI remains the merge gate; local broad integration suites were not
+repeated for this scoped change.
+
+### Owner portrait/spacing correction — 2026-11-02
+
+The first dialog refinement left excessive white space and undersized portraits.
+The owner requests compact windows, full-width blue-column portrait framing and
+Samir aligned to the bottom. The dialog now caps at 60rem, uses 32px desktop
+insets and 16px header separation, and lets content determine its height.
+Intrinsic portrait frames fill the column width and stick to the visible bottom
+edge while long text scrolls; Imane's
+722:1254 visible-subject ratio removes the square source's transparent side
+margins, and Samir's 919:1711 frame preserves his full image at the bottom.
+Mobile retains a compact upper-body stage. Biography prose now explicitly
+overrides the surrounding organisation-chart typography so Samir and colleagues
+use the same text size. Original image bytes remain unchanged.
+
+Verification for this correction: scoped ESLint, formatting/whitespace and the
+final isolated production build (including TypeScript) pass. All nine governance
+production-browser scenarios pass in FR/EN/AR, including compact Imane window
+height, portrait column width, initial visibility and bottom alignment before/after
+scrolling Samir’s long biography. Existing responsive, enlarged-text, dismissal,
+focus, no-JavaScript, search and axe checks also pass. Production captures confirm
+Imane’s framing, Samir’s visible bottom alignment at both scroll positions, and
+Arabic mobile reading. Earlier i18n/search unit evidence remains valid because
+this correction changes no catalogues or search projection.
+
+The earlier final-head CI failed at the existing transitive
+`deepmerge` audit (GHSA-gcqx-w48m-w2h4), before application checks; PR 133 remains
+unmerged and no audit bypass or dependency change is authorized by this refinement.
+
+### Owner portrait-scale and identity spacing follow-up — 2026-11-02
+
+The owner requests larger portraits where people still appear undersized and a
+tighter name/role gap. Biography-only source scales are now 1.5× for Samir, 1.35×
+for Mouhcine and 1.1× for Soukaina, Ayoub and Laila; Imane/Jamaleddine retain
+their existing framing. The clipped, top-aligned display preserves faces and
+bottom-sticky frames while cropping more of the lower body. Original portrait
+bytes and organisation-card framing remain unchanged. Image sizing allows for
+the larger displayed source.
+
+The LinkedIn action previously increased the name row to 44px, creating a measured
+25px gap above the role. Its touch target stays 44px, while its layout margins
+let the text row follow the name. The resulting gap is 4–4.6px in the development
+review, including Laila's variant without LinkedIn.
+
+Verification: all seven FR development portraits and name/role gaps inspected.
+Scoped ESLint, changed-file formatting/whitespace, mechanical design scan and the
+final isolated production build including TypeScript pass. All nine governance
+production-browser scenarios pass in FR/EN/AR; the new assertions enforce a
+maximum 6px name/role gap and preserve the LinkedIn target's 44px height. Existing
+portrait width/bottom alignment, long-biography scrolling, responsive containment,
+200% text, native dismissal/focus and axe checks still pass. Final production
+captures confirm Samir/Mouhcine's closer framing and Arabic mobile. Existing
+PR 133 remains gated by the unchanged transitive deepmerge audit; no dependency
+or search/catalogue change belongs to this visual correction.

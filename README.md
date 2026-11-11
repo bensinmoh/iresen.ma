@@ -50,23 +50,28 @@ management remains under `/admin/collections/users` with its existing admin gate
 
 ## Pinned environment
 
-| Component                   | Version |
-| --------------------------- | ------- |
-| Node.js                     | 24.22.1 |
-| pnpm                        | 11.28.6 |
-| Next.js                     | 16.4.2  |
-| React / React DOM           | 19.3.1  |
-| Payload / official adapters | 3.92.0  |
-| PostgreSQL configured/CI    | 17.11   |
+| Component                   | Version  |
+| --------------------------- | -------- |
+| Node.js                     | 24.22.2  |
+| pnpm                        | 11.28.11 |
+| Next.js                     | 16.4.6   |
+| React / React DOM           | 19.3.1   |
+| Payload / official adapters | 3.93.0   |
+| PostgreSQL configured/CI    | 17.11    |
 
 Use the committed lockfile and `pnpm-workspace.yaml`, including security overrides.
 Do not independently upgrade Next and Payload. Read the installed Next guides
 before implementing framework changes.
 
-Current developer tools: TypeScript 6.0.3, ESLint 10.13.0 with typescript-eslint
-8.72.0, Prettier 3.9.10, Vitest 5.0.5 and Playwright 1.64.1. The
-[October stack review](docs/stack-maintenance-2026-10-24.md) records compatibility,
+Current developer tools: TypeScript 6.0.3, ESLint 10.14.0 with typescript-eslint
+8.72.2, Prettier 3.9.10, Vitest 5.1.0 and Playwright 1.65.0. The
+[November stack and security review](docs/security-stack-review-2026-11-11.md) records compatibility,
 upstream sources and validation. Docker and CI use the same Node/pnpm pins.
+
+Payload's deepmerge dependency uses the reviewed local compatibility fork
+documented in [the remediation](docs/deepmerge-remediation-2026-11-11.md).
+Keep its exact-version override, security regressions and Docker install input
+together when maintaining dependencies.
 
 ## Local setup
 

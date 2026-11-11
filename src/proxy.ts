@@ -103,6 +103,21 @@ async function localeResponse(request: NextRequest) {
   return NextResponse.rewrite(localizedUrl, options)
 }
 
+async function securedHtmlResponse(
+  request: NextRequest,
+  handler: (request: NextRequest) => NextResponse | Promise<NextResponse>,
+) {
+  const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
+  const policy = contentSecurityPolicy(nonce, process.env.NODE_ENV !== 'production')
+  const headers = new Headers(request.headers)
+  headers.set('x-nonce', nonce)
+  headers.set('content-security-policy', policy)
+  const response = await handler(new NextRequest(request, { headers }))
+  response.headers.set('Content-Security-Policy', policy)
+  response.headers.set('Cache-Control', 'private, no-store')
+  return response
+}
+
 export default async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
   if (path === '/cms-preview' || path.startsWith('/cms-preview/')) {
@@ -123,6 +138,12 @@ export default async function proxy(request: NextRequest) {
         status: 404,
         headers: { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow' },
       })
+    // The authenticated workspace contains private recruitment/editorial data
+    // and needs the same nonce and framing protection as public HTML.
+    if (path !== '/admin/api' && !path.startsWith('/admin/api/'))
+      return securedHtmlResponse(request, (secured) =>
+        NextResponse.next({ request: { headers: secured.headers } }),
+      )
     return NextResponse.next()
   }
   if (path.startsWith('/api/')) {
@@ -134,15 +155,7 @@ export default async function proxy(request: NextRequest) {
       })
     return NextResponse.next()
   }
-  const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
-  const policy = contentSecurityPolicy(nonce, process.env.NODE_ENV !== 'production')
-  const headers = new Headers(request.headers)
-  headers.set('x-nonce', nonce)
-  headers.set('content-security-policy', policy)
-  const response = await localeResponse(new NextRequest(request, { headers }))
-  response.headers.set('Content-Security-Policy', policy)
-  response.headers.set('Cache-Control', 'private, no-store')
-  return response
+  return securedHtmlResponse(request, localeResponse)
 }
 
 export const config = {

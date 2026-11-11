@@ -82,6 +82,20 @@ test.describe('authenticated CMS shell with retained site corpus', () => {
     expect(response.status()).toBe(308)
     expect(response.headers().location).toMatch(/\/admin\?review=1$/)
   })
+  test('protects administrative HTML with unique nonce scripts and no framing', async ({
+    request,
+  }) => {
+    const first = await request.get('/admin')
+    const second = await request.get('/admin')
+    const policy = first.headers()['content-security-policy']
+    expect(first.status()).toBe(200)
+    expect(policy).toContain("frame-ancestors 'none'")
+    expect(policy).toContain("object-src 'none'")
+    expect(policy).toMatch(/'nonce-[^']+'/)
+    expect(policy).not.toContain('unsafe-eval')
+    expect(policy).not.toBe(second.headers()['content-security-policy'])
+    expect(first.headers()['cache-control']).toContain('no-store')
+  })
   test('shows real corpora and an authenticated role without runtime demonstrations', async ({
     page,
   }) => {

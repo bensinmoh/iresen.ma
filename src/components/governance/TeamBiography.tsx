@@ -2,8 +2,6 @@
 
 import { Heading } from '@/components/ui/Heading'
 
-import { SectionEyebrow } from '@/components/ui/SectionEyebrow'
-
 import Image from 'next/image'
 import { useEffect, useId, useRef, useState } from 'react'
 import { FooterIcon } from '@/components/layout/FooterIcon'
@@ -17,7 +15,9 @@ type Props = {
   role: string
   photo: string
   biographyPhoto?: string
-  biographyFullWidth?: boolean
+  /** Frame the visible cutout, excluding source transparency where needed. */
+  biographyAspectRatio?: string
+  biographyScale?: number
   portraitAlt: string
   paragraphs: string[]
   linkedin?: string
@@ -34,7 +34,8 @@ export function TeamBiography({
   role,
   photo,
   biographyPhoto = photo,
-  biographyFullWidth = false,
+  biographyAspectRatio = '2 / 3',
+  biographyScale = 1,
   portraitAlt,
   paragraphs,
   linkedin,
@@ -144,40 +145,50 @@ export function TeamBiography({
           <ViewerIcon name="close" />
         </button>
         <div className={styles.biographyLayout}>
-          <div
-            className={`${styles.biographyPhoto} ${biographyFullWidth ? styles.biographyFullWidth : ''}`}
-          >
-            <Image
-              src={biographyPhoto}
-              quality={90}
-              alt={portraitAlt}
-              {...(biographyFullWidth ? { width: 919, height: 1711 } : { fill: true })}
-              sizes="(max-width: 48rem) 90vw, 420px"
-            />
+          <div className={styles.biographyPhoto} data-biography-portrait>
+            <div className={styles.biographyFrame}>
+              <div
+                className={styles.biographyImage}
+                style={{ aspectRatio: biographyAspectRatio }}
+                data-biography-image
+              >
+                <Image
+                  src={biographyPhoto}
+                  quality={90}
+                  alt={portraitAlt}
+                  fill
+                  sizes="360px"
+                  style={{ transform: `scale(${biographyScale})` }}
+                />
+              </div>
+            </div>
           </div>
           <div className={styles.biographyCopy}>
-            <SectionEyebrow>{biographyLabel}</SectionEyebrow>
-            <div className={styles.biographyName}>
-              <Heading as="h2" size="compact" id={titleId}>
-                <bdi>{name}</bdi>
-              </Heading>
-              {linkedin && (
-                <a
-                  className={styles.biographyLinkedin}
-                  href={linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${linkedinLabel} — ${name}`}
-                  title={linkedinLabel}
-                >
-                  <FooterIcon name="linkedin" />
-                </a>
-              )}
+            <header className={styles.biographyHeader}>
+              <div className={styles.biographyName}>
+                <Heading as="h2" size="card" id={titleId}>
+                  <bdi>{name}</bdi>
+                </Heading>
+                {linkedin && (
+                  <a
+                    className={styles.biographyLinkedin}
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${linkedinLabel} — ${name}`}
+                    title={linkedinLabel}
+                  >
+                    <FooterIcon name="linkedin" />
+                  </a>
+                )}
+              </div>
+              <p className={styles.biographyRole}>{role}</p>
+            </header>
+            <div className={styles.biographyBody}>
+              {paragraphs.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
             </div>
-            <p className={styles.biographyRole}>{role}</p>
-            {paragraphs.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
           </div>
         </div>
       </dialog>

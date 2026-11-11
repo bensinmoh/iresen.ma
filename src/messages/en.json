@@ -852,7 +852,7 @@
       },
       "leadership-organisation": {
         "title": "Executive management and three complementary divisions",
-        "description": "The executive management implements the decisions of the board of directors. It coordinates scientific, technical, administrative and financial activities, mobilises the necessary resources and reports on progress against programmes and commitments. Three divisions structure the scientific, development and support functions. Soukaina BOUDOUDOUH Director of R&D&I Programmes and the Expert Network Ayoub HIRT Director of Platform Development and Structuring Projects Mouhcine BENMEZIANE Director of Partnerships and Innovation Marketing Laila TYDRINI Administrative & Financial Director Imane MOUBACHIR Director of Strategy, Governance & Organisation Jamaleddine FOUHAM Head of IT & Information Systems Department Samir RACHIDI Acting Scientific Director"
+        "description": "The executive management implements the decisions of the board of directors. It coordinates scientific, technical, administrative and financial activities, mobilises the necessary resources and reports on progress against programmes and commitments. Three divisions structure the scientific, development and support functions. Soukaina BOUDOUDOUH Director of R&D&I Programmes and the Expert Network Ayoub HIRT Director of Technological & Industrial Platforms Development Mouhcine BENMEZIANE Director of Partnerships and Innovation Marketing Laila TYDRINI Administrative & Financial Director Imane MOUBACHIR Strategy, Governance & Organisation Jamaleddine FOUHAM IT & Information Systems Samir RACHIDI Acting Scientific Director"
       },
       "department-responsibilities": {
         "title": "Department responsibilities",
@@ -2997,8 +2997,8 @@
       },
       "ayoub": {
         "name": "Ayoub HIRT",
-        "role": "Director of Platform Development and Structuring Projects",
-        "biography": "Ayoub HIRT is Director of Platforms Development and Strategic Projects at IRESEN. His career at the Institute includes heading the Green Chemistry, Bioenergy and Agritech Department and research and innovation activities in energy technologies.\n\nHis areas of work include green hydrogen, Power-to-X and bioenergy. He contributes to exchanges between scientific, institutional and industrial stakeholders on these sectors, their infrastructure and the skills needed for their development."
+        "role": "Director of Technological & Industrial Platforms Development",
+        "biography": "Ayoub HIRT is Director of Technological & Industrial Platforms Development at IRESEN. His career at the Institute includes heading the Green Chemistry, Bioenergy and Agritech Department and research and innovation activities in energy technologies.\n\nHis areas of work include green hydrogen, Power-to-X and bioenergy. He contributes to exchanges between scientific, institutional and industrial stakeholders on these sectors, their infrastructure and the skills needed for their development."
       },
       "mouhcine": {
         "name": "Mouhcine BENMEZIANE",
@@ -3012,12 +3012,12 @@
       },
       "imane": {
         "name": "Imane MOUBACHIR",
-        "role": "Director of Strategy, Governance & Organisation",
+        "role": "Strategy, Governance & Organisation",
         "biography": "Imane MOUBACHIR works in strategy and organisation at IRESEN. Her activities concern translating the Institute’s priorities into action, management tools and improvements to internal operations.\n\nHer work connects institutional priorities, the coordination of activities and the organisation of resources used by the teams."
       },
       "jamaleddine": {
         "name": "Jamaleddine FOUHAM",
-        "role": "Head of IT & Information Systems Department",
+        "role": "IT & Information Systems",
         "biography": "Jamaleddine FOUHAM works in information technology and information systems at IRESEN. His remit concerns the operation and development of the Institute’s IT and digital tools.\n\nHe supports teams’ uses and the needs of scientific and administrative activities, contributing to the organisation’s daily operations."
       },
       "samir": {

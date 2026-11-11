@@ -6,6 +6,17 @@ import { TeamBiography } from './TeamBiography'
 import { ValorisationIcon } from '@/components/transfer/ValorisationIcon'
 import styles from './GovernanceDiagrams.module.css'
 
+// Normalize visible portrait scale without changing the original cutout files.
+const biographyPortraitScales = {
+  samir: 1.5,
+  soukaina: 1.1,
+  ayoub: 1.1,
+  mouhcine: 1.35,
+  imane: 1,
+  laila: 1.1,
+  jamaleddine: 1,
+} as const
+
 export async function GovernanceDiagram({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'Governance.diagrams' })
   return (
@@ -97,7 +108,8 @@ export async function OrganisationDiagram({ locale }: { locale: Locale }) {
             role={t('directorGeneral')}
             photo={samirCutout}
             biographyPhoto={samirCutout}
-            biographyFullWidth
+            biographyAspectRatio="919 / 1711"
+            biographyScale={biographyPortraitScales.samir}
             portraitAlt={t('portrait', { name: t('directorGeneralName') })}
             paragraphs={samirBiographies[locale].paragraphs}
             linkedin={governanceTeamLinkedin.samir}
@@ -143,7 +155,14 @@ export async function OrganisationDiagram({ locale }: { locale: Locale }) {
                           ? samirCutout
                           : `/images/governance/${person}-portrait.png`
                       }
-                      biographyFullWidth={person === 'samir'}
+                      biographyScale={biographyPortraitScales[person]}
+                      biographyAspectRatio={
+                        person === 'samir'
+                          ? '919 / 1711'
+                          : person === 'imane'
+                            ? '722 / 1254'
+                            : undefined
+                      }
                       portraitAlt={t('portrait', { name: t(`team.${person}.name`) })}
                       paragraphs={
                         person === 'samir'

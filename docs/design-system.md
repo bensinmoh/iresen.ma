@@ -2290,3 +2290,25 @@ Choose a focal position around the principal subject, keep unletterboxed images
 at their natural scale where suitable, and compose hover/focus scaling on top of
 the selected crop. Preserve source bytes and full video-player framing. The seven
 YouTube card settings live in `src/data/youtube-videos.json`.
+
+## Governance biography dialogs — 2026-11-02
+
+The governance biographies use the existing card-heading role for names (600),
+blue 18px functions (500) and 16px prose (400, 1.8 leading). A fine rule and
+16px separation distinguish identity from narrative; prose stays within 65ch.
+The native dialog is capped at 60rem with a pale portrait column, 32px desktop
+insets and 24px mobile insets. Height follows content rather than a viewport-sized
+portrait minimum. Portrait frames fill their column width and stay at the visible
+bottom edge while long biographies scroll;
+Imane’s square cutout uses a 722:1254 visible-subject frame to remove transparent
+side margins, while Samir retains his 919:1711 ratio. Mobile uses a compact 240px
+upper-body stage. Existing fonts, physical signature corners, logical RTL
+spacing, 44px controls and native dismissal/focus restoration remain. This is
+a scoped adaptation; shared tokens and unrelated media viewers are unchanged.
+
+Portrait-scale follow-up — 2026-11-02: biography-only framing enlarges Samir
+1.5×, Mouhcine 1.35× and Soukaina/Ayoub/Laila 1.1×; Imane and Jamaleddine keep
+their existing scale. Clip the display framing from the top to preserve faces
+and keep the visible frame at the bottom while scrolling. Source assets and
+organisation-card framing stay unchanged. The name/role gap is about 4px, with
+the LinkedIn action retaining a 44px target without inflating the text row.
