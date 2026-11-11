@@ -8,6 +8,21 @@ export function matchesRequestOrigin(request: Request): boolean {
     const url = new URL(request.url)
     const host = request.headers.get('host') ?? url.host
     if (/[\s/\\?#@,]/.test(host)) return false
+    // In production Host is attacker-controlled unless the origin proxy rejects
+    // unknown hosts. Pin writes to the configured site, including behind TLS
+    // termination where Next's internal URL may still use HTTP.
+    if (process.env.NODE_ENV === 'production') {
+      const configured = process.env.NEXT_PUBLIC_SITE_URL
+      if (!configured) return false
+      const canonical = new URL(configured)
+      return (
+        ['http:', 'https:'].includes(canonical.protocol) &&
+        !canonical.username &&
+        !canonical.password &&
+        host.toLowerCase() === canonical.host.toLowerCase() &&
+        origin === canonical.origin
+      )
+    }
     const expected = new URL(`${url.protocol}//${host}`)
     return ['http:', 'https:'].includes(expected.protocol) && origin === expected.origin
   } catch {

@@ -4,6 +4,11 @@ The foundation is a development environment, not a production compliance assessm
 
 ## Engineering boundaries
 
+The [11 November 2026 security and stack review](security-stack-review-2026-11-11.md)
+updates the framework/CMS security releases, adds nonce CSP to administrative
+HTML and pins production CMS write origins to `NEXT_PUBLIC_SITE_URL` and the
+request authority. Proxy forwarding headers cannot select an allowed origin.
+
 - Keep secrets server-side and out of `NEXT_PUBLIC_*`, repository files, browser bundles and logs.
 - Enforce roles, fields, publication state and locale eligibility through server access rules. Explicitly apply authorization in Payload Local API reads.
 - Use a controlled first-administrator bootstrap; never ship a shared/default password or leave public account registration enabled.

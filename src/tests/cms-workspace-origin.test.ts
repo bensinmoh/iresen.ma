@@ -1,10 +1,22 @@
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { developmentCsrfOrigins, matchesRequestOrigin } from '@/lib/cms-workspace/origin'
 const request = (origin?: string, host = '127.0.0.1:3000', extra = {}) =>
   new Request('http://localhost:3000/admin/api/session', {
     headers: { host, ...(origin ? { origin } : {}), ...extra },
   })
+afterEach(() => vi.unstubAllEnvs())
 describe('CMS same-origin write boundary', () => {
+  it('pins production writes to the configured origin behind TLS termination', () => {
+    vi.stubEnv('NODE_ENV', 'production')
+    vi.stubEnv('NEXT_PUBLIC_SITE_URL', 'https://cms.example.test')
+    expect(matchesRequestOrigin(request('https://cms.example.test', 'cms.example.test'))).toBe(true)
+    expect(matchesRequestOrigin(request('https://attacker.invalid', 'attacker.invalid'))).toBe(
+      false,
+    )
+    expect(matchesRequestOrigin(request('http://cms.example.test', 'cms.example.test'))).toBe(false)
+    vi.stubEnv('NEXT_PUBLIC_SITE_URL', '')
+    expect(matchesRequestOrigin(request('http://127.0.0.1:3000'))).toBe(false)
+  })
   it('uses the request authority when Next has an internal listening hostname', () => {
     expect(matchesRequestOrigin(request('http://127.0.0.1:3000'))).toBe(true)
     expect(matchesRequestOrigin(request('http://localhost:3000', 'localhost:3000'))).toBe(true)
