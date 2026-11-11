@@ -5,6 +5,7 @@ RUN npm install --global pnpm@11.28.11 && npm cache clean --force
 
 FROM base AS dependencies
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY vendor/deepmerge-safe ./vendor/deepmerge-safe
 RUN --mount=type=cache,target=/app/.cache/pnpm pnpm install --frozen-lockfile
 
 FROM dependencies AS build
@@ -29,6 +30,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils c
 COPY --from=build /app/.next/standalone ./
 COPY --from=build /app/.next/static ./.next/static
 COPY --from=build /app/public ./public
+COPY --from=dependencies /app/vendor/deepmerge-safe/LICENSE ./licenses/deepmerge-safe-LICENSE
 RUN mkdir -p /app/.next/cache /app/uploads && chown -R node:node /app/.next/cache /app/uploads
 ENV PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium
 ENV NODE_ENV=production HOSTNAME=0.0.0.0 PORT=3000 CMS_ADMIN_ENABLED=false CMS_LOCAL_REVIEW=false PUBLIC_RELEASE=true CMS_UPLOAD_DIRECTORY=/app/uploads

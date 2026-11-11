@@ -15,6 +15,8 @@ export default defineConfig([
     'src/cms/migrations/**',
     'src/app/(payload)/admin/importMap.js',
     'next-env.d.ts',
+    // Unmodified MIT upstream declarations; the fork's runtime and regressions are linted.
+    'vendor/deepmerge-safe/index.d.ts',
     'playwright-report/**',
     'test-results/**',
     // Pinned third-party skill payloads are checked by source hashes, not application lint rules.

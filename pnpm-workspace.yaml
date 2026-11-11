@@ -10,6 +10,7 @@ minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
 enableGlobalVirtualStore: false
 overrides:
+  'payload@3.93.0>deepmerge': file:vendor/deepmerge-safe
   'sass@1.77.4': 1.108.1
   'undici@7.29.0': 7.30.2
   'dompurify@3.4.15': 3.4.17

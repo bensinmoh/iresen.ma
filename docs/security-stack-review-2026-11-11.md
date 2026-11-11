@@ -167,3 +167,10 @@ requires its own full CI; the low registry advisory continues to prevent merge.
 Cleanup removed only this task's recorded regression database, temporary
 PostgreSQL container and random connection credentials. The owner's database,
 backups, existing review builds and other workstreams remain intact.
+
+## Later owner-requested deepmerge resolution
+
+The owner subsequently commissions the [deepmerge code remediation](deepmerge-remediation-2026-11-11.md).
+Its narrowly scoped, explicitly maintained local compatibility fork supersedes
+the dependency blocker above once its own audit, regression and exact-head CI
+evidence passes. Earlier failed audit/CI entries remain historical evidence.

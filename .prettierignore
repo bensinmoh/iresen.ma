@@ -1,4 +1,5 @@
 node_modules
+vendor/deepmerge-safe/index.d.ts
 .next
 pnpm-lock.yaml
 src/payload-types.ts

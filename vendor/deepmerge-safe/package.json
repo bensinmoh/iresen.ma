@@ -1,0 +1,18 @@
+{
+  "name": "@iresen/deepmerge-safe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Locally maintained hardened deepmerge 4.3.1 compatibility fork for Payload",
+  "license": "MIT",
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "files": [
+    "index.cjs",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24.22.2 <25"
+  }
+}

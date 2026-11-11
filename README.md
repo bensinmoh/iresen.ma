@@ -68,6 +68,11 @@ Current developer tools: TypeScript 6.0.3, ESLint 10.14.0 with typescript-eslint
 [November stack and security review](docs/security-stack-review-2026-11-11.md) records compatibility,
 upstream sources and validation. Docker and CI use the same Node/pnpm pins.
 
+Payload's deepmerge dependency uses the reviewed local compatibility fork
+documented in [the remediation](docs/deepmerge-remediation-2026-11-11.md).
+Keep its exact-version override, security regressions and Docker install input
+together when maintaining dependencies.
+
 ## Local setup
 
 Install the pinned Node/pnpm versions with your version manager first. With nvm,
