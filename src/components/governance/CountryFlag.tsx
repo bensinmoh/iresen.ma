@@ -1,5 +1,5 @@
 /** Small decorative vector flags; the adjacent localized label carries the meaning. */
-export function CountryFlag({ region }: { region: 'fr' | 'de' | 'eu' | 'ma' | 'br' }) {
+export function CountryFlag({ region }: { region: 'fr' | 'de' | 'eu' | 'ma' | 'pt' | 'br' }) {
   const star =
     '0,-1 0.2245,-0.309 0.9511,-0.309 0.3633,0.118 0.5878,0.809 0,0.382 -0.5878,0.809 -0.3633,0.118 -0.9511,-0.309 -0.2245,-0.309'
   return (
@@ -51,6 +51,15 @@ export function CountryFlag({ region }: { region: 'fr' | 'de' | 'eu' | 'ma' | 'b
             strokeWidth="1.1"
             strokeLinejoin="miter"
           />
+        </>
+      )}
+      {region === 'pt' && (
+        <>
+          <path fill="#da291c" d="M0 0h30v20H0z" />
+          <path fill="#046a38" d="M0 0h12v20H0z" />
+          <circle cx="12" cy="10" r="3.8" fill="none" stroke="#ffcd00" strokeWidth="1" />
+          <path fill="#fff" stroke="#da291c" strokeWidth="0.6" d="M10 7.8h4v2.7a2 2 0 0 1-4 0z" />
+          <path fill="#003399" d="M11.6 9h.8v2.3h-.8zM10.7 9.7h2.6v.7h-2.6z" />
         </>
       )}
       {region === 'br' && (

@@ -14,7 +14,7 @@ describe('retained CMS corpus ingestion', () => {
     expect(count('patents')).toBe(59)
     expect(count('laboratories')).toBe(14)
     expect(count('board')).toBe(16)
-    expect(count('scientific-council')).toBe(8)
+    expect(count('scientific-council')).toBe(7)
     expect(count('organigram')).toBe(17)
     expect(count('careers')).toBe(0)
     expect(count('media')).toBeGreaterThanOrEqual(189)

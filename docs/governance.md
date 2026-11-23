@@ -5,6 +5,20 @@ French manuscript, Figma reference and subsequent council/team corrections.
 The six legacy anchors remain; `scientific-council` and `governance-oversight`
 are additional reachable child sections with localized search references.
 
+## Scientific Council roster — 2026-11-23
+
+The owner supplied the seven-member composition in the 23 November screenshot.
+Ahmed ENNAOUI chairs the council, alongside Florence LAMBERT, Vladimiro MIRANDA,
+Diego PAVÍA, Tijani BOUNAHMIDI, Robert PITZ-PAAL and Ralf B. WEHRSPOHN.
+The screenshot supplies the updated roles and flag associations. French copy is
+adapted for the site, with English and Arabic working translations. The existing
+portraits and professional links are reused.
+
+The public roster and portrait search now follow the seven current members. A
+CMS snapshot from the prior composition falls back to the delivered roster until
+the first authoring load refreshes the affected fields of the retained records.
+Previously stored records for former members are retained in the CMS.
+
 ## Content and sources
 
 - The supplied French text is the institutional content source. EN/AR are complete
@@ -19,7 +33,7 @@ are additional reachable child sections with localized search references.
   adds UM6P and the Ministry of Industry and Trade, identified as MICEP in the
   request: 16 board organisations in total. No individual board representatives
   or mandates are invented.
-- Eight scientific council members are displayed with supplied names,
+- The initial scientific council contained eight members with supplied names,
   affiliations and portraits. Ahmed ENNAOUI is marked president as in the owner
   screenshot. These supplied affiliations are not independently asserted as a
   newly verified current employment record.

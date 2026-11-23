@@ -16,6 +16,7 @@ import {
   governanceBoardLogo,
   governanceBoardSites,
   governanceScientists,
+  scientificCouncilSourceRevision,
   governanceScientistLinkedin,
   governanceScientistRegions,
   governanceDepartments,
@@ -215,6 +216,7 @@ export function retainedContentEntries(at: string): Entry[] {
         sortOrder: index,
         sourceImagePath: `/images/governance/${id}.webp`,
         region: governanceScientistRegions[id],
+        _scientificCouncilRevision: scientificCouncilSourceRevision,
       },
       (locale) => {
         const value = catalogs[locale].Governance.scientists[id]
@@ -405,7 +407,13 @@ export function retainedContentEntries(at: string): Entry[] {
           `${pageId}-${section.id}`,
           'messages.PageSections',
           { pageId, sectionId: section.id },
-          { pageId, sectionId: section.id },
+          {
+            pageId,
+            sectionId: section.id,
+            ...(pageId === 'governance' && section.id === 'scientific-council'
+              ? { _scientificCouncilRevision: scientificCouncilSourceRevision }
+              : {}),
+          },
           (locale) => ({
             title: localized(locale)?.title ?? '',
             body: localized(locale)?.description ?? '',

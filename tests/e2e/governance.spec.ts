@@ -24,7 +24,23 @@ for (const locale of ['fr', 'en', 'ar'] as const) {
     await expect(governance.locator('#council-representatives li')).toHaveCount(16)
     for (const url of Object.values(governanceBoardSites))
       await expect(governance.locator(`#council-representatives a[href="${url}"]`)).toHaveCount(1)
-    await expect(governance.locator('[id^="scientific-member-"]')).toHaveCount(8)
+    const members = governance.locator('[id^="scientific-member-"]')
+    await expect(members.locator('h3')).toHaveText([
+      catalogs[locale].Governance.scientists.ennaoui.name,
+      catalogs[locale].Governance.scientists.lambert.name,
+      catalogs[locale].Governance.scientists.miranda.name,
+      catalogs[locale].Governance.scientists.pavia.name,
+      catalogs[locale].Governance.scientists.bounahmidi.name,
+      catalogs[locale].Governance.scientists['pitz-paal'].name,
+      catalogs[locale].Governance.scientists.wehrspohn.name,
+    ])
+    const chair = members.first()
+    await expect(chair).toContainText(catalogs[locale].Governance.president)
+    await expect(chair.locator('[data-country-flag="ma"]')).toBeVisible()
+    await expect(chair.locator('[data-country-flag="de"]')).toBeVisible()
+    const miranda = members.filter({ has: page.locator('[data-country-flag="pt"]') })
+    await expect(miranda).toHaveAttribute('data-scientist', 'miranda')
+    await expect(miranda.locator('[data-country-flag="br"]')).toBeVisible()
     await expect(governance.locator('#department-responsibilities li')).toHaveCount(7)
     await expect(governance.locator('#council-representatives')).not.toContainText(
       'Société d’Ingénierie Énergétique',

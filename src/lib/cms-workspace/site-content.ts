@@ -1,5 +1,6 @@
 // Shared Node server / Payload CLI projection. The native pg dependency keeps this outside client bundles.
 import { cache } from 'react'
+import { scientificCouncilSourceRevision } from '@/lib/governance'
 import { searchDatabase } from '@/lib/search/database'
 import type { Language, Variant } from '@/lib/cms-preview/model'
 
@@ -61,10 +62,15 @@ export async function siteMessages<T extends Record<string, unknown>>(
       published?.status === 'published' &&
       (!published.fields._publishedShared ||
         JSON.parse(published.fields._publishedShared).visibility !== 'private')
-    const value =
+    let value =
       eligible && published.fields.structuredContent
         ? JSON.parse(published.fields.structuredContent)
         : baseline
+    // The named council records own the roster. Keep other governance catalog edits.
+    if (namespace === 'Governance') {
+      const { scientists } = messages.Governance as { scientists: unknown }
+      value = { ...value, scientists }
+    }
     if (sameContentShape(messages[namespace], value))
       (messages as Record<string, unknown>)[namespace] = value
   }
@@ -77,6 +83,11 @@ export async function siteMessages<T extends Record<string, unknown>>(
     }
     if (Object.hasOwn(parent, path.at(-1)!)) parent[path.at(-1)!] = value
   }
+  const originalSections = fallback.PageSections as
+    { governance?: { 'scientific-council'?: { description: string } } } | undefined
+  const councilDescription = originalSections?.governance?.['scientific-council']?.description
+  if (councilDescription !== undefined)
+    set(['PageSections', 'governance', 'scientific-council', 'description'], councilDescription)
   for (const row of rows) {
     const variant = row.public_variants[locale]
     if (
@@ -121,6 +132,7 @@ export async function siteMessages<T extends Record<string, unknown>>(
         set(['Governance', 'board', key], variant.title)
         break
       case 'scientific-council':
+        if (row.shared._scientificCouncilRevision !== scientificCouncilSourceRevision) break
         set(['Governance', 'scientists', key, 'name'], variant.title)
         set(['Governance', 'scientists', key, 'role'], variant.fields.professionalRole ?? '')
         set(['Governance', 'scientists', key, 'country'], variant.fields.country ?? '')
@@ -151,7 +163,14 @@ export async function siteMessages<T extends Record<string, unknown>>(
         break
       case 'pages':
         if (!row.shared.catalogNamespace) {
-          set(['PageSections', row.shared.pageId, row.shared.sectionId, 'title'], variant.title)
+          const { pageId, sectionId } = row.shared
+          set(['PageSections', pageId, sectionId, 'title'], variant.title)
+          if (
+            pageId === 'governance' &&
+            sectionId === 'scientific-council' &&
+            row.shared._scientificCouncilRevision !== scientificCouncilSourceRevision
+          )
+            break
           set(
             ['PageSections', row.shared.pageId, row.shared.sectionId, 'description'],
             variant.body,

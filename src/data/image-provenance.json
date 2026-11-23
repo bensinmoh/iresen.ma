@@ -234,18 +234,6 @@
     "references": ["docs/research-assets.json"]
   },
   {
-    "path": "/images/governance/artiba.png",
-    "sha256": "0cfec4a8ebc485c2fee465f173f650be01d514f2adfad391adc0102a08aeb6d9",
-    "category": "source-reference",
-    "references": ["docs/governance-assets.json"]
-  },
-  {
-    "path": "/images/governance/artiba.webp",
-    "sha256": "73df77291d41155434679e67057fb76336bfca50679514f26c9a7d1e6f1edf92",
-    "category": "source-reference",
-    "references": ["docs/governance-assets.json"]
-  },
-  {
     "path": "/images/governance/ayoub-portrait.png",
     "sha256": "2696fd78395fb1a21e31d209c1b169513b8022952bcf02d5e2e7c5c3b19d5746",
     "category": "ai-assisted",
