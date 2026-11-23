@@ -54,7 +54,7 @@ management remains under `/admin/collections/users` with its existing admin gate
 | --------------------------- | ------- |
 | Node.js                     | 24.22.1 |
 | pnpm                        | 11.28.6 |
-| Next.js                     | 16.4.2  |
+| Next.js                     | 16.4.5  |
 | React / React DOM           | 19.3.1  |
 | Payload / official adapters | 3.92.0  |
 | PostgreSQL configured/CI    | 17.11   |

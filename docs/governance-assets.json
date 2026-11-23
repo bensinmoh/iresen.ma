@@ -22,15 +22,6 @@
       "path": "/images/governance/ennaoui.png"
     },
     {
-      "id": "artiba",
-      "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-5.png",
-      "file": "artiba.png",
-      "kind": "scientific-portrait",
-      "sha256": "0cfec4a8ebc485c2fee465f173f650be01d514f2adfad391adc0102a08aeb6d9",
-      "bytes": 51980,
-      "path": "/images/governance/artiba.png"
-    },
-    {
       "id": "pavia",
       "source": "https://iresen.org/wp-content/themes/labostica/images/Conseil/Ellipse 16-7.png",
       "file": "pavia.png",
@@ -256,7 +247,6 @@
   "linkedinProfiles": {
     "scientists": {
       "ennaoui": "https://www.linkedin.com/in/ahmed-ennaoui-94127854/",
-      "artiba": "https://www.linkedin.com/in/abdelhakim-artiba-096aa836/",
       "pavia": "https://www.linkedin.com/in/diego-pavia-479b133b/",
       "lambert": "https://www.linkedin.com/in/florence-lambert-hognon-730b17105/",
       "wehrspohn": "https://www.linkedin.com/in/ralf-wehrspohn-b27a8072/",

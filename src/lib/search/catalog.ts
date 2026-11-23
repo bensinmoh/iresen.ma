@@ -340,7 +340,7 @@ export const publicAssetReferences: readonly PublicAssetReference[] = [
         locale,
         {
           title: messages[locale].Governance.scientists[id].name,
-          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role}. ${messages[locale].Governance.scientists[id].country}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
+          description: `${messages[locale].Governance.councils.science.membersTitle}. ${messages[locale].Governance.scientists[id].role} ${messages[locale].Governance.scientists[id].country}${locale === 'ar' ? ` ${messages.fr.Governance.scientists[id].name}` : ''}`,
         },
       ]),
     ) as PublicAssetReference['text'],

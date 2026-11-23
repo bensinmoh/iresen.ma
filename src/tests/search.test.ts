@@ -61,6 +61,21 @@ describe('multilingual search text', () => {
       ),
     ).toBe(false)
   })
+  it('indexes the updated council roles and current portraits across all locales', () => {
+    const documents = staticSearchDocuments()
+    for (const locale of contentLocales) {
+      const { scientists } = { fr, en, ar }[locale].Governance
+      const council = documents.find(
+        (item) => item.url === pageHref('governance', locale, 'scientific-council'),
+      )
+      expect(council?.body).toContain(scientists.miranda.role)
+      expect(council?.body).toContain(scientists.lambert.role)
+      expect(council?.body).not.toMatch(/artiba|أرتيبا/i)
+    }
+    expect(publicAssetReferences.some((asset) => asset.id === 'governance-scientist-artiba')).toBe(
+      false,
+    )
+  })
   it('registers the supplied biography and requested English and Arabic translations', () => {
     const biographies = staticSearchDocuments().filter((item) =>
       item.id.includes('samir-biography'),

@@ -572,8 +572,7 @@
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-12) var(--space-3);
   padding-block: 0 var(--space-4);
   direction: ltr;
@@ -614,7 +613,6 @@
   min-inline-size: 0;
   align-self: center;
   block-size: auto;
-  grid-column: span 3;
   border: 1px solid var(--color-footer-divider);
   border-radius: var(--radius-action);
   background: var(--color-navy);
@@ -627,31 +625,10 @@
     background-color 600ms ease,
     border-color 600ms ease;
 }
-.scientists [data-scientist='artiba'] {
-  grid-area: 1 / 1 / auto / span 3;
-}
-.scientists [data-scientist='lambert'] {
-  grid-area: 1 / 5 / auto / span 3;
-}
-.scientists [data-scientist='pavia'] {
-  grid-area: 1 / 9 / auto / span 3;
-}
-.scientists [data-scientist='ennaoui'] {
-  grid-area: 2 / 3 / auto / span 3;
-}
-.scientists [data-scientist='wehrspohn'] {
-  grid-area: 2 / 9 / auto / span 3;
-}
-.scientists [data-scientist='pitz-paal'] {
-  grid-area: 3 / 1 / auto / span 3;
-}
-.scientists [data-scientist='bounahmidi'] {
-  grid-area: 3 / 5 / auto / span 3;
-}
-.scientists [data-scientist='miranda'] {
-  grid-area: 3 / 9 / auto / span 3;
-}
 .scientists .chair {
+  grid-column: 1 / -1;
+  justify-self: center;
+  inline-size: min(100%, 32rem);
   background: var(--color-footer-control);
   border-color: var(--color-energy-cyan);
 }
@@ -794,11 +771,7 @@
   }
   .scientists {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: none;
     gap: var(--space-6);
-  }
-  .scientists [data-scientist] {
-    grid-area: auto;
   }
   .scienceConnections {
     display: none;

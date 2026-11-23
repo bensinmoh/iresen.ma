@@ -41,7 +41,9 @@ test('public routes use decorative Phosphor icons and retain only identity/struc
               ) &&
               !(
                 el.closest('[data-illustrative-network]') &&
-                ['fr', 'de', 'eu', 'ma', 'br'].includes(el.getAttribute('data-country-flag') ?? '')
+                ['fr', 'de', 'eu', 'ma', 'pt', 'br'].includes(
+                  el.getAttribute('data-country-flag') ?? '',
+                )
               ) &&
               !el.classList.contains('footer-icon') &&
               el.getAttribute('width') !== '0' &&

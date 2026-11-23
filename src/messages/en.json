@@ -864,7 +864,7 @@
       },
       "scientific-council": {
         "title": "The Scientific Council",
-        "description": "Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition. Dr. Ahmed ENNAOUI Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin Dr. Abdelhakim ARTIBA President of Université Polytechnique Hauts-de-France - UPHF M. Diego PAVIA President of InnoEnergy at the European Institute of Technology Dr. Florence LAMBERT CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission Dr. Ralf B. WEHRSPOHN Executive President of the Fraunhofer Institute / Professor at Université Martin Luther de Halle-Wittenberg - MLU Dr. Robert PITZ-PAAL Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA) Dr. Tijani BOUNAHMIDI Director of the Technological Innovation Centre, Vice President of Université Mohammed V de Rabat - UM5 Dr. Vlademiro MIRANDA Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil"
+        "description": "Bringing together international clean-technology experts, the scientific council considers Morocco’s needs in the light of scientific advances and technological trajectories. It examines research areas and recommends programme priorities. It assesses the scientific relevance of projects proposed for funding and submits recommendations to the board of directors, which decides on their acceptance and financing. Its expertise supports the quality of the work and its relevance to the national energy transition."
       },
       "governance-oversight": {
         "title": "Monitoring commitments and overseeing management",
@@ -2949,44 +2949,39 @@
     },
     "scientists": {
       "ennaoui": {
-        "name": "Dr. Ahmed ENNAOUI",
-        "role": "Former Research Director at the Helmholtz Institute for Heterogeneous Material Systems, Berlin",
-        "country": "Germany"
-      },
-      "artiba": {
-        "name": "Dr. Abdelhakim ARTIBA",
-        "role": "President of Université Polytechnique Hauts-de-France - UPHF",
-        "country": "France"
-      },
-      "pavia": {
-        "name": "M. Diego PAVIA",
-        "role": "President of InnoEnergy at the European Institute of Technology",
-        "country": "Europe"
+        "name": "Prof. Ahmed ENNAOUI",
+        "role": "International expert in solar energy and advanced materials. Former research team leader at Helmholtz-Zentrum Berlin. Founder of Virtual Learning University.",
+        "country": "Morocco and Germany"
       },
       "lambert": {
         "name": "Dr. Florence LAMBERT",
-        "role": "CEA-LITEN Director / Chair of the Industry, Jobs and Innovation Commission",
+        "role": "Chair and CEO of Genvia. Former director of CEA-Liten.",
         "country": "France"
       },
-      "wehrspohn": {
-        "name": "Dr. Ralf B. WEHRSPOHN",
-        "role": "Executive President of the Fraunhofer Institute / Professor at Université Martin Luther de Halle-Wittenberg - MLU",
-        "country": "Germany"
+      "miranda": {
+        "name": "Prof. Vladimiro MIRANDA",
+        "role": "Professor emeritus at the University of Porto. President of INESC P&D Brasil.",
+        "country": "Portugal and Brazil"
       },
-      "pitz-paal": {
-        "name": "Dr. Robert PITZ-PAAL",
-        "role": "Director of the Institute of Solar Research at the German Aerospace Center (DLR), Vice President of the International Energy Agency (IEA)",
-        "country": "Germany"
+      "pavia": {
+        "name": "Mr. Diego PAVÍA",
+        "role": "Assigned to Vision 2030 initiatives. Former CEO of InnoEnergy.",
+        "country": "European Union"
       },
       "bounahmidi": {
-        "name": "Dr. Tijani BOUNAHMIDI",
-        "role": "Director of the Technological Innovation Centre, Vice President of Université Mohammed V de Rabat - UM5",
+        "name": "Prof. Tijani BOUNAHMIDI",
+        "role": "Vice-President of Euromed University of Fez.",
         "country": "Morocco"
       },
-      "miranda": {
-        "name": "Dr. Vlademiro MIRANDA",
-        "role": "Member of the board of INESC TEC-INESC Technologies, President of INESC R&D Brazil",
-        "country": "Brazil"
+      "pitz-paal": {
+        "name": "Prof. Robert PITZ-PAAL",
+        "role": "Co-Director of the DLR Institute of Solar Research.",
+        "country": "Germany"
+      },
+      "wehrspohn": {
+        "name": "Prof. Ralf B. WEHRSPOHN",
+        "role": "Professor of experimental physics at Martin Luther University Halle-Wittenberg. Co-Director of the ITEL lithium institute.",
+        "country": "Germany"
       }
     },
     "team": {

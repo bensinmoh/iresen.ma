@@ -176,7 +176,9 @@ export async function GovernancePage({ locale }: { locale: Locale }) {
                         </span>
                       </Heading>
                       <p className={styles.country}>
-                        <CountryFlag region={governanceScientistRegions[id]} />
+                        {governanceScientistRegions[id].map((region) => (
+                          <CountryFlag key={region} region={region} />
+                        ))}
                         <span>{t(`scientists.${id}.country`)}</span>
                       </p>
                       <p className={styles.scientistRole}>{t(`scientists.${id}.role`)}</p>

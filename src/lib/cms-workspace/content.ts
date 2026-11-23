@@ -142,6 +142,33 @@ export async function loadContent(auth: AuthenticatedWorkspace) {
     for (const entry of retainedContentEntries(new Date().toISOString())) {
       if (existingIds.has(entry.id) || existingKeys.has(`${entry.module}:${entry.reference}`)) {
         const existing = current.entries.find((value) => value.id === entry.id)
+        const councilRevision = entry.shared._scientificCouncilRevision
+        if (
+          existing &&
+          councilRevision &&
+          existing.shared._scientificCouncilRevision !== councilRevision
+        ) {
+          existing.shared._scientificCouncilRevision = councilRevision
+          existing.shared.sourceRecord = entry.shared.sourceRecord
+          for (const field of ['region', 'sortOrder']) {
+            if (Object.hasOwn(entry.shared, field)) existing.shared[field] = entry.shared[field]
+          }
+          for (const locale of languages) {
+            const source = entry.variants[locale]
+            for (const variant of [existing.variants[locale], existing.publicVariants[locale]]) {
+              if (!variant) continue
+              if (entry.module === 'scientific-council') {
+                variant.title = source.title
+                variant.fields.professionalRole = source.fields.professionalRole
+                variant.fields.country = source.fields.country
+              } else {
+                variant.body = source.body
+              }
+            }
+          }
+          await storeEntry(req, existing)
+          changed = true
+        }
         if (existing && existing.shared._sourceVersion !== retainedContentVersion) {
           // Reconcile only untouched imported baseline metadata. Preserve every editorial change.
           const sameShared = Object.entries(entry.shared).every(
@@ -220,6 +247,7 @@ export async function writeContent(auth: AuthenticatedWorkspace, input: unknown,
         '_sourceDataset',
         '_sourceKey',
         '_sourceVersion',
+        '_scientificCouncilRevision',
         'sourceRecord',
         'catalogNamespace',
       ])

@@ -5,13 +5,11 @@ import styles from './GovernancePage.module.css'
 
 // Editorial positions connect expertise, not verified residences or affiliations.
 const links = [
-  'M125 167Q292 100 458 167T792 167',
-  'M125 167Q160 380 292 500T458 833',
-  'M458 167Q410 360 292 500T125 833',
-  'M458 167Q735 260 792 500T792 833',
-  'M792 167Q545 260 292 500Q510 750 792 833',
-  'M125 833Q292 760 458 833T792 833',
-  'M292 500Q542 425 792 500',
+  'M500 167Q250 250 167 500T167 833',
+  'M500 167V833',
+  'M500 167Q750 250 833 500T833 833',
+  'M167 500Q500 360 833 500',
+  'M167 833Q500 710 833 833',
 ]
 
 export function ScientificNetwork({ children }: { children: ReactNode }) {

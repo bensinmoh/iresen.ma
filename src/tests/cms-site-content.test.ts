@@ -76,6 +76,36 @@ describe('common site database projections', () => {
     database.query.mockResolvedValue({ rows: data })
     expect((await sitePublications()).some((value) => value.id === original.id)).toBe(false)
   })
+  it('uses the current council when older CMS snapshots still include superseded profiles', async () => {
+    vi.stubEnv('SITE_CONTENT_DATABASE_ENABLED', 'true')
+    const data = rows()
+    const oldMember = data.find((row) => row.id === 'retained-scientific-council-miranda')!
+    delete oldMember.shared._scientificCouncilRevision
+    oldMember.public_variants.fr!.title = 'Dr. Vlademiro MIRANDA'
+    oldMember.public_variants.fr!.fields.country = 'Brésil'
+    const currentMember = data.find((row) => row.id === 'retained-scientific-council-lambert')!
+    currentMember.public_variants.fr!.fields.professionalRole = 'Fonction approuvée pour Genvia'
+
+    const section = data.find((row) => row.id === 'retained-pages-governance-scientific-council')!
+    delete section.shared._scientificCouncilRevision
+    section.public_variants.fr!.body = 'Membres du conseil : Abdelhakim ARTIBA'
+    const governance = data.find((row) => row.id === 'retained-pages-catalog-Governance')!
+    const copy = JSON.parse(governance.public_variants.fr!.fields.structuredContent)
+    copy.introduction = 'Introduction approuvée'
+    copy.scientists.artiba = { name: 'Abdelhakim ARTIBA', role: '', country: 'France' }
+    governance.public_variants.fr!.fields.structuredContent = JSON.stringify(copy)
+
+    database.query.mockResolvedValue({ rows: data })
+    const messages = await siteMessages('fr', fr)
+    expect(messages.Governance.introduction).toBe('Introduction approuvée')
+    expect(messages.Governance.scientists).not.toHaveProperty('artiba')
+    expect(messages.Governance.scientists.miranda).toEqual(fr.Governance.scientists.miranda)
+    expect(messages.Governance.scientists.lambert.role).toBe('Fonction approuvée pour Genvia')
+    expect(fr.Governance.scientists.lambert.role).toContain('Ancienne directrice')
+    expect(messages.PageSections.governance['scientific-council'].description).not.toContain(
+      'ARTIBA',
+    )
+  })
   it('uses delivered catalogue baselines without approving EN/AR and keeps media order', async () => {
     vi.stubEnv('SITE_CONTENT_DATABASE_ENABLED', 'true')
     database.query.mockResolvedValue({ rows: rows() })

@@ -18,24 +18,25 @@ export const governanceBoard = [
 ] as const
 export const governanceScientists = [
   'ennaoui',
-  'artiba',
-  'pavia',
   'lambert',
-  'wehrspohn',
-  'pitz-paal',
-  'bounahmidi',
   'miranda',
+  'pavia',
+  'bounahmidi',
+  'pitz-paal',
+  'wehrspohn',
 ] as const
-// Owner-supplied editorial country/region labels, not nationality or map coordinates.
+
+export const scientificCouncilSourceRevision = '2026-11-23'
+
+// Editorial country and region labels supplied with the council roster.
 export const governanceScientistRegions = {
-  artiba: 'fr',
-  lambert: 'fr',
-  pavia: 'eu',
-  wehrspohn: 'de',
-  ennaoui: 'de',
-  'pitz-paal': 'de',
-  bounahmidi: 'ma',
-  miranda: 'br',
+  ennaoui: ['ma', 'de'],
+  lambert: ['fr'],
+  miranda: ['pt', 'br'],
+  pavia: ['eu'],
+  bounahmidi: ['ma'],
+  'pitz-paal': ['de'],
+  wehrspohn: ['de'],
 } as const
 
 export const governanceTeam = [
@@ -76,7 +77,6 @@ export const governanceBoardSites = {
 
 export const governanceScientistLinkedin = {
   ennaoui: 'https://www.linkedin.com/in/ahmed-ennaoui-94127854/',
-  artiba: 'https://www.linkedin.com/in/abdelhakim-artiba-096aa836/',
   pavia: 'https://www.linkedin.com/in/diego-pavia-479b133b/',
   lambert: 'https://www.linkedin.com/in/florence-lambert-hognon-730b17105/',
   wehrspohn: 'https://www.linkedin.com/in/ralf-wehrspohn-b27a8072/',
